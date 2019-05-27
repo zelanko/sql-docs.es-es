@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1
@@ -13,12 +12,12 @@ ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6be914812be9d58fb59316b1b4793eb5d9e07043
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa53c012649f983953b61a21901763b9bdd02c8b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889812"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056442"
 ---
 # <a name="reports-for-the-integration-services-server"></a>Informes para el servidor de Integration Services
   En la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]existen dos informes estándar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para ayudarle a supervisar los proyectos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] que se han implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Estos informes le ayudan a ver el estado y historial de los paquetes y, si es necesario, identificar la causa de los errores de ejecución de paquetes.  
@@ -32,7 +31,7 @@ ms.locfileid: "62889812"
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Descripción|  
+|Section|Descripción|  
 |-------------|-----------------|  
 |**Información de ejecución**|Muestra el número de ejecuciones en distintos estados (error, en ejecución, correcto, otros) en las últimas 24 horas.|  
 |**Información del paquete**|Muestra el número total de paquetes que se han ejecutado en las últimas 24 horas.|  
@@ -46,7 +45,7 @@ ms.locfileid: "62889812"
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Descripción|  
+|Section|Descripción|  
 |-------------|-----------------|  
 |Filter|Muestra el filtro actual que se aplica al informe, como el Intervalo de tiempo de inicio.|  
 |Información de ejecución|Muestra la hora de inicio, la hora de finalización y la duración de cada ejecución del paquete. Puede ver una lista de los valores de parámetro usados con una ejecución de paquete, como los valores que se pasaron a un paquete secundario mediante la tarea Ejecutar paquete. Para ver la lista de parámetros, haga clic en Información general.|  
@@ -60,7 +59,7 @@ ms.locfileid: "62889812"
   
  El informe muestra las siguientes secciones de información.  
   
-|Sección|Descripción|  
+|Section|Descripción|  
 |-------------|-----------------|  
 |Filter|Muestra el filtro actual que se aplica al informe, como conexiones con una cadena especificada y el intervalo de **Hora del último error** .<br /><br /> Establezca el intervalo de **Hora del último error** para que se muestren solo los errores de conexión que se produjeron durante un intervalo de fechas. El intervalo puede abarcar varios días, meses o años.|  
 |Detalles|Muestra la cadena de conexión, el número de ejecuciones en las que se produjo un error de conexión y la fecha en la que hubo un error de conexión por última vez.|  

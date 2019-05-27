@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - getting started
@@ -14,12 +13,12 @@ ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c13019d5845e0c580b28fef750683044d344a9ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c659362e7b5ddba500c2e48df1b11a27a4bf0a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105460"
 ---
 # <a name="planning-a-report-report-builder"></a>Planear un informe (Generador de informes)
   El Generador de informes permite crear muchos tipos de informes. Por ejemplo, puede crear informes que muestren los datos de ventas detallados o resumidos, las tendencias de marketing y de ventas, los informes de operaciones o los paneles. También puede crear informes que aprovechen el texto de formato enriquecido, por ejemplo, para pedidos de ventas, catálogos de productos o circulares. Todos estos informes se crean utilizando combinaciones diferentes de los mismos bloques de creación básicos en el Generador de informes. Para crear un informe útil, de fácil comprensión, sirve de ayuda planearlo primero. A continuación se detallan algunos de los aspectos que quizá desee considerar antes de empezar:  
@@ -36,7 +35,7 @@ ms.locfileid: "63215731"
   
      El Generador de informes proporciona muchos elementos de informe que puede agregar al informe para que sea más fácil de leer, resaltar la información clave, ayudar a sus usuarios a navegar por el informe, etc. Si tiene clara la apariencia que desea para el diseño del informe, puede determinar si necesita elementos de informe como cuadros de texto, rectángulos, imágenes y líneas. Es posible que desee también mostrar u ocultar elementos, agregar un mapa del documento, incluir informes detallados o subinformes, o crear vínculos con otros informes. Para más información, vea [Imágenes, cuadros de texto rectángulos y líneas &#40;Generador de informes y SSRS&#41;](rectangles-and-lines-report-builder-and-ssrs.md) y [Ordenación interactiva, mapas de documento y vínculos &#40;Generador de informes y SSRS&#41;](interactive-sort-document-maps-and-links-report-builder-and-ssrs.md).  
   
--   **¿Qué datos desea los lectores vean? ¿Quiere filtrar los datos o el formato para destinatarios distintos?**  
+-   **¿Qué datos desea que se presenten a sus lectores? ¿Quiere filtrar los datos o el formato para destinatarios distintos?**  
   
      Quizá prefiera restringir el ámbito del informe a ubicaciones o usuarios concretos, o a un período de tiempo determinado. Para filtrar los datos del informe, utilice los parámetros para recuperar y mostrar solo los datos que desea. Para más información, vea [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](report-parameters-report-builder-and-report-designer.md).  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - interactive searches [SQL Server Management Studio]
@@ -15,12 +14,12 @@ ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: fe26ee01517f23ba146b326c1e401496f05cc0c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 858724b4447c6602db14980a27225b3b8fe69eef
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022316"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063787"
 ---
 # <a name="search-documents-interactively"></a>Buscar documentos de forma interactiva
   Mediante el cuadro de diálogo **Buscar y reemplazar** , puede buscar en uno o más archivos o ventanas abiertos y desplazarse por las coincidencias una a una. Esta técnica permite revisar cada coincidencia individual en el contexto en que se encuentra. El cuadro de diálogo **Buscar y reemplazar** también ofrece la opción de realizar operaciones de búsqueda masiva y revisión de coincidencias en formato de informe.  

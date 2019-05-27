@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Integration Services packages, running
@@ -16,12 +15,12 @@ ms.assetid: 318e6beb-5540-4101-82a5-18c9d47f0570
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 0a4b8a1778fb7e8bcd91df82002ee068ffae22ef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9fdbc707a26c9cebae33c0dd432572cde3157c2d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62889615"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056422"
 ---
 # <a name="run-a-package-in-sql-server-data-tools"></a>Ejecutar un paquete en SQL Server Data Tools
   Los paquetes se ejecutan normalmente en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] durante el desarrollo, la depuración y la comprobación de los paquetes. Cuando se ejecuta un paquete desde el Diseñador de [!INCLUDE[ssIS](../includes/ssis-md.md)] , siempre se ejecuta inmediatamente.  

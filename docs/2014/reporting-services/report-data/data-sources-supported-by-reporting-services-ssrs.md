@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server data processing extension [Reporting Services]
@@ -21,12 +20,12 @@ ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 87cc2d927bc3a0786e935e2cd20c669a8bfac87a
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
-ms.locfileid: "63461725"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107371"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
@@ -104,7 +103,7 @@ ms.locfileid: "63461725"
   
 ###  <a name="DataSourcesTable"></a> Tipos de orígenes de datos  
   
-|Origen de<br /><br /> datos de informe|Tipo de origen de datos de Reporting Services|Nombre de la extensión de procesamiento de datos o proveedor de datos|Versión del proveedor de datos subyacente<br /><br /> (Opcional)|Datos<br /><br /> Source<br /><br /> Plataforma x86|Datos<br /><br /> Source<br /><br /> Plataforma x64|Versión del origen de datos|RS<br /><br /> Plataforma x86|RS<br /><br /> Plataforma x64|  
+|Origen de<br /><br /> datos de informe|Tipo de origen de datos de Reporting Services|Nombre de la extensión de procesamiento de datos o proveedor de datos|Versión del proveedor de datos subyacente<br /><br /> (Opcional)|Datos<br /><br /> `Source`<br /><br /> Plataforma x86|Datos<br /><br /> `Source`<br /><br /> Plataforma x64|Versión del origen de datos|RS<br /><br /> Plataforma x86|RS<br /><br /> Plataforma x64|  
 |-------------------------------|-----------------------------------------|------------------------------------------------------|-------------------------------------------------------|--------------------------------------|--------------------------------------|----------------------------|-------------------------|-------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|[Microsoft SQL Server](#MicrosoftSQLServer)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.SqlClient|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.|S|S|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos relacional|[OLEDB](#OLEDBSQL)|Extensión de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integrada|Extiende System.Data.OledbClient|S|S|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores.|S|S|  

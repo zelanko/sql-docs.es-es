@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Call Stack Window [Transact-SQL]
@@ -13,12 +12,12 @@ ms.assetid: ddb0b19c-87cd-4883-bcb8-ec09ffb30369
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cb1838890edb044ca3f1bbe5dfd5ebd3dad51c9d
-ms.sourcegitcommit: 40c3b86793d91531a919f598dd312f7e572171ec
+ms.openlocfilehash: ed3fbddcf91fe63920b349224a0dde73141c6d75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53328695"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063519"
 ---
 # <a name="call-stack-window"></a>Ventana de pila de llamadas
   La ventana **Pila de llamadas** muestra los módulos de la pila de llamadas y los tipos de datos y valores de los parámetros que se pasen a los módulos. [!INCLUDE[tsql](../../includes/tsql-md.md)] incluyen procedimientos almacenados, funciones y desencadenadores). Para mostrar la pila de llamadas, debe estar en modo de depuración.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - custom data processing extensions [Reporting Services]
@@ -22,12 +21,12 @@ ms.assetid: 2cddc9ea-0e28-4350-80ae-332412908e47
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ec3ed5167ee020e892a8fc578ec0088419e24ae8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 734eca26e94b4b879590c889c6c3c479c155c7be
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654851"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107053"
 ---
 # <a name="specify-connections-for-custom-data-processing-extensions"></a>Especificar conexiones para extensiones de procesamiento de datos personalizadas
   Puede crear o usar extensiones de procesamiento de datos personalizadas de otros fabricantes en un servidor de informes con el fin de mejorar la capacidad de procesamiento de datos de orígenes de datos admitidos o proporcionar compatibilidad con orígenes de datos adicionales que no estén disponibles en una instalación predeterminada de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las conexiones se tratan de forma diferente en función de la implementación. Las implementaciones siguientes están disponibles para extensiones de procesamiento de datos:  

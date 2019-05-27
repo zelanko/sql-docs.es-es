@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transferloginstask.logins.f1
@@ -15,12 +14,12 @@ ms.assetid: bf244c24-bd45-4ece-b66b-78b488f35c5b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 131c74b2637fb0181e55838b1430fb0b33a14d3f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ae8ebf56e4ae7c4fce3566cb7688d203b8ceb318
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62926828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054932"
 ---
 # <a name="transfer-logins-task-editor-logins-page"></a>Editor de la tarea Transferir inicios de sesión (página Inicios de sesión)
   Utilice la página **Inicios de sesión** del cuadro de diálogo **Editor de la tarea Transferir inicios de sesión** para especificar propiedades para copiar uno o varios inicios de sesión de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a otra. Para obtener más información acerca de esta tarea, vea [Transfer Logins Task](control-flow/transfer-logins-task.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newschedule.f1
@@ -13,12 +12,12 @@ ms.assetid: b2c69586-d98e-4933-827d-f5e6c15c5203
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 082188276dbc91f52be5813dda5b752c4699e9bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 083fa7998e347b3aa3abe7aacbf9585a18047b20
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201089"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100225"
 ---
 # <a name="new-shared-schedule-management-studio"></a>Nuevo Programación compartida (Management Studio)
   Use esta página para crear una programación compartida para ejecutar suscripciones e informes publicados. Las programaciones compartidas se pueden utilizar en lugar de las programaciones específicas del informe o de la suscripción. La información de programación centralizada y la capacidad de pausar y reanudar las operaciones programadas son dos características clave que distinguen las programaciones compartidas de las programaciones específicas de elemento.  

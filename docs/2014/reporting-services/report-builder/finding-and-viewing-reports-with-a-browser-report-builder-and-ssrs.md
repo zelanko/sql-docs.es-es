@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: edf4843a-2a0a-486f-be25-14a3c1c6bc72
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2f8e7d1aa634b124c009d899af6405f5343e99d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5c1e620bb0fd5cbf5ff6541fd1aa4a3552bd2eb2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987791"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107860"
 ---
 # <a name="finding-and-viewing-reports-with-a-browser-report-builder-and-ssrs"></a>Buscar y ver informes con un explorador (Generador de informes y SSRS)
   Puede utilizar cualquier explorador web compatible para ver un informe mediante una conexión directa a un servidor de informes. Cada informe dispone de una dirección URL en el servidor de informes. Puede escribir la dirección web de un informe para abrirlo por sí solo en una ventana del explorador de una aplicación web. El informe se abre en formato HTML e incluye la barra de herramientas de informe para que pueda navegar por las páginas o buscar valores de datos dentro del informe. Puede establecer parámetros en la dirección URL para ocultar la barra de herramientas o para seleccionar el formato de salida del informe.  

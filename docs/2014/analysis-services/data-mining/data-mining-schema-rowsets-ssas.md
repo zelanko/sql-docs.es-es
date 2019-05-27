@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - schema rowsets [Analysis Services], data mining
@@ -18,12 +17,12 @@ ms.assetid: 442d8c29-07c7-45de-9a15-d556059f68d7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8fef47b83e341e9c8fed6a4824da882550c9a892
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 30a4a503b16693a3774aa7f68771fb0f9dd70810
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722627"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084907"
 ---
 # <a name="querying-the-data-mining-schema-rowsets-analysis-services---data-mining"></a>Consultar los conjuntos de filas de esquema de minería de datos (Analysis Services - Minería de datos)
   En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)],muchos de los conjuntos de filas de esquema de minería de datos de OLE DB existentes se han expuesto como un conjunto de tablas del sistema que puede consultar con facilidad utilizando las instrucciones de Extensiones de minería de datos (DMX). Creando consultas para el conjunto de filas de esquema de minería de datos, puede identificar los servicios que están disponibles, obtener actualizaciones sobre el estado de los modelos y estructuras, y obtener detalles sobre el contenido o los parámetros del modelo. Para obtener una descripción de los conjuntos de filas de esquema de minería de datos, vea [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md).  

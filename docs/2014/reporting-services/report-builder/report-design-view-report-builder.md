@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10440"
@@ -22,12 +21,12 @@ ms.assetid: 1544472c-2803-448d-af52-e901cb457a00
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 714fe10abac63da9abdb7c1415e8f6abbfba11b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65f569214a2cd1bb1ce811fd2117fdc6fb432501
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156461"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107685"
 ---
 # <a name="report-design-view-report-builder"></a>Vista de diseño de informe (Generador de informes)
   La ventana del Generador de informes está diseñada para ayudarle a organizar con facilidad sus recursos de informes y a generar rápidamente los informes que necesita. La superficie de diseño está en el centro de la ventana, con la Cinta de opciones arriba y los paneles Datos de informe, Agrupación y Propiedades y la Galería de elementos de informe a la izquierda, abajo y a la derecha. La superficie de diseño es donde agrega y organiza sus elementos de informe. La Cinta de opciones organiza los elementos de menú tradicionales en categorías que puede buscar y utilizar con facilidad. Los paneles le ayudan a agregar, seleccionar y organizar sus recursos de informe y a cambiar las propiedades de los elementos de informe.  

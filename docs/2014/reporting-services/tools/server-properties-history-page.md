@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.serverproperties.history.f1
@@ -13,12 +12,12 @@ ms.assetid: be9d8018-a46f-4625-9ae1-138ebe6b38ba
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c10649c3dbe873464bcc52ca5bc54e5b948d547a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5ce48c964ec756668aa12566c494d9ae9a1e5372
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63157600"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099574"
 ---
 # <a name="server-properties-history-page"></a>Propiedades del servidor (página Historial)
   Utilice esta página para establecer un valor predeterminado para el número de copias del historial del informe que deben guardarse. El valor predeterminado proporciona un valor inicial que establece los límites del historial de informes para todos los informes. Existe la posibilidad de modificar esta configuración para informes individuales.  

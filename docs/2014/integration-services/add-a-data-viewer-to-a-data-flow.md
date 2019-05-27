@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data viewers [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 40e4b4bdab9772f5af95de8f23053b4b060ffdcc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cbd45caac75d4fac3b5fffc305a9f359193191a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62837397"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062093"
 ---
 # <a name="add-a-data-viewer-to-a-data-flow"></a>agregar un visor de datos a un flujo de datos
   En este tema se describe cómo agregar y configurar un visor de datos en un flujo de datos. Un visor de datos muestra los datos que se mueven entre dos componentes de flujo de datos. Por ejemplo, un visor de datos puede mostrar los datos que se extraen de un origen de datos antes de que una transformación en el flujo de datos los modifique.  

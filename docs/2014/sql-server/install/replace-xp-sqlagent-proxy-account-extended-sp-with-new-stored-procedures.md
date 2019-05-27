@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - xp_sqlagent_proxy_account
@@ -13,12 +12,12 @@ ms.assetid: 0e3cc931-6237-41dd-bf0d-0c03f4d8fff2
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 320c7c719752a08f5b41531d7861646aa9ffe423
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 4faff8420e318f7250cfc67dda173197d8028f0b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48181165"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092759"
 ---
 # <a name="replace-usage-of-the-xpsqlagentproxyaccount-extended-stored-procedure-with-new-stored-procedures"></a>Reemplazar el uso del procedimiento almacenado extendido xp_sqlagent_proxy_account con nuevos procedimientos almacenados
   El Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varios servidores proxy. Puede definir estos servidores proxy utilizando un nuevo conjunto de procedimientos almacenados. Para obtener más información sobre los nuevos procedimientos almacenados del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea los temas siguientes en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  

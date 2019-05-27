@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1e391bc85bc74ac9bd7394161298b190426926ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 436d90b75a5995ac8f455a52ebfffe662b1f9b7f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62473486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094462"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>Instalar las características de SQL Server BI con SharePoint (PowerPivot y Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se pueden integrar con una granja de Microsoft SharePoint para habilitar las características de Business Intelligence (BI) en SharePoint. Entre las características se incluyen [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]y [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] se utiliza para [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] acceso a datos en una granja de SharePoint. [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es el motor de datos para los libros creados en [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel y accesibles desde una biblioteca de SharePoint. Una vez que guarde un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SharePoint, puede utilizarlo como origen de datos para los informes de [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] .  

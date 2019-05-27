@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 09/23/2015
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - credentials [Reporting Services]
@@ -16,12 +15,12 @@ ms.assetid: dc700922-97fa-4b30-9547-05bbbec4f09c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e80e271d4d6ba1afff54143ad6926a5e5884d3d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 990e5b3c13ced56e78170cb9530f35277174b4cb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720561"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107005"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Almacenamiento de las credenciales en un origen de datos de Reporting Services
   Es posible configurar credenciales almacenadas que un servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] use para obtener acceso a los datos externos de un informe. Las credenciales almacenadas se utilizan si un informe se ejecuta de forma desatendida, por ejemplo, una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] que publica un informe como correo electrónico. El servidor de informes recupera y usa las credenciales cuando se programa o desencadena el procesamiento de informes. En este tema se explica cómo configurar credenciales almacenadas para los servidores de informes en modo Nativo y en modo de SharePoint.  

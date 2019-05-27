@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 45da4fef-2b02-40e1-977c-f8f80d87155e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: cc9b19a2693f28ccbfd3811ba81f8fb7b90de61b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 92b068b4bfa7f8b61b5be0904bc47cf080afc861
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106842"
 ---
 # <a name="add-a-gauge-to-a-report-report-builder-and-ssrs"></a>Agregar un medidor a un informe (Generador de informes y SSRS)
   Si desea resumir datos y presentarlos con un formato visual, puede usar una región de datos del medidor. Después de agregar una región de datos del medidor a la superficie de diseño, puede arrastrar los campos de conjunto de datos de informe a un panel de datos del medidor.  

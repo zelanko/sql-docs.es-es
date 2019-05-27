@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - keywords [SQL Server], after upgrade
@@ -15,12 +14,12 @@ ms.assetid: cb242081-54f8-4273-a8ef-52f3751c25ef
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8db9bcef48b28594187aab34fb0049689d907a47
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: d187fbe95a75091b0cbcf4bf09225c5f60a9af01
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53376237"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096891"
 ---
 # <a name="after-upgrade-new-reserved-keywords-cannot-be-used-as-identifiers"></a>Después de la actualización, las nuevas palabras clave reservadas no se pueden utilizar como identificadores
   El Asesor de actualizaciones detectó el uso de palabras que son palabras clave reservadas. Una palabra clave reservada no se puede utilizar como identificador o nombre de objeto a menos que el nombre se delimite.  

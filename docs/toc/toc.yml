@@ -2407,6 +2407,8 @@
           items:
             - name: Llamar a Java desde SQL Server
               href: ../language-extensions/how-to/call-java-from-sql.md
+            - name: SDK de extensibilidad para Java
+              href: ../language-extensions/how-to/extensibility-sdk-java-sql-server.md
             - name: Tipos de datos Java a SQL
               href: ../language-extensions/how-to/java-to-sql-data-types.md
             - name: Crear un archivo jar de Java

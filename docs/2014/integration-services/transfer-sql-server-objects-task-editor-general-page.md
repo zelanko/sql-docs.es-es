@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.transfersqlserverobjects.general.f1
@@ -15,12 +14,12 @@ ms.assetid: dedd85df-8f6a-40a4-ba28-ca35cdfa3982
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: aa17cef1fddd5d131424dc645763683d59b75325
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5fba4bafe61090e3b7bb89129e5ecefd0befc7d9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766208"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054892"
 ---
 # <a name="transfer-sql-server-objects-task-editor-general-page"></a>Editor de la tarea Transferir objetos de SQL Server (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Transferir objetos de SQL Server** para describir y asignar un nombre a la tarea Transferir objetos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para obtener más información acerca de esta tarea, vea [Transfer SQL Server Objects Task](control-flow/transfer-sql-server-objects-task.md).  

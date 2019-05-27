@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], data flow
@@ -14,12 +13,12 @@ ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: f7ece364cb1d0bbe2cc36b07de58873fc95acaed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bc9f6c28e775cdbd21806172d7074e655fdd1545
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62877932"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054819"
 ---
 # <a name="use-an-expression-in-a-data-flow-component"></a>utilizar una expresión en un componente de flujo de datos
   Este procedimiento describe cómo agregar una expresión a la transformación División condicional o a la transformación Columna derivada. La transformación División condicional utiliza expresiones para definir las condiciones que dirigen las filas de datos a una salida de transformación y la transformación Columna derivada utiliza expresiones para definir los valores asignados a las columnas.  

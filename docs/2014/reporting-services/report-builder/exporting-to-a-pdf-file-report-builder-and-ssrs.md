@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f22497b7-f6c1-4c7b-b831-8c731e26ae37
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1675221a4d6cfc8ad61a975610113435423ae05b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3eb41d807a1b4678882c791a7bdeb7693de7b08
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62987114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107919"
 ---
 # <a name="exporting-to-a-pdf-file-report-builder-and-ssrs"></a>Exportar a un archivo PDF (Generador de informes y SSRS)
   La extensión de representación en PDF representa un informe en archivos que se pueden abrir en Adobe Acrobat y en visores de PDF de otros fabricantes que admiten PDF 1.3. Aunque PDF 1.3 es compatible con Adobe Acrobat 4.0 y versiones posteriores, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] admite Adobe Acrobat 6 o posterior. La extensión de representación no requiere el software Adobe para representar el informe. Sin embargo, se necesitan visores de PDF, como Adobe Acrobat, para ver o imprimir un informe en formato PDF.  

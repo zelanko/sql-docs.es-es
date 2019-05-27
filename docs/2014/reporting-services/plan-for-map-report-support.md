@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5ddc97a7-7ee5-475d-bc49-3b814dce7e19
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2236103c76c6af8f81b0d4004962c23adedc2eaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df796e2dd4e132164f00716a9cb12f7b498d8984
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188245"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108079"
 ---
 # <a name="plan-for-map-report-support"></a>Planear la compatibilidad de informe de mapa
   [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] admite informes de mapas que usan orígenes de datos espaciales. Los datos espaciales pueden proceder de bases de datos de SQL Server, de archivos de forma ESRI o de la galería de mapas que se instala con Reporting Services o con el Generador de informes. Un mapa también puede mostrar un fondo de mosaicos de mapa de Bing. Un autor de informes puede crear un informe que especifique datos espaciales o mosaicos de mapa de Bing como dinámicos y recuperados en el tiempo de ejecución o como estáticos e incrustados en la definición de informe.  

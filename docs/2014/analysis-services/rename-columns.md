@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 056f386db58f01f663cc04e82ce04e0c6c6597a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 80d9cae6deae4059327084f531f6a6d958a39ec6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748247"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070318"
 ---
 # <a name="lesson-3-rename-columns"></a>Lección 3: Cambiar el nombre de las columnas
   En esta lección, cambiará el nombre de muchas de las columnas de cada tabla que ha importado. El cambio de nombre permite navegar de forma más sencilla por el diseñador de modelos y facilita la selección de campos de los usuarios en una aplicación cliente. Para obtener más información, consulte [Cambiar el nombre de una tabla o una columna &#40;SSAS tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  
@@ -27,7 +26,7 @@ ms.locfileid: "62748247"
  Tiempo estimado para completar esta lección: **20 minutos**  
   
 ## <a name="prerequisites"></a>Requisitos previos  
- Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Agregar datos](lesson-2-add-data.md).  
+ Este tema es parte de un tutorial de creación de modelos tabulares, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Agregar datos](lesson-2-add-data.md).  
   
 ## <a name="rename-columns"></a>Cambiar el nombre de las columnas  
   
@@ -66,7 +65,7 @@ ms.locfileid: "62748247"
     |NumberCarsOwned|Número de vehículos en propiedad|  
     |AddressLine1|Línea de dirección 1|  
     |AddressLine2|Línea de dirección 2|  
-    |Teléfono|Número de teléfono|  
+    |Phone|Número de teléfono|  
     |DateFirstPurchase|Fecha de la primera compra|  
     |CommuteDistance|Commute Distance|  
   

@@ -1,7 +1,7 @@
 ---
 title: Conectar al motor de base de datos con protección ampliada | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/21/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: d04f5e640f7622b5eab6106da29366f164fb6878
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7728a43645b2cd177bcc572a392481a7c5aa9510
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59774550"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015009"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,13 +81,13 @@ ms.locfileid: "59774550"
      Cuando un servidor se conoce por más de un SPN, se necesita la variable **Se aceptan SPN NTLM** . Cuando un cliente intenta conectarse al servidor utilizando un SPN válido que el servidor no conoce, el enlace de servicio dará un error. Para evitar este problema, los usuarios pueden especificar varios SPN que representan al servidor utilizando **Se aceptan SPN NTLM**. **Se aceptan SPN NTLM** es una serie de SPN separados por punto y coma. Por ejemplo, para permitir los SPN **MSSQLSvc/ nombreDeHost1.Contoso.com** y **MSSQLSvc/ nombreDeHost2.Contoso.com**, escriba **MSSQLSvc/nombreDeHost1 .Contoso.com; MSSQLSvc/nombreDeHost2.Contoso.com** en el cuadro **Se aceptan SPN NTLM** . La variable tiene una longitud máxima de 2.048 caracteres. **Se aceptan SPN NTLM** está en **Propiedades de Protocolos de MSSQLSERVER (pestaña Avanzadas)** en el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ## <a name="enabling-extended-protection-for-the-database-engine"></a>Habilitar la protección ampliada para el motor de base de datos  
- Para usar la **protección ampliada**, tanto el servidor como el cliente deben tener un sistema operativo en el que se admita la **protección ampliada**y la **protección ampliada** debe estar habilitada en el sistema operativo. Para obtener más información acerca de cómo habilitar la **protección ampliada** para el sistema operativo, vea [Protección ampliada para la autenticación](https://support.microsoft.com/kb/968389).  
+ Para usar la **protección ampliada**, tanto el servidor como el cliente deben tener un sistema operativo en el que se admita la **protección ampliada**y la **protección ampliada** debe estar habilitada en el sistema operativo. Para obtener más información acerca de cómo habilitar la **protección ampliada** para el sistema operativo, vea [Protección ampliada para la autenticación](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview).  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite la **protección ampliada** a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. La**protección ampliada** para algunas versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estará disponible en actualizaciones futuras. Después de habilitar la **protección ampliada** en el equipo servidor, siga estos pasos para volver a habilitar la **protección ampliada**en el motor de base de datos:  
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<_nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<_nombreDeInstancia *>* y, luego, haga clic en **Propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   

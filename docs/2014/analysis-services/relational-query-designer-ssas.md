@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.relquerydesginer.f1
@@ -13,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5c57ef0020031e944d1c482bf7ec9bc3928681a4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748567"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070462"
 ---
 # <a name="relational-query-designer-ssas"></a>Diseñador de consultas relacionales (SSAS)
   El diseñador de consultas relacionales le ayuda a crear una consulta que especifica los datos que hay que recuperar de las bases de datos relacionales de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] y del [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]. Use el diseñador gráfico de consultas para explorar los metadatos, crear la consulta de forma interactiva y ver los resultados de la misma.  Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas o para modificar una consulta. También puede importar una consulta existente de un archivo o informe.  

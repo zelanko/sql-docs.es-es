@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - rsconfig utility
@@ -17,17 +16,17 @@ ms.assetid: 68f2f9f4-f894-40ff-a71c-f9756bf4b68c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8f0f03f15e75d71378c2cccca13b8fe50dbbc473
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 07da79ea46ca0e9e23abb7197730821d8c31bfa8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201366"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100001"
 ---
 # <a name="report-server-command-prompt-utilities-ssrs"></a>Utilidades del símbolo del sistema del servidor de informes (SSRS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] incluye varias utilidades de la línea de comandos que se pueden utilizar para administrar un servidor de informes. Estas utilidades se instalan automáticamente cuando se instala el servidor de informes.  
   
-|Nombre|Archivo de comandos|Modo de implementación admitido|Descripción|  
+|NOMBRE|Archivo de comandos|Modo de implementación admitido|Descripción|  
 |----------|------------------|-------------------------------|-----------------|  
 |Utilidad RSS|rs.exe|Modo nativo y modo de SharePoint. La compatibilidad con el modo de SharePoint se introdujo con la versión [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] .|La [utilidad rs](rs-exe-utility-ssrs.md) es un host de script que se puede utilizar para llevar a cabo operaciones de script. Use esta herramienta para ejecutar scripts de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] que copian datos entre distintas bases de datos del servidor de informes, publican informes, crean elementos en una base de datos del servidor de informes, etc. Para más información sobre cómo usar scripts para administrar un servidor, vea [Script para tareas administrativas y de implementación](script-deployment-and-administrative-tasks.md).|  
 |Cmdlets de Powershell||Solo SharePoint|Para consultar una lista de los cmdlets de PowerShell, vea [Cmdlets de PowerShell para el modo de SharePoint de Reporting Services](../powershell-cmdlets-for-reporting-services-sharepoint-mode.md).|  

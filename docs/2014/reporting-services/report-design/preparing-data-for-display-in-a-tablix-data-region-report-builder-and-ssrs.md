@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: fbb00dc6-7887-480c-b771-cab6fecb8dcc
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 99bb694ee30a85d0f2cf484dd0c80836d2201a12
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 86418fd892c4f403f1e0207073a28e7933eb4b58
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59963091"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105417"
 ---
 # <a name="preparing-data-for-display-in-a-tablix-data-region-report-builder-and-ssrs"></a>Preparar datos para su presentación en una región de datos Tablix (Generador de informes y SSRS)
   Una región de datos Tablix muestra los datos de un conjunto de datos. Puede ver todos los datos recuperados para el conjunto de datos o puede crear filtros para ver solo un subconjunto de los datos. También puede agregar expresiones condicionales para rellenar los valores NULL o modificar la consulta para que un conjunto de datos incluya columnas que definan el criterio de ordenación para una columna existente.  

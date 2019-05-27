@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5360fefa-1362-4102-bfd1-81d3d313c2b6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 64040ce6a938f2456d3d655aad6dfbcd4abf3e29
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcff47cf725fd5b9fd059e6a06b075be00c5e808
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647048"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098702"
 ---
 # <a name="view-page-resources-report-manager"></a>Página Ver, recursos (Administrador de informes)
   Use la página Ver para ver un recurso. Un recurso es un elemento que se almacena y administra en un servidor de informes, pero no se procesa allí (un servidor de informes procesa informes y modelos). Los recursos se pueden utilizar cuando se deseen almacenar documentos arbitrarios, imágenes u otros archivos que el servidor no procesa. La mayoría de los archivos de imagen, como JPG, GIF y PNG, se pueden ver en la página Ver del Administrador de informes. Los demás recursos se abren en una ventana de aplicación distinta.  

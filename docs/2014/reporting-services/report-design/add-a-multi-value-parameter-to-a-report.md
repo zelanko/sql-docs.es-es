@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 12ad0e77-4c28-4bbb-ab11-473ae89ec9f1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e974ab95f2e4ad5543a33f37af168a5f3b870eb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 72a827e8f15627e986008e57ecb9a180b715a8a1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206827"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106812"
 ---
 # <a name="add-a-multi-value-parameter-to-a-report"></a>Agregar un parámetro de varios valores a un informe
   Puede agregar un parámetro a un informe que permita al usuario seleccionar más de un valor para el parámetro.  

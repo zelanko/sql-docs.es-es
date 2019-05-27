@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SSRS, tools
@@ -22,12 +21,12 @@ ms.assetid: 23d616e3-eb90-43fb-9b7a-869bd7e22e7b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 8cbe5a25ef6ca87c2ffa5fd83c8ff1ca0796fdae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 21c56f28a6f65b22d8fe334a1046f44f868c4453
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201744"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099911"
 ---
 # <a name="reporting-services-tools"></a>Herramientas de Reporting Services
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] contiene un conjunto de herramientas gráficas y de scripting que admiten el desarrollo y la utilización de informes completos en un entorno administrado. El conjunto de herramientas incluye herramientas de desarrollo, herramientas de configuración y administración, y herramientas de visualización de informes. Este tema proporciona una breve información general de cada herramienta de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y cómo se puede obtener acceso a ella.  

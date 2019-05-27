@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - roles [Reporting Services], creating
@@ -19,12 +18,12 @@ ms.assetid: 3d1d56e6-a283-44a7-8417-36cb4d2c74d1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 703615793c1c9ced7252a03e7597b701c977fbdd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 066c69298126cbc635d388d75659b98dcff95917
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306548"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101808"
 ---
 # <a name="create-delete-or-modify-a-role-management-studio"></a>Crear, eliminar o modificar un rol (Management Studio)
   Reporting Services proporciona roles predefinidos que definen un nivel de acceso a un servidor de informes. Cada usuario o grupo que requiere acceso al servidor de informes lo hace a través de un rol que describe las tareas que se pueden realizar. Los roles se definen para el servidor de informes como un conjunto. No puede variar una definición de roles para partes concretas del servidor de informes ni especificar que se use un rol de manera diferente dependiendo de las circunstancias.  

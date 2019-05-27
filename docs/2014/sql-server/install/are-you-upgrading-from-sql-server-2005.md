@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3d50a66a-1845-4116-8b3a-7b5a2eeb78e6
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e3f76346bf77e782eb47999a7acc36369fbec104
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5795d91c02227db555401b3474e19ae39f9dd759
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214911"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096720"
 ---
 # <a name="are-you-upgrading-from-sql-server-2005"></a>¿Desea actualizar desde SQL Server 2005?
   Como el soporte extendido de SQL Server 2005 llega a su fin, es un buen momento para actualizar a una versión más reciente de SQL Server y a Base de datos SQL de Azure. La actualización permite mantener la seguridad y el cumplimiento, lograr un rendimiento excepcional y optimizar la infraestructura de su plataforma de datos.  

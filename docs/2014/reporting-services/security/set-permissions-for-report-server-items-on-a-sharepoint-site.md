@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -14,12 +13,12 @@ ms.assetid: 2467c657-a3bf-4ec3-a88c-8877df19823d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d55ef7730032c782997a75c2b85f402626a89ad8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 9c8c0e8f0714efb337d78d4440938dcb5a332fcf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306253"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101563"
 ---
 # <a name="set-permissions-for-report-server-items-on-a-sharepoint-site-reporting-services-in-sharepoint-integrated-mode"></a>Establecer permisos para elementos del servidor de informes en un sitio de SharePoint (Reporting Services en el modo integrado de SharePoint)
   Si la configuración de seguridad predeterminada no proporciona el nivel de acceso necesario, puede crear nuevos niveles de permisos para proporcionar acceso a elementos u operaciones específicos del servidor de informes. La configuración de seguridad personalizada puede ser útil si desea restringir el acceso a un informe determinado.  

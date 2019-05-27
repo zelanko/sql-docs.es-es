@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.connectiondialog.F1
@@ -15,12 +14,12 @@ ms.assetid: 8b9ea8d3-827c-4011-9e02-be2eac3bb364
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 95062797cdfe8f2ab4bc2f3b8b8bb2735d2d0dcf
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 6fd7ff677fdbbfa91b616fd6a561d3eb48c2de57
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096059"
 ---
 # <a name="connect-to-a-native-mode-report-server"></a>Conectarse a un servidor de informes en modo nativo
   Utilice este cuadro de diálogo para conectarse a una instancia del servidor de informes de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] o posterior, local o remota. No puede usar esta herramienta para conectarse a las versiones anteriores de los servidores de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Solo puede conectarse a una instancia cada vez.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 0445b0ac-acae-4462-80fb-fe9735ac66db
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 89dc9cf211a9ab66c5617b6ef545795f332546f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1828f0f76963cea8cf792c17a251c843a93b5b0c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206486"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106561"
 ---
 # <a name="add-or-delete-a-group-in-a-chart-report-builder-and-ssrs"></a>Agregar o eliminar un grupo en un gráfico (Generador de informes y SSRS)
   Haga clic en la región de datos del gráfico para mostrar el panel **Datos del gráfico** . Cree grupos arrastrando los campos del conjunto de datos a las áreas **Grupos de categorías** y **Grupos de series** . Para agregar grupos anidados, agregue varios campos al área.  

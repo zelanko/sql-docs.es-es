@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.deploymentwizard.confirminstallation.f1
@@ -22,12 +21,12 @@ ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 68f464d49680e3563f44768e9d8ad29d947a8b24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f907127ff9863b696843a7d17e8df9950cd99c7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62890278"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056824"
 ---
 # <a name="package-installation-wizard-ui-reference"></a>Referencia de la interfaz de usuario del Asistente para la instalación de paquetes
   Use el **Asistente para la instalación de paquetes** para implementar un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , incluidos los paquetes y los distintos archivos que contienen, así como las dependencias del paquete.  

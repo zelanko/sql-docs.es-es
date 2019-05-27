@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], inactive
@@ -17,12 +16,12 @@ ms.assetid: 054c4a87-60bf-4556-9a8c-8b2d77a534e6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d93314c6cfe7f260422cfc1f0e4eb28d934bc305
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 998a7823721b8c978e2b8bfd21b6308507a8963c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63238300"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100757"
 ---
 # <a name="monitor-reporting-services-subscriptions"></a>Supervisar suscripciones de Reporting Services
   Puede supervisar las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] desde la interfaz de usuario, Windows PowerShell o los archivos de registro. Las opciones disponibles para la supervisión dependen del modo de servidor de informes que esté ejecutando.  
@@ -99,7 +98,7 @@ ms.locfileid: "63238300"
   
 ||||||||  
 |-|-|-|-|-|-|-|  
-|date|Procesar|Área|Category|Nivel|Correlation|de mensaje|  
+|date|Process|Área|Category|Nivel|Correlation|de mensaje|  
 |5/21/2014 14:34:06:15|Grupo de aplicaciones: a0ba039332294f40bc4a81544afde01d|SQL Server Reporting Services|Extensión de correo electrónico del servidor de informes|Inesperado|(vacío)|**Error al enviar correo electrónico.** Excepción: System.Net.Mail.SmtpException: Buzón no disponible. La respuesta del servidor fue: 5.7.1 el cliente no tiene permisos para enviar como este remitente en System.Net.Mail.DataStopCommand.CheckResponse (SmtpStatusCode statusCode, String serverResponse) en System.Net.Mail.DataStopCommand.Send (SmtpConnection conn) en System.Net.Mail.SmtpClient.Send (MailMessage message) en Microsoft.ReportingServices.EmailDeliveryProvider.EmailProvider.Deliver (Notification notification)|  
   
 ##  <a name="bkmk_use_powershell"></a> Usar PowerShell para supervisar suscripciones  

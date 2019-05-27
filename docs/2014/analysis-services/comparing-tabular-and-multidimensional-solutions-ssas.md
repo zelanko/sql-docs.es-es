@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 76ee5e96-6a04-49af-a88e-cb5fe29f2e9a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 498cba5d7ccb4e97de13d9cb46e58351547d9b75
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680825"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087772"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparar soluciones tabulares y multidimensionales (SSAS)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona dos enfoques distintos para el modelado de datos: tabular y multidimensional. Aunque existe una superposición significativa entre ellos, también hay diferencias importantes que influirán en su decisión sobre cómo avanzar. En este tema se ofrecen comparaciones de características y se explica cómo cada enfoque aborda los requisitos de proyecto comunes. Por ejemplo, si la compatibilidad de un origen de datos concreto es una consideración fundamental, la sección sobre orígenes de datos puede servirle de guía para tomar la decisión sobre qué enfoque de modelado usar.  
@@ -98,10 +97,10 @@ ms.locfileid: "62680825"
 ||||  
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
-|Acciones|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|No|  
-|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|No|  
+|Acciones|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sin |  
+|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Sin |  
 |Medidas calculadas|[Sí](multidimensional-models/create-calculated-members.md)|Sí|  
-|Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
+|Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|Sin |  
 |Resúmenes personalizados|Sí|No|  
 |Distinct Count|[Sí](multidimensional-models/use-aggregate-functions.md)|Sí (mediante DAX) *|  
 |Obtención de detalles|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sí|  

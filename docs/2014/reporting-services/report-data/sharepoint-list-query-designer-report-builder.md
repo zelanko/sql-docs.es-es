@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10016"
@@ -13,12 +12,12 @@ ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7d26534094e8e21029d9836c0cad065e1a76bdd3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e16dc91040596b1d083226683abe76a7e2e2c4ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720516"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107069"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Diseñador de consultas de lista de SharePoint (Generador de informes)
   El Generador de informes proporciona tanto un diseñador gráfico de consultas como un diseñador de consultas basado en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de un sitio de SharePoint para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos de la lista de SherPoint, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas, modificar una consulta o escribir los comandos de la consulta. También puede importar una consulta existente de un archivo o informe.  

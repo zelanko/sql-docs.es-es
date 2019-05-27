@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - digital signatures [Integration Services]
@@ -15,12 +14,12 @@ ms.assetid: 182b115e-0fe2-4717-8dff-183f9eb6e397
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c6da9652c18bd6e8093a38d337b61171bc448341
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 31da686dbf25922205ea4d1b03ecaa3758457573
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66055615"
 ---
 # <a name="sign-a-package-by-using-a-digital-certificate"></a>Firmar un paquete mediante un certificado digital
   En este tema se describe cómo firmar un paquete de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] con un certificado digital. Puede utilizar una firma digital, junto con otros valores de configuración, para evitar que se cargue y se ejecute un paquete que no es válido.  

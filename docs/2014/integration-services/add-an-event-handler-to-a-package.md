@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - event handlers [Integration Services], creating
@@ -13,12 +12,12 @@ ms.assetid: 5e56885d-8658-480a-bed9-3f2f8003fd78
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c64d535e7e712dde5dd98e8b4c14b3319d5947db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 589d90b52647241b22929473efc9c6e54eb3b75f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62772243"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062029"
 ---
 # <a name="add-an-event-handler-to-a-package"></a>agregar un controlador de eventos a un paquete
   En tiempo de ejecución, los contenedores y tareas producen eventos. Puede crear controladores de eventos personalizados que respondan a estos eventos ejecutando un flujo de trabajo cuando se produce el evento. Por ejemplo, puede crear un controlador de eventos que envíe un mensaje de correo electrónico cuando una tarea genera un error.  

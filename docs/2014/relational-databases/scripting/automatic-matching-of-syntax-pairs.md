@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [SQL Server], delimiter highlighting
@@ -14,12 +13,12 @@ ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c62ca169091e1ac33815c3c8a4b0c7bf771a1adf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 530747edf03e9790c2f728ec5485d305da046d08
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209421"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064148"
 ---
 # <a name="automatic-matching-of-syntax-pairs"></a>Coincidencia automática de pares en la sintaxis
   La coincidencia automática de pares en la sintaxis informa de manera inmediata sobre si están escritos correctamente los elementos de sintaxis que deben ir emparejados en el código. Esto se conoce como coincidencia de delimitadores en el Editor de consultas de [!INCLUDE[ssDE](../../includes/ssde-md.md)] , coincidencia de llaves en el Editor de consultas XMLA de Analysis Services y coincidencia de paréntesis en los editores MDX y DMX.  

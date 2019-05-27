@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.flatfilesourceadapter.connection.f1
@@ -15,12 +14,12 @@ ms.assetid: 2efd6baa-ed75-4f3f-b667-514024cebdb8
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e486f089ca261cbe5ea09cf7c9d38bc8fcdedbc9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d3c729faa93cf445e7e0aff46fa94258bc7ea7a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768271"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058689"
 ---
 # <a name="flat-file-source-editor-connection-manager-page"></a>Editor de origen de archivos planos (página Administrador de conexiones)
   Utilice la página **Administrador de conexiones** del cuadro de diálogo **Editor de origen de archivos planos** para seleccionar el administrador de conexiones que utilizará el origen de archivos planos. El origen de archivos planos lee los datos de un archivo de texto, que pueden estar en formato delimitado, tener un ancho fijo o ser mixtos.  

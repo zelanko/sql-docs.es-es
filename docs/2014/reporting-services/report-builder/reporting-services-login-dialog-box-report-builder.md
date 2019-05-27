@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10059"
@@ -13,12 +12,12 @@ ms.assetid: daf5eec6-f9d2-475c-8c65-9cf74e5523a2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e82aefb411f35e5eb8ad33cb16650e6963a461d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 16da6af99af021185c8965dccd087e1c8420e50a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156640"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107656"
 ---
 # <a name="reporting-services-login-dialog-box-report-builder"></a>Inicio de sesión de Reporting Services (cuadro de diálogo del Generador de informes)
   Utilice el cuadro de diálogo **Inicio de sesión de Reporting Services** para proporcionar credenciales para publicar informes en el servidor de informes. Para obtener ayuda con estos credenciales, póngase en contacto con el administrador del servidor de informes.  

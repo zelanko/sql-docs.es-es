@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - discretization [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 3c49862b-595d-4fa4-b890-e2e1bde1d74f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d69ba0371f77692f53464cc889ae8204f87d4cd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d2296eadc16d5ca1745fe940d1f5e7582ef30db6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689388"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085894"
 ---
 # <a name="change-the-discretization-of-a-column-in-a-mining-model"></a>Cambiar la discretización de una columna en un modelo de minería de datos
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] discretiza valores automáticamente: es decir, agrupa los datos de numérico columna en determinados escenarios. Por ejemplo, si la información contiene datos numéricos continuos y crea un modelo de árbol de decisión, cada columna de datos continuos se discretizará automáticamente según la distribución de los datos. Si desea controlar cómo se discretizan los datos, debe cambiar las propiedades en la columna de la estructura de minería de datos que controlan cómo se usan los datos en el modelo.  

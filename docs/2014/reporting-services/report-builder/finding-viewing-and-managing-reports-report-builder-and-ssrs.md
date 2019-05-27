@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 543edca0cbe8fd376df75158a2c4c8c5aba1cdca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6e2dc5a7ff69a61aae3d72fb9d9feca6abc3253c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63205241"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107825"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
   En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10134"
@@ -16,12 +15,12 @@ ms.assetid: df49e4e3-f279-4c63-a03b-b70c095f4ba2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 66dadc7a6163b8da7024818a9ecee16d5b3df696
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: fb96831c54a67a6ea74ca984cb346dcaaf50a335
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215067"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104630"
 ---
 # <a name="text-boxes-report-builder-and-ssrs"></a>Cuadros de texto (Generador de informes y SSRS)
   Al pensar en un cuadro de texto, probablemente se imagina un cuadro independiente que contiene el texto en una superficie como la de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office PowerPoint. En el Generador de informes algunos cuadros de texto son así y pueden mostrar el texto literal de títulos, descripciones y etiquetas, o texto dinámico basado en expresiones. Además, todas las celdas de una tabla o una matriz (región de datos de Tablix) contienen un cuadro de texto, al que se puede dar formato de la misma manera que a los cuadros de texto independientes de un informe.  

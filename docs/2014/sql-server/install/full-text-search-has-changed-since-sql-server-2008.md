@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d253bb05-9166-4b50-bd4a-27b818f514e0
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c6a5301a972775d262f0b7d4640880610bef3b9d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59591056d107e8cc53863ca537dc57aaba7f6d26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63127073"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66095144"
 ---
 # <a name="full-text-search-has-changed-since-sql-server-2008"></a>La búsqueda de texto completo ha cambiado desde SQL Server 2008
   El Asesor de actualizaciones detectó que la búsqueda de texto completo va a ser actualizada. Muchas opciones y valores de configuración de la búsqueda de texto completo han cambiado. Por consiguiente, al actualizar a la búsqueda de texto completo de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , es posible que sea necesario modificar algunos valores.  

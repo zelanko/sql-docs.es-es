@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f130562e-5673-40e3-8e01-de7227a21d41
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 33252d10da04299c4b4f4e6177745567335a5256
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0031e215c0674f87620e283a7bf903b174a40ae3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206913"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106918"
 ---
 # <a name="add-a-bookmark-to-a-report-report-builder-and-ssrs"></a>Agregar un marcador a un informe (Generador de informes y SSRS)
   Agregue marcadores y vínculos de marcador a un informe si desea incluir una tabla de contenido personalizada o vínculos de navegación interna personalizados en el informe. Normalmente, se agregan marcadores a las ubicaciones del informe a las que se desea dirigir a los usuarios, como las tablas, los gráficos o los valores de grupo únicos mostrados en una tabla o matriz. Puede crear sus propias cadenas para usarlas como marcadores o, para los grupos, puede establecer el marcador en la expresión de grupo.  

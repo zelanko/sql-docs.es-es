@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - sp_helptrigger
@@ -13,12 +12,12 @@ ms.assetid: b7c42a8f-f2e0-4fa3-b046-3cf39c854c47
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c7ad878072f8139cc95d6dc34c01f5f48835774a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 33d47c858a03766260e8ed8c098fef79e9e4a82f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067603"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093739"
 ---
 # <a name="new-column-in-output-of-sphelptrigger-may-impact-applications"></a>La nueva columna de la salida de sp_helptrigger podría afectar a las aplicaciones
   procedimiento almacenado de trigger_schemaias la última columna del conjunto de resultados devuelto por el sistema sp_helptrigger.  

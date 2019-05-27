@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - no credentials option [Reporting Services]
@@ -29,12 +28,12 @@ ms.assetid: fee1a663-a313-424a-aed2-5082bfd114b3
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3eab390eb43d41d89bc5cf3b1cefe84c121ce9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2d1e804282459972b21303cf795a9c3a88ea93d5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654906"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107038"
 ---
 # <a name="specify-credential-and-connection-information-for-report-data-sources"></a>Especificar información de credenciales y conexión para los orígenes de datos de informes
   Un servidor de informes utiliza credenciales para conectarse a orígenes de datos externos que proporcionan contenido a informes o información de destinatarios a una suscripción controlada por datos. Puede especificar credenciales que utilicen la autenticación de Windows, la autenticación de la base de datos, la autenticación personalizada o que no utilicen autenticación. Al enviar una solicitud de conexión a través de la red, el servidor de informes suplantará una cuenta de usuario o una cuenta de ejecución desatendida. Para obtener más información acerca del contexto de seguridad en el que se realiza una solicitud de conexión, vea [Configuración de orígenes de datos y conexiones de red](#DataSourceConfigurationConnections) más adelante en este tema.  

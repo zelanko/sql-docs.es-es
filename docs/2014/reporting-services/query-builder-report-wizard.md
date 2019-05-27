@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.dataview.vdtquerydesigner.f1
@@ -16,12 +15,12 @@ ms.assetid: 1b0904ea-28c1-448e-b56c-c0fdfbc8b222
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6874f54f70e038cd7cafbb0c82a463513d9ed10d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8d289466fcff56a78172c54f24a093e0af169484
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657611"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107996"
 ---
 # <a name="query-builder-report-wizard"></a>Generador de consultas (Asistente para informes)
   Utilice el Generador de consultas para especificar una consulta que recupera un conjunto de resultados para utilizarlo en un informe. Puede elegir entre dos generadores de consultas:  

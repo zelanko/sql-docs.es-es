@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - tutorials [Analysis Services]
@@ -14,12 +13,12 @@ ms.assetid: db55e226-601a-4026-8651-573195555a59
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ebbb4e6510f8896b9c931d6a582eaf6b3e2b0c24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 174d4ab61cf56f4916babb1639e110162d20e6fd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703128"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66077580"
 ---
 # <a name="multidimensional-modeling-adventure-works-tutorial"></a>Creación de modelos multidimensionales (tutorial de Adventure Works)
   Este es el Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . En este tutorial se describe cómo usar [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] para desarrollar e implementar un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , usando la empresa ficticia [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] para todos los ejemplos.  
@@ -52,7 +51,7 @@ ms.locfileid: "62703128"
 |Lección|Tiempo estimado para completar la lección|  
 |------------|--------------------------------|  
 |[Lección 1: Definir una vista del origen de datos dentro de un análisis Services Project](lesson-1-defining-a-data-source-view-within-an-analysis-services-project.md)|15 minutos|  
-|[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
+|[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)|30 minutos|  
 |[Lección 3: Modificar medidas, atributos y jerarquías](lesson-3-modifying-measures-attributes-and-hierarchies.md)|45 minutos|  
 |[Lección 4: Definir propiedades de dimensión y atributos avanzados](lesson-4-defining-advanced-attribute-and-dimension-properties.md)|120 minutos|  
 |[Lección 5: Definir relaciones entre dimensiones y grupos de medida](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)|45 minutos|  

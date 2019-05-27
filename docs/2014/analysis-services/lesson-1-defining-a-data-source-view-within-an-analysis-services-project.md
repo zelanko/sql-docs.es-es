@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7d3ffabd-78ae-4204-8323-29949d030c16
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a34938d97b26691dad0f1c4800b98af48434d7f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08d4d24f9049c2fd68e827664ecb07393262d8bf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729607"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079208"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: Definición de una vista del origen de datos en un proyecto de Analysis Services
   Para diseñar una aplicación de Business Intelligence en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , primero debe crear un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En este proyecto, debe definir todos los elementos de la solución, empezando por una vista del origen de datos.  
@@ -38,7 +37,7 @@ ms.locfileid: "62729607"
  Compare sus resultados en un archivo de proyecto de ejemplo que se creó para esta lección. Para obtener más información sobre cómo descargar los proyectos de ejemplo relacionados con este tutorial, consulte [SSAS Multidimensional Model Projects for SQL Server 2012](https://go.microsoft.com/fwlink/p/?LinkID=221866) (Proyectos de modelo multidimensional de SSAS para SQL Server 2012) en la página de ejemplos del producto de codeplex.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
+ [Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Crear un proyecto de Analysis Services &#40;SSDT&#41;](multidimensional-models/create-an-analysis-services-project-ssdt.md)   

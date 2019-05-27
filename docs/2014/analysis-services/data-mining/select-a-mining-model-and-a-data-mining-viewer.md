@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Mining Model Viewer [Analysis Services], types
@@ -13,12 +12,12 @@ ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5f1014578527684e9e9e5b66065a5166941f16f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4da674a33d71655b161820cacbfd7ce2f16232af
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62733855"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082879"
 ---
 # <a name="select-a-mining-model-and-a-data-mining-viewer"></a>Seleccionar un modelo de minería de datos y un visor de minería de datos
   Para explorar un modelo de minería de datos puede utilizar uno de los visores de la pestaña **Visor de modelos de minería de datos** en el Diseñador de minería de datos. Puede cambiar fácilmente entre modelos o cambiar el visor que se utiliza.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 28f07c70-7132-4d15-9505-4fdf31dc9cc0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 524fcaea873128ea4bde6ccdc213a29ec31cc77d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2f91cd8a93571b62f57933ff7556004f8c7b42a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62657675"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108043"
 ---
 # <a name="processing-options-properties-page-report-manager"></a>Página de propiedades Opciones de procesamiento (Administrador de informes)
   Use la página de propiedades Opciones de procesamiento para establecer las propiedades de ejecución de informes del informe actualmente seleccionado. Estas opciones determinan cuándo se produce el procesamiento de datos para el informe. Pueden usarse para recuperar los datos de informe durante las horas de menor actividad. Si tiene un informe al que se obtiene acceso con frecuencia, se pueden almacenar en caché copias temporales del mismo para que los usuarios no tengan que esperar si tienen acceso al mismo informe con diferencia de minutos.  

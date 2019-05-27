@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - query-scoped named sets [MDX]
@@ -14,12 +13,12 @@ ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: cbf5ac9c4bbb313ee6e7c608a64409273ef11c0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a611d3d20d269bb9c3fa3a1f764181b1660713b0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62725379"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66074069"
 ---
 # <a name="creating-query-scoped-named-sets-mdx"></a>Crear conjuntos con nombre del ámbito de consulta (MDX)
   Si un conjunto con nombre solo es necesario para una consulta de Expresiones multidimensionales (MDX) única, puede definir ese conjunto con nombre mediante la palabra clave WITH. Un conjunto con nombre que se ha creado con la palabra clave WITH deja de existir cuando cesa la ejecución de la consulta.  

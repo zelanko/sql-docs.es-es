@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.newdatabase.f1
@@ -13,12 +12,12 @@ ms.assetid: ddc7804b-acb0-4ae4-a88f-e8cdf704c341
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1bef5adba44a5202e3cc0fc7f2eb48fae08a0e3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ed652c47be4bfbe2783f5138bb80f8ed9c37dd32
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743724"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072305"
 ---
 # <a name="new-database-dialog-box-analysis-services"></a>Nueva base de datos (cuadro de diálogo, Analysis Services)
   Use el cuadro de diálogo **Nueva base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para crear una nueva base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] vacía. Para mostrar el cuadro de diálogo **Nueva base de datos**, haga clic con el botón derecho en la carpeta **Bases de datos** de una instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en **Explorador de objetos** y seleccione **Nueva base de datos**.  

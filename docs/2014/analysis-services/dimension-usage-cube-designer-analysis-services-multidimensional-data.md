@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.dimensionusagepane.f1
@@ -13,12 +12,12 @@ ms.assetid: 52e62633-856c-4af2-8c8a-d4a5a57351b6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c7561d15eb1a291d39fd481ef2f0a4ed8d221a06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 90eddd7949cee5067e5a00c4d9918d997a2d0df3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731691"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081667"
 ---
 # <a name="dimension-usage-cube-designer-analysis-services---multidimensional-data"></a>Uso de dimensiones (Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use la pestaña **Uso de dimensiones** del Diseñador de cubos para ver y editar las relaciones de dimensiones existentes entre las dimensiones de cubo y los grupos de medida del cubo.  

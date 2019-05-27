@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 7c426b04-4ff6-49ab-8bfd-54074d6ae99d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 324f333a355dfb9813340fd1ed11a6876bd84698
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 455d0981a4b81bc81b2dece8cedbd6ea07e66a21
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730417"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66080535"
 ---
 # <a name="import-from-a-text-file-ssas-tabular"></a>Importar desde un archivo de texto (SSAS tabular)
   Puede importar datos de archivos de Microsoft Excel y archivos de texto usando el Asistente para la importación de tablas.  

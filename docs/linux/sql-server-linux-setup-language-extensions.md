@@ -1,5 +1,5 @@
 ---
-title: Instalar extensiones de lenguaje de máquina SQL Server (Java) en Linux | Microsoft Docs
+title: Instalar extensiones de lenguaje (Java) de SQL Server en Linux | Microsoft Docs
 description: Obtenga información sobre cómo instalar extensiones de lenguaje (Java) de SQL Server en Red Hat, Ubuntu y SUSE.
 author: dphansen
 ms.author: davidph
@@ -10,20 +10,20 @@ ms.prod: sql
 ms.custom: sql-linux
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6d25739fb4f2ef104ba86c8e9124162e67fd8553
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: b694cde8784a1607c85ed9ab7dfcc4d770a6d938
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65995083"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186808"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar extensiones de lenguaje SQL Server de 2019 (Java) en Linux
 
-[SQL Server Machine Learning Services](../advanced-analytics/what-is-sql-server-machine-learning.md) se ejecuta en sistemas operativos de Linux a partir de esta versión preliminar de SQL Server 2019. Siga los pasos descritos en este artículo para instalar la extensión del lenguaje Java. 
-
 Extensiones de lenguaje son un complemento para el motor de base de datos. Aunque puede [instalar el motor de base de datos y extensiones de lenguaje simultáneamente](#install-all), es una práctica recomendada para instalar y configurar primero el motor de base de datos de SQL Server para que pueda resolver los problemas antes de agregar más componentes. 
 
-Ubicación del paquete para las extensiones de Java se encuentran en los repositorios de código fuente de SQL Server para Linux. Si ya ha configurado los repositorios de código fuente para la instalación del motor de base de datos, puede ejecutar el **mssql-server-extensibilidad-java** comandos de instalación con el mismo repositorio de registro del paquete.
+Siga los pasos descritos en este artículo para instalar la extensión del lenguaje Java.
+
+Ubicación del paquete para las extensiones de Java es en los repositorios de origen de SQL Server para Linux. Si ya ha configurado los repositorios de código fuente para la instalación del motor de base de datos, puede ejecutar el **mssql-server-extensibilidad-java** comandos de instalación con el mismo repositorio de registro del paquete.
 
 Extensiones de lenguaje también se admite en los contenedores de Linux. No se proporciona contenedores creados previamente con las extensiones de lenguaje, pero puede crear uno de los contenedores de SQL Server mediante [una plantilla de ejemplo disponible en GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
@@ -185,6 +185,8 @@ sudo zypper install mssql-server-extensibility-java
 
 6. Reinicie el `mssql-launchpadd` service de nuevo.
 
+7. Para cada base de datos que desea usar en las extensiones de lenguaje, deberá registrar el lenguaje externo con [crear LENGUAJE externo](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
+
 ## <a name="verify-installation"></a>Comprobar la instalación
 
 Característica de integración de Java no incluye las bibliotecas, pero puede ejecutar `grep -r JRE_HOME /etc` para confirmar la creación de la variable de entorno JAVA_HOME.
@@ -195,7 +197,7 @@ Para validar la instalación, ejecute un script de Transact-SQL que se ejecuta u
 
 ## <a name="full-install-of-sql-server-and-language-extensions"></a>Instalación completa de SQL Server y extensiones de lenguaje
 
-Puede instalar y configurar el motor de base de datos y Machine Learning Services en un procedimiento mediante la anexión de paquetes de Java y los parámetros en un comando que instala el motor de base de datos.
+Puede instalar y configurar el motor de base de datos y extensiones de lenguaje en un procedimiento mediante la anexión de paquetes de Java y los parámetros en un comando que instala el motor de base de datos.
 
 1. Proporcionar una línea de comandos que incluye el motor de base de datos, además de características de extensión del lenguaje.
 
@@ -235,7 +237,7 @@ Siga el [instalación sin conexión](sql-server-linux-setup.md#offline) instrucc
 
 #### <a name="download-site"></a>Sitio de descarga
 
-Puede descargar paquetes desde [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Todos los paquetes para Java coexisten con el paquete del motor de base de datos. 
+Puede descargar paquetes desde [ https://packages.microsoft.com/ ](https://packages.microsoft.com/). Todos los paquetes para Java se colocan con el paquete del motor de base de datos. 
 
 #### <a name="redhat7-paths"></a>Rutas de acceso de Red Hat/7
 

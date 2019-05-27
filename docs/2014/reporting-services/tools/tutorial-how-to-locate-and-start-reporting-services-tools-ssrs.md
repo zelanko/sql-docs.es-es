@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 12/29/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Builder 1.0, locating and starting tool
@@ -22,12 +21,12 @@ ms.assetid: 51ad69d8-fe92-4662-a7cd-d235692f0c03
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 03fb1d70046fe784fecafd8d9b3092ce21962498
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4edd0b6e3928a2bc3a280403a87eda5bb797e620
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62658014"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66099480"
 ---
 # <a name="tutorial-how-to-locate-and-start-reporting-services-tools-ssrs"></a>Tutorial: Cómo buscar e iniciar herramientas de Reporting Services (SSRS)
   En este tutorial se presentan las herramientas utilizadas para configurar un servidor de informes, administrar las operaciones y el contenido del servidor de informes, y crear y publicar informes. La finalidad de este tutorial es ayudar a los nuevos usuarios a comprender cómo encontrar y abrir las distintas herramientas. Si ya está familiarizado con estas herramientas, puede pasar a los otros tutoriales que le ayudarán a adquirir conocimientos para utilizar [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. Para obtener más información acerca de otros tutoriales, consulte [tutoriales de Reporting Services &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

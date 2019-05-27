@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.dependencynetwork.f1
@@ -13,12 +12,12 @@ ms.assetid: e58ce1b7-20d6-42cb-ade5-916da8471e09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3f907a03df66970d69fe4c6b0379d735af987102
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 819a69ad9c1b1415726d816e2cbc1faa92bd6cd1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732201"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081940"
 ---
 # <a name="dependency-network-tab-mining-model-viewer"></a>Pestaña Red de dependencias (Visor de modelos de minería de datos)
   La pestaña **Red de dependencias** proporciona una vista gráfica de todos los atributos que contiene el modelo de minería de datos, y muestra cómo se relacionan los atributos.  

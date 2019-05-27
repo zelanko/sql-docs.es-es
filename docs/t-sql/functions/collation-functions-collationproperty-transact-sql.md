@@ -16,16 +16,16 @@ helpviewer_keywords:
 - collations [SQL Server], properties
 - COLLATIONPROPERTY function
 ms.assetid: f5029e74-a1db-4f69-b0f5-5ee920c3311d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 66a53dcece274df879242ac8a7d3315882bad84f
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 06d2a9417d001e18b9bb8a5f34ce90575510e649
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572798"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944004"
 ---
 # <a name="collation-functions---collationproperty-transact-sql"></a>Funciones de intercalación: COLLATIONPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,7 +42,7 @@ COLLATIONPROPERTY( collation_name , property )
   
 ## <a name="arguments"></a>Argumentos  
 *collation_name*  
-El nombre de la intercalación. El argumento *nombre_de_la_intercalación* tiene un tipo de datos **nvarchar (128)**, sin valor predeterminado.
+El nombre de la intercalación. El argumento *nombre_de_la_intercalación* tiene un tipo de datos **nvarchar (128)** , sin valor predeterminado.
   
 *property*  
 La propiedad de intercalación. El argumento *propiedad* tiene un tipo de datos **varchar (128)** y puede tener uno de los valores siguientes:

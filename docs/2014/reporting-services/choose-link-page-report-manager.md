@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a89a555d-efa3-45d6-951e-db78ec6a2c8e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e0be564bb0ee1ae18817fb9ae011eb6a040a2ef8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 910b06a5cd7af69cc668fb3054dfdfd98c3ae036
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266056"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109885"
 ---
 # <a name="choose-link-page-report-manager"></a>Elegir vínculo (página del Administrador de informes)
   Use la página Elegir vínculo para elegir un informe diferente en el que basar el informe vinculado actualmente seleccionado. Los informes vinculados se basan en otros informes ya publicados en un servidor de informes. Un informe vinculado usa el diseño y los datos del informe base, pero tiene páginas de propiedades independientes para que pueda personalizar propiedades de parámetro, configuración de seguridad, nombre, descripción y ubicación.  

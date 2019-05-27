@@ -11,12 +11,12 @@ ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6ca421c3d1cdd2be5cbfbc57a867339c2ce2a228
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 015c0f51b728ba3f601722d1d44c1e3b2f173973
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65715911"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198178"
 ---
 # <a name="catalogsetenvironmentvariableprotection-ssisdb-database"></a>catalog.set_environment_variable_protection (base de datos de SSISDB)
 
@@ -33,18 +33,18 @@ ms.locfileid: "65715911"
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno. *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)** .  
   
  [ @sensitive = ] *sensitive*  
  Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena como texto simple. El parámetro *sensitive* es **bit**.  

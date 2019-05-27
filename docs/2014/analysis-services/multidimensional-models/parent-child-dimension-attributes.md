@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - data members [Analysis Services]
@@ -20,12 +19,12 @@ ms.assetid: 249971cc-4bcd-44f1-8241-bdacc04d3d38
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 500740207ea4c020ef7845b5de9e993655d4295d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 35521a8f12d3e5c16e63ba883a2b5d561bde4c96
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62737269"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073479"
 ---
 # <a name="attributes-in-parent-child-hierarchies"></a>Atributos en las jerarquías de elementos primarios y secundarios
   En [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], se realiza normalmente una suposición general sobre el contenido de los miembros de una dimensión. Los miembros hoja contienen datos derivados directamente de los orígenes de datos subyacentes; los miembros no hoja contienen datos derivados de agregaciones realizadas en miembros secundarios.  

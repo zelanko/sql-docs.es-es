@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: af00938a-5a06-4fae-b2fc-f3fb0ca3cea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ca6e9661c65098bed1175c7108b18a482b14a542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 939186d48f7dd8a0cc33b24778bf8948f9938a70
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62730328"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079280"
 ---
 # <a name="defining-a-data-source-view"></a>Definir una vista del origen de datos
   Tras definir los orígenes de datos que utilizará en un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], el paso siguiente generalmente consiste en definir una vista del origen de datos para el proyecto. Una vista del origen de datos es una sola vista unificada de metadatos de las tablas y vistas especificadas que el origen de datos define en el proyecto. Almacenar metadatos en la vista del origen de datos permite trabajar con los metadatos durante el proceso de desarrollo sin ninguna conexión abierta con ningún origen de datos subyacente. Para más información, vea [Vistas del origen de datos en modelos multidimensionales](multidimensional-models/data-source-views-in-multidimensional-models.md).  

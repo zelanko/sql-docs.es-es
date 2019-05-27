@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/14/2016
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
 ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords:
 - contained database, threats
 ms.assetid: 026ca5fc-95da-46b6-b882-fa20f765b51d
+author: VanMSFT
 ms.author: vanto
+ms.reviewer: aliceku
 manager: craigg
-ms.openlocfilehash: 0ec072bae284fad63cea677830bad307d9961f4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0a26cf3fa31d7e228b7d74f3c6a68bc5925fc02a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512242"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938191"
 ---
 # <a name="security-best-practices-with-contained-databases"></a>Prácticas recomendadas de seguridad con bases de datos independientes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +57,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ### <a name="creating-a-user-that-duplicates-a-login"></a>Crear un usuario que duplica un inicio de sesión  
  Si se crea un usuario de base de datos independiente con contraseña, con el mismo nombre que un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conecta especificando la base de datos independiente como el catálogo inicial, el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no podrá conectarse. La conexión se evaluará como el usuario de base de datos independiente con entidad de seguridad con contraseña en la base de datos independiente en vez de como usuario basado en el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto podría ocasionar una denegación de servicio intencional o accidental para el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
--   Como práctica recomendada, los miembros del rol fijo de servidor **sysadmin** siempre deben considerar realizar la conexión sin usar la opción de catálogo inicial. De esta forma, se conecta el inicio de sesión a la base de datos maestra y se evita que un propietario de base de datos use incorrectamente el intento de inicio de sesión. Después, el administrador puede cambiar a la base de datos independiente con la instrucción **USE**_\<baseDeDatos>_. Además, puede establecer la base de datos predeterminada del inicio de sesión en la base de datos independiente, que completa el inicio de sesión en la base de datos **maestra**y, a continuación, transfiere el inicio de sesión a la base de datos independiente.  
+-   Como práctica recomendada, los miembros del rol fijo de servidor **sysadmin** siempre deben considerar realizar la conexión sin usar la opción de catálogo inicial. De esta forma, se conecta el inicio de sesión a la base de datos maestra y se evita que un propietario de base de datos use incorrectamente el intento de inicio de sesión. Después, el administrador puede cambiar a la base de datos independiente con la instrucción **USE** _\<baseDeDatos>_ . Además, puede establecer la base de datos predeterminada del inicio de sesión en la base de datos independiente, que completa el inicio de sesión en la base de datos **maestra**y, a continuación, transfiere el inicio de sesión a la base de datos independiente.  
   
 -   Como práctica recomendada, no cree usuarios de bases de datos independientes con contraseñas que tengan el mismo nombre que los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
@@ -87,7 +88,7 @@ ALTER DATABASE DB1 SET TRUSTWORTHY ON;
 ## <a name="denial-of-service-through-autoclose"></a>Denegación de servicio mediante AUTO_CLOSE  
  No configure bases de datos independientes para que se cierren automáticamente. Si se cierra la base de datos, su apertura para autenticar un usuario consume recursos adicionales y podría contribuir a un ataque de denegación de servicio.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Bases de datos independientes](../../relational-databases/databases/contained-databases.md)   
  [Migrar a una base de datos parcialmente independiente](../../relational-databases/databases/migrate-to-a-partially-contained-database.md)  
   

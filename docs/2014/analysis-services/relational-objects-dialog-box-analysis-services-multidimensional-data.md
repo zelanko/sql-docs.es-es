@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.relationalobjectsdialog.f1
@@ -13,12 +12,12 @@ ms.assetid: 662ff835-2132-4171-b0d4-649d5873d052
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: fbb162851b1906ffaf42d5fdda943fea4fc6133f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070353"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Objetos relacionales (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Objetos relacionales** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar tablas, vistas u otros objetos de un origen de datos en el cual desea establecer el almacenamiento en caché automático. Puede visualizar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] haciendo clic en el botón de puntos suspensivos (**…**) de cualquiera de las opciones de **Especificar tablas de seguimiento** de la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** .  

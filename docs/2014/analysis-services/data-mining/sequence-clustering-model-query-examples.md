@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - sequence clustering algorithms [Analysis Services]
@@ -15,12 +14,12 @@ ms.assetid: 64bebcdc-70ab-43fb-8d40-57672a126602
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8f5776d2a7523f4d56bb48926a8f0bf0929e87f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d871ba87147f24fdd60c9effe5f279d9ea355db1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732891"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082922"
 ---
 # <a name="sequence-clustering-model-query-examples"></a>Ejemplos de consultas de modelos de clústeres de secuencia
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre la información almacenada en el modelo, o se puede crear una consulta de predicción, que utiliza los patrones del modelo para realizar predicciones según los datos nuevos que se proporcionen. En un modelo de agrupación en clústeres de secuencia, las consultas de contenido normalmente proporcionan detalles adicionales sobre los clústeres que se encontraron o las transiciones dentro de esos clústeres. También se pueden recuperar metadatos sobre el modelo mediante una consulta.  

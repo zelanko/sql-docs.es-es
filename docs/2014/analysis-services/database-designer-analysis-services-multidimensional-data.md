@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: c30016f0-7e50-44de-b45d-df11b8b34320
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 874d28c4a2ff53f0e9146dbf9a8af5a42f5b6519
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf63755b657ae55085decc9c84e25ee1dd51c553
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732504"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082410"
 ---
 # <a name="database-designer-analysis-services---multidimensional-data"></a>Diseñador de bases de datos (Analysis Services - Datos multidimensionales)
   Use el Diseñador de bases de datos de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para cambiar las propiedades y revisar las advertencias generadas por una base de datos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  

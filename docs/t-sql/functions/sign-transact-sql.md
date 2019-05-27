@@ -21,16 +21,16 @@ helpviewer_keywords:
 - 0 (zero)
 - negative values
 ms.assetid: c3a98b52-6fbe-4127-a5c9-8a4922e83e28
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c2ddba2215d6298baa750b6975fd3873a1d3a684
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8a18a7ce3fabd036adeab48ff83efe437e7a44e1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798233"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942712"
 ---
 # <a name="sign-transact-sql"></a>SIGN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -112,7 +112,7 @@ SELECT SIGN(-125), SIGN(0), SIGN(564);
 -1     0      1
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)  
   
   

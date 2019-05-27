@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 05/24/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 05f2cdfc40c8677bfa38c821cfd849c3ce483c31
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6ae1ee11edd51153585e9a6738bbfbd59af8974f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266467"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109921"
 ---
 # <a name="cache-refresh-options-report-manager"></a>Opciones de actualización de memoria caché (Administrador de informes)
   Utilice la página Opciones de actualización de caché a fin de crear las programaciones para cargar previamente la memoria caché con copias temporales de datos para un informe o un conjunto de datos compartido. Un plan de actualización incluye una programación y la opción para especificar o invalidar los valores de los parámetros. Para un conjunto de datos compartido, no puede invalidar los valores para los parámetros que estén marcados como de solo lectura. Puede crear y utilizar más de un plan de actualización como parte de la página de opciones de actualización.  

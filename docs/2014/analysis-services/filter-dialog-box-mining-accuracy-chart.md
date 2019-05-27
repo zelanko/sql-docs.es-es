@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 71e884a9-7ec4-4459-a4c4-87f6c796d478
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 87d3273367196d2c0c60780a3f1fa125c0b3bf8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 554c7c0f375d63710c86e37666ee98c6dac6daf6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62731318"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66081171"
 ---
 # <a name="filter-dialog-box-mining-accuracy-chart"></a>Cuadro de diálogo Filtrar (gráfico de precisión de minería de datos)
   El cuadro de diálogo **Filtrar** ayuda a generar las condiciones que se pueden aplicar a un conjunto de datos. El conjunto de datos puede ser un conjunto de datos externo que se use para las pruebas o los datos del caso que se usen para entrenar un modelo de minería de datos. Este cuadro de diálogo ayuda a generar criterios que se pueden guardar como parte de criterios de filtro más complejos en los cuadros de diálogo **Filtro de conjunto de datos** o **Filtro del modelo** .  

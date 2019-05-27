@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubewizard.definenewmeasures.f1
@@ -13,12 +12,12 @@ ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3769eaaa3b07c8f62ba8d558a44fdd16c85c2305
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8f526c1327f67bdcf84dce44e670eb195de9a96a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082106"
 ---
 # <a name="define-new-measures-cube-wizard"></a>Definir nuevas medidas (Asistente para cubos)
   Utilice la página **Definir nuevas medidas** para crear medidas nuevas para un cubo que se crea sin utilizar un origen de datos.  

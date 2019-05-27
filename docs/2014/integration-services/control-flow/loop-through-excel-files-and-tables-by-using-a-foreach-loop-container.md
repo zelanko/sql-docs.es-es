@@ -69,7 +69,7 @@ ms.locfileid: "62830586"
   
 ### <a name="to-loop-through-excel-tables-by-using-the-foreach-adonet-schema-rowset-enumerator"></a>Para crear un bucle entre tablas de Excel con el enumerador de conjunto de filas del esquema para Foreach de ADO.NET  
   
-1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para más información, consulte [Add, Delete, or Share a Connection Manager in a Package](../add-delete-or-share-a-connection-manager-in-a-package.md).  
+1.  Cree un administrador de conexiones de ADO.NET que utilice el proveedor OLE DB para Microsoft Jet para conectarse al libro de Excel. En la página Todas del cuadro de diálogo **Administrador de conexiones** , asegúrese de especificar Excel 8.0 como valor para la propiedad Propiedades extendidas. Para obtener más información, consulte [agregar, eliminar o compartir un administrador de conexiones en un paquete](../add-delete-or-share-a-connection-manager-in-a-package.md).  
   
 2.  Cree una variable de cadena que recibirá el nombre de la tabla actual en cada iteración del bucle.  
   

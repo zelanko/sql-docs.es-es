@@ -116,7 +116,7 @@ ms.locfileid: "66108898"
   
 4.  Ahora debería poder para comprobar que ambas instancias del servidor de informes están operativas. Para comprobar la segunda instancia, puede utilizar la herramienta Configuración de Reporting Services con el fin de conectarse al servidor de informes y hacer clic en la dirección URL del servicio web o en la dirección URL del Administrador de informes.  
   
- Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configure a Report Server on a Network Load Balancing Cluster](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
+ Si tiene previsto ejecutar los servidores de informes en un clúster de servidores con equilibrio de carga, son necesarios algunos pasos de configuración adicionales. Para más información, consulte [Configurar un servidor de informes en un clúster con equilibrio de carga de red](../report-server/configure-a-report-server-on-a-network-load-balancing-cluster.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   

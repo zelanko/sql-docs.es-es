@@ -43,7 +43,7 @@ ms.locfileid: "63245995"
 |-|-|  
 |**Descripción**|**Tema**|  
 |Describe cómo notificar a un operador el estado de un trabajo.|[Notify an Operator of Job Status](notify-an-operator-of-job-status.md)|  
-|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Write the Job Status to the Windows Application Log](../../reporting-services/report-server/windows-application-log.md)|  
+|Describe cómo escribir el estado de un trabajo en el registro de aplicación Windows.|[Escribir el estado de un trabajo en el registro de aplicación de Windows](../../reporting-services/report-server/windows-application-log.md)|  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar y responder a eventos](monitor-and-respond-to-events.md)  

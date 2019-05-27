@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 11d72068-2d97-495e-948f-12d1e8c1957d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 22090b659e78ac322aee9376a93f31bebfe77be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e8809b53078387fa58a961458693122753698e4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62988028"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107901"
 ---
 # <a name="exporting-to-xml-report-builder-and-ssrs"></a>Exportar a XML (Generador de informes y SSRS)
   La extensión de presentación en XML devuelve un informe en formato XML. El esquema XML del informe es específico de éste y solamente contiene datos. La extensión de representación en XML no representa la información de diseño ni mantiene la paginación. El XML que genera esta extensión se puede importar a una base de datos, se puede usar como mensaje de datos XML o se puede enviar a una aplicación personalizada.  
@@ -81,7 +80,7 @@ ms.locfileid: "62988028"
   
  Los valores de las variables son los siguientes:  
   
-|Nombre|Valor|  
+|Name|Valor|  
 |----------|-----------|  
 |Informe|Report.DataElementName|  
 |ReportURL|Dirección URL absoluta con codificación URL al informe en el servidor.|  

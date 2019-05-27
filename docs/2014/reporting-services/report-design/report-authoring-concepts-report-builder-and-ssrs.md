@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - concepts
@@ -14,12 +13,12 @@ ms.assetid: 99311b36-5dc5-4039-ac93-4d2826701327
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b7aa95480780c89dadcbcba4b4d08016adae50f4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 14ed49408c980b85e3a45902852f14f61534eec1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215429"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105308"
 ---
 # <a name="report-authoring-concepts-report-builder-and-ssrs"></a>Conceptos de creación de informes (Generador de informes y SSRS)
   En esta sección se definen brevemente los conceptos clave que se usan en la documentación del Generador de informes y del Diseñador de informes. Para obtener definiciones de términos o palabras específicas, vea el [Glosario &#40;Generador de informes&#41;](../report-builder/glossary-report-builder.md).  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectsourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 556e216b-5e21-4160-967d-4c57591fbab4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0f61dea4488e67c8b8c7ebd30920df2ef1774acd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bdb61763a49bad7eae1a49a01633ec8f45e27642
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746897"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069232"
 ---
 # <a name="select-the-source-cube-dimension-data-mining-wizard"></a>Seleccionar la dimensión de cubo de origen (Asistente para minería de datos)
   Utilice la página **Seleccionar la dimensión de cubo de origen** para seleccionar la dimensión desde el cubo que contiene los casos que desea analizar. Por ejemplo, si crea un modelo que analiza el comportamiento adquisitivo de los clientes basándose en los datos demográficos, seleccionaría la dimensión de cliente, que suele contener un registro único para cada cliente y diferentes atributos que representan datos demográficos, como el género, la ubicación o los ingresos. Más adelante en el asistente tendrá la oportunidad de agregar una tabla relacionada con esta tabla de casos: por ejemplo, puede agregar una tabla anidada que muestre los productos que ha comprado el cliente.  

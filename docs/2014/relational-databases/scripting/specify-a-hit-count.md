@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpt.hitcount
@@ -15,12 +14,12 @@ ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b25648aca519534d7b7fdea1177f227275e7b4d3
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: e053de9abdb9806a3294a2904827cf9f29753686
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48060885"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063709"
 ---
 # <a name="specify-a-hit-count"></a>Especificar un número de llamadas
   Un número de llamadas al punto de interrupción es un contador que el depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] incrementa cada vez que se alcanza el punto de interrupción. Si se alcanza el número de llamadas especificado y se satisface la condición de punto de interrupción especificada, el depurador realiza la acción definida para el punto de interrupción.  

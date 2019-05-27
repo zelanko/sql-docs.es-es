@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - shapes, data mining
@@ -16,12 +15,12 @@ ms.assetid: 9566f6a2-c750-4125-ba5e-42c7251a78c7
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 55bdeb41ed62fd727a6e5eb637734a67d21660fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef951825144f381ab37a83526ec96321fe43cfec
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732440"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082279"
 ---
 # <a name="decision-tree-diagram-walkthrough--data-mining-add-ins"></a>Tutorial de diagrama de árbol de decisión (complementos de minería de datos)
   Si ha creado un modelo de árbol de decisión, podrá crear un diagrama personalizado en Visio con la forma Árbol de decisión o la forma Red de dependencias. En este tema se describe las personalizaciones que puede realizar con el **árbol de decisión** forma y estos controles:  

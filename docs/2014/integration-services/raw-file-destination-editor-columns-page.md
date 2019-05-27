@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.rawfiledestinationcolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9bd9b370dbe030a745eb36c475f806316a5ef270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f7921844b5d2281bd6ba9e51855ef37b816cc17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766977"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66056578"
 ---
 # <a name="raw-file-destination-editor-columns-page"></a>Editor de destino de archivo sin formato (página Columnas)
   Use el editor de destino de archivos sin formato para configurar el destino de archivo sin formato con el fin de escribir datos sin formato en un archivo.  

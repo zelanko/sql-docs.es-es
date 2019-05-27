@@ -18,16 +18,16 @@ helpviewer_keywords:
 - assignment operators, ^=
 - augmented operators, ^=
 ms.assetid: ce524b0f-a24d-44e7-bd5b-b6943793cd48
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a03be231ada99c005c435b952c671b0698a0b28d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8c3c2a8a240a0ef233a91ad89a3be5981c4b18e6
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754913"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981313"
 ---
 # <a name="-bitwise-exclusive-or-assignment-transact-sql"></a>^ = (Asignación de OR exclusivo bit a bit) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ expression ^= expression
 ## <a name="remarks"></a>Notas  
  Para más información, vea [^ &#40;OR exclusivo bit a bit&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/bitwise-exclusive-or-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)  (Expressions [Transact-SQL])  
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

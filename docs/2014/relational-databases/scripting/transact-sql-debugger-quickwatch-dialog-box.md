@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.quickwatch
@@ -15,12 +14,12 @@ ms.assetid: d6bbb373-1452-41f2-bdc5-86ae689c3dc0
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 00f54c136441050a5e6e460e7578789f41a569d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 9fcb20846ba21876044d50c80856600214eed354
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48162715"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063385"
 ---
 # <a name="quickwatch-dialog-box"></a>Cuadro de diálogo Inspección rápida
   Utilice el cuadro de diálogo **Inspección rápida** para ver rápidamente el tipo de datos y el valor de una expresión de [!INCLUDE[tsql](../../includes/tsql-md.md)] , como una variable o un parámetro, cuando esté depurando el código de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Para inspeccionar varias expresiones, puede agregar también la expresión a una ventana **Inspección** .  
@@ -42,7 +41,7 @@ ms.locfileid: "48162715"
   
     -   Expresiones generadas mediante la aplicación de operadores a una o más variables, parámetros o funciones del sistema, como @IntegerCounter + 1 o FirstName + LastName.  
   
-    -   Instrucciones Transact-SQL que devuelven un valor único, como SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
+    -   Instrucciones de Transact-SQL que devuelven un valor único, como: SELECT CharacterCol FROM MyTable WHERE PrimaryKey = 1.  
   
 2.  Haga clic en **Actualizar**.  
   
@@ -61,7 +60,7 @@ ms.locfileid: "48162715"
  **Cuadrícula Valor**  
  Muestra las propiedades de la expresión que se está inspeccionando.  
   
- **Nombre**  
+ **Name**  
  Expresión [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a observar.  
   
  **Valor**  

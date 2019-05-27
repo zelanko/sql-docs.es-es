@@ -17,16 +17,16 @@ helpviewer_keywords:
 - indexes [SQL Server], viewing
 - indexes [SQL Server], properties
 ms.assetid: 998d5788-4871-44a8-8125-0d9390868b84
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b604dfaf700acf82b49934017121aa5749578ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830103"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944468"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
  Es una expresión que contiene el número de identificación de objeto de la tabla o de la vista indizada de la que se va a proporcionar información de propiedades del índice. *object_ID* es **int**.  
   
  *index_or_statistics_name*  
- Es una expresión que contiene el nombre del índice o las estadísticas para los cuales se va a devolver la información de la propiedad. *index_or_statistics_name* es **nvarchar(128)**.  
+ Es una expresión que contiene el nombre del índice o las estadísticas para los cuales se va a devolver la información de la propiedad. *index_or_statistics_name* es **nvarchar(128)** .  
   
  *property*  
  Es una expresión que contiene el nombre de la propiedad de base de datos que se va a devolver. *property* es de tipo **varchar(128)** y puede tener uno de estos valores.  
@@ -119,7 +119,7 @@ INDEXPROPERTY(OBJECT_ID('dbo.FactResellerSales'),
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [Utilizar las estadísticas para mejorar el rendimiento de las consultas](../../relational-databases/statistics/statistics.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

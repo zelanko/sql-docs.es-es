@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - unattended data refresh [Analysis Services with SharePoint]
@@ -16,12 +15,12 @@ ms.assetid: 4c8d8aa8-794d-4f72-ace3-78d0e688e1a5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 462dd89e60ef2e997ad35ec07fad4a5b767f5944
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3efe11a733408124490ece2e85c9bd40db34f3fb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62749010"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070917"
 ---
 # <a name="view-data-refresh-history-powerpivot-for-sharepoint"></a>Ver el Historial de actualización de datos (PowerPivot para SharePoint)
   El historial de actualización de datos es un registro de toda la actividad de actualización de datos para los datos PowerPivot en un libro de Excel. Las operaciones de actualización de datos se realizan en una instancia del servidor de Analysis Services en una granja de servidores de SharePoint según la programación que se proporcione. De forma predeterminada, el historial de la actualización de datos se retiene durante un año. Sin embargo, el administrador de una granja de servidores puede especificar una directiva de retención diferente para el historial de uso y eventos que determine durante cuánto tiempo se mantienen los registros de actualización de datos.  
@@ -63,7 +62,7 @@ ms.locfileid: "62749010"
   
 |Elemento|Descripción|  
 |----------|-----------------|  
-|Nombre|Especifica el nombre de archivo del libro de Excel que contiene los datos PowerPivot.|  
+|NOMBRE|Especifica el nombre de archivo del libro de Excel que contiene los datos PowerPivot.|  
 |Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> **Actualizando** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Correcto** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a poner en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no tuvo éxito. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
 |Última actualización correcta|Especifica la fecha en la que la última actualización de datos se completó correctamente.|  
 |Siguiente actualización de programación|Especifica la fecha en la que la siguiente actualización de datos está programada para que se produzca.<br /><br /> El vínculo **Configurar programación** le lleva a la página de definición de la programación. Si tiene permisos de contribución en el libro, puede hacer clic en el vínculo para ver y modificar la información de programación que controla la actualización de datos desatendida de los datos PowerPivot del libro.|  

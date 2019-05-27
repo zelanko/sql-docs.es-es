@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - subscriptions [Reporting Services], report distribution
@@ -22,12 +21,12 @@ ms.assetid: be7ec052-28e2-4558-bc09-8479e5082926
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 371cedc8217cbce4eef4c476fd93605d8582f7dc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f598946ec6231d1ca5edacf1810431beb4638f88
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62938172"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100669"
 ---
 # <a name="subscriptions-and-delivery-reporting-services"></a>Suscripciones y entrega (Reporting Services)
   Una suscripción [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es una configuración que entrega un informe a una hora concreta o a raíz de un evento. Lo hace en el formato de archivo que se especifique. Por ejemplo, todos los miércoles, se guarda el informe VentasMensuales en formato de documento Microsoft Word en un recurso compartido de archivos. Las suscripciones se pueden utilizar para programar y automatizar la entrega de un informe con un conjunto concreto de valores de parámetros de informes.  

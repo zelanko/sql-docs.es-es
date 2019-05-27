@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - Report Data pane, docking
@@ -13,12 +12,12 @@ ms.assetid: 8b87bb59-6083-44cb-ab34-493855b41585
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa9537784b4e7118567ddc262aecac3e722432ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 669983c17792d555a1310e2248c4fb98cee16f9b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711262"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100339"
 ---
 # <a name="dock-the-report-data-pane-in-report-designer-ssrs"></a>Acoplar el panel Datos de informe en el Diseñador de informes (SSRS)
   En el Diseñador de informes de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], el panel Datos de informe muestra una vista jerárquica de los objetos de datos que se pueden usar en un informe, como son orígenes de datos, conjuntos de datos, campos, parámetros e imágenes. Los orígenes de datos de esta vista pueden estar incrustados o ser referencias a orígenes de datos compartidos que se muestran en el Explorador de soluciones.  

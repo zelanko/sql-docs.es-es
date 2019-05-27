@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], properties
@@ -14,12 +13,12 @@ ms.assetid: aefaeb7f-d174-48d1-a188-0987a3b1196b
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2533de57dd2baee8297cd0f277c4538d16fbc16a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4c34cbfd2ea88d863239c068300c65531fd19f5f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689043"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085877"
 ---
 # <a name="change-the-properties-of-a-mining-model"></a>Cambiar las propiedades de un modelo de minería de datos
   Algunas propiedades del modelo de minería de datos se aplican al modelo en su conjunto, mientras que otras se aplican a columnas individuales. Ejemplos de propiedades que se aplican a todo el modelo son las propiedades `Drillthrough`, que especifica si los datos de los casos deben estar disponibles para las consultas, y `Description`. Entre las propiedades que se aplican a la columna se incluyen `Usage` y `ModelingFlags`, que controlan cómo se utilizan los datos en la columna dentro del modelo.  

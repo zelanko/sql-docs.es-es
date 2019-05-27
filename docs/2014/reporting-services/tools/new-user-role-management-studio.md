@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.reportserver.newrole.f1
@@ -13,12 +12,12 @@ ms.assetid: 9f76a235-0b58-479c-8e5b-50588091b71c
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: ca926ca10a391983900402d776e075ac321dea48
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b40fa294cb682746fe1b69a5fb03bf841d8e334
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201131"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100133"
 ---
 # <a name="new-user-role-management-studio"></a>Nuevo rol de usuario (Management Studio)
   Utilice esta página para crear una definición de roles de nivel de elemento. Una definición de roles de nivel de elemento es una colección con nombre de las tareas que puede realizar un usuario con las carpetas, los informes, los modelos, los recursos y los orígenes de datos compartidos. Un ejemplo de definición de roles de nivel de elemento sería el rol predefinido Explorador, que identifica los tipos de acciones que podría necesitar el usuario final de un informe para navegar por carpetas y ver informes.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - permissions [Reporting Services], SharePoint integrated mode
@@ -16,12 +15,12 @@ ms.assetid: 0eb2f34a-3643-4b03-81c2-5741ba7ebefd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c52bc6b7781b6593f945d582e033653aeb61dc9f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aa11481ed3c446becf2519a2ed149867456ac94a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242824"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66101925"
 ---
 # <a name="granting-permissions-on-report-server-items-on-a-sharepoint-site"></a>Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] ofrece características de seguridad integradas que puede usar para conceder acceso a los elementos del servidor de informes a los que accede desde sitios y bibliotecas de SharePoint. Si ya asignó permisos a los usuarios, dichos usuarios tendrán acceso a los elementos y las operaciones del servidor de informes inmediatamente después de configurarse la integración entre [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] y un servidor de informes. Puede usar los permisos existentes para cargar definiciones de informe y otros documentos, ver informes, crear suscripciones y administrar elementos.  

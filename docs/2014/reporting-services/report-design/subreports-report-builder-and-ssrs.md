@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: ab5bea3a-109e-4c25-92d9-494df7c52dd8
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b73227ae13d9534a98e4fc68030f5447f8db9cf7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d454f84295d86b373c3b5462580641a719435a17
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720196"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104798"
 ---
 # <a name="subreports-report-builder-and-ssrs"></a>Subinformes (Generador de informes y SSRS)
   Un subinforme es un elemento de informe que muestra otro informe dentro del cuerpo del informe principal. Como concepto, un subinforme de un informe es como un marco en una página web. Se utiliza para incrustar un informe dentro de un informe. Cualquier informe puede utilizarse como subinforme. El informe que se muestra como el subinforme se almacena en un servidor de informes, normalmente en la misma carpeta que el informe primario. Es posible diseñar el informe primario para que pase sus parámetros al subinforme. Este tipo de informe puede repetirse dentro de las regiones de datos mediante un parámetro que filtre los datos de cada instancia del subinforme.  

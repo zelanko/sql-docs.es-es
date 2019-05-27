@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.ffileconnection.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 8282cf7060f106798f2fa482f474bc5e364492ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b378d7257ddd57e97407d82feb817aa70965f598
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62768321"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058752"
 ---
 # <a name="flat-file-connection-manager-editor-general-page"></a>Editor del administrador de conexiones de archivos planos (página General)
   Utilice la página **General** del cuadro de diálogo **Editor del administrador de conexiones de archivos planos** para seleccionar un archivo y un formato de datos. Las conexiones de archivos planos permiten que un paquete se conecte con un archivo de texto.  

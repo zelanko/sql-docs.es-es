@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models [Analysis Services], feature selections
@@ -22,12 +21,12 @@ ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6618a4a0818519ba4c3f0bbd63a46e02b4217296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a1d79bb3810a56e8a1769845131312eab306f223
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722397"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084417"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
   *Selección de características* es un término usado habitualmente en la minería de datos para describir las herramientas y técnicas disponibles para reducir las entradas a un tamaño apropiado para su procesamiento y análisis. Selección de características implica no solo *reducción de cardinalidad*, lo que significa que impone un límite arbitrario o predefinido en el número de atributos que se pueden considerar al crear un modelo, sino también la elección de atributos, lo que significa que el analista o la herramienta de modelado activamente selecciona o descarta los atributos según su utilidad para el análisis.  

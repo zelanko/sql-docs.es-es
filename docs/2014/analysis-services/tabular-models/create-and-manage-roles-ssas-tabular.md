@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.rolemanager.f1
@@ -14,12 +13,12 @@ ms.assetid: e23d27a8-e968-4082-9dbe-963fc724b5d9
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 5d789812cb8dc3b6c880c4e2234aedbba3cc25bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 664f0cdc9f01bf27e8f20c6799097948b0c100c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757501"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067468"
 ---
 # <a name="create-and-manage-roles-ssas-tabular"></a>Crear y administrar roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Los roles se definen para un proyecto de modelos mediante el cuadro de diálogo Administrador de roles de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. Al implementar un modelo, los administradores de bases de datos pueden administrar los roles mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

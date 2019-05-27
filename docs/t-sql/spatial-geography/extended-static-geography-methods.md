@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Extended Static Geography Methods
 ms.assetid: a665a137-197c-4201-a2fb-ba639b5f3ca3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6298f24beabe0316c3fb4b242abefc5f07725fb7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4435e719e4e15b5e9f16662447aa39ba234622df
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540420"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937262"
 ---
 # <a name="extended-static-geography-methods"></a>Métodos de geografía estáticos extendidos
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52540420"
   
 -   [Point](../../t-sql/spatial-geography/point-geography-data-type.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de agregado de geografía estáticos](../../t-sql/spatial-geography/static-aggregate-geography-methods.md)   
  [Métodos de OGC en instancias de Geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)   
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   

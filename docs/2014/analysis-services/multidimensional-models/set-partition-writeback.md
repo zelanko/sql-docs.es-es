@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - write-enabled partitions [Analysis Services]
@@ -16,12 +15,12 @@ ms.assetid: 38bb09cc-2652-4971-8373-0cf468cdc7a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 54e2a0f5de93ee9f0d760adfd5a95551d19cc782
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3359e26ace467bbf8446aac6b68a0ef2716d09a4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62741387"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66072903"
 ---
 # <a name="set-partition-writeback"></a>Establecer la reescritura de particiones
   Si habilita para escritura un grupo de medida, los usuarios finales pueden cambiar los datos del cubo mientras lo examinan; en ese caso, los cambios se guardan en una tabla diferente denominada tabla de reescritura, no en los datos del cubo ni en los datos de origen. Los usuarios finales que examinan una partición habilitada para escritura verán el efecto neto de todos los cambios en la tabla de reescritura de la partición.  

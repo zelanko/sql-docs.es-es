@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: e02b80c1967059f91e3a97fb940a2715c6beebb8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e1aa9411fbc11becf8e7b159c27ef609e38083b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62656776"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094550"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>Instalar PowerPivot para SharePoint 2010
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] es una colección de servicios de nivel intermedio y back-end que proporcionan acceso a datos PowerPivot en una granja de SharePoint 2010. Si su organización usa la aplicación cliente, [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para Excel 2010, para crear libros que contienen datos analíticos, debe tener [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] para acceder a esos datos en un entorno de servidor. Este tema es una guía a través del proceso de instalación básico e incluye vínculos a temas adicionales para ayudarle a configurar PowerPivot.  

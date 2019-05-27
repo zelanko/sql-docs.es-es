@@ -1,7 +1,7 @@
 ---
 title: Tipo de datos XML y columnas (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/17/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 46a9dd3021f56292e56544fb1d688329b7456bc9
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6e0c0dbcb9f1cfea08ca1713f7ec46a698944255
+ms.sourcegitcommit: 622bcdaa0b21258248b259f003f38e9d6f73e05a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511582"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65836159"
 ---
 # <a name="xml-data-type-and-columns-sql-server"></a>Tipo de datos XML y columnas (SQL Server)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   En este tema se explican las ventajas y las limitaciones del tipo de datos **xml** en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]y le ayuda a elegir el modo de almacenar los datos XML.  
   
@@ -54,7 +55,7 @@ ms.locfileid: "58511582"
   
 -   Desea utilizar la funcionalidad administrativa del servidor de base de datos para administrar los datos XML, por ejemplo, para realizar copias de seguridad, recuperaciones y réplicas.  
   
- Si no se cumple ninguna de estas condiciones, es posible que convenga almacenar los datos como tipo de objeto grande no XML, por ejemplo, **[n]varchar(max)** o **varbinary(max)**.  
+ Si no se cumple ninguna de estas condiciones, es posible que convenga almacenar los datos como tipo de objeto grande no XML, por ejemplo, **[n]varchar(max)** o **varbinary(max)** .  
   
 ## <a name="xml-storage-options"></a>Opciones de almacenamiento de XML  
  Las opciones de almacenamiento para XML en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son las siguientes:  
@@ -175,6 +176,8 @@ ms.locfileid: "58511582"
 -   No puede utilizarse como parámetro de ninguna función integrada escalar que no sea ISNULL, COALESCE o DATALENGTH.  
   
 -   No puede utilizarse como columna de clave de un índice. Sin embargo, puede incluirse en forma de datos en un índice clúster o puede agregarse explícitamente a un índice no clúster mediante el uso de la palabra clave INCLUDE al crear el índice no clúster.  
+
+- Los elementos XML se pueden anidar hasta 128 niveles.
   
 ## <a name="see-also"></a>Consulte también  
  [Ejemplos de importación y exportación en bloque de documentos XML &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

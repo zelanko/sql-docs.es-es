@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dsveditor.createnamedcalculation.f1
@@ -15,12 +14,12 @@ ms.assetid: 66fb30ae-f5c5-4bfc-80ca-8c8a3a9bb30d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 31c0444930e15d933d75dd72554c3232871cd59e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53db9413ce7877182ca5f9c768bb1e1ef71e383
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679942"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086852"
 ---
 # <a name="create-edit-named-calculation-dialog-box-analysis-services"></a>Crear y editar cuadro de diálogo de cálculo con nombre (Analysis Services)
   Use el cuadro de diálogo **Crear/editar cálculo con nombre** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para definir o modificar un cálculo con nombre para una tabla en una vista del origen de datos. Para mostrar el cuadro de diálogo **Crear/editar cálculo con nombre**:  

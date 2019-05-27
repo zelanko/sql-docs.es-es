@@ -17,14 +17,18 @@ ms.assetid: 214e22e8-7e7d-4876-b690-c138e5721b81
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 6a23c9ece7522d2b7785b77789ba9e87b5ef356c
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: f4a1fe05a5662dad7e674831c5e5b76b9c8c8263
+ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58271622"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65801351"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Crear un destino con el componente de script
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   Los componentes de destino se utilizan en el flujo de datos de un paquete de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] para guardar datos recibidos de orígenes y transformaciones de nivel superior en un origen de datos. Por lo general, el componente de destino se conecta al origen de datos a través de un administrador de conexiones existente.  
   
  Para obtener una introducción al componente de script, vea [Extending the Data Flow with the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md) (Extensión del Flujo de datos con el componente de script).  
@@ -69,7 +73,7 @@ ms.locfileid: "58271622"
 ### <a name="adding-variables"></a>Agregar variables  
  Si quiere utilizar variables existentes en el script, puede agregarlas en los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** de la página **Script** del **Editor de transformación Script**.  
   
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. Para seleccionar varias variables, también puede hacer clic en el botón de puntos suspensivos (**…**) junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, después, seleccionar las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. Para seleccionar varias variables, también puede hacer clic en el botón de puntos suspensivos ( **…** ) junto a los campos de propiedades **ReadOnlyVariables** y **ReadWriteVariables** y, después, seleccionar las variables en el cuadro de diálogo **Seleccionar variables**.  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../../integration-services/extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   
@@ -120,7 +124,7 @@ ms.locfileid: "58271622"
   
 3.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** que contiene al menos las columnas **AddressID** y **City**.  
+4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación). Esta salida debe proporcionar datos de la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** que contiene al menos las columnas **AddressID** y **City**.  
   
 5.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas de entrada **AddressID** y **City**.  
   
@@ -237,7 +241,7 @@ public class ScriptMain:
   
 2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** y debe contener al menos las columnas **AddressID** y **City**.  
+3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación). Esta salida debe proporcionar datos de la tabla **Person.Address** de la base de datos de ejemplo **AdventureWorks** y debe contener al menos las columnas **AddressID** y **City**.  
   
 4.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**.  
   

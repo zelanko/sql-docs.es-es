@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.unionalltransformation.f1
@@ -15,12 +14,12 @@ ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: def728a5b32970553d8bf639f58d4cfba96fc31e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b62fb5e33311f1011911c40fc858723b218bac55
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766088"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054829"
 ---
 # <a name="union-all-transformation-editor"></a>Editor de transformación Unión de todo
   Use el cuadro de diálogo **Editor de transformación Unión de todo** para combinar varios conjuntos de filas de entrada en un solo conjunto de filas de salida. Al incluir la transformación Unión de todo en un flujo de datos, puede combinar datos de varios flujos, crear conjuntos de datos complejos anidando transformaciones Unión de todo y volver a combinar filas después de corregir errores en los datos.  

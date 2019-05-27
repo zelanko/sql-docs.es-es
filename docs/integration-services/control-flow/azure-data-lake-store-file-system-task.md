@@ -4,7 +4,7 @@ ms.custom: ''
 ms.date: 08/22/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -13,14 +13,18 @@ f1_keywords:
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: 02bbe8ec412c87b9a849f210d4a909eeecf7b5f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d07bedb102ee004c78d727afcf99320d12d68a4
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800043"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014886"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarea Sistema de archivos de Azure Data Lake Store
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 La tarea Sistema de archivos de Azure Data Lake Store permite que los usuarios realicen diversas operaciones del sistema de archivos en [Azure Data Lake Store (ADLS)](https://azure.microsoft.com/services/data-lake-store/).
 
@@ -32,8 +36,8 @@ Para agregar una tarea Sistema de archivos de Azure Data Lake Store a un paquete
 
 La propiedad **Operación** especifica la operación del sistema de archivos que se va a realizar. Seleccione una de las siguientes operaciones:
 
-- **CopyToADLS:** cargar archivos a ADLS.
-- **CopyToADLS:** descargar archivos de ADLS.
+- **CopyToADLS:** Cargue archivos en ADLS.
+- **CopyFromADLS:** Descargue archivos de ADLS.
 
 ## <a name="configure-the-properties-for-the-operation"></a>Configurar las propiedades de la operación
 Para cualquier operación, tendrá que especificar un administrador de conexiones de Azure Data Lake.

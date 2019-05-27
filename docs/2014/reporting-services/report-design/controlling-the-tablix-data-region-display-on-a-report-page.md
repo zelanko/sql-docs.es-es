@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f81c48cc-f038-4f57-988d-e9a3cbb46424
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3f740965cdc0b3c17e1a889975fae72bf37a85a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c6fd4b09947bc10a9e4e960ca1097f807a47c14f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206506"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106208"
 ---
 # <a name="controlling-the-tablix-data-region-display-on-a-report-page-report-builder-and-ssrs"></a>Controlar la presentación de la región de datos Tablix en una página de informe (Generador de informes y SSRS)
   En este tema se describen las propiedades que puede modificar en una región de datos Tablix para cambiar el modo en que aparece dicha región al visualizarla en un informe.  

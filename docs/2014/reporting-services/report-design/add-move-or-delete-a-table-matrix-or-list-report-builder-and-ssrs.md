@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4b97c470-cde0-4bb1-a46e-5f5f5553feaa
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eb60f8152ad49b68723367cfb4f9f3941511954e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3e98a5c49877f6bc94e9e3ac1e880c90229cd3c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63020894"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106599"
 ---
 # <a name="add-move-or-delete-a-table-matrix-or-list-report-builder-and-ssrs"></a>Agregar, mover o eliminar una tabla, una matriz o una lista (Generador de informes y SSRS)
   Una región de datos muestra los datos de un conjunto de datos de informe. Entre las regiones de datos se incluyen las siguientes: tabla, matriz, lista, gráfico y medidor. Para anidar una región de datos dentro de otra, agregue por separado cada región de datos y, a continuación, arrastre la región de datos secundaria a la región de datos primaria.  

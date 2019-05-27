@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 46fdd38274cb1400742d0bcda8654ebb7fd77b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0da7d391c5dc564129f1504e2100a6c47dcb000b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63064922"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108818"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint-sharepoint-2010-and-sharepoint-2013"></a>Instalar o desinstalar el complemento de Reporting Services para SharePoint (SharePoint 2010 y SharePoint 2013)
   Ejecute el paquete de instalación Complemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint (rsSharePoint.msi) en los servidores de SharePoint para proporcionar características de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] dentro de una implementación de SharePoint. Entre las características se incluyen Power View, un elemento web Visor de informes, un extremo de proxy URL, tipos de contenido y páginas de aplicación para que pueda crear, ver y administrar informes, modelos de informe, orígenes de datos y otro contenido de un servidor de informes en un sitio de SharePoint. El complemento [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para productos de SharePoint es un componente necesario para un servidor de informes que se ejecute en modo de SharePoint. El complemento se puede instalar desde el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] o descargando el archivo rsSharePoint.msi desde el Feature Pack de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Para obtener una lista de las versiones del complemento, así como de las páginas de descarga, vea [Dónde encontrar el complemento Reporting Services para Productos de SharePoint](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md).  

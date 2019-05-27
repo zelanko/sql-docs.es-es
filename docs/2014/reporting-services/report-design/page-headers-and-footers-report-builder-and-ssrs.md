@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.pagefooter.fill.f1
@@ -24,12 +23,12 @@ ms.assetid: 4fb9faac-511e-404a-b8d7-1f2e3cb47b11
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 9dfeb15d58f34759da6c340f66ce5935c0b71e41
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7b746f27653f5e8d1c24a584ac19c8fbac05a57c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63208949"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105528"
 ---
 # <a name="page-headers-and-footers-report-builder-and-ssrs"></a>Encabezados y pies de página (Generador de informes y SSRS)
   Un informe puede contener un encabezado y un pie de página que aparecen en la parte superior e inferior de cada página, respectivamente. Los encabezados y pies de página pueden contener texto estático, imágenes, líneas, rectángulos, bordes, color de fondo, imágenes de fondo y expresiones. Las expresiones incluyen referencias a campos de conjunto de datos para informes que tienen un conjunto de datos y llamadas a funciones de agregado que incluyen el conjunto de datos como ámbito.  
@@ -59,8 +58,8 @@ ms.locfileid: "63208949"
 |Admitido en la expresión|Agregados de ReportItems|Agregados de conjunto de datos (el ámbito debe ser el nombre del conjunto de datos)|  
 |-----------------------------|----------------------------|----------------------------------------------------------|  
 |Cuadros de texto del cuerpo del informe|Sí|No|  
-|&PageNumber|Sí|No|  
-|&TotalPages|Sí|No|  
+|&PageNumber|Sí|Sin |  
+|&TotalPages|Sí|Sin |  
 |Aggregate, función|Sí. Por ejemplo,<br /><br /> `=First(ReportItems!TXT_LastName.Value)`|Sí. Por ejemplo,<br /><br /> `=Max(Quantity.Value,"DataSet1")`|  
 |Colección de campos para los elementos de la página|Indirectamente. Por ejemplo,<br /><br /> `=Sum(ReportItems!Textbox1.Value)`|Sí. Por ejemplo,<br /><br /> `=Sum(Fields!Quantity.Value,"DataSet1")`|  
 |Imagen enlazada a datos|Indirectamente. Por ejemplo, `=ReportItems!TXT_Photo.Value`|Sí. Por ejemplo,<br /><br /> `=First(Fields!Photo.Value,"DataSet1")`|  

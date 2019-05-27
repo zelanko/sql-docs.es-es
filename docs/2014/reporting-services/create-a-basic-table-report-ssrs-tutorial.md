@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [Reporting Services]
@@ -15,12 +14,12 @@ ms.assetid: 3b539b4b-26f2-4c0b-b506-80f175679a46
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1f8dcab2a07aca7971ea8c799660b075fe0bcfd2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 08ed0c207b92075952ffc71669b45100e4ff7d06
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63266260"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109683"
 ---
 # <a name="create-a-basic-table-report-ssrs-tutorial"></a>Crear un informe de tabla básico (Tutorial de SSRS)
   Este tutorial está diseñado para ayudarle a crear un informe de tabla básico basado en la [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] mediante el Diseñador de informes de la base de datos. También puede crear informes con el Generador de informes o con el Asistente para informes. En este tutorial, creará un proyecto de informes, configurará la información de conexión, definirá una consulta, agregará una región de datos de tabla, agrupará y calculará los totales de varios campos, y obtendrá una vista previa del informe.  
@@ -47,7 +46,7 @@ ms.locfileid: "63266260"
 ## <a name="tasks"></a>Tareas  
  [Lección 1: Creación de un proyecto de servidor de informes &#40;Reporting Services&#41;](lesson-1-creating-a-report-server-project-reporting-services.md)  
   
- [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
+ [Lección 2: Especificación de información de conexión &#40;Reporting Services&#41;](lesson-2-specifying-connection-information-reporting-services.md)  
   
  [Lección 3: Definición de un conjunto de datos para el informe de tabla &#40;Reporting Services&#41;](lesson-3-defining-a-dataset-for-the-table-report-reporting-services.md)  
   

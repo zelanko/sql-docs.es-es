@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.browsecube.filterpane.f1
@@ -13,12 +12,12 @@ ms.assetid: f5cf0bb1-3afb-4856-a2ef-614deb4e7e49
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1964b6562c34411201ce141c97c9df42103482ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d788a4957d7c6b3ea02e407f8b09fa80b957a4b5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748407"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070538"
 ---
 # <a name="query-and-filter-browser-tab-cube-designer-analysis-services---multidimensional-data"></a>Consulta y filtro (pestaña Explorador del Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Este área de la pestaña **Explorador** en el Diseñador de cubos contiene un área de consulta y de filtro para ayudar a elegir datos del cubo y utilizarlos en procesos de examen o en consultas. Puede agregar todos los objetos de cubo que desee y luego ver los resultados en el área de datos, o exportar los resultados en un informe utilizando Analizar en Excel para visualizar cómo verían los datos los usuarios finales.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], getting assistance
@@ -14,12 +13,12 @@ ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: be016421136f10f7f78bdebffd8c524e4bee72e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 408b6b605e14fd5e7aa52cd0df7fba13b225c20c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62779760"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064831"
 ---
 # <a name="feature-reference-database-engine"></a>Referencia de características (motor de base de datos)
   [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] incluye varias herramientas y aplicaciones que se pueden usar para crear, administrar y ver objetos y datos de la base de datos. Hay además herramientas que pueden utilizarse para supervisar y solucionar problemas de rendimiento del servidor y de la base de datos, así como para habilitar y deshabilitar características, servicios y protocolos de red. En esta sección, se proporcionan temas específicos en los que se describen los cuadros de diálogo de estas herramientas y aplicaciones.  

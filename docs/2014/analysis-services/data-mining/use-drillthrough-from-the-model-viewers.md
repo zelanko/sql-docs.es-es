@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e5e065ad-c688-4c2c-8c82-7f3038e04915
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2ad62600c6ae48f156049cdae6078df37de0b330
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ebb910af4a9c01784fb74195ad6eed0f7f96db71
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62732606"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66082836"
 ---
 # <a name="use-drillthrough-from-the-model-viewers"></a>Usar la obtención de detalles desde los visores de modelos
   Dependiendo del tipo de modelo, es posible utilizar la obtención de detalles desde los visores de exploración de la pestaña **Visor de modelos de minería de datos** del Diseñador de minería de datos para explorar los casos usados en el modelo de minería de datos o para ver columnas adicionales en la estructura de minería de datos. Aunque muchos tipos de modelos no admiten la obtención de detalles debido a que los patrones del modelo no se pueden vincular directamente con casos concretos, los tipos de modelos siguientes sí lo hacen.  

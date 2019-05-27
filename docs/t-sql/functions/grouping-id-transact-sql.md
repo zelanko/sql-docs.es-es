@@ -16,15 +16,15 @@ helpviewer_keywords:
 - GROUP BY clause, GROUPING_ID
 - GROUPING_ID function
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 91161ebc6e9f39f3b937b55961a2d8439f44a788
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cbfbed6239d48cf01e65411250b163797d13333c
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836833"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943054"
 ---
 # <a name="groupingid-transact-sql"></a>GROUPING_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ GROUPING_ID ( <column_expression>[ ,...n ] )
  GROUPING_ID \<column_expression> deben coincidir exactamente con la expresión en la lista GROUP BY. Por ejemplo, si agrupa por DATEPART (yyyy, \<*nombre de columna*>), use GROUPING_ID (DATEPART (yyyy, \<*nombre de columna*>)) o, si agrupa por \<*nombre de columna*>, use GROUPING_ID (\<*nombre de columna*>).  
   
 ## <a name="comparing-groupingid--to-grouping-"></a>Comparar GROUPING_ID() con GROUPING()  
- GROUPING_ID (\<column_expression> [ **,**...*n* ]) introduce el equivalente del valor devuelto de GROUPING (\<column_expression>) de cada columna de su lista de columnas en cada fila de salida como una cadena de unos y ceros. GROUPING_ID interpreta dicha cadena como un número de base 2 y devuelve el número entero equivalente. Por ejemplo, considere la siguiente instrucción: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. La tabla siguiente muestra los valores de entrada y salida de GROUPING_ID().  
+ GROUPING_ID (\<column_expression> [ **,** ...*n* ]) introduce el equivalente del valor devuelto de GROUPING (\<column_expression>) de cada columna de su lista de columnas en cada fila de salida como una cadena de unos y ceros. GROUPING_ID interpreta dicha cadena como un número de base 2 y devuelve el número entero equivalente. Por ejemplo, considere la siguiente instrucción: `SELECT a, b, c, SUM(d),``GROUPING_ID(a,b,c)``FROM T GROUP BY <group by list>`. La tabla siguiente muestra los valores de entrada y salida de GROUPING_ID().  
   
 |Columnas agregadas|Entrada de GROUPING_ID (a, b, c) = GROUPING(a) + GROUPING(b) + GROUPING(c)|Resultado de GROUPING_ID()|  
 |------------------------|---------------------------------------------------------------------------------------|------------------------------|  
@@ -416,7 +416,7 @@ ORDER BY GROUPING_ID(DATEPART(yyyy,OrderDate)
 |NULL|NULL|2|144513.3741|011|6|Day|  
 |NULL|NULL|NULL|9364513,6416|111|7|Total general|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GROUPING &#40;Transact-SQL&#41;](../../t-sql/functions/grouping-transact-sql.md)   
  [GROUP BY &#40;Transact-SQL&#41;](../../t-sql/queries/select-group-by-transact-sql.md)  
   

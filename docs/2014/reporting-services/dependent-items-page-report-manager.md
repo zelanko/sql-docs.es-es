@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 4dcfb311-e9c3-4c5d-b2e0-018d79f37d2e
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 80d69d377948ebb85c907edb195807abf26ee33b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 59c022a0e6c57a85d83b25be3fe9dbe0c9dfeeb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63165110"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66109327"
 ---
 # <a name="dependent-items-page-report-manager"></a>Página de elementos dependientes (Administrador de informes)
   Use la página Elementos dependientes para ver una lista de informes y modelos que hacen referencia a un origen de datos compartido. El icono de cada tipo de elemento indica si se trata de un informe o de un modelo. Esta página puede mostrarse en la vista de lista o en la vista Detalles. Use la vista Detalles para mostrar más información sobre cada elemento. Esta vista también incluye opciones de página adicionales. Para ayudarle a administrar el origen de datos compartido, esta página proporciona vínculos a los informes y modelos que usan el origen de datos, las métricas sobre cuándo se ejecutó o modificó el informe o el modelo por última vez, y los botones Eliminar y Mover de manera que pueda quitar los informes y modelos con facilidad que ya no se usan, o moverlos a una ubicación diferente mientras determina si todavía son necesarios.  

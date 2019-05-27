@@ -11,12 +11,12 @@ ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: a77a3b1f6836af7ec639834326fc7fd802ba983f
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65982115"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66015102"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
 
@@ -304,15 +304,15 @@ El grupo de disponibilidad solo se puede crear en bases de datos existentes. As�
 
     Para cada réplica, configure las opciones **Confirmación sincrónica**, **Conmutación automática por error** y **Secundaria legible**. Vea la figura 17.
 
-    **Confirmación sincrónica**: garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
+**Confirmación sincrónica**: garantiza que, si se confirma una transacción en la réplica principal de una base de datos, también se confirme en las demás réplicas sincrónicas. La confirmación asincrónica no lo garantiza y podría ir a la zaga de la réplica principal.
 
-    Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos están en el mismo centro de datos. Si se encuentran en centros de datos diferentes, la confirmación sincrónica podría ralentizar el rendimiento de la base de datos.
+Normalmente debe habilitar la confirmación sincrónica solo si ambos nodos están en el mismo centro de datos. Si se encuentran en centros de datos diferentes, la confirmación sincrónica podría ralentizar el rendimiento de la base de datos.
 
-    Si no se marca esta casilla, se usará la confirmación asincrónica.
+Si no se marca esta casilla, se usará la confirmación asincrónica.
 
-    **Conmutación automática por error:** si la réplica principal está inactiva, el grupo de disponibilidad realizará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
+**Conmutación automática por error:** si la réplica principal está inactiva, el grupo de disponibilidad realizará automáticamente una conmutación por error a su réplica secundaria cuando se seleccione la conmutación automática por error. Solo se puede habilitar en las réplicas que tienen confirmaciones sincrónicas.
 
-    **Secundaria legible:** de forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
+**Secundaria legible:** de forma predeterminada, los usuarios no se pueden conectar a ninguna réplica secundaria. Con esta opción, los usuarios podrán conectarse a la réplica secundaria con acceso de solo lectura.
 
 8.  En la página **Especificar réplicas**, haga clic en la pestaña **Agente de escucha** y haga lo siguiente. Vea la figura 18.
 

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 99f83b32-4b86-4d40-973c-9a328d23ac8b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 203f90d8654d0465ed4e8ab5ba0f0b7e0747b7e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: aeb149fe1de94e9942352ca620f26311e252b477
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062283"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100629"
 ---
 # <a name="tablix-data-region-report-builder-and-ssrs"></a>Región de datos Tablix (Generador de informes y SSRS)
   La región de datos Tablix es un elemento de informe de diseño generalizado que muestra los datos del informe en celdas organizadas en filas y columnas. Los datos del informe pueden ser datos detallados tal y como se recuperan del origen de datos, o datos detallados agregados organizados en grupos previamente especificados. Cada celda de Tablix puede contener cualquier elemento de informe, como un cuadro de texto o una imagen, o bien otra región de datos, como una región de Tablix, un gráfico o un medidor. Para agregar varios elementos de informe a una celda, agregue primero un rectángulo que actúe como contenedor. Después, agregue los elementos de informe al rectángulo.  
@@ -63,7 +62,7 @@ ms.locfileid: "63062283"
   
  Las celdas del área de esquina de Tablix se crean automáticamente al definir los grupos de filas y de columnas. Las celdas de esta área pueden mostrar etiquetas, o puede combinar las celdas y crear un título.  
   
- Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
+ Para obtener más información, vea [Describir las áreas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](report-design/tablix-data-region-areas-report-builder-and-ssrs.md).  
   
 ## <a name="understanding-static-and-dynamic-rows-and-columns"></a>Descripción de las filas y columnas estáticas y dinámicas  
  Una región de datos Tablix organiza las celdas en filas y columnas que están asociadas a grupos. Las estructuras de grupo para los grupos de filas y las columnas son idénticas. Este ejemplo utiliza los grupos de filas, pero puede aplicar los mismos conceptos a grupos de columna.  

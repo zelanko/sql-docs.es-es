@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 96b7798dcacc69b1de233b330b053b2d9a2bd776
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 23eaa3b9394822399618a99483dfb2b22fe13455
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62703526"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079955"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>Configurar PowerPivot e implementar soluciones (SharePoint 2013)
   En estos temas se describen la implementación y la configuración de mejoras de nivel intermedio realizadas en las características de PowerPivot en [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] , incluidas la galería de PowerPivot, la programación de actualización de datos, el panel de administración y los proveedores de datos. Ejecute la herramienta de **Configuración de PowerPivot para SharePoint 2013** para hacer lo siguiente:  
@@ -40,7 +39,7 @@ ms.locfileid: "62703526"
 ##  <a name="bkmk_run_configuration_tool"></a> Ejecute PowerPivot para SharePoint 2013  
  **Nota:** El [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] Asistente para instalación instala dos herramientas de configuración diferentes para [!INCLUDE[ssGeminiLong](../../../includes/ssgeminilong-md.md)]. Cada una de ellas admite una versión diferente de SharePoint.  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
 |Configuración de PowerPivot para SharePoint 2013|SharePoint 2013|  
 |Herramienta de configuración de PowerPivot|SharePoint 2010 con SharePoint 2010 Service Pack 1 (SP1)|  

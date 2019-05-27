@@ -17,12 +17,12 @@ ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfacb
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 92e5aaf103c1c8d08b8527bf859415686fd5f4f8
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4d4f58161885519767e299683fe32b5197a045f
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993631"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198217"
 ---
 # <a name="sysdmexecqueryplanstats-transact-sql"></a>sys.dm_exec_query_plan_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
@@ -37,7 +37,7 @@ sys.dm_exec_query_plan_stats(plan_handle)
 
 ## <a name="arguments"></a>Argumentos 
 *plan_handle*  
-Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. *plan_handle* es **varbinary (64)**.   
+Es un token que identifica de forma exclusiva un plan de ejecución de consulta para un lote que se ha ejecutado y su plan reside en la caché del plan o se está ejecutando actualmente. *plan_handle* es **varbinary (64)** .   
 
 El *plan_handle* puede obtenerse de los objetos de administración dinámica siguientes:  
   
@@ -64,7 +64,7 @@ El *plan_handle* puede obtenerse de los objetos de administración dinámica sig
 ## <a name="remarks"></a>Comentarios
 Esta función del sistema está disponible a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.4.
 
-Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.5 de CTP y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS en [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+Se trata de una característica opcional que requiere que la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2451 esté habilitada. A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 2.5 de CTP, para realizar esta acción en el nivel de base de datos, vea la opción LAST_QUERY_PLAN_STATS [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 
 Esta función del sistema funciona bajo el **ligera** consultar las estadísticas de ejecución de generación de perfiles de infraestructura. Para obtener más información, vea [Infraestructura de generación de perfiles de consultas](../../relational-databases/performance/query-profiling-infrastructure.md).  
 

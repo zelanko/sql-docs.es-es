@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - segmentation algorithms [Analysis Services]
@@ -22,12 +21,12 @@ ms.assetid: ed1fc83b-b98c-437e-bf53-4ff001b92d64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 490857f9a8c95853d3f89bc8b0cfb85a165f1fd1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 082241af377c8817c3adbc394a46f1ebc7d6a4e3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722828"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085142"
 ---
 # <a name="data-mining-algorithms-analysis-services---data-mining"></a>Algoritmos de minería de datos (Analysis Services: Minería de datos)
   Un *algoritmo de minería de datos* es un conjunto de heurísticas y cálculos que crea un modelo de minería de datos. Para crear un modelo, el algoritmo analiza primero los datos proporcionados, en busca de tipos específicos de patrones o tendencias. El algoritmo usa los resultados de este análisis para definir los parámetros óptimos para la creación del modelo de minería de datos. A continuación, estos parámetros se aplican en todo el conjunto de datos para extraer patrones procesables y estadísticas detalladas.  

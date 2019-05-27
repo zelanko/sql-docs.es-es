@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10012"
@@ -20,12 +19,12 @@ ms.assetid: 5022ae33-03a3-48de-8ac1-82742f48cebe
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 938093f87f7c6252f85c309dfbb987bd6b63cb94
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e6324606dea5f3ea6f094e9b3c3dbe31d5fbcf92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62696619"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66107261"
 ---
 # <a name="graphical-query-designer-user-interface"></a>Interfaz de usuario del diseñador gráfico de consultas
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona un diseñador gráfico de consultas y un diseñador de consultas basado en texto con los que se pueden crear consultas y recuperar datos de una base de datos relacional para un conjunto de datos de informe del Diseñador de informes. Use el diseñador gráfico de consultas para generar una consulta de forma interactiva y ver los resultados para los tipos de orígenes de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], Oracle, OLE DB y ODBC. Use el diseñador de consultas basado en texto para especificar varias instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , sintaxis compleja de consultas o comandos, y consultas basadas en expresiones. Para más información, vea [Interfaz de usuario del Diseñador de consultas basado en texto](../text-based-query-designer-user-interface.md). Para obtener más información sobre cómo trabajar con tipos de orígenes de datos específicos, consulte [agregar datos a un informe &#40;generador de informes y SSRS&#41;](report-datasets-ssrs.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 6a9fd19b-2367-4908-b638-363b1e929e1e
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 65797fdf770196723a74510501d381fb608ad2ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b8e9532c9d3ecbc32942e6a70d82f5837856a329
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011644"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093590"
 ---
 # <a name="overview-of-sql-server-servicing-installation"></a>Información general sobre la instalación de servicios de SQL Server
   Puede aplicar una actualización a cualquier componente instalado de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con una actualización de servicio de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] . Si el nivel de versión de un componente de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] existente es posterior al nivel de versión de la actualización, el programa de instalación lo excluirá de la actualización. Para obtener más información sobre cómo aplicar el conjunto de servicios de actualización, consulte [instalar actualizaciones de servicio de SQL Server 2014](../../database-engine/install-windows/install-sql-server-servicing-updates.md).  

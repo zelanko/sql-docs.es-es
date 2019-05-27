@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - query hints [SQL Server]
@@ -14,12 +13,12 @@ ms.assetid: 405dfcff-a3a6-4e6d-a53a-ed77bbacdd13
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8eb4dfaf6649b80bd430992d5e7ff1d35fc5d7ed
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 69a6bae06b1cb5d7a727ff2582f10bccf1e21ca8
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582978"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091805"
 ---
 # <a name="table-hints-in-indexed-view-definitions-are-ignored-in-80-compatibility-mode-and-are-not-allowed-in-90-mode-or-later"></a>Las sugerencias de tabla en definiciones de vistas indizadas se omiten cuando el modo de compatibilidad es 80, mientras que en los modos 90 y superiores, no se permite su uso
   Las sugerencias de tabla en las definiciones de las vistas indizadas no se permiten en el modo de compatibilidad 90 o superior. Para obtener más información, vea los temas siguientes en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] libros en pantalla: "Diseñar vistas indizadas", "creación de vistas indizadas," y "Sugerencia de consulta ([!INCLUDE[tsql](../../includes/tsql-md.md)])."  

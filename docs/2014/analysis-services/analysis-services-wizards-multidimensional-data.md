@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Analysis Services wizards
@@ -13,12 +12,12 @@ ms.assetid: 4814b8f6-1717-4b03-835b-15fcaa79a287
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d86c15a57b296572d42ef4ac6122e69d271e7e2f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b922581c657bc45a1bb404a1f803e7a525bb8d42
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62643719"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062388"
 ---
 # <a name="analysis-services-wizards-multidimensional-data"></a>Asistentes de Analysis Services (Datos multidimensionales)
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] proporciona asistentes para usarlos en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] y [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. En la tabla siguiente se describen los asistentes disponibles.  

@@ -14,12 +14,12 @@ ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 581f6ee7daf4a208072b560c744e680ccfc5009e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 3074eb04df91d5284d5943b09a9c7c59bd9ef6f2
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872045"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983151"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-sql-server-2016"></a>Cambios substanciales en las características del Motor de base de datos de SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,13 @@ ms.locfileid: "58872045"
   
 -   La columna *TimeStamp* de `sys.fn_virtualfilestats` pasó de ser un tipo de datos **int** a un tipo de datos **bigint**.  
 
--   Los algoritmos MD2, MD4, MD5, SHA y SHA1 no están disponibles en el nivel de compatibilidad 130. **No se recomienda** usar los algoritmos de hash MD2, MD4, MD5, SHA o SHA1, pero se puede establecer el nivel de compatibilidad de base de datos en anterior a 130.  
-
 -   Por debajo del nivel de compatibilidad de base de datos 130, las conversiones implícitas de los tipos de datos **datetime** a **datetime2** muestran una mayor precisión al reflejar las fracciones de milisegundos, lo que se traduce en diferentes valores convertidos. Use una conversión explícita del tipo de datos datetime2 siempre que haya un escenario de comparación mixto entre tipos de datos datetime y datetime2. Para obtener más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/4010261).
 
 -   En el nivel de compatibilidad de la base de datos 130, las operaciones que realizan las conversiones implícitas entre determinados tipos de datos numéricos y de fecha y hora muestran una mayor precisión y pueden generar diferentes valores convertidos. Esto incluye el uso de funciones que requieren cálculos, como `DATEDIFF` y `ROUND`. Para obtener más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/help/4010261).
 
 ## <a name="previous-versions"></a> Versiones anteriores  
 
-Para información sobre los cambios importantes en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en algunas versiones anteriores, consulte Cambios recientes en las características del Motor de base de datos de SQL Server 2014.
+Para obtener información sobre los cambios importantes en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] y en algunas versiones anteriores, vea [Cambios recientes en las características del Motor de base de datos de SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
 
 #### <a name="archived-documentation-for-very-old-versions-of-sql-server"></a>Documentación archivada para las versiones muy antiguas de SQL Server
 

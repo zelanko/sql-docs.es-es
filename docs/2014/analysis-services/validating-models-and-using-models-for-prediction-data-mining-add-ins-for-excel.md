@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - mining models, validating
@@ -16,12 +15,12 @@ ms.assetid: e245ac1f-1230-48e9-9091-e70b131aa2a8
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0a9ae056818b260ed00df9111d8b06b37378285d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97268dac1fef029bc35ff702ace0d422ee296d65
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62793120"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065496"
 ---
 # <a name="validating-models-and-using-models-for-prediction-data-mining-add-ins-for-excel"></a>Validar modelos y usar modelos para la predicción (Complementos de minería de datos para Excel)
   La prueba y validación de un modelo constituye un paso importante en el proceso de minería de datos. Antes de implementar los modelos de minería de datos en un entorno de producción, debe saber cómo se comportan con datos reales.  

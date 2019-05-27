@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.wmieventwatcher.general.f1
@@ -15,12 +14,12 @@ ms.assetid: 5813279b-52ca-4232-8826-38001467d9bd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: b1273e282dab772b2bd59177de6bd24ad1d3e6d1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bf462fc9084468b3a76b7c6bd61f07a16ae4f466
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62766038"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66054350"
 ---
 # <a name="wmi-event-watcher-task-editor-general-page"></a>Editor de la tarea Monitor de eventos WMI (página General)
   Use la página **General** del cuadro de diálogo **Editor de la tarea Monitor de eventos WMI** para asignar un nombre a la tarea Monitor de eventos WMI y describirla.  

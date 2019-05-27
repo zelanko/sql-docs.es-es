@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dts.designer.excelsourceadapter.columns.f1
@@ -15,12 +14,12 @@ ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 5a46cdfd73b7339f40cf92555e45c07d8d5dc482
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dba56ee39e710adc3973a00a0d84b1823ee74f1b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62769731"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059211"
 ---
 # <a name="excel-source-editor-columns-page"></a>Editor de origen de Excel (página Columnas)
   Use la página **Columnas** del cuadro de diálogo **Editor de origen de Excel** para asignar una columna de salida a cada columna externa (origen).  

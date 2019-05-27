@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - create extended events session
@@ -14,12 +13,12 @@ ms.assetid: cba0e02b-b201-4863-bf1b-9164e68e5fa8
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ef0dfbb1c0e62bbe5301f769ee0f3e4d585b06b6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4a541c86029be9a438492a851c0eb16d18120f75
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62808357"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065029"
 ---
 # <a name="create-an-extended-events-session-using-query-editor"></a>Crear una sesión de eventos extendidos mediante el Editor de consultas
   Puede crear una sesión de eventos extendidos utilizando el Editor de consultas o puede crear una sesión en el Explorador de objetos. En el Explorador de objetos, Extended Events proporciona dos interfaces de usuario que puede usar para crear, modificar y ver datos de sesión de eventos: un asistente que le guiará por el proceso de creación de la sesión de eventos y una nueva interfaz de usuario de la sesión que proporciona opciones de configuración más avanzadas. Puede crear sesiones de eventos extendidos para diagnosticar el seguimiento de SQL Server, lo cual le permite resolver problemas como el siguiente:  

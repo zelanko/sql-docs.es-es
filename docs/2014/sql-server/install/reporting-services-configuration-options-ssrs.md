@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.ins.instwizard.reportserverinstoptions.f1
@@ -17,12 +16,12 @@ ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 1819fe94f3fac39d1697f2d4ee08738020e57d17
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 67c1cf99f536b7cc6de0cef3633af19ae88014a5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63058141"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66092589"
 ---
 # <a name="reporting-services-configuration-options-ssrs"></a>Opciones de configuración de Reporting Services (SSRS)
   Use la página **Configuración de Reporting Services** del Asistente para la instalación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para especificar la forma en que se instala y configura un servidor de informes. La disponibilidad de una opción de instalación depende de las opciones que se seleccionaron en la página **Selección de características** y de si también se está instalando una instancia local del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] al mismo tiempo que se instala el servidor de informes.  

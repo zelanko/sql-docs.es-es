@@ -18,16 +18,16 @@ helpviewer_keywords:
 - row numbers [SQL Server]
 - sequential row numbers [SQL Server]
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 270b303b90b00977335dd62dc5a3729410df03a2
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9f658b9d9780253faf05860912b02687461b9e25
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56800989"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947403"
 ---
 # <a name="rownumber-transact-sql"></a>ROW_NUMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -132,7 +132,7 @@ FROM sys.databases WHERE database_id < 5;
 |3 |tempdb |SIMPLE |
 
 
-### <a name="b-returning-the-row-number-for-salespeople"></a>b. Devolver el número de fila de vendedor  
+### <a name="b-returning-the-row-number-for-salespeople"></a>B. Devolver el número de fila de vendedor  
  En el ejemplo siguiente se calcula un número de fila para los vendedores de [!INCLUDE[ssSampleDBCoFull](../../includes/sssampledbcofull-md.md)] según la categoría de ventas anuales hasta la fecha.  
   
 ```sql  

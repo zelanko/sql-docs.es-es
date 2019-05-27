@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - Sql12.ssms.XeWizard.Summary.f1
@@ -32,12 +31,12 @@ ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fc69e3683656c5705e7e82df27b80a8a41cb81a9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdc50e81bcc58722a3c04fc8516b9158072533cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62807367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065058"
 ---
 # <a name="create-an-extended-events-session-using-the-wizard-object-explorer"></a>Crear una sesión de Extended Events utilizando el asistente (Explorador de objetos)
   Para ayudarle a seleccionar y capturar eventos en el servidor, los eventos extendidos incluyen un Asistente para nueva sesión que le guía a través de los pasos necesarios para crear una sesión de eventos extendidos. El Asistente para nueva sesión expone la mayor parte de la funcionalidad de Extended Events. El [cuadro de diálogo Nueva sesión](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) también permite definir una sesión de Eventos extendidos que capture, presente y analice los datos. El cuadro de diálogo Nueva sesión expone toda la funcionalidad de Extended Events.  

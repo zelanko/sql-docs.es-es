@@ -24,16 +24,16 @@ helpviewer_keywords:
 - DATEPART function [SQL Server]
 - dates [SQL Server], dateparts
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91a73ebf7d840669837a43cf89427463e9b46b4e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 5bec4347301ed95671b6d5df5b91a5b958bff584
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802909"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945718"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -96,7 +96,7 @@ Cada *datepart* y sus abreviaturas devuelven el mismo valor.
   
 El valor devuelto depende del entorno del idioma definido mediante [SET LANGUAGE](../../t-sql/statements/set-language-transact-sql.md) y la opción de configuración de servidor [Configurar el idioma predeterminado](../../database-engine/configure-windows/configure-the-default-language-server-configuration-option.md) del inicio de sesión. El valor devuelto depende de [SET DATEFORMAT](../../t-sql/statements/set-dateformat-transact-sql.md) si *date* es un literal de cadena de ciertos formatos. SET DATEFORMAT no cambia el valor devuelto cuando la fecha es una expresión de columna de un tipo de datos de hora o fecha.
   
-En esta tabla se enumeran todos los argumentos *datepart*, con los correspondientes valores devueltos para la instrucción `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. El argumento *date* tiene un tipo de datos **datetimeoffset(7)**. Las dos últimas posiciones del valor devuelto **nanosecond** *datepart* siempre son `00` y este valor tiene una escala de 9:
+En esta tabla se enumeran todos los argumentos *datepart*, con los correspondientes valores devueltos para la instrucción `SELECT DATEPART(datepart,'2007-10-30 12:15:32.1234567 +05:10')`. El argumento *date* tiene un tipo de datos **datetimeoffset(7)** . Las dos últimas posiciones del valor devuelto **nanosecond** *datepart* siempre son `00` y este valor tiene una escala de 9:
 
 **0,123456700**
   

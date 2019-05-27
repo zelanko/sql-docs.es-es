@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e07f6674df80b16abad45a6fece9aad582ec585d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f76d67d5e44fc700d4b889840ef2dcc07a0bfde0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756266"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66065766"
 ---
 # <a name="troubleshoot-process-data-ssas-tabular"></a>Solucionar problemas del procesamiento de datos (SSAS tabular)
   Este tema incluye información sobre el procesamiento (actualización) de los datos de un modelo cuando este se crea con [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]; no incluye información sobre el procesamiento de datos de modelos implementados en una instancia de servidor de Analysis Services. Para obtener más información sobre el procesamiento de los datos de un modelo implementado, vea [Crear scripts para tareas administrativas en Analysis Services](script-administrative-tasks-in-analysis-services.md).  

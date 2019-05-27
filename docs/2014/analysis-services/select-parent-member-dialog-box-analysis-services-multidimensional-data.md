@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.saveparentmemberdilaog.f1
@@ -15,12 +14,12 @@ ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 14ba9b6439938461b6cb9cbe4146f0046cc1f7cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5d8407f04061075bb19aa0207595dc1fffab92c0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747197"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069308"
 ---
 # <a name="select-parent-member-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Seleccionar miembro primario (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Seleccione miembro primario** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] con el fin de seleccionar un miembro primario para un miembro calculado. Se puede mostrar el cuadro de diálogo **Seleccionar miembro primario** haciendo clic en **Cambiar** en el panel del **Editor de Formulario de miembro calculado** de la pestaña **Cálculos** del Diseñador de cubos.  

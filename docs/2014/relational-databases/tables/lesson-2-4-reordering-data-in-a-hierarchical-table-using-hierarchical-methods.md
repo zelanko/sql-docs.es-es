@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - HierarchyID
@@ -13,12 +12,12 @@ ms.assetid: 7b8064c7-62c6-488d-84d2-57a5828fb907
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: d29af64209dfe11ed703f1cc42314fd6d849e771
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63298961"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110111"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenar los datos de una tabla jerárquica mediante métodos jerárquicos
   Reorganizar una jerarquía es una tarea de mantenimiento común. En esta tarea, usaremos una instrucción UPDATE con el método [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) para mover primero una única fila a una nueva ubicación en la jerarquía. A continuación, moveremos un subárbol completo a una nueva ubicación.  

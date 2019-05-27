@@ -1,18 +1,19 @@
 ---
 title: Configurar un servidor de informes en un clúster con equilibrio de carga de red | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
-ms.prod: reporting-services, reporting-services-sharepoint, reporting-services-native
+ms.prod: reporting-services
+ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.date: 10/03/2018
-ms.openlocfilehash: 26c8423308b07c570cf289113a00fbd07a1133aa
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
-ms.translationtype: HT
+ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041776"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937242"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -34,7 +35,7 @@ ms.locfileid: "56041776"
 |----------|-----------------|----------------------|  
 |1|Antes de instalar Reporting Services en los nodos de servidor en un clúster NLB, compruebe los requisitos de la implementación escalada.|[Implementación escalada horizontalmente (servidor de informes en modo nativo) &#40;Administrador de configuración&#41;](https://msdn.microsoft.com/library/4df38294-6f9d-4b40-9f03-1f01c1f0700c) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |2|Configure el clúster NLB y compruebe si funciona correctamente.<br /><br /> Asegúrese de asignar un nombre de encabezado de host a la dirección IP del servidor virtual del clúster NLB. El nombre de encabezado de host se utiliza en la dirección URL del servidor de informes y es más fácil de recordar y escribir que una dirección IP.|Para obtener más información, consulte la documentación de producto de Windows Server correspondiente a la versión del sistema operativo Windows que se ejecute.|  
-|3|Agregue NetBIOS y el nombre de dominio completo (FQDN) del encabezado de host a la lista de **BackConnectionHostNames** almacenada en el Registro de Windows. Siga los pasos del **Método 2: especificar nombres de host** en [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con el ajuste siguiente. El**paso 7** del artículo de KB dice que “salga del Editor del Registro y después reinicie el servicio de IISAdmin”. En su lugar, reinicie el equipo para asegurarse de que los cambios surten efecto.<br /><br /> Por ejemplo, si el nombre de encabezado de host \<MyServer> es un nombre virtual para el nombre de equipo Windows de "contoso", probablemente pueda hacer referencia al formato FQDN como "contoso.domain.com". Deberá agregar tanto el nombre de hostheader (MyServer) como el nombre FQDN (contoso.domain.com) a la lista de **BackConnectionHostNames**.|Se requiere este paso si el entorno de servidor incluye la autenticación NTLM en el equipo local, creando una conexión de bucle invertido.<br /><br /> Si es así, notará que las solicitudes entre el Administrador de informes y el servidor de informes dan el error 401 (no autorizado).|  
+|3|Agregue NetBIOS y el nombre de dominio completo (FQDN) del encabezado de host a la lista de **BackConnectionHostNames** almacenada en el Registro de Windows. Siga los pasos de **Método 2: especificar los nombres de host** en [KB 896861](https://support.microsoft.com/kb/896861) (https://support.microsoft.com/kb/896861), con el ajuste siguiente. El**paso 7** del artículo de KB dice que “salga del Editor del Registro y después reinicie el servicio de IISAdmin”. En su lugar, reinicie el equipo para asegurarse de que los cambios surten efecto.<br /><br /> Por ejemplo, si el nombre de encabezado de host \<MyServer> es un nombre virtual para el nombre de equipo Windows de "contoso", probablemente pueda hacer referencia al formato FQDN como "contoso.domain.com". Deberá agregar tanto el nombre de hostheader (MyServer) como el nombre FQDN (contoso.domain.com) a la lista de **BackConnectionHostNames**.|Se requiere este paso si el entorno de servidor incluye la autenticación NTLM en el equipo local, creando una conexión de bucle invertido.<br /><br /> Si es así, notará que las solicitudes entre el Administrador de informes y el servidor de informes dan el error 401 (no autorizado).|  
 |4|Instale [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el modo de solo archivos en los nodos que ya formen parte de un clúster NLB y configure las instancias del servidor de informes para la implementación escalada.<br /><br /> La implementación escalada que configure podría no responder a las solicitudes que se dirijan a la dirección IP del servidor virtual. La configuración de la implementación escalada para utilizar la dirección IP del servidor virtual se produce en un paso posterior, después de configurar la validación del estado de la vista.|[Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)|  
 |5|Configure la validación del estado de la vista.<br /><br /> Para obtener los mejores resultados, realice este paso después de configurar la implementación escalada y antes de configurar las instancias del servidor de informes para utilizar la dirección IP del servidor virtual. Al configurar la validación del estado de la vista primero, puede evitar las excepciones de la validación del estado con errores que se producen cuando los usuarios intentan tener acceso a informes interactivos.|[Cómo configurar la validación del estado de la vista](#ViewState) en este tema.|  
 |6|Configure **Hostname** y **UrlRoot** para que usen la dirección IP del servidor virtual del clúster NLB.|[Cómo configurar Hostname y UrlRoot](#SpecifyingVirtualServerName) en este tema.|  

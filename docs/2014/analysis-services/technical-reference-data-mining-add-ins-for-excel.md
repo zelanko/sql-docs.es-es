@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c657fc64bcc844d7c17153f83489a35594027ffc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: cdf32878788bd68f9f0da36500be75fed5b96691
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62756542"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066214"
 ---
 # <a name="technical-reference-data-mining-add-ins-for-excel"></a>Referencia técnica (Complementos de minería de datos para Excel)
   Los Complementos de minería de datos para Office contienen características útiles para los programadores y los usuarios avanzados de minería de datos.  

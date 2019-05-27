@@ -14,15 +14,15 @@ helpviewer_keywords:
 - rowsets [SQL Server], functions
 - rowsets [SQL Server]
 ms.assetid: ac24d700-3144-4ab5-9fa8-8c014001cc71
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 8c843db24866c819babe11c55a24301cdd20146d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d10adee08bea99595ba2d49edcf5f8f322f5bcfc
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735043"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945358"
 ---
 # <a name="rowset-functions-transact-sql"></a>Funciones de conjuntos de filas (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47735043"
   
  Todas las funciones de conjuntos de filas son no deterministas. Por ello, estas funciones no siempre devuelven el mismo resultado cada vez que se invocan, incluso con el mismo conjunto de valores de entrada. Para más información sobre el determinismo de las funciones, vea [Funciones deterministas y no deterministas](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
   
   

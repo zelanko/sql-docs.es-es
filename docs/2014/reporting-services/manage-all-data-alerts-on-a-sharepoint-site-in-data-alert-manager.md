@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - managing, alerts
@@ -14,12 +13,12 @@ ms.assetid: 9c70b0f4-2db8-4c2e-acbf-96e2a55ddc48
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d0fa7051bbbbc95b1fac5c0990b8210c6198be69
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: debf7415a6364a358bb92066d53b840bcecd5930
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63279019"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66108340"
 ---
 # <a name="manage-all-data-alerts-on-a-sharepoint-site-in-data-alert-manager"></a>Administrar todas las alertas de datos de un sitio de SharePoint en el Administrador de alertas de datos
   Los administradores de alertas de SharePoint pueden ver una lista de las alertas de datos creadas por los usuarios del sitio e información acerca de las alertas. Los administradores de alertas también pueden eliminar alertas. En la imagen siguiente se muestran las características disponibles para los administradores de alertas en el Administrador de alertas de datos.  

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - simple expressions [SQL Server]
 - complex expressions [SQL Server]
 ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55e3dda77a2b623ef50fe64ad82824b84a934f44
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 241da55ac2e4a0f0bf144bd0360767265f3258fd
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124105"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982339"
 ---
 # <a name="expressions-transact-sql"></a>Expresiones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "54124105"
 |----------|----------------|  
 |*constant*|Es un símbolo que representa un único valor de datos específico. Para más información, vea [Constantes &#40;Transact-SQL&#41;](../../t-sql/data-types/constants-transact-sql.md).|  
 |*scalar_function*|Es una unidad de sintaxis [!INCLUDE[tsql](../../includes/tsql-md.md)] que proporciona un servicio específico y devuelve un valor único. *scalar_function* puede incluir funciones escalares integradas, como las funciones SUM, GETDATE o CAST, o funciones escalares definidas por el usuario.|  
-|[ _table_name_**.** ]|Es el nombre o alias de una tabla.|  
+|[ _table_name_ **.** ]|Es el nombre o alias de una tabla.|  
 |*column*|Es el nombre de una columna. En una expresión solo se admite el nombre de la columna.|  
 |*variable*|Es el nombre de una variable o un parámetro. Para obtener más información, vea [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).|  
 |**(** _expression_  **)**|Es cualquier expresión válida tal como se define en este tema. Los paréntesis son operadores de agrupación que garantizan que todos los operadores de la expresión escritos entre paréntesis se evalúen antes de que la expresión resultante se combine con otra.|  

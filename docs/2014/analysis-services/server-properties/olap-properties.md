@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - AggregationPerfLog property
@@ -96,12 +95,12 @@ ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e89743de546afbc331259dbe3ff18a0344a4e420
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 4b26323f99d0b31cdb31e12b64eabdd2a855d907
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746727"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068871"
 ---
 # <a name="olap-properties"></a>Propiedades OLAP
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite las propiedades de servidor OLAP enumeradas en las tablas siguientes. Para obtener más información sobre las propiedades de servidor adicionales y cómo establecerlas, vea [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  
@@ -197,7 +196,7 @@ ms.locfileid: "62746727"
  `PartitionLatencyAccuracy`  
  Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .  
   
-## <a name="process"></a>Procesar  
+## <a name="process"></a>Process  
  `AggregationMemoryLimitMax`  
  Una propiedad de número de punto flotante de doble precisión de 64 bits con signo que define el máximo de memoria que se puede destinar a procesamiento, expresado en forma de porcentaje de memoria física.  
   

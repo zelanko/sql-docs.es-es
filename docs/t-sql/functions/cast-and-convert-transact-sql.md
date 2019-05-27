@@ -32,16 +32,16 @@ helpviewer_keywords:
 - time zones [SQL Server]
 - roundtrip conversions
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5020bfd6f7a17538130d5f701c7b2bbbe8ff766e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: f1ff55b99e722a1132114c400688cbc184b1bb04
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801839"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942893"
 ---
 # <a name="cast-and-convert-transact-sql"></a>CAST y CONVERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,15 +52,16 @@ Estas funciones convierten una expresión de un tipo de datos a otro.
 
 **Cast**
 ```sql  
-SELECT 9.5 AS Original, CAST(9.5 AS int) AS int, 
-    CAST(9.5 AS decimal(6,4)) AS decimal;
+SELECT 9.5 AS Original,
+       CAST(9.5 AS INT) AS [int],
+       CAST(9.5 AS DECIMAL(6, 4)) AS [decimal];
 
 ```  
 **Convertir**
 ```sql  
-
-SELECT 9.5 AS Original, CONVERT(int, 9.5) AS int, 
-    CONVERT(decimal(6,4), 9.5) AS decimal;
+SELECT 9.5 AS Original,
+       CONVERT(INT, 9.5) AS [int],
+       CONVERT(DECIMAL(6, 4), 9.5) AS [decimal];
 ```  
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
@@ -176,12 +177,12 @@ En el caso de una *expression* **xml**, *style* puede tener uno de los valores q
 |Valor|Salida|  
 |---|---|
 |**0** (valor predeterminado)|Usa el comportamiento de análisis predeterminado que descarta los espacios en blanco insignificantes y no permite un subconjunto DTD interno.<br /><br />**Nota:** Al convertir al tipo de datos **xml**, los espacios en blanco insignificantes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se controlan de forma distinta que en XML 1.0. Para más información, vea [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md).|  
-|**1**|Conserva los espacios en blanco insignificantes. Esta configuración de estilo establece el control predeterminado de **xml:space** para emular el comportamiento de **xml:space="preserve"**.|  
+|**1**|Conserva los espacios en blanco insignificantes. Esta configuración de estilo establece el control predeterminado de **xml:space** para emular el comportamiento de **xml:space="preserve"** .|  
 |**2**|Habilita el procesamiento limitado de subconjuntos DTD internos.<br /><br /> Si está habilitado, el servidor puede usar la siguiente información proporcionada en un subconjunto DTD interno para realizar operaciones de análisis que no se validan.<br /><br />   - Se aplican los valores predeterminados de los atributos<br />   - Las referencias a entidades internas se resuelven y se amplían<br />   - Se comprueba la corrección sintáctica del modelo de contenido DTD<br /><br /> El analizador pasa por alto los subconjuntos DTD externos. Además, no evalúa la declaración XML para comprobar si el atributo **standalone** tiene el valor **yes** o **no**. En su lugar, analiza la instancia XML como documento independiente.|  
 |**3**|Conserva los espacios en blanco insignificantes y habilita el procesamiento limitado de los subconjuntos DTD internos.|  
   
 ## <a name="binary-styles"></a>Estilos binarios
-En el caso de una *expression* **binary(n)**, **char(n)**, **varbinary(n)** o **varchar(n)**, *style* puede tener uno de los valores que se muestran en la siguiente tabla. Los valores de estilo que no figuran en la tabla devolverán un error.
+En el caso de una *expression* **binary(n)** , **char(n)** , **varbinary(n)** o **varchar(n)** , *style* puede tener uno de los valores que se muestran en la siguiente tabla. Los valores de estilo que no figuran en la tabla devolverán un error.
   
 |Valor|Salida|  
 |---|---|
@@ -204,15 +205,15 @@ Al convertir entre **datetimeoffset** y los tipos de caracteres **char**, **ncha
   
 ## <a name="large-value-data-types"></a>Tipos de datos de valor grande
 Los tipos de datos de valor grande tienen el mismo comportamiento de conversión implícita y explícita que sus equivalentes más pequeños, en concreto los tipos de datos **nvarchar**, **varbinary** y **varchar**. Aun así, tenga en cuenta las directrices siguientes:
--   La conversión de datos **image** a datos **varbinary(max)** y viceversa funciona como una conversión implícita, al igual que las conversiones entre **text** y **varchar(max)** y entre **ntext** y **nvarchar(max)**.  
--   La conversión de tipos de datos de valor grande, como **varchar(max)**, a un tipo de datos equivalente más pequeño, como **varchar**, es una conversión implícita, aunque se produce un truncamiento si el tamaño del valor grande supera la longitud especificada del tipo de datos más pequeño.  
+-   La conversión de datos **image** a datos **varbinary(max)** y viceversa funciona como una conversión implícita, al igual que las conversiones entre **text** y **varchar(max)** y entre **ntext** y **nvarchar(max)** .  
+-   La conversión de tipos de datos de valor grande, como **varchar(max)** , a un tipo de datos equivalente más pequeño, como **varchar**, es una conversión implícita, aunque se produce un truncamiento si el tamaño del valor grande supera la longitud especificada del tipo de datos más pequeño.  
 -   La conversión de **nvarchar**, **varbinary** o **varchar** a sus tipos de datos correspondientes de valor grande tiene lugar de forma implícita.  
 -   La conversión del tipo de datos **sql_variant** en los tipos de datos de valor grande es una conversión explícita.  
 -   Los tipos de datos de valor grande no se pueden convertir en el tipo de datos **sql_variant**.  
   
 Para más información sobre la conversión del tipo de datos **xml**, vea [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md).
   
-## <a name="xml-data-type"></a>Tipo de datos XML
+## <a name="xml-data-type"></a>tipo de datos xml
 Cuando se convierte de forma explícita o implícita el tipo de datos **xml** en un tipo de datos de cadena o binario, el contenido del tipo de datos **xml** se serializa en función de un conjunto de reglas definido. Para más información sobre estas reglas, vea [Definir la serialización de datos XML](../../relational-databases/xml/define-the-serialization-of-xml-data.md). Para más información sobre la conversión de otros tipos de datos al tipo de datos **xml**, vea [Crear instancias de datos XML](../../relational-databases/xml/create-instances-of-xml-data.md).
   
 ## <a name="text-and-image-data-types"></a>Tipos de datos text e image
@@ -366,7 +367,7 @@ WHERE CONVERT(int, ListPrice) LIKE '3%';
 GO  
 ```  
   
-### <a name="b-using-cast-with-arithmetic-operators"></a>b. Utilizar CAST con operadores aritméticos  
+### <a name="b-using-cast-with-arithmetic-operators"></a>B. Utilizar CAST con operadores aritméticos  
 En este ejemplo se calcula una única columna (`Computed`) mediante la división de las ventas anuales hasta la fecha (`SalesYTD`) entre el porcentaje de la comisión (`CommissionPCT`). Este valor se redondea al número entero más cercano y luego se convierte (CAST) en un tipo de datos `int`.
   
 ```sql
@@ -421,7 +422,7 @@ The list price is 364.09
 ```  
   
 ### <a name="d-using-cast-to-produce-more-readable-text"></a>D. Utilizar CAST para obtener texto más legible  
-En este siguiente ejemplo se usa CAST en la lista SELECT para convertir la columna `Name` en una columna de tipo **char(10)**. Usa la base de datos AdventureWorksDW.
+En este siguiente ejemplo se usa CAST en la lista SELECT para convertir la columna `Name` en una columna de tipo **char(10)** . Usa la base de datos AdventureWorksDW.
   
 ```sql
 SELECT DISTINCT CAST(EnglishProductName AS char(10)) AS Name, ListPrice  
@@ -673,7 +674,7 @@ ProductKey  UnitPrice  UnitPriceDiscountPct  DiscountPrice
 ```  
   
 ### <a name="l-using-cast-with-the-like-clause"></a>L. Utilizar CAST con la cláusula LIKE  
-En este ejemplo se convierte `ListPrice` de la columna **money** a un tipo **int** y, luego, a un tipo **char(20)**, de modo que la cláusula LIKE pueda usarla. En este ejemplo se usa la base de datos AdventureWorksDW.  
+En este ejemplo se convierte `ListPrice` de la columna **money** a un tipo **int** y, luego, a un tipo **char(20)** , de modo que la cláusula LIKE pueda usarla. En este ejemplo se usa la base de datos AdventureWorksDW.  
   
 ```sql
 SELECT EnglishProductName AS Name, ListPrice  

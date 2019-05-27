@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.bidtoolset.importfromppt.f1
@@ -13,12 +12,12 @@ ms.assetid: ac1a6a79-bda3-4122-a717-8b1e2f77da02
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 867d476c0132bedf39f709497e035b8264f2b022
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 941155a5e434457cdf9c79bd25c653c7207937a9
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757216"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067016"
 ---
 # <a name="import-from-powerpivot-ssas-tabular"></a>Importar desde PowerPivot (SSAS tabular)
   En este tema se describe cómo crear un nuevo proyecto de modelos tabulares importando los metadatos y datos desde un libro PowerPivot mediante la importación desde PowerPivot de plantilla de proyecto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.addreference.f1
@@ -16,12 +15,12 @@ ms.assetid: 457958c4-6baa-474d-99a0-34c195ceba09
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a2a44c1f7a37cc7e7e010ea15c72d35255b443e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 541b7371cdc05ee316e9fb9de9f50affc4f14fc7
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62632958"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66062859"
 ---
 # <a name="add-reference-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Agregar referencia (Analysis Services - Datos multidimensionales)
   Utilice el cuadro de diálogo **Agregar referencia** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para agregar una referencia a un ensamblado de [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET Framework o a otro proyecto del proyecto de desarrollo. Para abrir el cuadro de diálogo **Agregar referencia**, haga clic con el botón derecho en la carpeta **Ensamblados** de un proyecto de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en el **Explorador de soluciones** y seleccione **Nueva referencia de ensamblado** en el menú contextual.  

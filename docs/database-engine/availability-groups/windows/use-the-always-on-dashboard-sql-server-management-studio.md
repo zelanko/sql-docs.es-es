@@ -15,12 +15,12 @@ ms.assetid: c9ba2589-139e-42bc-99e1-94546717c64d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d70825317f2dbc7a59857bebf533d4b617b97e0
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: f1a82b21716db66c4eb2676ed51160519f99afd7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120202"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982790"
 ---
 # <a name="use-the-always-on-availability-group-dashboard-sql-server-management-studio"></a>Uso del panel de grupo de disponibilidad Always On (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,14 +40,12 @@ ms.locfileid: "49120202"
 -   Modo y estado de sincronización    
 -   Tiempo para restaurar registro  
   
-##  <a name="before-you-begin"></a>Antes de comenzar  
   
-### <a name="prerequisites"></a>Prerequisites  
+## <a name="prerequisites"></a>Prerequisites  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria de un grupo de disponibilidad.  
   
-### <a name="security"></a>Seguridad  
-  
-#### <a name="permissions"></a>Permisos  
+ 
+### <a name="permissions"></a>Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
 ##  <a name="to-start-the-always-on-dashboard"></a>Para iniciar el panel Always On  
@@ -56,7 +54,7 @@ ms.locfileid: "49120202"
   
 2.  Expanda el nodo **Alta disponibilidad de AlwaysOn** , haga clic con el botón derecho en el nodo **Grupos de disponibilidad** y, luego, haga clic en **Mostrar panel**.  
   
-###  <a name="change-always-on-dashboard-options"></a>Cambio de las opciones del panel Always On  
+##  <a name="change-always-on-dashboard-options"></a>Cambio de las opciones del panel Always On  
  Puede usar el cuadro de diálogo **Opciones** de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] para configurar el comportamiento del panel AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a la hora de habilitar y actualizar automáticamente una directiva de AlwaysOn autodefinida.  
   
 1.  En el menú **Herramientas** , haga clic en **Opciones**.  
@@ -216,8 +214,7 @@ El panel **Réplica de disponibilidad** muestra las columnas siguientes:
     -   En una base de datos secundaria, indica que la base de datos no ha iniciado la sincronización del registro debido a un problema de conexión, se está suspendiendo o está pasando por estados de transición durante el inicio o en una conmutación de roles.  
   
 -   **En proceso de sincronización**:
--   
-     En una réplica principal:   
+- En una réplica principal:   
     - En una base de datos principal, indica que esta base de datos está lista para aceptar una solicitud de examen de una base de datos secundaria.  
     - En una réplica secundaria, indica que hay en curso un movimiento de datos activo para esa base de datos secundaria. 
   
@@ -340,7 +337,7 @@ Para obtener más información, vea [Informes de latencia del grupo de disponibi
   
 -   [Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)  
   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - SQMSupportEnabled property
@@ -20,12 +19,12 @@ ms.assetid: a34d046a-6562-4d98-b827-37cebc6d77b4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7c9047bc6bae67b005d8ed93e4831557a0dac9b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1cc2d52bd942fe15eeabd72f1c37740637e692d2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746907"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069050"
 ---
 # <a name="feature-properties"></a>Propiedades de características
   Las propiedades de características corresponden a las características del producto, la mayor parte de ellas avanzadas, incluidas las propiedades que controlan los vínculos entre las instancias de servidor.  

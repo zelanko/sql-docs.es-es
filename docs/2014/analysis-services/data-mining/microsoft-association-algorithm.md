@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - MinimumProbability property
@@ -31,12 +30,12 @@ ms.assetid: 8b6b8247-62f9-4f6f-b1af-d01dab290e4c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 4ce0fdddd09dd3145949d56727ae4c3e8b853602
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6a799f5a8aef79dec7cb951e95e6f252b3be2626
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722114"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084069"
 ---
 # <a name="microsoft-association-algorithm"></a>Algoritmo de asociación de Microsoft
   Este algoritmo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] es un algoritmo de asociación suministrado por [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], útil para los motores de recomendación. Un motor de recomendación recomienda productos a los clientes basándose en los elementos que ya han adquirido o en los que tienen interés. El algoritmo de asociación de [!INCLUDE[msCoName](../../includes/msconame-md.md)] también resulta útil para el análisis de la cesta de compra. Para obtener un ejemplo de un análisis de cesta, consulte [lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41; ](../../tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md) en el Tutorial de minería de datos.  

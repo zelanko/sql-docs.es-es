@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - KEY_NAME function
 ms.assetid: 7b693e5d-2325-4bf9-9b45-ad6a23374b41
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 59b69687434a1432f087da75d77d93907c02edee
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ed2b88a38075fe5951340bcc72eb636cab3e251e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745453"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65949197"
 ---
 # <a name="keyname-transact-sql"></a>KEY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ KEY_NAME ( ciphertext | key_guid )
   
 ## <a name="arguments"></a>Argumentos  
  *ciphertext*  
- Es el texto cifrado por la clave simétrica. *cyphertext* es de tipo **varbinary(8000)**.  
+ Es el texto cifrado por la clave simétrica. *cyphertext* es de tipo **varbinary(8000)** .  
   
  *key_guid*  
  Es el GUID de la clave simétrica. *key_guid* es de tipo **uniqueidentifier**.  
@@ -109,7 +109,7 @@ SELECT KEY_NAME(@ciphertext) AS [Name of Key] ;
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.symmetric_keys &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md)   
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   
  [DECRYPTBYKEYAUTOASYMKEY &#40;Transact-SQL&#41;](../../t-sql/functions/decryptbykeyautoasymkey-transact-sql.md)  

@@ -22,15 +22,15 @@ helpviewer_keywords:
 - identification numbers [SQL Server], logins
 - SUSER_SID function
 ms.assetid: 57b42a74-94e1-4326-85f1-701b9de53c7d
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0d4a3d885eb4f0d40d95f937ba252625e9e07de5
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 0b8c2dbe2b9129ae52432de1b70079a53a963c27
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979891"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948389"
 ---
 # <a name="susersid-transact-sql"></a>SUSER_SID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
 SELECT SUSER_SID();  
 ```  
   
-### <a name="b-using-susersid-with-a-specific-login"></a>b. Utilizar SUSER_SID con un inicio de sesión específico  
+### <a name="b-using-susersid-with-a-specific-login"></a>B. Utilizar SUSER_SID con un inicio de sesión específico  
  En el ejemplo siguiente se devuelve el número de identificación de seguridad del inicio de sesión `sa` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 **Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.slicesourcecube.f1
@@ -13,12 +12,12 @@ ms.assetid: 16485608-d3b9-49ee-8baa-948038cdd7ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c68ec29c2461cb7ffddfdbd2792e1a1a191076b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bcb156d5c0a3c1332e748878ddebda1772b80696
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62746468"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66068596"
 ---
 # <a name="slice-source-cube-data-mining-wizard"></a>Segmentar el cubo de origen (Asistente para minería de datos)
   Puede utilizar el cuadro de diálogo **Segmentar el cubo de origen** para restringir los datos usados para entrenar el modelo. Un cubo suele contener datos relacionados con muchas dimensiones y atributos diferentes, como todas las tiendas, todas las regiones y todos los productos. No resulta práctico entrenar un modelo en combinaciones ilimitadas de atributos, por lo que debe utilizar este cuadro de diálogo para elegir un conjunto específico que se empleará para entrenar un modelo.  

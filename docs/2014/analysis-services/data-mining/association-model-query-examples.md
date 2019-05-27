@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - itemsets [Analysis Services]
@@ -17,12 +16,12 @@ ms.assetid: 68b39f5c-c439-44ac-8046-6f2d36649059
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 268685c489d03f7e9055042ab613223146f89600
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a31052c0d239010407941141997fca8fc343f9cf
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62689551"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086121"
 ---
 # <a name="association-model-query-examples"></a>Ejemplos de consultas del modelo de asociación
   Cuando se crea una consulta en un modelo de minería de datos, puede tratarse de una consulta de contenido, que proporciona detalles sobre las reglas y los conjuntos de elementos detectados durante el análisis, o una consulta de predicción, que utiliza las asociaciones detectadas en los datos para realizar predicciones. En un modelo de asociación, las predicciones se basan normalmente en reglas y se pueden utilizar para realizar recomendaciones, mientras que las consultas de contenido normalmente exploran la relación entre los conjuntos de elementos. También se puede recuperar metadatos sobre el modelo.  

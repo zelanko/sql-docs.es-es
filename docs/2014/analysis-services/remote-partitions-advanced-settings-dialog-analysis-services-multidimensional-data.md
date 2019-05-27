@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.advancedrestoresettings.f1
@@ -13,12 +12,12 @@ ms.assetid: a03bb7e1-efaf-47c8-b0ee-f3e4438311cb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7677776bb1adf21d3234f770a9e2941edfa70ed0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1ca3f12ff53c4291d8bbe7c8eb97ce8e47172ea3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62748347"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66070379"
 ---
 # <a name="remote-partitions---advanced-settings-dialog-box-analysis-services---multidimensional-data"></a>Particiones remotas - Cuadro de diálogo Configuración avanzada (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Particiones remotas - Configuración avanzada** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para editar la configuración avanzada, como la cadena de conexión del origen de datos que representa la base de datos remota de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que mantiene las particiones remotas, a la vez que restaura las particiones remotas desde un archivo de copia de seguridad remoto a una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] mediante el cuadro de diálogo **Restaurar base de datos**. Puede mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** desde la página **Particiones** del cuadro de diálogo **Restaurar base de datos** si hace clic en el botón de puntos suspensivos (**…**) de una partición remota tras seleccionar la opción **Restaurar particiones remotas** .  

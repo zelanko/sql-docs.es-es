@@ -9,16 +9,16 @@ ms.technology: t-sql
 ms.topic: language-reference
 dev_langs:
 - TSQL
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 9feb899a0a46a04ad52ef15fb801e2eb4866e478
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 117e5a08730aae4381f10fc8a8a2ab0ed2fa875f
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698573"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65945224"
 ---
 # <a name="sessionid-transact-sql"></a>SESSION_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +35,7 @@ SESSION_ID ( )
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Devuelve un valor **nvarchar(32)**.  
+ Devuelve un valor **nvarchar(32)** .  
   
 ## <a name="general-remarks"></a>Notas generales  
  El identificador de sesión se asigna a cada conexión de usuario en el momento de realizarla. Este identificador persiste mientras dure la conexión. Cuando la conexión finalice, el identificador de sesión se libera.  
@@ -51,7 +51,7 @@ SESSION_ID ( )
 SELECT SESSION_ID();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
  [VERSION &#40;SQL Data Warehouse&#41;](../../t-sql/functions/version-transact-sql-configuration-functions.md)
   

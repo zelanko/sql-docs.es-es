@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.partitions.partitiontableselection.f1
@@ -13,12 +12,12 @@ ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 2e615df2adea50f2ee6d0d0741d6d885b87311ca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7f8ea36c8c3d49d4903379ed4450548fc760937a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62757833"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067867"
 ---
 # <a name="table-binding-detail-partition-source-dialog-box-analysis-services---multidimensional-data"></a>Detalle del enlace de tablas (cuadro de diálogo Origen de la partición) (Analysis Services - Datos multidimensionales)
   Use la opción **Enlace de tablas** del cuadro de diálogo **Origen de la partición** para especificar la tabla de hechos que proporciona los datos para la partición. Puede mostrar este panel seleccionando **Enlace de tablas** en la opción **Tipo de enlace** del cuadro de diálogo **Origen de la partición** .  

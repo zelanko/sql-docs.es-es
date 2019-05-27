@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0e9931ff-439e-4e1a-9ef2-5d3971187eb9
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 60b2cb7347f38053474b6b6f1e001f9bd9f758f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 675d15f2d2c20ecb18b03cd5fa85684befeddff0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62758506"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66067900"
 ---
 # <a name="tabular-model-solutions-ssas-tabular"></a>Soluciones de modelos tabulares (SSAS tabular)
   En los temas de esta sección se proporciona información sobre la creación de modelos tabulares usando el diseñador de modelos tabulares de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

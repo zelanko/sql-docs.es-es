@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d0abb2a7-e981-4b0a-a442-80c819aca2ae
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d4788e421015effe2b3ee6abf0ffeca2cbbdd386
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f37c34b1b4857ca561b656a773c2cfa71ffb19c4
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62794476"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66066155"
 ---
 # <a name="toolbar-browser-tab-dimension-designer-analysis-services---multidimensional-data"></a>Barra de herramientas (pestaña Explorador, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
   Utilice el panel **Barra de herramientas** para realizar operaciones habituales en la pestaña **Explorador** del **Diseñador de dimensiones**.  

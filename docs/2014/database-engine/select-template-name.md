@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.pro.f1
@@ -15,12 +14,12 @@ ms.assetid: 30ac38b8-0c14-474c-b245-d2b8393d2f36
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a55b53cac59b387a2e52f5b1e5dc641471b1b28b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b0f79a5b61fc7526d87772c6b07c8a217b1baf60
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62773777"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089800"
 ---
 # <a name="select-template-name"></a>Seleccionar nombre de plantilla
   Utilice el cuadro de diálogo **Seleccionar nombre de plantilla** para seleccionar una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] existente para exportarla a un archivo del sistema operativo. También puede utilizar este cuadro de diálogo para seleccionar o escribir un nombre distinto para guardar una plantilla de seguimiento como cuando se edita una plantilla de seguimiento existente. Para tener acceso a este cuadro de diálogo cuando se exporta una plantilla, en el menú [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **del** , seleccione **Plantillas**y, a continuación, haga clic en **Exportar plantilla**. Para tener acceso a este cuadro de diálogo cuando se cambia el nombre de una plantilla, en el menú **Archivo** , seleccione **Plantillas**, **Editar plantilla**y, a continuación, haga clic en **Guardar como**.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - logs [Reporting Services], execution
@@ -14,12 +13,12 @@ ms.assetid: a7ead67d-1404-4e67-97e7-4c7b0d942070
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e8e2f2a714aad9d1824f2ad922b63cd94f2a96d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 649795e5e142563b64014f2ccf970f0df5de134b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190918"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103473"
 ---
 # <a name="report-server-execution-log-and-the-executionlog3-view"></a>Registro de ejecución del servidor de informes y la vista ExecutionLog3
   El registro de la ejecución del servidor de informes contiene información sobre los informes que se ejecutan en el servidor o en varios servidores de una implementación escalada en modo nativo o de una granja de servidores de SharePoint. Puede usar el registro de la ejecución de informes para averiguar con qué frecuencia se solicita el informe, qué formatos de salida se usan más y cuántos milisegundos del tiempo de procesamiento se dedica a cada fase del procesamiento. El registro contiene información sobre el tiempo de ejecución de la consulta de conjunto de datos de un informe y el tiempo empleado en el procesamiento de los datos. Si es administrador del servidor de informes, puede revisar la información del registro e identificar las tareas de ejecución prolongada, y realizar sugerencias a los autores de informes en las áreas del informe (conjunto de datos o procesamiento) que se puedan mejorar.  
@@ -124,7 +123,7 @@ select * from ExecutionLog3 order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos empleados en recuperar los datos.|  
 |TimeProcessing|Número de milisegundos empleados en procesar el informe.|  
 |TimeRendering|Número de milisegundos empleados en representar el informe.|  
-|Source|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Cache**: Indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **AdHoc** : Indica un informe generado dinámicamente en función del modelo informe detallado o un informe de generador de informes que se muestra una vista previa en un cliente que use el servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: Indica una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**:  Indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
+|`Source`|Origen de la ejecución del informe. Valores posibles:<br /><br /> **Live**<br /><br /> **Cache**: Indica una ejecución almacenada en caché, por ejemplo, conjunto de datos en directo no se ejecutan las consultas.<br /><br /> **Snapshot**<br /><br /> **Historial**<br /><br /> **AdHoc** : Indica un informe generado dinámicamente en función del modelo informe detallado o un informe de generador de informes que se muestra una vista previa en un cliente que use el servidor de informes para el procesamiento y representación.<br /><br /> **Sesión**: Indica una solicitud de seguimiento en una sesión que ya se ha establecido.  Por ejemplo, la solicitud inicial es ver la página 1 y la solicitud de seguimiento es exportar a Excel con el estado actual de la sesión.<br /><br /> **Rdce**:  Indica una extensión de personalización de definición de informe. Las extensiones personalizadas de RDCE pueden personalizar dinámicamente una definición de informe antes de que se pase al motor de procesamiento en el momento de la ejecución de informes.|  
 |Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
@@ -323,7 +322,7 @@ select * from ExecutionLog2 order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos dedicados a recuperar los datos, procesar el informe y representarlo.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
+|`Source`|Origen de la ejecución del informe (1=Activo, 2=Caché, 3=Instantánea, 4=Historial).|  
 |Estado|Estado (rsSuccess o un código de error; si se producen varios errores, solo se registra el primero).|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  
@@ -353,7 +352,7 @@ select * from ExecutionLog order by TimeStart DESC
 |TimeDataRetrieval|Número de milisegundos dedicados a recuperar los datos, procesar el informe y representarlo.|  
 |TimeProcessing||  
 |TimeRendering||  
-|Source|Origen de la ejecución del informe. Valores posibles: (1 = activo, 2 = caché, 3 = instantánea, 4 = historial, 5 = Adhoc, 6 = sesión, 7 = RDCE).|  
+|`Source`|Origen de la ejecución del informe. Valores posibles: (1 = activo, 2 = caché, 3 = instantánea, 4 = historial, 5 = Adhoc, 6 = sesión, 7 = RDCE).|  
 |Estado|Valores posibles: rsSuccess, rsProcessingAborted o un código de error. Si aparecen varios errores, solo se registra el primero.|  
 |ByteCount|Tamaño de los informes representados en bytes|  
 |RowCount|Número de filas devueltas de consultas.|  

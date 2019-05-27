@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e8c61bebd6265d25e2c3fe0a14516e986f3ee414
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
+ms.sourcegitcommit: 3b266dc0fdf1431fdca6b2ad34ae5fd38abe9f69
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134408"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66186798"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Conectarse a los nodos del dispositivo en Analytics Platform System
 En este artículo se explica las diversas maneras de conectarse a cada nodo en el dispositivo de Analytics Platform System.  
@@ -26,6 +26,9 @@ Antes de usar Hadoop con PDW de SQL Server, pida al administrador de dispositivo
 Cada uno de los nodos del dispositivo se acceda directa solo en escenarios de uso específicos y los tipos de usuario específico. En la tabla siguiente se enumera cada nodo de dispositivo y los escenarios en que los usuarios se conectarán directamente a ese nodo.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Cambiar la configuración de base de datos o una tabla en nodos de proceso o de Control sin consentimiento explícito del equipo del producto o el equipo de soporte técnico de cliente de puntos de acceso puede provocar que el dispositivo APS fuera del soporte técnico.
   
 |||  
 |-|-|  

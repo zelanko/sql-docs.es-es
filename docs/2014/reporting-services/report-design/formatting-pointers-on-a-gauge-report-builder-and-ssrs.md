@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 3254f7bbe4cfdd826b24c003b5b472535534dd54
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 294586f0d48ca96ca12d3e9eac70f5d2d288654f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62654472"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105833"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
   El puntero de un medidor indica el valor actual del medidor. De forma predeterminada, cuando se agrega un campo, los valores contenidos en él se agregan a un valor mostrado por el puntero en el medidor. Puede agregar varios punteros al medidor para que apunten a varios valores en la misma escala o agregar varias escalas y un puntero para cada una. Después de agregar un campo a un medidor, debe establecer los valores máximo y mínimo en la escala correspondiente para dar contexto al valor del puntero. También tiene la opción de establecer los valores mínimo y máximo en un intervalo, que muestra un área crítica en la escala.  

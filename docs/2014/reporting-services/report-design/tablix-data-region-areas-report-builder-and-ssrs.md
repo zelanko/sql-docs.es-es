@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: f6c13407-2887-4287-9396-a58dba619d9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 21b92fe6ab723b9e519b8828f9adcd4e67dad2e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0f3fb342593e24ce97a550186065a22ec3ee2498
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720250"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104723"
 ---
 # <a name="tablix-data-region-areas-report-builder-and-ssrs"></a>Describir las áreas de la región de datos Tablix (Generador de informes y SSRS)
   Una región de datos Tablix se compone de cuatro áreas que contienen las celdas de Tablix: la esquina, el área de grupo de filas, el área de grupo de columnas y el cuerpo. En cada área, las celdas tienen una función diferente. Las celdas que se agregan al cuerpo de Tablix tienen como finalidad mostrar datos detallados y agrupados. Si crea un grupo para mostrar valores de instancia de grupo, el Generador de informes y el Diseñador de informes agregan celdas al área de grupo de filas o al área de grupo de columnas. El Generador de informes y el Diseñador de informes crean las celdas de esquina de Tablix si existen grupos de filas y grupos de columnas.  

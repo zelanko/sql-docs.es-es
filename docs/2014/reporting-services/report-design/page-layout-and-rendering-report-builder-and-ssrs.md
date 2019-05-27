@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e2358653-35bc-4496-810a-d3ccf02f229f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fa140a2c4311a3bfa77ba056fc957bacbb99e5d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: df28762c61f548b47c4da4a31fe1d1fd42fbf65a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209084"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105510"
 ---
 # <a name="page-layout-and-rendering-report-builder-and-ssrs"></a>Representación y diseño de páginas (Generador de informes y SSRS)
   Cuando cree un informe, es importante que conozca el comportamiento de los representadores de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para asegurarse de que el informe representado tiene la apariencia que desea, incluidos el diseño y los saltos de página. Probablemente también desee asegurarse de que el informe representado cabe en el tamaño de papel que usted o su organización suelen utilizar.  

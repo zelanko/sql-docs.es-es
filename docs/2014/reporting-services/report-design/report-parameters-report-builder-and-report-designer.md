@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 07/27/2016
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.subreportproperties.parameters.f1
@@ -18,12 +17,12 @@ ms.assetid: 58b96555-d876-4f61-bff8-db5764b9f5f9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: c62b34985ccd967ec21e88e01c146851b9c18df9
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c9047073a39076fd246b14db26ca1d519fd2e1c6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932621"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105066"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
   Este tema describe los usos habituales de los parámetros de informe de SSRS, las propiedades que puede establecer y muchas cosas más relativas a los parámetros. Los parámetros de informe le permiten controlar datos de informe, conectar informes relacionados y cambiar la presentación de los informes.  
@@ -129,7 +128,7 @@ ms.locfileid: "59932621"
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|Nombre|Escriba un nombre de parámetro con distinción de mayúsculas y minúsculas. El nombre debe comenzar por una letra y puede incluir letras, números y caracteres de subrayado (_). El nombre no puede contener espacios. En el caso de los parámetros generados automáticamente, el nombre coincide con el parámetro en la consulta de conjunto de datos. De forma predeterminada, los parámetros creados manualmente deben similares a ReportParameter1.|  
+|NOMBRE|Escriba un nombre de parámetro con distinción de mayúsculas y minúsculas. El nombre debe comenzar por una letra y puede incluir letras, números y caracteres de subrayado (_). El nombre no puede contener espacios. En el caso de los parámetros generados automáticamente, el nombre coincide con el parámetro en la consulta de conjunto de datos. De forma predeterminada, los parámetros creados manualmente deben similares a ReportParameter1.|  
 |Pedir datos|El texto que aparece junto al parámetro en la barra de herramientas del Visor de informes.|  
 |Tipo de datos|Cuando se definen los valores disponibles para un parámetro, el usuario elige valores en una lista desplegable, incluso cuando el tipo de datos es `DateTime`. Un parámetro de informes debe ser de uno de los siguientes tipos de datos:<br /><br /> `Boolean`  El usuario selecciona True o False en un botón de opción.<br /><br /> `DateTime`  El usuario selecciona una fecha en un control de calendario.<br /><br /> **Integer**. El usuario escribe valores en un cuadro de texto.<br /><br /> **Float**. El usuario escribe valores en un cuadro de texto.<br /><br /> `Text`  El usuario escribe valores en un cuadro de texto.<br /><br /> Para obtener más información acerca de los tipos de datos de informe, vea [RDL Data Types](../reports/report-definition-language-ssrs.md#bkmk_RDL_Data_Types).|  
 |Permitir valor en blanco|Seleccione esta opción si el valor del parámetro puede ser una cadena vacía o estar en blanco.<br /><br /> Si especifica los valores válidos de un parámetro, y desea que el valor en blanco sea uno de ellos, deberá incluirlo como uno de los valores que especifique. La selección de esta opción no incluye automáticamente el espacio en blanco entre los valores disponibles.|  

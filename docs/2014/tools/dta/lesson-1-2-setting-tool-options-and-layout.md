@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Database Engine [SQL Server], tutorials
@@ -13,12 +12,12 @@ ms.assetid: 43e97ce0-97bc-4a27-9485-5bbeb7190b85
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 023a38a1d3b5c09fc7e1447ecd026d133abca1db
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: de7918c382187fe4af361146bd182eecd7e30b80
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63227020"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66110198"
 ---
 # <a name="setting-tool-options-and-layout"></a>Configurar las opciones de herramienta y el diseño
   Puede definir opciones que permiten configurar lo que mostrará la interfaz gráfica de usuario (GUI) del Asistente para la optimización de motor de base de datos al iniciarse, las fuentes utilizadas y otras funciones para facilitar el uso. Las prácticas de esta página le permitirán familiarizarse con las opciones que puede configurar y el modo de hacerlo.  
@@ -44,6 +43,6 @@ ms.locfileid: "63227020"
     -   La opción **Preguntar antes de detener análisis de sesión** está activada de forma predeterminada para impedir la detención accidental de la sesión de optimización antes de que el Asistente para la optimización de motor de base de datos haya terminado de analizar la carga de trabajo.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
+ [Lección 2: Usar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
   
   

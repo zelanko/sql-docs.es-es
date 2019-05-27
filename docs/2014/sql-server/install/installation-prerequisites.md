@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - installation prerequisites, Setup
@@ -16,12 +15,12 @@ ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 010f9ef7cfd46acb0b3245601af93cf150313227
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 98f7dd23615cf86e4c20a84eae6bc39ff6489bc3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48171035"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66094349"
 ---
 # <a name="installation-prerequisites"></a>Requisitos previos de la instalación
   Para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se instale correctamente, son necesarios los siguientes componentes de software en el equipo de instalación. Los instalará el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] :  

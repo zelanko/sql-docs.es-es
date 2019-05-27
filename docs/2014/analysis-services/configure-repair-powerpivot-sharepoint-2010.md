@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d61f49c5-efaa-4455-98f2-8c293fa50046
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a80e362c97df74773d303a4b022d376fff40fb70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 350aadcdd44dcc4424b94792286a7421e2613b2e
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62680489"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66087388"
 ---
 # <a name="configure-or-repair-powerpivot-for-sharepoint-2010-powerpivot-configuration-tool"></a>Configurar o reparar PowerPivot para SharePoint 2010 (Herramienta de configuración de PowerPivot)
   Para configurar o reparar una instalación de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] PowerPivot para SharePoint 2010, use la Herramienta de configuración de PowerPivot. La herramienta de configuración comienza examinando el sistema y devuelve una lista de las acciones necesarias para completar o reparar una instalación. El Asistente para la instalación de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] instala la herramienta de configuración de PowerPivot para SharePoint 2010 y una herramienta de configuración de PowerPivot para SharePoint 2013. En este tema se describe la herramienta de configuración de PowerPivot para SharePoint 2010. Para obtener más información sobre SharePoint 2010, consulte [configurar o reparar PowerPivot para SharePoint 2013 &#40;herramienta de configuración de PowerPivot&#41;](power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md).  
@@ -89,7 +88,7 @@ ms.locfileid: "62680489"
   
  En la tabla siguiente se describen los valores usados para configurar el servidor.  
   
-|Página|Valor de entrada|Source|Descripción|  
+|Página|Valor de entrada|`Source`|Descripción|  
 |----------|-----------------|------------|-----------------|  
 |**Configurar o reparar PowerPivot para SharePoint**|Cuenta predeterminada|Usuario actual|La cuenta predeterminada es una cuenta de usuario de Windows de dominio que se utiliza para proporcionar servicios compartidos en la granja. Se utiliza para proporcionar la aplicación de servicio PowerPivot, el Servicio de almacenamiento seguro, Excel Services, la identidad del grupo de aplicaciones web, el administrador de la colección de sitios, y la cuenta de actualización de datos desatendida de PowerPivot.<br /><br /> De forma predeterminada, la herramienta especifica la cuenta de dominio del usuario actual. A menos que esté configurando un servidor con fines de evaluación, debe reemplazar este con otra cuenta de usuario de dominio.<br /><br /> También puede cambiar las identidades de servicio posteriormente, mediante Administración central.<br /><br /> Opcionalmente, en la herramienta de configuración de PowerPivot, puede especificar cuentas dedicadas para:<br /><br /> La aplicación web mediante la página **Crear aplicación web predeterminada** (suponiendo que la herramienta vaya a crear una aplicación web para la granja).<br /><br /> PowerPivot cuenta de actualización de datos desatendida, utilizando el **crear cuenta de actualización de datos desatendida** página en esta herramienta.|  
 ||Servidor de bases de datos|Instancia con nombre local de PowerPivot, si está disponible|Si una instancia del motor de base de datos se instala como una instancia con nombre de PowerPivot, la herramienta rellenará el campo del servidor de bases de datos con esta instancia. Si no ha instalado el motor de base de datos, este campo está vacío. Debe proporcionar una instancia. Puede ser cualquier versión o edición de SQL Server que se admita en granjas de servidores de SharePoint.|  

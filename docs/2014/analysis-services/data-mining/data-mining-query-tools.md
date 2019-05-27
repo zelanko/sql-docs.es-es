@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - predictions [Analysis Services], DMX prediction queries
@@ -19,12 +18,12 @@ ms.assetid: a8952427-fd8c-4300-8f62-25f57ac1be0c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8b5d5ab4c6b62dd9afd4ac922b0604c6ffdbd075
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7c59d3a18c1fd36f82e8ea60e42d1b9f6e2f34c2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722918"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084981"
 ---
 # <a name="data-mining-query-interfaces"></a>Interfaces de consultas de minería de datos
   Las consultas de minería de datos se basan en el lenguaje DMX (Extensiones de minería de datos). DMX se usa para todas las tareas de predicción y modelado, incluida la clasificación, el análisis de riesgos, la generación de recomendaciones y la regresión lineal. También puede recuperar los patrones y estadísticas que se generaron al procesar el modelo.  

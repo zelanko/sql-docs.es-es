@@ -26,16 +26,16 @@ helpviewer_keywords:
 - COMMIT TRANSACTION statement
 - rolling back transactions, COMMIT TRANSACTION
 ms.assetid: f8fe26a9-7911-497e-b348-4e69c7435dc1
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f35a455b23d9fed53d40810a4aac87353458f11
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 392f5138e580f35f030ce51ce5eed1150f7d0be7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801459"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982758"
 ---
 # <a name="commit-transaction-transact-sql"></a>COMMIT TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -107,7 +107,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT TRANSACTION;   
 ```  
   
-### <a name="b-committing-a-nested-transaction"></a>b. Confirmar una transacción anidada  
+### <a name="b-committing-a-nested-transaction"></a>B. Confirmar una transacción anidada  
 **SE APLICA A:** SQL Server y Azure SQL Database    
 
 En el siguiente ejemplo se crea una tabla, se generan tres niveles de transacciones anidadas y después se confirma la transacción anidada. Aunque cada instrucción `COMMIT TRANSACTION` cuenta con un parámetro *transaction_name*, no existe ninguna relación entre las instrucciones `COMMIT TRANSACTION` y `BEGIN TRANSACTION`. Los parámetros *transaction_name* ayudan al programador a asegurarse de que escribe el número apropiado de confirmaciones para reducir `@@TRANCOUNT` hasta 0, confirmando así la transacción más externa. 

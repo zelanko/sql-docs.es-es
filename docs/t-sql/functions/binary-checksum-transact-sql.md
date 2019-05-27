@@ -16,16 +16,16 @@ helpviewer_keywords:
 - BINARY_CHECKSUM function
 - binary [SQL Server], checksum values
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 492bd95f917d6973e4ff2797c170be58d16d0c40
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+ms.openlocfilehash: ddffd56aae2f1ee2e9e6a550cf3436df1c014be7
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676093"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65942817"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -77,7 +77,7 @@ o Administrador de configuración de
   
 Por ejemplo, las cadenas "McCavity" y "Mccavity" tienen valores `BINARY_CHECKSUM` distintos. Por el contrario, en un servidor que no distingue entre mayúsculas y minúsculas, `CHECKSUM` devuelve los mismos valores de suma de comprobación para ambas cadenas. Debe evitar la comparación de valores `CHECKSUM` con `BINARY_CHECKSUM`.
  
-`BINARY_CHECKSUM` admite cualquier longitud de tipo **varbinary(max)** y un máximo de 255 caracteres de tipo **nvarchar(max)**.
+`BINARY_CHECKSUM` admite cualquier longitud de tipo **varbinary(max)** y un máximo de 255 caracteres de tipo **nvarchar(max)** .
   
 ## <a name="examples"></a>Ejemplos  
 Este ejemplo utiliza `BINARY_CHECKSUM` para detectar cambios en una fila de tabla.

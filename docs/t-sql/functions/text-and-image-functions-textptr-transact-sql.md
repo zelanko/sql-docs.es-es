@@ -18,15 +18,15 @@ helpviewer_keywords:
 - text-pointer values
 - displaying text pointer values
 ms.assetid: 2672b8cb-f747-46f3-9358-9b49b3583b8e
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 890819799317034e4f89b372a0af742afa3422e5
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: dfca4f9367a15cf5c418b8d671ae968260323898
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51699784"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948494"
 ---
 # <a name="text-and-image-functions---textptr-transact-sql"></a>Funciones de texto e imagen - TEXTPTR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,10 +63,10 @@ TEXTPTR ( column )
   
 |Función o instrucción|Descripción|  
 |---------------------------|-----------------|  
-|PATINDEX<b>('</b>_%pattern%_**' ,** _expression_**)**|Devuelve la posición de carácter de una cadena de caracteres especificada en columnas de tipo **text** o **ntext**.|  
-|DATALENGTH<b>(</b>_expression_**)**|Devuelve la longitud de datos en columnas **text**, **ntext** e **image**.|  
+|PATINDEX<b>('</b> _%pattern%_ **' ,** _expression_ **)**|Devuelve la posición de carácter de una cadena de caracteres especificada en columnas de tipo **text** o **ntext**.|  
+|DATALENGTH<b>(</b>_expression_ **)**|Devuelve la longitud de datos en columnas **text**, **ntext** e **image**.|  
 |SET TEXTSIZE|Devuelve el límite en bytes de los datos de tipo **text**, **ntext** o **image** que se devuelven con una instrucción SELECT.|  
-|SUBSTRING<b>(</b>_text_column_, _start_, _length_**)**|Devuelve una cadena **varchar** según los valores especificados en el desplazamiento *start* y *length*. La longitud debe ser inferior a 8 KB.|  
+|SUBSTRING<b>(</b>_text_column_, _start_, _length_ **)**|Devuelve una cadena **varchar** según los valores especificados en el desplazamiento *start* y *length*. La longitud debe ser inferior a 8 KB.|  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -186,7 +186,7 @@ pr_info
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
  [READTEXT &#40;Transact-SQL&#41;](../../t-sql/queries/readtext-transact-sql.md)   

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - sql12.swb.query.general.f1
@@ -13,12 +12,12 @@ ms.assetid: 858a0263-2f04-4692-b8bf-63e93c998ead
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 955dcff3399f6936fb5b1f8042dae4658a55a11f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b3ecf106315fa88fdfb68599cfce71a77be975dd
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844798"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089043"
 ---
 # <a name="query-options-execution-general-page"></a>Ejecución de Opciones de consulta (página General)
   Utilice esta página para especificar las opciones de ejecución de consultas de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] . Para tener acceso a este cuadro de diálogo, haga clic con el botón derecho en el cuerpo de una ventana del Editor de consultas y haga clic en **Opciones de consulta**.  

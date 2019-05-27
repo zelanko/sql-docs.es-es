@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - command line setup [Reporting Services]
@@ -21,12 +20,12 @@ ms.assetid: 42dd2f06-1de9-449e-ab9d-f4ef25f8b728
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: af30ed5d0e275353691e506dd49eeaebcea10d3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 899b202de247a28e4a842c313c32a8b4f57417df
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011620"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66093657"
 ---
 # <a name="other-reporting-services-upgrade-issues"></a>Otros problemas de actualización de Reporting Services
   En este tema se describen problemas conocidos que puede encontrar al actualizar la funcionalidad de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. **Asesor de actualizaciones no detecta estos problemas.** Para obtener más información, consulte [notas de la versión de SQL Server 2014](https://go.microsoft.com/fwlink/?LinkID=296445)  

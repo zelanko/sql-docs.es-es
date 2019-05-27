@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.dataexplorationoptionsdialog.f1
@@ -15,12 +14,12 @@ ms.assetid: 876920c8-9d6f-4d09-abb2-53d78161a289
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: bd497b6c4adae9a89ad0907985591675633a9c84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b327a0a350e88fd197a52c710f8a991c892a0aea
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679542"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086536"
 ---
 # <a name="data-exploration-options-dialog-box-analysis-services---data-mining"></a>Cuadro de diálogo Opciones de exploración de datos (Analysis Services – Minería de datos)
   Use el cuadro de diálogo **Opciones de exploración de datos** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para establecer las opciones de muestreo y de gráficos para el cuadro de diálogo **Explorar datos** . Para abrir el cuadro de diálogo **Opciones de exploración de datos** , haga clic en **Opciones de muestreo** en el cuadro de diálogo **Explorar datos** .  

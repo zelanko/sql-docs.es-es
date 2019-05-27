@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 05/25/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - offline resources [SQL Server]
@@ -42,12 +41,12 @@ ms.assetid: 619facba-5cf4-4474-9577-9e2d82a851fb
 author: mightypen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8f79b36232ef099ee211a9f718668d02cb7992ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a09293b660bc096f8dc9eacf3986f03950eabfb1
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62838008"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088561"
 ---
 # <a name="getting-sql-server-assistance"></a>Obtener ayuda sobre SQL Server
   Hay tres fuentes principales de información de [!INCLUDE[msCoName](../includes/msconame-md.md)] acerca de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:  
@@ -78,7 +77,7 @@ ms.locfileid: "62838008"
   
  En la tabla siguiente se describen estos recursos y sus destinatarios.  
   
-|Recurso|Público|  
+|Resource|Público|  
 |--------------|--------------|  
 |[Centro para desarrolladores de SQL Server](https://msdn.microsoft.com/sqlserver/)|Programadores que generan bases de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], sistemas de informes y soluciones de Business Intelligence, y que habilitan sus aplicaciones y sitios web para que utilicen estos sistemas.|  
 |[Centro para desarrolladores de XML](https://go.microsoft.com/fwlink/?LinkId=42458)|Creadores de sitios web y programadores de aplicaciones cuyos sitios y aplicaciones utilicen XML para la manipulación y el almacenamiento de datos.|  
@@ -87,7 +86,7 @@ ms.locfileid: "62838008"
 ## <a name="additional-online-information"></a>Información adicional en línea  
  Hay disponible información adicional de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en estos sitios web de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
-|Recurso|Descripción|  
+|Resource|Descripción|  
 |--------------|-----------------|  
 |[Microsoft SQL Server](https://go.microsoft.com/fwlink/?linkid=8504)|Proporciona información previa a las ventas acerca de la evaluación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para el almacenamiento de datos y como herramienta de Business Intelligence.|  
 |[Microsoft Knowledge Base](https://go.microsoft.com/fwlink/?LinkId=42461)|Proporciona un repositorio de artículos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] escritos por soporte técnico de [!INCLUDE[msCoName](../includes/msconame-md.md)], en el que se pueden realizar búsquedas.|    

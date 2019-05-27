@@ -13,15 +13,15 @@ helpviewer_keywords:
 - operators [Transact-SQL], about operators
 - operators [Transact-SQL]
 ms.assetid: 1fc2de8b-e7e0-4c61-9a02-4776a7d93ab7
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: b9ca22d4dcd4a8c25933d06d2311efa1cf28c029
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 69ce7cfc0949bc97c0e8371615de4930443737f4
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51701203"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980482"
 ---
 # <a name="operators-transact-sql"></a>Operadores (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "51701203"
 |[Operadores de comparación](../../t-sql/language-elements/comparison-operators-transact-sql.md)|[Operador de concatenación de cadenas](../../t-sql/language-elements/string-operators-transact-sql.md)|  
 |[Operadores compuestos](../../t-sql/language-elements/compound-operators-transact-sql.md)|[Operadores unarios](https://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Prioridad de los operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operator-precedence-transact-sql.md)  
   
   

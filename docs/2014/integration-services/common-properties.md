@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -20,12 +19,12 @@ ms.assetid: 51973502-5cc6-4125-9fce-e60fa1b7b796
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: ab92e158fe5da6312959cc0797ff48e1c44e0080
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62835234"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060961"
 ---
 # <a name="common-properties"></a>Propiedades comunes
   Los objetos de flujo de datos en el modelo de objetos de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] tienen propiedades comunes y propiedades personalizadas en el nivel del componente, de las entradas y salidas, y de las columnas de entrada y de salida. Muchas propiedades tienen valores de solo lectura que son asignados en tiempo de ejecución por el motor de flujo de datos.  
@@ -94,7 +93,7 @@ ms.locfileid: "62835234"
 |IdentificationString|String|Identifica el componente.|  
 |IsDefaultLocale|Boolean|Indica si el componente utiliza la configuración regional de la tarea Flujo de Datos a la que pertenece.|  
 |LocaleID|Integer|Configuración regional que el componente de flujo de datos utiliza cuando el paquete se ejecuta. Todas las configuraciones regionales de Windows están disponibles para su uso en componentes de flujo de datos.|  
-|Nombre|String|Nombre del componente de flujo de datos.|  
+|Name|String|Nombre del componente de flujo de datos.|  
 |PipelineVersion|Integer|La versión de la tarea de flujo de datos para la que se ha diseñado la ejecución de un componente.|  
 |UsesDispositions|Boolean|Indica si un componente tiene una salida de error.|  
 |ValidateExternalMetadata|Boolean|Indica si se validan los metadatos de columnas externas. El valor predeterminado de esta propiedad es `True`.|  
@@ -160,7 +159,7 @@ ms.locfileid: "62835234"
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
 |IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es `False`.<br /><br /> **\*\* Importante \* \***  estableciendo el valor de la `IsSorted` propiedad `True` no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Nombre|String|Nombre de la salida.|  
+|Name|String|Nombre de la salida.|  
 |SynchronousInputID|Integer|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure` y `Redirect row`.|  
   
@@ -179,7 +178,7 @@ ms.locfileid: "62835234"
 |Id.|Integer|Valor que identifica la columna de resultados de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna de resultados.|  
 |LineageID|Integer|El Id. de columna para la columna de resultados. Los componentes de nivel inferior hacen referencia a la columna utilizando este valor.|  
-|Name|String|Nombre de la columna de resultados.|  
+|NOMBRE|String|Nombre de la columna de resultados.|  
 |SortKeyPosition|Integer|Valor que indica si una columna está ordenada, su criterio de ordenación y la secuencia en la que se ordenan varias columnas. El valor **0** indica que la columna no está ordenada. Para más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
 |SpecialFlags|Integer|Un valor que contiene las marcas especiales de la columna de resultados.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure` y `Redirect row`. El valor predeterminado es `Fail component`.|  
@@ -196,7 +195,7 @@ ms.locfileid: "62835234"
 |Descripción|String|Describe la columna externa.|  
 |Id.|Integer|Valor que identifica la columna de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la columna.|  
-|Name|String|Nombre de la columna de externa.|  
+|NOMBRE|String|Nombre de la columna de externa.|  
   
  Las columnas de metadatos externos también incluyen un conjunto de propiedades de tipo de datos.  
   

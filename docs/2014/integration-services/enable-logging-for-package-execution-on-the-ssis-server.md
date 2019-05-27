@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 8930c63c-bc6f-46c2-b428-b3c29ee89a7d
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 99321c27fa28d16260ee3b27972d83a8b61cae59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 47f74d4510b46b984eb58706ff4ac159cb8b1352
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62898913"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66059369"
 ---
 # <a name="enable-logging-for-package-execution-on-the-ssis-server"></a>Habilitar el registro para la ejecución de paquetes en el servidor SSIS
   En este procedimiento se describe cómo establecer o cambiar el nivel de registro para un paquete cuando se ejecuta un paquete que ha implementado en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. El nivel de registro que se establece al ejecutar el paquete invalida el registro de paquete configurado mediante [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Vea [Habilitar el registro de paquetes en SQL Server Data Tools](../../2014/integration-services/enable-package-logging-in-sql-server-data-tools.md) para obtener más información.  

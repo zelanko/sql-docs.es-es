@@ -20,16 +20,16 @@ helpviewer_keywords:
 - IN keyword
 - 8632 (Database Engine error)
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 15af126a7fd76a38fc9cffa218d4a77fc5da3e0b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e6bead506a9e7b84aba4f5ec2cee1668e6483e1
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602823"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982156"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ test_expression [ NOT ] IN
  *subquery*  
  Es una subconsulta que tiene un conjunto de resultados de una columna. Esta columna debe tener el mismo tipo de datos que *test_expression*.  
   
- *expression*[ **,**... *n* ]  
+ *expression*[ **,** ... *n* ]  
  Es una lista de expresiones en la que se buscará una coincidencia. Todas las expresiones deben ser del mismo tipo que *test_expression*.  
   
 ## <a name="result-types"></a>Tipos de resultado  
@@ -206,7 +206,7 @@ FROM DimEmployee
 WHERE FirstName IN ('Mike', 'Michael');  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   

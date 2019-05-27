@@ -19,15 +19,15 @@ helpviewer_keywords:
 - SOME | ANY keyword
 - single-column set of values [SQL Server]
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 89b8317b9782685d7486eb375045ca6988af28d0
-ms.sourcegitcommit: 009bee6f66142c48477849ee03d5177bcc3b6380
+ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/13/2019
-ms.locfileid: "56230952"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981599"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  **Boolean**  
   
 ## <a name="result-value"></a>Valor del resultado  
- SOME o ANY devuelven **TRUE** cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_**,**_x_), donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve **FALSE**.  
+ SOME o ANY devuelven **TRUE** cuando la comparación especificada es TRUE para todos los pares (_scalar_expression_ **,** _x_), donde *x* es un valor del conjunto de una sola columna; en caso contrario, devuelve **FALSE**.  
   
 ## <a name="remarks"></a>Notas  
  SOME requiere que la *scalar_expression* se compare de forma positiva con al menos un valor devuelto por la subconsulta. Para ver instrucciones que requieren que *scalar_expression* se compare de forma positiva con solo un valor devuelto por la subconsulta, vea [ALL &#40;Transact-SQL&#41;](../../t-sql/language-elements/all-transact-sql.md). Por ejemplo, si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = SOME (subconsulta) se evaluaría como TRUE para una *scalar_expression* de 2. Si la subconsulta devuelve los valores 2 y 3, *scalar_expression* = ALL (subconsulta) se evaluaría como FALSE, porque algunos de los valores de la subconsulta (el valor 3) no cumplirían los criterios de la expresión.  
@@ -99,7 +99,7 @@ ELSE
 PRINT 'FALSE' ;  
 ```  
   
-### <a name="b-running-a-practical-example"></a>b. Ejecutar un ejemplo práctico  
+### <a name="b-running-a-practical-example"></a>B. Ejecutar un ejemplo práctico  
  En el ejemplo siguiente se crea un procedimiento almacenado que determina si todos los componentes de un `SalesOrderID` especificado en la base de datos `AdventureWorks2012` se pueden fabricar en el número de días especificado. En el ejemplo se usa una subconsulta para crear una lista de valores de `DaysToManufacture` para todos los componentes del `SalesOrderID` especificado y, a continuación, se comprueba si alguno de los valores devueltos por la subconsulta es mayor que el número de días especificado. Si cada valor de `DaysToManufacture` que se devuelve es menor que el número proporcionado, la condición es TRUE y se imprime el primer mensaje.  
   
 ```  

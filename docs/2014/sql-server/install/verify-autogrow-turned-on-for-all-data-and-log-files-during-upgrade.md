@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - log files [SQL Server], size
@@ -16,12 +15,12 @@ ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab29cc94071b95f6ff8cffb95902851d1796ed80
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62985867"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091214"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Comprobar que autogrow está activo para todos los datos y archivos de registro durante el proceso de actualización
   El Asesor de actualizaciones detectó archivos de datos o de registro no configurados para crecimiento automático. Características nuevas y mejoradas requieren espacio en disco adicional para bases de datos de usuario y la **tempdb** base de datos del sistema. Para asegurarse de que los recursos pueden aceptar los aumentos de tamaño durante la actualización y las operaciones de producción posteriores, se recomienda habilitar el crecimiento automático en ON para todos los archivos de registro y datos de usuario y la **tempdb** antes de actualizar los archivos de datos y de registro.  

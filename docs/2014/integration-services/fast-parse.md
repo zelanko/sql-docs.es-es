@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 helpviewer_keywords:
 - fast parse [Integration Services]
@@ -13,12 +12,12 @@ ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: d080df993035bc34783bb39991d80d6a8e692618
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62894508"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66058867"
 ---
 # <a name="fast-parse"></a>Fast Parse
   El análisis rápido ofrece un conjunto rápido y simple de rutinas para analizar datos. Estas rutinas no son dependientes de la configuración regional y solo admiten un subconjunto de formatos de fecha, hora y número entero.  

@@ -5,25 +5,25 @@ ms.custom: performance
 ms.date: 12/13/2017
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 00211061180339a1c537fba2101caf323758dd8d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f62f7f5536fb2a1ec716971e6c24d88e47cc04aa
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718559"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66009826"
 ---
 # <a name="change-the-account-for-scale-out-logging"></a>Cambiar la cuenta para el registro del escalabilidad horizontal
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-Al ejecutar paquetes de SSIS en escalabilidad horizontal, los mensajes de eventos se registrarán en la base de datos de SSISDB con un usuario creado automáticamente y llamado **##MS_SSISLogDBWorkerAgentLogin##**. El inicio de sesión de este usuario usará la autenticación de SQL Server.
+Al ejecutar paquetes de SSIS en escalabilidad horizontal, los mensajes de eventos se registrarán en la base de datos de SSISDB con un usuario creado automáticamente y llamado **##MS_SSISLogDBWorkerAgentLogin##** . El inicio de sesión de este usuario usará la autenticación de SQL Server.
 
 Si quiere cambiar la cuenta que se usa para el registro de la escalabilidad horizontal, siga estos pasos:
 

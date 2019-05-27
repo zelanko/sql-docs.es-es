@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1
@@ -13,12 +12,12 @@ ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d49e80d01a83f2ffad43178fa987010cd4f76b01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f5a8508218ed6a2b4407943fe962959e3cd4f97d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62679753"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66086615"
 ---
 # <a name="cross-validation-tab-mining-accuracy-chart-view"></a>Pestaña Validación cruzada (vista Gráfico de precisión de minería de datos)
   La validación cruzada le permite dividir una estructura de minería de datos en secciones transversales y entrenar y probar de forma iterativa los modelos con cada sección transversal. Se especifican varios subconjuntos en los que se dividirán los datos, y cada uno se usa a su vez como datos de pruebas, mientras que los datos restantes se usan para entrenar un nuevo modelo. A continuación, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] genera un conjunto de medidas de precisión estándar para cada modelo. Al comparar las medidas de los modelos generados para cada sección transversal, puede hacerse una idea del grado de confiabilidad del modelo de minería con respecto a todo el conjunto de datos.  

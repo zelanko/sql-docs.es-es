@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - Transact-SQL debugger, Locals Window
@@ -18,12 +17,12 @@ ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: cf132c55677580a22e57e52a106e3e7c639c3cef
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 354b3fa047fb1fd0effc4f92f18c011d85fcb1e2
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48147445"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66063429"
 ---
 # <a name="transact-sql-debugger-information"></a>Ver información del depurador de Transact-SQL
   Siempre que el depurador detenga la ejecución de una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] específica, puede usar las distintas ventanas del depurador para ver el estado de la ejecución actual.  
@@ -41,7 +40,7 @@ ms.locfileid: "48147445"
 -   En la barra de herramientas **Depuración** , haga clic en **Puntos de interrupción**y, a continuación, seleccione la ventana que desee.  
   
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
- Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
+ Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos que están asignados actualmente a expresiones en hasta cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**, y **Inspección4**.  
   
  La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   

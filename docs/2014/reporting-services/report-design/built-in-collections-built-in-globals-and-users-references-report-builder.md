@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 5f5e1149-c967-454d-9a63-18ec4a33d985
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 268deacf076f7ea79222dd441777f1ad16149750
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ef0438dfa0750c2a516a801a2d81b5d1c0b49721
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63022477"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106437"
 ---
 # <a name="built-in-globals-and-users-references-report-builder-and-ssrs"></a>Referencias a campos globales y de usuario integrados (Generador de informes y SSRS)
   La colección de campos integrados, que incluye las colecciones `Globals` y `User`, representa valores globales proporcionados por Reporting Services al procesar un informe. La colección `Globals` proporciona valores como el nombre del informe, la hora a la que comenzó el procesamiento del informe y el número de la página actual para el encabezado o el pie de página del informe. La colección `User` proporciona el identificador de usuario y la configuración de idioma. Estos valores se pueden usar en expresiones para filtrar los resultados de un informe.  
@@ -47,7 +46,7 @@ ms.locfileid: "63022477"
   
 |Miembro|Tipo|Descripción|  
 |------------|----------|-----------------|  
-|Nombre|`String`|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
+|NOMBRE|`String`|Nombre del representador como está registrado en el archivo de configuración de RSReportServer.<br /><br /> Está disponible durante el ciclo de procesamiento o representación de partes concretas del informe.|  
 |IsInteractive|`Boolean`|Si la solicitud de representación actual utiliza un formato de representación interactivo.|  
 |DeviceInfo|Colección nombre/valor de solo lectura|Pares clave/valor para los parámetros de deviceinfo para la solicitud de representación actual.<br /><br /> Los valores de cadena se pueden especificar utilizando la clave o un índice en la colección.|  
   

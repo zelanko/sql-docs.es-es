@@ -14,16 +14,16 @@ helpviewer_keywords:
 - Transact-SQL debugger, QuickWatch
 - Transact-SQL debugger, viewing information
 ms.assetid: b99819cc-f388-41a1-b304-36e78ce24147
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 051d63bf71870766a0bf74364eee7545970d4393
-ms.sourcegitcommit: 0638b228980998de9056b177c83ed14494b9ad74
+ms.openlocfilehash: fced8436279b5daa2751b0b4708a62b449d0bcd7
+ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51643852"
+ms.lasthandoff: 05/17/2019
+ms.locfileid: "65821832"
 ---
 # <a name="transact-sql-debugger---information"></a>Transact-SQL Debugger - Information (Depurador de Transact-SQL: Información)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "51643852"
 -   En la barra de herramientas **Depuración** , haga clic en **Puntos de interrupción**y, a continuación, seleccione la ventana que desee.  
   
 ## <a name="transact-sql-expressions"></a>Expresiones de Transact-SQL  
- Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3**e **Inspección4**.  
+ Las expresiones son cláusulas de [!INCLUDE[tsql](../../includes/tsql-md.md)] que se evalúan en un único valor escalar, como las variables o los parámetros. La ventana izquierda del depurador puede mostrar los valores de datos asignados actualmente a expresiones en un máximo de cinco pestañas o ventanas: **Variables locales, Inspección1**, **Inspección2**, **Inspección3** e **Inspección4**.  
   
  La ventana **Variables locales** muestra información sobre las variables locales del ámbito actual del depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El conjunto de expresiones que se muestran en **esta ventana** cambia a medida que el depurador se ejecuta en las distintas partes del código.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "51643852"
   
  En el modo de depuración, las pestañas **Resultados** y **Mensajes** continúan estando activas en el Editor de consultas. La pestaña **Resultados** continúa mostrando los conjuntos de resultados de las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que se ejecutan durante una sesión de depuración. La pestaña **Mensajes** continúa mostrando los mensajes del sistema, como *xx* filas afectadas y el resultado de las instrucciones PRINT y RAISERROR.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ventana de locales](../../relational-databases/scripting/transact-sql-debugger-locals-window.md)   
  [Ventana de inspección](../../relational-databases/scripting/transact-sql-debugger-watch-window.md)   
  [Cuadro de diálogo Inspección rápida](../../relational-databases/scripting/transact-sql-debugger-quickwatch-dialog-box.md)   

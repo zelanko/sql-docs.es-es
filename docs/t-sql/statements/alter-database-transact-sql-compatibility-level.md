@@ -1,7 +1,7 @@
 ---
 title: Nivel de compatibilidad de ALTER DATABASE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/15/2019
+ms.date: 05/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d535d50bde7c05629d23be85c2c64083dd455965
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: baa6f443215d5d1f221462e1d20d4bf1498ca899
+ms.sourcegitcommit: 856e28a4f540f851b988ca311846eac9ede6d492
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583378"
+ms.lasthandoff: 05/15/2019
+ms.locfileid: "65626692"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>Nivel de compatibilidad de ALTER DATABASE (Transact-SQL)
 
@@ -210,7 +210,7 @@ En esta sección se describen los nuevos comportamientos incluidos en el nivel d
 |--------------------------------------------------|-----------------------------------------|
 |La instrucción INSERT en una instrucción INSERT-SELECT es de subproceso único.|La instrucción INSERT en una instrucción INSERT-SELECT es multiproceso o puede tener un plan paralelo.|
 |Las consultas en una tabla optimizada para memoria ejecutan un único subproceso.|Ahora, las consultas en una tabla optimizada para memoria pueden tener planes paralelos.|
-|Incluyó el programa de estimación de cardinalidad de SQL 2014 **CardinalityEstimationModelVersion="120"**.|Más mejoras en la estimación de cardinalidad con el modelo de estimación de cardinalidad 130, que es visible desde una consulta. **CardinalityEstimationModelVersion="130"**|
+|Incluyó el programa de estimación de cardinalidad de SQL 2014 **CardinalityEstimationModelVersion="120"** .|Más mejoras en la estimación de cardinalidad con el modelo de estimación de cardinalidad 130, que es visible desde una consulta. **CardinalityEstimationModelVersion="130"**|
 |Cambios del modo por lotes frente al modo de fila con índices de almacén de columnas:<br /><ul><li>Las ordenaciones en una tabla con índice de almacén de columnas se producen en el modo de fila. <li>Los agregados de función basados en ventanas funcionan en el modo de fila, como `LAG` o `LEAD`. <li>Las consultas en tablas de almacén de columnas con varias cláusulas Distinct funcionaban en el modo de fila. <li>Las consultas que se ejecutan con Maxdop1 o un plan de consulta en serie se ejecutaban en el modo de fila.</li></ul>| Cambios del modo por lotes frente al modo de fila con índices de almacén de columnas:<br /><ul><li>Ahora, las ordenaciones en una tabla con índice de almacén de columnas se producen en el modo por lotes. <li>Ahora, los agregados basados en ventanas funcionan en el modo por lotes, como `LAG` o `LEAD`. <li>Las consultas en tablas de almacén de columnas con varias cláusulas Distinct funcionaban en el modo por lotes. <li>Las consultas que se ejecutan con MAXDOP 1 o con un plan de consulta en serie se ejecutan en el modo por lotes.</li></ul>|
 |Las estadísticas se pueden actualizar automáticamente. | La lógica que actualiza las estadísticas automáticamente es más agresiva en tablas grandes. En la práctica, esto debería reducir los casos en los que los clientes advierten problemas de rendimiento en las consultas donde las filas recién insertadas se consultan con frecuencia, pero las estadísticas no se habían actualizado para incluir esos valores. |
 |La marca de seguimiento 2371 está desactivada de forma predeterminada en [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]. | La [marca de seguimiento 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) está activada de forma predeterminada en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. La marca de seguimiento 2371 indica al actualizador automático de estadísticas que muestree un subconjunto de filas más pequeño, pero más práctico, en una tabla que tiene un gran número de filas. <br/> <br/> Una mejora consiste en incluir en el ejemplo más filas que se hayan insertado hace poco. <br/> <br/> Otra mejora es permitir que las consultas se ejecuten mientras el proceso de actualización de estadísticas se ejecuta, en lugar de bloquearlas. |
@@ -237,9 +237,9 @@ En esta sección se describen nuevos comportamientos incluidos con el nivel de c
 |Cuando la contención de la base de datos está establecida en parcial, al validar el campo `$action` en la cláusula `OUTPUT` de una instrucción `MERGE`, se puede devolver un error de intercalación.|La intercalación de los valores devueltos por la cláusula `$action` de una instrucción `MERGE` es la intercalación de base de datos en lugar de la intercalación de servidor y no se devuelve un error de conflicto de intercalación.|
 |Una instrucción `SELECT INTO` siempre crea una operación de inserción de subproceso único.|Una instrucción `SELECT INTO` puede crear una operación de inserción en paralelo. Al insertar un gran número de filas, la operación paralela puede mejorar el rendimiento.|
 
-## <a name="differences-between-lower-compatibility-levels-and-levels-110-and-120"></a>Diferencias entre los niveles de compatibilidad inferiores y los niveles 110 y 120
+## <a name="differences-between-lower-compatibility-levels-and-levels-100-and-110"></a>Diferencias entre los niveles de compatibilidad inferiores y los niveles 100 y 110
 
-En esta sección se describen nuevos comportamientos incluidos con nivel de compatibilidad 110. Esta sección también se aplica al nivel 120.
+En esta sección se describen nuevos comportamientos incluidos con nivel de compatibilidad 110. Esta sección también se aplica a los niveles de compatibilidad por encima de 110.
 
 |Nivel de compatibilidad 100 o inferior|Configuración de nivel de compatibilidad de al menos 110|
 |--------------------------------------------------|--------------------------------------------------|
@@ -295,7 +295,7 @@ En un nivel de compatibilidad dado, las palabras clave reservadas incluyen todas
 
 Una vez insertada, una palabra clave permanece reservada. Por ejemplo, la palabra clave reservada PIVOT, que se introdujo en el nivel de compatibilidad 90, también está reservada en los niveles 100, 110 y 120.
 
-Si una aplicación utiliza un identificador que está reservado como palabra clave para su nivel de compatibilidad, la aplicación generará un error. Para resolver este problema, incluya el identificador entre corchetes (**[]**) o comillas (**""**); por ejemplo, para actualizar una aplicación que usa el identificador **EXTERNAL** al nivel de compatibilidad 90, puede cambiar el identificador a **[EXTERNAL]** o **"EXTERNAL"**.
+Si una aplicación utiliza un identificador que está reservado como palabra clave para su nivel de compatibilidad, la aplicación generará un error. Para resolver este problema, incluya el identificador entre corchetes ( **[]** ) o comillas ( **""** ); por ejemplo, para actualizar una aplicación que usa el identificador **EXTERNAL** al nivel de compatibilidad 90, puede cambiar el identificador a **[EXTERNAL]** o **"EXTERNAL"** .
 
 Para obtener más información, vea [Palabras clave reservadas](../../t-sql/language-elements/reserved-keywords-transact-sql.md).
 

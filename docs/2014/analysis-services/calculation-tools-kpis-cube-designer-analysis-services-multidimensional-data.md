@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.cubeeditor.kpisview.calculationtoolspane.f1
@@ -13,12 +12,12 @@ ms.assetid: c030c725-7763-4c23-9988-4b274a88fc31
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6b845d0ab12447580bb27be43f0d776eac98ee7f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ecd16965c81ccb091d70320bd91c56112d3c15a0
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62681125"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66088268"
 ---
 # <a name="calculation-tools-kpis-tab-cube-designer-analysis-services---multidimensional-data"></a>Herramientas de cálculo (pestaña KPI, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
   Use el panel **Herramientas de cálculo** en la pestaña **KPI** del Diseñador de cubos para explorar metadatos, funciones y plantillas disponibles para usarlas en indicadores clave de rendimiento (KPI).  

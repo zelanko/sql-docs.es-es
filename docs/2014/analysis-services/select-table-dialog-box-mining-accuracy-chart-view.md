@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.miningmodeleditor.accuracychart.selecttable.f1
@@ -15,12 +14,12 @@ ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8baaed268e01c9335484bab411c87afb17b482b2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 242c6451cc6dc018e4972be7a16305b676845687
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747217"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069264"
 ---
 # <a name="select-table-dialog-box-mining-accuracy-chart-view"></a>Seleccionar tabla (vista Gráfico de precisión de minería de datos, cuadro de diálogo)
   Utilice el cuadro de diálogo **Seleccionar tabla** para seleccionar una tabla y utilizarla para probar la precisión de los modelos de minería de datos que contiene la estructura de minería de datos seleccionada.  

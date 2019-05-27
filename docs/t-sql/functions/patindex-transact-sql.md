@@ -19,16 +19,16 @@ helpviewer_keywords:
 - pattern searching [SQL Server]
 - PATINDEX function
 ms.assetid: c0dfb17f-2230-4e36-98da-a9b630bab656
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9dc713f54c9383b240a392304c5c938cdea210b1
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+ms.openlocfilehash: 05612e0b32a336b64614d6072169471fe0450d1b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875220"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943498"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  [expression](../../t-sql/language-elements/expressions-transact-sql.md) es una expresión, normalmente una columna en la que se busca el patrón especificado. *expression* es de la categoría del tipo de datos de cadena de caracteres.  
   
 ## <a name="return-types"></a>Tipos devueltos  
- **bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)**; en caso contrario, **int**.  
+ **bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)** ; en caso contrario, **int**.  
   
 ## <a name="remarks"></a>Notas  
  Si *pattern* o *expression* son NULL, PATINDEX devuelve NULL.  
@@ -63,7 +63,7 @@ PATINDEX ( '%pattern%' , expression )
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
  Cuando se usan intercalaciones SC, el valor devuelto contará cualquier par suplente UTF-16 en el parámetro *expression* como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
- 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en PATINDEX.  
+ 0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en PATINDEX.  
   
 ## <a name="examples"></a>Ejemplos  
   

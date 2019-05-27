@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - testing data mining models
@@ -18,12 +17,12 @@ ms.assetid: ab77eca1-bd48-4fef-b27f-ff5b648e0501
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 177972c5ca9841d0d206e9c20fd1450568fdcb8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 64783573ee24c5d0224393237fdac94044a1dbf3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62722296"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66084311"
 ---
 # <a name="lift-chart-analysis-services---data-mining"></a>Gráfico de mejora respecto al modelo predictivo (Analysis Services - Minería de datos)
   Un **gráfico de elevación** gráficamente representa la mejora que un modelo de minería de datos proporciona cuando se compara con una estimación aleatoria, y mide el cambio en términos de un *elevación* puntuación. Al comparar las puntuaciones de elevación para las distintas partes del conjunto de datos y para los distintos modelos, puede determinar qué modelo es mejor, y qué porcentaje de los casos del conjunto de datos se beneficiaría de aplicar las predicciones del modelo.  

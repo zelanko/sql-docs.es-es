@@ -25,16 +25,16 @@ helpviewer_keywords:
 - naming conventions [SQL Server]
 - syntax [SQL Server], Transact-SQL
 ms.assetid: 35fbcf7f-8b55-46cd-a957-9b8c7b311241
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0580ed82ca6ab5d94b1411ba70ce1b0d2f3ff770
-ms.sourcegitcommit: c61c7b598aa61faa34cd802697adf3a224aa7dc4
+ms.openlocfilehash: edc4bd43b27235a35b6c8ed213e2925523015fde
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56154730"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981449"
 ---
 # <a name="transact-sql-syntax-conventions-transact-sql"></a>Convenciones de sintaxis de Transact-SQL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +50,7 @@ En la siguiente tabla se incluyen y describen las convenciones utilizadas en los
 |&#124; (barra vertical)|Separa los elementos de sintaxis escritos entre corchetes o llaves. Solo puede utilizar uno de los elementos.|  
 |`[ ]` (corchetes)|Elementos opcionales de sintaxis. No escriba los corchetes.|  
 |{} (llaves)|Elementos obligatorios de sintaxis. No escriba las llaves.|  
-|[**,**…_n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa de la siguiente con una coma.|  
+|[ **,** …_n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa de la siguiente con una coma.|  
 |[..._n_]|Indica que el elemento anterior puede repetirse _n_ veces. Cada repetición se separa del siguiente con un espacio en blanco.|  
 |;|Terminador de instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Aunque el punto y coma no es necesario en la mayoría de las instrucciones de esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se exigirá en una versión futura.|  
 |\<label> ::=|Nombre de un bloque de sintaxis. Use esta convención para agrupar y etiquetar secciones de sintaxis extensas o una unidad de sintaxis que puede usar en varias ubicaciones dentro de una instrucción. Cada ubicación en que se podría usar el bloque de sintaxis se indica con la etiqueta situada entre comillas angulares: \<label>.<br /><br /> Un conjunto es una colección de expresiones, por ejemplo \<grouping set>; una lista es una colección de conjuntos, por ejemplo \<composite element list>.|  

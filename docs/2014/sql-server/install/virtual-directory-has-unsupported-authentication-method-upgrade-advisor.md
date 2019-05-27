@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - virtual directories [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca6cfaa5047ea16a4a8f4380fdf2cf150d0967d5
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: 992e0f125d80a4735a356a853dab55439149e7ba
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119645"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66091056"
 ---
 # <a name="virtual-directory-has-unsupported-authentication-method-upgrade-advisor"></a>El directorio virtual tiene un método de autenticación no admitido (Asesor de actualizaciones)
   El Asesor de actualizaciones ha detectado un método de autenticación no compatible en el directorio virtual del Administrador de informes o del servidor de informes. Entre los métodos de autenticación no admitidos por la actualización se incluyen: Anónimo, Implícito y .NET Passport.  

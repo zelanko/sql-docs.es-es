@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.dm.dmwizard.selectnestedtablecolumns.f1
@@ -13,12 +12,12 @@ ms.assetid: b78a820f-b5a2-4dfc-809a-8d6a949a3f3a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: e569dfba5470a6c8c13bb9caa0e36c9711119634
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 911525abdf78472cde7c8467357ce846daafc3a3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747287"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069355"
 ---
 # <a name="select-nested-table-columns-add-new-nested-table-wizard"></a>Seleccionar las columnas de la tabla anidada (Agregar nueva tabla anidada)
   Utilice la página **Seleccionar las columnas de la tabla anidada** para seleccionar los atributos y medidas que se van a incluir en la tabla anidada y para definir cómo utilizará el modelo de minería de datos esos atributos y medidas.  

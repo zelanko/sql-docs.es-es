@@ -21,15 +21,15 @@ helpviewer_keywords:
 - SIGNBYCERT function
 - cryptography [SQL Server], certificates
 ms.assetid: b4c6bced-4473-4bae-85b9-56deced495f9
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 884e7f3928c95584b6a2e675f79a8b88d5fb36bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 42c1e1f86a52ddc441048d25a5ef5d3b8071b96a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727093"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947841"
 ---
 # <a name="signbycert-transact-sql"></a>SIGNBYCERT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SignByCert ( certificate_ID , @cleartext [ , 'password' ] )
  Es una variable de tipo **nvarchar**, **char**, **varchar** o **nchar** que contiene los datos que se van a firmar.  
   
  **'** *password* **'**  
- Es la contraseña con la que se cifró la clave privada del certificado. *password* es **nvarchar(128)**.  
+ Es la contraseña con la que se cifró la clave privada del certificado. *password* es **nvarchar(128)** .  
   
 ## <a name="return-types"></a>Tipos devueltos  
  **varbinary** con un tamaño máximo de 8000 bytes.  
@@ -75,7 +75,7 @@ INSERT INTO [SignedData04]
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [VERIFYSIGNEDBYCERT &#40;Transact-SQL&#41;](../../t-sql/functions/verifysignedbycert-transact-sql.md)   
  [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md)   
  [CREATE CERTIFICATE &#40;Transact-SQL&#41;](../../t-sql/statements/create-certificate-transact-sql.md)   

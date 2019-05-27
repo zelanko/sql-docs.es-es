@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: configuración de la escalabilidad horizontal de SQL Server Integration Services | Microsoft Docs'
+title: 'Tutorial: Configuración de Escalabilidad horizontal de SQL Server Integration Services | Microsoft Docs'
 description: Este artículo le guiará a través de la instalación y configuración de Escalabilidad horizontal de SSIS.
 ms.custom: performance
 ms.date: 12/13/2017
@@ -11,14 +11,18 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 4f68e562884073761303b2450956ae4ebaca66ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3eb9f4bbf5a5c20d713b6d2e255900a88137b79c
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620573"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65718490"
 ---
-# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Guía detallada: Configurar la escalabilidad horizontal de Integration Services (SSIS)
+# <a name="walkthrough-set-up-integration-services-ssis-scale-out"></a>Tutorial: Configuración de Escalabilidad horizontal de Integration Services (SSIS)
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Para configurar la escalabilidad horizontal de [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS), lleve a cabo las siguientes tareas. 
 
 > [!TIP]
@@ -69,7 +73,7 @@ Para instalar la característica de patrón de escalabilidad horizontal, use el 
 
     ![Configuración del patrón 2](media/master-config-2.PNG "Configuración del patrón 2")
   
-5.  Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5.  Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-master-from-the-command-prompt"></a>Instalar el patrón de escalabilidad horizontal desde el símbolo del sistema
 
@@ -124,7 +128,7 @@ Para instalar la característica de trabajador de escalado horizontal, use el As
     > [!NOTE]
     > Si el certificado SSL que usa el patrón de escalabilidad horizontal está autofirmado, deberá haber un certificado SSL de cliente correspondiente instalado en el equipo que contiene el trabajador de escalabilidad horizontal. Si proporciona la ruta de acceso del archivo del certificado SSL de cliente en la página **Configuración del trabajo de escalabilidad horizontal de Integration Services**, se instalará automáticamente; en caso contrario, tendrá que instalar el certificado manualmente más adelante. 
      
-5. Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
+5. Finalice el Asistente para la instalación de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] .
 
 ### <a name="install-scale-out-worker-from-the-command-prompt"></a>Instalar el trabajador de escalabilidad horizontal desde el símbolo del sistema
 

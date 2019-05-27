@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10126"
@@ -13,12 +12,12 @@ ms.assetid: 117fb20c-2fda-437e-bcc5-9010d6d4b53b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7a18291f26e348851621a9f4321106a7793ab904
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d5ad7e47457aa2d1f1d5e36adec7e988de7b8bbb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237757"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102349"
 ---
 # <a name="row-visibility-dialog-box-report-builder"></a>Cuadro de diálogo Visibilidad de fila (Generador de informes)
   Use el cuadro de diálogo **Visibilidad de fila** para mostrar u ocultar la fila seleccionada cuando se ejecuta el informe por primera vez o para usar otro elemento de informe para activar o desactivar la visibilidad de la fila.  

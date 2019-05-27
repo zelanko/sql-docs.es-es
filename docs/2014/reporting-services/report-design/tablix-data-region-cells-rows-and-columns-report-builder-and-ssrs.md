@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10058"
@@ -16,12 +15,12 @@ ms.assetid: 70eef636-6d8c-495e-83fc-dc0fe9771658
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: f55324123716289fec88b9d9bc531dccb22848d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62720439"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104648"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
   Para controlar el modo en que las filas y columnas de una región de datos Tablix muestran los datos en un informe, debe entender cómo especificar las filas y columnas para los datos de detalle, los datos de grupo, las etiquetas y los totales. En muchos casos, puede usar las estructuras predeterminadas de una tabla, matriz o lista para mostrar los datos. Para obtener más información, consulte [tablas &#40;generador de informes y SSRS&#41;](tables-report-builder-and-ssrs.md), [Matrices &#40;generador de informes y SSRS&#41;](create-a-matrix-report-builder-and-ssrs.md), o [enumera &#40;el generador de informes y SSRS&#41;](create-invoices-and-forms-with-lists-report-builder-and-ssrs.md).  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 94fdf921-270c-4c12-87b3-46b1cc98fae5
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5b0af16c21cb9fdf2c8ab41a931f955b46c29352
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5db09273a26bd8dd596a6ae576b2f8f0cc414190
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59956111"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106064"
 ---
 # <a name="data-types-in-expressions-report-builder-and-ssrs"></a>Tipos de datos en expresiones (Generador de informes y SSRS)
   La finalidad de los tipos de datos es permitir el almacenamiento y el procesamiento de los datos de manera eficaz. Los tipos de datos más comunes incluyen texto (también conocido como cadenas), números (con y sin decimales), fechas y horas, e imágenes. Los valores de un informe deben ser del tipo de datos de lenguaje RDL (Report Definition Language). Puede dar formato a un valor según sus preferencias al mostrarlo en un informe. Por ejemplo, un campo que representa valores de moneda se almacena en la definición del como un número de punto flotante y mostrarse en uno y otro formato en función de la propiedad de formato elegida.  
@@ -34,8 +33,8 @@ ms.locfileid: "59956111"
 |String|Predeterminado: String<br /><br /> Chart, GUID, Timespan|  
 |Boolean|Predeterminado: Boolean|  
 |Integer|Predeterminado: Int64<br /><br /> Int16, Int32, Uint16, Uint64, Byte, Sbyte|  
-|Datetime|Predeterminado: Datetime<br /><br /> DateTimeOffset|  
-|float|Predeterminado: Doble<br /><br /> Single, Decimal|  
+|DateTime|Predeterminado: DateTime<br /><br /> DateTimeOffset|  
+|float|Predeterminado: Double<br /><br /> Single, Decimal|  
 |Binario|Predeterminado: Byte[]|  
 |Variant|Cualquiera de los anteriores excepto Byte []|  
 |VariantArray|Matriz de Variant|  

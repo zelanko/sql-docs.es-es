@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 43b54740d0d7870423778e2e8a692089fa3a8ebd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: edc19f948689fafea8cde0fb4ae2fd5f79de3242
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225275"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064060"
 ---
 # <a name="enable-disable-and-delete-breakpoints"></a>Habilitar, deshabilitar y eliminar puntos de interrupción
   Para ver y administrar todos los puntos de interrupción abiertos, puede usar la ventana **Puntos de interrupción** . Use la ventana para ver la información de punto de interrupción y para realizar acciones tales como eliminar, deshabilitar o habilitar puntos de interrupción.  

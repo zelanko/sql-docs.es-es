@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: c4b47e15-0484-4c13-9182-898db825f01f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 0aeef25c70e3e8ff7be1cbec739063ffe2c20dbb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c3c9452a9be55c71431a0ed3012769b1f5f6d8eb
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63185696"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66106412"
 ---
 # <a name="parameters-collection-references-report-builder-and-ssrs"></a>Usar referencias a la colección de parámetros (Generador de informes y SSRS)
   Los parámetros de informe son una de las colecciones integradas a las que se puede hacer referencia desde una expresión. Al incluir parámetros en una expresión, puede personalizar los datos y el aspecto de los informes basándose en las opciones seleccionadas por el usuario. Se pueden usar expresiones para cualquier propiedad de elemento de informe o de cuadro de texto que proporcione la opción (*Fx*) o \<**Expresión**>. Las expresiones también se usan para controlar el contenido y el aspecto de los informes de otras maneras. Para más información, vea [Ejemplos de expresiones &#40;Generador de informes y SSRS&#41;](expression-examples-report-builder-and-ssrs.md).  

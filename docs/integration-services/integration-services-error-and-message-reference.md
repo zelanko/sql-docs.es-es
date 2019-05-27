@@ -15,14 +15,18 @@ ms.assetid: 2c825c07-5074-42ad-90ea-0dc5a588dcf7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 9f1e05ab7d98bdbcfdb33a3feb82e84498bb4eaf
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: 67b6514534083c05f40b40adcda2bae5c30a4591
+ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290891"
+ms.lasthandoff: 05/16/2019
+ms.locfileid: "65723637"
 ---
 # <a name="integration-services-error-and-message-reference"></a>Referencia de errores y mensajes de Integration Services
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   En las tablas siguientes se muestra una lista de los errores [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] predefinidos, advertencias y mensajes informativos, en orden numérico ascendente dentro de cada categoría, junto con sus códigos numéricos y nombres simbólicos. Cada uno de estos errores se define como un campo en la clase <xref:Microsoft.SqlServer.Dts.Runtime.Hresults> en el espacio de nombres <xref:Microsoft.SqlServer.Dts.Runtime> .  
   
  Esta lista puede resultarle útil si encuentra un código de error sin su descripción. En este momento, la lista no incluye información sobre cómo solucionar problemas.  
@@ -45,7 +49,7 @@ ms.locfileid: "58290891"
 -   [Mensajes de error de componentes de flujo de datos (DTSBC_E_*)](#msgPipeline)  
   
 ##  <a name="msgError"></a> mensajes de error  
- Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_E_**.  
+ Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_E_** .  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2019,7 +2023,7 @@ ms.locfileid: "58290891"
 |||DTS_E_COMPONENTINITFAILED|Componente %1!s! no se pudo inicializar debido al error 0x%2!8.8X! "%3!s!".|  
   
 ##  <a name="msgWarning"></a> Mensajes de advertencia  
- Los nombres simbólicos de los mensajes de advertencia de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_W_**.  
+ Los nombres simbólicos de los mensajes de advertencia de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_W_** .  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2165,7 +2169,7 @@ ms.locfileid: "58290891"
 |0x930D|37645|DTS_W_EXTERNALTABLECOLSOUTOFSYNC|La tabla "%1" ha cambiado. Es posible que se hayan agregado nuevas columnas a la tabla.|  
   
 ##  <a name="msgInfo"></a> Mensajes informativos  
- Los nombres simbólicos de los mensajes informativos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_I_**.  
+ Los nombres simbólicos de los mensajes informativos de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_I_** .  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2264,7 +2268,7 @@ ms.locfileid: "58290891"
 |0x4020F42C|1075901484|DTS_I_OLEDBDESTZEROMAXCOMMITSIZE|La propiedad de tamaño máximo de confirmación de inserción del destino de OLE DB "%1" está establecida en 0. Este valor de la propiedad puede hacer que el paquete en ejecución deje de responder. Para obtener más información, vea el tema de Ayuda F1 del Editor de destino de OLE DB (página Administrador de conexiones).|  
   
 ##  <a name="msgGeneral"></a> Mensajes generales y de eventos  
- Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_MSG_**.  
+ Los nombres simbólicos de los mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_MSG_** .  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2303,7 +2307,7 @@ ms.locfileid: "58290891"
 |0x4010310E|1074802958|DTS_MSG_EVENTLOGENTRY_INFORMATION|Nombre del evento: %1<br /><br /> Mensaje: %9<br /><br /> Operador: %2<br /><br /> Nombre de origen: %3<br /><br /> Id. de origen: %4<br /><br /> Id. de ejecución: %5<br /><br /> Hora de inicio: %6<br /><br /> Hora de finalización: %7<br /><br /> Código de datos: %8|  
   
 ##  <a name="msgSuccess"></a> Mensajes de aprobación  
- Los nombres simbólicos de los mensajes de aprobación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_S_**.  
+ Los nombres simbólicos de los mensajes de aprobación de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTS_S_** .  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  
@@ -2312,7 +2316,7 @@ ms.locfileid: "58290891"
 |0x200001|2097153|DTS_S_EXPREVALTRUNCATIONOCCURRED|Se produjo un truncamiento al evaluar la expresión. El truncamiento se produjo durante la evaluación, que puede incluir cualquier punto de un paso intermedio.|  
   
 ##  <a name="msgPipeline"></a> Mensajes de error de componentes de flujo de datos  
- Los nombres simbólicos de mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTSBC_E_**, donde "BC" hace referencia a la clase base nativa de la que se derivan la mayoría de los componentes de flujo de datos de Microsoft.  
+ Los nombres simbólicos de mensajes de error de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] empiezan por **DTSBC_E_** , donde "BC" hace referencia a la clase base nativa de la que se derivan la mayoría de los componentes de flujo de datos de Microsoft.  
   
 |Código hexadecimal|Código decimal|Nombre simbólico|Descripción|  
 |----------------------|------------------|-------------------|-----------------|  

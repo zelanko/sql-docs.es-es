@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - singleton query predictions [DMX]
@@ -13,12 +12,12 @@ ms.assetid: e0a68ab0-bece-4d25-b464-47f1719302e6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6bcd9aa80170719a32ff3bf75f0ac36dc83cf021
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 15dcb2c8241b8b4cf7cdb2780ed532e863cf52ab
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715102"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66085490"
 ---
 # <a name="create-a-singleton-prediction-query-from-a-template"></a>Crear una consulta de predicción singleton desde una plantilla
   Una consulta singleton es útil cuando tiene un modelo que desea usar para la predicción, pero no desea asignarlo a un conjunto de datos de entrada externos o realizar predicciones masivas. Una consulta singleton le permite proporcionar un valor o varios valores al modelo y ver al momento el valor predicho.  

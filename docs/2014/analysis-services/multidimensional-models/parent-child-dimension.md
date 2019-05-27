@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - hierarchies [Analysis Services], parent-child
@@ -21,12 +20,12 @@ ms.assetid: 4657f5dc-d88e-48d2-a448-08f79bc89546
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be08164b3e96f5995c5ed1b64edc83699c7d8b40
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d0eac17d30d8a8870d03a0b5b81610fad1344333
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62736803"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66073385"
 ---
 # <a name="parent-child-hierarchy"></a>Jerarquía de elementos primarios y secundarios
   Una jerarquía de elementos primarios y secundarios es una jerarquía de una dimensión estándar que contiene un atributo primario. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. La posición de un miembro en una jerarquía de elementos primarios y secundarios viene determinada por las propiedades `KeyColumns` y `RootMemberIf` del atributo primario, mientras que la posición de un miembro en un nivel viene determinada por la propiedad `OrderBy` del atributo primario. Para obtener más información sobre las propiedades de atributo, vea [Atributos y jerarquías de atributos](../multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

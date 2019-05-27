@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Reporting Services, RDL
@@ -20,12 +19,12 @@ ms.assetid: b18b025e-f4bd-4744-8f86-0ac9fb967548
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7b7c63e4850d17009992f8749c35d86534c0ee83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6480a8cefee9b71149c61bf952896a739526cf55
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188340"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102497"
 ---
 # <a name="report-definition-language-ssrs"></a>Report Definition Language (SSRS)
   El lenguaje RDL (Report Definition Language) es una representación XML de una definición de informe de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Una definición de informe contiene información acerca de la recuperación y el diseño de los datos de un informe. RDL está formado por elementos XML que cumplen la sintaxis XML creada para [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Puede agregar sus propias funciones personalizadas para controlar los valores de elemento de informe, los estilos y el formato si obtiene acceso a los ensamblados de código en los archivos de definición de informe.  
@@ -82,7 +81,7 @@ ms.locfileid: "63188340"
 |**Tipos CLR**|**Tipo de datos correspondiente**|  
 |-----------------------|---------------------------------|  
 |Boolean|Boolean|  
-|DateTime, DateTimeOffset|Datetime|  
+|DateTime, DateTimeOffset|DateTime|  
 |Int16, Int32, UInt16, Byte, SByte|Integer|  
 |Single, Double|float|  
 |String, Char, GUID, Timespan|String|  

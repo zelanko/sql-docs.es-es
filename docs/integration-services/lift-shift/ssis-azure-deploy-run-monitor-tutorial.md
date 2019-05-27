@@ -9,14 +9,14 @@ ms.custom: ''
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
+ms.reviewer: maghan
 manager: craigg
-ms.openlocfilehash: 1c5c97eca9553f209e559ddacd25af2618e84f71
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 2e832343dfd54dd08a71c2724eed4cb7b156c758
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720860"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66010512"
 ---
 # <a name="tutorial-deploy-and-run-a-sql-server-integration-services-ssis-package-in-azure"></a>Tutorial: Implementación y ejecución de un paquete de SQL Server Integration Services (SSIS) en Azure
 
@@ -106,7 +106,7 @@ Para más información sobre cómo implementar los paquetes y respecto del Asist
     -   Seleccione **Implementar** para iniciar el proceso de implementación.
 
     > [!NOTE]
-    > Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos SqlClient de .NET)**, asegúrese de que se está ejecutando Azure-SSIS Integration Runtime. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
+    > Si recibe el mensaje de error **No hay ningún agente de trabajo activo (proveedor de datos SqlClient de .NET)** , asegúrese de que se está ejecutando Azure-SSIS Integration Runtime. Este error se produce si intenta implementar mientras Azure-SSIS IR está en estado detenido.
 
 5.  Una vez completado el proceso de implementación, se abrirá la página **Resultados**. Esta página muestra si cada acción si se completó correctamente o no.
     -   Si la acción no se realiza correctamente, seleccione **Error** en la columna **Resultado** para que aparezca una explicación del error.

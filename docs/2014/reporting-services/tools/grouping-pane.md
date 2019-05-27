@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10033"
@@ -16,12 +15,12 @@ ms.assetid: 8b4bd0b3-ec97-48f8-8bfb-82a53a2f35a1
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fe230d9e3ed5259da9decc87e044005184b7d989
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62711357"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100266"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
   El panel Agrupación muestra los grupos de filas y de columnas para la región de datos Tablix seleccionada actualmente. El panel de agrupación no está disponible para las regiones de datos Gráfico o Medidor. El panel Agrupación consta de los paneles Grupos de filas y Grupos de columnas. El panel en cuestión tiene dos modos: predeterminado y avanzado. El modo predeterminado muestra una vista jerárquica de los miembros dinámicos para los grupos de filas y de columnas. El modo avanzado muestra los miembros dinámicos y estáticos para los grupos de filas y de columnas. Un grupo es un conjunto de datos con nombre de un conjunto de datos de informe que se muestra en una región de datos. Los grupos se organizan en jerarquías que incluyen miembros estáticos y dinámicos. Para más información, vea [Descripción de los grupos &#40;Generador de informes y SSRS&#41;](../report-design/understanding-groups-report-builder-and-ssrs.md).  

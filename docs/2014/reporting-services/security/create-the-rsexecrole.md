@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - RSExecRole
@@ -13,12 +12,12 @@ ms.assetid: 7ac17341-df7e-4401-870e-652caa2859c0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a190d82a18f88d38b7e41642a1dd598ebd91215c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 3a6bc5ecbd1c59a5dc03f9c28d36d2816e6a8d92
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242856"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102031"
 ---
 # <a name="create-the-rsexecrole"></a>Crear el RSExecRole
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] utiliza un rol de base de datos predefinido denominado `RSExecRole` para conceder permisos de servidor de informes a la base de datos del servidor de informes. El `RSExecRole` rol se crea automáticamente con la base de datos del servidor de informes. Por lo general, nunca se debe modificar el rol ni asignar otros usuarios al mismo. Sin embargo, cuando se mueve una base de datos del servidor de informes a un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../../includes/ssde-md.md)], must re-create the role in the Master and MSDB system databases.  

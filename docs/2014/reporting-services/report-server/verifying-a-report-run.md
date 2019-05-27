@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - auditing [Reporting Services]
@@ -19,12 +18,12 @@ ms.assetid: 18a98f2f-6b40-454e-9b37-568ed1a96458
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 75ba075478f76dad10a6743bccbfc8424dda5e25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c11c57f7c5f67b2557f5637ad10658abc9f80606
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63255220"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103140"
 ---
 # <a name="verifying-a-report-run"></a>Comprobar la ejecución de un informe
   Para ver información acerca del estado del procesamiento de un informe, puede utilizar los archivos de registro o bien consultar la información de estado que se muestra junto con el informe en el Administrador de informes.  

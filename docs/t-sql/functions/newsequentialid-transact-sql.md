@@ -16,15 +16,15 @@ helpviewer_keywords:
 - NEWSEQUENTIALID function
 - GUIDs [SQL Server]
 ms.assetid: e06d2cab-f1ff-42f1-8550-6aaec57be36f
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a3181a92340ae591167aa2b9e667c3af79d32f9b
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 19c9caf543f7db84cbf71f76832176118d262f60
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698283"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944174"
 ---
 # <a name="newsequentialid-transact-sql"></a>NEWSEQUENTIALID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -72,7 +72,7 @@ CREATE TABLE myTable (ColumnA uniqueidentifier DEFAULT dbo.myfunction(NEWSEQUENT
   
  Cada GUID generado utilizando NEWSEQUENTIALID es único en ese equipo. Los GUID generados utilizando NEWSEQUENTIALID solo son únicos en varios equipos si el equipo de origen tiene una tarjeta de red.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [NEWID &#40;Transact-SQL&#41;](../../t-sql/functions/newid-transact-sql.md)   
  [Operadores de comparación &#40;Transact-SQL&#41;](../../t-sql/language-elements/comparison-operators-transact-sql.md)  
   

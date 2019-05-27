@@ -5,7 +5,7 @@ ms.custom: ''
 ms.date: 05/18/2018
 ms.prod: sql
 ms.prod_service: integration-services
-ms.reviewer: douglasl
+ms.reviewer: maghan
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: d8812b5cdaaf2271a0071d798ddd530266ebc8a9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
+ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728016"
+ms.lasthandoff: 05/22/2019
+ms.locfileid: "66014914"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarea de Azure Data Lake Analytics
 
@@ -60,8 +60,8 @@ La configuración de U-SQL tiene dos opciones: **SourceType** y opciones dinámi
 |Tipo de origen|Opciones dinámicas|  
 |-----------|-----------------|  
 |**SourceType = DirectInput**|Escriba la consulta U-SQL que se enviará directamente en el cuadro de opción o seleccione el botón Examinar (...) para escribir la consulta U-SQL en el cuadro de diálogo **Enter U-SQL Query** (Escribir consulta U-SQL).|  
-|**SourceType = FileConnection**|Seleccione un administrador de conexiones de archivos existente o seleccione <**Nueva conexión...**> para crear una nueva conexión de archivos. Para información relacionada, consulte [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Editor del administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
-|**SourceType = Variable**|Seleccione una variable existente o seleccione \<**Nueva variable…**> para crear una. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
+|**SourceType = FileConnection**|Seleccione un administrador de conexiones de archivos existente o seleccione <**Nueva conexión...** > para crear una nueva conexión de archivos. Para información relacionada, consulte [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md) y [Editor del administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager-editor.md).|  
+|**SourceType = Variable**|Seleccione una variable existente o seleccione \<**Nueva variable…** > para crear una. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md) y [Agregar variable](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5).|
 
 
 ### <a name="job-configuration"></a>Configuración del trabajo
@@ -86,7 +86,7 @@ La configuración del trabajo especifica las propiedades del envío del trabajo 
 
 Use la página **Asignación de parámetros** del cuadro de diálogo **Azure Data Lake Analytics Task Editor** (Editor de la tarea de Azure Data Lake Analytics) para asignar variables a los parámetros (variables U-SQL) en el script U-SQL.
 
-- **Nombre de variable:** una vez que se ha agregado una asignación de parámetro mediante **Agregar**, seleccione en la lista una variable de sistema o una variable definida por el usuario. De manera alternativa, puede seleccionar <**Nueva variable...**> para agregar una variable nueva con el cuadro de diálogo **Agregar variable**. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
+- **Nombre de variable:** una vez que se ha agregado una asignación de parámetro mediante **Agregar**, seleccione en la lista una variable de sistema o una variable definida por el usuario. De manera alternativa, puede seleccionar <**Nueva variable...** > para agregar una variable nueva con el cuadro de diálogo **Agregar variable**. Para información relacionada, consulte [Variables de Integration Services &#40;SSIS&#41;](../../integration-services/integration-services-ssis-variables.md).  
 
 - **Nombre del parámetro:** proporcione un nombre de variable o de parámetro en el script de U-SQL. Asegúrese de que el nombre del parámetro empieza con el signo \@, como \@Param1. 
 

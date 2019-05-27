@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - MinDbCompatibilityLevel method (geography)
 ms.assetid: a9e44748-4a9e-4179-abc4-7631597be5a7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 2fbd22febcadf49726a4c2c4891db85417cbf787
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32d7df746e51612dd39360ff6702e9489111ce04
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47744213"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937251"
 ---
 # <a name="mindbcompatibilitylevel-geography-data-type"></a>MinDbCompatibilityLevel (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -90,7 +90,7 @@ END
   
  La primera instrucción SELECT devuelve 110 y la segunda instrucción SELECT devuelve 100.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)   
  [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../../database-engine/sql-server-database-engine-backward-compatibility.md)  
   

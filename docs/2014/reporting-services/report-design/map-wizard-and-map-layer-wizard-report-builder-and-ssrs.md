@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.mapandlayerwizard.f1
@@ -15,12 +14,12 @@ ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: aa0ccc9d3b2ca01e1b2279f71ef2815c81e060e3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63210357"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105542"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
   El Asistente para mapas y el Asistente para capas de mapa automatizan la tarea de creación de un mapa, incorporación de una capa a un mapa o modificación de las opciones de capas de mapa en una capa existente.  
@@ -125,7 +124,7 @@ ms.locfileid: "63210357"
  La galería de mapas contiene mapas de los informes que se encuentran en la carpeta de la galería de mapas del entorno de creación de informes. Los mapas de la galería permiten comenzar rápidamente a agregar un mapa a un informe. Un proveedor de mapas proporciona los mapas predefinidos de la galería.  
   
 > [!NOTE]  
->  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Archivos de forma TIGER/Line están disponibles sin cargo alguno de los Estados Unidos. Census Bureau. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER y TIGER/Line son marcas registradas de los Estados Unidos. del censo estadounidense.  
+>  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([http://www.census.gov/](http://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [http://www.census.gov/geo/www/tiger](http://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
  Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   

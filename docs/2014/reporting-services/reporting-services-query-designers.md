@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - query designers [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 07efd3f1-804f-45f7-b62a-3e727a3d9835
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: e4f622d5963ae9da107aba9d6674e804b0c859da
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: c004b098f900606c2263391cf9363b6e5be2b97b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935901"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102880"
 ---
 # <a name="reporting-services-query-designers"></a>Diseñadores de consultas de Reporting Services
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] proporciona diseñadores de consultas gráfico y basado en texto para ayudarle a crear consultas para cada tipo de origen de datos en el informe.  

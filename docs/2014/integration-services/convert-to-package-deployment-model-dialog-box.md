@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- integration-services
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.ssis.bids.converttolegacydeployment.f1
@@ -13,12 +12,12 @@ ms.assetid: 9e60a34a-10f7-48d1-966f-b3ff236ab4b7
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 88a8d26716ed0945488fdd24ce1e19d3877e049f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dfe1f6e5b752284b6bb0feec96f4f3dfd67cc4f6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62829325"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66060349"
 ---
 # <a name="convert-to-package-deployment-model-dialog-box"></a>Convertir a modelo de implementación de paquetes, cuadro de diálogo
   El comando de **Convertir a modelo de implementación de paquetes** permite convertir un paquete al modelo de implementación de paquetes después de comprobar el proyecto y cada paquete en el proyecto para ver la compatibilidad con ese modelo. Si un paquete usa las características exclusivas del modelo de implementación de proyectos, como los parámetros, el paquete no se podrá convertir.  

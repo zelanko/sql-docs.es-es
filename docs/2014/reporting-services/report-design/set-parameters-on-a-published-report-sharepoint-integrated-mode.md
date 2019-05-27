@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - SharePoint integration [Reporting Services], content management
@@ -14,12 +13,12 @@ ms.assetid: dec5d985-a6c1-4dd8-8a66-a848e89a2e18
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b5be6c0698a20e9b05549ea81878c3d7929d0743
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: da71b511a65758483a9bf207dbe54a484f4f1b26
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63215178"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105016"
 ---
 # <a name="set-parameters-on-a-published-report-reporting-services-in-sharepoint-integrated-mode"></a>Establecer parámetros en un informe publicado (Reporting Services en el modo integrado de SharePoint)
   Un informe con parámetros es un informe que acepta valores de entrada usados para filtrar datos al ejecutar el informe. Los parámetros se definen al crear el informe. En función de cómo se defina un parámetro del informe en la definición del informe, puede aceptar un solo valor, varios valores o valores dinámicos, que cambian en respuesta a una selección previa (por ejemplo, si selecciona una categoría del producto, la siguiente selección podría ser un producto concreto de esa categoría). Un parámetro puede tener un valor predeterminado, que se puede usar para ejecutar una versión filtrada del informe de manera automática o posiblemente sustituirlo por otro valor.  

@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - "10500"
@@ -14,12 +13,12 @@ ms.assetid: f9d406dd-a87c-4321-bf23-339d90654062
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 6c1716049d16da49a95e2894c4458fe04b0a0f04
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 695515ddefa550d6d20476e681088d6bcd926a3a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63306367"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104376"
 ---
 # <a name="report-properties-dialog-box-page-setup"></a>Propiedades del informe (cuadro de diálogo), Configurar página
   Seleccione **Configurar página** en el **propiedades del informe**, cuadro de diálogo para establecer las opciones de página para todo el informe.  

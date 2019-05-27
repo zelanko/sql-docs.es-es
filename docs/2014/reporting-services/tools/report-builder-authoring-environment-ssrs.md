@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 32be8fcc-e87d-4c45-a644-dff45776a981
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 525eccd52a0a680304533ac73bb852f4f5c4e74c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b431dc6249cfabfb8e943b09304eeb7b10bc7e94
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63201205"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100116"
 ---
 # <a name="report-builder-ssrs"></a>Generador de informes (SSRS)
   El Generador de informes es un entorno de creación de informes destinado a los usuarios empresariales que prefieren trabajar en el entorno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office. Al diseñar un informe, especifica dónde obtener los datos, qué datos obtener y cómo mostrar los datos. Al ejecutar el informe, el procesador de informes toma toda la información especificada, recupera los datos y los combina con el diseño del informe para generar el informe.  

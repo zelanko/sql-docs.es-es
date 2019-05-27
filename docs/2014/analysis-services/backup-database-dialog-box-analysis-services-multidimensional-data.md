@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 f1_keywords:
 - sql12.asvs.sqlserverstudio.Backup.f1
@@ -13,12 +12,12 @@ ms.assetid: 7811ce7d-6c37-4189-bfa6-ef36fb4932db
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 741f3b761e4c6645cee7c43c3e8f593dbad13219
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650471"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66064380"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Copia de seguridad de la base de datos (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Copia de seguridad de la base de datos** de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para hacer una copia de seguridad de una base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] en un archivo de copia de seguridad con el formato de copia de seguridad de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (.abf).  

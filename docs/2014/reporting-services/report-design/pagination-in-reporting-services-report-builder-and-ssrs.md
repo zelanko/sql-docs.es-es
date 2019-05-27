@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: bf2f253405e3e64764f3b7edf61112a3bb05d601
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 58abb892f737b3f5b3c707c9e26fd44249d8e54f
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63209059"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66105476"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Paginación en Reporting Services (Generador de informes y SSRS)
   La paginación hace referencia al número de páginas de un informe y al modo en que los elementos de informe se organizan en dichas páginas. La paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] varía en función de la extensión de representación usada para ver y entregar el informe. Cuando se ejecuta un informe en el servidor de informes, el informe usa el representador de HTML. HTML sigue un conjunto concreto de reglas de paginación. Si, por ejemplo, exporta el mismo informe a PDF, se usará el representador de PDF y se aplicará otro conjunto de reglas; por consiguiente, el informe se paginará de manera diferente. Para diseñar correctamente un informe que resulte fácil de leer y que esté optimizado para el representador que va a usar para su entrega, es preciso que comprenda las reglas que se usan para controlar la paginación en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

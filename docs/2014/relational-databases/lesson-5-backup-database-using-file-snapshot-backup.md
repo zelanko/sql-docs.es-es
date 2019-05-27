@@ -4,21 +4,20 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: d9134ade-7b03-4c5c-8ed3-3bc369a61691
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 46d4018e125633319ed6d235873f56720fbe6bc2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a5787a3f5aecd746ac9aafd5850e6109ebcd999
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743331"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090695"
 ---
-# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migrar una base de datos desde un origen de máquina local a un equipo de destino de Windows Azure
+# <a name="lesson-6-migrate-a-database-from-a-source-machine-on-premises-to-a-destination-machine-in-windows-azure"></a>Lección 6: Migración de una base de datos desde un equipo de origen local a un equipo de destino en Windows Azure
   En esta lección se supone que ya tiene otro servidor SQL Server, que puede residir en otro equipo local o en una máquina virtual de Windows Azure. Para obtener información sobre cómo crear una máquina virtual de SQL Server en Windows Azure, consulte [aprovisionamiento de una máquina Virtual de SQL Server en Windows Azure](http://www.windowsazure.com/manage/windows/common-tasks/install-sql-server/). Después de aprovisionar una máquina virtual de SQL Server en Windows Azure, asegúrese de que puede conectarse a una instancia de SQL Server en esta máquina virtual a través de SQL Server Management Studio en otro equipo.  
   
  En esta lección también se supone que ya completó los pasos siguientes:  

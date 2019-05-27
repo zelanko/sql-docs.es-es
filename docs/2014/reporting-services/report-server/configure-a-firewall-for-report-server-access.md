@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - firewall systems [Reporting Services]
@@ -14,12 +13,12 @@ ms.assetid: 04dae07a-a3a4-424c-9bcb-a8000e20dc93
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: a8c43d75b0b070a73f89a16300694fc11234d6a7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 00590faa3ef5fb63338465d85202f4010cd3b72d
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63017086"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66104162"
 ---
 # <a name="configure-a-firewall-for-report-server-access"></a>Configurar un firewall para el acceso al servidor de informes
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] A las aplicaciones del servidor de informes y a los informes publicados se tiene acceso a través de direcciones URL que especifican una dirección IP, un puerto y un directorio virtual. Si Firewall de Windows está activado, es probable que el puerto que el servidor de informes está configurado para usar esté cerrado. Los indicios que señalan que un puerto podría estar cerrado son la aparición de una página web en blanco después de solicitar un informe o al intentar abrir el Administrador de informes desde un equipo cliente remoto.  

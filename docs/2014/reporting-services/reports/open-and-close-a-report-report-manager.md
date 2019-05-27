@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - opening reports
@@ -15,12 +14,12 @@ ms.assetid: a9db1caf-1e7d-41ee-9aed-e09fd0712f9b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 11f2aa43220ef419325f64c368f80ea7691b3b65
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 7a1c799ec4fc37fa5cdbd6f3bcc72fad7f4c45ed
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63272789"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102591"
 ---
 # <a name="open-and-close-a-report-report-manager"></a>Abrir y cerrar un informe (Administrador de informes)
   Puede usar el Administrador de informes para ver informes publicados en un servidor de informes. De forma predeterminada, todos los informes se abren en HTML. Después de abrirse un informe, puede exportarlo para verlo en otros formatos de aplicación. Si el informe contiene características interactivas o si es un informe del Generador de informes que contiene datos interactivos, puede hacer clic en los vínculos para ver datos o informes adicionales.  

@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 9e78dc37-a3f0-415d-847c-32fec69efa8c
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: d13d7b7f65ca1f121145815555afa055926c81fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729795"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66079570"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN para una instancia de Analysis Services
   Un nombre principal del servicio (SPN) identifica una instancia de servicio en un dominio de Active Directory cuando se usa Kerberos para autenticar mutuamente las identidades del cliente y del servicio. Un SPN está asociado a la cuenta de inicio de sesión bajo la que se ejecuta la instancia del servicio.  

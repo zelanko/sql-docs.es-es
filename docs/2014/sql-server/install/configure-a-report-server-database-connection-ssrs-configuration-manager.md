@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 08/10/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords:
 - connections [Reporting Services], configuring
@@ -18,12 +17,12 @@ ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 9e7f4785eb5b5d52d5271397e0be927180e53aea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62762029"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096188"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>Configurar una conexión a la base de datos del servidor de informes (Administrador de configuración de SSRS)
   Cada instancia del servidor de informes requiere una conexión a la base de datos del servidor de informes que almacena informes, modelos de informe, orígenes de datos compartidos, recursos y metadatos administrados por el servidor. La conexión inicial se puede crear durante la instalación de un servidor de informes si va a instalar la configuración predeterminada. En la mayoría de los casos, también puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para configurar la conexión una vez completada la instalación. Puede modificar la conexión en cualquier momento para cambiar el tipo de cuenta o restablecer las credenciales. Para obtener instrucciones paso a paso sobre cómo crear la base de datos y configurar la conexión, vea [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  

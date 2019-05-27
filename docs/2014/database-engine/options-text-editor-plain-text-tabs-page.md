@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs
@@ -13,12 +12,12 @@ ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
 author: craigg-msft
 ms.author: craigg
 manager: craigg
-ms.openlocfilehash: 4025a4812b7bb284d5fdf0540491d1506f05cdea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0e060f1bccb544edd4e82c759b737e05c4bb980b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62844291"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66089860"
 ---
 # <a name="options-text-editor---plain-text---tabs-page"></a>Options (Editor de texto - Texto sin formato - Página Pestañas)
   Utilice este cuadro de diálogo para cambiar el comportamiento del tabulador del Editor de texto que se usa para editar un documento que no esté asociado a ningún lenguaje de desarrollo específico. Para mostrar estas opciones de configuración, haga clic en **Opciones** en el menú **Herramientas** , expanda el **Editor de texto**, expanda **Texto sin formato**y, a continuación, haga clic en **Tabulaciones**.  

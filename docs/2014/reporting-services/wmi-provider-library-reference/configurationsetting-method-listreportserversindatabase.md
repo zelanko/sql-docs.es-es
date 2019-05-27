@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 api_name:
 - ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting Class)
@@ -19,12 +18,12 @@ ms.assetid: a4bf5968-c46f-484f-a510-65e2dde65a0d
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: eeb8b39355eac3526fa42aea08df33b32c70472a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c62e2793f11853158b7b31d1e79feb4ae59977de
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62647098"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66098291"
 ---
 # <a name="listreportserversindatabase-method-wmi-msreportserverconfigurationsetting"></a>Método ListReportServersInDatabase (WMI MSReportServer_ConfigurationSetting)
   Devuelve una lista de las instalaciones del servidor de informes que se encuentran en la base de datos del servidor de informes, sin tener en cuenta si esas instalaciones tienen acceso a la información segura.  

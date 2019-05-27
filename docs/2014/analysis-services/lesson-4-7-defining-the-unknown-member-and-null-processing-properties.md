@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d9abb09c-9bfa-4e32-b530-8590e4383566
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 5982bd49a5b7847cb8c09a7e46ca077bbe0e2d2b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729261"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078612"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definir las propiedades de miembro desconocido y de procesamiento de valores NULL
   Cuando [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] procesa una dimensión, todos los valores distintos de las columnas subyacentes de las tablas o las vistas de la vista del origen de datos rellenan los atributos de la dimensión. Si [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] encuentra una valor NULL durante el procesamiento, de forma predeterminada, convierte este valor NULL en un cero en las columnas numéricas o en una cadena vacía en las columnas de cadena. Puede modificar estas opciones predeterminadas o convertir los valores NULL en el proceso de extracción, transformación y carga (si existe) del almacenamiento de datos relacional subyacente. También puede hacer que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] convierta el valor NULL en un valor determinado configurando tres propiedades: las propiedades **UnknownMember** y **UnknownMemberName** de la dimensión y la propiedad **NullProcessing** del atributo clave de la dimensión.  

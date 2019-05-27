@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 685aa217-de1b-4df2-bf22-095228c40775
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 763b1170ad0201c737e06e19c3dac8d58c6712ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 43ec549444fd108dbee9e53518a4e996b281b46b
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62729121"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66078813"
 ---
 # <a name="using-a-modified-version-of-the-analysis-services-tutorial-project"></a>Usar una versión modificada del proyecto Tutorial de Analysis Services
   Las lecciones restantes de este tutorial se basan en una versión mejorada del proyecto Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que completó en las tres primeras lecciones. Se han agregado tablas y cálculos con nombre adicionales a la vista del origen de datos **Adventure Works DW 2012** , se han agregado más dimensiones al proyecto y estas nuevas dimensiones se han agregado al cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] . Además, se ha agregado un segundo grupo de medidas, que contiene medidas de una segunda tabla de hechos. Este proyecto mejorado le permitirá continuar aprendiendo a agregar funciones adicionales a la aplicación de Business Intelligence sin necesidad de tener que repetir las técnicas ya aprendidas.  

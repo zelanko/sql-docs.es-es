@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8dda4ea693774fabcc88e261ccd61f71350a6a79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 34b51b26454766498ee601baae3ccc52cd1c5768
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62650560"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66096530"
 ---
 # <a name="check-files-in-use"></a>Comprobar archivos en uso
   Para no tener que reiniciar Windows después de instalar las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use la página Comprobar archivos en uso con el fin de identificar los procesos que están bloqueando los archivos requeridos por el programa de instalación de la actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -45,9 +44,9 @@ ms.locfileid: "62650560"
   
 ## <a name="uielement-list"></a>Lista de UIElement  
   
-|Nombre|Descripción|  
+|Name|Descripción|  
 |----------|-----------------|  
-|Procesar|Muestra el nombre completo del proceso que está utilizando los archivos que se van a actualizar.|  
+|Process|Muestra el nombre completo del proceso que está utilizando los archivos que se van a actualizar.|  
 |Tipo|Muestra el tipo de proceso.|  
 |Cuenta|Muestra la cuenta en la que se está ejecutando el proceso.|  
 |Id. del proceso|Muestra el identificador del proceso.|  

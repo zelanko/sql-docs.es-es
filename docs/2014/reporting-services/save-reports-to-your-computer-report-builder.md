@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 03/08/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2962cd27e00ddc5dcf2f4b1cc83432fed49ffca4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 493e042e58c5a13bc94f299197ac8a75972f7ed6
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190218"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102310"
 ---
 # <a name="save-reports-to-your-computer-report-builder"></a>Guardar informes en el equipo (Generador de informes)
   En el Generador de informes, puede guardar las definiciones de informe en el equipo. Sin embargo, cuando se guarden en el equipo, otros usuarios no podrán verlos y los informes que hagan referencia a orígenes de datos compartidos o que almacenen elementos de informe del almacén, como imágenes y subinformes, podrían no ejecutarse externamente. Se recomienda que guarde los informes en un servidor de informes o sitio de SharePoint.  

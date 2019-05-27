@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- analysis-services
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords:
 - Schema Generation Wizard, F1 Help
@@ -13,12 +12,12 @@ ms.assetid: 41e5e3d1-cc45-4bb0-ac09-4639d2ffc0ea
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 913d830772403f1a7e9abd622611663a0a0e141f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: dbc1f6daf1039d24830bc91140f82e061b88ae65
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62747839"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66069946"
 ---
 # <a name="schema-generation-wizard-f1-help-analysis-services---multidimensional-data"></a>Asistente para generar esquemas (Ayuda F1) (Analysis Services - Datos multidimensionales)
   Use el Asistente para generar esquemas para generar automáticamente el esquema relacional para una base de datos del área de asunto que se basa en dimensiones y cubos existentes. Además, puede llenar tablas generadas por el asistente para dimensiones de tiempo y administrar la convención de nomenclatura y opciones para la base de datos del área de asunto.  

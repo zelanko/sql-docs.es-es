@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 f1_keywords:
 - sql12.rtp.rptdesigner.textboxproperties.alignment.f1
@@ -14,12 +13,12 @@ ms.assetid: 12a18ad3-a578-4ec2-813b-841b96c327b0
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 409a541929e27a8076f2ab56cb95d928915c6eb7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 750a4cefffe2baaefadf7266e94800374834ad85
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631289"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66100528"
 ---
 # <a name="text-box-properties-dialog-box-alignment-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de cuadro de texto, Alineación (Generador de informes y SSRS)
   Seleccione **Alineación** en el cuadro de diálogo **Propiedades de cuadro de texto** para situar los valores dentro de la celda o región de datos seleccionada.  

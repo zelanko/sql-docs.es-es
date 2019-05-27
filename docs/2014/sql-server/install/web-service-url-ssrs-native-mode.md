@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.reportservervirtualdirectory.F1
@@ -15,12 +14,12 @@ ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 5371060acadc0def9a8105616b36d8687eb5a87e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63131182"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66090990"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Dirección URL del servicio web (Modo nativo de SSRS)
   Utilice la página Dirección URL del servicio web para configurar o modificar la dirección URL que se usa para tener acceso al servidor de informes. Se creará una *reserva de direcciones URL* dependiendo de la dirección URL que especifique. La reserva de direcciones URL define la sintaxis y las reglas de todas las direcciones URL que se pueden utilizar posteriormente para tener acceso al servicio web del servidor de informes. Especifica el prefijo, host, puerto y directorio virtual para el servicio web del servidor de informes. Según cómo especifique el host, podría haber varias direcciones URL posibles para una única reserva. El valor predeterminado para el host especifica un carácter comodín seguro. Un carácter comodín seguro permite especificar en una dirección URL cualquier nombre de host que se pueda resolver como el equipo que hospeda el servidor de informes. Para obtener más información acerca de la configuración de dirección URL y las reservas de direcciones, vea [configurar una dirección URL &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md) y [configurar direcciones URL del servidor de informes &#40;SSRS Configuration Manager&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md).  

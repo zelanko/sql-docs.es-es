@@ -4,8 +4,7 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 helpviewer_keywords:
 - HTTP [Reporting Services]
@@ -13,12 +12,12 @@ ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b4e7850cb0c66b6acbc7be54178cbc9ace27ce72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63190893"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66103396"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   Los archivos de registro HTTP del servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] mantienen un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -64,20 +63,20 @@ ms.locfileid: "63190893"
 |date|Fecha en que se produjo la actividad.|No|  
 |Time|Hora en que se produjo la actividad.|No|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
-|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|No|  
+|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|Sin |  
 |ServerPort|Número de puerto utilizado para la conexión.|No|  
-|Host|Contenido del encabezado de host.|No|  
+|Host|Contenido del encabezado de host.|Sin |  
 |Método|Acción o método SOAP llamado desde el cliente.|Sí|  
 |UriStem|Recurso al que se obtuvo acceso.|Sí|  
-|UriQuery|Consulta utilizada para tener acceso al recurso.|No|  
+|UriQuery|Consulta utilizada para tener acceso al recurso.|Sin |  
 |ProtocolStatus|Código de estado HTTP.|Sí|  
 |BytesReceived|Número de bytes recibidos por el servidor.|No|  
 |TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|No|  
-|ProtocolVersion|Versión de protocolo utilizada por el cliente.|No|  
-|UserAgent|Tipo de explorador utilizado por el cliente.|No|  
-|CookieReceived|Contenido de la cookie recibida por el servidor.|No|  
-|CookieSent|Contenido de la cookie enviada por el servidor.|No|  
-|Referrer|Sitio anterior visitado por el cliente.|No|  
+|ProtocolVersion|Versión de protocolo utilizada por el cliente.|Sin |  
+|UserAgent|Tipo de explorador utilizado por el cliente.|Sin |  
+|CookieReceived|Contenido de la cookie recibida por el servidor.|Sin |  
+|CookieSent|Contenido de la cookie enviada por el servidor.|Sin |  
+|Referrer|Sitio anterior visitado por el cliente.|Sin |  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de seguimiento del servicio del servidor de informes](report-server-service-trace-log.md)   

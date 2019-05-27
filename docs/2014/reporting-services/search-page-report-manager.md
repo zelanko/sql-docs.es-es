@@ -4,19 +4,18 @@ ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: 51ffdc07-e1b9-4ed7-acb3-dd98d7cce273
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 66b4e98e08db2799d2038973db815b73ece63f53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 12413c103230d8c085a9701e3fb83db15135895a
+ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63237706"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66102262"
 ---
 # <a name="search-page-report-manager"></a>Buscar (página del Administrador de informes)
   Use la página Resultados de la búsqueda para ver los resultados de una operación de búsqueda especificada para un informe, un informe vinculado, un modelo de informe, un origen de datos compartido, una carpeta o un recurso. Los resultados de la búsqueda se muestran ordenados alfabéticamente. Se pueden ordenar por tipo, nombre o descripción.  

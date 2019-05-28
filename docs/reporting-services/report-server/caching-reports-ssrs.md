@@ -1,6 +1,6 @@
 ---
 title: Informes almacenados en caché (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 146542c3-8efd-4b89-a8d8-77d22896630e
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1c1e6ec452c20aea2df0eb99e4bf0123331d7192
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: ba54a5c29245a178fb1b50139d64f1e05bfd92f1
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580451"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175585"
 ---
 # <a name="caching-reports-ssrs"></a>Informes almacenados en caché (SSRS)
   Un servidor de informes puede almacenar en memoria caché una copia de un informe procesado y devolverla cuando el usuario abra el informe. Para un usuario, la única prueba visible que indica que el informe es una copia en caché es la fecha y la hora de ejecución. Si la fecha o la hora no son actuales y el informe no es una instantánea, significa que éste se ha obtenido de la caché.  
@@ -67,13 +67,12 @@ ms.locfileid: "65580451"
   
  Si un informe no puede representarse desde una instancia en caché por cualquier motivo (por ejemplo, si los valores de los parámetros que especifica un usuario son distintos de los que se utilizan para generar el informe en caché), el servidor de informes vuelve a ejecutar el informe.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
+ [Carga previa de la memoria caché](../../reporting-services/report-server/preload-the-cache-report-manager.md)   
  [Programaciones](../../reporting-services/subscriptions/schedules.md)   
  [Almacenar en caché conjuntos de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-server/cache-shared-datasets-ssrs.md)   
- [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6)  
   
   

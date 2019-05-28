@@ -1,6 +1,6 @@
 ---
 title: Conceder permisos en un servidor de informes en modo nativo | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: security
@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 260dc2e9-546c-4f04-9fa1-977e23c9d68c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d38bcdb965bc08aa4eb7cad1401bd9d77f42b4ed
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 26175cfea8af6686f8c15840c7e44a5bde191df5
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65579826"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175636"
 ---
 # <a name="granting-permissions-on-a-native-mode-report-server"></a>Conceder permisos en un servidor de informes en modo nativo
   SQL Server [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa la autorización basada en roles y un subsistema de autenticación para determinar quién puede realizar operaciones y tener acceso a los elementos de un servidor de informes. La autorización basada en roles divide en roles el conjunto de acciones que puede realizar un usuario o un grupo. La autenticación se basa en la autenticación de Windows integrada o en un módulo de autenticación personalizado proporcionado por el usuario. Puede usar los roles predefinidos o los personalizados con cualquier tipo de autenticación.  
@@ -41,9 +41,9 @@ ms.locfileid: "65579826"
   
 2.  Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
   
-3.  Use el Administrador de informes para asignar roles de la carpeta Inicio (esta es la carpeta de nivel superior en la jerarquía de carpetas del servidor de informes) para cada usuario o grupo que requiera acceso.  
+3.  Use el portal web para asignar roles de la carpeta Inicio (esta es la carpeta de nivel superior en la jerarquía de carpetas del servidor de informes) para cada usuario o grupo que requiera acceso.  
   
-4.  En el nivel de sitio, en la página Configuración del sitio del Administrador de informes, cree una asignación de roles de nivel de sistema para cada usuario y grupo empleando los roles predefinidos **Usuario del sistema** y **Administrador del sistema**.  
+4.  En el nivel de sitio, en la página Configuración del sitio del portal web, cree una asignación de roles de nivel de sistema para cada usuario y grupo empleando los roles predefinidos **Usuario del sistema** y **Administrador del sistema**.  
   
 5.  Cree las asignaciones de roles adicionales que necesite para carpetas, informes y otros elementos específicos. No cree un número elevado de asignaciones de roles. Si crea demasiadas, resultará difícil realizar un seguimiento de los distintos niveles de permisos para cada usuario.  
   
@@ -66,9 +66,9 @@ ms.locfileid: "65579826"
 |Herramienta|Tareas|  
 |----------|-----------|  
 |Management Studio: se usa para ver, modificar, crear y eliminar definiciones de roles.|[Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md)|  
-|Administrador de informes: se usa para asignar usuarios y grupos a los roles.|[Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md)<br /><br /> [Modificar o eliminar una asignación de roles &#40;Administrador de informes&#41;](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
+|El portal web: se usa para asignar usuarios y grupos a los roles.|[Concesión a un usuario de acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md)<br /><br /> [Modificar o eliminar una asignación de roles](../../reporting-services/security/role-assignments-modify-or-delete.md)|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Roles predefinidos](../../reporting-services/security/role-definitions-predefined-roles.md)   
  [Conceder permisos sobre elementos del servidor de informes en un sitio de SharePoint](../../reporting-services/security/granting-permissions-on-report-server-items-on-a-sharepoint-site.md)   
  [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)   

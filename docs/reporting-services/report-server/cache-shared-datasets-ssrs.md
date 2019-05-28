@@ -1,6 +1,6 @@
 ---
 title: Almacenar en caché conjuntos de datos compartidos (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 4acb1bbe-1c04-4979-b893-dc1b1c5039b6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 428cb9e75e7023b8abee13927435b74e166baa07
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 097955ece70dfa411c12d1ee5d69af0de14831e6
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65582219"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175599"
 ---
 # <a name="cache-shared-datasets-ssrs"></a>Almacenar en caché conjuntos de datos compartidos (SSRS)
   Los resultados de las consultas para un conjunto de datos compartido se pueden copiar en una memoria caché para proporcionar datos coherentes a varios informes y mejorar el tiempo de respuesta de la consulta del conjunto de datos. Al igual que los informes, puede configurar un conjunto de datos compartido que se va a almacenar en memoria caché al usarse por primera vez o especificando una programación.  
@@ -51,7 +51,7 @@ ms.locfileid: "65582219"
   
  Mientras los resultados de la consulta para una combinación de parámetros concreta estén en la memoria caché, cada informe que se inicie para procesarse y que incluya una referencia al conjunto de datos compartido con esos valores de parámetros utilizará los datos de la memoria caché.  
   
- Puede especificar cuánto tiempo se mantendrán los datos en la memoria caché antes de que expiren. Para más información, vea [Página de almacenamiento en caché, conjuntos de datos compartidos &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/eac372e9-d2a1-48a8-bbe5-09d101df16ea).  
+ Puede especificar cuánto tiempo se mantendrán los datos en la memoria caché antes de que expiren. Para más información, vea [Trabajar con conjuntos de datos compartidos: portal web](../../reporting-services/work-with-shared-datasets-web-portal.md).  
   
 ## <a name="preloading-the-cache"></a>Cargar previamente la memoria caché  
  Puede cargar previamente la memoria caché creando un plan de actualización de caché. Con un plan de actualización, puede especificar la frecuencia de la actualización de la memoria caché utilizando una programación específica de los elementos o una programación compartida. Para evitar varias entradas en la memoria caché para el mismo elemento, la programación que especifique debería permitir suficiente tiempo para el procesamiento de las consultas en el origen de datos externo. Por ejemplo, si la consulta tarda 20 minutos en ejecutarse, la programación de la actualización debería ser mayor de 20 minutos. Para obtener más información, vea [Schedules](../../reporting-services/subscriptions/schedules.md).  
@@ -68,7 +68,7 @@ ms.locfileid: "65582219"
   
 -   Debe tener los permisos ReadPolicy y UpdatePolicy en el conjunto de datos compartido.  
   
- Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para más información, vea [Opciones de actualización de memoria caché &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/227da40c-6bd2-48ec-aa9c-50ce6c1ca3a6).  
+ Los planes de actualización de memoria caché se aplican a los conjuntos de datos compartidos y a los informes. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
   
 ## <a name="conditions-that-cause-cache-expiration"></a>Situaciones que pueden provocar la expiración de la memoria caché  
  Las siguientes condiciones pueden hacer que una memoria caché del conjunto de datos compartido deje de ser válida.  
@@ -93,7 +93,7 @@ ms.locfileid: "65582219"
   
  Las actualizaciones de los planes de actualización de memoria caché para los conjuntos de datos compartidos no afectan a los informes que ya se estén procesando. La actualización de un plan de actualización de caché solo afecta a las versiones futuras de los informes que hagan referencia al conjunto de datos compartido.  
   
-## <a name="see-also"></a>Consulte también  
- [Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
+## <a name="see-also"></a>Vea también
   
+ [Administración de conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md)  
   

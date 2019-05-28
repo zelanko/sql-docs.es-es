@@ -1,18 +1,18 @@
 ---
 title: Características de SQL Server Reporting Services admitidas en sus ediciones
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ms.date: 11/01/2018
-ms.openlocfilehash: 1b46c6cec15f3a229892116758fe7f147f24c9ac
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
-ms.translationtype: HT
+ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185041"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936548"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Características de SQL Server Reporting Services admitidas en sus ediciones
 
@@ -26,7 +26,7 @@ En este tema se explican las características de SQL Server Reporting Services (
 
 > [![Descargar SQL Server 2017](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Descargar SQL Server 2017 desde el Centro de evaluación](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Máquina virtual de Azure pequeña ](../analysis-services/media/azure-virtual-machine-small.png)**[Poner en marcha una máquina virtual con SQL Server 2017 ya instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Máquina virtual de Azure pequeña ](../analysis-services/media/azure-virtual-machine-small.png) **[Poner en marcha una máquina virtual con SQL Server 2017 ya instalado](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Para conocer las características admitidas en las ediciones Evaluation y Developer, vea la columna SQL Server Enterprise Edition de la tabla siguiente.
 

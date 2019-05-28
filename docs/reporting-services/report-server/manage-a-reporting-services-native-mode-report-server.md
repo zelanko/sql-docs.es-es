@@ -1,6 +1,6 @@
 ---
 title: Administrar un servidor de informes en modo nativo de Reporting Services | Microsoft Docs
-ms.date: 03/17/2017
+ms.date: 05/14/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 27588665db387c7812b1779fd71e3002b1b80e36
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581097"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175195"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
   Esta sección contiene procedimientos para configurar una instancia de servidor de informes en modo nativo utilizando el Administrador de configuración de Reporting Services.  
@@ -36,7 +36,7 @@ ms.locfileid: "65581097"
  Explica cómo registrar manualmente un SPN para un servidor de informes que se ejecuta en una cuenta de usuario de dominio en una red que utiliza la autenticación Kerberos.  
   
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)  
- Explica cómo establecer una o varias direcciones URL que se usan para tener acceso al servicio web del servidor de informes y el Administrador de informes.  
+ Explica cómo establecer una o varias direcciones URL que se usan para tener acceso al servicio web del servidor de informes y el portal web.  
   
  [Crear una base de datos del servidor de informes de modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md)  
  Proporciona los pasos para crear una base de datos de servidor de informes. Este paso es necesario para implementar una instalación de Reporting Services.  
@@ -52,7 +52,7 @@ ms.locfileid: "65581097"
  Explica cómo abrir los puertos que se usan para las solicitudes entrantes y las respuestas salientes desde un servidor de informes.  
   
  [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md)  
- Describe los pasos adicionales necesarios para conectarse al Administrador de informes o a un servidor de informes mediante `https://localhost`.  
+ Describe los pasos adicionales necesarios para conectarse al portal web o a un servidor de informes mediante `https://localhost`.  
   
  [Configuración de un servidor de informes para la administración remota](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)  
  Explica cómo configurar una instancia del servidor de informes remota para que pueda conectarse y configurarla desde un equipo diferente.  

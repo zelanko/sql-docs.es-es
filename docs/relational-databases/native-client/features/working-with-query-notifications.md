@@ -1,7 +1,7 @@
 ---
 title: Trabajar con las notificaciones de consulta | Documentos de Microsoft
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 05/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: native-client
@@ -21,16 +21,16 @@ ms.assetid: 2f906fff-5ed9-4527-9fd3-9c0d27c3dff7
 author: MightyPen
 ms.author: genemi
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 889f791f74d7f28496b763eb942907ab8227ef4d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 23aadd055049052e3302e61e1303ccc5fa4cc62f
+ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670744"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66265451"
 ---
 # <a name="working-with-query-notifications"></a>Trabajar con notificaciones de consulta
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
   Las notificaciones de consulta se introdujeron con [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] y [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Las notificaciones de consulta, creadas a partir de la infraestructura de Service Broker introducida en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], permiten notificar a las aplicaciones si los datos han cambiado. Esta característica resulta especialmente útil para las aplicaciones que proporcionan una caché de información de una base de datos, como una aplicación web, y necesitan recibir notificaciones si se modifican los datos de origen.  
@@ -77,7 +77,7 @@ CREATE SERVICE myService ON QUEUE myQueue
 ### <a name="the-dbpropsetsqlserverrowset-property-set"></a>Conjunto de propiedades DBPROPSET_SQLSERVERROWSET  
  Para admitir las notificaciones de consulta a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega las siguientes propiedades nuevas al conjunto de propiedades DBPROPSET_SQLSERVERROWSET.  
   
-|Nombre|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|VT_UI4|Número de segundos que la notificación de consulta va a permanecer activa.<br /><br /> El valor predeterminado es 432000 segundos (5 días). El valor mínimo es 1 segundo y el valor máximo es 2^31-1 segundos.|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|VT_BSTR|Texto del mensaje de la notificación. Lo define el usuario y no tiene ningún formato predefinido.<br /><br /> De forma predeterminada, la cadena está vacía. Puede especificarse un mensaje usando de 1 a 2000 caracteres.|  
@@ -129,13 +129,13 @@ RECEIVE * FROM MyQueue
   
 -   **ntext**  
   
--   **imagen**  
+-   **image**  
   
  Si se realiza una solicitud de notificación para una consulta que devuelve cualquiera de estos tipos, la notificación se activa inmediatamente, especificando que no fue posible la suscripción de notificación.  
   
  Cuando se realiza una solicitud de suscripción para un lote o procedimiento almacenado, se realiza una solicitud de suscripción independiente para cada instrucción del lote o procedimiento almacenado. Las instrucciones EXECUTE no registrarán ninguna notificación, pero enviarán la solicitud de notificación al comando ejecutado. Si se trata de un lote, el contexto se aplicará a las instrucciones ejecutadas y se aplicarán las mismas reglas descritas anteriormente.  
   
- El envío de una consulta de notificación enviada por el mismo usuario bajo el mismo contexto de base de datos y con la misma plantilla, los mismos valores de parámetro, el mismo identificador de notificación y la misma ubicación de entrega de una suscripción activa existente, renovará la suscripción existente, restableciendo el nuevo tiempo de espera especificado. Esto significa que si se solicita una notificación para consultas idénticas, solo se enviará una notificación. Esto se aplicaría a una consulta duplicada de un lote o si se llamó varias veces a una consulta de un procedimiento almacenado.  
+ Envío de una consulta de notificación que se ha enviado por el mismo usuario en el mismo contexto de base de datos y tiene la misma plantilla, mismos valores de parámetro, mismo identificador de notificación y misma ubicación de entrega de una suscripción activa existente, renovará existente suscripción, restableciendo el nuevo especifica el tiempo de espera. Esto significa que si se solicita una notificación para consultas idénticas, se enviarán solo una notificación. Esto se aplicaría a una consulta duplicada de un lote o si se llamó varias veces a una consulta de un procedimiento almacenado.  
   
 ## <a name="see-also"></a>Vea también  
  [Características de SQL Server Native Client](../../../relational-databases/native-client/features/sql-server-native-client-features.md)  

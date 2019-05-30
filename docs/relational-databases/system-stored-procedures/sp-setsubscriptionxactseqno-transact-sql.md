@@ -16,17 +16,17 @@ ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bfc49e712e75a862c9c43ce99cc35b56c014cebc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534657"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270163"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Se utiliza durante la solución de problemas para especificar el número de secuencia de registro (LSN) de la siguiente transacción que se va a aplicar al Agente de distribución en el suscriptor, lo que permite al agente omitir una transacción que ha dado error. Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripción. No se admite para suscriptores que no sean de SQL Server.  
+  Se utiliza durante la solución de problemas para especificar la última transacción entregada con el número de secuencia de registro (LSN), que permite al agente de distribución empezar a entregar en la siguiente transacción. Al reiniciar, el agente de distribución devuelve que transacciones mayor que esta marca de agua (LSN) de la caché de base de datos de distribución (msrepl_commands). Este procedimiento almacenado se ejecuta en el suscriptor de la base de datos de suscripción. No se admite para suscriptores que no sean de SQL Server.  
   
 > [!CAUTION]  
 >  El uso incorrecto de este procedimiento almacenado o la especificación de un valor LSN incorrecto puede ocasionar que el Agente de distribución revierta los cambios ya aplicados en el suscriptor o que omita todos los cambios restantes.  
@@ -79,4 +79,6 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>Permisos  
  Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_setsubscriptionxactseqno**.  
   
-  
+## <a name="see-more"></a>Ver más
+
+[Blog: Cómo omitir una transacción](https://repltalk.com/2019/05/28/how-to-skip-a-transaction/)  

@@ -14,18 +14,18 @@ ms.assetid: e6658e9c-5b08-4b8d-b556-17ec2dd041d2
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 050256d488646425cd35580796e0fcfc771bea6d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 7d39dcfa1d3351434a6e35b1b74f7551648f2281
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487307"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354367"
 ---
 # <a name="create-a-link-attribute-master-data-services"></a>Crear un atributo de vínculo (Master Data Services)
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de vínculo cuando quiera que los usuarios escriban un hipervínculo como valor de atributo, como https://www.contoso.com.  
+  En [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], cree un atributo de vínculo cuando quiera que los usuarios escriban un hipervínculo como valor de atributo, como `https://www.contoso.com`.  
   
 > [!NOTE]  
 >  Cuando los usuarios escriban un valor para un atributo de vínculo, la cadena debe comenzar por **https://** o se mostrará un error.  

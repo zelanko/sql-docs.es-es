@@ -16,12 +16,12 @@ ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: de862ffdc0ca3e1c975fd386ba3da464219ead50
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015031"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354585"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>Funciones de API de nivel de núcleo (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -41,7 +41,7 @@ ms.locfileid: "66015031"
 |**SQLDescribeCol**|Devuelve el nombre de tipo, precisión, escala y la nulabilidad de la columna de resultados determinado. **Nota:  SQLDescribeCol** informa de las columnas calculadas como SQL_VARCHAR.|  
 |**SQLDisconnect**|Cierra una conexión. Si está habilitada la agrupación de conexiones para un entorno compartido y una aplicación llama a **SQLDisconnect** en una conexión en ese entorno, la conexión se devuelve al grupo de conexiones y sigue estando disponible para otros componentes mediante el mismo entorno compartido.|  
 |**SQLError**|Devuelve información de estado o de error sobre el último error. El controlador mantiene una pila o una lista de errores que se pueden devolver para el *hstmt*, *hdbc*, y *henv* argumentos, dependiendo de cómo la llamada a **SQLError**  se realiza. La cola de errores se vacíe después de cada instrucción. Normalmente recupera un mensaje de error de Oracle y en caso contrario, está vacío.|  
-|**SQLExecDirect**|Ejecuta una instrucción SQL nueva y no preparada. El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción. Si la tabla, vista o los nombres de campo contienen espacios, encierre los nombres de retroceso oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador de este modo:<br /><br /> Seleccione \`mi tabla\`. \`Mi Field1\`, \`Mi tabla\`.\` Mi Field2\` FROM \`mi tabla "\|  
+|**SQLExecDirect**|Ejecuta una instrucción SQL nueva y no preparada. El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción. Si la tabla, vista o los nombres de campo contienen espacios, encierre los nombres de retroceso oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador de este modo:<br /><br /> Seleccione \`mi tabla\`. \`Mi Field1\`, \`Mi tabla\`.\` Mi Field2\` FROM \`mi tabla\`|  
 |**SQLExecute**|Ejecuta una instrucción SQL preparada (una instrucción ya preparada por **SQLPrepare**). El controlador utiliza los valores actuales de las variables de marcador de parámetro, si existe algún parámetro en la instrucción.|  
 |**SQLFetch**|Recupera una fila de un conjunto de resultados en las ubicaciones especificadas por las llamadas anteriores a **SQLBindCol**. El controlador se prepara para una llamada a **SQLGetData** para las columnas sin enlazar.|  
 |**SQLFreeConnect**|Libera un identificador de conexión y libera toda la memoria asignada para el identificador.|  
@@ -49,7 +49,7 @@ ms.locfileid: "66015031"
 |**SQLFreeStmt**|Detiene el procesamiento asociado con un hstmt específico, cierra cualquier cursor abierto asociado con el identificador hstmt, descarta los resultados pendientes y, opcionalmente, libera todos los recursos asociados con el identificador de instrucción.|  
 |**SQLGetCursorName**|Devuelve el nombre del cursor asociado con el hstmt determinado.|  
 |**SQLNumResultCols**|Devuelve el número de columnas en un cursor de conjunto de resultados.|  
-|**SQLPrepare**|Prepara una instrucción SQL mediante la planeación de optimizar y ejecute la instrucción. La instrucción SQL se compila para ejecutarse en **SQLExecDirect**.<br /><br /> Si la tabla, vista o los nombres de campo contienen espacios, encierre los nombres de retroceso oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador como sigue:<br /><br /> Seleccione \`mi tabla\`.\` Mi campo\` FROM \`mi tabla "<br /><br /> Para obtener información sobre el uso de conjuntos de resultados que contienen matrices de parámetros formales, consulte [devolver los parámetros de matriz de los procedimientos almacenados](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md). \|  
+|**SQLPrepare**|Prepara una instrucción SQL mediante la planeación de optimizar y ejecute la instrucción. La instrucción SQL se compila para ejecutarse en **SQLExecDirect**.<br /><br /> Si la tabla, vista o los nombres de campo contienen espacios, encierre los nombres de retroceso oferta marcas. Por ejemplo, si la base de datos contiene una tabla denominada *mi tabla* y el campo *mi campo*, incluya cada elemento del identificador como sigue:<br /><br /> Seleccione \`mi tabla\`.\` Mi campo\` FROM \`mi tabla\`<br /><br /> Para obtener información sobre el uso de conjuntos de resultados que contienen matrices de parámetros formales, consulte [devolver los parámetros de matriz de los procedimientos almacenados](../../odbc/microsoft/returning-array-parameters-from-stored-procedures.md).|  
 |**SQLRowCount**|Oracle no proporciona una manera de determinar el número de filas en un conjunto de resultados hasta después de capturar la última fila, por lo que devuelve -1.|  
 |**SQLSetCursorName**|Asocia un nombre de cursor con un identificador de instrucción activa *hstmt*.|  
 |**SQLSetParam**|Reemplazado por SQLBindParameter de ODBC 2. *x*.|  

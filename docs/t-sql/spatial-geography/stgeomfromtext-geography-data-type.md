@@ -16,15 +16,15 @@ helpviewer_keywords:
 - full globe
 - STGeomFromText method
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 40044ced21eec81e90f9d479a217782a95cfc225
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6fc2c33daffe05ad996f62f07ae05dd098980e59
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753413"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936853"
 ---
 # <a name="stgeomfromtext-geography-data-type"></a>STGeomFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ STGeomFromText ( 'geography_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geography_tagged_text*  
- Es la representación WKT de la instancia de **geography** que se devuelve. *geography_tagged_text* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geography** que se devuelve. *geography_tagged_text* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que se va a devolver.  
@@ -66,7 +66,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

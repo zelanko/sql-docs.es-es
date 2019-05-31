@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromWKB (geometry Data Type)
 ms.assetid: cac25868-08ef-46fc-9c3d-a15e43794a7a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3cf212b35789e339305c9f29b2c1bba01a53474e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0167cb17dfe0f551bcfe5e1ed42d2248d14f6df7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620053"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938550"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipolygon*  
- Es la representación WKB de la instancia de **geometryMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometryMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiPolygon** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiPolygon**  
+ Tipo de OGC: **MultiPolígono**  
   
 ## <a name="remarks"></a>Notas  
   
@@ -62,7 +62,7 @@ SET @g = geometry::STMPolyFromWKB(0x01060000000200000001030000000100000004000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

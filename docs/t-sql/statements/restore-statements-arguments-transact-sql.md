@@ -13,15 +13,15 @@ helpviewer_keywords:
 - RESTORE statement, arguments
 - RESTORE statement
 ms.assetid: 4bfe5734-3003-4165-afd4-b1131ea26e2b
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 48df9a641db478f58f2e7db1ec8b3477594d04eb
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 173b33d6bf609d2acf3e1b85622cfe73a8c55b38
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242258"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946165"
 ---
 # <a name="restore-statements---arguments-transact-sql"></a>Instrucciones RESTORE: argumentos (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,12 +63,12 @@ En este tema se documentan los argumentos descritos en las secciones "Sintaxis" 
   
  Para obtener más información, vea [Aplicar copias de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/apply-transaction-log-backups-sql-server.md).  
   
- { _database\_name_ | **@**_database\_name\_var_}  
+ { _database\_name_ |  **@** _database\_name\_var_}  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
- Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable (**@**_database\_name\_var_), este nombre se puede especificar como una constante de cadena (**@**_database\_name\_var_ = *database*\_*name*) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
+ Es la base de datos en la que se restaura el registro o la base de datos completa. Si se proporciona como una variable ( **@** _database\_name\_var_), este nombre se puede especificar como una constante de cadena ( **@** _database\_name\_var_ = *database*\_*name*) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
   
- \<file_or_filegroup_or_page> [ **,**...*n* ]  
+ \<file_or_filegroup_or_page> [ **,** ...*n* ]  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el nombre de un archivo, un grupo de archivos o una página lógicos que se va a incluir en una instrucción RESTORE DATABASE o RESTORE LOG. Puede especificar una lista de archivos o grupos de archivos.  
@@ -81,10 +81,10 @@ En este tema se documentan los argumentos descritos en las secciones "Sintaxis" 
   
 -   Si la copia de seguridad contiene el grupo de archivos principal y se va a realizar una restauración parcial. En este caso, el registro de restauración no es necesario, porque se restaura automáticamente desde el conjunto de copia de seguridad.  
   
-FILE **=** { *logical_file_name_in_backup*| **@**_logical\_file\_name\_in\_backup\_var_}  
+FILE **=** { *logical_file_name_in_backup*|  **@** _logical\_file\_name\_in\_backup\_var_}  
  Especifica el nombre de un archivo que se va a incluir en la restauración de la base de datos.  
   
-FILEGROUP **=** { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var_ }  
+FILEGROUP **=** { *logical_filegroup_name* |  **@** _logical\_filegroup\_name\_var_ }  
  Especifica el nombre de un grupo de archivos que se va a incluir en la restauración de la base de datos.  
   
  **Nota:** FILEGROUP solo se admite en el modelo de recuperación simple si el grupo de archivos especificado es de solo lectura y se trata de una restauración parcial, es decir, si se usa WITH PARTIAL. Los grupos de archivos de lectura y escritura sin restaurar se marcan como inactivos y, en consecuencia, no se podrán restaurar en la base de datos resultante.  
@@ -92,7 +92,7 @@ FILEGROUP **=** { *logical_filegroup_name* | **@**_logical\_filegroup\_name\_var
 READ_WRITE_FILEGROUPS  
  Selecciona todos los grupos de archivos de lectura y escritura. Esta opción es especialmente útil cuando se desean restaurar grupos de archivos de solo lectura después de los grupos de archivos de lectura y escritura anteriores a los grupos de archivos de solo lectura.  
   
-PAGE = **'**_file_**:**_page* [ **,**...*n* ]**'**  
+PAGE = **'** _file_ **:** _page* [ **,** ...*n* ] **'**  
  Especifica una lista de una o varias páginas para una restauración de página (que solo se admite en bases de datos que utilizan los modelos de recuperación completa o de recuperación optimizado para cargas masivas de registros). Éstos son sus valores:  
   
 PAGE  
@@ -114,24 +114,24 @@ PAGE
   
  Para más información sobre la restauración de páginas, vea [Restaurar páginas &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-pages-sql-server.md).  
   
- [ **,**...*n* ]  
+ [ **,** ...*n* ]  
  Es un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos y páginas en una lista separada por comas. El número es ilimitado.  
   
-FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
+FROM { \<backup_device> [ **,** ...*n* ]| \<database_snapshot> } Normalmente especifica los dispositivos de copia de seguridad desde los que se restaurará la copia de seguridad. Alternativamente, en una instrucción RESTORE DATABASE, la cláusula FROM puede especificar el nombre de una instantánea de base de datos a la que va a revertir la base de datos, en cuyo caso no se admite ninguna cláusula WITH.  
   
  Si se omite la cláusula FROM, no se produce la restauración de la copia de seguridad. En su lugar, se recupera la base de datos. Esto permite recuperar una base de datos restaurada con la opción NORECOVERY o cambiar a un servidor en espera. Si se omite la cláusula FROM, se debe especificar NORECOVERY, RECOVERY o STANDBY en la cláusula WITH.  
   
- \<backup_device> [ **,**...*n* ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usarán para la operación de restauración.  
+ \<backup_device> [ **,** ...*n* ] Especifica los dispositivos de copia de seguridad físicos o lógicos que se usarán para la operación de restauración.  
   
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md), [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  \<backup_device>::= Especifica el dispositivo de copia de seguridad físico o lógico que se va a usar en la operación de copia de seguridad, así:  
   
- { _logical\_backup\_device\_name_ | **@**_logical\_backup\_device\_name\_var_ }  
- Es el nombre lógico, que debe seguir las reglas de los identificadores, de los dispositivos de copia de seguridad creados por **sp_addumpdevice** desde los que se restaura la base de datos. Si se proporciona como una variable (**@**_logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena (**@**_logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
+ { _logical\_backup\_device\_name_ |  **@** _logical\_backup\_device\_name\_var_ }  
+ Es el nombre lógico, que debe seguir las reglas de los identificadores, de los dispositivos de copia de seguridad creados por **sp_addumpdevice** desde los que se restaura la base de datos. Si se proporciona como una variable ( **@** _logical\_backup\_device\_name\_var_), el nombre del dispositivo de copia de seguridad se puede especificar como una constante de cadena ( **@** _logical\_backup\_device\_name\_var_ = _logical\_backup\_device\_name_) o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
   
- {DISK | TAPE } **=** { **'**_physical\_backup\_device\_name_**'** | **@**_physical\_backup\_device\_name\_var_ }  
- Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable (**@**_physical\_backup\_device\_name\_var_), el nombre del dispositivo se puede especificar como una constante de cadena (**@**_physical\_backup\_device\_name\_var_ = "*physical_backup_device_name*") o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
+ {DISK | TAPE } **=** { **'** _physical\_backup\_device\_name_ **'**  |  **@** _physical\_backup\_device\_name\_var_ }  
+ Permite restaurar las copias de seguridad guardadas en el dispositivo de disco o cinta con nombre. Los tipos de dispositivo de disco y cinta deben especificarse con el nombre real (por ejemplo, nombre de archivo y ruta de acceso completa) del dispositivo: `DISK ='Z:\SQLServerBackups\AdventureWorks.bak'` o `TAPE ='\\\\.\TAPE0'`. Si se especifica como una variable ( **@** _physical\_backup\_device\_name\_var_), el nombre del dispositivo se puede especificar como una constante de cadena ( **@** _physical\_backup\_device\_name\_var_ = "*physical_backup_device_name*") o como una variable de tipo de datos de cadena de caracteres, excepto para los tipos de datos **ntext** o **text**.  
   
  Si utiliza un servidor de red con un nombre UNC (que debe contener el nombre del equipo), especifique un tipo de dispositivo de disco. Para más información sobre cómo usar los nombres UNC, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
@@ -154,7 +154,7 @@ FROM { \<backup_device> [ **,**...*n* ]| \<database_snapshot> } Normalmente espe
 \<database_snapshot>::=  
 **Compatible con:**  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
-DATABASE_SNAPSHOT **=**_database\_snapshot\_name_  
+DATABASE_SNAPSHOT **=** _database\_snapshot\_name_  
  Revierte la base de datos a la instantánea de base de datos especificada por *database_snapshot_name*. La opción DATABASE_SNAPSHOT solo está disponible para una restauración de base de datos completa. En una operación de reversión, la instantánea de base de datos ocupa el lugar de una copia de seguridad de base de datos completa.  
   
  En una operación de reversión se requiere que la instantánea de base de datos especificada sea la única en la base de datos. Durante la operación de reversión, la instantánea de base de datos y la base de datos de destino se marcan como `In restore`. Para más información, vea la sección "Comentarios" de [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -200,7 +200,7 @@ DATABASE_SNAPSHOT **=**_database\_snapshot\_name_
   
  En algunos casos, RESTORE WITH NORECOVERY actualiza el conjunto de puestas al día lo suficiente para que sea coherente con la base de datos. En esos casos, no se produce la reversión y los datos permanecen sin conexión, como cabe esperar con esta opción. No obstante, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un mensaje informativo donde indica que el conjunto de puestas al día se puede recuperar mediante la opción RECOVERY.  
   
-STANDBY **=**_standby\_file\_name_  
+STANDBY **=** _standby\_file\_name_  
  Especifica un archivo en espera que permite deshacer los efectos de la recuperación. La opción STANDBY se puede utilizar en operaciones de restauración sin conexión (incluida la restauración parcial). Esta opción no se permite en operaciones de restauración en línea. Si se intenta especificar la opción STANDBY para una operación de restauración en línea, se producirá un error en la operación. STANDBY tampoco se permite cuando es necesario actualizar una base de datos.  
   
  El archivo en espera se utiliza para mantener una imagen previa de "copia en escritura" de las páginas modificadas durante la fase de deshacer de una operación RESTORE WITH STANDBY. El archivo en espera permite abrir una base de datos para el acceso de solo lectura entre las restauraciones del registro de transacciones, y utilizarla cuando haya un servidor en espera semiactiva o en situaciones de recuperación especiales en las que resulte útil inspeccionar la base de datos entre las restauraciones del registro. Después de una operación RESTORE WITH STANDBY, el archivo para deshacer se elimina automáticamente en la siguiente operación RESTORE. Si elimina el archivo en espera de forma manual antes de la siguiente operación RESTORE, deberá volver a restaurar la base de datos completa. Mientras la base de datos está en estado STANDBY, debe tratar el archivo en espera con el mismo cuidado que cualquier otro archivo de base de datos. A diferencia de lo que sucede con los demás archivos de base de datos, [!INCLUDE[ssDE](../../includes/ssde-md.md)] mantiene abierto este archivo solo durante las operaciones de restauración activas.  
@@ -225,7 +225,7 @@ LOADHISTORY
 ##### <a name="restore-operation-options"></a>Opciones de la operación de restauración  
  Estas opciones afectan al comportamiento de la operación de restauración.  
   
-MOVE **'**_logical\_file\_name\_in\_backup_**'** TO **'**_operating\_system\_file\_name_**'** [ ...*n* ]  
+MOVE **'** _logical\_file\_name\_in\_backup_ **'** TO **'** _operating\_system\_file\_name_ **'** [ ...*n* ]  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
  Especifica que el archivo de datos o de registro cuyo nombre lógico está especificado por *logical_file_name_in_backup* debe moverse restaurándolo en la ubicación especificada por *operating_system_file_name*. El nombre de archivo lógico de un archivo de datos o de registro de un conjunto de copia de seguridad coincide con el nombre lógico que tenía en la base de datos cuando se creó el conjunto de copia de seguridad.  
@@ -285,7 +285,7 @@ RESTRICTED_USER
 ##### <a name="backup-set-options"></a>Opciones de conjunto de copia de seguridad  
  Estas opciones funcionan en el conjunto de copia de seguridad que contiene la copia de seguridad que se va a restaurar.  
   
-FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
+FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Identifica el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, si *backup_set_file_number* es **1** , indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es **2** , indica el segundo conjunto de copia de seguridad. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
@@ -293,9 +293,9 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
  Cuando no se especifica, el valor predeterminado es **1**, excepto en el caso de RESTORE HEADERONLY, que procesa todos los conjuntos de copia de seguridad de los medios. Para obtener más información, vea "Especificar un conjunto de copia de seguridad" más adelante en este tema.  
   
 > [!IMPORTANT]  
->  Esta opción FILE no está relacionada con la opción FILE para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
+>  Esta opción FILE no está relacionada con la opción FILE para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* |  **@** _logical\_file\_name\_in\_backup\_var_ }.  
   
- PASSWORD  **=** { *password* | **@**_password\_variable_ }  
+ PASSWORD  **=** { *password* |  **@** _password\_variable_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Proporciona la contraseña del conjunto de copia de seguridad. Una contraseña de conjunto de copia de seguridad es una cadena de caracteres.  
@@ -311,7 +311,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### <a name="media-set-options"></a>Opciones de conjuntos de medios  
  Estas opciones funcionan para todo el conjunto de medios.  
   
- MEDIANAME **=** { *media_name* | **@**_media\_name\_variable_}  
+ MEDIANAME **=** { *media_name* |  **@** _media\_name\_variable_}  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Especifica el nombre de los medios. Si se proporciona, el nombre de los medios debe coincidir con el nombre de los medios de los volúmenes de copia de seguridad; en caso contrario, la operación de restauración finaliza. Si no se proporciona el nombre de los medios en la instrucción RESTORE, no se comprueba que éste coincida con el nombre de los medios de los volúmenes de copia de seguridad.  
@@ -319,7 +319,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 > [!IMPORTANT]  
 >  La utilización coherente de nombres de medios en las operaciones de copias de seguridad y restauración proporciona una comprobación adicional de seguridad del medio seleccionado para la operación de restauración.  
   
- MEDIAPASSWORD **=** { *mediapassword* | **@**_mediapassword\_variable_ }  
+ MEDIAPASSWORD **=** { *mediapassword* |  **@** _mediapassword\_variable_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md), [RESTORE FILELISTONLY](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md), [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md), [RESTORE LABELONLY](../../t-sql/statements/restore-statements-labelonly-transact-sql.md) y [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md).  
   
  Proporciona la contraseña del conjunto de medios. Una contraseña de conjunto de medios es una cadena de caracteres.  
@@ -332,7 +332,7 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 > [!IMPORTANT]  
 >  Esta contraseña proporciona un nivel de protección bajo para el conjunto de medios. Para más información, vea la sección "Permisos" de la instrucción correspondiente.  
   
- BLOCKSIZE **=** { *blocksize* | **@**_blocksize\_variable_ }  
+ BLOCKSIZE **=** { *blocksize* |  **@** _blocksize\_variable_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el tamaño de bloque físico, en bytes. Los tamaños admitidos son 512, 1024, 2048, 4096, 8192, 16384, 32768 y 65536 (64 KB) bytes. El valor predeterminado es 65536 para dispositivos de cinta y 512 para otros dispositivos. Normalmente, esta opción no es necesaria, ya que RESTORE selecciona automáticamente un tamaño de bloque apropiado para el dispositivo. La especificación explícita de un tamaño de bloque invalida la selección automática del tamaño de bloque.  
@@ -345,14 +345,14 @@ FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }
 ##### <a name="data-transfer-options"></a>Opciones de transferencia de datos  
  Las opciones le permiten optimizar la transferencia de datos desde el dispositivo de copia de seguridad.  
   
- BUFFERCOUNT **=** { *buffercount* | **@**_buffercount\_variable_ }  
+ BUFFERCOUNT **=** { *buffercount* |  **@** _buffercount\_variable_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica el número total de búferes de E/S que se van a utilizar para la operación de restauración. Puede especificar cualquier entero positivo; no obstante, un número de búferes demasiado grande podría provocar errores de "memoria insuficiente" a causa de un espacio de direcciones virtuales inadecuado en el proceso Sqlservr.exe.  
   
- El espacio total usado por los búferes viene determinado por: _buffercount_**\**_maxtransfersize_.  
+ El espacio total usado por los búferes viene determinado por: _buffercount_* *\** _maxtransfersize_.  
   
- MAXTRANSFERSIZE **=** { _maxtransfersize_ | **@**_maxtransfersize\_variable_ }  
+ MAXTRANSFERSIZE **=** { _maxtransfersize_ |  **@** _maxtransfersize\_variable_ }  
  **Compatible con:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   
  Especifica la unidad de transferencia más grande (en bytes) que se debe utilizar entre el medio de copia de seguridad y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los valores posibles son múltiplos de 65536 bytes (64 KB), hasta un máximo de 4194304 bytes (4 MB).  
@@ -497,8 +497,8 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  { STOPAT | STOPATMARK | STOPBEFOREMARK }   
  
- STOPAT **=** { **'**_datetime_**'** | **@**_datetime\_var* }  
- Especifica que se va restaurar la base de datos al estado en que estaba en la fecha y hora especificadas por el parámetro *datetime* o **@**_datetime\_var_. Para más información sobre cómo especificar una fecha y una hora, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
+ STOPAT **=** { **'** _datetime_ **'**  |  **@** _datetime\_var* }  
+ Especifica que se va restaurar la base de datos al estado en que estaba en la fecha y hora especificadas por el parámetro *datetime* o **@** _datetime\_var_. Para más información sobre cómo especificar una fecha y una hora, vea [Tipos de datos y funciones de fecha y hora &#40;Transact-SQL&#41;](../../t-sql/functions/date-and-time-data-types-and-functions-transact-sql.md).  
   
  Si se usa una variable para STOPAT, la variable debe ser del tipo de datos **varchar**, **char**, **smalldatetime** o **datetime**. Solo se aplican a la base de datos los datos del registro de transacciones escritos antes de la fecha y hora especificadas.  
   
@@ -507,7 +507,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para obtener más información, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   
- STOPATMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
+ STOPATMARK **=** { **'** _mark\_name_ **'**  |  **'** lsn:_lsn\_number_ **'** } [ AFTER **'** _datetime_ **'** ]  
  Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada se incluye en la recuperación, pero solo se confirma si estaba confirmada inicialmente cuando se generó.  
   
  Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  
@@ -521,7 +521,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  Para más información, vea [Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/use-marked-transactions-to-recover-related-databases-consistently.md) y [Recuperar a un número de secuencia de registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/recover-to-a-log-sequence-number-sql-server.md).  
   
- STOPBEFOREMARK **=** { **'**_mark\_name_**'** | **'** lsn:_lsn\_number_**'** } [ AFTER **'**_datetime_**'** ]  
+ STOPBEFOREMARK **=** { **'** _mark\_name_ **'**  |  **'** lsn:_lsn\_number_ **'** } [ AFTER **'** _datetime_ **'** ]  
  Especifica que la recuperación se realice en un punto de recuperación especificado. La transacción especificada no se incluye en la recuperación y se revertirá cuando se utilice WITH RECOVERY.  
   
  Tanto RESTORE DATABASE como RESTORE LOG admiten el parámetro *lsn_number*. Este parámetro especifica un número de secuencia de registro.  
@@ -560,7 +560,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
   
  La opción para especificar el conjunto de copia de seguridad que se desea restaurar es:  
   
- FILE **=**{ *backup_set_file_number* | **@**_backup\_set\_file\_number_ }  
+ FILE **=** { *backup_set_file_number* |  **@** _backup\_set\_file\_number_ }  
   
  Donde *backup_set_file_number* indica la posición de la copia de seguridad en el conjunto de medios. Un valor de *backup_set_file_number* de 1 (FILE = 1) indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es 2 (FILE = 2), indica el segundo conjunto de copia de seguridad, y así sucesivamente.  
   
@@ -574,7 +574,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
 |RESTORE VERIFYONLY|El valor predeterminado de *backup_set_file_number* es 1.|  
   
 > [!NOTE]  
->  La opción FILE para especificar un conjunto de copia de seguridad no está relacionada con la opción FILE para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* | **@**_logical\_file\_name\_in\_backup\_var_ }.  
+>  La opción FILE para especificar un conjunto de copia de seguridad no está relacionada con la opción FILE para especificar un archivo de base de datos, FILE **=** { *logical_file_name_in_backup* |  **@** _logical\_file\_name\_in\_backup\_var_ }.  
   
 ## <a name="summary-of-support-for-with-options"></a>Resumen de compatibilidad para las opciones de WITH  
  Las opciones de WITH siguientes solo son compatibles con la instrucción RESTORE: BLOCKSIZE, BUFFERCOUNT, MAXTRANSFERSIZE, PARTIAL, KEEP_REPLICATION, { RECOVERY | NORECOVERY | STANDBY }, REPLACE, RESTART, RESTRICTED_USER y { STOPAT | STOPATMARK | STOPBEFOREMARK }  
@@ -598,7 +598,7 @@ Use KEEP_REPLICATION al configurar la replicación para que funcione con el tras
 |STATS|√|-|-|-|-|√|  
 |{ UNLOAD &#124; NOUNLOAD }|√|√|√|√|√|√|  
   
- <sup>1</sup> FILE **=**_backup\_set\_file\_number_, que es distinto de {FILE | FILEGROUP}.  
+ <sup>1</sup> FILE **=** _backup\_set\_file\_number_, que es distinto de {FILE | FILEGROUP}.  
   
 ## <a name="permissions"></a>Permisos  
  Para comprobar los permisos, vea los siguientes temas:  

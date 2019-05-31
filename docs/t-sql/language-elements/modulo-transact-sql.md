@@ -22,16 +22,16 @@ helpviewer_keywords:
 - modulo operator (%)
 - modulus operator (%)
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 06e940fa535bbe75165d36edf3342e32f32b221e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b8a344f3c892bf8aca2670d7774813b5ab2af7c7
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710124"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981976"
 ---
 # <a name="-modulus-transact-sql"></a>% (Módulo) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -83,7 +83,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-example"></a>C: ejemplo sencillo  
+### <a name="c-simple-example"></a>C. Ejemplo sencillo  
  En el siguiente ejemplo se muestran los resultados del operador `%` al dividir 3 entre 2.  
   
 ```  
@@ -99,7 +99,7 @@ SELECT TOP(1) 3%2 FROM dimEmployee;
 1         
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones integradas &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)   
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

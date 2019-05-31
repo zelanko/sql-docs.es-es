@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STInteriorRingN (geometry Data Type)
 ms.assetid: 47310f9f-2cdb-41e0-a6da-7c3cfbf139ac
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: c1e78bb2f5959045dd47f32bb91d057a09fa8f0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e6908f612018978e234dd50074ae8eaf1998ed5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741143"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938878"
 ---
 # <a name="stinteriorringn-geometry-data-type"></a>STInteriorRingN (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0),(2 2, 2 1, 
 SELECT @g.STInteriorRingN(1).ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

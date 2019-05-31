@@ -20,16 +20,16 @@ helpviewer_keywords:
 - BETWEEN operator
 - range to test [SQL Server]
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e384d2835bcb28487757384543298d5a20144cf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768483"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980086"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  NOT BETWEEN devuelve **TRUE** si el valor de *test_expression* es menor que el valor de *begin_expression* y mayor que el valor de *end_expression*.  
   
 ## <a name="remarks"></a>Notas  
- Para especificar un intervalo exclusivo, utilice los operadores mayor que (>) y menor que (<). Si alguna entrada del predicado BETWEEN o NOT BETWEEN es NULL, el resultado es UNKNOWN.  
+ Para especificar un intervalo exclusivo, use los operadores "mayor que" (>) y "menor que" ( <). Si alguna entrada del predicado BETWEEN o NOT BETWEEN es NULL, el resultado es UNKNOWN.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -182,7 +182,7 @@ WHERE RateChangeDate BETWEEN '20011212' AND '20020105';
  La consulta recupera las filas previstas porque los valores de fecha de la consulta y los valores de **datetime** almacenados en la columna `RateChangeDate` se han especificado sin la parte de hora de la fecha. Si no se especifica la parte de hora, toma el valor predeterminado 12:00 a.m. Tenga en cuenta que esta consulta no devolverá una fila que contenga una parte de hora posterior a 12:00 a.m. del 05-01-2002, ya que está fuera del rango.  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [&#62; &#40;Mayor que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/greater-than-transact-sql.md)   
  [&#60; &#40;Menor que&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/less-than-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   

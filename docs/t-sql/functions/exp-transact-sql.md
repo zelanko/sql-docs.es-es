@@ -16,16 +16,16 @@ helpviewer_keywords:
 - exponential functions
 - EXP function
 ms.assetid: 5a9b8c52-6fb6-4e33-8b02-a878785b2f51
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3725fccd59dea96571a3f5b1b50338ec2adb2dee
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b62046f315c6921a03cdf692561d8336398792ec
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508521"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946098"
 ---
 # <a name="exp-transact-sql"></a>EXP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ EXP ( float_expression )
   
  El exponente de un número es la constante **e** elevada a la potencia del número. Por ejemplo, EXP(1,0) = e^1,0 = 2,71828182845905 y EXP(10) = e^10 = 22026,4657948067.  
   
- El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Asimismo, el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
+ El valor exponencial del logaritmo natural de un número es el propio número: EXP (LOG (*n*)) = *n*. Y el logaritmo natural del valor exponencial de un número es el propio número: LOG (EXP (*n*)) = *n*.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -121,7 +121,7 @@ SELECT EXP( LOG(20)), LOG( EXP(20));
 20                  20  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones matemáticas &#40;Transact-SQL&#41;](../../t-sql/functions/mathematical-functions-transact-sql.md)   
  [LOG &#40;Transact-SQL&#41;](../../t-sql/functions/log-transact-sql.md)   
  [LOG10 &#40;Transact-SQL&#41;](../../t-sql/functions/log10-transact-sql.md)  

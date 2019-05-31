@@ -18,16 +18,16 @@ helpviewer_keywords:
 - NULLIF function
 - equivalent expressions [SQL Server]
 ms.assetid: 44c7b67e-74c7-4bb9-93a4-7a3016bd2feb
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 91af3566777e4c7dd038e42e05e7edb16dcfdcea
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d72036caa89cb64b57c59c9ec84c09c6090623ec
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773513"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983165"
 ---
 # <a name="nullif-transact-sql"></a>NULLIF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -145,7 +145,7 @@ FROM budgets;
  5      null
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   
  [decimal and numeric &#40;Transact-SQL&#41;](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)  (decimal y numeric [Transact-SQL])  
  [Funciones del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)  

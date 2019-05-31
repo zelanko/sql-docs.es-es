@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromText method
 ms.assetid: 66dfd722-a9bd-45d3-9788-f1946dd23e17
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8b4dd80bdc3930f396703db04fb7d4282a9535f2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 111703695a1ed2452456125ccf872bf31a12d968
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742143"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936642"
 ---
 # <a name="stmlinefromtext-geography-data-type"></a>STMLineFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *texto_etiquetado_de_cadena_de_varias_líneas*  
- Es la representación WKT de la instancia de **geographyMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geographyMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiLineString** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo de OGC: **MultiLineString**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geography::STMLineFromText('MULTILINESTRING ((-122.358 47.653, -122.348
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

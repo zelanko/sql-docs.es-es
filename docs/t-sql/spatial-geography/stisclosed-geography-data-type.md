@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsClosed method
 ms.assetid: eba1643f-07c4-4500-8643-b7e90f908147
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 7e9fd864ae5688e1d3540f54db54454ec1ff41db
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a283ce663ce8aa68418169a8cb3bbb310c3b766c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663473"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936801"
 ---
 # <a name="stisclosed-geography-data-type"></a>STIsClosed (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ SET @g = geography::STGeomFromText('POLYGON((-122.358 47.653, -122.348 47.649, -
 SELECT @g.STIsClosed();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPointFromWKB (geometry Data Type)
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9b14ba9d9110add0e9ffd6c9ba3ecb64239b1c4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626938"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938577"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipoint*  
- Es la representación WKB de la instancia de **geometryMultiPoint** que se quiere devolver. *WKB_multipoint* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometryMultiPoint** que se quiere devolver. *WKB_multipoint* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiPoint** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiPoint**  
+ Tipo de OGC: **MultiPoint**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geometry::STMPointFromWKB(0x0104000000020000000101000000000000000000594
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

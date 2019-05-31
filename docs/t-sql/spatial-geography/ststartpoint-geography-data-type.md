@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STStartPoint method
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 80b78fbd1aff4490ae71198bc86b26926448f6f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2af68b46abc31d7025e0b8b03fa6b18f5e9403c
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615933"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939149"
 ---
 # <a name="ststartpoint-geography-data-type"></a>STStartPoint (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STStartPoint().ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

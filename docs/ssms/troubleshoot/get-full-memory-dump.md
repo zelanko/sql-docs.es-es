@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: ff78af4ffcfe530ba28d47ec57852486523f859a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65822513"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983127"
 ---
 # <a name="get-full-memory-dump"></a>Obtención de un volcado de memoria completo
 
@@ -88,6 +88,15 @@ Para capturar información de diagnóstico para solucionar problemas de una exce
     * "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
 9. Comprima la carpeta.
+
+## <a name="share-the-information"></a>Compartir la información
+
+1. Para compartir la información con el equipo de SSMS, registre el problema en https://aka.ms/sqlfeedback.
+
+2. Después, comparta el archivo de volcado de memoria recopilado a OneDrive (o equivalente), donde el archivo se puede recopilar.
+
+    > [!Important]
+    > Los archivos de volcado de memoria pueden contener información confidencial.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

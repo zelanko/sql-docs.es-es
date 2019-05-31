@@ -17,16 +17,16 @@ helpviewer_keywords:
 - RIGHT function
 - character strings [SQL Server], RIGHT
 ms.assetid: 43f1fe1f-aa18-47e3-ba20-e03e32254a6d
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 071cca59b0c0decd9dddceb26c7c1bf8ee944489
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 045f9af1cd88c83f4591e4c02f476712eebf234e
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670243"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944714"
 ---
 # <a name="right-transact-sql"></a>RIGHT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +46,7 @@ RIGHT ( character_expression , integer_expression )
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) de datos binarios o de caracteres. *character_expression* puede ser una constante, una variable o una columna. *character_expression* puede ser cualquier tipo de datos (excepto **text** o **ntext**) que se pueda convertir implícitamente a **varchar** o **nvarchar**. De lo contrario, use la función [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) para convertir *character_expression* explícitamente.  
   
  *integer_expression*  
- Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)**.  
+ Es un entero positivo que especifica cuántos caracteres de *character_expression* se van a devolver. Si *integer_expression* es negativo, se devuelve un error. Si *integer_expression* es de tipo **bigint** y contiene un valor grande, *character_expression* debe ser de un tipo de datos de gran tamaño, como **varchar(max)** .  
   
 ## <a name="return-types"></a>Tipos devueltos  
  Devuelve **varchar** cuando *character_expression* es de un tipo de datos de caracteres no Unicode.  
@@ -123,7 +123,7 @@ SELECT TOP(1) RIGHT('abcdefg',2) FROM dbo.DimProduct;
 fg
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [LEFT &#40;Transact-SQL&#41;](../../t-sql/functions/left-transact-sql.md)  
  [LTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/ltrim-transact-sql.md)  
  [RTRIM &#40;Transact-SQL&#41;](../../t-sql/functions/rtrim-transact-sql.md)  

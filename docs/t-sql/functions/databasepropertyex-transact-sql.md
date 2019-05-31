@@ -17,16 +17,16 @@ helpviewer_keywords:
 - displaying database properties
 - database properties [SQL Server]
 ms.assetid: 8a9e0ffb-28b5-4640-95b2-a54e3e5ad941
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3b502e1d930f8cfdd118e12f74921347c342601e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 690ed4abb406abc63be259241ba8c1c346bcf512
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045014"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65943768"
 ---
 # <a name="databasepropertyex-transact-sql"></a>DATABASEPROPERTYEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +43,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="arguments"></a>Argumentos  
 *database*  
-Una expresión que especifica el nombre de la base de datos para la que `DATABASEPROPERTYEX` devolverá la información de la propiedad con nombre. *database* tiene un tipo de datos **nvarchar(128)**.  
+Una expresión que especifica el nombre de la base de datos para la que `DATABASEPROPERTYEX` devolverá la información de la propiedad con nombre. *database* tiene un tipo de datos **nvarchar(128)** .  
 
 Para [!INCLUDE[ssSDS](../../includes/sssds-md.md)], `DATABASEPROPERTYEX` necesita el nombre de la base de datos actual. Devuelve NULL para todas las propiedades si se proporciona un nombre de base de datos diferente.
   
@@ -130,7 +130,7 @@ SELECT DATABASEPROPERTYEX('AdventureWorks2014', 'IsAutoShrink');
 0  
 ```  
   
-### <a name="b-retrieving-the-default-collation-for-a-database"></a>b. Recuperar la intercalación predeterminada de una base de datos  
+### <a name="b-retrieving-the-default-collation-for-a-database"></a>B. Recuperar la intercalación predeterminada de una base de datos  
 Este ejemplo devuelve varios atributos de la base de datos `AdventureWorks`.
   
 ```sql

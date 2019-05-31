@@ -1,7 +1,7 @@
 ---
 title: Columnas que incluyen un valor NULL de forma predeterminada | Microsoft Docs
-ms.custom: ''
-ms.date: 03/01/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -13,31 +13,35 @@ ms.assetid: 9381c07f-6887-4a62-9730-32661f9aa87c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 775155e56e180d8e5d0c2f9a24de2a1716d13101
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 33acf250b60628869cde6b1c920ee3e86e08259a
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513338"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175349"
 ---
 # <a name="columns-that-contain-a-null-value-by-default"></a>Columnas que incluyen un valor NULL de forma predeterminada
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
-  De forma predeterminada, un valor NULL en una columna se asigna a la ausencia del atributo, nodo u elemento. Este comportamiento predeterminado se puede sobrescribir solicitando XML centrado en elementos mediante la directiva ELEMENTS y especificando XSINIL a fin de solicitar la adición de elementos para valores NULL, tal y como se muestra en la consulta siguiente:  
-  
-```  
+
+De forma predeterminada, un valor NULL en una columna se asigna a la ausencia del atributo, nodo u elemento. Este comportamiento predeterminado puede invalidarse mediante el uso de la frase de palabras clave ELEMENTS XSINIL. Esta frase solicita un XML centrado en elementos. Esto significa que los valores null se indican explícitamente en los resultados devueltos. Estos elementos no tendrán ningún valor.
+
+La frase ELEMENTS XSINIL se muestra en el siguiente ejemplo Transact-SQL SELECT.
+
+```sql
 SELECT EmployeeID as "@EmpID",   
        FirstName  as "EmpName/First",   
        MiddleName as "EmpName/Middle",   
        LastName   as "EmpName/Last"  
 FROM   HumanResources.Employee E, Person.Contact C  
 WHERE  E.EmployeeID = C.ContactID  
-AND    E.EmployeeID=1  
-FOR XML PATH, ELEMENTS XSINIL  
+  AND  E.EmployeeID=1
+FOR XML PATH, ELEMENTS XSINIL;
 ```  
   
  A continuación se muestra el resultado. Tenga en cuenta que si no se especifica XSINIL, el elemento <`Middle`> estará ausente.  
   
-```  
+```xml
 <row xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" EmpID="1">  
   <EmpName>  
     <First>Gustavo</First>  

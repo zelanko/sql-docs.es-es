@@ -15,16 +15,16 @@ dev_langs:
 helpviewer_keywords:
 - STLineFromWKB (geometry Data Type)
 ms.assetid: e674c8c4-c67f-4fc1-9873-d9c2ed46c659
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abf2f040a75a014dce3ab85291277171bca6554d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 33ef95759817ac7a6e32907a1afad837282bf7cf
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815143"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938652"
 ---
 # <a name="stlinefromwkb-geometry-data-type"></a>STLineFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-pdw-md.md)]
@@ -40,7 +40,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_linestring*  
- Es la representación WKB de la instancia de **geometryLineString** que se va a devolver. *WKB_linestring* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometryLineString** que se va a devolver. *WKB_linestring* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryLineString** que se va a devolver.  
@@ -50,7 +50,7 @@ STLineFromWKB ( 'WKB_linestring' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **LineString**  
+ Tipo de OGC: **LineString**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -64,7 +64,7 @@ SET @g = geometry::STLineFromWKB(0x010200000002000000000000000000594000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointN method
 ms.assetid: 47670feb-b9e0-4b4b-af83-b9bba7da66ac
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 23f5b2e7333873f861165bc7bbf19fbbd56ca733
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 983442f724d4c2090bbface71a793bac71eb9ac7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836623"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936091"
 ---
 # <a name="stpointn-geography-data-type"></a>STPointN (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

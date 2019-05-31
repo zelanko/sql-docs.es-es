@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText method
 ms.assetid: a5b3c344-1045-43a4-82fa-47f6206a288e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: de09bc9bff3cc383d34e11a5429ae7e267755a4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f69ffb05414d8e2fdfd3886106a9cfebd1f4d688
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683683"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936954"
 ---
 # <a name="stgeomcollfromtext-geography-data-type"></a>STGeomCollFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometrycollection_tagged_text*  
- Es la representación WKT de la instancia de **geography** que se quiere devolver. *geometrycollection_tagged_text* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geography** que se quiere devolver. *geometrycollection_tagged_text* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geography** que quiere devolver.  
@@ -64,7 +64,7 @@ SET @g = geography::STGeomCollFromText('GEOMETRYCOLLECTION ( POINT(-122.34900 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

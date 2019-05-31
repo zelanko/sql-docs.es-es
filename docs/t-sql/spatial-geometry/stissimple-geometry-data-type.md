@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIsSimple (geometry Data Type)
 ms.assetid: da8f45d4-4f9c-405d-b883-760eb5344a71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e974d8cda1a6c21e7b3d568f242d36c96d81b5f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 662ead77fe7af659718266ab3518a13536c77e7f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47718303"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938762"
 ---
 # <a name="stissimple-geometry-data-type"></a>STIsSimple (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 0 2, 2 0)', 0);
 SELECT @g.STIsSimple();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

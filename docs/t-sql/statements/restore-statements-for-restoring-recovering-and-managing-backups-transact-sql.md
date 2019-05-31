@@ -19,16 +19,16 @@ helpviewer_keywords:
 - file restores [SQL Server], RESTORE statement
 - transaction log backups [SQL Server], RESTORE statement
 ms.assetid: fb29a151-f312-4f85-b857-5deeca0de8ce
-author: mashamsft
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 476d6d4ca92b806f0973983de5815f57782076e8
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: d094b8540609810d134c52fb5755b21db4fc0f6b
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242186"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947117"
 ---
 # <a name="restore-statements-for-restoring-recovering-and-managing-backups-transact-sql"></a>Instrucciones RESTORE para restaurar, recuperar y administrar copias de seguridad (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md )]

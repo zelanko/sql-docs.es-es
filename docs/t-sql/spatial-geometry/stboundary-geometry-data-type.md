@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBoundary (geometry Data Type)
 ms.assetid: f0551674-e6e8-4926-9038-df03f2c807d7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 234745a66d37083599f30243ab7974550193e5b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 671e27f0e35e450b89c3eaaadc3b31612114348a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47779131"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939095"
 ---
 # <a name="stboundary-geometry-data-type"></a>STBoundary (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,7 @@ SELECT @g.STBoundary().ToString();
  SELECT @g.STBoundary().ToString();
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

@@ -20,15 +20,15 @@ helpviewer_keywords:
 - testing permissions
 - HAS_PERMS_BY_NAME function
 ms.assetid: eaf8cc82-1047-4144-9e77-0e1095df6143
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 0227ad3719b7b3ca02fa8595ed8cccf6ff8705f6
-ms.sourcegitcommit: fc6a6eedcea2d98c93e33d39c1cecd99fbc9a155
+ms.openlocfilehash: e1bc60e0d3f171e57eeb202c022378b4b7f7bde1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49169215"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947960"
 ---
 # <a name="haspermsbyname-transact-sql"></a>HAS_PERMS_BY_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor mismo, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. No tiene ningún valor predeterminado.  
   
  *securable_class*  
- Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar(60)**.  
+ Es el nombre de la clase de elemento protegible en la cual se prueba el permiso. *securable_class* es una expresión escalar de tipo **nvarchar(60)** .  
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], el argumento securable_class debe establecerse en uno de los valores siguientes: **DATABASE**, **OBJECT**, **ROLE**, **SCHEMA** o **USER**.  
   
@@ -61,7 +61,7 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
  Expresión escalar opcional de tipo **sysname** que representa el nombre de la subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
   
 > [!NOTE]  
->  En las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[**_sub name_**]'**. Es mejor usar **'**_sub name_**'**.  
+>  En las versiones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las subentidades protegibles no pueden usar corchetes con el formato **'[** _sub name_ **]'** . Es mejor usar **'** _sub name_ **'** .  
   
  *sub-securable_class*  
  Expresión escalar opcional de tipo **nvarchar(60)** que representa la clase de subentidad protegible en la que se va a probar el permiso. El valor predeterminado es NULL.  
@@ -96,9 +96,9 @@ SELECT class_desc FROM sys.fn_builtin_permissions(default);
   
  Se utilizan las intercalaciones siguientes:  
   
--   Intercalación de la base de datos activa: elementos protegibles de base de datos, entre los que se incluyen elementos no incluidos en un esquema; elementos con ámbito de esquema de una o dos partes; base de datos de destino cuando se utiliza un nombre de tres partes.  
+-   Intercalación de base de datos actual: elementos protegibles de base de datos que incluyen elementos no incorporados en un esquema; elementos con ámbito de esquema de una o dos partes; base de datos de destino cuando se utiliza un nombre de tres partes.  
   
--   Intercalación de la base de datos maestra: elementos protegibles de servidor.  
+-   Intercalación de base de datos &maestra: elementos protegibles en el nivel de servidor.  
   
 -   En las comprobaciones de columna no se admite 'ANY'. Debe especificar el permiso apropiado.  
   
@@ -180,7 +180,7 @@ SELECT name AS column_name,
     WHERE c.object_id=object_id('T');  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md)   
  [Securables](../../relational-databases/security/securables.md)   
  [Jerarquía de permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-hierarchy-database-engine.md)   

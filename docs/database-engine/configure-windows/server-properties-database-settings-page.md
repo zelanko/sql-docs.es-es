@@ -1,7 +1,5 @@
 ---
 title: Propiedades del servidor (página Configuración de base de datos) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -13,68 +11,87 @@ ms.assetid: 1cebdbd3-cbfd-4a02-bba6-a5addf4e3ada
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4703e861683f9447ecd44490ccd5dba06cb6ce44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.custom: ''
+ms.date: 05/23/2019
+ms.openlocfilehash: 13d4bb3e4e61d195d4997f46bb1d343b02c36efc
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632903"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198307"
 ---
 # <a name="server-properties---database-settings-page"></a>Propiedades del servidor (página Configuración de base de datos)
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Utilice esta página para ver o modificar la configuración de la base de datos.  
   
-## <a name="options"></a>Opciones  
- **Factor predeterminado de relleno de índices**  
- Especifica cuánto se debe llenar cada página de índice de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea un nuevo índice con los datos existentes. El factor de relleno influye en el rendimiento, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe dedicar tiempo a dividir las páginas cuando se rellenan.  
+## <a name="options"></a>Opciones
+
+### <a name="default-index-fill-factor"></a>Factor predeterminado de relleno de índices
+
+Especifica cuánto se debe llenar cada página de índice de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuando se crea un nuevo índice con los datos existentes. El factor de relleno influye en el rendimiento, ya que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe dedicar tiempo a dividir las páginas cuando se rellenan.
   
- El valor predeterminado es 0; los valores válidos son los comprendidos entre 0 y 100. Un factor de relleno de 0 o 100 crea índices clúster con páginas de datos llenas e índices no clúster con páginas hoja llenas, pero deja algo de espacio en el nivel superior del árbol del índice. Los valores de factor de relleno 0 y 100 son idénticos en todos los sentidos.  
+El valor predeterminado es 0; los valores válidos son los comprendidos entre 0 y 100. Un factor de relleno de 0 o 100 crea índices clúster con páginas de datos llenas e índices no clúster con páginas hoja llenas, pero deja algo de espacio en el nivel superior del árbol del índice. Los valores de factor de relleno 0 y 100 son idénticos en todos los sentidos.
   
- El uso de valores pequeños para el factor de relleno hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree índices con páginas que no están llenas. Cada uno de los índices ocupa más espacio de almacenamiento, lo que permite que haya espacio para las inserciones posteriores sin necesidad de dividir páginas.  
+El uso de valores pequeños para el factor de relleno hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cree índices con páginas que no están llenas. Cada uno de los índices ocupa más espacio de almacenamiento, lo que permite que haya espacio para las inserciones posteriores sin necesidad de dividir páginas.
   
- **Esperar indefinidamente**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no superará nunca el tiempo de espera para una nueva cinta de copia de seguridad.  
+### <a name="wait-indefinitely"></a>Esperar indefinidamente
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no superará nunca el tiempo de espera para una nueva cinta de copia de seguridad.  
+
+### <a name="try-once"></a>Intentarlo una vez
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] superará el tiempo de espera si una cinta de copia de seguridad no está disponible cuando sea necesaria.
+
+### <a name="try-for-minutes"></a>Intentarlo durante (minutos)
+
+Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] superará el tiempo de espera si una cinta de copia de seguridad no está disponible en el período de tiempo especificado.  
+
+### <a name="default-backup-media-retention-in-days"></a>Tiempo predeterminado de retención de medios de copia de seguridad (días)
+
+Proporciona un valor predeterminado para todo el sistema relativo a cuánto tiempo se conservará cada medio de copia de seguridad una vez que se haya utilizado para una copia de seguridad de base de datos o de registro de transacciones. Esta opción ayuda a proteger las copias de seguridad para que no puedan sobrescribirse hasta que haya transcurrido el número de días especificado.  
+
+#### <a name="compress-backup"></a>Comprimir copia de seguridad
+
+En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versiones posteriores), indica el valor actual de la opción **compresión de copia de seguridad predeterminada** . Esta opción determina el valor predeterminado de nivel de servidor para comprimir copias de seguridad, como sigue:
+
+- Si la casilla **Comprimir copia de seguridad** se deja en blanco, las nuevas copias de seguridad no se comprimirán de forma predeterminada.
+
+- Si la casilla **Comprimir copia de seguridad** se activa, las nuevas copias de seguridad se comprimirán de forma predeterminada.
   
- **Intentarlo una vez**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] superará el tiempo de espera si una cinta de copia de seguridad no está disponible cuando sea necesaria.  
+    > [!IMPORTANT]
+    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../.. relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.
   
- **Intentarlo durante (minutos)**  
- Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] superará el tiempo de espera si una cinta de copia de seguridad no está disponible en el período de tiempo especificado.  
+Si es miembro del rol fijo de servidor **sysadmin** o **serveradmin** , puede cambiar el valor haciendo clic en el cuadro **Comprimir copia de seguridad** .  
   
- **Tiempo predeterminado de retención de medios de copia de seguridad (días)**  
- Proporciona un valor predeterminado para todo el sistema relativo a cuánto tiempo se conservará cada medio de copia de seguridad una vez que se haya utilizado para una copia de seguridad de base de datos o de registro de transacciones. Esta opción ayuda a proteger las copias de seguridad para que no puedan sobrescribirse hasta que haya transcurrido el número de días especificado.  
+Para obtener más información, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) y [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
+
+#### <a name="backup-checksum"></a>Suma de comprobación de copia de seguridad
+
+Esta opción le permite activar o desactivar el valor de sp_configure para el *valor predeterminado de la suma de comprobación de la copia de seguridad*. Esta característica le facilita habilitar el valor predeterminado de la suma de comprobación de la copia de seguridad.
+
+### <a name="recovery-interval-minutes"></a>Intervalo de recuperación (min.)
+
+Establece el número máximo de minutos por base de datos para recuperar bases de datos. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo configura automáticamente. En la práctica, esta opción significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas. Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
   
- **Comprimir copia de seguridad**  
- En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o versiones posteriores), indica el valor actual de la opción **compresión de copia de seguridad predeterminada** . Esta opción determina el valor predeterminado de nivel de servidor para comprimir copias de seguridad, como sigue:  
+### <a name="data"></a>data
+
+Especifica la ubicación predeterminada de los archivos de datos. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   Si la casilla **Comprimir copia de seguridad** se deja en blanco, las nuevas copias de seguridad no se comprimirán de forma predeterminada.  
+### <a name="log"></a>Log
   
--   Si la casilla **Comprimir copia de seguridad** se activa, las nuevas copias de seguridad se comprimirán de forma predeterminada.  
+Especifica la ubicación predeterminada de los archivos de registro. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    > [!IMPORTANT]  
-    >  De forma predeterminada, la compresión aumenta significativamente el uso de CPU y la CPU adicional que consume el proceso de compresión puede afectar adversamente a las operaciones simultáneas. Por consiguiente, podría ser conveniente crear copias de seguridad comprimidas de prioridad baja en una sesión en la que el [regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)limite el uso de CPU. Para obtener más información, vea [Usar el regulador de recursos para limitar el uso de CPU mediante compresión de copia de seguridad &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/use-resource-governor-to-limit-cpu-usage-by-backup-compression-transact-sql.md)limite el uso de CPU.  
+### <a name="configured-values"></a>Valores configurados
+
+Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no han surtido efecto, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- Si es miembro del rol fijo de servidor **sysadmin** o **serveradmin** , puede cambiar el valor haciendo clic en el cuadro **Comprimir copia de seguridad** .  
+### <a name="running-values"></a>Valores actuales
+
+Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
- Para obtener más información, vea [Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md) y [Compresión de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-compression-sql-server.md).  
-  
- **Intervalo de recuperación (min.)**  
- Establece el número máximo de minutos por base de datos para recuperar bases de datos. El valor predeterminado es 0, que indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]lo configura automáticamente. En la práctica, esto significa un tiempo de recuperación inferior a un minuto y un punto de comprobación aproximadamente cada minuto para bases de datos activas. Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).  
-  
- **Data**  
- Especifica la ubicación predeterminada de los archivos de datos. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
- **Log**  
- Especifica la ubicación predeterminada de los archivos de registro. Haga clic en el botón de examinar para navegar a la nueva ubicación predeterminada. No surte efecto hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
- **Valores configurados**  
- Muestra los valores configurados para las opciones de este panel. Si cambia estos valores, haga clic en **Valores actuales** para comprobar si los cambios han surtido efecto. Si no han surtido efecto, deberá reiniciarse primero la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
-  
- **Valores actuales**  
- Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
-  
-## <a name="see-also"></a>Ver también  
- [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
- [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)  
-  
-  
+## <a name="see-also"></a>Consulte también
+
+- [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
+
+- [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STCurveToLine method (geography)
 ms.assetid: 2f863a85-6168-465a-b32f-bb5e3de58dee
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 66bc3e4887fe6762113208b7554fec4b1eccadc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f237da350b47ea0c3141709cd82d083ef509196
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630083"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939194"
 ---
 # <a name="stcurvetoline-geography-data-type"></a>STCurveToLine (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47630083"
  SELECT @g1.STNumPoints() AS G1, @g2.STNumPoints() AS G2;
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STLength &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stlength-geography-data-type.md)   
  [STNumPoints &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/stnumpoints-geography-data-type.md)   
  [Información general de los tipos de datos espaciales](../../relational-databases/spatial/spatial-data-types-overview.md)  

@@ -21,16 +21,16 @@ helpviewer_keywords:
 - greater than or equal to operator (>=)
 - '>= (greater than or equal to operator)'
 ms.assetid: 641ee28d-7536-46dd-a48a-6c63c2d59278
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5f946a30bf575ab9217a1f97f07d2b8c21580d63
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 721a7795f027e3641e3a8f5ab2c740e17c9cff57
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618553"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982283"
 ---
 # <a name="gt-greater-than-or-equal-to-transact-sql"></a>&gt;= (Mayor o igual que) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -86,7 +86,7 @@ DepartmentID Name
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Expresiones &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [= &#40;Igual a&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/equals-transact-sql.md)   

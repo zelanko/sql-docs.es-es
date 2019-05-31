@@ -1,7 +1,7 @@
 ---
 title: GRANT (permisos de base de datos de Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27e9827672947572d05bfea4ed09c1712e7b079d
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.openlocfilehash: c6db8e7818cbcbba732828f0efd5177b8ab84870
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828405"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993472"
 ---
 # <a name="grant-database-permissions-transact-sql"></a>GRANT (permisos de base de datos de Transact-SQL)
 
@@ -175,6 +175,7 @@ Una base de datos es un elemento protegible que contiene el servidor, que es su 
 |Delete|CONTROL|CONTROL SERVER|
 |Ejecute|CONTROL|CONTROL SERVER|
 |EXECUTE ANY EXTERNAL SCRIPT <br /> **Se aplica a**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)].|CONTROL|CONTROL SERVER|
+|EXECUTE EXTERNAL SCRIPT <br /> **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssqlv15-md.md)].|EXECUTE ANY EXTERNAL SCRIPT|CONTROL SERVER|
 |INSERT|CONTROL|CONTROL SERVER|
 |KILL DATABASE CONNECTION<br />**Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|CONTROL|ALTER ANY CONNECTION|
 |REFERENCES|CONTROL|CONTROL SERVER|
@@ -222,7 +223,7 @@ GRANT CREATE TABLE TO MelanieK;
 GO
 ```
 
-### <a name="b-granting-showplan-permission-to-an-application-role"></a>b. Conceder el permiso SHOWPLAN para un rol de aplicación
+### <a name="b-granting-showplan-permission-to-an-application-role"></a>B. Conceder el permiso SHOWPLAN para un rol de aplicación
 
  En el siguiente ejemplo se concede el permiso `SHOWPLAN` para la base de datos `AdventureWorks2012` al rol de aplicación `AuditMonitor`.
 

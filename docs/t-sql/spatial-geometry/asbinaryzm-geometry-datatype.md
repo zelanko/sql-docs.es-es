@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - AsBinaryZM geometry
 ms.assetid: 5eae2872-adca-4b8f-8b04-4ee91ced98f1
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 94d1ee63cf5150dc38351c80543173870018d6d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: feafda7b9ed7fd7ca61310df5d29b0330a521d3b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47855803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935958"
 ---
 # <a name="asbinaryzm-geometry-datatype"></a>AsBinaryZM (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ SELECT @g1.AsBinaryZM();
 --Returns: 0x01B90B0000000000000000F03F000000000000F03F00000000000000400000000000000840  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  

@@ -19,16 +19,16 @@ helpviewer_keywords:
 - schema-scoped objects [SQL Server]
 - objects [SQL Server], schema-scoped
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157d307187333cdde730bfb6657ae9927db060c1
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 763ca67ef43b9e154f7a595c7b2b4c8bfcbe5ece
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100900"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948955"
 ---
 # <a name="objectproperty-transact-sql"></a>OBJECTPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -101,7 +101,7 @@ OBJECTPROPERTY ( id , property )
 |IsMSShipped|Cualquier objeto en el ámbito de esquema|Objeto creado durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsPrimaryKey|Cualquier objeto en el ámbito de esquema|Restricción PRIMARY KEY.<br /><br /> 1 = True<br /><br /> 0 = False<br /><br /> NULL = No es una función o el identificador de objeto no es válido.|  
 |IsProcedure|Cualquier objeto en el ámbito de esquema|Procedimiento.<br /><br /> 1 = True<br /><br /> 0 = False|  
-|IsQuotedIdentOn|Función de [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)], tabla, desencadenador de [!INCLUDE[tsql](../../includes/tsql-md.md)], vista, restricción CHECK, definición DEFAULT|Especifica que el valor del identificador entre comillas para el objeto es ON. Esto significa que los identificadores están delimitados por comillas dobles en todas las expresiones que participan en la definición del objeto.<br /><br /> 1 = ON <br /><br /> 0 = OFF|  
+|IsQuotedIdentOn|Función de [!INCLUDE[tsql](../../includes/tsql-md.md)], procedimiento de [!INCLUDE[tsql](../../includes/tsql-md.md)], tabla, desencadenador de [!INCLUDE[tsql](../../includes/tsql-md.md)], vista, restricción CHECK, definición DEFAULT|Especifica que el valor del identificador entre comillas para el objeto es ON. Esto significa que los identificadores están delimitados por comillas dobles en todas las expresiones que participan en la definición del objeto.<br /><br /> 1 = ON<br /><br /> 0 = OFF|  
 |IsQueue|Cualquier objeto en el ámbito de esquema|Cola de Service Broker<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsReplProc|Cualquier objeto en el ámbito de esquema|Procedimiento de replicación.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |IsRule|Cualquier objeto en el ámbito de esquema|Regla enlazada.<br /><br /> 1 = True<br /><br /> 0 = False|  
@@ -200,7 +200,7 @@ GO
   
 ```  
   
-### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>b. Comprobar si una función escalar definida por el usuario es determinista  
+### <a name="b-verifying-that-a-scalar-valued-user-defined-function-is-deterministic"></a>B. Comprobar si una función escalar definida por el usuario es determinista  
  En el siguiente ejemplo se comprueba si es determinista la función escalar definida por el usuario, `ufnGetProductDealerPrice`, que devuelve un valor **money**.  
   
 ```  
@@ -217,7 +217,7 @@ GO
 0
 ```  
   
-### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C: Búsqueda de las tablas que pertenecen a un esquema específico  
+### <a name="c-finding-the-tables-that-belong-to-a-specific-schema"></a>C. Búsqueda de las tablas que pertenecen a un esquema específico  
  En el siguiente ejemplo se devuelven todas las tablas del esquema dbo.  
   
 ```  
@@ -232,7 +232,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-verifying-that-an-object-is-a-table"></a>D: Comprobar si un objeto es una tabla  
+### <a name="d-verifying-that-an-object-is-a-table"></a>D. Comprobar si un objeto es una tabla  
  En el ejemplo siguiente se comprueba si `dbo.DimReseller` es una tabla de la base de datos [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)].  
   
 ```  

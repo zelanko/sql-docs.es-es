@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN (geometry Data Type)
 ms.assetid: 348c7047-3442-4590-8879-fe841e79058c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 05980c75165ef648f55a9e3b040d7f12b3685aa7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7e494349d40f78d1f6886e3091c3399b3f25e55d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807893"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938924"
 ---
 # <a name="stgeometryn-geometry-data-type"></a>STGeometryN (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SET @g = geometry::STGeomFromText('MULTIPOINT(0 0, 13.5 2, 7 19)', 0);
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

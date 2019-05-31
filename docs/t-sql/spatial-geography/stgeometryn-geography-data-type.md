@@ -14,15 +14,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryN method
 ms.assetid: 53755f69-cd50-475b-b3b8-a1a9157cf03a
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 19c11e02f561919767cc9eb67b68cc863442ceb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0955e653c2181cb8004780a8695c06c5c99a593f
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628993"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936869"
 ---
 # <a name="stgeometryn-geography-data-type"></a>STGeometryN (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ SET @g = geography::STGeomFromText('MULTIPOINT(-122.360 47.656, -122.343 47.656)
 SELECT @g.STGeometryN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

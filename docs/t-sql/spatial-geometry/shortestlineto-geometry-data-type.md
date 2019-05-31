@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - ShortestLineTo method (geometry)
 ms.assetid: 39a2d0e4-4f93-4e94-a27e-6ad9537cfe74
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: f2d92d90c363cd17844d905a7d0108b0f148a007
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52f8a04ec251283655ef8d50037b2be8e09bb2c7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631853"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937348"
 ---
 # <a name="shortestlineto-geometry-data-type"></a>ShortestLineTo (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Devuelve una instancia de **LineString** con dos puntos que representan la dista
  SELECT @g1.ShortestLineTo(@g2).ToString();
  ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ShortestLineTo &#40;geography Data Type&#41;](../../t-sql/spatial-geography/shortestlineto-geography-data-type.md) (ShortestLineTo [tipo de datos geography])  
   
   

@@ -18,16 +18,16 @@ helpviewer_keywords:
 - first nonnull expressions [SQL Server]
 - nonnull expressions
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab19d51f1032ad251cb1867cbe2326652d174f29
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802202"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982684"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +53,7 @@ Devuelve el tipo de datos de _expresión_ con la prioridad de tipo de datos más
 Si todos los argumentos son `NULL`, `COALESCE` devuelve `NULL`. Al menos uno de los valores NULL debe ser `NULL` con tipo.  
   
 ## <a name="comparing-coalesce-and-case"></a>Comparar COALESCE y CASE  
-La expresión `COALESCE` es un método abreviado sintáctico de la expresión `CASE`.  Es decir, el optimizador de consultas vuelve a escribir el código `COALESCE`(_expresión1_,_...n_) como la expresión `CASE` siguiente:  
+La expresión `COALESCE` es un método abreviado sintáctico de la expresión `CASE`.  Es decir, el optimizador de consultas vuelve a escribir el código `COALESCE`(_expresión1_, _...n_) como la expresión `CASE` siguiente:  
   
 ```sql  
 CASE  
@@ -125,7 +125,7 @@ COALESCE(Class, Color, ProductNumber) AS FirstNotNull
 FROM Production.Product;  
 ```  
   
-### <a name="b-running-a-complex-example"></a>b. Ejecutar un ejemplo complejo  
+### <a name="b-running-a-complex-example"></a>B. Ejecutar un ejemplo complejo  
 En este ejemplo, la tabla `wages` incluye tres columnas con información acerca del sueldo anual de los empleados: la tarifa por hora, el salario y la comisión. No obstante, un empleado recibe solo un tipo de sueldo. Para determinar el importe total pagado a todos los empleados, utilice `COALESCE` para obtener solo los valores no NULL que se encuentran en `hourly_wage`, `salary` y `commission`.  
   
 ```sql  
@@ -190,7 +190,7 @@ Total Salary
 (12 row(s) affected)
 ```  
   
-### <a name="c-simple-example"></a>C: Ejemplo sencillo  
+### <a name="c-simple-example"></a>C. Ejemplo sencillo  
 En el ejemplo siguiente se muestra cómo `COALESCE` selecciona los datos de la primera columna que tiene un valor que no es NULL. Para este ejemplo, se supone que la tabla `Products` contiene estos datos:  
   
 ```  
@@ -220,7 +220,7 @@ NULL         White      PN9876         White
   
 Observe que en la primera fila, el valor `FirstNotNull` es `PN1278`, no `Socks, Mens`. Esto se debe a que en el ejemplo la columna `Name` no se especificó como un parámetro para `COALESCE`.  
   
-### <a name="d-complex-example"></a>D: Ejemplo complejo  
+### <a name="d-complex-example"></a>D. Ejemplo complejo  
 En el ejemplo siguiente se usa `COALESCE` para comparar los valores de tres columnas y devolver solo el valor distinto de NULL que se encuentra en las columnas.  
   
 ```sql  

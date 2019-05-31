@@ -18,16 +18,16 @@ helpviewer_keywords:
 - type IDs [SQL Server]
 - data types [SQL Server], IDs
 ms.assetid: 647d17ef-b878-4922-b446-56642322ebad
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f822fc5dc4a115b5277c33c6578b0870137bbdf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6aa09b38956e1eafec844d30e767a986df454283
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658113"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65946906"
 ---
 # <a name="typeid-transact-sql"></a>TYPE_ID (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ SELECT TYPE_NAME(TYPE_ID('datetime')) AS typeName,
     TYPE_ID('datetime') AS typeID FROM table1;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [TYPE_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/type-name-transact-sql.md)   
  [TYPEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/typeproperty-transact-sql.md)   
  [sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)   

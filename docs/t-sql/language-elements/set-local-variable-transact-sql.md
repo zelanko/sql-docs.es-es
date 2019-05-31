@@ -15,16 +15,16 @@ helpviewer_keywords:
 - SET statement, @local_variable
 - local variables [SQL Server]
 ms.assetid: d410e06e-061b-4c25-9973-b2dc9b60bd85
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 27fbb65a3fcdcdfd78fd825dc767e5f31590c0fb
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: 20febb0b33e0da08d8620232195e183c7c5162f3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572828"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981763"
 ---
 # <a name="set-localvariable-transact-sql"></a>SET @local_variable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -68,7 +68,7 @@ SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression
   
 ## <a name="arguments"></a>Argumentos  
 **@** _local_variable_  
-El nombre de una variable de cualquier tipo, excepto **cursor**, **text**, **ntext**, **image** o **table**. Los nombres de variables deben comenzar por un signo de arroba (**@**). Los nombres de las variables deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
+El nombre de una variable de cualquier tipo, excepto **cursor**, **text**, **ntext**, **image** o **table**. Los nombres de variables deben comenzar por un signo de arroba ( **@** ). Los nombres de las variables deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
 *property_name*  
 El nombre de una propiedad definida por el usuario.  
@@ -80,9 +80,9 @@ Un campo público de un tipo definido por el usuario.
 El nombre de un tipo definido por el usuario CLR (Common Language Runtime).  
   
 `{ . | :: }`  
-Especifica el método de un tipo definido por el usuario CLR. En métodos de instancia (no estáticos), use un punto (**.**). En métodos estáticos, use dos puntos dobles (**::**). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
+Especifica el método de un tipo definido por el usuario CLR. En métodos de instancia (no estáticos), use un punto ( **.** ). En métodos estáticos, use dos puntos dobles ( **::** ). Para invocar un método, propiedad o campo de un tipo definido por el usuario CLR, debe tener el permiso EXECUTE para el tipo.  
   
-_method_name_ **(** _argument_ [ **,**... *n* ] **)**  
+_method_name_ **(** _argument_ [ **,** ... *n* ] **)**  
 Un método de un tipo definido por el usuario que toma uno o más argumentos para modificar el estado de la instancia de un tipo. Los métodos estáticos deben ser públicos.  
   
 **@** _SQLCLR_local_variable_  
@@ -167,14 +167,14 @@ READ ONLY
 Impide que se realicen actualizaciones a través de este cursor. No es posible hacer referencia al cursor en una cláusula WHERE CURRENT OF de una instrucción UPDATE o DELETE. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor. Esta palabra clave varía con respecto a la READ_ONLY anterior en que contiene un espacio en lugar de un carácter de subrayado entre READ y ONLY.  
   
 `UPDATE [OF column_name[ ,... n ] ]`  
-Define las columnas actualizables en el cursor. Si se especifica OF*column_name* [**,**...*n*], solo las columnas enumeradas admiten modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
+Define las columnas actualizables en el cursor. Si se especifica OF*column_name* [ **,** ...*n*], solo las columnas enumeradas admiten modificaciones. Si no se especifica ninguna lista, se podrán actualizar todas las columnas, a menos que el cursor se haya definido como READ_ONLY.  
   
 ## <a name="remarks"></a>Notas  
 Después de declarada una variable, esta se inicializa en NULL. Puede usar la instrucción SET para asignar a una variable declarada un valor distinto de NULL. La instrucción SET que asigna un valor a la variable devuelve un solo valor. Cuando inicialice varias variables, utilice una instrucción SET distinta para cada variable local.  
   
 Solo puede utilizar las variables en expresiones y no en lugar de nombres de objeto o palabras clave. Para formar instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] dinámicas, utilice EXECUTE.  
   
-Las reglas de sintaxis de SET **@**_variable_de_cursor_ no incluyen las palabras clave LOCAL y GLOBAL. Si usa la sintaxis SET **@**_variable_de_cursor_ = CURSOR..., el cursor se crea como GLOBAL o LOCAL, en función de la configuración del valor predeterminado en la opción de cursor local de la base de datos.  
+Las reglas de sintaxis de SET **@** _variable_de_cursor_ no incluyen las palabras clave LOCAL y GLOBAL. Si usa la sintaxis SET **@** _variable_de_cursor_ = CURSOR..., el cursor se crea como GLOBAL o LOCAL, en función de la configuración del valor predeterminado en la opción de cursor local de la base de datos.  
   
 Las variables de cursor son siempre locales, incluso cuando hacen referencia a un cursor global. Cuando una variable de cursor hace referencia a un cursor global, éste tiene a la vez una referencia de cursor global y otra local. Para obtener más información, vea el ejemplo C.  
   
@@ -185,7 +185,7 @@ Puede utilizar el operador de asignación compuesta en cualquier lugar donde hay
 No use una variable en una instrucción SELECT para concatenar valores (es decir, para calcular valores de agregado). Pueden producirse resultados de consulta inesperados. Esto se debe a que no todas las expresiones de la lista de SELECT (incluidas las asignaciones) se ejecutan necesaria y exactamente una vez por cada fila de salida. Para más información, vea [este artículo de KB](https://support.microsoft.com/kb/287515).  
   
 ## <a name="permissions"></a>Permisos  
-Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@**_variable_local_.  
+Debe pertenecer al rol public. Todos los usuarios pueden usar SET **@** _variable_local_.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -199,7 +199,7 @@ SELECT @myvar;
 GO  
 ```  
   
-### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>b. Utilizar en una instrucción SELECT una variable local a la que se ha asignado un valor con SET  
+### <a name="b-using-a-local-variable-assigned-a-value-by-using-set-in-a-select-statement"></a>B. Utilizar en una instrucción SELECT una variable local a la que se ha asignado un valor con SET  
 En el ejemplo siguiente se crea una variable local llamada `@state` que después se usa en una instrucción `SELECT` para buscar todos los nombres y apellidos de los empleados residentes en el estado de `Oregon`.  
   
 ```  

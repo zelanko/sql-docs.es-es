@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeomCollFromText (geometry Data Type)
 ms.assetid: 19e757b3-cb2e-4852-87b9-40a815ab707e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a5305ccc5c6a1fa8e6011f3ab87026c03a721b9e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 481907eb2bb445e18845f7af453b90cc7591a0be
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47817093"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938940"
 ---
 # <a name="stgeomcollfromtext-geometry-data-type"></a>STGeomCollFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STGeomCollFromText ( 'geometrycollection_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *geometrycollection_tagged_text*  
- Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geometry** que se quiere devolver. *geometry_tagged_text* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  
@@ -63,7 +63,7 @@ SET @g = geometry::STGeomCollFromText('GEOMETRYCOLLECTION ( POLYGON((5 5, 10 5, 
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

@@ -22,16 +22,16 @@ helpviewer_keywords:
 - OLE DB data sources [SQL Server]
 - ad hoc connection information
 ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 7cbf93440d9b164adef0f87c5af88da02d0f9b50
-ms.sourcegitcommit: 85fd3e1751de97a16399575397ab72ebd977c8e9
+ms.openlocfilehash: 3a6e2d51b9a2926f6d542ce3da5fc1c916881918
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53531100"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944807"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -192,10 +192,10 @@ Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blo
   
  Si las filas del archivo de datos no están ordenadas según el orden especificado, o si se ha especificado la sugerencia UNIQUE y hay claves duplicadas, se devuelve un error.  
   
- Se requieren alias de columna cuando se utiliza ORDER. La lista de alias de columna debe hacer referencia a la tabla derivada a la que la cláusula BULK está obteniendo acceso. Los nombres de columna que se especifican en la cláusula ORDER hacen referencia a esta lista de alias de columna. No se pueden especificar columnas con tipos de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml**) ni con tipos de objeto grande (**text**, **ntext** e **image**).  
+ Se requieren alias de columna cuando se utiliza ORDER. La lista de alias de columna debe hacer referencia a la tabla derivada a la que la cláusula BULK está obteniendo acceso. Los nombres de columna que se especifican en la cláusula ORDER hacen referencia a esta lista de alias de columna. No se pueden especificar columnas con tipos de valor grande (**varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml**) ni con tipos de objeto grande (**text**, **ntext** e **image**).  
   
  SINGLE_BLOB  
- Devuelve el contenido de *data_file* como un conjunto de filas de una sola columna y una sola fila de tipo **varbinary(max)**.  
+ Devuelve el contenido de *data_file* como un conjunto de filas de una sola columna y una sola fila de tipo **varbinary(max)** .  
   
 > [!IMPORTANT]  
 > Recomendamos que importe los datos XML solo mediante la opción SINGLE_BLOB, en vez de SINGLE_CLOB y SINGLE_NCLOB, ya que solo SINGLE_BLOB admite todas las conversiones de codificación de Windows.  
@@ -232,7 +232,7 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
   
  Al tener acceso remoto a orígenes de datos OLE DB, la identidad de inicio de sesión de las conexiones de confianza no se delegan automáticamente del servidor en el que el cliente se conecta al servidor que se consulta. Debe configurarse la delegación de autenticación.  
   
- Los nombres de catálogo y esquema son necesarios si el proveedor OLE DB admite varios catálogos y esquemas en el origen de datos especificado. Los valores de _catálogo_ y _esquema_ pueden omitirse si el proveedor OLE DB no los admite. Si el proveedor solamente admite nombres de esquema, se debe especificar un nombre de dos partes con el formato _schema_**.**_object_. Si el proveedor solamente admite nombres de catálogo, se debe especificar un nombre de tres partes con el formato _catalog_**.**_schema_**.**_object_. Es necesario especificar nombres de tres partes para las consultas de paso a través que usen el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para más información, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
+ Los nombres de catálogo y esquema son necesarios si el proveedor OLE DB admite varios catálogos y esquemas en el origen de datos especificado. Los valores de _catálogo_ y _esquema_ pueden omitirse si el proveedor OLE DB no los admite. Si el proveedor solamente admite nombres de esquema, se debe especificar un nombre de dos partes con el formato _schema_ **.** _object_. Si el proveedor solamente admite nombres de catálogo, se debe especificar un nombre de tres partes con el formato _catalog_ **.** _schema_ **.** _object_. Es necesario especificar nombres de tres partes para las consultas de paso a través que usen el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para más información, vea [Convenciones de sintaxis de Transact-SQL &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
  `OPENROWSET` no acepta variables para sus argumentos.  
   
@@ -265,7 +265,7 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
 > Cuando use `OPENROWSET`, es importante que entienda el modo en el que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controla la suplantación. Para más información sobre las consideraciones de seguridad, vea [Importación en bloque de datos mediante las instrucciones BULK INSERT u OPENROWSET&#40;BULK...&#41; &#40;SQL Server&#41;](../../relational-databases/import-export/import-bulk-data-by-using-bulk-insert-or-openrowset-bulk-sql-server.md).  
   
 ### <a name="bulk-importing-sqlchar-sqlnchar-or-sqlbinary-data"></a>Importar de forma masiva datos SQLCHAR, SQLNCHAR o SQLBINARY  
- OPENROWSET(BULK...) presupone que, si no se especifica, la longitud máxima de los datos SQLCHAR, SQLNCHAR o SQLBINARY no supera los 8000 bytes. Si los datos importados están en un campo de datos LOB que incluye cualquier objeto **varchar(max)**, **nvarchar(max)** o **varbinary(max)** que supera los 8000 bytes, debe usar un archivo de formato XML que defina la longitud máxima para el campo de datos. Para especificar la longitud máxima, edite el archivo de formato y declare el atributo MAX_LENGTH.  
+ OPENROWSET(BULK...) presupone que, si no se especifica, la longitud máxima de los datos SQLCHAR, SQLNCHAR o SQLBINARY no supera los 8000 bytes. Si los datos importados están en un campo de datos LOB que incluye cualquier objeto **varchar(max)** , **nvarchar(max)** o **varbinary(max)** que supera los 8000 bytes, debe usar un archivo de formato XML que defina la longitud máxima para el campo de datos. Para especificar la longitud máxima, edite el archivo de formato y declare el atributo MAX_LENGTH.  
   
 > [!NOTE]  
 > Un archivo de formato generado automáticamente no especifica la longitud o la longitud máxima de un campo LOB. Sin embargo, es posible editar un archivo de formato y especificar la longitud o la longitud máxima manualmente.  
@@ -295,7 +295,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>b. Usar el proveedor Microsoft OLE DB para Jet  
+### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Usar el proveedor Microsoft OLE DB para Jet  
  En el siguiente ejemplo se obtiene acceso a la tabla `Customers` de la base de datos `Northwind` de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access a través del proveedor [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB para Jet.  
   
 > [!NOTE]  

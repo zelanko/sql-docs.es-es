@@ -16,15 +16,15 @@ dev_langs:
 helpviewer_keywords:
 - Filter method
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b38318d9ca38f5774f15cdac66b9407f2ce4a968
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24b145ec8bda61645521fcf69e6a40bba1659e54
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832612"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938070"
 ---
 # <a name="filter-geometry-data-type"></a>Filter (tipo de datos Geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -75,7 +75,7 @@ FROM sample
 WHERE g.Filter(geometry::Parse('POLYGON((-1 -1, 1 -1, 1 1, -1 1, -1 -1))')) = 1;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [STIntersects &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stintersects-geometry-data-type.md)  
   

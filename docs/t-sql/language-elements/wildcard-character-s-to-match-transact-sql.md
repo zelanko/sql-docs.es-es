@@ -18,16 +18,16 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - '[ ] (wildcard - character(s) to match)'
 ms.assetid: 57817576-0bf1-49ed-b05d-fac27e8fed7a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4620f38c01f1bd7c4158387a607da12fbb95b865
-ms.sourcegitcommit: ad3b2133585bc14fc6ef8be91f8b74ee2f498b64
+ms.openlocfilehash: 4f9dd3de156ee0c3c8f916a7282fae4d8a5d7da3
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56425820"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982493"
 ---
 # <a name="--wildcard---characters-to-match-transact-sql"></a>\[ \] (caracteres comodín para coincidencia) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "56425820"
 Halla coincidencias con cada uno de los caracteres del intervalo o conjunto especificado entre corchetes `[ ]`. Estos caracteres comodín se pueden usar en comparaciones de cadenas donde se buscan coincidencias de patrón, como sucede con `LIKE` y `PATINDEX`.  
   
 ## <a name="examples"></a>Ejemplos  
-### <a name="a-simple-example"></a>A: Ejemplo sencillo   
+### <a name="a-simple-example"></a>A. Ejemplo sencillo   
 En el siguiente ejemplo se devuelven los nombres que comienzan por la letra `m`. `[n-z]` especifica que la segunda letra debe estar en alguna parte del intervalo entre `n` y `z`. El carácter comodín de porcentaje `%` permite cualquier carácter que comience por el tercer carácter. Las bases de datos `model` y `msdb` cumplen este criterio, pero no la base de datos `master`, de modo que se excluye del conjunto de resultados.
  
 ```sql
@@ -53,7 +53,7 @@ msdb
  Es posible que tenga instaladas más bases de datos aplicables.
 
 
-### <a name="b-more-complex-example"></a>B: Ejemplo más complejo   
+### <a name="b-more-complex-example"></a>B. Ejemplo más complejo   
  En el ejemplo siguiente se utiliza el operador [] para buscar los identificadores y nombres de todos los empleados de [!INCLUDE[ssSampleDBCoShort](../../includes/sssampledbcoshort-md.md)] cuyas direcciones tienen un código postal de cuatro dígitos.  
   
 ```sql  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STLength method
 ms.assetid: 774560ab-4a4a-4058-b043-1e67cf6fb9eb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: a07da59b2ed5d6da4ee6cf6180cfb65470ee5793
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 56a0c72b86e6dcb671b0f18197e7d0046cb2f36e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764763"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936740"
 ---
 # <a name="stlength-geography-data-type"></a>STLength (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SET @g = geography::STGeomFromText('LINESTRING(-122.360 47.656, -122.343 47.656)
 SELECT @g.STLength();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

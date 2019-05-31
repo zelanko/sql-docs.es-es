@@ -20,16 +20,16 @@ helpviewer_keywords:
 - less than (<)
 - < (less than operator)
 ms.assetid: 54f50bdd-bb62-4593-9af9-4c49edecab75
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d83e2dab2e215037ce88b86eaf3308258581ef1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bad75430d6458ce9927dd9031c5e98294559d03a
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816757"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983198"
 ---
 # <a name="lt-less-than-transact-sql"></a>&lt; (Menor que) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -78,7 +78,7 @@ DepartmentID Name
   
 ```  
   
-### <a name="b-using--to-compare-two-variables"></a>B. Usar < para comparar dos variables  
+### <a name="b-using--to-compare-two-variables"></a>B. Usar > para comparar dos variables  
   
 ```  
 DECLARE @a int = 45, @b int = 40;  
@@ -97,7 +97,7 @@ FALSE
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [IIF &#40;Transact-SQL&#41;](../../t-sql/functions/logical-functions-iif-transact-sql.md)   
  [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)  

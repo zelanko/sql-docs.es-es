@@ -12,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geometry)
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9adca69b9f275fae20eef2b5bb9f619c034556c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d199d2a6171cdb865dc617501a50ceff18563600
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47654223"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936162"
 ---
 # <a name="bufferwithcurves-geometry-data-type"></a>BufferWithCurves (tipo de datos Geometry)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ Tipo de valor devuelto de SQL Server: **geometry**
 |Valor de distancia|Dimensiones de tipo|Tipo espacial devuelto|  
 |--------------------|---------------------|---------------------------|  
 |distancia < 0|Cero o uno|Instancia de **GeometryCollection** vacía|  
-|distancia < 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo. **Note:** Un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|  
+|distancia < 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo. **Nota:** un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|  
 |distancia = 0|Todas las dimensiones|Copia de la instancia de **geometry** que hace la llamada|  
 |distancia > 0|Todas las dimensiones|Instancia de **CurvePolygon** o **GeometryCollection**|  
   
@@ -157,6 +157,6 @@ Tipo de valor devuelto de SQL Server: **geometry**
   
  Las primeras dos instrucciones **SELECT** devuelven una instancia de `GeometryCollection` porque el parámetro *distance* es menor o igual a la mitad de la distancia entre los dos puntos (1 1) y (1 4). La tercera instrucción **SELECT** devuelve una instancia de `CurvePolygon` porque las instancias almacenadas en búfer de los dos puntos (1 1) y (1 4) se superponen.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)  
  

@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Parse (geometry Data Type)
 ms.assetid: 6e080919-4b64-46cd-8dd2-254a9c232e53
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 92046c52474c538411c42e3509e96d6ef221fde7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a856bc8e5ea9a3c125e3d353963d5fcdf5b8492a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47607843"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937450"
 ---
 # <a name="parse-geometry-data-type"></a>Parse (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ SET @g = geometry::Parse('LINESTRING (100 100, 20 180, 180 180)');
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STGeomFromText](../../t-sql/spatial-geometry/parse-geometry-data-type.md)   
  [Métodos de geometría estáticos ampliados](../../t-sql/spatial-geometry/extended-static-geometry-methods.md)  
   

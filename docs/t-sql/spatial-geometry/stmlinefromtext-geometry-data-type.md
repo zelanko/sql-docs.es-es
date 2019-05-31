@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromText (geometry Data Type)
 ms.assetid: 39fe8559-c4c2-4d61-8508-86eb0a103807
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: da888409c10249e6ef110af1762fb69a3350b630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2d8f890adb1fb44d8e293a8d6cfc5e0c0d5c16c5
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800475"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938640"
 ---
 # <a name="stmlinefromtext-geometry-data-type"></a>STMLineFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *texto_etiquetado_de_cadena_de_varias_líneas*  
- Es la representación WKT de la instancia de **geometryMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geometryMultiLineString** que se quiere devolver. *texto_etiquetado_de_cadena_de_varias_líneas* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiLineString** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMLineFromText ( 'multilinestring_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo de OGC: **MultiLineString**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -64,7 +64,7 @@ SET @g = geometry::STMLineFromText('MULTILINESTRING ((100 100, 200 200), (3 4, 7
   
  `SELECT @g.ToString();`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

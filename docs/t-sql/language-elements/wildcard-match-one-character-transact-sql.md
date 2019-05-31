@@ -19,15 +19,15 @@ helpviewer_keywords:
 - wildcard characters [SQL Server]
 - _ (wildcard - match one character)
 ms.assetid: 11a2ed36-9e21-4bdf-ae20-a31db1434b97
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 5c071df768fa18e153bfac1c2dcd738bbaafa538
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47781145"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982737"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ Puede tener bases de datos adicionales que cumplan este criterio.
 
 Puede usar varios caracteres de subrayado para representar varios caracteres. Al cambiar el criterio `LIKE` para incluir dos caracteres de subrayado `'m__%` se incluye la base de datos maestra en el resultado.
 
-### <a name="b-more-complex-example"></a>B: ejemplo más complejo
+### <a name="b-more-complex-example"></a>B: Ejemplo más complejo
  En el siguiente ejemplo se usa el operador _ para buscar todas las personas de la tabla `Person` con un nombre de tres letras que termina en `an`.  
   
 ```sql  
@@ -66,7 +66,7 @@ FROM Person.Person
 WHERE FirstName LIKE '_an'  
 ORDER BY FirstName;  
 ```  
-## <a name="c-escaping-the-underscore-character"></a>C: escape del carácter de subrayado   
+## <a name="c-escaping-the-underscore-character"></a>C. Escape del carácter de subrayado   
 En el ejemplo siguiente se devuelven los nombres de los roles fijos de base de datos como `db_owner` y `db_ddladmin`, pero también se devuelve el usuario `dbo`. 
 
 ```sql
@@ -92,7 +92,7 @@ db_securityadmin
 ```
 
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [LIKE &#40;Transact-SQL&#41;](../../t-sql/language-elements/like-transact-sql.md)   
  [PATINDEX &#40;Transact-SQL&#41;](../../t-sql/functions/patindex-transact-sql.md)   
   [% (caracteres comodín para coincidencia)](../../t-sql/language-elements/percent-character-wildcard-character-s-to-match-transact-sql.md)   

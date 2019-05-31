@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointFromText (geometry Data Type)
 ms.assetid: 1d71dfd8-9d80-44c3-b6e1-64e99cde1fa0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e1ee814563b12479e79383069e1fffc2141cc840
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a5c0d41925b6d0ec943e3009402eaa9b4c5a4b1d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836743"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938393"
 ---
 # <a name="stpointfromtext-geometry-data-type"></a>STPointFromText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *point_tagged_text*  
- Es la representación WKT de la instancia de **geometryPoint** que se quiere devolver. *point_tagged_text* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geometryPoint** que se quiere devolver. *point_tagged_text* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryPoint** que se quiere devolver.  
@@ -49,7 +49,7 @@ STPointFromText ( 'point_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **Point**  
+ Tipo de OGC: **Point**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geometry::STPointFromText('POINT (100 100)', 0);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

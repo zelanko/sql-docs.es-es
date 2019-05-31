@@ -11,12 +11,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9dfc5e2cf7bab164d650f2da1767b2a0e7c399aa
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: 377c2d95564e7348bdfb5de9480c7c7f5004c7f7
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711186"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938161"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -50,12 +50,12 @@ Con los enclaves seguros, Always Encrypted protege la privacidad de la informaci
 
 - **Cifrado en contexto**: las operaciones criptográficas sobre información confidencial, como el cifrado inicial de datos o la rotación de una clave de cifrado de columna, se realizan dentro del enclave seguro y no requieren sacar los datos de la base de datos. Puede genera cifrado en contexto con la instrucción Transact-SQL ALTER TABLE y no es necesario usar herramientas, como el Asistente para Always Encrypted en SSMS o el cmdlet Set-SqlColumnEncryption de PowerShell.
 
-- **Cálculos completos (versión preliminar)**: las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
+- **Cálculos completos (versión preliminar)** : las operaciones sobre columnas cifradas, incluidas la coincidencia de patrones (el predicado LIKE) y las comparaciones de variedades, se admiten dentro del enclave seguro, que permite que Always Encrypted se use en una amplia variedad de aplicaciones y escenarios que requiere que dichos cálculos se realicen dentro del sistema de la base de datos.
 
 > [!IMPORTANT]
 > En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], los cálculos completos tienen pendientes varias optimizaciones de rendimiento, incluida la funcionalidad limitada (sin indexación, etc.), y actualmente están deshabilitados de manera predeterminada. Para habilitar los cálculos completos, consulte la sección sobre cómo [habilitar los cálculos completos](configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted con enclaves seguros usa enclaves seguros de memoria de [Seguridad basada en virtualización (VBS)](https://cloudblogs.microsoft.com/microsoftsecure/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (también conocidos como enclaves de Modo seguro virtual, VSM) en Windows.
+En [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)], Always Encrypted con enclaves seguros usa enclaves seguros de memoria de [Seguridad basada en virtualización (VBS)](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/) (también conocidos como enclaves de Modo seguro virtual, VSM) en Windows.
 
 ## <a name="secure-enclave-attestation"></a>Atestación de un enclave seguro
 
@@ -143,4 +143,4 @@ Estas limitaciones se aplican a la versión preliminar actual, pero están progr
 
 ## <a name="next-steps"></a>Next Steps
 
-- Configure el entorno de prueba y pruebe la funcionalidad de Always Encrypted con enclaves seguros en SSMS; consulte [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).
+- Configure un entorno de prueba y pruebe la funcionalidad de Always Encrypted con enclaves seguros en SSMS, vea [Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS](../tutorial-getting-started-with-always-encrypted-enclaves.md).

@@ -1,7 +1,7 @@
 ---
 title: Instalación de SQL Server 2016 desde el Asistente para la instalación (programa de instalación) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/06/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 949da90bae05be748c42c4a1468ba4dcea58b790
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: dfe56c7b445353950529603ec2195e90457c35c9
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535713"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993676"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>Instalar SQL Server desde el Asistente para la instalación (programa de instalación)
 
@@ -64,13 +64,29 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
 
 3.  En la página Clave del producto, seleccione una opción para indicar si está instalando una edición gratuita de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o una versión de producción del producto con una clave de PID. Para más información, vea [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
   
-     Para continuar, haga clic en **Siguiente**.  
+     Para continuar, haga clic en **Siguiente**.
 
+<!--
+The following item is for SQL Server 2019 or greater
+-->
+  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+4.  En la página Términos de licencia, revise el contrato de licencia y, si está de acuerdo, active la casilla **Acepto los términos de licencia y [Declaración de privacidad](https://privacy.microsoft.com/privacystatement)** . Después, haga clic en **Siguiente**.  
+
+::: moniker-end
+
+<!--
+The following item is for SQL Server 2016-2017
+-->
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
 4.  En la página Términos de licencia, revise el contrato de licencia y, si está de acuerdo, active la casilla **Acepto los términos de licencia** y haga clic en **Siguiente**.  
 
+::: moniker-end
+
   >[!NOTE]
-  > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, vea la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016). 
-  
+  > SQL Server transmite la información sobre su experiencia de instalación, así como otros datos de uso y rendimiento para ayudar a Microsoft a mejorar el producto. Para obtener más información acerca de los controles de privacidad y de procesamiento de datos de SQL Server, vea la [declaración de privacidad](https://privacy.microsoft.com/privacystatement) y [Configuración de SQL Server para enviar comentarios a Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+
 5.  En la ventana Reglas globales, el procedimiento de instalación avanzará automáticamente hasta la ventana Actualizaciones de productos si no hay ningún error de regla.  
   
 6.  La página [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update aparecerá a continuación si la casilla [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update del Panel de control\Todos los elementos de Panel de control\Windows Update\Cambiar configuración no está activada. Si se pone una marca de verificación en la página [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, cambiará la configuración del equipo para incluir las últimas actualizaciones al buscar actualizaciones en Windows Update.  
@@ -85,7 +101,7 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
   
 11. En la página **Selección de características**, seleccione los componentes de la instalación. Por ejemplo, para instalar una nueva instancia del motor de base de datos de SQL Server, seleccione **Servicios de Motor de base de datos**.
 
-    Después de seleccionar el nombre de la característica, aparece una descripción de cada grupo del componente en el panel **Descripción de característica** . Puede activar cualquier combinación de casillas. Para más información, vea [Ediciones y componentes de SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
+    Después de seleccionar el nombre de la característica, aparece una descripción de cada grupo del componente en el panel **Descripción de característica** . Puede activar cualquier combinación de casillas. Para obtener más información, vea Ediciones y componentes de [SQL Server 2016](../../sql-server/editions-and-components-of-sql-server-2016.md) y [SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
   
      Los requisitos previos para las características seleccionadas se muestran en el panel **Requisitos previos de las características seleccionadas** . [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] El programa de instalación instalará los requisitos previos que no se hayan instalado todavía durante el paso de instalación que se describe más adelante en este procedimiento.  
   
@@ -116,7 +132,7 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
   
      El flujo de trabajo del resto de la instalación depende de las características que haya especificado en la instalación. Dependiendo de las selecciones, es posible que no vea todas las páginas.  
   
-14. Use la página Configuración del servidor - Cuentas de servicio para especificar las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  
+14. Use la página Configuración del servidor - Cuentas de servicio para especificar las cuentas de inicio de sesión para los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los servicios reales que se configuran en esta página dependen de las características que se van a instalar.  Para obtener más información acerca de los valores de configuración, vea [Ayuda del Asistente para instalación](../../sql-server/install/instance-configuration.md#serverconfig).
   
      Puede asignar la misma cuenta de inicio de sesión a todos los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , o configurar cada cuenta de servicio individualmente. También puede especificar si los servicios se inician de forma automática o manual, o si están deshabilitados. [!INCLUDE[msCoName](../../includes/msconame-md.md)] recomienda configurar las cuentas de servicio de forma individual para proporcionar a cada servicio los privilegios mínimos; así, los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] obtendrán los permisos mínimos que necesitan para completar sus tareas. Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
@@ -130,37 +146,42 @@ Microsoft ha identificado un problema con la versión concreta de los archivos b
   
      Use la página Configuración del servidor - Intercalación para especificar intercalaciones no predeterminadas para [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para más información, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-15. Use la página Configuración del [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Configuración del servidor para especificar lo siguiente:  
+15. Use la pestaña **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración - Configuración del servidor** para especificar lo siguiente:  
   
     -   Modo de Seguridad: seleccione la autenticación de Windows o la autenticación de modo mixto para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si selecciona la autenticación de modo mixto, debe proporcionar una contraseña segura para la cuenta de administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integrada.  
   
-         Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto. Para obtener más información, vea [Configuración del motor de base de datos: configuración del servidor](../../sql-server/install/instance-configuration.md#database-engine-configuration---server-configuration).  
+       Una vez que un dispositivo establece una conexión correcta con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el mecanismo de seguridad es el mismo para la autenticación de Windows y para el modo mixto. Para obtener más información, vea [Configuración del motor de base de datos: configuración del servidor](../../sql-server/install/instance-configuration.md#serverconfig).
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Administradores: debe especificar al menos un administrador del sistema para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Use la página Configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
+     Use la página **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración - Directorios de datos** para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
   
     > [!IMPORTANT]  
     > Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-     Para obtener más información, vea [Configuración del motor de base de datos - Directorios de datos](../../sql-server/install/instance-configuration.md#database-engine-configuration---data-directories).  
+     Para obtener más información, vea [Configuración del motor de base de datos - Directorios de datos](../../sql-server/install/instance-configuration.md#datadir). 
+
+     Use la pestaña **[!INCLUDE[ssDE](../../includes/ssde-md.md)]Configuración - tempdb** para configurar el tamaño de archivo, el número de archivos, los directorios de instalación no predeterminados y la configuración del crecimiento de archivos para tempdb. Para obtener más información, vea [Configuración del motor de base de datos: TempDB](../../sql-server/install/instance-configuration.md#tempdb).  
+
+     ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+     Use la pestaña **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración - MaxDOP** para especificar el grado máximo de paralelismo. Esta configuración determina cuántos procesadores puede usar una única instrucción durante la ejecución y se calcula automáticamente el valor recomendado durante la instalación. Para obtener más información, vea [Directrices sobre el grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
+     ::: moniker-end
+
+     Use la página **[!INCLUDE[ssDE](../../includes/ssde-md.md)] Configuración - FILESTREAM** para habilitar FILESTREAM en su instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos - Secuencia de archivo](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
   
-     Use la página Configuración de [!INCLUDE[ssDE](../../includes/ssde-md.md)] - FILESTREAM para habilitar FILESTREAM para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener más información, vea [Configuración del motor de base de datos - Secuencia de archivo](../../sql-server/install/instance-configuration.md#database-engine-configuration---filestream).  
-  
-     Use la página Configuración - tempdb del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para configurar el tamaño de archivo, el número de archivos, los directorios de instalación no predeterminados y la configuración del crecimiento de archivos para tempdb. Para obtener más información, vea [Configuración del motor de base de datos: TempDB](../../sql-server/install/instance-configuration.md#database-engine-configuration---tempdb).  
   
 16. Use la página Configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Aprovisionamiento de cuentas para especificar el modo de servidor y los usuarios o las cuentas que tendrán permisos de administrador para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El modo servidor determina los subsistemas de memoria y de almacenamiento que se utilizan en el servidor. Tipos diferentes de solución se ejecutan en modos servidor diferentes. Si tiene previsto ejecutar bases de datos multidimensionales de cubo en el servidor, elija la opción predeterminada, el modo servidor multidimensional y de minería de datos. En lo que respecta a los permisos de administrador, debe especificar al menos un administrador del sistema para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de SQL Server, haga clic en **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o **Quitar**y, a continuación, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información sobre los permisos de administrador y de modo de servidor, vea [Configuración de Analysis Services - Aprovisionamiento de cuentas](../../sql-server/install/instance-configuration.md#analysis-services-configuration---account-provisioning).  
 
-   Cuando haya terminado de modificar la lista, haga clic en **Aceptar**. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.
+    Cuando haya terminado de modificar la lista, haga clic en **Aceptar**. Compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.
+
+    Use la página Configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
    
-   Use la página Configuración de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] - Directorios de datos para especificar los directorios de instalación no predeterminados. Para instalar en los directorios predeterminados, haga clic en **Siguiente**.  
+    > [!IMPORTANT]  
+    > Si, al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se especifica la misma ruta de directorio para INSTANCEDIR y para SQLUSERDBDIR, el Agente SQL Server y la búsqueda de texto completo no se inician debido a que faltan permisos.  
+    >  
+    > Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
    
-   > [!IMPORTANT]  
-   > Si, al instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se especifica la misma ruta de directorio para INSTANCEDIR y para SQLUSERDBDIR, el Agente SQL Server y la búsqueda de texto completo no se inician debido a que faltan permisos.  
-   >  
-   > Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-   
-   Para obtener más información, vea [Configuración de Analysis Services - Directorios de datos](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
+    Para obtener más información, vea [Configuración de Analysis Services - Directorios de datos](../../sql-server/install/instance-configuration.md#analysis-services-configuration---data-directories).  
    
 17. Use la página Configuración de Distributed Replay Controller para especificar los usuarios a los que desee conceder permisos administrativos para el servicio Distributed Replay Controller. Los usuarios con permisos administrativos tendrán acceso ilimitado al servicio Controlador de Distributed Replay.  
   

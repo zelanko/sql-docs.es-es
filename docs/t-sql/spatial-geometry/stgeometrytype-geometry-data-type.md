@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STGeometryType (geometry Data Type)
 ms.assetid: 224cdc83-aa83-4ad4-bb82-b7481031e910
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 3c91ae4decb540d80e371153504121ee22bf3ccc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a90fc5bc9f86f475d68ce3c07544969e91b46e46
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663463"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938902"
 ---
 # <a name="stgeometrytype-geometry-data-type"></a>STGeometryType (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ SET @g = geometry::STGeomFromText('POLYGON((0 0, 3 0, 3 3, 0 3, 0 0))', 0);
 SELECT @g.STGeometryType();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

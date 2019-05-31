@@ -19,16 +19,16 @@ helpviewer_keywords:
 - nested WHILE loops
 - WHILE keyword
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a1137ad372bd3b78bb8909dd3233481a2dcde059
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: e1bb6c94452194b75260c531a043c3e00c1bcc93
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802028"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65980063"
 ---
 # <a name="while-transact-sql"></a>WHILE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +93,7 @@ END
 PRINT 'Too much for the market to bear';  
 ```  
   
-### <a name="b-using-while-in-a-cursor"></a>b. Usar WHILE en un cursor  
+### <a name="b-using-while-in-a-cursor"></a>B. Usar WHILE en un cursor  
  En el ejemplo siguiente se usa `@@FETCH_STATUS` para controlar las actividades del cursor en un bucle `WHILE`.  
   
 ```  
@@ -114,7 +114,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="c-simple-while-loop"></a>C: Bucle WHILE simple  
+### <a name="c-simple-while-loop"></a>C. Bucle WHILE simple  
  En el ejemplo siguiente, si el precio de venta promedio de un producto es inferior a `$300`, el bucle `WHILE` dobla los precios y, a continuación, selecciona el precio máximo. Si el precio máximo es menor o igual que `$500`, el bucle `WHILE` se reinicia y vuelve a doblar los precios. Este bucle continúa doblando los precios hasta que el precio máximo es mayor que `$500`, después de lo cual sale del bucle `WHILE`.  
   
 ```  

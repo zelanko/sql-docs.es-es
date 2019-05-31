@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STAsBinary method
 ms.assetid: 99602a62-265d-4aa4-a8dc-92992ca55ba4
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 10a3c61b4fa5d261b35ca2f8fe57c73ec06dd66e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 463b76f05f0b5bf3ad14a10382140436ea33c596
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813463"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936210"
 ---
 # <a name="stasbinary-geography-data-type"></a>STAsBinary (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SET @g = geography::STGeomFromText('LINESTRING( -122.360 47.656, -122.343 47.656
 SELECT @g.STAsBinary();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

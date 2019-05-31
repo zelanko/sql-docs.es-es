@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STIntersection method
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: d1433cbbeb94c3027d8007914a67c113b42a0165
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e1ee84ab21082193c50486f775a22caec4e0dbb4
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777013"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936820"
 ---
 # <a name="stintersection-geography-data-type"></a>STIntersection (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ DECLARE @g geography = 'POLYGON((-122.358 47.653, -122.348 47.649, -122.348 47.6
 SELECT @g.STIntersection('FULLGLOBE').ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geography](../../t-sql/spatial-geography/ogc-methods-on-geography-instances.md)  
   
   

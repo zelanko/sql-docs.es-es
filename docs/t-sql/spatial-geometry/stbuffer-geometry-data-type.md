@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STBuffer (geometry Data Type)
 ms.assetid: ca6bf2dc-1d38-4503-b87e-f2ea033d36ba
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fdb4a177f1d391877e6f1b9d0f7b37c9c001b955
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 8d49fa09e703c186664a46f1daa8fe0b6283d33b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979481"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939078"
 ---
 # <a name="stbuffer-geometry-data-type"></a>STBuffer (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ Devuelve un objeto geométrico que representa la unión de todos los puntos cuya
  SELECT @g.STBuffer(-1).ToString();
  ```  
   
-### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>b. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
+### <a name="b-calling-stbuffer-with-parametervalue--0-on-a-polygon-instance"></a>B. Llamar a STBuffer() con parameter_value < 0 en una instancia de Polygon  
  En el siguiente ejemplo se devuelve una instancia de `Polygon` con un búfer negativo:  
   
 ```

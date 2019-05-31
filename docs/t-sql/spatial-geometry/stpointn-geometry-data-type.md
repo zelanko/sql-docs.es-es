@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPointN (geometry Data Type)
 ms.assetid: 8f0bb3b7-5cd9-42c2-b9f8-f04628653bd0
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 8e4f4c40b4607a354f6ef1c29bf3c7f1dc448f4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f7bbaf25715275b14deda0f2a510b40934c6f33e
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47727809"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938383"
 ---
 # <a name="stpointn-geometry-data-type"></a>STPointN (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 2, 1 0)', 0);
 SELECT @g.STPointN(2).ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

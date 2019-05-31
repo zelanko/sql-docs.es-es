@@ -17,15 +17,15 @@ dev_langs:
 helpviewer_keywords:
 - AsTextZM (geometry Data Type)
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 838bead95017140a2277169187935f534a3953a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 642c3cb7a6158856ad77761cab731be10d459270
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821653"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65939172"
 ---
 # <a name="astextzm-geometry-data-type"></a>AsTextZM (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ SELECT @g.STAsText();
 SELECT @g.AsTextZM();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [M &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/m-geometry-data-type.md)   
  [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  

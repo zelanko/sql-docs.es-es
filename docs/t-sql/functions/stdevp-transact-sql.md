@@ -17,16 +17,16 @@ helpviewer_keywords:
 - expressions [SQL Server], statistical standard deviation
 - statistical standard deviation
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5abf73c1229b2148c2683e140f3e51bc3d1d4f42
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.openlocfilehash: d8abb6c22fc45cb57183816027d4e735c4df52c5
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48080981"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65947588"
 ---
 # <a name="stdevp-transact-sql"></a>STDEVP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -56,7 +56,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
  *expression*  
  Es una [expresión](../../t-sql/language-elements/expressions-transact-sql.md) numérica. No se permiten funciones de agregado ni subconsultas. *expression* es una expresión de la categoría de tipos de datos numérico exacto o numérico aproximado, excepto para el tipo de datos **bit**.  
   
- OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
+ OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_ **)**  
  *partition_by_clause* divide el conjunto de resultados generado por la cláusula FROM en particiones a las que se aplica la función. Si no se especifica, la función trata todas las filas del conjunto de resultados de la consulta como un único grupo. *order_by_clause* determina el orden lógico en el que se realiza la operación. *order_by_clause* es obligatorio. Para más información, vea [Cláusula OVER &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   
 ## <a name="return-types"></a>Tipos devueltos  
@@ -69,7 +69,7 @@ STDEVP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-using-stdevp"></a>A. Mediante STDEVP  
+### <a name="a-using-stdevp"></a>A. Con STDEV  
  En el ejemplo siguiente se devuelve la desviación estándar de la población de todos los valores de bonificación de la tabla `SalesPerson` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  
@@ -80,7 +80,7 @@ GO
   
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="b-using-stdevp"></a>B. Mediante STDEVP  
+### <a name="b-using-stdevp"></a>B. Con STDEV  
  En el ejemplo siguiente se devuelve el valor `STDEVP` de los valores de la tabla `dbo.FactSalesQuota`. La primera columna contiene la desviación estándar de todos los valores distintos y la segunda columna contiene la desviación estándar de todos los valores, incluidos los valores duplicados.  
   
 ```  
@@ -123,7 +123,7 @@ Year  Quarter  SalesQuota              StdDeviation
 2002  4        154000.0000             34426.55
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Funciones de agregado &#40;Transact-SQL&#41;](../../t-sql/functions/aggregate-functions-transact-sql.md)   
  [OVER &#40;cláusula de Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md)  
   

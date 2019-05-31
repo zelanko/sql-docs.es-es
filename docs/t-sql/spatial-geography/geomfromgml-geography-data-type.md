@@ -16,22 +16,22 @@ helpviewer_keywords:
 - GeomFromGML (geography Data Type)
 - GeomFromGML method
 ms.assetid: 470d0997-3cb0-4d34-9a45-b332fe432b14
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: e38185e537747c951ad7fb236a3b06837240617a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 1d5542501325fb84b31c0133aaa04aa0097c077b
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51698390"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937832"
 ---
 # <a name="geomfromgml-geography-data-type"></a>GeomFromGML (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Crea una instancia de **geography** dada una representación en el subconjunto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del lenguaje de marcado de geografía (GML).
   
-Para obtener más información sobre GML, vea las siguientes especificaciones de Open Geospatial Consortium: [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629)
+Para obtener más información sobre el GML, consulte las siguientes especificaciones de Open Geospatial Consortium: [Especificaciones de OGC, Lenguaje de marcado de geografía](https://go.microsoft.com/fwlink/?LinkId=93629)
   
 Este método del tipo de datos **geography** admite instancias de **FullGlobe** o instancias espaciales mayores que un hemisferio.
   
@@ -80,7 +80,7 @@ SET @g = geography::GeomFromGml(@x, 4326);
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos extendidos](../../t-sql/spatial-geography/extended-static-geography-methods.md)  
   
   

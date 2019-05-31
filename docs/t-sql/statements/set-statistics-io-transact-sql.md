@@ -26,12 +26,12 @@ ms.assetid: 7033aac9-a944-4156-9ff4-6ef65717a28b
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: f734607cffa14f9714a7c165add067600cfa3447
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.openlocfilehash: f530f609c4c5ebc83d74d2e8ea376efe978dea89
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55760128"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65983082"
 ---
 # <a name="set-statistics-io-transact-sql"></a>SET STATISTICS IO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,15 +61,15 @@ SET STATISTICS IO { ON | OFF }
 |**logical reads**|Número de páginas leídas de la caché de datos.|  
 |**physical reads**|Número de páginas leídas del disco.|  
 |**read-ahead reads**|Número de páginas llevadas a la caché por la consulta.|  
-|**lob logical reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande (**varchar(max)**, **nvarchar(max)**, **varbinary(max)**) que se leen desde la memoria caché de datos.|  
-|**lob physical reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande que se leen desde el disco.|  
-|**lob read-ahead reads**|Número de páginas de tipo **text**, **ntext**, **image** o de un tipo de valor grande que se han colocado en la memoria caché en relación con la consulta.|  
-  
- La opción SET STATISTICS IO se establece en tiempo de ejecución, no en tiempo de análisis.  
-  
+|**lob logical reads**|Número de páginas leídas de la caché de datos. Incluye **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** o páginas de índice de almacén de columnas.|  
+|**lob physical reads**|Número de páginas leídas del disco. Incluye **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** o páginas de índice de almacén de columnas.|  
+|**lob read-ahead reads**|Número de páginas llevadas a la caché por la consulta. Incluye **text**, **ntext**, **image**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** o páginas de índice de almacén de columnas.|
+
+ La opción SET STATISTICS IO se establece en tiempo de ejecución, no en tiempo de análisis.
+
 > [!NOTE]  
->  Cuando las instrucciones Transact-SQL recuperan columnas LOB, es posible que algunas operaciones de recuperación de LOB necesiten recorrer el árbol de LOB varias veces. Esto puede ocasionar que SET STATISTICS IO informe de un mayor número de lecturas lógicas del que cabría esperar.  
-  
+> Cuando las instrucciones Transact-SQL recuperan columnas LOB, es posible que algunas operaciones de recuperación de LOB necesiten recorrer el árbol de LOB varias veces. Esto puede ocasionar que SET STATISTICS IO informe de un mayor número de lecturas lógicas del que cabría esperar.
+
 ## <a name="permissions"></a>Permisos  
  Para utilizar SET STATISTICS IO, los usuarios deben tener los permisos adecuados para ejecutar la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)]. El permiso SHOWPLAN no es necesario.  
   

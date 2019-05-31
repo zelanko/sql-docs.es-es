@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - MakeValid method (geography)
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b97058d2c023d07d0c7375beae6fc1c7fe47e229
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b4d60632de0ccc60d2c07f501334a64d31692fed
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783533"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937637"
 ---
 # <a name="makevalid-geography-data-type"></a>MakeValid (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47783533"
  En los casos en los que la instancia espacial que no es válida corta en intersección con el ecuador y el valor de EnvelopeAngle() es 180, se devolverá una instancia de **FullGlobe**. El método `MakeValid()` del tipo de datos **geography** hará todo lo posible pare devolver instancias válidas, pero no está garantizado que los resultados sean precisos ni exactos.  
   
 > [!NOTE]  
->  Los objetos no válidos se pueden almacenar en la base de datos. Los métodos que se pueden ejecutar en instancias no válidas (aquellas en las que STIsValid() devuelve False) son métodos que comprueban la validez o permiten la exportación: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() y AsGml().  
+>  Los objetos no válidos se pueden almacenar en la base de datos. Los métodos que se pueden ejecutar en instancias no válidas (aquellas instancias en las que STIsValid() devuelve False) son métodos que comprueban la validez o permiten la exportación: STIsValid(), MakeValid(), STAsText(), STAsBinary(), ToString(), AsTextZM() y AsGml().  
   
  Este método no es preciso.  
   
@@ -81,7 +81,7 @@ SELECT @g.ToString();
 MULTILINESTRING ((0 2, 1 1, 2 2), (1 1, 1 0))  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STIsValid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stisvalid-geometry-data-type.md)   
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
   

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STAsText (geometry Data Type)
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 79d74b7c8840261578479ca3489f65e2772dc985
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2be7933d08709b7f5526f9872cfc2bb7ba4d51ea
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641503"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936177"
 ---
 # <a name="stastext-geometry-data-type"></a>STAsText (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ SET @g = geometry::STGeomFromText('LINESTRING(0 0, 2 3)', 0);
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

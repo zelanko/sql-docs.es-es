@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB (geometry Data Type)
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 378b47226af215bab95df34afac6bbb22cd536e5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 767ab0db9ac92816cfb4c97df0b4ce97efa1ba30
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846983"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938598"
 ---
 # <a name="stmlinefromwkb-geometry-data-type"></a>STMLineFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *cadena_de_varias_líneas_WKB*  
- Es la representación WKB de la instancia de **geometryMultiLineString** que se va a devolver. *cadena_de_varias_líneas_WKB* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometryMultiLineString** que se va a devolver. *cadena_de_varias_líneas_WKB* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiLineString** que se va a devolver.  
@@ -49,7 +49,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeometry**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo de OGC: **MultiLineString**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geometry::STMLineFromWKB(0x01050000000200000001020000000200000000000000
 SELECT @g.STAsText();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geometría estáticos de OGC](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   
   

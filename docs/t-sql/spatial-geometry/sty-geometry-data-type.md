@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STY (geometry Data Type)
 ms.assetid: f72e0eaa-7d1d-4052-88fd-a172d8cb0d71
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: b4c8b0a123f2c4151a55813f0fd1025421e3eda3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a6744060b9ef3a6500c68d772645f12ecf8f2909
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755303"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65935591"
 ---
 # <a name="sty-geometry-data-type"></a>STY (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Propiedad de la coordenada Y de una instancia de **Point**.
 ## <a name="return-types"></a>Tipos devueltos  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Notas  
  El valor de esta propiedad será NULL si la instancia de **geometry** es un punto. Esta propiedad es de solo lectura.  
@@ -54,7 +54,7 @@ SET @g = geometry::STGeomFromText('POINT(3 8)', 0);
 SELECT @g.STY;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [STX &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stx-geometry-data-type.md)   
  [STSrid &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/stsrid-geometry-data-type.md)   
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  

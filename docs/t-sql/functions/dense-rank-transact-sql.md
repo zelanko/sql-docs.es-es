@@ -18,16 +18,16 @@ helpviewer_keywords:
 - tied rows [SQL Server]
 - ranking rows
 ms.assetid: 03871fc6-9592-4016-b0b2-ff543f132b20
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 311e6ee0e470aa01933967c648c0f8e5c3ac503e
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: a37eef1db62c91577fe8afb9851fc189d985681a
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53979441"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65948889"
 ---
 # <a name="denserank-transact-sql"></a>DENSE_RANK (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -98,7 +98,7 @@ ProductID   Name                               LocationID Quantity Rank
   
 ```  
   
-### <a name="b-ranking-all-rows-in-a-result-set"></a>b. Clasificar todas las filas de un conjunto de resultados  
+### <a name="b-ranking-all-rows-in-a-result-set"></a>B. Clasificar todas las filas de un conjunto de resultados  
 En este ejemplo se devuelven los diez primeros empleados clasificados por su salario. Como en la instrucción `SELECT` no se ha especificado una cláusula `PARTITION BY`, la función `DENSE_RANK` se ha aplicado a todas las filas del conjunto de resultados.  
   
 ```  
@@ -175,7 +175,7 @@ WHERE TerritoryID IS NOT NULL AND SalesYTD <> 0;
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
-### <a name="d-ranking-rows-within-a-partition"></a>D: Clasificar filas dentro de una partición  
+### <a name="d-ranking-rows-within-a-partition"></a>D. Clasificar filas dentro de una partición  
 En este ejemplo se clasifican los representantes de ventas de cada territorio de ventas en función de sus ventas totales. `DENSE_RANK` divide el conjunto de filas por `SalesTerritoryGroup` y ordena el conjunto de resultados por `SalesAmountQuota`.  
   
 ```  

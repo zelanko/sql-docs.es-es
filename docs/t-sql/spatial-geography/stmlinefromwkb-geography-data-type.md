@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMLineFromWKB method
 ms.assetid: 05ca6d65-4799-4b9a-9672-cfebae95f23e
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 723e8f173b36b3b62cf7eece71940affc780da9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4bd63a65268053f8f494631151bade48c42ef138
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804863"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936655"
 ---
 # <a name="stmlinefromwkb-geography-data-type"></a>STMLineFromWKB (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *cadena_de_varias_líneas_WKB*  
- Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *WKB_multilinestring* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geographyMultiLineString** que se va a devolver. *WKB_multilinestring* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiLineString** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMLineFromWKB ( 'WKB_multilinestring' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo OGC: **MultiLineString**  
+ Tipo de OGC: **MultiLineString**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geography::STMLineFromWKB(0x010500000002000000010200000005000000F4FDD47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

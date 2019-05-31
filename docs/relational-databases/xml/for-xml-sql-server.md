@@ -1,7 +1,7 @@
 ---
 title: FOR XML (SQL Server) | Microsoft Docs
-ms.custom: ''
-ms.date: 03/03/2017
+ms.custom: fresh2019may
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -21,18 +21,18 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions
-ms.openlocfilehash: d21557ca1157c8331ce9a5175619097b962d13f2
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: f0cc7033845f55a6df33a58d7b100c8a59926821
+ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429331"
+ms.lasthandoff: 05/23/2019
+ms.locfileid: "66175100"
 ---
 # <a name="for-xml-sql-server"></a>FOR XML (SQL Server)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. También puede usarse en instrucciones de asignación.
+Una consulta SELECT devuelve los resultados como un conjunto de filas. Opcionalmente, se pueden recuperar resultados formales de una consulta SQL como XML especificando la cláusula FOR XML en la consulta. La cláusula FOR XML puede usarse en consultas de nivel superior y en subconsultas. La cláusula FOR XML de nivel superior solo puede usarse en la instrucción SELECT. En el caso de las subconsultas, FOR XML puede usarse en las instrucciones INSERT, UPDATE y DELETE. FOR XML también puede usarse en instrucciones de asignación.
 
 En una cláusula FOR XML se especifica uno de estos modos:
 
@@ -69,7 +69,7 @@ SELECT Cust.CustomerID,
 FROM Sales.Customer Cust 
 INNER JOIN Sales.SalesOrderHeader OrderHeader
 ON Cust.CustomerID = OrderHeader.CustomerID
-FOR XML AUTO
+FOR XML AUTO;
 ```
 
 ## <a name="the-for-xml-clause-and-server-names"></a>La cláusula FOR XML y nombres de servidor
@@ -88,7 +88,7 @@ SELECT TOP 1 LastName
 
 **Servidor local**: &nbsp; Cuando `ServerName` es un servidor local, la consulta devuelve el texto siguiente:
 
-```console
+```xml
 <AdventureWorks2012.Person.Person LastName="Achong" />  
 ```
 
@@ -96,7 +96,7 @@ SELECT TOP 1 LastName
 
 **Servidor de red**: &nbsp; Cuando `ServerName` es un servidor de red, la consulta devuelve el texto siguiente:
 
-```console
+```xml
 <ServerName.AdventureWorks2012.Person.Person LastName="Achong" />
 ```
 
@@ -112,7 +112,7 @@ SELECT TOP 1 LastName
 
 La consulta con la ambigüedad eliminada devuelve ahora el texto siguiente:
 
-```console
+```xml
 <x LastName="Achong"/>
 ```
 

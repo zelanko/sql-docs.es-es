@@ -1,6 +1,6 @@
 ---
 title: Notas de la versión de SQL Server 2019 | Microsoft Docs
-ms.date: 03/27/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 3362a03fe1437b15985fdc557fac6536db5fd2f7
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 8f44927fb59e6d1b613b2a67e26aed980b3a080a
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582879"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65993944"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>Notas de la versión preliminar de SQL Server 2019
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -23,33 +23,17 @@ ms.locfileid: "59582879"
 En este artículo se describen las limitaciones y los problemas conocidos de las versiones de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] Community Technology Preview (CTP). Para obtener información relacionada, consulte estos artículos:
 - [Novedades de SQL Server 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-> [!NOTE]
-> Las versiones preliminares de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] están a su disposición para que pruebe las características de la próxima versión. No están admitidas para su uso en producción ni disponen de licencia para ello. Los siguientes escenarios no están admitidos de forma explícita:
->
-> - Instalación en paralelo con otras versiones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
-> - Actualización de una instancia existente de SQL Server desde cualquier versión
+## <a name="ctp-30"></a>CTP 3.0
 
-**Pruebe [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]**
-- [![Descargar desde el Centro de evaluación](../includes/media/download2.png)](https://go.microsoft.com/fwlink/?LinkID=862101) [Descargar [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] para instalar en Windows](https://go.microsoft.com/fwlink/?LinkID=862101)
-- Instalar en Linux para [Red Hat Enterprise Server](../linux/quickstart-install-connect-red-hat.md), [SUSE Linux Enterprise Server](../linux/quickstart-install-connect-suse.md) y [Ubuntu](../linux/quickstart-install-connect-ubuntu.md)
-- [Ejecutar SQL Server 2019 en Docker](../linux/quickstart-install-connect-docker.md)
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 es la versión pública más reciente de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
 
-## <a name="ctp-24"></a>CTP 2.4
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 es la versión pública más reciente de [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)].
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles. 
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 está disponible únicamente como edición de evaluación. No hay más ediciones disponibles. La compatibilidad con las versiones de CTP se describe en `license_Eval.rtf` con el soporte de instalación.
+Encontrará información completa sobre la compatibilidad y la administración de licencias de versiones de CTP en `license_Eval.rtf` con sus soportes de instalación.
 
-Se puede detectar una compatibilidad limitada en una de las siguientes ubicaciones:
+[!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
-- Foros
-  - [Comentarios de SQL Server](https://aka.ms/sqlfeedback)
-  - [Introducción a SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqlgetstarted)
-  - [Transact-SQL](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=transactsql)
-  - [Documentación de SQL Server](https://social.msdn.microsoft.com/Forums/sqlserver/en-US/home?forum=sqldocumentation)
-
-- También puede enviar un tuit a [@SQLServer](https://twitter.com/SQLServer) con [#sqlhelp](https://twitter.com/search?q=%23sqlhelp)
-
-### <a name="documentation-ctp-24"></a>Documentación (CTP 2.4)
+## <a name="documentation"></a>Documentación
 
 - **Problema e impacto en el cliente**: La documentación de SQL Server 2019 (15.x) es limitada, y el contenido está incluido en el conjunto de documentación de [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. El contenido de los artículos específicos de SQL Server 2019 (15.x) se distinguirá con **Se aplica a**.
 
@@ -57,7 +41,7 @@ Se puede detectar una compatibilidad limitada en una de las siguientes ubicacion
 
 - **Problema e impacto en el cliente**: No hay ningún contenido sin conexión disponible para SQL Server 2019 (15.x).
 
-### <a name="hardware-and-software-requirements-ctp-24"></a>Requisitos de hardware y software (CTP 2.4)
+## <a name="hardware-and-software-requirements"></a>Requisitos de hardware y software
 
 - **Problema e impacto en el cliente**: Los requisitos de hardware y software aún están en revisión y no son definitivos para la versión del producto.
 
@@ -69,51 +53,57 @@ Se puede detectar una compatibilidad limitada en una de las siguientes ubicacion
     - Microsoft .NET Framework 4.6.2. Disponible en el [Centro de descarga](https://www.microsoft.com/download/details.aspx?id=53344).
     - En cuanto a Linux, consulte [Linux: Plataformas compatibles](../linux/sql-server-linux-setup.md#supportedplatforms)
 
-### <a name="updated-compiler"></a>Compilador actualizado
+## <a name = "release-notes"></a>Características que se excluyen del soporte técnico
 
-- **Problema e impacto en el cliente**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] incorpora un compilador actualizado. CTP 2.1 tenía un problema conocido por el que los resultados de un número de punto flotante y otros escenarios de conversión podían devolver un valor distinto al devuelto en versiones anteriores debido al compilador actualizado. CTP 2.2 incluye recursos para asegurarse de que los escenarios afectados devuelvan los mismos resultados que las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No se ha detectado ningún otro error en CTP 2.3. Notifique cualquier anomalía en los resultados en comparación con [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al equipo de [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ](http://aka.ms/sqlfeedback) inmediatamente.
+- **Problema e impacto en el cliente:** [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] no ofrece soporte técnico para los componentes, las características y los escenarios siguientes:
+  - SQL Sever Analysis Services
+  - SQL Server Reporting Services
+  - Grupos de disponibilidad AlwaysOn en Kubernetes
+  - Recuperación acelerada de bases de datos.
+  - Metadatos tempdb optimizados para memoria
+
+- **Solución**: Ninguno. La exclusión se aplica a todos los clientes, incluidos los participantes en el programa de adopción temprana de SQL.
+
+- **Se aplica a**: CTP 3.0
+
+## <a name="updated-compiler"></a>Compilador actualizado
+
+- **Problema e impacto en el cliente**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] incorpora un compilador actualizado. CTP 2.1 tenía un problema conocido por el que los resultados de un número de punto flotante y otros escenarios de conversión podían devolver un valor distinto al devuelto en versiones anteriores debido al compilador actualizado. CTP 2.2 incluye recursos para asegurarse de que los escenarios afectados devuelvan los mismos resultados que las versiones anteriores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. No se ha detectado ningún otro error en CTP 3.0. Notifique cualquier anomalía en los resultados en comparación con [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] al equipo de [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ](http://aka.ms/sqlfeedback) inmediatamente.
 
 - **Solución**: N/D
 
-- **Se aplica a**: SQL Server 2019 CTP 2.4, CTP 2.3, CTP 2.2 y CTP 2.1
+- **Se aplica a**: SQL Server 2019 CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1
 
-### <a name="utf-8-collations"></a>Intercalaciones UTF-8
+## <a name="installation-wizard-may-wait-between-eula-pages"></a>El asistente para la instalación puede esperar entre las páginas de CLUF
+
+- **Problema e impacto en el cliente**: durante la instalación con el asistente para la instalación, el proceso puede esperar una cantidad excesiva de tiempo entre el contrato de licencia del usuario final (CLUF) para R Services y el CLUF para Python.
+
+- **Solución**: espere a que el asistente para la instalación termine. El tiempo de espera puede superar los 30 minutos.
+
+- **Se aplica a**: SQL Server 2019 CTP 3.0
+
+## <a name="utf-8-collations"></a>Intercalaciones UTF-8
 
 - **Problema e impacto en el cliente**: No se pueden usar las intercalaciones habilitadas para UTF-8 con algunas otras características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. UTF-8 no es compatible si se utilizan las siguientes características de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]:
 
-  - Servidor vinculado
   - OLTP en memoria
   - Tabla externa para PolyBase
   - Always Encrypted
 
   > [!Note]
-  > Actualmente, no hay ninguna compatibilidad de interfaz de usuario para elegir intercalaciones habilitadas para UTF-8 en Azure Data Studio o SQL Server Data Tools (SSDT). La versión más reciente de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS) permite elegir las intercalaciones habilitadas para UTF-8 en la interfaz de usuario.
+  > Actualmente, no hay ninguna compatibilidad de interfaz de usuario para elegir intercalaciones habilitadas para UTF-8 en Azure Data Studio o SQL Server Data Tools (SSDT). La versión 18, la más reciente de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] (SSMS), permite elegir las intercalaciones habilitadas para UTF-8 en la interfaz de usuario.
  
 - **Solución**: No hay ninguna solución alternativa para [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP.
 
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1 y CTP 2.0.
+- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1, CTP 2.0.
 
-### <a name="sql-graph"></a>SQL Graph
-
-- **Problema e impacto en el cliente**: Las herramientas que dependen de la importación o exportación de tipo DacFx no funcionarán con las nuevas características de grafos: las restricciones perimetrales o la combinación de DML. La generación de scripts podría no funcionar en [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].
-
-- **Solución**: La escritura de scripts de [!INCLUDE[tsql](../includes/tsql-md.md)] y su ejecución en el servidor con [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] o SQLCMD sí funcionan. La exportación/importación de objetos de base de datos que crean restricciones perimetrales, que tienen la nueva sintaxis de combinación DML o que crean tablas/vistas derivadas en los objetos de grafos no funcionará. Los usuarios tendrán que crear manualmente estos objetos en su base de datos con scripts de [!INCLUDE[tsql](../includes/tsql-md.md)]. 
-
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1 y CTP 2.0.
-
-### <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
+## <a name="always-encrypted-with-secure-enclaves"></a>Always Encrypted con enclaves seguros
 
 - **Problema e impacto en el cliente**: Los cálculos completos tienen pendientes varias optimizaciones de rendimiento, incluida la funcionalidad limitada (sin indexación, etc.), y actualmente están deshabilitados de manera predeterminada.
 
 - **Solución**: Para habilitar los cálculos completos, ejecute `DBCC traceon(127,-1)`. Para obtener más información, consulte [Habilitar cálculos completos](../relational-databases/security/encryption/configure-always-encrypted-enclaves.md#configure-a-secure-enclave).
 
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4, CTP 2.3, CTP 2.2, CTP 2.1 y CTP 2.0.
-
-### <a name="system-dynamic-management-views"></a>Vistas de administración dinámica del sistema +
-
-- **Problema e impacto en el cliente**: La función con valores de tabla del sistema [sys.dm_db_objects_disabled_on_compatibility_level_change](../relational-databases/system-dynamic-management-views/spatial-data-sys-dm-db-objects-disabled-on-compatibility-level-change.md) devuelve valores aleatorios en la columna `dependency`.
-
-- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 2.4 y CTP 2.3.
+- **Se aplica a**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.0, CTP 2.5, CTP 2.4, CTP 2.3, 2.2, CTP 2.1, 2.0.
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - Z method
 ms.assetid: 9abc79c5-43c9-4cc2-b37f-d2ecdec7c234
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 0671ccc73643e365da6555bb1ea40df827c32bd3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e4fd1a39bef618b942e8a6cea6cbcac781a49521
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665193"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936170"
 ---
 # <a name="z-geography-data-type"></a>Z (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "47665193"
 ## <a name="return-types"></a>Tipos devueltos  
  Tipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **float**  
   
- Tipo de CLR: **SqlDouble**  
+ Tipo CLR: **SqlDouble**  
   
 ## <a name="remarks"></a>Notas  
  Si la instancia de **geography** no es un punto, se asignará el valor null a esta propiedad, así como a cualquier instancia de **Point** para la que no se establezca dicha propiedad.  
@@ -58,7 +58,7 @@ SET @g = geography::STGeomFromText('POINT(-122.34900 47.65100 10.3 12)', 4326);
 SELECT @g.Z;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [M &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/m-geography-data-type.md)   
  [AsTextZM &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/astextzm-geography-data-type.md)  

@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - BufferWithCurves method (geography)
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: afcd0b1256b42f6f89d979de1e2178d566981a7a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81222e73df527d5d51a592dd2cabe62384b5f936
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695803"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937317"
 ---
 # <a name="bufferwithcurves-geography-data-type"></a>BufferWithCurves (tipo de datos de geografía)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47695803"
 |Valor de distancia|Dimensiones de tipo|Tipo espacial devuelto|  
 |--------------------|---------------------|---------------------------|  
 |distancia < 0|Cero o uno|Instancia de **GeometryCollection** vacía|  
-|distancia \< 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo.<br /><br /> Nota: Un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|
+|distancia \< 0|Dos o más|Instancia de **CurvePolygon** o **GeometryCollection** con un búfer negativo.<br /><br /> Nota: un búfer negativo puede crear una instancia de **GeometryCollection** vacía.|
 |distancia = 0|Todas las dimensiones|Copia de la instancia de **geography** que hace la llamada|  
 |distancia > 0|Todas las dimensiones|Instancia de **CurvePolygon** o **GeometryCollection**|  
   
@@ -140,7 +140,7 @@ ms.locfileid: "47695803"
   
  Observe que en los dos ejemplos anteriores se pasa un literal de cadena al método `BufferWithCurves()`. El primer ejemplo funciona porque el literal de cadena se puede convertir en un valor numérico. Sin embargo, el segundo ejemplo inicia una excepción `ArgumentException`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [BufferWithCurves &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/bufferwithcurves-geometry-data-type.md)  
   

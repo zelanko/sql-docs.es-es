@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STPolyFromWKB method
 ms.assetid: d236e0ea-dabe-4341-a6eb-ecc210d1f056
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 509ceaf76afe153d7cb3921b404cad4397df2a6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 504ca7319a3aa5fa76ef5281d55bf1147a70ae00
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733853"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936050"
 ---
 # <a name="stpolyfromwkb-geography-data-type"></a>STPolyFromWKB (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_polygon*  
- Es la representación WKB de la instancia de **geographyPolygon** que se quiere devolver. *WKB_polygon* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geographyPolygon** que se quiere devolver. *WKB_polygon* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia **geographyPolygon** que se quiere devolver.  
@@ -49,7 +49,7 @@ STPolyFromWKB ( 'WKB_polygon' , SRID )
   
  Tipo de valor devuelto de CLR: **SqlGeography**  
   
- Tipo OGC: **Polygon**  
+ Tipo de OGC: **Polígono**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geography::STPolyFromWKB(0x01030000000100000005000000F4FDD478E9965EC0DD
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

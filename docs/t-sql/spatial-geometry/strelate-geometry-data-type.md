@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STRelate (geometry Data Type)
 ms.assetid: 9dcb5f58-35ab-4bb3-86ee-2d29eefba6d3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 9c54da346320a8d4472b64df9bd879ceffac11bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bb4c4e589ef3f658cee65812e9263a68a3489d2a
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721923"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65938314"
 ---
 # <a name="strelate-geometry-data-type"></a>STRelate (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -63,7 +63,7 @@ SET @h = geometry::STGeomFromText('POINT(5 5)', 0);
 SELECT @g.STRelate(@h, 'FF*FF****');  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de OGC en instancias de geometry](../../t-sql/spatial-geometry/ogc-methods-on-geometry-instances.md)  
   
   

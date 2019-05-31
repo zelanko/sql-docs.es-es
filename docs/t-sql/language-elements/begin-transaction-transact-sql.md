@@ -27,16 +27,16 @@ helpviewer_keywords:
 - starting point marked for transactions
 - starting transactions
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: edcf0a919c0bcf5dbcbd1490b016c49ab7e46d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 9c9a6c4debdb401524d4a06828b05e8909ddde51
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802252"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981119"
 ---
 # <a name="begin-transaction-transact-sql"></a>BEGIN TRANSACTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -134,7 +134,7 @@ COMMIT TRAN T1;
   
  "BEGIN TRAN M2 WITH MARK ...;"  
   
- "Server: Mensaje 3920, Nivel 16, Estado 1, Línea 3"  
+ "Server: Mensaje 3920, nivel 16, estado 1, línea 3"  
   
  "La opción WITH MARK solo se aplica a la primera instrucción BEGIN TRAN WITH MARK."  
   
@@ -157,7 +157,7 @@ DELETE FROM HumanResources.JobCandidate
 COMMIT;  
 ```
 
-### <a name="b-rolling-back-a-transaction"></a>b. Revertir una transacción
+### <a name="b-rolling-back-a-transaction"></a>B. Revertir una transacción
 **SE APLICA A:** SQL Server (a partir de 2008,) Azure SQL Database, Azure SQL Data Warehouse, Almacenamiento de datos paralelos
 
 En el ejemplo siguiente se muestra el efecto de revertir una transacción. En este ejemplo, la instrucción ROLLBACK revertirá la instrucción INSERT, pero la tabla creada seguirá existiendo.

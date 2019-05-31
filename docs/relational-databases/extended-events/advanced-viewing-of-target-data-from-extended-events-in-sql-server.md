@@ -1,7 +1,7 @@
 ---
 title: Visualización avanzada de datos de destino de eventos extendidos en SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 10/04/2016
+ms.date: 05/24/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d80831a3a152d29d8a2f608527105c9feb23b126
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
+ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478170"
+ms.lasthandoff: 05/24/2019
+ms.locfileid: "66198348"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -42,7 +42,7 @@ En este artículo se da por hecho que ya sabe cómo crear e iniciar una sesión 
 
 En este artículo también se da por hecho que ha instalado una versión mensual muy reciente de SSMS. Encontrará ayuda para instalarlo en:
 
-- [Descarga de SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/mt238290.aspx)
+- [Descarga de SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
 
 
 
@@ -133,7 +133,7 @@ La opción **Ver datos de destino** muestra los datos que se han capturado hasta
 
 En el panel del **Explorador de objetos** puede expandir los nodos y, luego, hacer clic con el botón derecho en:
 
-- **Administración** > **Eventos extendidos** > **Sesiones** > *[su sesión]* > *[su nodo de destino]* > **Ver datos de destino**.
+- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  >  *[su nodo de destino]*  > **Ver datos de destino**.
 
 
 Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refleja en el siguiente ejemplo.
@@ -153,7 +153,7 @@ Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refl
 Cuando la sesión de eventos está activa, puede que quiera ver los datos de eventos en tiempo real, a medida que el destino los vaya recibiendo.
 
 
-- **Administración** > **Eventos extendidos** > **Sesiones** > *[su sesión]* > **Observar datos en directo**.
+- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Observar datos en directo**.
 
 
 ![su sesión > Observar datos en directo](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Cuando la sesión de eventos está activa, puede que quiera ver los datos de eve
 
 La presentación de datos se actualiza en un intervalo que se puede especificar. Vea la **Latencia máxima de envío** haciendo lo siguiente:
 
-- **Eventos extendidos** > **Sesiones** > *[su sesión]* > **Propiedades** > **Avanzadas** > **Latencia máxima de envío**
+- **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Propiedades** > **Avanzadas** > **Latencia máxima de envío**
 
 
 
@@ -318,4 +318,6 @@ El evento **query_post_execution_showplan** permite ver el plan de consulta real
 
 ![Plan de consulta con la lista de propiedades de un nodo](../../relational-databases/extended-events/media/xevents-ssms-ui60-showplangraph.png)
 
+## <a name="see-also"></a>Vea también
 
+[XELite: biblioteca multiplataforma para leer XEvents de archivos XEL o secuencias en directo de SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/); publicada en mayo de 2019.

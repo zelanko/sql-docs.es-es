@@ -31,16 +31,16 @@ helpviewer_keywords:
 - KILL statement
 - terminating process
 ms.assetid: 071cf260-c794-4b45-adc0-0e64097938c0
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4fd08c2afb3e89fa065570206f4dbfcf4237d0ea
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: f808d73ca9dfd169a69bf399990965039a10c602
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265272"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65982144"
 ---
 # <a name="kill-transact-sql"></a>KILL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -138,7 +138,7 @@ KILL 53;
 GO  
 ```  
   
-### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>b. Usar KILL Id. de sesión WITH STATUSONLY para obtener un informe de progreso  
+### <a name="b-using-kill-session-id-with-statusonly-to-obtain-a-progress-report"></a>B. Usar KILL Id. de sesión WITH STATUSONLY para obtener un informe de progreso  
 En el siguiente ejemplo se genera un estado del proceso de revertir para el Id. de sesión específico.  
   
 ```sql  

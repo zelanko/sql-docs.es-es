@@ -19,16 +19,16 @@ helpviewer_keywords:
 - minus operator (-)
 - subtracting numbers
 ms.assetid: db23145f-f17d-4b90-be09-28a881cacd1a
-author: douglaslMS
-ms.author: douglasl
+author: rothja
+ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8cbccdecdb504af75e4130d78c92b6e80673dd9c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ad673ecb2e33d22b8fcc6edc64548b0754ccbac9
+ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612743"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65981563"
 ---
 # <a name="--subtraction-transact-sql"></a>- (Resta) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -103,7 +103,7 @@ SELECT MAX(BaseRate) - MIN(BaseRate) AS BaseRateDifference
 FROM DimEmployee;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [-= &#40;Asignación de resta&#41; &#40;Transact-SQL&#41;](../../t-sql/language-elements/subtract-equals-transact-sql.md)   
  [Operadores compuestos &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)  
  [Arithmetic Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/arithmetic-operators-transact-sql.md)  (Operadores aritméticos [Transact-SQL])  

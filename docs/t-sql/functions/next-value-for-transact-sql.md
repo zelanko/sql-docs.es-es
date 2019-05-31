@@ -20,15 +20,15 @@ helpviewer_keywords:
 - NEXT VALUE FOR function
 - sequence number object, NEXT VALUE FOR function
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
-author: MashaMSFT
-ms.author: mathoma
+author: MikeRayMSFT
+ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: efc8631d234fae86010d7f94028fc962947561ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: a8478a619aa6a85e8d398b4c79399faa3b9f56b1
+ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525731"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65944130"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -95,7 +95,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
   
 -   En una instrucción que use la cláusula **ORDER BY**, a menos que se use **NEXT VALUE FOR** ... **OVER** (**ORDER BY** ...).  
   
--   En las siguientes cláusulas: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** o **FOR XML**.  
+-   En las cláusulas siguientes: **FETCH**, **OVER**, **OUTPUT**, **ON**, **PIVOT**, **UNPIVOT**, **GROUP BY**, **HAVING**, **COMPUTE**, **COMPUTE BY** o **FOR XML**.  
   
 -   En expresiones condicionales que usan **CASE**, **CHOOSE**, **COALESCE**, **IIF**, **ISNULL** o **NULLIF**.  
   
@@ -301,7 +301,7 @@ GO
 GRANT UPDATE ON OBJECT::Test.CounterSeq TO [AdventureWorks\Larry] ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-sequence-transact-sql.md)   
  [ALTER SEQUENCE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-sequence-transact-sql.md)   
  [Números de secuencia](../../relational-databases/sequence-numbers/sequence-numbers.md)  

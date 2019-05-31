@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - HasZ geometry
 ms.assetid: aa378943-252a-4079-848b-6c59344fcfce
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 6ca656d9e1d041864c80328dcad2b9fa19de27c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d29a99be39779283b0f6841ac51598491141938d
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839503"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937950"
 ---
 # <a name="hasz-geometry-datatype"></a>HasZ (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47839503"
 ## <a name="return-types"></a>Tipos devueltos  
  Tipo de valor devuelto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]: **bit**  
   
- Tipo de valor devuelto de CLR: **booleano**  
+ Tipo de valor devuelto de CLR: **Boolean**  
   
 ## <a name="remarks"></a>Notas  
   
@@ -49,7 +49,7 @@ SELECT @p.HasZ
 --Returns: 1 (true)  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geometry](../../t-sql/spatial-geometry/extended-methods-on-geometry-instances.md)   
  [Z &#40;tipo de datos geometry&#41;](../../t-sql/spatial-geometry/z-geometry-data-type.md)  
   

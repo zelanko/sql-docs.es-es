@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - STMPolyFromText method
 ms.assetid: 15356c0f-5144-418d-aa96-3e7ea5fecea3
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: fa121faac168a2d3729145eb9b87d5e4e4416fa2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 318f58fb2bde2d60c1937191a54fec49caabf4c6
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845083"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65936569"
 ---
 # <a name="stmpolyfromtext-geography-data-type"></a>STMPolyFromText (tipo de datos geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *multipolygon_tagged_text*  
- Es la representación WKT de la instancia de **geographyMultiPolygon** que se quiere devolver. *multipolygon_tagged_text* es una expresión **nvarchar(max)**.  
+ Es la representación WKT de la instancia de **geographyMultiPolygon** que se quiere devolver. *multipolygon_tagged_text* es una expresión **nvarchar(max)** .  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geographyMultiPolygon** que se quiere devolver.  
@@ -49,7 +49,7 @@ STMPolyFromText ( 'multipolygon_tagged_text' , SRID )
   
  Tipo de valor devuelto de CLR: **Sql Geography**  
   
- Tipo OGC: **MultiPolygon**  
+ Tipo de OGC: **MultiPolígono**  
   
 ## <a name="remarks"></a>Notas  
  Este método produce una excepción **FormatException** si la entrada no tiene el formato correcto.  
@@ -63,7 +63,7 @@ SET @g = geography::STMPolyFromText('MULTIPOLYGON(((-122.358 47.653, -122.348 47
 SELECT @g.ToString();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos de geografía estáticos de OGC](../../t-sql/spatial-geography/ogc-static-geography-methods.md)  
   
   

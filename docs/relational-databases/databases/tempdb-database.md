@@ -2,7 +2,7 @@
 title: Base de datos tempdb | Microsoft Docs
 description: En este tema se proporcionan detalles relacionados con la configuración y el uso de la base de datos tempdb en SQL Server en Azure SQL Database.
 ms.custom: P360
-ms.date: 02/14/2019
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: ''
@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 65a1afa2bf72c53f2ce656afb7f397dd10be9ef6
-ms.sourcegitcommit: 01e17c5f1710e7058bad8227c8011985a9888d36
+ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
+ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/14/2019
-ms.locfileid: "56265372"
+ms.lasthandoff: 05/21/2019
+ms.locfileid: "65994234"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 
@@ -215,6 +215,43 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], se optimiza el re
 Para obtener más información sobre la mejora del rendimiento en tempdb, consulte el siguiente artículo del blog:
 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/) (TEMPDB: archivos, marcas de seguimiento y actualizaciones)
+
+## <a name="memory-optimized-tempdb-metadata"></a>Metadatos tempdb optimizados para memoria
+
+La contención de metadatos tempdb ha sido históricamente un cuello de botella en la escalabilidad para muchas cargas de trabajo que se ejecutan en SQL Server. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduce una nueva característica que forma parte de la familia de características [Base de datos en memoria](../in-memory-database.md), metadatos tempdb optimizados para memoria, que quita este cuello de botella de forma eficaz y desbloquea un nuevo nivel de escalabilidad para cargas de trabajo intensivas de tempdb. En [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], las tablas del sistema implicadas en la administración de metadatos de la tabla temporal del sistema se pueden mover a tablas optimizadas para memoria no duraderas y sin bloqueos temporales. Para poder participar en esta nueva característica, use el siguiente script:
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+```
+
+Para que este cambio de configuración surta efecto, es necesario reiniciar el servicio.
+
+Esta implementación presenta algunas limitaciones que cabe tener en cuenta:
+
+1. Activar o desactivar la característica no es una acción dinámica. Debido a los cambios intrínsecos que deben realizarse en la estructura de tempdb, es necesario llevar a cabo un reinicio para habilitar o deshabilitar la característica.
+2. Una única transacción no puede acceder a tablas optimizadas para memoria en más de una base de datos.  Esto significa que cualquier transacción que implique una tabla optimizada para memoria en una base de datos de usuario no podrá acceder a vistas del sistema tempdb en la misma transacción.  Si intenta acceder a vistas del sistema tempdb en la misma transacción en forma de tabla optimizada para memoria en una base de datos de usuario, recibirá el error siguiente:
+    ```
+    A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
+    ```
+    Ejemplo:
+    ```
+    BEGIN TRAN
+    SELECT *
+    FROM tempdb.sys.tables  -----> Creates a user In-Memory OLTP Transaction on Tempdb
+    INSERT INTO <user database>.<schema>.<mem-optimized table>
+    VALUES (1)  ----> Attempts to create user In-Memory OLTP transaction but will fail
+    COMMIT TRAN
+    ```
+3. Las consultas en tablas optimizadas para memoria no admiten las sugerencias de bloqueo y aislamiento, por lo que las consultas en vistas de catálogo tempdb optimizadas para memoria no respetarán dichas sugerencias. Como sucede con otras vistas de catálogo del sistema en SQL Server, todas las transacciones realizadas en vistas del sistema estarán en aislamiento READ COMMITTED (o, en este caso, READ COMMITTED SNAPSHOT).
+4. Cuando los metadatos tempdb optimizados para memoria estén habilitados, pueden producirse algunos problemas con los índices de almacén de columnas en las tablas temporales. Para esta versión preliminar, es mejor evitar los índices de almacén de columnas en las tablas temporales cuando se usen metadatos tempdb optimizados para memoria.
+
+> [!NOTE] 
+> Estas limitaciones solo se aplican al hacer referencia a vistas del sistema tempdb. Si lo desea, puede crear una tabla temporal en la misma transacción al acceder a una tabla optimizada para memoria en una base de datos de usuario.
+
+Puede comprobar si tempdb está optimizado para memoria mediante el siguiente comando de T-SQL:
+```
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
+```
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>Planeamiento de capacidad para tempdb en SQL Server
 

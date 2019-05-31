@@ -15,15 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - EnvelopeAngle method
 ms.assetid: 14a7ba15-168c-4b08-ba3d-951d73092ac7
-author: douglaslMS
-ms.author: douglasl
+author: MladjoA
+ms.author: mlandzic
 manager: craigg
-ms.openlocfilehash: 4a66a7995d4ad6a97ca7d90798038dc2fe372150
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8d45a98495ab04b2c9ef106b2a432325b294f425
+ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47836729"
+ms.lasthandoff: 05/20/2019
+ms.locfileid: "65937878"
 ---
 # <a name="envelopeangle-geography-data-type"></a>EnvelopeAngle (tipo de datos Geography)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ DECLARE @g geography = 'LINESTRING(-120 45, -120 0, -90 0)';
 SELECT @g.EnvelopeAngle();  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos extendidos en instancias de geography](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)   
  [EnvelopeCenter &#40;tipo de datos geography&#41;](../../t-sql/spatial-geography/envelopecenter-geography-data-type.md)  
   

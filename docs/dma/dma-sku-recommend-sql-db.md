@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
 manager: craigg
-ms.openlocfilehash: 1ea0afb015bb457b067f1011bd3b602bf4142e09
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: c67eca111ecd0a51bc8e70d747cb7b713fe54ca8
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65106070"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413631"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar a la derecha de la SKU de instancia de base de datos administrada de SQL Azure para la base de datos local
 
@@ -41,7 +41,7 @@ Las siguientes son instrucciones que le ayudarán a determinar las recomendacion
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-- Descargue e instale la versión más reciente de [DMA](https://aka.sm/get-dma). Si ya tiene una versión anterior de la herramienta, ábralo y le pedirá que actualice DMA.
+- Descargue e instale la versión más reciente de [DMA](https://aka.ms/get-dma). Si ya tiene una versión anterior de la herramienta, ábralo y le pedirá que actualice DMA.
 - Asegúrese de que el equipo tiene [PowerShell versión 5.1](https://www.microsoft.com/download/details.aspx?id=54616) o versiones posteriores, que es necesario para ejecutar todos los scripts. Para obtener información acerca de qué versión de PowerShell está instalada en el equipo de findoug, consulte el artículo [descargar e instalar Windows PowerShell 5.1](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1).
 - Asegúrese de que el equipo tiene instalado el módulo de Powershell de Azure. Para obtener más información, vea el artículo [instalar el módulo Azure PowerShell](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.8.0).
 - Compruebe que el archivo de PowerShell **SkuRecommendationDataCollectionScript.ps1**, que es necesario para recopilar los contadores de rendimiento, se instala en la carpeta DMA.

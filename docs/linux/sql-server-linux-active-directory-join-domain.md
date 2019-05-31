@@ -10,12 +10,12 @@ manager: craigg
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6ccc94acb42fa7043912099c4888834cf4ff3e71
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 758915364784f34b638af0e874873a417662d710
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59243589"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413341"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Únase a SQL Server en un host Linux a un dominio de Active Directory
 
@@ -139,7 +139,7 @@ Este método une a un dominio de AD mediante el host de SQL Server **realmd** y 
 
 Realice los pasos siguientes para unir un host de SQL Server a un dominio de Active Directory:
 
-1. Use [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join.md) para unir el equipo host a su dominio de AD. En primer lugar debe instalar tanto el **realmd** y paquetes de cliente de Kerberos en el equipo host de SQL Server mediante el Administrador de paquetes de su distribución de Linux:
+1. Use [realmd](https://www.freedesktop.org/software/realmd/docs/guide-active-directory-join) para unir el equipo host a su dominio de AD. En primer lugar debe instalar tanto el **realmd** y paquetes de cliente de Kerberos en el equipo host de SQL Server mediante el Administrador de paquetes de su distribución de Linux:
 
    **RHEL:**
 
@@ -179,7 +179,7 @@ Realice los pasos siguientes para unir un host de SQL Server a un dominio de Act
 
    SQL Server utiliza SSSD y NSS para asignar cuentas de usuario y grupos a los identificadores de seguridad (SID). SSSD debe estar configurado y en ejecución para SQL Server crear los inicios de sesión de AD correctamente. **realmd** normalmente lo hace automáticamente como parte de unirse al dominio, pero en algunos casos, debe hacerlo por separado.
 
-   Para obtener más información, vea cómo [configuración manual de SSSD](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
+   Para obtener más información, vea cómo [configuración manual de SSSD](https://access.redhat.com/articles/3023951), y [configurar NSS para trabajar con SSSD](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/7/html/system-level_authentication_guide/configuring_services#Configuration_Options-NSS_Configuration_Options).
 
 1. Compruebe que ahora puede recopilar información acerca de un usuario del dominio y que puede adquirir un vale de Kerberos como ese usuario. En el ejemplo siguiente se usa **id**, [kinit](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/kinit.html), y [klist](https://web.mit.edu/kerberos/krb5-1.12/doc/user/user_commands/klist.html) comandos para esto.
 

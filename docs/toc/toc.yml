@@ -16598,7 +16598,7 @@
                   href: ../t-sql/statements/alter-assembly-transact-sql.md
                 - name: ASYMMETRIC KEY
                   href: ../t-sql/statements/alter-asymmetric-key-transact-sql.md
-                - name: 'AUTHORIZATION '
+                - name: AUTHORIZATION
                   href: ../t-sql/statements/alter-authorization-transact-sql.md
                 - name: AVAILABILITY GROUP
                   href: ../t-sql/statements/alter-availability-group-transact-sql.md
@@ -16668,7 +16668,7 @@
                   href: ../t-sql/statements/alter-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: ../t-sql/statements/alter-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: ../t-sql/statements/alter-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: ../t-sql/statements/alter-remote-service-binding-transact-sql.md
@@ -16836,7 +16836,7 @@
                   href: ../t-sql/statements/create-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: ../t-sql/statements/create-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: ../t-sql/statements/create-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: ../t-sql/statements/create-remote-service-binding-transact-sql.md
@@ -16992,7 +16992,7 @@
                   href: ../t-sql/statements/drop-partition-scheme-transact-sql.md
                 - name: PROCEDURE
                   href: ../t-sql/statements/drop-procedure-transact-sql.md
-                - name: 'QUEUE '
+                - name: QUEUE
                   href: ../t-sql/statements/drop-queue-transact-sql.md
                 - name: REMOTE SERVICE BINDING
                   href: ../t-sql/statements/drop-remote-service-binding-transact-sql.md

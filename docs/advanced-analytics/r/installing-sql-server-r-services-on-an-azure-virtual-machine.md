@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c88d4929d40af2dc0e61d5d7261fddb3bac2e74d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 65c6afcf3f74e320237c1f345ad643752fde6ae0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62506027"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454760"
 ---
 # <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Instale SQL Server Machine Learning Services con R y Python en una máquina virtual de Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ Para habilitar el acceso desde clientes de ciencia de datos remoto:
 
 Si espera que los clientes que llamen al servidor deberá emitir consultas ODBC como parte de su soluciones de aprendizaje automático, debe asegurarse de que el Launchpad puede realizar llamadas ODBC en nombre del cliente remoto. 
 
-Para ello, debe permitir que las cuentas de trabajo SQL que usan Launchpad puedan iniciar sesión en la instancia. Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../security/add-sqlrusergroup-to-database.md).
+Para ello, debe permitir que las cuentas de trabajo SQL que usan Launchpad puedan iniciar sesión en la instancia. Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../security/create-a-login-for-sqlrusergroup.md).
 
 <a name="network"></a>
 

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: c9b1b4eca18a9d4d8d1819eee399676046cc9d78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: a53056f1f169224b222a07a062f6ddd88cb24b81
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62503845"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454671"
 ---
 # <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>Administrar e integrar las cargas de trabajo de machine learning en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -59,7 +59,7 @@ Las cuentas con privilegios mínimos se creó durante la instalación y se coloc
 Como un DBA, puede usar seguridad de datos de SQL Server para especificar quién tiene permiso para ejecutar scripts y que los datos utilizados en los trabajos se administran en los mismos roles de seguridad que controlan el acceso a través de consultas de Transact-SQL. Como administrador del sistema, puede denegar explícitamente **SQLRUserGroup** acceso a datos confidenciales en el servidor local mediante la creación de ACL.
 
 >[!NOTE]
-> De forma predeterminada, el **SQLRUserGroup** no tiene permisos o un inicio de sesión de SQL Server. Si las cuentas de trabajo requiere un inicio de sesión para el acceso a datos, debe crearla usted mismo. Es un escenario que requiere la creación de un inicio de sesión específicamente admitir las solicitudes de una secuencia de comandos en ejecución para las operaciones en la instancia del motor de base de datos, o datos cuando la identidad del usuario es un usuario de Windows y la cadena de conexión especifica un usuario de confianza. Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+> De forma predeterminada, el **SQLRUserGroup** no tiene permisos o un inicio de sesión de SQL Server. Si las cuentas de trabajo requiere un inicio de sesión para el acceso a datos, debe crearla usted mismo. Es un escenario que requiere la creación de un inicio de sesión específicamente admitir las solicitudes de una secuencia de comandos en ejecución para las operaciones en la instancia del motor de base de datos, o datos cuando la identidad del usuario es un usuario de Windows y la cadena de conexión especifica un usuario de confianza. Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="disable-script-execution"></a>Deshabilitar la ejecución del script
 

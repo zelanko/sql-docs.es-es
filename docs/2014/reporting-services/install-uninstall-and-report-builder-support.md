@@ -12,12 +12,12 @@ ms.assetid: 2c9a5814-17bf-4947-8fb3-6269e7caa416
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 084d90ad20dbd1955894f20524e6f040231f5ae9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: d35f6c7d77a43fe35ba78a88824309ffd72a5a44
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66108947"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454597"
 ---
 # <a name="install-uninstall-and-report-builder-support"></a>Instalar, desinstalar y asistencia del Generador de informes
   El Generador de informes es una herramienta de creación de informes que puede usar para crear, actualizar y compartir informes, elementos de informe y conjuntos de datos compartidos. El Generador de informes está disponible en dos versiones: independiente y [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)]. Usted mismo o un administrador pueden instalar la versión independiente en el equipo. La versión [!INCLUDE[ndptecclick](../includes/ndptecclick-md.md)] se instala automáticamente con [!INCLUDE[ssRSCurrent](../includes/ssrscurrent-md.md)] y se descarga en su equipo desde el Administrador de informes o un sitio de SharePoint integrado con [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)].  
@@ -152,7 +152,7 @@ ms.locfileid: "66108947"
   
  Sin embargo, con una configuración adicional el servidor de informes está disponible para los usuarios del Generador de informes. Puede agregar direcciones URL de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] a los sitios de confianza. De forma predeterminada, Internet Explorer 7.0 o posterior se ejecuta en modo protegido en Windows Vista, Windows Server 2008 y Windows 7. El modo protegido es una característica que impide que las solicitudes del explorador lleguen a los procesos de alto nivel que se ejecuten en el mismo equipo. Puede deshabilitar el modo protegido para las aplicaciones del servidor de informes agregándolas como sitios de confianza. Debe tener permiso de administrador para realizar esta modificación.  
   
- Para obtener más información acerca de cómo configurar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Reporting Services Configuration Manager &#40;SUPR&#41; ](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode) en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
+ Para obtener más información acerca de cómo configurar [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], consulte [Reporting Services Configuration Manager &#40;SUPR&#41; ](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode) en el [documentación de Reporting Services](https://go.microsoft.com/fwlink/?linkid=121312) en msdn.microsoft.com.  
   
   
 ##  <a name="SampleDatabases"></a> Bases de datos de ejemplo SQL Server  

@@ -11,12 +11,12 @@ manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 05/08/2019
-ms.openlocfilehash: ee445dcf1a427adc23c38c40430965712c52d4e9
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
-ms.locfileid: "65450028"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454726"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
@@ -101,7 +101,7 @@ ms.locfileid: "65450028"
 
 | Cambiar | Detalles |
 | :----- | :------ |
-| Agregar **módulo de administración de SQL Server** paquete de extensión. | Esto facilita instalar Extensiones relacionadas con la administración de SQL Server. Esto incluye:<br/>&bull; &nbsp; [Agente SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [Importación de SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
+| Agregar **módulo de administración de SQL Server** paquete de extensión. | Esto facilita instalar Extensiones relacionadas con la administración de SQL Server. Esto incluye:<br/>&bull; &nbsp; [Agente SQL Server](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [Importación de SQL Server](sql-server-import-extension.md?view=sql-server-2017) |
 | Se ha agregado el filtrado extendido de soporte técnico de evento en la extensión de Profiler. | &nbsp; |
 | Guardar agregado como característica XML que se puede guardar los resultados de T-SQL como XML. | &nbsp; |
 | Se ha agregado mejoras en el Asistente para aplicaciones de capa de datos. | &bull; &nbsp; Se ha agregado botón Generar script<br/>&bull; &nbsp; Vista agregada para proporcionar a las advertencias de posible pérdida de datos durante la implementación. |

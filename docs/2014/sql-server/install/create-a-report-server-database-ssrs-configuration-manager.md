@@ -14,12 +14,12 @@ ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 066f5607ed159b382b156f0d679382881444e9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66095906"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454676"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>Crear una base de datos del servidor de informes (Administrador de configuración de SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **de** usa dos bases de datos relacionales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar metadatos y objetos de servidor de informes. Una base de datos se utiliza para el almacenamiento principal y la otra para almacenar datos temporales. Las bases de datos se crean juntas y se enlazan mediante el nombre. Con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] predeterminada, las bases de datos se denominan `reportserver` y `reportservertempdb`. Colectivamente, ambas se conocen como "base de datos del servidor de informes" o "catálogo del servidor de informes".  
@@ -72,6 +72,6 @@ ms.locfileid: "66095906"
  Cuando cree una base de datos del servidor de informes, tenga en cuenta que no se pueden usar todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para hospedarla. Para obtener más información, vea la sección "Requisitos de edición de servidor de informes servidor base de datos" de [características compatibles con las ediciones de SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Administrador de configuración de Reporting Services &#40;SUPR&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Administrador de configuración de Reporting Services &#40;SUPR&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

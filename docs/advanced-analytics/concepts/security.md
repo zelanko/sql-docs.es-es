@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 5fd8850271ab4ebf7ac69ff32cfa0877394f1d89
-ms.sourcegitcommit: 33712a0587c1cdc90de6dada88d727f8623efd11
+ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53596576"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454541"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Información general de seguridad para el marco de extensibilidad en SQL Server Machine Learning Services
 
@@ -71,7 +71,7 @@ Por lo tanto, todos los scripts externos que se inician desde un cliente remoto 
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servicios que se usan en el procesamiento externo (Launchpad)
 
-El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**Launchpad de SQL Server (MSSSQLSERVER)**](extensibility-framework.md#launchpad).
+El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 El motor de base de datos, usa el servicio Launchpad de SQL Server para crear instancias de una sesión de R o Python como un proceso independiente. El proceso se ejecuta bajo una cuenta con pocos privilegios; distinto de SQL Server, Launchpad propio y la identidad del usuario en la que se ejecutó la consulta de host o el procedimiento almacenada. Ejecutar script en un proceso independiente, bajo cuenta con pocos privilegios, es la base del modelo de seguridad y aislamiento para R y Python en SQL Server.
 
@@ -111,7 +111,7 @@ De forma predeterminada, los miembros de **SQLRUserGroup** dispone de lectura y 
 
 Para proteger los recursos confidenciales en SQL Server, puede definir opcionalmente una lista de control de acceso (ACL) que se deniega el acceso a **SQLRUserGroup**. A la inversa, también puede conceder permisos a los recursos de datos local que existen en el equipo host, además del propio SQL Server. 
 
-Por diseño, **SQLRUserGroup** no tiene permisos para todos los datos o un inicio de sesión de base de datos. En determinadas circunstancias, es posible que desea crear un inicio de sesión para permitir conexiones de retroceso de bucle, especialmente cuando una identidad de Windows de confianza es el usuario que realiza la llamada. Esta funcionalidad se denomina [ *autenticación implícita*](#implied-authentication). Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+Por diseño, **SQLRUserGroup** no tiene permisos para todos los datos o un inicio de sesión de base de datos. En determinadas circunstancias, es posible que desea crear un inicio de sesión para permitir conexiones de retroceso de bucle, especialmente cuando una identidad de Windows de confianza es el usuario que realiza la llamada. Esta funcionalidad se denomina [ *autenticación implícita*](#implied-authentication). Para obtener más información, consulte [agregar SQLRUserGroup como un usuario de base de datos](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 ## <a name="identity-mapping"></a>Asignación de identidades
 
@@ -127,7 +127,7 @@ Durante la ejecución, Launchpad crea las carpetas temporales para almacenar dat
 
 Las conexiones de confianza son factibles desde un script de R y Python, pero solo con una configuración adicional. En la arquitectura de extensibilidad, los procesos de R y Python se ejecutan en cuentas de trabajo, hereda los permisos del elemento primario **SQLRUserGroup**. Cuando se especifica una cadena de conexión `Trusted_Connection=True`, la identidad de la cuenta de trabajo se presenta en la solicitud de conexión, que se conoce de forma predeterminada para SQL Server.
 
-Para facilitar las conexiones de confianza correcta, se debe crear un inicio de sesión de base de datos para el **SQLRUserGroup**. Una vez hecho esto, cualquier conexión de cualquier miembro de confianza **SQLRUserGroup** tiene derechos de inicio de sesión para SQL Server. Para obtener instrucciones detalladas, consulte [agregar SQLRUserGroup para un inicio de sesión de base de datos](../../advanced-analytics/security/add-sqlrusergroup-to-database.md).
+Para facilitar las conexiones de confianza correcta, se debe crear un inicio de sesión de base de datos para el **SQLRUserGroup**. Una vez hecho esto, cualquier conexión de cualquier miembro de confianza **SQLRUserGroup** tiene derechos de inicio de sesión para SQL Server. Para obtener instrucciones detalladas, consulte [agregar SQLRUserGroup para un inicio de sesión de base de datos](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md).
 
 Las conexiones de confianza no son la formulación de una solicitud de conexión utilizada más comúnmente. Cuando el script de R o Python especifica una conexión, puede ser más habitual utilizar un inicio de sesión SQL, o un nombre de usuario completamente especificada y una contraseña si la conexión es a un origen de datos ODBC.
 
@@ -153,4 +153,4 @@ En el caso de [Always Encrypted](../../relational-databases/security/encryption/
 
 En este artículo, ha aprendido los componentes y modelo de interacción de la arquitectura de seguridad integradas en el [marco de extensibilidad](../../advanced-analytics/concepts/extensibility-framework.md). Puntos clave tratados en este artículo incluyen el propósito de las cuentas de Launchpad, SQLRUserGroup y de trabajo, el aislamiento de procesos de R y Python, y cómo se asignan las identidades de usuario a las cuentas de trabajo. 
 
-Como paso siguiente, revise las instrucciones para [conceder permisos](../../advanced-analytics/security/user-permission.md). Para los servidores que usan la autenticación de Windows, también debe revisar [agregar SQLRUserGroup para un inicio de sesión de base de datos](../../advanced-analytics/security/add-sqlrusergroup-to-database.md) para obtener información sobre cuándo se requiere configuración adicional.
+Como paso siguiente, revise las instrucciones para [conceder permisos](../../advanced-analytics/security/user-permission.md). Para los servidores que usan la autenticación de Windows, también debe revisar [agregar SQLRUserGroup para un inicio de sesión de base de datos](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md) para obtener información sobre cuándo se requiere configuración adicional.

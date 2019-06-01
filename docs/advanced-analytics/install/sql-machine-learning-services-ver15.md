@@ -9,12 +9,12 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3d549bdc96e09ed0b9b0235ada51274201f1b91a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 43d427129cae773fc17a0d73f57a26144b7cd09f
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994222"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454518"
 ---
 # <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>Diferencias en la instalación de SQL Server Machine Learning Services en SQL Server 2019  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -53,7 +53,7 @@ Al igual que con versiones anteriores, el **SQLRUserGroup** continúa proporcion
 
 ## <a name="implied-authentication"></a>Autenticación implícita
 
-Como antes, sigue siendo necesaria para una configuración adicional *autenticación implícita* en casos donde tiene un script o código para conectarse a SQL Server mediante autenticación de confianza para recuperar datos o recursos. La configuración adicional implica la creación de un inicio de sesión de base de datos para **SQLRUserGroup**, cuyo único miembro ahora es la única cuenta de servicio Launchpad de SQL Server en lugar de varias cuentas de trabajo. Para obtener más información acerca de esta tarea, vea [agregar SQLRUserGroup como un usuario de base de datos](../security/add-sqlrusergroup-to-database.md).
+Como antes, sigue siendo necesaria para una configuración adicional *autenticación implícita* en casos donde tiene un script o código para conectarse a SQL Server mediante autenticación de confianza para recuperar datos o recursos. La configuración adicional implica la creación de un inicio de sesión de base de datos para **SQLRUserGroup**, cuyo único miembro ahora es la única cuenta de servicio Launchpad de SQL Server en lugar de varias cuentas de trabajo. Para obtener más información acerca de esta tarea, vea [agregar SQLRUserGroup como un usuario de base de datos](../security/create-a-login-for-sqlrusergroup.md).
 
 
 ## <a name="symbolic-link-created-by-setup"></a>Vínculo simbólico creado por el programa de instalación

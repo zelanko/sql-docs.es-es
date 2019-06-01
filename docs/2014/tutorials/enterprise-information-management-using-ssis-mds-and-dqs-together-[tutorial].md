@@ -10,12 +10,12 @@ ms.assetid: ba09b504-3007-4cb7-8ef8-f01adbf51646
 author: lrtoyou1223
 ms.author: lle
 manager: craigg
-ms.openlocfilehash: 8a9b7c9f241bdf63679db85d7408e696c6f55599
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.openlocfilehash: 61773674412a8b4bdd8b5fa2f8b207de66254dcc
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65489727"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429037"
 ---
 # <a name="enterprise-information-management-using-ssis-mds-and-dqs-together-tutorial"></a>Administración de información empresarial mediante SSIS, MDS y DQS [Tutorial]
   La administración de información en una empresa suele implicar la integración de datos procedentes de la empresa y externos, la limpieza de datos, la búsqueda de coincidencias en los datos para quitar duplicados, la normalización de los datos, el enriquecimiento de los datos, hacer que los datos cumplan los requisitos legales y de cumplimiento, y su almacenamiento posterior en una ubicación centralizada con todas las configuraciones de seguridad necesarias.  
@@ -62,9 +62,9 @@ ms.locfileid: "65489727"
   
 5.  Instalar **complemento Master Data Services para Excel** (32 bits o 64 bits basado en la versión de Excel que tiene en su equipo) desde [aquí](https://www.microsoft.com/download/details.aspx?id=29064). Para averiguar la versión de Excel instalado en el equipo, ejecute **Excel**, haga clic en **archivo** en la barra de menús y haga clic en **ayuda** para ver la versión en el panel derecho. Tenga en cuenta que deberá instalar Visual Studio 2010 Tools para Office Runtime antes de instalar el complemento de Excel.  
   
-6.  (Opcional) Cree una cuenta con [Windows Azure Marketplace](https://datamarket.azure.com/). Una de las tareas del tutorial requiere que tenga un **Azure Marketplace** (denominado originalmente **Data Market**) cuenta. Puede omitir esta tarea si lo desea y continuar con la tarea siguiente.  
+6.  (Opcional) Cree una cuenta con [Windows Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/). Una de las tareas del tutorial requiere que tenga un **Azure Marketplace** (denominado originalmente **Data Market**) cuenta. Puede omitir esta tarea si lo desea y continuar con la tarea siguiente.  
   
-7.  Descargue el archivo Suppliers.xls desde [Microsoft Download Center](https://go.microsoft.com/fwlink/?LinkId=271504).  
+7.  Descargue el archivo Suppliers.xls desde [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=50426).  
   
 8.  DQS no permite exportar la limpieza o coincidencia de los resultados a un archivo de Excel si está utilizando **versión de 64 bits de Excel**. Se trata de un problema conocido. Para solucionar temporalmente este problema, haga lo siguiente:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "65489727"
 |Lección|Descripción breve|Tiempo estimado para completarla (en minutos).|  
 |------------|-----------------------|------------------------------------------------|  
 |[Lección 1: Creación de la Base de conocimiento DQS proveedores](../../2014/tutorials/lesson-1-creating-the-suppliers-dqs-knowledge-base.md)|En esta lección, creará una base de conocimiento DQS denominada **proveedores**.|60|  
-|[Lección 2: Limpieza de datos de proveedor con la Base de conocimiento proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|En esta lección, puede crear y ejecutar un proyecto de DQS para limpiar los datos de proveedor en un archivo de Excel mediante el **proveedores** Base de conocimiento que creó en la primera lección.|45|  
+|[Lección 2: Limpieza de datos de proveedor con la Base de conocimiento proveedores](../../2014/tutorials/lesson-2-cleansing-supplier-data-using-the-suppliers-knowledge-base.md)|En esta lección, puede crear y ejecutar un proyecto de DQS para limpiar los datos de proveedor en un archivo de Excel mediante el **proveedores** Base de conocimiento que creó en la primera lección.|45|  
 |[Lección 3: Buscar datos coincidentes para quitar duplicados de lista de proveedores](../../2014/tutorials/lesson-3-matching-data-to-remove-duplicates-from-supplier-list.md)|En esta lección, creará un proyecto de DQS para realizar la actividad de coincidencia con el fin de identificar y quitar duplicados de la lista limpia de proveedores.|45|  
 |[Lección 4: Almacenar datos de proveedor en MDS](../../2014/tutorials/lesson-4-storing-supplier-data-in-mds.md)|En esta lección, cargará los datos de proveedor limpios y coincidentes a Master Data Services (MDS) mediante el uso de la **complemento MDS para Excel**.|45|  
 |[Lección 5: Automatizar la limpieza y búsqueda de coincidencias con SSIS](../../2014/tutorials/lesson-5-automating-the-cleansing-and-matching-using-ssis.md)|En esta lección, creará una solución de SSIS que limpia los datos de entrada con DQS, busca coincidencias en los datos limpios para quitar duplicados, y almacena los datos limpios y coincidentes en MDS de forma automatizada.|75|  

@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_query_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/18/2018
+ms.date: 05/30/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 04d221372a0d91ed45ba339c1077ea1be68542df
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 821eaa4b7c54d8d2f449b2b071582480ac806378
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072359"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429029"
 ---
 # <a name="sysdmexecquerystats-transact-sql"></a>sys.dm_exec_query_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -118,7 +118,10 @@ Devuelve estadísticas de rendimiento de agregado para planes de consulta en cac
 |**min_spills**|**bigint**|El número mínimo de páginas que esta consulta nunca se ha transferido durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|El número máximo de páginas que esta consulta nunca se ha transferido durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 y [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**pdw_node_id**|**int**|El identificador para el nodo en esta distribución.<br /><br /> **Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]| 
-
+|**total_page_server_reads**|**bigint**|Número total de lecturas de página remota servidor realizadas por las ejecuciones de este plan desde que se compiló.<br /><br /> **Se aplica a:** Base de datos de SQL Azure a gran escala |  
+|**last_page_server_reads**|**bigint**|Número de lecturas de página remota server realizadas la última vez que se ejecutó el plan.<br /><br /> **Se aplica a:** Base de datos de SQL Azure a gran escala |  
+|**min_page_server_reads**|**bigint**|Número mínimo de servidor remoto página lee que este plan ha realizado durante una ejecución.<br /><br /> **Se aplica a:** Base de datos de SQL Azure a gran escala |  
+|**max_page_server_reads**|**bigint**|Número máximo de servidor remoto página lee que este plan ha realizado durante una ejecución.<br /><br /> **Se aplica a:** Base de datos de SQL Azure a gran escala |  
 > [!NOTE]
 > <sup>1</sup> para los procedimientos almacenados compilados de forma nativa cuando se habilita la recopilación de estadísticas, tiempo de trabajo se recopila en milisegundos. Si la consulta se ejecuta en menos de un milisegundo, el valor será 0.  
   

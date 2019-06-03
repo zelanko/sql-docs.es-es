@@ -228,6 +228,8 @@
       href: ../integration-services/control-flow/azure-hdinsight-pig-task.md
     - name: Tarea de carga de Azure SQL DW
       href: ../integration-services/control-flow/azure-sql-dw-upload-task.md
+    - name: Tarea de archivo flexible
+      href: ../integration-services/control-flow/flexible-file-task.md
     - name: Tarea Copia de seguridad de la base de datos
       href: ../integration-services/control-flow/back-up-database-task.md
     - name: 'Inserción masiva, tarea'
@@ -406,6 +408,10 @@
   href: ../integration-services/data-flow/azure-data-lake-store-source.md
 - name: Destino de Azure Data Lake Store
   href: ../integration-services/data-flow/azure-data-lake-store-destination.md
+- name: Origen de archivo flexible
+  href: ../integration-services/data-flow/flexible-file-source.md
+- name: Destino de archivo flexible
+  href: ../integration-services/data-flow/flexible-file-destination.md
 - name: Componentes del flujo de CDC
   href: ../integration-services/data-flow/cdc-flow-components.md
   items:

@@ -21,12 +21,12 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 64235b77ea2e1cf2f2c4c8d8240f34ad2e8eab8b
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 0cb7587cd88dd2d6c3915482f0741cf048dfda06
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65090042"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428882"
 ---
 # <a name="create-workload-classifier-transact-sql"></a>CREATE WORKLOAD CLASSIFIER (Transact-SQL)
 
@@ -52,7 +52,7 @@ WITH
  *classifier_name*  
  Especifica el nombre por el que se identifica el clasificador de carga de trabajo.  "classifier_name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser único en la instancia.
 
-WORKLOAD_GROUP = *"name"*: si se cumplen las condiciones en las reglas de clasificador, "name" asigna la solicitud a un grupo de cargas de trabajo.  "name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser un nombre de grupo de cargas de trabajo válido en el momento de crear el clasificador.
+WORKLOAD_GROUP = *"name"* : si se cumplen las condiciones en las reglas de clasificador, "name" asigna la solicitud a un grupo de cargas de trabajo.  "name" es un elemento "sysname".  Puede tener hasta 128 caracteres y debe ser un nombre de grupo de cargas de trabajo válido en el momento de crear el clasificador.
 
 WORKLOAD_GROUP debe asignarse a una clase de recursos existente:
 
@@ -67,7 +67,7 @@ WORKLOAD_GROUP debe asignarse a una clase de recursos existente:
 |staticrc70||
 |staticrc80||
 
-MEMBERNAME = *"security_account"*: se trata de la cuenta de seguridad que se va a agregar al rol.  "Security_account" es un elemento "sysname" y no tiene ningún valor predeterminado. "Security_account" puede ser un usuario o un rol de base de datos, el inicio de sesión de Azure Active Directory o un grupo de Azure Active Directory.
+MEMBERNAME = *"security_account"* : se trata de la cuenta de seguridad que se va a agregar al rol.  "Security_account" es un elemento "sysname" y no tiene ningún valor predeterminado. "Security_account" puede ser un usuario o un rol de base de datos, el inicio de sesión de Azure Active Directory o un grupo de Azure Active Directory.
 
 IMPORTANCE = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH } especifica la importancia relativa de una solicitud.  IMPORTANCE puede ser es uno de los siguientes valores:
 
@@ -101,4 +101,4 @@ CREATE WORKLOAD CLASSIFIER wgcELTRole
 [DROP WORKLOAD CLASSIFIER (Transact-SQL)](../../t-sql/statements/drop-workload-classifier-transact-sql.md)</br>
 Vista de catálogo [sys.workload_management_workload_classifier_details](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)</br>
 Vista de catálogo [sys.workload_management_workload_classifiers](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
-[Clasificación de SQL Data Warehouse](/azure/sql-data-warehouse/classification)
+[Clasificación de SQL Data Warehouse](/azure/sql-data-warehouse/sql-data-warehouse-workload-classification)

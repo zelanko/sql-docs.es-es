@@ -11,12 +11,12 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 04c7d8564b739bd593b84c3925e3d7491a1bbca8
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: 3139f841d1ef7c75decbc5a3dbab34fb333d289c
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198070"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66428993"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>Notas de la versión de SQL Server Management Studio (SSMS)
 
@@ -100,7 +100,7 @@ La versión de disponibilidad general (GA) de SSMS 18.0 está disponible. Si nec
 |Clasificación de datos|Se ha agregado la nueva característica "Clasificación de datos" a SMO. El objeto de columna expone propiedades nuevas: SensitivityLabelName, SensitivityLabelId, SensitivityInformationTypeName, SensitivityInformationTypeId e IsClassified (de solo lectura). Para obtener más información, consulte [ADD SENSITIVITY CLASSIFICATION (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/add-sensitivity-classification-transact-sql) |
 |Clasificación de datos|Se ha agregado el elemento de menú "Informe de clasificación" al control flotante "Clasificación de datos".|
 |Clasificación de datos| Recomendaciones actualizadas.|
-|Actualización del nivel de compatibilidad de la base de datos|Se ha agregado una opción nueva en **<Database name>** > **Tareas** > **Actualizar base de datos**. Esta opción iniciará el nuevo **Asistente para la optimización de consultas (QTA)** que guía a los usuarios a través de los procesos siguientes:<br>Recopilación de una línea de base de rendimiento antes de actualizar el nivel de compatibilidad de la base de datos.<br>Actualización al nivel de compatibilidad de la base de datos deseado.<br>Recopilación de un segundo paso de datos de rendimiento a través de la misma carga de trabajo.<br>Detección de regresiones de carga de trabajo y proporcionar recomendaciones comprobadas para mejorar el rendimiento de la carga de trabajo.<br>Esto es similar al proceso de actualización de base de datos documentado en [escenarios de uso del almacén de consultas](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), excepto el último paso donde QTA no se basa en un estado correcto conocido previamente para generar las recomendaciones.|
+|Actualización del nivel de compatibilidad de la base de datos|Se ha agregado una opción nueva en **<Database name>**  > **Tareas** > **Actualizar base de datos**. Esta opción iniciará el nuevo **Asistente para la optimización de consultas (QTA)** que guía a los usuarios a través de los procesos siguientes:<br>Recopilación de una línea de base de rendimiento antes de actualizar el nivel de compatibilidad de la base de datos.<br>Actualización al nivel de compatibilidad de la base de datos deseado.<br>Recopilación de un segundo paso de datos de rendimiento a través de la misma carga de trabajo.<br>Detección de regresiones de carga de trabajo y proporcionar recomendaciones comprobadas para mejorar el rendimiento de la carga de trabajo.<br>Esto es similar al proceso de actualización de base de datos documentado en [escenarios de uso del almacén de consultas](https://docs.microsoft.com/sql/relational-databases/performance/query-store-usage-scenarios#CEUpgrade), excepto el último paso donde QTA no se basa en un estado correcto conocido previamente para generar las recomendaciones.|
 |Asistente para aplicaciones de capa de datos|Se ha agregado compatibilidad para importar o exportar la aplicación de capa de datos con tablas de grafos.|
 |Asistente para la importación de archivos planos|Se ha agregado lógica para notificar al usuario que una importación puede haber producido un cambio de nombre de las columnas.|
 |Integration Services (SSIS)|Se ha agregado compatibilidad para permitir que los clientes programen paquetes SSIS en los Azure-SSIS IR que están en la nube de Azure Government.|
@@ -231,7 +231,7 @@ La versión de disponibilidad general (GA) de SSMS 18.0 está disponible. Si nec
 |Explorador de objetos|Se ha extendido la lógica para solicitar confirmación al cambiar el nombre de una base de datos a todos los objetos de esquema (se puede configurar el valor).|
 |Explorador de objetos|Se han agregado secuencias de escape adecuadas en el filtrado del Explorador de objetos. Para obtener información detallada, consulte https://feedback.azure.com/forums/908035/suggestions/36678803. |
 |Explorador de objetos|Se ha corregido y mejorado la vista de detalles del Explorador de objetos para mostrar los números con separadores adecuados. Para obtener información detallada, consulte https://feedback.azure.com/forums/908035/suggestions/32900944. |
-|Explorador de objetos|Se ha corregido el menú contextual en el nodo de "Tablas" cuando se conecta a SQL Express, que provocaba que faltara el control flotante "Nuevo", las tablas de grafos se mostraran de forma incorrecta y faltara la tabla con versiones del sistema. Para obtener información detallada, consulte https://feedback.azure.com/forums/908035/suggestions/37245529.|
+|Explorador de objetos|Se ha corregido el menú contextual en el nodo de "Tablas" cuando se conecta a SQL Express, que provocaba que faltara el control flotante "Nuevo", las tablas de grafos se mostraran de forma incorrecta y faltara la tabla con versiones del sistema. Para obtener información detallada, consulte https://feedback.azure.com/forums/908035/suggestions/37245529. |
 |Scripting de objetos|Mejoras de rendimiento general: se tarda la mitad de tiempo en generar scripts de WideWorldImporters en comparación con SSMS 17.7.|
 |Scripting de objetos|Al crear objetos de scripting, se omite la configuración de DB Scoped que tiene valores predeterminados.|
 |Scripting de objetos|No se genera T-SQL dinámico al crear un scripting. Vea https://feedback.azure.com/forums/908035-sql-server/suggestions/32898391. |
@@ -475,7 +475,7 @@ Always Encrypted:
 
 ### <a name="known-issues"></a>Problemas conocidos
 
-- Al hacer clic en el botón *Script* después de modificar cualquier propiedad de grupo de archivos en la ventana *Propiedades*, se generan dos scripts: uno con una instrucción *USE <database>* y un segundo script con una instrucción *USE master*.  El script *USE master* se genera en el error y se debe descartar. Ejecute el script que contiene la instrucción *USE <database>*.
+- Al hacer clic en el botón *Script* después de modificar cualquier propiedad de grupo de archivos en la ventana *Propiedades*, se generan dos scripts: uno con una instrucción *USE <database>* y un segundo script con una instrucción *USE master*.  El script *USE master* se genera en el error y se debe descartar. Ejecute el script que contiene la instrucción *USE <database>* .
 - Algunos cuadros de diálogo muestran un error de edición no válida cuando se trabaja con nuevas ediciones de Azure SQL Database *de uso general* o *crítico para la empresa*.
 - Se puede observar alguna latencia en el visor de XEvents. Es un [problema conocido de .Net Framework](https://github.com/Microsoft/dotnet/blob/master/releases/net472/dotnet472-changes.md#sql). Considere la posibilidad de actualizar a NetFx 4.7.2.
 
@@ -954,7 +954,7 @@ The connection is broken and recovery is not possible. The client driver attempt
   - El diseñador **Nueva tabla o vista** muestra el aviso de inicio de sesión antiguo y no funciona para la autenticación de Azure AD.
   - La característica **Editar las primeras 200 filas** no es compatible con la autenticación de Azure AD.
   - El componente **Servidor registrado** no es compatible con la autenticación de Azure AD.
-  - El **Asistente para la optimización de motor de base de datos** no es compatible con la autenticación de Azure AD. Hay un problema conocido por el que el mensaje de error que se presenta al usuario no es útil: *No se puede cargar el archivo o ensamblado "Microsoft.IdentityModel.Clients.ActiveDirectory,...* en lugar del esperado *El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)*.
+  - El **Asistente para la optimización de motor de base de datos** no es compatible con la autenticación de Azure AD. Hay un problema conocido por el que el mensaje de error que se presenta al usuario no es útil: *No se puede cargar el archivo o ensamblado "Microsoft.IdentityModel.Clients.ActiveDirectory,...* en lugar del esperado *El Asistente para la optimización de motor de base de datos no admite Microsoft Azure SQL Database. (DTAClient)* .
 
 **Analysis Services (AS)**
 

@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
 manager: craigg
-ms.openlocfilehash: 24768e1b230631009d94a1c449f08164157ed481
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 72f31c6f27590a9b44c0766c5379e90f9666d1a0
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65718421"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454579"
 ---
 # <a name="scale-out-support-for-high-availability"></a>Compatibilidad con la escalabilidad horizontal para una alta disponibilidad
 
@@ -68,11 +68,11 @@ Siga las instrucciones para configurar la compatibilidad con SSISDB para AlwaysO
 Además, tendrá que crear un agente de escucha de grupo de disponibilidad para el grupo de disponibilidad en el que agregue SSISDB. Consulte [Create or Configure an Availability Group Listener](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md) (Crear o configurar un agente de escucha de grupo de disponibilidad).
 
 ## <a name="5-update-the-scale-out-master-service-configuration-file"></a>5. Actualizar el archivo de configuración del servicio de patrón de escalabilidad horizontal
-Actualice el archivo de configuración del Servicio principal de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, tanto en el nodo principal como en los secundarios. Actualice **SqlServerName** a *[Nombre DNS del agente de escucha de grupo de disponibilidad],[Puerto]*.
+Actualice el archivo de configuración del Servicio principal de escalabilidad horizontal, `\<drive\>:\Program Files\Microsoft SQL Server\140\DTS\Binn\MasterSettings.config`, tanto en el nodo principal como en los secundarios. Actualice **SqlServerName** a *[Nombre DNS del agente de escucha de grupo de disponibilidad],[Puerto]* .
 
 ## <a name="6-enable-package-execution-logging"></a>6. Habilitar el registro de la ejecución de paquetes
 
-El registro en SSISDB se realiza mediante el inicio de sesión **##MS_SSISLogDBWorkerAgentLogin##**, cuya contraseña se genera automáticamente. Para que el registro funcione para todas las réplicas de SSISDB, haga lo siguiente:
+El registro en SSISDB se realiza mediante el inicio de sesión **##MS_SSISLogDBWorkerAgentLogin##** , cuya contraseña se genera automáticamente. Para que el registro funcione para todas las réplicas de SSISDB, haga lo siguiente:
 
 ### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1. Cambio de la contraseña de **##MS_SSISLogDBWorkerAgentLogin##** en la instancia de SQL Server principal
 
@@ -99,7 +99,7 @@ Llame al procedimiento almacenado `[catalog].[update_logdb_info]` con los siguie
 
 En máquinas virtuales de Azure, este paso de configuración requiere pasos adicionales. Una explicación completa de estos conceptos y pasos queda fuera del ámbito de este artículo.
 
-1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/azure/active-directory-domain-services/active-directory-ds-getting-started).
+1.  Tendrá que configurar un dominio de Azure. Los clústeres de conmutación por error de Windows Server requieren que todos los equipos del clúster sean miembros del mismo dominio. Para obtener más información, vea [Habilitación de Azure Active Directory Domain Services mediante Azure Portal](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance).
 
 2. Tendrá que configurar un equilibrador de carga de Azure. Es un requisito para la escucha de grupo de disponibilidad. Para más información, vea [Tutorial: equilibrar la carga de tráfico interno de las máquinas virtuales con Load Balancer Básico mediante Azure Portal](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal).
 

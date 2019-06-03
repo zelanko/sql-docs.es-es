@@ -14,12 +14,12 @@ ms.assetid: 8f625d5a-763c-4440-97b8-4b823a6e2439
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ad8f8aca9577023d3170fc0c1b6e7e4099129a90
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 850f0bac65f0c8955c50514145fb0d2998d6139a
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872315"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413613"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2016"></a>Novedades de Motor de base de datos de Microsoft SQL Server 2016
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ Si quiere revisar las novedades de los otros componentes de SQL Server, vea [Nov
 
 #### <a name="try-it-out"></a>Pruébelo
 
-- Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**![descargar](../analysis-services/media/download.png "descargar").
+- Para descargar [!INCLUDE[ssSQL15](../includes/sssql15-md.md)], vaya al **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** ![descargar](../analysis-services/media/download.png "descargar").
 
 - ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] ya instalado.
 
@@ -444,7 +444,7 @@ Descargar la versión más reciente de [SQL Server Management Studio (SSMS)](../
 ### <a name="upgrade-advisor"></a>Asesor de actualizaciones
 La vista previa del Asesor de actualizaciones de SQL Server 2016 es una herramienta independiente que permite que los usuarios de versiones anteriores ejecuten un conjunto de reglas de actualización en su base de datos SQL Server para identificar los cambios principales y de comportamiento y las características en desuso, además de prestar ayuda para la adopción de características nuevas, como Stretch Database.
 
- Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://www.microsoft.com/download/details.aspx?id=48119) o puede instalarla con el Instalador de plataforma web.
+ Puede descargar la vista previa del Asesor de actualizaciones [aquí](https://docs.microsoft.com/sql/sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades#how-to-install-and-run-upgrade-advisor) o puede instalarla con el Instalador de plataforma web.
 
 ## <a name="see-also"></a>Consulte también
 [Novedades de SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md)

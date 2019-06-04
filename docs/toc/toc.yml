@@ -1,5 +1,7 @@
 - name: información general
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+- name: Versiones anteriores 2014-2005
+  href: ../toc/previous-versions-sql-server.md
 - name: Información general
   items:
     - name: Novedades de SQL Server
@@ -7951,47 +7953,47 @@
               href: ../relational-databases/security/authentication-access/create-a-credential.md
         - name: Cifrado
           items:
-            - name: Selección de un algoritmo
-              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: Solución de problemas de TDE
               href: ../relational-databases/security/encryption/troubleshoot-tde.md
-            - name: Configuración de Always Encrypted con enclaves seguros
-              href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+            - name: Configuración de Always Encrypted
               items:
-                - name: SQL Server Management Studio
+                - name: Configuración de Always Encrypted con enclaves seguros
+                  href: ../relational-databases/security/encryption/configure-always-encrypted-enclaves.md
+                - name: Configuración con SQL Server Management Studio
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md
-                - name: PowerShell
+                - name: Configuración con PowerShell
                   href: ../relational-databases/security/encryption/configure-always-encrypted-using-powershell.md
+                  items:
+                    - name: Configuración de claves de Always Encrypted
+                      href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
+                    - name: Giro de claves de Always Encrypted
+                      href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
+                    - name: Configurar el cifrado de columnas
+                      href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: Creación y almacenamiento de claves maestras de columnas
                   href: ../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md
-                - name: Configurar claves
-                  href: ../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md
-                - name: Rotación de claves
-                  href: ../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md
-                - name: Configurar el cifrado de columnas
-                  href: ../relational-databases/security/encryption/configure-column-encryption-using-powershell.md
                 - name: Migración de información confidencial
                   href: ../relational-databases/security/encryption/migrate-sensitive-data-protected-by-always-encrypted.md
                 - name: Desarrollo de aplicaciones con .NET Framework
                   href: ../relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
-                - name: Traslado de una base de datos protegida por TDE
-                  href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-                - name: Activación de TDE con EKM
-                  href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
-                - name: Copia de seguridad de la clave maestra de servicio
-                  href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
-                - name: Restauración de la clave maestra de servicio
-                  href: ../relational-databases/security/encryption/restore-the-service-master-key.md
-                - name: Creación de la clave maestra de una base de datos
-                  href: ../relational-databases/security/encryption/create-a-database-master-key.md
-                - name: Copia de seguridad de la clave maestra de base de datos
-                  href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
-                - name: Restauración de la clave maestra de base de datos
-                  href: ../relational-databases/security/encryption/restore-a-database-master-key.md
-                - name: Creación de claves simétricas idénticas en dos servidores
-                  href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
-                - name: Cifrado de una columna de datos
-                  href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
+            - name: Traslado de una base de datos protegida por TDE
+              href: ../relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
+            - name: Activación de TDE con EKM
+              href: ../relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: Copia de seguridad de la clave maestra de servicio
+              href: ../relational-databases/security/encryption/back-up-the-service-master-key.md
+            - name: Restauración de la clave maestra de servicio
+              href: ../relational-databases/security/encryption/restore-the-service-master-key.md
+            - name: Creación de la clave maestra de una base de datos
+              href: ../relational-databases/security/encryption/create-a-database-master-key.md
+            - name: Copia de seguridad de la clave maestra de base de datos
+              href: ../relational-databases/security/encryption/back-up-a-database-master-key.md
+            - name: Restauración de la clave maestra de base de datos
+              href: ../relational-databases/security/encryption/restore-a-database-master-key.md
+            - name: Creación de claves simétricas idénticas en dos servidores
+              href: ../relational-databases/security/encryption/create-identical-symmetric-keys-on-two-servers.md
+            - name: Cifrado de una columna de datos
+              href: ../relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Seguridad de Azure SQL Database
           items:
             - name: Conector de SQL Server con cifrado
@@ -8065,6 +8067,8 @@
         - name: Cifrado
           href: ../relational-databases/security/encryption/sql-server-encryption.md
           items:
+            - name: Selección de un algoritmo
+              href: ../relational-databases/security/encryption/choose-an-encryption-algorithm.md
             - name: Hierarchy
               href: ../relational-databases/security/encryption/encryption-hierarchy.md
             - name: Cifrado de datos transparente (TDE)
@@ -8088,8 +8092,6 @@
             - name: Claves de cifrado
               href: ../relational-databases/security/encryption/sql-server-and-database-encryption-keys-database-engine.md
               items:
-                - name: Clave maestra de servicio
-                  href: ../relational-databases/security/encryption/service-master-key.md
                 - name: Administración extensible de claves (EKM)
                   href: ../relational-databases/security/encryption/extensible-key-management-ekm.md
                 - name: EKM mediante Azure Key Vault
@@ -16533,7 +16535,7 @@
                   href: ../t-sql/queries/select-order-by-clause-transact-sql.md
                 - name: 'SELECT: cláusula OVER'
                   href: ../t-sql/queries/select-over-clause-transact-sql.md
-            - name: FROM
+            - name: 'FROM junto a JOIN, APPLY y PIVOT'
               href: ../t-sql/queries/from-transact-sql.md
               items:
                 - name: 'FROM: uso de PIVOT y UNPIVOT'

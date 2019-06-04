@@ -1,7 +1,7 @@
 ---
-title: Sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
+title: sys.dm_exec_trigger_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/10/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cfd6485955cbdee7bece7ae8ab18c5138a5529f3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 42fc6848b89c57e6bfab40f1af96013fc73271f6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403540"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462705"
 ---
 # <a name="sysdmexectriggerstats-transact-sql"></a>sys.dm_exec_trigger_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +39,8 @@ ms.locfileid: "52403540"
 |**object_id**|**int**|Número de identificación del objeto del desencadenador.|  
 |**Tipo**|**char(2)**|Tipo del objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
 |**Type_desc**|**nvarchar(60)**|Descripción del tipo de objeto:<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
-|**sql_handle**|**varbinary (64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
-|**plan_handle**|**varbinary (64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.|  
+|**sql_handle**|**varbinary(64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de este desencadenador.|  
+|**plan_handle**|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.|  
 |**cached_time**|**datetime**|Momento en que el desencadenador se agregó a la caché.|  
 |**last_execution_time**|**datetime**|Última vez que se ejecutó el desencadenador vez.|  
 |**execution_count**|**bigint**|El número de veces que el desencadenador se ha ejecutado desde que se compiló por última vez.|  
@@ -68,6 +68,11 @@ ms.locfileid: "52403540"
 |**last_spills**|**bigint**|El número de páginas transferidas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**min_spills**|**bigint**|El número mínimo de páginas que alguna vez ha transferido este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
 |**max_spills**|**bigint**|El número máximo de páginas que alguna vez ha transferido este desencadenador durante una ejecución.<br /><br /> **Se aplica a**: A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3|  
+|**total_page_server_reads**|**bigint**|El número total de lecturas de página servidor realizadas por las ejecuciones de este desencadenador desde que se compiló.<br /><br /> **Se aplica a**: Base de datos SQL Azure a gran escala|  
+|**last_page_server_reads**|**bigint**|El número de lecturas de páginas de servidor realizadas la última vez que se ejecutó el desencadenador.<br /><br /> **Se aplica a**: Base de datos SQL Azure a gran escala|  
+|**min_page_server_reads**|**bigint**|El número mínimo de servidor de la página se lee que este desencadenador ha realizado durante una ejecución.<br /><br /> **Se aplica a**: Base de datos SQL Azure a gran escala|  
+|**max_page_server_reads**|**bigint**|El número máximo de servidor de la página se lee que este desencadenador ha realizado durante una ejecución.<br /><br /> **Se aplica a**: Base de datos SQL Azure a gran escala|  
+
   
 ## <a name="remarks"></a>Comentarios  
  En [!INCLUDE[ssSDS](../../includes/sssds-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.  

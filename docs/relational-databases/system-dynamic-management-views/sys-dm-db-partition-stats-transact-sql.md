@@ -1,7 +1,7 @@
 ---
 title: sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/15/2017
+ms.date: 05/31/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0221361bb3b2bb33748b20353c71931e07568f3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 74e3de1c32cb1ca1833121b4de1cef4db66f9e49
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63025126"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462656"
 ---
 # <a name="sysdmdbpartitionstats-transact-sql"></a>sys.dm_db_partition_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -34,19 +34,19 @@ ms.locfileid: "63025126"
   Devuelve información de página y recuento de filas de cada partición en la base de datos actual.  
   
 > [!NOTE]  
->  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_db_partition_stats**.  
+>  Al llamarlo desde [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] o [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], use el nombre **sys.dm_pdw_nodes_db_partition_stats**. El partition_id en sys.dm_pdw_nodes_db_partition_stats difiere el partition_id en la vista de catálogo sys.partitions para Azure SQL Data Warehouse.
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**partition_id**|**bigint**|Id. de la partición. Es único en la base de datos. Este es el mismo valor que el **partition_id** en el **sys.partitions** vista de catálogo|  
+|**partition_id**|**bigint**|Id. de la partición. Es único en la base de datos. Este es el mismo valor que el **partition_id** en el **sys.partitions** vista excepto para Azure SQL Data Warehouse de catálogo.|  
 |**object_id**|**int**|Id. de objeto de la tabla o vista indizada de la que esta partición forma parte.|  
 |**index_id**|**int**|Id. del montón o índice del que esta partición forma parte.<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster.<br /><br /> > 1 = índice no clúster|  
 |**partition_number**|**int**|Número de partición en base 1 en el índice o montón.|  
 |**in_row_data_page_count**|**bigint**|Número de páginas en uso para almacenar datos consecutivos en esta partición. Si la partición forma parte de un montón, el valor es el número de páginas de datos en el montón. Si la partición forma parte de un índice, el valor es el número de páginas en el nivel hoja. (Las páginas no hoja del árbol B no se incluyen en el recuento). No se incluyen las páginas IAM (mapa de asignación de índice) en cualquier caso. Siempre es 0 para un índice de almacén de columnas optimizado de memoria xVelocity.|  
 |**in_row_used_page_count**|**bigint**|Número total de páginas en uso para almacenar y administrar datos consecutivos en esta partición. Este recuento incluye páginas no hoja de árbol B, las páginas IAM y todas las páginas incluidas en el **in_row_data_page_count** columna. Siempre es 0 para un índice de almacén de columnas.|  
 |**in_row_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar datos consecutivos en esta partición, independientemente de si las páginas están en uso o no. Siempre es 0 para un índice de almacén de columnas.|  
-|**lob_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar fuera de la fila **texto**, **ntext**, **imagen**, **varchar (max)**, **nvarchar (máx.)** , **varbinary (max)**, y **xml** columnas dentro de la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  
-|**lob_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar fuera de la fila **texto**, **ntext**, **imagen**, **varchar (max)**,  **nvarchar (max)**, **varbinary (max)**, y **xml** columnas dentro de la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs reservados para almacenar y administrar un índice de almacén de columnas en la partición.|  
+|**lob_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar fuera de la fila **texto**, **ntext**, **imagen**, **varchar (max)** , **nvarchar (máx.)** , **varbinary (max)** , y **xml** columnas dentro de la partición. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs utilizados para almacenar y administrar el índice de almacén de columnas en la partición.|  
+|**lob_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar fuera de la fila **texto**, **ntext**, **imagen**, **varchar (max)** ,  **nvarchar (max)** , **varbinary (max)** , y **xml** columnas dentro de la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Número total de LOBs reservados para almacenar y administrar un índice de almacén de columnas en la partición.|  
 |**row_overflow_used_page_count**|**bigint**|Número de páginas en uso para almacenar y administrar el desbordamiento de fila **varchar**, **nvarchar**, **varbinary**, y **sql_variant** columnas dentro de la partición. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
 |**row_overflow_reserved_page_count**|**bigint**|Número total de páginas reservadas para almacenar y administrar el desbordamiento de fila **varchar**, **nvarchar**, **varbinary**, y **sql_variant** columnas dentro de la partición, independientemente de si las páginas están en uso o no. Las páginas IAM están incluidas.<br /><br /> Siempre es 0 para un índice de almacén de columnas.|  
 |**used_page_count**|**bigint**|Número total de páginas usadas para la partición. Se calcula como **in_row_used_page_count** + **lob_used_page_count** + **row_overflow_used_page_count**.|  

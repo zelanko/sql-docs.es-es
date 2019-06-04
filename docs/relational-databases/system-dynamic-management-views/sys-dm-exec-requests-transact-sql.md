@@ -1,7 +1,7 @@
 ---
 title: sys.dm_exec_requests (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 12/17/2018
+ms.date: 06/03/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87be8cba02cac7f0ff6b1cd0fa966241745e5483
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072239"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462524"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -95,7 +95,8 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 |parallel_worker_count |**int** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
 |external_script_request_id |**uniqueidentifier** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El identificador de solicitud de script externo asociado con la solicitud actual. |  
 |is_resumable |**bit** |**Se aplica a**: desde [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Indica si la solicitud es una operación de índice reanudable. |  
-|page_resource |**binary(8)** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Una representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. |
+|page_resource |**binary(8)** |**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> Una representación hexadecimal de 8 bytes del recurso de página si la `wait_resource` columna contiene una página. |  
+|page_server_reads|**bigint**|**Se aplica a**: Base de datos SQL Azure a gran escala<br /><br /> Número de lecturas de página servidor realizadas por esta solicitud. No admite valores NULL.|  
 
 ## <a name="remarks"></a>Comentarios 
 Para ejecutar código situado fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (por ejemplo, en procedimientos almacenados extendidos y consultas distribuidas), se tiene que ejecutar un subproceso fuera del control del programador no preferente. Para hacerlo, un trabajador se cambia al modo preferente. Los valores de tiempo que devuelve esta vista de administración dinámica no incluyen el tiempo transcurrido en modo preferente.

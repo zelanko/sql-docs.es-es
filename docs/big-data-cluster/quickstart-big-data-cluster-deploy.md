@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 2c0e00ab14cad3d300a09ecc697b2468f1d7d4ce
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 5725b00d3925a9b2589884e1e2bf8e7200844e1d
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993395"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462796"
 ---
 # <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
@@ -87,7 +87,7 @@ Utilice los pasos siguientes para ejecutar el script de implementación. Este sc
    | **Controlador para el usuario** | Nombre de usuario para el usuario del controlador (predeterminado: **admin**). |
 
    > [!IMPORTANT]
-   > El valor predeterminado **Standard_L8s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistente. Por ejemplo, el [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#ls-series) tamaño de la máquina es compatible con 32 discos conectados, por lo que se pueden evaluar los clústeres de datos de gran tamaño con un solo nodo de este tamaño de la máquina.
+   > El valor predeterminado **Standard_L8s** tamaño de la máquina no estén disponible en todas las regiones de Azure. Si selecciona un tamaño de máquina diferentes, asegúrese de que el número total de discos que se puede conectar a través de los nodos del clúster es mayor o igual a 24. Cada notificación de volumen persistente en el clúster requiere un disco conectado. Actualmente, el clúster de macrodatos requiere 24 notificaciones de volumen persistente. Por ejemplo, el [Standard_L8s](https://docs.microsoft.com/azure/virtual-machines/windows/sizes-storage#lsv2-series) tamaño de la máquina es compatible con 32 discos conectados, por lo que se pueden evaluar los clústeres de datos de gran tamaño con un solo nodo de este tamaño de la máquina.
 
    > [!NOTE]
    > El `sa` cuenta es un administrador del sistema en la instancia principal de SQL Server que se crea durante la instalación. Después de crear la implementación, el `MSSQL_SA_PASSWORD` variable de entorno es reconocible ejecutando `echo $MSSQL_SA_PASSWORD` en el contenedor de la instancia maestra. Por motivos de seguridad, cambiar su `sa` contraseña en la instancia principal después de la implementación. Para obtener más información, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).

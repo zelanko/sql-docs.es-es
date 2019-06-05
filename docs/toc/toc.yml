@@ -6374,6 +6374,15 @@
                   href: ../relational-databases/database-mail/create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs.md
                 - name: Comprobar el estado de los mensajes de correo electrónico enviados con Correo electrónico de base de datos
                   href: ../relational-databases/database-mail/check-the-status-of-e-mail-messages-sent-with-database-mail.md
+            - name: Solucionar problemas
+              href: ../relational-databases/database-mail/database-mail-general-troubleshooting.md
+              items:
+                - name: Envío de correo electrónico de prueba
+                  href: ../relational-databases/database-mail/database-mail-sending-test-email.md
+                - name: Errores comunes
+                  href: ../relational-databases/database-mail/database-mail-common-errors.md
+                - name: 'Correo en cola, no entregado'
+                  href: ../relational-databases/database-mail/database-mail-mail-queued-not-delivered.md
         - name: Compresión de datos
           href: ../relational-databases/data-compression/data-compression.md
           items:
@@ -8023,6 +8032,8 @@
           items:
             - name: Inyección de código SQL
               href: ../relational-databases/security/sql-injection.md
+            - name: Restricciones de características
+              href: ../relational-databases/security/feature-restrictions.md
             - name: Propiedad de base de datos TRUSTWORTHY
               href: ../relational-databases/security/trustworthy-database-property.md
             - name: Directiva de contraseñas
@@ -8724,20 +8735,42 @@
               href: ../ssdt/dac-framework-compatibility.md
     - name: SQL Server Management Studio (SSMS)
       items:
-        - name: Descargar
+        - name: Descargar SSMS
           href: ../ssms/download-sql-server-management-studio-ssms.md
         - name: Notas de la versión
           href: ../ssms/release-notes-ssms.md
         - name: Información general
           items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio (SSMS)
-                  href: ../ssms/sql-server-management-studio-ssms.md
-                - name: Introducción a SSMS para BI
-                  href: ../ssms/introduction-to-sql-server-management-studio-for-business-intelligence.md
-                - name: Instalación de versiones de SSMS en otros idiomas que no sean inglés
-                  href: ../ssms/install-other-languages.md
+            - name: SQL Server Management Studio (SSMS)
+              href: ../ssms/sql-server-management-studio-ssms.md
+        - name: Tutoriales rápidos
+          items:
+            - name: Conectar y consultar SQL Server
+              href: ../ssms/tutorials/connect-query-sql-server.md
+        - name: Tutoriales
+          items:
+            - name: Generación de script de objetos
+              href: ../ssms/tutorials/scripting-ssms.md
+            - name: Configuración de SSMS
+              href: ../ssms/tutorials/ssms-configuration.md
+        - name: Conceptos
+          items:
+            - name: Ventanas de herramientas de SSMS
+              href: ../ssms/tool-windows-in-sql-server-management-studio.md
+            - name: Usar SSMS para compilar proyectos de base de datos
+              href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
+            - name: Descripción de la administración de Windows de SSMS
+              href: ../ssms/understand-sql-server-management-studio-windows-management.md
+            - name: Administrar servidores con SSMS
+              href: ../ssms/administer-servers-with-sql-server-management-studio.md
+            - name: Arguments for External Tools
+              href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
+            - name: Agregar una herramienta externa al menú Herramientas
+              href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+            - name: SSMS (Utilidad)
+              href: ../ssms/ssms-utility.md
+            - name: Métodos abreviados de teclado de SSMS
+              href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
             - name: Agente SQL Server
               items:
                 - name: Agente SQL Server
@@ -8746,92 +8779,6 @@
                   href: ../ssms/agent/post-download-instructions.md
                 - name: Monitor de actividad de trabajo
                   href: ../ssms/agent/job-activity-monitor.md
-            - name: Registrar servidores
-              items:
-                - name: Registrar servidores
-                  href: ../ssms/register-servers/register-servers.md
-            - name: Scripting
-              items:
-                - name: Scripting
-                  href: ../ssms/scripting/database-engine-scripting.md
-                - name: Editores de texto y consultas
-                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
-                - name: Editor de consultas del motor de base de datos
-                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
-                - name: Editor XML
-                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
-                - name: Configurar editores
-                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
-                - name: Asociar extensiones de archivo a un editor de código
-                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
-                - name: 'Cambiar el color, el tamaño y el estilo de la fuente'
-                  href: ../ssms/scripting/change-font-color-size-and-style.md
-                - name: Utilizar la ventana Propiedades en Management Studio
-                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
-                - name: Abrir un editor
-                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
-                - name: Administrar el editor y el modo de visualización
-                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
-                - name: Administrar formato de código
-                  href: ../ssms/scripting/manage-code-formatting.md
-                - name: Navegar por el código y el texto
-                  href: ../ssms/scripting/navigate-code-and-text.md
-                - name: Codificación de colores en el Editor de consultas
-                  href: ../ssms/scripting/color-coding-in-query-editors.md
-        - name: Tutoriales rápidos
-          items:
-            - name: SSMS
-              items:
-                - name: Conectar y consultar SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-            - name: Registrar servidores
-              items:
-                - name: Crear un servidor registrado
-                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
-        - name: Tutoriales
-          items:
-            - name: SSMS
-              items:
-                - name: SQL Server Management Studio
-                  href: ../ssms/tutorials/tutorial-sql-server-management-studio.md
-                - name: Conectar y consultar SQL Server
-                  href: ../ssms/tutorials/connect-query-sql-server.md
-                - name: Generación de script de objetos
-                  href: ../ssms/tutorials/scripting-ssms.md
-                - name: Plantillas en SSMS
-                  href: ../ssms/tutorials/templates-ssms.md
-                - name: Configuración de SSMS
-                  href: ../ssms/tutorials/ssms-configuration.md
-            - name: Registrar servidores
-              items:
-                - name: Registrar un servidor conectado
-                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
-                - name: Crear un servidor de administración central y un grupo de servidores
-                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
-                - name: Ejecutar instrucciones en varios servidores simultáneamente
-                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
-        - name: Conceptos
-          items:
-            - name: SSMS
-              items:
-                - name: Ventanas de herramientas de SSMS
-                  href: ../ssms/tool-windows-in-sql-server-management-studio.md
-                - name: Usar SSMS para compilar proyectos de base de datos
-                  href: ../ssms/build-database-projects-by-using-sql-server-management-studio.md
-                - name: Descripción de la administración de Windows de SSMS
-                  href: ../ssms/understand-sql-server-management-studio-windows-management.md
-                - name: Administrar servidores con SSMS
-                  href: ../ssms/administer-servers-with-sql-server-management-studio.md
-                - name: Arguments for External Tools
-                  href: ../ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
-                - name: Agregar una herramienta externa al menú Herramientas
-                  href: ../ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
-                - name: SSMS (Utilidad)
-                  href: ../ssms/ssms-utility.md
-                - name: Métodos abreviados de teclado de SSMS
-                  href: ../ssms/sql-server-management-studio-keyboard-shortcuts.md
-            - name: Agente SQL Server
-              items:
                 - name: Tareas de administración automatizadas
                   href: ../ssms/agent/automated-administration-tasks-sql-server-agent.md
                 - name: Implementar la seguridad del agente
@@ -8938,6 +8885,8 @@
                       href: ../ssms/agent/proxy-account-properties-new-proxy-account-principals-tab.md
             - name: Registrar servidores
               items:
+                - name: Registrar servidores
+                  href: ../ssms/register-servers/register-servers.md
                 - name: Servidores registrados (Ayuda F1)
                   href: ../ssms/register-servers/registered-servers-f1-help.md
             - name: Scripting
@@ -9074,20 +9023,22 @@
                               items:
                                 - name: Objetos que admite el asistente Generar scripts
                                   href: ../ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
-        - name: Guías de procedimientos
+        - name: Instrucciones
           items:
-            - name: SSMS
+            - name: Instalación de versiones de SSMS en otros idiomas que no sean inglés
+              href: ../ssms/install-other-languages.md
+            - name: Uso de plantillas en SSMS
+              href: ../ssms/tutorials/templates-ssms.md
+            - name: Personalizar menús y teclas de método abreviado
+              href: ../ssms/customize-menus-and-shortcut-keys.md
+            - name: Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server
+              href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
+            - name: Configurar la auditoría de inicio de sesión
+              href: ../ssms/configure-login-auditing-sql-server-management-studio.md
+            - name: Solucionar problemas
               items:
-                - name: Personalizar menús y teclas de método abreviado
-                  href: ../ssms/customize-menus-and-shortcut-keys.md
-                - name: Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server
-                  href: ../ssms/configure-wmi-to-show-server-status-in-sql-server-tools.md
-                - name: Configurar la auditoría de inicio de sesión
-                  href: ../ssms/configure-login-auditing-sql-server-management-studio.md
-                - name: Solucionar problemas
-                  items:
-                    - name: Obtención de un volcado de memoria completo
-                      href: ../ssms/troubleshoot/get-full-memory-dump.md
+                - name: Obtención de un volcado de memoria completo
+                  href: ../ssms/troubleshoot/get-full-memory-dump.md
             - name: Agente SQL Server
               items:
                 - name: Configurar
@@ -9334,6 +9285,14 @@
                       href: ../ssms/agent/write-execution-trace-messages-to-sql-server-agent-log-ssms.md
             - name: Registrar servidores
               items:
+                - name: Crear un servidor registrado
+                  href: ../ssms/register-servers/create-a-new-registered-server-sql-server-management-studio.md
+                - name: Registrar un servidor conectado
+                  href: ../ssms/register-servers/register-a-connected-server-sql-server-management-studio.md
+                - name: Crear un servidor de administración central y un grupo de servidores
+                  href: ../ssms/register-servers/create-a-central-management-server-and-server-group.md
+                - name: Ejecutar instrucciones en varios servidores simultáneamente
+                  href: ../ssms/register-servers/execute-statements-against-multiple-servers-simultaneously.md
                 - name: Ver los servidores registrados en SQL Server Management Studio
                   href: ../ssms/register-servers/view-registered-servers-in-sql-server-management-studio.md
                 - name: Quitar un servidor registrado
@@ -9358,6 +9317,32 @@
                   href: ../ssms/register-servers/import-registered-server-information-sql-server-management-studio.md
             - name: Scripting
               items:
+                - name: Scripting
+                  href: ../ssms/scripting/database-engine-scripting.md
+                - name: Editores de texto y consultas
+                  href: ../ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+                - name: Editor de consultas del motor de base de datos
+                  href: ../ssms/scripting/database-engine-query-editor-sql-server-management-studio.md
+                - name: Editor XML
+                  href: ../ssms/scripting/xml-editor-sql-server-management-studio.md
+                - name: Configurar editores
+                  href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
+                - name: Asociar extensiones de archivo a un editor de código
+                  href: ../ssms/scripting/associate-file-extensions-to-a-code-editor.md
+                - name: 'Cambiar el color, el tamaño y el estilo de la fuente'
+                  href: ../ssms/scripting/change-font-color-size-and-style.md
+                - name: Utilizar la ventana Propiedades en Management Studio
+                  href: ../ssms/scripting/use-the-properties-window-in-management-studio.md
+                - name: Abrir un editor
+                  href: ../ssms/scripting/open-an-editor-sql-server-management-studio.md
+                - name: Administrar el editor y el modo de visualización
+                  href: ../ssms/scripting/manage-the-editor-and-view-mode.md
+                - name: Administrar formato de código
+                  href: ../ssms/scripting/manage-code-formatting.md
+                - name: Navegar por el código y el texto
+                  href: ../ssms/scripting/navigate-code-and-text.md
+                - name: Codificación de colores en el Editor de consultas
+                  href: ../ssms/scripting/color-coding-in-query-editors.md
                 - name: Configurar editores
                   href: ../ssms/scripting/configure-editors-sql-server-management-studio.md
                 - name: Asociar extensiones de archivo a un editor de código
@@ -12070,6 +12055,8 @@
               href: ../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: ../relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
+            - name: sys.sql_feature_restrictions
+              href: ../relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: ../relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys
@@ -15923,8 +15910,6 @@
                   href: ../t-sql/functions/col-name-transact-sql.md
                 - name: COLUMNPROPERTY
                   href: ../t-sql/functions/columnproperty-transact-sql.md
-                - name: DATABASE_PRINCIPAL_ID
-                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: DATABASEPROPERTYEX
                   href: ../t-sql/functions/databasepropertyex-transact-sql.md
                 - name: DB_ID
@@ -16028,6 +16013,8 @@
                   href: ../t-sql/functions/certprivatekey-transact-sql.md
                 - name: CURRENT_USER
                   href: ../t-sql/functions/current-user-transact-sql.md
+                - name: DATABASE_PRINCIPAL_ID
+                  href: ../t-sql/functions/database-principal-id-transact-sql.md
                 - name: HAS_DBACCESS
                   href: ../t-sql/functions/has-dbaccess-transact-sql.md
                 - name: HAS_PERMS_BY_NAME

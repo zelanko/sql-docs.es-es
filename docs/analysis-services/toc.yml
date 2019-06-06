@@ -382,6 +382,8 @@
               items:
                 - name: Crear y administrar medidas
                   href: ../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md
+            - name: Grupos de cálculo
+              href: ../analysis-services/tabular-models/calculation-groups.md
             - name: KPI
               href: ../analysis-services/tabular-models/kpis-ssas-tabular.md
               items:
@@ -744,7 +746,7 @@
                       href: ../analysis-services/multidimensional-models/understanding-the-analysis-services-deployment-script.md
                 - name: Implementar soluciones de modelos con la utilidad de implementación
                   href: ../analysis-services/multidimensional-models/deploy-model-solutions-with-the-deployment-utility.md
-        - name: 'Base de datos multidimensional '
+        - name: Base de datos multidimensional
           href: ../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md
           items:
             - name: Adjuntar y separar bases de datos de Analysis Services

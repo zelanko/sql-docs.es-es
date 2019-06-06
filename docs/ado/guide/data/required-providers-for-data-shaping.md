@@ -13,20 +13,20 @@ helpviewer_keywords:
 ms.assetid: d49d48d2-ac2d-4c11-895c-5a149b444620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7edd3b3cacd097380b5d14ad55ed115ff93cf072
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b95d6e42174cbce4357562ac3b866f49f0b58fef
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63280496"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701797"
 ---
 # <a name="required-providers-for-data-shaping"></a>Proveedores deseados para dar forma a datos
 Normalmente, la forma de datos requiere dos proveedores. El proveedor de servicios, [servicio de forma de datos para OLE DB](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md), proporciona la funcionalidad y un proveedor de datos, como el proveedor OLE DB para SQL Server de la forma de datos, proporciona filas de datos para rellenar la forma [conjunto de registros ](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  Se puede especificar el nombre del proveedor de servicios (MSDataShape) como valor de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad o la palabra clave de cadena de conexión "proveedor = MSDataShape;".  
   
- Se puede especificar el nombre del proveedor de datos como el valor de la **proveedor de datos** propiedad dinámica que se agrega a la **conexión** objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección por el servicio de forma de datos para OLE DB o la palabra clave de cadena de conexión "**proveedor de datos =**_proveedor_".  
+ Se puede especificar el nombre del proveedor de datos como el valor de la **proveedor de datos** propiedad dinámica que se agrega a la **conexión** objeto [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md) colección por el servicio de forma de datos para OLE DB o la palabra clave de cadena de conexión "**proveedor de datos =** _proveedor_".  
   
  Se requiere ningún proveedor de datos si la **Recordset** no se rellena (por ejemplo, al igual que en un fabricadas **Recordset** donde las columnas se crean con la palabra clave NEW). En ese caso, especifique "**proveedor de datos =** none;".  
   

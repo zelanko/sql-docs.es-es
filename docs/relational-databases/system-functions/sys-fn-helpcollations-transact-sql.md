@@ -1,5 +1,5 @@
 ---
-title: Sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
+title: sys.fn_helpcollations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 08/23/2017
 ms.prod: sql
@@ -20,40 +20,41 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 83c9efd36bbcec788ef18b19552446877c5e36c8
-ms.sourcegitcommit: 7e828cd92749899f4e1e45ef858ceb9a88ba4b6a
+monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/14/2018
-ms.locfileid: "51629618"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719428"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
 
   Devuelve una lista de todas las intercalaciones admitidas.  
-  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```
 fn_helpcollations ()  
 ```  
   
-## <a name="tables-returned"></a>Tablas devueltas  
+## <a name="tables-returned"></a>Tablas devueltas
+
  **fn_helpcollations** devuelve la siguiente información.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|Nombre|**sysname**|Nombre de intercalación estándar|  
+|NOMBRE|**sysname**|Nombre de intercalación estándar|  
 |Descripción|**nvarchar(1000)**|Descripción de la intercalación|  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite intercalaciones de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite un número limitado (<80) de las intercalaciones denominadas intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se desarrollaron antes de que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admitiera intercalaciones de Windows. Las intercalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se siguen admitiendo por compatibilidad con versiones anteriores, pero no se deben utilizar en nuevos trabajos de desarrollo. Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite intercalaciones de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admite un número limitado (< 80) de las intercalaciones denominadas [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intercalaciones, que se desarrollaron antes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite las intercalaciones de Windows. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] las intercalaciones se siguen admitiendo por compatibilidad con versiones anteriores, pero no puede utilizarse para nuevos trabajos de desarrollo. Para obtener más información sobre la intercalación de Windows, consulte [Nombre de intercalación de Windows &#40;Transact-SQL&#41;](../../t-sql/statements/windows-collation-name-transact-sql.md). Para obtener más información sobre las intercalaciones, vea [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
+## <a name="examples"></a>Ejemplos
 
-## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se devuelven todos los nombres de intercalación que comienzan por la letra `L` y que son intercalaciones de orden binario.  
   
 ```sql  
@@ -63,7 +64,7 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```   
+ ```
  Name                   Description  
  -------------------    ------------------------------------  
  Lao_100_BIN            Lao-100, binary sort  
@@ -75,10 +76,10 @@ WHERE Name like 'L%' AND Description LIKE '% binary sort';
  Lithuanian_100_BIN     Lithuanian-100, binary sort  
   
  (7 row(s) affected)  
- ```    
+ ```
   
-## <a name="see-also"></a>Vea también  
+## <a name="see-also"></a>Vea también
+
 [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
 [COLLATIONPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/collation-functions-collationproperty-transact-sql.md)  
 [Compatibilidad con la intercalación de base de datos de Azure SQL Data Warehouse](https://azure.microsoft.com/blog/database-collation-support-for-azure-sql-data-warehouse-2)  
-

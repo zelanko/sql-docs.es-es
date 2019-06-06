@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 36e0cdbe-7f50-40f5-af0d-700f5d8dc75a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4c221030b54aef21ffa0a2df891561976aacff76
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6863a14a467e1d884d43b982451ec5807820486b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302364"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701847"
 ---
 # <a name="passing-parameters-to-a-named-command"></a>Pasar parámetros a un comando con nombre
 Al igual que el resultado del comando se pasa como un *out* variable del comando con nombre, parámetros sido para un comando con parámetros puede pasado como *en* variables para el comando con nombre.  

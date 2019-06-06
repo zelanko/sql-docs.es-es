@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 802838b50a663d98441512a8548bf9b2e883cc4c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62802934"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702659"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
 Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o de red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente *.*  
@@ -53,7 +53,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Con ADO 2.7 o posterior, una dirección URL absoluta también puede definir un contexto. Por ejemplo, cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abre el objeto con una dirección URL absoluta, un **conexión** objeto se crea implícitamente para representar el recurso especificado por la dirección URL.  
   
- Se puede especificar una dirección URL absoluta que define un contexto en el *ActiveConnection* parámetro de la **registro** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. También se puede especificar una dirección URL absoluta como valor de la "dirección URL**=**" palabra clave en el **conexión** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parámetro y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parámetro.  
+ Se puede especificar una dirección URL absoluta que define un contexto en el *ActiveConnection* parámetro de la **registro** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. También se puede especificar una dirección URL absoluta como valor de la "dirección URL **=** " palabra clave en el **conexión** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parámetro y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parámetro.  
   
  También se puede definir el contexto abriendo un **registro** o **Recordset** objeto que representa un directorio, porque estos objetos ya tienen un implícita o explícitamente declarado **conexión**  objeto que especifica el contexto.  
   
@@ -86,7 +86,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
 ## <a name="ole-db-provider-supplied-url-schemes"></a>Esquemas de dirección URL proporcionada por el proveedor OLE DB  
  La parte inicial de una dirección URL completa es la *esquema* que se utiliza para tener acceso al recurso identificado por el resto de la dirección URL. Algunos ejemplos son HTTP (Protocolo de transferencia de hipertexto) y FTP (Protocolo de transferencia de archivos).  
   
- ADO admite proveedores OLE DB que reconocen sus propios esquemas de dirección URL. Por ejemplo, el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)*,* que tiene acceso a archivos de Windows 2000 "publicados", reconoce el esquema HTTP existente.  
+ ADO admite proveedores OLE DB que reconocen sus propios esquemas de dirección URL. Por ejemplo, el [proveedor Microsoft OLE DB para la publicación en Internet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *,* que tiene acceso a archivos de Windows 2000 "publicados", reconoce el esquema HTTP existente.  
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de conexión (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

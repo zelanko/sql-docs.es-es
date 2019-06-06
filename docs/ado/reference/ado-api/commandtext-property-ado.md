@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e9593b45e8b336fe777b8e240061e82c23543c1d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7ebc6a783aa8520c3ab16465143acdf1a6bf6628
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63316179"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698950"
 ---
 # <a name="commandtext-property-ado"></a>Propiedad CommandText (ADO)
 Indica el texto de un comando que se puede emitir en un proveedor.  

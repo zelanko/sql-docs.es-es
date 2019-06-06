@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 996c1321-c926-4f57-8297-85c8c20de974
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ad9c21deb365428a6642f3ee9b7f48396d7c4f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b784553302bf9df30750f239291ca179ecf6cf74
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63188106"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701879"
 ---
 # <a name="retrieving-resultsets-into-streams"></a>Recuperar conjuntos de resultados en secuencias
 En lugar de recibir los resultados en el tradicional **Recordset** objeto ADO en su lugar, puede recuperar los resultados de la consulta en una secuencia. ADO **Stream** objeto (u otros objetos que admiten el COM **IStream** interfaz, por ejemplo, el ASP **solicitar** y **respuesta** objetos ) se puede usar para contener estos resultados. Un uso de esta característica es para recuperar los resultados en formato XML. Con SQL Server, por ejemplo, los resultados XML pueden devolverse de varias formas, por ejemplo, mediante la cláusula FOR XML con una consulta SELECT de SQL o mediante una consulta XPath.  

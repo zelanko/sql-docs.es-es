@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: bdf9a56a-de4a-44de-9111-2f11ab7b16ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2378d438c575ad54a89f09c4c9ddcb157c246ffd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8e3c3c7ff7d623d3bec0adf60773266bb6e53571
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184827"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704433"
 ---
 # <a name="working-with-recordsets"></a>Trabajar con conjuntos de registros
 El **Recordset** objeto tiene características integradas que permiten reorganizar el orden de los datos en el conjunto de resultados para buscar un registro específico en función de criterios que suministran e incluso a optimizar estas operaciones de búsqueda mediante índices. Si estas características están disponibles para su uso depende del proveedor y en algunos casos - como los de la [índice](../../../ado/reference/ado-api/index-property.md) propiedad - la estructura del origen de datos propia.  
@@ -54,7 +54,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
  Solo un nombre de columna única puede especificarse para el criterio. En otras palabras, este método no admite búsquedas de varias columnas.  
   
- Puede ser el operador de comparación para el criterio"**>**"(mayor que),"**\<**" (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), " <> "(no igual a), o"LIKE"(coincidencia).  
+ Puede ser el operador de comparación para el criterio" **>** "(mayor que)," **\<** " (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), " <> "(no igual a), o"LIKE"(coincidencia).  
   
  El valor del criterio puede ser una cadena, número de punto flotante o fecha. Los valores de cadena están delimitados con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #").  
   
@@ -63,7 +63,7 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
  Los asteriscos pueden usarse solo al final de una cadena de criterios o juntos al principio y al final de una cadena de criterios, como se mostró anteriormente. No se puede usar el asterisco como comodín inicial ('* str') o incrustados indicado anteriormente\*r'). Esto provocará un error.  
   
 ### <a name="seek-and-index"></a>Buscar e indizar  
- Use la **Seek** método junto con el **índice** propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite los índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
+ Use la **Seek** método junto con el **índice** propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite los índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
   
  Si **Seek** hace que no se encontró la fila deseada, ningún error se produce y la fila se coloca al final de la **Recordset**. Establecer el **índice** propiedad en el índice deseado antes de ejecutar este método.  
   
@@ -88,12 +88,12 @@ El **Recordset** objeto tiene características integradas que permiten reorganiz
   
 -   *FieldName* debe ser un nombre de campo válido de la **Recordset**. Si el nombre del campo contiene espacios, debe incluir el nombre entre corchetes.  
   
--   *Operador* debe ser uno de los siguientes: **\<**, **>**, **\< =**, **>=** , **<>**, **=**, o **como**.  
+-   *Operador* debe ser uno de los siguientes: **\<** , **>** , **\< =** , **>=** , **<>** , **=** , o **como**.  
   
 -   *Valor* es el valor con el que se compararán los valores de campo (por ejemplo, `'Smith'`, `#8/24/95#`, `12.345`, o `$50.00`). Utilice las comillas simples (') con las cadenas y signos de número (`#`) con fechas. Puede usar para números, puntos decimales, signos de dólar y notación científica. Si *operador* es **como**, *valor* puede usar caracteres comodín. Solo el asterisco (\*) y signo de porcentaje (%) se permiten caracteres comodín y deben ser el último carácter de la cadena. *Valor* no puede ser null.  
   
     > [!NOTE]
-    >  Para incluir las comillas simples (') en el filtro *valor*, utilice dos comillas simples para representar una. Por ejemplo, para filtrar según *o ' Malley*, debe ser la cadena de criterios `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, incluya la cadena de signos de número (#). Por ejemplo, para filtrar según *'1'*, debe ser la cadena de criterios `"col1 = #'1'#"`.  
+    >  Para incluir las comillas simples (') en el filtro *valor*, utilice dos comillas simples para representar una. Por ejemplo, para filtrar según *o ' Malley*, debe ser la cadena de criterios `"col1 = 'O''Malley'"`. Para incluir las comillas simples al principio y al final del valor de filtro, incluya la cadena de signos de número (#). Por ejemplo, para filtrar según *'1'* , debe ser la cadena de criterios `"col1 = #'1'#"`.  
   
  No hay ninguna preferencia entre **AND** y **o**. Las cláusulas se pueden agrupar entre paréntesis. Sin embargo, no se puede agrupar cláusulas combinadas por un **o** y, a continuación, unirse al grupo a otra cláusula mediante AND, como se indica a continuación.  
   

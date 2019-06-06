@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8b528b23-063d-45ea-8dea-6a90d4060b20
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b95e6f0bd2b702080b3580b8b9eeb80ac5b06e8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c85f6ec6ce130d6bcb10db5f137a16f0cd102475
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63063131"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701065"
 ---
 # <a name="alternatives-using-sql-statements"></a>Alternativas: Uso de instrucciones SQL
 ADO también permite usar comandos como alternativa a sus propiedades y métodos integrados para modificar los datos. Dependiendo de su proveedor, todas las operaciones que se mencionan en esta sección también se podrían lograr pasando comandos al origen de datos. Por ejemplo, las instrucciones UPDATE de SQL pueden usarse para modificar los datos sin usar la **valor** propiedad de un **campo**. Las instrucciones INSERT de SQL pueden utilizarse para agregar nuevos registros a un origen de datos, en lugar del método ADO **AddNew**. Para obtener más información acerca de SQL o el lenguaje de manipulación de datos de su proveedor, consulte la documentación del origen de datos.  

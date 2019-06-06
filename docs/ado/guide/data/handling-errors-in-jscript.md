@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7be00967d8d17731e4564a0a23aa245e609c6e8a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d63f01c937f4a690968fe5edb50ac84958e705ed
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161451"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700665"
 ---
 # <a name="handling-errors-in-jscript"></a>Control de errores en JScript
 Debe comprobar el código de Microsoft® JScript® el **recuento** propiedad de la **conexión** del objeto **errores** colección. Si el valor es mayor que 0, recorrer en iteración la colección e imprimir los valores como lo haría en cualquiera de los demás idiomas.  

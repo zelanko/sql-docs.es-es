@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8c57f35e-3c04-4f17-bf3e-3ad053951530
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6e23f7b373eb0b1f089c2c38eb28027dedc48849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 5417fb01208e7811985dc7f27fd41cf9d23ee9c6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161512"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702169"
 ---
 # <a name="handling-errors-in-other-languages"></a>Control de errores en otros lenguajes
 Hasta ahora, en esta sección se describe errores desde un punto de vista de Microsoft® Visual Basic®. El resto de esta sección le proporcionará una visión general de control de errores en lenguajes distintos de Visual Basic.  

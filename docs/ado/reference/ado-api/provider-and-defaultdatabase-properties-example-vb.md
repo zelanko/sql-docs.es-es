@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 677e1dbe-bcf6-4028-a62c-e99b1c88bf7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9e2566af4f320ce3bf12d00421b40e5c41d661
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 43909f1dd324a9e8ddfcbd6364b2c11d80f3bfbb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63278649"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66703111"
 ---
 # <a name="provider-and-defaultdatabase-properties-example-vb"></a>Ejemplo Provider y DefaultDatabase propiedades (VB)
 Este ejemplo se muestra el [proveedor](../../../ado/reference/ado-api/provider-property-ado.md) propiedad abriendo tres [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objetos mediante diferentes proveedores. También usa el [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) propiedad para establecer la base de datos predeterminada para el proveedor ODBC de Microsoft.  

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed92b3f83e865d2b8d4f3e3a3a3cb95e291d771e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63162101"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700638"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: una aplicación ADO sencilla
 Los pasos de esta aplicación simple a través de cada una de las cuatro operaciones principales de ADO: introducción, examinar, editar y actualizar datos. Estas operaciones se realizan en la base de datos de ejemplo Northwind incluido con Microsoft® SQL Server. Para centrarse en los aspectos básicos de ADO y evitar el desorden de código, control de errores en el ejemplo es mínimo.  
@@ -45,17 +45,17 @@ Los pasos de esta aplicación simple a través de cada una de las cuatro operaci
   
 |Tipo de control|Property|Valor|  
 |------------------|--------------|-----------|  
-|Form|Name|Form1|  
+|Form|NOMBRE|Form1|  
 ||Alto|6500|  
 ||Ancho|6500|  
 |Cuadrícula de datos de MS|Name|grdDisplay1|  
-|TextBox|Nombre|txtDisplay1|  
+|TextBox|Name|txtDisplay1|  
 ||Varias líneas|true|  
-|Botón de comando|Name|cmdGetData|  
+|Botón de comando|NOMBRE|cmdGetData|  
 ||Título|Get Data|  
 |Botón de comando|Name|cmdExamineData|  
 ||Título|Examinar los datos|  
-|Botón de comando|Name|cmdEditData|  
+|Botón de comando|NOMBRE|cmdEditData|  
 ||Título|Editar datos|  
-|Botón de comando|Name|cmdUpdateData|  
+|Botón de comando|NOMBRE|cmdUpdateData|  
 ||Título|Datos actualizados|

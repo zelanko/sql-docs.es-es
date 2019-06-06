@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3077d0b6-42d6-4f10-8e5d-42e6204f1109
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4ddf5fff0974c9a7ae92b5d44372f0d71fecf712
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f64909f4f7db1f765d233878631eb90a4760531e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63191797"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704204"
 ---
 # <a name="running-business-objects-in-component-services"></a>Ejecución de objetos de negocios en servicios de componentes
 > [!IMPORTANT]

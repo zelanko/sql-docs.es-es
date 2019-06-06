@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: ef514f85-c446-4f05-824e-c9313b2ffae1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c12692a6ebd1467148b52f993a77043ff495d43
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 998fd4ee425f1a4356bdc675b53b23247d89c3f8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161778"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700774"
 ---
 # <a name="editing-data"></a>Edición de datos
 Ya se explicó cómo utilizar ADO para conectarse a un origen de datos, ejecutar un comando, obtener los resultados en un **Recordset** de objetos y navegar dentro de la **Recordset**. En esta sección se centra en la siguiente operación fundamental de ADO: edición de datos.  

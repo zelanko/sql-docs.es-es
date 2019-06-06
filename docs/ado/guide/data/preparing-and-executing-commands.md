@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f3de2bb729e2096e1b30aab12c402803036914b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bf2120468a00de2150f6105f4d79ec5a2ed4278
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62911364"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700459"
 ---
 # <a name="preparing-and-executing-commands"></a>Preparar y ejecutar comandos
 Los comandos son instrucciones emitidas a un proveedor para realizar algunas operaciones en el origen de datos subyacente. Una instrucción SQL, por ejemplo, es un comando para el proveedor de datos SQL de Microsoft. En ADO, los comandos se suelen representar por **comando** objetos, aunque también se pueden emitir comandos sencillos a través de **conexión** o **Recordset** objetos.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 35033910-623b-449a-a57d-baff3ed5ab8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 902d077cfb46926ce9eade6ea9a99c2df0730916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cba540af0557c96cb265abefc2a6144530ea390d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308752"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695756"
 ---
 # <a name="count-property-example-vb"></a>Ejemplo de la propiedad de recuento (VB)
 Este ejemplo se muestra el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad con dos colecciones en la ***empleado*** base de datos. La propiedad obtiene el número de objetos de cada colección y establece el límite superior para los bucles que enumerar estas colecciones. Otra manera de enumerar estas colecciones sin utilizar la **recuento** propiedad sería usar `For Each...Next` instrucciones.  

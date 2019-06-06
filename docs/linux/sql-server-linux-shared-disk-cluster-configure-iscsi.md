@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: c73a91a461f78687d390e4ef620416325e7672df
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9a64460b2d04f1d6957a181657af7255d64cc829
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524907"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705068"
 ---
 # <a name="configure-failover-cluster-instance---iscsi---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error - iSCSI: SQL Server en Linux
 
@@ -53,7 +52,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
     - iface.net_ifacename es el nombre de la tarjeta de red, tal como se muestra en el sistema operativo.
     - iface.hwaddress es la dirección MAC del nombre único que se creará para esta interfaz siguiente.
-    - iface.IPAddress
+    - iface.ipaddress
     - iface.subnet_Mask 
 
     Vea el ejemplo siguiente:
@@ -95,7 +94,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     ```bash
     sudo grep "Attached SCSI" /var/log/messages
     ```
-    ![30 iSCSIattachedDisks][7]
+    ![30-iSCSIattachedDisks][7]
 
 7.  Crear un volumen físico en el disco iSCSI.
 
@@ -196,7 +195,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
     ls /var/opt/mssql/data
     ```
 
-    ![45 CopyMove][8]
+    ![45-CopyMove][8]
  
    *    Tipo `exit` para volver al usuario raíz.
 
@@ -320,7 +319,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
    *    Para probar, cree una base de datos en esa carpeta. El ejemplo que se muestra a continuación, usa sqlcmd para crear una base de datos, cambiar el contexto a ella, compruebe los archivos existen en el nivel de sistema operativo y, a continuación, elimina la ubicación temporal. Puede usar SSMS.
   
-    ![50 ExampleCreateSSMS][9]
+    ![50-ExampleCreateSSMS][9]
 
    *    Desmontar el recurso compartido 
 
@@ -354,7 +353,7 @@ Para obtener más información sobre el iniciador iSCSI para las distribuciones 
 
     \<ListOfVGsNotUsedByPacemaker > es la lista de grupos de volúmenes de la salida de paso 20 que no se usará para la FCI. Coloque cada uno de ellos en las comillas y separados por punto y coma. A continuación, se muestra un ejemplo.
 
-    ![55 ListOfVGs][11]
+    ![55-ListOfVGs][11]
  
  
 17. Cuando se inicia Linux, montará el sistema de archivos. Para asegurarse de que Pacemaker sólo puede montar el disco iSCSI, vuelva a generar la imagen de sistema de archivos raíz. 

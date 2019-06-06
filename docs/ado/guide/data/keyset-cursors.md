@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 14b51b17-6fd9-4146-af45-ca4b0fe6d48a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2ff246d01254ceb2b526b5118553d72cc499046
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: b349838788a3c442ea9c32fc5b8a7ebbd0240e37
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161647"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702090"
 ---
 # <a name="keyset-cursors"></a>Cursores KEYSET
 El cursor keyset proporciona la funcionalidad entre estático y un cursor dinámico en su capacidad para detectar los cambios. Al igual que un cursor estático, no siempre detecta los cambios realizados en la pertenencia y el orden del conjunto de resultados. Como un cursor dinámico, detecta cambios en los valores de las filas del conjunto de resultados.  

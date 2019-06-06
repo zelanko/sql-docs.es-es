@@ -12,16 +12,16 @@ helpviewer_keywords:
 ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4d6b6698f57184c0b1c4bc170e17c9fc11b9ea0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955818"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704139"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
-Cada encabezado de sección en el archivo de personalización consta de los corchetes (**[]**) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
+Cada encabezado de sección en el archivo de personalización consta de los corchetes ( **[]** ) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
   
 > [!IMPORTANT]
 >  A partir de Windows 8 y Windows Server 2012, componentes de servidor RDS ya no están incluidos en el sistema operativo de Windows (consulte Windows 8 y [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) para obtener más detalles). Componentes de cliente RDS se quitará en una versión futura de Windows. Evite utilizar esta característica en nuevos trabajos de desarrollo y tenga previsto modificar las aplicaciones que actualmente la utilizan. Deben migrar las aplicaciones que usan RDS a [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -55,7 +55,7 @@ identifier
   
  Una sección concreta se usa en las siguientes circunstancias:  
   
--   Un **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos =**_valor_", coincide con un **conectar** identificador de la sección *.*  
+-   Un **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos =** _valor_", coincide con un **conectar** identificador de la sección *.*  
   
 -   Un **sql** sección se usa si la cadena de comandos de cliente contiene una cadena que coincide con un **sql** identificador de la sección.  
   

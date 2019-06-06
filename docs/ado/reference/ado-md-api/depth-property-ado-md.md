@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e41f2644-617d-4c09-80a4-feb5cf736186
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b609b8ee65c193c181c4b7583e26f489c78cd8ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 97fc2e4a7c6146b82a48d4dc28d8b86ff94f7cd3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225776"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718994"
 ---
 # <a name="depth-property-ado-md"></a>Profundidad (propiedad, ADO MD)
 Indica el número de niveles entre el [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md) y la raíz de la jerarquía.  

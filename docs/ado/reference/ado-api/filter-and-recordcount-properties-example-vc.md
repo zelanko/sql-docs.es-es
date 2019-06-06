@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3aef01723a9682907ac20be42d04bb02773557e7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62631258"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694977"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Ejemplo Filter y RecordCount propiedades (VC ++)
 Este ejemplo se usa el [filtro](../../../ado/reference/ado-api/filter-property.md) propiedad para abrir una nueva [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) según una condición especificada se aplica a una existente **Recordset**. Usa el [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) propiedad para mostrar el número de registros en los dos **conjuntos de registros**. La función FilterField es necesaria ejecutar este procedimiento.  

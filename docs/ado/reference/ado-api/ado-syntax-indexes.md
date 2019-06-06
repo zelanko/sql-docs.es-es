@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fad34f61-c34f-4c0b-8ce5-3b8872abfe4e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 404c84cd5e8b737552163082d78b5e8fcc3b1ff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: d225fa7af71b905ebe2de383af92156ba12fc74c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63249040"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718145"
 ---
 # <a name="ado-syntax-indexes"></a>Índices de sintaxis de ADO
 La sintaxis para llamar a las propiedades y métodos de ADO varía según el entorno de desarrollo. El resto de la referencia del lenguaje ADO utiliza el lenguaje de programación Microsoft Visual Basic para ilustrar la sintaxis de método y propiedad de ADO. Sin embargo, consulte las secciones siguientes para obtener ejemplos más específicos sintaxis según el lenguaje de programación y la metodología:  

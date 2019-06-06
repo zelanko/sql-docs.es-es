@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e75b79934022743ba806722427dd37ab733bc2f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62853331"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701327"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería uno de los datos de cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando las interfaces OLE DB, algunos orígenes de datos aún no están expuestos de este modo. Sin embargo, la mayoría de los sistemas DBMS en uso hoy en día puede obtenerse a través de ODBC.
@@ -65,7 +65,7 @@ MSDASQL
 
  El proveedor no admite los parámetros de conexión específico además de los definidos por ADO. Sin embargo, el proveedor pasará los parámetros de conexión que no son de ADO para el Administrador de controladores ODBC.
 
- Dado que se puede omitir el **proveedor** parámetro, por lo tanto, puede crear una cadena de conexión de ADO que es idéntica a una cadena de conexión ODBC para el mismo origen de datos. Use los mismos nombres de parámetro (**controlador =**, **base de datos =**, **DSN =**, y así sucesivamente), valores y la sintaxis como se haría al componer una cadena de conexión ODBC. Puede conectar con o sin un nombre de origen de datos predefinidos (DSN) o un FileDSN.
+ Dado que se puede omitir el **proveedor** parámetro, por lo tanto, puede crear una cadena de conexión de ADO que es idéntica a una cadena de conexión ODBC para el mismo origen de datos. Use los mismos nombres de parámetro (**controlador =** , **base de datos =** , **DSN =** , y así sucesivamente), valores y la sintaxis como se haría al componer una cadena de conexión ODBC. Puede conectar con o sin un nombre de origen de datos predefinidos (DSN) o un FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintaxis con un DSN o FileDSN:
 
@@ -84,9 +84,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Comentarios
  Si usa un **DSN** o **FileDSN**, debe definirse mediante el Administrador de origen de datos ODBC en el Panel de Control de Windows. En Microsoft Windows 2000, el Administrador de ODBC se encuentra en Herramientas administrativas. En versiones anteriores de Windows, el icono de administrador de ODBC se denomina **ODBC 32-bit** o simplemente **ODBC**.
 
- Como alternativa a la configuración de un **DSN**, puede especificar el controlador ODBC (**controlador =**), como "SQL Server"; el nombre del servidor (**SERVER =**); y el nombre de la base de datos (**Base de datos =**).
+ Como alternativa a la configuración de un **DSN**, puede especificar el controlador ODBC (**controlador =** ), como "SQL Server"; el nombre del servidor (**SERVER =** ); y el nombre de la base de datos (**Base de datos =** ).
 
- También puede especificar un nombre de cuenta de usuario (**UID =**) y la contraseña para la cuenta de usuario (**PWD =**) en los parámetros específicos de ODBC o en el estándar definidos por ADO *usuario* y *contraseña* parámetros.
+ También puede especificar un nombre de cuenta de usuario (**UID =** ) y la contraseña para la cuenta de usuario (**PWD =** ) en los parámetros específicos de ODBC o en el estándar definidos por ADO *usuario* y *contraseña* parámetros.
 
  Aunque un **DSN** definición ya especifica una base de datos, puede especificar *un* *base de datos* parámetro además un **DSN** para conectarse para una base de datos diferentes. Es una buena idea incluir siempre *el* *base de datos* cuando use un **DSN**. Esto garantizará que conectarse a la base de datos si otro usuario cambia el parámetro de base de datos predeterminado desde la última la **DSN** definición.
 
@@ -205,19 +205,19 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|No|No|Sí|Sí|
+|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sin|No|Sí|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Sí|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin|Sí|Sí|Sí|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|No|Sí|Sí|Sí|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin|Sí|Sí|Sí|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|No|Sí|Sí|
+|[Resync](../../../ado/reference/ado-api/resync-method.md)|Sin|No|Sí|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|

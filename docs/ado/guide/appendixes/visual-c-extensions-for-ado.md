@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 2952ece0-7217-4448-bb09-f6b64f43b7e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4432c125b0c860775911aa753984806a472a64ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ccd783bdb7bf266bfdc83c3a02520345d707ceea
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62864506"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702625"
 ---
 # <a name="visual-c-extensions-for-ado"></a>Extensiones de Visual C++ para ADO
 El método preferido de programación ADO con Visual C++ es usar el **#import** directiva, como se describe en [programación ADO en Microsoft Visual C++](../../../ado/guide/appendixes/visual-c-ado-programming.md). Sin embargo, las versiones anteriores de ADO se incluye con un método alternativo de la programación con Visual C++: las extensiones de Visual C++. Esta sección documentan esta característica para aquellos que se debe mantener el código de extensiones de Visual C++, pero se debe escribir el nuevo código de ADO con #**importar**.

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e71776a43aa338246b4acb3b4d9f620c19234f0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a3f544ae5a38b50ed13ddbafb725c07e0c8a4c8e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028142"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697957"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro se encuentra; en caso contrario, se establece la posición al final (o inicio) de la **Recordset**.  
@@ -50,7 +50,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="remarks"></a>Comentarios  
  Se puede especificar solo un nombre de columna única en *criterios*. Este método no admite búsquedas en varias columnas.  
   
- El operador de comparación *criterios* puede ser "**>**"(mayor que),"**\<**" (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia).  
+ El operador de comparación *criterios* puede ser " **>** "(mayor que)," **\<** " (menor que), "=" (igual), "> =" (mayor o igual que), "< =" (menor o igual que), "<>" (no es igual a) o "like" (coincidencia).  
   
  El valor de *criterios* puede ser una cadena, número de punto flotante o fecha. Los valores de cadena están delimitados con comillas simples o marcas "#" (signo de número) (por ejemplo, "estado = 'WA'" o "estado = WA #"). Los valores de fecha se delimitan con marcas de "#" (signo de número) (por ejemplo, "start_date > #7/22/97 #"). Estos valores pueden contener horas, minutos y segundos para indicar las marcas de tiempo, pero no deben contener milisegundos o se producirán errores.  
   

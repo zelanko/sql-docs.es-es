@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 594c51cb-1157-4417-802b-d91b875ba020
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448768620100ac444fefe030e2ef42812e2eb03c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 860b64a924762e68e7405ae02b6d909cc807b368
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028182"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694965"
 ---
 # <a name="find-method-example-vc"></a>Ejemplo del método Find (VC ++)
 Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [buscar](../../../ado/reference/ado-api/find-method-ado.md) método para localizar y contar el número de títulos de empresa en el **Pubs** base de datos. El ejemplo se supone que el proveedor subyacente no admite una funcionalidad similar.  

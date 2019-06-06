@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 21c162ca-2845-4dd8-a49d-e715aba8c461
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b89f05822ee23f5ad62c627b8bc6d67ebe401a2e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0f2d47229b7383c11740ca3d7a20ad8e420931a5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63130205"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66700476"
 ---
 # <a name="persisting-data"></a>Conservar los datos
 Equipos portátiles (por ejemplo, con equipos portátiles) ha generado la necesidad de las aplicaciones que se pueden ejecutar en un estado conectado y desconectado. ADO ha agregado compatibilidad para esto proporcionando al programador la capacidad de guardar un cursor de cliente **Recordset** en el disco y vuelva a cargar más adelante.  

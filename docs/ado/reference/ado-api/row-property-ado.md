@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 21019d89-2dd1-4a26-ac6f-384b81d66949
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041356f05daaaef50e6e81d995209ab5379fc901
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: f67978362c7e55357c3cdbfea1c8590354277416
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63192825"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711464"
 ---
 # <a name="row-property-ado"></a>Propiedad de las filas (ADO)
 Obtiene o establece OLE DB **fila** objeto desde o en un [Interfaz ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md) objeto. Cuando usas **put_Row** para establecer un **fila** objeto, una fila se convierte en ADO **registro** objeto.  

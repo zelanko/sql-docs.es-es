@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d20fd28-aaf8-4232-83ce-f9d1e5f93dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6f47f3c40ed85cf0b38615176309f47bfb6ce542
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 47462e323e77e23b70a85321764413c40494f3f5
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63067551"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701607"
 ---
 # <a name="saving-to-the-xml-dom-object"></a>Guardar datos en el objeto de DOM de XML
 Puede guardar un conjunto de registros en formato XML en una instancia de un objeto DOM de MSXML, como se muestra en el siguiente código de Visual Basic:  

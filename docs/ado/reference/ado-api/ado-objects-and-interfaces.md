@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0bba8402bb49d481886e4c81071443873834c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248899"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696637"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
 Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -48,7 +48,7 @@ Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](
  [Colecciones de ADO](../../../ado/reference/ado-api/ado-collections.md)   
  [Propiedades dinámicas de ADO](../../../ado/reference/ado-api/ado-dynamic-properties.md)   
  [Constantes enumeradas de ADO](../../../ado/reference/ado-api/ado-enumerated-constants.md)   
- [Apéndice B: Errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
+ [Apéndice B: Errores de ADO](../../../ado/guide/appendixes/appendix-b-ado-errors.md)   
  [Eventos de ADO](../../../ado/reference/ado-api/ado-events.md)   
  [Métodos de ADO](../../../ado/reference/ado-api/ado-methods.md)   
  [Modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md)   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 729daea7fe719f33ec8931424143c3fedc5ac86f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 18f14920ae532e344ddb69ee79fdc0bd838af95b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62675920"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699472"
 ---
 # <a name="marking-business-objects-as-safe-for-scripting"></a>Marcado de objetos de negocios como seguros para scripting
 > [!IMPORTANT]

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: c8f6fbcb-6675-4133-b37e-430de43949c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f37f69b64e4a1a7fd55fb24a0c85d515971d4e72
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c01d24a5f92b4bca1e5b41a0cbece980237fd961
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910457"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701672"
 ---
 # <a name="recordset-positioning"></a>Posición de conjunto de registros
 Use la **AbsolutePosition** propiedad que se va a mover a un registro, según su posición ordinal en la **Recordset** objeto, o para determinar la posición ordinal del registro actual. El proveedor debe admitir la funcionalidad adecuada para esta propiedad esté disponible.  

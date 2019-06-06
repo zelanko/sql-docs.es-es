@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a52ca419f3f06e4156c278cb0ba8999c24e09ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63071141"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66695377"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
 Ejecuta la consulta especificada, instrucción SQL, procedimiento almacenado o texto específico del proveedor.  
@@ -40,7 +40,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parámetros  
  *CommandText*  
- Un **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,**, se pueden usar los nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo si un nombre de tabla de "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
+ Un **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,** , se pueden usar los nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo si un nombre de tabla de "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
   
  *RecordsAffected*  
  Opcional. Un **largo** variable a la que el proveedor devuelve el número de registros que se ven afectados por la operación.  

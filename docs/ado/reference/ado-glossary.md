@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3b93ee4ab5b57414d8c8d640bc12a5ebbff882c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63206371"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709977"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se define términos relacionados con ADO.  
@@ -264,7 +264,7 @@ En este tema se define términos relacionados con ADO.
  Un conjunto de filas desde un origen de datos tienen el mismo esquema de campo. Un conjunto de filas puede representar algunos o todos los campos de una tabla. Un conjunto de filas también puede representar una tabla virtual, creada por una consulta o una combinación de dos o más tablas. En ADO, los conjuntos de filas se representan mediante **Recordset** objetos.  
   
 ## <a name="s"></a>S  
- Ámbito  
+ Scope  
  El intervalo de referencia para un objeto o variable o un intervalo de registros en una tabla o vista. Por ejemplo, pueden hacer referencia a variables locales solo dentro del procedimiento en el que se hubieran definido. Las variables públicas son accesibles desde cualquier parte de la aplicación. Los objetos, como la base de datos actual, están en ámbito si se encuentran en la ruta de acceso de búsqueda definida. Los intervalos de registros se pueden especificar con una cláusula de ámbito de muchos comandos.  
   
  proveedor de servicios  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1cd30769-c8af-43e7-be27-12ed0434daa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d6268c1eb31565a781929b235fd72f4c27091476
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ddcc576731091596b8efa00c9473a7d167c9ee99
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184123"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707920"
 ---
 # <a name="clustered-property-example-vb"></a>Ejemplo de propiedad Clustered (VB)
 Este ejemplo se muestra el [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) propiedad de un [índice](../../../ado/reference/adox-api/index-object-adox.md). Tenga en cuenta que las bases de datos Microsoft Jet no admiten índices agrupados, por lo que este ejemplo devolverá **False** para el **Clustered** propiedad de todos los índices de la **Northwind** base de datos.  

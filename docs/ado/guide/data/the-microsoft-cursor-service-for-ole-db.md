@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 1ac3bd9b-2d45-4cc8-88ec-bd8a218cfb49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e85d6f482b9d206b2ec705a8d890a4e34e5f2252
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: cbf289e73cd3cb94418521f3d4070cf155a7fdf2
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142934"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704918"
 ---
 # <a name="the-microsoft-cursor-service-for-ole-db"></a>El servicio de cursores de Microsoft para OLE DB
 Cuando se selecciona un cursor de cliente, o establecer el **CursorLocation** propiedad **adUseClient**, está invocando el servicio de cursores de Microsoft para OLE DB. También podría ver referencias a "Client Cursor Engine", que es básicamente lo mismo en el contexto de ADO. Este servicio complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, puede percibir una funcionalidad relativamente uniforme en todos los proveedores de datos.  

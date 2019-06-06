@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10a7097292562acd60e8b83af9a48bd61aeb8557
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7891fbeeaa04df2078826f059a3a985ce3f284da
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62955745"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704147"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos del sistema para la aplicación de la libreta de direcciones
 Para configurar la aplicación de ejemplo de la libreta de direcciones, es preciso cumplir los requisitos de software y la base de datos siguientes:  

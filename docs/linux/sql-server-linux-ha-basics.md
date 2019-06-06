@@ -7,14 +7,13 @@ manager: craigg
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.openlocfilehash: b93e48c20645da68ed53d98775a4cc57760abc77
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658416"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719373"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Aspectos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -164,7 +163,7 @@ Esta sección describe los conceptos y terminología para una implementación de
 #### <a name="node"></a>Nodo
 Un nodo es un servidor que participan en el clúster. Un clúster de Pacemaker admite hasta 16 nodos de forma nativa. Este número se puede superar si Corosync no se está ejecutando en los nodos adicionales, pero es necesario para Corosync [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. Por lo tanto, el número máximo de nodos de un clúster puede tener para cualquier [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]-en función de configuración es 16; esto es el límite de Pacemaker y no tiene nada que ver con las limitaciones máximas para grupos de disponibilidad o fci impuestas por [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)]. 
 
-#### <a name="resource"></a>Recurso
+#### <a name="resource"></a>Resource
 Un clúster WSFC y un clúster de Pacemaker tienen el concepto de un recurso. Un recurso es una funcionalidad específica que se ejecuta en el contexto del clúster, como un disco o una dirección IP. Por ejemplo, en Pacemaker pueden crear los recursos de FCI y grupo de disponibilidad. Esto no es muy distinta a lo que se realiza en un WSFC, donde verá un [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] recurso para ser una FCI o un grupo de disponibilidad al configurar un grupo de disponibilidad, pero es no es exactamente el mismo debido a las diferencias en cómo subyacentes [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] se integra con Pacemaker.
 
 Pacemaker tiene recursos estándar y el clon. Clone los recursos son las que se ejecutan simultáneamente en todos los nodos. Un ejemplo sería una dirección IP que se ejecuta en varios nodos para equilibrar la carga. Cualquier recurso que se crea para fci usa un recurso estándar, ya que sólo un nodo puede hospedar una FCI en un momento dado.

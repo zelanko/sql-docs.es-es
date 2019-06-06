@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 71aed2a5-4c8a-41db-a869-37db4d07a5a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddbb675214f537054e608e10854cedf74e0f39be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75f2784c9d144cdb33bb4062d08c3a855413e0ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719868"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66701468"
 ---
 # <a name="internet-explorer-error-codes-for-remote-data-service"></a>Códigos de Error de Internet Explorer para el servicio de datos remotos
 En la tabla siguiente se enumera los códigos de error de Microsoft® Internet Explorer relacionados con el uso del servicio de datos remoto. La conversión de decimal positiva de los dos bytes bajos, la traducción decimal negativo del código de error completo y los valores hexadecimales se muestran.

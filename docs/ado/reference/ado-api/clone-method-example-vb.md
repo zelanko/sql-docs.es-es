@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 64cb1753-e074-4a2d-8b74-7c35f3f6f64d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98b6b3e454aa37e220bbcb62fa932c4b127ecd79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e3c46addb9ca2ce28f88f220da2ef211d6f998b6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302342"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696122"
 ---
 # <a name="clone-method-example-vb"></a>Ejemplo del método Clone (VB)
 Este ejemplo se usa el [clon](../../../ado/reference/ado-api/clone-method-ado.md) método para crear copias de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y permite al usuario, a continuación, colocar el puntero de registro de cada copia de forma independiente.  

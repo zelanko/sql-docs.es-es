@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff83bb2f41415d876b89d46bfe8ba1399b940523
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7ab58a0d406df88fcf68162020ec84904738f2d1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63213421"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66694646"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Ejemplos de código RDS en Visual C++
 Utilice los siguientes ejemplos de código para obtener información sobre cómo usar las propiedades de RDS al escribir en Microsoft Visual C++.  

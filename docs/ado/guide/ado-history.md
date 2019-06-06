@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 667673f2-3151-432b-894a-3fc60b704ea4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e3e491ccb659d8739cb93d72e0c923fce480015
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 7fcdee5d45cffb14af2f1e0dc73941689c7fda4d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62695430"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702838"
 ---
 # <a name="ado-features-for-each-release"></a>Características de ADO para cada versión
 
@@ -38,7 +38,7 @@ En dominios que implican los sitios de confianza de secuencias de comandos, se d
  **Recordset.Open** _,_ **Recordset.Save** _,_ **Stream.SaveToFile** _, y_ **Stream.LoadFromFile** _operará solo los archivos físicos._
 Estos métodos ahora para comprobar que los identificadores de archivos punto a solo los archivos físicos.
 
- **Recordset.ActiveCommand** _devuelve un error cuando se invoca desde una página ASP/HTML._ 
+ **Recordset.ActiveCommand** _devuelve un error cuando se invoca desde una página ASP/HTML._
 Esto evita la **comando** objeto desde el que se utiliza incorrectamente.
 
  _El número de_**conjuntos de registros**_devuelto por una anidada_**forma**_comando tiene un límite superior._

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cccbbd4d87c930ac38aadd1ec9f58dab26bcce1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 970555ceef08d07aafb506f006652abec2139d6c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63062643"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709957"
 ---
 # <a name="axis-object-ado-md"></a>Objeto Axis (ADO MD)
 Representa una posición o el eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de uno o más dimensiones.  

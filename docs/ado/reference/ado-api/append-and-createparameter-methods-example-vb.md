@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 46908cbd-434f-43e7-a794-ed0be0e0c0a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58f8bb0cab715df78926b6a4a70027ff25bcba1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 99133d2fbf057efcd32e10d77da2226c8b989948
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63248366"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696593"
 ---
 # <a name="append-and-createparameter-methods-example-vb"></a>Anexar y ejemplo de los métodos CreateParameter (VB)
 Este ejemplo se usa el [Append](../../../ado/reference/ado-api/append-method-ado.md) y [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) métodos para ejecutar un procedimiento almacenado con un parámetro de entrada.  

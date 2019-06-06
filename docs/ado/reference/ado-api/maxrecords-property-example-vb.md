@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c687f2b7a11dba37c05412c03cf14da4a3daa543
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 51f277aa6a1d757b6796b885dee913c3c41c3288
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62863877"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707564"
 ---
 # <a name="maxrecords-property-example-vb"></a>Ejemplo de la propiedad MaxRecords (VB)
 Este ejemplo se usa el [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) propiedad para abrir un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) que contiene los títulos más caros 10 en el ***títulos*** tabla.  

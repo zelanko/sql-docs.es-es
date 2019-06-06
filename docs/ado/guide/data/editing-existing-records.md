@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 17ce1263-5897-452a-9ea5-c7f96b33df65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64262ae52b802398fc2060092a03e7469146f063
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6bd1e02bf406906cc8a893ccee66a408b38510f3
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63161714"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702063"
 ---
 # <a name="editing-existing-records"></a>Editar los registros existentes
 Para editar los registros existentes, vaya a la fila que desea editar y cambiar el **valor** propiedad de los campos que desee cambiar. Para obtener más información sobre la **campo** del objeto **valor** propiedad, vea [examinar datos](../../../ado/guide/data/examining-data.md). Dependiendo del tipo de cursor, se utilizará **actualización** o **UpdateBatch** para enviar los cambios en el origen de datos. Para obtener más información, consulte [actualizar y conservar datos](../../../ado/guide/data/updating-and-persisting-data.md).  

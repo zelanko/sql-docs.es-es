@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 38ca4e1b-c109-4fba-b590-bdd6994f770e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 707d8ca7db6d61e324c0c97839711965801a0433
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 16d2c544da0da068d54fd3d7561b5cfad87eaa60
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155213"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704217"
 ---
 # <a name="absolutepage-pagecount-and-pagesize-properties-example-vc"></a>AbsolutePage, PageCount y ejemplo de las propiedades PageSize (VC ++)
 Este ejemplo se usa el [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), y [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) propiedades para mostrar los nombres y las fechas de contratación del ***empleado*** tabla de cinco registros a la vez.  

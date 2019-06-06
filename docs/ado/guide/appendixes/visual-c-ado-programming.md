@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 232b7c739e274ba9252c14dd28e739934cbd42e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c8145b4000a621ecb09abff074e4b5e06aea7c80
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142974"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702620"
 ---
 # <a name="visual-c-ado-programming"></a>Programación ADO en Visual C++
 La referencia de API de ADO describe la funcionalidad de la interfaz de programación de aplicaciones (API) de ADO mediante una sintaxis similar a Microsoft Visual Basic. Aunque el público objetivo son todos los usuarios, los programadores de ADO emplean diversos lenguajes como Visual Basic, Visual C++ (con y sin la **#import** directiva) y Visual J ++ (con el paquete de clase ADO y WFC).  
@@ -65,7 +65,7 @@ objectPtr->PutProperty(value);      // set property value
 variable = objectPtr->GetProperty;  // get property value  
 ```
   
- El compilador generará adecuado **obtener**_-_, **colocar**-, o **PutRef**_propiedad_ llamada según la sintaxis alternativa declarada y si se va la propiedad de lectura o escritura.  
+ El compilador generará adecuado **obtener** _-_ , **colocar**-, o **PutRef**_propiedad_ llamada según la sintaxis alternativa declarada y si se va la propiedad de lectura o escritura.  
   
  El **__declspec(property...)**  solo puede declarar la directiva de compilador **obtener**, **colocar**, o **obtener** y **colocar** sintaxis alternativa para una función. Operaciones de solo lectura, solo tienen un **obtener** declaración; las operaciones de solo escritura solo tiene un **colocar** declaración; las operaciones que son ambos leen y escriben tienen ambos **obtener** y **colocar** declaraciones.  
   
@@ -85,7 +85,7 @@ variable = objectPtr->GetProperty;  // get property value
 collectionPtr->Item[index];  
 ```
   
- Por ejemplo, asignar un valor a un campo de un **Recordset** objeto, denominado  **_rs_**, derivada de la **autores** tabla de la **pubs** base de datos. Use la **Item()** propiedad para tener acceso a la tercera **campo** de la **Recordset** objeto **campos** colección (las colecciones se indizan de cero; Suponga que el tercer campo se denomina  **_au\_fname_**). A continuación, llame a la **Value()** método en el **campo** objeto para asignar un valor de cadena.  
+ Por ejemplo, asignar un valor a un campo de un **Recordset** objeto, denominado  **_rs_** , derivada de la **autores** tabla de la **pubs** base de datos. Use la **Item()** propiedad para tener acceso a la tercera **campo** de la **Recordset** objeto **campos** colección (las colecciones se indizan de cero; Suponga que el tercer campo se denomina  **_au\_fname_** ). A continuación, llame a la **Value()** método en el **campo** objeto para asignar un valor de cadena.  
   
  Esto se puede expresar en Visual Basic en los siguientes cuatro maneras (los dos últimos formularios son exclusivos de Visual Basic; otros lenguajes no tienen equivalentes):  
   

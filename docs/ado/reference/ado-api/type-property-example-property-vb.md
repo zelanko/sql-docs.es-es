@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 2ee8e4c5-1d66-4a77-8892-6dad7e07e611
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 487f32fa2ec374d08589766b75ce97a1b35e2aac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: a6c9482b1c295769465aec1a063aeac017fe79c8
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910484"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710549"
 ---
 # <a name="type-property-example-property-vb"></a>Ejemplo de la propiedad de tipo (propiedad) (VB)
 Este ejemplo se muestra el [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad. Es un modelo de una utilidad para enumerar los nombres y tipos de una colección, como [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etcetera.  

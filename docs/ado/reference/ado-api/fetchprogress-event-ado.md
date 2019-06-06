@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f47fb473d0120c124fd07fbb0b30bdecf991926f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63258968"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66698086"
 ---
 # <a name="fetchprogress-event-ado"></a>Evento FetchProgress (ADO)
 El **FetchProgress**se llama al evento periódicamente durante una operación asincrónica prolongada para informar de cuántas filas se han recuperado actualmente en el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

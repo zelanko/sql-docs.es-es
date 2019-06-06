@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6a06b2291d07378b63907b4a195fa3902930078
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472552"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702138"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con el pendiente actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin datos. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
@@ -35,7 +35,7 @@ La sección de datos define los datos del conjunto de filas junto con el pendien
 ## <a name="binary"></a>Binario  
  Datos binarios están bin.hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por nibble).  
   
-## <a name="datetime"></a>Datetime  
+## <a name="datetime"></a>DateTime  
  El formato VT_DATE variant no es directamente compatible con tipos de datos XML. El formato correcto para las fechas con el componente de fecha y de hora es aaaa-mm-ddThh.  
   
  Para obtener más información acerca de los formatos de fecha especificados mediante XML, vea el [especificación W3C XML-Data](https://go.microsoft.com/fwlink/?LinkId=5692).  

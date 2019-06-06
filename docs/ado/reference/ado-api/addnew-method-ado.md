@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 911509c62c5ae93bc73ca94469ac776195d2a8b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: da8ef8208ae3edd1219eb81ec93e77ba5a275f87
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065286"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704231"
 ---
 # <a name="addnew-method-ado"></a>AddNew (método) (ADO)
 Crea un nuevo registro para un actualizable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

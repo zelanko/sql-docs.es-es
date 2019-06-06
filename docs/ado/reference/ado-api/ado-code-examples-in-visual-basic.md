@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48530cfd233aa8ca2fd8d5af4bba075952b13678
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 15e4643baed45b04bff003c6f0fcb25b2e8951a0
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63065204"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718176"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Ejemplos de código ADO en Visual Basic
 Utilice los siguientes ejemplos de código para obtener información sobre cómo usar los métodos de ADO, propiedades y eventos cuando se escribe en Visual Basic.  
@@ -159,4 +159,4 @@ Utilice los siguientes ejemplos de código para obtener información sobre cómo
 ## <a name="see-also"></a>Vea también  
  [VBScript de ejemplos de código ADO](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Ejemplos de código ADO en Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Apéndice D: Ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [Apéndice D: Ejemplos de ADO](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

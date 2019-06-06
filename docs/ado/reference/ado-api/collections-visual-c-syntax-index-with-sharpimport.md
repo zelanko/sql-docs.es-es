@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1fa18eeacad58195c42d03b12f03332c332b0a35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9f761a0d65954e104be0849f10c786cc709085a1
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155226"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66718251"
 ---
 # <a name="collections-visual-c-syntax-index-with-import"></a>Colecciones (Visual C++ índice de sintaxis con #import)
 Resulta útil saber que las colecciones heredan ciertos métodos y propiedades comunes.  

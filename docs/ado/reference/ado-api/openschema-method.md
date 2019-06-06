@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2b4df18cf783e23792b51fb2c437b82c6a8ec52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63239991"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707107"
 ---
 # <a name="openschema-method"></a>Método OpenSchema
 Obtiene información de esquema de base de datos del proveedor.  
@@ -77,4 +77,4 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
  [Método Open (Record ADO)](../../../ado/reference/ado-api/open-method-ado-record.md)   
  [Método Open (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
  [Método Open (Stream de ADO)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: a0bb2ed8-d4cb-4f92-8de7-769bbe0e6273
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 10d6715a19212c87ece9c890ee99516571713d4f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: c146e53379f1a81948135d9d993150f4e1e4046e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710336"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706343"
 ---
 # <a name="parentcatalog-property-adox"></a>ParentCatalog (propiedad, ADOX)
 Especifica el catálogo del elemento primario de un objeto de tabla, el usuario o la columna para proporcionar acceso a propiedades específicas del proveedor.  

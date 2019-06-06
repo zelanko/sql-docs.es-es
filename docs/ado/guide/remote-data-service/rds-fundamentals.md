@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a676f0a7-7d17-45db-87c1-3fc78627465f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed14ba8b72fba1713003d5fed7005dc01d4ce84b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 528d81e4df0b0b85a09038875abbbe061a3b4497
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63186848"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699448"
 ---
 # <a name="rds-fundamentals"></a>Aspectos básicos de RDS
 > [!IMPORTANT]

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b595baf25a8b0f3982399c384c169c6af3f1cd81
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 109b7ff83e6b3f722560dae0a034c4bf37da137f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63253189"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719269"
 ---
 # <a name="errors-collection-ado"></a>Colección de errores (ADO)
 Contiene todos los [Error](../../../ado/reference/ado-api/error-object.md) objetos creados en respuesta a un error relacionado con el proveedor.  
@@ -48,4 +48,4 @@ Contiene todos los [Error](../../../ado/reference/ado-api/error-object.md) objet
   
 ## <a name="see-also"></a>Vea también  
  [Objeto de error](../../../ado/reference/ado-api/error-object.md)   
- [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Apéndice A: proveedores](../../../ado/guide/appendixes/appendix-a-providers.md)

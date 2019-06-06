@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36f91ea537b1ad2a5e52221400f41bf88dc544b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e187cc35238440e67ce3f56343b103a9943f8f75
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63028042"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719233"
 ---
 # <a name="idsoshapeextensions-interface"></a>Interfaz IDSOShapeExtensions
 Obtiene el objeto de origen de datos OLE DB subyacente para el proveedor de formas.  

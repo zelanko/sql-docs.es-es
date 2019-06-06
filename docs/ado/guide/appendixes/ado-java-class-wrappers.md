@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 1fc09dc1-9e32-412e-9f43-b8eb8bb483ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddcbba246f0bdcfb5c3a22766f5d335a2bd5893e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 34a4ab7327edfb6f6f4204fb457ade97be4f5975
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62719966"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702927"
 ---
 # <a name="ado-java-class-wrappers"></a>Contenedores de clase Java de ADO
 Este código declara una instancia de la propiedad ADO [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) contenedor de clase y lo inicializa, todo en la misma línea de código. Además, declara variables para cada uno de los argumentos de la [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método, especialmente para [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) y [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) (porque no es compatible con Java enumerado tipos). Se abre y cierra el **Recordset** objeto. Si el valor Rs1 NULL simplemente programa esa variable se liberará cuando Java realice su lanzamiento intermitente y sistemática de objetos no utilizados.  

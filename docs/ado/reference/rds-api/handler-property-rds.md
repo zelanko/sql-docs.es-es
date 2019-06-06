@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: fdc34362-6d47-4727-b171-8d033159408e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 642addb5ff03e17b5b36e7baa01ef87661a00b35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 6b538767f62a3d80b9cf2cd9b558f14c5de91549
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63276448"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712467"
 ---
 # <a name="handler-property-rds"></a>Propiedad de controlador (RDS)
 Indica el nombre de un programa de personalización de servidor (controlador) que amplía la funcionalidad de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)y todos los parámetros utilizados por la *controlador*.  
@@ -50,7 +50,7 @@ DataControl.Handler = String
   
  El nombre del controlador predeterminado es **MSDFMAP. Controlador**, y su parámetro predeterminado es un archivo de personalización denominado **MSDFMAP. INI**. Utilice esta propiedad para invocar los archivos de personalización alternativos creados por el administrador del servidor.  
   
- La alternativa a la configuración de la **controlador** propiedad consiste en especificar un controlador de parámetros y en el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad; es decir, "**controlador =** _handlerName, parámetro1, parámetro2,...;_".  
+ La alternativa a la configuración de la **controlador** propiedad consiste en especificar un controlador de parámetros y en el [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) propiedad; es decir, "**controlador =** _handlerName, parámetro1, parámetro2,...;_ ".  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto DataControl (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  

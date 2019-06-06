@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: sql-linux
-ms.openlocfilehash: d20799a6a6c9872d56bebd6a3c38d76916fb7ba9
-ms.sourcegitcommit: 8dccf20d48e8db8fe136c4de6b0a0b408191586b
+ms.openlocfilehash: f1f949db84689fae7e362f81cb686824f249c564
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/09/2018
-ms.locfileid: "48874301"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705226"
 ---
 # <a name="choose-the-right-tool-to-manage-sql-server-on-linux"></a>Elija la herramienta adecuada para administrar SQL Server en Linux
 
@@ -23,7 +22,7 @@ ms.locfileid: "48874301"
 
 Hay varias maneras para administrar SQL Server en Linux. La siguiente sección proporciona una introducción rápida de las técnicas de punteros a más recursos y herramientas de administración diferentes.
 
-## <a name="mssql-conf"></a>MSSQL-conf 
+## <a name="mssql-conf"></a>mssql-conf 
 
 El **mssql-conf** herramienta configura SQL Server en Linux. Para obtener más información, consulte [configurar SQL Server en Linux con mssql-conf](sql-server-linux-configure-mssql-conf.md).
 
@@ -39,7 +38,7 @@ El nuevo Azure Data Studio es una herramienta multiplataforma para administrar S
 
 SQL Server Management Studio (SSMS) es una aplicación de Windows que proporciona una interfaz gráfica de usuario para la administración de SQL Server. Aunque actualmente sólo se ejecuta en Windows, puede usarlo para conectarse remotamente a las instancias de Linux con SQL Server. Para obtener más información sobre el uso de SSMS para administrar SQL Server, vea [Use SSMS para administrar SQL Server en Linux](sql-server-linux-manage-ssms.md).
 
-## <a name="mssql-cli-preview"></a>MSSQL-cli (versión preliminar)
+## <a name="mssql-cli-preview"></a>mssql-cli (preview)
 
 Microsoft ha lanzado una nueva herramienta de secuencias de comandos multiplataforma para SQL Server, [mssql-cli](https://blogs.technet.microsoft.com/dataplatforminsider/2017/12/12/try-mssql-cli-a-new-interactive-command-line-tool-for-sql-server/). Esta herramienta está actualmente en versión preliminar.
 

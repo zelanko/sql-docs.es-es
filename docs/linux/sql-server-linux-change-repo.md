@@ -7,26 +7,25 @@ manager: craigg
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 65147a78fe616f83854b155f903d346aa52d69d5
-ms.sourcegitcommit: c0e1db7cd1081e94a3a526136a5e166df646c9ba
+ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/20/2019
-ms.locfileid: "56444240"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713336"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositorios de instalación y actualización de SQL Server en Linux
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 ::: zone pivot="ld2-rhel"
-En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux. En la parte superior, la selección actual es **Red Hat (RHEL)**.
+En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux. En la parte superior, la selección actual es **Red Hat (RHEL)** .
 ::: zone-end
 
 ::: zone pivot="ld2-sles"
-En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux. En la parte superior, la selección actual es **SUSE (SLES)**.
+En este artículo se describe cómo configurar el repositorio correcto para las actualizaciones e instalaciones de SQL Server 2017 y 2019 de SQL Server en Linux. En la parte superior, la selección actual es **SUSE (SLES)** .
 ::: zone-end
 
 ::: zone pivot="ld2-ubuntu"
@@ -40,7 +39,7 @@ En este artículo se describe cómo configurar el repositorio correcto para las 
 
 Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Este repositorio se usa para adquirir el paquete del motor de base de datos, **mssql-server**y relacionados con los paquetes de SQL Server. Actualmente hay tres repositorios principales:
 
-| Repositorio | Nombre | Descripción |
+| Repositorio | NOMBRE | Descripción |
 |---|---|---|
 | **Preview (2017)** | **mssql-server** | Repositorio de SQL Server 2017 CTP y RC (suspendido). |
 | **Preview (2019)** | **mssql-server-preview** | Vista previa de SQL Server 2019 y repositorio RC. |
@@ -51,7 +50,7 @@ Al instalar SQL Server en Linux, debe configurar un repositorio de Microsoft. Es
 
 Es importante tener en cuenta que hay dos tipos principales de repositorios para cada distribución:
 
-- **Las actualizaciones acumulativas (CU)**: El repositorio de actualización acumulativa (CU) contiene los paquetes para la versión de SQL Server de base y las correcciones de errores o mejoras desde esa versión. Las actualizaciones acumulativas son específicas para una versión de lanzamiento, como SQL Server 2017. Se publican periódicamente.
+- **Las actualizaciones acumulativas (CU)** : El repositorio de actualización acumulativa (CU) contiene los paquetes para la versión de SQL Server de base y las correcciones de errores o mejoras desde esa versión. Las actualizaciones acumulativas son específicas para una versión de lanzamiento, como SQL Server 2017. Se publican periódicamente.
 
 - **GDR**: El repositorio GDR contiene paquetes para el lanzamiento de SQL Server base y solo correcciones críticas y actualizaciones de seguridad desde esa versión. Estas actualizaciones también se agregan a la próxima versión CU.
 

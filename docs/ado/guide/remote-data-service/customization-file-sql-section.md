@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: e65c2871-9986-44ff-b8b7-7f5eda91b3fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5efa6587ade3a15ce4b45b7247da1c3a896f69ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ba0d8c7ab1294400c19456abf164c6ad6be0dd2e
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63214764"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704306"
 ---
 # <a name="customization-file-sql-section"></a>Sección de SQL del archivo de personalización
 El **sql** sección puede contener una cadena SQL nueva que reemplaza la cadena de comandos de cliente. Si no hay ninguna cadena SQL en la sección, se omitirá la sección.  
@@ -43,7 +43,7 @@ SQL = " "
 ## <a name="syntax"></a>Sintaxis  
  Un entrada de la cadena SQL de reemplazo tiene el formato:  
   
- **SQL=**   
+ **SQL=**    
  ***sqlString***  
   
 |Parte|Descripción|  

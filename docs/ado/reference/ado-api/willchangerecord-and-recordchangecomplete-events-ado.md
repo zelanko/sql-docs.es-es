@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: cbc369fd-63af-4a7d-96ae-efa91b78ca69
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd31a75a45bd38bda04655bbb47daca09714803c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: ef2e02ec156aeed69089a585d743e16e592eb95f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642893"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710155"
 ---
 # <a name="willchangerecord-and-recordchangecomplete-events-ado"></a>Eventos WillChangeRecord y RecordChangeComplete (ADO)
 El **WillChangeRecord** se llama al evento antes de uno o más registros (filas) el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) cambiar. El **RecordChangeComplete** se llama al evento después de que uno o más registros de cambian.  

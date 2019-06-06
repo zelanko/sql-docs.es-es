@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f53fb3258e7eebc54aa0adfad60ff81e83e41bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: db5be65f007a667d23f7d94b3a7ae17eb6d2f36c
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63315676"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719102"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Método Seek y ejemplo de la propiedad de índice (VB)
 Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [Seek](../../../ado/reference/ado-api/seek-method.md) método y [índice](../../../ado/reference/ado-api/index-property.md) propiedad junto con un determinado ***Id. de empleado***, para buscar el nombre del empleado en el ***empleados*** tabla de la base de datos Neptuno.  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84091a0d01f23fe870f6f0dbfb01bced2bff3e0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 8d4aa41707757b42fb33e918b0d1465a884a14bb
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62710229"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66706260"
 ---
 # <a name="parameters-collection-command-property-example-vb"></a>Ejemplo de propiedad Command, colección de parámetros (VB)
 El código siguiente muestra cómo usar el [comando](../../../ado/reference/adox-api/command-property-adox.md) propiedad con el [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto para recuperar información de parámetros para el procedimiento.  

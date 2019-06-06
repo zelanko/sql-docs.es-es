@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cef615f2009809cb84d62b284d2c08167b6ba86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: aa5c6dc2517a05fb25ccdb2ab7f5cd58976ac4e6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63033207"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708753"
 ---
 # <a name="positions-collection-ado-md"></a>Colección de posiciones (ADO MD)
 Contiene el [posición](../../../ado/reference/ado-md-api/position-object-ado-md.md) objetos que definen un punto de un eje.  

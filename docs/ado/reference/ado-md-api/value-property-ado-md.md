@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe3426b6e4ef8f2174cf12ba4db8883e4a5a83a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 9160ff14f331821415670fd1f0a6732e36caa728
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63308776"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66708683"
 ---
 # <a name="value-property-ado-md"></a>Value (propiedad) (ADO MD)
 Indica el valor del elemento actual [celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

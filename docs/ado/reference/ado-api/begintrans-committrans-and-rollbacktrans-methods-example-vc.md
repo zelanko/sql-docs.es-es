@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cffd1524ce12d53be41ea5a060c04ff32f43542e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 2f9f19cc552209d2ecb35c1339d209cc04feb874
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62509827"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66696477"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vc"></a>BeginTrans, CommitTrans y ejemplo de los métodos RollbackTrans (VC ++)
 Este ejemplo cambia el tipo de libro de todos los libros de psicología de la ***títulos*** tabla de la base de datos. Después de la [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método inicia una transacción que se aísla de todos los cambios realizados en el ***títulos*** tabla, el [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método guarda los cambios. Puede usar el [reversión](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) método para deshacer los cambios guardados mediante el [actualización](../../../ado/reference/ado-api/update-method.md) método.  

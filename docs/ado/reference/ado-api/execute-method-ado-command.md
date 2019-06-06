@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: f84a5ff3-0528-4ad7-9bea-9a15103378dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9508b85bc73ebbec82ad7d3bea5af5148d7c674
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 88718c492702018b77e89597faec8897aa8f51f1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184807"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66697926"
 ---
 # <a name="execute-method-ado-command"></a>Método Execute (Command ADO)
 Ejecuta la consulta, la instrucción SQL o el procedimiento almacenado especificado en el [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) o [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) propiedad de la [objeto Command](../../../ado/reference/ado-api/command-object-ado.md).  
@@ -53,7 +53,7 @@ Set recordset = command.Execute( RecordsAffected, Parameters, Options )
 ## <a name="remarks"></a>Comentarios  
  Mediante el **Execute** método en un **comando** objeto ejecuta la consulta especificada en el **CommandText** propiedad o **CommandStream** propiedad del objeto.  
   
- Los resultados se devuelven en un **Recordset** (de forma predeterminada) o como un flujo de información binaria. Para obtener un flujo binario, especifique **adExecuteStream** en *opciones*, a continuación, proporcione un flujo estableciendo **Command.Properties ("salida Stream")**. ADO **Stream** objeto puede especificarse para recibir los resultados o se puede especificar otro objeto stream, como el objeto de respuesta de IIS. Si se ha especificado ninguna secuencia antes de llamar a **Execute** con **adExecuteStream**, se produce un error. La posición de la secuencia en la devolución de **Execute** es proveedor específico.  
+ Los resultados se devuelven en un **Recordset** (de forma predeterminada) o como un flujo de información binaria. Para obtener un flujo binario, especifique **adExecuteStream** en *opciones*, a continuación, proporcione un flujo estableciendo **Command.Properties ("salida Stream")** . ADO **Stream** objeto puede especificarse para recibir los resultados o se puede especificar otro objeto stream, como el objeto de respuesta de IIS. Si se ha especificado ninguna secuencia antes de llamar a **Execute** con **adExecuteStream**, se produce un error. La posición de la secuencia en la devolución de **Execute** es proveedor específico.  
   
  Si el comando no está diseñado para devolver resultados (por ejemplo, una consulta UPDATE de SQL) el proveedor devuelve **nada** siempre que la opción **adExecuteNoRecords** especificado; en caso contrario, Execute devuelve un cerrado **Recordset**. Algunos lenguajes de aplicación permiten omitir este valor devuelto si no hay ningún **Recordset** es el deseado.  
   

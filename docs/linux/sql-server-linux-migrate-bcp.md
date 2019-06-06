@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 7b93d0d7-7946-4b78-b33a-57d6307cdfa9
-ms.openlocfilehash: 506d98acd28b38d0ce8867f96229632a306ae680
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bda200cccdaadb4db30b95289c2e16982a4e1f4b
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812157"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713138"
 ---
 # <a name="bulk-copy-data-with-bcp-to-sql-server-on-linux"></a>Copia masiva de datos con bcp para SQL Server en Linux
 
@@ -81,7 +80,7 @@ Esto debería mostrar lo siguiente en la ventana del terminal:
 ```
 
 ### <a name="import-data-from-the-source-data-file"></a>Importar datos desde el archivo de datos de origen
-Copie y pegue los siguientes comandos en la ventana de terminal. Este comando usa `bcp` para conectarse a la instancia de SQL Server local (**localhost**) e importar los datos del archivo de datos (**~/test_data.txt**) en la tabla (**TestEmployees** ) en la base de datos (**BcpSampleDB**). No olvide reemplazar el nombre de usuario y `<your_password>` según sea necesario antes de ejecutar los comandos.
+Copie y pegue los siguientes comandos en la ventana de terminal. Este comando usa `bcp` para conectarse a la instancia de SQL Server local (**localhost**) e importar los datos del archivo de datos ( **~/test_data.txt**) en la tabla (**TestEmployees** ) en la base de datos (**BcpSampleDB**). No olvide reemplazar el nombre de usuario y `<your_password>` según sea necesario antes de ejecutar los comandos.
 
 ```bash 
 bcp TestEmployees in ~/test_data.txt -S localhost -U sa -P <your_password> -d BcpSampleDB -c -t  ','

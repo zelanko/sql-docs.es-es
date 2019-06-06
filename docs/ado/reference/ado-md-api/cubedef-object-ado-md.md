@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: feb2581c-fc41-471c-bb69-29f8a55fda70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1027fc76cb09f7b846e1b8edad52a3cb5dbf2bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 3831c78380d8ae34e1dab74e92514c7d84136988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63225915"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66709391"
 ---
 # <a name="cubedef-object-ado-md"></a>Objeto CubeDef (ADO MD)
 Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.  
@@ -39,7 +39,7 @@ Representa un cubo de un esquema multidimensional, que contiene un conjunto de d
   
  El **propiedades** colección contiene las propiedades proporcionadas por el proveedor. En la tabla siguiente se enumera las propiedades que podrían estar disponibles. La lista de propiedades reales puede variar en función de la implementación del proveedor. Consulte la documentación del proveedor para obtener una lista completa de las propiedades disponibles.  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |CatalogName|El nombre del catálogo al que pertenece este cubo.|  
 |CreatedOn|Fecha y hora de creación del cubo.|  

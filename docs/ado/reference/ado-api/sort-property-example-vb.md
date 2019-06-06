@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: fc2fd40b-65d6-4023-90a3-90c9a88ef6cf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac218d0f95e16931f359bd183d4fe8a032f8c6cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 537ca70a2741cb1226602af5406529eaa281fcd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314789"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711216"
 ---
 # <a name="sort-property-example-vb"></a>Ejemplo de la propiedad de ordenación (VB)
 Este ejemplo se usa el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) del objeto [ordenación](../../../ado/reference/ado-api/sort-property.md) propiedad volver a ordenar las filas de una **Recordset** derivado de la ***autores*** tabla de el ***Pubs*** base de datos. Una rutina de la utilidad secundaria imprime cada fila.  

@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: cbbd10ce9bc41ef7149f319077030e982ae6fcc0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1f0274a8eb84f9700378d266729afbdc91aebaf1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664604"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713207"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Las bibliotecas de conectividad y marcos de trabajo para Microsoft SQL Server
 
@@ -25,7 +24,7 @@ Consulte la [tutoriales de introducción](https://aka.ms/sqldev) rápidamente em
 
 En la tabla siguiente se enumera las bibliotecas de conectividad o *controladores* que las aplicaciones cliente pueden utilizar desde una variedad de lenguajes para conectarse a y usar Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse. 
 
-| Idioma | Plataforma | Recursos adicionales | Descargar | Introducción |
+| Lenguaje | Plataforma | Recursos adicionales | Descargar | Introducción |
 | :-- | :-- | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Microsoft ADO.NET para SQL Server](https://msdn.microsoft.com/library/mt657768.aspx) | [Descargar](https://msdn.microsoft.com/vstudio/aa496123.aspx) | [Introducción](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu)
 | Java | Windows, Linux, macOS | [Microsoft JDBC Driver para SQL Server](https://msdn.microsoft.com/library/mt484311.aspx) | [Descargar](https://go.microsoft.com/fwlink/?LinkId=245496) |  [Introducción](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu)
@@ -37,7 +36,7 @@ En la tabla siguiente se enumera las bibliotecas de conectividad o *controladore
 
 En la tabla siguiente se enumera algunos ejemplos de marcos de asignación relacional de objetos (ORM) y los marcos web que las aplicaciones cliente pueden utilizar con Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse. 
 
-| Idioma | Plataforma | ORM(s) |
+| Lenguaje | Plataforma | ORM(s) |
 | :-- | :-- | :-- |
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernar ORM](https://hibernate.org/orm)|

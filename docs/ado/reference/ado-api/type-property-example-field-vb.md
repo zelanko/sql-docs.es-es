@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: accb72f5-a3bd-4a7e-92b6-6da0783b4b75
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab419055687e7715e71005f2d231300269c2868f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 94bec3334bb637bf27189d35194fccd605931789
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910891"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66710660"
 ---
 # <a name="type-property-example-field-vb"></a>Ejemplo de la propiedad de Type (campo) (VB)
 Este ejemplo se muestra el [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad mostrando el nombre de la constante que corresponde al valor de la [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad de todos el [campo](../../../ado/reference/ado-api/field-object.md) objetos en el ***Empleados*** tabla. La función FieldType es necesaria ejecutar este procedimiento.  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89b82d6efe87cec6643d68837447ed64a6f69059
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 21cb7f8773c0663d584f62bcaaaeab15c7eac108
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63314701"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66711425"
 ---
 # <a name="seek-method"></a>El método de búsqueda
 Busca el índice de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para localizar rápidamente la fila que coincide con los valores especificados y cambia la posición de fila actual para esa fila.  
@@ -42,7 +42,7 @@ recordset.Seek KeyValues, SeekOption
  Un [SeekEnum](../../../ado/reference/ado-api/seekenum.md) valor que especifica el tipo de comparación entre las columnas del índice y la correspondiente *KeyValues*.  
   
 ## <a name="remarks"></a>Comentarios  
- Use la **Seek** método junto con el [índice](../../../ado/reference/ado-api/index-property.md) propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md)**(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite los índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
+ Use la **Seek** método junto con el [índice](../../../ado/reference/ado-api/index-property.md) propiedad si el proveedor subyacente admite índices en el **Recordset** objeto. Use la [admite](../../../ado/reference/ado-api/supports-method.md) **(adSeek)** método para determinar si el proveedor subyacente admite **Seek**y el **Supports** método para determinar si el proveedor admite los índices. (Por ejemplo, el [proveedor OLE DB para Microsoft Jet](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-microsoft-jet.md) admite **Seek** y **índice**.)  
   
  Si **Seek** hace que no se encontró la fila deseada, ningún error se produce y la fila se coloca al final de la **Recordset**. Establecer el **índice** propiedad en el índice deseado antes de ejecutar este método.  
   

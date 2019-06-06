@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a45eafed2c0e673820a5b93eaa13438ac7898988
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 75c75540433e077cc5d96bb9b2f0c88c05a62bd6
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63156434"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704037"
 ---
 # <a name="activecommand-property-example-vb"></a>Ejemplo de la propiedad ActiveCommand (VB)
 Este ejemplo se muestra el [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) propiedad.  
@@ -93,7 +93,7 @@ End Sub
   
  El **ActiveCommandXprint** rutina tiene sólo un **Recordset** de objeto, que imprimir el texto de comando y los parámetros que creó el **Recordset**. Esto puede realizarse porque la **Recordset** del objeto **ActiveCommand** propiedad da como resultado asociado [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto.  
   
- El **comando** del objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad da como resultado el comando con parámetros que creó el **Recordset**. El **comando** del objeto [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección genera el valor que se ha sustituido por marcador de posición de parámetro del comando ("**?**").  
+ El **comando** del objeto [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) propiedad da como resultado el comando con parámetros que creó el **Recordset**. El **comando** del objeto [parámetros](../../../ado/reference/ado-api/parameters-collection-ado.md) colección genera el valor que se ha sustituido por marcador de posición de parámetro del comando (" **?** ").  
   
  Por último, se imprimen un mensaje de error o el nombre del autor y ID.  
   

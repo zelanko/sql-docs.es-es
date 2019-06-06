@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 699b73f7-04f9-4d46-94b2-6cb12be6de56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7cf21d0f932708b23978bb36db5c800358a6fa90
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: e9fb54ab264b6f1a247407d5bfdecdbdf6c4dc16
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63311919"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66712054"
 ---
 # <a name="read-readtext-write-and-writetext-methods-example-vb"></a>Lectura, ReadText, escritura y ejemplo de los métodos WriteText (VB)
 En este ejemplo se muestra cómo leer el contenido de un cuadro de texto en un texto [Stream](../../../ado/reference/ado-api/stream-object-ado.md) y un archivo binario **Stream**. Otras propiedades y métodos que se muestran incluyen [posición](../../../ado/reference/ado-api/position-property-ado.md), [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md), [Charset](../../../ado/reference/ado-api/charset-property-ado.md), y [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  

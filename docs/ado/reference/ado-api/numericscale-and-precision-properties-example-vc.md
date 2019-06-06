@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 55d91ba8-4d80-4df6-af8e-060a19ddc138
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c8cde8f5d9d50b37f3d89154d09d6d60ac3bc987
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1437eeda2fcaab8b4eccefe12c2630d5357309d1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63242632"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66707209"
 ---
 # <a name="numericscale-and-precision-properties-example-vc"></a>Ejemplo de las propiedades NumericScale y Precision (VC ++)
 Este ejemplo se usa el [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) y [precisión](../../../ado/reference/ado-api/precision-property-ado.md) propiedades para mostrar la escala numérica y la precisión de los campos de la ***descuentos*** tabla de la  ***Pubs*** base de datos.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b2fcf858-21c3-462a-8d49-50c85647d092
-ms.custom: sql-linux
-ms.openlocfilehash: 5de8172a38cfb547315c2cf65c470b019b7227eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38f0f3a03e6de4cec622ffe03f9dbdc47a7ccb73
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723203"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66713157"
 ---
 # <a name="use-sql-server-management-studio-on-windows-to-manage-sql-server-on-linux"></a>Usar SQL Server Management Studio en Windows para administrar SQL Server en Linux
 
@@ -93,7 +92,7 @@ Después de conectarse a su servidor, puede conectarse a una base de datos y eje
 
 1. Haga clic en el **Execute** botón para ejecutar la consulta y ver los resultados.
 
-   ![Correcto. Conectarse al servidor de base de datos SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
+   ![Correcto. Conéctese al servidor de base de datos SQL: SQL Server Management Studio](./media/sql-server-linux-manage-ssms/execute-query.png)
 
 Aunque es posible realizar casi cualquier tarea de administración con consultas Transact-SQL, SSMS es una herramienta gráfica que facilita es más fácil de administrar SQL Server. Las secciones siguientes proporcionan algunos ejemplos del uso de la interfaz gráfica de usuario.
 
@@ -147,4 +146,4 @@ Cuando se expande un panel, Monitor de actividad consulta la instancia para obte
 - [Exportar e importar una base de datos con SSMS](sql-server-linux-migrate-ssms.md)
 - [Tutorial: SQL Server Management Studio](../ssms/tutorials/tutorial-sql-server-management-studio.md)
 - [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md)
-- [Supervisión de la actividad y el rendimiento del servidor](../relational-databases/performance/server-performance-and-activity-monitoring.md)
+- [Supervisión de la actividad y rendimiento del servidor](../relational-databases/performance/server-performance-and-activity-monitoring.md)

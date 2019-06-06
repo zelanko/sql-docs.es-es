@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25a076118df9f85ff2449c35dc0273db8a499fac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62855179"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66702724"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -117,13 +117,13 @@ objectClass='user' AND objectCategory='Person'"
   
 |Método|¿Está disponible?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|  
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sin|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
-|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|No|  
+|[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sin|  
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|  
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|  
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
@@ -135,8 +135,8 @@ objectClass='user' AND objectCategory='Person'"
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|Sí|  
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|Sin|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sin|  
   
  Para obtener más información acerca de ADSI y los detalles del proveedor, consulte la documentación de Active Directory Service Interfaces o visite la página Web de ADSI.  
   

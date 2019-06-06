@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 669662a0-e20f-483e-ab28-53f66c524c98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 061cae6b387611886943aabcfa3dfd99579a59d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 1c6894a19c39df171dea3b621773daf31971895f
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63134409"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66704270"
 ---
 # <a name="minimizing-log-file-space-usage"></a>Minimización del uso de espacio de archivo de registro
 Un archivo de registro puede llenar rápidamente (detener, por tanto, el servidor) si hay un gran volumen de actividad en una base de datos de SQL Server. Puede establecer el archivo de registro en **Truncate en punto de comprobación** ampliar significativamente la vida del archivo de registro para una base de datos.  

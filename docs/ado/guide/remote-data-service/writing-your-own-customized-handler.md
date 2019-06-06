@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: daddb9057775e1f098754dd2a331c1dc77194d10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 58a380336d3b1abc99e00f1f4052cd24a8cc5988
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63155913"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699404"
 ---
 # <a name="writing-your-own-customized-handler"></a>Escritura de un controlador personalizado
 Es posible que desea escribir su propio controlador si es un administrador del servidor IIS que desea que el valor predeterminado admite RDS, pero un mayor control sobre las solicitudes de usuario y los derechos de acceso.  
@@ -32,7 +32,7 @@ Es posible que desea escribir su propio controlador si es un administrador del s
 ## <a name="idatafactoryhandler-interface"></a>Interfaz IDataFactoryHandler  
  Esta interfaz tiene dos métodos, **GetRecordset** y **volver a conectar**. Ambos métodos requieren que el [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) propiedad se establece en **adUseClient**.  
   
- Ambos métodos toman argumentos que aparecen después de la primera coma en el "**controlador =**" palabra clave. Por ejemplo, `"Handler=progid,arg1,arg2;"` pasará una cadena de argumentos `"arg1,arg2"`, y `"Handler=progid"` pasará un argumento nulo.  
+ Ambos métodos toman argumentos que aparecen después de la primera coma en el "**controlador =** " palabra clave. Por ejemplo, `"Handler=progid,arg1,arg2;"` pasará una cadena de argumentos `"arg1,arg2"`, y `"Handler=progid"` pasará un argumento nulo.  
   
 ## <a name="getrecordset-method"></a>Método GetRecordset  
  Este método consulta el origen de datos y crea un nuevo [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto con los argumentos proporcionados. El **Recordset** debe abrirse con **adLockBatchOptimistic** y no se debe abrir de forma asincrónica.  

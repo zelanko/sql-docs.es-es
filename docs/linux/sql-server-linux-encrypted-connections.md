@@ -7,17 +7,16 @@ ms.author: vinsonyu
 manager: craigg
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 9506c8c27e17f59c95a1cfeff5cd3885d1657b79
-ms.sourcegitcommit: 753364d8ac569c9f363d2eb6b1b8214948d2ed8c
+ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52826090"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705671"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrar conexiones a SQL Server en Linux
 
@@ -135,5 +134,5 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUD
 |--- |--- |
 |La cadena de certificado fue emitida por una entidad que no sea de confianza.  |Este error se produce cuando los clientes no pueden comprobar la firma en el certificado presentado por SQL Server durante el protocolo de enlace TLS. Asegúrese de que el cliente confía ya sea el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directamente el certificado o la entidad de certificación que firmó el certificado de SQL Server. |
 |El nombre principal de destino es incorrecto.  |Asegúrese de que el campo de nombre común en el certificado del servidor SQL coincide con el nombre del servidor especificado en la cadena de conexión del cliente. |  
-|El host remoto cerró fuerza una conexión existente. |Este error puede producirse cuando el cliente no es compatible con la versión del protocolo TLS requerida SQL Server. Por ejemplo, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para requerir TLS 1.2, asegúrese de que los clientes también admiten el protocolo TLS 1.2. |
+|El host remoto forzó el cierre de la conexión existente. |Este error puede producirse cuando el cliente no es compatible con la versión del protocolo TLS requerida SQL Server. Por ejemplo, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para requerir TLS 1.2, asegúrese de que los clientes también admiten el protocolo TLS 1.2. |
 | | |   

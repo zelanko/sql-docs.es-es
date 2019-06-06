@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 353d569a-043a-4397-9ee6-564c4af8d5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 65f4705eb926c116d935384163cffe4f33b11a88
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 893921a7100ca22cae219f5a0e88d543499053b1
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63184838"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66699696"
 ---
 # <a name="xml-recordset-persistence-scenario"></a>Escenario de persistencia del conjunto de registros XML
 En este escenario, creará una aplicación de páginas Active Server (ASP) que guarda el contenido de un objeto de conjunto de registros directamente en el objeto de respuesta de ASP.  

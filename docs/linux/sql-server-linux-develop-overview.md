@@ -7,15 +7,14 @@ manager: craigg
 ms.date: 11/17/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
 ms.assetid: 758cb738-b018-465b-9ab0-59a24b892e66
-ms.openlocfilehash: 9f9175d82102e5c0dbbae2fbc7054459a0710e6e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 4d3ef46dfbacb1c4cbfe67df555b79fb10ade86d
+ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670885"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66705817"
 ---
 # <a name="how-to-get-started-developing-applications-for-sql-server-on-linux"></a>Cómo empezar a desarrollar aplicaciones para SQL Server en Linux
 
@@ -55,7 +54,7 @@ Vea los temas siguientes para obtener más información:
 
 - [SQL Server Management Studio (SSMS)](sql-server-linux-manage-ssms.md)
 - [SQL Server Data Tools (SSDT)](sql-server-linux-develop-use-ssdt.md)
-- [PowerShell SQL](sql-server-linux-manage-powershell.md)
+- [SQL PowerShell](sql-server-linux-manage-powershell.md)
 
 > [!Note]
 > Asegúrese de que está utilizando las versiones más recientes de estas herramientas para mejorar la experiencia.
@@ -68,9 +67,9 @@ Puede usar el nuevo [extensión mssql](https://aka.ms/mssql-marketplace) para [V
 
 También puede usar nuevas herramientas de línea de comandos que son nativas para Linux. Estas herramientas incluyen lo siguiente:
 
-- [Sqlcmd](../tools/sqlcmd-utility.md)
+- [sqlcmd](../tools/sqlcmd-utility.md)
 - [bcp](sql-server-linux-migrate-bcp.md)
-- [MSSQL-conf](sql-server-linux-configure-mssql-conf.md)
+- [mssql-conf](sql-server-linux-configure-mssql-conf.md)
 
 ## <a name="next-steps"></a>Pasos siguientes
 
@@ -78,5 +77,5 @@ Para empezar, instale a SQL Server en Linux mediante uno de los siguientes inici
 
 - [Instalación en Red Hat Enterprise Linux](quickstart-install-connect-red-hat.md)
 - [Instalación en SUSE Linux Enterprise Server](quickstart-install-connect-suse.md)
-- [Instalar en Ubuntu](quickstart-install-connect-ubuntu.md)
+- [Instalación en Ubuntu](quickstart-install-connect-ubuntu.md)
 - [Ejecutar en Docker](quickstart-install-connect-ubuntu.md)

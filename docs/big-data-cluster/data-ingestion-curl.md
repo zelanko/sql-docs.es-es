@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d40123d97b0a2305494a0cfe23dd2221993d14d3
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994046"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743950"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server
 
@@ -25,14 +25,14 @@ En este artículo se explica cómo usar **curl** para cargar datos en HDFS en cl
 
 ## <a name="obtain-the-service-external-ip"></a>Obtener la dirección IP externa de servicio
 
-WebHDFS se inicia cuando se completa la implementación, y su acceso se pasa a través de Knox. El punto de conexión de Knox se expone a través de un servicio de Kubernetes denominado **puerta de enlace-svc-external**.  Para crear la dirección URL de WebHDFS necesaria para cargar/descargar archivos, necesitará la **puerta de enlace-svc-external** dirección IP externa y el nombre del clúster del servicio. Puede obtener el **puerta de enlace-svc-external** dirección IP externa del servicio, ejecute el comando siguiente:
+WebHDFS se inicia cuando se completa la implementación, y su acceso se pasa a través de Knox. El punto de conexión de Knox se expone a través de un servicio de Kubernetes denominado **puerta de enlace-svc-external**.  Para crear la dirección URL de WebHDFS necesaria para cargar/descargar archivos, necesitará la **puerta de enlace-svc-external** dirección IP externa y el nombre del clúster de macrodatos de servicio. Puede obtener el **puerta de enlace-svc-external** dirección IP externa del servicio, ejecute el comando siguiente:
 
 ```bash
-kubectl get service gateway-svc-external -n <cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
+kubectl get service gateway-svc-external -n <big data cluster name> -o json | jq -r .status.loadBalancer.ingress[0].ip
 ```
 
 > [!NOTE]
-> El `<cluster name>` aquí es el nombre del clúster que especificó en el archivo de configuración de implementación. El nombre predeterminado es `mssql-cluster`.
+> El `<big data cluster name>` aquí es el nombre del clúster que especificó en el archivo de configuración de implementación. El nombre predeterminado es `mssql-cluster`.
 
 ## <a name="construct-the-url-to-access-webhdfs"></a>Construir la dirección URL para tener acceso a WebHDFS
 

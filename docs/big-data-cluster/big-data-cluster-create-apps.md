@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 462bff09e37f293f39109e9c129fcbb0ca4d2111
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 6c8f4aea32ba409a00dd1d8f3fb5487e2a4a9d90
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994104"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743975"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
 
@@ -80,7 +80,7 @@ Si usa AKS, deberá ejecutar el comando siguiente para obtener la dirección IP 
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your cluster>
+kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm o Minikube
@@ -111,7 +111,7 @@ Esto supone que tiene la aplicación que se almacenan en el `addpy` carpeta. Est
 
 Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes archivos en un directorio llamado `addpy`:
 
-- `add.py`  Copie el siguiente código de Python en este archivo:
+- `add.py` Copie el siguiente código de Python en este archivo:
    ```py
    #add.py
    def add(x,y):
@@ -119,7 +119,7 @@ Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes
         return result
     result=add(x,y)
    ```
-- `spec.yaml`  Copie el código siguiente en este archivo:
+- `spec.yaml` Copie el código siguiente en este archivo:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

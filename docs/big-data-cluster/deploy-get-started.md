@@ -9,12 +9,12 @@ ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5aeb6f5f92eba1bad828455b472d25561570901a
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 48ba1bfe2a90fdb1ea2464d404ba851a8ca30992
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64774767"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743984"
 ---
 # <a name="get-started-with-sql-server-big-data-clusters"></a>Empezar a trabajar con clústeres grandes de datos de SQL Server
 
@@ -39,7 +39,7 @@ Otras herramientas son necesarias para diferentes escenarios. Cada artículo deb
 
 Los clústeres de datos de gran tamaño se implementan como una serie de contenedores interrelacionados que se administran en [Kubernetes](https://kubernetes.io/docs/home). Puede hospedar Kubernetes en una variedad de formas. Incluso si ya tiene un entorno de Kubernetes existente, debe revisar los requisitos relacionados para los clústeres de datos de gran tamaño.
 
-- **Azure Kubernetes Service (AKS)**: AKS permite implementar un clúster de Kubernetes administrado en Azure. Solo debe administrar y mantener los nodos de agente. Con AKS, no tienes que proporcionar su propio hardware para el clúster. También es fácil de usar un clúster de macrodatos [script de implementación](quickstart-big-data-cluster-deploy.md) para crear el clúster de AKS e implementar el clúster de macrodatos en un solo paso. Para obtener más información sobre el uso de AKS con los clústeres de datos de gran tamaño, vea [configurar Azure Kubernetes Service para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019](deploy-on-aks.md).
+- **Azure Kubernetes Service (AKS)** : AKS permite implementar un clúster de Kubernetes administrado en Azure. Solo debe administrar y mantener los nodos de agente. Con AKS, no tienes que proporcionar su propio hardware para el clúster. También es fácil de usar un clúster de macrodatos [script de implementación](quickstart-big-data-cluster-deploy.md) para crear el clúster de AKS e implementar el clúster de macrodatos en un solo paso. Para obtener más información sobre el uso de AKS con los clústeres de datos de gran tamaño, vea [configurar Azure Kubernetes Service para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019](deploy-on-aks.md).
 
 - **Varias máquinas**: También puede implementar Kubernetes a varias máquinas de Linux, que podrían ser servidores físicos o máquinas virtuales. El [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) herramienta puede usarse para crear el clúster de Kubernetes. Este método funciona bien si ya tiene una infraestructura existente que desea usar para el clúster de macrodatos. Para obtener más información sobre el uso de **kubeadm** implementaciones con los clústeres de datos de gran tamaño, consulte [Kubernetes configurar en varios equipos para las implementaciones de clústeres (versión preliminar) de datos de gran tamaño de SQL Server 2019](deploy-with-kubeadm.md).
 
@@ -51,7 +51,7 @@ Después de configurar Kubernetes, implementa un clúster de macrodatos con el `
 
 - Si va a implementar en un entorno de desarrollo y pruebas, puede elegir usar uno de los [configuraciones predeterminadas](deployment-guidance.md#deploy) proporcionada por **mssqlctl**.
 
-- Para personalizar la implementación, puede crear y utilizar su propia [los archivos de configuración de implementación](deployment-guidance.md#configfile). 
+- Para personalizar la implementación, puede crear y utilizar su propia [los archivos de configuración de implementación](deployment-guidance.md#configfile).
 
 - Para una instalación completamente desatendida, puede pasar todas las demás configuraciones en variables de entorno. Para obtener más información, consulte [implementaciones desatendidas](deployment-guidance.md#unattended).
 

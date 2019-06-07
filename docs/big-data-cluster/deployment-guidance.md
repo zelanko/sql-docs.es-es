@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 924d026c61275d5bc957ce1157e30381f27ef2d0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 34290ebdb92468687ae5f252c0ebdfef05dd11ff
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993983"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743930"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -92,8 +92,10 @@ Puede implementar un clúster de macrodatos mediante la ejecución de **de creac
 mssqlctl cluster create
 ```
 
-> [!TIP]
-> En este ejemplo, se solicitará cualquier configuración que no forma parte de la configuración predeterminada, como contraseñas. Tenga en cuenta que la información de Docker se proporciona a usted por Microsoft como parte de la SQL Server de 2019 [programa de adopción temprana](https://aka.ms/eapsignup).
+En este escenario, se solicitará cualquier configuración que no forma parte de la configuración predeterminada, como contraseñas. Tenga en cuenta que la información de Docker se proporciona a usted por Microsoft como parte de la SQL Server de 2019 [programa de adopción temprana](https://aka.ms/eapsignup).
+
+> [!IMPORTANT]
+> El nombre predeterminado del clúster de macrodatos es **mssql-cluster**. Esto es importante saber con el fin de ejecutar cualquiera de los **kubectl** comandos que especifican el espacio de nombres de Kubernetes con el `-n` parámetro.
 
 ## <a id="customconfig"></a> Configuraciones personalizadas
 
@@ -220,8 +222,11 @@ Después de que el script de implementación se ha completado correctamente, pue
 1. Después de la implementación, busque la dirección IP del punto de conexión de controlador echando un vistazo a la salida EXTERNAL-IP de los siguientes **kubectl** comando:
 
    ```bash
-   kubectl get svc controller-svc-external -n <your-cluster-name>
+   kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Si no cambió el nombre predeterminado durante la implementación, use `-n mssql-cluster` en el comando anterior. **MSSQL-cluster** es el nombre predeterminado para el clúster de macrodatos.
 
 1. Inicie sesión en el clúster de macrodatos con **inicio de sesión mssqlctl**. Establecer el **--punto de conexión del controlador** parámetro a la dirección IP externa del punto de conexión del controlador.
 
@@ -267,7 +272,7 @@ minikube ip
 Independientemente de la plataforma usa su clúster de Kubernetes, para obtener todos los extremos de servicio implementados para el clúster, ejecute el siguiente comando:
 
 ```bash
-kubectl get svc -n <your-cluster-name>
+kubectl get svc -n <your-big-data-cluster-name>
 ```
 
 ## <a id="connect"></a> Conéctese al clúster

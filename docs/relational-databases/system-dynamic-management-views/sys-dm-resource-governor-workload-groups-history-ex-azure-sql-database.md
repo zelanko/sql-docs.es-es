@@ -19,14 +19,14 @@ helpviewer_keywords:
 author: joesackmsft
 ms.author: josack
 manager: craigg
-ms.openlocfilehash: a177d3bcb81e17bb3a3accf6e1fade02132a58fa
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 1a2123c3da5945fb42184631e43fe27d83972375
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66213766"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744022"
 ---
-# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>Sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
+# <a name="sysdmresourcegovernorworkloadgroupshistoryex-azure-sql-database"></a>sys.dm_resource_governor_workload_groups_history_ex (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Instantánea devuelve intervalos de 15 segundos para los últimos 30 minutos del recurso de los grupos de estadísticas para una base de datos de SQL Azure.
@@ -78,7 +78,7 @@ Instantánea devuelve intervalos de 15 segundos para los últimos 30 minutos del
 
 ## <a name="permissions"></a>Permisos
 
-Esta vista necesita el permiso VIEW DATABASE STATE.
+Esta vista requiere el permiso VIEW SERVER STATE.
 
 ## <a name="remarks"></a>Comentarios
 

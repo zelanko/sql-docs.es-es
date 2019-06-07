@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a2f7f6c2929f1b16d0e845bc72a50cc50f3d8812
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: f4520fe88844fcece48ca397041e0e1b8845519c
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014988"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744150"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -33,11 +33,11 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
-| **mssqlctl** updates | Varios **mssqlctl** [actualizaciones de parámetros y comandos](../big-data-cluster/reference-mssqlctl.md). Esto incluye una actualización de la **inicio de sesión mssqlctl** comando, que ahora tiene como destino el nombre de usuario del controlador y el punto de conexión. |
-| Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para los registros y datos. Además, se ha reducido el número de notificaciones de volumen persistente para un clúster de macrodatos. |
-| Varias instancias del grupo de proceso | Compatibilidad con varias instancias del grupo de proceso. |
-| Características y el nuevo comportamiento de grupo | Ahora se utiliza el grupo de proceso predeterminada para las operaciones de grupo de almacenamiento grupo y los datos en un **ROUND_ROBIN** sólo distribución. El grupo de datos puede utilizar ahora un nuevo nuevo **REPLICADO** tipo de distribución, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
-| Mejoras de la tabla externa | Tipo de tablas externas de origen de datos HADOOP ahora admite la lectura las filas hasta 1 MB de tamaño. Las tablas externas (ODBC, bloque de almacenamiento, el grupo de datos) ahora compatibilidad con filas tan anchos como una tabla de SQL Server. |
+| **mssqlctl** updates | Varias [actualizaciones de comandos y parámetros](../big-data-cluster/reference-mssqlctl.md) de **mssqlctl**. Esto incluye una actualización del comando **mssqlctl login**, que ahora se dirige al punto de conexión y al nombre de usuario del controlador. |
+| Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para registros y datos. Además, se ha reducido el número de notificaciones de volumen persistentes para un clúster de macrodatos. |
+| Varias instancias de grupos de procesos | Compatibilidad con varias instancias de grupos de procesos. |
+| Nuevas características y nuevo comportamiento del grupo | Ahora, el grupo de procesos se utiliza de forma predeterminada para las operaciones de grupo de almacenamiento y grupo de datos solo en distribución **ROUND_ROBIN**. Ahora, el grupo de datos puede utilizar un nuevo tipo de distribución, **REPLICATED**, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
+| Mejoras en la tabla externa | Las tablas externas de tipo origen de datos HADOOP ahora admiten la lectura de filas de hasta 1 MB. Ahora, las tablas externas (ODBC, bloque de almacenamiento, grupo de datos) admiten filas tan anchas como las tablas de SQL Server. |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
@@ -497,7 +497,7 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 El portal de administración de clúster no muestra el punto de conexión para la instancia principal de SQL Server. Para encontrar la dirección IP y puerto de la instancia maestra, use el siguiente **kubectl** comando:
 
 ```
-kubectl get svc endpoint-master-pool -n <your-cluster-name>
+kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 ```
 
 #### <a name="external-tables"></a>Tablas externas

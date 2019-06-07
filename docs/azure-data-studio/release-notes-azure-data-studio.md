@@ -10,17 +10,46 @@ ms.author: maghan
 manager: craigg
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 05/08/2019
-ms.openlocfilehash: d3451fcc6ca506e038ab614183007aad81880231
-ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.date: 06/06/2019
+ms.openlocfilehash: 6e2d4ff6e300290381f75ff4ab984743d7ea106e
+ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/31/2019
-ms.locfileid: "66454726"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66749145"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="june-2019"></a>Junio de 2019
+
+6 de junio de 2019 &nbsp;  /  &nbsp; versión: 1.8.0 
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Versión de extensión de los servidores de Administración Central (CMS) | Servidores de administración central almacenan una lista de instancias de SQL Server que se organizan en uno o varios grupos de servidores de administración central. Los usuarios pueden conectarse a sus propios servidores CMS existentes y administrar sus servidores, como agregar y quitar servidores. Para obtener más información, puede leer [aquí](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Versión de extensiones de herramientas de administración de base de datos para Windows | Esta extensión inicia dos de las experiencias más usadas en SQL Server Management Studio desde Azure Data Studio. Los usuarios pueden haga clic con el botón derecho en muchos objetos diferentes (por ejemplo, las bases de datos, tablas, columnas, vistas etc.) y seleccione Propiedades para ver el cuadro de diálogo de propiedades de SSMS para ese objeto. Además, los usuarios pueden haga clic con el botón derecho en una base de datos y seleccione Generar secuencias de comandos para iniciar al conocido SSMS Asistente generar Scripts. 
+| Mejoras de comparación de esquemas | &bull; &nbsp; Opciones incluir/excluir agregados <br/>&bull; &nbsp; Generar script de secuencia de comandos se abre después de que se está generando <br/>&bull; &nbsp; Quitar las barras de desplazamiento dobles  <br/>&bull; &nbsp; Mejoras de formato y diseño <br/>&bull; &nbsp; Pueden encontrar cambios completados [aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
+| Sección de mensajes ha movido a la propia pestaña | Cuando los usuarios ejecutaron consultas SQL, los resultados y los mensajes se eran en paneles apilados. Ahora están en pestañas independientes en un panel, como en SSMS. |
+| Mejoras del Bloc de notas SQL | &bull; &nbsp; Los usuarios ahora pueden elegir utilizar sus propias instalaciones de Python 3 o Anaconda en blocs de notas <br/>&bull; &nbsp; Varios estabilidad + fit/finalizar correcciones &bull; &nbsp; ver la lista completa de las mejoras [aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| La versión de Visual Studio Code mayo mezcla 1.34 | Las mejoras más recientes pueden encontrarse [aquí](https://code.visualstudio.com/updates/v1_34) |
+| Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>Problemas conocidos
+- Extensiones de herramientas de administración de base de datos para Windows
+    - No se puede iniciar las propiedades de nodo de servidor desconectada
+    - No se puede iniciar las propiedades de los servidores de Azure
+    - No todos los objetos tienen cuadros de diálogo Propiedades
+    - Los cuadros de diálogo tardan mucho tiempo en iniciarse
+    - Errores de inicio de los servidores con algunos tipos de conexiones (como AAD)
+- PC de bolsillo
+    - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) permiten a los usuarios utilizar el sistema de Python para cuadernos
+- Comparación de esquemas
+    - [5804](https://github.com/microsoft/azuredatastudio/issues/5804) tareas de comparación de esquemas Mostrar menú de contexto de cancelación predeterminado que no hace nada
 
 ## <a name="may-2019"></a>Mayo de 2019
 
@@ -32,7 +61,7 @@ ms.locfileid: "66454726"
 | :----- | :------ |
 | Versión de extensión de comparación de esquemas | Comparación de esquemas es una característica conocida en SQL Server Data Tools (SSDT) y su caso de uso principal es comparar y visualizar las diferencias entre las bases de datos y archivos .dacpac y ejecutar acciones para que sean iguales. |
 | Mueve la vista de tareas a la ventana de salida | Los usuarios ahora pueden ver el estado de las tareas de ejecución prolongada, como copia de seguridad, restauración y comparación de esquemas en la vista de tareas en la ventana de salida
-| Se agregó la página principal | &bull; &nbsp; Vínculos a las acciones comunes, como la nueva consulta, el nuevo archivo, nuevo cuaderno <br/>&bull; &nbsp; Vínculos a documentación y Github |
+| Se agregó la página principal | &bull; &nbsp; Vínculos a las acciones comunes, como la nueva consulta, el nuevo archivo, nuevo cuaderno <br/>&bull; &nbsp; Vínculos a documentación y GitHub |
 | Mejoras del Bloc de notas SQL | &bull; &nbsp; Mejoras de representación de markdown, incluida una mejor compatibilidad con tablas y notas <br/>&bull; &nbsp; Mejoras de facilidad de uso en la barra de herramientas <br/>&bull; &nbsp; Vínculos de markdown para cuadernos de confianza ya no requieren Cmd/Ctrl y haga clic en y pueden hacer clic directamente <br/>&bull; &nbsp; Mejoras en los procesos de Jupyter de limpieza después de cerrar los blocs de notas y reduciendo los errores al iniciar simultáneamente varios blocs de notas <br/>&bull; &nbsp; Mejoras en las conexiones de Bloc de notas para asegurarse de errores de SQL no se producen al ejecutar 2 blocs de notas en la misma base de datos <br/>&bull; &nbsp; Mejoras en el Bloc de notas el desplazamiento automático a la celda actualmente en ejecución al hacer clic en el botón ejecutar las celdas de la barra de herramientas <br/>&bull; &nbsp; Mejoras de rendimiento y la estabilidad generales |
 | Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/31?closed=1). |
 | &nbsp; | &nbsp; |

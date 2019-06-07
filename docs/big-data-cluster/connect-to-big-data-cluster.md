@@ -9,12 +9,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3305990935c5d4c6077caa062184b0150aa83d6b
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d247d50b40129d47600de6fb2d943d7e1e1ac777
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994054"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66743991"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Conectarse a un clúster de macrodatos de SQL Server con Azure Data Studio
 
@@ -37,8 +37,11 @@ Para conectarse a un clúster de macrodatos con Azure Data Studio, realice una c
 1. Desde la línea de comandos, busque la dirección IP de la instancia maestra con el siguiente comando:
 
    ```
-   kubectl get svc master-svc-external -n <your-cluster-name>
+   kubectl get svc master-svc-external -n <your-big-data-cluster-name>
    ```
+
+   > [!TIP]
+   > Los datos de gran tamaño de clúster nombre predeterminado es **mssql-cluster** a menos que personalice el nombre de un archivo de configuración de implementación. Para obtener más información, consulte [configurar opciones de implementación para los clústeres de macrodatos](deployment-custom-configuration.md#clustername).
 
 1. En Azure Data Studio, presione **F1** > **nueva conexión**.
 

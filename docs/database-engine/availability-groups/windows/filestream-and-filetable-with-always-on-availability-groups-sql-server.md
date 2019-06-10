@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1f27403dcce14e657915abe3d8a98f886dd7cc9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7619712d0445182d0ded0d7d544bd23f2cee8e90
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214866"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800779"
 ---
 # <a name="use-filestream-and-filetable-with-always-on-availability-groups"></a>Uso de FILESTREAM y FileTable con grupos de disponibilidad Always On
 
@@ -32,16 +32,6 @@ ms.locfileid: "53214866"
  Se admite toda la funcionalidad de FILESTREAM. Después de una conmutación por error, los datos de FILESTREAM son accesibles tanto en las réplicas secundarias legibles como en la nueva réplica principal.  
   
  Se admite parcialmente la funcionalidad de FileTable. Después de una conmutación por error, es posible tener acceso a los datos de FileTable en la réplica principal, pero no en las réplicas secundarias legibles.  
-  
- **En este tema:**  
-  
--   [Requisitos previos](#Prerequisites)  
-  
--   [Usar nombres de red virtual (VNN) para el acceso de FILESTREAM y FileTable](#vnn)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> Requisitos previos  
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: c147c9e1-b81d-49c8-b800-3019f4d86a13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ba002f0cf239e519c0ac4b7e3949dfdd96ed95b9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4679a937c99dcf4e58fa1b8184de48f189663980
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47634253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775046"
 ---
 # <a name="xpcmdshell-server-configuration-option"></a>xp_cmdshell (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ RECONFIGURE;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  
   

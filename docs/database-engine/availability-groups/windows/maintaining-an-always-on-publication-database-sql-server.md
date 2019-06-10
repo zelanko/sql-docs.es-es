@@ -13,26 +13,18 @@ helpviewer_keywords:
 ms.assetid: 55b345fe-2eb9-4b04-a900-63d858eec360
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 00de66d272688a7b61b4847e38a41f4738457d92
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+manager: jroth
+ms.openlocfilehash: 557bd9828979a4f2e0913e827b05f3805e9b4ef9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54300152"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799264"
 ---
 # <a name="manage-a-replicated-publisher-database-as-part-of-an-always-on-availability-group"></a>Administración de una base de datos del publicador replicada como parte de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se tratan consideraciones especiales para mantener una base de datos de publicación cuando se usan grupos de disponibilidad AlwaysOn.  
-  
- **En este tema:**  
-  
--   [Mantener una base de datos publicada en un grupo de disponibilidad](#MaintainPublDb)  
-  
--   [Quitar una base de datos publicada de un grupo de disponibilidad](#RemovePublDb)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
   
 ##  <a name="MaintainPublDb"></a> Mantener una base de datos publicada en un grupo de disponibilidad  
  El mantenimiento de una base de datos de publicación AlwaysOn se realiza básicamente de la misma forma que para una base de datos de publicación estándar, con las siguientes salvedades:  

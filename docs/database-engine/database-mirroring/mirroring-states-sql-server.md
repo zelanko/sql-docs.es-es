@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 90062917-74f9-471b-b49e-bc153ae1a468
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6b92cc60a6a5d84eb2971b5f03f506688310db86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a73d25596d8815d773bdcdfcd0d1ee43d65340c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798496"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795366"
 ---
 # <a name="mirroring-states-sql-server"></a>Estados de creacion de reflejo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47798496"
 |PENDING_FAILOVER|Este estado se encuentra solo en el servidor principal después de que se haya iniciado una conmutación por error, pero el servidor todavía no se ha pasado al rol reflejado.<br /><br /> Cuando se inicia la conmutación por error, la base de datos principal pasa al estado PENDING_FAILOVER, finaliza rápidamente cualquier conexión de usuario y asume el rol reflejado inmediatamente.|  
 |DISCONNECTED|El asociado ha perdido la comunicación con el otro asociado.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)  
   
   

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 4ecf9c63-b3a4-4c54-b553-5bc37973232b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc6d99faaf68c64bd54f4b10ff729b6d2381d9ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 48dbf8caf5a38e228d6c11e6b5917693adc24176
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795404"
 ---
 # <a name="manually-fail-over-a-database-mirroring-session-sql-server-management-studio"></a>Realizar manualmente la conmutación por error de una sesión de creación de reflejo de la base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "47852123"
   
      El cuadro de diálogo se cierra automáticamente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Realizar una conmutación por error manualmente de una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/manually-fail-over-a-database-mirroring-session-transact-sql.md)   

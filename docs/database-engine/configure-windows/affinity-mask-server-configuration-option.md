@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5823ba29-a75d-4b3e-ba7b-421c07ab3ac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 27af9f6cab45c6859a755578d5dfa93c2506016d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8b31f79f4b5e6218d27d2f8562204223c2f21d6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789073"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786845"
 ---
 # <a name="affinity-mask-server-configuration-option"></a>affinity mask (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -133,7 +133,7 @@ GO
 ### <a name="reconfigure"></a>Reconfigurar  
  Si una máscara de afinidad determinada infringe las directivas de las licencias en la ejecución del comando RECONFIGURE de [!INCLUDE[tsql](../../includes/tsql-md.md)] , se envía un mensaje de error a la sesión de cliente y al registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solicitando que el administrador de la base de datos vuelva a configurar la máscara de afinidad. En este caso no se acepta ningún comando RECONFIGURE WITH OVERRIDE.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar el uso de recursos &#40;Monitor de sistema&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

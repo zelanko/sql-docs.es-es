@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: 07727642-0266-4cbc-8c55-3c367e4458ca
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 40834c6e6ce705b025e2d4b0b3b3ec974bfebd49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5179b48634aae9a55e2670ddb0a0055861ffa31
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783293"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783263"
 ---
 # <a name="map-tcp-ip-ports-to-numa-nodes-sql-server"></a>Asignación de puertos TCP/IP a nodos NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "47783293"
   
 #### <a name="to-map-a-tcpip-port-to-a-numa-node"></a>Para asignar un puerto TCP/IP a un nodo NUMA  
   
-1.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** *\<nombre de instancia>*.  
+1.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** *\<nombre de instancia>* .  
   
 2.  En el panel de detalles, haga doble clic en **TCP/IP**.  
   
-3.  En la pestaña **Direcciones IP** , en la sección correspondiente a la dirección IP que se va a configurar, en el cuadro **Puerto TCP** , agregue el identificador del nodo NUMA entre paréntesis a continuación del número de puerto. Por ejemplo, para el puerto TCP 1500 y los nodos 0, 2 y 5, use **1500[37]** o **1500[0x25]**.  
+3.  En la pestaña **Direcciones IP** , en la sección correspondiente a la dirección IP que se va a configurar, en el cuadro **Puerto TCP** , agregue el identificador del nodo NUMA entre paréntesis a continuación del número de puerto. Por ejemplo, para el puerto TCP 1500 y los nodos 0, 2 y 5, use **1500[37]** o **1500[0x25]** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Soft-NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)  
   
   

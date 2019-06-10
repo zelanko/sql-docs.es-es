@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 6088e603405a41d5bffbc1425b9f6f5495096f18
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429341"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767718"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>Establecer la opción de configuración del servidor Máximo de subprocesos de trabajo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

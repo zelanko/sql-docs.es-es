@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dec0b9aa3c92cdefa82e3031546ea8200f70bb6e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 9dfc37d9dfb4cac8c30debf29890e2369cd8785b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042444"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798152"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Requisitos previos, restricciones y recomendaciones para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "59042444"
 > [!IMPORTANT]  
 >  Asegúrese también de que el entorno esté configurado correctamente para conectarse a un grupo de disponibilidad. Para obtener más información, vea [Conectividad de cliente de AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Recomendaciones para equipos que hospedan réplicas de disponibilidad (sistema de Windows)  
+##  <a name="ComputerRecommendations"></a> Recomendaciones para equipos que hospedan réplicas de disponibilidad (sistema de Windows)  
   
 -   **Sistemas comparables:**  En el caso de un grupo de disponibilidad determinado, todas las réplicas de disponibilidad se deben ejecutar en sistemas comparables que puedan controlar cargas de trabajo idénticas.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "59042444"
   
 3.  Use el cmdlet **Get-ClusterResource** para encontrar el recurso Nombre de red y, después, use el cmdlet **Set-ClusterParameter** para establecer el valor **HostRecordTTL** de la siguiente manera:  
   
-     Get-ClusterResource "*\<nombreRecursoRed>*" | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
+     Get-ClusterResource " *\<nombreRecursoRed>* " | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
   
      En el siguiente ejemplo de PowerShell se establece el HostRecordTTL en 300 segundos en un recurso de nombre de red denominado `SQL Network Name (SQL35)`.  
   

@@ -14,49 +14,30 @@ helpviewer_keywords:
 ms.assetid: e23c6e06-1cd1-4d4a-9bc2-e3e06ab2933d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 49c2c6e7f607717ed9639e11d9513f486b5585ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d1cb8408c01dd02528f80cf44b0516e0d12000b2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207644"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796604"
 ---
 # <a name="change-the-session-timeout-period-for-a-replica-within-an-always-on-availability-group"></a>Cambio del tiempo de espera de la sesión para una réplica en un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo configurar el período de tiempo de espera de la sesión de una réplica de disponibilidad de AlwaysOn usando [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. El período de tiempo de espera de la sesión es una propiedad de réplica que controla el número de segundos (en segundos) que una réplica de disponibilidad espera una respuesta de ping de una réplica conectada antes de determinar que la conexión ha sufrido un error. De forma predeterminada, una réplica espera 10 segundos la respuesta de un ping. Esta propiedad de réplica solamente se aplica a la conexión entre una réplica secundaria dada y la réplica principal del grupo de disponibilidad. Para obtener más información sobre el período de tiempo de espera de sesión, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Recomendaciones](#Recommendations)  
-  
-     [Seguridad](#Security)  
-  
--   **Para cambiar el período de tiempo de espera de la sesión, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos  
+   
+##  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="Recommendations"></a> Recomendaciones  
  Es recomendable que mantenga el período de espera en 10 segundos o más. Si establece el valor en menos de 10 segundos, existe la posibilidad de que un sistema sobrecargado no reciba los PING y declare un error falso.  
   
-###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+## <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para cambiar el período de tiempo de espera de la sesión para una réplica de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  

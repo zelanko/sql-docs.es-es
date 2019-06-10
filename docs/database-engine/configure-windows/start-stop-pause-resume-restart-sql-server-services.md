@@ -40,13 +40,13 @@ helpviewer_keywords:
 ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 49a5a5681093c9a4f39f843d713aa286c86fc818
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+manager: jroth
+ms.openlocfilehash: 9325820ea71c94bb1e43828998ebbf810fb11c10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801999"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775264"
 ---
 # <a name="start-stop-pause-resume-restart-sql-server-services"></a>Iniciar, detener, pausar, reanudar o reiniciar los servicios de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "56801999"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son programas ejecutables que funcionan como un servicio de Windows. Los programas que se ejecutan como servicio de Windows pueden seguir funcionando sin mostrar actividad alguna en la pantalla del equipo.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] del ssDE**  
- El proceso ejecutable que es [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede ser la instancia predeterminada (límite de una por equipo) o puede ser una de las numerosas instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar las instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que están instaladas en el equipo. La instancia predeterminada (si la instala) aparece como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. Las instancias con nombre (si las instala) aparecen como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nombre_instancia>)**. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**.  
+ El proceso ejecutable que es [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede ser la instancia predeterminada (límite de una por equipo) o puede ser una de las numerosas instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar las instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que están instaladas en el equipo. La instancia predeterminada (si la instala) aparece como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** . Las instancias con nombre (si las instala) aparecen como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nombre_instancia>)** . De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** .  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servicio del Agente**  
  Servicio de Windows que ejecuta tareas administrativas programadas, denominadas trabajos y alertas. Para obtener más información, consulte [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
@@ -117,7 +117,7 @@ ms.locfileid: "56801999"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, solo los miembros del grupo local de administradores pueden iniciar, detener, pausar, reanudar o reiniciar un servicio. Para conceder la capacidad de administrar servicios a usuarios que no son administradores, vea [CÓMO: Conceder a los usuarios derechos para administrar servicios en la familia Windows Server 2003](https://support.microsoft.com/kb/325349). El proceso es similar en las demás versiones de Windows.  
   
  La detención de [!INCLUDE[ssDE](../../includes/ssde-md.md)] mediante el comando [!INCLUDE[tsql](../../includes/tsql-md.md)]**SHUTDOWN** requiere la pertenencia a los roles fijos de servidor **sysadmin** o **serveradmin** , y no es transferible.  

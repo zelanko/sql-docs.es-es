@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: edfe5d59-4287-49c1-96c9-dd56212027bc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e27e6062df321ad32ce8964291a3e065d95f040c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a20e12062a71394906c62c753d56f1137d9bb73d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799063"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794616"
 ---
 # <a name="fail-over-to-a-log-shipping-secondary-sql-server"></a>Conmutar por error a una base de datos secundaria de trasvase de registros (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "47799063"
   
 -   [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Copias del final del registro &#40;SQL Server&#41;](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)  

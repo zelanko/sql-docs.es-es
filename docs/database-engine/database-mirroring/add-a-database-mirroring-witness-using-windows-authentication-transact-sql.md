@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4cf7b351726ab07313dff9272bd4411957f05cb2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 97d7daf07250f60859f73c15874a0a6dfb7a4cbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507102"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775026"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "52507102"
   
 ### <a name="to-establish-a-witness"></a>Para establecer un testigo  
   
-1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en las sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (ROLE**=** WITNESS). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
+1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en las sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (ROLE **=** WITNESS). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
   
      Para ejecutar una instrucción SET WITNESS, es preciso haber iniciado previamente la sesión de creación de reflejo de la base de datos (entre los asociados) y el valor STATE del extremo del testigo debe establecerse en STARTED.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "52507102"
     ```  
   
     > [!IMPORTANT]  
-    >  Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Si quita un extremo en uso, se interrumpirán las conexiones de las sesiones existentes. Si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y sus usuarios quedan desconectados. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Si existe un extremo para la creación de reflejo de la base de datos y ya se está utilizando, se recomienda utilizar ese extremo para cada sesión en la instancia de servidor. Si quita un extremo en uso, se interrumpirán las conexiones de las sesiones existentes. Si se ha establecido un testigo para una sesión, la eliminación del extremo de creación de reflejo de la base de datos puede hacer que el servidor principal de esa sesión pierda quórum; si sucede esto, la base de datos se queda sin conexión y sus usuarios quedan desconectados. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
      Si el asociado carece de un punto de conexión, vea [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md).  
   
@@ -54,15 +54,15 @@ ms.locfileid: "52507102"
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   
-     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=**_<dirección_de_red_de_servidor>_  
+     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=** _<dirección_de_red_de_servidor>_  
   
      donde *<nombre_de_base_de_datos>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo para ambos asociados) y *<dirección_de_red_de_servidor>* es la dirección de red de servidor de la instancia del servidor testigo.  
   
      La sintaxis para una dirección de red de servidor es la siguiente:  
   
-     TCP<b>://</b>_\<dirección del sistema>_<b>:</b>_\<puerto>_  
+     TCP<b>://</b> _\<dirección del sistema>_ <b>:</b> _\<puerto>_  
   
-     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>*, el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
+     donde \<*dirección del sistema>* es una cadena que identifica de forma inequívoca el sistema del equipo de destino y \<*puerto>* , el número de puerto que usa el punto de conexión de la creación de reflejo de la instancia de servidor asociado. Para obtener más información, vea [Especificar una dirección de red de servidor &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/specify-a-server-network-address-database-mirroring.md).  
   
      Por ejemplo, en la instancia del servidor principal, la siguiente instrucción ALTER DATABASE define el testigo. El nombre de la base de datos es **AdventureWorks**, la dirección del sistema es DBSERVER3 (el nombre del sistema testigo) y el puerto que usa el punto de conexión de creación de reflejo de la base de datos del testigo es `7022`:  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52507102"
   
  Para ver un ejemplo completo en el que se muestra la configuración de seguridad, se prepara la base de datos reflejada, se configuran los asociados y se agrega un testigo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [Permitir el acceso de red a un punto de conexión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-allow-network-access-windows-authentication.md)   
  [Crear un punto de conexión de creación de reflejo de la base de datos para la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql.md)   

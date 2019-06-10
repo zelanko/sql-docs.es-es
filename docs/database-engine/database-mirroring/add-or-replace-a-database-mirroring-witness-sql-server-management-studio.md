@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 54aa90739bb6f2d5d89afe33b6237b00a6c81a84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9ed4ea2aa5c11e8e764f3ff821122b4290d110ed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628043"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774990"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,11 +66,11 @@ ms.locfileid: "47628043"
   
 13. Si lo desea, en la pantalla de resumen **Finalización del asistente** , compruebe la configuración del testigo y haga clic en **Finalizar**.  
   
-14. Cuando finalice, el asistente volverá al cuadro de diálogo **Propiedades de la base de datos** , donde en el campo **Testigo** se mostrará la dirección de red del servidor del testigo. Además, se seleccionará automáticamente **Modo de alta seguridad con conmutación por error automática (sincrónica)**, que es necesario con un testigo.  
+14. Cuando finalice, el asistente volverá al cuadro de diálogo **Propiedades de la base de datos** , donde en el campo **Testigo** se mostrará la dirección de red del servidor del testigo. Además, se seleccionará automáticamente **Modo de alta seguridad con conmutación por error automática (sincrónica)** , que es necesario con un testigo.  
   
      Para habilitar el testigo y cambiar la sesión al modo de alta seguridad con conmutación por error automática, haga clic en **Aceptar**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   

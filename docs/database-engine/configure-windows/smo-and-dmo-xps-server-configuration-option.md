@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bcd945ba-5d81-4124-9a2b-d87491c2a369
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b8cf91274210e10fa4e46f2c4b9bd90486a28e6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7c0f82a57cdbc9117e28e03b65a070055831ef13
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651273"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775578"
 ---
 # <a name="smo-and-dmo-xps-server-configuration-option"></a>SMO and DMO XPs (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Guía de programación para objetos de administración de SQL Server &#40;SMO&#41;](../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md)  
   
   

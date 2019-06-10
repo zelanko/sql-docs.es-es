@@ -17,46 +17,27 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e5fb0b24d51c383466cf91e6e691717170c290f4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 0171d8e6c8b4148508f584743e36aa1a5a1c5a91
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202004"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801031"
 ---
 # <a name="remove-a-primary-database-from-an-always-on-availability-group"></a>Eliminación de una base de datos principal de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo quitar la base de datos principal y las bases de datos secundarias correspondientes del grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos y restricciones](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para quitar una base de datos de disponibilidad, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Seguimiento:**  [después de quitar una base de datos de disponibilidad de un grupo de disponibilidad](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
+##  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
 -   Esta tarea solo se admite en las réplicas principales. Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una base de datos de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal de la base de datos o bases de datos que se van a quitar y expanda el árbol.  

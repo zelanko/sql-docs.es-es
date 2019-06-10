@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 53b55ce0449dfd4eb415ee49ac29ac3cb493e111
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59779521"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794109"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -34,7 +34,7 @@ La instalación de LocalDB copia un conjunto de archivos mínimo necesario para 
 
 ## <a name="try-it-out"></a>Pruébelo. 
 
-- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)**. LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
+- Para descargar e instalar SQL Server Express LocalDB, vaya a las **[descargas de SQL Server](https://www.microsoft.com/sql-server/sql-server-downloads)** . LocalDB es una característica que se selecciona durante la instalación y está disponible al descargar los medios. Si descarga los medios, elija **Express Advanced** o el paquete de LocalDB. En el **Instalador de Visual Studio**, puede instalar LocalDB de SQL Server Express como parte de la carga de trabajo de **desarrollo de escritorio de .NET** o como un componente individual.
 
  >[!TIP]
  > También puede instalar LocalDB como parte de Visual Studio. Durante la instalación de Visual Studio, seleccione la carga de trabajo de **desarrollo de escritorio de .NET**, que incluye LocalDB de SQL Server Express.
@@ -123,7 +123,7 @@ REM Gather information about the instance of LocalDB
 |Nombre de canalización de instancia|np:\\\\.\pipe\LOCALDB#F365A78E\tsql\query|
 
 >[!NOTE]
->Si la aplicación usa una versión de .NET anterior a 4.0.2, debe conectarse directamente a la canalización con nombre de LocalDB. El valor de nombre de canalización de la instancia es la canalización con nombre en la que escucha la instancia de LocalDB. La parte de nombre de canalización de la instancia que sigue a LOCALDB# cambiará cada vez que se inicie la instancia de LocalDB. Para conectarse a la instancia de LocalDB mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], escriba el nombre de canalización de la instancia en el cuadro **Nombre de servidor** del cuadro de diálogo **Conectar a[!INCLUDE[ssDE](../../includes/ssde-md.md)]**. Desde su programa personalizado puede establecer la conexión a la instancia de LocalDB mediante una cadena de conexión similar a `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`.
+>Si la aplicación usa una versión de .NET anterior a 4.0.2, debe conectarse directamente a la canalización con nombre de LocalDB. El valor de nombre de canalización de la instancia es la canalización con nombre en la que escucha la instancia de LocalDB. La parte de nombre de canalización de la instancia que sigue a LOCALDB# cambiará cada vez que se inicie la instancia de LocalDB. Para conectarse a la instancia de LocalDB mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], escriba el nombre de canalización de la instancia en el cuadro **Nombre de servidor** del cuadro de diálogo **Conectar a[!INCLUDE[ssDE](../../includes/ssde-md.md)]** . Desde su programa personalizado puede establecer la conexión a la instancia de LocalDB mediante una cadena de conexión similar a `SqlConnection conn = new SqlConnection(@"Server=np:\\.\pipe\LOCALDB#F365A78E\tsql\query");`.
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Conexión a una instancia compartida de LocalDB
 

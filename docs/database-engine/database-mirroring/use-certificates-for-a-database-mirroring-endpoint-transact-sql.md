@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: f7c23cc2-48dc-4b78-b441-89ca29a0bd9e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f5563317cec0cde942e32bad313fba09543d29d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b03d55317715a554eb7a07161948122e88f896ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770963"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795111"
 ---
 # <a name="use-certificates-for-a-database-mirroring-endpoint-transact-sql"></a>Usar certificados para un extremo de creación de reflejo de la base de datos (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "47770963"
   
  Cuando copie un certificado en otro sistema, utilice un método de copia seguro. Tenga mucho cuidado de mantener todos sus certificados protegidos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear la clave maestra de una base de datos](../../relational-databases/security/encryption/create-a-database-master-key.md)   
  [CREATE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/create-master-key-transact-sql.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

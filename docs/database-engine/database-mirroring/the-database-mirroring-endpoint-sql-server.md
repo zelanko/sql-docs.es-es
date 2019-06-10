@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: 39332dc5-678e-4650-9217-6aa3cdc41635
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 60144c2b3283621d6365a3016b4f1d436319b05a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0d7577a95f08b4e960fc3f5dfdeb356cd7434d73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807233"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795161"
 ---
 # <a name="the-database-mirroring-endpoint-sql-server"></a>El extremo de creación de reflejo de la base de datos (SQL Server)
 
@@ -97,7 +97,7 @@ ms.locfileid: "47807233"
 -   [sys.database_mirroring_endpoints (Transact-SQL)](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn (SQL Server)](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Solucionar problemas de configuración de creación de reflejo de la base de datos (SQL Server)](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)   
  [sys.dm_hadr_availability_replica_states (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md)   

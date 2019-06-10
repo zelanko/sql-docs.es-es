@@ -13,25 +13,19 @@ helpviewer_keywords:
 ms.assetid: aca0d016-3228-40b8-bdc3-285ed6d9b280
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dddfbbbac696ca55d3e114a34f567bd1712bde22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c111300429215baaa787611ffebb9103d7757a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780125"
 ---
 # <a name="view-availability-group-listener-properties-sql-server"></a>Ver las propiedades del agente de escucha del grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo ver las propiedades de un *agente de escucha de grupo de disponibilidad* AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Para ver las propiedades del agente de escucha, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver las propiedades del agente de escucha**  
   
 1.  En el Explorador de objetos, conéctese a una instancia del servidor que hospeda una réplica de disponibilidad del grupo disponibilidad cuyo agente de escucha desea ver. Haga clic en el nombre del servidor para expandir el árbol.  
@@ -94,7 +88,7 @@ ms.locfileid: "47667333"
   
 -   [Quitar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [Supervisar grupos de disponibilidad &#40;Transact-SQL&#41;](../../../database-engine/availability-groups/windows/monitor-availability-groups-transact-sql.md)  

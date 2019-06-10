@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8ebbdcd6-565a-498f-b674-289c84b985eb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e25084fc5c472021b3159204116a04d1c3fb0174
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 6e92c372d4e71401e101b4f915bf4c6807cf0064
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126356"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795556"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ ms.locfileid: "54126356"
  *<PRINCIPAL_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor principal. El nombre adopta el siguiente formato:  
   
- *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_**\\**_<nombre_instancia>_.  
+ donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_ **\\** _<nombre_instancia>_ .  
   
  *<MIRROR_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor reflejado. El formato es el mismo que el del servidor principal.  
@@ -83,7 +83,7 @@ ms.locfileid: "54126356"
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el banner situado encima de las pestañas, en el panel de detalles se muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:**_\<fecha>\<hora>_. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el banner situado encima de las pestañas, en el panel de detalles se muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:** _\<fecha>\<hora>_ . Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 608106f70ab12353efd0f5315e4edd0951df7273
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5304bd107c5aa41a2c0be30d7576f4f782d19820
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642523"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777776"
 ---
 # <a name="resume-an-availability-database-sql-server"></a>Reanudar una base de datos de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,43 +31,24 @@ ms.locfileid: "47642523"
 > [!NOTE]  
 >  Suspender y reanudar una base de datos secundaria de AlwaysOn no afecta directamente a la disponibilidad de la base de datos principal. Sin embargo, suspender una base de datos secundaria puede afectar a las capacidades de conmutación por error y redundancia de la base de datos principal, hasta que la base de datos secundaria suspendida se reanuda. Esto se diferencia del reflejo de base de datos, en el que el estado de reflejo se suspende tanto en la base de datos reflejada como en la base de datos principal hasta que el reflejo se reanuda. Al suspender una base de datos principal AlwaysOn, se suspende el movimiento de datos en todas las bases de datos secundarias y las capacidades de conmutación por error y redundancia cesan para esa base de datos hasta que la base de datos principal se reanuda.  
   
--   **Antes de empezar:**  
   
-     [Requisitos previos](#Prerequisites)  
   
-     [Seguridad](#Security)  
-  
--   **Para reanudar una base de datos secundaria, mediante:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
-  
-### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
+## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones  
  Un comando RESUME realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la reanudación real de la base de datos se produce de forma asincrónica.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
   
--   Debe estar conectado a la instancia de servidor que hospeda la base de datos que se va a reanudar.  
-  
--   El grupo de disponibilidad debe estar en línea.  
-  
+-   Debe estar conectado a la instancia de servidor que hospeda la base de datos que se va a reanudar.    
+-   El grupo de disponibilidad debe estar en línea.    
 -   La base de datos principal debe estar en línea y disponible.  
   
-###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para reanudar una base de datos secundaria**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea reanudar una base de datos y expanda el árbol.  
@@ -117,7 +98,7 @@ ms.locfileid: "47642523"
   
 -   [Suspender una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/suspend-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

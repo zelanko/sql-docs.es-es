@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8876cdbe-c84a-43ae-a146-06974b4576e8
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc7c57172b4f824794f20710105b9d2f49d91c8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6ceffc0d0609e310d7a9285118f1d99020bf50b9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643813"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775532"
 ---
 # <a name="set-working-set-size-server-configuration-option"></a>set working set size (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47643813"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

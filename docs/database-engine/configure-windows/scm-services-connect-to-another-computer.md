@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 327257526f48424398a3931ba9270b3752b4b316
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 889067a9b4691e2b6d7ad03ab3ee3b7a503d425b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135775"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775771"
 ---
 # <a name="scm-services---connect-to-another-computer"></a>Servicios SCM - Conectarse a otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "54135775"
   
 8.  En la ventana **Agregar o quitar complemento** , haga clic en **Aceptar**.  
   
-9. Expanda **Administración de equipos(**_\<nombre de equipo>_**)** y, luego, **Servicios y Aplicaciones**.  
+9. Expanda **Administración de equipos(** _\<nombre de equipo>_ **)** y, luego, **Servicios y Aplicaciones**.  
   
 10. Haga clic con el botón derecho en **Administrador de configuración de SQL Server**y, después, haga clic en **Nueva ventana desde aquí**.  
   

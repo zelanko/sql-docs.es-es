@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 59e23ff3-d7ee-4e32-9629-0b54d3a258f7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8489e910defaa7d5f27c36aea2425dc1bec39a03
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 31c9ce74c6638925b1a91ab6d63abb8c759324cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47609423"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774960"
 ---
 # <a name="choose-servers-to-configure-configure-database-mirroring-security-wizard"></a>Elegir los servidores que configurar (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47609423"
  **Instancia de servidor testigo**  
  Seleccione para configurar la seguridad del servidor testigo (si está presente).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Propiedades de la base de datos &#40;página Creación de reflejo&#41;](../../relational-databases/databases/database-properties-mirroring-page.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   

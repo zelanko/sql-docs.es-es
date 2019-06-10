@@ -12,18 +12,18 @@ helpviewer_keywords:
 ms.assetid: 3056cf64-621d-4996-9162-3913f6bc6d5b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 91a1e59f46d99c4011fff59d0a6ff64caac4a250
-ms.sourcegitcommit: ca9b5cb6bccfdba4cdbe1697adf5c673b4713d6c
+manager: jroth
+ms.openlocfilehash: a254795952d11c6827a5f70afa3d1202e660e01f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/18/2019
-ms.locfileid: "56407635"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794161"
 ---
 # <a name="configure-the-max-text-repl-size-server-configuration-option"></a>Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  En este tema se describe cómo establecer la opción de configuración del servidor **tamaño de replicación de texto máximo** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción **max text repl size** especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El valor predeterminado es 65 536 bytes. Un valor predeterminado de -1 indica que no hay límite de tamaño, excepto el impuesto por el tipo de datos.  
+  En este tema se describe cómo establecer la opción de configuración del servidor **tamaño de replicación de texto máximo** en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La opción **max text repl size** especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El valor predeterminado es 65 536 bytes. Un valor predeterminado de -1 indica que no hay límite de tamaño, excepto el impuesto por el tipo de datos.  
   
  **En este tema**  
   
@@ -49,10 +49,10 @@ ms.locfileid: "56407635"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar la opción de tamaño de replicación de texto máximo  
   
@@ -66,7 +66,7 @@ ms.locfileid: "56407635"
   
 #### <a name="to-configure-the-max-text-repl-size-option"></a>Para configurar la opción de tamaño de replicación de texto máximo  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

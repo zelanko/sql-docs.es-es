@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 78bba43c-4edb-4216-84ac-d6246ae5546d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f8139bec00a512a9be6d5805e17f09671135eadb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef8e2fd80accc21e3497d3c2f3671116f824902f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640143"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799435"
 ---
 # <a name="configure-file-system-permissions-for-database-engine-access"></a>Configurar permisos del sistema de archivos para el acceso al motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47640143"
   
 7. Haga clic en **Aplicar**y, a continuación, haga clic dos veces en **Aceptar** para salir.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar el servicio del motor de base de datos](../../database-engine/configure-windows/manage-the-database-engine-services.md)   
  [Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md)   
  [Mover bases de datos de usuario](../../relational-databases/databases/move-user-databases.md)  

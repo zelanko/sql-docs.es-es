@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d632a45f81658612c7c6f37e4de6dc535551fee4
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 674af28b550a7c40837755a301f2c0c2594c8486
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212164"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798187"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-always-on-availability-group-sql-server"></a>Realización de una conmutación por error manual planeada de un grupo de disponibilidad Always On (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +56,7 @@ Una conmutación por error manual planeada solo se admite cuando la réplica pri
   
 ###  <a name="Security"></a> Seguridad 
   
-####  <a name="Permissions"></a> Permissions 
+####  <a name="Permissions"></a> Permisos 
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad. También se requieren los permisos CONTROL AVAILABILITY GROUP, ALTER ANY AVAILABILITY GROUP o CONTROL SERVER. 
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio 

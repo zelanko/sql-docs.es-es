@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 356d3e6b-8514-4bd2-a683-9de147949b2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 58d6ca34183b63054b851cf3ef15ca32f7ed7a80
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: fd6f49f4e3c27491382723c3fdcfad995e379fbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255562"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775138"
 ---
 # <a name="view-or-configure-remote-server-connection-options-sql-server"></a>Ver o configurar las opciones de conexión de servidor remoto (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,16 +44,16 @@ ms.locfileid: "54255562"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La ejecución de **sp_serveroption** requiere el permiso ALTER ANY LINKED SERVER en el servidor.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-remote-server-connection-options"></a>Para ver o configurar las opciones de conexión de servidor remoto  
   
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y luego haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de SQL Server - \<**_nombre_servidor_**>**, haga clic en **Conexiones**.  
+2.  En el cuadro de diálogo **Propiedades de SQL Server - \<** _nombre_servidor_ **>** , haga clic en **Conexiones**.  
   
 3.  En la página **Conexiones** , revise las opciones de configuración de **Conexiones a servidores remotos** y modifíquelas si es necesario.  
   
@@ -63,7 +63,7 @@ ms.locfileid: "54255562"
   
 #### <a name="to-view-remote-server-connection-options"></a>Para ver las opciones de conexión de servidor remoto  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -77,7 +77,7 @@ EXEC sp_helpserver ;
   
 #### <a name="to-configure-remote-server-connection-options"></a>Para configurar las opciones de conexión de servidor remoto  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

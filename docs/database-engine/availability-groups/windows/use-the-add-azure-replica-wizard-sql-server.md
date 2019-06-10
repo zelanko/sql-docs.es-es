@@ -11,30 +11,23 @@ f1_keywords:
 ms.assetid: b89cc41b-07b4-49f3-82cc-bc42b2e793ae
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7a2f46a7451fa246065ae11b3771e22b7c609f4f
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c5dfd05448d59a26ded4672f27ae4ec8ebbdd926
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602966"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803432"
 ---
 # <a name="use-the-add-azure-replica-wizard-sql-server"></a>Usar el Asistente para agregar réplica de Azure (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Use el Asistente Agregar réplica de Microsoft Azure para que le ayude a crear una nueva máquina virtual de Windows Azure en tecnologías informáticas híbridas y configurarla como una réplica secundaria para un grupo de disponibilidad AlwaysON nuevo o existente.  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para agregar una réplica con:**  [Asistente Agregar réplica de Microsoft Azure (SQL Server Management Studio)](#SSMSProcedure)  
-  
+
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Si nunca ha agregado una réplica de disponibilidad a un grupo de disponibilidad, vea las secciones "Instancias del servidor" y "Grupos y réplicas de disponibilidad" en [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal actual.  
   
@@ -48,10 +41,10 @@ ms.locfileid: "51602966"
   
      Si no puede utilizar el asistente para realizar la sincronización de datos inicial completa, debe preparar las bases de datos secundarias manualmente. Puede hacerlo antes o después de ejecutar el asistente. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
+##  <a name="Permissions"></a> Permisos  
+ Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-####  <a name="Permissions"></a> Permissions  
- Consulte [Security](../../../database-engine/availability-groups/windows/use-the-add-replica-to-availability-group-wizard-sql-server-management-studio.md#Security)  
+ También se necesita el permiso CONTROL ON ENDPOINT si desea permitir que el asistente Agregar réplica a grupo de disponibilidad administre el extremo de creación de reflejo de la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar el Asistente para agregar réplica de Azure (SQL Server Management Studio)  
  El Asistente para agregar réplica de Azure se puede iniciar desde [Especificar la página de réplicas](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). Hay dos formas de llegar a esta opción:  
@@ -70,7 +63,7 @@ ms.locfileid: "51602966"
   
 4.  Especifique los valores de configuración para la máquina virtual de Windows Azure que hospedará la nueva réplica secundaria:  
   
-     Imagen  
+     imagen  
      Nombre de la imagen de SQL Server que se va a usar para la máquina virtual de Windows Azure.  
   
      Tamaño de VM  
@@ -110,7 +103,7 @@ ms.locfileid: "51602966"
   
 -   [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
  [Agregar una réplica secundaria a un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/add-a-secondary-replica-to-an-availability-group-sql-server.md)  

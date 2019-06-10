@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f37e036444bd0302e62339275d45942b62f9b375
-ms.sourcegitcommit: c0b3b3d969af668d19b1bba04fa0c153cc8970fd
+manager: jroth
+ms.openlocfilehash: 7670b7f7ac2d80f596c3a192eb23fbf2b9e94a6d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/11/2019
-ms.locfileid: "57756710"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775112"
 ---
 # <a name="view-or-configure-the-backup-compression-default-server-configuration-option"></a>Ver o establecer la opción de configuración del servidor de compresión de copia de seguridad predeterminada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,10 +60,10 @@ ms.locfileid: "57756710"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-configure-the-backup-compression-default-option"></a>Para ver o configurar la opción de valor predeterminado de compresión de copia  
   
@@ -83,7 +83,7 @@ ms.locfileid: "57756710"
   
 #### <a name="to-view-the-backup-compression-default-option"></a>Para ver la opción de valor predeterminado de compresión de copia de seguridad  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -98,7 +98,7 @@ GO
   
 #### <a name="to-configure-the-backup-compression-default-option"></a>Para configurar la opción de valor predeterminado de compresión de copia de seguridad  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

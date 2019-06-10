@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 9b38a4358eb5ac7c0ab05ac7e2175c22011cea66
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 61fb2e329b60468ece3f87eeacefb7490908dba4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52528954"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802578"
 ---
 # <a name="breaking-changes-to-database-engine-features-in-includesssqlv14-mdincludessssqlv14-mdmd"></a>Cambios sustanciales en las características del motor de base de datos de [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)]
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "52528954"
 
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características desusadas del motor de base de datos de SQL Server 2016](../database-engine/deprecated-database-engine-features-in-sql-server-2016.md)   
  [Funcionalidad del motor de base de datos no incluida en SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)   
  [Compatibilidad con versiones anteriores del Motor de base de datos de SQL Server](../database-engine/sql-server-database-engine-backward-compatibility.md)   

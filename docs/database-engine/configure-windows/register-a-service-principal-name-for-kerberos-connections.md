@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b6d10f1d16c31ad3af67e193a8bc684be0c66c1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b36c25969ac053bad4e626b110c314c28dff6b08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395488"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772157"
 ---
 # <a name="register-a-service-principal-name-for-kerberos-connections"></a>Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
  El método preferido para que los usuarios se autentiquen en SQL Server es la autenticación de Windows. Los clientes que usan la autenticación de Windows se autentican mediante NTLM o Kerberos. En un entorno de Active Directory, se intenta utilizar siempre en primer lugar la autenticación Kerberos. La autenticación Kerberos no está disponible para los clientes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] mediante canalizaciones con nombre.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Al iniciarse el servicio [!INCLUDE[ssDE](../../includes/ssde-md.md)] , se intenta registrar el nombre principal de servicio (SPN). Si la cuenta con la que se inicia SQL Server no tiene permiso para registrar un SPN en los servicios de dominio de Active Directory, esta llamada producirá un error y se registrará un mensaje de advertencia en el registro de eventos de la aplicación así como en el registro de errores de SQL Server. Para registrar el SPN, se debe ejecutar [!INCLUDE[ssDE](../../includes/ssde-md.md)] en una cuenta integrada, como Sistema local (no se recomienda) o Servicio de red, o bien, en una cuenta que tenga permiso para registrar un SPN, como la de administrador de dominio. Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en el sistema operativo  [!INCLUDE[win7](../../includes/win7-md.md)] o  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] , se puede ejecutar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante una cuenta virtual o una cuenta de servicio administrada (MSA). Las cuentas virtuales y las MSA pueden registrar un SPN. Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se ejecuta en ninguna de estas cuentas, el SPN no se registrará en el inicio y el administrador de dominio deberá hacerlo manualmente.  
   
 > [!NOTE]  
@@ -73,7 +73,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instancia con nombre**  
   
--   **MSSQLSvc/\<FQDN>:[\<puerto> | \<nombreDeInstancia>]**, donde:  
+-   **MSSQLSvc/\<FQDN>:[\<puerto> | \<nombreDeInstancia>]** , donde:  
   
     -   **MSSQLSvc** es el servicio que se va a registrar.  
   
@@ -85,7 +85,7 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
   
 **Instancia predeterminada**  
   
--   **MSSQLSvc/\<FQDN>:\<puerto>** | **MSSQLSvc/\<FQDN>**, donde:  
+-   **MSSQLSvc/\<FQDN>:\<puerto>**  | **MSSQLSvc/\<FQDN>** , donde:  
   
     -   **MSSQLSvc** es el servicio que se va a registrar.  
   
@@ -106,9 +106,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
 > En el caso de una conexión TCP/IP, en la que el puerto TCP está incluido en el SPN, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe habilitar el protocolo TCP para que los usuarios puedan conectarse usando la autenticación Kerberos. 
 
 ##  <a name="Auto"></a> Registro automático de SPN  
- Cuando se inicia una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta registrar el SPN para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando la instancia se detiene, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta anular el registro del SPN. En una conexión TCP/IP, el SPN se registra con el formato *MSSQLSvc/\<FQDN>*:*\<puertotcp>*. Las instancias con nombre y la instancia predeterminada se registran como *MSSQLSvc* en función del valor *\<puertotcp>* para diferenciar las instancias.  
+ Cuando se inicia una instancia de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta registrar el SPN para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Cuando la instancia se detiene, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta anular el registro del SPN. En una conexión TCP/IP, el SPN se registra con el formato *MSSQLSvc/\<FQDN>* : *\<puertotcp>* . Las instancias con nombre y la instancia predeterminada se registran como *MSSQLSvc* en función del valor *\<puertotcp>* para diferenciar las instancias.  
   
- En el resto de conexiones compatibles con Kerberos, el SPN se registra con el formato *MSSQLSvc/\<FQDN>*/*\<nombreDeInstancia>* de una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>*.  
+ En el resto de conexiones compatibles con Kerberos, el SPN se registra con el formato *MSSQLSvc/\<FQDN>* / *\<nombreDeInstancia>* de una instancia con nombre. El formato para registrar la instancia predeterminada es *MSSQLSvc/\<FQDN>* .  
   
  Es posible que se requiera una intervención manual para registrar o anular el registro del SPN si la cuenta de servicio carece de los permisos requeridos para estas acciones.  
   
@@ -177,7 +177,7 @@ WHERE session_id = @@SPID;
   
  Si no se puede anular el registro del SPN durante el cierre, se indica el problema en el registro de errores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el cierre continúa.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con Nombre de entidad de seguridad de servicio &#40;SPN&#41; en conexiones cliente](../../relational-databases/native-client/features/service-principal-name-spn-support-in-client-connections.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/service-principal-names-spns-in-client-connections-ole-db.md)   
  [Nombres de entidad de seguridad de servicio &#40;SPNs&#41; en conexiones cliente &#40;ODBC&#41;](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)   

@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: a782d60d-0373-4386-bd77-9ec192553700
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: affc717019c031445fc19b429ba0c96186088e59
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4fd4e32c928ed046f449392a078af0158efed283
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612893"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795255"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,9 +69,9 @@ ms.locfileid: "47612893"
   
 ||Alto rendimiento|Modo de alta seguridad sin ningún testigo|Modo de alta seguridad con un testigo|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|conmutación automática por error|no|no|Sí|  
-|conmutación por error manual|no|Sí|Sí|  
-|Servicio forzado|Sí|Sí|no|  
+|conmutación automática por error|No|No|Sí|  
+|conmutación por error manual|No|Sí|Sí|  
+|Servicio forzado|Sí|Sí|No|  
   
  Tras una conmutación de roles, deben existir ciertos metadatos en ambos asociados para garantizar que todos los usuarios de bases de datos puedan tener acceso a la nueva base de datos principal. Además, se deben crear los trabajos de copia de seguridad en el nuevo servidor principal para garantizar que se siga realizando una copia de seguridad de la base de datos de acuerdo con su programación periódica. Para obtener más información, vea [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   
@@ -159,7 +159,7 @@ ms.locfileid: "47612893"
 -   El servidor principal ha perdido la comunicación con el resto de la configuración del reflejo de la base de datos, mientras que el servidor reflejado y el testigo conservan el quórum. Sin embargo, si todas las instancias de servidor pierden la comunicación, y el testigo y el servidor reflejado la recuperan después, no se produce la conmutación automática por error.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 -   El servidor reflejado ha detectado la pérdida del servidor principal.  
   
@@ -312,9 +312,9 @@ ms.locfileid: "47612893"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Calcular la interrupción del servicio durante la conmutación de roles &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/estimate-the-interruption-of-service-during-role-switching-database-mirroring.md)   
- [Posibles errores durante la creación de reflejo de la base de datos](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
+ [Possible Failures During Database Mirroring](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)   
  [Restauraciones de base de datos completas &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/complete-database-restores-full-recovery-model.md)   

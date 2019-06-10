@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 32a8945392df4d45dd6904a3921d2cbc770a4674
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211574"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800143"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Adición de una base de datos a un grupo de disponibilidad Always On con el "Asistente para grupo de disponibilidad"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "53211574"
      Si no puede utilizar el asistente para realizar la sincronización de datos inicial completa, debe preparar las bases de datos secundarias manualmente. Puede hacerlo antes o después de ejecutar el asistente. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="use-the-new-availability-group-wizard"></a>Uso del "Asistente para nuevo grupo de disponibilidad"

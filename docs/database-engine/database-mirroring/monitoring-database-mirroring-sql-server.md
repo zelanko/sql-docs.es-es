@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b2bafd110b358e3dc1c2d639e4a1b5251c89bb9b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5bb5ffaab7bf391a50dbfb28be14852a05e83582
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52517501"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795350"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>Supervisar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -295,11 +295,11 @@ ms.locfileid: "52517501"
   
  Los siguientes eventos están disponibles en la creación de reflejo de la base de datos:  
   
--   Clase de evento**Database Mirroring State Change**   
+-   Clase de evento**Database Mirroring State Change**  
   
      Este evento indica cuándo cambia el estado de creación de reflejo de una base de datos reflejada. Para obtener más información, consulte [Database Mirroring State Change Event Class](../../relational-databases/event-classes/database-mirroring-state-change-event-class.md).  
   
--   Clase de evento**Audit Database Mirroring Login**   
+-   Clase de evento**Audit Database Mirroring Login**  
   
      Este evento le permite emitir mensajes de auditoría relacionados con la seguridad de transporte de la creación de reflejo de la base de datos. Para obtener más información, consulte [Audit Database Mirroring Login Event Class](../../relational-databases/event-classes/audit-database-mirroring-login-event-class.md).  
   
@@ -331,7 +331,7 @@ ms.locfileid: "52517501"
   
 -   [sp_dbmmonitorupdate &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorupdate-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Conceptos del proveedor WMI para eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   

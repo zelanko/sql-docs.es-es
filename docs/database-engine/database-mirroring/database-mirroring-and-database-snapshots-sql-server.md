@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0bf1be90-7ce4-484c-aaa7-f8a782f57c5f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e03a85102928b3b56f2c5b705b61f47c1a428717
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7e1eacf9068e6e55cb8c9a9a6a01fe0a62485d23
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47708154"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774910"
 ---
 # <a name="database-mirroring-and-database-snapshots-sql-server"></a>Reflejo e instantáneas de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ ms.locfileid: "47708154"
 -   [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)   
  [Conectar clientes a una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/connect-clients-to-a-database-mirroring-session-sql-server.md)  
   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: ebe368a4-ca1c-45d0-9a71-3ddbd5b26a8e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c1a3a18900159d6073c3054fb2ab12500ccb24c3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90b23afd0fb30ca2d1a50f48a05ac9c7e12800e7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794590"
 ---
 # <a name="remove-a-secondary-database-from-a-log-shipping-configuration-sql-server"></a>Quitar una base de datos secundaria desde una configuración del trasvase de registros (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "47776703"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Los procedimientos almacenados de trasvase de registros requieren que se pertenezca al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-a-log-shipping-secondary-database"></a>Para quitar una base de datos secundaria de trasvase de registros  
   
@@ -93,7 +93,7 @@ ms.locfileid: "47776703"
   
 -   [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

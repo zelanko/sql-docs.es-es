@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 63215e0746f5f2cea679213ba275d40d6102c930
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ef39e9a8b86d348383537ec6786c08361b60df59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623693"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774778"
 ---
 # <a name="database-mirroring-and-log-shipping-sql-server"></a>Crear reflejo de la base de datos y trasvase de registros (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -12,20 +12,20 @@ helpviewer_keywords:
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d4ee8e281c6508b00cecdcde60e516dfbfcd524d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 59f3a250cb2a7914ccf5e153176f237de7976731
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807343"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775874"
 ---
 # <a name="replication-xps-server-configuration-option"></a>Replication XPs (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Esta opción solo se utiliza de forma interna.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

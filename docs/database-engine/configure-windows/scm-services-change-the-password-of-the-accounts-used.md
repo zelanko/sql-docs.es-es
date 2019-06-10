@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 5b6dcc03-6cae-45d3-acef-6f85ca6d615f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7860afbb60d0911c61c479bb19e2b39c5b1e75e9
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 8f9b16bf035d2666eb3f6237a6a04aa49dd8a0fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606575"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775829"
 ---
 # <a name="scm-services---change-the-password-of-the-accounts-used"></a>Servicios SCM - Cambiar la contraseña de las cuentas usadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "51606575"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para cambiar la contraseña que utiliza un servicio debe ser el administrador del equipo.  
   
 ##  <a name="SSMSProcedure"></a> Usar el Administrador de configuración de SQL Server  
@@ -57,9 +57,9 @@ ms.locfileid: "51606575"
   
 2.  En Administrador de configuración de SQL Server, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **(**\<nombreDeInstancia>**)** de SQL Server y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **(** \<nombreDeInstancia> **)** de SQL Server y, luego, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (**\<nombreDeInstancia>**) de SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de (** \<nombreDeInstancia> **) de SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
   
      La contraseña surte efecto inmediatamente, sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -69,13 +69,13 @@ ms.locfileid: "51606575"
   
 2.  En Administrador de configuración de SQL Server, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **Agente SQL Server (**\<nombreDeInstancia>**)** y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **Agente SQL Server (** \<nombreDeInstancia> **)** y, luego, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (**\<nombreDeInstancia>**) de Agente SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de (** \<nombreDeInstancia> **) de Agente SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
   
      En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la contraseña surte efecto inmediatamente, sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En una instancia en clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría cambiar el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a sin conexión y requerir un reinicio.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Temas de procedimientos de administración de servicios &#40;Administrador de configuración de SQL Server&#41;](https://msdn.microsoft.com/library/78dee169-df0c-4c95-9af7-bf033bc9fdc6)  
   
   

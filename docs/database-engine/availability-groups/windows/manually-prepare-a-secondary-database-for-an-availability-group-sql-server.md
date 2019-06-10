@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 9f2feb3c-ea9b-4992-8202-2aeed4f9a6dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: a9f6cc5a6ba2c63add3742602b89bbb627677286
-ms.sourcegitcommit: db552ff344e021c154acb3d0a728475ec4420899
+manager: jroth
+ms.openlocfilehash: cd2f8de0af5078816d4034dc9ba23bcc7ab647b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/07/2019
-ms.locfileid: "55832087"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799262"
 ---
 # <a name="prepare-a-secondary-database-for-an-always-on-availability-group"></a>Preparación de una base de datos secundaria para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ En este tema se describe cómo preparar una base de datos de un grupo de disponi
 ###  <a name="Security"></a> Seguridad  
  Cuando se realiza una copia de seguridad de una base de datos, la [propiedad de base de datos TRUSTWORTHY](../../../relational-databases/security/trustworthy-database-property.md) se establece en OFF. Por lo tanto, TRUSTWORTHY está siempre en OFF en una base de datos que se acaba de restaurar.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, los permisos BACKUP DATABASE y BACKUP LOG corresponden a los miembros del rol fijo de servidor **sysadmin** y de los roles fijos de base de datos **db_owner** y **db_backupoperator** . Para obtener más información, vea [BACKUP &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-transact-sql.md).  
   
  Cuando la base de datos que se va a restaurar no existe en la instancia de servidor, la instrucción RESTORE requiere permisos CREATE DATABASE. Para obtener más información, vea [RESTORE &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-statements-transact-sql.md).  
@@ -80,7 +80,7 @@ En este tema se describe cómo preparar una base de datos de un grupo de disponi
   
 3.  En la instancia del servidor que hospeda la réplica secundaria, restaure la copia de seguridad completa de la base de datos principal (y opcionalmente una copia de seguridad diferencial) seguida de las copias de seguridad del registro subsiguientes.  
   
-     En la página **Opciones de RESTORE DATABASE**, seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)**.  
+     En la página **Opciones de RESTORE DATABASE**, seleccione **Dejar la base de datos no operativa y no revertir transacciones no confirmadas. Pueden restaurarse registros de transacciones adicionales. (RESTORE WITH NORECOVERY)** .  
   
      Si las rutas de acceso de archivos de la base de datos principal y la base de datos secundaria difieren, por ejemplo, si la base de datos principal se encuentra en la unidad "F:" pero la instancia de servidor que hospeda la réplica secundaria no tiene unidad "F:", incluya la opción MOVE en la cláusula WITH.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 84e36fcb-2c78-48e8-8e4b-bf784a3ee557
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8a233814c86779b3c8fca67e6fb79c9f183a91d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 61c4482299d8e6fa9c70353eb80be5feaf5b9662
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670883"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799447"
 ---
 # <a name="configure-database-engine-instances-sql-server"></a>Configurar instancias del motor de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47670883"
 |Describe cómo asignar un puerto TCP/IP a la afinidad del nodo de acceso a memoria no uniforme (NUMA).|[Asignación de puertos TCP/IP a nodos NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)|  
 |Describe cómo habilitar la directiva de Bloquear páginas en memoria de Windows. Esta directiva determina qué cuentas pueden usar un proceso que mantiene los datos en memoria física, impidiendo que el sistema lleve los datos a páginas de memoria virtual (disco).|[Habilitar la opción Bloquear páginas en la memoria &#40;Windows&#41;](../../database-engine/configure-windows/enable-the-lock-pages-in-memory-option-windows.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instancias del motor de base de datos &#40;SQL Server&#41;](../../database-engine/configure-windows/database-engine-instances-sql-server.md)  
   
   

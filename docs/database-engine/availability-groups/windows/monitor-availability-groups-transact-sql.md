@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 881a34de-8461-4811-8c62-322bf7226bed
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d14cb0b60074ce7cd2c11c80817ec5f0043651a0
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12d36899d27e73d2176e0ad3c5c40c80119406ab
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209434"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779173"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,27 +32,8 @@ ms.locfileid: "53209434"
 > [!TIP]  
 >  Muchas de estas vistas se pueden unir utilizando las columnas ID para devolver información de varias vistas en una única consulta.  
   
- **En este tema:**  
   
--   [Permisos](#Permissions)  
-  
--   **Usar Transact-SQL para supervisar:**  
-  
-     [Característica de grupos de disponibilidad AlwaysOn en una instancia de servidor](#AoAgFeatureOnSI)  
-  
-     [Grupos de disponibilidad en el clúster de WSFC](#WSFC)  
-  
-     [Grupos de disponibilidad](#AvGroups)  
-  
-     [Réplicas de disponibilidad](#AvReplicas)  
-  
-     [Bases de datos de disponibilidad](#AvDbs)  
-  
-     [Agentes de escucha del grupo de disponibilidad](#AGlisteners)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW ANY DEFINITION en la instancia de servidor. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] requieren el permiso VIEW SERVER STATE en el servidor.  
   
 ##  <a name="AoAgFeatureOnSI"></a> Supervisar la característica de grupos de disponibilidad AlwaysOn en una instancia de servidor  
@@ -189,7 +170,7 @@ ms.locfileid: "53209434"
 >  La ubicación de la réplica principal es el origen autorizado para un grupo de disponibilidad.  
   
 > [!NOTE]  
->  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)**, **Vaciados de registro/s.**, **Errores de caché del grupo de registros/s.**, **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)** , **Vaciados de registro/s.** , **Errores de caché del grupo de registros/s.** , **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Supervisar agentes de escucha del grupo de disponibilidad  
  Para supervisar los agentes de escucha del grupo de disponibilidad en las subredes del clúster de WSFC, utilice las vistas siguientes:  

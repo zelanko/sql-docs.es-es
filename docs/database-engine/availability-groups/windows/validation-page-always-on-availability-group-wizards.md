@@ -15,18 +15,16 @@ helpviewer_keywords:
 ms.assetid: c8971556-240c-491a-bc86-9cc72f71a3dd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ff7bb0be3ecc9ef02e38994bebda675c016ef8b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 281306cece913e4386a1ca6059b738c9fa20e058
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47847713"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780138"
 ---
 # <a name="validation-page-always-on-availability-group-wizards"></a>Página Validación (asistentes para grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-  
     
   En este tema de Ayuda se describen las opciones de la página **Validación** . Esta tema se aplica a [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)], [!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]y [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Utilice esta página para validar que el entorno admite todas las opciones de configuración realizada en las páginas anteriores del asistente.  
   
@@ -59,7 +57,7 @@ ms.locfileid: "47847713"
 -   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

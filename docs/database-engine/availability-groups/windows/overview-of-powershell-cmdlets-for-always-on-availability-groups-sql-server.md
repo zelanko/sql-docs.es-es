@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: b3fef0d5-b6d7-4386-a0f0-d06c165ad4de
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b4f60098f7410b847e2a420ef899e4abc8b2ef94
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 87e18202c821ee56c403150af246dfbc21ef207d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203774"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798218"
 ---
 # <a name="overview-of-powershell-cmdlets-for-always-on-availability-groups"></a>Información general de los cmdlets de PowerShell para grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,22 +29,6 @@ ms.locfileid: "53203774"
   
 > [!NOTE]  
 >  Un cmdlet de PowerShell se puede completar correctamente iniciando una acción. Esto no indica que el trabajo previsto, como la conmutación por error de un grupo de disponibilidad se haya completado. Cuando se genera el script de una secuencia de acciones, puede que tenga que comprobar el estado de las acciones y esperar a que se completen.  
-  
- En este tema se describen los cmdlets de los siguientes conjuntos de tareas:  
-  
--   [Configurar una instancia de servidor para grupos de disponibilidad AlwaysOn](#ConfiguringServerInstance)  
-  
--   [Realizar copias de seguridad y restaurar bases de datos y registros de transacciones](#BnRcmdlets)  
-  
--   [Crear y administrar un grupo de disponibilidad](#DeployManageAGs)  
-  
--   [Crear y administrar un agente de escucha de un grupo de disponibilidad](#AGlisteners)  
-  
--   [Crear y administrar una réplica de disponibilidad](#DeployManageARs)  
-  
--   [Agregar y administrar una base de datos de disponibilidad](#DeployManageDbs)  
-  
--   [Supervisar el estado de grupos de disponibilidad](#MonitorTblshtAGs)  
   
 > [!NOTE]  
 >  Para obtener una lista de los temas de los Libros en pantalla de [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] en los que se describe cómo usar cmdlets para realizar tareas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] , vea la sección "Tareas relacionadas” de [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  

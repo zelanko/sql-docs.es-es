@@ -18,38 +18,22 @@ helpviewer_keywords:
 ms.assetid: fd7efe79-c1f9-497d-bfe7-b2a2b2321cf5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bcda8c38e842f6799d799c97263c1443ad065ad8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 8e9fecbbe5894eb6a6804c48f4d37facf01359a1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209495"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772536"
 ---
 # <a name="join-a-secondary-database-to-an-always-on-availability-group"></a>Unión de una base de datos secundaria con un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo combinar una base de datos secundaria con un grupo de disponibilidad de AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Después de preparar una base de datos secundaria para una réplica de disponibilidad secundaria, debe combinar la base de datos con el grupo de disponibilidad lo antes posible. Se iniciará el movimiento de datos de la base de datos principal correspondiente a la base de datos secundaria.  
-  
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para preparar una base de datos secundaria, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
+   
 > [!NOTE]  
 >  Para obtener información sobre lo que ocurre cuando una base de datos secundaria se une al grupo, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos  
+   
+##  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria.  
   
@@ -57,12 +41,10 @@ ms.locfileid: "53209495"
   
 -   La base de datos secundaria debe haberse preparado recientemente. Para obtener más información, vea [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para combinar una base de datos secundaria con un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria y expanda el árbol de servidores.  

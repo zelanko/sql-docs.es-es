@@ -13,13 +13,13 @@ ms.assetid: cef118a5-a7ce-4bfa-8b9d-c81996284cfc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 9ce14b9cbc983987072eb9433a20823c8721e3db
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 9deb380eb4c92b283afac6f1bdcbe3c85c98beb1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533968"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794743"
 ---
 # <a name="upgrade-sql-server-using-the-installation-wizard-setup"></a>Actualizar SQL Server con el Asistente para instalación (programa de instalación)
 
@@ -85,7 +85,7 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 6.  La página [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update aparecerá a continuación si la casilla [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update del Panel de control\Todos los elementos de Panel de control\Windows Update\Cambiar configuración no está activada. Si se pone una marca de verificación en la página [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, cambiará la configuración del equipo para incluir las últimas actualizaciones al buscar actualizaciones en Windows Update.  
   
-7.  En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** .  
+7.  En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** .  
   
 8.  En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , y se especifica que debe incluirse, esa actualización también se instalará.  
   
@@ -139,9 +139,9 @@ Debe ejecutar el programa de instalación como administrador. Si instala [!INCLU
   
 -   **Actualizar las estadísticas**: para poder optimizar el rendimiento de las consultas, es recomendable actualizar las estadísticas de todas las bases de datos tras la actualización. Use el procedimiento almacenado **sp_updatestats** para actualizar las estadísticas de las tablas definidas por el usuario en las bases de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
--   **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**: para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
+-   **Configurar la nueva instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : para reducir el área expuesta del sistema susceptible de recibir ataques, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instala y habilita los servicios y características clave de forma selectiva. Para obtener más información sobre la configuración del área expuesta, vea el archivo Léame correspondiente a esta versión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

@@ -14,12 +14,12 @@ ms.assetid: f4c44553-0f08-4731-ac47-7534990b8c8d
 author: Lingxi-Li
 ms.author: lingxl
 manager: craigg
-ms.openlocfilehash: aaef05352411d1cb955c4169e1f9ca82924a3c8b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 569341b07d373aaf1d0739a400537ca3b7998a80
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012869"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462648"
 ---
 # <a name="azure-data-lake-store-connection-manager"></a>Administrador de conexiones de Azure Data Lake Store
 
@@ -46,7 +46,7 @@ El administrador de conexiones de Azure Data Lake Store es un componente de [Fea
     1.  Si seleccionó la opción de autenticación **Identidad de usuario de Azure AD**, realice lo siguiente:
         1. Proporcione los valores para los campos **Nombre de usuario** y **Contraseña**. 
     
-        2. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no ha permitido previamente que SSIS accediera a los datos de Data Lake Storage Gen1, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-integrating-applications#updating-an-application).
+        2. Seleccione **Probar conexión** para probar la conexión. Si usted o el administrador de inquilinos no ha permitido previamente que SSIS accediera a los datos de Data Lake Storage Gen1, seleccione **Aceptar** cuando se le solicite. Para obtener más información sobre esta experiencia del consentimiento, consulte [Integración de aplicaciones con Azure Active Directory](https://docs.microsoft.com/azure/active-directory/manage-apps/plan-an-application-integration#integrating-applications-with-azure-ad).
     
         > [!NOTE] 
         > Al seleccionar la opción de autenticación **Identidad de usuario de Azure AD**, no se admitirá la autenticación multifactor ni la autenticación de la cuenta de Microsoft.

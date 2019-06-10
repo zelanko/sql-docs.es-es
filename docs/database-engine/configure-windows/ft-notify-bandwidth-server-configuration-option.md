@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9ca284c5-f3e0-4a67-a132-fff376ff0ffe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e4264e97883665ddf845a95a98f3728527a48381
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7013f10dcc80faf6de0401cd0c251a8cbf411a88
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669183"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66785314"
 ---
 # <a name="ft-notify-bandwidth-server-configuration-option"></a>ft notify bandwidth (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47669183"
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [ft crawl bandwidth (opción de configuración del servidor)](../../database-engine/configure-windows/ft-crawl-bandwidth-server-configuration-option.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

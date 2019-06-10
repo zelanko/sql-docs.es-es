@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 49239d02-964e-47c0-9b7f-2b539151ee1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 19f3748634b86bcb4419f96a8abae36a72f20f88
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: 74753f0e23c64650e1d2056716cf65ffa0862f38
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589219"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795135"
 ---
 # <a name="transport-security---database-mirroring---always-on-availability"></a>Seguridad de transporte - Creación de reflejo de la base de datos - Grupos de disponibilidad AlwaysOn
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53589219"
   
 -   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como servicios con diferentes cuentas de dominio (en el mismo dominio o en dominios de confianza), el inicio de sesión de cada cuenta debe crearse en **master** en cada una de las otras instancias de servidor, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión.  
   
--   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (_DomainName_**\\**_ComputerName$_) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
+-   Si las instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como cuenta de servicio de red, el inicio de sesión de cada cuenta de equipo host (_DomainName_ **\\** _ComputerName$_ ) se debe crear en **master** en cada uno de los demás servidores, y a ese inicio de sesión se le deben conceder permisos CONNECT en el punto de conexión. Esto se debe a que una instancia de servidor que se ejecuta en la cuenta Servicio de red se autentica mediante la cuenta de dominio del equipo host.  
   
 > [!NOTE]  
 >  Para obtener un ejemplo de configuración de una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  

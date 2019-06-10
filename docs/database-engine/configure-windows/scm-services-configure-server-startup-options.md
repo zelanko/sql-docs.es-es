@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 7a94643c-6460-4baf-bb31-0cb99eaf970d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 688339a6f598ed43e6128f7b40be9d1ec91dc8c8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 0b85c75d024edd1e7e53eee08e21683aa7412bbc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131226"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775741"
 ---
 # <a name="scm-services---configure-server-startup-options"></a>Servicios SCM - Configurar opciones de inicio del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "54131226"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La configuración de opciones de inicio del servidor está restringida a los usuarios que pueden cambiar las entradas relacionadas del Registro. Esto incluye a los usuarios siguientes.  
   
 -   Miembros del grupo local de administradores.  
@@ -63,7 +63,7 @@ ms.locfileid: "54131226"
   
 2.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel derecho, haga clic con el botón derecho en **SQL Server (**_<nombre_instancia>_**)** y, luego, haga clic en **Propiedades**.  
+3.  En el panel derecho, haga clic con el botón derecho en **SQL Server (** _<nombre_instancia>_ **)** y, luego, haga clic en **Propiedades**.  
   
 4.  En la pestaña **Parámetros de inicio** , en el cuadro **Especifique un parámetro de inicio** , escriba el parámetro y, a continuación, haga clic en **Agregar**.  
   

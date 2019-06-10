@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 0d5d2742-2614-43de-9ab9-864addb6299b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f238b5b31c4e354562091bb80768b7db1e9af5c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 510fa333b4dff71fc38bc60f91509d3daa67adb2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131855"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775021"
 ---
 # <a name="connect-clients-to-a-database-mirroring-session-sql-server"></a>Conectar clientes a una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ Network=dbnmpntw;
 #### <a name="server-attribute"></a>Atributo Server  
  La cadena de conexión debe contener un atributo **Server** que proporciona el nombre del asociado inicial, que debería identificar la instancia del servidor principal actual.  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_]. Por ejemplo:  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre, *<nombre_de_servidor>* [ **\\** _<nombre_de_instancia_de_SQL_Server>_ ]. Por ejemplo:  
   
  `Server=Partner_A;`  
   
@@ -101,7 +101,7 @@ Network=dbnmpntw;
 > [!NOTE]  
 >  Se necesita una consulta de SQL Server Browser si la cadena de conexión especifica el nombre de la instancia con nombre y no el puerto.  
   
- Para especificar la dirección IP y el puerto, el atributo **Server** adopta el siguiente formato: `Server=`*<dirección_ip>*`,`*\<puerto>*. Por ejemplo:  
+ Para especificar la dirección IP y el puerto, el atributo **Server** adopta el siguiente formato: `Server=` *<dirección_ip>* `,` *\<puerto>* . Por ejemplo:  
   
 ```  
 Server=123.34.45.56,4724;   
@@ -121,7 +121,7 @@ Server=123.34.45.56,4724;
 >  En esta cadena se omite la información de autenticación.  
   
 > [!IMPORTANT]  
->  La unión del prefijo de protocolo con el atributo **Server** (`Server=tcp:`*\<nombreDeServidor>*) es incompatible con el atributo **Network** y, si se especifica el protocolo en ambos lugares, lo más probable es que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y que se especifique solo el nombre de servidor en el atributo **Server** (`"Network=dbmssocn; Server=`*\<nombreDeServidor>*`"`).  
+>  La unión del prefijo de protocolo con el atributo **Server** (`Server=tcp:` *\<nombreDeServidor>* ) es incompatible con el atributo **Network** y, si se especifica el protocolo en ambos lugares, lo más probable es que se produzca un error. Por lo tanto, se recomienda que una cadena de conexión especifique el protocolo con el atributo **Network** y que se especifique solo el nombre de servidor en el atributo **Server** (`"Network=dbmssocn; Server=` *\<nombreDeServidor>* `"`).  
   
 #### <a name="failover-partner-attribute"></a>Atributo Failover Partner  
  Además del nombre del asociado inicial, el cliente puede especificar también el nombre del asociado de conmutación por error, que debería identificar la instancia del servidor reflejado actual. Una de las palabras clave especifica el asociado de conmutación por error para el atributo de asociado de conmutación por error. La palabra clave para este atributo depende de la API que está utilizando. En la tabla siguiente se enumeran estas palabras clave.  
@@ -132,7 +132,7 @@ Server=123.34.45.56,4724;
 |Controlador ODBC|**Failover_Partner**|  
 |Objetos de datos ActiveX (ADO)|**Failover Partner**|  
   
- La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>*[**\\**_<nombre_de_instancia_de_SQL_Server>_].  
+ La manera más sencilla de identificar la instancia de servidor es especificando su nombre de sistema, *<nombre_de_servidor>* [ **\\** _<nombre_de_instancia_de_SQL_Server>_ ].  
   
  O bien, se pueden proporcionar la dirección IP y el número de puerto en el atributo **Failover Partner** . Si el intento de conexión inicial no tiene éxito durante la primera conexión a la base de datos, el intento de conectarse al asociado de conmutación por error no tendrá que retransmitirse en DNS y SQL Server Browser. Una vez que se establezca la conexión, el nombre del asociado de conmutación por error se sobrescribirá con el nombre del asociado de conmutación por error, de modo que, si se produce una conmutación por error, las conexiones redirigidas requerirán DNS y SQL Server Browser.  
   
@@ -169,13 +169,13 @@ Server=123.34.45.56,4724;
   
  El tiempo de reintento se calcula mediante la siguiente fórmula:  
   
- _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;**_TiempoDeEsperaDeInicioDeSesión_**)**  
+ _TiempoDeReintento_ **=** _TiempoDeReintentoAnterior_ **+(** 0,08 **&#42;** _TiempoDeEsperaDeInicioDeSesión_ **)**  
   
  Donde *PreviousRetryTime* es inicialmente 0.  
   
  Por ejemplo, si se usa el tiempo de espera predeterminado de 15 segundos, *LoginTimeout* *= 15*. En este caso, los tiempos de reintento en los primeros tres ciclos son los siguientes:  
   
-|Redondear|Cálculo de*RetryTime* |Tiempo de reintento por intento|  
+|Redondear|Cálculo de*RetryTime*|Tiempo de reintento por intento|  
 |-----------|-----------------------------|----------------------------|  
 |1|0 **+(** 0,08 **&#42;** 15 **)**|1,2 segundos|  
 |2|1,2 **+(** 0,08 **&#42;** 15 **)**|2,4 segundos|  

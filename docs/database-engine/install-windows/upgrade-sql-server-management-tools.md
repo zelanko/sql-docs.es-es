@@ -12,13 +12,13 @@ ms.assetid: 1dab50b9-d16c-49a1-9ecc-af72adb6c378
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: b15e0448bb230ff209b17cbe5c0bc719686193f5
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: acb334972a7d0fabf656fb5e34bff179f2c50f2f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600725"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794758"
 ---
 # <a name="upgrade-sql-server-management-tools"></a>Actualizar las herramientas de administración de SQL Server
 
@@ -50,7 +50,7 @@ Considere los problemas siguientes antes de actualizar a [!INCLUDE[ssCurrent](..
   
 -   Correo electrónico de base de datos, que también se conoce como SQLiMail, se actualizará con el componente [!INCLUDE[ssDE](../../includes/ssde-md.md)] de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. De forma predeterminada, la aplicación Correo electrónico de base de datos se desactivará después de la actualización. Las actualizaciones del esquema deben reconciliarse con un script de actualización después de la actualización.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md)   
  [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)   
  [Upgrade SQL Server Using the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md) (Actualización de SQL Server mediante el Asistente para instalación [programa de instalación])  

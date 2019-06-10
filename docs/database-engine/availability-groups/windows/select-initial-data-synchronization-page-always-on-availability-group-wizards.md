@@ -13,13 +13,13 @@ f1_keywords:
 ms.assetid: 457b1140-4819-4def-8f7c-54a406e6db12
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 6a06a4f8bf7474cd2379886dc78cbdddc6a05cab
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: dbfa8c5acd998fed28546baf8b16af09d3abae07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545392"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787708"
 ---
 # <a name="select-initial-data-synchronization-page-always-on-availability-group-wizards"></a>Página Seleccionar sincronización de datos iniciales (asistentes para grupos de disponibilidad Always On)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "52545392"
   
 -   [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

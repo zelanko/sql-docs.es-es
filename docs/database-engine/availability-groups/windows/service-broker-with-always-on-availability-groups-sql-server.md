@@ -12,24 +12,19 @@ helpviewer_keywords:
 ms.assetid: 881c20e5-1c99-44eb-b393-09fc5ea0f122
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 7f544983e1d34073cfe681a614d7d4808b45cd3c
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 18e28d840373ae25f5045e8456fe6ecf479bfbe9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51607115"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787837"
 ---
 # <a name="service-broker-with-always-on-availability-groups-sql-server"></a>Service Broker con grupos de disponibilidad AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tema contiene información acerca de la configuración de Service Broker para que funcione con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **En este tema:**  
-  
--   [Requisitos de un servicio en un grupo de disponibilidad para que reciba mensajes remotos](#ReceiveRemoteMessages)  
-  
--   [Requisitos para enviar mensajes a un servicio remoto en un grupo de disponibilidad](#SendRemoteMessages)  
   
 ##  <a name="ReceiveRemoteMessages"></a> Requisitos de un servicio en un grupo de disponibilidad para que reciba mensajes remotos  
   
@@ -118,7 +113,7 @@ ms.locfileid: "51607115"
   
 -   [Configurar cuentas de inicio de sesión para la creación de reflejo de la base de datos o grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/database-mirroring/set-up-login-accounts-database-mirroring-always-on-availability.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Agentes de escucha de grupo de disponibilidad, conectividad de cliente y conmutación por error de una aplicación &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)   
  [SQL Server Service Broker](../../../database-engine/configure-windows/sql-server-service-broker.md)  

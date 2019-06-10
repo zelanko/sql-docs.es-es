@@ -20,13 +20,13 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 28a2c9bd527fb4996730630a6121d205fbaebf04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 210572e30dc1115fa52cfab4da293533a051d634
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59429351"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767430"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>Habilitar conexiones cifradas en el motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "59429351"
  El cliente debe ser capaz de comprobar la propiedad del certificado utilizado por el servidor. Si el cliente tiene el certificado de clave pública de la entidad de certificación que firmó el certificado del servidor, no es necesario realizar una mayor configuración. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows incluye los certificados de clave pública de muchas entidades de certificación. Si el certificado del servidor lo firmó una entidad de certificación pública o privada para la que el cliente no tiene certificado de clave pública, debe instalar el certificado de clave pública de esta entidad de certificación.  
   
 > [!NOTE]  
-> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son test1.*\<su empresa>*.com y test2.*\<su empresa>*.com y un servidor virtual llamado virtsql, deberá instalar un certificado para virtsql.*\<su empresa>*.com en ambos nodos. El valor de la opción **ForceEncryption** se puede establecer en **Sí**.
+> Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son test1. *\<su empresa>* .com y test2. *\<su empresa>* .com y un servidor virtual llamado virtsql, deberá instalar un certificado para virtsql. *\<su empresa>* .com en ambos nodos. El valor de la opción **ForceEncryption** se puede establecer en **Sí**.
 
 > [!NOTE]
 > Al crear conexiones cifradas para un indexador de Azure Search en SQL Server en una máquina virtual de Azure, consulte [Configuración de una conexión desde un indexador de Azure Search a SQL Server en una máquina virtual de Azure](https://azure.microsoft.com/documentation/articles/search-howto-connecting-azure-sql-iaas-to-azure-search-using-indexers/). 
@@ -52,7 +52,7 @@ Para que SQL Server cargue un certificado SSL, el certificado debe cumplir las 
 - El certificado debe estar en un almacén de certificados del equipo local o en el almacén de certificados del usuario actual.
 - La cuenta de servicio de SQL Server debe tener el permiso necesario para acceder al certificado SSL.
 - La hora actual del sistema debe ser posterior al valor de la propiedad **Válido desde** del certificado y anterior a la propiedad Válido hasta del certificado.
-- El certificado debe estar destinado a la autenticación del servidor. Para esto es necesario que la propiedad **Uso mejorado de clave** del certificado para especificar **Autenticación del servidor (1.3.6.1.5.5.7.3.1)**.
+- El certificado debe estar destinado a la autenticación del servidor. Para esto es necesario que la propiedad **Uso mejorado de clave** del certificado para especificar **Autenticación del servidor (1.3.6.1.5.5.7.3.1)** .
 - El certificado se debe crear mediante la opción **KeySpec** de **AT_KEYEXCHANGE**. Por lo general, la propiedad de uso de clave del certificado (**KEY_USAGE**) incluye también el cifrado de clave (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**).
 - La propiedad **Asunto** del certificado debe indicar que el nombre común (CN) es el mismo que el nombre del host o nombre de dominio completo (FQDN) del servidor. Si SQL Server se ejecuta en un clúster de conmutación por error, el nombre común debe coincidir con el del host o FQDN del servidor virtual y los certificados deben estar en todos los nodos del clúster de conmutación por error.
 - SQL Server 2008 R2 y SQL Server 2008 R2 Native Client admiten los certificados comodín. Es posible que otros clientes no admitan los certificados comodín. Para más información, consulte la documentación del cliente y [KB258858](http://support.microsoft.com/kb/258858).

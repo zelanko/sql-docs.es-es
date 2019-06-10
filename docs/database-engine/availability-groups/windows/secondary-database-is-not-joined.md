@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 10817e5e-75fa-42dd-baa2-359bea3ad051
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 01ba0d2a58a54cba2d509df407d11d8c5d0ebdee
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 58e1a2589476041d83a34fbc3008addb19632b8c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606515"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787800"
 ---
 # <a name="secondary-database-is-not-joined"></a>Base de datos secundaria sin combinar
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "51606515"
 ## <a name="possible-solution"></a>Solución posible  
  Use Transact-SQL, PowerShell o SQL Server Management Studio para combinar la réplica secundaria con el grupo de disponibilidad. Para obtener más información sobre cómo combinar las réplicas secundarias con los grupos de disponibilidad, vea [Combinar una réplica secundaria con un grupo de disponibilidad (SQL Server)](https://msdn.microsoft.com/library/ff878473\(SQL.110\).aspx).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

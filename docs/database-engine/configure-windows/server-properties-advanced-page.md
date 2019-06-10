@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: cc5e65c2-448e-4f37-9ad4-2dfb1cc84ebe
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d7ae58695fabc363a432f21d91a70ccc3a3f4dc6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c11918f1f6c0d57b799e78cf2d653c9c445673fa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47619513"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771783"
 ---
 # <a name="server-properties---advanced-page"></a>Propiedades del servidor (página Opciones avanzadas)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "47619513"
  Después de adjuntar, restaurar o copiar una base de datos de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], queda disponible inmediatamente y se actualiza a continuación de forma automática. Si la base de datos tiene índices de texto completo, el proceso de actualización los importa, los restablece o los vuelve a generar, en función del valor de la propiedad del servidor **Opción de actualización de texto completo** . Si la opción de actualización se establece en **Importar** o en **Volver a generar**, los índices de texto completo no estarán disponibles durante la actualización. Dependiendo de la cantidad de datos que se indicen, la importación puede requerir varias horas y volver a generar puede requerir hasta diez veces más. Tenga en cuenta también que si la opción de actualización se establece en **Importar**y no hay disponible ningún catálogo de texto completo, se vuelven a generar los índices de texto completo asociados. Para obtener más información sobre cómo ver o cambiar la configuración de la propiedad **Opción de actualización de texto completo** , vea [Administrar y supervisar la búsqueda de texto completo para una instancia de servidor](../../relational-databases/search/manage-and-monitor-full-text-search-for-a-server-instance.md).  
   
  **Tamaño de replicación de texto máximo**  
- Especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)**, **nvarchar(max)**, **xml**e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El cambio realizado en este valor surte efecto de forma inmediata. Para más información, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
+ Especifica el tamaño máximo (en bytes) de los datos de tipo **text**, **ntext**, **varchar(max)** , **nvarchar(max)** , **xml**e **image** que se pueden agregar a una columna replicada o capturada en una sola instrucción INSERT, UPDATE, WRITETEXT o UPDATETEXT. El cambio realizado en este valor surte efecto de forma inmediata. Para más información, consulte [Establecer la opción de configuración del servidor Tamaño de replicación de texto máximo](../../database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option.md).  
   
  **Buscar procedimientos de inicio**  
  Especifica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorrerá al iniciarse la ejecución automática de los procedimientos almacenados. Si se establece en **True**, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recorre y ejecuta todos los procedimientos almacenados que se ejecutan automáticamente definidos en el servidor. Si se establece en **False** (valor predeterminado), no se recorre ningún procedimiento. Para más información, consulte [Establecer la opción de configuración del servidor Buscar procedimientos de inicio](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md).  

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 782663cf-f3d7-4cc6-b621-21e4550f0322
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: d8e85590f094595b73cd2279ee61ae698b42d2e9
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+manager: jroth
+ms.openlocfilehash: c2116101f7e9b0ab51cf3e7c5e4066f0e55a0d1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590288"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771879"
 ---
 # <a name="scm-services---prevent-automatic-startup-of-an-instance"></a>Servicios SCM - Impedir el inicio automático de una instancia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "53590288"
   
 3.  En el panel de detalles, haga clic con el botón derecho en **MSSQLServer**y, después, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **SQL Server \<**_nombreDeInstancia_**> Propiedades**, en la pestaña **Servicio**, en el cuadro **General**, establezca el valor de **Modo de inicio** en **Manual**.  
+4.  En el cuadro de diálogo **SQL Server \<** _nombreDeInstancia_ **> Propiedades**, en la pestaña **Servicio**, en el cuadro **General**, establezca el valor de **Modo de inicio** en **Manual**.  
   
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<**_nombreDeInstancia_**> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de \<** _nombreDeInstancia_ **> de SQL Server** y, luego, cierre el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="see-also"></a>Consulte también  
  [Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)  

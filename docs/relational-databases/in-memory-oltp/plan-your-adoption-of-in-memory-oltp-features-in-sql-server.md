@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e3671c2b89c60a48431d52e631c11e9f06971a55
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.openlocfilehash: 2dd71a010353c019acb2784456b66427e8559bff
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421192"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462504"
 ---
 # <a name="plan-your-adoption-of-in-memory-oltp-features-in-sql-server"></a>Planear la adopción de características de OLTP en memoria en SQL Server
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ Una tabla optimizada para memoria que contiene 200 GB de datos requiere que más
 
 Para una base de datos hospedada en el servicio en la nube de Base de datos SQL de Azure, el nivel de servicio elegido afecta a la cantidad de memoria activa que la base de datos puede consumir. Debe planear la supervisión del uso de memoria de la base de datos mediante una alerta. Para obtener detalles, consulte:
 
-- Revisar los límites de almacenamiento de OLTP en memoria de su [plan de tarifa](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#standalone-database-service-tiers-and-performance-levels)
+- Revisar los límites de almacenamiento de OLTP en memoria de su [plan de tarifa](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Supervisión del almacenamiento OLTP en memoria](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### <a name="memory-optimized-table-variables"></a>Variables de tabla con optimización para memoria
@@ -118,7 +118,7 @@ Para obtener instrucciones sobre si las características de OLP en memoria puede
 
 
 
-## <a name="b-unsupported-features"></a>b. Características no admitidas
+## <a name="b-unsupported-features"></a>B. Características no admitidas
 
 Las características que no se admiten en determinados escenarios de OLP en memoria se describen en:
 
@@ -214,9 +214,9 @@ Para obtener información general de los índices de las tablas optimizadas para
 
 #### <a name="hash-indexes"></a>Índices de hash
 
-Los índices de hash pueden ser el formato más rápido para tener acceso a una fila específica por su valor exacto de clave principal mediante el operador '**=**'.
+Los índices de hash pueden ser el formato más rápido para tener acceso a una fila específica por su valor exacto de clave principal mediante el operador ' **=** '.
 
-- Los operadores inexactos como "**!=**", "**>**" o "**BETWEEN**" perjudicarían el rendimiento si se usaran con un índice de hash.
+- Los operadores inexactos como " **!=** ", " **>** " o "**BETWEEN**" perjudicarían el rendimiento si se usaran con un índice de hash.
 
 - Un índice de hash puede que no sea la mejor opción si la tasa de duplicación del valor principal es demasiado alta.
 

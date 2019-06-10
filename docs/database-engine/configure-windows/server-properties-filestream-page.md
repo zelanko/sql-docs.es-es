@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8a8d38d3-e97a-4b09-a40b-659b2e3a5c47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2943b98f4c0e75102d7d044476904e194a375dbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 27b2070ec6b8c4ccc71e0e1f05fc0faefae29384
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770973"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771715"
 ---
 # <a name="server-properties---filestream-page"></a>Propiedades del servidor (página FILESTREAM)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47770973"
  **Permitir que los clientes remotos tengan acceso de transmisión por secuencias a los datos de FILESTREAM**  
  Seleccione este control para permitir que los clientes remotos tengan acceso a estos datos de FILESTREAM en este servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
   

@@ -13,29 +13,28 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b903c4e55940f4c941564f4f0d180f4f94d1ad58
-ms.sourcegitcommit: c9d33ce831723ece69f282896955539d49aee7f8
+manager: jroth
+ms.openlocfilehash: 510331bd244ced57494566c9508485d5dd4c90e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/12/2018
-ms.locfileid: "53306172"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789436"
 ---
 # <a name="use-automatic-seeding-to-initialize-a-secondary-replica-for-an-always-on-availability-group"></a>Uso de la propagación automática para inicializar una réplica secundaria para un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 En SQL Server 2012 y 2014, la única manera de inicializar una réplica secundaria en un grupo de disponibilidad AlwaysOn de SQL Server es recurriendo a los trabajos de copia de seguridad, copia y restauración. SQL Server 2016 incorpora una característica nueva para inicializar una réplica secundaria: la *propagación automática*. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esta nueva característica se puede usar durante la creación inicial de un grupo de disponibilidad o cuando una base de datos se agrega a uno de estos grupos. La propagación automática se incluye en todas las ediciones de SQL Server que admiten grupos de disponibilidad AlwaysOn, y se puede usar tanto con los grupos de disponibilidad tradicionales como con los [grupos de disponibilidad distribuidos](distributed-availability-groups.md).
 
-## <a name="considerations"></a>Consideraciones
+## <a name="security"></a>Seguridad
 
-Hay que considerar los siguientes aspectos al usar la propagación automática:
+Los permisos de seguridad varían según el tipo de réplica que se esté inicializando:
 
-* [Impacto en el rendimiento y el registro de transacciones de la réplica principal](#performance-and-transaction-log-impact-on-the-primary-replica)
-* [Diseño de disco](#disklayout)
-* [Seguridad](#security)
+* Si es un grupo de disponibilidad tradicional, el grupo de disponibilidad en la réplica secundaria debe tener concedidos permisos, ya que está unido al grupo de disponibilidad. En Transact-SQL, use el comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
+* En el caso de un grupo de disponibilidad distribuido, en el que las bases de datos de la réplica que se van a crear se encuentran en la réplica principal del segundo grupo de disponibilidad, no se requiere ningún permiso adicional, dado que ya es un elemento principal.
+* En el caso de una réplica secundaria en el segundo grupo de disponibilidad de un grupo de disponibilidad distribuido, debe usar el comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Esta réplica secundaria se propagará desde el elemento principal del segundo grupo de disponibilidad.
 
-
-### <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impacto en el rendimiento y el registro de transacciones de la réplica principal
+## <a name="performance-and-transaction-log-impact-on-the-primary-replica"></a>Impacto en el rendimiento y el registro de transacciones de la réplica principal
 
 La propagación automática puede ser o no práctica a la hora de inicializar una réplica secundaria, según cuál sea el tamaño de la base de datos, la velocidad de red y la distancia entre las réplicas principales y las secundarias. Por ejemplo, en estas circunstancias:
 
@@ -49,7 +48,7 @@ La propagación automática es un proceso de un único subproceso que puede asum
 
 La compresión se puede usar en la propagación automática, pero está deshabilitada de forma predeterminada. Si la compresión se activa, se reducirá el ancho de banda de red y, posiblemente, el proceso se acelere, pero a cambio habrá una mayor sobrecarga del procesador. Para usar la compresión durante la propagación automática, habilite la marca de seguimiento 9567; vea [Tune compression for availability group](tune-compression-for-availability-group.md) (Optimizar la compresión para los grupos de disponibilidad).
 
-### <a name = "disklayout"></a> Diseño de disco
+## <a name = "disklayout"></a> Diseño de disco
 
 En SQL Server 2016 y versiones anteriores, la carpeta donde se creará la base de datos mediante la propagación automática ya debe existir y ser la misma que la ruta de acceso de la réplica principal. 
 
@@ -81,13 +80,6 @@ Si mezcla rutas predeterminadas con rutas que no lo sean en la réplica principa
 
 Para revertir el comportamiento de SQL Server 2016 y versión anteriores, habilite la marca de seguimiento 9571. Para obtener información sobre cómo habilitar marcas de seguimiento, consulte [DBCC TRACEON (Transact-SQL)](../../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md).
 
-### <a name="security"></a>Seguridad
-
-Los permisos de seguridad varían según el tipo de réplica que se esté inicializando:
-
-* Si es un grupo de disponibilidad tradicional, el grupo de disponibilidad en la réplica secundaria debe tener concedidos permisos, ya que está unido al grupo de disponibilidad. En Transact-SQL, use el comando `ALTER AVAILABILITY GROUP [<AGName>] GRANT CREATE ANY DATABASE`.
-* En el caso de un grupo de disponibilidad distribuido, en el que las bases de datos de la réplica que se van a crear se encuentran en la réplica principal del segundo grupo de disponibilidad, no se requiere ningún permiso adicional, dado que ya es un elemento principal.
-* En el caso de una réplica secundaria en el segundo grupo de disponibilidad de un grupo de disponibilidad distribuido, debe usar el comando `ALTER AVAILABILITY GROUP [<2ndAGName>] GRANT CREATE ANY DATABASE`. Esta réplica secundaria se propagará desde el elemento principal del segundo grupo de disponibilidad.
 
 ## <a name="create-an-availability-group-with-automatic-seeding"></a>Crear un grupo de disponibilidad con propagación automática
 

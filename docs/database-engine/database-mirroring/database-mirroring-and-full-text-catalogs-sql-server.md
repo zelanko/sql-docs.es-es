@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e34072ae-fe8a-462d-bb03-02fa0987f793
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5df730b72c6adc7f13fd2770e88654934e7753ba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 71a1ff074e5627491ef24ffe4e72cffcd5fcd2b8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774871"
 ---
 # <a name="database-mirroring-and-full-text-catalogs-sql-server"></a>Creación de reflejo de la base de datos y catálogos de texto completo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "47656723"
 ## <a name="after-forcing-service"></a>Después de forzar el servicio  
  Después de forzar el servicio al servidor reflejado (con posible pérdida de datos), inicie un rastreo completo. El método que debe usar para iniciar un rastreo completo depende de si el índice de texto completo tiene seguimiento de cambios. Para obtener más información, vea "Índices de texto completo después de la conmutación por error" anteriormente en este tema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-fulltext-index-transact-sql.md)   
  [CREATE FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-fulltext-index-transact-sql.md)   
  [DROP FULLTEXT INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-fulltext-index-transact-sql.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
- [Realizar copias de seguridad de los catálogos e índices de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
+ [Realizar copias de seguridad de los catálogos de texto completo y restaurarlos](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)  
   
   

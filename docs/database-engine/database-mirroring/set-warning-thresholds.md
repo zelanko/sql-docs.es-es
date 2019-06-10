@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 17f93147-e7d9-4092-b4c2-c11b38051171
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2883f607a56da0e30067180854c289625ae11dd0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfebc4164264e2deeb02ab5f8e9f8b8b6ef64655
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47753915"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795212"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47753915"
 -   **Conectado a**  *nombre_instancia_servidor*  
   
     > [!NOTE]  
-    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)**.  
+    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)** .  
   
  El nombre de cada una de las instancias del servidor asociado se muestra en otro campo de *instancia del servidor y su estado de conexión* . En el campo superior se muestra el servidor principal cuando el monitor inició su ejecución.  
   
@@ -90,9 +90,9 @@ ms.locfileid: "47753915"
   
  Un evento solo se escribe en el registro de eventos para un rendimiento si su valor se encuentra en el umbral, o por encima de éste, cuando se actualiza la tabla de estado. Si un valor máximo alcanza el umbral momentáneamente entre las actualizaciones de estado, se pierde dicho máximo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

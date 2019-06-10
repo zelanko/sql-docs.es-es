@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 3b9556e7cecf64d0cd3d2abfe0aecdf3c5aa7cc8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 914fb9a73839580ebc96d30f406c3c66442726ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203844"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801050"
 ---
 # <a name="use-read-scale-with-always-on-availability-groups"></a>Uso de escalado de lectura con grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

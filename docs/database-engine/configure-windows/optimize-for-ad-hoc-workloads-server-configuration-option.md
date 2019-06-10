@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 0972e028-3a8e-454b-a186-e814a1d431f2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ee3dc240d56e3ca9de53e65e08541097dedd6600
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90e61107f4f552e6a871c953f0dd5874d42a4a71
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818389"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772304"
 ---
 # <a name="optimize-for-ad-hoc-workloads-server-configuration-option"></a>optimize for ad hoc workloads (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ GROUP BY objtype, cacheobjtype;
 > Establecer la opción **Optimizar para cargas de trabajo ad hoc** en 1 afecta solo a los planes nuevos; los planes que ya están en la memoria caché del plan no resultan afectados.
 > Para afectar a los planes de consulta que ya están almacenados en caché inmediatamente, es necesario borrar la cache mediante [ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) o reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   

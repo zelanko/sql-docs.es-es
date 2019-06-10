@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3db6a569-e942-4321-a0dd-c4ab002087c8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 016ce9783ee3d25b80ad777710b22b4afe0a72ff
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: d16917d5b22189be5ffcbe48260fd7cc9b68c42e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602526"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794303"
 ---
 # <a name="some-availability-replicas-are-not-synchronizing-data"></a>Algunas réplicas de disponibilidad no sincronizan datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "51602526"
 ## <a name="possible-solution"></a>Solución posible  
  Use el estado de directiva de la réplica de disponibilidad para buscar la réplica de disponibilidad con un estado NOT SYNCHRONIZING y, a continuación, resuelva el problema en la réplica de disponibilidad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)  
   

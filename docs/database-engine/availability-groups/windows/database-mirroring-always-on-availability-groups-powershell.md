@@ -14,34 +14,26 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 2c3c9306b27804603e00bf9c5d542e5bc800f14e
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 12a1a9a62a8fa467612bb64ee77f96aff9c23fa9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206384"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793343"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-an-availability-group-using-powershell"></a>Creación de un punto de conexión de creación de reflejo de la base de datos para un grupo de disponibilidad con PowerShell
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   En este tema se describe cómo crear un extremo de creación de reflejo de la base de datos para uso de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante PowerShell.  
   
- **En este tema**  
+
   
--   **Antes de empezar:**  [Seguridad](#Security)  
-  
--   **Para crear un punto de conexión de creación de reflejo de la base de datos con:**  [PowerShell](#PowerShellProcedure)  
-  
-## <a name="before-you-begin"></a>Antes de empezar  
-  
-###  <a name="Security"></a> Seguridad  
-  
+##  <a name="Permissions"></a> Permisos  
+ Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
+
 > [!IMPORTANT]  
 >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
-  
-####  <a name="Permissions"></a> Permissions  
- Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="PowerShellProcedure"></a> Usar PowerShell  
  **Para crear un extremo de creación de reflejo de la base de datos**  

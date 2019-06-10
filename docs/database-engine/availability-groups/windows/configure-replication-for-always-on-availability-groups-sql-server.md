@@ -13,36 +13,20 @@ helpviewer_keywords:
 ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: bbbc8122105df6a9911357734a00c7c633e63687
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: d191a506f688b1c1f79751f4aa652a719000a564
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59367243"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793620"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Configuración de la replicación con grupos de disponibilidad Always On
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
   La configuración de la replicación y los grupos de disponibilidad AlwaysOn de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conlleva siete pasos. Cada paso se describe con más detalle en las secciones siguientes.  
-  
-1.  [Configurar las publicaciones y suscripciones de la base de datos.](#step1)  
-  
-2.  [Configurar el grupo de disponibilidad AlwaysOn.](#step2)  
-  
-3.  [Asegúrese de que todos los hosts de la réplica secundaria están configurados para la replicación.](#step3)  
-  
-4.  [Configurar los hosts de la réplica secundaria como publicadores de replicación.](#step4)  
-  
-5.  [Redirigir el publicador original al nombre del agente de escucha del grupo de disponibilidad.](#step5)  
-  
-6.  [Ejecutar el procedimiento almacenado de validación para comprobar la configuración.](#step6)  
-  
-7.  [Agregar el publicador original al Monitor de replicación.](#step7)  
-  
- Los pasos 1 y 2 se pueden realizar en cualquier orden.  
   
 ##  <a name="step1"></a> 1. Configurar las publicaciones y suscripciones de la base de datos  
  **Configurar el distribuidor**  

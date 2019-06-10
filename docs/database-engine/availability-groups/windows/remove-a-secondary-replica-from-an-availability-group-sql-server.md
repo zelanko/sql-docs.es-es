@@ -15,54 +15,32 @@ helpviewer_keywords:
 ms.assetid: 35ddc8b6-3e7c-4417-9a0a-d4987a09ddf7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4bacb15ea7932cdbe533ee9c4a3ff1be4a65ef9a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: cde3691b20ff9a674a64e4f7f997a8919594c93a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53201924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801010"
 ---
 # <a name="remove-a-secondary-replica-from-an-availability-group-sql-server"></a>Quitar una réplica secundaria de un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo quitar una réplica secundaria de un grupo de disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+ 
+   
+##  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para quitar una réplica secundaria, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Seguimiento:**  [después de quitar una réplica secundaria](#PostBestPractices)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
-  
--   Esta tarea solo se admite en la réplica principal.  
-  
+-   Esta tarea solo se admite en la réplica principal.    
 -   Solo se puede quitar una réplica secundaria de un grupo de disponibilidad.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+## <a name="Prerequisites"></a> Requisitos previos  
   
 -   Debe estar conectado a la instancia del servidor que hospeda la réplica principal del grupo de disponibilidad.  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una réplica secundaria**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  

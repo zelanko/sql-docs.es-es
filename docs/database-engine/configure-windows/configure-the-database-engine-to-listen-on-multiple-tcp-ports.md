@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8e955033-06ef-403f-b813-3d8241b62f1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2efa695bd6b6c36db1a813d7b33a866a30bd95f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 2fa73136dfc026f158cbe7a81a08d68cf9142114
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125965"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803343"
 ---
 # <a name="configure-the-database-engine-to-listen-on-multiple-tcp-ports"></a>Configurar el motor de base de datos para escuchar en varios puertos TCP
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "54125965"
   
 #### <a name="to-configure-the-sql-server-database-engine-to-listen-on-an-additional-tcp-port"></a>Para configurar el motor de la base de datos de SQL Server para escuchar en otro puerto TCP  
   
-1.  En Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** _&lt;nombre_instancia&gt;_.  
+1.  En Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, después, haga clic en **Protocolos de** _&lt;nombre_instancia&gt;_ .  
   
 2.  Expanda **Protocolos de** _&lt;nombre_instancia&gt;_ y, después, haga clic en **TCP/IP**.  
   

@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: acf3cd99-55f7-4287-8414-0892f830f423
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dc21969541334a1cf07887e0a5bc5074d1083bc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cd0527188ebdf3bbe5f0e2504ddd696f92038faa
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692963"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794612"
 ---
 # <a name="monitor-log-shipping-transact-sql"></a>Supervisar el trasvase de registros (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47692963"
 |[sp_help_log_shipping_secondary_database](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-database-transact-sql.md)|Recupera la configuración de la base de datos secundaria de las tablas **log_shipping_secondary**, **log_shipping_secondary_databases** y **log_shipping_monitor_secondary** .|Servidor secundario|  
 |[sp_help_log_shipping_secondary_primary &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-log-shipping-secondary-primary-transact-sql.md)|Este procedimiento almacenado recupera la configuración de una base de datos principal determinada en el servidor secundario.|Servidor secundario|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Ver el informe de trasvase de registros &#40;SQL Server Management Studio&#41;](../../database-engine/log-shipping/view-the-log-shipping-report-sql-server-management-studio.md)   
  [Tablas y procedimientos almacenados de trasvase de registros](../../database-engine/log-shipping/log-shipping-tables-and-stored-procedures.md)  
   

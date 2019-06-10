@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 7d475d33-a776-4776-a174-2c8a4acd476f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 15635f99ee6ecc20fd0341f04f6cf5caaac74914
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f8e46d571c5379255b138f0555f1e907f98aca73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676790"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772202"
 ---
 # <a name="open-the-odbc-data-source-administrator"></a>Abrir el Administrador de orígenes de datos ODBC
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,18 +39,18 @@ ms.locfileid: "47676790"
   
 2.  En el **Panel de control**, haga clic en **Herramientas administrativas**.  
   
-3.  En **Herramientas administrativas**, haga clic en **Orígenes de datos (ODBC)**.  
+3.  En **Herramientas administrativas**, haga clic en **Orígenes de datos (ODBC)** .  
 
 
 #### <a name="to-open-the-odbc-data-source-administrator-in-windows-server-2008"></a>Para abrir el Administrador de orígenes de datos ODBC en Windows Server 2008  
   
-1.  En el menú **Inicio** , seleccione **Herramientas administrativas**y, después, haga clic en **Orígenes de datos (ODBC)**.  
+1.  En el menú **Inicio** , seleccione **Herramientas administrativas**y, después, haga clic en **Orígenes de datos (ODBC)** .  
 
 
 > [!NOTE]  
 >  En el caso de conexiones a Azure Active Directory Authentication para SQL Database, instale el controlador más reciente, como [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comprobar la versión del controlador ODBC de SQL Server &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  
   
   

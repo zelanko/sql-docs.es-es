@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 74bc40bb-9f57-44e4-8988-1d69c0585eb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6016d1feff6d66fa7ef93fc99b04f20eda88970
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: f4c5a8a94da47f5961d2034a76b6195420b3f8f2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133227"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793800"
 ---
 # <a name="configure-backups-on-secondary-replicas-of-an-always-on-availability-group"></a>Configuración de copias de seguridad en las réplicas secundarias de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,41 +33,18 @@ ms.locfileid: "54133227"
 > [!NOTE]  
 >  Para obtener una introducción sobre la realización de copias de seguridad en las réplicas secundarias, vea [Secundarias activas: copia de seguridad en las réplicas secundarias &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Configurar la copia de seguridad en las réplicas secundarias, mediante:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Seguimiento:**  [después de configurar una copia de seguridad en las réplicas secundarias](#FollowUp)  
-  
--   [Para obtener información acerca de los valores de preferencia de copia de seguridad](#ForInfoAboutBuPref)  
-  
--   [Contenido relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
-###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
 |Para configurar la copia de seguridad en las réplicas secundarias al crear un grupo de disponibilidad|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar un grupo de disponibilidad o una réplica de disponibilidad|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para configurar la copia de seguridad en las réplicas secundarias**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y haga clic en el nombre del servidor para expandir el árbol.  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 31ceaebf-864b-4dd0-9112-0d047b0316ad
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 4b2d1d273d3876ca0a8156ee5d8e53399d4a5b75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 253866dc7483fb74162a55dc4f4c376c7b630312
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703763"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803468"
 ---
 # <a name="troubleshoot-a-failed-add-file-operation-always-on-availability-groups"></a>Solucionar problemas relativos a una operación de agregar archivos con error (grupos de disponibilidad AlwaysOn)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47703763"
   
 5.  Volver a unir la base de datos secundaria al grupo de disponibilidad. Para obtener más información, vea [Combinar una base de datos secundaria con un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/join-a-secondary-database-to-an-availability-group-sql-server.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Preparar manualmente una base de datos secundaria para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/manually-prepare-a-secondary-database-for-an-availability-group-sql-server.md)   
  [Solucionar problemas de usuarios huérfanos &#40;SQL Server&#41;](../../../sql-server/failover-clusters/troubleshoot-orphaned-users-sql-server.md)   

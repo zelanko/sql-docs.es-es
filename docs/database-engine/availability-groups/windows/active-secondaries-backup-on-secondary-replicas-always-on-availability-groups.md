@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 40fa3d6f3464c92a16e27a2a8bdddbf664909504
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 5b74fc36a3a6e53e0b7f00438f013218b0d76344
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53209444"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801350"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>Descarga de copias de seguridad admitidas en las réplicas secundarias de un grupo de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +34,7 @@ ms.locfileid: "53209444"
 > [!NOTE]  
 >  Las instrucciones RESTORE no se permiten en las bases de datos principales o secundarias de un grupo de disponibilidad.  
   
--   [Tipos de copia de seguridad admitidos](#SupportedBuTypes)  
-  
--   [Configurar dónde se ejecutan los trabajos de copia de seguridad](#WhereBuJobsRun)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
+ 
 ##  <a name="SupportedBuTypes"></a> Tipos de copia de seguridad admitidos en réplicas secundarias  
   
 -   **BACKUP DATABASE** solo admite copias de seguridad completas de solo copia de bases de datos, archivos o grupos de archivos cuando se ejecuta en réplicas secundarias. Tenga en cuenta que las copias de seguridad de solo copia no afectan a la cadena de registros ni borran el mapa de bits diferencial.  

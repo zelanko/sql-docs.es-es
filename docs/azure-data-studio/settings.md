@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: 8983e874e9f1a7a5dc875774304c87ad23fa60ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: 883c0c98531311d77754fcbcdd86615283aecdc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63312841"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798072"
 ---
 # <a name="modify-user-and-workspace-settings"></a>Modificar la configuración de área de trabajo y usuario
 
@@ -31,7 +31,7 @@ Es fácil de configurar [!INCLUDE[name-sos](../includes/name-sos-short.md)] a su
 
 El comando de menú **archivo** > **preferencias** > **configuración** (**código**  >  **Preferencias** > **configuración** en Mac) proporciona el punto de entrada para configurar la configuración de usuario y el área de trabajo. Se proporcionan con una lista de la configuración predeterminada. Copiar cualquier configuración que desea cambiar a la correspondiente `settings.json` archivo. Las pestañas de la derecha le permite alternar rápidamente entre los archivos de configuración de usuario y el área de trabajo.
 
-También puede abrir la configuración de usuario y del área de trabajo desde el **paleta de comandos** (**Ctrl + Mayús + P**) con **preferencias: Abrir configuración de usuario** y **preferencias: Abrir configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +,**).
+También puede abrir la configuración de usuario y del área de trabajo desde el **paleta de comandos** (**Ctrl + Mayús + P**) con **preferencias: Abrir configuración de usuario** y **preferencias: Abrir configuración de área de trabajo** o use el método abreviado de teclado (**Ctrl +,** ).
 
 El siguiente ejemplo deshabilita los números de línea en el editor y configura las líneas de código que se les aplica sangría automáticamente.
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: c8424d3c-86ba-4cc5-bf0c-be4ce44bdd04
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3c07aa73aea0edf5aa6b8e4b37cc1fceccf1f079
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f2476313880b061424b2cf34fe0e4ec4d2ce771
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772349"
 ---
 # <a name="open-objects-server-configuration-option"></a>open objects (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47846033"
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

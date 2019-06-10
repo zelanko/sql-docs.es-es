@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2e1c6c64-5ce7-4357-98c7-ac7763a9f9de
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8f0f897fcc970ee95942fd9e72ce7e21af257fa2
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 85af1eb285a8739fb6c9e092609909be660223bb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51599925"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786801"
 ---
 # <a name="agent-xps-server-configuration-option"></a>Agent XPs (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ RECONFIGURE
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tareas administrativas automatizadas &#40;Agente SQL Server&#41;](https://msdn.microsoft.com/library/541ee5ac-2c9f-4b74-b4f0-13b7bd5920b0)   
  [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)  
   

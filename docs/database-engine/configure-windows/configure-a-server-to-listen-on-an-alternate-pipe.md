@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 914f7491-e2be-4b0d-b3aa-fe5409cdbafa
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 0f480c19522982f99496dfe50d21578312a2d8ed
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7b595eb58dba9f76c2fcb7e825cfc4e0597d739e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686923"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799501"
 ---
 # <a name="configure-a-server-to-listen-on-an-alternate-pipe"></a>Configurar un servidor para que escuche en una canalización alternativa
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47686923"
   
 #### <a name="to-configure-the-named-pipe-used-by-the-sql-server-database-engine"></a>Para configurar la canalización con nombre utilizada por el Motor de base de datos de SQL Server  
   
-1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, luego, haga clic en **Protocolos de** *\<nombre de instancia>*.  
+1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y, luego, haga clic en **Protocolos de** *\<nombre de instancia>* .  
   
 2.  En el panel de detalles, haga clic con el botón derecho en **Canalizaciones con nombre**y, después, haga clic en **Propiedades**.  
   
@@ -47,7 +47,7 @@ ms.locfileid: "47686923"
   
 4.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
-5.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (**\<nombre de instancia>**)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+5.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (** \<nombre de instancia> **)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está escuchando en una canalización alternativa, hay tres formas de conectarse a una canalización con nombre específica con una aplicación cliente:  
   
@@ -57,7 +57,7 @@ ms.locfileid: "47686923"
   
 -   Programar el cliente para conectarse mediante una cadena de conexión personalizada.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear o eliminar un alias de servidor para que lo utilice un cliente &#40;Administrador de configuración de SQL Server&#41;](../../database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client.md)   
  [Configuración de red del servidor](../../database-engine/configure-windows/server-network-configuration.md)  
   

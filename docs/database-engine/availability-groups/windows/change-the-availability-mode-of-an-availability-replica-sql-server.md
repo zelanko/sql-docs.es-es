@@ -14,44 +14,27 @@ helpviewer_keywords:
 ms.assetid: c4da8f25-fb1b-45a4-8bf2-195df6df634c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: fd1b07c3d7c9172d52478c2d949f8f3f194a2c0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: ec2015fd96f523054ca48e2ba78f410594c0b2ef
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213584"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66772688"
 ---
 # <a name="change-the-availability-mode-of-a-replica-within-an-always-on-availability-group"></a>Cambio del modo de disponibilidad de una réplica dentro de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo cambiar el modo de disponibilidad de una réplica de disponibilidad de un grupo de disponibilidad AlwaysOn en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] por medio de [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell. El modo de disponibilidad es una propiedad de réplica que controla si la réplica se confirma asincrónica o sincrónicamente. El*modo confirmación asincrónica* maximiza el rendimiento a costa de la alta disponibilidad y solo admite la conmutación por error manual forzada (con posible pérdida de datos), que suele denominarse *conmutación por error forzada*. El*modo confirmación sincrónica* da prioridad a la alta disponibilidad sobre el rendimiento y, una vez sincronizada la réplica secundaria, admite la conmutación por error manual y, opcionalmente, la conmutación automática por error.  
+    
+##  <a name="Prerequisites"></a> Requisitos previos  
   
--   **Antes de empezar:**  
+Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
   
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para cambiar el modo de disponibilidad de una réplica de disponibilidad, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos  
-  
--   Debe estar conectado a la instancia del servidor que hospeda la réplica principal.  
-  
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+
+##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para cambiar el modo de disponibilidad de un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  

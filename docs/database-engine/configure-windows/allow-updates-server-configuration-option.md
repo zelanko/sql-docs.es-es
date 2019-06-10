@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3967c3ed-280a-4de8-a2ce-393e82745a7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: e27491d0f0c45660b736bcb01b993065941490f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2be9a6eb16bf2b4f481faf6409b28da11eb39eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47646690"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799566"
 ---
 # <a name="allow-updates-server-configuration-option"></a>allow updates (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47646690"
   
  Si se cambia la opción **allow updates** , se producirá un error en la instrucción RECONFIGURE. Los cambios en la opción **allow updates** deben eliminarse de todos los scripts.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

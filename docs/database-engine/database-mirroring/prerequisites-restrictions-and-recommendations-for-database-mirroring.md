@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: fdcf2251-9895-44c6-b81e-768fef32e732
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc62539432599cf6273772d5db9fca0a296b5980
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: acd91330934f2d9bc87064d593202ef1b58814ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795291"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-database-mirroring"></a>Requisitos previos, restricciones y recomendaciones para la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +114,7 @@ ms.locfileid: "47669863"
 3.  Espere a habilitar la conmutación automática por error hasta que tenga la seguridad de que el modo de alta seguridad sin conmutación automática por error cumple las necesidades empresariales y que los errores de red no están ocasionando problemas. Para obtener más información, vea [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/role-switching-during-a-database-mirroring-session-sql-server.md).  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   

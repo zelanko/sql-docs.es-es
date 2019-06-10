@@ -14,13 +14,13 @@ f1_keywords:
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a09468a52948090561ac85293c8ef95fc173f59f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c8c39b760c422efc2172eb4b6f3211722c22729c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655603"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771711"
 ---
 # <a name="server-properties---general-page"></a>Propiedades del servidor - Página General
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47655603"
 ## <a name="description-field"></a>Campo de descripción  
  Presenta información adicional sobre las propiedades del servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

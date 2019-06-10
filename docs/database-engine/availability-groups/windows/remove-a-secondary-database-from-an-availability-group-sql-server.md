@@ -16,47 +16,28 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 637c4a984876ad401fb2a757ac4d76ea833a5222
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 1c8c5fe88e1b3c95abd435558b0565960ba25ebf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213554"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801014"
 ---
 # <a name="remove-a-secondary-database-from-an-availability-group-sql-server"></a>Quitar una base de datos secundaria de un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo quitar una base de datos secundaria de un grupo de disponibilidad AlwaysOn mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
+   
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para quitar una base de datos secundaria, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Seguimiento:**  [después de quitar una base de datos secundaria de un grupo de disponibilidad](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Restrictions"></a>   
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
+##  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
 -   Esta tarea solo se admite en las réplicas secundarias. Debe estar conectado a la instancia del servidor que hospeda la réplica secundaria de la que se va a quitar la base de datos.  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para quitar una base de datos secundaria de un grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica secundaria de la que desea quitar una o varias bases de datos secundarias y expanda el árbol.  

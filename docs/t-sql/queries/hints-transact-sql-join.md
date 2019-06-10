@@ -23,20 +23,20 @@ ms.assetid: 09069f4a-f2e3-4717-80e1-c0110058efc4
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: c4c1cf9d7174736325e7308ac8609c403581f53d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: f1c99da1106f366e50d7c02bcc666a4e0c167bb6
+ms.sourcegitcommit: fc341b2e08937fdd07ea5f4d74a90677fcdac354
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334462"
+ms.lasthandoff: 06/05/2019
+ms.locfileid: "66719442"
 ---
 # <a name="hints-transact-sql---join"></a>Sugerencias (Transact-SQL): combinación
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   Las sugerencias de combinación especifican que el optimizador de consultas aplique una estrategia de combinación entre dos tablas en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Para obtener información general sobre las combinaciones y la sintaxis de combinación, vea [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   
-> [!IMPORTANT]  
->  Puesto que el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] normalmente selecciona el mejor plan de ejecución de una consulta, se recomienda que solo los administradores de bases de datos y los desarrolladores experimentados usen las sugerencias, incluida \<sugerencia_de_combinación>, como último recurso.
+> [!CAUTION]  
+>  Como el optimizador de consultas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] suele seleccionar el mejor plan de ejecución de una consulta, se recomienda que únicamente los administradores de bases de datos y desarrolladores experimentados utilicen las sugerencias como último recurso.
   
  **Se aplica a:**  
   
@@ -85,7 +85,7 @@ ON p.ProductID = pr.ProductID
 ORDER BY ProductReviewID DESC;  
 ```  
   
-### <a name="b-using-loop"></a>b. Usar LOOP  
+### <a name="b-using-loop"></a>B. Usar LOOP  
  En el siguiente ejemplo se especifica que la operación `JOIN` de la consulta está realizada por una combinación `LOOP`. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)].  
   
 ```  

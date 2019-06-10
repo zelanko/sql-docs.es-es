@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 55f3ac04-5626-4ad2-96bd-a1f1b079659d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5c4f4c40711fad6d32d8fcc0aa859507e266fdd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 65f613ebf1364d7aeaeda77ec244794f983f3fc9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255380"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775225"
 ---
 # <a name="view-or-change-server-properties-sql-server"></a>Ver o cambiar las propiedades del servidor (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "54255380"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para obtener más información, vea [Roles de nivel de servidor](../../relational-databases/security/authentication-access/server-level-roles.md).  
   
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-server-properties"></a>Para ver o cambiar las propiedades del servidor  
   
@@ -78,7 +78,7 @@ ms.locfileid: "54255380"
   
 #### <a name="to-view-server-properties-by-using-the-serverproperty-built-in-function"></a>Para ver las propiedades del servidor mediante la función integrada SERVERPROPERTY  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -91,7 +91,7 @@ ms.locfileid: "54255380"
   
 #### <a name="to-view-server-properties-by-using-the-sysservers-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.servers  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -108,7 +108,7 @@ ms.locfileid: "54255380"
   
 #### <a name="to-view-server-properties-by-using-the-sysconfigurations-catalog-view"></a>Para ver las propiedades del servidor mediante la vista de catálogo sys.configurations  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -125,7 +125,7 @@ ms.locfileid: "54255380"
   
 #### <a name="to-change-a-server-property-by-using-spconfigure"></a>Para cambiar una propiedad del servidor mediante sp_configure  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -155,9 +155,9 @@ GO
   
 2.  En **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (\<**_nombreDeInstancia_**>)** y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (\<** _nombreDeInstancia_ **>)** y, luego, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (\<**_nombreDeInstancia_**>) de SQL Server**, cambie las propiedades del servidor en las pestañas **Servicio** o **Avanzadas** y, después, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de (\<** _nombreDeInstancia_ **>) de SQL Server**, cambie las propiedades del servidor en las pestañas **Servicio** o **Avanzadas** y, después, haga clic en **Aceptar**.  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de cambiar propiedades del servidor  
  Para algunas propiedades, puede que sea necesario reiniciar el servidor para que el cambio surta efecto.  

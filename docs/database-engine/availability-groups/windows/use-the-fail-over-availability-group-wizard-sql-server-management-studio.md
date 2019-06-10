@@ -19,13 +19,13 @@ helpviewer_keywords:
 ms.assetid: 4a602584-63e4-4322-aafc-5d715b82b834
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8b11894150e184233b985dcfd21002175b1d9555
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 7ea5095fcec5681ea54a07bbcf8c41255d66db87
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255930"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780265"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ ms.locfileid: "54255930"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para usar el Asistente para conmutación por error del grupo de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospede una réplica secundaria del grupo de disponibilidad que necesita ser objeto de conmutación por error y expanda el árbol.  
@@ -60,7 +60,7 @@ ms.locfileid: "54255930"
   
 4.  La información que muestra la página **Introducción** depende de si la réplica secundaria es válida para una conmutación por error planeada. Si en esta página pone "**Realice una conmutación por error planeada para este grupo de disponibilidad**", puede realizar la conmutación por error en el grupo de disponibilidad sin perder datos.  
   
-5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de la conmutación por error, este valor será "**Pérdida de datos, Advertencias(**_#_**)**", donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de conmutación por error determinado, haga clic en su valor "Preparación para la conmutación por error".  
+5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de la conmutación por error, este valor será "**Pérdida de datos, Advertencias(** _#_ **)** ", donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de conmutación por error determinado, haga clic en su valor "Preparación para la conmutación por error".  
   
      Para obtener más información, vea la página [Seleccionar la nueva réplica principal](#SelectNewPrimaryReplica), más adelante en este tema.  
   

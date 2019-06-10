@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 2738ce65-205e-4682-92d8-dc7e37c58b2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f5dc6b48ece6318cdd1ab15e6bccd86401b05e2a
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: 7261b155c8dffa1d39a9e4354e03fb0cc7a8d1ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214726"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798154"
 ---
 # <a name="prerequisites-to-convert-log-shipping-to-always-on-availability-groups"></a>Requisitos previos para convertir el trasvase de registros en grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,15 +29,6 @@ ms.locfileid: "53214726"
 > [!NOTE]  
 >  Puede configurar cualquier base de datos principal o secundaria (posiblemente legible) de un grupo de disponibilidad como una base de datos principal de trasvase de registros.  
   
- **En este tema:**  
-  
--   [Requisitos previos de los grupos de disponibilidad](#AGPrereqsRealAddress)  
-  
--   [Requisitos previos del trasvase de registros](#LogShipPrereqs)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="AGPrereqsRealAddress"></a> Requisitos previos de los grupos de disponibilidad  
  Para permitir que los trabajos de copia de seguridad se ejecuten en la réplica principal del grupo de disponibilidad, use las siguientes opciones de copia de seguridad de los grupos de disponibilidad AlwaysOn:  
@@ -110,7 +101,7 @@ ms.locfileid: "53214726"
   
      [Notas del producto de Microsoft para SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)  
   
-     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://sqlcat.com/)  
+     [Notas del producto del equipo de asesoramiento al cliente de SQL Server](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## <a name="see-also"></a>Consulte también  
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../../database-engine/log-shipping/about-log-shipping-sql-server.md)   

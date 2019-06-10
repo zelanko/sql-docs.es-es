@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: af9ae643-9866-4014-b36f-11ab556a773e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 8e983bc2bbf7efe42d479dea90e8cf1f212adc15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bc07937bb9e554d2e052fd12cf0c157519c02368
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807943"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799080"
 ---
 # <a name="database-engine-instances-sql-server"></a>Instancias del motor de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,13 +47,13 @@ ms.locfileid: "47807943"
 |Describe cómo usar el generador de perfiles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para capturar el seguimiento de solicitudes de aplicación que entran en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Los seguimientos se pueden reproducir posteriormente para actividades como pruebas de rendimiento o diagnóstico de problemas.|[SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)|  
 |Describe la captura de datos modificados (CDC) y las características de seguimiento de cambios y cómo se usan estas características para realizar el seguimiento de cambios en los datos de una base de datos.|[Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)|  
 |Describe cómo usar el visor del archivo de registro para buscar y ver los errores y mensajes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en diversos registros; por ejemplo el historial de trabajos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los registros de SQL Server y los registros de eventos de Windows.|[Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)|  
-|Describe cómo usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analizar las bases de datos y hacer recomendaciones para tratar problemas potenciales de rendimiento.|[Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
+|Describe cómo usar el Asistente para la optimización de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para analizar las bases de datos y hacer recomendaciones para tratar problemas potenciales de rendimiento.|[Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)|  
 |Describe cómo los administradores de base de datos de producción pueden establecer una conexión de diagnóstico a instancias cuando las conexiones estándar no se están aceptando.|[Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)|  
 |Describe cómo usar la característica desusada de servidores remotos para habilitar el acceso desde una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] a otra. El mecanismo preferido para esta funcionalidad es un servidor vinculado.|[Servidores remotos](../../database-engine/configure-windows/remote-servers.md)|  
 |Describe las capacidades de Service Broker para las aplicaciones de mensajería y de puesta en cola, y proporciona punteros a la documentación de Service Broker.|[Service Broker](../../database-engine/configure-windows/sql-server-service-broker.md)|  
 |Describe cómo se puede utilizar la extensión del grupo de búferes para proporcionar una integración sin problemas del almacenamiento de acceso aleatorio no volátil (unidades de estado sólido) con el grupo de búferes del motor de base de datos para mejorar significativamente el rendimiento de E/S.|[Archivo de la extensión del grupo de búferes](../../database-engine/configure-windows/buffer-pool-extension.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sqlservr (aplicación)](../../tools/sqlservr-application.md)   
  [Características de la base de datos](../../relational-databases/database-features.md)   
  [Características entre instancias del motor de base de datos](../../relational-databases/database-engine-cross-instance-features.md)  

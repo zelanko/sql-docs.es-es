@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 498eb3fb-6a43-434d-ad95-68a754232c45
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: da9aa6724aadb63112414cd2a0055ccf5d865d81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 06184565c25288a2b280ab6ae67d2f59b03eef7d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595563"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803538"
 ---
 # <a name="start-data-movement-on-an-always-on-secondary-database-sql-server"></a>Iniciar el movimiento de datos en una base de datos secundaria AlwaysOn (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "47595563"
   
 -   [Usar el Asistente para agregar una base de datos al grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/availability-group-add-database-to-group-wizard.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)  
   
   

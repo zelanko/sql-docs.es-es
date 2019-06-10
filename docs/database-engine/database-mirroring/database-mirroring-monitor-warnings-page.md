@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 01936122-961d-436b-ba3c-5f79fefe5469
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5324e48c091f7bc4f999795f28f19f943217f7d4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 01a523c57399bb5d4a2ebf5a5d866bac3cb39e1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126135"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795525"
 ---
 # <a name="database-mirroring-monitor-warnings-page"></a>Monitor de creación de reflejo de la base de datos (página Advertencias)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "54126135"
  Para obtener más información, vea la sección "Comentarios" más adelante en este tema.  
   
 ## <a name="remarks"></a>Notas  
- Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **No conectado a** _<NOMBRE_DE_SISTEMA>_, o bien **No conectado a** _<NOMBRE_DE_SISTEMA>_**\\**_<nombre_de_instancia>_, en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
+ Si la información no está disponible actualmente para una instancia del servidor, la columna **Umbral en** muestra un fondo gris y un texto de marca de agua. Si el monitor no está conectado a la instancia del servidor, la cuadrícula de cada celda muestra **No conectado a** _<NOMBRE_DE_SISTEMA>_ , o bien **No conectado a** _<NOMBRE_DE_SISTEMA>_ **\\** _<nombre_de_instancia>_ , en función de si la instancia es la predeterminada o es una instancia con nombre. Si el monitor espera que se devuelva una consulta, la cuadrícula muestra **Esperando datos...** en cada celda.  
   
  Si hay información disponible, la celda de cada advertencia muestra un valor de umbral especificado (y una unidad de medida), o bien **No habilitado**.  
   

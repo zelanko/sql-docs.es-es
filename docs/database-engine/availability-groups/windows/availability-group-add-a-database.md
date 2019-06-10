@@ -14,28 +14,19 @@ helpviewer_keywords:
 ms.assetid: 2a54eef8-9e8e-4e04-909c-6970112d55cc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d22b59e761d499c566078e3867736d0b8b743df0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 262a4538774d2827d60367d1d96a12fb15e2d0f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860446"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789427"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group"></a>Adición de una base de datos a un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se explica cómo agregar una base de datos a un grupo de disponibilidad AlwaysOn con [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o PowerShell en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos y restricciones](#prerequisites-and-restrictions)    
-     [Permisos](#Permissions)    
--   **Para agregar una base de datos a un grupo de disponibilidad, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)    
-     [Transact-SQL](#TsqlProcedure)    
-     [PowerShell](#PowerShellProcedure)  
-  
+
   
 ## <a name="prerequisites-and-restrictions"></a>Requisitos previos y restricciones  
   
@@ -43,8 +34,7 @@ ms.locfileid: "58860446"
   
 -   La base de datos debe residir en la instancia del servidor que hospeda la réplica principal y cumple los requisitos previos y las restricciones de las bases de datos de disponibilidad. Para obtener más información, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-##  <a name="Security"></a> Seguridad  
-  
+ 
 ##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   

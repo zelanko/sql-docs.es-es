@@ -14,25 +14,20 @@ helpviewer_keywords:
 ms.assetid: 09eb6ebc-3051-4fff-86a5-93524507b1fc
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: bf22a6a15d85f3e5ad6ffc24a9ce371f43b34206
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d529be67fc2d264ca4b2ddaf3b1a6705165e2cc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215491"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775992"
 ---
 # <a name="add-an-encrypted-database-to-an-always-on-availability-group"></a>Adición de una base de datos cifrada a un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
   Este tema contiene información sobre el uso de bases de datos actualmente cifradas o recientemente descifradas con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
- **En este tema:**  
-  
--   [Limitaciones y restricciones](#Restrictions)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
+ 
 ##  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si una base de datos está cifrada o incluso contiene una clave de cifrado de base de datos (DEK), no puede usar el [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] ni el [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] para agregar la base de datos a un grupo de disponibilidad. Aunque se haya descifrado una base de datos cifrada, sus copias de seguridad de registros pueden contener datos cifrados. En este caso, la sincronización de datos completa inicial podría producir errores en la base de datos. Esto se debe a que la operación de restaurar registro puede requerir el certificado utilizado por las claves de cifrado de base de datos (DEK) y ese certificado podría no estar disponible.  

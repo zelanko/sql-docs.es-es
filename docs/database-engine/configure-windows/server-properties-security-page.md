@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: b8a131c7-e7bd-4203-bf26-234f1ebfe622
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 48fb7495e7dcd3818e784fd7c9dd7b4152871ebb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: beda4797b2beeeea2bfb24a35cf052b9ac22b5eb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848869"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794130"
 ---
 # <a name="server-properties---security-page"></a>Propiedades del servidor (página Seguridad)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "47848869"
  **Encadenamiento de propiedad entre bases de datos**  
  Seleccione esta opción para permitir que la base de datos pueda ser el origen o destino de una cadena de propiedad entre bases de datos. Para obtener más información, vea [cross db ownership chaining (opción de configuración del servidor)](../../database-engine/configure-windows/cross-db-ownership-chaining-server-configuration-option.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

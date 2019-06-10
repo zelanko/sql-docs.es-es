@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 66ffcdec-4bf7-4dd5-a221-fd9baefeeef4
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8a6b2b6313a0e4292d1860e8102218d2cc8b24e0
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: f929c973a400b600a220a920b944d7a9d46df6a6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65486455"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802138"
 ---
 # <a name="configure-severity-levels-for-dqs-log-files"></a>Configurar los niveles de gravedad de los archivos de registro de DQS
 
@@ -58,7 +58,7 @@ ms.locfileid: "65486455"
   
 2.  En la página de inicio de [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] , haga clic en **Configuración**.  
   
-3.  A continuación, haga clic en la pestaña **Configuración del registro** . Se muestran las actividades DQS siguientes para las que puede seleccionar un nivel de gravedad: **Administración de dominios**, **Detección de conocimiento**, **Proyecto de limpieza (p. ej., RDS)**, **Directiva de coincidencia y Proyecto de búsqueda de coincidencias** y **RDS**.  
+3.  A continuación, haga clic en la pestaña **Configuración del registro** . Se muestran las actividades DQS siguientes para las que puede seleccionar un nivel de gravedad: **Administración de dominios**, **Detección de conocimiento**, **Proyecto de limpieza (p. ej., RDS)** , **Directiva de coincidencia y Proyecto de búsqueda de coincidencias** y **RDS**.  
   
 4.  Para una actividad de DQS, seleccione el nivel de gravedad que desea registrar. Puede seleccionar uno de los siguientes: **Fatal**, **Error**, **Warn**, **Info** y **Debug**. Por ejemplo, si desea que en los archivos de registro de DQS solo aparezcan mensajes de tipo Fatal para la actividad de detección de conocimiento, seleccione **Fatal** en la lista desplegable de la actividad **KnowledgeDiscovery** .  
   

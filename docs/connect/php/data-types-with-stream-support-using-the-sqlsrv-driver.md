@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a16fe7da-e4c8-45f5-be54-aad03c4fa168
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a76d08ab4c07bc1324d09540a7c667f26c91020d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e2221833af115e31d7f7d74eff33b0b4f2557a74
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735073"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796203"
 ---
 # <a name="data-types-with-stream-support-using-the-sqlsrv-driver"></a>Tipos de datos con compatibilidad con secuencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ Los siguientes tipos de datos de SQL Server se pueden recuperar como secuencias 
   
 -   XML  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)
 
 [Tipos de datos PHP predeterminados](../../connect/php/default-php-data-types.md)

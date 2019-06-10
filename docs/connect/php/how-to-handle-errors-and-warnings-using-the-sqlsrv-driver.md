@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: fa231d60-4c06-4137-89e8-097c28638c5d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a80e7c63a92863abdbcbba0475fe74f05a3c5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 18aef50a23c7452e371abb30e6897b3ec11b48f3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799108"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796107"
 ---
 # <a name="how-to-handle-errors-and-warnings-using-the-sqlsrv-driver"></a>Cómo controlar errores y advertencias con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -43,7 +43,7 @@ Tenga en cuenta que en la primera llamada a una función de **sqlsrv** ([sqlsrv_
   
 Observe también que en el código de ejemplo se comprueban los errores después de cada llamada a una función de **sqlsrv** . Este es el método recomendado.  
   
-En este ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
+En este ejemplo se da por hecho que SQL Server y la base de datos de [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos. Cuando se ejecuta el ejemplo en una nueva instalación de la base de datos de AdventureWorks, se generan 3 advertencias y 2 errores. Las dos primeras advertencias son advertencias estándar que se emiten cuando se conecta a una base de datos. La tercera se genera debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que cero. Los errores se producen debido a que las horas de vacaciones disponibles de un empleado se actualizan a un valor menor que 40 horas, lo que constituye una infracción de una restricción de la tabla.  
   
 ```  
 <?php  
@@ -200,7 +200,7 @@ function DisplayWarnings()
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md)
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  

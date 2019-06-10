@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BLOBs, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6c71488ab4e92e241ac7de9873febbe5e6537421
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7db9b5da3a7f627070739d3e9e4e0530aae3650a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834163"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803203"
 ---
 # <a name="fetching-blob-data-using-irowopen-and-isequentialstream"></a>Capturar datos BLOB mediante IRow::Open e ISequentialStream
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -83,7 +83,7 @@ HRESULT GetSequentialColumn(IRow* pUnkRow, ULONG iCol)
   
  Los datos grandes se pueden enlazar o recuperar mediante la interfaz **ISequentialStream**. En el caso de las columnas enlazadas, la marca de estado indica si los datos se truncan mediante el establecimiento de DBSTATUS_S_TRUNCATED.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Capturar datos BLOB mediante IRow](../../oledb/ole-db-rowsets/fetching-a-single-row-with-irow.md)  
   
   

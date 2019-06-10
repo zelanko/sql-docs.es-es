@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7c4b6fb4-f45a-4973-adb9-a4d83f0a2a7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63668ecb4ece28c27948ec3cca7991039090ec26
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: cd45cc3b0db61e87c8d9ce506e141cc9ad8c97c5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59041924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798788"
 ---
 # <a name="installing-the-driver-manager"></a>Instalación del Administrador de controladores
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,11 +72,11 @@ Si el script de instalación no se puede completar, configure y compile manualme
   
 4.  Cambie al directorio unixODBC-2.3.0.  
   
-5.  En un símbolo del sistema, ejecute el comando: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"**.  
+5.  En un símbolo del sistema, ejecute el comando: **CPPFLAGS = "-DSIZEOF_LONG_INT = 8"** .  
   
 6.  En un símbolo del sistema, ejecute el comando: **export CPPFLAGS**.  
   
-7.  En un símbolo del sistema, ejecute el comando: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"**.  
+7.  En un símbolo del sistema, ejecute el comando: **"./configure --prefix=/usr --libdir=/usr/lib64 --sysconfdir=/etc --enable-gui=no --enable-drivers=no --enable-iconv --with-iconv-char-enc=UTF8 --with-iconv-ucode-enc=UTF16LE"** .  
   
 8.  En un símbolo del sistema (con una sesión iniciada con permisos de raíz), ejecute el comando: **make**.  
   

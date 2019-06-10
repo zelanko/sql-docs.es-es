@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 3c0dbca4-abfc-4449-b133-66c819681840
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 06bb27e8faf8269090bc5920889d1b70f85dc71e
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 026160c3e65255321691ec24fc331f8c7ab09b5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600385"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803174"
 ---
 # <a name="how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -92,7 +92,7 @@ sqlsrv_close( $conn);
   
 Como en los tres primeros campos no se ha especificado el tipo de datos PHP devuelto, los campos se devuelven según el tipo de datos PHP predeterminado. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de valor devueltos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

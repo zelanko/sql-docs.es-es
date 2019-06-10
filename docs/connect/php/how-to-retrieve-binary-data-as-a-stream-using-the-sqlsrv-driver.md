@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: cd8d6382-abe6-48ee-9d10-4e6c52c0cb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aefee98fefc5ae0b47ce3ea734580799c8abe57c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e4bf2ae4330a98d810d0d3291f0045834b8927d3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698743"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799329"
 ---
 # <a name="how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver"></a>Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -90,7 +90,7 @@ sqlsrv_close( $conn);
   
 Al especificar el tipo de valor devuelto en el ejemplo, se demuestra cómo especificar el tipo de valor devuelto PHP como una secuencia binaria. Técnicamente, no es necesario en el ejemplo, ya que el campo *LargePhoto* tiene el tipo de SQL Server varbinary(max) y, por tanto, se devuelve como un flujo binario de manera predeterminada. Para obtener información sobre los tipos de datos PHP predeterminados, consulte [Default PHP Data Types](../../connect/php/default-php-data-types.md). Para obtener información sobre cómo especificar los tipos de valor devueltos PHP, consulte [How to: Specify PHP Data Types](../../connect/php/how-to-specify-php-data-types.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Recuperación de datos como una secuencia con el controlador SQLSRV](../../connect/php/retrieving-data-as-a-stream-using-the-sqlsrv-driver.md)

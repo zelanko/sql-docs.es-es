@@ -9,14 +9,14 @@ helpviewer_keywords:
 - URL registration
 - Report Server service, URL reservations
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0e835d14bfb2684685f95f65dd1a16e7e4edb55e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814118"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454504"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
   Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
@@ -64,7 +64,7 @@ ms.locfileid: "51814118"
  Si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, el programa de instalación reservará direcciones URL para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. También puede aceptar estos valores predeterminados al definir las reservas de direcciones URL en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las direcciones URL predeterminadas incluirán un nombre de instancia si instala [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como una instancia con nombre.  
   
 > [!IMPORTANT]  
->  El carácter de la instancia es el carácter de subrayado (**_**).  
+>  El carácter de la instancia es el carácter de subrayado ( **_** ).  
   
  Las reservas de direcciones URL incluyen un número de puerto. Los sistemas operativos siguientes permitirán que varias aplicaciones web compartan un puerto.  
   
@@ -90,10 +90,9 @@ ms.locfileid: "51814118"
 |SQL Server Express|Portal web|`https://<servername>/reports_SQLExpress`|`https://<servername>:80/reports_SQLExpress`|  
   
 ##  <a name="URLPermissionsAccounts"></a> Autenticación e identidad de servicio de las direcciones URL de Reporting Services  
- [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Las reservas de direcciones URL especifican la cuenta de servicio del servicio Servidor de informes. La cuenta en la que el servicio se ejecuta se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia. La identidad del servicio de la instancia del servidor de informes está almacenada en el archivo RSReportServer.config.  
+ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Las reservas de direcciones URL muestran la cuenta de la reserva. La cuenta del servicio virtual se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia.
   
- La cuenta de servicio no tiene ningún valor predeterminado. Pero hay que especificar una cuenta de servicio durante la instalación. Se especifica en **URLReservation** en RSReportServer.config, aunque el servidor se instale en modo de solo archivos. Los valores válidos para la cuenta de servicio incluyen una cuenta de usuario de dominio, **LocalSystem**o **NetworkService**.  
-  
+ 
  El acceso anónimo está deshabilitado porque la seguridad predeterminada es **RSWindowsNegotiate**. Para el acceso en una intranet, las direcciones URL del servidor de informes usan nombres de equipo de red. Si desea configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para las conexiones a Internet, debe utilizar valores diferentes. Para obtener más información sobre la autenticación, vea [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 ##  <a name="URLlocalAdmin"></a> Direcciones URL para administración local  
@@ -103,7 +102,7 @@ ms.locfileid: "51814118"
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] y versiones posteriores incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
   

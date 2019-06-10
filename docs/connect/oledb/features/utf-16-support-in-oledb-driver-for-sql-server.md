@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: e0c76b7a62150fe4ee53fd83b63d7b9ebe1fd737
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 421b7e37054fbc283959373a01921fd4f9e8ca2b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641733"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796055"
 ---
 # <a name="utf-16-support-in-ole-db-driver-for-sql-server"></a>Compatibilidad de UTF-16 con el controlador OLE DB para SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "47641733"
 
   A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], si proporciona un búfer de longitud fija al enlazar un parámetro de salida o el resultado de una columna, y si el carácter **wchar** escrito en el búfer antes del carácter de finalización es un punto de código que actúa como suplente superior de un par de suplentes y el carácter **wchar** siguiente es un punto de código que actúa como suplente inferior, el controlador OLE DB para SQL Server no agregará el punto de código que actúa como suplente superior al búfer.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)   
   
   

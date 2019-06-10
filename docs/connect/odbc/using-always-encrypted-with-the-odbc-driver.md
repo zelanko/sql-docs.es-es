@@ -7,14 +7,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: ab53bcc4885ab91c3c9d022ffc3ba3bd72e2c5be
-ms.sourcegitcommit: 1d66761e54490267be4d0a94efc0ad6790051ef2
+ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
-ms.locfileid: "65198035"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801738"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -557,7 +557,7 @@ En la tabla siguiente se proporciona un resumen de las acciones al trabajar en u
 
 |`ColumnEncryption`|Dirección BCP|Descripción|
 |----------------|-------------|-----------|
-|`Disabled`|OUT (al cliente)|Recupera el texto cifrado. El tipo de datos observado es **varbinary(max)**.|
+|`Disabled`|OUT (al cliente)|Recupera el texto cifrado. El tipo de datos observado es **varbinary(max)** .|
 |`Enabled`|OUT (al cliente)|Recupera el texto no cifrado. El controlador descifrará los datos de la columna.|
 |`Disabled`|IN (en el servidor)|Inserta el texto cifrado. Esto está pensado para mover de manera opaca los datos cifrados sin necesidad de que se descifren. La operación generará un error si la opción `ALLOW_ENCRYPTED_VALUE_MODIFICATIONS` no está establecida en el usuario o si BCPMODIFYENCRYPTED no está establecido en el identificador de conexión. Para obtener más información, vea lo siguiente.|
 |`Enabled`|IN (en el servidor)|Inserta el texto no cifrado. El controlador cifrará los datos de la columna.|

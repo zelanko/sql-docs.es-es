@@ -1,18 +1,18 @@
 ---
 title: Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-sharepoint
 ms.topic: conceptual
 ms.date: 09/15/2017
-ms.openlocfilehash: d5a771bc28d4c6a6f248925d329fa708c4135f8d
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+ms.openlocfilehash: 8d53445544c360250ed35c322e2fc4078559bbbe
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52397159"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454572"
 ---
 # <a name="claims-to-windows-token-service-c2wts-and-reporting-services"></a>Notificaciones del servicio de token de Windows (C2WTS) y Reporting Services
 
@@ -50,7 +50,7 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
 
     **Como procedimiento recomendado, C2WTS se debe ejecutar en su propia identidad de dominio.**
 
-    * Cree una cuenta de Active Directory y regístrela como una cuenta administrada en SharePoint Server. Para más información sobre las cuentas administradas, consulte el artículo sobre las [cuentas administradas en Sharepoint](https://blogs.technet.microsoft.com/wbaer/2010/04/11/managed-accounts-in-sharepoint-2010/).
+    * Cree una cuenta de Active Directory y regístrela como una cuenta administrada en SharePoint Server. Para más información sobre las cuentas administradas, consulte el artículo sobre las [cuentas administradas en Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/).
    
     * Configure el servicio C2WTS para usar la cuenta administrada mediante Administración central de SharePoint > Seguridad > Configurar cuentas de servicio > Servicio de Windows - Notificaciones al Servicio de token de Windows
 
@@ -84,7 +84,7 @@ Si en su entorno se usa la delegación limitada de Kerberos, el servicio SharePo
     * Seleccione **Usuarios o equipos...&#42;** y escriba la cuenta que hospeda el servicio. Por ejemplo, si un servidor SQL Server se ejecuta en una cuenta denominada *sqlservice*, escriba `sqlservice`. 
       Para el **elemento web Visor de informes**, esta será la cuenta de servicio para la instancia de Reporting Services (modo nativo).
 
-    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-web-part-configuration).
+    * Seleccione la lista de servicios. Esto mostrará los SPN disponibles en esa cuenta. Si el servicio no está indicado en la cuenta, es posible que falte o que esté en otra cuenta. Puede usar la utilidad SetSPN para ajustar los SPN. Para el **elemento web Visor de informes**, verá el SPN HTTP que se configuró en [Configuración del elemento web Visor de informes](https://docs.microsoft.com/sql/reporting-services/install-windows/claims-to-windows-token-service-c2wts-and-reporting-services?view=sql-server-2017#report-viewer-native-mode-web-part-configuration).
 
     * Seleccione Aceptar para salir de los cuadros de diálogo.
 

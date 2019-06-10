@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 17dc9129-04cd-430c-b5b3-82824116425d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe04b5fbe8d5bd0ab16ca81fc503ac72ff7a1966
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d5d1d7e62709af773ca251a389c8cfaa4981ce58
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787405"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797045"
 ---
 # <a name="retrieving-data-as-a-stream-using-the-sqlsrv-driver"></a>Recuperación de datos como una secuencia con el controlador SQLSRV
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -49,7 +49,7 @@ En los pasos siguientes se resume cómo recuperar datos como una secuencia:
 |[Cómo recuperar datos de caracteres como una secuencia utilizando el controlador SQLSRV](../../connect/php/how-to-retrieve-character-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos de caracteres como una secuencia.|  
 |[Cómo recuperar datos binarios como una secuencia mediante el controlador SQLSRV](../../connect/php/how-to-retrieve-binary-data-as-a-stream-using-the-sqlsrv-driver.md)|Muestra cómo recuperar datos binarios como una secuencia.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

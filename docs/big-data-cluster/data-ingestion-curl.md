@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: c4c6cb2032949131277d5baa126f2895255fd18b
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d1e8da7430048381a320936abef35cdd64bad134
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743950"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800709"
 ---
 # <a name="use-curl-to-load-data-into-hdfs-on-sql-server-big-data-clusters"></a>Use curl para cargar datos en HDFS en clústeres de macrodatos de SQL Server
 

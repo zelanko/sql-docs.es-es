@@ -4,18 +4,18 @@ titleSuffix: SQL Server 2019 big data clusters
 description: Este artículo describe la implementación de aplicaciones en un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: jterh
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 03/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44e0be15c9b9cc3abb8af3e8f2e7fc8049d385df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 1a6ba9caed2b01abc50e16e34d1a13413af2d0ba
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63283714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801856"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>¿Qué es la implementación de aplicaciones en un clúster de macrodatos de 2019 de SQL Server?
 

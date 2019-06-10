@@ -4,18 +4,18 @@ titleSuffix: Azure Data Studio
 description: En este artículo se describe cómo usar el Acelerador de código de PROSE en Azure Data Studio para generar automáticamente código para tareas comunes de tratamiento de datos.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 705d3b5230faf69ca9eb9de2f7f0cc21b42a8955
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59935347"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770777"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Uso del Acelerador de código de PROSE de Wrangling de datos
 
@@ -114,7 +114,7 @@ Para obtener más información, consulte el [documentación](https://aka.ms/pros
 Otro escenario común es detectar patrones en una columna de cadena con el fin de limpieza o de agrupación. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos diferentes. Con el fin de normalizar los valores, puede escribir instrucciones condicionales mediante expresiones regulares.
 
 
-|   |Name                      |BirthDate      |
+|   |NOMBRE                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Desconocido        |

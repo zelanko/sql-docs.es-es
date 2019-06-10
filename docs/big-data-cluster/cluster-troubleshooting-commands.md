@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este artículo proporciona comandos útiles para la supervisión y solución de problemas de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 3914bc088ab8974c92a24131d69590b4353f068e
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994088"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800738"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervisión y solución de problemas de clústeres de macrodatos de SQL Server
 
@@ -242,9 +242,9 @@ az aks browse --resource-group <azure_resource_group> --name <aks_cluster_name>
 ```
 
 > [!Note]
-> Si recibe el error siguiente: *No se puede escuchar en el puerto 8001: Todos los agentes de escucha no se pudo crear con los siguientes errores: No se puede crear el agente de escucha: Error escuchar tcp4 127.0.0.1:8001: > enlazar: Normalmente se permite un solo uso de cada dirección de socket (dirección de red Protocolo/puerto). No se puede crear el agente de escucha: Error escuchar tcp6: dirección [[:: 1]]: 8001: falta el puerto en > error de dirección: No se puede escuchar en cualquiera de los puertos solicitados: [{8001 9090}]*, asegúrese de que no se inició el panel ya desde otra ventana.
+> Si recibe el error siguiente: *No se puede escuchar en el puerto 8001: Todos los agentes de escucha no se pudo crear con los siguientes errores: No se puede crear el agente de escucha: Error escuchar tcp4 127.0.0.1:8001: > enlazar: Normalmente se permite un solo uso de cada dirección de socket (dirección de red Protocolo/puerto). No se puede crear el agente de escucha: Error escuchar tcp6: dirección [[:: 1]]: 8001: falta el puerto en > error de dirección: No se puede escuchar en cualquiera de los puertos solicitados: [{8001 9090}]* , asegúrese de que no se inició el panel ya desde otra ventana.
 
-Al iniciar el panel del explorador, podría obtener advertencias permiso debido a que se está habilitado de forma predeterminada en los clústeres de AKS de RBAC y la cuenta de servicio usada por el panel no tiene permisos suficientes para tener acceso a todos los recursos (por ejemplo,  *está prohibido Pods: Usuario "del sistema: serviceaccount:kube-kubernetes: sistema-panel" no se pueden enumerar los pods en el espacio de nombres "predeterminado"*). Ejecute el comando siguiente para conceder los permisos necesarios para `kubernetes-dashboard`y, a continuación, reinicie el panel:
+Al iniciar el panel del explorador, podría obtener advertencias permiso debido a que se está habilitado de forma predeterminada en los clústeres de AKS de RBAC y la cuenta de servicio usada por el panel no tiene permisos suficientes para tener acceso a todos los recursos (por ejemplo,  *está prohibido Pods: Usuario "del sistema: serviceaccount:kube-kubernetes: sistema-panel" no se pueden enumerar los pods en el espacio de nombres "predeterminado"* ). Ejecute el comando siguiente para conceder los permisos necesarios para `kubernetes-dashboard`y, a continuación, reinicie el panel:
 
 ```bash
 kubectl create clusterrolebinding kubernetes-dashboard -n kube-system --clusterrole=cluster-admin --serviceaccount=kube-system:kubernetes-dashboard

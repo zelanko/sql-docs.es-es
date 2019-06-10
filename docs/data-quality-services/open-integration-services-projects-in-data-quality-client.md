@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ea719c85026c110329092a5dd243e84a1e1ef78c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65488244"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788004"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Abrir proyectos de Integration Services en Data Quality Client
 
@@ -51,7 +51,7 @@ ms.locfileid: "65488244"
   
 3.  En la pantalla **Abrir proyecto** , puede identificar un proyecto de Integration Services de una de las formas siguientes:  
   
-    1.  **Nombre del proyecto**: los proyectos de Integration Services se muestran con la terminología de nomenclatura siguiente: "Package.DQS Cleansing_*\<FECHA>\<HORA>*_{GUID}." Cada vez que ejecuta correctamente el mismo paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], aparece un nuevo proyecto en la pantalla **Abrir proyecto** .  
+    1.  **Nombre del proyecto**: los proyectos de Integration Services se muestran con la terminología de nomenclatura siguiente: "Package.DQS Cleansing_ *\<FECHA>\<HORA>* _{GUID}." Cada vez que ejecuta correctamente el mismo paquete en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], aparece un nuevo proyecto en la pantalla **Abrir proyecto** .  
   
     2.  **Tipo de proyecto**: los proyectos de Integration Services tienen **SSIS** como tipo de proyecto en la pantalla **Abrir proyecto**.  
   

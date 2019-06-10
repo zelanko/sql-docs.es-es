@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: craigg
-ms.openlocfilehash: 5b000a420867428116403fb067cf79215b6ea196
-ms.sourcegitcommit: 179ab0e55f918f58a18c43af076130f4ac3decd6
+manager: jroth
+ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/19/2019
-ms.locfileid: "65875187"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794308"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Novedades de Data Migration Assistant
 En este artículo se enumera las adiciones en cada versión de Data Migration Assistant (DMA).

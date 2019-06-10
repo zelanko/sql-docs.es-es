@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 2d0e07e069754e961b290b33d77cb30b522c367f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: ff0a31fc4d825966fefafc11d8780862634f1937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015148"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794478"
 ---
 # <a name="create-analysis-reports-in-database-experimentation-assistant"></a>Crear informes de análisis en el Asistente de experimentación de base de datos
 
@@ -36,7 +36,7 @@ En **informes de análisis de**, seleccione **nuevo informe de análisis**.
 
 Escriba o seleccione la siguiente información:
 
-- **Nombre del informe**: Escriba un nombre para el informe. Se usa el nombre del informe tanto A bases de datos de B y. Ejemplo: *A (o B)* + *nombre del informe* + *identificador único*. 
+- **Nombre del informe**: Escriba un nombre para el informe. Se usa el nombre del informe tanto A bases de datos de B y. Ejemplo: *A (o B)*  + *nombre del informe* + *identificador único*. 
 - **Nombre del servidor**: Escriba el nombre del equipo del servidor que desea incluir en A, B y las bases de datos de análisis.
 - **Nombre de instancia de SQL Server**: Escriba el nombre de la instancia de SQL Server que se usará para el informe.
 - **Seguimiento de servidor de origen**: Escriba el primer archivo de seguimiento (.trc) SQL Server (2008 R2).

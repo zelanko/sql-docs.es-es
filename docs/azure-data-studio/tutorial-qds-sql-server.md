@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: dfd48e17e4d9216d0b0bd23c3395acfd69516c67
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 10795ae2e1836e018e103a51cb7bea718ec9299f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65089686"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797924"
 ---
 # <a name="tutorial-add-the-five-slowest-queries-sample-widget-to-the-database-dashboard"></a>Tutorial: Agregar el *cinco consultas más lentas* widget de ejemplo en el panel de la base de datos
 
@@ -129,7 +129,7 @@ Para agregar el *lenta widget consultas* al panel, edite el *dashboard.database.
 
 ## <a name="view-insight-details-for-more-information"></a>Ver detalles de la información para obtener más información
 
-1. Para ver información adicional sobre un widget de información, haga clic en el botón de puntos suspensivos (**...** ) en la esquina superior derecha y seleccione **mostrar detalles**.
+1. Para ver información adicional sobre un widget de información, haga clic en el botón de puntos suspensivos ( **...** ) en la esquina superior derecha y seleccione **mostrar detalles**.
 2. Para mostrar más detalles de un elemento, seleccione cualquier elemento **datos del gráfico** lista.
 
    ![Cuadro de diálogo de información](./media/tutorial-qds-sql-server/insight-details-dialog.png)

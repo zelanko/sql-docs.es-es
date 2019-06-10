@@ -1,7 +1,7 @@
 ---
 title: sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/02/2017
+ms.date: 06/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: system-objects
@@ -19,15 +19,15 @@ ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 0f599084d70903ae3d74c04795ddb60d473b6002
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62628100"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802559"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
 
   Devuelve información sobre el volumen (directorio) del sistema operativo en que están almacenados los archivos y bases de datos especificados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Utilice esta función de administración dinámica para comprobar los atributos de la unidad de disco física y obtener información sobre el espacio disponible en el directorio.  
   
@@ -68,14 +68,14 @@ sys.dm_os_volume_stats (database_id, file_id)
 ## <a name="security"></a>Seguridad  
   
 ### <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW SERVER STATE.  
+ Requiere el permiso `VIEW SERVER STATE`.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-return-total-space-and-available-space-for-all-database-files"></a>A. Devolver el espacio total y el espacio disponible de todos los archivos de base de datos  
  El ejemplo siguiente devuelve el espacio total y el espacio disponible (en bytes) de todos los archivos de base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-```  
+```sql  
 SELECT f.database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.master_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);  
@@ -84,7 +84,7 @@ CROSS APPLY sys.dm_os_volume_stats(f.database_id, f.file_id);
 ### <a name="b-return-total-space-and-available-space-for-the-current-database"></a>b. Devolver el espacio total y el espacio disponible de la base de datos actual  
  El ejemplo siguiente devuelve el espacio total y el espacio disponible (en bytes) de los archivos de base de datos de la base de datos actual.  
   
-```  
+```sql  
 SELECT database_id, f.file_id, volume_mount_point, total_bytes, available_bytes  
 FROM sys.database_files AS f  
 CROSS APPLY sys.dm_os_volume_stats(DB_ID(f.name), f.file_id);  

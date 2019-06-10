@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 4430352babb69c58930755cf4ddae0e70b9d5a02
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015119"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794453"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en el Asistente de experimentación de base de datos
 
@@ -65,7 +65,7 @@ En DEA, seleccione el icono de menú. En el menú expandido, seleccione **reprod
 ### <a name="replay-a-trace"></a>Reproducir un seguimiento
 
 1.  **Nombre de archivo de seguimiento**: Escriba un nombre de archivo de seguimiento.
-1.  **Tamaño máximo de archivo (MB)**: Escriba un valor de tamaño de sustitución incremental de archivo de seguimiento. El valor predeterminado es 200 MB. Puede especificar un valor personalizado.
+1.  **Tamaño máximo de archivo (MB)** : Escriba un valor de tamaño de sustitución incremental de archivo de seguimiento. El valor predeterminado es 200 MB. Puede especificar un valor personalizado.
 1.  **Ruta de acceso para almacenar el resultado del seguimiento de reproducción**: Escriba la ruta de acceso del archivo de salida. trc.
 1.  **Nombre de instancia de SQL Server**:  Escriba el nombre de la instancia de SQL Server en el que se va a reproducir seguimientos.
 1.  Seleccione **Inicio**.

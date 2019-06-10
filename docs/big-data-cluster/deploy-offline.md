@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo realizar una implementación sin conexión de un clúster de macrodatos de SQL Server.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49c96300792adfefa32152ec73911ba32fac47ee
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994016"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797886"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realizar una implementación sin conexión de un clúster de macrodatos de SQL Server
 

@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo se puede cargar un cuaderno de Spark de ejemplo en un clúster de macrodatos de 2019 de SQL Server (versión preliminar) de una ejecución.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: ed1516c14a8a49269ea0768a2ddafb9e255c24a9
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 91daed271ca8e6a8eb04928a0806b287163143a8
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994142"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770872"
 ---
 # <a name="tutorial-run-a-sample-notebook-on-a-sql-server-big-data-cluster"></a>Tutorial: Ejecutar un cuaderno de ejemplo en un clúster de macrodatos de SQL Server
 

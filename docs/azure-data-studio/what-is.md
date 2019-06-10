@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: overview
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: e93c417f286246f6db25d0463cec97eba8541c1c
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993848"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801918"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
@@ -79,7 +79,7 @@ Para obtener información sobre la creación de extensiones, consulte [Extension
 
 ### <a name="shell"></a>Shell
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |El inicio de sesión Azure|Sí|Sí|
 |Panel|Sí||
@@ -102,7 +102,7 @@ Para obtener información sobre la creación de extensiones, consulte [Extension
 
 ### <a name="query-editor"></a>Editor de consultas
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Visor de gráficos|Sí||
 |Resultados de la exportación a CSV, JSON, XLSX|Sí||
@@ -119,7 +119,7 @@ Para obtener información sobre la creación de extensiones, consulte [Extension
 
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Linux|Sí||
 |macOS|Sí||
@@ -127,7 +127,7 @@ Para obtener información sobre la creación de extensiones, consulte [Extension
 
 ### <a name="data-engineering"></a>Ingeniería de datos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Crear a Asistente para la tabla externa|Vista previa||
 |Integración de HDFS|Vista previa||
@@ -135,7 +135,7 @@ Para obtener información sobre la creación de extensiones, consulte [Extension
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Copia de seguridad y restauración|Sí|Sí|
 |Importación de archivos planos|Vista previa|Sí|

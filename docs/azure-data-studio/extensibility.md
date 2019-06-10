@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: ce80ae9ec15fc7e1fdf8c68b595c71b2ee3f0a64
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: ea432d05ea1fde8ec0d2585d0618ea6feba86ccc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105041"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801927"
 ---
 # <a name="getting-started-with-includename-sosincludesname-sos-shortmd-extensibility"></a>Introducción a [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibilidad
 
@@ -274,8 +274,8 @@ En el panel, se proporcionan las siguientes variables de contexto:
 
 |variable de contexto| description|
 |:---|:---|
-|`connectionProvider` | Una cadena del identificador para el proveedor de la conexión actual. Por ejemplo, `connectionProvider == 'MSSQL'` |
-|`serverName`|Una cadena del nombre del servidor de la conexión actual. Por ejemplo, `serverName == 'localhost'` |
-|`databaseName` | Una cadena del nombre de base de datos de la conexión actual. Por ejemplo, `databaseName == 'master'` |
+|`connectionProvider` | Una cadena del identificador para el proveedor de la conexión actual. Por ejemplo, `connectionProvider == 'MSSQL'`|
+|`serverName`|Una cadena del nombre del servidor de la conexión actual. Por ejemplo, `serverName == 'localhost'`|
+|`databaseName` | Una cadena del nombre de base de datos de la conexión actual. Por ejemplo, `databaseName == 'master'`|
 |`connection` | El objeto de perfil de conexión completa para la conexión actual (IConnectionProfile)|
 |`dashboardContext` | Una cadena del contexto de la página del panel está actualmente. 'Database' o 'server'. Por ejemplo, `dashboardContext == 'database'`|

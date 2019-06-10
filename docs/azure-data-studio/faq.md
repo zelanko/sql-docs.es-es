@@ -7,16 +7,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 0b73dabb77ae04b915efa50dd8e0a8453b3ab3be
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65105083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800751"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] PREGUNTAS MÁS FRECUENTES
 
@@ -81,7 +81,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="shell-features"></a>Características de shell
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |El inicio de sesión Azure|Sí|Sí|
 |Panel|Sí| |
@@ -103,7 +103,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="query-editor"></a>Editor de consultas
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Visor de gráficos|Sí||
 |Resultados de la exportación a CSV, JSON, XLSX|Sí||
@@ -121,7 +121,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="operating-system-support"></a>Sistemas operativos admitidos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Windows|Sí|Sí|
 |macOS|Sí||
@@ -129,7 +129,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="data-engineering"></a>Ingeniería de datos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Asistente para datos externos|Vista previa||
 |Integración de HDFS|Vista previa||
@@ -137,7 +137,7 @@ No. Se seguirán las inversiones en herramientas de Windows de estrella (SSMS, S
 
 ### <a name="database-administration"></a>Administración de bases de datos
 
-|Característica|Azure Data Studio |SSMS|
+|Característica|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |Copia de seguridad y restauración|Sí|Sí|
 |Importación de archivos planos|Vista previa|Sí|

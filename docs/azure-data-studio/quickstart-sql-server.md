@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: craigg
-ms.openlocfilehash: f62d315991910fa89513425e5e41700e4effd059
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+manager: jroth
+ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620383"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800761"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar con SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 En este tutorial rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y, a continuación, usar instrucciones Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
@@ -36,7 +36,7 @@ Si no tiene acceso a un servidor SQL Server, seleccione su plataforma desde los 
 ## <a name="connect-to-a-sql-server"></a>Conectarse a un servidor SQL Server
 
    
-1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 1. La primera vez que ejecute [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **bienvenida** debe abrir la página. Si no ve el **bienvenida** página, seleccione **ayuda** > **bienvenida**. Seleccione **nueva conexión** para abrir el **conexión** panel:
    
    ![Nuevo icono de conexión](media/quickstart-sql-server/new-connection-icon.png)

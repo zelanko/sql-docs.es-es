@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo instalar las herramientas que se usan con los clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 01/17/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dc53bdfb71efeafd55752686ff136355bc79bd34
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: cbb4860cd747e454a09f1374d3b166fae466ee33
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860486"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797916"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>Instalar las herramientas de macrodatos de SQL Server 2019
 

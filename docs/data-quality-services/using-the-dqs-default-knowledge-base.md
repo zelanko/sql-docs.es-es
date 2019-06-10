@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b36af13b-9fcc-4168-bb92-214d600b1c93
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8c4e1ee43a9502f33719ba63912cec1f11fb5fec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+manager: jroth
+ms.openlocfilehash: a55326a6cbbc3b60dba603b1603c36cbdc680dac
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65487852"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801397"
 ---
 # <a name="using-the-dqs-default-knowledge-base"></a>Utilizar la base de conocimiento predeterminada de DQS
 
@@ -26,9 +26,9 @@ ms.locfileid: "65487852"
   
 -   **País o región**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en el nombre de país largo.  
   
--   **País o región (tres letras iniciales)**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
+-   **País o región (tres letras iniciales)** : contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  Los valores iniciales se establecen en la abreviatura de tres letras del condado.  
   
--   **País o región (dos letras iniciales)**: contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
+-   **País o región (dos letras iniciales)** : contiene nombres convencionales largos (nombre oficial según se designe por el país o región) y cortos (nombre común usado en las listas, en el mapa, etc.), la abreviatura de dos letras, la abreviatura de tres letras y el código de tres dígitos para cada ubicación.  El valor principal se establece en la abreviatura de dos letras del país.  
   
 -   **Condados de Estados Unidos**: contiene una lista de condados de Estados Unidos.  
   
@@ -38,7 +38,7 @@ ms.locfileid: "65487852"
   
 -   **Estados de Estados Unidos**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor principal se establece en el nombre convencional de estado.  
   
--   **Estados de Estados Unidos (encabezado de dos letras)**: contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
+-   **Estados de Estados Unidos (encabezado de dos letras)** : contiene el nombre largo convencional (oficial) y la abreviatura de dos letras para cada estado de EE. UU. El valor inicial se establece en la abreviatura de dos letras del nombre de estado.  
   
 ## <a name="using-the-default-knowledge-base"></a>Usar la base de conocimiento predeterminada  
  Puede utilizar la base de conocimiento predeterminado DQS, DQS Data, de las maneras siguientes:  

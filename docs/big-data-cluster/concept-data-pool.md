@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: En este artículo se describe el grupo de datos en un clúster de macrodatos de SQL Server 2019.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 8345ae06280458e7fa479ad95ffa20383e429267
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: ba296a504ae4a6656941c408e7b7a0c96a83c97d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860126"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783085"
 ---
 # <a name="what-are-data-pools-in-a-sql-server-big-data-cluster"></a>¿Cuáles son los grupos de datos en un clúster de macrodatos de SQL Server?
 

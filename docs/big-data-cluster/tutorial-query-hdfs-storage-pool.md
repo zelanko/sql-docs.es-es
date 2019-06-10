@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo consultar datos HDFS en un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Crear una tabla externa a través de los datos en el grupo de almacenamiento y, a continuación, ejecutar una consulta.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e43480c27ea865e827ec9a7325b55474935a21c1
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: d24c5b2089160236f4dcfaf5acf00e2426137f89
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994139"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770798"
 ---
 # <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>Tutorial: Consulta de HDFS en un clúster de macrodatos de SQL Server
 

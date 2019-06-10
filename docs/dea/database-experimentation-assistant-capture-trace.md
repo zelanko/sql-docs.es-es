@@ -12,13 +12,13 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: craigg
-ms.openlocfilehash: 822f8d02a9bcaa27a405acdc351646fd63560880
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+manager: jroth
+ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66015171"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794502"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capture un seguimiento en el Asistente de experimentación de base de datos
 
@@ -39,8 +39,8 @@ Almacenamiento en caché de consulta en SQL Server puede afectar a los resultado
     - **Nombre de instancia de SQL Server**: Escriba un nombre para el equipo que ejecuta SQL Server en el que desea capturar un seguimiento del servidor.
     - **Nombre de la base de datos**: Escriba un nombre para una base de datos que se va a iniciar un seguimiento de la base de datos. Si no se especifica una base de datos, se captura la traza en todas las bases de datos en el servidor.
     - **Nombre de archivo de seguimiento**: Escriba un nombre para el archivo de seguimiento para la captura.
-    - **Tamaño máximo de archivo (MB)**: Seleccione el tamaño de sustitución incremental de archivos. Se crea un nuevo archivo según sea necesario en el tamaño de archivo que seleccione. El tamaño recomendado de sustitución incremental es de 200 MB.
-    - **Duración (en minutos)**: Seleccione el período de tiempo (en minutos) que desee que se ejecute la captura de seguimiento.
+    - **Tamaño máximo de archivo (MB)** : Seleccione el tamaño de sustitución incremental de archivos. Se crea un nuevo archivo según sea necesario en el tamaño de archivo que seleccione. El tamaño recomendado de sustitución incremental es de 200 MB.
+    - **Duración (en minutos)** : Seleccione el período de tiempo (en minutos) que desee que se ejecute la captura de seguimiento.
     - **Ruta de acceso para almacenar el archivo de salida de seguimiento**: Seleccione la ruta de acceso de destino para el archivo de seguimiento. 
 
     > [!NOTE]

@@ -10,13 +10,13 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: craigg
-ms.openlocfilehash: dbf7b427c8c978538370a576aa50c35dd15417cf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63252969"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778333"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar con PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 En este tutorial rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a Postgres y, a continuación, usar instrucciones SQL para crear la base de datos *tutorialdb* y realiza consultas.
@@ -31,7 +31,7 @@ Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../include
 
 ## <a name="connect-to-postgresql"></a>Conectarse a PostgreSQL
 
-1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Iniciar **[!INCLUDE[name-sos](../includes/name-sos-short.md)]** .
 
 2. La primera vez que inicie [!INCLUDE[name-sos](../includes/name-sos-short.md)] el **conexión** abre el cuadro de diálogo. Si el **conexión** no abre el cuadro de diálogo, haga clic en el **nueva conexión** icono en el **servidores** página:
 

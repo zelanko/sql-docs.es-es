@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1cc9093bb6d266bd70fe8f53d96b249bc6680324
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 44ef1a05dfe0437420b8b3a1036ed356122dcfca
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66014948"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770931"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
 

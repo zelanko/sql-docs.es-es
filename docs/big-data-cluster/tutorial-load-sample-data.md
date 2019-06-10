@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo cargar datos de ejemplo en un clúster de macrodatos de SQL Server. Los datos de ejemplo incluyen datos relacionales en la instancia principal de SQL Server. También incluye datos de HDFS en el bloque de almacenamiento. Estos datos es compatible con otros tutoriales de esta sección.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: e84b43b4aeeaff97d5b625eed0f4e30a0e6907f0
-ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
+ms.openlocfilehash: d78fd9ecce71e9b7ffb86441fab134b1180d058a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
-ms.locfileid: "66743836"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770833"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>Tutorial: Cargar datos de ejemplo en un clúster de macrodatos de SQL Server
 

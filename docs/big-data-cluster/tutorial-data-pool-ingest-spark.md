@@ -4,18 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar) mediante trabajos de Spark en Azure Data Studio.
 author: rothja
 ms.author: jroth
-manager: craigg
+manager: jroth
 ms.date: 05/22/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: dcdbee449f15e070920660d5470135f4f8ae93a0
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: aa38de6e488c71109758d26481a8487f574f6451
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65994166"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770887"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con trabajos de Spark
 

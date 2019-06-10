@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6ca03a09-d6a8-4c93-ba12-1c99dcbfb618
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a516be313ddca5edd5d899ca05eeab6b1818b972
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 26b5bdacbdcf799ffc6c22113ebaec4fce2293b4
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175195"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499595"
 ---
 # <a name="manage-a-reporting-services-native-mode-report-server"></a>Administrar un servidor de informes en modo nativo de Reporting Services
   Esta sección contiene procedimientos para configurar una instancia de servidor de informes en modo nativo utilizando el Administrador de configuración de Reporting Services.  
@@ -29,7 +29,7 @@ ms.locfileid: "66175195"
  [Administrador de configuración de Reporting Services &#40;modo nativo&#41;](../../reporting-services/install-windows/reporting-services-configuration-manager-native-mode.md)  
  Proporciona los pasos para iniciar la herramienta de configuración de Reporting Services.  
   
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)  
+ [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)  
  Explica cómo especificar la información de cuenta y contraseña para el servicio Servidor de informes.  
   
  [Registrar un nombre principal de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md)  
@@ -45,7 +45,7 @@ ms.locfileid: "66175195"
  [Configurar una implementación escalada horizontalmente del servidor de informes en modo nativo &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-native-mode-report-server-scale-out-deployment.md)  
  Proporciona los pasos para configurar varios servidores de informes para compartir una base de datos del servidor de informes.  
   
- [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Entrega por correo electrónico en Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)   
  Ofrece pasos para configurar un servidor de informes para la distribución por correo electrónico.  
   
  [Configurar un firewall para el acceso al servidor de informes](../../reporting-services/report-server/configure-a-firewall-for-report-server-access.md)  

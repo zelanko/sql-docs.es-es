@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fe573e3-30db-4828-abab-e9346493e931
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5a0b33640f9978b5b7b383e7bd89c62e026d5386
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aff7392d2aceab631e5e53cd446696f8ce15ab43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47789829"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66773094"
 ---
 # <a name="sqlserverblob-constructor-sqlserverconnection-byte"></a>Constructor SQLServerBlob (SQLServerConnection, byte)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public SQLServerBlob(SQLServerConnection connection,
   
  Matriz **byte**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-constructors.md)   
  [Miembros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Clase SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

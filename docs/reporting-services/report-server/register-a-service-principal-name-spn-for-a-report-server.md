@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: dda91d4f-77cc-4898-ad03-810ece5f8e74
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 71a78c0e5b7adf88835ff9f4ebf2a6f859fec0fb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 92c0943b17f22c63481f1dbfb0f76977a4b71381
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577644"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500233"
 ---
 # <a name="register-a-service-principal-name-spn-for-a-report-server"></a>Registrar un nombre principal de servicio (SPN) para un servidor de informes
   Si está implementando [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en una red que usa el protocolo Kerberos para la autenticación mutua, debe crear un nombre principal de servicio (SPN) para el servicio Servidor de informes si lo configura para que se ejecute como una cuenta de usuario de dominio.  
@@ -67,7 +67,7 @@ Setspn -s http/<computername>.<domainname> <domain-user-account>
 7.  Agregue `<RSWindowsNegotiate/>` como primera entrada en esta sección para habilitar Kerberos.  
   
 ## <a name="see-also"></a>Consulte también  
- [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0)   
+ [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Configurar la cuenta de servicio del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [Administración de un servidor de informes en modo nativo de Reporting Services](../../reporting-services/report-server/manage-a-reporting-services-native-mode-report-server.md)  
   

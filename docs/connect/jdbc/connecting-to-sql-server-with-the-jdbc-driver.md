@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 94bcfbe3-f00e-4774-bda8-bb7577518fec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f418bdc6cd0dc3a4beda0a74ab1bcca3d1a7312a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ceb6d9f5fca9a0ab6281b3caa4b95ceef5bc0b9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47835053"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789356"
 ---
 # <a name="connecting-to-sql-server-with-the-jdbc-driver"></a>Conectar SQL Server con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Usar la autenticación integrada de Kerberos para conectar con SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Describe una implementación Java para que las aplicaciones se conecten con una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación integrada de Kerberos.|  
 |[Conectarse a una instancia de Azure SQL Database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Explica los problemas de conectividad con bases de datos en SQL Azure.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d1d7bc71-f0e9-4ce5-b3ad-6fee54388a31
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: fdb756a8afe170a75c8b4f2975ef4bffaa41d939
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 1aeae63d9fdec1b7afb876364b2fc36714e72479
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573348"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500478"
 ---
 # <a name="create-a-shared-dataset-or-embedded-dataset-report-builder-and-ssrs"></a>Crear un conjunto de datos compartido o un conjunto de datos incrustado (Generador de informes y SSRS)
 Los conjuntos de datos incrustados se usan en un único informe de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Los conjuntos de datos compartidos en un servidor de informes se pueden usar en varios informes, tanto móviles como paginados. Para crear un conjunto de datos, necesita un origen de datos incrustado o compartido.  
@@ -58,7 +58,7 @@ Use el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssb
   
 4.  En el diseñador de consultas, especifique los campos que se incluirán en el conjunto de datos.  
   
-5.  Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.  
+5.  Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.  
   
 6.  En el botón **Generador de informes** , haga clic en **Guardar** o **Guardar como** para guardar el conjunto de datos compartido en el servidor de informes.  
   
@@ -116,7 +116,7 @@ Use el Diseñador de informes en [!INCLUDE[ssBIDevStudioFull](../../includes/ssb
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos incrustados y compartidos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/embedded-and-shared-datasets-report-builder-and-ssrs.md)  
   
   

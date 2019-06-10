@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 59ddc4b8-9517-4d3f-9c88-a07e9907cecb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 105f335cf25d2e1e9cac28ca14900244d6fef942
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 8682d55f6c805066f5b596e79a074f253db9faa9
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581119"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499632"
 ---
 # <a name="saving-reports-report-builder"></a>Guardar informes (Generador de informes)
   En el Generador de informes puede guardar un informe pagina en un servidor de informes de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , una biblioteca de SharePoint, un recurso compartido de archivos en el que tenga permiso de escritura o en su equipo. 
@@ -62,7 +62,7 @@ Cuando guarda un informe, lo que realmente se guarda es la definición de inform
    
 ## <a name="see-also"></a>Consulte también  
  [Informes, elementos de informe y definiciones de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/reports-report-parts-and-report-definitions-report-builder-and-ssrs.md)   
- [Instalar, desinstalar y asistencia del Generador de informes 3.0](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Install Report Builder](../install-windows/install-report-builder.md)   
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)   
  [Exportar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)  

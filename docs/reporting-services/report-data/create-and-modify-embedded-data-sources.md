@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 1c38c2e8-7a29-4f79-a4a3-85ed2b13723b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a701249370f0455c62a169c5401f3f101fd49a5
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 0daca68faa97a59b9c98b13ab9ca8f867341917c
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573225"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500467"
 ---
 # <a name="create-and-modify-embedded-data-sources"></a>Creación y modificación de orígenes de datos incrustados
   Un origen de datos incrustado se define en una definición de informe y se usa solamente en ese informe.  
@@ -33,7 +33,7 @@ ms.locfileid: "65573225"
   
     2.  Especifique una cadena de conexión usando una de las alternativas siguientes:  
   
-        -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para consultar una lista de cadenas de conexión de ejemplo, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+        -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para consultar una lista de cadenas de conexión de ejemplo, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) o [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
         -   Haga clic en el botón de expresión (**fx** ) para crear una expresión que dé como resultado una cadena de conexión. En el cuadro de diálogo **Expresión** , escriba la expresión en el panel Expresión. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -59,7 +59,7 @@ ms.locfileid: "65573225"
   
     2.  Especifique una cadena de conexión usando una de las alternativas siguientes:  
   
-        -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+        -   Escriba la cadena de conexión directamente en el cuadro de texto **Cadena de conexión** . Para obtener ejemplos de cadenas de conexión, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
         -   Haga clic en el botón de expresión (**fx** ) para crear una expresión que dé como resultado una cadena de conexión. En el cuadro de diálogo **Expresión** , escriba la expresión en el panel Expresión. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -69,7 +69,7 @@ ms.locfileid: "65573225"
   
 4.  Haga clic en **Credenciales**.  
   
-     Especifique las credenciales que se deben usar para este origen de datos. El propietario del origen de datos elige el tipo de credenciales que se admiten. Para más información, vea [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+     Especifique las credenciales que se deben usar para este origen de datos. El propietario del origen de datos elige el tipo de credenciales que se admiten. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -77,6 +77,6 @@ ms.locfileid: "65573225"
   
 ## <a name="see-also"></a>Consulte también  
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)   
- [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)  
   
   

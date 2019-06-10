@@ -10,12 +10,12 @@ manager: kfile
 reviewer: ''
 ms.custom: ''
 ms.date: 03/17/2017
-ms.openlocfilehash: 946d16e240bc8601f695cc4fd5269e046672f122
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 60387cff118b0e809bba1e659be496c4ca2c00cc
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578223"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500557"
 ---
 # <a name="add-data-from-external-data-sources-ssrs"></a>Agregar datos de orígenes de datos externos (SSRS)
   Para recuperar datos de un origen de datos externo, use una conexión de datos. La información de la conexión de datos la suele proporcionar el propietario del origen de datos externo, que es responsable de otorgar los permisos y de especificar qué tipos de credenciales se han de usar. La información de la conexión de datos se guarda como un origen de datos de informe. El tipo de origen de datos especifica qué extensión de datos usar para recuperar los datos.  
@@ -40,7 +40,7 @@ ms.locfileid: "65578223"
 -   **Origen de datos externo:** de dónde recuperar los datos de informe; por ejemplo, una base de datos, un archivo, un cubo o un servicio web.  
   
 > [!NOTE]  
->  Al no estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan con el Generador de informes. Obtiene acceso a los datos como un usuario único utilizando las credenciales de su equipo. Al estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan en el servidor de informes. Obtiene acceso a los datos como uno de los diferentes usuarios que ejecutan el informe, para lo que utiliza las credenciales del servidor de informes. Para más información, vea [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53).  
+>  Al no estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan con el Generador de informes. Obtiene acceso a los datos como un usuario único utilizando las credenciales de su equipo. Al estar conectado a un servidor de informes, puede elegir desde las extensiones de datos que se instalan en el servidor de informes. Obtiene acceso a los datos como uno de los diferentes usuarios que ejecutan el informe, para lo que utiliza las credenciales del servidor de informes. Para más información, consulte [Especificar información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md).  
   
 ##  <a name="ReportData"></a> Descripción de los datos de informe  
  En su forma más simple, un informe muestra los datos desde un conjunto de datos de informe de una región de datos de la página del informe, es decir, de una tabla única, gráfico, matriz u otro tipo de región de datos del informe. Los datos de un conjunto de datos de informe proceden del primer conjunto de resultados que se devuelve desde un comando de consulta único que ejecuta desde un acceso de solo lectura a un origen de datos externo. Todas las regiones de datos se expanden lo necesario para mostrar todos los datos del conjunto de datos.  
@@ -98,7 +98,7 @@ ms.locfileid: "65578223"
 |Tema|Descripción|  
 |-----------|-----------------|  
 |[Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)|Proporciona información general sobre cómo obtener acceso a los datos del informe.|  
-|[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
+|[Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|Proporciona información sobre las conexiones de datos y los orígenes de datos.|  
 |[Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|Proporciona información sobre conjuntos de datos compartidos e incrustados.|  
 |[Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)|Proporciona información sobre la colección de campos de conjunto de datos que genera la consulta.|  
 |[Orígenes de datos admitidos por Reporting Services &#40;SSRS&#41;](../../reporting-services/report-data/data-sources-supported-by-reporting-services-ssrs.md) en la documentación relativa a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en los [Libros en pantalla](https://go.microsoft.com/fwlink/?linkid=121312) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Proporciona información detallada sobre la compatibilidad de versiones y plataformas para cada extensión de datos.|  
@@ -107,6 +107,6 @@ ms.locfileid: "65578223"
   
 ## <a name="see-also"></a>Consulte también  
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Herramientas de diseño de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

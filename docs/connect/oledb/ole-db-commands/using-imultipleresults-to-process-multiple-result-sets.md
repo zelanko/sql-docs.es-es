@@ -15,13 +15,13 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d5ea43d5607dc999bfbcc85d821167c6cdd8ae96
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a8a2b76946245021683f3224f67070dce04c3ed0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47643663"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768592"
 ---
 # <a name="using-imultipleresults-to-process-multiple-result-sets"></a>Utilizar IMultipleResults para procesar varios conjuntos de resultados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -55,7 +55,7 @@ COMPUTE
 > [!NOTE]  
 >  Si se utilizan cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la ejecución de comandos crea el cursor. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] indica si la creación del cursor se ha llevado a cabo correctamente o no; por consiguiente, el viaje de ida y vuelta (round trip) a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se completa cuando se obtiene el resultado de la ejecución del comando. Así, cada llamada a **GetNextRows** se convierte en un recorrido de ida y vuelta. De esta manera, pueden existir varios objetos de comando activos, y cada uno de ellos procesará un conjunto de filas que es el resultado de una captura del cursor de servidor. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

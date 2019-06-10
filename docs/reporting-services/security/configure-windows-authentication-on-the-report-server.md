@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: a7614848f5f52148ff5e4769c1e4dbfc5be9fe28
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 47cba9b26c56a41b6741211f1f9d228884b32b5b
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571149"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499943"
 ---
 # <a name="configure-windows-authentication-on-the-report-server"></a>Configurar la autenticación de Windows en el servidor de informes
   De forma predeterminada, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] acepta solicitudes que especifican la autenticación NTLM o Negotiate. Si la implementación incluye aplicaciones cliente y exploradores que utilizan estos proveedores de seguridad, puede utilizar los valores predeterminados sin necesidad de ninguna configuración adicional. Si desea utilizar un proveedor de seguridad diferente para la seguridad integrada de Windows (por ejemplo, si desea utilizar directamente Kerberos) o si modificó los valores predeterminados y prefiere restaurar los originales, puede utilizar la información de este tema para especificar los valores de autenticación en el servidor de informes.  
@@ -130,7 +130,7 @@ ms.locfileid: "65571149"
   
 -   Registre un SPN para el servicio del servidor de informes en la cuenta de usuario de dominio. Para más información, vea [Registrar un nombre de entidad de seguridad de servicio &#40;SPN&#41; para un servidor de informes](../../reporting-services/report-server/register-a-service-principal-name-spn-for-a-report-server.md).  
   
--   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](https://msdn.microsoft.com/library/25000ad5-3f80-4210-8331-d4754dc217e0).  
+-   Cambie la cuenta de servicio para que se ejecute en una cuenta integrada como servicio de red. Las cuentas integradas asignan el SPN HTTP al SPN de host, que se define al unir un equipo a la red. Para más información, vea [Configurar una cuenta de servicio &#40;Administrador de configuración de SSRS&#41;](../install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md).
   
 -   Use NTLM. Generalmente, NTLM funcionará en los casos en que no lo haga la autenticación Kerberos. Para utilizar NTLM, quite **RSWindowsNegotiate** del archivo RSReportServer.config y compruebe que solo se especifica **RSWindowsNTLM** . Si elige esta solución, puede continuar utilizando una cuenta de usuario de dominio para el servicio del servidor de informes aunque no defina un SPN para él.  
   

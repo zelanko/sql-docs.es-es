@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9d33571b-4887-49d3-96df-8abda7b5a904
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6bcee9c77c6b015255ab1d3127047cecd802bbda
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 919bbe1714af10a608a1489b2d629b4c7ce390cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698543"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778220"
 ---
 # <a name="updateobject-method-int-javalangobject-int"></a>Método updateObject (int, java.lang.Object, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public void updateObject(int index,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateObject &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateobject-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

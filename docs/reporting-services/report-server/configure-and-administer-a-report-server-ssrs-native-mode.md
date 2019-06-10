@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: cfec012b-56f1-4346-9814-247acf22351c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f2262386eaa44f4cda6ca72e17f1f0aba65894c1
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: f605121be80ecef94f5a4412d23869cfd17c6ca6
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175648"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500312"
 ---
 # <a name="configure-and-administer-a-report-server-ssrs-native-mode"></a>Configurar y administrar un servidor de informes (modo nativo de SSRS)
   En este artículo se resumen los métodos que se pueden usar para configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. También se incluye una lista de temas en los que se explica cómo configurar determinados componentes, características o funciones del servidor. Para configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], puede:  
@@ -47,7 +47,7 @@ ms.locfileid: "66175648"
  [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md)  
  Describe cómo modificar la cadena de conexión que utiliza el servidor de informes para conectarse a la base de datos del servidor de informes.  
   
- [Configurar un servidor de informes para la entrega de correo electrónico (Administrador de configuración de SSRS)](https://msdn.microsoft.com/b838f970-d11a-4239-b164-8d11f4581d83)  
+ [Entrega por correo electrónico en Reporting Services](../install-windows/e-mail-settings-reporting-services-native-mode-configuration-manager.md)  
  Describe cómo configurar un servidor de informes para permitir la distribución de informes por correo electrónico.  
   
  [Configurar la cuenta de ejecución desatendida &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  

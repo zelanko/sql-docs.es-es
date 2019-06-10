@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 47c502da-d163-45d9-bf04-0849e5ba7929
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8bea2da3329bce5ffa6adaf4be57109ac7c801dc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 6b4936ef2889d433985d4ff0206d72722300ac91
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581105"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500521"
 ---
 # <a name="shared-dataset-design-view-report-builder"></a>Vista de diseño de conjunto de datos compartidos (Generador de informes)
   En un informe, un conjunto de datos representa los datos del informe que se devuelven como resultado de ejecutar una consulta en un origen de datos externo. Los conjuntos de datos compartidos se publican en un servidor de informes y se pueden usar en varios informes. Puede crear conjuntos de datos para compartirlos con otros usuarios. En la ventana de diseño de conjunto de datos compartido, puede seleccionar un origen de datos compartido, especificar las propiedades del conjunto de datos compartido y crear una consulta en el diseñador de consultas.  
@@ -31,7 +31,7 @@ ms.locfileid: "65581105"
 > [!NOTE]  
 >  Un conjunto de datos compartido debe basarse en un origen de datos compartido. Si el origen de datos que necesita no está disponible, debe crear uno en el servidor de informes. Para más información, vea [Crear, modificar y eliminar orígenes de datos compartidos &#40;SSRS&#41;](../../reporting-services/report-data/create-modify-and-delete-shared-data-sources-ssrs.md).  
   
- Para obtener más información, consulte [Conexiones de datos, orígenes de datos y cadenas de conexión](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para obtener más información, consulte [Conexiones de datos, orígenes de datos y cadenas de conexión](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 ### <a name="dataset"></a>Dataset  
  Utilice el botón **Establecer opciones** para establecer las propiedades del conjunto de datos compartido. Entre ellas, figuran:  

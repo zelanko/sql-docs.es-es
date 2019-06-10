@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: b8a3122c-8008-4950-b515-937636d7967f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d0750d924922087cde824085e954d59427c568bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: bd0c32d753abf6b907e35daa91851acdd286f417
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65575366"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500052"
 ---
 # <a name="sharepoint-list-query-designer-report-builder"></a>Diseñador de consultas de lista de SharePoint (Generador de informes)
   El Generador de informes y el Diseñador de informes proporcionan un diseñador gráfico de consultas y un diseñador de consultas basados en texto para ayudarle a crear una consulta que especifique los datos que deben recuperarse de un sitio de SharePoint para un conjunto de datos de informe. Use el diseñador gráfico de consultas para explorar los metadatos de la lista de SherPoint, crear una consulta de forma interactiva y ver los resultados de la consulta. Use el diseñador de consultas basado en texto para ver la consulta creada por el diseñador gráfico de consultas, modificar una consulta o escribir los comandos de la consulta. También puede importar una consulta existente de un archivo o informe.  
@@ -93,6 +93,6 @@ ms.locfileid: "65575366"
 |**Mostrar campos ocultos**|Alterna entre mostrar u ocultar los campos que SharePoint generó automáticamente como el ProgID y Level para los elementos de vínculo de SharePoint, pero normalmente no se utiliza en informes. Al ocultar estos campos, la lista de campos se hace más corta y más fácil de utilizar.|  
   
 ## <a name="see-also"></a>Consulte también  
- [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Herramientas de diseño de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

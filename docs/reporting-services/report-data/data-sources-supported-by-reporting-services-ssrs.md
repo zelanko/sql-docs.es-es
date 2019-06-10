@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f9b0a0bed30c936065cb262e34db4764345e846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65573141"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500460"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] recupera datos de informe de orígenes de datos mediante un nivel de datos modular y extensible que usa extensiones de procesamiento de datos. Para recuperar datos de informe de un origen de datos, debe seleccionar una extensión de procesamiento de datos que admita el tipo de origen de datos, la versión del software que se ejecuta en el origen de datos y la plataforma del origen de datos ( [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]de 32 ó 64 bits).  
@@ -89,11 +89,11 @@ ms.locfileid: "65573141"
   
 -   Versión del proveedor de datos subyacente (opcional): algunos tipos de orígenes de datos admiten más de un proveedor de datos. Puede tratarse de distintas versiones del mismo proveedor o de distintas implementaciones por parte de terceros para un tipo de proveedor de datos. El nombre del proveedor suele aparecer en la cadena de conexión después de configurarse un origen de datos. Esta columna responde a la pregunta: "Después de seleccionar el tipo de origen de datos, ¿qué proveedor de datos se selecciona en el cuadro de diálogo **Propiedades de conexión** ?".  
   
--   Origen de datos *\<plataforma>*: es la plataforma del origen de datos admitida por la extensión de procesamiento de datos o el proveedor de datos para el origen de datos de destino. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos o proveedor de datos recuperar datos de un origen de datos en este tipo de plataforma?".  
+-   Origen de datos *\<plataforma>* : es la plataforma del origen de datos admitida por la extensión de procesamiento de datos o el proveedor de datos para el origen de datos de destino. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos o proveedor de datos recuperar datos de un origen de datos en este tipo de plataforma?".  
   
 -   Versión del origen de datos: es la versión del origen de datos de destino admitida por la DPE o el proveedor de datos. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos o este proveedor de datos recuperar datos de esta versión del origen de datos?".  
   
--   RS *\<plataforma>*: son las plataformas para el servidor de informes y el cliente de creación de informes donde se puede instalar una DPE o un proveedor de datos personalizados. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integradas se incluyen con todas las instalaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una extensión de datos personalizada o un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se deben compilar de forma nativa para una plataforma específica. Esta columna responde a la pregunta: "¿Se puede instalar esta extensión de procesamiento de datos o este proveedor de datos en este tipo de plataforma?".  
+-   RS *\<plataforma>* : son las plataformas para el servidor de informes y el cliente de creación de informes donde se puede instalar una DPE o un proveedor de datos personalizados. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integradas se incluyen con todas las instalaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una extensión de datos personalizada o un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se deben compilar de forma nativa para una plataforma específica. Esta columna responde a la pregunta: "¿Se puede instalar esta extensión de procesamiento de datos o este proveedor de datos en este tipo de plataforma?".  
   
 ###  <a name="DataSourcesTable"></a> Tipos de orígenes de datos  
   
@@ -132,7 +132,7 @@ ms.locfileid: "65573141"
 > [!NOTE]
 >  La extensión de procesamiento de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] no se admite en este momento.  
   
- Para obtener más información sobre las extensiones de procesamiento de datos admitidas por el Generador de informes, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34) en la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
+ Para obtener más información sobre las extensiones de procesamiento de datos admitidas por el Generador de informes, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md) en la [documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
 ###  <a name="MicrosoftSQLServer"></a> Extensión de procesamiento de datos de Microsoft SQL Server  
  El tipo de origen de datos **Microsoft SQL Server** incluye y extiende el proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta extensión de procesamiento de datos se compila de forma nativa y se ejecuta en plataformas basadas en x86 e [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)].  

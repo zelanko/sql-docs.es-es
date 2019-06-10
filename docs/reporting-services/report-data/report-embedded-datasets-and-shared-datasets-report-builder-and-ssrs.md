@@ -10,12 +10,12 @@ f1_keywords:
 ms.assetid: c5852c8a-40e4-424d-a847-64eb151448ff
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 093652067f436c83ae46d3cb3053cc93747579db
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 87686f4200acf4e4db1666a59b562482c76d0960
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571191"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500288"
 ---
 # <a name="report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs"></a>Conjuntos de datos incrustados y compartidos de informe (Generador de informes y SSRS)
   Un conjunto de datos especifica los datos que desea usar de una conexión de datos. Un conjunto de datos se basa en una conexión de datos guardada en el informe como un origen del datos incrustado o una referencia a un origen de datos compartido en un servidor de informes. El conjunto de datos incluye una consulta que especifica un conjunto de campos. Al arrastrar estos campos hacia la superficie de diseño, se crean expresiones que se evalúan como los datos reales cuando se ejecuta el informe.  
@@ -219,7 +219,7 @@ ms.locfileid: "65571191"
   
 ## <a name="see-also"></a>Consulte también  
  [Colección Campos del conjunto de datos &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/dataset-fields-collection-report-builder-and-ssrs.md)   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)   
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)   
  [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md)  
   
   

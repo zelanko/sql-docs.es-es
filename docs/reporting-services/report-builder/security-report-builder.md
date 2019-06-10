@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: ed38291a-6afe-449f-9f32-3ae04502bd6f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ed74bb929a41256117858cce3c1da79a5610cedb
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: c21af6661a3854db731cbab82a8623c6e3e19855
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65578006"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500533"
 ---
 # <a name="security-report-builder"></a>Seguridad (Generador de informes)
   El Generador de informes es una aplicación cliente de creación de informes diseñada para que funcione con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . El servidor de informes se puede configurar para funcione en modo nativo como un servidor independiente o en modo integrado de SharePoint, para que admita los informes de un sitio de SharePoint.  
@@ -94,7 +94,7 @@ ms.locfileid: "65578006"
   
 -   [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
   
- Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+ Para más información sobre orígenes de datos, vea [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](../report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
   
 ##  <a name="Models"></a> Descripción de los modelos y los filtros de seguridad  
@@ -114,7 +114,7 @@ ms.locfileid: "65578006"
   
   
 ## <a name="see-also"></a>Consulte también  
- [Instalar y desinstalar el Generador de informes](https://msdn.microsoft.com/library/2c9a5814-17bf-4947-8fb3-6269e7caa416)   
+ [Instalación del Generador de informes](../install-windows/install-report-builder.md)  
  [Parámetros de informe &#40;Generador de informes y Diseñador de informes&#41;](../../reporting-services/report-design/report-parameters-report-builder-and-report-designer.md)  
   
   

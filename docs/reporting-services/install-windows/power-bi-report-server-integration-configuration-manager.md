@@ -1,18 +1,18 @@
 ---
 title: Integración del servidor de informes de Power BI (Administrador de configuración) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.date: 09/17/2017
-ms.openlocfilehash: 61f72b2676e2c3c92dd82febc70d2e00d3363baf
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: c99eb7091cd72be40f2acb45e5e7bebf8a71526e
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506562"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499608"
 ---
 # <a name="power-bi-report-server-integration-configuration-manager"></a>Integración del servidor de informes de Power BI (Administrador de configuración)
 
@@ -113,7 +113,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 1. Los usuarios obtienen una vista previa de los informes en el [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] y la primera vez que hacen clic para anclar un elemento de informe desde el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)].
 
-2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obtener más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5).
+2. Se les redirigirá a la página de inicio de sesión de Azure AD. También pueden iniciar sesión desde la página [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] **My Settings** page. Cuando los usuarios inicien sesión en el inquilino administrado de Azure, se establecerá una relación entre su cuenta de Azure y los permisos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  Para obtener más información, consulte [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md).
 
 3. Se devuelve un token de seguridad del usuario al servidor de informes.
 
@@ -125,7 +125,7 @@ En esta sección se resumen los pasos básicos y las tecnologías implicadas en 
 
 7. Se crea una suscripción de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para administrar la actualización programada del elemento de informe en el icono del panel. La suscripción usa el token de seguridad que se creó cuando el usuario inició sesión.
 
-     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5). para obtener más información.
+     El token es válido durante **90 días**. Transcurrido este tiempo, los usuarios deben iniciar sesión de nuevo para crear un nuevo token de usuario. Cuando el token expire, los iconos anclados seguirán mostrándose en el panel, pero ya no se actualizarán los datos.  Las suscripciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se usan para los elementos anclados generarán un error hasta que se cree un nuevo token de usuario. Vea [La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md). para obtener más información.
 
 La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4. En su lugar, se recuperarán el identificador de la aplicación y las direcciones URL de la base de datos ReportServer y el flujo continuará con el paso 5.
 
@@ -153,7 +153,7 @@ La segunda vez que un usuario ancle un elemento, se omitirán los pasos de 1 a 4
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-[Mi configuración para la integración de Power BI](https://msdn.microsoft.com/85c2fac7-80bf-45b7-8654-764b5f5231f5)  
+[La configuración de la integración de Power BI &#40;portal web&#41;](../my-settings-for-power-bi-integration-web-portal.md)  
 [Anclado de elementos de Reporting Services en paneles de Power BI](../../reporting-services/pin-reporting-services-items-to-power-bi-dashboards.md)
 [Paneles de Power BI](https://powerbi.microsoft.com/documentation/powerbi-service-dashboards/)  
 

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d646a58c09fcc580fcc1f95acfd251bd17f4f290
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65574954"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500121"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>Interfaz de usuario del Diseñador de consultas basado en texto (Generador de informes)
   Use el diseñador de consultas basado en texto para especificar una consulta mediante el lenguaje de consulta admitido por el origen de datos, para ejecutar la consulta y para ver los resultados en tiempo de diseño. Puede especificar varias sintaxis de consulta, comandos o instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] para extensiones de procesamiento de datos personalizadas, y consultas que se especifican como expresiones. Dado que el generador de consultas basado en texto no procesa previamente la consulta y puede acomodar todo tipo de sintaxis de consulta, es la herramienta de generación de consultas predeterminada para varios tipos de orígenes de datos.  
@@ -83,7 +83,7 @@ SELECT Name FROM Person.ContactType
 uspGetWhereUsedProductID  
 ```  
   
- Haga clic en el botón **Ejecutar** (**!**). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
+ Haga clic en el botón **Ejecutar** ( **!** ). Cuando se le soliciten los parámetros de consulta, use la tabla siguiente para escribir los valores.  
   
 |||  
 |-|-|  
@@ -104,6 +104,6 @@ uspGetWhereUsedProductID
   
 ## <a name="see-also"></a>Consulte también  
  [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md)   
- [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9)  
+ [Herramientas de diseño de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md)  
   
   

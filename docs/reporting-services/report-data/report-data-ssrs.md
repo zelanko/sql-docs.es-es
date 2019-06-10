@@ -10,12 +10,12 @@ ms.technology: report-data
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: 65cc1f358a7bb6507e0a4d869fdd623c35f27949
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.openlocfilehash: e75714085c7eb515de60d35af0dafabe04755e12
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65935391"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500378"
 ---
 # <a name="report-data-in-sql-server-reporting-services-ssrs"></a>Datos de informe en SQL Server Reporting Services (SSRS)
 
@@ -30,7 +30,7 @@ ms.locfileid: "65935391"
   
 - **Definición de origen de datos compartido** .   Un archivo que contiene la representación XML de un origen de datos de informe. Cuando se publica un informe, sus orígenes de datos se guardan en el servidor de informes o sitio de SharePoint como definiciones de origen de datos, independientemente de la definición de informe. Por ejemplo, un administrador del servidor de informes podría actualizar la cadena de conexión o credenciales. En un servidor de informes nativo, el tipo de archivo es .rds. En un sitio de SharePoint, el tipo de archivo es .rsds.  
   
-- **Cadena de conexión** .   Una cadena de conexión es una versión de cadena de las propiedades de conexión necesarias para conectarse a un origen de datos. Las propiedades de conexión son distintas según el tipo de conexión de datos. Para obtener ejemplos, vea [Data Connections, Data Sources, and Connection Strings in Report Builder](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34).  
+- **Cadena de conexión** .   Una cadena de conexión es una versión de cadena de las propiedades de conexión necesarias para conectarse a un origen de datos. Las propiedades de conexión son distintas según el tipo de conexión de datos. Para obtener ejemplos, vea [Data Connections, Data Sources, and Connection Strings in Report Builder](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
 - **Origen de datos compartido.** Es un origen de datos que está disponible en un servidor de informes o sitio de SharePoint que se va a usar en varios informes.  
   

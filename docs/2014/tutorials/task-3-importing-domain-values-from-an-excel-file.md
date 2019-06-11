@@ -7,14 +7,17 @@ ms.reviewer: ''
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 242e8309-1195-495b-9cd5-aa127748c185
-ms.openlocfilehash: 323f555337afa56b51ded0fb303f58960a52f310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.author: lle
+author: lrtoyou1223
+ms.openlocfilehash: d86d71a3d62ca94eed2da5ad91fbdd60ee4989f4
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63250176"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822979"
 ---
 # <a name="task-3-importing-domain-values-from-an-excel-file"></a>Tarea 3: Importación de valores de dominio desde un archivo de Excel
+
   En esta tarea, importará valores para el dominio **Estado** desde una hoja de cálculo de un archivo de Excel.  
   
 1.  Haga clic en el dominio **Estado** en la lista **Dominio**.  
@@ -36,6 +39,6 @@ ms.locfileid: "63250176"
      ![Mostrar solamente nueva casilla en valores de dominio](../../2014/tutorials/media/et-importingdomainvaluesfromanexcelfile-03.jpg "mostrar solamente nueva casilla en valores de dominio")  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Configurar reglas de dominio](../../2014/tutorials/task-4-setting-domain-rules.md)  
+ [Tarea 4: Configurar reglas de dominio](../../2014/tutorials/task-4-setting-domain-rules.md)  
   
   

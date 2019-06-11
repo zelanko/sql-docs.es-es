@@ -4,20 +4,21 @@ ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
 ms.reviewer: ''
-ms.technology: security"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: c14034ef-6e0b-4df5-8072-bfb8d90b3172
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 31282041abe538bd51ba4b1367f70cd3c5fa3d5b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a3a79a6ec655e91264d6fcc00db5a920ad82a21e
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56030796"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822376"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-registered-servers"></a>Realizar una evaluación a petición usando servidores registrados
+
   Puede realizar una evaluación a petición de las directivas de prácticas recomendadas con una o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilizando servidores registrados. Puede utilizar grupos de servidores locales o un servidor de administración central.  
   
 > [!NOTE]  
@@ -47,13 +48,13 @@ ms.locfileid: "56030796"
   
     -   Para evaluar las directivas con un servidor específico o un grupo de servidores, expanda **grupos de servidores locales** o asigne un nombre, haga clic en el servidor o grupo de servidores que desea evaluar directivas con y, a continuación, haga clic en el servidor de administración central **Evaluar directivas**.  
   
-4.  En el **evaluar directivas** cuadro de diálogo, junto a la **origen** cuadro, haga clic en el botón de puntos suspensivos (**...** ) botón.  
+4.  En el **evaluar directivas** cuadro de diálogo, junto a la **origen** cuadro, haga clic en el botón de puntos suspensivos ( **...** ) botón.  
   
 5.  En el **Seleccionar origen** cuadro de diálogo, puede seleccionar cualquiera **archivos** o **Server** como origen de los archivos de directivas para evaluar. Si hace clic en **Server**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccione los archivos de directiva individuales que se va a evaluar. Para ello, siga estos pasos:  
   
     1.  Haga clic en **archivos**.  
   
-    2.  Junto a **archivos**, haga clic en el botón de puntos suspensivos (**...** ) botón.  
+    2.  Junto a **archivos**, haga clic en el botón de puntos suspensivos ( **...** ) botón.  
   
     3.  Seleccione uno o varios archivos de directiva .xml para evaluar y, a continuación, haga clic en **abierto**.  
   
@@ -75,7 +76,7 @@ ms.locfileid: "56030796"
 8.  Para ver los resultados detallados de una directiva, haga clic en la directiva en el **resultados** tabla. El **detalles del destino** tabla muestra los detalles para cada instancia.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Supervisar y aplicar las prácticas recomendadas usando administración basada en directivas](../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)   

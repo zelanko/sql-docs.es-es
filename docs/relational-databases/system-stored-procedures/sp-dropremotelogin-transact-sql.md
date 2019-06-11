@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_dropremotelogin
 ms.assetid: 9f097652-a286-40b2-be73-568d77ada698
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 910f4f02c17ba0f6524648b9ac1eb201d735b238
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: 820ebc7e2bd79d0c321e327a2e5713151f3e24f3
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527927"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822477"
 ---
 # <a name="spdropremotelogin-transact-sql"></a>sp_dropremotelogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Quita un inicio de sesión remoto asignado a un inicio de sesión local que se utiliza para ejecutar procedimientos almacenados remotos en el servidor local que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +39,6 @@ ms.locfileid: "58527927"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sp_dropremotelogin [ @remoteserver = ] 'remoteserver'   
      [ , [ @loginame = ] 'login' ]   
      [ , [ @remotename = ] 'remote_name' ]  
@@ -70,21 +71,21 @@ sp_dropremotelogin [ @remoteserver = ] 'remoteserver'
 ### <a name="a-dropping-all-remote-logins-for-a-remote-server"></a>A. Quitar todos los inicios de sesión remotos de un servidor remoto  
  En el siguiente ejemplo se quita la entrada del servidor remoto `ACCOUNTS`, con lo que se quitan también todas las asignaciones entre inicios de sesión del servidor local e inicios de sesión remotos del servidor remoto.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS';  
 ```  
   
 ### <a name="b-dropping-a-login-mapping"></a>b. Quitar una asignación de inicio de sesión  
  En el siguiente ejemplo se quita la entrada que asigna inicios de sesión remotos del servidor remoto `ACCOUNTS` al nombre de inicio de sesión local `Albert`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'Albert';  
 ```  
   
 ### <a name="c-dropping-a-remote-user"></a>C. Quitar un usuario remoto  
  En el siguiente ejemplo se quita el inicio de sesión remoto `Chris` del servidor remoto `ACCOUNTS`, asignado al inicio de sesión local `salesmgr`.  
   
-```  
+```sql
 EXEC sp_dropremotelogin 'ACCOUNTS', 'salesmgr', 'Chris';  
 ```  
   

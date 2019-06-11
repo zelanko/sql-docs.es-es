@@ -9,24 +9,25 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: e2fdf8e9-1b74-4682-b2d4-c62aca053d7f
-author: hirokib
-ms.author: elbutter
+author: julieMSFT
+ms.author: jrasnick
 manager: jrj
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: b7bb600d4eda0f91be025baee7c6ecd35f99c9da
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 399f08e0ebf09ea90c358ae5667b5031ef0cb099
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62715872"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822509"
 ---
 # <a name="syspdwnodescolumnstoresegments-transact-sql"></a>sys.pdw_nodes_column_store_segments (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-Contiene una fila para cada columna de un índice de almacén de columnas.  
+Contiene una fila para cada columna de un índice de almacén de columnas.
 
 | Nombre de columna                 | Tipo de datos  | Descripción                                                  |
-| --------------------------- | ---------- | ------------------------------------------------------------ |
+| :-------------------------- | :--------- | :----------------------------------------------------------- |
 | **partition_id**            | **bigint** | Indica el identificador de partición. Es único en una base de datos.     |
 | **hobt_id**                 | **bigint** | Identificador del montón o el índice de árbol b (hobt) para la tabla que contiene este índice de almacén de columnas. |
 | **column_id**               | **int**    | Identificador de la columna de almacén de columnas.                                |
@@ -44,10 +45,11 @@ Contiene una fila para cada columna de un índice de almacén de columnas.
 | **null_value**              | **bigint** | Valor usado para representar valores NULL.                               |
 | **on_disk_size**            | **bigint** | Tamaño del segmento en bytes.                                    |
 | **pdw_node_id**             | **int**    | Identificador único de un [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] nodo. |
+| &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
-Únase a sys.pdw_nodes_column_store_segments con otras tablas del sistema para determinar el número de segmentos de almacén de columnas por tabla lógica. 
+Únase a sys.pdw_nodes_column_store_segments con otras tablas del sistema para determinar el número de segmentos de almacén de columnas por tabla lógica.
 
 ```sql
 SELECT  sm.name           as schema_nm
@@ -75,17 +77,16 @@ GROUP BY    sm.name
 ,           nc.column_id  
 ORDER BY    table_nm
 ,           nc.column_id
-,           sm.name
+,           sm.name ;
 ```
 
-## <a name="permissions"></a>Permisos  
- Requiere el permiso **VIEW SERVER STATE**.  
+## <a name="permissions"></a>Permisos
 
-## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
- [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)   
- [sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)  
+Requiere el permiso **VIEW SERVER STATE**.
 
-  
+## <a name="see-also"></a>Vea también
 
+[SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
+[CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)  
+[sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  
+[sys.pdw_nodes_column_store_dictionaries &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-dictionaries-transact-sql.md)

@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: def5041286ade754020a5c84e8d2ac91fc79afa3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+manager: jroth
+author: VanMSFT
+ms.openlocfilehash: efed12f21dd3413108849124d1326d7ec2c8540c
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62796575"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822752"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Crea un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -37,7 +39,6 @@ ms.locfileid: "62796575"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sp_grantlogin [@loginame=] 'login'  
 ```  
   
@@ -58,7 +59,7 @@ sp_grantlogin [@loginame=] 'login'
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se usa `CREATE LOGIN` para crear un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión para el usuario de Windows `Corporate\BobJ.` éste es el método preferido.  
   
-```  
+```sql
 CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;  
 GO  
 ```  

@@ -3,7 +3,7 @@ title: 'Tutorial: Utilizar autenticación de Active Directory para SQL Server en
 titleSuffix: SQL Server
 description: Este tutorial proporcionan los pasos de configuración para la autenticación de AD para SQL Server en Linux.
 author: Dylan-MSFT
-ms.author: Dylan.Gray
+ms.author: dygray
 ms.reviewer: rothja
 ms.date: 04/01/2019
 manager: craigg
@@ -13,12 +13,12 @@ ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: 3ab6fd05b0cf9486ded5b0e550101a374669be11
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.openlocfilehash: 5e9d7ee2c086f188041fbf6c42448d21953b008d
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
-ms.locfileid: "65097239"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822786"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>Tutorial: Usar la autenticación de Active Directory con SQL Server en Linux
 
@@ -361,4 +361,4 @@ En este tutorial, hemos visto cómo configurar la autenticación de Active Direc
 A continuación, explorar otros escenarios de seguridad para SQL Server en Linux.
 
 > [!div class="nextstepaction"]
->[Cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md)
+> [Cifrar conexiones a SQL Server en Linux](sql-server-linux-encrypted-connections.md)

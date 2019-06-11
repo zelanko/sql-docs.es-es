@@ -16,15 +16,17 @@ helpviewer_keywords:
 - sp_enum_login_for_proxy
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bf71a75b86698fc78c56c26d87878a14a2ba91a1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+author: VanMSFT
+manager: jroth
+ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535587"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822630"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra las asociaciones entre las entidades de seguridad y los servidores proxy.  
@@ -34,7 +36,6 @@ ms.locfileid: "58535587"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sp_enum_login_for_proxy  
     [ @name = ] 'name'  
     [ @proxy_id = ] id,  
@@ -42,7 +43,7 @@ sp_enum_login_for_proxy
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, inicio de sesión, el rol de servidor, o **msdb** rol de base de datos para mostrar los servidores proxy para. El nombre es **nvarchar (256)**, su valor predeterminado es null.  
+`[ @name = ] 'name'` El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] entidad de seguridad, inicio de sesión, el rol de servidor, o **msdb** rol de base de datos para mostrar los servidores proxy para. El nombre es **nvarchar (256)** , su valor predeterminado es null.  
   
 `[ @proxy_id = ] id` El número de identificación del proxy del servidor proxy para mostrar información. El *proxy_id* es **int**, su valor predeterminado es null. Ya sea el *id* o el *proxy_name* se puede especificar.  
   
@@ -59,6 +60,7 @@ sp_enum_login_for_proxy
 |**proxy_name**|**sysname**|Nombre del proxy.|  
 |**Nombre**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
 |**flags**|**int**|Tipo de la entidad de seguridad.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión<br /><br /> **1** = rol fijo del sistema<br /><br /> **2** = rol de base de datos en **msdb**|  
+| &nbsp; | &nbsp; | &nbsp; |
   
 ## <a name="remarks"></a>Comentarios  
  Si no se proporcionan parámetros, **sp_enum_login_for_proxy** muestra información acerca de todos los inicios de sesión en la instancia para cada servidor proxy.  
@@ -77,7 +79,7 @@ sp_enum_login_for_proxy
 ### <a name="a-listing-all-associations"></a>A. Mostrar todas las asociaciones  
  En el ejemplo siguiente se muestran todos los permisos establecidos entre los inicios de sesión y los servidores proxy de la instancia actual.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   
@@ -88,7 +90,7 @@ GO
 ### <a name="b-listing-proxies-for-a-specific-login"></a>b. Mostrar los servidores proxy para un inicio de sesión específico  
  En el ejemplo siguiente se muestran los servidores proxy a los que tiene acceso el inicio de sesión `terrid`.  
   
-```  
+```sql
 USE msdb ;  
 GO  
   

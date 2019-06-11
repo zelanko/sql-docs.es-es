@@ -20,14 +20,15 @@ ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 5ea972558da077dd984ce2ef30c99e1b46b0e5c4
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65983018"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822762"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Hace que la instancia de servidor analice y cargue los datos del archivo de sinónimos correspondiente al idioma cuyo LCID se especifica. Este procedimiento almacenado es útil después de actualizar un archivo de sinónimos. Ejecutar **sp_fulltext_load_thesaurus_file** provoca una recompilación de consultas de texto completo que utilizan el diccionario de sinónimos del LCID especificado.  
@@ -37,7 +38,6 @@ ms.locfileid: "65983018"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]   
 ```  
   
@@ -45,7 +45,7 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  Número entero que asigna el identificador de configuración regional (LCID) del idioma para el que desea lade la definición XML del diccionario de sinónimos. Para obtener los LCID de los idiomas que están disponibles en una instancia del servidor, use la [sys.fulltext_languages &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md) vista de catálogo.  
   
- **@loadOnlyIfNotLoaded** = *Acción*  
+ **@loadOnlyIfNotLoaded**  = *Acción*  
  Especifica si el archivo de diccionario de sinónimos se carga en las tablas de diccionario de sinónimos internas aun cuando ya se haya cargado. *acción* es uno de:  
   
 |Valor|Definición|  
@@ -74,23 +74,19 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
 ### <a name="a-load-a-thesaurus-file-even-if-it-is-already-loaded"></a>A. Cargar un archivo de diccionario de sinónimos aunque esté cargado  
  En el ejemplo siguiente se analiza y carga el archivo de diccionario de sinónimos en inglés.  
   
-```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1033;  
-GO  
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 ```  
   
 ### <a name="b-load-a-thesaurus-file-only-if-it-is-not-yet-loaded"></a>b. Cargar un archivo de diccionario de sinónimos si todavía no está cargado  
  El ejemplo siguiente analiza y carga el archivo de diccionario de sinónimos en árabe, a menos que ya esté cargado.  
   
+```sql
+EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
-EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;  
-GO  
-```  
-  
-## <a name="see-also"></a>Vea también  
- [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)   
- [Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)   
- [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)  
-  
-  
+
+## <a name="see-also"></a>Vea también
+
+[FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
+[Procedimientos almacenados del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
+[Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md)

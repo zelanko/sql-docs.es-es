@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 07/13/2017
 ms.author: genemi
-authors: MightyPen
+author: MightyPen
 manager: craigg
-ms.openlocfilehash: 256a8f87445dd7bcc581e1bc0e5d55e9b5700ffb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b743b1b02a911c9132eab4a90c1f35b781895df2
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62629518"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822978"
 ---
 # <a name="retrieve-numeric-data-with-sqlnumericstruct"></a>Recuperar datos numéricos con SQL\_numérico\_STRUCT
 
@@ -35,7 +35,7 @@ El artículo [tipos de datos C](c-data-types.md) proporciona más información s
 El código SQL\_numérico\_STRUCT se define en el archivo de encabezado sqltypes.h como sigue:
 
 
-``` C
+```c
 #define SQL_MAX_NUMERIC_LEN    16
 typedef struct tagSQL_NUMERIC_STRUCT
 {
@@ -64,7 +64,7 @@ Este ejemplo de código muestra cómo para:
 >
 > Microsoft proporciona estos ejemplos de código "tal cual" sin garantía de ningún tipo, ya sea expresa o implícita, incluidas sin limitación las garantías implícitas de comerciabilidad e idoneidad para un propósito específico.
 
-``` C
+```c
 #include <stdio.h>
 #include <string.h>
 #include <conio.h>
@@ -217,7 +217,7 @@ while((retcode =SQLFetch(hstmt1)) != SQL_NO_DATA)
 ### <a name="interim-results"></a>Resultados provisionales:
 
 
-```
+```console
 //  C  ==> 12 * 1    =     12
 //  7  ==> 07 * 16   =    112
 //  2  ==> 02 * 256  =    512
@@ -240,7 +240,7 @@ Ahora el desafío consiste en construir el entero escalado fuera de esta matriz 
 Código que implementa la conversión desde el modo little-endian en el entero escalado. Es responsabilidad del desarrollador de aplicaciones para implementar esta funcionalidad. El siguiente ejemplo de código es solo una de las muchas maneras posibles.
 
 
-``` C
+```c
 long strtohextoval()
 {
     long val=0,value=0;
@@ -283,7 +283,7 @@ El programa de ejemplo siguiente muestra el uso de SQL\_C\_numérico, insertando
 El controlador ODBC que se usa para ejecutar este programa debe admitir la funcionalidad de ODBC 3.0.
 
 
-``` C
+```c
 #include <windows.h>
 #include <sql.h>
 #include <sqlext.h>

@@ -1,6 +1,6 @@
 ---
 title: Nivel de compatibilidad para modelos tabulares de Analysis Services | Microsoft Docs
-ms.date: 05/23/2019
+ms.date: 06/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -9,25 +9,25 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d2176b88f01808e1b84f409cb1f1c117774a220c
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.openlocfilehash: 19c69aa1a1ab27e7498d3c9d6a0d52c25b9f0020
+ms.sourcegitcommit: c2a5bed031b14f66562f792a3afaefab8c759fda
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66175126"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66826833"
 ---
 # <a name="compatibility-level-for-analysis-services-tabular-models"></a>Nivel de compatibilidad para modelos tabulares de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
 
-  El *ivel* hace referencia a los comportamientos específicos de la versión en el motor de Analysis Services. Por ejemplo, DirectQuery y metadatos de objetos tabulares tienen implementaciones diferentes según el nivel de compatibilidad. En general, debe elegir el nivel de compatibilidad más reciente compatible con los servidores.
+  El *ivel* hace referencia a las mejoras de funcionalidad y características en el motor de Analysis Services y en los metadatos del modelo tabular. En general, debe elegir el nivel de compatibilidad más reciente compatible con los servidores. 
 
   **El nivel de compatibilidad admitido más reciente es el 1400** 
   
 Las características principales en el nivel de compatibilidad 1400 incluyen:
 
 *  Nueva infraestructura para la conectividad de datos e importarlos en modelos tabulares con compatibilidad con TOM APIs y scripting de TMSL. Esto habilita la compatibilidad con orígenes de datos adicionales, como Azure Blob storage. Los orígenes de datos adicionales incluyen en futuras actualizaciones.
-*  Transformación de datos y capacidades de mashup de datos mediante el uso de expresiones Get Data y m. en SSDT.
-*  Las medidas ahora admiten una propiedad de filas de detalles con una expresión de DAX, habilitar herramientas de BI como Microsoft Excel en profundidad a los datos detallados de un informe agregado. Por ejemplo, cuando los usuarios finales ven las ventas totales para una región y mes, pueden ver los detalles del pedido asociados. 
+*  Transformación de datos y capacidades de mashup de datos mediante el uso de expresiones Get Data y m. en SQL Server Data Tools (SSDT).
+*  Mide ahora compatibilidad con una propiedad de filas de detalles con una expresión de DAX, habilitar a BI de las herramientas como Microsoft Excel análisis detallado de datos de un informe agregado detallados. Por ejemplo, cuando los usuarios ven las ventas totales de una región y mes, pueden ver los detalles del pedido asociados. 
 *  Seguridad de nivel de objeto para los nombres de tabla y columna, además de los datos dentro de ellos.
 *  Compatibilidad mejorada para las jerarquías desiguales.
 *  Supervisión del rendimiento y mejoras.
@@ -35,6 +35,8 @@ Las características principales en el nivel de compatibilidad 1400 incluyen:
   
 ## <a name="supported-compatibility-levels-by-version"></a>Niveles de compatibilidad admitidos por versión
   
+Niveles de compatibilidad inferiores son compatibles con versiones anteriores de compatibilidad. 
+
 |||  
 |-|-|- 
 |**Nivel de compatibilidad**|**Versión del servidor**| 
@@ -44,7 +46,7 @@ Las características principales en el nivel de compatibilidad 1400 incluyen:
 |1103|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1|  
 |1100|SQL Server 2017*, SQL Server 2016, SQL Server 2014, SQL Server 2012 SP1, SQL Server 2012| 
 
-\* niveles de compatibilidad 1100 y 1103 están desusados en SQL Server 2017.
+\* niveles de compatibilidad 1100 y 1103 están en desuso en SQL Server 2017 y versiones posteriores.
   
 ## <a name="set-compatibility-level"></a>Establecimiento del nivel de compatibilidad 
  Al crear un nuevo proyecto de modelo tabular en SQL Server Data Tools (SSDT), puede especificar el nivel de compatibilidad en el **Diseñador de modelos tabulares** cuadro de diálogo. 

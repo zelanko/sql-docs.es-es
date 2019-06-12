@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8aa3b6b211095f3c27693928dab6518a6a2e895
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759413"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790091"
 ---
 # <a name="using-basic-data-types"></a>Usar tipos de datos básicos
 
@@ -51,10 +51,10 @@ En la siguiente tabla se muestran las asignaciones predeterminadas entre los tip
 | REAL               | real                                               | FLOAT                        |
 | smalldatetime      | timestamp                                          | java.sql.Timestamp           |
 | SMALLINT           | SMALLINT                                           | short                        |
-| smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
+| SMALLMONEY         | DECIMAL                                            | java.math.BigDecimal         |
 | texto               | LONGVARCHAR                                        | String                       |
 | time               | TIME (1)                                           | java.sql.Time (1)            |
-| timestamp          | BINARY                                             | byte[]                       |
+| TIMESTAMP          | BINARY                                             | byte[]                       |
 | TINYINT            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |
 | UNIQUEIDENTIFIER   | CHAR                                               | String                       |
@@ -127,6 +127,6 @@ Si tiene que recuperar parámetros de un procedimiento almacenado, primero debe 
   
 Para obtener más información sobre cómo usar el controlador JDBC con procedimientos almacenados y parámetros de salida, vea [mediante un procedimiento almacenado con parámetros de salida](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md).  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

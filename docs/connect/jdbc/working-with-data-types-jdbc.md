@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39f44d0-3710-4bc6-880c-35bd8c10a734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a160da53ddc8a634953fc7f7b75028075ce3d691
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76af99170edeaca8f600d12955a6de2b09897548
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47696714"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783273"
 ---
 # <a name="working-with-data-types-jdbc"></a>Trabajar con tipos de datos (JDBC)
 
@@ -39,6 +39,6 @@ En los temas de esta sección se describe cómo usar los tipos de datos del cont
 |[Ejemplos de tipos de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md)|Describe cómo almacenar datos XML en una base de datos relacional, cómo recuperar datos XML desde una base de datos y cómo analizar datos XML con el tipo de datos Java de **SQLXML**.|  
 |[Ejemplo de tipos de datos espaciales](../../connect/jdbc/spatial-data-types-sample.md)|Describe cómo almacenar y recuperar los datos con los tipos de datos espaciales 'Geometría' y 'Geography' de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la base de datos **geometría** y **Geography** tipos de Java definidos por el controlador JDBC de Microsoft.|
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones del controlador JDBC de ejemplo](../../connect/jdbc/sample-jdbc-driver-applications.md)  

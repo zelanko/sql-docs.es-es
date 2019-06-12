@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e6bac39-45af-428c-bc32-f773482562ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 138f2f235ce810980f08ee7f253cefc6656db9d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 7be00e00ade69c48f36f788dd093fb814440f3e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628103"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782817"
 ---
 # <a name="sqlsrvrollback"></a>sqlsrv_rollback
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -124,7 +124,7 @@ Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo ant
 > [!NOTE]  
 > No utilice instrucciones de Transact-SQL incrustadas para realizar transacciones. Por ejemplo, para iniciar una transacción, no ejecute una instrucción con "BEGIN TRANSACTION" como consulta de Transact-SQL. No se puede garantizar que las transacciones se comporten de la forma esperada cuando se usan instrucciones de Transact-SQL insertadas para realizar transacciones.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Realización de transacciones](../../connect/php/how-to-perform-transactions.md)

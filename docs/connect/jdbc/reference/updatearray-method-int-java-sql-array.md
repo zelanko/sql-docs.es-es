@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2bdd281ed4e122e6710b2f82693aa9975505916b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93d4d6bb84b3279e60b0b6b69e1b684d6ca75e9a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786539"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>Método updateArray (int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public void updateArray(int columnIndex,
   
  *x*  
   
- Un objeto de matriz.  
+ Matriz de objetos.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -51,7 +51,7 @@ public void updateArray(int columnIndex,
 ## <a name="remarks"></a>Notas  
  Este método updateArray especificado por el método updateArray en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateArray &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatearray-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

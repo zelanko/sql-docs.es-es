@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7802328d-4d23-4775-9573-4169b127d258
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3c3712370fef840e8bf265850d9ad4dbd946a52b
-ms.sourcegitcommit: 110e5e09ab3f301c530c3f6363013239febf0ce5
+manager: jroth
+ms.openlocfilehash: 4fcb982a613fe914aa0f0c3de556b8d19faa1bbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/10/2018
-ms.locfileid: "48905017"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66782512"
 ---
 # <a name="understanding-the-jdbc-driver-data-types"></a>Describir los tipos de datos del controlador JDBC
 
@@ -41,6 +41,6 @@ En los temas de esta sección se describe cómo utilizar los tipos de datos bás
 | [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)                                                                                 | Describe la interfaz SQLXML. También describe cómo leer y escribir datos XML desde y en una base de datos relacional con el tipo de datos Java de **SQLXML**.                                                                                                             |
 | [Contenedores e interfaces](../../connect/jdbc/wrappers-and-interfaces.md)                                                                         | Explica las interfaces que tienen los métodos y constantes específicos de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] que permiten que un servidor de aplicaciones cree un proxy de la clase; asimismo, describe la compatibilidad con la interfaz `java.sql.Wrapper`. |
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

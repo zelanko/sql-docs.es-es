@@ -1,6 +1,6 @@
 ---
 title: ICommandWithParameters | Microsoft Docs
-description: Interfaz ICommandWithParameters
+description: ISSCommandWithParameters, interfaz
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: df2ced0a4a9640224db743636f96f8cfd1b35657
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 7194b886ed972937c30b775bb6ec093e1b4fe612
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51033605"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790614"
 ---
 # <a name="icommandwithparameters"></a>ICommandWithParameters
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "51033605"
   
  También a partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], al llamar a ICommandWithParameters::SetParameterInfo, el último valor pasado al parámetro *pwszName* debe ser un identificador válido. Para obtener más información, vea [Database Identifiers](../../../relational-databases/databases/database-identifiers.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

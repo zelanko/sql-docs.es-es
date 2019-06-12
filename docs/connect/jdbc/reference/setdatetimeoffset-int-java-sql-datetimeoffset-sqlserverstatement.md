@@ -1,5 +1,5 @@
 ---
-title: setDateTimeOffset (int, java.sql.DateTimeOffset) | Microsoft Docs
+title: setDateTimeOffset(int, java.sql.DateTimeOffset) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e8b6e380-6b53-489b-be73-73fcb5258269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ecbdb1496ed0128d6f8e1c4ff37f26b7009171ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 36b23fb46e8cd909cf71e696293f2981731a86d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810703"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793914"
 ---
 # <a name="setdatetimeoffsetint-javasqldatetimeoffset-sqlserverstatement"></a>setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public void setDateTimeOffset(int parameterIndex, DateTimeOffset dateTime)
 |date|Solo puede insertar: "AAAA-MM-DD"|  
 |datetime2|Solo puede insertar: "AAAA-MM-DD hh:mm:ss[.nnnnnnn]"|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [getDateTimeOffset &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getdatetimeoffset-sqlserverresultset.md)   
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

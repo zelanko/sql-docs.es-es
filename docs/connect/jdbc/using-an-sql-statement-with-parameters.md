@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3202b88f-ce13-44dd-982c-c6a3b0260378
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66a0215721b906ed81e9daa06cb3dbc07804229d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2c2647b4737268a1550bd9e45deb9557ecc0f81d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47629473"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790133"
 ---
 # <a name="using-an-sql-statement-with-parameters"></a>Usar una instrucción SQL con parámetros
 
@@ -32,6 +32,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 
 [!code[JDBC#UsingSQLWithParams1](../../connect/jdbc/codesnippet/Java/using-an-sql-statement-w_1_1.java)]
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

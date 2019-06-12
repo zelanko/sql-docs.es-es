@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 676094e9-ec18-4524-9b21-1f9c5b16dd52
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 25b16ae2c31233ee837c86cc156ddcb2d4ffa901
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 120a90168d46f81d57115812c832c5c6674cf436
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660323"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793205"
 ---
 # <a name="getlocktimeout-method-sqlserverdatasource"></a>Método getLockTimeout (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public int getLockTimeout()
 > [!NOTE]  
 >  Un valor de 0 indica que el tiempo de espera será nulo. Si no se establece la propiedad lockTimeout, el método getLockTimeout devuelve el valor predeterminado de -1.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

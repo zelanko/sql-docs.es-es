@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4659c6571f8afbcdb757141e03df51ac54d0835e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 860014601394e4e39436e3aa10de8ebcff55ddd6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510720"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790280"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>Usar Always Encrypted con el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ Microsoft JDBC Driver para SQL Server incluye los siguientes proveedores de alma
 
 | Clase                                                 | Descripción                                        | Nombre del proveedor (búsqueda)  | ¿Se ha registrado previamente? |
 | :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un proveedor para un almacén de claves para Azure Key Vault. | AZURE_KEY_VAULT         | no                 |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | Un proveedor para un almacén de claves para Azure Key Vault. | AZURE_KEY_VAULT         | No                 |
 | **SQLServerColumnEncryptionCertificateStoreProvider** | Un proveedor para el Almacén de certificados de Windows.      | MSSQL_CERTIFICATE_STORE | Sí                |
 | **SQLServerColumnEncryptionJavaKeyStoreProvider**     | Un proveedor del almacén de claves de Java                   | MSSQL_JAVA_KEYSTORE     | Sí                |
 
@@ -99,9 +99,9 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > [!IMPORTANT]
 >  Si utiliza el proveedor de almacén de claves de Azure Key Vault, la implementación de Azure Key Vault del controlador JDBC tiene dependencias en estas bibliotecas (desde GitHub) que deben incluirse con la aplicación:
 >
->  [Azure sdk para java](https://github.com/Azure/azure-sdk-for-java)
+>  [azure-sdk-for-java](https://github.com/Azure/azure-sdk-for-java)
 >
->  [bibliotecas de Azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java)
+>  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > Para obtener un ejemplo de cómo incluir estas dependencias en un proyecto de Maven, consulte [descargar ADAL4J y AKV dependencias con Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
 
@@ -650,6 +650,6 @@ Con SQLServerBulkCopy, puede copiar datos que ya están cifrados y almacenados e
 > [!NOTE]
 > Tenga cuidado al especificar AllowEncryptedValueModifications ya que esta opción puede provocar daños en la base de datos dado que Microsoft JDBC Driver for SQL Server no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

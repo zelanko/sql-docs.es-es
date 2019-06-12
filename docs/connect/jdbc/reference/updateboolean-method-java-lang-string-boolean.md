@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5fed9ebb-d9a3-4d1a-9212-1057a603c4e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7218cd8f86fa6fe65f6820c77b54f77654dce7b7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 488d79e4b3d82bc20d7046efd09621fb0d08e707
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667363"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787061"
 ---
 # <a name="updateboolean-method-javalangstring-boolean"></a>Método updateBoolean (java.lang.String, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateBoolean(java.lang.String columnName,
 ## <a name="remarks"></a>Notas  
  Este método updateBoolean especificado por el método updateBoolean en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateboolean-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

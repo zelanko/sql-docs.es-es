@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4b0728bd-059b-4b71-895c-999335bc7427
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 041a0119425e6469a394420469b14f47f3b84a81
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d63b7195e2de73292e56f9a63dcce561ca3b906e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47674843"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790216"
 ---
 # <a name="using-an-sql-statement-with-no-parameters"></a>Usar una instrucción SQL sin parámetros
 
@@ -30,6 +30,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 
 Para obtener más información sobre el uso de conjuntos de resultados, vea [administrar conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

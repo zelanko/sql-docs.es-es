@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4704199b-c0ae-4c77-8a2e-6963715b4ffb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 89fd14cf4245a3c44dad41b4af5b3b14e779e82b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2da0381f06e5092a7bcdb056d88df1160486ce0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838298"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790242"
 ---
 # <a name="using-an-sql-statement-to-modify-data"></a>Usar una instrucción SQL para modificar datos
 
@@ -37,6 +37,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 >
 > Si desea que el controlador JDBC devuelva todos los recuentos de actualizaciones, incluidos los recuentos de actualizaciones devueltos por todos los desencadenadores activados, establezca la propiedad de cadena de conexión lastUpdateCount en "false". Para obtener más información acerca de la propiedad lastUpdateCount, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con SQL](../../connect/jdbc/using-statements-with-sql.md)

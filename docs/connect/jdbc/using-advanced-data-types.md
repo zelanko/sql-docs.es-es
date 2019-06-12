@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ddef588be6f7e15c8a3f7f8e981a44cfcb5c9076
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 2682d5fe31bcd2f22eb92960ab16f70458687b55
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736826"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790358"
 ---
 # <a name="using-advanced-data-types"></a>Usar tipos de datos avanzados
 
@@ -48,17 +48,17 @@ Las siguientes secciones proporcionan ejemplos de cómo puede usar el controlado
 El controlador JDBC implementa todos los métodos de las interfaces java.sql.Blob, java.sql.Clob y java.sql.NClob.  
   
 > [!NOTE]  
-> Los valores CLOB se pueden usar con tipos de datos de valores grandes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (o versiones posteriores). En concreto, los tipos CLOB se pueden usar con el **varchar (max)** y **nvarchar (max)** tipos de datos, tipos de blobs pueden usarse con **varbinary (max)** y **imagen**  y los tipos NCLOB se pueden usar con **ntext** y **nvarchar (max)**.  
+> Los valores CLOB se pueden usar con tipos de datos de valores grandes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] (o versiones posteriores). En concreto, los tipos CLOB se pueden usar con el **varchar (max)** y **nvarchar (max)** tipos de datos, tipos de blobs pueden usarse con **varbinary (max)** y **imagen**  y los tipos NCLOB se pueden usar con **ntext** y **nvarchar (max)** .  
 
 ## <a name="large-value-data-types"></a>Tipos de datos de valores grandes
 
-En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el trabajo con tipos de datos de valores grandes requería un tratamiento especial. Los tipos de datos de gran tamaño son aquellos que superan el tamaño de fila máximo de 8 KB. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ha introducido un especificador máximo para los tipos de datos **varchar**, **nvarchar** y **varbinary** a fin de permitir el almacenamiento de valores de hasta 2^31 bytes. Las columnas de tabla y las variables [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden especificar los tipos de datos **varchar(max)**, **nvarchar(max)** o **varbinary(max)**.  
+En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el trabajo con tipos de datos de valores grandes requería un tratamiento especial. Los tipos de datos de gran tamaño son aquellos que superan el tamaño de fila máximo de 8 KB. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se ha introducido un especificador máximo para los tipos de datos **varchar**, **nvarchar** y **varbinary** a fin de permitir el almacenamiento de valores de hasta 2^31 bytes. Las columnas de tabla y las variables [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden especificar los tipos de datos **varchar(max)** , **nvarchar(max)** o **varbinary(max)** .  
 
 Los escenarios principales en los que se trabaja con tipos de valores grandes implican su recuperación de una base de datos o agregarlos a una base de datos. Las siguientes secciones describen diferentes enfoques para realizar estas tareas.  
 
 ### <a name="retrieving-large-value-types-from-a-database"></a>Recuperar tipos de valores grandes de una base de datos
 
-Al recuperar un tipo de datos de valores grandes, que no sean binarios, de una base de datos, como el tipo de datos **varchar(max)**, un planteamiento es leer esos datos como un flujo de caracteres. En el siguiente ejemplo, se usa el método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para recuperar datos de la base de datos y devolverlos como un conjunto de resultados. Después, se usa el método [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para leer los datos de valores grandes del conjunto de resultados.  
+Al recuperar un tipo de datos de valores grandes, que no sean binarios, de una base de datos, como el tipo de datos **varchar(max)** , un planteamiento es leer esos datos como un flujo de caracteres. En el siguiente ejemplo, se usa el método [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverstatement.md) de la clase [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) para recuperar datos de la base de datos y devolverlos como un conjunto de resultados. Después, se usa el método [getCharacterStream](../../connect/jdbc/reference/getcharacterstream-method-sqlserverresultset.md) de la clase [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para leer los datos de valores grandes del conjunto de resultados.  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT TOP 1 * FROM Test1");  
@@ -69,7 +69,7 @@ Reader reader = rs.getCharacterStream(2);
 > [!NOTE]
 > También se puede usar este mismo enfoque para la **texto**, **ntext**, y **nvarchar (max)** tipos de datos.  
 
-Al recuperar tipos de datos binarios de valores grandes, de una base de datos, como el tipo de datos **varbinary(max)**, hay varios enfoques que se pueden aplicar. El enfoque más eficaz es leer los datos como un flujo binario, como en el siguiente ejemplo:  
+Al recuperar tipos de datos binarios de valores grandes, de una base de datos, como el tipo de datos **varbinary(max)** , hay varios enfoques que se pueden aplicar. El enfoque más eficaz es leer los datos como un flujo binario, como en el siguiente ejemplo:  
 
 ```java
 ResultSet rs = stmt.executeQuery("SELECT photo FROM mypics");  
@@ -104,7 +104,7 @@ pstmt.executeUpdate();
 > [!NOTE]  
 > Este enfoque también puede usarse para los valores que se almacenan en **texto**, **ntext**, y **nvarchar (max)** columnas.  
 
-Si tiene en el servidor una biblioteca de imágenes y debe cargar archivos de imagen binarios completos en una columna **varbinary(max)**, el método más eficaz con JDBC Driver es usar directamente secuencias, como en el siguiente ejemplo:  
+Si tiene en el servidor una biblioteca de imágenes y debe cargar archivos de imagen binarios completos en una columna **varbinary(max)** , el método más eficaz con JDBC Driver es usar directamente secuencias, como en el siguiente ejemplo:  
 
 ```java
 try (PreparedStatement pstmt = con.prepareStatement("INSERT INTO test1 (Col1, Col2) VALUES(?,?)")) { 

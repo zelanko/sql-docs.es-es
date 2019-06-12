@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0e5c0579-84b5-4717-b128-0bcd512f6022
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce4e9c995d8566700b66b6359a54db5d3fa7e3eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 053dab7055969b502a79e2e2d0250cdd98749fbe
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598713"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797295"
 ---
 # <a name="supportsstoredfunctionsusingcallsyntax-method-sqlserverdatabasemetadata"></a>Método supportsStoredFunctionsUsingCallSyntax (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public boolean supportsStoredFunctionsUsingCallSyntax()
 ## <a name="remarks"></a>Notas  
  Este método supportsStoredFunctionsUsingCallSyntax especificado por el método supportsStoredFunctionsUsingCallSyntax en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

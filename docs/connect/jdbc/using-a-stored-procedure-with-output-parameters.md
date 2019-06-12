@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 1c006f27-7e99-43d5-974c-7b782659290c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea98438694963986c31f0dbb7dddecfb5caa9da6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4af5769f5187fd70387f89aebf07625117da9a49
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47610833"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790334"
 ---
 # <a name="using-a-stored-procedure-with-output-parameters"></a>Usar un procedimiento almacenado con parámetros de salida
 
@@ -87,6 +87,6 @@ public static void executeStoredProcedure(Connection con) throws SQLException {
 
 Los procedimientos almacenados también pueden devolver recuentos de actualizaciones y múltiples conjuntos de resultados. [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sigue la especificación de JDBC 3.0, que indica que se deben recuperar varios conjuntos de resultados y recuentos de actualizaciones antes de que se recuperen los parámetros OUT. Es decir, la aplicación debe recuperar todos los objetos de conjunto de resultados y recuentos de actualizaciones antes de recuperar los parámetros OUT mediante los métodos CallableStatement.getter. De lo contrario, los objetos ResultSet y los recuentos de actualizaciones que aún no se hayan recuperado se perderán cuando se recuperen los parámetros OUT. Para obtener más información sobre recuentos de actualizaciones y conjuntos de resultados, vea [mediante un procedimiento almacenado con un recuento de actualización](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md) y [utilizando varios conjuntos de resultados](../../connect/jdbc/using-multiple-result-sets.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

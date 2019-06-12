@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 16ac54c78839df4c5ce911a1258dfa052ac1666c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 160300be692ff21af1cc33c1fd6fc49d415b22e5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47625013"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790323"
 ---
 # <a name="using-adaptive-buffering"></a>Usar el almacenamiento en búfer adaptable
 
@@ -92,6 +92,6 @@ Además, la siguiente lista proporciona algunas recomendaciones para los conjunt
 
 - Para los conjuntos de resultados de solo avance, cuando recupera un conjunto de filas el controlador normalmente lee en la memoria el número de filas indicado por el método [getFetchSize](../../connect/jdbc/reference/getfetchsize-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md), incluso aunque el almacenamiento en búfer adaptable esté habilitado en la conexión. Si la llamada al método [next](../../connect/jdbc/reference/next-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) produce un OutOfMemoryError, puede reducir el número de filas recuperadas llamando al método [setFetchSize](../../connect/jdbc/reference/setfetchsize-method-sqlserverresultset.md) del objeto [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) para configurar el tamaño de captura en un número de filas más pequeño, incluso una sola fila si es necesario. También puede forzar el controlador para que no almacene filas en el almacenamiento den búfer llamando al método [setResponseBuffering](../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md) del objeto [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) con el parámetro "**adaptive**" antes de ejecutar la instrucción. Como el conjunto de resultados no es desplazable, si la aplicación accede a un número de columna grande utilizando uno de los métodos get\<Type>Stream, el controlador rechaza el valor en cuanto la aplicación lo lee, lo mismo que hace con los conjuntos de resultados de solo avance y solo lectura.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)

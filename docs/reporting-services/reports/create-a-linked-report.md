@@ -1,6 +1,6 @@
 ---
 title: Crear un informe vinculado | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reports
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 12be8341-cb57-45e8-a421-2bf66b50234d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 19a78d5909d62054903a61d18c89d975cde1befe
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 77590da41aa09f66d7549a0d7ff615cdb3f63af3
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571618"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506641"
 ---
 # <a name="create-a-linked-report"></a>Crear un informe vinculado
   Un informe vinculado es un elemento del servidor de informes que proporciona un punto de acceso a un informe existente. Conceptualmente, es similar a los accesos directos a programa que se usan para ejecutar un programa o abrir un archivo.  
@@ -26,26 +26,26 @@ ms.locfileid: "65571618"
   
  Si bien los informes vinculados se basan normalmente en informes con parámetros, no es necesario disponer de este tipo de informe. Puede crear informes vinculados siempre que desee implementar un informe existente con diferentes parámetros.  
   
-### <a name="to-create-a-linked-report"></a>Crear un informe vinculado  
+## <a name="to-create-a-linked-report"></a>Crear un informe vinculado  
   
-1.  En el Administrador de informes, navegue hasta la carpeta que contiene el informe al que desea vincular y, a continuación, abra el menú de opciones para hacer clic en **Crear informe vinculado**.  
+1. En el portal web, desplácese hasta el informe que desee, haga doble clic en él y seleccione **administrar** desde el menú desplegable.
+
+2. En el **administrar <reportname>**  página, seleccione **crear informe vinculado**.  
   
-2.  Escriba un nombre para el nuevo informe vinculado. Si lo desea, escriba una descripción.  
+3. Escriba un nombre para el nuevo informe vinculado. Opcionalmente, escriba una descripción.  
   
-3.  Para guardar el informe en una carpeta diferente, haga clic en **Cambiar ubicación**. Haga clic en la carpeta que desee utilizar o escriba el nombre de la carpeta en el cuadro **Ubicación** . [!INCLUDE[clickOK](../../includes/clickok-md.md)] Si no selecciona una carpeta distinta, el informe vinculado se creará en la carpeta actual (donde está almacenado el informe en que se basa).  
+4. Para seleccionar una carpeta diferente para el informe, seleccione el botón de puntos suspensivos (...) a la derecha del ***ubicación***.  Vaya a la nueva carpeta para el informe y seleccione **seleccione**. Si no selecciona una carpeta diferente, el informe vinculado se crea en la carpeta actual.  
   
-4.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] Se abre el informe vinculado.  
+5. Seleccione **Crear**. Se crea el informe vinculado.  
+
+6. En **avanzadas**, seleccionar otro **tiempo de espera de informe** valor si lo desea y seleccione **aplicar** para guardar los cambios.
   
      El icono de un informe vinculado es distinto de otros elementos administrados por un servidor de informes. El siguiente icono distingue los informes vinculados:  
   
      ![Icono de informe vinculado](../../reporting-services/report-server/media/hlp-16linked.gif "Icono de informe vinculado")  
   
-## <a name="see-also"></a>Consulte también  
- [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)   
- [Nuevo informe vinculado &#40;página del Administrador de informes&#41;](https://msdn.microsoft.com/library/fefb46e8-6901-4d50-a3f8-7c49ad72e7b1)   
- [Elegir página de ubicación del elemento &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/4a53a1a8-d1e1-47ef-b1fc-63352ece7d3c)   
- [Página de propiedades generales, informes &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/66c99d28-ab41-45f0-bf02-ed560293595d)   
- [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+## <a name="see-also"></a>Vea también  
+ [Abrir y cerrar un informe &#40;portal web&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md)  
+ [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)  
+ [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)
   

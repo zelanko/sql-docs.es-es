@@ -10,13 +10,13 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 32fa412b7ea73bc2925ed1cf2407740cf00f9ece
-ms.sourcegitcommit: af1d9fc4a50baf3df60488b4c630ce68f7e75ed1
+manager: jroth
+ms.openlocfilehash: 3f747a6d2078a5d9535a9e920091198d9a2ed1ec
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51032287"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790678"
 ---
 # <a name="icolumnsrowset"></a>IColumnsRowset
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "51032287"
 
   Controlador OLE DB para SQL Server agrega la columna DBCOLUMN_BASETABLEINSTANCE a IColumnsRowset:: Getcolumnrowset. Esta columna devuelve DBTYPE_I2 y está reservada para su uso por parte de Microsoft. La información de esta columna está sujeta a cambios en versiones futuras.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Interfaces &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/oledb-driver-for-sql-server-ole-db-interfaces.md) 
   
   

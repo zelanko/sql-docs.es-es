@@ -1,6 +1,6 @@
 ---
 title: Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -13,21 +13,21 @@ helpviewer_keywords:
 ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8a0a28974b50d5230c962a19bc19630a55dbef48
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580958"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506438"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
   Se puede usar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para especificar valores de tiempo de espera para establecer límites sobre el uso de los recursos del sistema. El servidor de informes admite dos valores de tiempo de espera:  
   
--   Un valor de tiempo de espera de consulta de un conjunto de datos incrustado es el número de segundos durante los que el servidor de informes espera una respuesta de la base de datos. Este valor se define en el informe.  
+- Un valor de tiempo de espera de consulta de un conjunto de datos incrustado es el número de segundos durante los que el servidor de informes espera una respuesta de la base de datos. Este valor se define en el informe.  
   
--   Un valor de tiempo de espera de consulta de un conjunto de datos compartido es el número de segundos durante los que el servidor de informes espera una respuesta de la base de datos. Este valor es parte de la definición del conjunto de datos compartido y se puede cambiar al administrar el conjunto de datos compartido en el servidor de informes.  
+- Un valor de tiempo de espera de consulta de un conjunto de datos compartido es el número de segundos durante los que el servidor de informes espera una respuesta de la base de datos. Este valor es parte de la definición del conjunto de datos compartido y se puede cambiar al administrar el conjunto de datos compartido en el servidor de informes.  
   
--   Un valor de tiempo de espera de informe es el número máximo de segundos durante los cuales puede continuar el procesamiento del informe antes de que se detenga. Este valor se define en el nivel de sistema. Existe la posibilidad de modificarlo para informes individuales.  
+- Un valor de tiempo de espera de informe es el número máximo de segundos durante los cuales puede continuar el procesamiento del informe antes de que se detenga. Este valor se define en el nivel de sistema. Existe la posibilidad de modificarlo para informes individuales.  
   
  La mayoría de los errores de tiempo de espera se generan durante el procesamiento de las consultas. Si detecta errores de este tipo, intente aumentar el valor de tiempo de espera de la consulta. Asegúrese de ajustar el valor de tiempo de espera de ejecución del informe de forma que sea superior al de la consulta. El período de tiempo debería ser suficiente para completar el procesamiento tanto de la consulta como del informe.  
   
@@ -50,12 +50,11 @@ ms.locfileid: "65580958"
  Es importante mencionar que, si se especifica un valor de tiempo de espera inferior a 60 segundos, el informe puede llegar a procesarse por completo si el proceso empieza y termina durante la parte silenciosa del ciclo en la que el servidor de informes no evalúa los trabajos en ejecución Por ejemplo, si se establece un valor de tiempo de espera de 10 segundos para un informe que necesita 20 para ejecutarse, el procesamiento del informe solamente podrá completarse si la ejecución da comienzo nada más empezar el ciclo de 60 segundos.  
   
 > [!NOTE]  
->  Se puede establecer el parámetro **RunningRequestsDbCycle** del archivo RSReportServer.config para cambiar la frecuencia con la que se evalúan los trabajos en ejecución.  
+> Se puede establecer el parámetro **RunningRequestsDbCycle** del archivo RSReportServer.config para cambiar la frecuencia con la que se evalúan los trabajos en ejecución.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
  [Servidor de informes de Reporting Services &#40;modo nativo&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md)   
  [Administrar un proceso en ejecución](../../reporting-services/subscriptions/manage-a-running-process.md)   
- [Administrador de informes &#40;Modo nativo de SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)  
-  
+ [El portal web de un servidor de informes (modo nativo de SSRS)](../../reporting-services/web-portal-ssrs-native-mode.md)  
   

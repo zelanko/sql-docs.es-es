@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e120762a84929ed58d163efb26faa6f28eb50dc3
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+manager: jroth
+ms.openlocfilehash: 2eef48c472ee9b23d941be88ae76cb0349067739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306133"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789342"
 ---
 # <a name="connecting-to-an-azure-sql-database"></a>Conectarse a una base de datos de SQL Azure
 
@@ -47,9 +47,9 @@ Para evitar que un componente de red elimine las conexiones inactivada, se debe 
   
 |Configuración del Registro|Valor recomendado|  
 |----------------------|-----------------------|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveTime|30000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ KeepAliveInterval|1000|  
-|HKEY_LOCAL_MACHINE \ SYSTEM \ CurrentControlSet \ Services \ Tcpip \ Parameters \ TcpMaxDataRetransmissions|10|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ KeepAliveTime|30000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ KeepAliveInterval|1000|  
+|HKEY_LOCAL_MACHINE \ sistema \ CurrentControlSet \ Services \ Tcpip \ parámetros \ TcpMaxDataRetransmissions|10|  
   
 Reinicie el equipo para que surta efecto la configuración del Registro.  
 
@@ -81,7 +81,7 @@ Antes de la versión 4.0 de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversio
 
 ## <a name="using-encryption-requires-setting-hostnameincertificate"></a>Usar el cifrado requiere establecer hostNameInCertificate
 
-Antes de la versión 7.2 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **encrypt=true** (si el nombre de servidor en la conexión cadena es *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
+Antes de la versión 7.2 de la [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], al conectarse a un [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], debe especificar **hostNameInCertificate** si especifica **cifrar = true** (si el nombre de servidor en la conexión cadena es *shortName*. *domainName*, establezca el **hostNameInCertificate** propiedad \*. *domainName*.). Esta propiedad es opcional a partir de la versión 7.2 del controlador.
 
 Por ejemplo:
 

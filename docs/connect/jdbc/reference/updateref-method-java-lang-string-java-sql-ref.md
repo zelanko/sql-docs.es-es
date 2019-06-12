@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7740d17d-282f-4f1d-91f9-c68a873b069a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e8c63e9fe6c544dea276b2da07370921c6af3ec5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a07f14422a1e4d6db9c9715ac766b9265fdeb86c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672313"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778454"
 ---
 # <a name="updateref-method-javalangstring-javasqlref"></a>Método updateRef (java.lang.String, java.sql.Ref)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateRef(java.lang.String columnName,
 ## <a name="remarks"></a>Notas  
  Este método updateRef especificado por el método updateRef en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateRef &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

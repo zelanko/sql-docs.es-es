@@ -1,5 +1,5 @@
 ---
-title: Los miembros de SQLServerDriver | Microsoft Docs
+title: SQLServerDriver Members | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 079c7eb7-71e4-4109-83de-f6d785433c95
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2efb7a32cd9a5fddd3de17aef724eb4555cce79c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 07d5be731e1e647f9a3be7957d35591702910488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749635"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779460"
 ---
 # <a name="sqlserverdriver-members"></a>Miembros de SQLServerDriver
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47749635"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  
   
   

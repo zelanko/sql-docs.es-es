@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a4a969e7-e72c-4ac8-8b8c-ae2281e4e705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fdee4bfa9f5cc0e8a35bcac3214bab3415541b2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b20b5b8d8577ce768f35e99f4422ac7f0005ba34
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823183"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777188"
 ---
 # <a name="getdate-method-sqlservercallablestatement"></a>Método getDate (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47823183"
 |[getDate (java.lang.String)](../../../connect/jdbc/reference/getdate-method-java-lang-string.md)|Recupera el valor del parámetro designado como un objeto java.sql.Date en el lenguaje de programación Java según el nombre de parámetro especificado.|  
 |[getDate (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/getdate-method-java-lang-string-java-util-calendar.md)|Recupera el valor del parámetro designado como un objeto java.sql.Date en el lenguaje de programación Java según el nombre de parámetro y el objeto Calendar.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

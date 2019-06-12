@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 399100d6e718138012453e47fdfe8d11386f8cbd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c4e8d429490a0dd7fe8f0a259d065f1f4914dd29
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754903"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794050"
 ---
 # <a name="programming-with-sqlxml"></a>Programar con SQLXML
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "47754903"
  El código muestra de [Ejemplo de tipo de datos SQLXML](../../connect/jdbc/sqlxml-data-type-sample.md) muestra cómo realizar estas tareas API comunes.  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>Objetos SQLXML de lectura y escritura  
- La tabla siguiente enumera qué tipos de objetos SQLXML son compatibles con los métodos establecedor, captador y actualizador de la API de JDBC.  Las columnas de la tabla hacen referencia a lo siguiente:  
+ La tabla siguiente enumera qué tipos de objetos SQLXML son compatibles con los métodos establecedor, captador y actualizador de la API de JDBC. Las columnas de la tabla hacen referencia a lo siguiente:  
   
 -   La columna **Nombre de método** enumera los métodos compatibles establecedor, captador y actualizador de la API de JDBC.  
   
@@ -100,7 +100,7 @@ ms.locfileid: "47754903"
 ## <a name="adaptive-buffering-and-sqlxml-support"></a>Almacenamiento en búfer adaptable y compatibilidad con SQLXML  
  Los flujos binarios y de caracteres devueltos por el objeto SQLXML obedecen a los modos de almacenamiento en búfer completo o adaptable. Por otra parte, si los analizadores XML no son secuencia, no obedecerán a los valores completos o adaptables. Para obtener más información sobre el almacenamiento en búfer adaptable, vea [usando almacenamiento en búfer adaptable](../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con datos XML](../../connect/jdbc/supporting-xml-data.md)  
   
   

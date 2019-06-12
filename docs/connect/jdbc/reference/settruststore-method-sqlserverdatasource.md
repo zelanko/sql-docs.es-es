@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bab5485d-4547-426c-adbe-44e2b5702d1d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8deaaf006698018764eb67dc27e3f7cdb372e04a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a38bbf56613f0b06f874b5db4e4de03f0064492f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687773"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783551"
 ---
 # <a name="settruststore-method-sqlserverdatasource"></a>Método setTrustStore (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,9 +45,9 @@ public void setTrustStore(java.lang.String trustStore)
   
 -   1. Un archivo especificado por la propiedad del sistema "javax.net.ssl.trustStore" de la máquina virtual Java (JVM).  
   
--   2. "\<java-home >/lib/security/jssecacerts" archivo.  
+-   2. "\<java-home>/lib/security/jssecacerts" file.  
   
--   3. "\<java-home >/lib/security/cacerts" archivo.  
+-   3. Archivo "\<java-home/lib/security/cacerts".  
   
  Para obtener más información, consulte la documentación de la interfaz de SunX509 TrustManager en el sitio web de Sun Microsystems.  
   
@@ -55,7 +55,7 @@ public void setTrustStore(java.lang.String trustStore)
   
  La propiedad trustStorePassword se puede especificar junto con la propiedad trustStore y su valor se utiliza para abrir el archivo trustStore. Para obtener más información, vea [setTrustStorePassword](../../../connect/jdbc/reference/settruststorepassword-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

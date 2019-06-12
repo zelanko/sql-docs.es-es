@@ -17,13 +17,13 @@ helpviewer_keywords:
 - multiple-rowset results
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d0be8b9222d2b6ba99b913a76aa5b18c07d90f09
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 29504408c66cb5bada0e180eeda8f41834e10288
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720653"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795752"
 ---
 # <a name="commands-generating-multiple-rowset-results"></a>Comandos que generan resultados de varios conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,7 +53,7 @@ WCHAR*       wSQLString = L"SELECT * FROM Categories; "
   
 -   [Utilizar IMultipleResults para procesar varios conjuntos de resultados](../../oledb/ole-db-commands/using-imultipleresults-to-process-multiple-result-sets.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Comandos](../../oledb/ole-db-commands/commands.md)  
   
   

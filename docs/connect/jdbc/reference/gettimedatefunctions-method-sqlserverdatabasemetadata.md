@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6542de9bc4b77114657b628916fc5edd4fc487df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8b6d796bbcea2cbb7956cc966c9436793b693e92
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47683523"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778747"
 ---
 # <a name="gettimedatefunctions-method-sqlserverdatabasemetadata"></a>Método getTimeDateFunctions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getTimeDateFunctions()
 ## <a name="remarks"></a>Notas  
  Este método getTimeDateFunctions especificado por el método getTimeDateFunctions en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

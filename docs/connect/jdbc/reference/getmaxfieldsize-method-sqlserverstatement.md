@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: de123b3c6c8f0105a7280c87a4983fadc657ad93
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4ff1033816bef4bc4234693628ae49158e3752c9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47795613"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792613"
 ---
 # <a name="getmaxfieldsize-method-sqlserverstatement"></a>Método getMaxFieldSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final int getMaxFieldSize()
 ## <a name="remarks"></a>Notas  
  Este método getMaxFieldSize especificado por el método getMaxFieldSize en la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-methods.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

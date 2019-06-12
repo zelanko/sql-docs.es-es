@@ -1,5 +1,5 @@
 ---
-title: 'PDO:: Query | Microsoft Docs'
+title: PDO::query | Microsoft Docs
 ms.custom: ''
 ms.date: 08/01/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f6f5e6d4-8ca9-4f06-89ed-de65ad3952a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 928c1ad5a9b181e791d30332bc7af9d6ed47a0aa
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 68f06811c0c56fa46f1e3769c794d48ad0e43488
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600515"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761981"
 ---
 # <a name="pdoquery"></a>PDO::query
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,7 +52,7 @@ Puede especificar las siguientes opciones para $*fetch_style*.
 |---------|---------------|  
 |PDO::FETCH_COLUMN, *num*|Consultas de datos de la columna especificada. La primera columna de la tabla es 0.|  
 |PDO::FETCH_CLASS, "*NombreDeClase*", array( *listaArgumentos* )|Crea una instancia de una clase y asigna nombres de columna a las propiedades de la clase. Si el constructor de clase toma uno o varios parámetros, también se puede transmitir un objeto *arglist*.|  
-|PDO:: fetch_class, '*classname*'|Asigna nombres de columna a las propiedades de una clase existente.|  
+|PDO::FETCH_CLASS, '*classname*'|Asigna nombres de columna a las propiedades de una clase existente.|  
   
 Llame a PDOStatement::closeCursor para liberar recursos de base de datos asociados al objeto PDOStatement antes de volver a llamar a PDO::query.  
   
@@ -119,7 +119,7 @@ $stmt = null;
 ```
 
 ## <a name="example"></a>Ejemplo
-Este ejemplo de código muestra cómo crear una tabla de [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) tipos y capturar los datos insertados.
+Este ejemplo de código muestra cómo crear una tabla de tipos [sql_variant](https://docs.microsoft.com/sql/t-sql/data-types/sql-variant-transact-sql) y capturar los datos insertados.
 
 ```
 <?php
@@ -166,7 +166,7 @@ Array
 )
 ```
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Clase PDO](../../connect/php/pdo-class.md)
 
 [PDO](https://php.net/manual/book.pdo.php)  

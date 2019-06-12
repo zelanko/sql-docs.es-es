@@ -13,13 +13,13 @@ helpviewer_keywords:
 - commands [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 507da03dfe225ed9e37a8d2c8d2adac2cb4cf6dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 26a8069f1f0e05c1421cd18440f86928ad842ab9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798185"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795757"
 ---
 # <a name="commands"></a>Comandos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47798185"
   
 -   [Comandos que generan resultados de varios conjuntos de filas](../../oledb/ole-db-commands/commands-generating-multiple-rowset-results.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

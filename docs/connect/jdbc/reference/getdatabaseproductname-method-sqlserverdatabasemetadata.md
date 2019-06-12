@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 548bd099-019f-487c-87cc-6f0b665f164d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e34bdc5294b8f68ccf2d364cff71d3df6599f266
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f2f0ed41b3f256b69df8981d3258ef94f592f416
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740643"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762893"
 ---
 # <a name="getdatabaseproductname-method-sqlserverdatabasemetadata"></a>Método getDatabaseProductName (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getDatabaseProductName()
 ## <a name="remarks"></a>Notas  
  Este método getDatabaseProductName especificado por el método getDatabaseProductName en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

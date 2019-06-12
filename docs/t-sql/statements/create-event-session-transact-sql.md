@@ -1,7 +1,7 @@
 ---
 title: CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/10/2017
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: c2335efbd97872975fd6779081e7a5a693266e02
-ms.sourcegitcommit: a192814756570bcbce3b1dbbb05acb24a79d1530
+ms.openlocfilehash: 482d6fd7062dfb0b733e3a3d50bae82f2f754f72
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54457678"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354513"
 ---
 # <a name="create-event-session-transact-sql"></a>CREATE EVENT SESSION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,7 @@ ON SERVER
  SET { *event_customizable_attribute*= \<value> [ ,...*n*] }  
  Permite establecer los atributos personalizables del evento. Los atributos personalizables aparecen en la vista sys.dm_xe_object_columns como column_type "customizable" y object_name = *event_name*.  
   
- ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,**...*n*] })  
+ ACTION ( { [*event_module_guid*].*event_package_name*.*action_name* [ **,** ...*n*] })  
  Es la acción que se va a asociar a la sesión de eventos, donde:  
   
 -   *event_module_guid* es el GUID del módulo que contiene el evento.  
@@ -259,7 +259,11 @@ ON SERVER
     WITH (MAX_MEMORY=4MB, MAX_EVENT_SIZE=4MB);  
 GO  
 ```  
-  
+
+### <a name="code-examples-can-differ-for-azure-sql-database"></a>Ejemplos de código que pueden diferir de Azure SQL Database
+
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
+
 ## <a name="see-also"></a>Consulte también  
  [ALTER EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-event-session-transact-sql.md)   
  [DROP EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/drop-event-session-transact-sql.md)   

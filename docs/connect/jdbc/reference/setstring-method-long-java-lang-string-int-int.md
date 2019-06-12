@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9fb59b09-e825-46a6-ba5d-85d4a8dc143a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba5046a2036b88c3ec55499a6e86609d8b050f7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47611063"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762237"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Método setString (long, java.lang.String, int, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public int setString(long pos,
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *punto de venta*  
+ *pos*  
   
  La posición donde se comienza a escribir en el CLOB.  
   
@@ -62,11 +62,11 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notas  
- Este método setString especificado por el método setString en la interfaz java.sql.Clob.  
+ El método setString especifica este método setString en la interfaz java.sql.CallableStatement.  
   
  Los datos de caracteres se sobrescriben tomando como punto de inicio la posición especificada y pueden sobrescribir la longitud inicial del CLOB. Si se especifica un valor position+1, se anexará la cadena. Si se especifican valores position+2 o superiores (o cero o menos), se producirá un error de la posición.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setString &#40;SQLServerClob&#41;](../../../connect/jdbc/reference/setstring-method-sqlserverclob.md)   
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   

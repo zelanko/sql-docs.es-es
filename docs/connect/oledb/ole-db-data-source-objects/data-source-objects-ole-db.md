@@ -18,13 +18,13 @@ helpviewer_keywords:
 - CLSID
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c838857b09d0eb0279b2732e86602b0938a7fd4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 45a09a47f3ee1b633ccde0276977db56e0ead711
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726903"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768603"
 ---
 # <a name="data-source-objects-ole-db"></a>Objetos de origen de datos (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47726903"
 
   El controlador OLE DB para SQL Server usa el término origen de datos para el conjunto de interfaces OLE DB usado para establecer un vínculo a un almacén de datos, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Crear una instancia del objeto de origen de datos del proveedor es la primera tarea de un controlador de OLE DB para el consumidor de SQL Server.  
   
- Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID para el controlador OLE DB para SQL Server es el CLSID_MSOLEDBSQL de GUID de C o C++ (el símbolo MSOLEDBSQL_CLSID se resuelve como el valor correcto progid en el archivo msoledbsql.h que se hace referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
+ Todos los proveedores OLE DB declaran un identificador de clase (CLSID) para sí mismo. El CLSID para el controlador OLE DB para SQL Server es la C /C++ GUID CLSID_MSOLEDBSQL (el símbolo MSOLEDBSQL_CLSID se resuelve como el valor correcto progid en el archivo msoledbsql.h que se hace referencia). Con el CLSID, el consumidor usa la función de OLE **CoCreateInstance** para fabricar una instancia del objeto de origen de datos.  
   
  Controlador OLE DB para SQL Server es un servidor en proceso. Las instancias de objetos del controlador OLE DB para SQL Server se crean mediante la macro CLSCTX_INPROC_SERVER para indicar el contexto ejecutable.  
   
@@ -92,7 +92,7 @@ else
   
 -   [Objetos de origen de datos persistentes](../../oledb/ole-db-data-source-objects/persisted-data-source-objects.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

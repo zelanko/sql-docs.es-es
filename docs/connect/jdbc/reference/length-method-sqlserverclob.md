@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 18bea01e-7d3d-40aa-961f-2318513fab1c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ce5ba3e79e340677718b24bf6cd540c203000b0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d46824b0d49bd359c748d4ab9ab33f5d4b29958d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655003"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66791756"
 ---
 # <a name="length-method-sqlserverclob"></a>Método length (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public long length()
 ## <a name="remarks"></a>Notas  
  Este método de longitud especificado por el método length de la interfaz java.sql.Clob.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

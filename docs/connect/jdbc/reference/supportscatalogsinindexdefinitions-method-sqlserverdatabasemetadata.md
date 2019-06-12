@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a19423a0-e7b6-4f5c-94be-80ddf3fa4717
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6b2a93f8692a7ee92525a106e01483b98fab1c21
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b230058d46f28970b44456e19f9b04837f90ff44
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766407"
 ---
 # <a name="supportscatalogsinindexdefinitions-method-sqlserverdatabasemetadata"></a>Método supportsCatalogsInIndexDefinitions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsCatalogsInIndexDefinitions()
 ## <a name="remarks"></a>Notas  
  Este método supportsCatalogsInIndexDefinitions especificado por el método supportsCatalogsInIndexDefinitions en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

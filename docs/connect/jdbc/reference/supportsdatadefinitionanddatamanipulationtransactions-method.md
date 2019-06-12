@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fe91c601-9bb3-4364-9131-575a94d3a1b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd5fba5833f8b00c397651bc90dac483ddb63ffe
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6f0a794d8551d546efbc1933ab93a22aeb829fbd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623953"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794220"
 ---
 # <a name="supportsdatadefinitionanddatamanipulationtransactions-method-sqlserverdatabasemetadata"></a>Método supportsDataDefinitionAndDataManipulationTransactions (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsDataDefinitionAndDataManipulationTransactions()
 ## <a name="remarks"></a>Notas  
  Este método suportsDataDefinitionAndDataManipulationTransactions especificado por el método suportsDataDefinitionAndDataManipulationTransactions en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

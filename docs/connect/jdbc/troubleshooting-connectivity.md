@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: bfba0b49-2e1f-411d-a625-d25fad9ea12d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ae5f65538c0303a92fdb86f71d75a556ad3f458
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 05a8e57b4d531d05cdf14cb57ab164851d0c1800
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840893"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798250"
 ---
 # <a name="troubleshooting-connectivity"></a>Solución de los problemas de conectividad
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47840893"
   
 -   Cuando usa la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el controlador JDBC requiere que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esté instalado con Autenticación [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que no es la predeterminada. Asegúrese de que esta opción esté incluida cuando instale o configure su copia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Diagnosticar problemas del controlador JDBC](../../connect/jdbc/diagnosing-problems-with-the-jdbc-driver.md)   
  [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
   

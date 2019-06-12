@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 61a2ec0d-1bcb-4231-bea0-cff866c21463
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d436072e81212203aff568feba1d764b07c31b8a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+manager: jroth
+ms.openlocfilehash: 48e4771b8d538775ae2e2faec053f0263bd6d653
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579265"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789884"
 ---
 # <a name="connecting-with-sqlcmd"></a>Conexión con sqlcmd
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -98,7 +98,7 @@ Especifique siempre **-M** al conectarse a una escucha de un grupo de disponibil
   
 - -s *column_separator_char* especificar el carácter separador de columnas.  
 
-- -S [*protocol*:] *server*[**,**_port_]  
+- -S [*protocol*:] *server*[ **,** _port_]  
 Especifique la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para conectarse a, o si es -D utiliza, un DSN. El controlador ODBC en Linux y macOS requiere -S. Tenga en cuenta que **tcp** es el único protocolo válido.  
   
 - -t *query_timeout* especificar el número de segundos que tienen que transcurrir antes de que un comando (o la instrucción de SQL) exceda el tiempo de espera.  
@@ -210,19 +210,19 @@ Se admiten las siguientes entradas en un DSN de Linux o MacOS:
 
 -   **ApplicationIntent=ReadOnly**  
 
--   **Base de datos =**_base de datos\_nombre_  
+-   **Base de datos =** _base de datos\_nombre_  
   
 -   **Driver = ODBC Driver 11 para SQL Server** o **Driver = ODBC Driver 13 para SQL Server**
   
 -   **MultiSubnetFailover=Yes**  
   
--   **Server =**_server\_nombre\_o\_IP\_dirección_  
+-   **Server =** _server\_nombre\_o\_IP\_dirección_  
   
 -   **Trusted_Connection=yes**|**no**  
   
 En un DSN, solo se requiere la entrada DRIVER, pero para conectarse a un servidor, `sqlcmd` o `bcp` necesitan el valor de la entrada SERVER.  
 
-Si se especifica la misma opción en el DSN y la línea de comandos `sqlcmd` o `bcp`, la opción de línea de comandos invalida el valor utilizado en el DSN. Por ejemplo, si el DSN tiene una entrada DATABASE y la línea de comandos `sqlcmd` incluye **-d**, se utiliza el valor transmitido a **-d**. Si se especifica **Trusted_Connection=yes** en el DSN, se utiliza la autenticación Kerberos, y el nombre de usuario (**–U**) y la contraseña (**–P**), si se proporcionan, se omiten.
+Si se especifica la misma opción en el DSN y la línea de comandos `sqlcmd` o `bcp`, la opción de línea de comandos invalida el valor utilizado en el DSN. Por ejemplo, si el DSN tiene una entrada DATABASE y la línea de comandos `sqlcmd` incluye **-d**, se utiliza el valor transmitido a **-d**. Si se especifica **Trusted_Connection=yes** en el DSN, se utiliza la autenticación Kerberos, y el nombre de usuario ( **–U**) y la contraseña ( **–P**), si se proporcionan, se omiten.
 
 Los scripts existentes que invocan a `isql` pueden modificarse para usar `sqlcmd` definiendo el siguiente alias: `alias isql="sqlcmd -D"`.  
 

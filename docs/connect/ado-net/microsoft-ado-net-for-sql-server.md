@@ -10,17 +10,17 @@ ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a15fc702c5f7b3907441a237f5765b19ea41a14d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 82125679283a67006ed93bcd0d8355e2aaaf3d07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602285"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770655"
 ---
 # <a name="microsoft-adonet-for-sql-server"></a>Microsoft ADO.NET para SQL Server
 
-![En círculo la flecha abajo de descarga](../../ssdt/media/download.png)[descargar ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![Download-DownArrow-Circled](../../ssdt/media/download.png)[Para descargar un controlador ODBC](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
 
 ADO.NET es la tecnología básica de acceso a datos para lenguajes .NET. Utilice el espacio de nombres System.Data.SqlClient para el acceso a SQL Server, o bien proveedores de terceros para acceder a sus almacenes. Utilice System.Data.Odbc o System.Data.Oledb para acceder a los datos de lenguajes .NET con otras tecnologías de acceso a datos. Utilice System.Data.Dataset cuando necesite una caché de datos sin conexión en aplicaciones cliente. También proporciona funciones XML y de persistencia local que pueden resultar útiles en los servicios web.  
   

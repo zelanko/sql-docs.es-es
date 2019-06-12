@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5ed49a53-ed61-4e95-ad67-45957aaabb6a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eab31765374c30436062b9d0a7eaa3783c3e651f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ad4c6fc3ed97eec086f7b3919ef1332ce662396b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804813"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792240"
 ---
 # <a name="getmetadata-method-sqlserverpreparedstatement"></a>Método getMetaData (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final java.sql.ResultSetMetaData getMetaData()
 ## <a name="remarks"></a>Notas  
  Este método getMetaData especificado por el método getMetaData de la interfaz java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Clase SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

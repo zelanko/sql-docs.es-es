@@ -10,28 +10,28 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 45ad47f53b36a54843aacb985e3d9c3db3d55d01
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398338"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781659"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>Características internacionales del controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  Entre las características de internacionalización de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se incluye lo siguiente:  
+  Entre las características de internacionalización del [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se incluyen las siguientes:  
   
 -   Compatibilidad con el trabajo en los mismos idiomas que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
--   Compatibilidad con las conversiones de idioma de Java para datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] susceptibles a la configuración regional  
+-   Compatibilidad con las conversiones de idioma de Java para datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en los que el idioma sea importante  
   
 -   Compatibilidad con idiomas internacionales, independientemente del sistema operativo  
   
 -   Compatibilidad con nombres de dominio internacionales (a partir de Microsoft JDBC Driver 6.0 para SQL Server)  
   
-## <a name="handling-of-character-data"></a>Tratamiento de datos de caracteres  
+## <a name="handling-of-character-data"></a>Tratamiento de los datos de caracteres  
  Los datos de caracteres en Java se tratan de forma predeterminada como Unicode, el objeto **String** de Java representa datos de caracteres Unicode. En el controlador JDBC, la única excepción a esta regla son los métodos establecedor y captador de flujos ASCII, que son casos especiales porque usan flujos de bytes con la presunción implícita de páginas de códigos únicas conocidas (ASCII).  
   
  Además, el controlador JDBC proporciona la **sendStringParametersAsUnicode** propiedad cadena de conexión. Esta propiedad se puede usar para especificar que los parámetros preparados para los datos de caracteres se envíen como ASCII o juego de caracteres multibyte (MBCS) en lugar de Unicode. Para obtener más información sobre la **sendStringParametersAsUnicode** propiedad de cadena de conexión, consulte [estableciendo las propiedades de conexión](../../connect/jdbc/setting-the-connection-properties.md).  
@@ -63,7 +63,7 @@ ms.locfileid: "52398338"
 > [!NOTE]  
 >  La mayoría del software de resolver escrito para plataformas distintas de Windows se basa en los estándares DNS de Internet y, por tanto, es probable que use el formato Punycode para los IDN, mientras que un servidor de DNS basado en Windows en una red privada se puede configurar para permitir el uso de caracteres UTF-8 según el servidor.  Para más información, vea [Compatibilidad con caracteres Unicode](https://technet.microsoft.com/library/cc738403(v=ws.10).aspx).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

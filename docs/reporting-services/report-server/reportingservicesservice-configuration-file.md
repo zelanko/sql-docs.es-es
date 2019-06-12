@@ -1,6 +1,6 @@
 ---
 title: Archivo de configuración ReportingServicesService | Microsoft Docs
-ms.date: 03/15/2017
+ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40f4a401-cb61-4c42-b1ec-01acdacdacd1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c78156832d2e66d95e4a9868bef2336c4769d9bc
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: dfb0f48bb35e6341e2b2a9a72007ef4eb09c2b9b
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581328"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506632"
 ---
 # <a name="reportingservicesservice-configuration-file"></a>archivo de configuración ReportingServicesService
 
@@ -26,8 +26,13 @@ ms.locfileid: "65581328"
 El archivo ReportingServicesService.exe.config incluye valores que configuran la traza.  
   
 ## <a name="file-location"></a>Ubicación del archivo  
- Este archivo se encuentra en la carpeta \Reporting Services\Report Server\Bin.  
-  
+Este archivo podría estar ubicado en cualquiera de las rutas de acceso siguiente:  
+
+``` Paths  
+\Reporting Services\Report Server\Bin  
+\Program Files\Microsoft SQL Server Reporting Services\SSRS\ReportServer\bin  
+```  
+ 
 ## <a name="editing-guidelines"></a>Directrices para editar  
  Puede modificar este archivo para cambiar el nombre del archivo de registro, o bien para aumentar o disminuir los niveles de seguimiento. No modifique ningún otro parámetro. Para obtener instrucciones, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md). Para más información sobre los registros de seguimiento, vea [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md).  
   
@@ -85,8 +90,7 @@ El archivo ReportingServicesService.exe.config incluye valores que configuran la
 |**Components**|Especifica los componentes para los que se crean registros de seguimiento. El valor predeterminado es **all**. Otros valores válidos para este parámetro son los nombres de los componentes internos. No modifique este valor.|  
 |**Tiempo de ejecución**|Especifica valores de configuración que ofrecen compatibilidad con versiones anteriores. Los valores de tiempo de ejecución se utilizan para redirigir a la nueva versión las solicitudes destinadas a versiones anteriores de Microsoft.ReportingServices.Interfaces.<br /><br /> Todos los valores de configuración de esta sección están descritos en la documentación del producto [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] . Para obtener más información, vea la sección sobre los valores de esquema de tiempo de ejecución en el sitio web de MSDN o en la documentación de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] .|  
   
-## <a name="see-also"></a>Consulte también  
- [Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)   
- [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  
-  
+## <a name="see-also"></a>Vea también  
+[Archivos de configuración de Reporting Services](../../reporting-services/report-server/reporting-services-configuration-files.md)  
+[Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)  
   

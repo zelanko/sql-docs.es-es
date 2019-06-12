@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 574e326f-0520-4003-bdf1-62d92c3db457
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5d88840ef429258ad425e867efc4b744f6a5d3c5
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: e61d9fbb562bda9ea400024598b1c7107ce5542e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736946"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788424"
 ---
 # <a name="understanding-xa-transactions"></a>Descripción de las transacciones XA
 
@@ -118,7 +118,7 @@ Hay tres maneras de comprobar la versión de sqljdbc_xa.dll instalada en la inst
 ### <a name="BKMK_ServerSide"></a> Configurar el valor de tiempo de espera del servidor para la reversión automática de transacciones no preparadas  
 
 > [!WARNING]  
-> Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se actualiza sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
+> Esta opción de servidor es nueva en Microsoft JDBC Driver 4.2 (y superior) para SQL Server. Para obtener el comportamiento actualizado, asegúrese de que se ha actualizado sqljdbc_xa.dll en el servidor. Para más información sobre cómo establecer los tiempos de espera del cliente, vea [XAResource.setTransactionTimeout()](https://docs.oracle.com/javase/8/docs/api/javax/transaction/xa/XAResource.html).  
 
 Hay dos configuraciones de registro (valores DWORD) para controlar el comportamiento de tiempo de espera de las transacciones distribuidas:  
   
@@ -160,7 +160,7 @@ Al instalar una nueva versión del controlador JDBC, también debe usar sqljdbc_
 > [!IMPORTANT]  
 > Debe actualizar sqljdbc_xa.dll durante un intervalo de mantenimiento o cuando no haya transacciones MS DTC en curso.
   
-1. Descargue sqljdbc_xa.dll con el [!INCLUDE[tsql](../../includes/tsql-md.md)] comando **DBCC sqljdbc_xa (FREE)**.  
+1. Descargue sqljdbc_xa.dll con el [!INCLUDE[tsql](../../includes/tsql-md.md)] comando **DBCC sqljdbc_xa (FREE)** .  
   
 2. Copie el nuevo archivo sqljdbc_xa.dll del directorio de instalación del controlador JDBC al directorio Binn de cada equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que vaya a participar en las transacciones distribuidas.  
   

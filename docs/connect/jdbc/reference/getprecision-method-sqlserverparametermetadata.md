@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 32913e5120afb71f4773318acc1b34c9daed892a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4f7959476f092389f22f2d7720927907b8f59d69
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47813303"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771344"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>Método getPrecision (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public int getPrecision(int param)
   
  Para los tipos de número, este método obtiene el número de dígitos decimales. Para los tipos de caracteres, obtiene la longitud máxima en caracteres. Para los tipos binarios, obtiene la longitud máxima en bytes. Cuando se desconozca el número de dígitos, este método devuelve "0."  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-methods.md)   
  [Miembros SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-members.md)   
  [Clase SQLServerParameterMetaData](../../../connect/jdbc/reference/sqlserverparametermetadata-class.md)  

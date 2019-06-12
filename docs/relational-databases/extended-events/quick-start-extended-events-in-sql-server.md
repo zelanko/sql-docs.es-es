@@ -1,7 +1,7 @@
 ---
 title: 'Inicio rápido: Eventos extendidos en SQL Server | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/10/2016
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e32610836ab856710de35dcf24104a3e4433877
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: dc8a06380e54e49f188813f29fe6c0f4ee68346f
+ms.sourcegitcommit: 36c5f28d9fc8d2ddd02deb237937c9968d971926
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478240"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66354572"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>Inicio rápido: Eventos extendidos en SQL Server
 
@@ -110,11 +110,11 @@ El texto y las capturas de pantalla de ayuda pueden ser ligeramente inexactas cu
 
     ![Nueva sesión > Eventos > Configurar > Filtro (predicado) > Campo](../../relational-databases/extended-events/media/xevents-session-newsessions-20b-events-ssms-yoursessionnode.png)
 
-7. Haga clic en la pestaña **Filtro (predicado)**. Después, haga clic en **Haga clic aquí para agregar una cláusula**para capturar todas las instrucciones SQL SELECT que tengan una cláusula HAVING.
+7. Haga clic en la pestaña **Filtro (predicado)** . Después, haga clic en **Haga clic aquí para agregar una cláusula**para capturar todas las instrucciones SQL SELECT que tengan una cláusula HAVING.
 
 8. En la lista desplegable **Campo** , elija **sqlserver.sql_text**.
    - En **Operador** , elija un operador LIKE.
-   - En **Valor** , escriba **%SELECT%HAVING%**.
+   - En **Valor** , escriba **%SELECT%HAVING%** .
 
     > [!NOTE]
     > En este nombre de dos partes, *sqlserver* es el nombre del paquete y *sql_text* es el nombre del campo. El evento que hemos elegido anteriormente, *sql_statement_completed* , debe encontrarse en el mismo paquete que el campo que hemos elegido.
@@ -133,7 +133,7 @@ El texto y las capturas de pantalla de ayuda pueden ser ligeramente inexactas cu
 
     ![Nueva sesión > Avanzado > Latencia máxima de envío > Aceptar](../../relational-databases/extended-events/media/xevents-session-newsessions-40-advanced-ssms-yoursessionnode.png)
 
-12. En la parte superior izquierda, haga clic en la página **Advanced (Avanzado)**.
+12. En la parte superior izquierda, haga clic en la página **Advanced (Avanzado)** .
     - Reduce la **latencia máxima de envío** a 3 segundos.
     - Por último, haga clic en el botón **Aceptar** situado en la parte inferior.
 
@@ -153,7 +153,7 @@ En el **Explorador de objetos**de SSMS, puede editar la sesión de eventos al ha
 
 Ha usado la interfaz de usuario de SSMS para generar un script T-SQL que ha creado la sesión de eventos. A continuación, puede ver el script generado:
 
-- Haga clic con el botón derecho en el nodo de la sesión, haga clic en **Incluir sesión como** > **CREATE to (CREATE para)** > **Portapapeles**.
+- Haga clic con el botón derecho en el nodo de la sesión, haga clic en **Incluir sesión como** > **CREATE to (CREATE para)**  > **Portapapeles**.
 - Péguelo en cualquier editor de texto.
 
 
@@ -382,13 +382,13 @@ Existen varias características avanzadas en la interfaz de usuario de SSMS que 
 - [Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md)
 
 
-Los conceptos básicos comienzan con las opciones del menú contextual denominadas **View Target Data (Ver datos de destino)** y **Watch Live Data (Observar datos en directo)**.
+Los conceptos básicos comienzan con las opciones del menú contextual denominadas **View Target Data (Ver datos de destino)** y **Watch Live Data (Observar datos en directo)** .
 
 
 ### <a name="view-target-data"></a>View Target Data (Ver datos de destino)
 
 
-En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho en el nodo de destino que se encuentra debajo del nodo de la sesión de eventos. En el menú contextual, haga clic en **View Target Data (Ver datos de destino)**. SSMS muestra los datos.
+En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho en el nodo de destino que se encuentra debajo del nodo de la sesión de eventos. En el menú contextual, haga clic en **View Target Data (Ver datos de destino)** . SSMS muestra los datos.
 
 La visualización no se actualiza ya que el evento notifica datos nuevos. Pero puede hacer clic en **View Target Data (Ver datos de destino)** de nuevo.
 
@@ -399,7 +399,7 @@ La visualización no se actualiza ya que el evento notifica datos nuevos. Pero p
 ### <a name="watch-live-data"></a>Watch Live Data (Observar datos en directo)
 
 
-En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho en el nodo de la sesión de eventos. En el menú contextual, haga clic en **Watch Live Data (Observar datos en directo)**. SSMS muestra los datos entrantes a medida que llegan en tiempo real.
+En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho en el nodo de la sesión de eventos. En el menú contextual, haga clic en **Watch Live Data (Observar datos en directo)** . SSMS muestra los datos entrantes a medida que llegan en tiempo real.
 
 
 ![Watch Live Data (Observar datos en directo), en SSMS, Administración > Eventos extendidos > Sesiones > SuSesión, hacer clic con el botón derecho](../../relational-databases/extended-events/media/xevents-watchlivedata-ssms-yoursessionnode-63.png)
@@ -411,7 +411,7 @@ En el **Explorador de objetos**de SSMS, puede hacer clic con el botón derecho e
 Existen incontables escenarios para el uso eficaz de los eventos extendidos. En los siguientes artículos se proporcionan escenarios de ejemplo que implican los bloqueos que se han realizado durante las consultas.
 
 
-En los siguientes artículos se describen escenarios específicos para las sesiones de eventos que tienen como objetivo la evaluación de los bloqueos. En los artículos también se muestran algunas técnicas avanzadas, como el uso de **@dbid**y el de `EXECUTE (@YourSqlString)`dinámico:
+En los siguientes artículos se describen escenarios específicos para las sesiones de eventos que tienen como objetivo la evaluación de los bloqueos. En los artículos también se muestran algunas técnicas avanzadas, como el uso de **@dbid** y el de `EXECUTE (@YourSqlString)`dinámico:
 
 - [Buscar los objetos que han obtenido más bloqueos](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - En este escenario se usa package0.histogram de destino, que procesa los datos de eventos sin procesar antes de mostrárselos.
@@ -553,10 +553,11 @@ Las vistas del sistema para eventos extendidos incluyen:
     - Cláusulas CREATE EVENT SESSION.
     - Los controles de interfaz de usuario de SSMS.
 
+## <a name="code-examples-can-differ-for-azure-sql-database"></a>Ejemplos de código que pueden diferir de Azure SQL Database
 
-<a name="appendix1"></a>
-## <a name="appendix-selects-to-ascertain-permission-owner-in-advance"></a>Apéndice: Instrucciones SELECT para averiguar el propietario del permiso por anticipado
+[!INCLUDE[sql-on-premises-vs-azure-similar-sys-views-include.](../../includes/paragraph-content/sql-on-premises-vs-azure-similar-sys-views-include.md)]
 
+## <a name="appendix1"></a> Apéndice: Instrucciones SELECT para averiguar el propietario del permiso por anticipado
 
 Los permisos que se mencionan en este artículo son:
 

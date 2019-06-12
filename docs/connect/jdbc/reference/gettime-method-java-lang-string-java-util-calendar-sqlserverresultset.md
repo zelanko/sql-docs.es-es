@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 13b51f77-cec9-45fc-862e-3d2bb2d718d7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: aba96561e08274f847198b5e2a84cc67b7905945
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aaa80e7af15839f4ccbc0e623d18cf21707850da
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839853"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778872"
 ---
 # <a name="gettime-method-javalangstring-javautilcalendar-sqlserverresultset"></a>Método getTime (java.lang.String, java.util.Calendar) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.sql.Time getTime(java.lang.String colName,
   
  Valor **String** que contiene el nombre de columna.  
   
- *CAL*  
+ *cal*  
   
  Un objeto de calendario.  
   
@@ -56,8 +56,8 @@ public java.sql.Time getTime(java.lang.String colName,
   
  Este método devuelve una hora válida que forma parte de un tipo de datos datetime o smalldatetime de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], con la parte correspondiente a la fecha establecida en la fecha de inicio de Java de 1970/01/01 en la zona horaria del calendario suministrado.  
   
-## <a name="see-also"></a>Ver también  
- [Método getTime &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
+## <a name="see-also"></a>Consulte también  
+ [Método getByte &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/gettime-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

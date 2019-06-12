@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2b3727da-0480-4cea-b8b1-abda90699b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad07fbd53d2e3004ea96572d1c4d28f83e92a509
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5d777242d38e6a7002b2fa557c4ca18290e652a9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604403"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795594"
 ---
 # <a name="setclob-method-int-javaioreader"></a>Método setClob (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public final void setClob(int parameterIndex,
 ## <a name="remarks"></a>Notas  
  El método setClob especifica este método setClob en la interfaz java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

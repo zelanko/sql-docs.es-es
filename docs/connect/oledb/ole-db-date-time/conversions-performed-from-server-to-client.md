@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], server to client
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d6e71a8175cdddf63ad5e55124a63b40117b3be0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407052"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769366"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,12 +32,12 @@ ms.locfileid: "52407052"
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |DATETIME|5, 7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|ACEPTAR (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
@@ -66,7 +66,7 @@ ms.locfileid: "52407052"
 |12|La cadena se analiza como un literal ISO y se convierte al tipo de destino. Si se produce un error, la cadena se analiza como un literal de fecha OLE (que también tiene componentes de hora) y se convierte de una fecha OLE (DBTYPE_DATE) al tipo de destino. La cadena debe cumplir la sintaxis de literales del tipo de destino permitido para que el análisis de formato ISO sea correcto. Para que el análisis de OLE sea correcto, la cadena debe cumplir la sintaxis reconocida por OLE. Si no se puede analizar la cadena, se establece DBSTATUS_E_CANTCONVERTVALUE. Si algún valor de componente está fuera del intervalo, se establece DBSTATUS_E_DATAOVERFLOW.|  
 |13|La cadena se analiza como un literal ISO y se convierte al tipo de destino. Si se produce un error, la cadena se analiza como un literal de fecha OLE (que también tiene componentes de hora) y se convierte de una fecha OLE (DBTYPE_DATE) al tipo de destino. La cadena debe cumplir la sintaxis de los literales de fecha y hora, a menos que el destino sea DBTYPE_DATE o DBTYPE_DBTIMESTAMP. Si éste es el caso, se permite un literal de fecha y hora o fecha para que el análisis de formato ISO sea correcto. Para que el análisis de OLE sea correcto, la cadena debe cumplir la sintaxis reconocida por OLE. Si no se puede analizar la cadena, se establece DBSTATUS_E_CANTCONVERTVALUE. Si algún valor de componente está fuera del intervalo, se establece DBSTATUS_E_DATAOVERFLOW.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Enlaces y conversiones &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

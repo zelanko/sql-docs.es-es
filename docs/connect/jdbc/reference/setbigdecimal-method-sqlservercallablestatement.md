@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b50a920c-3839-40f0-9411-c60bbc2a9f34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97d78c638c572e3a4b591192df489e553f6cbe5a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bbdf6c4f9ab7e50447b887240d0f946477cbcb0c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702023"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764890"
 ---
 # <a name="setbigdecimal-method-sqlservercallablestatement"></a>Método setBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void setBigDecimal(java.lang.String sCol,
 ## <a name="remarks"></a>Notas  
  Este método setBigDecimal especificado por el método setBigDecimal en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

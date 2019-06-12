@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3be84d65-af61-4c34-b052-74a5d488eaa9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bdd85a56b1a75ccaf5d57493686e9f99852f068a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fb088453c2250b2b301b98c8e899d2ae0b504955
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680893"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780847"
 ---
 # <a name="getdriverversion-method-sqlserverdatabasemetadata"></a>Método getDriverVersion (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.lang.String getDriverVersion()
 ## <a name="remarks"></a>Notas  
  Este método getDriverVersion especificado por el método getDriverVersion en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2bb0038320ccefe0e143ca7c18fbf7e117c4a75
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d286046f40ea96863302b97d2c1d8289985dab2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719663"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788534"
 ---
 # <a name="understanding-row-locking"></a>Descripción del bloqueo de filas
 
@@ -32,6 +32,6 @@ El bloqueo se utiliza para asegurar la integridad transaccional y la coherencia 
 > [!NOTE]  
 > Para obtener más información sobre el bloqueo de fila en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Bloqueos en [!INCLUDE[ssDE](../../includes/ssde_md.md)]" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Administrar conjuntos de resultados con el controlador JDBC](../../connect/jdbc/managing-result-sets-with-the-jdbc-driver.md)

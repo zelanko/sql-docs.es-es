@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a4b2cdefeecc56c331224cd7453e861defafb8b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687974"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761629"
 ---
 # <a name="working-with-a-connection"></a>Trabajar con una conexión
 
@@ -40,9 +40,9 @@ Connection con = DriverManager.getConnection(connectionUrl);
 Este técnica creará una conexión a una base de datos usando el primer controlador disponible de la lista de controladores que se pueda conectar correctamente con la URL dada.
 
 > [!NOTE]  
-> Al usar la biblioteca de clases sqljdbc4.jar, las aplicaciones no necesitan registrar o cargar explícitamente el controlador usando el método Class.forName. Cuando se llama al método getConnection de la clase DriverManager, un controlador adecuado se encuentra en el conjunto de controladores JDBC registrados. Para obtener más información, vea Usar el controlador JDBC
+> Al usar la biblioteca de clases sqljdbc4.jar, las aplicaciones no necesitan registrar o cargar explícitamente el controlador usando el método Class.forName. Cuando se llama al método getConnection de la clase DriverManager, se busca un controlador apropiado en el conjunto de controladores JDBC registrados. Para obtener más información, vea Usar el controlador JDBC
 
-## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Crear una conexión con la clase SQLServerDriver 
+## <a name="creating-a-connection-by-using-the-sqlserverdriver-class"></a>Crear una conexión con la clase SQLServerDriver
 
 Si tiene que especificar un controlador en particular de la lista de controladores para DriverManager, puede crear una conexión a una base de datos con el método [connect](../../connect/jdbc/reference/connect-method-sqlserverdriver.md) de la clase [SQLServerDriver](../../connect/jdbc/reference/sqlserverdriver-class.md), como en el siguiente ejemplo:
 
@@ -125,6 +125,6 @@ De esta forma se liberarán los recursos de la base de datos que está usando el
 > [!NOTE]  
 > Si llama al método close, también se revertirán todas las transacciones pendientes.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

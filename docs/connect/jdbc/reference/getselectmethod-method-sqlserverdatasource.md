@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b6255d2e-0028-474a-afa8-553ef092243e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4a9a4a0a3f05e6f5bd8bfe8fbcb111a9ed4208f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fcdec15bb04af85cb068ea209625e9a10d8f85db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704063"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66792028"
 ---
 # <a name="getselectmethod-method-sqlserverdatasource"></a>Método getSelectMethod (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public java.lang.String getSelectMethod()
 ## <a name="remarks"></a>Notas  
  La propiedad selectMethod especifica el tipo de cursor predeterminado que se utiliza para un conjunto de resultados. Esta propiedad es útil cuando se estén abordando grandes conjuntos de resultados y no se quiera almacenar el conjunto de resultados entero en la memoria del lado cliente. Si se establece la propiedad en "cursor", podrá crear un cursor en el lado del servidor que puede capturar fragmentos más pequeños de cada vez. Si no se establece la propiedad selectMethod, el método getSelectMethod devuelve el valor predeterminado "direct".  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

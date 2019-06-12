@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 069c68ff-442d-4104-917f-3445a3ad264a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3676612dbb690939a5bcf01b60ca29b20ba8aede
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ee07768e1d92cf39f7dc773b68b118406742f8f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829953"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765685"
 ---
 # <a name="getbyte-method-javalangstring-sqlserverresultset"></a>Método getByte (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,11 +47,11 @@ public byte getByte(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getByte especificado por el método getByte en la interfaz java.sql.ResultSet.  
+ El método getDate especifica este método getDate en la interfaz java.sql.ResultSet.  
   
  Este método solo se admite en los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pueden devolver de forma segura un valor de bytes, como por ejemplo, tinyint y bit. El resto de tipos de datos producirá una excepción.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getByte &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getbyte-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

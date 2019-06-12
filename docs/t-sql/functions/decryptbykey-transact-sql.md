@@ -21,12 +21,12 @@ ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 55999857db6723d883683345aa4ab57d301b2cf4
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 1e9c989630296c8417bb6d72f82ef67fcaf28033
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65945498"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413411"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ En esta función se usa una clave simétrica para descifrar los datos.
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
+```sql
   
 DecryptByKey ( { 'ciphertext' | @ciphertext }   
     [ , add_authenticator, { authenticator | @authenticator } ] )  
@@ -66,6 +66,8 @@ Una variable que contiene datos a partir de los que se genera un autenticador. D
 `DECRYPTBYKEY` usa una clave simétrica. La base de datos debe tener esta clave simétrica ya abierta. `DECRYPTBYKEY` permitirá varias claves abiertas a la vez. No es necesario abrir la clave inmediatamente antes de descifrar el texto cifrado.  
   
 El cifrado y descifrado simétricos suelen funcionar con relativa rapidez, y funcionan bien para las operaciones que implican grandes volúmenes de datos.  
+
+La llamada a `DECRYPTBYKEY` debe producirse en el contexto de la base de datos que contiene la clave de cifrado. Asegúrese de esto mediante una llamada a `DECRYPTBYKEY` desde un objeto (por ejemplo, una vista, un procedimiento almacenado o una función) que reside en la base de datos. 
   
 ## <a name="permissions"></a>Permisos  
 La clave simétrica ya debe estar abierta en la sesión actual. Para obtener más información, vea [OPEN SYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/open-symmetric-key-transact-sql.md).  
@@ -75,7 +77,7 @@ La clave simétrica ya debe estar abierta en la sesión actual. Para obtener má
 ### <a name="a-decrypting-by-using-a-symmetric-key"></a>A. Descifrar utilizando una clave simétrica  
 En este ejemplo se descifra texto cifrado con una clave simétrica.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data.  
 OPEN SYMMETRIC KEY SSN_Key_01  
    DECRYPTION BY CERTIFICATE HumanResources037;  
@@ -95,7 +97,7 @@ GO
 ### <a name="b-decrypting-by-using-a-symmetric-key-and-an-authenticating-hash"></a>B. Descifrar utilizando una clave simétrica y un hash de autenticación  
 En este ejemplo se descifran datos que originalmente se cifraron juntos con un autenticador.  
   
-```  
+```sql  
 -- First, open the symmetric key with which to decrypt the data  
 OPEN SYMMETRIC KEY CreditCards_Key11  
    DECRYPTION BY CERTIFICATE Sales09;  
@@ -112,6 +114,61 @@ SELECT CardNumber, CardNumber_Encrypted
 GO  
   
 ```  
+
+### <a name="c-fail-to-decrypt-when-not-in-the-context-of-database-with-key"></a>C. No se puede descifrar cuando no está en el contexto de base de datos con clave
+En el ejemplo siguiente se muestra que `DECRYPTBYKEY` debe ejecutarse en el contexto de la base de datos que contiene la clave. La fila no se descifra cuando `DECRYPTBYKEY` se ejecuta en la base de datos maestra (master); el resultado es NULL. 
+
+```sql
+-- Create the database
+CREATE DATABASE TestingDecryptByKey
+GO
+
+USE [TestingDecryptByKey]
+
+-- Create the table and view
+CREATE TABLE TestingDecryptByKey.dbo.Test(val VARBINARY(8000) NOT NULL);
+GO
+CREATE VIEW dbo.TestView AS SELECT CAST(DecryptByKey(val) AS VARCHAR(30)) AS DecryptedVal FROM TestingDecryptByKey.dbo.Test;
+GO
+
+-- Create the key, and certificate
+USE TestingDecryptByKey;
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'ItIsreallyLong1AndSecured!Passsword#';
+CREATE CERTIFICATE TestEncryptionCertificate WITH SUBJECT = 'TestEncryption';
+CREATE SYMMETRIC KEY TestEncryptSymmmetricKey WITH ALGORITHM = AES_256, IDENTITY_VALUE = 'It is place for test',
+KEY_SOURCE = 'It is source for test' ENCRYPTION BY CERTIFICATE TestEncryptionCertificate;
+
+-- Insert rows into the table
+DECLARE @var VARBINARY(8000), @Val VARCHAR(30);
+SELECT @Val = '000-123-4567';
+OPEN SYMMETRIC KEY TestEncryptSymmmetricKey DECRYPTION BY CERTIFICATE TestEncryptionCertificate;
+SELECT @var = EncryptByKey(Key_GUID('TestEncryptSymmmetricKey'), @Val);
+SELECT CAST(DecryptByKey(@var) AS VARCHAR(30)), @Val;
+INSERT INTO dbo.Test VALUES(@var);
+GO
+
+-- Switch to master
+USE [Master];
+GO
+
+-- Results show the date inserted
+SELECT DecryptedVal FROM TestingDecryptByKey.dbo.TestView;
+
+-- Results are NULL because we are not in the context of the TestingDecryptByKey Database
+SELECT CAST(DecryptByKey(val) AS VARCHAR(30)) AS DecryptedVal FROM TestingDecryptByKey.dbo.Test;
+GO
+
+-- Clean up resources
+USE TestingDecryptByKey;
+
+DROP SYMMETRIC KEY TestEncryptSymmmetricKey REMOVE PROVIDER KEY;
+DROP CERTIFICATE TestEncryptionCertificate;
+
+Use [Master]
+DROP DATABASE TestingDecryptByKey;
+GO
+```
+
   
 ## <a name="see-also"></a>Consulte también  
  [ENCRYPTBYKEY &#40;Transact-SQL&#41;](../../t-sql/functions/encryptbykey-transact-sql.md)   

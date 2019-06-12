@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4e250baaf4e0d52c447fdd7d36614ba741bc664
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cbab5a72d076e6a66b306ec9bf11c13b56c599e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47598583"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769884"
 ---
 # <a name="sample-jdbc-driver-applications"></a>Aplicaciones del controlador JDBC de ejemplo
 
@@ -42,6 +42,6 @@ Todas las aplicaciones de ejemplo se incluyen en archivos de código *.java que 
 | [Trabajo con datos grandes](../../../connect/jdbc/code-samples/working-with-large-data.md)                                            | Estas aplicaciones de ejemplo demuestran cómo usar el almacenamiento en búfer adaptable para recuperar datos de valores grandes de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin la sobrecarga que suponen los cursores de servidor.                                                         |
 | [Clasificación y detección de datos de SQL](../../jdbc/code-samples/data-discovery-and-classification-sample.md) | Esta aplicación de ejemplo muestra cómo recuperar información de clasificación y detección de datos contenida en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos de un objeto de conjunto de resultados mediante el controlador JDBC.                                            |
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../../connect/jdbc/overview-of-the-jdbc-driver.md)

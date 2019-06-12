@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b41b8baf067b753904d43742c34a94ceb6efee90
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: fec14aa519dfcc5539005321f0110c25146ce6e6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47701973"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796346"
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>Método isSigned (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public boolean isSigned(int column)
 ## <a name="remarks"></a>Notas  
  Este método isSigned especificado por el método isSigned en la interfaz java.sql.ResultSetMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 903106b5dfc17b98aae0614bd7b168d9b3acdf11
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52527532"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789872"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -47,7 +47,7 @@ bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.x
 ## <a name="available-options"></a>Opciones disponibles
 En la versión actual, se encuentran disponibles las siguientes opciones y sintaxis:  
 
-[_base de datos_**.**] _esquema_**.** _tabla_ **en** _datos\_archivo_ | **out** _datos\_archivo_
+[_database_ **.** ]_schema_ **.** _table_ **in** _data\_file_ | **out** _data\_file_
 
 - -a *packet_size*  
 Especifica el número de bytes por paquete de red enviados y recibidos por el servidor.  
@@ -79,7 +79,7 @@ Especifica el número de la primera fila que se exportará desde una tabla o que
 Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.  
   
 - -l  
-Especifica un tiempo de espera de inicio de sesión. La opción –l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
+Especifica un tiempo de espera de inicio de sesión. La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en  agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
   
 - -L *last_row*  
 Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos.  
@@ -146,6 +146,6 @@ Utiliza los tipos de datos de una versión anterior de [!INCLUDE[ssNoVersion](..
 - -X  
 Si se usa con las opciones format y -f format_file, genera un archivo de formato basado en XML en lugar del archivo de formato predeterminado que no es XML.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión con **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  

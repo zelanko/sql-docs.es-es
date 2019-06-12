@@ -16,13 +16,13 @@ helpviewer_keywords:
 - dropping tables
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 467c465af5cc7c095feace48b0c3bc5c8feaae2f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f743194d0036d338ad39594d7c7f00665d83a224
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695893"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766242"
 ---
 # <a name="dropping-a-sql-server-table"></a>Quitar una tabla de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47695893"
   
  Especifique el nombre de la tabla como una cadena de caracteres Unicode en el miembro *pwszName* de la unión *uName* en el parámetro *pTableID*. El miembro *eKind* de *pTableID* debe ser DBKIND_NAME.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

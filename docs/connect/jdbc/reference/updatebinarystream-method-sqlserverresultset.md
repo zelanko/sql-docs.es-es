@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 1af26ac2-76e5-4a26-a600-9919211333ba
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: efeb37786e94cbdbde08433fc819081ffacedce3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: da5b91da09e0e811a464a63c1ce85e72880fdc34
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771343"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787215"
 ---
 # <a name="updatebinarystream-method-sqlserverresultset"></a>Método updateBinaryStream (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47771343"
 |[updateBinaryStream (java.lang.String, java.io.InputStream, int)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-int.md)|Actualiza la columna designada con un valor de flujo binario, que tendrá el número especificado de bytes.|  
 |[updateBinaryStream(java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updatebinarystream-method-java-lang-string-java-io-inputstream-long.md)|Actualiza la columna designada con un valor de flujo binario, que tendrá el número especificado de bytes.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

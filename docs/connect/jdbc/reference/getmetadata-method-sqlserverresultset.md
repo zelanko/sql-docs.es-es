@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 9dcdbf69-1d47-422c-842e-0bed5afdcb93
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1b7efaada004677329006941dab9a5ea71469cb1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f1b73f9a0d1c95978dc92d3139ba637bfa707b6f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47652653"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784817"
 ---
 # <a name="getmetadata-method-sqlserverresultset"></a>Método getMetaData (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public java.sql.ResultSetMetaData getMetaData()
 ## <a name="remarks"></a>Notas  
  Este método getMetaData especificado por el método getMetaData de la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

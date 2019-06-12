@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 158be08f-387d-4c5b-b567-a1fe590d6f16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 38c3525da3af94c64a723766b96423b64cd19346
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d755c53cc49b0d1d92b49a0e1662025aa91e99cc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764000"
 ---
 # <a name="supportsnamedparameters-method-sqlserverdatabasemetadata"></a>Método supportsNamedParameters (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsNamedParameters()
 ## <a name="remarks"></a>Notas  
  Este método supportsNamedParameters especificado por el método supportsNamedParameters en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

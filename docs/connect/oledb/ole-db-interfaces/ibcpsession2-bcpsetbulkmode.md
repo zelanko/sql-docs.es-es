@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession2:: Bcpsetbulkmode | Microsoft Docs'
+title: IBCPSession2::BCPSetBulkMode | Microsoft Docs
 description: 'Uso de ibcpsession2:: Bcpsetbulkmode para crear una copia masiva una consulta o una tabla'
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,13 @@ helpviewer_keywords:
 - BCPSetBulkMode function
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8df4a1e06e0bb1d7fbc4f4352c5c650be029f980
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 5987ca7b01022d30df0ee9bcded83ec4f65078ff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532452"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790739"
 ---
 # <a name="ibcpsession2bcpsetbulkmode"></a>IBCPSession2::BCPSetBulkMode
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ HRESULT BCPSetBulkMode (
  *property*  
  Constante de tipo BYTE. Vea la tabla en la sección Comentarios para obtener una lista de las constantes.  
   
- *Years*  
+ *pField*  
  Puntero al valor de terminador de campo.  
   
  cbField  
@@ -363,7 +363,7 @@ int main() {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [IBCPSession2 &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession2-ole-db.md)  
   
   

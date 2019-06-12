@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b343b2b2-7215-4bcd-b12d-de4a9662e536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f9e1aa955fa8c1b2063ecb214d618b70e57a87c7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5314932281224811ac5dbe3efd4bcf6c5023c0f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47692753"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763634"
 ---
 # <a name="getclob-method-sqlserverresultset"></a>Método getClob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47692753"
 |[getClob (int)](../../../connect/jdbc/reference/getclob-method-int-sqlserverresultset.md)|Recupera el valor del índice de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto Clob en el lenguaje de programación Java.|  
 |[getClob (java.lang.String)](../../../connect/jdbc/reference/getclob-method-java-lang-string-sqlserverresultset.md)|Recupera el valor del nombre de la columna que se ha designado en la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) como un objeto Clob en el lenguaje de programación Java.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

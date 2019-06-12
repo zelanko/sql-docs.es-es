@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bfa24c46-b7cf-470a-afa1-52301847a448
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0cbe71d1ff4d19da3baba87210a1444e83d4f98e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6cdfd42d0670d8d536e0a9bf40f2a6981ef5b937
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47633783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796362"
 ---
 # <a name="issamerm-method-sqlserverxaresource"></a>Método isSameRM (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public boolean isSameRM(javax.transaction.xa.XAResource xares)
 ## <a name="remarks"></a>Notas  
  El método de confirmación especifica este método de confirmación en la interfaz javax.transaction.xa.XAResource.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [Miembros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [Clase SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

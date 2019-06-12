@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: edee084b-9a8c-4167-9e13-66fc3ed1ecaa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1e30ccf2871f3603815ee89bb78fa1ad2f6b672b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1e841d3b6999d6852dc9b792fb55ffdd94195e3a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47842113"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764288"
 ---
 # <a name="supportsintegrityenhancementfacility-method-sqlserverdatabasemetadata"></a>Método supportsIntegrityEnhancementFacility (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsIntegrityEnhancementFacility()
 ## <a name="remarks"></a>Notas  
  Este método supportsIntegrityEnhancementFacility especificado por el método supportsIntegrityEnhancementFacility en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

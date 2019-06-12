@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 840ecfcf-0dd3-4b7b-976f-dc9a96cd1464
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8ec96cd3f56b1710268ae951e39e98866fe1bd54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1ca9d0fede758b99f442a9553e4266e79fa81134
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826823"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794025"
 ---
 # <a name="recover-method-sqlserverxaresource"></a>Método recover (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public javax.transaction.xa.Xid[] recover(int flags)
   
  Si el parámetro **marca** no es XAResource.TMSTARTRSCAN o XAResource.TMSTARTRSCAN | XAResource.TMENDRSCAN, debe ser un análisis de recuperación en curso.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-methods.md)   
  [Miembros SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-members.md)   
  [Clase SQLServerXAResource](../../../connect/jdbc/reference/sqlserverxaresource-class.md)  

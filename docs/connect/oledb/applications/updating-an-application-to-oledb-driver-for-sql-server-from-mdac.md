@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, updating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: edd075f24e1acaef4bb83485a8b7b2faef874d06
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 72f4406c4da07a1ddec422f09512dfe7cb28a028
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524483"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778087"
 ---
 # <a name="updating-an-application-to-ole-db-driver-for-sql-server-from-mdac"></a>Actualización de una aplicación al controlador OLE DB para SQL Server desde MDAC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -73,7 +73,7 @@ ms.locfileid: "52524483"
 
 -   El controlador OLE DB para SQL Server devuelve sinónimos en los conjuntos de filas de esquema TABLES y TABLE_INFO, con TABLE_TYPE establecido en SYNONYM.  
 
--   Los valores devueltos de tipo de datos **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, **xml**, **udt** u otros tipos de objetos grandes no pueden devolverse a versiones de cliente anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si desea usar estos tipos como valores devueltos, debe usar el controlador de OLE DB para SQL Server.  
+-   Los valores devueltos de tipo de datos **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , **xml**, **udt** u otros tipos de objetos grandes no pueden devolverse a versiones de cliente anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]. Si desea usar estos tipos como valores devueltos, debe usar el controlador de OLE DB para SQL Server.  
 
 -   MDAC permite ejecutar las instrucciones siguientes al inicio de transacciones manuales e implícitas, mientras que el controlador OLE DB para SQL Server no. Deben ejecutarse en modo de confirmación automática.  
 
@@ -110,5 +110,5 @@ ms.locfileid: "52524483"
 
  Ambos controlador OLE DB para SQL Server como MDAC admiten leer con las versiones de fila, pero solo controlador de OLE DB para el aislamiento de transacción de instantánea de SQL Server admite el aislamiento de transacción confirmada. (En términos de programación, el aislamiento de transacción de lectura confirmada con versiones de fila es igual que la transacción de lectura confirmada.)  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compilación de aplicaciones con el controlador OLE DB para SQL Server](../../oledb/applications/building-applications-with-oledb-driver-for-sql-server.md)  

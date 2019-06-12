@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fc744566-7191-4b15-9f76-b4b8087fb14a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4bffa24786e4f86d170c4065b11f3fc9ff8ec49b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3ca37a11eba988f0a4b65281ca6f6f4b0e83863f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630934"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783542"
 ---
 # <a name="acceptsurl-method-sqlserverdriver"></a>Método acceptsURL (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public boolean acceptsURL(java.lang.String url)
 ## <a name="remarks"></a>Notas  
  Este método acceptsURL especificado por el método acceptsURL en la interfaz java.sql.Driver.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [Miembros de SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [Clase SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

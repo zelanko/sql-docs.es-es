@@ -15,13 +15,13 @@ helpviewer_keywords:
 - Execute method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 86de5c5e985d038ec4e2640fcd9d4d87b56546d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 24ecb2e2089780ee9aed25853e0933bab1a4664c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773832"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66781318"
 ---
 # <a name="creating-rowsets-with-icommandexecute"></a>Crear conjuntos de filas con ICommand::Execute
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "47773832"
   
  Desplazable controlador OLE DB para conjuntos de filas de SQL Server son compatibles con [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursores. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] impone limitaciones en los cursores que son sensibles a los cambios realizados por otros usuarios de la base de datos. Concretamente, las filas de algunos cursores no se pueden ordenar y es posible que no se lleve a cabo correctamente la creación de un conjunto de filas mediante un comando que contiene una cláusula SQL ORDER BY. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

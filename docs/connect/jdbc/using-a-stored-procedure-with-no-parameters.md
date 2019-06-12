@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e9470a6d-a758-4c56-96ec-7b37139e36a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5430d5bc97c91357dd0e3d756e8f28f7a813467b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d766423b4ee2c1db4b7515c87edfa96b4b84b416
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47820596"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790387"
 ---
 # <a name="using-a-stored-procedure-with-no-parameters"></a>Usar un procedimiento almacenado sin parámetros
 
@@ -58,6 +58,6 @@ public static void executeSprocNoParams(Connection con) throws SQLException {
 }
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

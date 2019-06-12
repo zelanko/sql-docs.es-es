@@ -1,7 +1,7 @@
 ---
 title: Método deleteRow (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 01/20/2017
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -15,23 +15,23 @@ apitype: Assembly
 ms.assetid: aa04a644-c7c2-4738-8b6e-7fea566d2c16
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 466fa86609ba4f784e78ba9ac0fb5178d827645e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 987be5ee9fd49385acf02e52108e1e657fbc08a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786519"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Método deleteRow (SQLServerResultSet)
+
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Elimina la fila actual de este objeto [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) y de la base de datos subyacente.  
   
 ## <a name="syntax"></a>Sintaxis  
   
-```  
-  
+```cpp
 public void deleteRow()  
 ```  
   
@@ -45,7 +45,7 @@ public void deleteRow()
   
  Al utilizar los cursores del conjunto de claves, este método deja un hueco en el conjunto de resultados. Puede buscar este hueco mediante el método [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Los números de fila de las filas en el conjunto de resultados no se ven modificados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

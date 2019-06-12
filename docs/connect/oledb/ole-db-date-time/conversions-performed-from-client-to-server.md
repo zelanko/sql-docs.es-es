@@ -12,13 +12,13 @@ helpviewer_keywords:
 - conversions [OLE DB], client to server
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 625b8c6503378341596523d7f1887129c38d6a19
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 49d474e1fcaca6c90cdec5bdfcb0a8194ce7d23f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769307"
 ---
 # <a name="conversions-performed-from-client-to-server"></a>Conversiones realizadas de cliente a servidor
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,18 +67,18 @@ ms.locfileid: "47827033"
 |11|El número de dígitos de fracciones de segundo (la escala) se determina según el tamaño de la columna de destino, de acuerdo con la tabla siguiente. Si el tamaño de las columnas es mayor que el intervalo de la tabla, se presupone una escala de 9. Esta conversión debería permitir hasta nueve dígitos en las fracciones de segundo, que es el máximo permitido por OLE DB.<br /><br /> Sin embargo, si el tipo de origen es DBTIMESTAMP y las fracciones de segundo son cero, no se generan dígitos de fracciones de segundo ni separador decimal. Este comportamiento asegura la compatibilidad con versiones anteriores para aplicaciones desarrolladas utilizando proveedores OLE DB anteriores.<br /><br /> Un tamaño de columna de ~0 implica un tamaño ilimitado en OLE DB (9 dígitos, a menos que sea aplicable la regla de 3 dígitos para DBTIMESTAMP).|  
 |12|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para DBTYPE_DATE. Las fracciones de segundo se truncan en cero.|  
 |13|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para DBTYPE_FILETIME. Si usa la API FileTimeToSystemTime de Windows, la precisión de fracciones de segundo se limita a 1 milisegundo.|  
-|14|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para **smalldatetime**. Los segundos se establecen en cero.|  
-|15|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para **datetime**. Los segundos se redondean a la fracción 1/300 de segundo más próxima.|  
+|14|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para **smalldatetime** . Los segundos se establecen en cero.|  
+|15|Se mantiene la semántica de conversión anterior a [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] para **datetime** . Los segundos se redondean a la fracción 1/300 de segundo más próxima.|  
 |16|El comportamiento de conversión de un valor (de un tipo determinado) incrustado en una estructura de cliente de SSVARIANT y el comportamiento del mismo valor y tipo cuando no está incrustado en una estructura de cliente de SSVARIANT son iguales.|  
   
 ||||  
 |-|-|-|  
 |Tipo|Longitud (en caracteres)|Escala|  
-|DBTIME2|8, 10..18|0, supuesta 1.. 9|  
-|DBTIMESTAMP|19, 21..29|0, supuesta 1.. 9|  
-|DBTIMESTAMPOFFSET|26, 28..36|0, supuesta 1.. 9|  
+|DBTIME2|8, 10..18|0,1..9|  
+|DBTIMESTAMP|19, 21..29|0,1..9|  
+|DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Enlaces y conversiones &#40;OLE DB&#41;](../../oledb/ole-db-date-time/conversions-ole-db.md)  
   
   

@@ -56,12 +56,12 @@ ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 5be56de82834133127700b945440ffb0e013fa4c
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: f5e268e821713e52a48b31bf7afa9553e2dc9712
+ms.sourcegitcommit: 5905c29b5531cef407b119ebf5a120316ad7b713
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556155"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66429017"
 ---
 # <a name="hints-transact-sql---query"></a>Sugerencias (Transact-SQL): consulta
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -153,7 +153,7 @@ Especifica que las vistas indexadas se expanden. También especifica que el opti
   
 Esta sugerencia de consulta virtualmente no permite el uso directo de vistas indizadas ni índices en vistas indizadas en el plan de consulta.  
   
-La vista indexada sigue contraída si hay una referencia directa a la vista en la parte SELECT de la consulta. La vista también permanece contraída si se especifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX (index\_value_ [ **,**_...n_ ] ) ). Para más información sobre la sugerencia de consulta NOEXPAND, vea [Uso de NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+La vista indexada sigue contraída si hay una referencia directa a la vista en la parte SELECT de la consulta. La vista también permanece contraída si se especifica WITH (NOEXPAND) o WITH (NOEXPAND, INDEX (index\_value_ [ **,** _...n_ ] ) ). Para más información sobre la sugerencia de consulta NOEXPAND, vea [Uso de NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 La sugerencia solo afecta a las vistas de la parte SELECT de las instrucciones, incluidas las vistas de las instrucciones INSERT, UPDATE, MERGE y DELETE.  
   
@@ -257,27 +257,27 @@ Fuerza al optimizador de consultas a intentar aplicar un plan que funcione para 
   
 Si no es posible realizar tal plan, el optimizador de consultas devuelve un error en lugar de diferir la detección de errores hasta la ejecución de la consulta. Las filas pueden contener columnas de longitud variable; el [!INCLUDE[ssDE](../../includes/ssde-md.md)] permite definir filas con un tamaño potencial máximo que supere la capacidad del [!INCLUDE[ssDE](../../includes/ssde-md.md)] para procesarlas. Normalmente, a pesar del tamaño potencial máximo, una aplicación almacena filas cuyo tamaño real se encuentra dentro de los límites que puede procesar el [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] se encuentra con una fila demasiado larga, devuelve un error de ejecución.  
  
-<a name="use_hint"></a> USE HINT ( **'**_hint\_name_**'** )    
- **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].
+<a name="use_hint"></a> USE HINT ( **'** _hint\_name_ **'** )    
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
  
 Proporciona una o varias sugerencias adicionales para el procesador de consultas. Las sugerencias adicionales se especifican mediante un nombre de la sugerencia **dentro de comillas simples**.   
 
 Se admiten los siguientes nombres de sugerencia:    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
+   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan de consulta mediante la suposición de contención simple en lugar de la suposición de contención de base predeterminada para las combinaciones en el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) del [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones más recientes. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476. 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
-   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan con una selectividad mínima al estimar predicados AND para que los filtros tengan en cuenta la correlación. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 cuando se usa con el modelo de estimación de la cardinalidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores, y tiene un efecto similar cuando se usa la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 con el modelo de estimación de la cardinalidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones posteriores.
+   Hace que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] genere un plan con una selectividad mínima al estimar predicados AND para que los filtros tengan en cuenta la correlación. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 cuando se usa con el modelo de estimación de cardinalidad de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores, y tiene un efecto similar cuando se usa la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 con el modelo de estimación de cardinalidad de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] o versiones posteriores.
 *  "DISABLE_BATCH_MODE_ADAPTIVE_JOINS"       
-   Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins).
+   Deshabilita las combinaciones adaptables del modo por lotes. Para obtener más información, vea [Combinaciones adaptables del modo por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK"       
-   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback).   
+   Deshabilita los comentarios de concesión de memoria en modo por lotes. Para obtener más información, vea [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 * "DISABLE_DEFERRED_COMPILATION_TV"    
-  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation).
+  Deshabilita la compilación diferida de variables de tabla. Para obtener más información, consulte [Compilación diferida de variables de tabla](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_INTERLEAVED_EXECUTION_TVF"      
-   Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs).
+   Deshabilita la ejecución intercalada de las funciones con valores de tabla de múltiples instrucciones. Para más información, consulte [Ejecución intercalada de funciones con valores de tabla de múltiples instrucciones](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].   
 *  "DISABLE_OPTIMIZED_NESTED_LOOP"      
-   Indica al procesador de consultas que no use una operación de ordenación (ordenación por lotes) para las combinaciones de bucle anidado optimizadas cuando se genera un plan de consulta. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
+   Indica al procesador de consultas que no use una operación de ordenación (ordenación por lotes) para las combinaciones de bucle anidado optimizadas cuando se genera un plan de consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340.
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
    Hace que SQL Server genere un plan que no usa las modificaciones del objetivo de fila con las consultas que contienen estas palabras clave: 
    
@@ -286,23 +286,23 @@ Se admiten los siguientes nombres de sugerencia:
    * IN
    * EXISTS
    
-   Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
+   Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4138.
 *  "DISABLE_PARAMETER_SNIFFING"      
-   Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a PARAMETER_SNIFFING=OFF de la opción [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Indica al optimizador de consultas que utilice el promedio de distribución de datos al compilar una consulta con uno o más parámetros. Esta instrucción hace que el plan de consulta sea independiente en el valor del parámetro que se utilizó en primer lugar cuando se compiló la consulta. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 o a la opción `PARAMETER_SNIFFING = OFF` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 * "DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK"    
-  Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback).
+  Deshabilita los comentarios de concesión de memoria del modo de fila. Para más información, consulte [Comentarios de concesión de memoria de modo de proceso por lotes](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 * "DISABLE_TSQL_SCALAR_UDF_INLINING"    
-  Deshabilita la inserción de UDF escalar. Para obtener más información, vea [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Inserción de UDF escalar).
+  Deshabilita la inserción de UDF escalar. Para obtener más información, vea [Scalar UDF inlining](../../relational-databases/user-defined-functions/scalar-udf-inlining.md) (Inserción de UDF escalar). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]).    
 * "DISALLOW_BATCH_MODE"    
-  Deshabilita la ejecución del modo por lotes. Para más información, consulte [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes).
+  Deshabilita la ejecución del modo por lotes. Para más información, consulte [Modos de ejecución](../../relational-databases/query-processing-architecture-guide.md#execution-modes). **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].     
 *  "ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS"      
-   Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
+   Habilita las estadísticas rápidas generadas automáticamente (modificación de histograma) para las columnas de índice iniciales para las que se necesite la estimación de cardinalidad. El histograma usado para calcular la cardinalidad se ajustará en tiempo de compilación de la consulta para tener en cuenta el valor máximo o mínimo real de esta columna. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139. 
 *  "ENABLE_QUERY_OPTIMIZER_HOTFIXES"     
-   Permite revisiones del optimizador de consultas (cambios publicados en las actualizaciones acumulativas y Service Packs de SQL Server). Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o a QUERY_OPTIMIZER_HOTFIXES=ON de la opción [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Permite revisiones del optimizador de consultas (cambios publicados en las actualizaciones acumulativas y Service Packs de SQL Server). Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4199 o a la opción `QUERY_OPTIMIZER_HOTFIXES = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  "FORCE_DEFAULT_CARDINALITY_ESTIMATION"      
-   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción de [configuración con ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) LEGACY_CARDINALITY_ESTIMATION=ON o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
+   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) que se corresponde con el nivel de compatibilidad de la base de datos actual. Use esta sugerencia para invalidar la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) o la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481.
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Este nombre de sugerencia es análogo a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a LEGACY_CARDINALITY_ESTIMATION=ON de la opción [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
+   Fuerza al optimizador de consultas a usar el modelo de [estimación de la cardinalidad](../../relational-databases/performance/cardinality-estimation-sql-server.md) de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones anteriores. Es equivalente a la [marca de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 o a la opción `LEGACY_CARDINALITY_ESTIMATION = ON` de [Configuración de ámbito de base de datos](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  Exige el comportamiento del optimizador de consultas en un nivel de consulta. Este comportamiento se produce como si la consulta se compilara con nivel de compatibilidad de base de datos _n_, donde _n_ es un nivel de compatibilidad de base de datos compatible. Consulte [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) para ver una lista de los valores admitidos actualmente para _n_. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
@@ -328,10 +328,10 @@ Puede consultar la lista de todos los nombres de USE HINT compatibles mediante l
 > [!IMPORTANT] 
 > Algunas sugerencias USE HINT pueden entrar en conflicto con las marcas de seguimiento habilitadas a nivel global o de sesión, o con las opciones de configuración con ámbito de base de datos. En este caso, la sugerencia de nivel de consulta (USE HINT) siempre tiene prioridad. Si una sugerencia USE HINT entra en conflicto con otra sugerencia de consulta o una marca de seguimiento habilitada en el nivel de consulta (por ejemplo, mediante QUERYTRACEON), [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generará un error al intentar ejecutar la consulta. 
 
- USE PLAN N **'**_xml\_plan_**'**     
- Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **'**_xml\_plan_**'**. USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
+ USE PLAN N **'** _xml\_plan_ **'**      
+ Fuerza al optimizador de consultas a usar un plan de consulta existente en una consulta especificada por **'** _xml\_plan_ **'** . USE PLAN no puede especificarse con las instrucciones INSERT, UPDATE, MERGE ni DELETE.  
   
-TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ] ] **)** Aplica la sugerencia de la tabla especificada a la tabla o vista que corresponde a _exposed\_object\_name_. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md).  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ [ **,** ]..._n_ ] ] **)** Aplica la sugerencia de la tabla especificada a la tabla o vista que corresponde a _exposed\_object\_name_. Se recomienda usar una sugerencia de tabla como una sugerencia de consulta únicamente en el contexto de una [guía de plan](../../relational-databases/performance/plan-guides.md).  
   
  _exposed\_object\_name_ puede ser una de las referencias siguientes:  
   
@@ -341,7 +341,7 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
  Al especificar _exposed\_object\_name_ sin especificar también una sugerencia de tabla, se descartan todos los índices que especifique en la consulta como parte de una sugerencia de tabla para el objeto. Después, el optimizador de consultas determina el uso de los índices. Puede emplear esta técnica para eliminar el efecto de una sugerencia de tabla INDEX cuando no se puede modificar la consulta original. Vea el ejemplo J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Es la sugerencia de tabla que se aplica a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [ **(** _index\_value_ **(** _index\_column\_name_ [ **,** ... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK } Es la sugerencia de tabla que se aplica a la tabla o vista que corresponde a *exposed_object_name* como una sugerencia de consulta. Para obtener una descripción de estas sugerencias, vea [Sugerencias de tabla &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Las sugerencias de tabla distintas de INDEX, FORCESCAN y FORCESEEK no están permitidas como sugerencias de consulta, a menos que la consulta ya tenga una cláusula WITH que especifique la sugerencia de tabla. Para obtener más información, vea la sección Comentarios.  
   
@@ -385,7 +385,7 @@ OPTION (MERGE JOIN);
 GO    
 ```  
   
-### <a name="b-using-optimize-for"></a>b. Usar OPTIMIZE FOR  
+### <a name="b-using-optimize-for"></a>B. Usar OPTIMIZE FOR  
  En el ejemplo siguiente se indica al optimizador de consultas que use el valor `'Seattle'`para la variable local `@city_name` y que use datos estadísticos para determinar el valor de la variable local `@postal_code` al optimizar la consulta. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
@@ -547,7 +547,7 @@ GO
 ```  
   
 ### <a name="k-specifying-semantics-affecting-table-hints"></a>K. Especificar sugerencias de tabla que afectan a la semántica  
-El ejemplo siguiente presenta dos sugerencias de tabla en la consulta: NOLOCK, que afecta a la semántica, e INDEX, que no afecta a la semántica. Para conservar la semántica de la consulta, la sugerencia NOLOCK se especifica en la cláusula OPTIONS de la guía de plan. Junto con la sugerencia NOLOCK, especifique las sugerencias INDEX y FORCESEEK y reemplace la sugerencia INDEX que no afecta a la semántica en la consulta durante la compilación y optimización de la instrucción. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+El ejemplo siguiente presenta dos sugerencias de tabla en la consulta: NOLOCK, que afecta a la semántica, e INDEX, que no la afecta. Para conservar la semántica de la consulta, la sugerencia NOLOCK se especifica en la cláusula OPTIONS de la guía de plan. Junto con la sugerencia NOLOCK, especifique las sugerencias INDEX y FORCESEEK y reemplace la sugerencia INDEX que no afecta a la semántica en la consulta durante la compilación y optimización de la instrucción. En el ejemplo se usa la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```sql  
 EXEC sp_create_plan_guide   

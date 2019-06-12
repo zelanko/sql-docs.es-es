@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dce7aa3a-9a2f-4a45-8191-e37949e2202f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 88cd33eb001155b05079120e4a2f780caf079e22
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b3e7edbc0868ae3683d6cd07fb9dbeb80491afff
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784211"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776899"
 ---
 # <a name="getdescription-method-sqlserverdatasource"></a>Método getDescription (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.lang.String getDescription()
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto **String** que contiene la descripción del origen de datos o NULL si no se establece ningún valor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

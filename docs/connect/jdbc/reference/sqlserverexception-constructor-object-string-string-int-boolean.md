@@ -1,5 +1,5 @@
 ---
-title: SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, int, boolean) | Microsoft Docs
+title: SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -13,15 +13,15 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5b8c39021b8afac5631e44cddd8874cbf22975a3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 868e14c72fbb7c32d394df2fbbdf5cd3a7c36738
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670033"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766991"
 ---
-# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, int, boolean)
+# <a name="sqlserverexception-constructor-javalangobject-javalangstring-javalangstring-int-boolean"></a>SQLServerException Constructor (java.lang.Object, java.lang.String, java.lang.String, StreamError, boolean)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Inicializa una nueva instancia de la [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md) clase cuando se especifica un **objeto**, un **cadena** objeto, un **cadena** (objeto), un **int**y un **booleano**.
@@ -60,7 +60,7 @@ public SQLServerException(java.lang.Object obj,
   
  Un valor booleano que indica si se debe generar el seguimiento de pila.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [Miembros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [Clase SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

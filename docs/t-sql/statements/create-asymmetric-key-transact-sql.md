@@ -1,7 +1,7 @@
 ---
 title: CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/07/2017
+ms.date: 05/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 141bc976-7631-49f6-82bd-a235028645b1
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: fa20850f0784b734173f46ceee4235694c15b9cd
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 1198567d07035413463a35accbd58c17127118bb
+ms.sourcegitcommit: 9388dcccd6b89826dde47b4c05db71274cfb439a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361555"
+ms.lasthandoff: 05/28/2019
+ms.locfileid: "66270185"
 ---
 # <a name="create-asymmetric-key-transact-sql"></a>CREATE ASYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -43,18 +43,18 @@ ms.locfileid: "54361555"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-CREATE ASYMMETRIC KEY Asym_Key_Name   
+CREATE ASYMMETRIC KEY asym_key_name   
    [ AUTHORIZATION database_principal_name ]  
-   [ FROM <Asym_Key_Source> ]  
+   [ FROM <asym_key_source> ]  
    [ WITH <key_option> ] 
    [ ENCRYPTION BY <encrypting_mechanism> ] 
    [ ; ]
   
-<Asym_Key_Source>::=  
+<asym_key_source>::=  
      FILE = 'path_to_strong-name_file'  
    | EXECUTABLE FILE = 'path_to_executable_file'  
-   | ASSEMBLY Assembly_Name  
-   | PROVIDER Provider_Name  
+   | ASSEMBLY assembly_name  
+   | PROVIDER provider_name  
   
 <key_option> ::=  
    ALGORITHM = <algorithm>  
@@ -71,50 +71,54 @@ CREATE ASYMMETRIC KEY Asym_Key_Name
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- FROM *Asym_Key_Source*  
- Especifica el origen desde el que se carga el par de claves asimétricas.  
-  
+ *asym_key_name*  
+ Nombre de una clave asimétrica en la base de datos. Los nombres de clave asimétrica deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md) y ser exclusivos en el esquema.  
+
  AUTHORIZATION *database_principal_name*  
  Especifica el propietario de la clave asimétrica. El propietario no puede ser un rol ni un grupo. Si se omite esta opción, el propietario será el usuario actual.  
   
- FILE ='*path_to_strong-name_file*'  
- Especifica la ruta de acceso a un archivo de nombre seguro desde el que se carga el par de claves.  
+ FROM *asym_key_source*  
+ Especifica el origen desde el que se carga el par de claves asimétricas.  
+  
+ FILE = '*path_to_strong-name_file*'  
+ Especifica la ruta de acceso a un archivo de nombre seguro desde el que se carga el par de claves. Limitado a 260 caracteres por MAX_PATH de la API de Windows.  
   
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- EXECUTABLE FILE ='*path_to_executable_file*'  
- Especifica un archivo de ensamblado desde el que se carga la clave pública. Limitado a 260 caracteres por MAX_PATH de la API de Windows.  
+ EXECUTABLE FILE = '*path_to_executable_file*'  
+ Especifica la ruta de acceso de un archivo de ensamblado del que se carga la clave pública. Limitado a 260 caracteres por MAX_PATH de la API de Windows.  
   
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- ASSEMBLY *Assembly_Name*  
- Especifica el nombre de un ensamblado desde el que se carga la clave pública.  
+ ASSEMBLY *assembly_name*  
+ Especifica el nombre de un ensamblado firmado que ya se ha cargado en la base de datos de la que se carga la clave pública.  
   
-ENCRYPTION BY *\<key_name_in_provider>* Especifica cómo se cifra la clave. Puede ser un certificado, una contraseña o una clave asimétrica.  
-  
- KEY_NAME ='*key_name_in_provider*'  
- Especifica el nombre de la clave del proveedor externo. Para obtener más información sobre la Administración extensible de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
-  
- CREATION_DISPOSITION = CREATE_NEW  
- Crea una nueva clave en el dispositivo de Administración extensible de claves. Debe utilizarse PROV_KEY_NAME para especificar el nombre de clave en el dispositivo. Si ya existe una clave en el dispositivo, se producirá un error en la instrucción.  
-  
- CREATION_DISPOSITION = OPEN_EXISTING  
- Asigna una clave asimétrica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una clave de Administración extensible de claves. Debe utilizarse PROV_KEY_NAME para especificar el nombre de clave en el dispositivo. Si no se proporciona CREATION_DISPOSITION = OPEN_EXISTING, el valor predeterminado es CREATE_NEW.  
+ PROVIDER *provider_name*  
+ Especifica el nombre de un proveedor de Administración extensible de claves (EKM). El proveedor debe definirse antes mediante la instrucción CREATE PROVIDER. Para obtener más información sobre la Administración extensible de claves, vea [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md).  
   
  ALGORITHM = \<algorithm>  
  Se pueden proporcionar cinco algoritmos: RSA_4096, RSA_3072, RSA_2048, RSA_1024 y RSA_512.  
   
  RSA_1024 y RSA_512 están en desuso. Para usar los algoritmos RSA_1024 o RSA_512 (no se recomienda), debe establecer la base de datos en el nivel de compatibilidad de base de datos 120 o inferior.  
   
- PASSWORD = '*password*'  
+ PROVIDER_KEY_NAME = '*key_name_in_provider*'  
+ Especifica el nombre de la clave del proveedor externo.  
+  
+ CREATION_DISPOSITION = CREATE_NEW  
+ Crea una nueva clave en el dispositivo de Administración extensible de claves. Debe utilizarse PROVIDER_KEY_NAME para especificar el nombre de clave en el dispositivo. Si ya existe una clave en el dispositivo, se producirá un error en la instrucción.  
+  
+ CREATION_DISPOSITION = OPEN_EXISTING  
+ Asigna una clave asimétrica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a una clave de Administración extensible de claves. Debe utilizarse PROVIDER_KEY_NAME para especificar el nombre de clave en el dispositivo. Si no se proporciona CREATION_DISPOSITION = OPEN_EXISTING, el valor predeterminado es CREATE_NEW.  
+  
+ ENCRYPTION BY PASSWORD = '*password*'  
  Especifica la contraseña con la que se cifra la clave privada. Si no está presente esta cláusula, la clave privada se cifrará con la clave maestra de la base de datos. *password* tiene un máximo de 128 caracteres. *password* debe cumplir los requisitos de la directiva de contraseñas de Windows del equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## <a name="remarks"></a>Notas  
- Una *clave asimétrica* es una entidad protegible en el nivel de base de datos. De manera predeterminada, esta entidad contiene una clave pública y otra privada. Si se ejecuta sin la cláusula FROM, CREATE ASYMMETRIC KEY genera un nuevo par de claves. Si se ejecuta con la cláusula FROM, CREATE ASYMMETRIC KEY importa un par de claves desde un archivo o importa una clave pública desde un ensamblado.  
+ Una *clave asimétrica* es una entidad protegible en el nivel de base de datos. De manera predeterminada, esta entidad contiene una clave pública y otra privada. Si se ejecuta sin la cláusula FROM, CREATE ASYMMETRIC KEY genera un nuevo par de claves. Si se ejecuta con la cláusula FROM, CREATE ASYMMETRIC KEY importa un par de claves desde un archivo o importa una clave pública desde un ensamblado o un archivo DLL.  
   
- De manera predeterminada, la clave privada está protegida por la clave maestra de la base de datos. Si no se ha creado una clave maestra de base de datos, se necesita una contraseña para proteger la clave privada. Si hay una clave maestra de base de datos, la contraseña es opcional.  
+ De manera predeterminada, la clave privada está protegida por la clave maestra de la base de datos. Si no se ha creado una clave maestra de base de datos, se necesita una contraseña para proteger la clave privada.  
   
  La clave privada puede ser de 512, 1.024 o 2.048 bits.  
   
@@ -133,18 +137,18 @@ CREATE ASYMMETRIC KEY PacificSales09
 GO  
 ```  
   
-### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>b. Crear una clave asimétrica desde un archivo, concediendo autorización a un usuario  
- En el siguiente ejemplo se crea la clave asimétrica `PacificSales19` a partir de un par de claves almacenadas en un archivo y, a continuación, se autoriza al usuario `Christina` a utilizar la clave asimétrica.   
+### <a name="b-creating-an-asymmetric-key-from-a-file-giving-authorization-to-a-user"></a>B. Crear una clave asimétrica desde un archivo, concediendo autorización a un usuario  
+ En el siguiente ejemplo se crea la clave asimétrica `PacificSales19` a partir de un par de claves almacenado en un archivo y asigna la propiedad de la clave asimétrica al usuario `Christina`. La clave privada está protegida por la clave maestra de base de datos, que debe crearse antes de crear la clave asimétrica.  
   
 ```  
-CREATE ASYMMETRIC KEY PacificSales19 AUTHORIZATION Christina   
-    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp'    
-    ENCRYPTION BY PASSWORD = '<enterStrongPasswordHere>';  
+CREATE ASYMMETRIC KEY PacificSales19  
+    AUTHORIZATION Christina  
+    FROM FILE = 'c:\PacSales\Managers\ChristinaCerts.tmp';  
 GO  
 ```  
   
 ### <a name="c-creating-an-asymmetric-key-from-an-ekm-provider"></a>C. Crear una clave asimétrica de un proveedor de EKM  
- En el ejemplo siguiente se crea la clave asimétrica `EKM_askey1` a partir de un par de claves almacenadas en un archivo. A continuación, lo cifra mediante un proveedor de Administración extensible de claves llamado `EKMProvider1` y una clave en dicho proveedor llamada `key10_user1`.  
+ En el ejemplo siguiente se crea la clave asimétrica `EKM_askey1` a partir de un par de claves almacenado en un proveedor de Administración extensible de claves llamado `EKM_Provider1` y una clave de ese proveedor denominada `key10_user1`.  
   
 ```  
 CREATE ASYMMETRIC KEY EKM_askey1   
@@ -157,10 +161,12 @@ GO
 ```  
   
 ## <a name="see-also"></a>Consulte también  
- [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
- [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)   
- [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)   
- [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)   
+ [ALTER ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-asymmetric-key-transact-sql.md)  
+ [DROP ASYMMETRIC KEY &#40;Transact-SQL&#41;](../../t-sql/statements/drop-asymmetric-key-transact-sql.md)  
+ [ASYMKEYPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/asymkeyproperty-transact-sql.md)  
+ [ASYMKEY_ID &#40;Transact-SQL&#41;](../../t-sql/functions/asymkey-id-transact-sql.md)  
+ [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)  
+ [Jerarquía de cifrado](../../relational-databases/security/encryption/encryption-hierarchy.md)  
  [Administración extensible de claves con el Almacén de claves de Azure &#40;SQL Server&#41;](../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  
   
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f8be8ed5a1718e33b9e0c2c04caf75967f7067ea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571376"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66500304"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -92,9 +92,9 @@ ms.locfileid: "65571376"
   
  En el diseñador de consultas, puede ejecutar la consulta para ver datos de ejemplo y validar la sintaxis del comando de consulta. Los nombres de columna del conjunto de resultados se convierten en los nombres de campo que se ven en el panel Datos de informe. El conjunto de resultados debe ser un conjunto único de filas y columnas en el que existe el mismo número de valores para cada fila de datos. No se admiten varios conjuntos de resultados de una única consulta. Las jerarquías desiguales, que no tienen un número constante de columnas y pueden generar un número distinto de valores de datos para cada fila, no se admiten.  
   
- Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para más información, vea [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53) y [Conexiones de datos, orígenes de datos y cadenas de conexión &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
+ Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para obtener más información, consulte [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md) y [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+ Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Diseñadores de consultas &#40;Generador de informes&#41;](query-design-tools-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
@@ -120,9 +120,9 @@ ms.locfileid: "65571376"
 ##  <a name="Section"></a> En esta sección  
  [Elementos de informe y conjuntos de datos en el Generador de informes](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)  
   
- [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](https://msdn.microsoft.com/library/7e103637-4371-43d7-821c-d269c2cc1b34)  
+ [Conexiones de datos, orígenes de datos y cadenas de conexión en el Generador de informes](data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)  
   
- [Especificar credenciales en el Generador de informes](https://msdn.microsoft.com/library/7412ce68-aece-41c0-8c37-76a0e54b6b53)  
+ [Especificación de información de credenciales y conexión para los orígenes de datos de informes](specify-credential-and-connection-information-for-report-data-sources.md)  
   
  [Conjuntos de datos incrustados y compartidos de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)  
   

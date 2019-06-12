@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 69ce8557-5260-4ea4-81b8-d0c5481f0868
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d9e38b9e58bcfb9d9d75b62e73850cb4e72370e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 995b8ae8affbd04349013724bb43101040e27ebb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637413"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778116"
 ---
 # <a name="securing-connection-strings"></a>Proteger las cadenas de conexión
 
@@ -30,6 +30,6 @@ Otro enfoque consiste en almacenar la contraseña cifrada en un archivo. Asegúr
 
 Si obtiene la información de cadena de conexión de una fuente externa (por ejemplo, si un usuario proporciona un Id. de usuario y una contraseña), debe validar las entradas desde el origen para asegurarse de que presentan el formato correcto y no contienen parámetros adicionales que afecten a la conexión.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Proteger las aplicaciones del controlador JDBC](../../connect/jdbc/securing-jdbc-driver-applications.md)

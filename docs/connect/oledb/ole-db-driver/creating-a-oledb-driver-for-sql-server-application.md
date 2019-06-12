@@ -14,13 +14,13 @@ helpviewer_keywords:
 - OLE DB, creating applications
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: fb718e2288b1d5e2aaccc1cbafc0c85037bd8082
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: c36ec6878f7ef981e72a64121c98c930e6481104
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605775"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66769212"
 ---
 # <a name="creating-an-ole-db-driver-for-sql-server-application"></a>Creación de un controlador OLE DB para la aplicación de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "51605775"
   
 -   [Uso de la cláusula OUTPUT con OLE DB en el controlador de OLE DB para SQL Server](../../oledb/ole-db-driver/using-the-output-clause-with-ole-db-in-oledb-driver-for-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

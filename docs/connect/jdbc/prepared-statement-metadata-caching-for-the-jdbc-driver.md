@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72ef56833f8f6a6ed4cc66a91dcb7a9e4576c7f5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 58ebcb2560e3b03703d7a419b28c6c04e41c19f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395838"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794088"
 ---
 # <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>Almacenamiento en caché de metadatos de instrucción preparado para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -73,7 +73,7 @@ Por ejemplo: `connection.setStatementPoolingCacheSize(10)`
 |Nuevo método|Descripción|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean value)|Establece la agrupación de instrucciones en true o false.|
-|booleano getDisableStatementPooling()|Devuelve true si se deshabilita la agrupación de instrucciones.|
+|boolean getDisableStatementPooling()|Devuelve true si se deshabilita la agrupación de instrucciones.|
 |void setStatementPoolingCacheSize(int value)|Especifica el tamaño de la caché de la instrucción preparada para esta conexión. Un valor menor que 1 no significa memoria caché.|
 |int getStatementPoolingCacheSize()|Devuelve el tamaño de la caché de la instrucción preparada para esta conexión. Un valor menor que 1 no significa memoria caché.|
 |int getStatementHandleCacheEntryCount()|Devuelve el número actual de identificadores de instrucción preparada agrupados.|
@@ -84,11 +84,11 @@ Por ejemplo: `connection.setStatementPoolingCacheSize(10)`
 |Nuevo método|Descripción|  
 |-----------|-----------------|  
 |void setDisableStatementPooling(boolean disableStatementPooling)|Establece la instrucción de agrupación en true o false|
-|booleano getDisableStatementPooling()|Devuelve true si se deshabilita la agrupación de instrucciones.|
+|boolean getDisableStatementPooling()|Devuelve true si se deshabilita la agrupación de instrucciones.|
 |void setStatementPoolingCacheSize(int statementPoolingCacheSize)|Especifica el tamaño de la caché de la instrucción preparada para esta conexión. Un valor menor que 1 no significa memoria caché.|
 |int getStatementPoolingCacheSize()|Devuelve el tamaño de la caché de la instrucción preparada para esta conexión. Un valor menor que 1 no significa memoria caché.|
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Mejorar el rendimiento y la confiabilidad con el controlador JDBC](../../connect/jdbc/improving-performance-and-reliability-with-the-jdbc-driver.md)  
   
   

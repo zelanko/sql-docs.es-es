@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c7967740fc56efab93129aa6846d70f7eb55c7de
-ms.sourcegitcommit: 2533383a7baa03b62430018a006a339c0bd69af2
+ms.openlocfilehash: 08bdce27a5894cdbdba0122ec33a98c94f244ea3
+ms.sourcegitcommit: 944af0f6b31bf07c861ddd4d7960eb7f018be06e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/01/2019
-ms.locfileid: "57017921"
+ms.lasthandoff: 05/31/2019
+ms.locfileid: "66454722"
 ---
 # <a name="temporal-tables"></a>Tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "57017921"
   
 -   Columna de inicio del período: el sistema registra la hora de inicio de la fila en esta columna, que normalmente se denomina **SysStartTime**.  
   
--   Columna de fin del período: el sistema registra la hora de fin de la fila en esta columna, que normalmente se denomina **SysEndTime**.  
+-   Columna de fin del período: El sistema registra la hora de fin de la fila en esta columna, que normalmente se denomina **SysEndTime**.  
   
  La tabla actual contiene el valor actual de cada fila. La tabla de historial contiene cada valor anterior de cada fila, si existe, y las horas de inicio y fin del periodo de validez.  
   
@@ -119,7 +119,7 @@ CREATE TABLE dbo.Employee
 >  Las horas registradas en las columnas datetime2 del sistema se basan en la hora de inicio de la propia transacción. Por ejemplo, todas las filas insertadas en una única transacción tendrán la misma hora UTC registrada en la columna correspondiente al inicio del período **SYSTEM_TIME** .  
   
 ## <a name="how-do-i-query-temporal-data"></a>¿Cómo se consultan los datos temporales?  
- La cláusula **FROM**_\<tabla\>_ de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas temporales específicas con las que se pueden consultar datos de la tabla actual y las tablas históricas. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
+ La cláusula **FROM** _\<tabla\>_ de la instrucción **SELECT** tiene una nueva cláusula **FOR SYSTEM_TIME** con cinco subcláusulas temporales específicas con las que se pueden consultar datos de la tabla actual y las tablas históricas. Esta nueva sintaxis de la instrucción **SELECT** se puede usar directamente en una sola tabla, propagarse por varias combinaciones y por las vistas de varias tablas temporales.  
   
  ![Temporal: consultar](../../relational-databases/tables/media/temporal-querying.PNG "Temporal: consultar")  
   
@@ -142,14 +142,14 @@ SELECT * FROM Employee
   
 |Expresión|Filas certificadas|Descripción|  
 |----------------|---------------------|-----------------|  
-|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Devuelve una tabla con filas que contienen los valores que fueron reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *<date_time>*. El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *<date_time>*.|  
+|**AS OF**<date_time>|SysStartTime \<= date_time AND SysEndTime > date_time|Devuelve una tabla con filas que contienen los valores que fueron reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *<date_time>* .|  
 |**FROM**<start_date_time>**TO**<end_date_time>|SysStartTime < end_date_time AND SysEndTime > start_date_time|Devuelve una tabla con los valores de todas las versiones de fila que estaban activas dentro del rango de tiempo especificado, independientemente de si empezaron a ser activas antes del valor del parámetro *<start_date_time>* en el argumento FROM o si dejaron de serlo después del valor del parámetro *<end_date_time>* en el argumento TO. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de todas las versiones de fila que estaban activas en cualquier momento dentro del intervalo de tiempo especificado. No se incluyen las filas que han dejado de ser activas justamente en el límite inferior definido por el punto de conexión FROM ni tampoco aquellas que se han activado exactamente en el límite superior definido por el punto de conexión TO.|  
 |**BETWEEN**<start_date_time>**AND**<end_date_time>|SysStartTime \<= end_date_time AND SysEndTime > start_date_time|Igual que la descripción anterior de **FOR SYSTEM_TIME FROM** <start_date_time>**TO** <end_date_time>, salvo que la tabla de filas devuelta incluye las filas que se activaron en el límite superior definido por el punto de conexión <end_date_time>.|  
 |**CONTAINED IN** (<start_date_time> , <end_date_time>)|SysStartTime >= start_date_time AND SysEndTime \<= end_date_time|Devuelve una tabla con los valores de todas las versiones de fila que se abrieron y cerraron dentro del rango de tiempo especificado definido por los dos valores de fecha y hora en el argumento CONTAINED IN. Se incluyen las filas que se activaron justamente en el límite inferior o que dejaron de estarlo exactamente en el límite superior.|  
 |**ALL**|Todas las filas|Devuelve la unión de las filas pertenecientes a la tabla actual y a la tabla de historial.|  
   
 > [!NOTE]  
->  Si quiere, puede ocultar estas columnas de período, de forma que las consultas que no hagan referencia explícitamente a estas columnas de período no devuelvan esas columnas (el escenario de **SELECT \* FROM**_\<tabla\>_). Para devolver una columna oculta, basta con hacer referencia explícita a dicha columna en la consulta. Del mismo modo, las instrucciones **INSERT** y **BULK INSERT** continuarán como si estas nuevas columnas de periodo no estuvieran presentes (y los valores de columna se rellenarán automáticamente). Para obtener más información sobre cómo usar la cláusula **HIDDEN** , vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
+>  Si quiere, puede ocultar estas columnas de período, de forma que las consultas que no hagan referencia explícitamente a estas columnas de período no devuelvan esas columnas (el escenario de **SELECT \* FROM** _\<tabla\>_ ). Para devolver una columna oculta, basta con hacer referencia explícita a dicha columna en la consulta. Del mismo modo, las instrucciones **INSERT** y **BULK INSERT** continuarán como si estas nuevas columnas de periodo no estuvieran presentes (y los valores de columna se rellenarán automáticamente). Para obtener más información sobre cómo usar la cláusula **HIDDEN** , vea [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md) y [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md).  
   
 ## <a name="see-also"></a>Consulte también  
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   

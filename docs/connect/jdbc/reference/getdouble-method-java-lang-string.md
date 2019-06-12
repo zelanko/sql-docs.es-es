@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8eab6a8e-91f3-47b1-8707-5e57368ad0c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36575b1d5b8fb7696c151b7939f667f85500f45a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4d248f06bac0f57f7fdd79e11eab482cb8bcb3ed
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694761"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765996"
 ---
 # <a name="getdouble-method-javalangstring"></a>Método getDouble (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public double getDouble(java.lang.String sCol)
   
  Este método devuelve todos los tipos de datos basados en número con fidelidad **double** de Java.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getDouble &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdouble-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

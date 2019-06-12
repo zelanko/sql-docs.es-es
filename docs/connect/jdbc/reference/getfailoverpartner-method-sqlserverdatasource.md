@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 885f927f-9c48-42e0-a7fb-fd936d2b8130
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 39195742d8b6a2a03b0b2c835f47d0ba42735791
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 61d86ecbab10fc1a2fc1f05034f5af00525becdc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47730463"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66767095"
 ---
 # <a name="getfailoverpartner-method-sqlserverdatasource"></a>Método getFailoverPartner (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public string getFailoverPartner()
 ## <a name="remarks"></a>Notas  
  El valor que devuelve este método refleja el conjunto de nombres del asociado de conmutación por error mediante el método [setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

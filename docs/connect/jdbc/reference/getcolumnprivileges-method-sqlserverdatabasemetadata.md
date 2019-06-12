@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 4ab6a671-9573-4b95-8c23-364306c60d25
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 792b09cc57fbfb1438c6c4e9d372beb6547635d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 934a230e295532231f52ac3ed787b6a4de366d54
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763377"
 ---
 # <a name="getcolumnprivileges-method-sqlserverdatabasemetadata"></a>Método getColumnPrivileges (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -69,7 +69,7 @@ public java.sql.ResultSet getColumnPrivileges(java.lang.String catalog,
 |Nombre|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |TABLE_CAT|**String**|Nombre del catálogo.|  
-|TABLE_SCHEM|**String**|El nombre del esquema de tabla.|  
+|TABLE_SCHEM|**String**|Es el esquema de la tabla.|  
 |TABLE_NAME|**String**|El nombre de la tabla.|  
 |COLUMN_NAME|**String**|Nombre de columna.|  
 |GRANTOR|**String**|Objeto que concede el acceso.|  
@@ -106,7 +106,7 @@ public static void executeGetColumnPrivileges(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: abcec31f-1a60-4765-9725-8cf7e9f1f8ab
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f56200ca5df9e0eca7cafc6c7a99ed9bf7ca019d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3ca2b8afe197c2509f0a2633266ea21c619bdeb1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773673"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764687"
 ---
 # <a name="setbinarystream-method-sqlserverblob"></a>Método setBinaryStream (SQLServerBlob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.io.OutputStream setBinaryStream(long pos)
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *punto de venta*  
+ *Pos*  
   
  La posición en el valor BLOB donde se comienza a escribir.  
   
@@ -51,7 +51,7 @@ public java.io.OutputStream setBinaryStream(long pos)
   
  El flujo de salida sobrescribe los datos en el objeto BLOB a partir de la posición especificada y puede exceder la longitud inicial del BLOB. Si se especifica un valor position+1, se anexarán bytes. Si se pasan valores position+2 o superiores (o cero o menos), se producirá un error de la posición.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-methods.md)   
  [Miembros SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-members.md)   
  [Clase SQLServerBlob](../../../connect/jdbc/reference/sqlserverblob-class.md)  

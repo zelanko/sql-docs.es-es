@@ -1,5 +1,5 @@
 ---
-title: Guía de programación de los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
+title: Ejemplos de código para los controladores de Microsoft para PHP para SQL Server | Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 48a4a3f288af63788af84e8f64f2af91138c9ff1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776503"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780994"
 ---
 # <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>Programación de guía para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -38,7 +38,7 @@ Esta sección contiene temas que le ayudarán a desarrollar aplicaciones con los
 |[Uso de Always Encrypted con los controladores de Microsoft para PHP para SQL Server | Microsoft Docs](../../connect/php/using-always-encrypted-php-drivers.md)|Proporciona información sobre cómo usar la característica Always Encrypted con los controladores PHP.|  
 |[Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|Describe consideraciones de seguridad para desarrollar, implementar y ejecutar aplicaciones.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Información general de los controladores de Microsoft para PHP para SQL Server](../../connect/php/overview-of-the-php-sql-driver.md)
 
 [Introducción a los controladores de Microsoft para PHP para SQL Server](../../connect/php/getting-started-with-the-php-sql-driver.md)

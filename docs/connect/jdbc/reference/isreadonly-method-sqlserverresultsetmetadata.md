@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: aba234d9-04ec-46a5-ba9e-7903f48b4ecc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ab66f9568985c5814b203edecb634a9cbc430b83
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a3cbf45389bd7cb87f724b0ff1db9b2b24e66c8d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845303"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768896"
 ---
 # <a name="isreadonly-method-sqlserverresultsetmetadata"></a>Método isReadOnly (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public boolean isReadOnly(int column)
 ## <a name="remarks"></a>Notas  
  Este método isReadOnly es especificado por el método isReadOnly en la interfaz java.sql.ResultSetMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

@@ -1,7 +1,7 @@
 ---
 title: Administrador de conexiones de Azure Storage | Microsoft Docs
 ms.custom: ''
-ms.date: 03/01/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,34 +14,30 @@ ms.assetid: 68bd1d04-d20f-4357-a34e-7c9c76457062
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 509e51243f7de4e6871bedf18c7ce7aa84d3e8c6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 03acf5db82c21a66e2fbd8337713b6989ce36a31
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728328"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403070"
 ---
 # <a name="azure-storage-connection-manager"></a>Administrador de conexiones de Almacenamiento de Azure
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
-
-  El **administrador de conexiones de Azure Storage** permite que un paquete SSIS se conecte a una cuenta de Azure Storage mediante los valores especificados para las propiedades: Nombre de la cuenta de almacenamiento y Clave de la cuenta.  
+  El **Administrador de conexiones de Azure Storage** permite que un paquete SSIS se conecte a una cuenta de Azure Storage.
    
  El **Administrador de conexiones de Azure Storage** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md). 
   
-1.  En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **AzureStorage**y haga clic en **Agregar**.  
+En el cuadro de diálogo **Agregar administrador de conexiones SSIS** , seleccione **AzureStorage**y haga clic en **Agregar**.  
   
-2.  En el cuadro de diálogo Azure Storage Connection Manager Editor (Editor del administrador de conexiones de Almacenamiento de Azure), elija **Use Azure account** (Usar cuenta de Azure) para conectarse a un servicio de Almacenamiento de Azure a través de Internet o elija **Use local developer account** (Usar cuenta de desarrollador local) para conectarse al servicio local hospedado en el Emulador de almacenamiento de Azure.  
-  
-3.  Si ha seleccionado la opción **Use Azure account** (Usar cuenta de Azure), realice lo siguiente:  
-  
-    1.  Especifique los valores para los campos **Nombre de cuenta de almacenamiento** y **Clave de cuenta** . Estos valores se almacenarán como información confidencial en el paquete SSIS.  
-  
-    2.  Seleccione **Use HTTPS** (Usar HTTPS) si desea utilizar HTTPS en lugar de HTTP para conectarse con el servicio de Almacenamiento de Azure.  
-  
-4.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
-  
-5.  Puede ver las propiedades del Administrador de conexiones que creó en la ventana **Propiedades** .  
-  
-  
+Están disponibles las propiedades siguientes.
+
+- **Servicio:** especifica el servicio de almacenamiento al que conectarse.
+- **Nombre de cuenta:** especifica el nombre de la cuenta de almacenamiento.
+- **Autenticación:** especifica el método de autenticación que se va a utilizar. Se admite la autenticación **AccessKey** y **ServicePrincipal**.
+    - **AccessKey:** con este método de autenticación, especifique el valor de **Clave de cuenta**.
+    - **ServicePrincipal:** con este método de autenticación, especifique los valores de **Id. de la aplicación**, **Clave de aplicación** e **Id. de inquilino** de la entidad de servicio.
+      Se debe asignar el rol **Colaborador de datos de Storage Blob** a la entidad de servicio en la cuenta de almacenamiento.
+      Consulte [esta](https://docs.microsoft.com/azure/storage/common/storage-auth-aad-rbac-portal#assign-rbac-roles-using-the-azure-portal) página para obtener más información.
+- **Entorno:** especifica el entorno de nube que hospeda la cuenta de almacenamiento.

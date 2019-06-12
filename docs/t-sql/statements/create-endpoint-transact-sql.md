@@ -32,12 +32,12 @@ ms.assetid: 6405e7ec-0b5b-4afd-9792-1bfa5a2491f6
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 41b6c0009c2cfc3c83a4326875c13083875166b3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: fc582f9328196233768e1fd7e7bd2bb81688c81d
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124585"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413442"
 ---
 # <a name="create-endpoint-transact-sql"></a>CREATE ENDPOINT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54124585"
   
      En esta parte, defina la carga que admite el extremo. La carga puede ser uno de los tipos admitidos: [!INCLUDE[tsql](../../includes/tsql-md.md)], Service Broker y creación de reflejo de la base de datos. En esta parte, también puede incluir información específica del lenguaje.  
   
-> **NOTA:** Los servicios web XML nativos (extremos HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
+> **NOTA:** Los servicios web XML nativos (puntos de conexión HTTP/SOAP) se quitaron en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -73,7 +73,7 @@ FOR { TSQL | SERVICE_BROKER | DATABASE_MIRRORING } (
 <AS TCP_protocol_specific_arguments> ::=  
 AS TCP (  
   LISTENER_PORT = listenerPort  
-  [ [ , ] LISTENER_IP = ALL | ( 4-part-ip ) | ( "ip_address_v6" ) ]  
+  [ [ , ] LISTENER_IP = ALL | ( xx.xx.xx.xx IPv4 address ) | ( '__:__1' IPv6 address ) ]  
   
 )  
   
@@ -145,10 +145,10 @@ FOR DATABASE_MIRRORING (
   
  Los argumentos que aparecen a continuación solo se aplican a la opción de protocolo TCP.  
   
- LISTENER_PORT **=**_puertoDelAgenteDeEscucha_  
+ LISTENER_PORT **=** _puertoDelAgenteDeEscucha_  
  Especifica el número de puerto que escucha el protocolo TCP/IP de Service Broker para las conexiones. Se usa 4022 por convención, pero cualquier número entre 1024 y 32767 es válido.  
   
- LISTENER_IP **=** ALL | **(**_dirección_IP_de_4_partes_ **)** | **(** "*dirección_IP_v6*" **)**  
+ LISTENER_IP **=** ALL | **(** _dirección_IP_de_4_partes_ **)**  |  **(** "*dirección_IP_v6*" **)**  
  Especifica la dirección IP en la que escuchará el extremo. El valor predeterminado es ALL. Esto significa que la escucha aceptará una conexión en cualquier dirección IP válida.  
   
  Si configura la creación de reflejo de la base de datos con una dirección IP en lugar de con un nombre de dominio completo (`ALTER DATABASE SET PARTNER = partner_IP_address` o `ALTER DATABASE SET WITNESS = witness_IP_address`), tiene que especificar `LISTENER_IP =IP_address` en lugar de `LISTENER_IP=ALL` al crear los extremos de los reflejos.  
@@ -230,7 +230,7 @@ FOR DATABASE_MIRRORING (
  DISABLED  
  Descarta los mensajes para los servicios que están ubicados en otro lugar. Ésta es la opción predeterminada.  
   
- MESSAGE_FORWARD_SIZE **=**_tamaño_del_reenvío_  
+ MESSAGE_FORWARD_SIZE **=** _tamaño_del_reenvío_  
  Especifica la cantidad máxima de almacenamiento en megabytes que se va a asignar para que el extremo la utilice cuando almacene mensajes que se van a reenviar.  
   
  **Opciones de DATABASE_MIRRORING**  
@@ -276,7 +276,7 @@ FOR DATABASE_MIRRORING (
 ### <a name="creating-a-database-mirroring-endpoint"></a>Crear un extremo de creación de reflejo de la base de datos  
  En el ejemplo siguiente se crea un extremo de creación de reflejo de la base de datos. El extremo utiliza el número de puerto `7022`, aunque cualquier número de puerto disponible sirve. El extremo se configura para utilizar la autenticación de Windows solo con Kerberos. La opción `ENCRYPTION` se configura con el valor que no es predeterminado de `SUPPORTED` para admitir datos cifrados o no cifrados. El extremo se configura para admitir los roles de asociado y testigo.  
   
-```  
+```sql  
 CREATE ENDPOINT endpoint_mirroring  
     STATE = STARTED  
     AS TCP ( LISTENER_PORT = 7022 )  
@@ -286,6 +286,36 @@ CREATE ENDPOINT endpoint_mirroring
        ROLE=ALL);  
 GO  
 ```  
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv4-address-and-port"></a>Creación de un punto de conexión que apunta a una dirección IPv4 específica y un puerto
+
+```sql
+CREATE ENDPOINT ipv4_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = (10.0.75.1)
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public; -- Keep existing public permission on default endpoint for demo purpose
+GRANT CONNECT ON ENDPOINT::ipv4_endpoint_special
+TO login_name;
+```
+
+### <a name="create-a-new-endpoint-pointing-to-a-specific-ipv6-address-and-port"></a>Creación de un punto de conexión que apunta a una dirección IPv6 específica y un puerto
+
+```sql
+CREATE ENDPOINT ipv6_endpoint_special
+STATE = STARTED
+AS TCP (
+    LISTENER_PORT = 55555, LISTENER_IP = ('::1')
+)
+FOR TSQL ();
+
+GRANT CONNECT ON ENDPOINT::[TSQL Default TCP] TO public;
+GRANT CONNECT ON ENDPOINT::ipv6_endpoint_special
+
+```
   
 ## <a name="see-also"></a>Vea también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   

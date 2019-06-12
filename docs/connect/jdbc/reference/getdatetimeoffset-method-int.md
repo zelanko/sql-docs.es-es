@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8bb00356-4d6e-4625-b924-67646930fdf2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a15cfc236214e10307f75bd98e36235636e7ca0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a83bb0d142860b1cb6f94070b8a85f3c40b23114
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47671839"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777035"
 ---
 # <a name="getdatetimeoffset-method-int"></a>Método getDateTimeOffset (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public microsoft.sql.DateTimeOffset getDateTimeOffset(int index)
 ## <a name="remarks"></a>Notas  
  Puede establecer un [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) valor de parámetro con [SQLServerCallableStatement.setDateTimeOffset](../../../connect/jdbc/reference/setdatetimeoffset-method-sqlservercallablestatement.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getDateTimeOffset &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getdatetimeoffset-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

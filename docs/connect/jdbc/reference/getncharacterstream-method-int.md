@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 85c624147db770f95af36e2e6eb43df611688606
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 21cfd942fe43dedcbe19e8d0fe88a831bae76872
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726343"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66784599"
 ---
 # <a name="getncharacterstream-method-int"></a>Método getNCharacterStream (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public final java.io.Reader getNCharacterStream(int parameterIndex)
   
  Este método getNCharacterStream especificado por el método getNCharacterStream en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getNCharacterStream &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

@@ -1,7 +1,7 @@
 ---
 title: Tarea de descarga de blobs de Azure | Microsoft Docs
 ms.custom: ''
-ms.date: 07/25/2016
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -14,12 +14,12 @@ ms.assetid: 8a63bf44-71be-456d-9a5c-be7c31aff065
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: dfde0bdb50c5f8fbb81a5eb7d9b88067999f1de4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: ec05684572563228ec3bce88ebb5c5ca32a86bc2
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65728044"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403207"
 ---
 # <a name="azure-blob-download-task"></a>Tarea de descarga de blobs de Azure
 
@@ -33,15 +33,13 @@ Para agregar una **tarea de descarga de blobs de Azure**, arrástrela y suéltel
  La **tarea de descarga de blobs de Azure** es un componente de [Feature Pack de SQL Server Integration Services (SSIS) para Azure](../../integration-services/azure-feature-pack-for-integration-services-ssis.md).  
   
  En la tabla siguiente se proporciona la descripción de los campos de este cuadro de diálogo.  
-  
-|||  
-|-|-|  
+
 |**Campo**|**Descripción**|  
+|---|---|
 |AzureStorageConnection|Especifique un administrador de conexiones de almacenamiento de Azure existente o cree uno nuevo que haga referencia a una cuenta de almacenamiento de Azure, que esté orientado a la ubicación en la que se encuentran hospedados los archivos de blob.|  
 |BlobContainer|Especifica el nombre del contenedor de blobs que contiene los archivos de blob que hay que descargar.|  
 |BlobDirectory|Especifica el directorio de blobs que contiene los archivos de blob que hay que descargar. El directorio de blob es una estructura jerárquica virtual.|  
+|SearchRecursively|Especifica si se debe buscar de forma recursiva en subdirectorios.|  
 |LocalDirectory|Especifica el directorio local en el que se almacenan los archivos de blob descargados.|  
 |FileName|Especifica un filtro de nombre para seleccionar archivos con el patrón de nombre especificado. Por ejemplo, `MySheet*.xls\*` incluye archivos como `MySheet001.xls` y `MySheetABC.xlsx`.|  
 |TimeRangeFrom/TimeRangeTo|Especifica un filtro de intervalo de tiempo. Se incluyen los archivos modificados después de **TimeRangeFrom** y antes de **TimeRangeTo**.|  
-  
-  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cffa1602-c045-4e61-abb6-442ade28dbf6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4c00c0a95483f1bff8e813f5d630e5344e5dd6f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 46cd39c51ba8c5421083721f868345962937f07a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766458"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66762873"
 ---
 # <a name="getdatabasename-method-sqlserverdatasource"></a>Método getDatabaseName (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.lang.String getDatabaseName()
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto **String** que contiene el nombre de la base de datos o el valor NULL si no se establece ningún valor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

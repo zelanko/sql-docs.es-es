@@ -25,12 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 983ba238c0c5d5a0e355f49af734a72ae946ee79
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: e467af9ecc9879229172b2d1b25471c071a66612
+ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980401"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66413421"
 ---
 # <a name="create-availability-group-transact-sql"></a>CREATE AVAILABILITY GROUP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -104,11 +104,11 @@ CREATE AVAILABILITY GROUP group_name
    }  
   
   <network_subnet_option> ::=  
-     'four_part_ipv4_address', 'four_part_ipv4_mask'    
+     'ip4_address', 'four_part_ipv4_mask'    
   
   <ip_address_option> ::=  
      {   
-        'four_part_ipv4_address', 'four_part_ipv4_mask'  
+        'ip4_address', 'pv4_mask'  
       | 'ipv6_address'  
      }  
   
@@ -228,12 +228,12 @@ CREATE AVAILABILITY GROUP group_name
   
  Para obtener más información sobre los requisitos previos de los nodos de WSFC y las instancias de servidor, vea [Requisitos previos, restricciones y recomendaciones - Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
- ENDPOINT_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ ENDPOINT_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica la ruta de acceso de la dirección URL del [punto de conexión de creación de reflejo de la base de datos](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md) en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que hospeda la réplica de disponibilidad que se va a definir en la cláusula REPLICA ON actual.  
   
  La cláusula ENDPOINT_URL es obligatoria. Para obtener más información, vea [Especificar la dirección URL del punto de conexión al agregar o modificar una réplica de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/specify-endpoint-url-adding-or-modifying-availability-replica.md).  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Determina una dirección URL para especificar una dirección URL del extremo o una dirección URL de enrutamiento de solo lectura. Los parámetros de la dirección URL son como sigue:  
   
  *system-address*  
@@ -316,10 +316,10 @@ CREATE AVAILABILITY GROUP group_name
   
  Para más información, vea [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad Always On&#41;](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
- READ_ONLY_ROUTING_URL **='** TCP **://**_system-address_**:**_port_**'**  
+ READ_ONLY_ROUTING_URL **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica la dirección URL que se va a usar para enrutar las solicitudes de conexión de intención de lectura de enrutamiento para esta réplica de disponibilidad. Es la dirección URL en la que escucha el motor de base de datos de SQL Server. Normalmente, la instancia predeterminada del motor de base de datos de SQL Server escucha en el puerto TCP 1433.  
   
- En una instancia con nombre, puede obtener el número de puerto si consulta a las columnas **port** y **type_desc** de la vista de administración dinámica [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). La instancia de servidor usa el agente de escucha de Transact-SQL (**type_desc='TSQL'**).  
+ En una instancia con nombre, puede obtener el número de puerto si consulta a las columnas **port** y **type_desc** de la vista de administración dinámica [sys.dm_tcp_listener_states](../../relational-databases/system-dynamic-management-views/sys-dm-tcp-listener-states-transact-sql.md). La instancia de servidor usa el agente de escucha de Transact-SQL (**type_desc='TSQL'** ).  
   
  Para obtener más información sobre el cálculo de la dirección URL de enrutamiento de solo lectura para una réplica, vea [Calculating read_only_routing_url for Always On](https://blogs.msdn.com/b/mattn/archive/2012/04/25/calculating-read-only-routing-url-for-AlwaysOn.aspx) (Calcular read_only_routing_url para AlwaysOn).  
   
@@ -340,7 +340,7 @@ CREATE AVAILABILITY GROUP group_name
  ALL  
  Se permiten todas las conexiones con las bases de datos de la réplica principal. Éste es el comportamiento predeterminado.  
   
- READ_ONLY_ROUTING_LIST **=** { **('**\<server_instance>**'** [ **,**...*n* ] **)** | NONE } Especifica una lista separada por comas de instancias de servidor que hospedan réplicas de disponibilidad de este grupo de disponibilidad y que cumplen los requisitos siguientes al ejecutarse en el rol secundario:  
+ READ_ONLY_ROUTING_LIST **=** { **('** \<server_instance> **'** [ **,** ...*n* ] **)** | NONE } Especifica una lista separada por comas de instancias de servidor que hospedan réplicas de disponibilidad de este grupo de disponibilidad y que cumplen los requisitos siguientes al ejecutarse en el rol secundario:  
   
 -   Está configurado para permitir todas las conexiones o las conexiones de solo lectura (vea el argumento ALLOW_CONNECTIONS de la opción SECONDARY_ROLE de más arriba).  
   
@@ -372,12 +372,12 @@ CREATE AVAILABILITY GROUP group_name
   
  \<ag_name> Especifica el nombre del grupo de disponibilidad que constituye la mitad del grupo de disponibilidad distribuido.  
   
- LISTENER **='** TCP **://**_system-address_**:**_port_**'**  
+ LISTENER **='** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica la ruta de acceso de la dirección URL del agente de escucha asociado al grupo de disponibilidad.  
   
  La cláusula LISTENER es obligatoria.  
   
- **'** TCP **://**_system-address_**:**_port_**'**  
+ **'** TCP **://** _system-address_ **:** _port_ **'**  
  Especifica una dirección URL del agente de escucha asociado al grupo de disponibilidad. Los parámetros de la dirección URL son como sigue:  
   
  *system-address*  
@@ -414,7 +414,7 @@ CREATE AVAILABILITY GROUP group_name
  MANUAL  
  Especifica la propagación manual (valor predeterminado). Este método requiere la creación de una copia de seguridad de la base de datos en la réplica principal y su restauración manual en las réplicas del grupo de disponibilidad secundario.  
   
- LISTENER **'**_dns\_name_**'(** \<listener_option\> **)** Define un nuevo agente de escucha del grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
+ LISTENER **'** _dns\_name_ **'(** \<listener_option\> **)** Define un nuevo agente de escucha del grupo de disponibilidad para este grupo de disponibilidad. LISTENER es un argumento opcional.  
   
 > [!IMPORTANT]
 >  Antes de crear el primer agente de escucha, se recomienda encarecidamente leer [Crear o configurar un agente de escucha del grupo de disponibilidad &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
@@ -436,7 +436,7 @@ CREATE AVAILABILITY GROUP group_name
   
  \<listener_option> LISTENER toma una de las siguientes opciones \<listener_option>: 
   
- WITH DHCP [ ON { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** } ]  
+ WITH DHCP [ ON { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')** } ]  
  Especifica que el agente de escucha del grupo de disponibilidad usa el protocolo DHCP (Protocolo de configuración dinámica de host).  Opcionalmente, use la cláusula ON para identificar la red en la que se ha creado este agente de escucha. DHCP está limitado a una sola subred que se usa para cada instancia de servidor que hospeda una réplica en el grupo de disponibilidad.  
   
 > [!IMPORTANT]  
@@ -446,17 +446,17 @@ CREATE AVAILABILITY GROUP group_name
   
  `WITH DHCP ON ('10.120.19.0','255.255.254.0')`  
   
- WITH IP **(** { **('**_four\_part\_ipv4\_address_**','**_four\_part\_ipv4\_mask_**')** | **('**_ipv6\_address_**')** } [ **,** ...*n* ] **)** [ **,** PORT **=**_listener\_port_ ]  
+ WITH IP **(** { **('** _four\_part\_ipv4\_address_ **','** _four\_part\_ipv4\_mask_ **')**  |  **('** _ipv6\_address_ **')** } [ **,** ...*n* ] **)** [ **,** PORT **=** _listener\_port_ ]  
  Especifica que, en lugar de usar DHCP, el agente de escucha del grupo de disponibilidad usa una o más direcciones IP estáticas. Para crear un grupo de disponibilidad a través de varias subredes, cada subred requiere una dirección IP estática en la configuración de la escucha. Para una subred determinada, la dirección IP estática puede ser una dirección IPv4 o una dirección IPv6. Póngase en contacto con el administrador de red para obtener una dirección IP estática para cada subred que hospeda una réplica del nuevo grupo de disponibilidad.  
   
  Por ejemplo:  
   
  `WITH IP ( ('10.120.19.155','255.255.254.0') )`  
   
- *four_part_ipv4_address*  
+ *ip4_address*  
  Especifica una dirección IPv4 de cuatro partes para el agente de escucha de un grupo de disponibilidad. Por ejemplo, `10.120.19.155`.  
   
- *four_part_ipv4_mask*  
+ *ipv4_mask*  
  Especifica una máscara IPv4 de cuatro partes para el agente de escucha de un grupo de disponibilidad. Por ejemplo, `255.255.254.0`.  
   
  *ipv6_address*  

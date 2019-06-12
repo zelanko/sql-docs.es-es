@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7732746b-eda5-469e-8567-e8546c4d81cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc209770285226beb45342223c1e46ff3a2fec3f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9a871bbbb7135d22771b3cd769a6ef0e5eb1bbe9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47771323"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768755"
 ---
 # <a name="setncharacterstream-method-int-javaioreader"></a>Método setNCharacterStream (int, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +48,7 @@ public final void setNCharacterStream(int parameterIndex,
   
  Este método se debe usar para **NCHAR**, **NVARCHAR**, **NTEXT**, y **XML** tipos de datos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setNCharacterStream &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setncharacterstream-method-sqlserverpreparedstatement.md)   
  [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

@@ -15,18 +15,18 @@ apitype: Assembly
 ms.assetid: 3d6decae-2570-4ca5-8ff6-57a2cc3e921f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 58e3144664f3f331d8bc3135d229c2eaeda80c88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2903508d7dc59d293402374637792e8d23c3726c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839613"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66779867"
 ---
 # <a name="getwarnings-method-sqlserverstatement"></a>Método getWarnings (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Recupera la primera advertencia que notifican las llamadas en este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
+  Recupera la primera advertencia notificada por las llamadas en este objeto [SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,7 +44,7 @@ public final java.sql.SQLWarning getWarnings()
 ## <a name="remarks"></a>Notas  
  Este método getWarnings especificado por el método getWarnings de la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

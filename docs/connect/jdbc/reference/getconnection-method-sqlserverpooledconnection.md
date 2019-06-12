@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 05bdb61f-26e8-480f-a1c1-1e46a8ed4b70
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 590fca2fcf97929755faa3633b257849b3fd7030
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 1f1f42623344ddd4659df3d6163a9e8b89d6ae7b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47687432"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763201"
 ---
 # <a name="getconnection-method-sqlserverpooledconnection"></a>Método getConnection (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public java.sql.Connection getConnection()
 ```  
   
 ## <a name="return-value"></a>Valor devuelto  
- Un objeto de conexión.  
+ Un objeto Connection.  
   
 ## <a name="exceptions"></a>Excepciones  
  java.sql.SQLException  
@@ -44,7 +44,7 @@ public java.sql.Connection getConnection()
 ## <a name="remarks"></a>Notas  
  Este método getConnection especificado por el método getConnection en la interfaz javax.sql.PooledConnection.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-methods.md)   
  [Miembros SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-members.md)   
  [Clase SQLServerPooledConnection](../../../connect/jdbc/reference/sqlserverpooledconnection-class.md)  

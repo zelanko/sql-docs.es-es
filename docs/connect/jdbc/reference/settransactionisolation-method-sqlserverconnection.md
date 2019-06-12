@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6a8fa4d3-5237-40f8-8a02-b40a3d7a1131
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 992ce78ec0fab556bb2bb91fdcaf97f54f3145e3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bb352bf06b6fc825d1fb45406bc6aab4336d0bb0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47811823"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766860"
 ---
 # <a name="settransactionisolation-method-sqlserverconnection"></a>Método setTransactionIsolation (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -58,7 +58,7 @@ public void setTransactionIsolation(int level)
   
  No se confirman las transacciones si se llama a este método durante el transcurso de una transacción.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

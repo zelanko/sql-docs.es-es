@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 870d0031-6871-4dc0-b03a-fb0a9ff6ab98
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 167c9b477a7078f10b3452ea96f96a77d85bb1d0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4c7fc5e407a4dfed3a310228ca5f68c7c11968c7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47660293"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66764463"
 ---
 # <a name="setfloat-method-sqlserverpreparedstatement"></a>Método setFloat (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setFloat(int n,
 ## <a name="remarks"></a>Notas  
  El método setFloat especifica este método setFloat en la interfaz java.sql.PreparedStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros de SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   
  [Clase SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)  
   

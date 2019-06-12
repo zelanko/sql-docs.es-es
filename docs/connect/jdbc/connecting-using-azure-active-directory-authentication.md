@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9c9d97be-de1d-412f-901d-5d9860c3df8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62892cebe5c3c709cedee94b620b2c0e4cfeb258
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 802172caef018224403544aad5c3c4fd53778305
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55737036"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775972"
 ---
 # <a name="connecting-using-azure-active-directory-authentication"></a>Conectarse usando la autenticación de Azure Active Directory
 
@@ -190,9 +190,9 @@ Acceso a un equipo unido al dominio de Windows para consultar el controlador de 
   ```
 - **Información para extraer** el nombre de controlador, en este caso `co1-red-dc-33.domain.company.com`
 
-##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Paso 2: Configuración de KDC en krb5.conf
+##### <a name="step-2-configuring-kdc-in-krb5conf"></a>Paso 2: Configuración del KDC en krb5.conf
 - **Ejecutar en**: Linux/Mac
-- **Acción**: Edite el /etc/krb5.conf en un editor que prefiera. Configure las claves siguientes
+- **Acción**: editar el /etc/krb5.conf en un editor que prefiera. Configure las claves siguientes
   ```
   [libdefaults]
     default_realm = DOMAIN.COMPANY.COM

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 78e367c6-5e4d-4715-8cb7-e841e4f76a7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5758830d9dddd5024daeea89a9e9cba8f278eb30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3a99919763cdf26ee49292ccaa5ec5ee9c28437d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702043"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66787239"
 ---
 # <a name="updateblob-method-sqlserverresultset"></a>Método updateBlob (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47702043"
 |[updateBlob (java.lang.String, java.io.InputStream)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md)|Actualiza la columna designada mediante el flujo de entrada especificado.|  
 |[updateBlob (java.lang.String, java.io.InputStream, long)](../../../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md)|Actualiza la columna designada mediante el flujo de entrada especificado, que tendrá el número especificado de bytes.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

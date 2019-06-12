@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4508d90f-c3c4-4eac-8001-fb0b93b66734
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9cf27049e45c8e52c8a63a419327f377dd1f558f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 150876193af526044d19efcee250e7702bc4fe84
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47841403"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774466"
 ---
 # <a name="getholdability-method-sqlserverresultset"></a>Método getHoldability (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public int getHoldability()
   
  Cuando se restablece la capacidad de alojamiento y se llama al método getHoldability en el resultado creado previamente el objeto de conjunto, el valor devuelto por este método puede ser diferente del valor de capacidad de alojamiento devuelto por los métodos siguientes: Statement.getResultSetHoldability , Connection.getHoldability o DatabaseMetaData.getResultSetHoldability.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

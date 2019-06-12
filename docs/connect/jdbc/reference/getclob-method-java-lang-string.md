@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ad871d09-ec43-4885-9067-20854b439b0c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f546a846b96b3c0d518663fbf52edb033631a7ec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c070bb12da865d1a5a43d2cb5ddf9a7f6a28fc5c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647623"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66763676"
 ---
 # <a name="getclob-method-javalangstring"></a>Método getClob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.sql.Clob getClob(java.lang.String sCol)
 ## <a name="remarks"></a>Notas  
  El método getClob especifica este método getClob en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

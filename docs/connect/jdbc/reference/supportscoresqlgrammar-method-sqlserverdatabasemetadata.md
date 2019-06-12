@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6b82f300-f906-4d11-b810-525bda4a88ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4606e2574e0c1fd058c9ae075c75f1670ef2fc80
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 95a9dd888224720874e57bc74d39bec441190e6b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804883"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766182"
 ---
 # <a name="supportscoresqlgrammar-method-sqlserverdatabasemetadata"></a>Método supportsCoreSQLGrammar (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsCoreSQLGrammar()
 ## <a name="remarks"></a>Notas  
  Este método supportsCoreSQLGrammer especificado por el método supportsCoreSQLGrammer en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

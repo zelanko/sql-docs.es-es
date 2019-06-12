@@ -13,13 +13,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, sessions
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 0753e0d4347a86db3401806c2b46cba7224342eb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a2768acd897d996ec3076864a0586be74f22dbdf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731423"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66768437"
 ---
 # <a name="sessions"></a>Sesiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -190,7 +190,7 @@ EXIT:
 > [!NOTE]  
 >  En el ejemplo anterior, se usa la interfaz **IDBCreateCommand** porque la interfaz **ICommand** implementa el método **GetDBSession**, el único método en el ámbito de comando o de conjunto de filas que permite a un objeto determinar la sesión en la que se ha creado. Por tanto, un objeto de comando, y solo un objeto de comando, permite a una aplicación recuperar un puntero de objeto de origen de datos a partir del cual se pueden crear sesiones adicionales.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Objetos de origen de datos &#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

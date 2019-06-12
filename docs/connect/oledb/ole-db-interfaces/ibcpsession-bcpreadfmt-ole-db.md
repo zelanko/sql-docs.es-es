@@ -1,5 +1,5 @@
 ---
-title: 'Ibcpsession:: Bcpreadfmt (OLE DB) | Microsoft Docs'
+title: IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs
 description: 'Utilizando ibcpsession:: Bcpreadfmt para leer datos de un archivo de formato (OLE DB)'
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,13 @@ helpviewer_keywords:
 - BCPReadFmt method
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 451b2b52f44af44176ab5470992d30e24df70582
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 46139cddfb91c974f78547794bec55251abce25c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600275"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66790824"
 ---
 # <a name="ibcpsessionbcpreadfmt-ole-db"></a>IBCPSession::BCPReadFmt (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ HRESULT BCPReadFmt(
  E_UNEXPECTED  
  No se esperaba la llamada al método. Por ejemplo, no se llamó al método [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) antes de llamar a este método.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
  [Realizar operaciones de copia masiva](../../oledb/features/performing-bulk-copy-operations.md)  
   

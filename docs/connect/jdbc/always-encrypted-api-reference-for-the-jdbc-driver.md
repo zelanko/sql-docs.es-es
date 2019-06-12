@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 6962a2aa-9508-4d4f-a78c-905e2bc68615
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f659f5fbb2daa0b0a9969c3e7cde75dccc53d0
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+manager: jroth
+ms.openlocfilehash: 36ccbdddde5276bedffe3271a541875f1e555df3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361675"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66770480"
 ---
 # <a name="always-encrypted-api-reference-for-the-jdbc-driver"></a>Referencia de la API de Always Encrypted para el controlador JDBC
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -75,8 +75,8 @@ ms.locfileid: "54361675"
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
-|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<alias_certificado><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] decryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] encryptedColumnEncryptionKey)`|Descifra el valor cifrado especificado de una clave de cifrado de columna. Se espera que el valor cifrado se haya cifrado mediante el certificado con la ruta de acceso a la clave especificada y mediante el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<certificate_alias><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. decryptColumnEncryptionKey(String, String, Byte[]).)|  
+|`public byte[] encryptColumnEncryptionKey (String masterKeyPath, String encryptionAlgorithm, byte[] plainTextColumnEncryptionKey)`|Cifra una clave de cifrado de columna mediante el certificado con la ruta de acceso a la clave especificada y con el algoritmo especificado.<br /><br /> **El formato de la ruta de acceso a la clave debe ser uno de los siguientes:**<br /><br /> Thumbprint:<huella_digital_certificado><br /><br /> Alias:<certificate_alias><br /><br /> (Reemplaza a SQLServerColumnEncryptionKeyStoreProvider. encryptColumnEncryptionKey(String, String, Byte[]).)|  
 |`public void setName (String name)`|Establece el nombre de este proveedor de almacén de claves.|
 |`public String getName ()`|Obtiene el nombre de este proveedor de almacén de claves.|
   

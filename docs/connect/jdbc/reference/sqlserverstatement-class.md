@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ec24963c-8b51-4838-91e9-1fbfa2347451
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7488efcb3392623e6f54cff440a16494c10e0a69
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 0901763b2f7b6c62e365df953012c2f54dba6f6d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47705353"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66776725"
 ---
 # <a name="sqlserverstatement-class"></a>Clase SQLServerStatement
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public class SQLServerStatement
   
  Esta clase admite la acción de desencapsular para la clase SQLServerStatement, la interfaz ISQLServerStatement y la interfaz java.sql.Statement. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: ca0a3b29-30d1-4d20-bc8d-d3d9ed19ff50
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bd885dd500a6608772a4e91e731e2d1db5b57ef3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6fe0152d23bcf71e371ad778a961dedb9c6ee739
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637153"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778809"
 ---
 # <a name="gettime-method-javalangstring"></a>Método getTime (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public java.sql.Time getTime(java.lang.String sCol)
   
  Vea el gráfico titulado "Conversiones de métodos de captador" en [descripción de las conversiones de tipo de datos](../../../connect/jdbc/understanding-data-type-conversions.md) para ver qué [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipos de datos se pueden recuperar con este método.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getTime &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/gettime-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

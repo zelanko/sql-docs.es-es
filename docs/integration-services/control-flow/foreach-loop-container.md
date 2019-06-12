@@ -1,7 +1,7 @@
 ---
 title: Contenedor de bucles Para cada uno | Microsoft Docs
 ms.custom: ''
-ms.date: 08/22/2017
+ms.date: 05/22/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -31,12 +31,12 @@ ms.assetid: dd6cc2ba-631f-4adf-89dc-29ef449c6933
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 79afc8387a98df72ca2e60d1f97703097fba90e5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 504e17e0cb7d377f4b5567d705b9efb4647091aa
+ms.sourcegitcommit: fc0eb955b41c9c508a1fe550eb5421c05fbf11b4
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65727708"
+ms.lasthandoff: 05/30/2019
+ms.locfileid: "66403050"
 ---
 # <a name="foreach-loop-container"></a>Contenedor Foreach Loop
 
@@ -68,6 +68,8 @@ ms.locfileid: "65727708"
 -   Enumerador de blobs de Azure para Foreach usado para enumerar blobs en un contenedor de blobs en Almacenamiento de Azure.  
 
 -   Enumerador de archivos de ADLS para el bucle Para cada uno para enumerar los archivos en un directorio en Azure Data Lake Store.
+
+-   Enumerador de archivos de Data Lake Storage Gen2 para Foreach para enumerar archivos en un directorio de Azure Data Lake Store Gen2.
   
  El siguiente diagrama muestra un contenedor de bucles Foreach que tiene una tarea Sistema de archivos. El bucle Foreach utiliza el Enumerador de archivos para Foreach y la tarea Sistema de archivos está configurada para copiar un archivo. Si la carpeta especificada por el enumerador contiene cuatro archivos, el bucle se repetirá cuatro veces y copiará cuatro archivos.  
   
@@ -98,6 +100,7 @@ ms.locfileid: "65727708"
 |Enumerador de archivos HDFS para Foreach|Especifique una carpeta y los archivos que se van a enumerar, el formato de nombre de archivo de los archivos recuperados y si hay que recorrer las subcarpetas.|  
 |Por cada blob de Azure|Deberá especificar el contenedor de blobs de Azure que contendrá los blobs que se van a enumerar.|  
 |Archivo de ADLS para Para cada uno|Especifique el directorio de Azure Data Lake Store que contiene los archivos que hay que enumerar.|
+|Archivo de Data Lake Storage Gen2 para Foreach|Especifique el directorio de Azure Data Lake Storage Gen2 que contiene los archivos que hay que enumerar, además de otras opciones.|
 
 ## <a name="add-enumeration-to-a-control-flow-with-a-foreach-loop-container"></a>Agregar enumeración a un flujo de control con un contenedor de bucles Para cada uno
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] incluye el contenedor de bucles Para cada uno, un elemento de flujo de control que simplifica la inclusión de una construcción de bucle que enumera archivos y objetos en el flujo de control de un paquete. Para más información, vea [Contenedor Foreach Loop](../../integration-services/control-flow/foreach-loop-container.md).  
@@ -215,6 +218,7 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
 |**Enumerador de archivos HDFS para Foreach**|Enumerar archivos HDFS en la ubicación de HDFS especificada. Si selecciona este valor se muestran las opciones dinámicas en la sección **Enumerador de archivos HDFS para Foreach**.|  
 |**Enumerador de blob de Azure para Para cada uno**|Enumerar archivos blob en la ubicación de blob especificada. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de blob de Azure para Foreach**.|  
 |**Enumerador de archivos de ADLS para Para cada uno**|Enumerar archivos en el directorio de Data Lake Store especificado. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos ADLS para Para cada uno**.|
+|**Enumerador de archivos de Data Lake Storage Gen2 para Foreach**|Enumerar archivos en el directorio de Data Lake Storage Gen2 especificado. Si selecciona este valor, se muestran las opciones dinámicas en la sección **Enumerador de archivos de Data Lake Storage Gen2 para Foreach**.|
   
  **Expresiones**  
  Haga clic en **Expresiones** o expándalo para ver la lista de expresiones de propiedad existentes. Haga clic en el botón de puntos suspensivos **(…)** para agregar una expresión de propiedad para una propiedad de enumerador, o bien para editar y evaluar una expresión de propiedad existente.  
@@ -470,6 +474,9 @@ Utilice la página **General** del cuadro de diálogo **Editor de bucles Foreach
  **Directorio de blob**  
  Especifique el directorio de blob que contiene los archivos de blob que hay que enumerar. El directorio de blob es una estructura jerárquica virtual.  
   
+ **Buscar recursivamente**  
+ Especifique si se debe buscar de forma recursiva en subdirectorios.
+
  **Filtro de nombre de blob**  
  Especifique un nombre de filtro para enumerar los archivos con un determinado patrón de nombre. Por ejemplo, `MySheet*.xls\*` incluirá archivos como MiHoja001.xls y MiHojaABC.xlsx.  
   
@@ -490,6 +497,18 @@ Especifica un filtro de nombre de archivo. Se enumeran solo los archivos cuyo no
   
 **SearchRecursively**  
 Especifica si se debe buscar de forma recursiva en el directorio especificado.  
+
+####  <a name="ForeachBlobFsFile"></a> Enumerator = Enumerador de archivos de Data Lake Storage Gen2 para Foreach 
+El **Enumerador de archivos de Data Lake Storage Gen2 para Foreach** permite que un paquete SSIS enumere archivos en Azure Data Lake Store Gen2.
+
+**AzureStorageConnection**  
+Especifica un administrador de conexiones de Azure Storage existente o crea uno que haga referencia a un servicio de Data Lake Storage Gen2.
+
+**FolderPath**  
+Especifica la ruta de acceso de la carpeta en la que se van a enumerar los archivos.
+
+**SearchRecursively**  
+Especifica si se debe buscar de forma recursiva en la carpeta especificada.  
 
 ## <a name="variable-mappings-page---foreach-loop-editor"></a>Página Asignaciones de variables: Editor de bucles Para cada uno
  Use la página **Asignaciones de variables** del cuadro de diálogo **Editor de bucles Foreach** para asignar variables al valor de la colección. El valor de la variable se actualiza con los valores de la colección en cada iteración del bucle.  

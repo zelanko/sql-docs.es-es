@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 55a182c1-28e5-4d32-aeb1-166a8ac76758
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9c9394408ef3fb421033df56ecbac87494acddba
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 81c33a04fa62c6fbfa94ae5982f4d4954ba91d79
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47668873"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66766595"
 ---
 # <a name="supportsaltertablewithdropcolumn-method-sqlserverdatabasemetadata"></a>Método supportsAlterTableWithDropColumn (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public boolean supportsAlterTableWithDropColumn()
 ## <a name="remarks"></a>Notas  
  Este método supportsAlterTableWithDropColumn especificado por el método supportsAlterTableWithDropColumn en la interfaz java.sql.DatabaseMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

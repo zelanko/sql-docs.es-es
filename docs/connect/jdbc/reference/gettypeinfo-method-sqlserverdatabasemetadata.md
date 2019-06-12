@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40ca58f33dec39a1ec6d39979c7f6f0103acf8b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47682723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66788633"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método getTypeInfo especificado por el método getTypeInfo en la interfaz java.sql.DatabaseMetaData.  
+ El método getTables especifica este método getTables en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getTypeInfo contendrá la siguiente información:  
   
@@ -98,7 +98,7 @@ public static void executeGetTypeInfo(Connection con) {
 }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   
  [Miembros SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-members.md)   
  [Clase SQLServerDatabaseMetaData](../../../connect/jdbc/reference/sqlserverdatabasemetadata-class.md)  

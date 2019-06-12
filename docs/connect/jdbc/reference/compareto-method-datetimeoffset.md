@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: e4cf2ea4-0fe9-40ce-ba79-f2a2b616997e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04f19f08deda9cd42affa0a5ced28255c1bb521b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cb06138639be09378baa8dfe94d110c0ded41223
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47742933"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66777369"
 ---
 # <a name="compareto-method-datetimeoffset"></a>Método compareTo (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public int compareTo(DateTimeOffset other)
 ## <a name="remarks"></a>Notas  
  Cuando dos objetos **DateTimeOffset** tienen la misma hora de GMT, no se produce ninguna ordenación adicional de los objetos basados en el desplazamiento.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

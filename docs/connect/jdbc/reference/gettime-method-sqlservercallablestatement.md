@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e5739e05-ffb9-4759-a44c-0601cb04b924
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b7772070aba8c41ae39825c52befa72ccde1ec4c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 84753fa742825c71b0161bc310e191ad34e3ed37
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843963"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66778789"
 ---
 # <a name="gettime-method-sqlservercallablestatement"></a>Método getTime (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47843963"
 |[getTime (java.lang.String)](../../../connect/jdbc/reference/gettime-method-java-lang-string.md)|Recupera el valor del parámetro designado como un objeto java.sql.Time en el lenguaje de programación Java según el nombre de parámetro especificado.|  
 |[getTime (java.lang.String, java.util.Calendar)](../../../connect/jdbc/reference/gettime-method-java-lang-string-java-util-calendar.md)|Recupera el valor del parámetro designado como un objeto java.sql.Time en el lenguaje de programación Java según el nombre de parámetro y usando el objeto Calendar determinado.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

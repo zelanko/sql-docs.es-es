@@ -1,7 +1,7 @@
 ---
 title: Características de SQL Server no admitidas para OLTP en memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 07/19/2017
+ms.date: 05/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ba432d722bcd6f9df6c797d361a53e0b6dc6dff9
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: cfb3e978c407ecdd3394c2d6ca90df9d5b1f8885
+ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254970"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66506590"
 ---
 # <a name="unsupported-sql-server-features-for-in-memory-oltp"></a>Características de SQL Server no admitidas para OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,15 +33,15 @@ Las características siguientes de [!INCLUDE[ssNoVersion](../../includes/ssnover
 |-------------------------|-------------------------|  
 |Compresión de datos en tablas optimizadas para memoria.|Puede usar la característica de compresión de datos como ayuda para comprimir los datos de una base de datos y reducir el tamaño de la base de datos. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md).|  
 |Creación de particiones de tablas optimizadas para memoria e índices HASH, así como índices no agrupados.|Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de la base de datos. Para obtener más información, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).|  
-| REPLICATION | Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria.<br /><br />Si hay un grupo de archivos optimizados para memoria, no se admite la replicación con sync_mode="database snapshot".<br /><br />Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
+| Replicación | Las configuraciones de replicación que no sean la replicación transaccional en tablas optimizadas para memoria en los suscriptores son incompatibles con tablas o vistas que hacen referencia a tablas optimizadas para memoria.<br /><br />Si hay un grupo de archivos optimizados para memoria, no se admite la replicación con sync_mode="database snapshot".<br /><br />Para obtener más información, vea [Replicación para los suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|
 |Creación de reflejo|No se admite la creación de reflejo de la base de datos para bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA. Para obtener más información sobre la creación de reflejo, vea [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md).|  
 |Recompilar el registro|La recompilación del registro, ya sea a través de un adjunto o de ALTER DATABASE, no se admite para bases de datos con un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Servidor vinculado|No se puede tener acceso a los servidores vinculados en la misma consulta o transacción como tablas optimizadas en memoria. Para obtener más información, vea [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md).|  
 |Registro masivo|Independientemente del modelo de recuperación de la base de datos, todas las operaciones en tablas durables optimizadas para memoria siempre se registran completamente.|  
 |Registro mínimo|Las tablas optimizadas para memoria no admiten el registro mínimo. Para obtener más información sobre el registro mínimo, vea [El registro de transacciones &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md) y [Requisitos previos para el registro mínimo durante la importación en bloque](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md).|  
-|seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. Sin embargo, no se hace el seguimiento de los cambios en las tablas optimizadas para memoria.|  
+|seguimiento de cambios|El seguimiento de cambios se puede habilitar en una base de datos con objetos de OLTP en memoria. |
 | DDL, desencadenadores | No se admiten ni los desencadenadores DDL de nivel de base de datos ni de nivel de servidor con las tablas OLTP en memoria ni con módulos compilados de forma nativa. |  
-| Captura de datos modificados (CDC) | CDC no se puede usar con una base de datos que tenga tablas optimizadas para memoria, debido a que CDC internamente usa un desencadenador DDL para DROP TABLE. |  
+| Captura de datos modificados (CDC) | SQL Server 2017 CU15 y versiones superiores admiten la habilitación de CDC en una base de datos que tenga tablas optimizadas para memoria. Esto solo es aplicable a la base de datos y a las tablas en disco de esta. En versiones anteriores de SQL Server, CDC no se puede usar con una base de datos que tenga tablas optimizadas para memoria, debido a que CDC usa internamente un desencadenador DDL para DROP TABLE. |  
 | Modo de fibra | El modo de fibra no se admite con tablas optimizadas para memoria:<br /><br />Si el modo de fibra está activo, no puede crear bases de datos con grupos de archivos optimizados para memoria ni agregar grupos de archivos optimizados para memoria a bases de datos existentes.<br /><br />Puede habilitar el modo de fibra si hay bases de datos con grupos de archivos optimizados para memoria. Sin embargo, para habilitar el modo de fibra hay que reiniciar el servidor. En esa situación, las bases de datos con grupos de archivos optimizados para memoria no se podrían recuperar. Luego vería un mensaje de error que recomendaría deshabilitar el modo de fibra para usar las bases de datos con grupos de archivos optimizados para memoria.<br /><br />Si el modo de fibra está activo, se produce un error al adjuntar y restaurar una base de datos con un grupo de archivos optimizados para memoria. Las bases de datos quedarían marcadas como sospechosas.<br /><br />Para obtener más información, consulte [lightweight pooling (opción de configuración del servidor)](../../database-engine/configure-windows/lightweight-pooling-server-configuration-option.md). |  
 |Limitación de Service Broker|No puede tener acceso a una cola desde un procedimiento almacenado compilado de forma nativa.<br /><br /> No puede tener acceso a una cola en una base de datos remota en una transacción que tiene acceso a tablas optimizadas para memoria.|  
 |Replicación en los suscriptores|La replicación transaccional en tablas optimizadas para memoria en suscriptores se admite pero con algunas restricciones. Para obtener más información, vea [Replicación en suscriptores de tablas con optimización para memoria](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).|  

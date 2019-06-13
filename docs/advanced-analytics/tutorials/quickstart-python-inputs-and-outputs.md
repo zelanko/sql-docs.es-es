@@ -8,12 +8,12 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a778c4a65b9e3f4cbf4ed77cff46e9061d4b6a8a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583228"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033395"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>Inicio rápido: Controlar las entradas y salidas con Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,9 +56,9 @@ SELECT * FROM PythonTestData
 
 Echemos un vistazo a la forma predeterminada las variables de entrada y salidas de sp_execute_external_script: `InputDataSet` y `OutputDataSet`.
 
-1. Puede obtener los datos de la tabla como entrada para el script de R. Ejecute la instrucción siguiente. Obtiene los datos de la tabla, realiza un recorrido por el runtime de R y devuelve los valores con el nombre de columna *NewColName*.
+1. Puede obtener los datos de la tabla como entrada para el script de Python. Ejecute la instrucción siguiente. Obtiene los datos de la tabla, realiza un recorrido por el runtime de Python y devuelve los valores con el nombre de columna *NewColName*.
 
-    Los datos devueltos por la consulta se pasan al runtime de R, que devuelve los datos a la base de datos de SQL como una trama de datos. La cláusula WITH RESULT SETS define el esquema de la tabla de datos devueltos para la base de datos SQL.
+    Los datos devueltos por la consulta se pasan al runtime de Python, que devuelve los datos a la base de datos SQL como un DataFrame de pandas. La cláusula WITH RESULT SETS define el esquema de la tabla de datos devueltos para la base de datos SQL.
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -72,7 +72,7 @@ Echemos un vistazo a la forma predeterminada las variables de entrada y salidas 
 
     ![Salida de script de Python que devuelve datos de una tabla](./media/python-output-pythontestdata.png)
 
-2. Vamos a cambiar el nombre de las variables de entrada o salidas. El script anterior usa la entrada predeterminada y los nombres de variable de salida _InputDataSet_ y _OutputDataSet_. Para definir los datos de entrada asociados con _InputDatSet_, usa el *@input_data_1* variable.
+2. Vamos a cambiar el nombre de las variables de entrada o salidas. El script anterior usa la entrada predeterminada y los nombres de variable de salida _InputDataSet_ y _OutputDataSet_. Para definir los datos de entrada asociados con _InputDataSet_, usa el *@input_data_1* variable.
 
     En esta secuencia de comandos, los nombres de las variables de entrada y salida para el procedimiento almacenado se cambió a *SQL_out* y *SQL_in*:
 

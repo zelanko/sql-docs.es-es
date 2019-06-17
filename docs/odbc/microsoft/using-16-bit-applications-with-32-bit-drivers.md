@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63209972"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 16 bits con controladores de 32 bits
@@ -36,7 +36,7 @@ ms.locfileid: "63209972"
 >  Cada vez que una aplicación de 16 bits interactúa con un controlador de 32 bits, el Administrador de controladores de 32 bits siempre devuelve "2.0" como la versión de ODBC compatibles con el controlador.  
   
 ## <a name="administration"></a>Administración  
- Puede administrar orígenes de datos para los controladores de 32 bits mediante el Administrador de orígenes de datos ODBC. Para abrir el Administrador de ODBC en equipos que ejecutan Microsoft® Windows® 2000, abra el Panel de Control de Windows, haga doble clic en **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. En equipos que ejecutan versiones anteriores de Microsoft Windows, el icono se denomina **ODBC 32-bit** o simplemente **ODBC**.  
+ Puede administrar orígenes de datos para los controladores de 32 bits mediante el Administrador de orígenes de datos ODBC. Para abrir el Administrador de ODBC en equipos que ejecutan Microsoft® Windows® 2000, abra el Panel de Control de Windows, haga doble clic en **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . En equipos que ejecutan versiones anteriores de Microsoft Windows, el icono se denomina **ODBC 32-bit** o simplemente **ODBC**.  
   
  La siguiente ilustración muestra cómo una aplicación de 16 bits llama a un archivo DLL de configuración del controlador de 32 bits. Entre la DLL de instalador de 16 bits y el controlador de 32 bits DLL de instalación es una DLL de thunk genérica que convierte las llamadas DLL de instalador de 16 bits a las llamadas DLL de instalador de 32 bits.  
   

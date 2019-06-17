@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 827dd531eda338f4fd297a4420ed144d46a613ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998929"
 ---
 # <a name="outer-joins"></a>Combinaciones externas
 ODBC admite el SQL-92 dejado, sintaxis de combinación externa completa y correcta. Es la secuencia de escape para las combinaciones externas  
   
- **{oj** _outer-join_**}**  
+ **{oj** _outer-join_ **}**  
   
  donde *combinación externa* es  
   

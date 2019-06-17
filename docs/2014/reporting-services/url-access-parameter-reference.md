@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b5607f9105ec7197ebc96afc91f189ac19969be8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098719"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
@@ -68,7 +68,7 @@ ms.locfileid: "66098719"
 |*ShowHideToggle*|Alterna el estado de mostrar u ocultar de una sección del informe. Especifique un entero positivo para representar la sección que desea alternar.|  
   
 ## <a name="report-viewer-web-part-commands-rv"></a>Comandos de elemento web del visor de informes (rv:)  
- En la tabla siguiente se describen los nombres de parámetros de informes reservados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se usan para tener como destino el elemento web del visor de informes cuando se integra con SharePoint. Estos nombres de parámetro tienen como prefijo *rv:*. El elemento web del visor de informes también acepta el parámetro *rs:ParameterLanguage* .  
+ En la tabla siguiente se describen los nombres de parámetros de informes reservados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] que se usan para tener como destino el elemento web del visor de informes cuando se integra con SharePoint. Estos nombres de parámetro tienen como prefijo *rv:* . El elemento web del visor de informes también acepta el parámetro *rs:ParameterLanguage* .  
   
 |Parámetro|Acción|  
 |---------------|------------|  

@@ -13,22 +13,22 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 23b0125ab578ebb4fb8837c95ec61db900880ec6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064528"
 ---
 # <a name="browse-for-remote-folder-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar carpeta remota (Analysis Services - Datos multidimensionales)
   El cuadro de diálogo **Buscar carpeta remota** muestra una lista de carpetas de registro y de datos disponibles para una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Puede seleccionar una carpeta de la lista o especificar una carpeta diferente, si fuese necesario. El cuadro de diálogo **Buscar carpeta remota** se muestra de una de las siguientes maneras:  
   
--   En el Asistente para particiones, en la página **Ubicaciones de procesamiento y almacenamiento** , al hacer clic en el botón de puntos suspensivos (**…**).  
+-   En el Asistente para particiones, en la página **Ubicaciones de procesamiento y almacenamiento** , al hacer clic en el botón de puntos suspensivos ( **…** ).  
   
--   En el cuadro de diálogo **Restaurar base de datos** de la página **Particiones** , en la opción **Seleccionar ubicaciones diferentes** , en la columna **Carpeta de destino** , al hacer clic en el botón de puntos suspensivos (**…**).  
+-   En el cuadro de diálogo **Restaurar base de datos** de la página **Particiones** , en la opción **Seleccionar ubicaciones diferentes** , en la columna **Carpeta de destino** , al hacer clic en el botón de puntos suspensivos ( **…** ).  
   
--   En el cuadro de diálogo **Particiones remotas - Configuración avanzada** , en la opción **Lista de particiones** , en la columna **Carpeta de restauración** , al hacer clic en el botón de puntos suspensivos (**…**).  
+-   En el cuadro de diálogo **Particiones remotas - Configuración avanzada** , en la opción **Lista de particiones** , en la columna **Carpeta de restauración** , al hacer clic en el botón de puntos suspensivos ( **…** ).  
   
--   En el Asistente para sincronizar bases de datos, ya sea en la página **Especificar ubicaciones para particiones locales** o en la página **Especificar ubicaciones para particiones remotas** , en la opción **Ubicaciones** , en la columna **Carpeta de destino** , al hacer clic en el botón de puntos suspensivos (**…**).  
+-   En el Asistente para sincronizar bases de datos, ya sea en la página **Especificar ubicaciones para particiones locales** o en la página **Especificar ubicaciones para particiones remotas** , en la opción **Ubicaciones** , en la columna **Carpeta de destino** , al hacer clic en el botón de puntos suspensivos ( **…** ).  
   
 ## <a name="options"></a>Opciones  
  **Seleccione la carpeta**  

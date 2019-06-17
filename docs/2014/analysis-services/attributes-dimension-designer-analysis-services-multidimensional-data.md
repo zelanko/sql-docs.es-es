@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9eab7de49abaf06446fbd03f7b80c381d102f20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064398"
 ---
 # <a name="attributes-dimension-structure-tab-dimension-designer-analysis-services---multidimensional-data"></a>Atributos (pestaña Estructura de dimensión, Diseñador de dimensiones) (Analysis Services - Datos multidimensionales)
@@ -58,7 +58,7 @@ ms.locfileid: "66064398"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |Regular|Identifica un atributo normal.|  
-|Key|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos (**…**) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
+|Key|Identifica el atributo clave de la dimensión. Esto corresponde a los miembros hoja de la dimensión. Solo puede haber un atributo clave por dimensión. Para modificarlo, haga clic en el botón de puntos suspensivos ( **…** ) que aparece junto a la propiedad **KeyColumns** en el panel **Propiedades** .|  
 |Parent|Indica el atributo primario para una relación de elementos primarios y secundarios. El atributo secundario de esta relación siempre debe ser el atributo clave.|  
 |AccountType|Indica un atributo de tipo de cuenta. Lo usa el servidor o el motor cuando la función de agregación para una medida está establecida en “por cuenta”.|  
   

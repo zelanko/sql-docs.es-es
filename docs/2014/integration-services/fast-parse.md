@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b13ddc498962ca23e6bc1f5e7a10d88af47ff7d6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058867"
 ---
 # <a name="fast-parse"></a>Fast Parse
@@ -29,7 +29,7 @@ ms.locfileid: "66058867"
   
  Si el flujo de datos en el paquete exige un análisis sensible a la configuración regional, se recomienda el análisis estándar en lugar del rápido. Por ejemplo el análisis rápido no reconoce los datos relacionados con la configuración regional que incluyen símbolos decimales como la coma, formatos de fecha que no sean los formatos año-mes-fecha y símbolos de moneda.  
   
- Las representaciones truncadas que implican una o más partes de una fecha, como el siglo, año o mes, no son reconocidas por el análisis rápido. Por ejemplo, el análisis rápido no reconoce el formato "**-YYMM**", que especifica un año y mes en un siglo específico, ni "**--MM**", que especifica un mes en un año implícito. Sin embargo, se reconocen algunas representaciones con precisión reducida. Por ejemplo, el análisis rápido reconoce el formato 'hhmm;', que indica solamente horas y minutos, y '**YYYY**', que indica el año solamente.  
+ Las representaciones truncadas que implican una o más partes de una fecha, como el siglo, año o mes, no son reconocidas por el análisis rápido. Por ejemplo, el análisis rápido no reconoce el formato " **-YYMM**", que especifica un año y mes en un siglo específico, ni " **--MM**", que especifica un mes en un año implícito. Sin embargo, se reconocen algunas representaciones con precisión reducida. Por ejemplo, el análisis rápido reconoce el formato 'hhmm;', que indica solamente horas y minutos, y '**YYYY**', que indica el año solamente.  
   
  El análisis rápido se especifica en el nivel de columna. En el origen de archivo plano y en la transformación Conversión de datos, puede especificarse el análisis rápido en las columnas de salida. Las entradas y salidas pueden incluir columnas sensibles y no sensibles a la configuración regional.  
   

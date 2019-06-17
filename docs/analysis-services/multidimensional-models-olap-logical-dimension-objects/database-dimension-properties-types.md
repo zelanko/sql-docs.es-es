@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 663c26ac169c11e5ab2d9b90285419cf4145368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025770"
 ---
 # <a name="database-dimension-properties---types"></a>Propiedades de la dimensión de base de datos: tipos
@@ -38,7 +38,7 @@ ms.locfileid: "63025770"
 |Escenario|Dimensión cuyos atributos representan información de planeación o análisis estratégico.|  
 |Cuantitativo|Dimensión cuyos atributos representan información cuantitativa.|  
 |Utilidad|Dimensión cuyos atributos representan información diversa.|  
-|Moneda|Este tipo de dimensión contiene datos de moneda y metadatos.|  
+|Currency|Este tipo de dimensión contiene datos de moneda y metadatos.|  
 |Tarifas|Dimensión cuyos atributos representan información de tasa de cambio.|  
 |Canal|Dimensión cuyos atributos representan información de canal.|  
 |Promoción|Dimensión cuyos atributos representan información de promociones de marketing.|  

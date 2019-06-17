@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: f11b09d93510fe1da89abc1a723e7698f1fdd915
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531047"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046716"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -78,9 +78,9 @@ sp_execute_external_script
  **@language** = N'*lenguaje*'  
  Indica el lenguaje de script. *lenguaje* es **sysname**.  Según la versión de SQL Server, los valores válidos son R (SQL Server 2016 y versiones posterior), (SQL Server 2017 y versiones posterior) de Python y Java (versión preliminar de SQL Server 2019). 
   
- **@script** = N'*script*' especificado como entrada de una literal o una variable de secuencia de comandos de lenguaje externo. *secuencia de comandos* es **nvarchar (max)**.  
+ **@script** = N'*script*' especificado como entrada de una literal o una variable de secuencia de comandos de lenguaje externo. *secuencia de comandos* es **nvarchar (max)** .  
 
-`[ @input_data_1 =  N'input_data_1' ]` Especifica los datos de entrada usados por el script externo en forma de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Tipo de datos de *input_data_1* es **nvarchar (max)**.
+`[ @input_data_1 =  N'input_data_1' ]` Especifica los datos de entrada usados por el script externo en forma de un [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta. Tipo de datos de *input_data_1* es **nvarchar (max)** .
 
 `[ @input_data_1_name = N'input_data_1_name' ]` Especifica el nombre de la variable utilizada para representar la consulta definida por @input_data_1. El tipo de datos de la variable en el script externo depende del idioma. En el caso de R, la variable de entrada es una trama de datos. En el caso de Python, la entrada debe ser tabular. *input_data_1_name* es **sysname**.  Valor predeterminado es *InputDataSet*.  
 
@@ -124,7 +124,7 @@ Ejecución de secuencia de comandos de monitor mediante [sys.dm_external_script_
 
  En SQL Server 2019, actualmente en versión preliminar pública, puede establecer dos parámetros adicionales que permiten el modelo de datos con particiones, donde las particiones se basan en uno o más columnas que proporcione que naturalmente segmentación un conjunto de datos en particiones lógicas, crean y usa durante la ejecución del script. Las columnas que contienen valores que se repiten para edad, sexo, región geográfica, fecha u hora, son algunos ejemplos que se prestan a los conjuntos de datos con particiones.
  
- Los dos parámetros son **input_data_1_partition_by_columns** y **input_data_1_order_by_columns**, donde el segundo parámetro se utiliza para ordenar el conjunto de resultados. Los parámetros se pasan como entradas para `sp_execute_external_script` con el script externo ejecuta una vez para cada partición. Para obtener más información y ejemplos, vea [Tutorial: Crear modelos basados en la partición](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md).
+ Los dos parámetros son **input_data_1_partition_by_columns** y **input_data_1_order_by_columns**, donde el segundo parámetro se utiliza para ordenar el conjunto de resultados. Los parámetros se pasan como entradas para `sp_execute_external_script` con el script externo ejecuta una vez para cada partición. Para obtener más información y ejemplos, vea [Tutorial: Crear modelos basados en la partición](https://docs.microsoft.com/sql/advanced-analytics/tutorials/r-tutorial-create-models-per-partition).
 
  Puede ejecutar la secuencia de comandos en paralelo mediante la especificación de `@parallel=1`. Si se puede paralelizar la consulta de entrada, debe establecer `@parallel=1` como parte de los argumentos de `sp_execute_external_script`. De forma predeterminada, el optimizador de consultas funciona bajo `@parallel=1` en las tablas que tienen más de 256 filas, pero si desea controlar esto de forma explícita, este script incluye el parámetro como una demostración.
 

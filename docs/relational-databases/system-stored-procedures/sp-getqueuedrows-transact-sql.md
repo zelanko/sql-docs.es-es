@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: fa6ce6b4e0d1c3fbefe7256f3ca96c84d59e664d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62500432"
 ---
 # <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
@@ -44,7 +44,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 `[ @owner = ] 'owner'` Es el propietario de la suscripción. *propietario* es **sysname**, su valor predeterminado es null.  
   
-`[ @tranid = ] 'transaction_id'` Permite la salida ser filtradas por el identificador de transacción. *transaction_id* es **nvarchar (70)**, su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
+`[ @tranid = ] 'transaction_id'` Permite la salida ser filtradas por el identificador de transacción. *transaction_id* es **nvarchar (70)** , su valor predeterminado es null. Si se especifica, se muestra el Id. de la transacción asociado con el comando en cola. Si es NULL, se muestran todos los comandos de la cola.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -54,7 +54,7 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Acción**|**nvarchar(10)**|Tipo de acción que se llevará a cabo cuando tenga lugar la sincronización.<br /><br /> INS= insertar <br /><br /> DEL = eliminar<br /><br /> UPD = actualizar|  
+|**Acción**|**nvarchar(10)**|Tipo de acción que se llevará a cabo cuando tenga lugar la sincronización.<br /><br /> INS= insertar<br /><br /> DEL = eliminar<br /><br /> UPD = actualizar|  
 |**transacción**|**nvarchar(70)**|Id. de transacción con el que se ejecutó el comando.|  
 |**tabla column1... n**||El valor para cada columna de la tabla especificada en *tablename*.|  
 |**msrepl_tran_version**|**uniqueidentifier**|Esta columna se utiliza para realizar un seguimiento de los cambios de datos replicados y para llevar a cabo la detección de conflictos en el publicador. Esta columna se agrega a la tabla automáticamente.|  

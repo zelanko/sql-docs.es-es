@@ -25,10 +25,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f7a16507855e5f17674fc76f7238e3e6b32a6d16
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102818"
 ---
 # <a name="reporting-services-report-server"></a>Servidor de informes de Reporting Services
@@ -91,15 +91,15 @@ ms.locfileid: "66102818"
 |**Administrador de informes**|Sí|El Administrador de informes no se puede usar para administrar el modo de SharePoint. Use las páginas de aplicación de SharePoint. Para más información, vea [Aplicaciones de servicio y servicio de SharePoint de Reporting Services](../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**Informes vinculados**|Sí|No.|  
 |**Mis informes**|Sí|No|  
-|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|Sin |  
-|**Alertas de datos**|Sin |Sí|  
-|**Power View**|Sin |Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para obtener más información sobre los requisitos del explorador, vea [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
+|**Mis suscripciones** y métodos de procesamiento por lotes.|Sí|No|  
+|**Alertas de datos**|Sin|Sí|  
+|**Power View**|Sin|Sí<br /><br /> Requiere Silverlight en el explorador cliente. Para obtener más información sobre los requisitos del explorador, vea [planeamiento para Reporting Services y compatibilidad con exploradores de Power View &#40;Reporting Services 2014&#41;](../../2014/reporting-services/browser-support-for-reporting-services-and-power-view.md)|  
 |**Informes .RDL**|Sí|Sí<br /><br /> Los informes .RDL pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo o en modo de SharePoint.|  
-|**Informes .RDLX**|Sin |Sí<br /><br /> Los informes .RDLX de Power View solo pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|  
-|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|Sin |Sí|  
-|**Zonas de AAM para implementaciones con conexión a Internet**|Sin |Sí|  
-|**Copias de seguridad y recuperación de SharePoint**|No|Sí|  
-|**Compatibilidad con registros de ULS**|Sin |Sí|  
+|**Informes .RDLX**|No|Sí<br /><br /> Los informes .RDLX de Power View solo pueden ejecutarse en servidores de informes de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo de SharePoint.|  
+|**Credenciales de token de usuario de SharePoint para la extensión de lista de SharePoint**|Sin|Sí|  
+|**Zonas de AAM para implementaciones con conexión a Internet**|No|Sí|  
+|**Copias de seguridad y recuperación de SharePoint**|Sin|Sí|  
+|**Compatibilidad con registros de ULS**|Sin|Sí|  
   
 ##  <a name="bkmk_nativemode"></a> Modo nativo  
  En el modo nativo, un servidor de informes es un servidor de aplicaciones independiente que proporciona todas las operaciones de visualización, administración, procesamiento y entrega de informes y modelos de informe. Se trata del modo predeterminado para las instancias del servidor de informes. Puede instalar un servidor de informes en modo nativo que se configure durante la instalación o puede configurarlo para las operaciones en modo nativo una vez completado el programa de instalación.  

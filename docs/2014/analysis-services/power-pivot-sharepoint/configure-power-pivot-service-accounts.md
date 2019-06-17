@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b90944c3260af69f29fbae8a93f5865c1f3c6d1e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071859"
 ---
 # <a name="configure-powerpivot-service-accounts"></a>Configurar las cuentas de servicio PowerPivot
@@ -44,7 +44,7 @@ ms.locfileid: "66071859"
   
 ##  <a name="bkmk_passwordssas"></a> Actualizar una contraseña expirada para la instancia de SQL Server Analysis Services (PowerPivot)  
   
-1.  Haga clic en Inicio, seleccione **Herramientas administrativas**y, a continuación, **Servicios**. Haga doble clic en **SQL Server Analysis Services (PowerPivot)**. Haga clic en **Iniciar sesión**y escriba la nueva contraseña de la cuenta.  
+1.  Haga clic en Inicio, seleccione **Herramientas administrativas**y, a continuación, **Servicios**. Haga doble clic en **SQL Server Analysis Services (PowerPivot)** . Haga clic en **Iniciar sesión**y escriba la nueva contraseña de la cuenta.  
   
 2.  En Administración central, en la sección Seguridad, haga clic en **Configurar cuentas administradas**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "66071859"
   
 3.  En **Seleccionar una cuenta para este servicio**, elija una cuenta administrada o cree una nueva. La cuenta debe ser una cuenta de usuario de dominio.  
   
-4.  Seleccione **Grupo de aplicaciones de servicio - Sistema de SharePoint Web Services** para cambiar la identidad del grupo de aplicaciones de la aplicación de servicio PowerPivot predeterminada. Según la forma en que esté configurada la instalación, el servicio puede ejecutarse con un grupo de aplicaciones de servicio existente, creado para los servicios de SharePoint. De forma predeterminada, la herramienta de configuración de PowerPivot registra el servicio como **Aplicación de servicio PowerPivot predeterminada (Aplicación de servicio PowerPivot)**.  
+4.  Seleccione **Grupo de aplicaciones de servicio - Sistema de SharePoint Web Services** para cambiar la identidad del grupo de aplicaciones de la aplicación de servicio PowerPivot predeterminada. Según la forma en que esté configurada la instalación, el servicio puede ejecutarse con un grupo de aplicaciones de servicio existente, creado para los servicios de SharePoint. De forma predeterminada, la herramienta de configuración de PowerPivot registra el servicio como **Aplicación de servicio PowerPivot predeterminada (Aplicación de servicio PowerPivot)** .  
   
      Si un administrador de SharePoint configuró manualmente el servicio, probablemente tendrá su propio grupo de aplicaciones de servicios.  
   

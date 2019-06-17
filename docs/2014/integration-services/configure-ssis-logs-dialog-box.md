@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1f881435de01c7c21b80bff00b43c2399d0f7d75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060592"
 ---
 # <a name="configure-ssis-logs-dialog-box"></a>Configurar registros de SSIS, cuadro de diálogo
@@ -73,7 +73,7 @@ ms.locfileid: "66060592"
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
- Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
+ Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows no requiere conexión.  
   
  Temas relacionados: [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md)  
   

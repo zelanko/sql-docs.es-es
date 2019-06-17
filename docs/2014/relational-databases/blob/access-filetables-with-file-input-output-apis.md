@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cd43f430f43f31435df6fff71687136f4bd5f9e7
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010357"
 ---
 # <a name="access-filetables-with-file-input-output-apis"></a>Obtener acceso a FileTables con API de entrada-salida de archivo
@@ -92,7 +92,7 @@ ms.locfileid: "66010357"
   
 -   Estos cambios no se pueden revertir.  
   
- Pero también se puede obtener acceso a la columna FILESTREAM de una FileTable a través de FILESTREAM con transacciones llamando a **OpenSqlFileStream ()**. Este tipo de acceso puede ser totalmente transaccional y respetará todos los niveles de coherencia transaccional que se admiten actualmente.  
+ Pero también se puede obtener acceso a la columna FILESTREAM de una FileTable a través de FILESTREAM con transacciones llamando a **OpenSqlFileStream ()** . Este tipo de acceso puede ser totalmente transaccional y respetará todos los niveles de coherencia transaccional que se admiten actualmente.  
   
 ###  <a name="concurrency"></a> Control de simultaneidad  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplica el control de simultaneidad para el acceso de FileTable entre las aplicaciones del sistema de archivos, así como entre las aplicaciones del sistema de archivos y las aplicaciones [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este control de simultaneidad se logra aplicando los bloqueos adecuados en las filas de la FileTable.  
@@ -105,25 +105,25 @@ ms.locfileid: "66010357"
 |Capacidad|Compatible|Comentarios|  
 |----------------|---------------|--------------|  
 |**Oplocks**|Sí|Se admiten los bloqueos oportunistas de nivel 2, nivel 1, lote y filtro.|  
-|**Atributos extendidos**|Sin ||  
-|**Puntos de análisis**|Sin ||  
+|**Atributos extendidos**|No||  
+|**Puntos de análisis**|No||  
 |**ACL persistentes**|No||  
-|**Flujos con nombre**|Sin ||  
+|**Flujos con nombre**|No||  
 |**Archivos dispersos**|Sí|La dispersión se puede establecer solo en archivos y afecta al almacenamiento del flujo de datos. Dado que los datos de FILESTREAM se almacenan en volúmenes NTFS, la característica FileTable admite archivos dispersos reenviando las solicitudes al sistema de archivos NTFS.|  
 |**Compresión**|Sí||  
 |**Cifrado**|Sí||  
-|**TxF**|No||  
-|**Identificadores de archivo**|Sin ||  
-|**Identificadores de objeto**|Sin ||  
-|**Vínculos simbólicos**|Sin ||  
-|**Vínculos físicos**|Sin ||  
-|**Nombres cortos**|Sin ||  
-|**Notificaciones de cambio de directorio**|Sin ||  
+|**TxF**|Sin||  
+|**Identificadores de archivo**|Sin||  
+|**Identificadores de objeto**|Sin||  
+|**Vínculos simbólicos**|Sin||  
+|**Vínculos físicos**|Sin||  
+|**Nombres cortos**|No||  
+|**Notificaciones de cambio de directorio**|Sin||  
 |**Bloqueo de intervalo de bytes**|Sí|Las solicitudes de bloqueo de intervalo de butes se pasan al sistema de archivos NTFS.|  
-|**Archivos asignados en memoria**|No||  
+|**Archivos asignados en memoria**|Sin||  
 |**Cancelar E/S**|Sí||  
-|**Seguridad**|Sin |Se aplica la seguridad de nivel de recursos compartidos de Windows y la seguridad de nivel de tabla y columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
-|**Diario USN**|Sin |Los cambios de metadatos en archivos y directorios de una FileTable son operaciones DML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, se registran en el archivo de registro de la base de datos correspondiente. Sin embargo, no se registran en el diario de NTFS USN (salvo los cambios de tamaño).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden usar para capturar información similar.|  
+|**Seguridad**|Sin|Se aplica la seguridad de nivel de recursos compartidos de Windows y la seguridad de nivel de tabla y columna de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
+|**Diario USN**|Sin|Los cambios de metadatos en archivos y directorios de una FileTable son operaciones DML en una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Por consiguiente, se registran en el archivo de registro de la base de datos correspondiente. Sin embargo, no se registran en el diario de NTFS USN (salvo los cambios de tamaño).<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se pueden usar para capturar información similar.|  
   
 ## <a name="see-also"></a>Vea también  
  [Cargar archivos en FileTables](load-files-into-filetables.md)   

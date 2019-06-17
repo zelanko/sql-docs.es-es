@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 91498db5535c99c7c8afaba85efc35639510a079
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270006"
 ---
 # <a name="project-settings-type-mapping-db2tosql"></a>Configuración del proyecto (asignación de tipo) (DB2ToSQL)
@@ -104,7 +104,7 @@ En la tabla siguiente contiene la asignación de tipo de datos predeterminada pa
 |urowid|UNIQUEIDENTIFIER|  
 |varchar|ntext|  
 |varchar2|ntext|  
-|xmltype|Xml|  
+|xmltype|xml|  
   
 <sup>\*</sup> Se aplica para devolver el valor de tipo asignación solo.  
   
@@ -176,7 +176,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |urowid[\*..\*]|UNIQUEIDENTIFIER|  
 |varchar[\*..\*]|varchar[\*]|  
 |varchar2[\*..\*]|varchar[\*]|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ### <a name="default-local-variable-type-mapping"></a>Asignación de tipo de Variable Local predeterminada  
 En la tabla siguiente contiene la asignación de tipo de valor predeterminado para las variables locales.  
@@ -263,7 +263,7 @@ En la tabla siguiente contiene la asignación de tipo de valor predeterminado pa
 |varchar[8001..\*]|ntext|  
 |varchar2[\*..8000]|varchar[\*]|  
 |varchar2[8001..\*]|varcha(max)|  
-|Xmltype|Xml|  
+|Xmltype|xml|  
   
 ## <a name="see-also"></a>Vea también  
 [Referencia de la interfaz de usuario &#40;DB2ToSQL&#41;](../../ssma/db2/user-interface-reference-db2tosql.md)  

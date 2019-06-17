@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63281132"
 ---
 # <a name="odbc-drivers-subkey"></a>Subclave de controladores de ODBC
 Los valores bajo la subclave de controladores ODBC enumeran los controladores instalados. En la tabla siguiente se muestra el formato de estos valores.  
   
-|Name|Tipo de datos|Datos|  
+|NOMBRE|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |*driver-description*|REG_SZ|**Installed**|  
   

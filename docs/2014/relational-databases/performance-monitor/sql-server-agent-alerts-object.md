@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d88041f61c2f84e510c637b71f0ebb1bbb2a97cd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250926"
 ---
 # <a name="sql-server-agent-alerts-object"></a>Alerts (objeto del Agente SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "63250926"
   
  La tabla siguiente contiene los contadores **SQLAgent:Alerts** .  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |**Alertas activadas**|Este contador indica el número total de alertas que el Agente SQL Server ha activado desde la última vez que se reinició.|  
 |**Alertas activadas/minuto**|Este contador indica el número de alertas que activó el Agente SQL Server en el último minuto.|  

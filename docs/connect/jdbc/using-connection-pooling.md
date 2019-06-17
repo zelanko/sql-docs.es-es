@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 79ad5b79ff9cdf59af19cd4cf9092baa5a6689d7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c6c7b378f8b8260f0124e5d87b1bb0c20f5f3293
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677525"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798682"
 ---
 # <a name="using-connection-pooling"></a>Usar agrupación de conexiones
 
@@ -41,6 +41,6 @@ Las clases para la implementación de la agrupación de conexiones son las sigui
 > [!NOTE]  
 > El controlador JDBC no llama al procedimiento almacenado sp_reset_connection al devolver la conexión al grupo. En su lugar, el controlador se basa en servidores de aplicaciones Java para devolver las conexiones a su estado original.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  

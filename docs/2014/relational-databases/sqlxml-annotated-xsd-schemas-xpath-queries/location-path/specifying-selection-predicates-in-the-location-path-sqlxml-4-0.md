@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5d35b70c157dc5285355fcd15b38739757f0be9a
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012580"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
@@ -39,7 +39,7 @@ ms.locfileid: "66012580"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >**, porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de `attribute` eje).  
+ En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >** , porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de `attribute` eje).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   

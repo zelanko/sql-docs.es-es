@@ -15,14 +15,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: febaae6051e8428d3fed2bb6533ce2c4d972950f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078057"
 ---
 # <a name="level-naming-template-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Plantilla de asignación de nombres de nivel (Analysis Services - Datos multidimensionales)
-  Use el cuadro de diálogo **Plantilla de asignación de nombres de nivel** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear la plantilla de asignación de nombres de nivel para un atributo primario de una dimensión. Para obtener más información sobre el nivel de nomenclatura de plantillas, vea [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Puede mostrar el **Level Naming Template** cuadro de diálogo, haga clic en el botón de puntos suspensivos (**...** ) en el `NamingTemplate` valor de una traducción de un atributo en el **detalles de traducción** panel en el **traducciones** ficha de **delDiseñadordedimensiones**.  
+  Use el cuadro de diálogo **Plantilla de asignación de nombres de nivel** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para crear la plantilla de asignación de nombres de nivel para un atributo primario de una dimensión. Para obtener más información sobre el nivel de nomenclatura de plantillas, vea [Elemento NamingTemplate &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/namingtemplate-element-assl). Puede mostrar el **Level Naming Template** cuadro de diálogo, haga clic en el botón de puntos suspensivos ( **...** ) en el `NamingTemplate` valor de una traducción de un atributo en el **detalles de traducción** panel en el **traducciones** ficha de **delDiseñadordedimensiones**.  
   
 ## <a name="options"></a>Opciones  
   

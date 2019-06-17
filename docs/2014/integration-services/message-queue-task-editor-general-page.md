@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2cdd3c2e8e903de90871b096d24cda17fe490d1d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057628"
 ---
 # <a name="message-queue-task-editor-general-page"></a>Editor de la tarea Cola de mensajes (página General)
@@ -40,7 +40,7 @@ ms.locfileid: "66057628"
  Indica si se va a utilizar el formato 2000 de Message Queue Server (que también recibe el nombre de MSMQ). De manera predeterminada, es `False`.  
   
  **MSMQConnection**  
- Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones MSMQ existente o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
   
  **Temas relacionados**: [Administrador de conexiones MSMQ](connection-manager/msmq-connection-manager.md), [Editor del administrador de conexiones MSMQ](../../2014/integration-services/msmq-connection-manager-editor.md)  
   

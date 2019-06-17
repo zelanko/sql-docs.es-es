@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6e4327de10dd03b3ff8cf034ade64391d18d2a86
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192899"
 ---
 # <a name="view-and-modify-replication-agent-command-prompt-parameters-sql-server-management-studio"></a>Ver y modificar parámetros del símbolo del sistema de los agentes de replicación (SQL Server Management Studio)
-  Los agentes de replicación son ejecutables que aceptan parámetros en la línea de comandos. De forma predeterminada, los agentes se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de modo que estos parámetros se pueden ver y modificar mediante el cuadro de diálogo **Propiedades del trabajo: \<trabajo>**. Este cuadro de diálogo está disponible en la carpeta **Trabajos** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en la pestaña **Agentes** en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
+  Los agentes de replicación son ejecutables que aceptan parámetros en la línea de comandos. De forma predeterminada, los agentes se ejecutan en los pasos de trabajo del Agente [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], de modo que estos parámetros se pueden ver y modificar mediante el cuadro de diálogo **Propiedades del trabajo: \<trabajo>** . Este cuadro de diálogo está disponible en la carpeta **Trabajos** en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en la pestaña **Agentes** en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
   
 > [!NOTE]  
 >  Los cambios en los parámetros del agente tendrán efecto la próxima vez que se inicie el agente. Si el agente se ejecuta sin interrupción, debe detenerlo y reiniciarlo.  
@@ -57,7 +57,7 @@ ms.locfileid: "63192899"
   
 3.  Haga clic con el botón secundario en un trabajo y, a continuación, haga clic en **Propiedades**.  
   
-4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>**, seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
+4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>** , seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
 5.  En el cuadro de diálogo **Propiedades de paso de trabajo - Ejecutar agente** , edite el campo **Comando** .  
   
@@ -73,7 +73,7 @@ ms.locfileid: "63192899"
   
 4.  En el **suscripción \< SubscriptionName >** ventana, haga clic en **acción**y, a continuación, haga clic en  **\<Nombreagente > Propiedades del trabajo**.  
   
-5.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>**, seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
+5.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>** , seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
 6.  En el cuadro de diálogo **Propiedades de paso de trabajo - Ejecutar agente** , edite el campo **Comando** .  
   
@@ -87,7 +87,7 @@ ms.locfileid: "63192899"
   
 3.  Haga clic con el botón secundario en un agente en la cuadrícula y, a continuación, haga clic en **Propiedades**.  
   
-4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>**, seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
+4.  En la página **Pasos** del cuadro de diálogo **Propiedades del trabajo: \<Trabajo>** , seleccione el paso **Ejecutar agente** y luego haga clic en **Editar**.  
   
 5.  En el cuadro de diálogo **Propiedades de paso de trabajo - Ejecutar agente** , edite el campo **Comando** .  
   

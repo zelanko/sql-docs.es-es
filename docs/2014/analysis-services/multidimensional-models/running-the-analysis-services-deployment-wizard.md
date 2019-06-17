@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d8fd34a7e614c1c1bb247f84846e090d22ea053e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073036"
 ---
 # <a name="running-the-analysis-services-deployment-wizard"></a>Ejecutar el Asistente para la implementación de Analysis Services
@@ -40,7 +40,7 @@ ms.locfileid: "66073036"
   
      -o bien-  
   
--   En el **proyectos** carpeta de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del proyecto, haga doble clic en el  *\<nombre del proyecto >*. asdatabase.  
+-   En el **proyectos** carpeta de la [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] del proyecto, haga doble clic en el  *\<nombre del proyecto >* . asdatabase.  
   
     > [!NOTE]  
     >  Si no encuentra el  *\<nombre del proyecto >* archivo .asdatabase, pruebe a utilizar Buscar especificando *.asdatabase.  

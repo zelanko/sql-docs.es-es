@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: cd6b880fc1908d973b4a78fdc04cb59ed9eca731
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062469"
 ---
 # <a name="analysis-services-mdx-query-designer-powerpivot"></a>Diseñador de consultas MDX de Analysis Services (PowerPivot)
@@ -36,7 +36,7 @@ ms.locfileid: "66062469"
   
 |Panel|Función|  
 |----------|--------------|  
-|Botón Selección de cubo (**...**)|Muestra el cubo seleccionado actualmente.|  
+|Botón Selección de cubo ( **...** )|Muestra el cubo seleccionado actualmente.|  
 |Panel Metadatos|Muestra una lista jerárquica de medidas, indicadores clave de rendimiento (KPI) y dimensiones definidas en el cubo seleccionado.|  
 |Panel Miembros calculados|Muestra los miembros calculados definidos actualmente que se encuentran disponibles para utilizarse en la consulta.|  
 |Panel Filtro|Se usa a fin de elegir dimensiones y jerarquías relacionadas para filtrar datos en el origen y limitar datos devueltos.|  
@@ -88,7 +88,7 @@ ms.locfileid: "66062469"
   
 |Panel|Función|  
 |----------|--------------|  
-|Botón Selección de cubo (**...**)|Muestra el cubo seleccionado actualmente.|  
+|Botón Selección de cubo ( **...** )|Muestra el cubo seleccionado actualmente.|  
 |Panel Metadatos/Funciones/Plantillas|Muestra una lista jerárquica de medidas, KPI y dimensiones definidas en el cubo seleccionado.|  
 |Panel de consulta|Muestra el texto de consulta.|  
 |Panel Resultado|Muestra los resultados de la ejecución de la consulta.|  

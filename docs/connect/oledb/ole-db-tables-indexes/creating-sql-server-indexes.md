@@ -16,13 +16,13 @@ helpviewer_keywords:
 - adding indexes
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: bdb8b8f48a4a54a185f6ffae03cf129e4549641b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 90cccd51afafa5139b6519e61cb0d044413189d4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612924"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801296"
 ---
 # <a name="creating-sql-server-indexes"></a>Crear índices de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -156,7 +156,7 @@ HRESULT CreatePrimaryKey
     }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas e índices](../../oledb/ole-db-tables-indexes/tables-and-indexes.md)  
   
   

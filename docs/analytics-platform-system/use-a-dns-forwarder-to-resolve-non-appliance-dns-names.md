@@ -10,14 +10,14 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63243792"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>Usar un reenviador DNS para resolver nombres DNS que no sea de dispositivo de Analytics Platform System
-Se puede configurar un reenviador DNS en los nodos de Active Directory Domain Services (**_dispositivo\_dominio_-AD01** y  **_dispositivo\_ dominio_-AD02**) de la aplicación Analytics Platform System para permitir que los scripts y aplicaciones de software para tener acceso a servidores externos.  
+Se puede configurar un reenviador DNS en los nodos de Active Directory Domain Services ( **_dispositivo\_dominio_-AD01** y  **_dispositivo\_ dominio_-AD02**) de la aplicación Analytics Platform System para permitir que los scripts y aplicaciones de software para tener acceso a servidores externos.  
   
 ## <a name="ResolveDNS"></a>Usar un reenviador DNS  
 La aplicación Analytics Platform System está configurada para evitar la resolución de nombres DNS de los servidores que no están en el dispositivo. Algunos procesos, como Windows Software Update Services (WSUS), deberá tener acceso a servidores fuera de la aplicación. Para admitir este escenario de uso el sistema de plataforma de análisis de DNS puede configurarse para admitir un reenviador de nombre externo que permitirá a los hosts de Analytics Platform System y máquinas virtuales (VM) usar servidores DNS externos para resolver nombres fuera de la aplicación. No se admite la configuración personalizada de sufijos DNS, lo que significa que debe usar nombres de dominio completo para resolver un nombre de servidor que no sea de dispositivo.  

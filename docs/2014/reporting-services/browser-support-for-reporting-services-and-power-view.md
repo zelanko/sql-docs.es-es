@@ -10,10 +10,10 @@ ms.topic: conceptual
 ms.custom: ''
 ms.date: 06/13/2017
 ms.openlocfilehash: 58ed105619ca5ad5eadb00271e18ddaa10c6bfe3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63266823"
 ---
 # <a name="planning-for-reporting-services-and-power-view-browser-support-reporting-services-2014"></a>Planear la compatibilidad del explorador de Reporting Services y Power View (Reporting Services 2014)
@@ -35,7 +35,7 @@ ms.locfileid: "63266823"
   
 ##  <a name="bkmk_powerview"></a> Escenarios del explorador de Power View
 
- La lista de exploradores y versiones de explorador que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] admite depende del tipo de documento abierto. Libros de Excel 2013 y "**.rdlx**" archivos usan diferentes componentes.  
+ La lista de exploradores y versiones de explorador que [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] admite depende del tipo de documento abierto. Libros de Excel 2013 y " **.rdlx**" archivos usan diferentes componentes.  
   
 |Tipo de documento|Entorno|Compatibilidad con exploradores|  
 |-------------------|-----------------|---------------------|  
@@ -146,7 +146,7 @@ ms.locfileid: "63266823"
   
  Si el scripting no está habilitado, verá un mensaje de error similar al siguiente al abrir un informe:  
   
-- **El explorador no admite secuencias de comandos o se ha configurado para no permitir la ejecución de scripts. Haga clic aquí para ver este informe sin scripts**.  
+- **Su explorador no admite scripts o está configurado para no admitir su ejecución. Haga clic aquí para ver este informe sin scripts**.  
   
  Si decide ver el informe prescindiendo de la compatibilidad con script, se representará en formato HTML y no incorporará funcionalidad del Visor de informes, como la barra de herramientas Informes y el mapa del documento.  
   

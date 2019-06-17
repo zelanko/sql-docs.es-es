@@ -24,10 +24,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: db71e2ca03cbefdccf0bdf879fdb43d775125064
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205265"
 ---
 # <a name="creating-a-sql-server-native-client-odbc-driver-application"></a>Crear una aplicación de controlador ODBC de SQL Server Native Client
@@ -66,7 +66,7 @@ ms.locfileid: "63205265"
   
 -   Realizar operaciones de copia masiva.  
   
--   Administrar datos de gran tamaño (**varchar (max)**, **nvarchar (max)**, y **varbinary (max)** columnas) las operaciones  
+-   Administrar datos de gran tamaño (**varchar (max)** , **nvarchar (max)** , y **varbinary (max)** columnas) las operaciones  
   
 -   Usar la lógica de reconexión para facilitar la conmutación por error al configurar la creación de reflejo de la base de datos.  
   

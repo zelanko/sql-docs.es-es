@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 6cb30c306c5cd2b426976aba4a873475639e4ba5
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65994213"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Instalar SQL Server Machine Learning Services en Windows
@@ -81,7 +81,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 
         > [!NOTE]
         > 
-        > No seleccione la opción para **Machine Learning Server (independiente)**. La opción para instalar el servidor de Machine Learning en **características compartidas** está pensado para su uso en un equipo independiente.
+        > No seleccione la opción para **Machine Learning Server (independiente)** . La opción para instalar el servidor de Machine Learning en **características compartidas** está pensado para su uso en un equipo independiente.
 
 4. En el **da su consentimiento para instalar R** página, seleccione **Accept**. Este contrato de licencia cubre Microsoft R Open, que incluye una distribución de los paquetes base de código abierto R y herramientas, junto con los paquetes de R mejorados y proveedores de conectividad desde el equipo de desarrollo de Microsoft.
 

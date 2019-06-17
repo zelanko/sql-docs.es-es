@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: c5a78fc65ee96439c6b6a4d7726e9a40522e5be4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144346"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
@@ -107,7 +107,7 @@ ms.locfileid: "63144346"
      **Programación**  
      Indica en qué programación se ejecutó el subplán. Haga clic en **Programación del subplán** para abrir el cuadro de diálogo **Nueva programación de trabajo** . Haga clic en **Quitar programación** para eliminar la programación del subplán.  
   
-     Lista de**Ejecutar como**   
+     Lista de**Ejecutar como**  
      Seleccione la cuenta que se utilizará para ejecutar esta subtarea.  
   
 6.  Haga clic en **Programación del subplán** para escribir detalles de programación en el cuadro de diálogo **Nueva programación del trabajo** .  
@@ -144,7 +144,7 @@ ms.locfileid: "63144346"
   
     2.  Seleccione las herramientas que desee que aparezcan en el **Cuadro de herramientas**y, a continuación, haga clic en **Aceptar**.  
   
-     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)**.  
+     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)** .  
   
 8.  Para definir un flujo de trabajo entre tareas:  
   
@@ -159,10 +159,10 @@ ms.locfileid: "63144346"
          **Opción de restricción**  
          Define cómo funciona una restricción entre dos tareas.  
   
-         Lista**Operación de evaluación**    
+         Lista**Operación de evaluación**  
          Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
-         Lista**Valor**   
+         Lista**Valor**  
          Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
@@ -215,7 +215,7 @@ ms.locfileid: "63144346"
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)**  y seleccione la ruta de acceso para el nombre de archivo o carpeta desde la **Buscar carpeta -**_nombre_servidor_ o **buscar archivos de base de datos -**_nombreDeServidor_  cuadros de diálogo.  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)**  y seleccione la ruta de acceso para el nombre de archivo o carpeta desde la **Buscar carpeta -** _nombre_servidor_ o **buscar archivos de base de datos -** _nombreDeServidor_  cuadros de diálogo.  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "63144346"
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
   
-     Las siguientes opciones están disponibles en el **Log File Viewer -**_nombre_servidor_ cuadro de diálogo.  
+     Las siguientes opciones están disponibles en el **Log File Viewer -** _nombre_servidor_ cuadro de diálogo.  
   
      **Cargar registro**  
      Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  

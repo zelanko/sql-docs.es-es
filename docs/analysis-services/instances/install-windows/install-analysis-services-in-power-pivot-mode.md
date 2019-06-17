@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3e973c30ea178a544b9da3501d88f43cf9b1ddb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63054825"
 ---
 # <a name="install-analysis-services-in-power-pivot-mode"></a>Instalación de Analysis Services en el modo PowerPivot
@@ -262,7 +262,7 @@ ms.locfileid: "63054825"
  Los pasos necesarios para actualizar libros creados en versiones anteriores de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] dependen de la versión de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] que creó el libro. Para obtener más información, vea [Actualizar libros y actualización de datos programada &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md).  
   
 ##  <a name="bkmk_multiple_servers"></a> Más allá de la instalación de servidor único - PowerPivot para Microsoft SharePoint  
- **Web front-end (WFE)** o **nivel intermedio:**: Para usar un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor en modo de SharePoint en una granja de servidores de SharePoint mayor e instalar adicionales [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] características en la granja, ejecute el paquete del instalador **spPowerPivot16.msi (SharePoint 2016) o spPowerPivot.msi (SharePoint 2013),** en cada uno de los servidores de SharePoint. El archivo spPowerPivot16.msi o spPowerPivot.msi instala los proveedores de datos necesarios y la herramienta de configuración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 o 2013.  
+ **Web front-end (WFE)** o **nivel intermedio:** : Para usar un [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] servidor en modo de SharePoint en una granja de servidores de SharePoint mayor e instalar adicionales [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] características en la granja, ejecute el paquete del instalador **spPowerPivot16.msi (SharePoint 2016) o spPowerPivot.msi (SharePoint 2013),** en cada uno de los servidores de SharePoint. El archivo spPowerPivot16.msi o spPowerPivot.msi instala los proveedores de datos necesarios y la herramienta de configuración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2016 o 2013.  
   
  Para obtener información acerca de la instalación y la configuración de nivel intermedio, vea lo siguiente:  
   

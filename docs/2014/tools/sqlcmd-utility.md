@@ -27,10 +27,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d128085012c0ef3a9bc58b147f982a26d2c094b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035394"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
@@ -135,10 +135,10 @@ ms.locfileid: "63035394"
   
  Si la opción **-P** va seguida de más de un argumento, se genera un mensaje de error y el programa se cierra.  
   
- **-S** [*protocolo*:]*servidor*[**\\**_nombre_de_instancia_][**,**_puerto_]  
+ **-S** [*protocolo*:]*servidor*[ **\\** _nombre_de_instancia_][ **,** _puerto_]  
  Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Establece la variable de scripting de `sqlcmd` SQLCMDSERVER.  
   
- Especifique *nombre_de_servidor* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese equipo servidor. Especifique *nombre_de_servidor* [ **\\**_nombre_de_instancia_ ] para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese equipo servidor. Si no se especifica ningún equipo, `sqlcmd` se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria si se ejecuta `sqlcmd` desde un equipo remoto conectado a la red.  
+ Especifique *nombre_de_servidor* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese equipo servidor. Especifique *nombre_de_servidor* [ **\\** _nombre_de_instancia_ ] para conectar con una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese equipo servidor. Si no se especifica ningún equipo, `sqlcmd` se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria si se ejecuta `sqlcmd` desde un equipo remoto conectado a la red.  
   
  *protocolo* puede ser `tcp` (TCP/IP), `lpc` (memoria compartida), o `np` (canalizaciones con nombre).  
   
@@ -168,7 +168,7 @@ ms.locfileid: "63035394"
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **Opciones de entrada o salida**  
-  **-f** _página_de_códigos_ | **i:**_página_de_códigos_[**,o:**_página_de_códigos_] | **o:**_página_de_códigos_[**,i:**_página_de_códigos_]  
+  **-f** _página_de_códigos_ | **i:** _página_de_códigos_[ **,o:** _página_de_códigos_] | **o:** _página_de_códigos_[ **,i:** _página_de_códigos_]  
  Especifica las páginas de códigos de entrada y de salida. El número de página de códigos es un valor numérico que especifica una página de códigos instalada en Windows.  
   
  Reglas de conversión de páginas de códigos:  
@@ -183,7 +183,7 @@ ms.locfileid: "63035394"
   
  Escriba `chcp` en el símbolo del sistema para comprobar la página de códigos de Cmd.exe.  
   
- **-i** _archivo_de_entrada_[**,**_archivo_de_entrada2_...]  
+ **-i** _archivo_de_entrada_[ **,** _archivo_de_entrada2_...]  
  Identifica el archivo que contiene un lote de instrucciones SQL o procedimientos almacenados. Se pueden especificar varios archivos que se leerán y se procesarán en orden. No use ningún espacio entre los nombres de archivo. `sqlcmd` comprobará primero si todos los archivos especificados existen. Si uno o más archivos no existen, `sqlcmd` se cerrará. Las opciones -i y -Q/-q se excluyen mutuamente.  
   
  Ejemplos de rutas de acceso:  
@@ -266,7 +266,7 @@ ms.locfileid: "63035394"
 >  El tiempo de espera real puede variar unos segundos con respecto al valor de *tiempo_de_espera* especificado.  
   
  **-vvar =** _value_[ **var =** _value_...]  
- Crea un `sqlcmd`variable de scripting que puede usarse en un `sqlcmd` secuencia de comandos. Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios  **_var_**=**"*`values`*"** valores. Si hay errores en alguno de los valores especificados, `sqlcmd` genera un mensaje de error y después se cierra.  
+ Crea un `sqlcmd`variable de scripting que puede usarse en un `sqlcmd` secuencia de comandos. Si el valor contiene espacios en blanco, especifíquelo entre comillas. Puede especificar varios  **_var_** = **" *`values`* "** valores. Si hay errores en alguno de los valores especificados, `sqlcmd` genera un mensaje de error y después se cierra.  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -460,11 +460,11 @@ ms.locfileid: "63035394"
 |||  
 |-|-|  
 |**GO** [*count*]|**:List**|  
-|[**:**] **RESET**|**:Error**|  
-|[**:**] **ED**|**:Out**|  
-|[**:**] **!!**|**:Perftrace**|  
-|[**:**] **QUIT**|**:Connect**|  
-|[**:**] **EXIT**|**:On Error**|  
+|[ **:** ] **RESET**|**:Error**|  
+|[ **:** ] **ED**|**:Out**|  
+|[ **:** ] **!!**|**:Perftrace**|  
+|[ **:** ] **QUIT**|**:Connect**|  
+|[ **:** ] **EXIT**|**:On Error**|  
 |**:r**|**:Help**|  
 |**:ServerList**|**:XML** [**ON** &#124; **OFF**]|  
 |**:Setvar**|**:Listvar**|  
@@ -474,7 +474,7 @@ ms.locfileid: "63035394"
 -   Todos los comandos de `sqlcmd`, excepto GO, deben ir precedidos de dos puntos (:).  
   
     > [!IMPORTANT]  
-    >  Para mantener la compatibilidad con los scripts de **osql** existentes, algunos de los comandos se reconocerán sin los dos puntos. Esto se indica por [**:**].  
+    >  Para mantener la compatibilidad con los scripts de **osql** existentes, algunos de los comandos se reconocerán sin los dos puntos. Esto se indica por [ **:** ].  
   
 -   Los comandos de `sqlcmd` se reconocen solo si aparecen al principio de una línea.  
   
@@ -485,21 +485,21 @@ ms.locfileid: "63035394"
 -   Los comandos se ejecutan inmediatamente. No se colocan en el búfer de ejecución, como es el caso de las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] .  
   
  **Editar comandos**  
-  [**:**] **ED**  
+  [ **:** ] **ED**  
  Inicia el editor de texto. Este editor se puede utilizar para editar el lote actual de [!INCLUDE[tsql](../includes/tsql-md.md)] o el último lote ejecutado. Para editar el último lote ejecutado, el comando **ED** debe escribirse inmediatamente después de que se complete la ejecución del último lote.  
   
  El editor de texto se define mediante la variable de entorno SQLCMDEDITOR. El editor predeterminado es "Edit". Para cambiar el editor, establezca la variable de entorno SQLCMDEDITOR. Por ejemplo, para establecer el editor en el Bloc de notas de [!INCLUDE[msCoName](../includes/msconame-md.md)] , en el símbolo del sistema, escriba:  
   
  `SET SQLCMDEDITOR=notepad`  
   
- [**:**] **RESET**  
+ [ **:** ] **RESET**  
  Borra la caché de instrucciones.  
   
  **:List**  
  Imprime el contenido de la memoria caché de instrucciones.  
   
  **Variables**  
-  **: Setvar** \< **var**> [ **"*`value`*"** ]  
+  **: Setvar** \< **var**> [ **" *`value`* "** ]  
  Define las variables de scripting de `sqlcmd`. Las variables de scripting tienen el siguiente formato: `$(VARNAME)`.  
   
  Los nombres de variables no distinguen entre mayúsculas y minúsculas.  
@@ -531,7 +531,7 @@ ms.locfileid: "63035394"
   
  **Comandos de salida**  
   **:Error**   
- **_\<_** _filename_  **_>|_ STDERR|STDOUT**  
+ ** _\<_ ** _filename_  ** _>|_ STDERR|STDOUT**  
  Redirige toda la salida de error al archivo especificado por *nombre_de_archivo*, a **stderr** o a **stdout**. El comando **Error** puede aparecer varias veces en un script. De forma predeterminada, la salida de error se envía a **stderr**.  
   
  *Nombre de archivo*  
@@ -543,10 +543,10 @@ ms.locfileid: "63035394"
  **STDOUT**  
  Cambia la salida del error al flujo **stdout** . Si se ha redirigido, el destino al cual se redirige el flujo recibirá la salida del error.  
   
- **:Out \<** _nombre_de_archivo_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _nombre_de_archivo_ **>** | **STDERR**| **STDOUT**  
  Crea y redirige todos los resultados de consulta al archivo especificado por *file name*, a **stderr** o a **stdout**. De forma predeterminada, la salida se envía a **stdout**. Si el archivo ya existe, se truncará en cero bytes. El comando **Out** puede aparecer varias veces en un script.  
   
- **:Perftrace \<** _nombre_de_archivo_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _nombre_de_archivo_ **>** | **STDERR**| **STDOUT**  
  Crea y redirige toda la información de seguimiento de rendimiento al archivo especificado por *nombre_de_archivo*, a **stderr** o a **stdout**. De forma predeterminada, la salida de seguimiento de rendimiento se envía a **stdout**. Si el archivo ya existe, se truncará en cero bytes. El comando **Perftrace** puede aparecer varias veces en un script.  
   
  **Comandos de control de ejecución**  
@@ -557,10 +557,10 @@ ms.locfileid: "63035394"
   
  Cuando se usa la opción `ignore`, `sqlcmd` pasa por alto el error y continúa con la ejecución del lote o del script. De forma predeterminada, se imprimirá un mensaje de error.  
   
- [**:**] **QUIT**  
+ [ **:** ] **QUIT**  
  Hace que `sqlcmd` se cierre.  
   
- [**:**] **EXIT**[ **(*`statement`*)** ]  
+ [ **:** ] **EXIT**[ **( *`statement`* )** ]  
  Permite usar el resultado de una instrucción SELECT como valor devuelto de `sqlcmd`. Si es numérica, la primera columna de la última fila del resultado se convierte en un entero de 4 bytes (long). MS-DOS pasa el byte bajo al proceso primario o al nivel de errores del sistema operativo. Windows 200x pasa el entero de 4 bytes completo. La sintaxis es la siguiente:  
   
  `:EXIT(query)`  
@@ -625,7 +625,7 @@ ms.locfileid: "63035394"
  **:Serverlist**  
  Enumera los servidores configurados localmente y los nombres de los servidores que difunden en la red.  
   
- **:Connect** _server_name_[**\\**_instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect** _server_name_[ **\\** _instance_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  Conecta con una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. También cierra la conexión actual.  
   
  Opciones de tiempo de espera:  
@@ -651,8 +651,8 @@ ms.locfileid: "63035394"
   
  `:connect $(myservername) $(myusername)`  
   
- [**:**] **!!**\< *command*>  
- Ejecuta comandos del sistema operativo. Para ejecutar un comando del sistema operativo, inicie una línea con dos signos de exclamación (**!!**) seguidos por el comando del sistema operativo. Por ejemplo:  
+ [ **:** ] **!!** \< *command*>  
+ Ejecuta comandos del sistema operativo. Para ejecutar un comando del sistema operativo, inicie una línea con dos signos de exclamación ( **!!** ) seguidos por el comando del sistema operativo. Por ejemplo:  
   
  `:!! Dir`  
   
@@ -668,11 +668,11 @@ ms.locfileid: "63035394"
 ### <a name="sqlcmd-file-names"></a>Nombres de archivo de sqlcmd  
  `sqlcmd` se pueden especificar archivos de entrada con el **-i** opción o el **: r** comando. Los archivos de salida se pueden especificar con la opción **-o** o con los comandos **:Error**, **:Out** y **:Perftrace** . A continuación se incluyen algunas directrices para trabajar con estos archivos:  
   
--   **: Error**, **: Out** y **: Perftrace** debe usar independiente **< *`filename`* >**. Si el mismo **< *`filename`* >** es usa, pueden mezclar las entradas de los comandos.  
+-   **: Error**, **: Out** y **: Perftrace** debe usar independiente **< *`filename`* >** . Si el mismo **< *`filename`* >** es usa, pueden mezclar las entradas de los comandos.  
   
 -   Si `sqlcmd` llama a un archivo de entrada ubicado en un servidor remoto desde un equipo local y el archivo contiene una ruta de acceso de archivo del tipo :out c:\archivoDeSalida.txt. el archivo de salida se creará en el equipo local y no en el servidor remoto.  
   
--   Las rutas de acceso de archivo válidas se incluyen: C:\\**<*`filename`*>**, \\ \\< servidor\>\\< recursoCompartido$ >\\ **< *`filename`* >** y "carpeta C:\Some\\  **< *`file name`*>**". Si hay algún espacio en blanco en la ruta de acceso, use comillas.  
+-   Las rutas de acceso de archivo válidas se incluyen: C:\\ **< *`filename`* >** , \\ \\< servidor\>\\< recursoCompartido$ >\\ **< *`filename`* >** y "carpeta C:\Some\\  **< *`file name`* >** ". Si hay algún espacio en blanco en la ruta de acceso, use comillas.  
   
 -   Cada nueva sesión de `sqlcmd` sobrescribirá los archivos existentes que tengan el mismo nombre.  
   

@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017757"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
@@ -42,7 +42,7 @@ sp_help [ [ @objname = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'name'` Es el nombre de cualquier objeto, en **sysobjects** o cualquier dato definido por el usuario escriba en el **systypes** tabla. *nombre* es **nvarchar (** 776 **)**, su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
+`[ @objname = ] 'name'` Es el nombre de cualquier objeto, en **sysobjects** o cualquier dato definido por el usuario escriba en el **systypes** tabla. *nombre* es **nvarchar (** 776 **)** , su valor predeterminado es null. No se aceptan nombres de bases de datos.  Se deben delimitar dos o tres nombres de partes, como "Person.AddressType" o [Person.AddressType].   
    
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -93,7 +93,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**Column_name**|**nvarchar(** 128 **)**|Nombre de columna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de datos de la columna.|  
         |**Calculado**|**varchar(** 35 **)**|Indica si se calculan los valores de la columna: Sí o no.|  
-        |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**), el valor será se mostrará como -1.|  
+        |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , o **xml**), el valor será se mostrará como -1.|  
         |**Prec**|**char(** 5 **)**|Precisión de columna.|  
         |**Escala**|**char(** 5 **)**|Escala de la columna.|  
         |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL en la columna: Sí o no.|  

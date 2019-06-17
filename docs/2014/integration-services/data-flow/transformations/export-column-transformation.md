@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ecb72ee0cb9d6e94a672f46ed523096ac4cc096e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62900161"
 ---
 # <a name="export-column-transformation"></a>Transformación Exportar columna
@@ -34,10 +34,10 @@ ms.locfileid: "62900161"
   
 |Anexar|Truncamiento|El archivo existe|Resultado|  
 |------------|--------------|-----------------|-------------|  
-|False|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|False|False|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
 |True|False|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|False|True|No|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
-|True|True|No|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
+|False|True|Sin|La transformación crea un archivo nuevo y escribe los datos en el archivo.|  
+|True|True|Sin|Se produce un error al validar la transformación en tiempo de diseño. No se permite establecer ambas propiedades en `true`.|  
 |False|False|Sí|Se produce un error en tiempo de ejecución. El archivo existe, pero la transformación no puede escribir en él.|  
 |False|True|Sí|La transformación elimina y vuelve a crear el archivo, y escribe los datos en el archivo.|  
 |True|False|Sí|La transformación abre el archivo y escribe los datos al final del archivo.|  

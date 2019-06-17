@@ -25,10 +25,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2478f1605b7fb67d8328be905956cbaae8e3c243
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62889817"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
@@ -96,7 +96,7 @@ ms.locfileid: "62889817"
 |Operador|La identidad del usuario que inició el paquete.|  
 |SourceName|Nombre del contenedor o la tarea en los que ocurrió el evento del registro.|  
 |SourceID|Identificador único del paquete; el contenedor de bucles For, bucles Foreach o secuencias, o bien la tarea en la que ocurrió el evento del registro.|  
-|ExecutionID|GUID de la instancia de ejecución del paquete.<br /><br /> Nota: Ejecutar un paquete único podría crear entradas de registro con valores diferentes para el elemento ExecutionID. Por ejemplo, al ejecutar un paquete en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase de validación podría crear entradas de registro con un elemento ExecutionID que corresponda a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sin embargo, la fase de ejecución podría crear entradas de registro con un elemento ExecutionID que corresponda a dtshost.exe. Otro ejemplo de esta situación es cuando se ejecuta un paquete que contiene tareas Ejecutar paquete, cada una de las cuales ejecuta un paquete secundario. Estos paquetes secundarios podrían crear entradas de registro que tengan un elemento ExecutionID diferente al de las entradas de registro que crea el paquete principal.|  
+|ExecutionID|GUID de la instancia de ejecución del paquete.<br /><br /> Nota: Al ejecutar un paquete único, se podrían crear entradas de registro con valores diferentes para el elemento ExecutionID. Por ejemplo, al ejecutar un paquete en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], la fase de validación podría crear entradas de registro con un elemento ExecutionID que corresponda a [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]. Sin embargo, la fase de ejecución podría crear entradas de registro con un elemento ExecutionID que corresponda a dtshost.exe. Otro ejemplo de esta situación es cuando se ejecuta un paquete que contiene tareas Ejecutar paquete, cada una de las cuales ejecuta un paquete secundario. Estos paquetes secundarios podrían crear entradas de registro que tengan un elemento ExecutionID diferente al de las entradas de registro que crea el paquete principal.|  
 |MessageText|Mensaje asociado a la entrada del registro.|  
 |DataBytes|Matriz de bytes específica de la entrada del registro. El significado de este campo varía para cada entrada del registro.|  
   
@@ -113,7 +113,7 @@ ms.locfileid: "62889817"
   
  En la tabla siguiente se describen los eventos predefinidos que se pueden habilitar para escribir entradas del registro cuando se producen eventos en tiempo de ejecución. Estas entradas del registro se aplican a los ejecutables, al paquete y a las tareas y contenedores que incluye el paquete. El nombre de la entrada del registro es el nombre del evento que se produjo en tiempo de ejecución y que originó la entrada del registro.  
   
-|Eventos|Descripción|  
+|Events|Descripción|  
 |------------|-----------------|  
 |**OnError**|Escribe una entrada del registro cuando se produce un error.|  
 |**OnExecStatusChanged**|Escribe una entrada del registro cuando una tarea (no un contenedor) se suspende o se reanuda durante la depuración.|  

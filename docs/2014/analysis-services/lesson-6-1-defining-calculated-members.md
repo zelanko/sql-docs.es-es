@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 91dbc92eca754b99a154b062c4f40e5663a4cd9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078400"
 ---
 # <a name="defining-calculated-members"></a>Definir miembros calculados
@@ -57,11 +57,11 @@ ms.locfileid: "66078400"
   
 5.  Arrastre **Internet Sales-Sales Amount** de la pestaña **Metadatos** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las **expresiones de cálculo** .  
   
-6.  En el **expresión** , escriba un signo más (`+`) después de **[Measures]. [ Internet Sales-Sales Amount]**.  
+6.  En el **expresión** , escriba un signo más (`+`) después de **[Measures]. [ Internet Sales-Sales Amount]** .  
   
 7.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Venta del distribuidor**y, después, arrastre **Reseller Sales-Sales Amount** al cuadro **Expresión** del panel de las **expresiones de cálculo** después del signo más (+).  
   
-8.  En la lista **Cadena de formato** , seleccione **"Moneda"**.  
+8.  En la lista **Cadena de formato** , seleccione **"Moneda"** .  
   
 9. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66078400"
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. En la lista **Cadena de formato** , seleccione **"Moneda"**.  
+14. En la lista **Cadena de formato** , seleccione **"Moneda"** .  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Total Product Cost** y **Reseller Sales-Total Product Cost**y haga clic en **Aceptar**.  
   
@@ -113,7 +113,7 @@ ms.locfileid: "66078400"
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 5.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
@@ -129,7 +129,7 @@ ms.locfileid: "66078400"
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+9. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 10. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
@@ -147,7 +147,7 @@ ms.locfileid: "66078400"
   
      Observe que este miembro calculado hace referencia a otros miembros calculados. Como este miembro calculado se calculará después de los miembros calculados a los que hace referencia, se tratará de un miembro calculado válido.  
   
-14. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+14. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -188,7 +188,7 @@ ms.locfileid: "66078400"
   
      Esta expresión MDX calcula la contribución al total de ventas por Internet de cada producto. La instrucción Case junto con la función IS EMPTY garantiza que no se produzca un error de división por cero cuando un producto no tiene ventas.  
   
-5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 6.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
@@ -209,7 +209,7 @@ ms.locfileid: "66078400"
         End  
     ```  
   
-10. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+10. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 11. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
@@ -230,7 +230,7 @@ ms.locfileid: "66078400"
         End  
     ```  
   
-15. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+15. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 16. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   

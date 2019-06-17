@@ -16,10 +16,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 45b13c29af6a9c5e82533a4b66213d1cb1b9dd15
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787763"
 ---
 # <a name="breaking-changes-to-full-text-search"></a>Cambios principales en la búsqueda de texto completo
@@ -38,7 +38,7 @@ ms.locfileid: "62787763"
   
 |Característica|Escenario|SQL Server 2005|SQL Server 2008 y versiones posteriores.|  
 |-------------|--------------|---------------------|----------------------------------------|  
-|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) con tipos definidos por el usuario (UDT)|La clave de texto completo es un tipo definido por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por ejemplo, `MyType = char(1)`.|La clave devuelta es del tipo asignado al tipo definido por el usuario.<br /><br /> En el ejemplo, esto sería **char (1)**.|La clave devuelta es del tipo definido por el usuario. En el ejemplo, esto sería **MyType**.|  
+|[CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) con tipos definidos por el usuario (UDT)|La clave de texto completo es un tipo definido por el usuario de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], por ejemplo, `MyType = char(1)`.|La clave devuelta es del tipo asignado al tipo definido por el usuario.<br /><br /> En el ejemplo, esto sería **char (1)** .|La clave devuelta es del tipo definido por el usuario. En el ejemplo, esto sería **MyType**.|  
 |*top_n_by_rank* parámetro (de la CONTAINSTABLE y [FREETEXTTABLE](/sql/relational-databases/system-functions/freetexttable-transact-sql) [!INCLUDE[tsql](../includes/tsql-md.md)] instrucciones)|*top_n_by_rank* consultas usando 0 como parámetro.|Produce un mensaje de error que indica que debe utilizar un valor mayor que cero.|Tiene éxito y devuelve cero filas.|  
 |CONTAINSTABLE y **ItemCount**|Eliminar las filas de la tabla base antes de insertar los cambios en MSSearch.|CONTAINSTABLE devuelve el registro fantasma. **ItemCount** no cambia.|CONTAINSTABLE no devuelve ningún registro fantasma.|  
 |**ItemCount**|La tabla contiene documentos nulos o columnas de tipo.|Además de los documentos indizados, los documentos que son null o que tienen tipos nulos se contabilizan en el **ItemCount** valor.|Solo los documentos indizados se contabilizan el **ItemCount** valor.|  

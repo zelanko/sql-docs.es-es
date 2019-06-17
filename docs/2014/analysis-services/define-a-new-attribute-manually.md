@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6618a7c5023f140fdaee0b512c797c01586c62ff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66082336"
 ---
 # <a name="define-a-new-attribute-manually"></a>Definir un nuevo atributo manualmente
@@ -31,7 +31,7 @@ ms.locfileid: "66082336"
   
      Haga clic en el **atributos** panel, seleccione **Mostrar atributos en**y, a continuación, haga clic en **cuadrícula**.  
   
-3.  Desplácese hasta la última fila de la cuadrícula y, a continuación, haga clic en  **\<nuevo atributo >**.  
+3.  Desplácese hasta la última fila de la cuadrícula y, a continuación, haga clic en  **\<nuevo atributo >** .  
   
 4.  Escriba un nombre para el atributo para establecer la propiedad `Name` y, a continuación, presione Entrar.  
   

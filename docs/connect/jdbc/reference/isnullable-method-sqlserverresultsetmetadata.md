@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e01f6ec24adaa7f520ae9ec9ea8094829a9a98f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5475726e2905909515003cefc4aba19c1a4b86cf
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626423"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796456"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>Método isNullable (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public int isNullable(int column)
 ## <a name="remarks"></a>Notas  
  Este método isNullable es especificado por el método isNullable en la interfaz java.sql.ResultSetMetaData.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   
  [Miembros SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-members.md)   
  [Clase SQLServerResultSetMetaData](../../../connect/jdbc/reference/sqlserverresultsetmetadata-class.md)  

@@ -26,20 +26,16 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: bae9ec6ddd1d3098c04dc1afaaebc189ae079959
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65821090"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836319"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.
-
-> [!NOTE]
-> La utilidad ssbdiagnose ya no se instala junto a la versión más reciente de SQL Server Management Studio (SSMS), la 18.0. Para instalar la versión más reciente de ssbdiagnose, instale [SSMS 17.9.1](../../ssms/release-notes-ssms.md#download-ssms-1791).
-> La necesidad de instalar una versión anterior de SSMS para obtener la última versión de ssbdiagnose desaparecerá en futuras versiones. SSMS 18.x se ejecuta en paralelo con la versiones 17.x, por lo que pueden convivir en un mismo equipo.
 
 ## <a name="syntax"></a>Sintaxis  
   
@@ -206,7 +202,7 @@ WHERE database_id = DB_ID();
  Los identificadores de conversación se presentan en la columna **conversation_id** de la vista de catálogo **sys.conversation_endpoints** .  
   
  **-TIMEOUT** _timeout_interval_  
- Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera.**-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
+ Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera. **-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
   
  **\<runtimeconnectionoptions>**  
  Especifica la información de conexión para las bases de datos que contienen los servicios asociados a los elementos de conversación que se están supervisando. Si todos los servicios se encuentran en la misma base de datos, solo es necesario especificar una cláusula **CONNECT TO** . Por el contrario, si los servicios se encuentran en bases de datos independientes, será necesario especificar una cláusula **CONNECT TO** para cada base de datos. Si **runtimeconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions**.  
@@ -249,7 +245,7 @@ WHERE database_id = DB_ID();
  **-S** _server_name_[\\*instance_name*]  
  Especifica la instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar.  
   
- Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique _server\_name_**\\**_instance\_name_ para conectar una instancia con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
+ Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Especifique _server\_name_ **\\** _instance\_name_ para conectar una instancia con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en ese servidor. Si no se especifica **-S** , **ssbdiagnose** usa el valor de la variable de entorno SQLCMDSERVER. Si tampoco se establece SQLCMDSERVER, **ssbdiagnose** se conecta a la instancia predeterminada de [!INCLUDE[ssDE](../../includes/ssde-md.md)] en el equipo local.  
   
  **-d** _database_name_  
  Especifica la base de datos que contiene los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] que se van a analizar. Si la base de datos no existe, se genera un mensaje de error. Si no se especifica **-d** , el valor predeterminado es la base de datos especificada en la propiedad de base de datos predeterminada del inicio de sesión.  

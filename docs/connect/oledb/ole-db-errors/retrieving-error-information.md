@@ -17,13 +17,13 @@ helpviewer_keywords:
 - OLE DB error handling, examples
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8cd520017b423c562628056ea818dfacd01b0631
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: aa354694c0b74412dc28bd6dd7a1a367398ca60c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639633"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802390"
 ---
 # <a name="retrieving-error-information"></a>Recuperar información sobre errores
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -221,7 +221,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Errores](../../oledb/ole-db-errors/errors.md)  
   
   

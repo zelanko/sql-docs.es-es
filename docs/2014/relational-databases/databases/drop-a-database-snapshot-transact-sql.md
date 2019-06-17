@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d1387b6321ace59ec8a0c13ed03444553f4adf85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871923"
 ---
 # <a name="drop-a-database-snapshot-transact-sql"></a>Eliminar una instantánea de base de datos (Transact-SQL)
@@ -36,7 +36,7 @@ ms.locfileid: "62871923"
   
 2.  Ejecute una instrucción [DROP DATABASE](/sql/t-sql/statements/drop-database-audit-specification-transact-sql) especificando el nombre de la instantánea de base de datos que se quitará. La sintaxis es la siguiente:  
   
-     DROP DATABASE *nombre_de_instantánea_de_base_de_datos* [ **,**...*n* ]  
+     DROP DATABASE *nombre_de_instantánea_de_base_de_datos* [ **,** ...*n* ]  
   
      Donde *nombre_de_instantánea_de_base_de_datos* es el nombre de la instantánea de base de datos que se va a quitar.  
   

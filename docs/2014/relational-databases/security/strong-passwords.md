@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 97b13e8ccf7ef331320d15254dde3480331c4bb0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62470362"
 ---
 # <a name="strong-passwords"></a>Contraseñas seguras
@@ -52,7 +52,7 @@ ms.locfileid: "62470362"
   
 -   Comienza por el carácter $ o \@.  
   
- Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! \@  Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
+ Si se usa en una cadena de conexión de OLE DB u ODBC, el inicio de sesión o la contraseña no deben contener ninguno de estos caracteres: [] {}() , ; ? * ! \@ Estos caracteres se usan para inicializar una conexión o para separar valores de conexión.  
   
 ## <a name="related-content"></a>Contenido relacionado  
  [Directiva de contraseñas](password-policy.md)  

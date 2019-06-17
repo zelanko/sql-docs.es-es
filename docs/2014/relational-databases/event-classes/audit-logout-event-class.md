@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e8c7c2f178391b93b1034d3e1bfb07ff9f7714ed
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012574"
 ---
 # <a name="audit-logout-event-class"></a>Audit Logout, clase de eventos
@@ -35,8 +35,8 @@ ms.locfileid: "63012574"
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Duración**|**bigint**|Cantidad aproximada de tiempo desde el inicio de sesión del usuario.|13|Sí|  
 |**EndTime**|**datetime**|Hora de cierre de la sesión.|15|Sí|  
-|**EventClass**|**int**|Tipo de evento = 15.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 15.|27|Sin|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|Sin|  
 |**EventSubClass**|**int**|Tipo de conexión usada por el inicio de sesión. 1 = No agrupada, 2 = Agrupada.|21|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  

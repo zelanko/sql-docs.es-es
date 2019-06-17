@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 577145b2a844a95480d8e250a87cce0a15877e20
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095715"
 ---
 # <a name="database-ssrs-native-mode"></a>Base de datos (Modo nativo de SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66095715"
  Especifica las credenciales que utiliza el servidor de informes para conectarse a la base de datos de servidor de informes. Los tipos de credenciales que puede especificar incluyen la cuenta de servicio, un usuario del dominio de Windows, un usuario local de Windows o un inicio de sesión de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca de cómo seleccionar credenciales, vea [configurar una conexión de base de datos del servidor de informes &#40;SSRS Configuration Manager&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
  **Nombre de usuario**  
- Especifica una cuenta de usuario de dominio, si está utilizando credenciales de Windows, o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si usa credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si está usando credenciales de Windows, especifíquelas en este formato:  *\<dominio >\\< cuenta\>*.  
+ Especifica una cuenta de usuario de dominio, si está utilizando credenciales de Windows, o un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si usa credenciales de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si está usando credenciales de Windows, especifíquelas en este formato:  *\<dominio >\\< cuenta\>* .  
   
  **Contraseña**  
  Especifica la contraseña de la cuenta.  

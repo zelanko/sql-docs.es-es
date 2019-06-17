@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 32b95a5d156ae52394b7128b024c86b9a7e308b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891543"
 ---
 # <a name="step-5-adding-and-configuring-the-flat-file-source"></a>Paso 5: Adición y configuración del origen de archivo plano
@@ -40,7 +40,7 @@ ms.locfileid: "62891543"
   
 8.  Haga clic con el botón derecho en el origen del archivo plano y haga clic en **Propiedades**.  
   
-9. En la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)**.  
+9. En la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** .  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
  [Paso 6: Agregar y configurar transformaciones de búsqueda](lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

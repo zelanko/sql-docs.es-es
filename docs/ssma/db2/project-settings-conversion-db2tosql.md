@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273020"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
@@ -33,7 +33,7 @@ Especifica si SSMA genera mensajes informativos durante la conversión, mostrarl
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista:** No  
+**Modo predeterminado/optimista:** Sin  
   
 **Modo completo:** No  
   
@@ -62,7 +62,7 @@ La parte superior, se requiere que la expresión de cláusulas principales se ev
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo completo o de forma predeterminada:** No  
+**Modo completo o de forma predeterminada:** Sin  
   
 **Modo optimista:** Sí  
   
@@ -112,7 +112,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
   
 **Modo completo o de forma predeterminada:** Sí  
   
-**Modo optimista:** No  
+**Modo optimista:** Sin  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>Convertir instrucción FORALL en WHILE instrucción  
 Define cómo tratará SSMA FORALL bucles en elementos de la colección de PL/SQL.  
@@ -136,7 +136,7 @@ DB2 permite crear restricciones de clave externa, donde una acción SET NULL pod
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista/completo:** No  
+**Modo predeterminado/optimista/completo:** Sin  
   
 ### <a name="convert-function-calls-to-procedure-calls"></a>Convertir las llamadas de función a las llamadas a procedimientos  
 Algunas funciones de DB2 se definen como transacciones autónomas o contener instrucciones que no sería válidas en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En estos casos, SSMA crea un procedimiento y una función que es un contenedor para el procedimiento. La función convertida llama al procedimiento de implementación.  
@@ -211,7 +211,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
   
 **Modo predeterminado/optimista:** Sí  
   
-**Modo completo:** No  
+**Modo completo:** Sin  
   
 ### <a name="convert-subtypes"></a>Convertir a subtipos  
 SSMA puede convertir a subtipos de PL/SQL de dos maneras:  
@@ -222,7 +222,7 @@ SSMA puede convertir a subtipos de PL/SQL de dos maneras:
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista/completo:** No  
+**Modo predeterminado/optimista/completo:** Sin  
   
 ### <a name="convert-synonyms"></a>Convertir sinónimos  
 Sinónimos de los siguientes objetos de DB2 pueden migrarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
@@ -260,7 +260,7 @@ SSMA puede convertir TO_CHAR(date, format) DB2 en los procedimientos de la base 
   
 -   Si selecciona **función TO_CHAR_DATE utilizando**, SSMA convierte la TO_CHAR (fecha, formato) en función TO_CHAR_DATE mediante del idioma inglés para la conversión.  
   
--   Si selecciona **función utilizando TO_CHAR_DATE_LS (NLS atención)**, SSMA convierte la TO_CHAR (fecha, formato) en función TO_CHAR_DATE_LS mediante de idioma de la sesión para la conversión  
+-   Si selecciona **función utilizando TO_CHAR_DATE_LS (NLS atención)** , SSMA convierte la TO_CHAR (fecha, formato) en función TO_CHAR_DATE_LS mediante de idioma de la sesión para la conversión  
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
@@ -299,7 +299,7 @@ SSMA puede emular el comportamiento DB2 ORDER BY activando la casilla de verific
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista:** No  
+**Modo predeterminado/optimista:** Sin  
   
 **Modo completo:** Sí  
   
@@ -378,7 +378,7 @@ Instrucción ISNULL se utiliza en llamadas a funciones de reemplazo para emular 
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista:** No  
+**Modo predeterminado/optimista:** Sin  
   
 **Modo completo:** Sí  
   
@@ -391,7 +391,7 @@ Instrucción ISNULL se utiliza en llamadas a función CONCAT para emular el comp
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista:** No  
+**Modo predeterminado/optimista:** Sin  
   
 **Modo completo:** Sí  
   
@@ -405,7 +405,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
   
 **Modo predeterminado/optimista:** Sí  
   
-**Modo completo:** No  
+**Modo completo:** Sin  
   
 ### <a name="use-selectfor-xml-when-converting-selectinto-for-record-variable"></a>Usar SELECT... FOR XML al convertir seleccionar... INTO para la variable de registro  
 Especifica si se debe generar un resultado XML que se establece cuando se selecciona en una variable de registro.  
@@ -416,7 +416,7 @@ Especifica si se debe generar un resultado XML que se establece cuando se selecc
   
 Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la siguiente configuración:  
   
-**Modo predeterminado/optimista/completo:** No  
+**Modo predeterminado/optimista/completo:** Sin  
   
 ## <a name="returning-clause-conversion"></a>DEVOLVER la conversión de cláusula  
   

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f733740b062983f14379f71a48b77f73392aceae
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62865287"
 ---
 # <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
@@ -50,7 +50,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` Devuelve el valor entero del modo de conmutación por error y es un **salida** parámetro. *failover_mode_id* es un **tinyint** con un valor predeterminado de **0**. Devuelve **0** para actualización inmediata y **1** actualización en cola.  
   
- [**@failover_mode=**] **'***failover_mode***' salida**  
+ [ **@failover_mode=** ] **'***failover_mode***' salida**  
  Devuelve el modo en que se realizan las modificaciones de datos en el suscriptor. *failover_mode* es un **nvarchar (10)** con el valor predeterminado es NULL. Es un **salida** parámetro.  
   
 |Valor|Descripción|  

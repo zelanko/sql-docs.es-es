@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 097434fd-2b74-411c-a5ed-eba04481dde5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c4dcbeb69fee36b3b38ec07de338e2624d3695c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 916a3c318cf96fa5114b7e0e6bc1a3caae815d4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800552"
 ---
 # <a name="sqlserverdatasource-class"></a>Clase SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ public class SQLServerDataSource
 ## <a name="remarks"></a>Notas  
  Esta clase admite la acción de desencapsular para la clase SQLServerDataSource, la interfaz ISQLServerDataSource y la interfaz de origen de datos. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

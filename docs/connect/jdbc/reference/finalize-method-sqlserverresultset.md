@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 49bc879d-822b-42da-bc20-2394865f1f0f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e1b8a5435d6923015c2d3c29eef5031f3d5b2f4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 854da2b16cf680ac6ce54ae44a4bf1296cdbfd2c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622793"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796861"
 ---
 # <a name="finalize-method-sqlserverresultset"></a>Método finalize (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public void finalize()
 ## <a name="remarks"></a>Notas  
  Cierra el conjunto de resultados si no lo hace la aplicación. Este método existe exclusivamente para ajustarse a las especificaciones de JDBC. Dado que la máquina virtual Java (JVM) no garantiza cuándo tendrá oportunidad de ejecutarse un finalizador, las aplicaciones que no cierren explícitamente sus conjuntos de resultados podrían seguir realizando interbloqueos en otra instrucción que utilice la misma conexión y esté bloqueada en un recurso de servidor común, como bloqueos de fila.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 4992e50f3daeb7d131e8cfb98be3700366550f3f
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: d27099c54497eadecf38af33f8f3b0c12f4ccc7b
+ms.sourcegitcommit: 90b0e0a524df1d1dac18251397973ffd1eb6515f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582838"
+ms.lasthandoff: 06/13/2019
+ms.locfileid: "67046691"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
   
 -   No se pueden realizar copias de seguridad en el almacenamiento premium.  
   
--   SQL Server limita a 1 TB el tamaño máximo de copia de seguridad admitido con un blob en páginas. El tamaño máximo de copia de seguridad admitido con blobs en bloques está limitado a aproximadamente 200 MB (50 000 bloques * 4 MB MAXTRANSFERSIZE). Los blobs en bloques admiten la creación de bandas para admitir tamaños de copia de seguridad considerablemente mayores.  
+-   SQL Server limita a 1 TB el tamaño máximo de copia de seguridad admitido con un blob en páginas. El tamaño máximo de copia de seguridad admitido con blobs en bloques está limitado a aproximadamente 200 GB (50 000 bloques * 4 MB MAXTRANSFERSIZE). Los blobs en bloques admiten la creación de bandas para admitir tamaños de copia de seguridad considerablemente mayores.  
   
 -   Puede emitir una copia de seguridad o restaurar instrucciones mediante TSQL, SMO, cmdlets de PowerShell o el Asistente para copia de seguridad o restauración de SQL Server Management Studio.   
   

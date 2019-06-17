@@ -13,18 +13,18 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3399262b9ea80c789f81b7b4e745b6c8f32d11f1
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66012909"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836393"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 > Para obtener más información sobre el Asistente para importación y exportación, consulte [Asistente para importación y exportación de SQL Server](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-El Asistente para importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) en un destino determinado. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
+El Asistente para la importación de archivos planos es una forma muy sencilla de copiar datos de un archivo plano (.csv, .txt) a una nueva tabla de la base de datos. En la información general puede consultar los motivos por los que el asistente resulta tan útil, el proceso para encontrarlo y un ejemplo que podrá seguir fácilmente.
 
 ## <a name="why-would-i-use-this-wizard"></a>¿Por qué el asistente es tan útil?
 El objetivo del asistente es mejorar la experiencia de importación actual y ofrece un marco inteligente conocido como Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). Para un usuario sin conocimientos especializados en el tema de los dominios, importar datos puede ser una tarea compleja y tediosa, además de que se suelen producir errores. Este asistente permite simplificar el proceso de importación, ya que basta con seleccionar un archivo de entrada y un nombre de tabla único. El marco de PROSE se encarga del resto.

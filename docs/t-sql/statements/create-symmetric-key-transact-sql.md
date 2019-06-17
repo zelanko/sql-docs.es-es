@@ -1,7 +1,7 @@
 ---
 title: CREATE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/12/2017
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: b5d23572-b79d-4cf1-9eef-d648fa3b1358
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 54c25b504befc151b31bf6f0727838170b6d5a9b
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 56be2b8913002d681a4478eff80448acd2e71089
+ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326506"
+ms.lasthandoff: 06/11/2019
+ms.locfileid: "66836349"
 ---
 # <a name="create-symmetric-key-transact-sql"></a>CREATE SYMMETRIC KEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ CREATE SYMMETRIC KEY key_name
   
 ## <a name="arguments"></a>Argumentos  
  *Key_name*  
- Especifica el nombre único por el que se conoce la clave simétrica en la base de datos. Los nombres de estas tablas temporales empiezan por el signo de número (#). Por ejemplo, **#temporaryKey900007**. No se puede crear una clave simétrica que presente un nombre que comienza por más de un signo de número. No puede crear ninguna clave simétrica temporal mediante un proveedor EKM.  
+ Especifica el nombre único por el que se conoce la clave simétrica en la base de datos. Las claves temporales se designan cuando _key_name_ comienza por el signo de número (#). Por ejemplo, **#temporaryKey900007**. No se puede crear una clave simétrica que presente un nombre que comienza por más de un signo de número. No puede crear ninguna clave simétrica temporal mediante un proveedor EKM.  
   
  AUTHORIZATION *owner_name*  
  Especifica el nombre del usuario de la base de datos o el rol de aplicación que será propietario de la clave.  
@@ -82,13 +82,13 @@ CREATE SYMMETRIC KEY key_name
 > [!NOTE]  
 >  Esta opción no está disponible en las bases de datos independientes.  
   
- KEY_SOURCE **='**_pass\_phrase_**'**  
+ KEY_SOURCE **='** _pass\_phrase_ **'**  
  Especifica una frase de contraseña a partir de la cual se derivará la clave.  
   
- IDENTITY_VALUE **='**_identity\_phrase_**'**  
+ IDENTITY_VALUE **='** _identity\_phrase_ **'**  
  Especifica una frase de identidad a partir de la cual se generará una GUID para etiquetar los datos cifrados con una clave temporal.  
   
- PROVIDER_KEY_NAME **='**_key\_name\_in\_provider_**'**  
+ PROVIDER_KEY_NAME **='** _key\_name\_in\_provider_ **'**  
  Especifica el nombre al que se hace referencia en el proveedor de Administración extensible de claves.  
   
 > [!NOTE]  
@@ -166,7 +166,7 @@ ENCRYPTION BY CERTIFICATE Shipping04;
 GO  
 ```  
   
-### <a name="b-creating-a-temporary-symmetric-key"></a>b. Crear una clave simétrica temporal  
+### <a name="b-creating-a-temporary-symmetric-key"></a>B. Crear una clave simétrica temporal  
  En el siguiente ejemplo se crea una clave simétrica temporal denominada `#MarketingXXV` a partir de la frase de contraseña: `The square of the hypotenuse is equal to the sum of the squares of the sides`. La clave se suministra con un GUID generado a partir de la cadena `Pythagoras` y se cifra con el certificado `Marketing25`.  
   
 ```  

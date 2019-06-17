@@ -11,12 +11,12 @@ ms.assetid: e0d5e9f5-59c6-4118-87b5-4aa5c37a7df6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: fac4b997b8dfde4c73fcf846012344c8d9cb7e0e
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 73a8e9877b0d72a5d2d05686b2d08678985a50dc
+ms.sourcegitcommit: c3de32efeee3095fcea0d3faebb8f2ff1b56d229
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65717246"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67033393"
 ---
 # <a name="catalogcheckschemaversion"></a>catalog.check_schema_version 
 
@@ -39,7 +39,7 @@ catalog.check_schema_version [@use32bitruntime = ] use32bitruntime
   
 ## <a name="arguments"></a>Argumentos  
  [ @use32bitruntime= ] *use32bitruntime*  
- Cuando el parámetro se establece en **Verdadero**, se llama a la versión de 32 bits dtexec. *use32bitruntime* es de tipo **Bool**.  
+ Cuando el parámetro se establece en **1**, se llama a la versión de 32 bits de dtexec. *use32bitruntime* es de tipo **int**.  
   
 ## <a name="result-set"></a>Tipo de cursor  
  None  

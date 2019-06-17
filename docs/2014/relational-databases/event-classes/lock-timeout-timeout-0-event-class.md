@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 312cda4fd588336d8be42c82a20392c8d0b80664
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023501"
 ---
 # <a name="locktimeout-timeout-gt-0-event-class"></a>Clase de eventos Lock:Timeout (timeout &gt; 0)
@@ -37,8 +37,8 @@ ms.locfileid: "63023501"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que ha agotado el tiempo de espera.|35|Sí|  
 |Duration|`bigint`|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |EndTime|`datetime`|Hora a la que finalizó el evento. Esta columna no se llena para las clases de eventos de inicio, como **SQL:BatchStarting** o **SP:Starting**.|15|Sí|  
-|EventClass|`int`|Tipo de evento = 189.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|`int`|Tipo de evento = 189.|27|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData2|`int`|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|55|Sí|  

@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: d71a6ddc965b422f0f96f40788352213501b4db2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63042350"
 ---
 # <a name="download-and-apply-microsoft-updates-for-analytics-platform-system"></a>Descargue y aplique las actualizaciones de Microsoft para Analytics Platform System
@@ -107,7 +107,7 @@ Antes de realizar estos pasos, necesitará:
   
 1.  Antes de empezar, abra el [supervisar el dispositivo mediante la consola de administración &#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md), haga clic en el **estado de dispositivo** pestaña y compruebe que la  **Clúster** y **red** show verde columnas (o ND) para todos los nodos. Si existe alguna alerta en cualquiera de estas columnas, el dispositivo no pueda instalar correctamente las actualizaciones. Resolver todas las alertas existentes en el **clúster** y **red** columnas antes de continuar.  
   
-2.  Inicie sesión en el _< nombreDeDominio >_**-HST01** nodo como el Administrador de dominio de Fabric.  
+2.  Inicie sesión en el _< nombreDeDominio >_ **-HST01** nodo como el Administrador de dominio de Fabric.  
   
 3.  Para aplicar todas las actualizaciones aprobadas para WSUS, ejecute el programa de actualización. Consulte [ejecutar el programa de actualización](#RunUpdateWizard) a continuación para obtener instrucciones.  
   
@@ -123,7 +123,7 @@ Antes de realizar estos pasos, necesitará:
   
 5.  En el **estado** menú desplegable, seleccione **cualquier** y haga clic en **actualizar**.  
   
-6.  Expanda **actualizar servicios**, *<appliance name>*- VMM, **actualizaciones**, **todas las actualizaciones**, donde *<appliance name>* es el nombre de dispositivo.  
+6.  Expanda **actualizar servicios**, *<appliance name>* - VMM, **actualizaciones**, **todas las actualizaciones**, donde *<appliance name>* es el nombre de dispositivo.  
   
 7.  En el **todas las actualizaciones** ventana conjunto **aprobación** a **cualquier excepción rechazada**.  
   

@@ -13,14 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d7c61a21f149a50c4893c9c82d3624e0905a481b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022427"
 ---
 # <a name="script-to-grant-oracle-permissions"></a>Script para conceder permisos en Oracle
-  El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle que publicará datos utilizando la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
+  El script que se proporciona en este tema se utiliza durante la configuración de una base de datos de Oracle que publicará datos utilizando la replicación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Este script también está disponible en el directorio siguiente después de la instalación de: *\<unidad>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. Para más información sobre la configuración de la base de datos de Oracle, vea [Configurar un publicador de Oracle](configure-an-oracle-publisher.md).  
   
 > [!NOTE]  
 >  Este script incluye la instrucción `GRANT CREATE ANY TRIGGER TO &&AdminLogin;`, que es necesaria para los desencadenadores que utiliza la replicación transaccional. Si solo va a utilizar replicación de instantáneas, quite del script esta línea de la línea de comandos.  

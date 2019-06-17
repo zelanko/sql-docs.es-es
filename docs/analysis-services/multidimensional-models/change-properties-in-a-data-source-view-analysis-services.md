@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7ec8840a9d4f66247c41466a6d32c7dd6eee7de6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988100"
 ---
 # <a name="change-properties-in-a-data-source-view-analysis-services"></a>Cambiar las propiedades de una vista del origen de datos (Analysis Services)
@@ -54,7 +54,7 @@ ms.locfileid: "62988100"
 |DataSource|Especifica el origen de datos para el objeto. Esta propiedad no se puede editar.|  
 |Descripción|Especifica la descripción de la tabla, vista o consulta con nombre. Si la tabla o vista de la base de datos subyacente tenía una descripción almacenada como propiedad extendida, se muestra este valor. Esta propiedad se puede editar.|  
 |FriendlyName|Especifica un nombre para la tabla o vista que es significativo para los usuarios o tiene relación con el asunto. De manera predeterminada, la propiedad **FriendlyName** de una tabla o vista es igual que la propiedad **Name** de la misma. La propiedad **FriendlyName** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en tablas o vistas. Esta propiedad se puede editar.|  
-|Name|Especifica el nombre de la tabla o vista subyacente, o el nombre de la consulta con nombre. La propiedad **Name** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en consultas con nombre. Esta propiedad solo se puede editar para las consultas con nombre.|  
+|NOMBRE|Especifica el nombre de la tabla o vista subyacente, o el nombre de la consulta con nombre. La propiedad **Name** es utilizada por los objetos de minería de datos y OLAP al definir nombres de objeto basados en consultas con nombre. Esta propiedad solo se puede editar para las consultas con nombre.|  
 |QueryDefinition|Especifica la definición de la consulta con nombre. Esta propiedad solo se puede aplicar a las consultas con nombre y no se puede editar directamente. Para editar esta propiedad, se edita la propia consulta con nombre.|  
 |esquema|Especifica el esquema de la base de datos aplicable a la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  
 |TableType|Especifica el tipo de tabla de la tabla, vista o consulta con nombre. Esta propiedad no se puede editar.|  

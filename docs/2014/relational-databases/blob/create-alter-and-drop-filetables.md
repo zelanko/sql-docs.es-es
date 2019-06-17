@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010291"
 ---
 # <a name="create-alter-and-drop-filetables"></a>Crear, modificar y quitar FileTables
@@ -175,7 +175,7 @@ GO
 |Restricciones CHECK|Las restricciones CHECK definidas por el sistema se aplican a los siguientes requisitos:<br /><br /> Nombres de archivo válidos.<br /><br /> Atributos de archivo válidos.<br /><br /> El objeto primario debe ser un directorio.<br /><br /> La jerarquía del espacio de nombres se bloquea durante la manipulación de archivos.|  
   
  **Convención de nomenclatura para las restricciones definidas por el sistema**  
- Las restricciones definidas por el sistema descritas arriba reciben su nombre en el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>**, donde:  
+ Las restricciones definidas por el sistema descritas arriba reciben su nombre en el formato **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** , donde:  
   
 -   *<constraint_type>* es CK (restricción CHECK), DF (restricción DEFAULT), FK (clave externa), PK (clave principal) o UQ (restricción UNIQUE).  
   

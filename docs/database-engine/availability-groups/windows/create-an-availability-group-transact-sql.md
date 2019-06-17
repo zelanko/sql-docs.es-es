@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8b0a6301-8b79-4415-b608-b40876f30066
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 30cdbd1624e2fd8cd17ca4d0cf36cb8cb8f93b92
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 409c6a27b03eb4a7f84038df005a8c625b4011ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974424"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793519"
 ---
 # <a name="create-an-always-on-availability-group-using-transact-sql-t-sql"></a>Creación de un grupo de disponibilidad Always On mediante Transact-SQL (T-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,37 +27,20 @@ ms.locfileid: "57974424"
 > [!NOTE]  
 >  Para obtener una introducción a los grupos de disponibilidad, vea [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md).  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#PrerequisitesRestrictions)  
-  
-     [Seguridad](#Security)  
-  
-     [Resumen de las tareas e instrucciones Transact-SQL correspondientes](#SummaryTsqlStatements)  
-  
--   **Para crear y configurar un grupo de disponibilidad mediante:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Ejemplo:**  [Configuración de un grupo de disponibilidad que usa la Autenticación de Windows](#ExampleConfigAGWinAuth)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
-  
 > [!NOTE]  
 >  Como alternativa al uso de [!INCLUDE[tsql](../../../includes/tsql-md.md)], puede usar el Asistente para crear grupo de disponibilidad o cmdlets de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Usar el Asistente para grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-availability-group-wizard-sql-server-management-studio.md), [Usar el cuadro de diálogo Nuevo grupo de disponibilidad &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-new-availability-group-dialog-box-sql-server-management-studio.md)o [Crear un grupo de disponibilidad &#40;SQL Server PowerShell&#41;](../../../database-engine/availability-groups/windows/create-an-availability-group-sql-server-powershell.md).  
+
   
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
- Se recomienda encarecidamente leer esta sección antes de intentar crear el primer grupo de disponibilidad.  
-  
-###  <a name="PrerequisitesRestrictions"></a> Requisitos previos, restricciones y recomendaciones  
+## <a name="PrerequisitesRestrictions"></a> Requisitos previos, restricciones y recomendaciones  
   
 -   Antes de crear un grupo de disponibilidad, compruebe que las instancias de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedan réplicas de disponibilidad residen en otro nodo (WSFC) de clúster de conmutación por error de Windows Server en el mismo clúster de conmutación por error de WSFC. Además, compruebe que cada una de las instancias del servidor cumple los requisitos previos de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] . Para obtener más información, recomendamos encarecidamente que lea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
+##  <a name="TsqlProcedure"></a> Usar Transact-SQL para crear y configurar un grupo de disponibilidad 
+
 ###  <a name="SummaryTsqlStatements"></a> Resumen de las tareas e instrucciones Transact-SQL correspondientes  
  En la tabla siguiente se enumeran las tareas básicas relacionadas con la creación y configuración de un grupo de disponibilidad y se indican las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] que han de utilizarse para estas tareas. Las tareas de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] se deben realizar en la secuencia en que se muestran en la tabla.  
   
@@ -69,10 +52,9 @@ ms.locfileid: "57974424"
 |Preparar la base de datos secundaria|[BACKUP](../../../t-sql/statements/backup-transact-sql.md) y [RESTORE](../../../t-sql/statements/restore-statements-transact-sql.md).|Se crean las copias de seguridad de la instancia del servidor que hospeda la réplica principal.<br /><br /> Se restauran las copias de seguridad en cada una de las instancias del servidor que hospedan una réplica secundaria utilizando RESTORE WITH NORECOVERY.|  
 |Iniciar la sincronización de datos uniendo cada base de datos secundaria al grupo de disponibilidad|[ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) *database_name* SET HADR AVAILABILITY GROUP = *group_name*|Se ejecuta en cada una de las instancias del servidor que hospedan una réplica secundaria.|  
   
- *Para realizar una tarea determinada, conéctese a la instancia o instancias del servidor indicadas.  
-  
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL para crear y configurar un grupo de disponibilidad  
-  
+ *Para realizar una tarea determinada, conéctese a la instancia o instancias del servidor indicadas.   
+ 
+### <a name="using-transact-sql"></a>Usar Transact-SQL 
 > [!NOTE]  
 >  Para obtener un procedimiento de configuración de ejemplo que contiene ejemplos de código de cada una de estas instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)], vea [Ejemplo: Configuración de un grupo de disponibilidad que usa la Autenticación de Windows](#ExampleConfigAGWinAuth).  
   

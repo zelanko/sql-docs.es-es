@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 392790b24fb8e78ee9922d6cb34d2b1ea80b0961
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 7a53e16032d2e90b4072d0f19939e4d9be0e7a78
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51606545"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803509"
 ---
 # <a name="take-an-availability-group-offline-sql-server"></a>Poner sin conexión un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,37 +25,19 @@ ms.locfileid: "51606545"
   
  Si durante una migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]algunas aplicaciones se conectan directamente a la réplica principal de un grupo de disponibilidad, se debe poner sin conexión el grupo de disponibilidad. La migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la actualización del sistema operativo con un tiempo de inactividad mínimo de los grupos de disponibilidad. El escenario habitual es usar la migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para actualizar el sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o a [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Recomendaciones](#Recommendations)  
-  
-     [Seguridad](#Security)  
-  
--   **Para poner un grupo de disponibilidad sin conexión, mediante:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Seguimiento:**  [Después de que el grupo de disponibilidad esté sin conexión](#FollowUp)  
-  
--   [Contenido relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 > [!CAUTION]  
 >  Use la opción OFFLINE solo para realizar una migración entre clústeres de los recursos de un grupo de disponibilidad.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
   
--   La instancia de servidor en la que se escribe el comando OFFLINE debe ejecutar [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o superior (edición Enterprise o superior).  
-  
+-   La instancia de servidor en la que se escribe el comando OFFLINE debe ejecutar [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o superior (edición Enterprise o superior).    
 -   El grupo de disponibilidad debe estar actualmente en línea.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="Recommendations"></a> Recomendaciones  
  Antes de poner el grupo de disponibilidad sin conexión, elimine el agente o los agentes de escucha del grupo de disponibilidad. Para obtener más información, vea [Quitar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/remove-an-availability-group-listener-sql-server.md).  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -76,9 +58,9 @@ ms.locfileid: "51606545"
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de que el grupo de disponibilidad esté sin conexión  
+##  <a name="FollowUp"></a> Seguimiento: Después de que el grupo de disponibilidad esté sin conexión  
   
--   **Registro de la operación OFFLINE**  : La identidad del nodo de WSFC donde se inició la operación OFFLINE se almacena tanto en el registro de clúster de WSFC como en el registro de errores de SQL.  
+-   **Registro de operación OFFLINE:**  La identidad del nodo de WSFC donde se ha iniciado la operación OFFLINE se almacena tanto en el registro de clúster de WSFC como en el registro de errores de SQL.  
   
 -   **En el caso de que no se eliminara la escucha del grupo de disponibilidad antes de dejar a este último sin conexión:**  si va a migrar el grupo de disponibilidad a otro clúster WSFC, elimine el VNN y el VIP del agente de escucha. Puede eliminarlos mediante la consola Administración del clúster de conmutación por error, el cmdlet [Remove-ClusterResource](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx) de PowerShell o [cluster.exe](https://technet.microsoft.com/library/ee461015\(WS.10\).aspx). Tenga en cuenta que cluster.exe está desusado en Windows 8.  
   
@@ -92,9 +74,9 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 -   [Artículos técnicos de SQL Server 2012](https://msdn.microsoft.com/library/bb418445\(SQL.10\).aspx)  
   
--   [Blog del equipo de AlwaysOn de SQL Server: blog oficial del equipo de AlwaysOn de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
+-   [Blog del equipo Always On de SQL Server: el blog oficial del equipo de Always On de SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  
   
   

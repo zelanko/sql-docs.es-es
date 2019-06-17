@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 80c8b1690a4a0e38b591fe0614bb13e4ab028e1a
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: ce926bbfbefce529a5d01607408818676f6d46f5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605155"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66783822"
 ---
 # <a name="configure-the-remote-access-server-configuration-option"></a>Configurar la opción de configuración del servidor Acceso remoto
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,11 +41,11 @@ ms.locfileid: "51605155"
   
  Puede que a los programadores les interesen los temas siguientes:  
   
--   [Conectar con SQL Server mediante Autenticación de SQL en ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
+-   [Cómo: Conectar con SQL Server mediante Autenticación de SQL en ASP.NET 2.0](https://msdn.microsoft.com/library/ff648340.aspx)  
   
 -   [Conectarse a una instancia de SQL Server](../../relational-databases/server-management-objects-smo/create-program/connecting-to-an-instance-of-sql-server.md)  
   
--   [Crear conexiones a Bases de datos de SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
+-   [Cómo: Crear conexiones a Bases de datos de SQL Server](https://msdn.microsoft.com/library/s4yys16a.aspx)  
   
  **Aquí comienza el cuerpo principal de este tema.**  
   
@@ -78,10 +78,10 @@ ms.locfileid: "51605155"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-access-option"></a>Para configurar la opción de acceso remoto  
   
@@ -114,7 +114,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de acceso remoto  
  Esta configuración no surte efecto hasta que reinicie SQL Server.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  

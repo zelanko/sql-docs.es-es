@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9deaa92f28e6ca0f0e7c32144a0a42e67234df47
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8b72d754299554e44a61a6239b0755e634429de1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47642333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799418"
 ---
 # <a name="configure-the-query-governor-cost-limit-server-configuration-option"></a>Configurar la opción de configuración del servidor Límite de costo de regulador de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47642333"
   
 -   **Seguimiento:**  [Después de configurar la opción de límite de costo de regulador de consultas](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -53,10 +53,10 @@ ms.locfileid: "47642333"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-query-governor-cost-limit-option"></a>Para configurar la opción de límite de costo de regulador de consultas  
   
@@ -97,7 +97,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de límite de costo de regulador de consultas  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET QUERY_GOVERNOR_COST_LIMIT &#40;Transact-SQL&#41;](../../t-sql/statements/set-query-governor-cost-limit-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

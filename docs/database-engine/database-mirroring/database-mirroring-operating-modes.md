@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2a7449f51121491025d662fde50eaa548602cd41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fa1beab7acbdb4eb2b522596b8854e4bc714c640
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52503456"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795520"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "52503456"
 -   Si se pierde el servidor principal, forzar el servicio en el servidor reflejado requiere que éste se conecte al testigo.  
   
 > [!NOTE]  
->  Para obtener información sobre los tipos de cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Para obtener información sobre los tipos de cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Responder ante los errores del servidor principal  
  Si se produce un error en el servidor principal, el propietario de la base de datos tiene varias opciones:  
@@ -157,7 +157,7 @@ ms.locfileid: "52503456"
   
  A diferencia de los dos asociados, el testigo no sirve a la base de datos. El testigo simplemente admite la conmutación automática por error al comprobar que el servidor principal se encuentre activo y en funcionamiento. El servidor reflejado inicia la conmutación automática por error solo si éste y el testigo permanecen mutuamente conectados después de haberse desconectado del servidor principal.  
   
- Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md) y [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, vea [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md) y [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  La conmutación automática por error requiere las condiciones siguientes:  
   
@@ -229,7 +229,7 @@ ms.locfileid: "52503456"
   
 -   Cuando hay un testigo pero no está conectado a un asociado, el testigo tiene el estado UNKOWN o DISCONNECTED en relación con el asociado. En este caso, el testigo carece de quórum con ese asociado y, si los asociados no están conectados entre sí, la base de datos se vuelve no disponible.  
   
- Para obtener información sobre el cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Para obtener información sobre el cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  El estado de cada testigo en una instancia del servidor se registra en la vista de catálogo **sys.database_mirroring**, en las columnas **mirroring_witness_state** y **mirroring_witness_state_desc**. Para obtener más información, vea [sys.database_mirroring &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-transact-sql.md).  
   
@@ -243,7 +243,7 @@ ms.locfileid: "52503456"
   
  *Si el testigo se desconecta, se recomienda establecer WITNESS OFF hasta que la instancia del servidor testigo esté disponible.  
   
- **Si hay un testigo en modo de alto rendimiento, no participará en la sesión. Sin embargo, para que la base de datos esté disponible, al menos dos de las instancias de servidor deben permanecer conectadas. Por lo tanto, se recomienda mantener la propiedad WITNESS establecida en OFF en las sesiones en modo de alto rendimiento. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ **Si hay un testigo en modo de alto rendimiento, no participará en la sesión. Sin embargo, para que la base de datos esté disponible, al menos dos de las instancias de servidor deben permanecer conectadas. Por lo tanto, se recomienda mantener la propiedad WITNESS establecida en OFF en las sesiones en modo de alto rendimiento. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="ViewWitness"></a> Ver la configuración de seguridad y el estado del testigo  
  Para ver la configuración de seguridad y el estado del testigo de una base de datos, use la vista de catálogo **sys.database_mirroring** . Las columnas relevantes son:  
@@ -284,7 +284,7 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
   
 -   [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Testigo de creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-witness.md)  
   

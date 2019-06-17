@@ -1,6 +1,6 @@
 ---
 title: Polygon | Microsoft Docs
-ms.date: 03/06/2017
+ms.date: 03/07/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,15 +14,17 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8818d5b8b97e6bef9df2a4e2d9b550e2cbbc980c
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65936390"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66761451"
 ---
 # <a name="polygon"></a>Polygon
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
   Un **Polygon** es una superficie bidimensional almacenada como una secuencia de puntos que definen un anillo delimitador exterior y cero o más anillos interiores.  
   
 ## <a name="polygon-instances"></a>Instancias de Polygon  
@@ -107,11 +109,13 @@ SELECT @g1.STIsValid(), @g2.STIsValid(), @g3.STIsValid(), @g4.STIsValid(), @g5.S
   
 ## <a name="examples"></a>Ejemplos  
 ### <a name="example-a"></a>Ejemplo A.  
-El ejemplo siguiente crea una instancia sencilla de `geometry``Polygon` con un hueco y un SRID de 10.  
+En el siguiente ejemplo se crea una instancia sencilla de `geometry` `Polygon` con un hueco y un SRID de 10.
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::STPolyFromText('POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))', 10);  
+SET @g = geometry::STPolyFromText(
+    'POLYGON((0 0, 0 3, 3 3, 3 0, 0 0), (1 1, 1 2, 2 1, 1 1))',
+    10);
 ```  
   
 
@@ -120,7 +124,9 @@ Una instancia que no es válida se puede especificar y convertir en una instanci
   
 ```sql  
 DECLARE @g geometry;  
-SET @g = geometry::Parse('POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))');  
+SET @g = geometry::Parse(
+    'POLYGON((1 0, 0 1, 1 2, 2 1, 1 0), (2 0, 1 1, 2 2, 3 1, 2 0))'
+    );  
 ```  
   
 ### <a name="example-c"></a>Ejemplo C.  
@@ -134,7 +140,8 @@ SELECT @g.ToString();
 La instancia de `geometry` devuelta por el ejemplo anterior es de tipo `MultiPolygon`.  
   
 ```sql  
-MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)), ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))  
+MULTIPOLYGON (((2 0, 3 1, 2 2, 1.5 1.5, 2 1, 1.5 0.5, 2 0)),
+              ((1 0, 1.5 0.5, 1 1, 1.5 1.5, 1 2, 0 1, 1 0)))
 ```  
   
 ### <a name="example-d"></a>Ejemplo D.  

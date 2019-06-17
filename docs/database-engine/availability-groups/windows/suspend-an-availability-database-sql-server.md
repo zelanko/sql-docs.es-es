@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 409432676e85dd6d6626b3be2ec5aa375c802424
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 86c7677754faca57723e93cccc3e55cf76da7a01
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700943"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803501"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>Suspender una base de datos de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +56,11 @@ ms.locfileid: "47700943"
   
      [PowerShell](#PowerShellProcedure)  
   
--   **Seguimiento:** [Prevención de un registro de transacciones lleno](#FollowUp)  
+-   **Seguimiento:** [Evitar un registro de transacciones lleno](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Un comando SUSPEND realiza la devolución en cuanto haya sido aceptado por la réplica que hospeda la base de datos de destino, pero la suspensión real de la base de datos se produce de forma asincrónica.  
@@ -69,16 +69,16 @@ ms.locfileid: "47700943"
  Debe estar conectado a la instancia de servidor que hospeda la base de datos que desea suspender. Para suspender una base de datos principal y las bases de datos secundarias correspondientes, conéctese a la instancia del servidor que hospeda la réplica principal. Para suspender una base de datos secundaria dejando disponible la base de datos principal, conéctese a la réplica secundaria.  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
- Durante los cuellos de botella, la suspensión breve de una o varias bases de datos secundarias puede ser útil para mejorar temporalmente el rendimiento de la réplica principal. Mientras una base de datos secundaria permanece suspendida, el registro de transacciones de la base de datos principal correspondiente no puede truncarse. Esto hace que las entradas de registro se acumulen en la base de datos principal. Por tanto, se recomienda reanudar o quitar rápidamente una base de datos secundaria suspendida. Para obtener más información, vea [Seguimiento: evitar un registro de transacciones lleno](#FollowUp), más adelante en este tema.  
+ Durante los cuellos de botella, la suspensión breve de una o varias bases de datos secundarias puede ser útil para mejorar temporalmente el rendimiento de la réplica principal. Mientras una base de datos secundaria permanece suspendida, el registro de transacciones de la base de datos principal correspondiente no puede truncarse. Esto hace que las entradas de registro se acumulen en la base de datos principal. Por tanto, se recomienda reanudar o quitar rápidamente una base de datos secundaria suspendida. Para más información, vea [Seguimiento: Evitar un registro de transacciones lleno](#FollowUp) más adelante en este tema.  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
  Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para suspender una base de datos**  
   
 1.  En el Explorador de objetos, conéctese a la instancia de servidor que hospeda la réplica de disponibilidad en la que desea suspender una base de datos y expanda el árbol. Para obtener más información, vea [Requisitos previos](#Prerequisites), anteriormente en este tema.  
@@ -126,7 +126,7 @@ ms.locfileid: "47700943"
   
 -   [Proveedor de SQL Server PowerShell Provider](../../../relational-databases/scripting/sql-server-powershell-provider.md)  
   
-##  <a name="FollowUp"></a> Follow Up: Avoiding a Full Transaction Log  
+##  <a name="FollowUp"></a> Seguimiento: Evitar un registro de transacciones lleno  
  Normalmente, cuando se lleva a cabo un punto de comprobación automático en una base de datos, su registro de transacciones se trunca en dicho punto de comprobación después de la siguiente copia de seguridad del registro. Sin embargo, mientras una base de datos secundaria está suspendida, todas las entradas de registro actuales permanecen activas en la base de datos principal. Si el registro de transacciones se llena (bien porque alcanza su tamaño máximo o porque la instancia del servidor se queda sin espacio), la base de datos no puede realizar más actualizaciones.  
   
  Para evitar este problema, debe realizar una de las siguientes acciones:  
@@ -145,7 +145,7 @@ ms.locfileid: "47700943"
   
 -   [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Reanudar una base de datos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/resume-an-availability-database-sql-server.md)  
   

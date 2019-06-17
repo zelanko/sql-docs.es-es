@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: da45efed-55eb-4c71-be34-ac2589dfce8d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 38cd77776070b6a7c493e68eaf42da49c79ba425
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 039ff094deed56cd3eddabd22a1035e6455a95e3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47728799"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795199"
 ---
 # <a name="setting-up-database-mirroring-sql-server"></a>Configurar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47728799"
   
 1.  El servidor principal, el servidor reflejado y el testigo, si existen, deben estar hospedados en instancias de servidor independientes que, a su vez, deben estar en sistemas de host diferentes. Cada una de las instancias de servidor requiere un extremo de creación de reflejo de la base de datos. Si necesita crear un extremo de creación de reflejo de la base de datos, asegúrese de que sea accesible a las demás instancias de servidor.  
   
-     El tipo de autenticación que utilice la instancia de servidor para la creación de reflejo de la base de datos es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte disponibles para la creación de reflejo de la base de datos: autenticación de Windows o autenticación basada en certificados. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
+     El tipo de autenticación que utilice la instancia de servidor para la creación de reflejo de la base de datos es una propiedad del extremo de reflejo de la base de datos. Existen dos tipos de seguridad de transporte para la creación de reflejo de la base de datos: autenticación de Windows o autenticación basada en certificados. Para obtener más información, vea [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md).  
   
      Los requisitos para el acceso de red son específicos del tipo de autenticación, del siguiente modo:  
   
@@ -91,12 +91,12 @@ ms.locfileid: "47728799"
          Otra opción, si no desea la conmutación automática por error y prefiere poner más énfasis en el rendimiento en lugar de la disponibilidad, es desactivar la seguridad de las transacciones. Para obtener más información, vea [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md).  
   
         > [!NOTE]  
-        >  En el modo de alto rendimiento, WITNESS debe establecerse en OFF. Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+        >  En el modo de alto rendimiento, WITNESS debe establecerse en OFF. Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 > [!NOTE]  
->  Para ver un ejemplo del uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos por medio de la autenticación de Microsoft Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
+>  Para obtener un ejemplo del uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos mediante la autenticación de Microsoft Windows, vea [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
 >   
->  Para ver un ejemplo del uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos por medio de la seguridad basada en certificados, vea [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
+>  Para obtener un ejemplo del uso de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos mediante la seguridad basada en certificados, vea [Ejemplo: configurar la creación de reflejo de la base de datos mediante certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md).  
   
   
 ##  <a name="InThisSection"></a> En esta sección  
@@ -112,7 +112,7 @@ ms.locfileid: "47728799"
  [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
  Describe los pasos de [!INCLUDE[tsql](../../includes/tsql-md.md)] para configurar la creación de reflejo de la base de datos.  
   
- [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)  
+ [Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md).  
  Contiene un ejemplo de todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos con un testigo usando la autenticación de Windows.  
   
  [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
@@ -153,7 +153,7 @@ ms.locfileid: "47728799"
 -   [Solucionar problemas de configuración de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/troubleshoot-database-mirroring-configuration-sql-server.md)  
   
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Creación de reflejo de la base de datos: interoperabilidad y coexistencia &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-interoperability-and-coexistence-sql-server.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

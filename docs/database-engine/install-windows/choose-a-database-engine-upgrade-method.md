@@ -10,13 +10,13 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: f8a71f5e91fec924a73186211f3296bfc52add8a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: 434edd3a2fb48e6566deeac246b941f9ef7f2eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872265"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795003"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>Elegir un método de actualización del motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -45,7 +45,11 @@ Existen varios métodos que se deben considerar a la hora de planear la actualiz
 -   Un entorno de desarrollo sin una configuración de alta disponibilidad.  
   
 -   Un entorno de producción no esencial que pueda tolerar el tiempo de inactividad y que ejecute hardware y software recientes. La cantidad de tiempo de inactividad depende del tamaño de la base de datos y la velocidad de su subsistema de E/S. Se necesitará un poco más de tiempo a la hora de actualizar SQL Server 2014 cuando se estén usando tablas optimizadas para memoria. Para obtener más información, consulte [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md).  
-  
+
+> [!NOTE]
+> Para ver un ejemplo del modo en que Microsoft ha usado esta estrategia, consulte el siguiente blog: [To upgrade or not to upgrade](https://azure.microsoft.com/blog/azure-sql-server-to-upgrade-or-not-to-upgrade-that-is-the-question/) (Actualizar o no actualizar). 
+
+
 > [!WARNING]  
 >  Cuando se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene y reinicia como parte de la ejecución de las comprobaciones previas a la actualización.  
   

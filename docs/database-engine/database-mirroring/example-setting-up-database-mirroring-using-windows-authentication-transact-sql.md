@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 35800769-aede-4aac-b077-0e0e487e302f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 4f4fe56652f71e3c46e93b8115e792154d17a74f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 42f706ed9b7975c73f6c24b3f7e828ab077c8776
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47832293"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795432"
 ---
-# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Ejemplo: Configurar la creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
+# <a name="example-setting-up-database-mirroring-using-windows-authentication-transact-sql"></a>Ejemplo: Configuración de la creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este ejemplo se muestran todos los pasos necesarios para crear una sesión de creación de reflejo de la base de datos con un testigo mediante la autenticación de Windows. En los ejemplos descritos en este tema se utiliza [!INCLUDE[tsql](../../includes/tsql-md.md)]. Tenga en cuenta que como alternativa a los pasos que utilizan [!INCLUDE[tsql](../../includes/tsql-md.md)], puede utilizar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos para configurar la creación de reflejo de la base de datos. Para obtener más información, vea [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md).  
   
@@ -157,9 +157,9 @@ GO
   
 -   [Permitir que un punto de conexión de creación de reflejo de la base de datos use certificados para las conexiones entrantes &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-use-certificates-for-inbound-connections.md)  
   
--   [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Ejemplo: Configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [El punto de conexión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/the-database-mirroring-endpoint-sql-server.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   

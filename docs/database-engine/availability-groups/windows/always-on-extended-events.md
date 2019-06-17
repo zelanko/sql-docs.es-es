@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5950f98a-3950-473d-95fd-cde3557b8fc2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 2301a4709585f9243073f085703a3070c813b43e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+manager: jroth
+ms.openlocfilehash: ae3cc8d39ec9c181d6e99a41acb3a0590ebc77ee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860636"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66789645"
 ---
 # <a name="configure-extended-events-for-always-on-availability-groups"></a>Configuración de eventos extendidos para grupos de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -25,13 +25,7 @@ ms.locfileid: "58860636"
 ```sql  
 SELECT * FROM sys.dm_xe_objects WHERE name LIKE '%hadr%'  
 ```  
-  
- [Sesión Alwayson_health](always-on-extended-events.md#BKMK_alwayson_health)  
-  
- [Eventos extendidos para la depuración](always-on-extended-events.md#BKMK_Debugging)  
-  
- [Referencia de eventos extendidos de grupos de disponibilidad Always On](always-on-extended-events.md#BKMK_Reference)  
-  
+   
 ##  <a name="BKMK_alwayson_health"></a> Sesión Alwayson_health  
  La sesión de eventos extendidos alwayson_health se crea automáticamente al crear el grupo de disponibilidad y captura un subconjunto de los eventos relacionados del grupo de disponibilidad. Esta sesión está preconfigurada como una útil y cómoda herramienta que ayuda a empezar a trabajar rápidamente a la vez que soluciona los problemas de un grupo de disponibilidad. El Asistente para crear un grupo de disponibilidad inicia automáticamente la sesión en cada réplica de disponibilidad participante configurada en el asistente.  
   
@@ -91,7 +85,7 @@ Para obtener información sobre algunos de los eventos cubiertos por alwayson_he
 |columna|Description|  
 |------------|-----------------|  
 |Nombre|availability_replica_state_change|  
-|Categoría|alwayson|  
+|Categoría|Always on|  
 |Canal|Operativos|  
   
 #### <a name="event-fields"></a>Campos del evento  
@@ -122,7 +116,7 @@ GO
 |columna|Description|  
 |------------|-----------------|  
 |Nombre|availability_group_lease_expired|  
-|Categoría|alwayson|  
+|Categoría|Always On|  
 |Canal|Operativos|  
   
 #### <a name="event-fields"></a>Campos del evento  
@@ -150,7 +144,7 @@ GO
 |Nombre|Description|  
 |----------|-----------------|  
 |availability_replica_automatic _failover_validation||  
-|Categoría|alwayson|  
+|Categoría|Always On|  
 |Canal|Analíticos|  
   
 #### <a name="event-fields"></a>Campos del evento  
@@ -195,7 +189,7 @@ GO
 |Número de error|Description|  
 |------------------|-----------------|  
 |35201|Se ha producido un tiempo de espera de conexión al intentar establecer una conexión con la réplica de disponibilidad "%ls".|  
-|35202|Se ha establecido correctamente una conexión del grupo de disponibilidad "%ls" de la réplica de disponibilidad "%ls" con identificador [%ls] a "%ls" con identificador [%ls].  Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.|  
+|35202|Se ha establecido correctamente una conexión del grupo de disponibilidad "%ls" de la réplica de disponibilidad "%ls" con el identificador [%ls] a "%ls" con el identificador [%ls].  Esto es solo un mensaje informativo. No se requiere ninguna acción del usuario.|  
 |35206|Se ha producido un tiempo de espera de conexión en una conexión previamente establecida con la réplica de disponibilidad "%ls".|  
 |35204|Se ha deshabilitado la conexión entre la instancia "%ls" y "%ls" debido al apagado del punto de conexión.|  
 |Tiempo de espera + conectado|  
@@ -250,7 +244,7 @@ GO
 |columna|Description|  
 |------------|-----------------|  
 |Nombre|data_movement_suspend_resume|  
-|Categoría|Alwayson|  
+|Categoría|Always On|  
 |Canal|Operativos|  
   
 #### <a name="event-fields"></a>Campos del evento  
@@ -293,7 +287,7 @@ GO
 |columna|Description|  
 |------------|-----------------|  
 |Nombre|alwayson_ddl_execution|  
-|Categoría|alwayson|  
+|Categoría|Always On|  
 |Canal|Analíticos|  
   
 #### <a name="event-fields"></a>Campos del evento  
@@ -326,7 +320,7 @@ GO
 |columna|Description|  
 |------------|-----------------|  
 |Nombre|availability_replica_manager_state_change|  
-|Categoría|alwayson|  
+|Categoría|Always On|  
 |Canal|Operativos|  
   
 #### <a name="event-fields"></a>Campos del evento  

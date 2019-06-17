@@ -16,12 +16,12 @@ ms.assetid: 44fadbee-b5fe-40c0-af8a-11a1eecf6cb5
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 08da724047b89ef31c8f9cc06a4a2da36e6b5eaa
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58161692"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462717"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -729,6 +729,8 @@ Los valores de parámetros se examinan durante la compilación o la recompilaci�
 -  Consultas enviadas mediante sp_executesql 
 -  Consultas preparadas
 
+Para obtener más información sobre cómo solucionar problemas de exámenes de parámetros incorrectos, vea [Troubleshoot queries with parameter-sensitive query execution plan issues](https://docs.microsoft.com/azure/sql-database/sql-database-monitor-tune-overview#troubleshoot-performance-issues) (Solución de problemas de consultas con un plan de ejecución de consultas sensible a parámetros).
+
 > [!NOTE]
 > En el caso de las consultas que usan la sugerencia `RECOMPILE`, se examinan tanto los valores de parámetro como los valores actuales de las variables locales. Los valores examinados (de los parámetros y las variables locales) son los que existen en el lote justo antes de la instrucción con la sugerencia `RECOMPILE`. En concreto, en el caso de los parámetros, no se examinan los valores que aparecieron con la llamada de invocación del lote.
 
@@ -916,7 +918,7 @@ Las instrucciones individuales `CREATE TABLE` o `ALTER TABLE` pueden tener varia
 Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos métodos para referenciar orígenes de datos OLE DB heterogéneos en instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)]:
 
 * Nombres de servidores vinculados  
-  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante nombres que consten de cuatro partes. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
+  Los procedimientos almacenados del sistema `sp_addlinkedserver` y `sp_addlinkedsrvlogin` se utilizan para dar un nombre de servidor a un origen de datos OLE DB. Se puede hacer referencia a los objetos de estos servidores vinculados en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] mediante nombres que consten de cuatro elementos. Por ejemplo, si un nombre de servidor vinculado de `DeptSQLSrvr` se define en otra instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], la instrucción siguiente hace referencia a una tabla de ese servidor: 
   
   ```sql
   SELECT JobTitle, HireDate 
@@ -926,7 +928,7 @@ Microsoft [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite dos mét
    El nombre del servidor vinculado también puede especificarse en una instrucción `OPENQUERY` para abrir un conjunto de filas desde un origen de datos OLE DB. Se puede hacer referencia a este conjunto de filas del mismo modo que a una tabla en las instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]. 
 
 * Nombres de conectores ad hoc  
-  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. A continuación, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]: 
+  Para las referencias poco frecuentes a un origen de datos, las funciones `OPENROWSET` o `OPENDATASOURCE` se especifican con la información necesaria para conectarse a un servidor vinculado. Después, se puede hacer referencia al conjunto de filas del mismo modo que se hace referencia a una tabla en instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)]: 
   
   ```sql
   SELECT *

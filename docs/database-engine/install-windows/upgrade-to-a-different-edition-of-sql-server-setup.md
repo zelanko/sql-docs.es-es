@@ -10,13 +10,13 @@ ms.assetid: 31d16820-d126-4c57-82cc-27701e4091bc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: a7bbf62397971834da589d7232070300296f10c4
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 51bcd27ee8d2c63103650c8527014716f10bc3f9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51601955"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794695"
 ---
 # <a name="upgrade-to-a-different-edition-of-sql-server-setup"></a>Actualizar a una edición diferente de SQL Server (programa de instalación)
 
@@ -80,7 +80,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
   
 -   Las bases de datos de plantilla permanecen en el equipo después de la actualización.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)   
  [Compatibilidad con versiones anteriores](https://msdn.microsoft.com/library/15d9117e-e2fa-4985-99ea-66a117c1e9fd)  
   

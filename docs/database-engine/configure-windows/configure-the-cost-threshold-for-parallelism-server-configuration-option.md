@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: dad21bee-fe28-41f6-9d2f-e6ababfaf9db
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: abc5cb2557c3620ff9088520113a33b4f1a06bcc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 483329a9d948d054600df71710fdd84af57685f7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47768583"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803350"
 ---
 # <a name="configure-the-cost-threshold-for-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Umbral de costo para paralelismo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "47768583"
   
 -   **Seguimiento:**  [Después de configurar la opción de umbral de costo para paralelismo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -75,10 +75,10 @@ FROM sys.dm_os_sys_info
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-cost-threshold-for-parallelism-option"></a>Para configurar la opción de umbral de costo para paralelismo  
   
@@ -116,7 +116,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de umbral de costo para paralelismo  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md)   
  [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md)   
  [ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)   

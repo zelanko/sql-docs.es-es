@@ -1,7 +1,7 @@
 ---
-title: FROM (Transact-SQL) | Microsoft Docs
+title: 'FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs'
 ms.custom: ''
-ms.date: 03/16/2018
+ms.date: 06/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -35,20 +35,33 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e55be31f3f32316e8d9f841a34a7fcff3a3e97
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334792"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462685"
 ---
-# <a name="from-transact-sql"></a>FROM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+# <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
 
-  Especifica las tablas, vistas, tablas derivadas y tablas combinadas que se utilizan en las instrucciones DELETE, SELECT y UPDATE en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. En la instrucción SELECT, la cláusula FROM es necesaria excepto cuando la lista de selección solo contiene constantes, variables y expresiones aritméticas (sin nombres de columna).  
-  
- ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
+[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+
+En Transact-SQL, la cláusula FROM está disponible en las siguientes instrucciones:
+
+- [DELETE](../statements/delete-transact-sql.md)
+- [UPDATE](update-transact-sql.md)
+- [SELECT](select-transact-sql.md)
+
+Normalmente, la cláusula FROM es necesaria en la instrucción SELECT. La excepción se produce cuando no hay columnas de tablas enumeradas, y los únicos elementos que se muestran son literales, variables o expresiones aritméticas.
+
+En este artículo también se tratan las siguientes palabras clave, que se pueden usar en la cláusula FROM:
+
+- JOIN
+- APPLY
+- PIVOT
+
+![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
@@ -256,7 +269,7 @@ FROM { <table_source> [ ,...n ] }
  Es una expresión de tipo entero constante utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para generar un número aleatorio. *repeat_seed* es **bigint**. Si no se especifica *repeat_seed*, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna un valor de forma aleatoria. Para un valor *repeat_seed* específico, el resultado del muestreo es siempre el mismo si no se ha aplicado ningún cambio a la tabla. La expresión *repeat_seed* debe evaluarse como un entero mayor que cero.  
   
 ### <a name="tablesample-clause"></a>Cláusula Tablesample
-**Se aplica a:** Almacenamiento de datos SQL
+**Se aplica a:** SQL Data Warehouse
 
  Especifica que se devuelva un ejemplo de los datos de la tabla. El ejemplo puede ser aproximado. Esta cláusula se puede usar en cualquier tabla principal o combinada de una instrucción SELECT o UPDATE. TABLESAMPLE no se puede especificar con vistas. 
 
@@ -473,7 +486,7 @@ TerritoryID Name
 (10 row(s) affected)  
 ```  
   
-### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>b. Usar las sugerencias del optimizador TABLOCK y HOLDLOCK  
+### <a name="b-using-the-tablock-and-holdlock-optimizer-hints"></a>B. Usar las sugerencias del optimizador TABLOCK y HOLDLOCK  
  En la siguiente transacción parcial se muestra cómo colocar un bloqueo explícito de tabla compartida en `Employee` y cómo leer el índice. El bloqueo se mantiene durante toda la transacción.  
   
 ```sql    
@@ -880,11 +893,9 @@ FROM Sales.Customer TABLESAMPLE SYSTEM (10 PERCENT) ;
   
 ## <a name="see-also"></a>Consulte también  
  [CONTAINSTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/containstable-transact-sql.md)   
- [DELETE &#40;Transact-SQL&#41;](../../t-sql/statements/delete-transact-sql.md)   
  [FREETEXTTABLE &#40;Transact-SQL&#41;](../../relational-databases/system-functions/freetexttable-transact-sql.md)   
  [INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-transact-sql.md)   
  [OPENQUERY &#40;Transact-SQL&#41;](../../t-sql/functions/openquery-transact-sql.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   
- [UPDATE &#40;Transact-SQL&#41;](../../t-sql/queries/update-transact-sql.md)   
  [WHERE &#40;Transact-SQL&#41;](../../t-sql/queries/where-transact-sql.md)  

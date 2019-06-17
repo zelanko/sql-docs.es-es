@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 1af22188-e08b-4c80-a27e-4ae6ed9ff969
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: e3757c44ada2f4413693d6124e75bb726f63ac7d
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: a00716f654263528d0332fb5a71cef6d80f9bc21
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605395"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775467"
 ---
 # <a name="soft-numa-sql-server"></a>Soft-NUMA (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +34,11 @@ Los procesadores de hoy en día tienen varios núcleos por socket. Normalmente, 
 > soft-NUMA no admite procesadores de agregado en caliente.  
   
 ## <a name="automatic-soft-numa"></a>soft-NUMA automático  
- Con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cada vez que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta más de ocho núcleos físicos por nodo NUMA o socket en el inicio, se crean nodos soft-NUMA de forma automática y predeterminada. Al hacer el recuento de núcleos físicos de un nodo, no se distinguen los núcleos de procesador con Hyper-Threading.  Cuando el número de núcleos físicos detectado es superior a ocho por socket, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea nodos soft-NUMA que, idealmente, contienen ocho núcleos, pero esta cifra puede bajar a cinco o subir a nueve núcleos lógicos por nodo. El tamaño del nodo de hardware puede estar limitado por una máscara de afinidad de CPU. El número de nodos NUMA nunca supera el número máximo de nodos NUMA admitido.  
+Con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], cada vez que [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] detecta más de ocho núcleos físicos por nodo NUMA o socket en el inicio, se crean nodos soft-NUMA de forma automática y predeterminada. Al hacer el recuento de núcleos físicos de un nodo, no se distinguen los núcleos de procesador con Hyper-Threading.  Cuando el número de núcleos físicos detectado es superior a ocho por socket, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] crea nodos soft-NUMA que, idealmente, contienen ocho núcleos, pero esta cifra puede bajar a cinco o subir a nueve núcleos lógicos por nodo. El tamaño del nodo de hardware puede estar limitado por una máscara de afinidad de CPU. El número de nodos NUMA nunca supera el número máximo de nodos NUMA admitido.  
   
- Es posible deshabilitar o volver a habilitar soft-NUMA con la instrucción [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) y el argumento `SET SOFTNUMA`. Para que el cambio del valor de esta configuración surta efecto, hay que reiniciar el motor de base de datos.  
+Es posible deshabilitar o volver a habilitar soft-NUMA con la instrucción [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) y el argumento `SET SOFTNUMA`. Para que el cambio del valor de esta configuración surta efecto, hay que reiniciar el motor de base de datos.  
   
- En la siguiente imagen se muestra el tipo de información sobre soft-NUMA que aparece en el registro de errores de SQL Server cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta nodos NUMA de hardware con más de ocho núcleos físicos en cada nodo o socket.  
+En la siguiente imagen se muestra el tipo de información sobre soft-NUMA que aparece en el registro de errores de SQL Server cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detecta nodos NUMA de hardware con más de ocho núcleos físicos en cada nodo o socket.  
 
 
 ```
@@ -49,6 +49,9 @@ Los procesadores de hoy en día tienen varios núcleos por socket. Normalmente, 
 2016-11-14 13:39:43.63 Server      Node configuration: node 2: CPU mask: 0x0000555555000000:0 Active CPU mask: 0x0000555555000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.     
 2016-11-14 13:39:43.63 Server      Node configuration: node 3: CPU mask: 0x0000aaaaaa000000:0 Active CPU mask: 0x0000aaaaaa000000:0. This message provides a description of the NUMA configuration for this computer. This is an informational message only. No user action is required.   
 ```   
+
+> [!NOTE]
+> A partir de [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, use la marca de seguimiento 8079 para permitir que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] use soft-NUMA automática. A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], este comportamiento se controla mediante el motor y la marca de seguimiento 8079 no tiene ningún efecto. Para obtener más información, vea [DBCC TRACEON: marcas de seguimiento](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md).
 
 ## <a name="manual-soft-numa"></a>soft-NUMA manual  
 Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] manualmente de modo que use soft-NUMA, deshabilite soft_NUMA automático y modifique el Registro para agregar una máscara de afinidad de configuración de nodo. Al usar este método, la máscara soft-NUMA se puede establecer como una entrada del Registro binaria, DWORD (hexadecimal o decimal) o QWORD (hexadecimal o decimal). Para configurar más de las primeras 32 CPU use valores del Registro QWORD o BINARY (los valores QWORD no se pueden usar antes de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]). Tras modificar el Registro, debe reiniciar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] para que se aplique la configuración de soft-NUMA.  
@@ -70,7 +73,7 @@ La instancia A de [!INCLUDE[ssDE](../../includes/ssde-md.md)] se configura para 
   
  La instancia A, que experimenta actividades de E/S importantes, tiene ahora dos subprocesos de E/S y un subproceso de escritura diferida. La instancia B, que realiza operaciones que requieren un uso intensivo del procesador, solo tiene un subproceso de E/S y un subproceso de escritura diferida. Se pueden asignar diferentes cantidades de memoria a las instancias, pero, a diferencia de lo que ocurre con el NUMA de hardware, ambas reciben memoria del mismo bloque de memoria del sistema operativo y no hay afinidad entre la memoria y el procesador.  
   
- El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para obtener más información, vea el artículo acerca de [cómo funciona: NUMA de software, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, sea cual sea el número de nodos físicos de NUMA que presente el hardware, este será el número de subprocesos de escritura diferida que se creen. Para más información, vea [Cómo funciona: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx) (Cómo funciona: soft-NUMA, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria).  
   
 > [!NOTE]
 > Las claves del Registro de **Soft-NUMA** no se copian al actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -128,14 +131,14 @@ SET PROCESS AFFINITY CPU=4 TO 7;
 ## <a name="metadata"></a>Metadatos  
  Puede usar las siguientes DMV para ver el estado y configuración actuales de soft-NUMA.  
   
--   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): muestra el valor actual (0 o 1) para SOFTNUMA.  
+-   [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md): muestra el valor actual (0 o 1) de SOFTNUMA.  
   
 -   [sys.dm_os_sys_info &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md): en las columnas *softnuma* y *softnuma_desc* se muestran los valores de configuración actuales.  
   
 > [!NOTE]
 > El valor actual de uso automático de soft-NUMA se puede ver con [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md), pero no se puede modificar mediante **sp_configure**. Debe usar la instrucción [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md) con el argumento `SET SOFTNUMA`.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Asignación de puertos TCP/IP a nodos NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/map-tcp-ip-ports-to-numa-nodes-sql-server.md)    
 [affinity mask (opción de configuración del servidor)](../../database-engine/configure-windows/affinity-mask-server-configuration-option.md)    
 [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)     

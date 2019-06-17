@@ -34,16 +34,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 3adc687a30c3f8f7e9f8564bfbbb3fec44ad4a20
-ms.sourcegitcommit: ccea98fa0768d01076cb6ffef0b4bdb221b2f9d5
+ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/13/2019
-ms.locfileid: "65560107"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744172"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
 
+> [!div class="nextstepaction"]
+> [Comparta sus comentarios sobre la página de documentación de SQL.](https://github.com/MicrosoftDocs/sql-docs/issues/2249)
 
 En este tema se proporcionan detalles de las características compatibles con las diversas ediciones de SQL Server 2017. 
 

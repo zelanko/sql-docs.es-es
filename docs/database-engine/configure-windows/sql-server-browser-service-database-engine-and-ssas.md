@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 5c236ddc-766d-4a30-af1e-cc6176eca690
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0482258aeb628e608666ee61f796f2a20157a9
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+manager: jroth
+ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52616945"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775439"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servicio SQL Server Browser (motor de base de datos y SSAS)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -127,9 +127,9 @@ ms.locfileid: "52616945"
  Las instancias ocultas son instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que solo admiten las conexiones de memoria compartida. Para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], establezca la marca `HideInstance` para señalar que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser no debería responder con información acerca de esta instancia del servidor.  
   
 ### <a name="using-a-firewall"></a>Utilizar un firewall  
- Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, consulte "Cómo configurar un firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, vea "Cómo: Configurar un firewall para el acceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  
  [Ocultar una instancia del motor de base de datos de SQL Server](../../database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md)  
   

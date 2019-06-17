@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8ea4a9169218f517aa186e1913bd952c4665a48e
-ms.sourcegitcommit: 209fa6dafe324f606c60dda3bb8df93bcf7af167
+ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
+ms.sourcegitcommit: 32dce314bb66c03043a93ccf6e972af455349377
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/24/2019
-ms.locfileid: "66198348"
+ms.lasthandoff: 06/06/2019
+ms.locfileid: "66744135"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -133,7 +133,7 @@ La opción **Ver datos de destino** muestra los datos que se han capturado hasta
 
 En el panel del **Explorador de objetos** puede expandir los nodos y, luego, hacer clic con el botón derecho en:
 
-- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  >  *[su nodo de destino]*  > **Ver datos de destino**.
+- **Administración** > **Eventos extendidos** > **Sesiones** > *[su sesión]* > *[su nodo de destino]* > **Ver datos de destino**.
 
 
 Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refleja en el siguiente ejemplo.
@@ -153,7 +153,7 @@ Los datos de destino se muestran en un panel con pestañas en SSMS. Esto se refl
 Cuando la sesión de eventos está activa, puede que quiera ver los datos de eventos en tiempo real, a medida que el destino los vaya recibiendo.
 
 
-- **Administración** > **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Observar datos en directo**.
+- **Administración** > **Eventos extendidos** > **Sesiones** > *[su sesión]* > **Observar datos en directo**.
 
 
 ![su sesión > Observar datos en directo](../../relational-databases/extended-events/media/xevents-ssms-ui55-watchlivedata.png)
@@ -161,7 +161,7 @@ Cuando la sesión de eventos está activa, puede que quiera ver los datos de eve
 
 La presentación de datos se actualiza en un intervalo que se puede especificar. Vea la **Latencia máxima de envío** haciendo lo siguiente:
 
-- **Eventos extendidos** > **Sesiones** >  *[su sesión]*  > **Propiedades** > **Avanzadas** > **Latencia máxima de envío**
+- **Eventos extendidos** > **Sesiones** > *[su sesión]* > **Propiedades** > **Avanzadas** > **Latencia máxima de envío**
 
 
 
@@ -321,3 +321,5 @@ El evento **query_post_execution_showplan** permite ver el plan de consulta real
 ## <a name="see-also"></a>Vea también
 
 [XELite: biblioteca multiplataforma para leer XEvents de archivos XEL o secuencias en directo de SQL](https://www.nuget.org/packages/Microsoft.SqlServer.XEvent.XELite/); publicada en mayo de 2019.
+
+[Read-SQLXEvent PowerShell cmdlet](https://www.powershellgallery.com/packages/SqlServer.XEvent), publicado en junio de 2019.

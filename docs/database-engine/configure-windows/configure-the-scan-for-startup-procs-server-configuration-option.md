@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 6bf9d252-e766-458d-9dcd-23d895f032a2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 779cd10fa83fdc4d1ec44079ca08ee8dd480468c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 55f13de3ecfb6d78219812734d0c559430a914be
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47647783"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799088"
 ---
 # <a name="configure-the-scan-for-startup-procs-server-configuration-option"></a>Establecer la opción de configuración del servidor Buscar procedimientos de inicio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "47647783"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**[Después de configurar la opción de buscar procedimientos de inicio](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción de buscar procedimientos de inicio](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -51,10 +51,10 @@ ms.locfileid: "47647783"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-scan-for-startup-procs-option"></a>Para configurar la opción scan for startup procs  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47647783"
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo usar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para establecer el valor de la opción `scan for startup procs` en `1`.  
+3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se muestra cómo usar [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) para establecer el valor de la opción de `scan for startup procs` en `1`.  
   
 ```sql  
 USE AdventureWorks2012 ;  
@@ -91,7 +91,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de buscar procedimientos de inicio  
  El servidor debe reiniciarse para que el valor surta efecto.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

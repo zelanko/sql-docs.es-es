@@ -12,12 +12,12 @@ ms.assetid: 15c0a5e8-9177-484c-ae75-8c552dc0dac0
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: ac5f345a6ee07abb8ddf5f4dbacff914914da5f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 4656beba4de77e7d245a025911dfc2f417b8e1c6
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749043"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462673"
 ---
 # <a name="sql-server-and-database-encryption-keys-database-engine"></a>SQL Server y claves de cifrado de base de datos (motor de base de datos)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,13 +26,19 @@ ms.locfileid: "47749043"
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las claves de cifrado incluyen una combinación de claves públicas, privadas y simétricas que se utilizan para proteger la información confidencial. La clave simétrica se crea durante la inicialización de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] al iniciar por primera vez la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] utiliza la clave para cifrar los datos confidenciales que se almacenan en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El sistema operativo crea las claves públicas y privadas, y éstas se utilizan para proteger la clave simétrica. Para cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que almacena datos confidenciales en una base de datos se crea un par de claves pública y privada.  
   
 ## <a name="applications-for-sql-server-and-database-keys"></a>Aplicaciones para las claves de SQL Server y las claves de las bases de datos  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos aplicaciones principales para las claves: una *clave maestra de servicio* (SMK) generada en y para una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y una *clave maestra de base de datos* (DMK) usada para una base de datos.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tiene dos aplicaciones principales para las claves: una *clave maestra de servicio* (SMK) generada en y para una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y una *clave maestra de base de datos* (DMK) usada para una base de datos.
+
+### <a name="service-master-key"></a>Clave maestra de servicio
   
- La clave maestra de servicio se genera automáticamente la primera vez que se inicia la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y se utiliza para cifrar una contraseña de servidor vinculado, las credenciales y la clave maestra de base de datos. La SMK se cifra mediante la clave del equipo local y la API de protección de datos de Windows (DPAPI). La DPAPI utiliza una clave derivada de las credenciales de Windows de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y de las credenciales del equipo. La clave maestra de servicio solo puede descifrarse con la cuenta de servicio en la que se creó o con una entidad de seguridad que tenga acceso a las credenciales del equipo.  
+ La clave maestra de servicio es la raíz de la jerarquía de cifrado de SQL Server. La clave maestra de servicio se genera automáticamente la primera vez que se inicia la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y se utiliza para cifrar una contraseña de servidor vinculado, las credenciales y la clave maestra de base de datos. La SMK se cifra mediante la clave del equipo local y la API de protección de datos de Windows (DPAPI). La DPAPI utiliza una clave derivada de las credenciales de Windows de la cuenta de servicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y de las credenciales del equipo. La clave maestra de servicio solo puede descifrarse con la cuenta de servicio en la que se creó o con una entidad de seguridad que tenga acceso a las credenciales del equipo.
+
+La clave maestra de servicio solo puede abrirla la cuenta de servicio de Windows bajo la que se creó, o una entidad de seguridad con acceso al nombre y a la contraseña de la cuenta de servicio.
+
+ [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] usa el algoritmo de cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de la base de datos (DMK). AES es un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. Después de actualizar una instancia de [!INCLUDE[ssDE](../../../includes/ssde-md.md)] a [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], se deben volver a generar las claves SMK y DMK para actualizar las claves maestras al algoritmo AES. Para obtener más información sobre cómo volver a generar la SMK, vea [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-service-master-key-transact-sql.md) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-master-key-transact-sql.md).
+
+### <a name="database-master-key"></a>Clave maestra de base de datos
   
- La clave maestra de base de datos es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. También se puede utilizar para cifrar los datos, pero sus limitaciones de longitud hacen que sea más práctico utilizar una clave simétrica.  
-  
- Al crearla, la clave maestra se cifra mediante el algoritmo Triple DES y una contraseña proporcionada por el usuario. Para habilitar el descifrado automático de la clave maestra, se cifra una copia de la clave mediante la SMK. Esta copia se almacena en la base de datos donde se utiliza y en la base de datos del sistema **master** .  
+ La clave maestra de base de datos es una clave simétrica que se utiliza para proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. También se puede utilizar para cifrar los datos, pero sus limitaciones de longitud hacen que sea más práctico utilizar una clave simétrica. Para habilitar el descifrado automático de la clave maestra de base de datos, se cifra una copia de la clave mediante la SMK. Esta copia se almacena en la base de datos donde se utiliza y en la base de datos del sistema **master** .  
   
  La copia de la DMK almacenada en la base de datos del sistema **master** se actualiza automáticamente siempre que se modifica la DMK. Sin embargo, este comportamiento predeterminado se puede cambiar con la opción **DROP ENCRYPTION BY SERVICE MASTER KEY** de la instrucción **ALTER MASTER KEY** . Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción **OPEN MASTER KEY** y una contraseña.  
   
@@ -94,7 +100,7 @@ ms.locfileid: "47749043"
   
  [Restaurar una clave maestra de base de datos](../../../relational-databases/security/encryption/restore-a-database-master-key.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Hacer copia de seguridad y restaurar claves de cifrado de Reporting Services](../../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md)   
  [Eliminar y volver a crear claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/ssrs-encryption-keys-delete-and-re-create-encryption-keys.md)   
  [Agregar y quitar claves de cifrado para implementaciones escaladas &#40;Administrador de configuración de SSRS&#41;](../../../reporting-services/install-windows/add-and-remove-encryption-keys-for-scale-out-deployment.md)   

@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 33be8ac5-12dd-4b8a-99e0-68261c219dd2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fd6e2883714c538bff1e2ff2a93ace7b71fd5d02
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 394bacedb14f84a5cc11722200c0ee5a1e3380fc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51604195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66771852"
 ---
 # <a name="server-properties---connections-page"></a>Propiedades del servidor (página Conexiones)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,8 +72,8 @@ ms.locfileid: "51604195"
  **Valores actuales**  
  Presenta los valores actuales de las opciones de este panel. Estos valores son de solo lectura.  
   
-## <a name="see-also"></a>Ver también  
- [Opciones &#40;Ejecución de la consulta/SQL Server/página Avanzadas&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)   
+## <a name="see-also"></a>Consulte también  
+ [Options &#40;Query Execution: SQL Server: Advanced Page&#41;](https://msdn.microsoft.com/library/3ec788c7-22c3-4216-9ad0-81a168d17074)  (Opciones [Ejecución de consultas: SQL Server: página Avanzado])  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)  
   
   

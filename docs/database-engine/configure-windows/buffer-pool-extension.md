@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 909ab7d2-2b29-46f5-aea1-280a5f8fedb4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 43423c8db03d27c26558672d287415fa5e12d638
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+manager: jroth
+ms.openlocfilehash: 0f0736e2a0a0824187d3a3ba8bac9573efe6bb9f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255960"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786811"
 ---
 # <a name="buffer-pool-extension"></a>Buffer Pool Extension
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54255960"
   
  Las páginas de datos y de índice se leen desde el disco en el grupo de búferes y las páginas modificadas (también conocidas como páginas desfasadas) se escriben en el disco. La presión de memoria en los puntos de comprobación de la base de datos y el servidor hace que las páginas desfasadas (activas) de la memoria caché del búfer se expulsen de la memoria caché y se escriban en discos mecánicos y después se lean de nuevo en la memoria caché. Estas operaciones de E/S suelen ser pequeñas lecturas y escrituras aleatorias del orden de 4 a 16 kB de datos. Los patrones aleatorios de E/S pequeños incurren en búsquedas frecuentes, compitiendo por el brazo del disco mecánico, lo que aumenta la latencia de E/S y reduce el rendimiento de E/S global del sistema.  
   
- El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costos operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.  
+ El enfoque típico para solucionar estos cuellos de botella de E/S consiste en agregar más DRAM o, como alternativa, agregar ejes SAS de alto rendimiento. Aunque estas opciones son útiles, presentan unas desventajas importantes: la DRAM es más cara que las unidades de almacenamiento de datos y agregar ejes aumenta el gasto de la inversión para la adquisición de hardware y los costes operativos debido al mayor consumo energético y a la mayor probabilidad de que se produzca un error en un componente.  
   
  La característica de extensión del grupo de búferes extiende la memoria caché del grupo de búferes con almacenamiento no volátil (generalmente SSD). Debido a esta extensión, el grupo de búferes puede contener un espacio de trabajo de la base de datos mayor, lo que fuerza la paginación de operaciones de E/S entre la RAM y las SSD. Esto descarga de forma efectiva las pequeñas operaciones de E/S aleatorias de los discos mecánicos a las SSD. Debido a la menor latencia y al mejor rendimiento de E/S aleatoria de las SSD, la extensión del grupo de búferes mejora considerablemente el rendimiento de las operaciones de E/S.  
   

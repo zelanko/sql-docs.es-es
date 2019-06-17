@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 73c5f451036360acdbf2b986b84d5631af75386d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6d9a4b5da604917262b8787d71a6bc068a6fc552
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670173"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803294"
 ---
 # <a name="configure-the-user-options-server-configuration-option"></a>Establecer la opción de configuración del servidor Opciones de usuario
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "47670173"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de configurar la opción de configuración para opciones de usuario](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción de configuración para opciones de usuario](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -73,10 +73,10 @@ ms.locfileid: "47670173"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-user-options-configuration-option"></a>Para configurar la opción de configuración para opciones de usuario  
   
@@ -108,10 +108,10 @@ GO
   
 ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de configurar la opción de configuración para opciones de usuario  
+##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de configuración para opciones de usuario  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b70487d9d9f89defb77eeed4adc9633b734cc40a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a4a038d29aeaacdfd75b71600443df8ea0c3f1db
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733243"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799407"
 ---
 # <a name="change-server-authentication-mode"></a>Cambiar el modo de autenticación del servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,12 +41,12 @@ ms.locfileid: "47733243"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  La cuenta sa es una cuenta conocida de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y suele ser el objetivo de los usuarios malintencionados. No habilite la cuenta sa a menos que su aplicación lo requiera. Es muy importante que utilice una contraseña segura para el inicio de sesión de sa.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-change-security-authentication-mode"></a>Para cambiar el modo de autenticación de seguridad  
   
@@ -73,17 +73,29 @@ ms.locfileid: "47733243"
   
 2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo siguiente se habilita el inicio de sesión de sa y se establece una nueva contraseña.  
+3.  Copie y pegue uno de los ejemplos siguientes en la ventana de consulta y haga clic en **Ejecutar**. 
+
+
+    -  En el ejemplo siguiente se habilita el inicio de sesión de sa y se establece una nueva contraseña.  
   
-    ```  
-    ALTER LOGIN sa ENABLE ;  
-    GO  
-    ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
-    GO  
+       ```sql  
+       ALTER LOGIN sa ENABLE ;  
+       GO  
+       ALTER LOGIN sa WITH PASSWORD = '<enterStrongPasswordHere>' ;  
+       GO  
+       ```  
+    -  En el ejemplo siguiente se cambia la autenticación del servidor de modo mixto (Windows+SQL) a solo Windows.
+
+       ```sql
+       USE [master]
+       GO
+       EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE', 
+                                 N'Software\Microsoft\MSSQLServer\MSSQLServer',      
+                                 N'LoginMode', REG_DWORD, 1
+       GO
+       ```
   
-    ```  
-  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Contraseñas seguras](../../relational-databases/security/strong-passwords.md)   
  [Consideraciones de seguridad para una instalación de SQL Server](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)   
  [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)   

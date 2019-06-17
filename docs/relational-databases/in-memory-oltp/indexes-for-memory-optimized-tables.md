@@ -1,7 +1,7 @@
 ---
 title: Índices de tablas con optimización para memoria | Microsoft Docs
 ms.custom: ''
-ms.date: 11/28/2017
+ms.date: 06/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,14 +12,15 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c0edd8d6ef30db1dbcae561f09b5cb1cf27cee3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c0ed65ac8c7f4824270d84cde95cf5ab84851ece
+ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673024"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66462470"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 Todas las tablas optimizadas para memoria deben tener como mínimo un índice porque son los índices los que conectan las filas. En una tabla optimizada para memoria, todos los índices también son optimizados para memoria. Hay varias formas de diferenciar un índice en un índice optimizado para memoria de un índice tradicional en una tabla basada en disco:  
@@ -35,7 +36,7 @@ El índice debe ser uno de los siguientes:
 - Índice de hash  
 - Índice no agrupado optimizado para memoria (es decir, la estructura interna predeterminada de un árbol B) 
   
-Los índices de *hash* se analizan con más detalle en [Índices de hash de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+Los índices de *hash* se analizan con más detalle en [Índices de hash de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).  
 Los índices *no agrupados* se analizan con más detalle en [Índice no agrupado de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#inmem_nonclustered_index).  
 Los índices de*almacén de columnas* se tratan en [otro artículo](../../relational-databases/indexes/columnstore-indexes-overview.md).  
 
@@ -57,7 +58,7 @@ Para declararse con el valor predeterminado de DURABILITY = SCHEMA\_AND_DATA, la
     )  
         WITH (  
             MEMORY_OPTIMIZED = ON,  
-            DURABILITY = SCHEMA\_AND_DATA);  
+            DURABILITY = SCHEMA_AND_DATA);  
     ```
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] tienen un límite de 8 índices por tabla optimizada para memoria o tipo de tabla. A partir de [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], ya no hay un límite para el número de índices específicos para tablas optimizadas para memoria y tipos de tabla.
@@ -116,11 +117,30 @@ En este apartado se incluye un bloque de código de Transact-SQL que muestra la 
   
 ## <a name="duplicate-index-key-values"></a>Valores de clave de índice duplicados
 
-Los valores de clave de índice duplicados pueden afectar al rendimiento de las operaciones en las tablas optimizadas para memoria. Cuando el número de duplicados es elevado (más de 100, por ejemplo), la tarea de mantenimiento de un índice no es eficaz porque hay que atravesar cadenas duplicadas en la mayoría de las operaciones de índice. El impacto de esto se aprecia en operaciones `INSERT`, `UPDATE` y `DELETE` realizadas en tablas optimizadas para memoria. 
+Los valores duplicados de una clave de índice pueden reducir el rendimiento de las tablas optimizadas para memoria. Valores duplicados del sistema que atraviesan cadenas de entrada en la mayoría operaciones de lectura y escritura de índices. Cuando una cadena de entradas duplicadas supera las 100 entradas, la degradación del rendimiento puede ser palpable.
 
-Este problema es más patente en el caso de los índices de hash, debido tanto el menor costo por operación de este tipo de índices y a la interferencia de grandes cadenas duplicadas con la cadena de colisión de hash. Para reducir la duplicación en un índice, use un índice no agrupado y agregue más columnas (por ejemplo, desde la clave principal) al final de la clave de índice con el propósito de reducir el número de duplicados. Para más información sobre las colisiones de hash, consulte el artículo sobre los [índices de hash de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+### <a name="duplicate-hash-values"></a>Valores hash duplicados
 
-Por ejemplo, considere una tabla `Customers` con una clave principal en `CustomerId` y un índice en la columna `CustomerCategoryID`. Normalmente, habrá muchos clientes de una categoría determinada y, por tanto, muchos valores duplicados para una clave determinada en el índice de CustomerCategoryID. En este escenario, el procedimiento recomendado es usar un índice no agrupado en `(CustomerCategoryID, CustomerId)`. Este índice se puede usar en consultas que usan un predicado donde `CustomerCategoryID` existe y no contiene duplicados y, en consecuencia, no provoca ineficiencias en el mantenimiento de índices.
+Este problema es más patente en el caso de los índices hash. Los índices hash sufren más debido a las siguientes consideraciones:
+
+- El menor coste por operación de los índices hash.
+- La interferencia de grandes cadenas de duplicados con la cadena de colisión de hash.
+
+Para reducir la duplicación en un índice, pruebe a realizar los siguientes ajustes:
+
+- Utilice un índice no agrupado.
+- Agregue más columnas al final de la clave de índice para reducir el número de duplicados.
+  - Por ejemplo, podría agregar columnas que estén también en la clave principal.
+
+Para más información sobre las colisiones de hash, consulte el artículo sobre los [índices de hash de tablas optimizadas para memoria](../../relational-databases/sql-server-index-design-guide.md#hash_index).
+
+### <a name="example-improvement"></a>Ejemplo de mejora
+
+Este es un ejemplo en el que se indica cómo evitar que se produzca un rendimiento ineficaz en el índice.
+
+Considere una tabla `Customers` que tiene una clave principal en `CustomerId` y un índice en la columna `CustomerCategoryID`. En una categoría determinada suele haber muchos clientes. Por tanto, habrá muchos valores duplicados de CustomerCategoryID dentro de una determinada clave del índice.
+
+En este escenario, el procedimiento recomendado es usar un índice no agrupado en `(CustomerCategoryID, CustomerId)`. Este índice se puede usar en consultas que usan un predicado donde `CustomerCategoryID` existe, pero la clave de índice no contiene duplicados. Por tanto, no surgen ineficiencias en el mantenimiento de índices provocadas por valores duplicados de CustomerCategoryID o por la columna extra en el índice.
 
 La consulta siguiente muestra el promedio de valores clave de índice duplicados para el índice en `CustomerCategoryID` en la tabla `Sales.Customers`, en la base de datos de ejemplo [WideWorldImporters](../../sample/world-wide-importers/wide-world-importers-documentation.md).
 
@@ -155,15 +175,11 @@ En todas las instrucciones SELECT siguientes, es preferible un índice no agrupa
 SELECT CustomerName, Priority, Description 
 FROM SupportEvent  
 WHERE StartDateTime > DateAdd(day, -7, GetUtcDate());  
-    
-SELECT CustomerName, Priority, Description 
-FROM SupportEvent  
-WHERE CustomerName != 'Ben';  
-    
+
 SELECT StartDateTime, CustomerName  
 FROM SupportEvent  
-ORDER BY StartDateTime;  
-    
+ORDER BY StartDateTime DESC; -- ASC would cause a scan.
+
 SELECT CustomerName  
 FROM SupportEvent  
 WHERE StartDateTime = '2016-02-26';  
@@ -195,7 +211,7 @@ El índice de hash requiere que la cláusula `WHERE` contenga una prueba de igua
   
 Ningún tipo de índice resultará útil si solo se especifica la segunda columna de la clave de índice en la cláusula `WHERE`.  
 
-### <a name="summary-table-to-compare-index-use-scenarios"></a>Tabla de resumen para comparar los escenarios de uso de los índices  
+## <a name="summary-table-to-compare-index-use-scenarios"></a>Tabla de resumen para comparar los escenarios de uso de los índices  
   
 En la tabla siguiente se enumeran todas las operaciones que son compatibles con distintos tipos de índices. *Sí* se refiere a que el índice puede atender la solicitud con eficiencia y *No* se refiere a que el índice no puede satisfacer la solicitud con eficiencia. 
   
@@ -203,9 +219,10 @@ En la tabla siguiente se enumeran todas las operaciones que son compatibles con 
 | :-------- | :--------------------------- | :----------------------------------- | :------------------------------------ |  
 | Index scan, recupera todas las filas de la tabla. | Sí | Sí | Sí |  
 | Index seek en predicados de igualdad (=). | Sí <br/> (Se requiere la clave completa). | Sí  | Sí |  
-| Index seek en predicados de desigualdad y de intervalo <br/> (>, <, <=, >=, `BETWEEN`). | no <br/> (Resultados de un examen de índice). | Sí <sup>1</sup> | Sí |  
-| Recuperar filas según un criterio de ordenación que coincida con la definición de índice. | no | Sí | Sí |  
-| Recuperar filas según un criterio de ordenación que coincida con el opuesto de la definición de índice. | no | no | Sí |  
+| Index seek en predicados de desigualdad y de intervalo <br/> (>, <, <=, >=, `BETWEEN`). | No <br/> (Resultados de un examen de índice). | Sí <sup>1</sup> | Sí |  
+| Recuperar filas según un criterio de ordenación que coincida con la definición de índice. | No | Sí | Sí |  
+| Recuperar filas según un criterio de ordenación que coincida con el opuesto de la definición de índice. | No | No | Sí |  
+| &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
 <sup>1</sup> Para un índice optimizado para memoria no agrupado, no es necesaria la clave completa para realizar la búsqueda de índice.  
 

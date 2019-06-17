@@ -27,12 +27,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2b31c801d485d4e127993ba7664b5277e5a1e01
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.openlocfilehash: 4f2e86162a7b7fc8dd491241fb598ed8083e2c78
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
-ms.locfileid: "65943684"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469644"
 ---
 # <a name="dateadd-transact-sql"></a>DATEADD (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -88,7 +88,8 @@ Una expresión que se puede resolver en uno de los valores siguientes:
 Para *date*, `DATEADD` aceptará una expresión de columna, una expresión, un literal de cadena o una variable definida por el usuario. Un valor de literal de cadena se debe resolver en un argumento **datetime**. Para evitar problemas de ambigüedad, use años de cuatro dígitos. Vea [Establecer la opción de configuración del servidor Fecha límite de año de dos dígitos](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) para obtener información sobre los años de dos dígitos.
   
 ## <a name="return-types"></a>Tipos de valores devueltos
-El tipo de datos del argumento *date* se convierte en el tipo de datos del valor devuelto `DATEADD`, excepto para los valores *date* de literal de cadena. Para un literal de cadena, `DATEADD` devuelve un valor **datetime**. `DATEADD` producirá un error si la escala de segundos del literal de cadena supera tres posiciones decimales (.nnn) o si el literal de cadena contiene la parte de desplazamiento de zona horaria.
+
+El tipo de datos de valores devueltos de este método es dinámico. El tipo devuelto depende del argumento proporcionado para `date`. Si el valor de `date` es una fecha de literal de cadena, `DATEADD` devuelve un valor **datetime**. Si se proporciona otro tipo válido de datos de entrada para `date`, `DATEADD` devuelve el mismo tipo de datos. `DATEADD` produce un error si la escala de segundos del literal de cadena supera tres posiciones decimales (.nnn) o si el literal de cadena contiene la parte de desplazamiento de zona horaria.
   
 ## <a name="return-value"></a>Valor devuelto  
   

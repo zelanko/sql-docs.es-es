@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f3ce7afc-8936-4d35-80ce-d0f8fbc318d3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f33c5a51cbd49522e16bd72b63b5b416bb703d67
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a951fa18e10a5472f03ff9d37d63499e539584a2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773333"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795269"
 ---
 # <a name="remove-the-witness-from-a-database-mirroring-session-sql-server"></a>Quitar el testigo de una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,16 +38,16 @@ ms.locfileid: "47773333"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de quitar el testigo](#FollowUp)  
+-   **Seguimiento:**  [Después de quitar el testigo](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-the-witness"></a>Para quitar el testigo  
   
@@ -82,7 +82,7 @@ ms.locfileid: "47773333"
     ALTER DATABASE AdventureWorks2012 SET WITNESS OFF ;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de quitar el testigo  
+##  <a name="FollowUp"></a> Seguimiento: Después de quitar el testigo  
  Al desactivar el testigo cambia el [modo de funcionamiento](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)de acuerdo con la configuración de la seguridad de las transacciones:  
   
 -   Si la seguridad de las transacciones está configurada en FULL (el valor predeterminado), la sesión utiliza el modo sincrónico de alta seguridad sin conmutación automática por error.  
@@ -98,7 +98,7 @@ ms.locfileid: "47773333"
   
 -   [Agregar o reemplazar un testigo de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/add-or-replace-a-database-mirroring-witness-sql-server-management-studio.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   
  [Cambiar la seguridad de las transacciones en una sesión de creación de reflejo de la base de datos &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/change-transaction-safety-in-a-database-mirroring-session-transact-sql.md)   
  [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)   

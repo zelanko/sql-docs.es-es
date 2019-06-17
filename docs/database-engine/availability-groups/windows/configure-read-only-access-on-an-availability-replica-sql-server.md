@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c7dfd6c8dc39e2653a2ddeca3bec07a1270f5cd8
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: b596a81bf48a69e9b4c641e878383a4a513c891b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135825"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66793671"
 ---
 # <a name="configure-read-only-access-to-a-secondary-replica-of-an-always-on-availability-group"></a>Configuración del acceso de solo lectura a una réplica secundaria de un grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,42 +30,19 @@ ms.locfileid: "54135825"
   
  Para obtener información sobre las implicaciones de habilitar el acceso de solo lectura en una réplica secundaria y una introducción al acceso de conexión, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md) y [Secundarias activas: réplicas secundarias legibles &#40;grupos de disponibilidad Always On&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
--   **Antes de empezar:**  
-  
-     [Requisitos previos y restricciones](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Para configurar el acceso de una réplica de disponibilidad con:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Seguimiento:**  [Después de configurar el acceso de solo lectura para una réplica de disponibilidad](#FollowUp)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos y restricciones  
+ 
+##  <a name="Prerequisites"></a> Requisitos previos y restricciones  
   
 -   Para configurar otro acceso de conexión, debe estar conectado a la instancia de servidor que hospeda la réplica principal.  
   
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
   
 |Tarea|Permisos|  
 |----------|-----------------|  
 |Para configurar réplicas al crear un grupo de disponibilidad|Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
 |Para modificar una réplica de disponibilidad|Se requiere el permiso ALTER AVAILABILITY GROUP en el grupo de disponibilidad, el permiso CONTROL AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.|  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para configurar el acceso en una réplica de disponibilidad**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del servidor que hospeda la réplica principal y expanda el árbol.  

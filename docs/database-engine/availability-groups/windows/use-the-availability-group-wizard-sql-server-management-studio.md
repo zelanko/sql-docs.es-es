@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: e1f1dccc-9e65-471d-8fd1-b45085c9484a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 9274cd7423df9dea1dad8febee2a49871c24f296
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+manager: jroth
+ms.openlocfilehash: 4d804c41803824f0bc7d69873677984dfba6a729
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974314"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780284"
 ---
 # <a name="use-the-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ En la mayoría de los casos, puede usar el Asistente para nuevo grupo de disponi
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere la pertenencia al rol fijo de servidor **sysadmin** y el permiso de servidor CREATE AVAILABILITY GROUP, el permiso ALTER ANY AVAILABILITY GROUP o el permiso CONTROL SERVER.  
   
  También se necesita el permiso CONTROL ON ENDPOINT si desea permitir que el Asistente para nuevo grupo de disponibilidad administre el extremo de creación de reflejo de la base de datos.  

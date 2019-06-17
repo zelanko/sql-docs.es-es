@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 84affc47-40e0-43d9-855e-468967068c35
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8804bc9cc86941acaba7856d3134339abc969059
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bf43dae4f0950d34d9e1c0d4a49faf8656e9af76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824993"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803439"
 ---
 # <a name="use-object-explorer-details-to-monitor-availability-groups"></a>Usar los detalles del Explorador de objetos para supervisar los grupos de disponibilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,24 +30,11 @@ ms.locfileid: "47824993"
 > [!NOTE]  
 >  Para obtener información sobre cómo usar el panel Detalles del Explorador de objetos, vea [Panel de detalles del Explorador de objetos](../../../ssms/object/object-explorer-details-pane.md).  
   
--   **Antes de empezar:**  [Requisitos previos](#Prerequisites)  
   
--   **Para supervisar un grupo de disponibilidad utilizando:**  [SQL Server Management Studio](#SSMSProcedure)  
-  
--   **Detalles del Explorador de objetos:**  
-  
-     [Detalles de grupos de disponibilidad](#AvGroupsDetails)  
-  
-     [Detalles de la réplica de disponibilidad](#AvReplicaDetails)  
-  
-     [Detalles de la base de datos de disponibilidad](#AvDbDetails)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
  Debe estar conectado a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (instancia del servidor) que hospeda la réplica principal o una réplica secundaria.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para supervisar grupos de disponibilidad, réplicas de disponibilidad y bases de datos de disponibilidad**  
   
 1.  En el menú Ver, haga clic en **Detalles del Explorador de objetos**o presione la tecla **F7** .  
@@ -109,7 +96,7 @@ ms.locfileid: "47824993"
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**No sincronizadas**|La base de datos no está sincronizada o no se ha unido todavía al grupo de disponibilidad.|  
-|**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado Sincronizado.|  
+|**Sincronizado**|La base de datos está sincronizada con la base de datos principal en la réplica principal actual, si existe, o en la última réplica principal.<br /><br /> Nota: En modo de rendimiento, la base de datos nunca está en estado sincronizado.|  
 |**NULL**|Estado desconocido. Este valor aparece cuando la instancia del servidor local no puede comunicarse con el clúster de conmutación por error de WSFC (es decir, el nodo local no forma parte del quórum de WSFC).|  
   
 > [!NOTE]  
@@ -128,7 +115,7 @@ ms.locfileid: "47824993"
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónica, el estado de sincronización siempre es **Sincronizando**.|  
+|Sincronizando|La base de datos secundaria ha recibido las entradas del registro de transacciones de la base de datos principal no escritas todavía en el disco (protegido).<br /><br /> Nota: En el modo de confirmación asincrónico, el estado de la sincronización siempre es **Sincronizando**.|  
 |||  
   
  **Suspendida**  
@@ -144,9 +131,9 @@ ms.locfileid: "47824993"
 > [!NOTE]  
 >  Para obtener información sobre los contadores de rendimiento para las bases de datos de disponibilidad, vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.dm_os_performance_counters &#40;Transact-SQL&#41;](../../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md)   
- [Usar el Panel de AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
+ [Usar el Panel AlwaysOn &#40;SQL Server Management Studio&#41;](../../../database-engine/availability-groups/windows/use-the-always-on-dashboard-sql-server-management-studio.md)   
  [Ver las propiedades del grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-group-properties-sql-server.md)   
  [Ver las propiedades de una réplica de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/view-availability-replica-properties-sql-server.md)  
   

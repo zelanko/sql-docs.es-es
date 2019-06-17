@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 8676f9d8-c451-419b-b934-786997d46c2b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 2179ae0fd8110f7172ca936b77045f58fb50cd7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d555bc79dffcb750494bd9f1f79622d03fc75eb5
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47770183"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795330"
 ---
 # <a name="prepare-a-mirror-database-for-mirroring-sql-server"></a>Preparar una base de datos reflejada para la creación de reflejo (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47770183"
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Requirements"></a> Requisitos  
   
@@ -92,7 +92,7 @@ ms.locfileid: "47770183"
   
  Para obtener más información sobre cómo habilitar el descifrado automático de la clave maestra de la base de datos de una base de datos reflejada, vea [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Propietario de la base de datos o administrador del sistema.  
   
 ##  <a name="PrepareToRestartMirroring"></a> Para preparar una base de datos reflejada existente para reiniciar la creación de reflejo  
@@ -135,7 +135,7 @@ ms.locfileid: "47770183"
   
 7.  Con RESTORE WITH NORECOVERY, aplique la copia de seguridad o las copias de seguridad de registros pendientes en la base de datos reflejada.  
   
-    -   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+    -   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Para poder iniciar una sesión de creación de reflejo de la base de datos, debe crear la base de datos reflejada. Debe hacerlo inmediatamente antes de iniciar la sesión de creación de reflejo.  
@@ -237,7 +237,7 @@ ms.locfileid: "47770183"
   
  Para ver un ejemplo completo de la configuración de la creación de reflejo de la base de datos, en el que se muestra la configuración de seguridad, se prepara la base de datos reflejada, se configuran los asociados y se agrega un testigo, vea [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: después de preparar una base de datos reflejada  
+##  <a name="FollowUp"></a> Seguimiento: Después de preparar una base de datos reflejada  
   
 1.  Si se han realizado copias de seguridad de registros adicionales desde la operación RESTORE LOG más reciente, se debe aplicar manualmente cada copia de seguridad de registros adicional, utilizando RESTORE WITH NORECOVERY.  
   
@@ -251,7 +251,7 @@ ms.locfileid: "47770183"
   
 -   [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md)  
   
--   [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
+-   [Restaurar una copia de seguridad de registros de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
@@ -261,7 +261,7 @@ ms.locfileid: "47770183"
   
 -   [Configurar una base de datos reflejada para usar la propiedad Trustworthy &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/set-up-a-mirror-database-to-use-the-trustworthy-property-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Seguridad de transporte para la creación de reflejo de la base de datos y grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/database-mirroring/transport-security-database-mirroring-always-on-availability.md)   
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   

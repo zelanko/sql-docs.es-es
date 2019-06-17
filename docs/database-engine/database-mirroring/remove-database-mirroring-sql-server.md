@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: bbc4d7f7-3bc7-40d6-a822-af195fe7f8c0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fc50c8392232f96d1a64af124d2d5a773daf1d4b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 3a80688d458b70f470643830406668ac2a056498
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52525399"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795276"
 ---
 # <a name="remove-database-mirroring-sql-server"></a>Quitar la creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "52525399"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de quitar la creación de reflejo de la base de datos](#FollowUp)  
+-   **Seguimiento:**  [Después de quitar la creación de reflejo de la base de datos](#FollowUp)  
   
 -   [Tareas relacionadas](#RelatedTasks)  
   
@@ -45,10 +45,10 @@ ms.locfileid: "52525399"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-remove-database-mirroring"></a>Para quitar la creación de reflejo de la base de datos  
   
@@ -85,7 +85,7 @@ ms.locfileid: "52525399"
     ALTER DATABASE AdventureWorks2012 SET PARTNER OFF;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: quitar la creación de reflejo de la base de datos  
+##  <a name="FollowUp"></a> Seguimiento: Quitar la creación de reflejo de la base de datos  
   
 > [!NOTE]  
 >  Para obtener más información sobre las repercusiones de quitar la creación de reflejo, vea [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
@@ -115,9 +115,9 @@ ms.locfileid: "52525399"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/database-mirroring-establish-session-windows-authentication.md)  
   
--   [Ejemplo: configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
+-   [Ejemplo: Configurar la creación de reflejo de la base de datos con certificados &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/example-setting-up-database-mirroring-using-certificates-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Configurar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md)   
  [Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)  

@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: 0e73bd23-497d-42f1-9e81-8d5314bcd597
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: aad8a5ee94f9d4cc2320b8c31a7d32d44dea57f0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: d7335d16f428af13813cea36de6a7de79e1faf95
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515983"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795128"
 ---
 # <a name="upgrading-mirrored-instances"></a>Actualización de instancias reflejadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,13 +32,13 @@ ms.locfileid: "52515983"
 ## <a name="prerequisites"></a>Prerequisites  
  Antes de empezar, revise la siguiente información importante:  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+-   [Elegir un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
--   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
+-   [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
 ## <a name="recommended-preparation-best-practices"></a>Preparación recomendada (prácticas recomendadas)  
  Antes de iniciar una actualización gradual, es recomendable que:  
@@ -92,13 +92,13 @@ ms.locfileid: "52515983"
 1.  Si una sesión de creación de reflejo conlleva un testigo, recomendamos que lo quite antes de realizar una actualización gradual. Si no lo hace, al actualizar la instancia del servidor reflejado, la disponibilidad de la base de datos depende del testigo que sigue estando conectado a la instancia del servidor principal. Después de quitar un testigo, puede actualizarlo en cualquier momento durante el proceso de actualización gradual sin aumentar el tiempo de inactividad de la base de datos.  
   
     > [!NOTE]  
-    >  Para obtener más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+    >  Para más información, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](../../database-engine/database-mirroring/quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
     -   [Quitar el testigo de una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-the-witness-from-a-database-mirroring-session-sql-server.md)  
   
 ### <a name="to-perform-the-rolling-upgrade"></a>Para realizar la actualización gradual  
   
-1.  Para minimizar el tiempo de inactividad, recomendamos que inicie la actualización gradual actualizando todos los asociados de creación de reflejo que sean actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
+1.  Para reducir al mínimo el tiempo de inactividad, recomendamos que inicie la actualización gradual actualizando todos los asociados de creación de reflejo que sean actualmente el servidor reflejado en todas sus sesiones de creación de reflejo. Podría tener que actualizar varias instancias del servidor en este momento.  
   
     > [!NOTE]  
     >  Un testigo se puede actualizar en cualquier momento del proceso de actualización gradual. Por ejemplo, si una instancia del servidor es un servidor reflejado en la Sesión 1 y es un testigo en la Sesión 2, puede actualizar ahora la instancia del servidor.  
@@ -140,9 +140,9 @@ ms.locfileid: "52515983"
   
 1.  Si lo desea, vuelva al modo de alto rendimiento utilizando uno de los métodos siguientes:  
   
-    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos** .  
+    -   En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: cambie la opción **Modo de funcionamiento** a **Rendimiento alto (asincrónico)** mediante la página [Creación de reflejo](../../relational-databases/databases/database-properties-mirroring-page.md) del cuadro de diálogo **Propiedades de la base de datos**.  
   
-    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: utilice [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)para desactivar la seguridad de las transacciones.  
+    -   En [!INCLUDE[tsql](../../includes/tsql-md.md)]: utilice [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md) para desactivar la seguridad de las transacciones.  
   
 ### <a name="to-add-a-witness-back-into-a-mirroring-session"></a>Para volver a agregar un testigo a una sesión de creación de reflejo  
   
@@ -154,7 +154,7 @@ ms.locfileid: "52515983"
   
     -   [Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;Transact-SQL&#41;](../../database-engine/database-mirroring/add-a-database-mirroring-witness-using-windows-authentication-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Reflejo de la base de datos ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)   

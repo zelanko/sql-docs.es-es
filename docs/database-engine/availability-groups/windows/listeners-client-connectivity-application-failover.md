@@ -17,46 +17,21 @@ helpviewer_keywords:
 ms.assetid: 76fb3eca-6b08-4610-8d79-64019dd56c44
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 23321c9c8208cf4a78909ab5cedcd921184f7b0b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+manager: jroth
+ms.openlocfilehash: d27da0678e993047ffb71a2000a497d282d6dc63
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53214706"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799299"
 ---
 # <a name="connect-to-an-always-on-availability-group-listener"></a>Conexión a un agente de escucha del grupo de disponibilidad Always On 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Este tema contiene información acerca de las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
+  Este artículo contiene información sobre las consideraciones de conectividad del cliente de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] y la funcionalidad de conmutación por error de aplicaciones.  
   
 > [!NOTE]  
 >  Para la mayoría de las configuraciones habituales de agente de escucha, puede crear el primer agente de escucha del grupo de disponibilidad utilizando simplemente instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] o cmdlets de PowerShell. Para obtener más información, vea [Tareas relacionadas](#RelatedTasks), más adelante en este mismo tema.  
   
- **En este tema:**  
-  
--   [Agentes de escucha del grupo de disponibilidad](#AGlisteners)  
-  
--   [Usar un agente de escucha para conectarse a la réplica principal](#ConnectToPrimary)  
-  
--   [Usar un agente de escucha para conectarse a una réplica secundaria de solo lectura (enrutamiento de solo lectura)](#ConnectToSecondary)  
-  
-    -   [Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura](#ConfigureARsForROR)  
-  
-    -   [Intención de aplicación de solo lectura y enrutamiento de solo lectura](#ReadOnlyAppIntent)  
-  
--   [Omitir agentes de escucha del grupo de disponibilidad](#BypassAGl)  
-  
--   [Comportamiento de conexiones de cliente en la conmutación por error](#CCBehaviorOnFailover)  
-  
--   [Compatibilidad con clústeres de conmutación por error de varias subredes de grupo de disponibilidad](#SupportAgMultiSubnetFailover)  
-  
--   [Agentes de escucha del grupo de disponibilidad y certificados SSL](#SSLcertificates)  
-  
--   [Agentes de escucha del grupo de disponibilidad y nombres principales de servidor (SPN)](#SPNs)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
   
 ##  <a name="AGlisteners"></a> Agentes de escucha del grupo de disponibilidad  
  Puede proporcionar conectividad de cliente a la base de datos de un grupo de disponibilidad determinado mediante la creación de un agente de escucha del grupo de disponibilidad. Un agente de escucha de grupo de disponibilidad es un nombre de red virtual (VNN) al que los clientes pueden conectarse para tener acceso a una base de datos situada en una réplica principal o secundaria de un grupo de disponibilidad AlwaysOn. Los agentes de escucha del grupo de disponibilidad permiten a los clientes conectarse a una réplica de disponibilidad sin conocer el nombre de la instancia física de SQL Server a la que se están conectando.  No hay necesidad de modificar la cadena de conexión del cliente para conectarse a la ubicación actual de la réplica principal.  
@@ -67,13 +42,8 @@ ms.locfileid: "53214706"
   
  Para obtener información esencial sobre los agentes de escucha del grupo de disponibilidad, vea [Crear o configurar un agente de escucha de grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md).  
   
- **En esta sección:**  
   
--   [Configuración de agentes de escucha del grupo de disponibilidad](#AGlConfig)  
-  
--   [Seleccionar un puerto de agentes de escucha del grupo de disponibilidad](#SelectListenerPort)  
-  
-###  <a name="AGlConfig"></a> Configuración de agentes de escucha del grupo de disponibilidad  
+##  <a name="AGlConfig"></a> Configuración de agentes de escucha del grupo de disponibilidad  
  Un agente de escucha del grupo de disponibilidad se define por lo siguiente:  
   
  Nombre DNS único  
@@ -95,7 +65,7 @@ ms.locfileid: "53214706"
   
  Las configuraciones de red híbridas y DHCP en subredes no se admiten para los agentes de escucha del grupo de disponibilidad. Esto se debe a que cuando se produce una conmutación por error, una dirección IP dinámica puede expirar o lanzarse, con lo que se compromete la alta disponibilidad total.  
   
-###  <a name="SelectListenerPort"></a> Seleccionar un puerto de agentes de escucha del grupo de disponibilidad  
+##  <a name="SelectListenerPort"></a> Seleccionar un puerto de agentes de escucha del grupo de disponibilidad  
  Al configurar un agente de escucha del grupo de disponibilidad, debe designar un puerto.  Puede configurar el puerto predeterminado en 1433 para permitir la sencillez de las cadenas de conexión de cliente. Si utiliza 1433, no necesita indicar un número de puerto en una cadena de conexión.   Además, puesto que cada agente de escucha del grupo de disponibilidad tendrá un nombre de red virtual independiente, cada agente de escucha del grupo de disponibilidad configurado en un único WSFC se puede configurar para hacer referencia al mismo puerto predeterminado 1433.  
   
  También puede diseñar un puerto de agente de escucha no estándar, aunque esto significa que también necesitará especificar explícitamente un puerto de destino en la cadena de conexión cada vez que se conecte al agente de escucha del grupo de disponibilidad.  También necesitará abrir permiso en el firewall para el puerto no estándar.  
@@ -122,7 +92,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
 
 -   La cadena de conexión hace referencia a un agente de escucha de grupo de disponibilidad y la intención de aplicaciones de la conexión entrante se establece en solo lectura (por ejemplo, al usar la palabra clave **Application Intent=ReadOnly** en las cadenas de conexión, los atributos de conexión o las propiedades de ODBC u OLEDB). Para obtener más información, vea [Intención de aplicación de solo lectura y enrutamiento de solo lectura](#ReadOnlyAppIntent), más adelante en esta sección.  
   
-###  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura  
+##  <a name="ConfigureARsForROR"></a> Para configurar réplicas de disponibilidad para el enrutamiento de solo lectura  
  Un administrador de base de datos debe configurar las réplicas de disponibilidad del siguiente modo:  
   
 1.  Para cada réplica de disponibilidad que desee configurar como réplica secundaria legible, un administrador de base de datos debe configurar los valores siguientes, que tienen efecto solo en el rol secundario:  
@@ -139,7 +109,7 @@ Server=tcp: AGListener,1433;Database=MyDB;IntegratedSecurity=SSPI
   
 -   [Configurar el enrutamiento de solo lectura para un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md)  
   
-###  <a name="ReadOnlyAppIntent"></a> Intención de aplicación de solo lectura y enrutamiento de solo lectura  
+##  <a name="ReadOnlyAppIntent"></a> Intención de aplicación de solo lectura y enrutamiento de solo lectura  
  La propiedad de la cadena de conexión de la intención de aplicación expresa la solicitud de la aplicación cliente de ser dirigida a una versión de lectura y escritura, o de solo lectura, de una base de datos del grupo de disponibilidad. Para utilizar el enrutamiento de solo lectura, un cliente debe utilizar un intento de aplicación de solo lectura en la cadena de conexión al conectarse al agente de escucha del grupo de disponibilidad. Sin el intento de aplicación de solo lectura, las conexiones al agente de escucha del grupo de disponibilidad se dirigen a la base de datos en la réplica principal.  
   
  El atributo de la intención de aplicación se almacena en la sesión de cliente durante el inicio de sesión y, después, la instancia de SQL Server procesará esta intención y determinará lo que debe hacer de acuerdo con la configuración del grupo de disponibilidad y el estado de lectura y escritura actual de la base de datos de destino en la réplica secundaria.  
@@ -167,11 +137,11 @@ Server=tcp:AGListener,1433;Database=AdventureWorks;IntegratedSecurity=SSPI;Appli
 ##  <a name="BypassAGl"></a> Omitir agentes de escucha del grupo de disponibilidad  
  Mientras los agentes de escucha del grupo de disponibilidad habilitan la compatibilidad con la redirección de conmutación por error y el enrutamiento de solo lectura, las conexiones de cliente no requieren utilizarlos. Una conexión de cliente puede hacer referencia directamente a la instancia de SQL Server en lugar de conectarse al agente de escucha del grupo de disponibilidad.  
   
- Para la instancia de SQL Server, es irrelevante si una conexión inicia una sesión utilizando el agente de escucha del grupo de disponibilidad o utilizando otro extremo de la instancia.  La instancia de SQL Server comprobará el estado de la base de datos de destino y permitirá o denegará la conectividad basada en la configuración del grupo de disponibilidad y el estado actual de la base de datos de la instancia.  Por ejemplo, si una aplicación cliente se conecta directamente a una instancia de puerto de SQL Server y se conecta a una base de datos de destino hospedada en un grupo de disponibilidad, y la base de datos de destino está en estado principal y en línea, la conectividad se realizará correctamente.  Si la base de datos de destino está sin conexión o en estado transitorio, la conectividad a la base de datos producirá un error.  
+ Para la instancia de SQL Server, es irrelevante si una conexión inicia una sesión utilizando el agente de escucha del grupo de disponibilidad o utilizando otro punto de conexión de la instancia.  La instancia de SQL Server comprobará el estado de la base de datos de destino y permitirá o denegará la conectividad basada en la configuración del grupo de disponibilidad y el estado actual de la base de datos de la instancia.  Por ejemplo, si una aplicación cliente se conecta directamente a una instancia de puerto de SQL Server y se conecta a una base de datos de destino hospedada en un grupo de disponibilidad, y la base de datos de destino está en estado principal y en línea, la conectividad se realizará correctamente.  Si la base de datos de destino está sin conexión o en estado transitorio, la conectividad a la base de datos producirá un error.  
   
  Alternativamente, en la migración de creación de reflejo de la base de datos a [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], las aplicaciones pueden especificar la cadena de conexión de creación de reflejo de la base de datos mientras solo exista una réplica secundaria y no permita conexiones de usuario. Para obtener más información, vea [Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad](#DbmConnectionString), más adelante en esta sección.  
   
-###  <a name="DbmConnectionString"></a> Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad  
+##  <a name="DbmConnectionString"></a> Usar cadenas de conexión de creación de reflejo de la base de datos con grupos de disponibilidad  
  Si un grupo de disponibilidad posee solo una réplica secundaria y está configurado con ALLOW_CONNECTIONS = READ_ONLY o con ALLOW_CONNECTIONS = NONE en la réplica secundaria, los clientes pueden conectarse a la réplica de disponibilidad principal a través de una cadena de conexión de creación de reflejo de la base de datos. Este enfoque puede ser útil cuando se migra una aplicación existente de creación de reflejo de la base de datos a un grupo de disponibilidad, siempre que se limite el grupo de disponibilidad a dos réplicas de disponibilidad (una réplica principal y una réplica secundaria). Si agrega réplicas secundarias adicionales, deberá crear un agente de escucha del grupo de disponibilidad y actualizar sus aplicaciones para que se utilice el nombre DNS del agente de escucha del grupo de disponibilidad.  
   
  Cuando se utilizan cadenas de conexión de creación de reflejo de la base de datos, el cliente puede usar [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client o el proveedor de datos de .NET Framework para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La cadena de conexión proporcionada por un cliente debe proporcionar como mínimo el nombre de una instancia del servidor, el *nombre del asociado inicial*, para identificar la instancia del servidor que hospeda inicialmente la réplica de disponibilidad con la que se desea establecer conexión. Opcionalmente, la cadena de conexión también puede proporcionar el nombre de otra instancia del servidor, *nombre del asociado de conmutación por error*, para identificar la instancia del servidor que hospeda inicialmente la réplica secundaria como nombre del asociado de conmutación por error.  

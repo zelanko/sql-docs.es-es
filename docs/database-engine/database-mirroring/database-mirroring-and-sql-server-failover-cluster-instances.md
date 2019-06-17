@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f1dd6a79-698b-4e31-b923-6bfc3ea0b617
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 00397c644e2e9cffd04026d4cc4beb4ade4b69c8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2ce3c4df7141f6bf31c02e4376001a280135db5a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830864"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774729"
 ---
 # <a name="database-mirroring-and-sql-server-failover-cluster-instances"></a>Creación de reflejo de la base de datos e instancias de clúster de conmutación por error
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47830864"
   
  ![Clúster de conmutación por error](../../database-engine/database-mirroring/media/dbm-and-failover-clustering.gif "Clúster de conmutación por error")  
   
- Las tres instancias de servidor de la sesión de creación de reflejo residen en tres clústeres distintos: **Cluster_A**, **Cluster_B**y **Cluster_C**. En cada clúster, se ejecuta una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al iniciarse la sesión de creación de reflejo, la instancia en clúster de conmutación por error en **Cluster_A** es el servidor principal, la instancia en clúster de conmutación por error en **Cluster_B** es el servidor reflejado y la instancia en clúster de conmutación por error en **Cluster_C** es el testigo de la sesión de creación de reflejo. Es posible que el nodo activo de **Cluster_A** tenga un error, lo que provocará que el servidor principal deje de estar disponible.  
+ Las tres instancias de servidor de la sesión de creación de reflejo residen en tres clústeres distintos: **Cluster_A**, **Cluster_B** y **Cluster_C**. En cada clúster, se ejecuta una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Al iniciarse la sesión de creación de reflejo, la instancia en clúster de conmutación por error en **Cluster_A** es el servidor principal, la instancia en clúster de conmutación por error en **Cluster_B** es el servidor reflejado y la instancia en clúster de conmutación por error en **Cluster_C** es el testigo de la sesión de creación de reflejo. Es posible que el nodo activo de **Cluster_A** tenga un error, lo que provocará que el servidor principal deje de estar disponible.  
   
  Antes de que el clúster tenga tiempo de realizar la conmutación por error, el servidor reflejado detecta la pérdida del servidor principal con la ayuda del testigo. El servidor reflejado pone al día su base de datos y la pone en línea como nueva base de datos principal lo más rápido posible. Cuando **Cluster_A** finaliza la conmutación por error, el servidor principal anterior se convierte en servidor reflejado y sincroniza su base de datos con la base de datos principal actual en **Cluster_B**.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "47830864"
   
 -   [Establecer una sesión de creación de reflejo de la base de datos mediante la autenticación de Windows &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/establish-database-mirroring-session-windows-authentication.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](../../database-engine/database-mirroring/database-mirroring-operating-modes.md)   
  [Instancias de clúster de conmutación por error de AlwaysOn &#40;SQL Server&#41;](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md)  

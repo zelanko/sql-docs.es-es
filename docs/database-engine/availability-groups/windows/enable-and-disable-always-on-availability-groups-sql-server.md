@@ -15,13 +15,13 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6d416be5087d9aa9c55f069940aecee568442f8
-ms.sourcegitcommit: d7ed341b2c635dcdd6b0f5f4751bb919a75a6dfe
+manager: jroth
+ms.openlocfilehash: 3f1ea7ec48f702173ad3370b7212b0b0b24260dc
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/06/2019
-ms.locfileid: "57527128"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66765803"
 ---
 # <a name="enable-or-disable-always-on-availability-group-feature"></a>Habilitación o deshabilitación de la característica de grupo de disponibilidad Always On
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,23 +31,8 @@ ms.locfileid: "57527128"
 > [!IMPORTANT]  
 >  Si elimina y vuelve a crear un clúster de WSFC, debe deshabilitar y volver a habilitar la característica de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] en cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que hospedaba una réplica de disponibilidad en el clúster de WSFC original.  
   
--   **Antes de empezar:**  
   
-     [Requisitos previos](#Prerequisites)  
-  
-     [Seguridad](#Security)  
-  
--   **Procedimiento:**  
-  
-    -   [Determinar si los grupos de disponibilidad AlwaysOn están habilitados](#IsEnabled)  
-  
-    -   [Habilitar los grupos de disponibilidad AlwaysOn](#EnableAOAG)  
-  
-    -   [Deshabilitar los grupos de disponibilidad AlwaysOn](#DisableAOAG)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Prerequisites"></a> Requisitos previos para habilitar los grupos de disponibilidad AlwaysOn  
+##  <a name="Prerequisites"></a> Requisitos previos para habilitar los grupos de disponibilidad AlwaysOn  
   
 -   La instancia de servidor debe residir en un nodo de clústeres de conmutación por error de Windows Server (WSFC).  
   
@@ -57,10 +42,9 @@ ms.locfileid: "57527128"
   
  Para obtener información sobre los requisitos previos adicionales para crear y configurar los grupos de disponibilidad, vea [Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
   
-###  <a name="Security"></a> Seguridad  
+## <a name="Permissions"></a> Permisos  
  Mientras los grupos de disponibilidad AlwaysOn están habilitados en una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la instancia del servidor tiene control total del clúster de WSFC.  
-  
-####  <a name="Permissions"></a> Permissions  
+
  Requiere la pertenencia al grupo **Administrador** en el equipo local y control total del clúster de WSFC. Cuando habilite AlwaysOn mediante PowerShell, abra la ventana del símbolo del sistema mediante la opción **Ejecutar como administrador** .  
   
  Requiere permisos para crear y administrar objetos de Active Directory.  
@@ -200,7 +184,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
 3.  En el **Administrador de configuración de SQL Server**, haga clic en **Servicios de SQL Server**, haga clic con el botón derecho en SQL Server (**\<**_instance name_**>)**, donde **\<**_instance name_**>** es el nombre de una instancia del servidor local para la que quiera deshabilitar los grupos de disponibilidad AlwaysOn, y haga clic en **Propiedades**.  
   
-4.  En la pestaña**Alta disponibilidad de AlwaysOn**, desactive la casilla **Habilitar los grupos de disponibilidad AlwaysOn** y haga clic en **Aceptar**.  
+4.  En la pestaña **Alta disponibilidad de AlwaysOn**, desactive la casilla **Habilitar los grupos de disponibilidad AlwaysOn** y haga clic en **Aceptar**.  
   
      [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] guarda los cambios y reinicie el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Cuando se reinicia el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , AlwaysOn estará deshabilitado y la propiedad del servidor **IsHadrEnabled** se establecerá en 0 para indicar que los grupos de disponibilidad AlwaysOn están deshabilitados.  
   

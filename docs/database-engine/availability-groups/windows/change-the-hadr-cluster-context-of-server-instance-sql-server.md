@@ -13,14 +13,14 @@ helpviewer_keywords:
 ms.assetid: ecd99f91-b9a2-4737-994e-507065a12f80
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: def5873f53093abfc13ed0968229671a012af839
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: c4f01db5d1d27c57b863c3421e6abee894975b85
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202134"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796638"
 ---
 # <a name="change-which-cluster-manages-the-metadata-for-replicas-in-an-always-on-availability-group"></a>Cambio del clúster que administra los metadatos para las réplicas de un grupo de disponibilidad Always On
 
@@ -30,30 +30,10 @@ ms.locfileid: "53202134"
   
  Cambie el contexto de clúster de HADR solo durante una migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] a una instancia de [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] en un nuevo clúster de WSFC. La migración entre clústeres de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] admite la actualización del sistema operativo a [!INCLUDE[win8](../../../includes/win8-md.md)] o [!INCLUDE[win8srv](../../../includes/win8srv-md.md)] con un tiempo de inactividad mínimo de los grupos de disponibilidad. Para obtener más información, vea [Migración entre clústeres de grupos de disponibilidad AlwaysOn para la actualización del sistema operativo](https://msdn.microsoft.com/library/jj873730.aspx).  
   
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Requisitos previos](#Prerequisites)  
-  
-     [Recomendaciones](#Recommendations)  
-  
-     [Seguridad](#Security)  
-  
--   **Para cambiar el contexto de clúster de una réplica de disponibilidad, mediante:**  [Transact-SQL](#TsqlProcedure)  
-  
--   **Seguimiento:**  [después de cambiar el contexto de clúster de una réplica de disponibilidad](#FollowUp)  
-  
--   [Tareas relacionadas](#RelatedTasks)  
-  
--   [Contenido relacionado](#RelatedContent)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
 > [!CAUTION]  
 >  Cambie el contexto de clúster de HADR solo durante la migración entre clústeres de implementaciones [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] .  
   
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
+##  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Solo puede cambiar el contexto de clúster de HADR desde el clúster local de WSFC a un clúster remoto y viceversa. No puede cambiar el contexto de clúster de HADR desde un clúster remoto a otro clúster remoto.  
   
@@ -61,7 +41,7 @@ ms.locfileid: "53202134"
   
 -   Un contexto de clúster de HADR remoto se puede volver a cambiar al clúster local en cualquier momento. Sin embargo, el contexto no se puede cambiar de nuevo si la instancia de servidor hospeda réplicas de disponibilidad.  
   
-###  <a name="Prerequisites"></a> Requisitos previos  
+##  <a name="Prerequisites"></a> Requisitos previos  
   
 -   La instancia de servidor en la que se cambia el contexto de clúster de HADR debe ejecutar [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] o superior (edición Enterprise o superior).  
   
@@ -78,7 +58,7 @@ ms.locfileid: "53202134"
   
 -   Antes de poder cambiar de un clúster remoto al clúster local, todas las réplicas con confirmación sincrónica deben estar en el estado SYNCHRONIZED.  
   
-###  <a name="Recommendations"></a> Recomendaciones  
+##  <a name="Recommendations"></a> Recomendaciones  
   
 -   Se recomienda especificar el nombre de dominio completo. Esto es porque para buscar la dirección IP de destino de un nombre corto, ALTER SERVER CONFIGURATION usa la resolución de DNS. En algunas situaciones, en función del orden de búsqueda de DNS, el uso de un nombre corto puede producir confusiones. Por ejemplo, considere el comando siguiente, que se ejecuta en un nodo del dominio `abc` (`node1.abc.com`). El clúster de destino previsto es el clúster `CLUS01` del dominio `xyz` (`clus01.xyz.com`). Sin embargo, el dominio local hospeda también un clúster denominado `CLUS01` (`clus01.abc.com`).  
   
@@ -88,9 +68,8 @@ ms.locfileid: "53202134"
     ALTER SERVER CONFIGURATION SET HADR CLUSTER CONTEXT = 'clus01.xyz.com'  
     ```  
   
-###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
   
 -   **inicio de sesión de SQL Server**  
   

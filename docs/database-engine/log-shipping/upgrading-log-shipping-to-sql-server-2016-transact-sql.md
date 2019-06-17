@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: dfb48f3af8f7a4cba7030fd8beeff2add3653e9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ca18e2b1a58da7d270d8352cddf15dc0f5281cc7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47801683"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794546"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>Actualización del trasvase de registros a SQL Server 2016 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +41,13 @@ ms.locfileid: "47801683"
 ##  <a name="Prerequisites"></a> Requisitos previos  
  Antes de empezar, revise la siguiente información importante:  
   
--   [Supported Version and Edition Upgrades](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): Compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+-   [Actualizaciones de ediciones y versiones admitidas](../../database-engine/install-windows/supported-version-and-edition-upgrades.md): compruebe que puede actualizar a SQL Server 2016 desde su versión del sistema operativo Windows y la versión de SQL Server. Por ejemplo, no puede actualizar directamente desde una instancia de SQL Server 2005 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
--   [Choose a Database Engine Upgrade Method](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
+-   [Elegir un método de actualización del motor de base de datos](../../database-engine/install-windows/choose-a-database-engine-upgrade-method.md): seleccione el método y los pasos de actualización adecuados en función de la revisión de versiones admitidas y actualizaciones de ediciones, y también teniendo en cuenta otros componentes instalados en el entorno con el fin de actualizar los componentes en el orden correcto.  
   
--   [Planeamiento y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, la lista de comprobación previa a la actualización y desarrolle y pruebe el plan de actualización.  
+-   [Planeación y prueba del plan de actualización del motor de base de datos](../../database-engine/install-windows/plan-and-test-the-database-engine-upgrade-plan.md): revise las notas de la versión y los problemas conocidos de actualización, así como la lista de comprobación previa a la actualización, y desarrolle y pruebe el plan de actualización.  
   
--   [Requisitos de hardware y software para instalar SQL Server 2016:](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
+-   [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md):  revise los requisitos de software para instalar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Si se requiere software adicional, puede instalarlo en cada nodo antes de comenzar el proceso de actualización para reducir los posibles tiempos de inactividad.  
   
 ##  <a name="ProtectData"></a> Proteger los datos antes de la actualización  
  Como práctica recomendada, es aconsejable que proteja sus datos antes de realizar una actualización del trasvase de registros.  
@@ -87,7 +87,7 @@ ms.locfileid: "47801683"
 > [!NOTE]  
 >  El trasvase de registros también admite la opción [Conmutar por error a una base de datos secundaria de trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/fail-over-to-a-log-shipping-secondary-sql-server.md) y, opcionalmente, [Cambiar los roles entre el servidor de trasvase de registros primario y secundario &#40;SQL Server&#41;](../../database-engine/log-shipping/change-roles-between-primary-and-secondary-log-shipping-servers-sql-server.md). Sin embargo, dado que el trasvase de registros ya rara vez se configura como una solución de alta disponibilidad (las opciones más recientes son mucho más sólidas), la conmutación por error generalmente no minimiza el tiempo de inactividad porque no se sincronizarán los objetos de base de datos del sistema y porque puede ser una odisea permitir que los clientes busquen un elemento secundario promovido y se conecten a él fácilmente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualización a SQL Server 2016 mediante el Asistente para instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)   
  [Instalar SQL Server 2016 desde el símbolo del sistema](../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md)   
  [Configurar el trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/configure-log-shipping-sql-server.md)   

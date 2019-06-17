@@ -10,13 +10,13 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 863e28c5a2545523161135821c420c1711ebf4e5
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513770"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794874"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
 
@@ -305,7 +305,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 - [Desinstalar una instancia existente de SQL Server &#40;programa de instalación&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Qué es Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [Cómo funciona Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143547)  
   

@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 0fa8785b-0830-4a52-aff5-fcf8268b72fc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1fffafeed8fe36520223aaf5ef900c410244e495
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5b7d8a4cb398e984ede05ad411623a9e33653ac1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47732213"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803330"
 ---
 # <a name="configure-the-default-full-text-language-server-configuration-option"></a>Establecer la opción de configuración del servidor Idioma de texto completo predeterminado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +42,9 @@ ms.locfileid: "47732213"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de configurar la opción Idioma de texto completo predeterminado](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción de idioma de texto completo predeterminado](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -58,10 +58,10 @@ ms.locfileid: "47732213"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-default-full-text-language-option"></a>Para configurar la opción de idioma de texto completo predeterminado  
   
@@ -100,7 +100,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de idioma de texto completo predeterminado  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)   
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

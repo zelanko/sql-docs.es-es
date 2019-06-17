@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 888c8448-933b-41e3-8aa1-c206bc0cdb78
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3040815900a2502a6e476472d21ee6c1f4e2019e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a43aff5afdd0d54663aad31e95f0fd528b3b9096
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47821233"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802836"
 ---
 # <a name="configure-the-remote-query-timeout-server-configuration-option"></a>Establecer la opción de configuración del servidor Tiempo de espera de consulta remota
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "47821233"
   
 -   **Seguimiento:**  [Después de configurar la opción de tiempo de espera de consultas remotas](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
@@ -54,10 +54,10 @@ ms.locfileid: "47821233"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  De forma predeterminada, todos los usuarios tienen permisos de ejecución en **sp_configure** sin ningún parámetro o solo con el primero. Para ejecutar **sp_configure** con ambos parámetros y cambiar una opción de configuración, o para ejecutar la instrucción RECONFIGURE, un usuario debe tener el permiso ALTER SETTINGS en el servidor. Los roles fijos de servidor **sysadmin** y **serveradmin** tienen el permiso ALTER SETTINGS de forma implícita.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-the-remote-query-timeout-option"></a>Para configurar la opción de tiempo de espera de consultas remotas  
   
@@ -92,7 +92,7 @@ GO
 ##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción de tiempo de espera de consultas remotas  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [Propiedades y comportamientos de conjuntos de filas](../../relational-databases/native-client-ole-db-rowsets/rowset-properties-and-behaviors.md)   
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

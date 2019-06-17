@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 6acd02b9-2311-49b0-a5f8-3852beecb4b0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 551d71d427b9e7997082a8feda1b766b85bfe659
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: be6b135e4e21f7bdcec47c231be6fe872a20ab76
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837274"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795308"
 ---
 # <a name="register-mirrored-database"></a>Registrar base de datos reflejada
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "47837274"
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
-|**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada** , seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción** .|  
+|**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada**, seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción**.|  
 |**Base de datos**|Nombre de una base de datos reflejada en la instancia del servidor seleccionada.|  
 |**Rol actual**|Rol de creación de reflejo actual de la base de datos, ya sea principal o reflejada, en la instancia del servidor seleccionada.|  
 |**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión '***\<nombre de inicio de sesión>***'**. Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
@@ -63,9 +63,9 @@ ms.locfileid: "47837274"
  **Aplicar**  
  Haga clic en este botón para registrar las bases de datos seleccionadas (y guardar las credenciales para las instancias del servidor asociado) a la vez que se mantiene abierto el cuadro de diálogo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
- [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
+ [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  
   
   

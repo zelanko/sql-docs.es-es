@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 05ede3b4-6abe-4442-abb7-9f5aee1d6bc0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 51e19a1af0fc8e1764c66777cf58d580a70671b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dbd0c7d408293bda1dfcdb71652bc6464a59f8e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795379"
 ---
 # <a name="pause-or-resume-a-database-mirroring-session-sql-server"></a>Pausar o reanudar una sesión de creación de reflejo de la base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ ms.locfileid: "47776863"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [después de pausar o reanudar la creación de reflejo de la base de datos](#FollowUp)  
+-   **Seguimiento:**  [Después de pausar o reanudar la creación de reflejo de la base de datos](#FollowUp)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  En cualquier momento, puede suspender una sesión de creación de reflejo de la base de datos, lo que puede mejorar el rendimiento durante los cuellos de botella, y puede reanudar una sesión suspendida.  
   
 > [!CAUTION]  
@@ -50,10 +50,10 @@ ms.locfileid: "47776863"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Para pausar o reanudar una sesión de creación de reflejo de la base de datos, use la página **Creación de reflejo de Propiedades de la base de datos** .  
   
 #### <a name="to-pause-or-resume-database-mirroring"></a>Para pausar o reanudar la creación de reflejo de la base de datos  
@@ -110,7 +110,7 @@ ms.locfileid: "47776863"
     ALTER DATABASE AdventureWorks2012 SET PARTNER RESUME;  
     ```  
   
-##  <a name="FollowUp"></a> Seguimiento: después de pausar o reanudar la creación de reflejo de la base de datos  
+##  <a name="FollowUp"></a> Seguimiento: Después de pausar o reanudar la creación de reflejo de la base de datos  
   
 -   **Después de pausar la creación de reflejo de la base de datos**  
   
@@ -124,7 +124,7 @@ ms.locfileid: "47776863"
   
 -   [Quitar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/remove-database-mirroring-sql-server.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)  
   
   

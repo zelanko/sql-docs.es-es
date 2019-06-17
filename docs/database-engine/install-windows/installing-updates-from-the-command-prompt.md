@@ -10,13 +10,13 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: c69d17094d5998c0158aeb56d8c14421f6199a4b
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: fdf35fa6ad124784f44391e5ad6b7d42cd1064a4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51605995"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794853"
 ---
 # <a name="installing-updates-from-the-command-prompt"></a>Instalar actualizaciones desde el símbolo del sistema
 
@@ -27,7 +27,7 @@ Pruebe y modifique los scripts de instalación para adaptarlos a las necesidades
 ## <a name="sample-syntax-for-installation"></a>Sintaxis de ejemplo para la instalación 
 El nombre del paquete de actualización puede variar y es posible que incluya un componente de idioma, edición y procesador. Aplique una actualización en una línea de comandos y reemplace <nombre_paquete> por el nombre del paquete de actualización: 
  
-- Actualice una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes compartidos, como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y Herramientas de administración: puede especificar la instancia bien utilizando el parámetro InstanceName o bien con el parámetro InstanceID. Para actualizar una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe especificar el parámetro InstanceID.
+- Actualice una sola instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los componentes compartidos, como [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] y las herramientas de administración: Puede especificar la instancia mediante el parámetro InstanceName o InstanceID. Para actualizar una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe especificar el parámetro InstanceID.
 
     ```
     <package_name>.exe /qs /IAcceptSQLServerLicenseTerms /Action=Patch /InstanceName=MyInstance

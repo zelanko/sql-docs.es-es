@@ -19,12 +19,12 @@ ms.assetid: bea8ce8d-cf63-4257-840a-fc9adceade8c
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: c0759d5da7af3cfd50ff32b500050b90affa70c5
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.openlocfilehash: 97feadfea27ee4957e71940dbbf773e215e61418
+ms.sourcegitcommit: cb86e7b75c2b40c2c5ff2a6c1be0e6bd17b03f9a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
-ms.locfileid: "65720055"
+ms.lasthandoff: 06/03/2019
+ms.locfileid: "66469654"
 ---
 # <a name="deploy-integration-services-ssis-projects-and-packages"></a>Implementación de proyectos y paquetes de Integration Services (SSIS)
 
@@ -36,7 +36,7 @@ ms.locfileid: "65720055"
 Para más información sobre el modelo de implementación de paquetes heredada, vea [Implementación de paquetes heredada &#40;SSIS&#41;](../../integration-services/packages/legacy-package-deployment-ssis.md).  
   
 > [!NOTE]  
->  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con este modelo de implementación, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. En [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] se presentó el modelo de implementación de paquetes, que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
+>  El modelo de implementación de proyectos se introdujo en [!INCLUDE[ssISversion11](../../includes/ssisversion11-md.md)]. Con este modelo de implementación, no pudo implementar uno o varios paquetes sin implementar todo el proyecto. [!INCLUDE[ssISversion13](../../includes/ssisversion13-md.md)] incluyó la característica Implementación incremental de paquetes, que permite implementar uno o varios paquetes sin implementar todo el proyecto.  
 
 > [!NOTE]
 > En este artículo se describe cómo implementar paquetes SSIS en general y cómo implementar los paquetes de forma local. Los paquetes SSIS también se pueden implementar en las plataformas siguientes:

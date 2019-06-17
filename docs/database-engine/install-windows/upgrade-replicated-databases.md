@@ -1,5 +1,5 @@
 ---
-title: Actualizar bases de datos replicadas | Microsoft Docs
+title: Actualización o revisión de bases de datos replicadas | Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2016
 ms.prod: sql
@@ -16,15 +16,15 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 279a5c55ddc305d62e3e09f1f8073057b4ff226b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 3b311514c90045042dcb6a62f163d5fe08ef9549
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124615"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66794716"
 ---
-# <a name="upgrade-replicated-databases"></a>Actualizar bases de datos replicadas
+# <a name="upgrade-or-patch-replicated-databases"></a>Actualización o revisión de bases de datos replicadas
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   
@@ -42,9 +42,7 @@ La ruta de actualización a SQL Server es diferente según el modelo de implemen
 
 Un enfoque común que se ha adoptado para las actualizaciones en paralelo de las topologías de replicación es mover los pares de publicador y suscriptor por partes al nuevo entorno en paralelo, en lugar de mover toda la topología. Este enfoque por fases ayuda a controlar el tiempo de inactividad y a minimizar, hasta cierto punto, el impacto para la empresa que depende de la replicación.  
 
-
-> [!NOTE]  
-> **Para obtener más información relacionada con la actualización de la topología de replicación a SQL 2016, vea la entrada de blog [Upgrading a Replication Topology to SQL Server 2016](https://blogs.msdn.microsoft.com/sql_server_team/upgrading-a-replication-topology-to-sql-server-2016/)** (Actualización de una topología de replicación a SQL Server 2016). 
+La mayor parte de este artículo se centra en la actualización de la versión de SQL Server. Sin embargo, el proceso de actualización en contexto también debe utilizarse al aplicar revisiones en SQL Server con un Service Pack o actualización acumulativa también. 
 
  >[!WARNING]
  > La actualización de una topología de replicación es un proceso de varios pasos. Se recomienda intentar la actualización de una réplica de la topología de replicación en un entorno de prueba antes de ejecutar la actualización en el entorno de producción real. Esto ayudará a resolver cualquier documentación de las operaciones necesaria para administrar la actualización sin problemas y sin incurrir en tiempos de inactividad costosos y prolongados durante el proceso de actualización real. Hemos visto que los clientes reducen significativamente el tiempo de inactividad con el uso de grupos de disponibilidad Always On o instancias de clúster de conmutación por error de SQL Server para sus entornos de producción durante la actualización de su topología de replicación. Además, se recomienda realizar copias de seguridad de todas las bases de datos incluidas MSDB, la principal, las bases de datos de distribución y las de usuario que participan en la replicación antes de intentar la actualización.

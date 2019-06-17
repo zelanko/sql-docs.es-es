@@ -12,13 +12,13 @@ f1_keywords:
 ms.assetid: 4f64b4e1-89e9-4827-98fa-b92c3dc73b48
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f50a0e343ea7ffd934ed0de3384deffa4679ff7c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 9b4ec2994fe8fdc0e444087dadcf7ab57c01c34e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505195"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795539"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "52505195"
   
  Si este trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene, el estado quedará cada vez más desusado y puede que deje de reflejar la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar el Monitor de creación de reflejo de la base de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-database-mirroring-monitor-sql-server-management-studio.md)   
  [Supervisar la creación de reflejo de la base de datos &#40;SQL Server&#41;](../../database-engine/database-mirroring/monitoring-database-mirroring-sql-server.md)   
  [Iniciar el Asistente para la configuración de seguridad de la creación de reflejo de bases de datos &#40;SQL Server Management Studio&#41;](../../database-engine/database-mirroring/start-the-configuring-database-mirroring-security-wizard.md)  

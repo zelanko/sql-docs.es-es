@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 3d1953d29d718edebbdae18677d240395d0b710f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 630dee3126fe6c122f3e2d034252260769e3ed03
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66774948"
 ---
 # <a name="create-a-database-mirroring-endpoint-for-windows-authentication-transact-sql"></a>Crear un extremo de reflejo de la base de datos para la autenticación de Windows (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47838123"
   
 -   **Para crear un punto de conexión de creación de reflejo de la base de datos con:**  [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  El administrador del sistema establece los métodos de autenticación y cifrado de la instancia del servidor.  
@@ -45,7 +45,7 @@ ms.locfileid: "47838123"
 > [!IMPORTANT]  
 >  El algoritmo RC4 está obsoleto. [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Se recomienda utilizar AES.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere permiso CREATE ENDPOINT o pertenecer al rol fijo de servidor sysadmin. Para obtener más información, vea [GRANT &#40;permisos de punto de conexión de Transact-SQL&#41;](../../t-sql/statements/grant-endpoint-permissions-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -108,7 +108,7 @@ ms.locfileid: "47838123"
         > [!IMPORTANT]  
         >  Cada instancia del servidor requiere solo un puerto de escucha único.  
   
-    -   Para la Autenticación de Windows, la opción AUTHENTICATION es opcional, salvo que desee que el extremo únicamente Use NTLM o Kerberos para autenticar conexiones. *\<métodoDeAutorización>* especifica el método usado para autenticar conexiones como uno de los siguientes: NTLM, KERBEROS o NEGOTIATE. El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos. La negociación habilita conexiones con o sin autenticación, dependiendo del nivel de autenticación del extremo opuesto.  
+    -   Para la Autenticación de Windows, la opción AUTHENTICATION es opcional, salvo que desee que el extremo únicamente Use NTLM o Kerberos para autenticar conexiones. *\<métodoDeAutorización>* especifica el método que se usa para autenticar conexiones como uno de los siguientes: NTLM, KERBEROS o NEGOTIATE. El valor predeterminado, NEGOTIATE, hace que el extremo utilice el protocolo de negociación de Windows para elegir NTLM o Kerberos. La negociación habilita conexiones con o sin autenticación, dependiendo del nivel de autenticación del extremo opuesto.  
   
     -   ENCRYPTION se establece en REQUIRED de forma predeterminada. Esto significa que todas las conexiones con este punto final deben usar cifrado. No obstante, puede deshabilitar el cifrado o hacer que sea opcional en un extremo. Las alternativas son las siguientes:  
   
@@ -139,7 +139,7 @@ ms.locfileid: "47838123"
     > [!NOTE]  
     >  Para cambiar un punto de conexión existente, use [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md).  
   
-###  <a name="TsqlExample"></a> Ejemplo: Crear extremos para admitir para la creación de reflejo de la base de datos (Transact-SQL)  
+###  <a name="TsqlExample"></a> Ejemplo: Crear puntos de conexión para admitir para la creación de reflejo de la base de datos (Transact-SQL)  
  En el siguiente ejemplo se crean dos extremos de creación de reflejo de la base de datos para las instancias del servidor predeterminadas en tres sistemas independientes:  
   
 |Rol de la instancia de servidor|Nombre del equipo host|  
@@ -198,7 +198,7 @@ GO
   
 -   [sys.database_mirroring_endpoints &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-mirroring-endpoints-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-endpoint-transact-sql.md)   
  [Elegir un algoritmo de cifrado](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)   
  [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md)   

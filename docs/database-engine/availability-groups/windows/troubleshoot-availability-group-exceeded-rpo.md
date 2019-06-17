@@ -9,15 +9,15 @@ ms.topic: conceptual
 ms.assetid: 38de1841-9c99-435a-998d-df81c7ca0f1e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4e1840f9c6d04965ae24d8b9d188b7def303a0b5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 207c4aa417f2063cbdca8fa575b45ea380f1da4b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408772"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66780986"
 ---
-# <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: el grupo de disponibilidad superó el RPO
+# <a name="troubleshoot-availability-group-exceeded-rpo"></a>Solución de problemas: El grupo de disponibilidad superó el RPO
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Después de realizar una conmutación por error manual forzada de un grupo de disponibilidad a una réplica secundaria de confirmación asincrónica, es posible que la pérdida de datos supere su objetivo de punto de recuperación (RPO). También puede ser que al calcular la pérdida de datos potencial de una réplica secundaria de confirmación sincrónica usando el método que se describe en [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md) (Supervisión del rendimiento de grupos de disponibilidad Always On), descubra que supera el RPO.  
   
@@ -116,7 +116,7 @@ ORDER BY r.io_pending , r.io_pending_ms_ticks DESC;
   
 -   **Disco físico: todos los contadores**  
   
--   **Disco físico: promedio de segundos de disco/transferencia**  
+-   **Disco físico: Promedio de de segundos de disco/transferencia**  
   
 -   **SQL Server: bases de datos > tiempo de espera de vaciado de registro**  
   

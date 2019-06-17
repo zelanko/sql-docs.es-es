@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f658ae1bfbfca7a487157c0129d67a12e890a2e2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 0c01218cf7303653464814a554771d2ea386f1fb
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523534"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803448"
 ---
 # <a name="use-always-on-policies-to-view-the-health-of-an-availability-group-sql-server"></a>Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,19 +27,9 @@ ms.locfileid: "52523534"
 > [!IMPORTANT]  
 >  Para las directivas de AlwaysOn, los nombres de categoría se usan como identificadores. La acción de cambiar el nombre de una categoría de AlwaysOn interrumpirá la funcionalidad de la evaluación de estado. Por consiguiente, los nombres de categoría de AlwaysOn no deben modificarse nunca.  
   
--   **Antes de empezar:** [Seguridad](#Security)  
   
--   **Usar directivas de AlwaysOn para ver el estado de un grupo de disponibilidad, mediante:**  
   
-     [Panel AlwaysOn](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de comenzar  
-  
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere permisos CONNECT TO, VIEW SERVER STATE y VIEW ANY DEFINITION.  
   
 ##  <a name="SSMSProcedure"></a> Usar el panel AlwaysOn  
@@ -125,15 +115,15 @@ ms.locfileid: "52523534"
 ##  <a name="RelatedContent"></a> Contenido relacionado  
  **Blogs del equipo de Always On de SQL Server: supervisión del estado de Always On con PowerShell:**  
   
--   [Parte 1: información general básica de los cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
+-   [Parte 1: Información general básica de los cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-1-basic-cmdlet-overview/)  
   
--   [Parte 2: uso avanzado de cmdlet](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
+-   [Parte 2: Uso avanzado de cmdlets](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/13/monitoring-alwayson-health-with-powershell-part-2-advanced-cmdlet-usage/)  
   
--   [Parte 3: una aplicación simple de supervisión](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
+-   [Parte 3: Una sencilla aplicación de supervisión](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/14/monitoring-alwayson-health-with-powershell-part-3-a-simple-monitoring-application/)  
   
--   [Parte 4: integración con el Agente SQL Server](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/)  
+-   [Parte 4: Integration with SQL Server Agent](https://blogs.msdn.microsoft.com/sqlalwayson/2012/02/15/monitoring-alwayson-health-with-powershell-part-4-integration-with-sql-server-agent/) (Supervisión del mantenimiento de Always On con PowerShell, parte 4: integración con el Agente SQL Server)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Información general de los grupos de disponibilidad AlwaysOn &#40;SQL Server&#41;](~/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
  [Administración de un grupo de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/administration-of-an-availability-group-sql-server.md)   
  [Supervisión de los grupos de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/monitoring-of-availability-groups-sql-server.md)   

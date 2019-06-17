@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 72eb4fc1-7af4-4ec6-9e02-11a69e02748e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 9178ee0cbb010f55cf7438c345112c95f3d2b3fb
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+manager: jroth
+ms.openlocfilehash: 34e5533d442dbbc91807a533ba53ebcc8b115d19
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52508702"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66775352"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar SQL Server en modo de usuario único
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Por ejemplo, **-m"SQLCMD"** limita las conexiones a una conexión única y esa c
   
 6.  Una vez completada la operación, cierre el símbolo del sistema y vuelva a poner en línea SQL y otros recursos mediante el administrador de clústeres.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar, detener o pausar el servicio del Agente SQL Server](https://msdn.microsoft.com/library/c95a9759-dd30-4ab6-9ab0-087bb3bfb97c)   
  [Conexión de diagnóstico para administradores de bases de datos](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)   
  [sqlcmd (utilidad)](../../tools/sqlcmd-utility.md)   

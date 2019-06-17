@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: 5b982015-e196-44c3-83b8-275fb9d769b2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ddef6de92c0bb5329e84011f9996368ef6b452dc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e60261790ce1597c9968fb9c6c3c15403f71a93c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690154"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66786951"
 ---
 # <a name="ad-hoc-distributed-queries-server-configuration-option"></a>ad hoc distributed queries (opción de configuración del servidor)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47690154"
 >  Habilitar el uso de nombres ad hoc significa que cualquier inicio de sesión autenticado en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede obtener acceso al proveedor. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] deben habilitar esta característica para los proveedores a los que cualquier inicio de sesión local pueda tener acceso de forma segura.  
   
 ## <a name="remarks"></a>Notas  
- El intento de realizar una conexión ad hoc con la opción **Ad Hoc Distributed Queries** no habilitada tiene como resultado el error: mensaje 7415, nivel 16, estado 1, línea 1  
+ El intento de realizar una conexión ad hoc con la opción **Ad Hoc Distributed Queries** no habilitada tiene como resultado el error: mensaje 7415, nivel 16, estado 1, línea 1.  
   
  Denegado el acceso ad hoc al proveedor OLE DB 'Microsoft.ACE.OLEDB.12.0'. El acceso debe realizarse mediante un servidor vinculado.  
   
@@ -59,7 +59,7 @@ FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Opciones de configuración de servidor &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   
  [Servidores vinculados &#40;motor de base de datos&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md)   
  [OPENROWSET &#40;Transact-SQL&#41;](../../t-sql/functions/openrowset-transact-sql.md)   

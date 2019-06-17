@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4d1e58d016649c3c21a056a82315bd0d0fb3564f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63248384"
 ---
 # <a name="mdx-data-definition---create-set"></a>Definición de datos de MDX: CREATE SET
@@ -58,7 +58,7 @@ CREATE [SESSION] [ STATIC | DYNAMIC ] [HIDDEN] SET
   
  Si especifica un cubo distinto del que está conectado actualmente, se genera un error. Por lo tanto, debe utilizar CURRENTCUBE en lugar de un nombre de cubo para indicar el cubo actual.  
   
-## <a name="scope"></a>Ámbito  
+## <a name="scope"></a>Scope  
  Un conjunto definido pro el usuario puede producirse en uno de los ámbitos enumerados en la tabla siguiente.  
   
  Ámbito de consulta  

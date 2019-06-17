@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5261e3bd3c114961533b60431b6d0e1b9a313fc5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d8220eebb82a5c0e513e14fc9b582b10183d293f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47615253"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797776"
 ---
 # <a name="data-source-wizard-screen-3"></a>Pantalla del Asistente para orígenes de datos 3
 
@@ -72,7 +72,7 @@ Si la aplicación se conecta a un grupo de disponibilidad de (grupos de disponib
 
 ### <a name="transparent-network-ip-resolution"></a>Resolución de IP de red transparente.
 
-Modifica el comportamiento de **conmutación por error de múltiples subredes** para permitir una reconexión más rápida durante la conmutación por error. Consulte [utilizando resolución de direcciones IP de red transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md) para obtener más información.
+Modifica el comportamiento de **conmutación por error de múltiples subredes** para permitir una reconexión más rápida durante la conmutación por error. Para obtener más información, vea [Uso de resolución de IP de red transparente](../../../connect/odbc/using-transparent-network-ip-resolution.md).
 
 ### <a name="column-encryption"></a>Cifrado de columnas.
 

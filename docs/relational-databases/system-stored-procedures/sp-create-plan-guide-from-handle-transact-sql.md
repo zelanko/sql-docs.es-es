@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 29e5bd9f5dc682862d636b49d77e6b338fe937b9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724500"
 ---
 # <a name="spcreateplanguidefromhandle-transact-sql"></a>sp_create_plan_guide_from_handle (Transact-SQL)
@@ -46,7 +46,7 @@ sp_create_plan_guide_from_handle [ @name = ] N'plan_guide_name'
  Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas para [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar con el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
  [ @plan_handle = ] *plan_handle*  
- Identifica un lote en la memoria caché del plan. *plan_handle* es **varbinary (64)**. *plan_handle* puede obtenerse a partir del [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
+ Identifica un lote en la memoria caché del plan. *plan_handle* es **varbinary (64)** . *plan_handle* puede obtenerse a partir del [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md) vista de administración dinámica.  
   
  [ @statement_start_offset = ] { *statement_start_offset* | NULL } ]  
  Identifica la posición inicial de la instrucción dentro del lote especificado *plan_handle*. *statement_start_offset* es **int**, su valor predeterminado es null.  

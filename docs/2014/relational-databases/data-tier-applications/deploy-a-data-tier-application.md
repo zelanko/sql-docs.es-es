@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ded740286ac86deee92d6822aaa5b3130f796849
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918195"
 ---
 # <a name="deploy-a-data-tier-application"></a>Implementar una aplicación de capa de datos
@@ -160,7 +160,7 @@ ms.locfileid: "62918195"
   
  **\< Anterior** -devuelve a la **Seleccionar paquete DAC** página.  
   
- **Siguiente >**: avanza a la página **Resumen**.  
+ **Siguiente >** : avanza a la página **Resumen**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "62918195"
   
  **\< Anterior** -vuelve a la **actualizar la configuración** página para cambiar sus selecciones.  
   
- **Siguiente >**: implementa la DAC y muestra los resultados en la página **Implementar DAC**.  
+ **Siguiente >** : implementa la DAC y muestra los resultados en la página **Implementar DAC**.  
   
  **Cancelar:** termina el asistente sin implementar la DAC.  
   

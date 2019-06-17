@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 032c371fd37bb66392761fff24bd30efb2bd5b37
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011948"
 ---
 # <a name="create-an-application-role"></a>Crear un rol de aplicación
@@ -56,7 +56,7 @@ ms.locfileid: "63011948"
   
 3.  Expanda la carpeta **Roles** .  
   
-4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación...**.  
+4.  Haga clic con el botón derecho en la carpeta **Roles de aplicación** y seleccione **Nuevo rol de aplicación...** .  
   
 5.  En el cuadro de diálogo **Rol de aplicación - Nuevo**, en la página **General**, escriba el nuevo nombre del nuevo rol de aplicación en el cuadro **Nombre de rol**.  
   

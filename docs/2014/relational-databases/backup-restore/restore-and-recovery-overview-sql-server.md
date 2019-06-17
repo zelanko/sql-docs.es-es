@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 254b05afdaa08483117c07660630b3120527a3fe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921019"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
@@ -88,9 +88,9 @@ ms.locfileid: "62921019"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recuperación de datos|Recuperación completa (si el registro está disponible).|Existe el riesgo de perder algunos datos.|Se perderán los datos desde la última copia de seguridad completa o diferencial.|  
 |Restauración a un momento dado|Cualquier momento cubierto por las copias de seguridad de registros.|No está permitida si la copia de seguridad de registros contiene algún cambio registrado de forma masiva.|No compatible.|  
-|File restore **\***|Totalmente compatible.|A veces.**\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
-|Page restore **\***|Totalmente compatible.|A veces.**\*\***|Ninguno.|  
-|Restauración por etapas (nivel de grupos de archivos) **\***|Totalmente compatible.|A veces.**\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
+|File restore **\***|Totalmente compatible.|A veces. **\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
+|Page restore **\***|Totalmente compatible.|A veces. **\*\***|Ninguno.|  
+|Restauración por etapas (nivel de grupos de archivos) **\***|Totalmente compatible.|A veces. **\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
   
  **\*** Disponible solo en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

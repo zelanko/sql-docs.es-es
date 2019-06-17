@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026902"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: Tablas de transición de estado de ODBC
@@ -47,7 +47,7 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
   
 -   **E**  
 
-     **_n_**  , **C_n_**, **S_n_**, o **D_n_** -el estado del entorno, conexión, instrucción o descriptor pasa al estado especificado.  
+     **_n_**  , **C_n_** , **S_n_** , o **D_n_** -el estado del entorno, conexión, instrucción o descriptor pasa al estado especificado.  
  
 -   **(IH)**  : Un identificador no válido se pasó a la función. Si el identificador era un identificador nulo o un identificador válido de un tipo incorrecto: por ejemplo, se pasó un identificador de conexión cuando se requiere un identificador de instrucción: la función devuelva SQL_INVALID_HANDLE; en caso contrario, el comportamiento es indefinido y probablemente irrecuperable. Este error se muestra solo cuando es sólo posible resultado de llamar a la función en el estado especificado. Este error no cambia el estado y siempre se detecta mediante el Administrador de controladores, como se indica entre paréntesis.  
   

@@ -3,24 +3,24 @@ title: 'Instalar nuevos paquetes de idioma de Python: SQL Server Machine Learnin
 description: Agregar nuevos paquetes de Python para SQL Server 2017 Machine Learning Services (In-Database) y Machine Learning Server (independiente).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/10/2018
+ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: cc83ed8500e93147163e3166b895c7333b4222cd
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510302"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140719"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>Instalar nuevos paquetes de Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 En este artículo se describe cómo instalar nuevos paquetes de Python en una instancia de SQL Server 2017 Machine Learning Services. En general, el proceso para instalar nuevos paquetes es similar de un entorno de Python estándar. Sin embargo, son necesarios algunos pasos adicionales si el servidor no tiene una conexión a internet.
 
-Para obtener más información acerca de las rutas de acceso de ubicación e instalación del paquete, consulte [obtener R o Python información del paquete](../r/determine-which-packages-are-installed-on-sql-server.md).
+Para obtener más información acerca de las rutas de acceso de ubicación e instalación del paquete, consulte [obtener R o Python información del paquete](../package-management/installed-package-information.md).
 
 ## <a name="prerequisites"></a>Requisitos previos
 

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 65a154d1-375c-439b-a653-7815c9d70ff3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d19077a4a0b676875a9b82acf529cc8720f31f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 340cedae8ee5c205e3bc6ea8942151dd4beca168
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680028"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796124"
 ---
 # <a name="how-to-connect-on-a-specified-port"></a>Cómo conectarse a un puerto específico
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -44,7 +44,7 @@ En este tema se describe cómo conectarse a SQL Server en un puerto específico 
     $conn = new PDO( "sqlsrv:server=$serverName;Database=$database", "", "");  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)

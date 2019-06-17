@@ -9,13 +9,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a8799a77817b7e01b8c3391a9b2ed06fd6bbd3c0
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+manager: jroth
+ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744375"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796212"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Descargar los controladores de Microsoft para PHP para SQL Server
 

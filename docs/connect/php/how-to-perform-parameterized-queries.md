@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: dc7d0ede-a9b6-4ce2-977e-4d1e7ec2131c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8c1e764373b0a8877da8dcdcf967ec8a591f1580
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a7783ac898dff9176a2a148f7c8e01a0ac28047b
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666593"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796098"
 ---
 # <a name="how-to-perform-parameterized-queries"></a>Cómo realizar consultas con parámetros
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -114,7 +114,7 @@ sqlsrv_close( $conn);
 En el ejemplo anterior se usa la función **sqlsrv_query** para ejecutar consultas. Esta función es adecuada para ejecutar consultas únicas, puesto que realiza los procesos de preparación y ejecución de la instrucción. Para volver a ejecutar una consulta con otros valores de parámetro, es mejor hacerlo con la combinación de **sqlsrv_prepare**/**sqlsrv_execute**. A continuación, encontrará un ejemplo en el que se vuelve a ejecutar una consulta con distintos valores de parámetros.  
   
 ## <a name="example"></a>Ejemplo  
-En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . La matriz *$params* se enlaza a la instrucción (*$stmt*) cuando se llama a **sqlsrv_prepare**. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
+En el ejemplo siguiente se muestra el enlace implícito de variables cuando se usa la función **sqlsrv_prepare** . En el ejemplo se insertan varios pedidos de ventas en la tabla *Sales.SalesOrderDetail* . La matriz *$params* se enlaza a la instrucción ( *$stmt*) cuando se llama a **sqlsrv_prepare**. Antes de cada ejecución de una consulta que inserta un nuevo pedido de ventas en la tabla, la matriz *$params* se actualiza con los nuevos valores correspondientes a los detalles del pedido de ventas. En la siguiente ejecución de la consulta se utilizan los nuevos valores de parámetro.  
   
 En el ejemplo se da por hecho que SQL Server y la base de datos [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) están instalados en el equipo local. Los resultados se agregan a la consola cuando se ejecuta el ejemplo en la línea de comandos.  
   
@@ -188,7 +188,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Conversión de tipos de datos](../../connect/php/converting-data-types.md)
 
 [Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)

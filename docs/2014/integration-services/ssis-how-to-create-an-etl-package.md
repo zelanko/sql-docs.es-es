@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e25c90b3baa4e718f40dc3a3f84b6dc221d54c33
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62878292"
 ---
 # <a name="ssis-tutorial-creating-a-simple-etl-package"></a>Tutorial de SSIS: Creación de un paquete ETL sencillo
@@ -58,7 +58,7 @@ ms.locfileid: "62878292"
  [Lección 1: Crear el proyecto y el paquete básico](lesson-1-create-a-project-and-basic-package-with-ssis.md)  
  En esta lección, creará un paquete ETL sencillo que extrae datos de un único archivo plano, transforma los datos mediante transformaciones de búsqueda y, por último, carga los resultados en un destino de tabla de hechos.  
   
- [Lección 2: Agregar bucles](lesson-2-adding-looping-with-ssis.md)  
+ [Lección 2: Agregar bucles](lesson-2-adding-looping-with-ssis.md)  
  En esta lección, expandirá el paquete que ha creado en la lección 1 para beneficiarse de las nuevas características de bucles para extraer varios archivos planos en un único proceso de flujo de datos.  
   
  [Lección 3: Agregar registro](lesson-3-add-logging-with-ssis.md)  

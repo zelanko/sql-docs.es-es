@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a84e1d2fa9d65cfdab4e4753315d44346af4597e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004534"
 ---
 # <a name="sysinternaltables-transact-sql"></a>sys.internal_tables (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "63004534"
 
   Devuelve una fila por cada objeto que es una tabla interna. Las tablas internas son generadas de forma automática por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a fin de permitir varias características. Por ejemplo, cuando se crea un índice XML principal, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea automáticamente una tabla interna para hacer que persistan los datos del documento XML dividido. Las tablas internas aparecen en la **sys** esquema de cada base de datos y tienen nombres únicos y generados por el sistema que indican su función, por ejemplo, **xml_index_nodes_2021582240_32001** o  **queue_messages_1977058079**  
   
- Las tablas internas no contienen datos accesibles para el usuario y su esquema es fijo e inalterable. No se puede hacer referencia a los nombres de las tablas internas en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo, no se puede ejecutar una instrucción como SELECT \* FROM  *\<sys.internal_table_name >*. Sin embargo, se pueden consultar vistas de catálogo para ver los metadatos de las tablas internas.  
+ Las tablas internas no contienen datos accesibles para el usuario y su esquema es fijo e inalterable. No se puede hacer referencia a los nombres de las tablas internas en las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Por ejemplo, no se puede ejecutar una instrucción como SELECT \* FROM  *\<sys.internal_table_name >* . Sin embargo, se pueden consultar vistas de catálogo para ver los metadatos de las tablas internas.  
   
   
 |Nombre de columna|Tipo de datos|Descripción|  

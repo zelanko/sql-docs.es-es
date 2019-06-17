@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9e8695c847e6c5efce1869d55ec68e17bdee5800
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62683982"
 ---
 # <a name="sptablevalidation-transact-sql"></a>sp_table_validation (Transact-SQL)
@@ -72,9 +72,9 @@ sp_table_validation [ @table = ] 'table'
   
 `[ @shutdown_agent = ] shutdown_agent` Si se está ejecutando el agente de distribución **sp_table_validation**, especifica si el agente de distribución debe cerrarse inmediatamente tras la finalización de la validación. *shutdown_agent* es **bit**, su valor predeterminado es **0**. Si **0**, el agente de replicación no se cierra. Si **1**, se produce el error 20578 y el agente de replicación se señala a apagar. Este parámetro se omite cuando **sp_table_validation** es ejecutado directamente por un usuario.  
   
-`[ @table_name = ] table_name` Es el nombre de tabla de la vista utilizada para los mensajes de salida. *table_name* es **sysname**, su valor predeterminado es **@table**.  
+`[ @table_name = ] table_name` Es el nombre de tabla de la vista utilizada para los mensajes de salida. *table_name* es **sysname**, su valor predeterminado es **@table** .  
   
-`[ @column_list = ] 'column_list'` Es la lista de columnas que se debe usar en la función de suma de comprobación. *column_list* es **nvarchar (4000)**, su valor predeterminado es null. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
+`[ @column_list = ] 'column_list'` Es la lista de columnas que se debe usar en la función de suma de comprobación. *column_list* es **nvarchar (4000)** , su valor predeterminado es null. Habilita la validación de artículos de mezcla para especificar una lista de columnas que excluya las columnas calculadas y de marca de tiempo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  Si realiza una validación de suma de comprobación y la suma de comprobación esperada es igual a la suma de comprobación en la tabla, **sp_table_validation** devuelve un mensaje que la tabla ha pasado la validación de suma de comprobación. De lo contrario, devuelve un mensaje que indica que la tabla puede no estar sincronizada e informa de la diferencia entre el número de filas real y el esperado.  

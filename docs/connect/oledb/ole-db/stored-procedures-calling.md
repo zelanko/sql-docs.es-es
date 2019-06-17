@@ -18,13 +18,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 6959aec6b60713ed22e138c44139e0581f6e0ac2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3221a4593bf3d7534c3f9def115e69edc3cfeb07
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47740633"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66795926"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -87,7 +87,7 @@ ms.locfileid: "47740633"
   
 -   Secuencia de escape RPC (llamada a procedimiento remoto).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.  
   
 ### <a name="odbc-call-escape-sequence"></a>Secuencia de escape ODBC CALL  
  Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función del asistente para buscar la información de parámetros del procedimiento almacenado.  
@@ -96,7 +96,7 @@ ms.locfileid: "47740633"
   
  La sintaxis general para llamar a un procedimiento utilizando la secuencia de escape ODBC CALL es la siguiente:  
   
- {[**? =**]**llamar**_procedimiento\_nombre_[**(**[*parámetro*] [**,** [_parámetro_]]... **)**]}  
+ {[ **? =** ]**llamar**_procedimiento\_nombre_[ **(** [*parámetro*] [ **,** [_parámetro_]]... **)** ]}  
   
  Por ejemplo:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "47740633"
 EXECUTE SalesByCategory 'Produce', '1995'  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados](../../oledb/ole-db/stored-procedures.md)  
   
   

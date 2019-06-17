@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d2cb929ffc3506d6dcb4a0745c53b47a45fdb469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62627824"
 ---
 # <a name="spmergearticlecolumn-transact-sql"></a>sp_mergearticlecolumn (Transact-SQL)
@@ -50,9 +50,9 @@ sp_mergearticlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Identifica las columnas que se va a crear la partición vertical. *columna* es **sysname**, su valor predeterminado es null. Si es NULL y `@operation = N'add'`, de manera predeterminada se agregan al artículo todas las columnas de la tabla de origen. *columna* no puede ser NULL cuando *operación* está establecido en **drop**. Para excluir las columnas de un artículo, ejecute **sp_mergearticlecolumn** y especifique *columna* y `@operation = N'drop'` para cada columna que se va a quitar de la especificada *artículo*.  
   
-`[ @operation = ] 'operation'` Es el estado de replicación. *operación* es **nvarchar (4)**, con el valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
+`[ @operation = ] 'operation'` Es el estado de replicación. *operación* es **nvarchar (4)** , con el valor predeterminado es ADD. **agregar** marca la columna para la replicación. **quitar** borra la columna.  
   
-`[ @schema_replication = ] 'schema_replication'` Especifica que un cambio de esquema se propagará cuando se ejecuta el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @schema_replication = ] 'schema_replication'` Especifica que un cambio de esquema se propagará cuando se ejecuta el agente de mezcla. *el argumento schema_replication* es **nvarchar (5)** , su valor predeterminado es False.  
   
 > [!NOTE]  
 >  Solo **FALSE** es compatible con *el argumento schema_replication*.  

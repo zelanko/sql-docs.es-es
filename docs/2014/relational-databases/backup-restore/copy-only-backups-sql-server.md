@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cba784ed6e81152e91b8320ac5e441187c07df9c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922136"
 ---
 # <a name="copy-only-backups-sql-server"></a>Copias de seguridad de solo copia (SQL Server)
@@ -52,14 +52,14 @@ ms.locfileid: "62922136"
   
 -   Para una copia de seguridad completa de solo copia:  
   
-     Base de datos de copia de seguridad *database_name* TO \<backup_device*>* ... WITH COPY_ONLY …  
+     Base de datos de copia de seguridad *database_name* TO \<backup_device *>* ... WITH COPY_ONLY …  
   
     > [!NOTE]  
     >  COPY_ONLY no tiene ningún efecto cuando se especifica con la opción DIFFERENTIAL.  
   
 -   Para una copia de seguridad de registros de solo copia:  
   
-     BACKUP LOG *database_name* TO *\<* backup_device*>* ... WITH COPY_ONLY …  
+     BACKUP LOG *database_name* TO *\<* backup_device *>* ... WITH COPY_ONLY …  
   
 ###  <a name="PowerShellProcedure"></a> Usar PowerShell  
   

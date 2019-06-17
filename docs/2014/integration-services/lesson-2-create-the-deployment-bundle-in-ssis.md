@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8ec7519a4ea203693e6520eee569639a3259215f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767517"
 ---
-# <a name="lesson-2-creating-the-deployment-bundle"></a>Lección 2: Crear el paquete de implementación
+# <a name="lesson-2-creating-the-deployment-bundle"></a>Lección 2: Creación del paquete de implementación
   En la [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md), ha creado el proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] denominado Deployment Tutorial, ha agregado paquetes y archivos auxiliares al proyecto y ha implementado configuraciones en paquetes.  
   
  En esta lección, creará el paquete de implementación, que es una carpeta que contiene los elementos que necesita para instalar paquetes en otro equipo. El paquete de implementación incluirá un manifiesto de implementación, copias de los paquetes y copias de los archivos auxiliares del proyecto Deployment Tutorial. El manifiesto de implementación enumera los paquetes, varios archivos y configuraciones en el paquete de implementación.  

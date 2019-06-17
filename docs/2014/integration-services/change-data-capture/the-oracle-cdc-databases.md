@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 35f07d23facba97288881d7ee3c011c368d4736a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771204"
 ---
 # <a name="the-oracle-cdc-databases"></a>Las bases de datos CDC de Oracle
@@ -107,7 +107,7 @@ ms.locfileid: "62771204"
   
  En la tabla siguiente se describen las opciones disponibles.  
   
-|Name|Default|Min|Max|Estático|Descripción|  
+|NOMBRE|Default|Min|Max|Estático|Descripción|  
 |----------|-------------|---------|---------|------------|-----------------|  
 |seguimiento|False|-|-|False|Valores disponibles:<br /><br /> **True**<br /><br /> **False**<br /><br /> **on**<br /><br /> **off**|  
 |cdc_update_state_interval|10|1|120|False|Tamaño (en kilobytes) de los fragmentos de memoria asignados para una transacción (una transacción puede asignar más de un fragmento). Vea la columna memory_limit en la tabla [cdc.xdbcdc_config](the-oracle-cdc-databases.md#bkmk_cdcxdbcdc_config) .|  

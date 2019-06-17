@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639522"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Administrar permisos en el almacenamiento de datos paralelos
@@ -62,7 +62,7 @@ En la lista siguiente se describen los permisos predeterminados:
   
 -   Cuando se crea un inicio de sesión mediante instrucciones using **CREATE LOGIN** instrucción, el inicio de sesión recibe el **CONNECT SQL** permiso Permitir el inicio de sesión para conectarse a SQL Server PDW.  
   
--   Cuando se crea un usuario de base de datos mediante el uso de la **CREATE USER** instrucción, el usuario recibe la **CONNECT ON DATABASE::**_< database_name >_ permiso, lo que permite el inicio de sesión para conectarse a esa base de datos como un usuario.  
+-   Cuando se crea un usuario de base de datos mediante el uso de la **CREATE USER** instrucción, el usuario recibe la **CONNECT ON DATABASE::** _< database_name >_ permiso, lo que permite el inicio de sesión para conectarse a esa base de datos como un usuario.  
   
 -   Todas las entidades, incluida la función pública, no tengan ningún permiso explícito o implícito de forma predeterminada porque se heredan permisos implícitos de los permisos explícitos. Por lo tanto, cuando no hay ningún permiso explícito, también no puede haber ningún permiso implícito.  
   

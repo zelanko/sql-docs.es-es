@@ -28,10 +28,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: dbbc884a32f892830ec4b7b66e3a67c45fc37416
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922569"
 ---
 # <a name="clr-hosted-environment"></a>Entorno hospedado CLR
@@ -125,7 +125,7 @@ ms.locfileid: "62922569"
 |Seguridad de acceso del código|Solo ejecución|Ejecución + acceso a recursos externos|No restringida|  
 |Restricciones del modelo de programación|Sí|Sí|Sin restricciones|  
 |Requisito de capacidad de comprobación|Sí|Sí|No|  
-|Capacidad de llamar a código nativo|No|No|Sí|  
+|Capacidad de llamar a código nativo|Sin|Sin|Sí|  
   
  SAFE es el modo más confiable y seguro, con restricciones asociadas relativas al modelo de programación permitido. Los ensamblados SAFE tienen permisos suficientes para la ejecución, realización de cálculos y obtención de acceso a la base de datos local. Los ensamblados SAFE deben tener capacidad para comprobar la seguridad de los tipos y no pueden llamar a código no administrado.  
   

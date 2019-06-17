@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e2b54bbbd6b989890c1d31a545c95117c4b6cbe2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109706"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
@@ -70,7 +70,7 @@ ms.locfileid: "66109706"
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)**.  
+11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)** .  
   
      Los puntos suspensivos **(...)** aparecen en la línea que contiene la primera cláusula.  
   
@@ -109,7 +109,7 @@ ms.locfileid: "66109706"
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>**.  
+     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>** .  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   

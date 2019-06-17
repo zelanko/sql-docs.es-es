@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a1ff35cfc7d5e8611c06981b2e3a9fe9dd6e82fd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62769001"
 ---
 # <a name="upgrade-integration-services-packages"></a>Actualizar paquetes de Integration Services
@@ -81,14 +81,14 @@ ms.locfileid: "62769001"
   
 -   DTExecUI.exe.config  
   
- Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, deberá modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >*: \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
+ Para usar [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] para diseñar paquetes que incluyen [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] componentes personalizados, deberá modificar el archivo devenv.exe.config que se encuentra en  *\<unidad >* : \Program Files\ Microsoft Visual Studio 10.0\Common7\IDE.  
   
  Para usar estos paquetes con aplicaciones cliente compiladas con el motor de ejecución para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], incluya reglas de redirección en la sección de configuración del archivo *.exe.config para el ejecutable. Las reglas redirigirán los ensamblados en tiempo de ejecución a la versión 11.0.0.0 ([!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]). Para obtener más información sobre la redirección de la versión de ensamblado, vea [Elemento \<assemblyBinding> para \<runtime>](https://msdn.microsoft.com/library/twy1dw1e.aspx).  
   
 ### <a name="locating-the-assemblies"></a>Buscar los ensamblados  
- En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>*:\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
+ En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] se actualizaron a .NET 4.0. Hay una memoria caché global de ensamblados diferente para .NET 4, que se encuentra en *\<unidad>* :\Windows\Microsoft.NET\assembly. Puede buscar todos los ensamblados de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] bajo esta ruta de acceso, normalmente en la carpeta GAC_MSIL.  
   
- Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también se encuentran en *\<unidad>*:\Archivos de programa\Microsoft SQL Server\100\SDK\Assemblies.  
+ Como ocurre en versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los archivos básicos de extensibilidad .dll de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] también se encuentran en *\<unidad>* :\Archivos de programa\Microsoft SQL Server\100\SDK\Assemblies.  
   
 ## <a name="understanding-sql-server-package-upgrade-results"></a>Descripción de los resultados de la actualización del paquete SQL Server  
  Durante el proceso de actualización del paquete, la mayoría de los componentes y características de los paquetes de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] se convierten sin problema en sus homólogos de la versión actual de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Sin embargo, hay varios componentes y características que no se actualizarán u obtendrán resultados en la actualización que habría que tener en cuenta. La tabla siguiente identifica estos componentes y características.  

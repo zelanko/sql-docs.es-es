@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee2142c117a2e46b024a7e2bd639e6739ffd00ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083671"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
@@ -75,10 +75,10 @@ ms.locfileid: "66083671"
 |Tipo de nodo|Descripción|  
 |---------------|-----------------|  
 |1 (Modelo)|Nodo raíz para el modelo.|  
-|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"**.|  
+|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"** .|  
 |3 (interior)|Encabezado de la bifurcación interior, que se encuentra dentro de un árbol de clasificación o de regresión.|  
 |4 (distribución)|Nodo hoja, que se encuentra dentro de un árbol de clasificación o de regresión.|  
-|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"**.|  
+|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"** .|  
   
  NODE_CAPTION  
  Nombre descriptivo que se utiliza para la visualización.  

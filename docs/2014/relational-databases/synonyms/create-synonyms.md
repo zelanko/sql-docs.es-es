@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e2a45cf4f34b73996b6ecbd4f9cbb5f5a902e760
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62854971"
 ---
 # <a name="create-synonyms"></a>Crear sinónimos
@@ -50,7 +50,7 @@ ms.locfileid: "62854971"
   
 1.  En el **Explorador de objetos**, expanda la base de datos donde desea crear la nueva vista.  
   
-2.  Haga clic con el botón derecho en la carpeta **Sinónimos** y después haga clic en **Nuevo sinónimo...**.  
+2.  Haga clic con el botón derecho en la carpeta **Sinónimos** y después haga clic en **Nuevo sinónimo...** .  
   
 3.  En el cuadro de diálogo **Agregar sinónimo** , escriba la siguiente información.  
   

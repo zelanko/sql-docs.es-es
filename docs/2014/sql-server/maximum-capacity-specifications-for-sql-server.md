@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 49e86c8b47a3a0de48a0138d96cec22d585901c6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62711450"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>Especificaciones de capacidad máxima para SQL Server
@@ -44,7 +44,7 @@ ms.locfileid: "62711450"
   
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] objeto|Tamaños o cifras máximas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (32 bits)|Tamaños o cifras máximas [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64 bits)|  
 |---------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|  
-|Tamaño del lote<br /><br /> Nota: El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS usados para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|65.536 * Tamaño de paquete de red|65.536 * Tamaño de paquete de red|  
+|Tamaño del lote<br /><br /> Nota: El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS usados para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|65\.536 * Tamaño de paquete de red|65\.536 * Tamaño de paquete de red|  
 |Bytes por columna de cadenas cortas|8,000|8,000|  
 |Bytes por GROUP BY y ORDER BY|8,060|8,060|  
 |Bytes por clave de índice<br /><br /> Nota: El número máximo de bytes de una clave de índice no puede superar los 900 en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Puede definir una clave utilizando columnas de longitud variable cuyos tamaños máximos sumen hasta más de 900, siempre que ninguna fila se haya insertado con más de 900 bytes de datos en dichas columnas. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], puede incluir columnas sin clave en un índice no clúster para evitar el tamaño máximo de clave de índice de 900 bytes.|900|900|  
@@ -79,7 +79,7 @@ ms.locfileid: "62711450"
 |Longitud del identificador (en caracteres)|128|128|  
 |Instancias por equipo|50 instancias en un servidor independiente para todas las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].<br /><br /> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite 25 instancias en una conmutación por error del clúster cuando se usa un disco de clúster compartido como opción de almacenamiento para que la instalación del clúster [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] recursos compartidos de archivos admite 50 instancias en una conmutación por error de clúster si elige SMB como opción de almacenamiento para la instalación del clúster Para obtener más información, consulte [requisitos de Hardware y Software para instalar SQL Server 2014](install/hardware-and-software-requirements-for-installing-sql-server.md).|50 instancias en un servidor independiente.<br /><br /> 25 instancias en un clúster de conmutación por error cuando se usa un disco de clúster compartido como opción de almacenamiento para la instalación del clúster; [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite 50 instancias en un clúster de conmutación por error si elige recursos compartidos de archivos SMB como opción de almacenamiento para la instalación del clúster.|  
 |Índices por tabla optimizada para memoria|No compatible|8|  
-|Longitud de una cadena que contiene instrucciones SQL (tamaño de lote)<br /><br /> Nota: El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS usados para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|65.536 * Tamaño de paquete de red|65.536 * Tamaño de paquete de red|  
+|Longitud de una cadena que contiene instrucciones SQL (tamaño de lote)<br /><br /> Nota: El tamaño del paquete de red es el tamaño de los paquetes de flujo TDS usados para la comunicación entre aplicaciones y el [!INCLUDE[ssDE](../includes/ssde-md.md)]relacional. El tamaño del paquete predeterminado es 4 KB y se controla mediante la opción de configuración Tamaño de paquete de red.|65\.536 * Tamaño de paquete de red|65\.536 * Tamaño de paquete de red|  
 |Bloqueos por conexión|Máximo de bloqueos por servidor|Máximo de bloqueos por servidor|  
 |Bloqueos por instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]<br /><br /> Nota: Este valor sirve para asignaciones de bloqueo estático. Los bloqueos dinámicos están limitados solo por la memoria.|Hasta 2.147.483.647|Limitado solo por la memoria|  
 |Niveles de procedimientos almacenados anidados<br /><br /> Nota: Si un procedimiento almacenado tiene acceso a más de 64 bases de datos o a más de 2 bases de datos en intercalación, recibirá un error.|32|32|  
@@ -116,7 +116,7 @@ ms.locfileid: "62711450"
 |Archivos de registro por base de datos|1|1|  
 |Volúmenes por equipo|3|3|  
   
- * El número máximo de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilidad puede variar según la configuración de hardware del servidor. Para obtener información de introducción, vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). El punto de control de la Utilidad de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
+ \* El número máximo de instancias administradas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] admite [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] utilidad puede variar según la configuración de hardware del servidor. Para obtener información de introducción, vea [Características y tareas de la utilidad de SQL Server](../relational-databases/manage/sql-server-utility-features-and-tasks.md). El punto de control de la Utilidad de[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ##  <a name="DAC"></a> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Objetos de aplicación de capa de datos  
  En la tabla siguiente se especifican los tamaños y la cantidad máxima de diversos objetos que se probaron en las aplicaciones de capa de datos (DAC) de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

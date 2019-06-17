@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013418"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
@@ -99,7 +99,7 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca del alcance del cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Ámbito|Descripción|  
+|Scope|Descripción|  
 |-----------|-----------------|  
 |Local|Especifica que el alcance del cursor es local para el proceso por lotes, procedimiento almacenado o desencadenador en que se creó el cursor.|  
 |Global|Especifica que el alcance del cursor es global para la conexión.|  

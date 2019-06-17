@@ -1,7 +1,7 @@
 ---
 title: Introducción a SQL Server (en Linux) en la nube
 titleSuffix: SQL Server
-description: En este tutorial rápido se muestra cómo ejecutar SQL Server en Linux en la nube de su elección.
+description: En este inicio rápido se muestra cómo ejecutar SQL Server en Linux en la nube que elija.
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
 ms.openlocfilehash: 3530436b08ae05e6e10a42720b47688f50077a27
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713561"
 ---
 # <a name="quickstart-run-sql-server-in-the-cloud"></a>Inicio rápido: Ejecute SQL Server en la nube

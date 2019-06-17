@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 31caafde6ea3cdd93355910f244ed5872b6990ff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635892"
 ---
 # <a name="sphelpserver-transact-sql"></a>sp_helpserver (Transact-SQL)
@@ -44,7 +44,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @server = ] 'server'` Es el servidor sobre qué información se notifica. Cuando *server* no se especifica, los informes sobre todos los servidores de **master.sys.servers**. *servidor* es **sysname**, su valor predeterminado es null.  
   
-`[ @optname = ] 'option'` Es la opción que describe el servidor. *opción* es **varchar (** 35 **)**, su valor predeterminado es null, y debe ser uno de estos valores.  
+`[ @optname = ] 'option'` Es la opción que describe el servidor. *opción* es **varchar (** 35 **)** , su valor predeterminado es null, y debe ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -60,7 +60,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 |**system**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Usar intercalación remota**|Usa la intercalación de una columna remota en lugar de la del servidor local.|  
   
-`[ @show_topology = ] 'show_topology'` Es la relación del servidor especificado a otros servidores. *show_topology* es **varchar (** 1 **)**, su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas que se muestran en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
+`[ @show_topology = ] 'show_topology'` Es la relación del servidor especificado a otros servidores. *show_topology* es **varchar (** 1 **)** , su valor predeterminado es null. Si *show_topology* no es igual a **t** o es NULL, **sp_helpserver** devuelve columnas que se muestran en la sección conjuntos de resultados. Si *show_topology* es igual a **t**, además de las columnas enumeradas en los conjuntos de resultados, **sp_helpserver** también devuelve **topx** y **topy** información.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error).  
@@ -86,7 +86,7 @@ sp_helpserver [ [ @server = ] 'server' ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-displaying-information-about-all-servers"></a>A. Presentar información acerca de todos los servidores  
- En este ejemplo se presenta información acerca de todos los servidores mediante el uso de `sp_helpserver` sin parámetros.    
+ En este ejemplo se presenta información acerca de todos los servidores mediante el uso de `sp_helpserver` sin parámetros.  
   
 ```  
 USE master;  

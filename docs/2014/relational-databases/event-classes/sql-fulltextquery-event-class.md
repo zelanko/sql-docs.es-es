@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5452b53bf6171b7e516f246972aa0d9d56e321a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63050755"
 ---
 # <a name="sqlfulltextquery-event-class"></a>SQL:FullTextQuery, clase de eventos
@@ -37,8 +37,8 @@ ms.locfileid: "63050755"
 |Duration|`bigint`|Tiempo necesario para finalizar la consulta de texto completo.|13|No|  
 |EndTime|`datetime`|Tiempo del evento terminado|15|Sí|  
 |Error|`int`|Número del mensaje de error.|31|Sí|  
-|EventClass|`int`|Tipo de evento registrado = 123.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|`int`|Tipo de evento registrado = 123.|27|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|`int`|Número de filas devueltas. Si la consulta devuelve un error, el valor es NULL. Si la consulta no devuelve ninguna fila, el valor es 0.|25|Sí|  
@@ -52,7 +52,7 @@ ms.locfileid: "63050755"
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|TextData|`nvarchar`|La parte de texto completo de la consulta enviada a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|1|No|  
+|TextData|`nvarchar`|La parte de texto completo de la consulta enviada a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|1|Sin|  
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
 |XactSequence|`bigint`|Token que describe la transacción actual.|50|Sí|  
   

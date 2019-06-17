@@ -42,10 +42,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 1a3e999975f13654a5f3c2f34a2325324c5a36ac
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770743"
 ---
 # <a name="transformation-custom-properties"></a>Propiedades personalizadas de transformación
@@ -263,7 +263,7 @@ ms.locfileid: "62770743"
 |Delimiters|String|Los delimitadores de token que la transformación utiliza. Los delimitadores predeterminados incluyen los caracteres siguientes: espacio ( ), coma (,), punto (.), punto y coma (;), dos puntos (:), guión (-), comillas rectas dobles ("), comillas rectas sencillas ('), y comercial (&), barra diagonal (/), barra diagonal inversa (\\), arroba (@), signo de exclamación (!), signo de interrogación (?), paréntesis de apertura ((), paréntesis de cierre ()), menor que (\<), mayor que (>), corchete de apertura ([), corchete de cierre (]), llave de apertura ({), llave de cierre (}), barra vertical (&#124;), signo de número (#), asterisco (*), símbolo de intercalación (^) y porcentaje (%).|  
 |Exhaustive|Boolean|Valor que especifica si cada registro de entrada se compara con el resto. El valor de `True` está destinado sobre todo a fines de depuración. El valor predeterminado de esta propiedad es `False`.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
 |MaxMemoryUsage|Integer|Cantidad de memoria máxima que puede usar la transformación. El valor predeterminado de esta propiedad es **0**, que habilita el uso de la memoria dinámica.<br /><br /> Puede especificar el valor de esta propiedad con una expresión de propiedad.<br /><br /> Nota: Esta propiedad no está disponible en **Editor de transformación Agrupación aproximada**, pero se puede definir con el **Editor avanzado**.|  
-|MinSimilarity|Doble|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
+|MinSimilarity|Double|Umbral de similitud que la transformación utiliza para identificar los duplicados, expresado como un valor entre 0 y 1.  El valor predeterminado de esta propiedad es 0.8.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de entrada de la transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  
   
@@ -272,7 +272,7 @@ ms.locfileid: "62770743"
 |ExactFuzzy|Integer (enumeración)|Valor que especifica si la transformación realiza una coincidencia aproximada o una coincidencia exacta. Los valores válidos son **Exacta** y **Aproximada**. El valor predeterminado de esta propiedad es **Aproximada**.|  
 |FuzzyComparisonFlags|Integer (enumeración)|Valor que especifica cómo compara la transformación los datos de cadena de una columna. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **FullySensitive**<br /><br /> **IgnoreCase**<br /><br /> **IgnoreKanaType**<br /><br /> **IgnoreNonSpace**<br /><br /> **IgnoreSymbols**<br /><br /> **IgnoreWidth**<br /><br /> <br /><br /> Para más información, consulte [Comparing String Data](../comparing-string-data.md).|  
 |LeadingTrailingNumeralsSignificant|Integer (enumeración)|Valor que especifica la importancia de los numerales. Esta propiedad admite cualquiera de los siguientes valores:<br /><br /> **LeadingNumeralsSignificant** (1): se usa si los números iniciales son significativos.<br /><br /> **TrailingNumeralsSignificant** (2): se usa si los números finales son significativos.<br /><br /> **LeadingAndTrailingNumeralsSignificant** (3): se usa si los números iniciales y finales son significativos.<br /><br /> **NumeralsNotSpecial** (0): se usa si los números no son significativos.|  
-|MinSimilarity|Doble|Umbral de similitud que se usa para la combinación en la columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
+|MinSimilarity|Double|Umbral de similitud que se usa para la combinación en la columna, especificado como un valor entre 0 y 1. Solo las filas mayores que el umbral se consideran coincidencias.|  
 |ToBeCleaned|Boolean|Valor que especifica si la columna se utiliza para identificar los duplicados; es decir, si se trata de una columna en la que está agrupando. El valor predeterminado de esta propiedad es `False`.|  
   
  En la tabla siguiente se describen las propiedades personalizadas de las columnas de salida de transformación Agrupación aproximada. Todas las propiedades son de lectura y escritura.  

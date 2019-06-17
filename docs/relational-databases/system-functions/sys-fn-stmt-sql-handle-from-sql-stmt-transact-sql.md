@@ -15,10 +15,10 @@ ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 049fb28c9d49dcfe359363e0be8d78ba8a4bca8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62744492"
 ---
 # <a name="sysfnstmtsqlhandlefromsqlstmt-transact-sql"></a>sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
@@ -40,7 +40,7 @@ sys.fn_stmt_sql_handle_from_sql_stmt
   
 ## <a name="arguments"></a>Argumentos  
  *query_sql_text*  
- Es el texto de la consulta en el que desea que el identificador de almacén de consultas. *query_sql_text* es un **nvarchar (max)**, no tiene ningún valor predeterminado.  
+ Es el texto de la consulta en el que desea que el identificador de almacén de consultas. *query_sql_text* es un **nvarchar (max)** , no tiene ningún valor predeterminado.  
   
  *query_param_type*  
  Es el tipo de parámetro de la consulta. *query_param_type* es un **tinyint**. Los valores posibles son:  

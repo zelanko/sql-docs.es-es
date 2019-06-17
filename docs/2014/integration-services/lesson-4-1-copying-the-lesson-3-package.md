@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c3a765f23b4bfcdd4d8f0ff84ac8d363424882bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767457"
 ---
-# <a name="step-1-copying-the-lesson-3-package"></a>Paso 1: Copiar el paquete de la lección 3
+# <a name="step-1-copying-the-lesson-3-package"></a>Paso 1: Copia del paquete de la lección 3
   En esta tarea, creará una copia del paquete que ha creado en la lección 3, denominado Lesson 3.dtsx. Por otra parte, si no ha completado la lección 3, puede agregar al proyecto el paquete completado de la lección 3 que se incluye con el tutorial y, a continuación, copiar dicho paquete para trabajar. Usará esta nueva copia en toda la lección 4.  
   
 ### <a name="to-create-the-lesson-4-package"></a>Para crear el paquete de la lección 4  
@@ -38,7 +38,7 @@ ms.locfileid: "62767457"
   
 7.  En la ventana Propiedades, actualice el `Name` propiedad `Lesson 4`.  
   
-8.  Haga clic en el cuadro para la **ID** propiedad y, a continuación, en la lista, haga clic en  **\<generar nuevo Id. >**.  
+8.  Haga clic en el cuadro para la **ID** propiedad y, a continuación, en la lista, haga clic en  **\<generar nuevo Id. >** .  
   
 ### <a name="to-add-the-completed-lesson-3-package"></a>Para agregar el paquete de la lección 3 completada  
   
@@ -48,7 +48,7 @@ ms.locfileid: "62767457"
   
 3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-4.  Haga clic en el botón Examinar **(…)**, busque Lesson 3.dtsx en el equipo y, después, haga clic en **Abrir**.  
+4.  Haga clic en el botón Examinar **(…)** , busque Lesson 3.dtsx en el equipo y, después, haga clic en **Abrir**.  
   
      Para descargar todos los paquetes de lecciones de este tutorial, haga lo siguiente.  
   

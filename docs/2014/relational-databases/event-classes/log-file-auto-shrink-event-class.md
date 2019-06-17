@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: eab2902600f26abfc0f714b231fcf1bb684f513b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662219"
 ---
 # <a name="log-file-auto-shrink-event-class"></a>Log File Auto Shrink, clase de eventos
@@ -36,8 +36,8 @@ ms.locfileid: "62662219"
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Duración**|**bigint**|Tiempo (en milisegundos) necesario para ampliar el archivo.|13|Sí|  
 |**EndTime**|**datetime**|Hora final de la **reducción automática** del archivo de registro.|18|Sí|  
-|**EventClass**|**int**|Tipo de evento = 95.|27|No|  
-|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 95.|27|Sin|  
+|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|Sin|  
 |**Nombre de archivo**|**nvarchar**|Nombre lógico del archivo que se va a ampliar.|36|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|**Int**|Número de páginas de 8 KB en las que se incrementa el archivo.|25|Sí|  

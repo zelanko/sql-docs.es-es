@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: d315ad6a-0d50-4093-80c2-2f11217237c2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40c6bbf04f0c1fc5f2b4e2e360a3fcce5a68c6f7
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 48c9955733672699e16cb4a00e28fa2f59717b80
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600475"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797087"
 ---
 # <a name="support-for-localdb"></a>Compatibilidad con LocalDB
 
@@ -78,6 +78,6 @@ $conn = new PDO( 'sqlsrv:server=(localdb)\\myInstance;'
 
 Para obtener instrucciones acerca de cómo instalar LocalDB, vea el [LocalDB documentación](../../database-engine/configure-windows/sql-server-2016-express-localdb.md). Si usa sqlcmd.exe para modificar datos en la instancia de LocalDB, necesitará el [utilidad sqlcmd](../../tools/sqlcmd-utility.md).
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión al servidor](../../connect/php/connecting-to-the-server.md)

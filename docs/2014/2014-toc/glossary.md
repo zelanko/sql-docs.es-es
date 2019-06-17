@@ -15,10 +15,10 @@ author: heidisteen
 ms.author: heidist
 manager: craigg
 ms.openlocfilehash: 334735c2ec9fc0573ed08bcc76b214a093394b6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504780"
 ---
 # <a name="glossary"></a>Glosario
@@ -466,8 +466,8 @@ ms.technology:
 |quitar de la cola|Quitar de una cola.|  
 |columna derivada|Transformación que crea nuevos valores de columna mediante la aplicación de expresiones a las columnas de entrada de transformación.|  
 |deserialización|Proceso de convertir un objeto de un formato de almacenamiento serie en un formato binario en forma de objeto que las aplicaciones pueden usar. Esto sucede cuando el objeto se recupera del clúster de caché con las API de cliente Get.|  
-|destino|Componente de flujo de datos SSIS que carga datos en almacenes de datos o crea conjuntos de datos en memoria.|  
-|destino|Proveedor de sincronización que proporciona su conocimiento actual, acepta una lista de cambios del proveedor de origen, detecta conflictos entre esa lista y sus propios elementos, y aplica cambios a su almacén de datos.|  
+|destination|Componente de flujo de datos SSIS que carga datos en almacenes de datos o crea conjuntos de datos en memoria.|  
+|destination|Proveedor de sincronización que proporciona su conocimiento actual, acepta una lista de cambios del proveedor de origen, detecta conflictos entre esa lista y sus propios elementos, y aplica cambios a su almacén de datos.|  
 |adaptador de destino|Componente de flujo de datos que carga datos en un almacén de datos.|  
 |proveedor de destino|Proveedor de sincronización que proporciona su conocimiento actual, acepta una lista de cambios del proveedor de origen, detecta conflictos entre esa lista y sus propios elementos, y aplica cambios a su almacén de datos.|  
 |detectar|Encontrar algo.|  
@@ -967,7 +967,7 @@ ms.technology:
 |Panel Mensajes|Una de las pestañas que hospedan los mensajes devueltos de SQL Server después de ejecutar una consulta de TSQL.|  
 |Interfaz de programación de aplicaciones de mensajería|Arquitectura de mensajería que permite que varias aplicaciones interactúen con varios sistemas de mensajería en una variedad de plataformas de hardware. MAPI se crea en la base del modelo de objetos componentes (COM).|  
 |metadatos|Información sobre las propiedades o estructura de datos que no forma parte de los valores que los datos contienen.|  
-|método|En la programación orientada a objetos, bloque de código con nombre que realiza una tarea cuando se le llama.|  
+|method|En la programación orientada a objetos, bloque de código con nombre que realiza una tarea cuando se le llama.|  
 |Microsoft Message Queue Server|Tecnología de Microsoft que habilita aplicaciones que se ejecutan en momentos diferentes para la comunicación en redes heterogéneas y sistemas que pueden estar temporalmente sin conexión.|  
 |algoritmo de clústeres de secuencia de Microsoft|Algoritmo que es una combinación de análisis de secuencia y clústeres que identifica clústeres de eventos ordenados de forma similar en una secuencia. Los clústeres se pueden usar para predecir la ordenación probable de eventos en una secuencia basándose en características conocidas.|  
 |Importación de datos de uso de Microsoft SharePoint Foundation|El trabajo de temporizador predeterminado para SharePoint Foundation que importa archivos de registro de uso en la base de datos de registro.|  
@@ -1399,7 +1399,7 @@ ms.technology:
 |instantánea de esquema|Instantánea que incluye el esquema de las tablas y los objetos publicados que requiere la replicación (desencadenadores, tablas de metadatos, etc.), pero no datos de usuario.|  
 |procesador compatible con esquemas|Perteneciente a un método de procesamiento basado en un esquema que define los elementos, atributos y tipos que se usarán para validar los documentos de entrada y salida.|  
 |ámbito|Hasta qué punto se puede hacer referencia a un identificador, como un objeto o una propiedad, dentro de un programa. El ámbito puede ser global para la aplicación o local para el documento activo.|  
-|ámbito|Conjunto de datos que están en proceso de sincronización.|  
+|scope|Conjunto de datos que están en proceso de sincronización.|  
 |memoria de script|Memoria local (RAM del lado cliente) que usa un script PHP.|  
 |panel de scripts|Parte del editor de texto del Diseñador de tablas.|  
 |crear script|Perteneciente a la automatización de acciones del usuario o la configuración de un estado estándar en un equipo por medio de scripts.|  
@@ -1430,7 +1430,7 @@ ms.technology:
 |relación en secuencia|Relación en un repositorio que especifica posiciones explícitas para cada objeto de destino de la colección de objetos de destino.|  
 |número de serie|Número asignó a un elemento de inventario concreto para identificarlo y diferenciarlo de elementos similares con el mismo número de elemento.|  
 |serialización|Proceso de convertir la información de estado de un objeto a un formato que se pueda almacenar o transportar. Durante la serialización, un objeto escribe su estado actual en el almacenamiento temporal o persistente. Más adelante se puede volver a crear el objeto al leer, o deserializar, el estado del objeto del almacenamiento.|  
-|servidores|Equipo que proporciona recursos compartidos, como archivos o impresoras, a los usuarios de red.|  
+|server|Equipo que proporciona recursos compartidos, como archivos o impresoras, a los usuarios de red.|  
 |intercalación del servidor|Intercalación de una instancia de SQL Server.|  
 |cursor de servidor|Cursor implementado en el servidor.|  
 |nombre de servidor|Nombre que identifica de forma exclusiva un equipo servidor en una red.|  

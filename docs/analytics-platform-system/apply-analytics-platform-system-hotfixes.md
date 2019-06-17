@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019050"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Aplicación de las revisiones de Analytics Platform System
@@ -32,7 +32,7 @@ Para llevar a cabo estos pasos, necesitará:
   
 -   Un inicio de sesión de Analytics Platform System con permisos para tener acceso a la consola de administración para supervisar el estado del dispositivo. <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
   
--   Conocimiento de la cuenta de administrador de dominio del tejido para conectarse a la _< nombreDeDominio >_**-HST01** nodo.  
+-   Conocimiento de la cuenta de administrador de dominio del tejido para conectarse a la _< nombreDeDominio >_ **-HST01** nodo.  
   
 ## <a name="HowToInstallPDW"></a>Para aplicar una revisión de Analytics Platform System  
 A diferencia de las actualizaciones de Microsoft, las revisiones para el software de Analytics Platform System no se controlan a través de WSUS. Tienen un flujo de trabajo diferentes y se instalan mediante la ejecución de un paquete de revisión.  

@@ -18,10 +18,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d829ef131bc8772ce2d84391513ffa52b2f2ff1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873739"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
@@ -42,7 +42,7 @@ ms.locfileid: "62873739"
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Conjuntos de permisos de nivel de directiva de host de SQL Server  
  El conjunto de permisos de seguridad de acceso del código que se concede a los ensamblados mediante el nivel de directiva de host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene determinado por el conjunto de permisos especificado al crear el ensamblado. Hay tres conjuntos de permisos: `SAFE`, `EXTERNAL_ACCESS` y `UNSAFE` (especificado mediante el **PERMISSION_SET** opción de[CREATE ASSEMBLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-assembly-transact-sql)) .  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  Esta directiva no está pensada para el dominio de aplicación predeterminado que estaría activo cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea una instancia de CLR.  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Esta directiva no está pensada para el dominio de aplicación predeterminado que estaría activo cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea una instancia de CLR.  
   
  El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] fixedpolicy para ensamblados del sistema y la directiva especificada por el usuario para ensamblados de usuario.  
   
@@ -108,9 +108,9 @@ ms.locfileid: "62873739"
 ||`SAFE`|`EXTERNAL_ACCESS`|`UNSAFE`|  
 |`Code Access Security Permissions`|Solo ejecución|Ejecución + acceso a recursos externos|Sin restringir (se incluye P/Invoke)|  
 |`Programming model restrictions`|Sí|Sí|Sin restricciones|  
-|`Verifiability requirement`|Sí|Sí|No|  
+|`Verifiability requirement`|Sí|Sí|Sin|  
 |`Local data access`|Sí|Sí|Sí|  
-|`Ability to call native code`|No|No|Sí|  
+|`Ability to call native code`|No|Sin|Sí|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración CLR](clr-integration-security.md)   

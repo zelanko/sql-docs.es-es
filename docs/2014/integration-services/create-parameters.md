@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 639e31d8ec9282a948a7eda9050cc1a2025ac65e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060140"
 ---
 # <a name="create-parameters"></a>Create Parameters
@@ -39,7 +39,7 @@ ms.locfileid: "66060140"
   
     |Property|Descripción|  
     |--------------|-----------------|  
-    |Name|Nombre del parámetro.|  
+    |NOMBRE|Nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  
@@ -73,7 +73,7 @@ ms.locfileid: "66060140"
   
     |Property|Descripción|  
     |--------------|-----------------|  
-    |NOMBRE|Nombre del parámetro.|  
+    |Name|Nombre del parámetro.|  
     |Tipo de datos|El tipo de datos del parámetro.|  
     |Valor predeterminado|Valor predeterminado para el parámetro asignado en tiempo de diseño. También se conoce como valor predeterminado de diseño.|  
     |Con distinción|Los valores de parámetros con distinción se cifran en el catálogo y aparecen como valor NULL cuando se ven con Transact-SQL o SQL Server Management Studio.|  

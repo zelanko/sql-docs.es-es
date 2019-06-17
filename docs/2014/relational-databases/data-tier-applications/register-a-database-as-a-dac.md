@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1b33e0d78dfe308c537ea5297b55415bce304474
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918149"
 ---
 # <a name="register-a-database-as-a-dac"></a>Registrar una base de datos como una DAC
@@ -69,7 +69,7 @@ ms.locfileid: "62918149"
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >**: avanza a la página **Definir propiedades**.  
+ **Siguiente >** : avanza a la página **Definir propiedades**.  
   
  **Cancelar** : sale del asistente sin registrar una DAC.  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62918149"
   
  **\< Anterior** -vuelve a la **Introducción** página.  
   
- **Siguiente >**: comprueba que se puede crear una DAC a partir de los objetos de la base de datos y muestra los resultados en la página **Validación y resumen**.  
+ **Siguiente >** : comprueba que se puede crear una DAC a partir de los objetos de la base de datos y muestra los resultados en la página **Validación y resumen**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
@@ -96,16 +96,16 @@ ms.locfileid: "62918149"
   
  **\< Anterior** -vuelve a la **Set Properties** página para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
 ### <a name="validating-objects"></a>Validar objetos  
- **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. _SchemaName_**.**_ObjectName_ identifican el objeto que se está comprobando.  
+ **Checking**  _SchemaName_ **.** _ObjectName_ **.** - Muestra una barra de progreso cuando el asistente comprueba las dependencias de los objetos recuperados y comprueba que son todos objetos válidos para una DAC. _SchemaName_ **.** _ObjectName_ identifican el objeto que se está comprobando.  
   
  **\< Anterior** -vuelve a la **Set Properties** página para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   
@@ -116,7 +116,7 @@ ms.locfileid: "62918149"
   
  **\< Anterior** -vuelve a la **Set Properties** página para cambiar las entradas.  
   
- **Siguiente >**: registra la DAC y muestra los resultados en la página **Registrar DAC**.  
+ **Siguiente >** : registra la DAC y muestra los resultados en la página **Registrar DAC**.  
   
  **Cancelar** : sale del asistente sin registrar la DAC.  
   

@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63313068"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (controlador ODBC de Visual FoxPro)
@@ -34,22 +34,22 @@ ms.locfileid: "63313068"
   
 |*Función*|Admitida|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|No|  
-|SQL_API_SQLCOLUMNPRIVELEGES|No|  
+|SQL_API_SQLBROWSECONNECT|Sin|  
+|SQL_API_SQLCOLUMNPRIVELEGES|Sin|  
 |SQL_API_SQLDATASOURCES|Sí|  
-|SQL_API_SQLDESCRIBEPARAM|No|  
+|SQL_API_SQLDESCRIBEPARAM|Sin|  
 |SQL_API_SQLDRIVERS|Sí|  
 |SQL_API_SQLEXTENDEDFETCH|Sí|  
 |SQL_API_SQLFOREIGNKEYS|No|  
 |SQL_API_SQLMORERESULTS|Sí|  
-|SQL_API_SQLNATIVESQL|No|  
+|SQL_API_SQLNATIVESQL|Sin|  
 |SQL_API_SQLNUMPARAMS|Sí|  
 |SQL_API_SQLPARAMOPTIONS|Sí|  
 |SQL_API_SQLPRIMARYKEYS|Sí|  
 |SQL_API_SQLPROCEDURECOLUMNS|No|  
-|SQL_API_SQLPROCEDURES|No|  
+|SQL_API_SQLPROCEDURES|Sin|  
 |SQL_API_SQLSETPOS|Sí|  
 |SQL_API_SQLSETSCROLLOPTIONS|Sí|  
-|SQL_API_SQLTABLEPRIVILEGES|No|  
+|SQL_API_SQLTABLEPRIVILEGES|Sin|  
   
  Para obtener más información, consulte [SQLGetFunctions](../../odbc/reference/syntax/sqlgetfunctions-function.md) en el *referencia del programador de ODBC*.

@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62688370"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
@@ -44,10 +44,10 @@ sp_table_privileges [ @table_name = ] 'table_name'
   
 ## <a name="arguments"></a>Argumentos  
  [ @table_name=] '*table_name*'  
- Es la tabla que se usa para devolver información de catálogo. *table_name* es **nvarchar (** 384 **)**, no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
+ Es la tabla que se usa para devolver información de catálogo. *table_name* es **nvarchar (** 384 **)** , no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
  [ @table_owner=] '*table_owner*'  
- Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
+ Es el propietario de la tabla de la tabla utilizada para devolver información del catálogo. *TABLE_OWNER*es **nvarchar (** 384 **)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si no se especifica el propietario, se aplican las reglas de visibilidad de tabla predeterminadas del DBMS subyacente.  
   
  Si el usuario actual posee una tabla con el nombre especificado, se devuelven las columnas de dicha tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *table_name* que pertenecen a la propietario de la base de datos. Si existe una, se devuelven las columnas de esa tabla.  
   

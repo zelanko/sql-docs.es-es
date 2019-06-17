@@ -120,7 +120,7 @@
           href: outer-join-operators-and-are-not-supported-in-90-or-later-compatibility-modes.md
         - name: No se pueden actualizar bases de datos de solo lectura
           href: read-only-databases-cannot-be-upgraded.md
-        - name: 'Quitar llamadas al comando desusado DBCC CONCURRENCYVIOLATION '
+        - name: Quitar llamadas al comando desusado DBCC CONCURRENCYVIOLATION
           href: remove-calls-to-the-deprecated-dbcc-concurrencyviolation-command.md
         - name: Quitar los dos puntos que siguen a las palabras claves reservadas
           href: remove-colon-following-reserved-keyword.md

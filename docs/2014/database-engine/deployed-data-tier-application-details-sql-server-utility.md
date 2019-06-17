@@ -19,10 +19,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0ca9186b93e96c60e1c5128e385b5b77d5f2b94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754112"
 ---
 # <a name="deployed-data-tier-application-details-sql-server-utility"></a>Detalles de la aplicación de capa de datos implementada (Utilidad de SQL Server)
@@ -40,7 +40,7 @@ ms.locfileid: "62754112"
   
  La secuencia de columnas en la vista de lista se puede cambiar, para ello arrastre las columnas hacia la izquierda o la derecha. En la vista de lista, se pueden agregar o eliminar columnas, para ello haga clic en los encabezados de columna y seleccione columnas o anule su selección. El menú contextual también proporciona opciones de ordenación. La capacidad de ordenación también se puede activar si hace clic en la parte superior del nombre de una columna.  
   
- Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)**. Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
+ Para tener acceso a las opciones de filtro para la vista de lista de la utilidad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , haga clic con el botón derecho en el nodo **Aplicaciones de capa de datos implementadas** en el panel de navegación del Explorador de Utilidad y seleccione **Filtro**. Una vez implementada la configuración del filtro, el nodo **Aplicaciones de capa de datos implementadas** en el Explorador de Utilidad se etiquetará con **Aplicaciones de capa de datos implementadas (filtradas)** . Para más información, consulte [Configuración del filtro &#40;Explorador de objetos y Explorador de Utilidad&#41;](../ssms/object/filter-settings-object-explorer-and-utility-explorer.md).  
   
  De forma predeterminada, las siguientes columnas muestran información sobre el estado de mantenimiento de cada aplicación de capa de datos.  
   

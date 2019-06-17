@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0faff73e9b823ab46073137e67c5dfc511404330
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404077"
 ---
 # <a name="lesson-4-7---defining-the-unknown-member-and-null-processing-properties"></a>Lección 4-7: definir el miembro desconocido y propiedades de procesamiento de valores Null
@@ -90,7 +90,7 @@ En las tareas de este tema, agregará los atributos de categoría de producto y 
   
 9. En el panel **Atributos** , cambie el nombre de este nuevo atributo por **Category**.  
   
-10. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
+10. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el ( **...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 11. Seleccione **EnglishProductCategoryName** en la lista **Columna de origen** y haga clic en **Aceptar**.  
   

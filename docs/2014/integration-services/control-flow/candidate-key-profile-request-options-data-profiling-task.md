@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d682bacdc2bce10a118190108a2237419d4b9e27
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832961"
 ---
 # <a name="candidate-key-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de claves candidatas (tarea de generación de perfiles de datos)
@@ -34,7 +34,7 @@ ms.locfileid: "62832961"
   
 -   Al seleccionar varias columnas en **KeyColumns**, la tarea calcula el nivel de clave de la clave compuesta que consta de todas las columnas seleccionadas.  
   
--   Al seleccionar el carácter comodín, **(\*)**, en **KeyColumns**, la tarea calcula el nivel de clave de cada columna de la tabla o vista.  
+-   Al seleccionar el carácter comodín, **(\*)** , en **KeyColumns**, la tarea calcula el nivel de clave de cada columna de la tabla o vista.  
   
  Por ejemplo, considere una tabla de ejemplo que contiene las columnas A, B y C. Realiza las selecciones siguientes para **KeyColumns**:  
   
@@ -76,12 +76,12 @@ ms.locfileid: "62832961"
  Muestra el nombre de la tabla seleccionada. Esta opción es de solo lectura.  
   
 #### <a name="keycolumns-options"></a>Opciones de KeyColumns  
- Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)**.  
+ Las opciones siguientes se presentan para cada columna seleccionada para la generación de perfiles en **KeyColumns** o para la opción **(\*)** .  
   
  Para obtener más información, vea la sección "Selección de columnas para la propiedad KeyColumns" anteriormente en este tema.  
   
  **IsWildcard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
  Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  

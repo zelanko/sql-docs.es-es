@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3657e45d18ac84ad737a016150692730f736b55f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917720"
 ---
 # <a name="database-mail-messaging-objects"></a>Objetos de mensajería de Correo electrónico de base de datos
@@ -32,7 +32,7 @@ ms.locfileid: "62917720"
   
  Estos objetos son la interfaz del Correo electrónico de base de datos en la base de datos host de correo. Hay instalados otros objetos para implementar las funciones proporcionadas por los objetos enumerados anteriormente. Sin embargo, dichos objetos están reservados para uso interno.  
   
-|Name|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |----------|----------|-----------------|  
 |[sysmail_allitems &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-allitems-transact-sql)|`View`|Enumera todos los mensajes enviados al Correo electrónico de base de datos.|  
 |[sysmail_event_log &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sysmail-event-log-transact-sql)|`View`|Enumera los mensajes acerca del comportamiento del [Database Mail External Program](database-mail-external-program.md).|  

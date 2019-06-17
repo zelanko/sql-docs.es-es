@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9c94117f277f0d058bd67c61e8dabc609d009337
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107634"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
@@ -25,7 +25,7 @@ ms.locfileid: "66107634"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Guardar un informe en un servidor de informes  
   
-1.  Desde el botón Generador de informes, haga clic en **Guardar**. El **Guardar como**_\<elemento de informe\>_  abre el cuadro de diálogo.  
+1.  Desde el botón Generador de informes, haga clic en **Guardar**. El **Guardar como** _\<elemento de informe\>_  abre el cuadro de diálogo.  
   
     > [!NOTE]  
     >  Si vuelve a guardar un informe, automáticamente se guarda en su ubicación anterior. Utilice la opción Guardar como para cambiar la ubicación.  
@@ -40,7 +40,7 @@ ms.locfileid: "66107634"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para guardar un informe con un nombre diferente  
   
-1.  En el botón Generador de informes, haga clic en **Guardar como**. El **Guardar como**_\<elemento de informe\>_  abre el cuadro de diálogo.  
+1.  En el botón Generador de informes, haga clic en **Guardar como**. El **Guardar como** _\<elemento de informe\>_  abre el cuadro de diálogo.  
   
 2.  Vaya a la ubicación del servidor de informes o al recurso compartido de archivos donde desea guardar el informe.  
   

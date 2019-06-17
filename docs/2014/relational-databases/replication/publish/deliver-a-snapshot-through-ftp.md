@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d1a8989492c9efb670b00bda00dbfa757c549fca
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960069"
 ---
 # <a name="deliver-a-snapshot-through-ftp"></a>Entregar una instantánea mediante FTP
@@ -40,11 +40,11 @@ ms.locfileid: "62960069"
  Cuando sea posible, pida a los usuarios que proporcionen sus credenciales en tiempo de ejecución. Si almacena las credenciales en un archivo de script, debe proteger el archivo.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Una vez configurado el servidor de FTP, especifique el directorio y la información de seguridad para este servidor en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
+ Una vez configurado el servidor de FTP, especifique el directorio y la información de seguridad para este servidor en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md).  
   
 #### <a name="to-specify-ftp-information"></a>Para especificar la información de FTP  
   
-1.  En el cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione **Permitir a los suscriptores descargar archivos de instantánea usando FTP (Protocolo de transferencia de archivos)** en una de las páginas siguientes:   
+1.  En el cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione **Permitir a los suscriptores descargar archivos de instantánea usando FTP (Protocolo de transferencia de archivos)** en una de las páginas siguientes:   
     -   La página **Instantánea de FTP** , para las publicaciones transaccionales y de instantáneas, y las publicaciones de combinación para los publicadores que ejecuten versiones anteriores a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)].    
     -   La página **Instantánea de FTP e Internet** , para las publicaciones de combinación de los publicadores que ejecuten [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o posterior.    
 2.  Especifique valores para **Nombre del servidor FTP**, **Número de puerto**, **Ruta de acceso de la carpeta raíz del servidor FTP**, **Inicio de sesión**y **Contraseña**.    
@@ -53,7 +53,7 @@ ms.locfileid: "62960069"
     -   La ubicación de instantáneas predeterminada en el distribuidor asociado con esta publicación.    
          Para obtener más información acerca de cómo especificar la ubicación predeterminada de instantáneas, vea [especificar la ubicación predeterminada de instantáneas](../snapshot-options.md#snapshot-folder-locations).    
     -   Una carpeta de instantáneas alternativa para esta publicación. Se necesita una ubicación alternativa si la instantánea está comprimida.    
-         Escriba la ruta de acceso en el cuadro de texto **Poner los archivos en la siguiente carpeta**, situado en la página Instantánea del cuadro de diálogo **Propiedades de la publicación: \<publicación>**.   
+         Escriba la ruta de acceso en el cuadro de texto **Poner los archivos en la siguiente carpeta**, situado en la página Instantánea del cuadro de diálogo **Propiedades de la publicación: \<publicación>** .   
 4.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -61,7 +61,7 @@ ms.locfileid: "62960069"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-snapshot-or-transactional-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del Publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especificar **@publication**, un valor de `true` para **@enabled_for_internet**y los valores adecuados para los parámetros siguientes:    
+1.  En la base de datos de publicación del Publicador, ejecute [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especificar **@publication** , un valor de `true` para **@enabled_for_internet** y los valores adecuados para los parámetros siguientes:    
     -   **@ftp_address** : la dirección del servidor FTP usada para entregar la instantánea    
     -   (Opcional) **@ftp_port** : el puerto usado por el servidor FTP    
     -   (Opcional) **@ftp_subdirectory** : el subdirectorio del directorio FTP predeterminado asignado a un inicio de sesión de FTP. Por ejemplo, si el directorio raíz del servidor de FTP es \\\servidorFTP\inicio y desea almacenar las instantáneas en \\\servidorFTP\inicio\instantáneas, especifique **\instantáneas\ftp** para **@ftp_subdirectory** (la replicación anexa "ftp" a la ruta de acceso de la carpeta de instantáneas al crear los archivos de instantáneas).    
@@ -72,7 +72,7 @@ ms.locfileid: "62960069"
   
 #### <a name="to-enable-ftp-snapshot-delivery-for-a-merge-publication"></a>Para habilitar la entrega de instantáneas a través de FTP para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especificar **@publication**, un valor de `true` para **@enabled_for_internet** y los valores adecuados para los parámetros siguientes:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergepublication](/sql/relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql). Especificar **@publication** , un valor de `true` para **@enabled_for_internet** y los valores adecuados para los parámetros siguientes:  
   
     -   **@ftp_address** : la dirección del servidor FTP usada para entregar la instantánea    
     -   (Opcional) **@ftp_port** : el puerto usado por el servidor FTP    
@@ -84,21 +84,21 @@ ms.locfileid: "62960069"
   
 #### <a name="to-create-a-pull-subscription-to-a-snapshot-or-transactional-publication-that-uses-ftp-snapshot-delivery"></a>Para crear una suscripción de extracción a una publicación transaccional o de instantáneas que usa la entrega de instantáneas a través de FTP  
   
-1.  En el publicador de la base de datos de suscripciones, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Especifique **@publisher** y **@publication**.  
+1.  En el publicador de la base de datos de suscripciones, ejecute [sp_addpullsubscription](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql). Especifique **@publisher** y **@publication** .  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especificar **@publisher**, **@publisher_db**, **@publication**, el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenciales de Windows con las que el agente de distribución en el Suscriptor que se ejecuta para **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Especificar **@publisher** , **@publisher_db** , **@publication** , el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] credenciales de Windows con las que el agente de distribución en el Suscriptor que se ejecuta para **@job_login** y **@job_password** y un valor de `true` para **@use_ftp** .  
   
 2.  En la base de datos de publicación del publicador, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql) para registrar la suscripción de extracción. Para obtener más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### <a name="to-create-a-pull-subscription-to-a-merge-publication-that-uses-ftp-snapshot-delivery"></a>Para crear una suscripción de extracción a una publicación de combinación que use la entrega de instantáneas a través de FTP  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique **@publisher** y **@publication**.   
-2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Especificar **@publisher**, **@publisher_db**, **@publication**, las credenciales de Windows bajo la que se ejecuta el agente de distribución en el suscriptor para **@job_login** y **@job_password**y un valor de `true` para **@use_ftp**.    
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql). Especifique **@publisher** y **@publication** .   
+2.  En el suscriptor de la base de datos de suscripciones, ejecute [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql). Especificar **@publisher** , **@publisher_db** , **@publication** , las credenciales de Windows bajo la que se ejecuta el agente de distribución en el suscriptor para **@job_login** y **@job_password** y un valor de `true` para **@use_ftp** .    
 3.  En la base de datos de publicación del publicador, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql) para registrar la suscripción de extracción. Para obtener más información, consulte [Create a Pull Subscription](../create-a-pull-subscription.md).  
   
 #### <a name="to-change-one-or-more-ftp-snapshot-delivery-settings-for-a-snapshot-or-transactional-publication"></a>Para cambiar una o más configuraciones de entrega de instantáneas a través de FTP para una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value**:    
+1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value** :    
     -   `ftp_address`: la dirección del servidor FTP usada para entregar la instantánea    
     -   `ftp_port`: el puerto usado por el servidor FTP    
     -   `ftp_subdirectory`: el subdirectorio del directorio FTP predeterminado usado para la instantánea de FTP    
@@ -106,11 +106,11 @@ ms.locfileid: "62960069"
     -   `ftp_password`: la contraseña del inicio de sesión de FTP  
   
 2.  (Opcional) Repita el paso 1 para cada configuración de FTP que se está cambiando.    
-3.  (Opcional) Para deshabilitar la entrega de instantáneas a través de FTP, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `enabled_for_internet` para **@property** y un valor de `false` para **@value**.  
+3.  (Opcional) Para deshabilitar la entrega de instantáneas a través de FTP, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `enabled_for_internet` para **@property** y un valor de `false` para **@value** .  
   
 #### <a name="to-change-ftp-snapshot-delivery-settings-for-a-merge-publication"></a>Para cambiar la configuración de entrega de instantáneas a través de FTP para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value**:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql). Especifique uno de los siguientes valores para **@property** y un nuevo valor de esta configuración para **@value** :  
   
     -   `ftp_address`: la dirección del servidor FTP usada para entregar la instantánea    
     -   `ftp_port`: el puerto usado por el servidor FTP    
@@ -118,7 +118,7 @@ ms.locfileid: "62960069"
     -   `ftp_login`: un inicio de sesión para conectar al servidor de FTP    
     -   `ftp_password`: la contraseña del inicio de sesión de FTP    
 2.  (Opcional) Repita el paso 1 para cada configuración de FTP que se está cambiando.    
-3.  (Opcional) Para deshabilitar la entrega de instantáneas a través de FTP, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `enabled_for_internet` para **@property** y un valor de `false` para **@value**.  
+3.  (Opcional) Para deshabilitar la entrega de instantáneas a través de FTP, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql) en el Publicador de la base de datos de publicación. Especifique un valor de `enabled_for_internet` para **@property** y un valor de `false` para **@value** .  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El ejemplo siguiente crea una publicación de combinación que permite a los Suscriptores tener acceso a los datos de instantánea usando FTP. El suscriptor debe usar una conexión VPN segura al obtener acceso al recurso compartido de FTP. Las variables de scripting de**sqlcmd** se usan para proporcionar valores de inicio de sesión y de contraseña. Para obtener más información, vea [Usar sqlcmd con variables de script](../../scripting/sqlcmd-use-with-scripting-variables.md).  

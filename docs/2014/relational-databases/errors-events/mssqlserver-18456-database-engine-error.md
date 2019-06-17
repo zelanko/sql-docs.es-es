@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f37f2ce9ec367d136eb853ce3bffe81f22b2dc4e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62869600"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
@@ -88,7 +88,7 @@ ms.locfileid: "62869600"
 ## <a name="examples"></a>Ejemplos  
  En este ejemplo, el estado de error de autenticación es 8. Esto indica que la contraseña no es correcta.  
   
-|date|Source|de mensaje|  
+|date|`Source`|de mensaje|  
 |----------|------------|-------------|  
 |2007-12-05 20:12:56.34|Inicio de sesión|Error: 18456, gravedad: 14, estado: 8.|  
 |2007-12-05 20:12:56.34|Inicio de sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [Cliente: \<dirección ip >]|  

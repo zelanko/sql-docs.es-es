@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a872057f354b289d65a6a3a730e3a63afd7af0d4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782319"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine-sql-server-configuration-manager"></a>Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)
@@ -37,7 +37,7 @@ ms.locfileid: "62782319"
  El cliente debe ser capaz de comprobar la propiedad del certificado utilizado por el servidor. Si el cliente tiene el certificado de clave pública de la entidad de certificación que firmó el certificado del servidor, no es necesario realizar una mayor configuración. [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows incluye los certificados de clave pública de muchas entidades de certificación. Si el certificado del servidor lo firmó una entidad de certificación pública o privada para la que el cliente no tiene certificado de clave pública, debe instalar el certificado de clave pública de esta entidad de certificación.  
   
 > [!NOTE]  
->  Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son test1.*\<su empresa>*.com y test2.*\<su empresa>*.com y un servidor virtual llamado virtsql, deberá instalar un certificado para virtsql.*\<su empresa>*.com en ambos nodos. Puede establecer el valor de la opción **ForceEncryption**en **Sí**.  
+>  Si desea utilizar el cifrado con un clúster de conmutación por error, debe instalar el certificado del servidor con el nombre DNS completo del servidor virtual en todos los nodos del clúster de conmutación por error. Por ejemplo, si tiene un clúster con dos nodos cuyos nombres son test1. *\<su empresa>* .com y test2. *\<su empresa>* .com y un servidor virtual llamado virtsql, deberá instalar un certificado para virtsql. *\<su empresa>* .com en ambos nodos. Puede establecer el valor de la opción **ForceEncryption**en **Sí**.  
   
  **En este tema**  
   
@@ -85,7 +85,7 @@ ms.locfileid: "62782319"
   
 1.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** _\<instancia de servidor>_ y, después, seleccione **Propiedades**.  
   
-2.  En el **protocolos de**_\<nombre de instancia >_ **propiedades** cuadro de diálogo el **certificado** ficha, seleccione el desea certificado en el menú desplegable para la **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
+2.  En el **protocolos de** _\<nombre de instancia >_ **propiedades** cuadro de diálogo el **certificado** ficha, seleccione el desea certificado en el menú desplegable para la **certificado** cuadro y, a continuación, haga clic en **Aceptar**.  
   
 3.  En la pestaña **Marcas** , en el cuadro **ForceEncryption** , seleccione **Sí**y, a continuación, haga clic en **Aceptar** para cerrar el cuadro de diálogo.  
   

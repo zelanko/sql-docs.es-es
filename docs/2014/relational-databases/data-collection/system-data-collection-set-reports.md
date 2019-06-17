@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 39bd24414e2382557a22469da502bad91abe20b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873413"
 ---
 # <a name="system-data-collection-set-reports"></a>Informes de conjuntos de recopilación de datos del sistema
@@ -56,7 +56,7 @@ ms.locfileid: "62873413"
  La tabla debajo del gráfico muestra las horas de la recopilación de datos y los datos de uso correspondientes.  
   
 #### <a name="disk-usage-for-database-databasename-subreport"></a>Subinforme Uso de disco para la base de datos : <nombre_de_base_de_datos>  
- El subinforme **Uso de disco para la base de datos:**_<nombre_de_base_de_datos>_ se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
+ El subinforme **Uso de disco para la base de datos:** _<nombre_de_base_de_datos>_ se muestra al hacer clic en un nombre de base de datos de la tabla de resumen del informe Conjunto de recopilación de uso de disco. Este informe proporciona un desglose numérico y gráfico del uso de espacio de los archivos del registro de transacciones y de datos. El uso de espacio de los archivos de datos se categoriza como un porcentaje asignado a las páginas de índice, el espacio sin asignar, a los datos y al espacio sin usar. Estas categorías se definen como se indica a continuación:  
   
 |Category|Definición|  
 |--------------|----------------|  

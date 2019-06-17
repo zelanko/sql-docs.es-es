@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae6b6602d7968bb444dcf4838537bb000b97dd53
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63278258"
 ---
 # <a name="or-mdx"></a>OR (MDX)
@@ -44,9 +44,9 @@ Expression1 OR Expression2
 |*Expression1*|*Expression2*|Valor devuelto|  
 |-------------------|-------------------|------------------|  
 |**true**|**true**|**true**|  
-|**true**|**False**|**true**|  
-|**False**|**true**|**true**|  
-|**False**|**False**|**False**|  
+|**true**|**false**|**true**|  
+|**false**|**true**|**true**|  
+|**false**|**false**|**false**|  
   
 ## <a name="example"></a>Ejemplo  
  La siguiente consulta contiene una medida calculada que devuelve la cadena "MARRIED OR MALE" si el miembro actual en la jerarquía Gender de la dimensión Customer es Male o el miembro actual en la jerarquía Marital Status de la dimensión Customer es Married; en caso contrario, devuelve la cadena "UNMARRIEDA o FEMALE".  

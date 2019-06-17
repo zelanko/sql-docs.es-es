@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: c050efd2f309ccec76b80fd24b519e7d2389e4ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126079"
 ---
 # <a name="add-a-data-source-odbc"></a>Agregar un origen de datos (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126079"
   
 ### <a name="to-add-a-data-source-by-using-odbc-administrator"></a>Para agregar un origen de datos mediante el Administrador ODBC  
   
-1.  Desde el **Panel de Control**, acceso **herramientas administrativas** y, a continuación, **orígenes de datos (ODBC)**. De modo alternativo, puede invocar odbcad32.exe.  
+1.  Desde el **Panel de Control**, acceso **herramientas administrativas** y, a continuación, **orígenes de datos (ODBC)** . De modo alternativo, puede invocar odbcad32.exe.  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** pestaña y, a continuación, haga clic en **agregar**.  
   

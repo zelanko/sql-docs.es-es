@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fba97c2e348b238702206ebf194c2390f155ad16
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62834660"
 ---
 # <a name="the-cdc-designer-console-introduction"></a>Introducción a la Consola del diseñador CDC
@@ -56,7 +56,7 @@ ms.locfileid: "62834660"
   
 -   Cliente Oracle 11.x  
   
- **Tenga en cuenta**: Debe usar la versión de 32 bits o 64 bits de este software según la versión de la consola del diseñador CDC de Oracle instalada.  
+ **Nota**: Debe usar la versión de 32 bits o 64 bits de este software según la versión de la consola del diseñador CDC de Oracle instalada.  
   
  La Consola del diseñador CDC de Oracle emplea el proveedor ODBC de Oracle para comunicarse con la base de datos de Oracle de origen.  
   

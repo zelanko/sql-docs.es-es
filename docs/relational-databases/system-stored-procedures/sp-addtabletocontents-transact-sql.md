@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 991ee7139ae4a323a1d426d1882e4f6b3a4df871
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63049730"
 ---
 # <a name="spaddtabletocontents-transact-sql"></a>sp_addtabletocontents (Transact-SQL)
@@ -44,7 +44,7 @@ sp_addtabletocontents [ @table_name = ] 'table_name'
   
 `[ @owner_name = ] 'owner_name'` Es el nombre del propietario de la tabla. *owner_name* es **sysname**, su valor predeterminado es null.  
   
-`[ @filter_clause = ] 'filter_clause'` Especifica una cláusula de filtro que controla qué filas de datos recientemente cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es **nvarchar (4000)**, su valor predeterminado es null. Si *filter_clause* es **null**, masiva todas las filas cargadas se agregan.  
+`[ @filter_clause = ] 'filter_clause'` Especifica una cláusula de filtro que controla qué filas de datos recientemente cargados deben agregarse a las tablas de seguimiento de mezcla. *filter_clause* es **nvarchar (4000)** , su valor predeterminado es null. Si *filter_clause* es **null**, masiva todas las filas cargadas se agregan.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

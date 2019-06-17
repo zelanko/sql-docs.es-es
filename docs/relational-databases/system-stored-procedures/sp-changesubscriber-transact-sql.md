@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1f31a00e0c42bc56dffac191ff9a934bb77b95df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997803"
 ---
 # <a name="spchangesubscriber-transact-sql"></a>sp_changesubscriber (Transact-SQL)
@@ -63,7 +63,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @login = ] 'login'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Id. de inicio de sesión de autenticación. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
-`[ @password = ] 'password'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *contraseña* es **sysname**, su valor predeterminado es **%**. **%** indica que no hay ningún cambio en la propiedad de contraseña.  
+`[ @password = ] 'password'` Es el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] contraseña de autenticación. *contraseña* es **sysname**, su valor predeterminado es **%** . **%** indica que no hay ningún cambio en la propiedad de contraseña.  
   
 `[ @commit_batch_size = ] commit_batch_size` Se admiten por razones de compatibilidad.  
   
@@ -117,7 +117,7 @@ sp_changesubscriber [ @subscriber= ] 'subscriber'
   
 `[ @active_end_date = ] active_end_date` Es la fecha en la tarea de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date*es **int**, su valor predeterminado es null.  
   
-`[ @description = ] 'description'` Es una descripción opcional. *descripción* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` Es una descripción opcional. *descripción* es **nvarchar (255)** , su valor predeterminado es null.  
   
 `[ @security_mode = ] security_mode` Es el modo de seguridad implementado. *security_mode* es **int**, y puede tener uno de estos valores.  
   

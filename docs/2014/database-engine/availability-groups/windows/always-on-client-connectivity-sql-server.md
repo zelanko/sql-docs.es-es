@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62790664"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividad de cliente de AlwaysOn (SQL Server)
@@ -36,14 +36,14 @@ ms.locfileid: "62790664"
 |Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de múltiples subredes: Más rápida una sola conmutación por error de punto de conexión de subred|Conmutación por error de múltiples subredes: Las instancias en clúster de resolución de instancias con nombre para SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sí|Sí|Sí|Sí|Sí|  
-|SQL Native Client 11.0 OLEDB|No|Sí|Sí|No|No|  
-|ADO.NET con .NET Framework 4.0 con revisión de conectividad**<sup>*</sup>**|Sí|Sí|Sí|Sí|Sí|  
-|ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **<sup>**</sup>**|Sí|Sí|Sí|Sí|Sí|  
+|SQL Native Client 11.0 OLEDB|Sin|Sí|Sí|No|Sin|  
+|ADO.NET con .NET Framework 4.0 con revisión de conectividad **<sup>*</sup>**|Sí|Sí|Sí|Sí|Sí|  
+|ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **<sup>** </sup>**|Sí|Sí|Sí|Sí|Sí|  
 |Controlador JDBC 4.0 de Microsoft para SQL Server|Sí|Sí|Sí|Sí|Sí|  
   
  **<sup>*</sup>**  Descargar la revisión de conectividad para ADO .NET con .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  
   
- **<sup>**</sup>** Descargar la revisión de conectividad para ADO.NET con .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
+ **<sup>** </sup>** Descargar la revisión de conectividad para ADO.NET con .NET Framework 3.5 SP1: [ https://support.microsoft.com/kb/2654347 ](https://support.microsoft.com/kb/2654347).  
   
 > [!IMPORTANT]  
 >  Para conectarse a un agente de escucha del grupo de disponibilidad, los clientes deben usar una cadena de conexión de TCP.  

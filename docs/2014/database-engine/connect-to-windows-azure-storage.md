@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3525f28864c3260bd2b50d98f441f6ed5072accb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808576"
 ---
 # <a name="connect-to-windows-azure-storage"></a>Conectar a Azure Storage
@@ -29,7 +29,7 @@ ms.locfileid: "62808576"
   
 2.  **Clave de cuenta** : especifique la clave de cuenta para la cuenta de almacenamiento especificada.  
   
-3.  **Usar puntos de conexión seguros (HTTPS)**: esta opción usa la comunicación cifrada y el identificador seguro de un servidor web de la red.  
+3.  **Usar puntos de conexión seguros (HTTPS)** : esta opción usa la comunicación cifrada y el identificador seguro de un servidor web de la red.  
   
 4.  **Guardar clave de cuenta** : esta opción guarda su contraseña en un archivo cifrado.  
   

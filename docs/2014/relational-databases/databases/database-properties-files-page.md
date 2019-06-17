@@ -13,14 +13,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 36b0d8b5d91b18ad4b97ac873ad3073ca97b133e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871991"
 ---
 # <a name="database-properties-files-page"></a>Propiedades de la base de datos (página Archivos)
-  Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)**.  
+  Utilice esta página para crear una nueva base de datos o para ver o modificar las propiedades de la base de datos seleccionada. Este tema se aplica a **Propiedades de la base de datos (página Archivos)** de las bases de datos existentes y a **Nueva base de datos (página General)** .  
   
 ## <a name="uielement-list"></a>Lista de UIElement  
  **Nombre de la base de datos**  

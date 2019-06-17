@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d440aace866527797252b67e3b397cc76d7dbdc7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62787981"
 ---
 # <a name="use-the-fail-over-availability-group-wizard-sql-server-management-studio"></a>Usar el Asistente para grupo de disponibilidad de conmutación por error (SQL Server Management Studio)
@@ -81,7 +81,7 @@ ms.locfileid: "62787981"
   
 4.  La información que muestra la página **Introducción** depende de si la réplica secundaria es válida para una conmutación por error planeada. Si en esta página pone "**Realice una conmutación por error planeada para este grupo de disponibilidad**", puede realizar la conmutación por error en el grupo de disponibilidad sin perder datos.  
   
-5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de conmutación por error este valor será "**Pérdida de datos, Advertencias(***#***)**", donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de conmutación por error determinado, haga clic en su valor "Preparación para la conmutación por error".  
+5.  En la página **Seleccione la nueva réplica principal** , puede ver el estado de la réplica principal actual y del cuórum de WSFC antes de elegir la réplica secundaria que se convertirá en la nueva réplica principal (el *destino de conmutación por error*). Para una conmutación por error manual planeada, asegúrese de seleccionar una réplica secundaria cuyo valor de **Preparación para la conmutación por error** sea "**No se produce pérdida de datos**". En el caso de una conmutación por error forzada, para todos los destinos posibles de conmutación por error este valor será "**Pérdida de datos, Advertencias(***#***)** ", donde *#* indica el número de advertencias que existe para una réplica secundaria concreta. Para ver las advertencias para un destino de conmutación por error determinado, haga clic en su valor "Preparación para la conmutación por error".  
   
      Para obtener más información, vea la página [Seleccionar la nueva réplica principal](#SelectNewPrimaryReplica), más adelante en este tema.  
   

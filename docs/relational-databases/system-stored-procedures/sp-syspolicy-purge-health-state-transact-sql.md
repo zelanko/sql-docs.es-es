@@ -19,10 +19,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2e7e9622fdd45362da9782798c7af82ff9112745
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000794"
 ---
 # <a name="spsyspolicypurgehealthstate-transact-sql"></a>sp_syspolicy_purge_health_state (Transact-SQL)
@@ -40,7 +40,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Representa el nodo en el Explorador de objetos donde desea borrar el estado de mantenimiento. *target_tree_root_with_id* es **nvarchar (400)**, su valor predeterminado es null.  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'` Representa el nodo en el Explorador de objetos donde desea borrar el estado de mantenimiento. *target_tree_root_with_id* es **nvarchar (400)** , su valor predeterminado es null.  
   
  Puede especificar los valores de la columna target_query_expression_with_id de la vista de sistema msdb.dbo.syspolicy_system_health_state.  
   

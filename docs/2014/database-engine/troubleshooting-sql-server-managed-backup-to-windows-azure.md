@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fd68f6f8bcb83bfbc980be0809e12141403e4012
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62842582"
 ---
 # <a name="troubleshooting-sql-server-managed--backup-to-windows-azure"></a>Solucionar problemas de la Copia de seguridad administrada de SQL Server para Microsoft Azure
@@ -105,8 +105,8 @@ ms.locfileid: "62842582"
   
      Si SQL Server deja de responder, los eventos se registran en el canal de administración.  Un ejemplo del registro de eventos:  
   
-     *Error de SQL (motor no responde u obtener sqlException: SqlException:*   
-     *seguimiento de la pila, el mensaje y el código de error se mostrará en un canal de administración xevent, junto con cierta información adicional, como:*   
+     *Error de SQL (motor no responde u obtener sqlException: SqlException:*    
+     *seguimiento de la pila, el mensaje y el código de error se mostrará en un canal de administración xevent, junto con cierta información adicional, como:*    
     *"Probablemente experimentando problemas de conectividad con SQL Server. Omitiendo la base de datos en la iteración actual"*  
   
 -   **Agente SQL deja de responder o deja de funcionar cuando [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] se está ejecutando:**  

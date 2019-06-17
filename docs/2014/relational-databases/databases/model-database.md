@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c2886fffebdf06ea16ebe8b6992387be3c22e0bf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916951"
 ---
 # <a name="model-database"></a>Base de datos model
@@ -60,13 +60,13 @@ ms.locfileid: "62916951"
 |AUTO_SHRINK|OFF|Sí|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|Sin|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
 |Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> Sí<br /><br /> Sí|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|OFF|No|  
+|DB_CHAINING|OFF|Sin|  
 |ENCRYPTION|OFF|No|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
@@ -76,7 +76,7 @@ ms.locfileid: "62916951"
 |RECOVERY|Depende de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition<sup>1</sup>|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|DISABLE_BROKER|No|  
-|TRUSTWORTHY|OFF|No|  
+|TRUSTWORTHY|OFF|Sin|  
   
  <sup>1</sup> para comprobar el modelo de recuperación actual de la base de datos, vea [ver o cambiar el modelo de recuperación de una base de datos &#40;SQL Server&#41; ](../backup-restore/view-or-change-the-recovery-model-of-a-database-sql-server.md) o [sys.databases &#40;Transact-SQL&#41; ](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql).  
   

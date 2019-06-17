@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62864906"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configuración global (evaluador) (OracleToSQL)
@@ -52,7 +52,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 **Detener la ejecución de pruebas tras el primer error**  
 Esta configuración especifica si se debe detener la ejecución de caso de prueba actual, si se ha producido un error durante la ejecución. Conjunto de opciones de forma predeterminada es **Sí**.  

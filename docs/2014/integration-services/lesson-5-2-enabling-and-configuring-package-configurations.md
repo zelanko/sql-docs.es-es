@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: fa75b3a71832eaba4064de5a9dd90e73236e8177
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891074"
 ---
 # <a name="step-2-enabling-and-configuring-package-configurations"></a>Paso 2: Habilitación y configuración de configuraciones de paquete
@@ -39,7 +39,7 @@ ms.locfileid: "62891074"
   
 7.  Vuelva a la pestaña **Flujo de control** y haga doble clic en el contenedor **Foreach File in Folder** .  
   
-8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones** y, después, haga clic en el botón de puntos suspensivos **(…)**.  
+8.  En la página **Colección** del **Editor de bucles Foreach**, haga clic en **Expresiones** y, después, haga clic en el botón de puntos suspensivos **(…)** .  
   
 9. En el **Editor de expresiones de propiedad**, haga clic en el **propiedad** lista y seleccione `Directory`.  
   

@@ -11,14 +11,14 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7a799707dc57e07528afb29c135a5ee394c56354
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62770221"
 ---
 # <a name="tutorial-using-the-odata-source-ssis"></a>Tutorial: Usar el origen OData [SSIS]
-  En este tutorial se describe el proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/)) y, después, cargarlo en un archivo plano.  
+  En este tutorial se describe el proceso para extraer la colección **Employees** del servicio OData del ejemplo **Northwind** (http://services.odata.org/V3/Northwind/Northwind.svc/) ) y, después, cargarlo en un archivo plano.  
   
 ## <a name="1-create-an-integration-services-project"></a>1. Crear un proyecto de Integration Services  
   

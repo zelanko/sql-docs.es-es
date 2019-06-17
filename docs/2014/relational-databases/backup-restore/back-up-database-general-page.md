@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3206052455ff1d1bd5db14f6c53507ec9f00a7eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62877064"
 ---
 # <a name="back-up-database-general-page"></a>Copia de seguridad de base de datos (página General)
@@ -42,7 +42,7 @@ ms.locfileid: "62877064"
   
 ## <a name="options"></a>Opciones  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  Las opciones del panel **Origen** identifican la base de datos y especifican el tipo de copia de seguridad y el componente para la operación de copia de seguridad.  
   
  **Base de datos**  

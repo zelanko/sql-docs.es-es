@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 661b4f3cc63eb0c19fddb53f872e940d1f9976e2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108437"
 ---
 # <a name="lesson-5-design-the-child-report-using-the-report-wizard"></a>Lección 5: Diseño del informe secundario usando el Asistente para informes
@@ -40,7 +40,7 @@ ms.locfileid: "66108437"
   
     1.  Arrastre **ProductID**, **PurchaseOrderID**, **PurchaseOrderDetailID**, **OrderQty**, **ReceivedQty**, **RejectedQty**y **StockedQty** desde **Campos disponibles** hasta el cuadro **Valores** .  
   
-    2.  Haga clic en la flecha situada junto a **SUM (ProductID)**, **SUM (purchaseorderid)**, **SUM (purchaseorderdetailid)**, **SUM (OrderQty)**,  **SUM (receivedqty)**, **SUM (rejectedqty)**, y **SUM (stockedqty)** y desactive el **suma** selección.  
+    2.  Haga clic en la flecha situada junto a **SUM (ProductID)** , **SUM (purchaseorderid)** , **SUM (purchaseorderdetailid)** , **SUM (OrderQty)** ,  **SUM (receivedqty)** , **SUM (rejectedqty)** , y **SUM (stockedqty)** y desactive el **suma** selección.  
   
 7.  Haga clic en **siguiente** dos veces y, a continuación, haga clic en **finalizar** para cerrar el **Asistente para informes**.  
   

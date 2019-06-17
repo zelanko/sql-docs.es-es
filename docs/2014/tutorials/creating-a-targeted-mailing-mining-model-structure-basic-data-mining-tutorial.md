@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2bd2e9d0decc730a59b63ee600bec2d080cc85fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856162"
 ---
 # <a name="creating-a-targeted-mailing-mining-model-structure-basic-data-mining-tutorial"></a>Crear una estructura del modelo de minería de datos de distribución de correo directo (Tutorial básico de minería de datos)
@@ -30,7 +30,7 @@ ms.locfileid: "62856162"
   
 3.  En el **seleccionar el método de definición** , comprueba que **desde el almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?**, seleccione **Microsoft Decision Trees**.  
+4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?** , seleccione **Microsoft Decision Trees**.  
   
     > [!NOTE]  
     >  Si aparece una advertencia de que no se puede encontrar ningún algoritmo de minería de datos, puede que las propiedades del proyecto no estén configuradas correctamente. Esta advertencia se produce cuando el proyecto intenta recuperar una lista de algoritmos de minería de datos del servidor de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] y no puede encontrarlo. De forma predeterminada, [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] usará **localhost** como el servidor. Si está utilizando una instancia diferente o una instancia con nombre, debe cambiar las propiedades del proyecto. Para obtener más información, consulte [crear un proyecto de Analysis Services &#40;Basic Data Mining Tutorial&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md).  

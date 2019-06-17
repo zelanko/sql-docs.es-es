@@ -15,14 +15,14 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36f447ce365f25135a521ea7e1760599aa17f9bc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62812599"
 ---
 # <a name="compare-files"></a>Comparar archivos
-  Puede comparar archivos para determinar cómo ha progresado un archivo hasta su estado actual. Por ejemplo, si se detecta un defecto en una versión del proyecto de código tras haberse protegido una versión concreta del archivo de origen, podrá comparar la versión actual con la anterior.  Esto ayuda a identificar el código que ha ocasionado el defecto.  
+  Puede comparar archivos para determinar cómo ha progresado un archivo hasta su estado actual. Por ejemplo, si se detecta un defecto en una versión del proyecto de código tras haberse protegido una versión concreta del archivo de origen, podrá comparar la versión actual con la anterior. Esto ayuda a identificar el código que ha ocasionado el defecto.  
   
  Puede utilizar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] para comparar una copia local de un proyecto o un archivo con la versión almacenada en el control de código fuente o para comparar dos archivos locales. Además, al usar el **historial** de comandos, puede comparar dos versiones controlados por código fuente.  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed653b16fe524f364ba89f13e00715b725080033
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62824403"
 ---
 # <a name="unsuppress-run-custom-report-warnings"></a>Anular la supresión de las advertencias de Ejecutar informe personalizado
@@ -32,7 +32,7 @@ ms.locfileid: "62824403"
   
 2.  Haga clic en `reports.xml`y, a continuación, haga clic en **editar**.  
   
-3.  Cambio**\<SuppressWarning > true\</suppresswarning > a \<SuppressWarning > false\</suppresswarning >**.  
+3.  Cambio **\<SuppressWarning > true\</suppresswarning > a \<SuppressWarning > false\</suppresswarning >** .  
   
 4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -42,7 +42,7 @@ ms.locfileid: "62824403"
   
 2.  Haga clic en `reports.xml`y haga clic en **editar**.  
   
-3.  Cambio  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > a \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >**.  
+3.  Cambio  **\<SuppressDrillthroughWarning > true\</SuppressDrillthroughWarning > a \<SuppressDrillthroughWarning > false\</SuppressDrillthroughWarning >** .  
   
 4.  Reinicie [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   

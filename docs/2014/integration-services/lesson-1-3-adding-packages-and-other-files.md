@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7db3e293c95b358d78e445e6b7534f90ea7b9310
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892210"
 ---
 # <a name="step-3-adding-packages-and-other-files"></a>Paso 3: Adición de paquetes y otros archivos
@@ -51,7 +51,7 @@ ms.locfileid: "62892210"
   
 4.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.  
   
-5.  Haga clic en el botón Examinar **(…)**, vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, seleccione **DataTransfer.dtsx** y, después, haga clic en **Abrir**.  
+5.  Haga clic en el botón Examinar **(…)** , vaya a C:\Archivos de programa\Microsoft SQL Server\100\Samples\Integration ServicesTutorial\Deploying Packages\Completed Packages, seleccione **DataTransfer.dtsx** y, después, haga clic en **Abrir**.  
   
 6.  Haga clic en **Aceptar**.  
   

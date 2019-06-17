@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 508542ec-cc28-4a17-80f4-52325d6a48db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b6a7ed91da704fa81b0c8f101f8da5cd71ff48f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e29fd659e2119682325b3df6725aefc37953b452
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857203"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796249"
 ---
 # <a name="converting-data-types"></a>Convertir tipos de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] permiten especific
 |[Envío y recuperación de datos UTF-8 gracias a la compatibilidad integrada con UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)|Muestra cómo utilizar la compatibilidad integrada de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] con los datos UTF-8.<br /><br />En la versión 1.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], se agregó compatibilidad con los caracteres UTF-8.|  
 |[Envío y recuperación de datos ASCII en Linux y Mac OS](../../connect/php/how-to-send-and-retrieve-ascii-data-in-linux-mac.md)|Muestra cómo usar [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]del soporte técnico para los datos de ASCII en Linux o macOS.<br /><br />Se agregó compatibilidad con caracteres ASCII en entornos que no sean Windows en la versión 5.2 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)

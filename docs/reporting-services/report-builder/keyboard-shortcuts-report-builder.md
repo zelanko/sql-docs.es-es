@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2d04f2c9-4e29-4b7a-843f-ce9a7c168aeb
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1f84f5331946a5887f833f7e579eb078a8854662
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 963c225d70429a9f1f45902f9edf554753a78c15
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581188"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037862"
 ---
 # <a name="keyboard-shortcuts-report-builder"></a>Métodos abreviados de teclado (Generador de informes)
   Al crear y editar informes paginados de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en el Generador de informes, tendrá acceso a todas las teclas de método abreviado para la navegación que se proporcionan para el entorno de Windows. Puede seleccionar entre varios esquemas de asignación de teclado estándar.  
@@ -92,6 +92,5 @@ ms.locfileid: "65581188"
 ## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Glosario &#40;Generador de informes&#41;](../../reporting-services/report-builder/glossary-report-builder.md)  
-  
+
   

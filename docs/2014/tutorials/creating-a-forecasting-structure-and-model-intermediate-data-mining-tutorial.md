@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6e631a8983705d4f58e4b193823c9a255284f346
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204812"
 ---
 # <a name="creating-a-forecasting-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura de pronóstico y un modelo (tutorial intermedio de minería de datos)
@@ -28,7 +28,7 @@ ms.locfileid: "63204812"
   
 3.  En el **seleccionar el método de definición** , comprueba que **desde el almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?**, seleccione **serie temporal de Microsoft**y, a continuación, haga clic en  **Siguiente**.  
+4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?** , seleccione **serie temporal de Microsoft**y, a continuación, haga clic en  **Siguiente**.  
   
 5.  En el **seleccionar vista del origen de datos** página, en **vistas del origen de datos disponibles**, seleccione **SalesByRegion**.  
   

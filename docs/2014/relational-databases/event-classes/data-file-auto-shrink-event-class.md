@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b65f0200dd91c3813be405d9186543732eea6741
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663178"
 ---
 # <a name="data-file-auto-shrink-event-class"></a>Data File Auto Shrink, clase de eventos
@@ -36,7 +36,7 @@ ms.locfileid: "62663178"
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Duración**|**bigint**|Tiempo (en milisegundos) necesario para reducir el archivo.|13|Sí|  
 |**EndTime**|**datetime**|Hora de finalización de la reducción automática.|18|Sí|  
-|**EventClass**|**int**|Tipo de evento registrado = 94.|27|No|  
+|**EventClass**|**int**|Tipo de evento registrado = 94.|27|Sin|  
 |**EventSequence**|**int**|Secuencia de la clase de eventos en el lote.|51|No|  
 |**Nombre de archivo**|**nvarchar**|Nombre lógico del archivo que se va a reducir.|36|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se llena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  

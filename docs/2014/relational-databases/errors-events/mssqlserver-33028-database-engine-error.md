@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_33028 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 33028 (Database Engine error)
 ms.assetid: c5cec0e4-0bcd-4907-826f-e7d835cfcb37
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89f02cfd7ab2116528adb82d6e98023c912c6437
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62868668"
 ---
 # <a name="mssqlserver33028"></a>MSSQLSERVER_33028
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Detalles  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62868668"
 |Texto del mensaje|No se puede abrir la sesión para %S_MSG '%.*ls'. Código de error de proveedor: %d.|  
   
 ## <a name="explanation"></a>Explicación  
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo abrir el proveedor de servicios criptográficos enumerado en el mensaje de error. El proveedor de servicios criptográficos proporcionó el código de error enumerado. Puede que tenga que ponerse en contacto con su proveedor de servicios criptográficos para obtener más información sobre el error.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo abrir el proveedor de servicios criptográficos enumerado en el mensaje de error. El proveedor de servicios criptográficos proporcionó el código de error enumerado. Puede que tenga que ponerse en contacto con su proveedor de servicios criptográficos para obtener más información sobre el error.  
   
 |Código de error|Descripción|  
-|--------------|---------------|  
+|----------------|-----------------|  
 |0|Correcto. Ningún error.|  
 |1|Error. Se ha producido un error no especificado o inesperado. No se dispone de información adicional.|  
 |2|Búfer insuficiente. No se pudo asignar espacio para el proveedor de servicios criptográficos.|  
@@ -47,5 +46,6 @@ ms.locfileid: "62868668"
 |6|Argumento no válido. Se ha pasado un argumento no válido al proveedor de servicios criptográficos.|  
   
 ## <a name="user-action"></a>Acción del usuario  
-Resuelva el error o póngase en contacto con el proveedor de servicios criptográficos para obtener más información.  
+ Resuelva el error o póngase en contacto con el proveedor de servicios criptográficos para obtener más información.  
+  
   

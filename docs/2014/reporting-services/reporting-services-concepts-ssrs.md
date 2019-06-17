@@ -10,12 +10,12 @@ ms.assetid: 934b199c-9918-4e6b-83f4-5862b94fc904
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 2df295b62ca76dfb46e767ed206180a52493255a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 5030feecab11ed0c7727424ae49bde788c1f55f8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66102970"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046745"
 ---
 # <a name="reporting-services-concepts-ssrs"></a>Conceptos de Reporting Services (SSRS)
   En este tema se proporciona un breve resumen de los conceptos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
@@ -76,7 +76,7 @@ ms.locfileid: "66102970"
  **Los informes y definiciones de informe**  
  **RDL.** Una definición de informe es un archivo XML conforme a una gramática XML denominada lenguaje RDL (Report Definition Language). En [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], una definición de informe se crea en una herramienta como el Generador de informes o el Diseñador de informes. Incluye elementos que definen conexiones a orígenes de datos, consultas usadas para recuperar datos, expresiones, parámetros, imágenes, cuadros de texto, tablas y cualquier otro elemento de tiempo de diseño. Para más información, vea [Report Definition Language &#40;SSRS&#41;](reports/report-definition-language-ssrs.md).  
   
- **RDLX.** Una definición de informe en RDLX es un archivo RDL con extensiones internas que habilitan la experiencia de visualización de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea el tema de [información general acerca de la vista avanzada](https://blogs.msdn.com/b/microsoft_business_intelligence1/archive/2012/02/07/power-view-overview.aspx).  
+ **RDLX.** Una definición de informe en RDLX es un archivo RDL con extensiones internas que habilitan la experiencia de visualización de [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] . Para obtener más información, vea el tema de [información general acerca de la vista avanzada](https://support.office.com/article/power-view-explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e#__toc328127684).  
   
  **RDLC.** El Diseñador de informes de Visual Studio genera archivos de definición de informe de cliente (.rdlc) en formato XML para su uso con el control ReportViewer.  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff882caf0ce5d9ef7d2e9f059daed89ed4b50d82
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126108"
 ---
 # <a name="delete-a-data-source-odbc"></a>Eliminar un origen de datos (ODBC)
@@ -24,7 +24,7 @@ ms.locfileid: "63126108"
   
 ### <a name="to-delete-a-data-source-by-using-odbc-administrator"></a>Para eliminar un origen de datos mediante el Administrador ODBC  
   
-1.  En **Panel de Control**, abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
+1.  En **Panel de Control**, abra **herramientas administrativas**y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema.  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   

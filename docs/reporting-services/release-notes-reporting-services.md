@@ -1,20 +1,20 @@
 ---
 title: Notas para (SSRS) 2017 y versiones posteriores de la versión | Microsoft Docs
-ms.date: 09/01/2018
+ms.date: 02/18/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
-ms.reviewer: maghan
+ms.reviewer: maggies
 author: casualoak
-ms.author: RhysSchmidtke
+ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: c85d3811fc467d94dc1841b871964e3bb594e2df
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58283302"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037854"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas de la versión de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores
 
@@ -86,7 +86,7 @@ Se corrigió el problema siguiente:
 | El tamaño del texto no se escala si pageHeight es inferior a 0,5 pulgadas. | &nbsp; |
 | Se produce interbloqueo en la base de datos de catálogos SSRS cuando se usa con CRM. | &nbsp; |
 | Encabezados de columna alineados de manera vertical mostrados de forma incorrecta al desplazarse hasta el informe. | &nbsp; |
-| Los usuarios agregados al rol de informes SCOM tienen bloqueado el acceso al portal web de SSRS. | &nbsp; |
+| Los usuarios agregados a la función informes de System Center Operations Manager tienen acceso bloqueado al portal web SSRS. | &nbsp; |
 | Caracteres tailandés no se exportan correctamente en el archivo PDF. | &nbsp; |
 | Cambio de comportamiento del rol Explorador. | &nbsp; |
 | rc:Toolbar=false no funciona en la edición Express. | &nbsp; |

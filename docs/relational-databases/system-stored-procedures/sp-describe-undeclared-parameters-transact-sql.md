@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088505"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
@@ -43,9 +43,9 @@ sp_describe_undeclared_parameters
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@tsql = ] 'Transact-SQL\_batch'` Uno o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
+`[ \@tsql = ] 'Transact-SQL\_batch'` Uno o más [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. *Transact-SQL_batch* puede ser **nvarchar (** _n_ **)** o **nvarchar (max)** .  
   
-`[ \@params = ] N'parameters'` \@params proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona por lotes, de forma similar a la forma de sp_executesql. *Parámetros* puede ser **nvarchar (**_n_**)** o **nvarchar (max)**.  
+`[ \@params = ] N'parameters'` \@params proporciona una cadena de declaración para los parámetros para el [!INCLUDE[tsql](../../includes/tsql-md.md)] funciona por lotes, de forma similar a la forma de sp_executesql. *Parámetros* puede ser **nvarchar (** _n_ **)** o **nvarchar (max)** .  
   
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en *Transact SQL_batch*. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. n es un marcador de posición que indica definiciones de parámetros adicionales. Si la instrucción Transact-SQL o el lote en la instrucción no contiene parámetros, \@params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
@@ -196,11 +196,11 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     -   **numeric (38, 19)** -no se consideran otros tipos de datos decimal o numérico.  
   
-    -   **varchar (8000)**, **varchar (max)**, **nvarchar (4000)**, y **nvarchar (max)** : otros tipos de datos de cadena (como **texto**, **char (8000)**, **nvarchar (30)**, etc.) no se consideran.  
+    -   **varchar (8000)** , **varchar (max)** , **nvarchar (4000)** , y **nvarchar (max)** : otros tipos de datos de cadena (como **texto**, **char (8000)** , **nvarchar (30)** , etc.) no se consideran.  
   
-    -   **varbinary (8000)** y **varbinary (max)** -otros tipos de datos binarios no se consideran (como **imagen**, **binary(8000)**, **varbinary (30)** , etcetera.).  
+    -   **varbinary (8000)** y **varbinary (max)** -otros tipos de datos binarios no se consideran (como **imagen**, **binary(8000)** , **varbinary (30)** , etcetera.).  
   
-    -   **fecha**, **Time (7)**, **smalldatetime**, **datetime**, **datetime2 (7)**, **DateTimeOffset (7)**  - Otra fecha y hora como tipos, **time(4)**, no se consideran.  
+    -   **fecha**, **Time (7)** , **smalldatetime**, **datetime**, **datetime2 (7)** , **DateTimeOffset (7)**  - Otra fecha y hora como tipos, **time(4)** , no se consideran.  
   
     -   **sql_variant**  
   
@@ -233,7 +233,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
      Esta regla solo se aplica si hay una conversión implícita entre cada tipo de datos que coincide según la regla 1 y el tipo de datos con la precedencia máxima. Si no hay ninguna conversión implícita, la deducción del tipo de datos no se puede realizar y genera un error. Por ejemplo, en la consulta `SELECT @p FROM t`, se produce un error de deducción de tipos de datos porque cualquier tipo de datos para \@p sería igual de bueno. Por ejemplo, no hay ninguna conversión implícita de **int** a **xml**.  
   
-3.  Si dos tipos de datos similares cumplen la regla 1, por ejemplo **varchar (8000)** y **varchar (max)**, menor será el tipo de datos (**varchar (8000)**) se elige. El mismo principio se aplica a **nvarchar** y **varbinary** tipos de datos.  
+3.  Si dos tipos de datos similares cumplen la regla 1, por ejemplo **varchar (8000)** y **varchar (max)** , menor será el tipo de datos (**varchar (8000)** ) se elige. El mismo principio se aplica a **nvarchar** y **varbinary** tipos de datos.  
   
 4.  Para los fines de la regla 1, el algoritmo de deducción de tipo prefiere ciertas conversiones sobre otras. Las conversiones, en orden de mejor a peor, son:  
   
@@ -245,7 +245,7 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
   
     4.  Cualquier otra conversión.  
   
- Por ejemplo, para la consulta `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar (8000)** se elige porque la conversión (a) es mejor. Para la consulta `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar (8000)** todavía se elige porque provoca una conversión de tipos (b) y porque otra opción (como **varchar (4000)**) produciría una conversión de tipo (d).  
+ Por ejemplo, para la consulta `SELECT * FROM t WHERE [Col_varchar(30)] > @p`, **varchar (8000)** se elige porque la conversión (a) es mejor. Para la consulta `SELECT * FROM t WHERE [Col_char(30)] > @p`, **varchar (8000)** todavía se elige porque provoca una conversión de tipos (b) y porque otra opción (como **varchar (4000)** ) produciría una conversión de tipo (d).  
   
  Como último ejemplo, dada una consulta `SELECT NULL + @p`, **int** se elige para \@p porque produce una conversión de tipos (c).  
   

@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205099"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  Si se especifica *AttributeName* con la directiva `xmltext`, se agregan los atributos del elemento <`overflow`> como atributos de los subelementos del elemento <`Parent`> que los incluye. El nombre especificado para *AttributeName* se convierte en el nombre del subelemento.  
   
- En esta consulta, se especifica *AttributeName*, <`overflow`>, junto con la directiva `xmltext`*:*  
+ En esta consulta, se especifica *AttributeName*, <`overflow`>, junto con la directiva `xmltext` *:*  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

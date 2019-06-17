@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cd447f6ad12ee12c96f6bcbb6af858aa32fdb06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63016066"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
@@ -65,7 +65,7 @@ ms.locfileid: "63016066"
   
 -   Ejecutar procedimientos almacenados del sistema  
   
-     Los procedimientos del sistema comienzan por el prefijo **sp_**. Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de que calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
+     Los procedimientos del sistema comienzan por el prefijo **sp_** . Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de que calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
   
     ```sql  
     EXEC sys.sp_who;  

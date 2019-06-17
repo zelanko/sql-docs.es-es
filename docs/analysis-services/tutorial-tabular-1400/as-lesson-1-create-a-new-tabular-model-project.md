@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: 52e0b3f317044e25b2004512083fdcaff7a77ecf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62468022"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67148990"
 ---
 # <a name="create-a-tabular-model-project"></a>Crear un proyecto de modelos tabulares
 
@@ -47,7 +47,7 @@ En este artículo es la primera lección de un tutorial de creación de modelos 
   
     El área de trabajo hospeda una base de datos de modelo tabular con el mismo nombre que el proyecto durante la creación del modelo. Área de trabajo integrada significa que Visual Studio usa una instancia integrada, lo que elimina la necesidad de instalar una instancia de servidor de Analysis Services independiente solo para la creación del modelo.
       
-6.  En **ivel**, seleccione **SQL Server 2017 / Azure Analysis Services (1400)**.   
+6.  En **ivel**, seleccione **SQL Server 2017 / Azure Analysis Services (1400)** .   
  
     ![as-lesson1-tmd](../tutorial-tabular-1400/media/as-lesson1-tmd.png)
       
@@ -81,7 +81,7 @@ Examine algunos de los cuadros de diálogo y ubicaciones de las distintas caract
 
 ## <a name="whats-next"></a>¿Qué sigue?
 
-[Lección 2: Obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md).
+[Lección 2: Obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md).
 
   
   

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3cea4731ee665e401429679d764832247b2a2242
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155372"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
@@ -80,11 +80,11 @@ ms.locfileid: "63155372"
   
 1.  En el Explorador de objetos, expanda la tabla en la que desea crear un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 3.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 5.  En el cuadro de diálogo **Seleccionar columnas de**_table_name_ , active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
@@ -96,7 +96,7 @@ ms.locfileid: "63155372"
   
 1.  En el Explorador de objetos, expanda la base de datos en la que desea crear una tabla con un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...**.  
+2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...** .  
   
 3.  Cree una tabla nueva como lo haría normalmente. Para obtener más información, vea [Crear tablas &#40;motor de base de datos&#41;](../tables/create-tables-database-engine.md).  
   

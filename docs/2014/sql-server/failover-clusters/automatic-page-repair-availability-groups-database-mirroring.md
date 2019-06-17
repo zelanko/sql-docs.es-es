@@ -16,10 +16,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f4f39024817d3d0aa35c015ed815eb8f412f1c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63137513"
 ---
 # <a name="automatic-page-repair-for-availability-groups-and-database-mirroring"></a>Reparación de página automática (para grupos de disponibilidad y creación de reflejo de base de datos)
@@ -88,7 +88,7 @@ ms.locfileid: "63137513"
   
 
   
-##  <a name="ViewAPRattempts"></a> Cómo: Ver los intentos de reparación de página automática  
+##  <a name="ViewAPRattempts"></a> Procedimientos para: Ver los intentos de reparación de página automática  
  Las siguientes vistas de administración dinámica devuelven filas para los últimos intentos de reparación de página automática en una base de datos de disponibilidad o base de datos reflejada determinada, con un máximo de 100 filas por base de datos.  
   
 -   **Grupos de disponibilidad AlwaysOn:**  

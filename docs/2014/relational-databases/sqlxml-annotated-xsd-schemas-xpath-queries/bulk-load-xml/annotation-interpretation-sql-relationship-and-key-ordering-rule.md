@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 521614f8755261d0348ab95132c527c736c96311
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66013509"
 ---
 # <a name="sqlrelationship-and-the-key-ordering-rule-sqlxml-40"></a>sql:relationship y regla de orden de clave (SQLXML 4.0)
@@ -58,7 +58,7 @@ ms.locfileid: "66013509"
 </xsd:schema>  
 ```  
   
- Como el  **\<cliente >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que la carga masiva XML lee  **\</Customer >**. En el procesamiento de la  **\<orden >** nodo de elemento, carga masiva XML usa `<sql:relationship>` para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder desde el **\<cliente >** primaria elemento, porque el  **\<orden >** elemento no especifica la **CustomerID** atributo. Esto significa que la definición en el  **\<cliente >** elemento, debe especificar el **CustomerID** atributo en el esquema antes de especificar `<sql:relationship>`. En caso contrario, cuando un  **\<orden >** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder, y cuando el XML de forma masiva carga alcanza el  **\</Order >** finalizar la etiqueta, envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin el valor de columna de clave externa CustomerID.  
+ Como el  **\<cliente >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que la carga masiva XML lee  **\</Customer >** . En el procesamiento de la  **\<orden >** nodo de elemento, carga masiva XML usa `<sql:relationship>` para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder desde el **\<cliente >** primaria elemento, porque el  **\<orden >** elemento no especifica la **CustomerID** atributo. Esto significa que la definición en el  **\<cliente >** elemento, debe especificar el **CustomerID** atributo en el esquema antes de especificar `<sql:relationship>`. En caso contrario, cuando un  **\<orden >** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder, y cuando el XML de forma masiva carga alcanza el  **\</Order >** finalizar la etiqueta, envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin el valor de columna de clave externa CustomerID.  
   
  Guarde el esquema que se proporciona en este ejemplo como SampleSchema.xml.  
   

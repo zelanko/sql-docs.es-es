@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ca3437315803ff8435640bf58219fe93f96e242a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103396"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
@@ -59,24 +59,24 @@ ms.locfileid: "66103396"
 |Campo|Descripción|Default|  
 |-----------|-----------------|-------------|  
 |HttpTraceFileName|Este valor es opcional. El valor predeterminado es ReportServerServiceHTTP_. Puede especificar un valor diferente si desea utilizar una convención de nomenclatura de archivos diferente (por ejemplo, para incluir el nombre de servidor si guarda los archivos de registro en una ubicación central).|Sí|  
-|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|No|  
-|date|Fecha en que se produjo la actividad.|No|  
+|HTTPTraceSwitches|Este valor es opcional. Si lo especifica, puede configurar los campos utilizados en el archivo de registro con un formato separado por comas.|Sin|  
+|date|Fecha en que se produjo la actividad.|Sin|  
 |Time|Hora en que se produjo la actividad.|No|  
 |ClientIp|Dirección IP del cliente que tiene acceso al servidor de informes.|Sí|  
-|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|Sin |  
+|UserName|Nombre del usuario que tuvo acceso al servidor de informes.|Sin|  
 |ServerPort|Número de puerto utilizado para la conexión.|No|  
-|Host|Contenido del encabezado de host.|Sin |  
+|Host|Contenido del encabezado de host.|No|  
 |Método|Acción o método SOAP llamado desde el cliente.|Sí|  
 |UriStem|Recurso al que se obtuvo acceso.|Sí|  
-|UriQuery|Consulta utilizada para tener acceso al recurso.|Sin |  
+|UriQuery|Consulta utilizada para tener acceso al recurso.|No|  
 |ProtocolStatus|Código de estado HTTP.|Sí|  
 |BytesReceived|Número de bytes recibidos por el servidor.|No|  
 |TimeTaken|Tiempo transcurrido (en milisegundos) desde que el HTTP.SYS instantáneo devuelve los datos de la solicitud hasta que el servidor finaliza el último envío, excluido el tiempo de transmisión por la red.|No|  
-|ProtocolVersion|Versión de protocolo utilizada por el cliente.|Sin |  
-|UserAgent|Tipo de explorador utilizado por el cliente.|Sin |  
-|CookieReceived|Contenido de la cookie recibida por el servidor.|Sin |  
-|CookieSent|Contenido de la cookie enviada por el servidor.|Sin |  
-|Referrer|Sitio anterior visitado por el cliente.|Sin |  
+|ProtocolVersion|Versión de protocolo utilizada por el cliente.|Sin|  
+|UserAgent|Tipo de explorador utilizado por el cliente.|Sin|  
+|CookieReceived|Contenido de la cookie recibida por el servidor.|Sin|  
+|CookieSent|Contenido de la cookie enviada por el servidor.|Sin|  
+|Referrer|Sitio anterior visitado por el cliente.|No|  
   
 ## <a name="see-also"></a>Vea también  
  [Registro de seguimiento del servicio del servidor de informes](report-server-service-trace-log.md)   

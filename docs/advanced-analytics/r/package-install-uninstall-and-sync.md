@@ -3,17 +3,17 @@ title: 'Sincronización de paquetes de R desde el sistema de archivos: SQL Serve
 description: Actualizar las bibliotecas de R en SQL Server con las versiones más recientes instaladas en el sistema de archivos.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 57677e8d7573411be2e77baa7ffd8564ec9cbeb4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f6782acd011242cfd9b8ed4fe24a11fba85e932c
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642741"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140519"
 ---
 # <a name="r-package-synchronization-for-sql-server"></a>Sincronización de paquetes de R para SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +46,7 @@ También debe habilitar la [característica de administración de paquetes](r-pa
 
 Esta característica está disponible en SQL Server 2017 CTP 2 o posterior.
 
-Esta característica se puede agregar a una instancia de SQL Server 2016 mediante la actualización de la instancia para usar la versión más reciente de Microsoft R. Para obtener más información, consulte [usar SqlBindR.exe para actualizar SQL Server R Services](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Esta característica se puede agregar a una instancia de SQL Server 2016 mediante la actualización de la instancia para usar la versión más reciente de Microsoft R. Para obtener más información, consulte [usar SqlBindR.exe para actualizar SQL Server R Services](../install/upgrade-r-and-python.md).
 
 ### <a name="enable-the-package-management-feature"></a>Habilitar la característica de administración de paquetes
 
@@ -69,7 +69,7 @@ Siempre que agregue un nuevo paquete mediante las funciones de administración d
 
 + Para sincronizar los paquetes marcados como **privada**, ya sea el propietario del paquete o el administrador debe ejecutar la función y los paquetes deben ser privados.
 
-+ Para sincronizar los paquetes en nombre de otros usuarios, el propietario debe BA un miembro de la **db_owner** rol de base de datos.
++ Para sincronizar los paquetes en nombre de otros usuarios, el propietario debe ser un miembro de la **db_owner** rol de base de datos.
 
 ## <a name="how-package-synchronization-works"></a>Cómo funciona la sincronización de paquete
 

@@ -3,17 +3,17 @@ title: Usar Transact-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R -
 description: Agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: b59f15ace1dc96af537486336e76a209f1c85da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: b18b5cf4a7255a206162bd002004767b7e3ab1fa
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62507029"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140671"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>Usar Transact-SQL (CREATE EXTERNAL LIBRARY) para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,6 +68,5 @@ EXEC sp_execute_external_script
 
 ## <a name="see-also"></a>Vea también
 
-+ [Obtención de información del paquete](determine-which-packages-are-installed-on-sql-server.md)
++ [Obtención de información del paquete](../package-management/installed-package-information.md)
 + [Tutoriales de R](../tutorials/sql-server-r-tutorials.md)
-+ [Guías de procedimientos](sql-server-machine-learning-tasks.md)

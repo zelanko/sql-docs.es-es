@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ff94284ba1f60d40697ad5a1e209b284dfaaefdf
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63005871"
 ---
 # <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-SQL)
@@ -43,9 +43,9 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @sp_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar(390)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @sp_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar(390)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @sp_owner = ] 'schema'` Es el nombre del esquema al que pertenece el procedimiento. *esquema* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
+`[ @sp_owner = ] 'schema'` Es el nombre del esquema al que pertenece el procedimiento. *esquema* es **nvarchar (384)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el esquema actual contiene un procedimiento con el nombre especificado, se devuelve ese procedimiento. Si se especifica un procedimiento almacenado no calificado, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] busca el procedimiento siguiendo este orden:  
   
@@ -55,7 +55,7 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 -   El esquema **dbo** de la base de datos actual.  
   
-`[ @qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_**.** _esquema_**.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para las tablas en el formulario (_calificador_ **.** _esquema_ **.** _nombre_. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *calificador* representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 `[ @fUsePattern = ] 'fUsePattern'` Determina si el carácter de subrayado (_), porcentaje (%) o corchetes []) se interpretan como caracteres comodín. *fUsePattern* es **bit**, su valor predeterminado es 1.  
   

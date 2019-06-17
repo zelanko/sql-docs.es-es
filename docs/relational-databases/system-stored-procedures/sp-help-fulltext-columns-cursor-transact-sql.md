@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6d158c0703190e78209c9a9550040f9bc667b371
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65983055"
 ---
 # <a name="sphelpfulltextcolumnscursor-transact-sql"></a>sp_help_fulltext_columns_cursor (Transact-SQL)
@@ -47,7 +47,7 @@ sp_help_fulltext_columns_cursor [ @cursor_return = ] @cursor_variable OUTPUT
 ## <a name="arguments"></a>Argumentos  
 `[ @cursor_return = ] @cursor_variable OUTPUT` Es la variable de salida de tipo **cursor**. El cursor resultante es desplazable, dinámico y de solo lectura.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para el que se solicita información de índice de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si *table_name* se omite, se recupera información de columna de índice de texto completo para cada tabla indizada de texto completo.  
+`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para el que se solicita información de índice de texto completo. *table_name* es **nvarchar (517)** , su valor predeterminado es null. Si *table_name* se omite, se recupera información de columna de índice de texto completo para cada tabla indizada de texto completo.  
   
 `[ @column_name = ] 'column_name'` Es el nombre de la columna cuyos metadatos de índice de texto completo se desean. *column_name* es **sysname** con un valor predeterminado es null. Si *column_name* se omite o es NULL, se devuelve información de columna de texto completo para cada columna de índice de texto completo para *table_name*. Si *table_name* también se omite o es NULL, se devuelve información de columna de índice de texto completo para cada columna de índice de texto completo de todas las tablas de la base de datos.  
   

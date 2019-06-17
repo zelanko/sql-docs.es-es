@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0b1265d3ef58f6ef0946937b15411b0cb79a3c20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916895"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
@@ -70,16 +70,16 @@ ms.locfileid: "62916895"
 |ANSI_PADDING|OFF|Sí|  
 |ANSI_WARNINGS|OFF|Sí|  
 |ARITHABORT|OFF|Sí|  
-|AUTO_CLOSE|OFF|No|  
+|AUTO_CLOSE|OFF|Sin|  
 |AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|No|  
+|AUTO_SHRINK|OFF|Sin|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|Sin|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Sin<br /><br /> No<br /><br /> Sin|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
 |DB_CHAINING|ON|No|  
 |ENCRYPTION|OFF|No|  
@@ -87,7 +87,7 @@ ms.locfileid: "62916895"
 |PAGE_VERIFY|CHECKSUM para las nuevas instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> NONE para las actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|Sin|  
 |RECOVERY|SIMPLE|No|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
 |Opciones de Service Broker|ENABLE_BROKER|Sí|  

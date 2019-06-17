@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: de23ecd1201d7ce0e24638cf9e64c63cb782face
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62912112"
 ---
 # <a name="audit-broker-login-event-class"></a>Audit Broker Login, clase de eventos
@@ -32,24 +32,24 @@ ms.locfileid: "62912112"
 |**ClientProcessID**|**int**|No se utiliza en esta clase de evento.|9|Sí|  
 |**DatabaseID**|**int**|[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**EventClass**|**int**|Tipo de clase de eventos capturado. Es siempre **159** para **Audit Broker Login**.|27|No|  
-|**EventSequence**|**int**|Número de secuencia de este evento.|51|No|  
+|**EventSequence**|**int**|Número de secuencia de este evento.|51|Sin|  
 |**EventSubClass**|**int**|Tipo de subclase de evento que proporciona más información acerca de cada clase de evento. En la tabla siguiente se enumeran los valores de subclase de este evento.|21|Sí|  
-|**FileName**|**nvarchar**|Nivel de autenticación de agente remoto. Método de autenticación compatible configurado en el extremo del agente remoto. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta la autenticación de certificados NTLM o SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta la autenticación de certificados Kerberos o de extremo.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado de extremo para la autenticación o Windows negocia el método de autenticación.|36|No|  
+|**FileName**|**nvarchar**|Nivel de autenticación de agente remoto. Método de autenticación compatible configurado en el extremo del agente remoto. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta la autenticación de certificados NTLM o SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta la autenticación de certificados Kerberos o de extremo.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado del extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado de extremo para la autenticación o Windows negocia el método de autenticación.|36|Sin|  
 |**HostName**|**nvarchar**|No se utiliza en esta clase de evento.|8|Sí|  
-|**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|No|  
+|**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sin|  
 |**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario al que pertenece la conexión que generó este evento.|6|Sí|  
-|**ObjectName**|**nvarchar**|Cadena de conexión utilizada para esta conexión.|34|No|  
+|**ObjectName**|**nvarchar**|Cadena de conexión utilizada para esta conexión.|34|Sin|  
 |**OwnerName**|**nvarchar**|Método de autenticación compatible configurado en el extremo del agente local. Cuando hay más de un método disponible, el extremo que acepte (el destino) determina el método que se intentará primero. Los valores posibles son:<br /><br /> **Ninguna**. No hay ningún método de autenticación configurado.<br /><br /> **NTLM**. Requiere autenticación NTLM.<br /><br /> **KERBEROS**. Requiere autenticación Kerberos.<br /><br /> **NEGOTIATE**. Windows negocia el método de autenticación.<br /><br /> **CERTIFICATE**. Requiere el certificado configurado para el extremo, que se almacena en la base de datos **maestra** .<br /><br /> **NTLM, CERTIFICATE**. Acepta la autenticación de certificados NTLM o SSL.<br /><br /> **KERBEROS, CERTIFICATE**. Acepta la autenticación de certificados Kerberos o de extremo.<br /><br /> **NEGOTIATE, CERTIFICATE**. Windows negocia el método de autenticación o se puede utilizar un certificado del extremo para la autenticación.<br /><br /> **CERTIFICATE, NTLM**. Acepta un certificado de extremo o NTLM para la autenticación.<br /><br /> **CERTIFICATE, KERBEROS**. Acepta un certificado de extremo o Kerberos para la autenticación.<br /><br /> **CERTIFICATE, NEGOTIATE**. Acepta un certificado de extremo para la autenticación o Windows negocia el método de autenticación.|37|No|  
 |**ProviderName**|**nvarchar**|Método de autenticación utilizado para esta conexión.|46|No|  
-|**RoleName**|**nvarchar**|Rol de la conexión. Es **initiator** o **target**.|38|No|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de SQL Server de la que se realiza un seguimiento.|26|No|  
+|**RoleName**|**nvarchar**|Rol de la conexión. Es **initiator** o **target**.|38|Sin|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de SQL Server de la que se realiza un seguimiento.|26|Sin|  
 |**SPID**|**int**|Identificador de proceso del servidor que SQL Server asigna al proceso relacionado con el cliente.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |**State**|**int**|Indica la ubicación en el código fuente de SQL Server que produjo el evento. Cada lugar en el que se puede producir este evento tiene un código de estado diferente. Un ingeniero de soporte técnico de Microsoft puede utilizar este código de estado para buscar el lugar en que se produjo el evento.|30|No|  
-|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> **Nota** ISC = Iniciar contexto de seguridad. ASC = Aceptar contexto de seguridad|39|No|  
-|**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|No|  
+|**TargetUserName**|**nvarchar**|Estado del inicio de sesión. Una de las siguientes opciones:<br /><br /> INITIAL<br /><br /> WAIT LOGIN NEGOTIATE<br /><br /> ONE ISC<br /><br /> ONE ASC<br /><br /> TWO ISC<br /><br /> TWO ASC<br /><br /> WAIT ISC Confirm<br /><br /> WAIT ASC Confirm<br /><br /> WAIT REJECT<br /><br /> WAIT PRE-MASTER SECRET<br /><br /> WAIT VALIDATION<br /><br /> WAIT ARBITRATION<br /><br /> ONLINE<br /><br /> error<br /><br /> **Nota** ISC = Iniciar contexto de seguridad. ASC = Aceptar contexto de seguridad|39|Sin|  
+|**TransactionID**|**bigint**|Identificador de la transacción asignado por el sistema.|4|Sin|  
   
  En la tabla siguiente se presentan los valores de subclase de esta clase de evento.  
   

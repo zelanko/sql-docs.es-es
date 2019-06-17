@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbb8490c7b60a65e909ed6905003a4ec61f80e59
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403857"
 ---
 # <a name="lesson-1-4---modifying-default-table-names"></a>Lección 1-4: modificación de nombres de tabla predeterminados
@@ -47,7 +47,7 @@ En la tarea siguiente, cambiará el nombre descriptivo de cada tabla de la vista
 7.  En el menú **Archivo** , o en la barra de herramientas de [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic en **Guardar todo** para guardar los cambios que ha realizado hasta este momento en el proyecto Tutorial de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . Si lo desea, puede detener aquí el tutorial y reanudarlo más tarde.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
+[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Vistas del origen de datos en modelos multidimensionales](../multidimensional-models/data-source-views-in-multidimensional-models.md)  

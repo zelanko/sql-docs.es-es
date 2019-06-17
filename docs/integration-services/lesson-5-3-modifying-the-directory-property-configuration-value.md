@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 09d4279501110d15eab2ca339e33ddb9ab0cee3f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721208"
 ---
 # <a name="lesson-5-3-modify-the-directory-property-configuration-value"></a>Lección 5-3: Modificar el valor de configuración de la propiedad Directory
@@ -30,7 +30,7 @@ En esta tarea se modifica el parámetro de configuración almacenado en el archi
   
 1.  En el Bloc de notas o cualquier otro editor de texto, busque y abra el archivo de configuración **SSISTutorial.dtsConfig** creado mediante el Asistente para configuración de paquetes en la tarea anterior.  
   
-2.  Cambie el valor del elemento **ConfiguredValue** para que coincida con la ruta de acceso de la carpeta **New Sample Data** que ha creado en la tarea anterior. No especifique la ruta de acceso entre comillas. Si la carpeta **Nuevos datos de ejemplo** está en el nivel raíz de la unidad (por ejemplo, **C:\\**), el XML actualizado debería ser similar al siguiente ejemplo:  
+2.  Cambie el valor del elemento **ConfiguredValue** para que coincida con la ruta de acceso de la carpeta **New Sample Data** que ha creado en la tarea anterior. No especifique la ruta de acceso entre comillas. Si la carpeta **Nuevos datos de ejemplo** está en el nivel raíz de la unidad (por ejemplo, **C:\\** ), el XML actualizado debería ser similar al siguiente ejemplo:  
   
     ```
     <?xml version="1.0"?>

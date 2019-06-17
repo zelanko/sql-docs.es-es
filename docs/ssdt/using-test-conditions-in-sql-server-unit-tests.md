@@ -14,10 +14,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 923c6fc93418cf2e46bf3970632ae0454f5a611d
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101893"
 ---
 # <a name="using-test-conditions-in-sql-server-unit-tests"></a>Usar condiciones de prueba en pruebas unitarias de SQL Server
@@ -88,7 +88,7 @@ Después de agregar una condición de prueba Suma de comprobación de datos a la
   
 3.  (Opcional) Es posible que desee cambiar la propiedad **(Nombre)** de la condición de prueba para que sea más descriptiva.  
   
-4.  En la propiedad **Configuración**, haga clic en el botón Examinar (**…**).  
+4.  En la propiedad **Configuración**, haga clic en el botón Examinar ( **…** ).  
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   
@@ -118,7 +118,7 @@ Una vez agregada una condición de prueba Esquema esperado a la prueba unitaria 
   
 3.  (Opcional) Es posible que desee cambiar la propiedad **(Nombre)** de la condición de prueba para que sea más descriptiva.  
   
-4.  En la propiedad **Configuración**, haga clic en el botón Examinar (**…**).  
+4.  En la propiedad **Configuración**, haga clic en el botón Examinar ( **…** ).  
   
     Aparece el cuadro de diálogo **Configuración de TestConditionName** .  
   

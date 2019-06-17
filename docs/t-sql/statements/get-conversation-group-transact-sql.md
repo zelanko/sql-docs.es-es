@@ -26,10 +26,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 15be53ce562e717af448092699689687b4cb30bf
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503440"
 ---
 # <a name="get-conversation-group-transact-sql"></a>GET CONVERSATION GROUP (Transact-SQL)
@@ -78,7 +78,7 @@ ms.locfileid: "65503440"
 ## <a name="remarks"></a>Notas  
   
 > [!IMPORTANT]  
->  Si la instrucción GET CONVERSATION GROUP no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma (**;**), que es el terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
+>  Si la instrucción GET CONVERSATION GROUP no es la primera de un lote o un procedimiento almacenado, la instrucción anterior debe terminar en un punto y coma ( **;** ), que es el terminador de instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  Si la cola especificada en la instrucción GET CONVERSATION GROUP no está disponible, la instrucción genera un error de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

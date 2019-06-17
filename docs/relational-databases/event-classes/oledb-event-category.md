@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f67ec37ff1eaa83529d88ff3e00d19ae071359e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47648273"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665492"
 ---
 # <a name="oledb-event-category"></a>OLEDB [categoría de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "47648273"
 |[OLEDB Provider Information (clase de eventos)](../../relational-databases/event-classes/oledb-provider-information-event-class.md)|Indica que se ha ejecutado una consulta distribuida que ha recopilado información relativa a la conexión del proveedor.|  
 |[OLEDB QueryInterface (clase de eventos)](../../relational-databases/event-classes/oledb-queryinterface-event-class.md)|Indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha emitido una llamada **QueryInterface** de OLE DB para consultas distribuidas y procedimientos almacenados remotos.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

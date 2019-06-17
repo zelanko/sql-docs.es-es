@@ -16,11 +16,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 0bcd57b8f3a2c9d136968fd2903a7e591cc777e2
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013813"
 ---
 # <a name="create-a-new-plan-guide"></a>Crear una nueva guía de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ Las guías de plan influyen en la optimización de las consultas adjuntando suge
 Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, a una consulta.
   
 ##  <a name="Restrictions"></a> Limitaciones y restricciones  
--   Los argumentos de sp_create_plan_guide deben indicarse en el orden que se muestra. Cuando se incluyen valores para los parámetros de **sp_create_plan_guide**, deben especificarse todos los nombres de parámetro de forma explícita, o bien no especificarse ninguno. Por ejemplo, si se especifica **@name =**, también deben especificarse **@stmt =** , **@type =**, etc. Del mismo modo, si se omite **@name =** y solo se indica el valor del parámetro, también deben omitirse los demás nombres de parámetro y solo se indicará su valor. Los nombres de argumento solo se incluyen con fines de descripción, para ayudar a entender la sintaxis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no comprueba si el nombre del parámetro especificado coincide con el nombre del parámetro en la posición donde se utiliza.  
+-   Los argumentos de sp_create_plan_guide deben indicarse en el orden que se muestra. Cuando se incluyen valores para los parámetros de **sp_create_plan_guide**, deben especificarse todos los nombres de parámetro de forma explícita, o bien no especificarse ninguno. Por ejemplo, si se especifica **@name =** , también deben especificarse **@stmt =** , **@type =** , etc. Del mismo modo, si se omite **@name =** y solo se indica el valor del parámetro, también deben omitirse los demás nombres de parámetro y solo se indicará su valor. Los nombres de argumento solo se incluyen con fines de descripción, para ayudar a entender la sintaxis. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no comprueba si el nombre del parámetro especificado coincide con el nombre del parámetro en la posición donde se utiliza.  
   
 -   Puede crearse más de una guía de plan OBJECT o SQL para la misma consulta y lote o módulo. Sin embargo, en un momento dado, solo puede estar habilitada una guía de plan.  
   
@@ -37,13 +37,13 @@ Una guía de plan aplica un plan de consulta fijo, y/o sugerencias de consulta, 
   
 -   Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia. También se producirá un error si se intenta quitar una tabla que tenga definido un desencadenador al que haga referencia una guía de plan.  
 
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Para crear una guía de plan de tipo OBJECT necesita el permiso ALTER en el objeto al que se hace referencia. Para crear una guía de plan de tipo SQL o TEMPLATE necesita el permiso ALTER en la base de datos actual.  
   
 ##  <a name="SSMSProcedure"></a> Creación de una guía de plan mediante SSMS  
 1.  Haga clic en el signo más para expandir la base de datos en la que desea crear una guía de plan y, a continuación, haga clic en el signo más para expandir la carpeta **Programación** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Guías de plan** y seleccione **Nueva guía de plan…**. ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
+2.  Haga clic con el botón derecho en la carpeta **Guías de plan** y seleccione **Nueva guía de plan…** . ![select_plan_guide](../../relational-databases/performance/media/select-plan-guide.png)
   
 3.  En el cuadro de diálogo **Nueva guía de plan** , en el cuadro **Nombre** , escriba el nombre de la guía de plan.  
   

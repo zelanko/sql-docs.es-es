@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d0572019dabc6d62a634022ebeac2cdcb295a9e1
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723334"
 ---
 # <a name="lesson-1-4-add-a-data-flow-task-to-the-package"></a>Lección 1-4: Incorporación de una tarea Flujo de datos al paquete
@@ -42,7 +42,7 @@ Después de haber creado los administradores de conexión para los datos de orig
   
     Proporcione nombres únicos para todos los componentes que agregue a una superficie de diseño. Para facilitar el uso y el mantenimiento, los nombres deben describir la función de cada componente. Seguir estas directrices de nomenclatura permite que los paquetes de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] sean autodocumentados. Los paquetes también pueden documentarse mediante anotaciones. Para más información sobre las anotaciones, consulte [Usar anotaciones en paquetes](../integration-services/use-annotations-in-packages.md).  
   
-4.  Haga clic con el botón derecho en la tarea Flujo de datos, seleccione **Propiedades** y, en esta ventana, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)**.  
+4.  Haga clic con el botón derecho en la tarea Flujo de datos, seleccione **Propiedades** y, en esta ventana, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** .  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 5: Incorporación y configuración del origen de archivo plano](../integration-services/lesson-1-5-adding-and-configuring-the-flat-file-source.md)  

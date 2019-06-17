@@ -11,10 +11,10 @@ author: haoqian
 ms.author: haoqian
 manager: craigg
 ms.openlocfilehash: c384881ffdc02af219de417434d882d41d34c1ef
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718760"
 ---
 # <a name="integration-services-scale-out-manager"></a>Administrador de escalabilidad horizontal de Integration Services
@@ -66,7 +66,7 @@ El estado del trabajo de escalabilidad horizontal se muestra en la página **Adm
 ![Administrador del trabajo del portal](media/portal-worker-manager-new.PNG)
 
 ### <a name="add-a-scale-out-worker"></a>Agregar un trabajo de escalabilidad horizontal
-Para agregar un trabajo de escalabilidad horizontal, haga clic en **+**, en la parte inferior de la lista de trabajos de escalabilidad horizontal. 
+Para agregar un trabajo de escalabilidad horizontal, haga clic en **+** , en la parte inferior de la lista de trabajos de escalabilidad horizontal. 
 
 Escriba el nombre del equipo del trabajo de escalabilidad horizontal que quiera agregar y haga clic en **Validar**. El Administrador de escalabilidad horizontal comprobará si el usuario actual tiene acceso a los almacenes de certificados del Servicio principal de escalabilidad horizontal y a los equipos de trabajo de escalabilidad horizontal.
 
@@ -93,7 +93,7 @@ En caso de que no se pueda acceder a la configuración del trabajo, tendrá que 
 Active la casilla **Confirmar** y, a continuación, haga clic en **Aceptar** para empezar a agregar un trabajo de escalabilidad horizontal.
 
 ### <a name="delete-a-scale-out-worker"></a>Eliminación del trabajo de escalabilidad horizontal
-Para eliminar un trabajo de escalabilidad horizontal, selecciónelo y haga clic en **-**, en la parte inferior de la lista del trabajo en cuestión.
+Para eliminar un trabajo de escalabilidad horizontal, selecciónelo y haga clic en **-** , en la parte inferior de la lista del trabajo en cuestión.
 
 ### <a name="enable-or-disable-a-scale-out-worker"></a>Habilitar o deshabilitar un trabajo de escalabilidad horizontal
 Para habilitar o deshabilitar un trabajo de escalabilidad horizontal, selecciónelo y haga clic en **Habilitar trabajo** o **Deshabilitar trabajo**. Si el trabajo dispone de conexión, el estado del trabajo que aparece en el Administrador de escalabilidad horizontal cambiará según corresponda.

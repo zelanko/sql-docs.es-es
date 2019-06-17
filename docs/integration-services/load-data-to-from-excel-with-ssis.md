@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 77125f88ed8d378a0cc2dc60ae47db641a681a95
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720480"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
@@ -48,7 +48,7 @@ En las secciones siguientes se incluye la información necesaria para usar Excel
 
 Puede importar o exportar datos hacia o desde Excel con SSIS con una de estas herramientas:
 
--   **SQL Server Integration Services (SSIS)**. Cree un paquete SSIS que use el origen o el destino de Excel con el Administrador de conexiones de Excel. (En este artículo no se describe cómo crear paquetes SSIS).
+-   **SQL Server Integration Services (SSIS)** . Cree un paquete SSIS que use el origen o el destino de Excel con el Administrador de conexiones de Excel. (En este artículo no se describe cómo crear paquetes SSIS).
 
 -   El **Asistente para importación o exportación de SQL Server**, que está integrado en SSIS. Para más información, consulte [Importar y exportar datos con el Asistente para importación y exportación de SQL Server](import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard.md) y [Conectarse a un origen de datos de Excel (Asistente para importación y exportación de SQL Server)](import-export-data/connect-to-an-excel-data-source-sql-server-import-and-export-wizard.md).
 
@@ -125,11 +125,11 @@ Si va a exportar datos desde Excel y habilita esta opción, la primera fila de l
 
 Hay tres tipos de objetos de Excel que se pueden usar como origen o destino de los datos: una hoja de cálculo, un rango con nombre o un rango de celdas sin nombre que se especifique con su dirección.
 
--   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter `$` al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**). También puede buscar un nombre que acabe con el carácter `$` en la lista de las tablas y vistas existentes.
+-   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter `$` al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]** ). También puede buscar un nombre que acabe con el carácter `$` en la lista de las tablas y vistas existentes.
 
 -   **Rango con nombre.** Para especificar un rango con nombre, proporcione el nombre del rango (por ejemplo, **MiRangoDeDatos**). También puede buscar un nombre que no acabe con el carácter `$` en la lista de las tablas y vistas existentes.
     
--   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]**).
+-   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]** ).
 
 Para seleccionar o especificar el tipo de objeto de Excel que quiere usar como origen o destino de los datos, lleve a cabo una de las siguientes acciones:
 

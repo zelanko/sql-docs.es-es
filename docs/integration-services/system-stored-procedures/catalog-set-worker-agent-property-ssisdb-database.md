@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 89f2442cc389e6ca9becc1b2a210a4056361fb94
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715756"
 ---
 # <a name="catalogsetworkeragentproperty-ssisdb-database"></a>catalog.set_worker_agent_property (base de datos de SSISDB)
@@ -38,10 +38,10 @@ catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyNa
 Id. de agente de trabajo del trabajo de escalabilidad horizontal. *WorkerAgentId* es **uniqueidentifier**.
 
 [@PropertyName =] *PropertyName*  
-El nombre de la propiedad. *PropertyName* es **nvarchar(256)**.
+El nombre de la propiedad. *PropertyName* es **nvarchar(256)** .
 
 [@PropertyValue =] *PropertyValue*  
-Valor de la propiedad. *PropertyValue* es **nvarchar(max)**.
+Valor de la propiedad. *PropertyValue* es **nvarchar(max)** .
 
 ## <a name="remarks"></a>Notas
 Los nombres de propiedad válidos son **DisplayName**, **Descriptio0n** y **Tags**.

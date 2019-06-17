@@ -23,11 +23,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f18a3d809be2302732fa4e4aaeaa1b1e19cbb2dd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130395"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025213"
 ---
 # <a name="alter-table-columndefinition-transact-sql"></a>ALTER TABLE column_definition (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -85,7 +85,7 @@ column_name <data_type>
  *column_name*  
  Es el nombre de la columna que se va a modificar, agregar o quitar. *column_name* puede tener entre 1 y 128 caracteres. Si se trata de columnas nuevas creadas con un tipo de datos de marca de tiempo, *column_name* se puede omitir. Si no se especifica el argumento *column_name* en una columna con un tipo de datos **timestamp**, se usa el nombre **timestamp**.  
   
- [ _type_schema_name_**.** ] *type_name*  
+ [ _type_schema_name_ **.** ] *type_name*  
  Es el tipo de datos de la columna agregada y el esquema al que pertenece.  
   
  *type_name* puede ser:  
@@ -125,7 +125,7 @@ DOCUMENT
  Solo se aplica al tipo de datos **xml** para asociar una colección de esquemas XML al tipo. Antes de escribir una columna **xml** para un esquema, primero debe crear el esquema en la base de datos mediante [CREATE XML SCHEMA COLLECTION](../../t-sql/statements/create-xml-schema-collection-transact-sql.md).  
   
 FILESTREAM  
- Opcionalmente, especifica un atributo de almacenamiento FILESTREAM para una columna que tiene un *type_name* de **varbinary(max)**.  
+ Opcionalmente, especifica un atributo de almacenamiento FILESTREAM para una columna que tiene un *type_name* de **varbinary(max)** .  
   
  Si se especifica FILESTREAM para una columna, la tabla debe tener también una columna del tipo de datos **uniqueidentifier** con el atributo ROWGUIDCOL. Esta columna no debe permitir valores nulos y debe tener una restricción de columna única UNIQUE o PRIMARY KEY. El valor GUID para la columna debe ser suministrado por una aplicación cuando se insertan los datos o por una restricción DEFAULT que utiliza la función NEWID ().  
   
@@ -163,7 +163,7 @@ Si se usa cuando no se está agregando también la columna relacionada, no tiene
 IDENTITY  
  Especifica que la nueva columna es una columna de identidad. [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proporciona un valor incremental único para la columna. Al agregar columnas de identificadores a tablas existentes, los números de identidad se agregan a las filas existentes de la tabla con los valores de inicialización e incremento. No se garantiza el orden en que las filas se actualizan. También se generan números de identidad para las filas nuevas que se añadan.  
   
- Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a una columna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o**numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. La palabra clave DEFAULT y los valores predeterminados enlazados no se pueden utilizar con una columna de identidad. En este caso, debe especificarse tanto el valor de inicialización como el incremento o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Las columnas de identidad se utilizan normalmente junto con restricciones PRIMARY KEY para que actúen como identificador exclusivo de fila para la tabla. La propiedad IDENTITY se puede asignar a una columna **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o**numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. La palabra clave DEFAULT y los valores predeterminados enlazados no se pueden utilizar con una columna de identidad. En este caso, debe especificarse tanto el valor de inicialización como el incremento o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
 > [!NOTE]  
 >  No puede modificar una columna de tabla existente para agregar la propiedad IDENTITY.  
@@ -215,7 +215,7 @@ ENCRYPTION_TYPE = { DETERMINISTIC | RANDOMIZED }
   
 ALGORITHM  
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
-Debe ser **'AEAD_AES_256_CBC_HMAC_SHA_256'**.  
+Debe ser **'AEAD_AES_256_CBC_HMAC_SHA_256'** .  
   
  Para más información, incluidas restricciones de características, vea [Always Encrypted &#40;motor de base de datos&#41;](../../relational-databases/security/encryption/always-encrypted-database-engine.md).  
   

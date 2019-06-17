@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099652"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>Procedimientos: Ejecutar pruebas unitarias de SQL Server desde Team Foundation Build
@@ -115,7 +115,7 @@ De forma predeterminada, Team Foundation Build crea un archivo de configuración
   
 3.  Haga clic con el botón derecho en el archivo denominado **Copia de app.config** y haga clic en Cambiar nombre.  
   
-4.  Escriba _BuildComputer_**.sqlunitttest.config** y presione ENTRAR, donde *BuildComputer* es el nombre del equipo en el que se ejecuta el agente de compilación.  
+4.  Escriba _BuildComputer_ **.sqlunitttest.config** y presione ENTRAR, donde *BuildComputer* es el nombre del equipo en el que se ejecuta el agente de compilación.  
   
 5.  Haga doble clic en *BuildComputer*.sqlunitttest.config.  
   
@@ -246,7 +246,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 3.  En la barra de navegación, haga clic en **Valores predeterminados de compilación**.  
   
-4.  En **Copiar la salida de la compilación en la siguiente carpeta de entrega (ruta UNC, como \\\servidor\recurso compartido)**, especifique una carpeta que contenga la salida de la compilación.  
+4.  En **Copiar la salida de la compilación en la siguiente carpeta de entrega (ruta UNC, como \\\servidor\recurso compartido)** , especifique una carpeta que contenga la salida de la compilación.  
   
     Puede especificar una carpeta compartida en el equipo local o en cualquier ubicación de red en los que el proceso de compilación tenga permisos.  
   
@@ -274,7 +274,7 @@ En este procedimiento, va a proteger todos los archivos de la solución. Estos a
   
 1.  En Team Explorer, expanda el nodo de proyecto de equipo, expanda el nodo Compilaciones, haga clic con el botón secundario en la definición de compilación que desea ejecutar y, a continuación, haga clic en Poner nueva compilación en cola.  
   
-    Se abrirá el cuadro de diálogo **Poner en cola compilación {**_NombreDelProyectoDeEquipo_**}** con una lista de todos los tipos de compilación existentes.  
+    Se abrirá el cuadro de diálogo **Poner en cola compilación {** _NombreDelProyectoDeEquipo_ **}** con una lista de todos los tipos de compilación existentes.  
   
 2.  Si fuera necesario, en **Definición de compilación**, haga clic en la nueva definición de compilación.  
   

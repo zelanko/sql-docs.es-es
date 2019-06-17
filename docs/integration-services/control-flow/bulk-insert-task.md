@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f0a32d1d21cd5f3c42fcb91ece5b5a6792c94ce6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728006"
 ---
 # <a name="bulk-insert-task"></a>Inserción masiva, tarea
@@ -126,7 +126,7 @@ ms.locfileid: "65728006"
   
 ### <a name="options"></a>Opciones  
  **Conexión**  
- Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
+ Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md)  
   
@@ -142,7 +142,7 @@ ms.locfileid: "65728006"
 |**Especificar**|Especifique el formato. Si se selecciona esta opción, se muestran las opciones dinámicas **RowDelimiter** y **ColumnDelimiter**.|  
   
  **Archivo**  
- Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
+ Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
   
  La ubicación del archivo es relativa al motor de base de datos de SQL Server especificado en el administrador de conexiones para esta tarea. Es preciso que el motor de base de datos de SQL Server tenga acceso al archivo de texto en un disco duro local en el servidor o mediante una unidad compartida o asignada a SQL Server. El tiempo de ejecución de SSIS no tiene acceso al archivo.  
   
@@ -157,11 +157,11 @@ ms.locfileid: "65728006"
   
 #### <a name="format--use-file"></a>Formato = Utilizar archivo  
  **FormatFile**  
- Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos (**…**) para buscar el archivo de formato.  
+ Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos ( **…** ) para buscar el archivo de formato.  
   
 #### <a name="format--specify"></a>Formato = Especificar  
  **RowDelimiter**  
- Especifique el delimitador de filas en el archivo de origen. El valor predeterminado es **{CR}{LF}**.  
+ Especifique el delimitador de filas en el archivo de origen. El valor predeterminado es **{CR}{LF}** .  
   
  **ColumnDelimiter**  
  Especifique el delimitador de columna en el archivo de origen. El valor predeterminado es **Tab**.  

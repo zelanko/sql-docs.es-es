@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca71393266c7d88bcdc3dcc43bab5fbfd1a22e2f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65718129"
 ---
 # <a name="integration-services-service-ssis-service"></a>Servicio Integration Services (servicio SSIS)
@@ -166,7 +166,7 @@ ms.locfileid: "65718129"
 
 ### <a name="event-logged-when-permissions-are-missing"></a>Evento que se registra cuando faltan los permisos
 
-Si la cuenta de servicio del Agente SQL Server no tiene el DCOM de Integration Services **[Permisos de inicio y activación]**, se agrega el evento siguiente a los registros de eventos del sistema cuando el Agente SQL Server ejecuta los trabajos del paquete SSIS:
+Si la cuenta de servicio del Agente SQL Server no tiene el DCOM de Integration Services **[Permisos de inicio y activación]** , se agrega el evento siguiente a los registros de eventos del sistema cuando el Agente SQL Server ejecuta los trabajos del paquete SSIS:
 
 ```
 Log Name: System

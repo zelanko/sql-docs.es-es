@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6fe2095d7e5bdd47a4442084b9d75c6880a64cfc
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713718"
 ---
 # <a name="debugging-control-flow"></a>Depurar el flujo de control
@@ -136,7 +136,7 @@ ms.locfileid: "65713718"
   
     -   Para establecer puntos de interrupción en un controlador de eventos, haga clic en la pestaña **Controlador de eventos** , haga clic con el botón derecho en una tarea, un contenedor de bucles For o Foreach o un contenedor de secuencias y, después, haga clic en **Editar puntos de interrupción**.  
   
-4.  En el cuadro de diálogo **Establecer puntos de interrupción \<nombre de contenedor>**, seleccione los puntos de interrupción que quiere habilitar.  
+4.  En el cuadro de diálogo **Establecer puntos de interrupción \<nombre de contenedor>** , seleccione los puntos de interrupción que quiere habilitar.  
   
 5.  Opcionalmente, modifique el tipo y la cantidad de número de llamadas para cada punto de interrupción.  
   

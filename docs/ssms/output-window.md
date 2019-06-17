@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a070121a50f056ad293bc4aec6af305587a9b6c3
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095672"
 ---
 # <a name="output-window-in-sql-server-management-studio"></a>Ventana de salida de SQL Server Management Studio
@@ -31,7 +31,7 @@ En la tabla siguiente se ofrece una visión general de los tipos de mensajes aso
 |Canal|Descripción|
 |-----------|---------------|  
 |**Telemetría**|La telemetría es la secuencia de [datos de uso de la función anónima](sql-server-management-studio-ssms.md) que recopila Microsoft. Estos eventos pueden ser útiles para sus propios registros de uso de SSMS. Pueden ayudarle a identificar los nodos del Explorador de objetos que ha expandido, así como qué comandos ha ejecutado durante su sesión en SSMS con la Ventana de salida abierta.|
-|**Explorador de objetos**|Este canal da como resultado el texto de consulta y el tiempo transcurrido para realizar las consultas SQL necesarias para expandir nodos en el Explorador de objetos. Cada consulta registra una consulta inicial y un evento de consulta final. Cada evento tiene una marca de tiempo y el URN asociados a la entidad a la que se envía la consulta. El [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) hace referencia al objeto de administración de SQL subyacente y consta de una jerarquía de estilo XPath. Por ejemplo, el URN de una tabla llamada "Tabla1" en la base de datos "Base de datos" del servidor "Mi servidor" sería "Server[@Name='MiServidor']/Database[@Name='BaseDeDatos'/Table[/@Name='Tabla1']".  Al expandir un nodo en el Explorador de objetos, puede realizar varias de estas consultas usando parámetros diferentes. El evento de finalización de consulta contendrá el tiempo transcurrido de la consulta junto con el texto TSQL. Es posible que esta consulta de datos le resulte útil para el análisis del rendimiento del servidor en casos en los que el Explorador de objetos parezca inusualmente lento al intentar expandir un nodo determinado. **Nota**: No todos los nodos del Explorador de objetos aportan este nivel de detalle de la consulta al expandirse.|
+|**Explorador de objetos**|Este canal da como resultado el texto de consulta y el tiempo transcurrido para realizar las consultas SQL necesarias para expandir nodos en el Explorador de objetos. Cada consulta registra una consulta inicial y un evento de consulta final. Cada evento tiene una marca de tiempo y el URN asociados a la entidad a la que se envía la consulta. El [URN](https://technet.microsoft.com/library/microsoft.sqlserver.management.smo.urn(v=sql.90).aspx) hace referencia al objeto de administración de SQL subyacente y consta de una jerarquía de estilo XPath. Por ejemplo, el URN de una tabla llamada "Tabla1" en la base de datos "Base de datos" del servidor "Mi servidor" sería "Server[@Name='MiServidor']/Database[@Name='BaseDeDatos'/Table[/@Name='Tabla1']". Al expandir un nodo en el Explorador de objetos, puede realizar varias de estas consultas usando parámetros diferentes. El evento de finalización de consulta contendrá el tiempo transcurrido de la consulta junto con el texto TSQL. Es posible que esta consulta de datos le resulte útil para el análisis del rendimiento del servidor en casos en los que el Explorador de objetos parezca inusualmente lento al intentar expandir un nodo determinado. **Nota**: No todos los nodos del Explorador de objetos aportan este nivel de detalle de la consulta al expandirse.|
 |**Monitor de actividad**|Este canal se inicia cuando se [abre el Monitor de actividad](https://docs.microsoft.com/sql/relational-databases/performance-monitor/activity-monitor) para un servidor. Esta secuencia contiene eventos que muestran parte del texto de la consulta y la marca de tiempo de cada consulta, mensajes de error y notificaciones del monitor para informar de que están en pausa debido a problemas de conectividad. Si el Monitor de actividad parece estar inactivo o no se puede actualizar, compruebe este canal de salida para obtener más información.|
 
 

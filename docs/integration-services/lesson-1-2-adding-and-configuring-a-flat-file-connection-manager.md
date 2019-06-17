@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 60a704adb2fe1bbdcfd5d78cfd02a7b704745642
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723433"
 ---
 # <a name="lesson-1-2-add-and-configure-a-flat-file-connection-manager"></a>Lección 1-2: Adición y configuración de un administrador de conexiones de archivos planos
@@ -35,7 +35,7 @@ En esta lección, configurará las propiedades siguientes en el administrador de
 -   **Asignaciones de datos:** las asignaciones de tipo de datos que especifique para el administrador de conexiones de archivos planos se usan en todos los componentes de origen de datos de archivo plano que hacen referencia al administrador de conexiones. Puede asignar los tipos de datos de forma manual mediante el administrador de conexiones de archivos planos o usar el cuadro de diálogo **Sugerir tipos de columna** . En esta tarea, verá las asignaciones sugeridas en el cuadro de diálogo **Sugerir tipos de columna** y luego creará de forma manual las asignaciones necesarias en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
   
 > [!NOTE]
-> El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción de configuración regional **Inglés (Estados Unidos)**, debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
+> El administrador de conexiones de archivos planos proporciona información de configuración regional acerca del archivo de datos. Si el equipo no está configurado para usar la opción de configuración regional **Inglés (Estados Unidos)** , debe establecer propiedades adicionales en el cuadro de diálogo **Editor del administrador de conexiones de archivos planos**.  
   
 ## <a name="add-a-flat-file-connection-manager-to-the-ssis-package"></a>Adición de un administrador de conexiones de archivos planos al paquete SSIS  
   

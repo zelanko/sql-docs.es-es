@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65722742"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>Lección 2-2: Incorporación y configuración del contenedor de bucles Foreach
@@ -51,7 +51,7 @@ Una vez realizadas estas modificaciones en el paquete y, cuando este se ejecute,
   
 4.  En el cuadro de diálogo **Editor de bucles Foreach**, en la página **General**, en **Nombre**, escriba **Foreach File in Folder**. Seleccione **Aceptar**.  
   
-5.  Haga clic con el botón derecho en el contenedor de bucles Foreach, seleccione **Propiedades** y, en la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)**.  
+5.  Haga clic con el botón derecho en el contenedor de bucles Foreach, seleccione **Propiedades** y, en la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** .  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>Configuración del enumerador para el contenedor de bucles Foreach  
   
@@ -71,7 +71,7 @@ Una vez realizadas estas modificaciones en el paquete y, cuando este se ejecute,
   
 1.  Seleccione **Asignaciones de variables**.  
   
-2.  En la página **Asignaciones de variables**, en la columna **Variable**, seleccione la celda vacía y elija **\<Nueva variable…>**.  
+2.  En la página **Asignaciones de variables**, en la columna **Variable**, seleccione la celda vacía y elija **\<Nueva variable…>** .  
   
 3.  En el cuadro de diálogo **Agregar variable**, en **Nombre**, escriba **varFileName**.  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d8660aa65699e6abd22c73e13c3673903ff6bfb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713527"
 ---
 # <a name="what39s-new-in-integration-services-in-sql-server-2017"></a>Novedades de Integration Services en SQL Server 2017
@@ -64,7 +64,7 @@ Ahora puede desarrollar proyectos y paquetes de SSIS para las versiones de SQL S
 -   Se mejoró el control de conmutación por error de los registros de ejecución de Trabajadores de escalabilidad horizontal. Los registros de ejecución se guardan en un disco local por si el trabajo de escalabilidad horizontal se detiene inesperadamente. Posteriormente, cuando se reinicia el trabajo, vuelve a cargar los registros persistentes y los sigue guardando en SSISDB.
 -   Se cambió el nombre del parámetro *runincluster* del procedimiento almacenado **[catálogo].[create_execution]** a *runinscaleout* para mejorar la coherencia y la legibilidad. Este cambio en el nombre del parámetro tiene las siguientes consecuencias:
     -   Si tiene scripts existentes para ejecutar paquetes en Escalabilidad horizontal, debe cambiar el nombre del parámetro de *runincluster* a *runinscaleout* para que los scripts funcionen en RC1.
-    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: "*@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. Hasta que esté disponible la versión 17.2 de SSMS, como solución alternativa, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes, cambiar el nombre del parámetro *runincluster* a *runinscaleout* en el script y, luego, ejecutar el script.
+    -   SQL Server Management Studio (SSMS) 17.1 y versiones anteriores no pueden desencadenar la ejecución de paquetes en Escalabilidad horizontal en RC1. El mensaje de error es este: " *@runincluster* no es un parámetro para el procedimiento **create_execution**". Este problema se corrige en la versión siguiente de SSMS, la versión 17.2. La versión 17.2 y versiones posteriores de SSMS admiten el nuevo nombre de parámetro y la ejecución de paquetes en Escalabilidad horizontal. Hasta que esté disponible la versión 17.2 de SSMS, como solución alternativa, puede usar la versión existente de SSMS para generar el script de ejecución de paquetes, cambiar el nombre del parámetro *runincluster* a *runinscaleout* en el script y, luego, ejecutar el script.
 -   El catálogo de SSIS tiene una nueva propiedad global para especificar el modo predeterminado de ejecución de los paquetes de SSIS. Esta nueva propiedad se aplica cuando llama al procedimiento almacenado **[catalog].[create_execution]** con el parámetro *runinscaleout* establecido en null. Este modo también se aplica a los trabajos del Agente SQL de SSIS. Puede establecer la propiedad global nueva en el cuadro de diálogo Propiedades para el nodo SSISDB en SSMS o con el siguiente comando:
     ```sql
     EXEC [catalog].[configure_catalog] @property_name=N'DEFAULT_EXECUTION_MODE', @property_value=1

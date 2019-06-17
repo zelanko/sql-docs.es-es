@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3cf3917aec1bfed9a02a684b5a86b48ffe7dc5e7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716834"
 ---
 # <a name="catalogcreateenvironment-ssisdb-database"></a>catalog.create_environment (base de datos de SSISDB)
@@ -37,13 +37,13 @@ catalog.create_environment [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- Nombre de la carpeta que contendrá el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contendrá el entorno. *folder_name* es **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- El nombre del entorno. *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [@environment_description=] *environment_description*  
- Una descripción opcional del entorno. *environment_description* es **nvarchar(1024)**.  
+ Una descripción opcional del entorno. *environment_description* es **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

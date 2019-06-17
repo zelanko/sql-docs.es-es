@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a92ea4fd7b16715cdea3994d8ab68fa0ef047c4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939049"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>Promover los valores XML usados con frecuencia con columnas calculadas
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ WHERE  ISBN = '0-7356-1588-2'
   
 -   Cree desencadenadores en la columna XML para mantener las tablas de propiedades. En los desencadenadores, realice una de las siguientes operaciones:  
   
-    -   Use métodos de tipo de datos **xml** , como **nodes()** y **value()**, para insertar y eliminar filas de las tablas de propiedades.  
+    -   Use métodos de tipo de datos **xml** , como **nodes()** y **value()** , para insertar y eliminar filas de las tablas de propiedades.  
   
     -   Cree funciones de transmisión por secuencias con valores de tabla en Common Language Runtime (CLR) para insertar y eliminar filas de las tablas de propiedades.  
   

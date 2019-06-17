@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ca43c5b6faaa8aecf24da81e7a587f9c33636ac3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715734"
 ---
 # <a name="catalogvalidatepackage-ssisdb-database"></a>catalog.validate_package (base de datos de SSISDB)
@@ -44,13 +44,13 @@ catalog.validate_package [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- El nombre de la carpeta que contiene el paquete. *folder_name* es **nvarchar(128)**.  
+ El nombre de la carpeta que contiene el paquete. *folder_name* es **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- El nombre del proyecto que contiene el paquete. *project_name* es **nvarchar(128)**.  
+ El nombre del proyecto que contiene el paquete. *project_name* es **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. El parámetro *package_name* es de tipo **nvarchar(260)**.  
+ Nombre del paquete. El parámetro *package_name* es de tipo **nvarchar(260)** .  
   
  [ @validation_id = ] *validation_id*  
  Devuelve el identificador único (ID) de la validación. El parámetro *validation_id* es **bigint**.  
@@ -59,7 +59,7 @@ catalog.validate_package [ @folder_name = ] folder_name
  Indica si el motor en tiempo de ejecución de 32 bits se debe usar para ejecutar el paquete en un sistema operativo de 64 bits. Use el valor de `1` para ejecutar el paquete con el entorno de ejecución de 32 bits cuando se ejecute en un sistema operativo de 64 bits. Use el valor `0` para ejecutar el paquete con el motor en tiempo de ejecución de 64 bits cuando se ejecute en un sistema operativo de 64 bits. Este parámetro es opcional. El parámetro *use32bitruntime* es **bit**.  
   
  [ @environment_scope = ] *environment_scope*  
- Indica las referencias de entorno que la validación tiene en cuenta. Cuando el valor es `A`, todas las referencias de entorno asociadas con el proyecto se incluyen en la validación. Cuando el valor es `S`, solo se incluye una sola referencia de entorno. Cuando el valor es `D`, no se incluyen referencias de entorno y todos los parámetros deben tener un valor literal predeterminado para pasar la validación. Este parámetro es opcional. El carácter `D` se usa de forma predeterminada. El parámetro *environment_scope* es **char(1)**.  
+ Indica las referencias de entorno que la validación tiene en cuenta. Cuando el valor es `A`, todas las referencias de entorno asociadas con el proyecto se incluyen en la validación. Cuando el valor es `S`, solo se incluye una sola referencia de entorno. Cuando el valor es `D`, no se incluyen referencias de entorno y todos los parámetros deben tener un valor literal predeterminado para pasar la validación. Este parámetro es opcional. El carácter `D` se usa de forma predeterminada. El parámetro *environment_scope* es **char(1)** .  
   
  [ @reference_id = ] *reference_id*  
  El identificador único de la referencia de entorno. Este parámetro es obligatorio solo cuando se incluye una sola referencia de entorno en la validación, cuando el parámetro *environment_scope* es `S`. *reference_id* es **bigint**.  

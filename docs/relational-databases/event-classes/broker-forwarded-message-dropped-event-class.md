@@ -14,10 +14,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c2fb2e65589e8cec209eb1d7336ec83da3b14737
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265527"
 ---
 # <a name="brokerforwarded-message-dropped-event-class"></a>Broker:Forwarded Message Dropped, clase de eventos
@@ -50,7 +50,7 @@ ms.locfileid: "66265527"
 |ObjectId|**int**|Tiempo de vida del mensaje reenviado.|22|No|  
 |ObjectName|**nvarchar**|Identificador del mensaje reenviado.|34|No|  
 |OwnerName|**nvarchar**|Identificador de la instancia del agente del destino del mensaje.|37|No|  
-|RoleName|**nvarchar**|Rol del identificador de conversación. Una de las siguientes opciones:<br /><br /> - Iniciador. Este agente inició la conversación.<br /><br /> - Destino. Este agente es el destino de la conversación.|38|No|  
+|RoleName|**nvarchar**|Rol del identificador de conversación. Una de las siguientes opciones:<br /><br /> \- Iniciador. Este agente inició la conversación.<br /><br /> \- Destino. Este agente es el destino de la conversación.|38|No|  
 |ServerName|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |Severity|**int**|Número de nivel de gravedad para el texto del evento.|29|No|  
 |SPID|**int**|Identificador de proceso del servidor que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna al proceso asociado al cliente.|12|Sí|  

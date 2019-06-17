@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a8d607e528164e71d1e771d497ff7660cb7ecf66
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132995"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669670"
 ---
 # <a name="updatable-subscriptions---for-transactional-replication"></a>Suscripciones actualizables para la replicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "54132995"
   
 -   Los suscriptores no pueden actualizar o insertar valores **text**, **ntext** o **image** porque no es posible leer en las tablas insertadas o eliminadas dentro de los desencadenadores de seguimiento de cambios de replicación. Igualmente, los suscriptores no pueden actualizar o insertar valores **text** o **image** utilizando **WRITETEXT** o **UPDATETEXT** porque el publicador sobrescribe los datos. En su lugar, puede dividir las columnas **text** y **image** en una tabla independiente y modificar las dos tablas en una transacción.  
   
-     Para actualizar los objetos grandes de un suscriptor, utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)** en lugar de **text**, **ntext**y **image** , respectivamente.  
+     Para actualizar los objetos grandes de un suscriptor, utilice los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** en lugar de **text**, **ntext**y **image** , respectivamente.  
   
 -   No se permiten actualizaciones de claves únicas (incluidas las claves principales) que generen duplicados (por ejemplo, una actualización con el formato `UPDATE <column> SET <column> =<column>+1` ) y se rechazarán debido a una infracción de unicidad. Esto se debe a que la replicación propaga las actualizaciones de conjuntos realizadas en el suscriptor como instrucciones **UPDATE** individuales para cada fila afectada.  
   

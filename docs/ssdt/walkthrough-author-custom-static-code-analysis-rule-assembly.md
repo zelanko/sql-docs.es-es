@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ba52dfc0ff41cb1ee4a92fda4a37e368f0533474
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090165"
 ---
 # <a name="walkthrough-authoring-a-custom-static-code-analysis-rule-assembly-for-sql-server"></a>Tutorial de creación de un ensamblado de regla de análisis de código estático personalizado para SQL Server
@@ -495,7 +495,7 @@ Ahora que ha agregado las clases del asistente que la regla de análisis de cód
   
 3.  Haga clic en **Firmar el ensamblado**.  
   
-4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>**.  
+4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>** .  
   
 5.  En el cuadro de diálogo **Crear clave de nombre seguro**, en **Nombre del archivo clave**, escriba MyRefKey.  
   

@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: e90952527e5510d4a49fa7b7a72843c059686b96
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102039"
 ---
 # <a name="walkthrough-extend-database-project-build-to-generate-model-statistics"></a>Tutorial: Ampliación de la compilación del proyecto de base de datos para generar estadísticas de modelo
@@ -438,7 +438,7 @@ Para crear un colaborador de compilación, debe realizar las siguientes tareas:
   
 3.  Haga clic en **Firmar el ensamblado**.  
   
-4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>**.  
+4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>** .  
   
 5.  En el cuadro de diálogo **Crear clave de nombre seguro** , en el **Nombre del archivo clave**, escriba **MyRefKey**.  
   
@@ -525,7 +525,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
   
 1.  En Visual Studio, haga clic con el botón secundario en el proyecto y seleccione “Recompilar”. Se recompilará el proyecto, y debería ver las estadísticas del modelo generadas, con la salida incluida en la compilación de salida y guardada en ModelStatistics.xml. Observe que puede tener que elegir “Mostrar todos los archivos” en el Explorador de soluciones para ver el archivo XML.  
   
-2.  Abra un símbolo del sistema de Visual Studio: en el menú **Inicio**, haga clic en **Todos los programas**, **Microsoft Visual Studio <Visual Studio Version>**, **Visual Studio Tools**, y, finalmente, en **Símbolo del sistema Visual Studio (<Visual Studio Version>)**.  
+2.  Abra un símbolo del sistema de Visual Studio: en el menú **Inicio**, haga clic en **Todos los programas**, **Microsoft Visual Studio <Visual Studio Version>** , **Visual Studio Tools**, y, finalmente, en **Símbolo del sistema Visual Studio (<Visual Studio Version>)** .  
   
 3.  En el símbolo del sistema, navegue a la carpeta que contiene el proyecto de SQL.  
   

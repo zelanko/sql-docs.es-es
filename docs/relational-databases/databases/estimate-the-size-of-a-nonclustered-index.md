@@ -22,11 +22,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 80b6c00b0abcd09d4712b82df1d0d138cb37a390
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62653168"
 ---
 # <a name="estimate-the-size-of-a-nonclustered-index"></a>Estimar el tamaño de un índice no clúster
 
@@ -250,7 +250,7 @@ ms.locfileid: "51559182"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntext**, **xml**e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntext**, **xml**e **image** es complejo. Basta con agregar el tamaño medio de los valores LOB esperados, multiplicarlo por ***Num_Rows***y sumar el resultado al tamaño total del índice no agrupado.  
   
 -   Compresión  
   
@@ -260,7 +260,7 @@ ms.locfileid: "51559182"
   
      Para obtener información sobre los requisitos de espacio de las columnas dispersas, vea [Use Sparse Columns](../../relational-databases/tables/use-sparse-columns.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Índices agrupados y no agrupados descritos](../../relational-databases/indexes/clustered-and-nonclustered-indexes-described.md)   
  [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md)   
  [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md)   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c79df90c6093ed93668e504e574c712a2ba2146a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716021"
 ---
 # <a name="catalogmoveproject---ssisdb-database"></a>catalog.move_project - base de datos de SSISDB
@@ -37,13 +37,13 @@ catalog.move_project [ @source_folder = ] source_folder
   
 ## <a name="arguments"></a>Argumentos  
  [ @source_folder = ] *source_folder*  
- Nombre de la carpeta de origen en la que está ubicado el proyecto antes de moverlo. *source_folder* es **nvarchar(128)**.  
+ Nombre de la carpeta de origen en la que está ubicado el proyecto antes de moverlo. *source_folder* es **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nombre del proyecto que se va a mover. *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto que se va a mover. *project_name* es **nvarchar(128)** .  
   
  [ @destination_folder = ] *destination_folder*  
- Nombre de la carpeta de destino en la que está ubicado el proyecto después de moverlo. *destination_folder* es **nvarchar(128)**.  
+ Nombre de la carpeta de destino en la que está ubicado el proyecto después de moverlo. *destination_folder* es **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

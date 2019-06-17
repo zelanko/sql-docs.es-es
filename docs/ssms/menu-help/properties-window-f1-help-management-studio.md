@@ -25,10 +25,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: ad01e2691f76fea00a5531834918b7fbe5d2382e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096391"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ventana Propiedades (Ayuda F1 de Management Studio)
@@ -42,7 +42,7 @@ La ventana **Propiedades** muestra distintos tipos de campos de edición, depend
 Muestra el objeto o los objetos seleccionados actualmente. Solo están visibles los objetos del editor o diseñador activo.  
   
 **Por categorías**  
-Muestra, por categoría, todas las propiedades y los valores de las propiedades del objeto seleccionado. Una categoría se puede contraer para reducir el número de propiedades visibles. Cuando se expande o contrae una categoría, verá un signo más (**+**) o un signo menos (**-**) a la izquierda del nombre de la categoría. Las categorías se muestran por orden alfabético.  
+Muestra, por categoría, todas las propiedades y los valores de las propiedades del objeto seleccionado. Una categoría se puede contraer para reducir el número de propiedades visibles. Cuando se expande o contrae una categoría, verá un signo más ( **+** ) o un signo menos ( **-** ) a la izquierda del nombre de la categoría. Las categorías se muestran por orden alfabético.  
   
 **Alfabético**  
 Ordena alfabéticamente todas las propiedades y los eventos de tiempo de diseño para los objetos seleccionados.  

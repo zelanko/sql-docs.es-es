@@ -25,10 +25,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 728981e3b05aa82d80138006c0f1a13648cbcd25
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105585"
 ---
 # <a name="create-a-login"></a>Crear un inicio de sesión
@@ -56,17 +56,17 @@ ms.locfileid: "65105585"
   
 1.  En el Explorador de objetos, expanda la carpeta de la instancia de servidor en la que desea crear el nuevo inicio de sesión.  
   
-2.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y, después, haga clic en **Inicio de sesión...**.  
+2.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y, después, haga clic en **Inicio de sesión...** .  
   
 3.  En el cuadro de diálogo **Inicio de sesión - Nuevo**, en la página **General**, escriba el nombre de un usuario en el cuadro **Nombre de inicio de sesión**. Como alternativa, haga clic en **Buscar...** para abrir el cuadro de diálogo **Seleccionar usuarios o grupos**.  
   
-     Si hace clic en **Buscar...**:  
+     Si hace clic en **Buscar...** :  
   
     1.  En **Seleccionar este tipo de objeto**, haga clic en **Tipos de objeto...** para abrir el cuadro de diálogo **Tipos de objetos** y seleccione alguna o todas las opciones siguientes: **Entidades de seguridad integradas**, **Grupos** y **Usuarios**. Las opciones**Entidades de seguridad integradas** y **Usuarios** están seleccionadas de forma predeterminada. Cuando termine, haga clic en **Aceptar**.  
   
     2.  En **Desde esta ubicación**, haga clic en **Ubicaciones...** para abrir el cuadro de diálogo **Ubicaciones** y seleccione una de las ubicaciones de servidor disponibles. Cuando termine, haga clic en **Aceptar**.  
   
-    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](https://technet.microsoft.com/library/cc771712.aspx).  
+    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)** , escriba el usuario o el nombre de grupo que quiere buscar. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo)](https://technet.microsoft.com/library/cc771712.aspx).  
   
     4.  Haga clic en **Avanzadas...** para obtener más opciones avanzadas de búsqueda. Para obtener más información, vea [Seleccionar usuarios, equipos o grupos (cuadro de diálogo): página Opciones avanzadas](https://technet.microsoft.com/library/cc733110.aspx).  
   
@@ -104,31 +104,31 @@ ms.locfileid: "65105585"
 ### <a name="server-roles"></a>Roles del servidor  
  La página **Roles de servidor** enumera todos los roles posibles que se pueden asignar al nuevo inicio de sesión. Las siguientes opciones están disponibles:  
   
- Casilla**bulkadmin**   
+ Casilla**bulkadmin**  
  Los miembros del rol fijo de servidor **bulkadmin** pueden ejecutar la instrucción BULK INSERT.  
   
- Casilla**dbcreator**   
+ Casilla**dbcreator**  
  Los miembros del rol fijo de servidor **dbcreator** pueden crear, modificar, quitar y restaurar cualquier base de datos.  
   
- Casilla**diskadmin**   
+ Casilla**diskadmin**  
  Los miembros del rol fijo de servidor **diskadmin** pueden administrar archivos de disco.  
   
- Casilla**processadmin**   
+ Casilla**processadmin**  
  Los miembros del rol fijo de servidor **processadmin** pueden finalizar procesos mediante la ejecución de una instancia del [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
- Casilla**public**   
+ Casilla**public**  
  Todos los usuarios, grupos y roles de SQL Server pertenecen al rol fijo de servidor **public** de forma predeterminada.  
   
- Casilla**securityadmin**   
+ Casilla**securityadmin**  
  Los miembros del rol fijo de servidor **securityadmin** administran los inicios de sesión y sus propiedades. Administran los permisos de servidor GRANT, DENY y REVOKE. También administran los permisos de base de datos GRANT, DENY y REVOKE. Asimismo, pueden restablecer contraseñas para inicios de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
   
- Casilla**serveradmin**   
+ Casilla**serveradmin**  
  Los miembros del rol fijo de servidor **serveradmin** pueden cambiar opciones de configuración en el servidor y cerrar el servidor.  
   
- Casilla**setupadmin**   
+ Casilla**setupadmin**  
  Los miembros del rol fijo de servidor **setupadmin** pueden agregar y quitar servidores vinculados, y ejecutar algunos procedimientos almacenados del sistema.  
   
- Casilla**sysadmin**   
+ Casilla**sysadmin**  
  Los miembros del rol fijo de servidor **sysadmin** pueden realizar cualquier actividad en el [!INCLUDE[ssDE](../../../includes/ssde-md.md)].  
   
 ### <a name="user-mapping"></a>Asignación de usuarios  
@@ -165,23 +165,23 @@ ms.locfileid: "65105585"
   
 1.  Haga clic en **Buscar**.  
   
-2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...**, **Todos los objetos de los tipos...** o **Servidor**_nombre\_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+2.  En el cuadro de diálogo **Agregar objetos**, seleccione una de las opciones siguientes: **Objetos específicos...** , **Todos los objetos de los tipos...** o **Servidor**_nombre\_servidor_. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
     > **NOTA:** Cuando se selecciona **Servidor**_nombre\_servidor_, se rellena de forma automática la cuadrícula superior con todos los objetos que se pueden proteger de ese servidor.  
   
-3.  Si selecciona **Objetos específicos...**:  
+3.  Si selecciona **Objetos específicos...** :  
   
-    1.  En el cuadro de diálogo **Seleccionar objetos**, en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto...**.  
+    1.  En el cuadro de diálogo **Seleccionar objetos**, en **Seleccionar estos tipos de objeto**, haga clic en **Tipos de objeto...** .  
   
     2.  En el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
-    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)**, haga clic en **Examinar...**.  
+    3.  En **Escribir los nombres de objeto para seleccionar (ejemplos)** , haga clic en **Examinar...** .  
   
     4.  En el cuadro de diálogo **Buscar objetos** , seleccione cualquiera de los objetos disponibles del tipo que seleccionó en el cuadro de diálogo **Seleccionar tipos de objeto** y haga clic en **Aceptar**.  
   
     5.  En el cuadro de diálogo **Seleccionar objetos** , haga clic en **Aceptar**.  
   
-4.  Si selecciona **Todos los objetos de los tipos...**, en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
+4.  Si selecciona **Todos los objetos de los tipos...** , en el cuadro de diálogo **Seleccionar tipos de objeto**, seleccione alguno o todos los tipos de objeto siguientes: **Puntos de conexión**, **Inicios de sesión**, **Servidores**, **Grupos de disponibilidad** y **Roles de servidor**. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
  **Nombre**  
  El nombre de cada entidad de seguridad o elemento protegible que se agrega a la cuadrícula.  

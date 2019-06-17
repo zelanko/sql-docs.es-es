@@ -18,10 +18,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 5ea7a499e2d0577b8ac0d57cbb0f530958af9ff8
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096520"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar un operador para notificaciones de error
@@ -67,7 +67,7 @@ Solo los miembros del rol fijo de servidor **sysadmin** pueden designar operador
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -**_nombre\_servidor_, en **Seleccionar una página**, seleccione **Sistema de alerta**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -** _nombre\_servidor_, en **Seleccionar una página**, seleccione **Sistema de alerta**.  
   
 4.  En **Operador para notificaciones de error**, seleccione **Habilitar operador para notificaciones de error**.  
   

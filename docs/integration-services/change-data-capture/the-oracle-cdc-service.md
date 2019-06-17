@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c033a631425a051fae411acbd5ff589302eb7344
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728480"
 ---
 # <a name="the-oracle-cdc-service"></a>El servicio CDC de Oracle
@@ -76,7 +76,7 @@ CREATE ASYMMETRIC KEY xdbcdc_asym_key
   
  Si se emplea un algoritmo diferente, se puede quitar esta clave y crear una nueva con el mismo nombre y cifrada con la misma contraseña.  
   
- La contraseña de clave asimétrica es la contraseña maestra que se guarda en el Registro, en la ruta **HKLM\Software\Microsoft\XDBCDCSVC\\<nombre-servicio>**. Esa clave solo está disponible para los administradores locales y la cuenta de servicio de Windows CDC de Oracle. La clave contiene un valor binario cifrado **AsymmetricKeyPassword** que almacena la contraseña de la clave asimétrica. Se necesita acceso a esta clave del Registro para poder obtener acceso a las credenciales de minería de registros de Oracle.  
+ La contraseña de clave asimétrica es la contraseña maestra que se guarda en el Registro, en la ruta **HKLM\Software\Microsoft\XDBCDCSVC\\<nombre-servicio>** . Esa clave solo está disponible para los administradores locales y la cuenta de servicio de Windows CDC de Oracle. La clave contiene un valor binario cifrado **AsymmetricKeyPassword** que almacena la contraseña de la clave asimétrica. Se necesita acceso a esta clave del Registro para poder obtener acceso a las credenciales de minería de registros de Oracle.  
   
  Para usar la cláusula ENCRYPTION BY PASSWORD, la contraseña debe cumplir los requisitos de la directiva de contraseñas de Windows para el equipo que ejecuta la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto se realiza seleccionando la contraseña de clave asimétrica según dicha directiva.  
   

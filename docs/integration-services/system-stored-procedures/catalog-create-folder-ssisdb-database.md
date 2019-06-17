@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a5115d9c66dd7baf091635b06ff413aa8c4ca736
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716902"
 ---
 # <a name="catalogcreatefolder-ssisdb-database"></a>catalog.create_folder (base de datos de SSISDB)
@@ -35,7 +35,7 @@ catalog.create_folder [@folder_name =] folder_name, [@folder_id =] folder_id OUT
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- El nombre de la nueva carpeta. *folder_name* es **nvarchar(128)**.  
+ El nombre de la nueva carpeta. *folder_name* es **nvarchar(128)** .  
   
  [@folder_name =] *folder_id*  
  El identificador único (ID) de la carpeta. *folder_id* es **bigint**.  

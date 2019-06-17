@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: bbe729ebef5d156f6c946e0c5cda62c1cefdcd81
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717201"
 ---
 # <a name="catalogadddatatapbyguid"></a>catalog.add_data_tap_by_guid 
@@ -50,10 +50,10 @@ catalog add_data_tap_by_guid [ @execution_id = ] execution_id
   
  Para buscar la cadena de identificación, en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], haga clic con el botón derecho en la ruta de acceso entre dos componentes de flujo de datos y, a continuación, haga clic en **Propiedades**. La propiedad **IdentificationString** aparece en la ventana **Propiedades**.  
   
- El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)**.  
+ El parámetro *dataflow_path_id_string* es de tipo **nvarchar(4000)** .  
   
  [ @data_filename = ] *data_filename*  
- Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta "*\<Carpeta de instalación de SQL Server>* \130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)**.  
+ Nombre del archivo que almacena los datos derivados. Si la tarea Flujo de datos se ejecuta en un bucle Foreach o en un contenedor de bucles For, los datos derivados se almacenan en archivos diferentes para cada iteración del bucle. Cada archivo tiene como prefijo un número que corresponde a una iteración. Los archivos de derivación de datos se escriben en la carpeta " *\<Carpeta de instalación de SQL Server>* \130\DTS\\". El parámetro *data_filename* es de tipo **nvarchar(4000)** .  
   
  [ @max_rows = ] max_rows  
  Número de filas que se capturan durante la derivación de datos. Si no se especifica este valor, se capturan todas las filas. El parámetro max_rows es de tipo **int**.  

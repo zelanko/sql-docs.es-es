@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 7b686a585b037a9377926198278a3a34f6fd4881
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721658"
 ---
 # <a name="lesson-4-1-copy-the-lesson-3-package"></a>Lección 4-1: Copia del paquete de la lección 3
@@ -46,7 +46,7 @@ Siga estos pasos si va a copiar la lección 3 completada.  Para copiar el ejempl
 
 7.  En la ventana **Propiedades**, cambie la propiedad **Nombre** a **Lesson 4**.
 
-8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>**.
+8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>** .
 
 ## <a name="add-the-completed-lesson-3-package"></a>Adición del paquete de la lección 3 completada
 
@@ -56,7 +56,7 @@ Siga estos pasos si va a copiar la lección 3 completada.  Para copiar el ejempl
 
 3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.
 
-4.  Haga clic en el botón Examinar **(…)**, vaya a **Lesson 3.dtsx** en el equipo y, después, haga clic en **Abrir**.
+4.  Haga clic en el botón Examinar **(…)** , vaya a **Lesson 3.dtsx** en el equipo y, después, haga clic en **Abrir**.
 
 5.  Copie y pegue el paquete de la lección 3 como se describe en los pasos 3 a 8 de la sección anterior.
 

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: b299b20d-d1cd-45b3-91dc-dcf579498570
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9735b94f6b888f3ee83f7c9e807d4d8ecef22cdb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c0199a2cbbeb5f01472a17ade1575031c3ad994e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672853"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803208"
 ---
 # <a name="jdbccompliant-method-sqlserverdriver"></a>Método jdbcCompliant (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +41,7 @@ public boolean jdbcCompliant()
 ## <a name="remarks"></a>Notas  
  Este método jdbcCompliant especificado por el método jdbcCompliant en la interfaz java.sql.Driver.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   
  [Miembros de SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-members.md)   
  [Clase SQLServerDriver](../../../connect/jdbc/reference/sqlserverdriver-class.md)  

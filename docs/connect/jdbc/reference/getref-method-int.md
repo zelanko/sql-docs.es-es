@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 905dd02a-0c7f-475b-8be4-341b4359c766
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d75bf52e220d5c7c5273ab99dbfca5c6e9b2d050
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3e9f964f6a9ace8984e63018f556550c1631bc1c
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47726593"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800221"
 ---
 # <a name="getref-method-int"></a>Método getRef (int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.sql.Ref getRef(int i)
 ## <a name="remarks"></a>Notas  
  El método getRef especifica este método getRef en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getRef &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getref-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

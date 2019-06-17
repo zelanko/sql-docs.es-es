@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 5487631a-1107-4169-84ca-b77fd09bea66
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3369fbc84cb16ed0f9b587ed20fe7fe368d11b02
-ms.sourcegitcommit: 0d6e4cafbb5d746e7d00fdacf8f3ce16f3023306
+manager: jroth
+ms.openlocfilehash: edc0b28c132e5422c12ae340e35c1464ee48fa73
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/11/2018
-ms.locfileid: "49084920"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799250"
 ---
 # <a name="setlastupdatecount-method-sqlserverdatasource"></a>Método setLastUpdateCount (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +43,7 @@ public void setLastUpdateCount(boolean lastUpdateCount)
 ## <a name="remarks"></a>Notas  
  Si la propiedad lastUpdateCount está establecida en **true**, [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] solo devolverá el último recuento de actualizaciones a partir de una instrucción SQL que se haya pasado al servidor. Si la propiedad lastUpdateCount está establecida en **false**, el controlador devolverá todos los recuentos de actualizaciones, incluso los que se hayan devuelto por desencadenadores activados. Si no se establece la propiedad lastUpdateCount, el método [getLastUpdateCount ](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)devuelve el valor predeterminado **true**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 501eb13a137b82adad1190f990d29760c43119b2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622363"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797060"
 ---
 # <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Consideraciones de seguridad para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -34,7 +34,7 @@ Debe utilizarse la autenticación de Windows para conectarse a SQL Server siempr
   
 Para obtener información sobre cómo conectarse a un servidor con la autenticación de Windows, consulte [Cómo conectarse mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md).  
   
-Cuando se conecte mediante la autenticación de Windows, se recomienda que configure el entorno para que SQL Server puede utilizar el protocolo de autenticación Kerberos. Para obtener más información, vea [Cómo asegurarse de que está utilizando la autenticación Kerberos cuando crea una conexión remota a una instancia de SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) o [Autenticación Kerberos y SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
+Cuando se conecte mediante la autenticación de Windows, se recomienda que configure el entorno para que SQL Server puede utilizar el protocolo de autenticación Kerberos. Para obtener más información, consulte [Cómo asegurarse de que está utilizando la autenticación Kerberos cuando crea una conexión remota a una instancia de SQL Server 2005](https://support.microsoft.com/en-ca/help/909801/how-to-make-sure-that-you-are-using-kerberos-authentication-when-you-c) o [Autenticación Kerberos y SQL Server](https://msdn.microsoft.com/library/cc280744.aspx).  
   
 ## <a name="use-encrypted-connections-when-transferring-sensitive-data"></a>Uso de conexiones cifradas cuando se transfiere información confidencial  
 Se deben usar conexiones cifradas siempre que se envíe información confidencial o se recupere de SQL Server. Para obtener información sobre cómo habilitar conexiones cifradas, vea el artículo [Habilitar conexiones cifradas en el motor de base de datos (Administrador de configuración de SQL Server)](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md). Para establecer una conexión segura con los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], utilice el atributo de conexión Encrypt cuando se conecte al servidor. Para obtener más información sobre los atributos de conexión, consulte [Connection Options](../../connect/php/connection-options.md).  
@@ -42,7 +42,7 @@ Se deben usar conexiones cifradas siempre que se envíe información confidencia
 ## <a name="use-parameterized-queries"></a>Uso de consultas con parámetros  
 Utilice consultas con parámetros para reducir el riesgo de ataques por inyección de SQL. Para obtener ejemplos de la ejecución de consultas con parámetros, consulte [How to: Perform Parameterized Queries](../../connect/php/how-to-perform-parameterized-queries.md).  
   
-Para obtener más información sobre los ataques por inyección de SQL y las consideraciones de seguridad relacionadas, vea [Inyección de código SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
+Para obtener más información sobre los ataques por inyección de SQL y las consideraciones de seguridad relacionadas, consulte [Inyección de código SQL](https://msdn.microsoft.com/library/ms161953.aspx).  
   
 ## <a name="do-not-accept-server-or-connection-string-information-from-end-users"></a>No aceptación de información de la cadena de conexión o del servidor procedente de usuarios finales  
 Escriba aplicaciones para que los usuarios finales no puedan enviar información de la cadena de conexión o del servidor a la aplicación. Al mantener un control estricto sobre la información de la cadena de conexión y del servidor, se reduce el área expuesta a actividades malintencionadas.  
@@ -53,6 +53,6 @@ Desarrolle aplicaciones con la configuración **WarningsAsErrors** definida como
 ## <a name="secure-logs-for-deployed-application"></a>Registros seguros para la aplicación implementada  
 Para las aplicaciones implementadas, asegúrese de que los registros se agregan a una ubicación segura o de que el registro esté desactivado. Esto ayuda a proteger contra la posibilidad de que los usuarios finales accedan a información escrita en los archivos de registro. Para obtener más información, consulte [Logging Activity](../../connect/php/logging-activity.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
   

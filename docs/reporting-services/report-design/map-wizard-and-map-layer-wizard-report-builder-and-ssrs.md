@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 48cbe18b-1290-4107-8a1c-ec6acd71f73b
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8587cedde63352f7027e573092c6e8ae02dc218d
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7acbf53f3a77252d00d3ad5de65ffb221afe3b7a
+ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580118"
+ms.lasthandoff: 06/04/2019
+ms.locfileid: "66499878"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
  En los informes paginados de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] , el Asistente para mapas y el Asistente para capas de mapa automatizan las tareas de crear un mapa, agregar una capa de mapa o cambiar las opciones de capas de mapa en una capa existente.  
@@ -114,12 +114,12 @@ ms.locfileid: "65580118"
  La galería de mapas contiene mapas de los informes que se encuentran en la carpeta de la galería de mapas del entorno de creación de informes. Los mapas de la galería permiten comenzar rápidamente a agregar un mapa a un informe. Un proveedor de mapas proporciona los mapas predefinidos de la galería.  
   
 > [!NOTE]  
->  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([https://www.census.gov/](https://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para obtener más información acerca de los archivos de forma TIGER/Line, visite [https://www.census.gov/geo/www/tiger](https://www.census.gov/geo/www/tiger). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
+>  Esta característica de mapas de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] usa los datos de archivos de forma TIGER/Line que se proporcionan por cortesía de la Oficina del censo estadounidense ([https://www.census.gov/](https://www.census.gov/)). Los archivos de forma TIGER/Line son un extracto de información geográfica y cartográfica seleccionada de la base de datos MAF/TIGRE del Censo. Los archivos de forma TIGER/Line están disponibles sin cargo en la Oficina del censo estadounidense. Para más información acerca de los archivos de forma TIGER/Line, vaya a [TIGER/Line Shapefiles and TIGER/Line Files Technical Documentation](https://www.census.gov/programs-surveys/geography/technical-documentation/complete-technical-documentation/tiger-geo-line.html) (Documentación técnica de los archivos de forma TIGER/Line y los archivos TIGER/Line). La información de fronteras de los archivos de forma TIGER/Line está destinada únicamente para la recopilación de datos estadísticos y tabulación; su representación y designación para fines estadísticos no constituye ninguna determinación de autoridad jurisdiccional ni derechos de propiedad ni de titularidad, y no son descripciones legales de territorios. Census TIGER and TIGER/Line son marcas registradas de la Oficina del censo estadounidense.  
   
  Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>*.shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>*.dbf.  
+ Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>* .shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>* .dbf.  
   
  Al especificar un archivo de forma como origen de datos espaciales, si se encuentra en el equipo local, los datos espaciales se incrustan automáticamente en el informe. Para usar los datos espaciales de un archivo ESRI dinámicamente, debe hacer lo siguiente:  
   
@@ -134,7 +134,7 @@ ms.locfileid: "65580118"
  Una consulta espacial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es una consulta de conjunto de datos que especifica datos de tipo SQLGeometry o SQLGeography de una base de datos relacional de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 > [!NOTE]  
->  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para más información, vea [Diseñadores de consultas &#40;Generador de informes&#41;](https://msdn.microsoft.com/library/553f0d4e-8b1d-4148-9321-8b41a1e8e1b9).  
+>  Al definir un origen de datos en el asistente, verá diseñadores de consultas diferentes en la página Diseñar una consulta, en función del tipo de origen de datos al que se haya conectado. Para obtener más información, consulte [herramientas de diseño de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md).  
   
  Al ejecutar la consulta en el diseñador de consultas, el conjunto de resultados muestra una columna con datos espaciales que aparece como texto. Por ejemplo, una fila podría contener datos espaciales que sean un único punto y la siguiente fila podría contener datos espaciales que definan un conjunto de puntos. Cada fila se convierte en un elemento de mapa. Puede variar la presentación de cada elemento de mapa como una unidad indivisible.  
   

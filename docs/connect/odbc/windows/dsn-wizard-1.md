@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f13746005f05d84bd8b987fe048baf392e81af3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: e8c961487aaff7e6aa57ea8add571ccbc2945dee
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641979"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797785"
 ---
 # <a name="data-source-wizard-screen-1"></a>Pantalla del Asistente para orígenes de datos 1
 
@@ -40,7 +40,7 @@ En la mayoría de los casos, el controlador ODBC puede conectarse utilizando el 
 
 Puede escribir "(local)" en el cuadro del servidor cuando esté utilizando el mismo equipo que SQL Server. El usuario puede establecer conexión con una instancia local de SQL Server, incluso si ejecuta una versión que no está en red de SQL Server. Pueden ejecutarse varias instancias de SQL Server en el mismo equipo. Para especificar una instancia con nombre de SQL Server, el nombre del servidor se especifica como _nombreDeServidor_\\_nombreDeInstancia_.
 
-Para obtener más información acerca de los nombres de servidor para diferentes tipos de redes, vea la documentación de la instalación de SQL Server en los Libros en pantalla de SQL Server.
+Para más información acerca de los nombres de servidor para diferentes tipos de redes, vea la documentación de la instalación de SQL Server en los Libros en pantalla de SQL Server.
 
 ### <a name="finish"></a>Finalizar
 

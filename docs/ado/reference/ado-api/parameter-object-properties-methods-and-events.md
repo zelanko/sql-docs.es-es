@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 83de81b055d337c5e68e67dc7128fc5c910cfa1b
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66703425"
 ---
 # <a name="parameter-object-properties-methods-and-events"></a>Los eventos, métodos y propiedades del objeto parameter
@@ -43,7 +43,7 @@ ms.locfileid: "66703425"
 ## <a name="methods"></a>Métodos  
  [Método AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md)  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Vea también  

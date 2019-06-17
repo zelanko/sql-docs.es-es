@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 678a7d6ce075e6a1082856aa7962bb3f6eec522d
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489716"
 ---
 # <a name="lesson-4-storing-supplier-data-in-mds"></a>Lección 4: Almacenamiento de datos de proveedor en MDS
@@ -49,6 +49,6 @@ ms.locfileid: "65489716"
 8.  Crear y usar una jerarquía derivada mediante la relación de atributo basado en dominio entre las entidades **Proveedor** y **Estado** (el atributo Estado de la entidad Proveedor es de tipo entidad Estado) mediante **Master Data Manager**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1: Crear el modelo proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
+ [Tarea 1: Crear el modelo proveedores mediante Master Data Manager](../../2014/tutorials/task-1-creating-suppliers-model-using-master-data-manager.md)  
   
   

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2df7517a8043269efe40d21b112100edaf9e847f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489451"
 ---
 # <a name="task-4-manaing-and-viewing-results"></a>Tarea 4: Administrar y ver resultados
@@ -72,7 +72,7 @@ ms.locfileid: "65489451"
   
 20. Cambie a la **corregido** ficha.  
   
-21. Tenga en cuenta que **estado** para el registro que tiene **Ciudad** como **Los Ángeles** está establecido en **CA** ahora. Observe que en el **motivo** campo es que **corregido por la regla 'Regla ciudad-estado'**.  
+21. Tenga en cuenta que **estado** para el registro que tiene **Ciudad** como **Los Ángeles** está establecido en **CA** ahora. Observe que en el **motivo** campo es que **corregido por la regla 'Regla ciudad-estado'** .  
   
      ![Corrección de regla ciudad-estado](../../2014/tutorials/media/et-managingandviewingresults-04.jpg "corrección a la regla Ciudad-Estado")  
   
@@ -87,6 +87,6 @@ ms.locfileid: "65489451"
 25. Haga clic en **siguiente** para cambiar a la **exportar** página.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Exportar los resultados a un archivo de Excel de la limpieza](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
+ [Tarea 5: Exportar los resultados a un archivo de Excel de la limpieza](../../2014/tutorials/task-5-exporting-cleansing-results-to-an-excel-file.md)  
   
   

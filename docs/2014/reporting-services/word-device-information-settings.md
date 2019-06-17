@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ddd145c5073003a8dc189e3ed9b1bbb25dc11d09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66096928"
 ---
 # <a name="word-device-information-settings"></a>Configuración de la información del dispositivo web
@@ -25,7 +25,7 @@ ms.locfileid: "66096928"
   
 |Parámetro|Valor|  
 |-------------|-----------|  
-|`AutoFit`|`False`  AutoFit está establecido en `false` en cualquier tabla de Word.<br /><br /> `True`  AutoaFit está establecido en `true` en cada tabla de Word.<br /><br /> `Never`  Los valores de AutoFit no están establecidos en ninguna tabla de Word y el comportamiento revierte al predeterminado de Word.<br /><br /> `Default`  AutoFit se establece en las tablas que son más estrechas que el área física de dibujo (ancho de página física excepto los márgenes) por la página lógica.|  
+|`AutoFit`|`False` AutoFit está establecido en `false` en cualquier tabla de Word.<br /><br /> `True` AutoaFit está establecido en `true` en cada tabla de Word.<br /><br /> `Never` Los valores de AutoFit no están establecidos en ninguna tabla de Word y el comportamiento revierte al predeterminado de Word.<br /><br /> `Default` AutoFit se establece en las tablas que son más estrechas que el área física de dibujo (ancho de página física excepto los márgenes) por la página lógica.|  
 |`ExpandToggles`|Indica si todos los elementos que se pueden alternar deberían representarse en su estado totalmente expandido. El valor predeterminado es `false`.|  
 |`FixedPageWidth`|Indica si el ancho de página escrito en el archivo DOC crecerá para alojar el ancho de la página más grande en el cuerpo del informe. El valor predeterminado es `false`.|  
 |**OmitHyperlinks**|Indica si omitir la acción Hyperlink en todos los elementos donde se establezca. El valor predeterminado es `false`|  

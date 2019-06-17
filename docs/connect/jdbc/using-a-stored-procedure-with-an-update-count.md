@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d2cc4cf802827239ffa32e5401e647bbbc61921c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b65d882365b7424cd88fa0942674cfe0a7660795
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680332"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797115"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>Usar un procedimiento almacenado con un recuento de actualizaciones
 
@@ -52,6 +52,6 @@ En el siguiente ejemplo, se pasa una conexión abierta a la base de datos de eje
 
 [!code[JDBC#UsingSprocWithUpdateCount1](../../connect/jdbc/codesnippet/Java/using-a-stored-procedure_0_1.java)]
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con procedimientos almacenados](../../connect/jdbc/using-statements-with-stored-procedures.md)

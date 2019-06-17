@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 5f4c61c346452664557396032cb4ea14f89da66c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105330"
 ---
 # <a name="aggregate-functions-reference-report-builder-and-ssrs"></a>Referencia a las funciones de agregado (Generador de informes y SSRS)
@@ -73,17 +73,17 @@ ms.locfileid: "66105330"
 |------------------------|------------|----------------|-----------------|-------------------------------|----------------------------|---------------|------------------|  
 |Encabezado de página<br /><br /> Pie de página|Sí|Sí|A lo sumo uno<br /><br /> Nota 1|Sí|Sí|Sí|Sí|  
 |Cuerpo|Sí<br /><br /> Nota 2|Sí|Solo los elementos del ámbito actual o de un ámbito que lo contenga<br /><br /> Nota 3|No|Sí|Sí|Sí|  
-|Parámetro de informe|No|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|Sin |Sin |Sin |No|Sin |  
-|Campo|Sí|Sí|Sin |Sin |Sin |No|Sin |  
-|Parámetro de consulta|Sin |Sí|Sin |Sin |Sin |No|Sin |  
-|Expresión de grupo|Sí|Sí|No|Sin |Sí|Sin |Sin |  
-|Expresión de ordenación|Sí|Sí|No|Sin |Sí|Sí<br /><br /> Nota 5|Sin |  
-|Expresión de filtro|Sí|Sí|No|No|Sí|Sí<br /><br /> Nota 6|Sin |  
-|Código|Sin |Sí<br /><br /> Nota 7|No|Sin |Sin |Sin |Sin |  
-|Idioma de los informes|No|Sí|Sin |Sin |No|Sin |Sin |  
-|Variables|Sí|Sí|Sin |No|Sí|Ámbito actual o que lo contiene|Sin |  
-|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|Sin |Sin |  
-|Funciones de búsqueda|Sí|Sí|Sí|Sin |Sí|No|Sin |  
+|Parámetro de informe|Sin|Solo los parámetros anteriores en la lista<br /><br /> Nota 4|Sin|Sin|Sin|Sin|No|  
+|Campo|Sí|Sí|Sin|Sin|No|Sin|Sin|  
+|Parámetro de consulta|No|Sí|Sin|Sin|Sin|Sin|Sin|  
+|Expresión de grupo|Sí|Sí|Sin|No|Sí|Sin|No|  
+|Expresión de ordenación|Sí|Sí|Sin|No|Sí|Sí<br /><br /> Nota 5|Sin|  
+|Expresión de filtro|Sí|Sí|Sin|Sin|Sí|Sí<br /><br /> Nota 6|Sin|  
+|Código|No|Sí<br /><br /> Nota 7|Sin|Sin|No|Sin|No|  
+|Idioma de los informes|Sin|Sí|Sin|Sin|Sin|Sin|Sin|  
+|Variables|Sí|Sí|No|Sin|Sí|Ámbito actual o que lo contiene|No|  
+|Agregados|Sí|Sí|Solo en encabezado de página o pie de página|Solo en agregados de elementos de informe|Sí|No|No|  
+|Funciones de búsqueda|Sí|Sí|Sí|Sin|Sí|No|No|  
   
 -   **Nota 1.** ReportItems debe existir en la página del informe representado o su valor es Null. Si la visibilidad de un elemento de informe depende de una expresión que se evalúa como False, el elemento de informe no existe en la página.  
   
@@ -106,13 +106,13 @@ ms.locfileid: "66105330"
   
 |Contexto|RunningValue|RowNumber|Primero<br /><br /> Último|Previous|Funciones de suma y otras de ordenación previa|Agregados ReportItem|Funciones de búsqueda|Función de agregado|  
 |-------------|------------------|---------------|--------------------|--------------|-------------------------------------|---------------------------|----------------------|------------------------|  
-|Valor actual|Sin |Sin |Sin |No|Sí|Sin |Sí|Sin |  
-|Primero<br /><br /> Último|Sin |No|No|Sin |Sí|Sin |No|Sin |  
-|Previous|Sí|Sí|Sí|Sin |Sí|Sin |Sí|Sin |  
-|Funciones de suma y otras de ordenación previa|No|Sin |No|No|Sí|No|Sí|Sin |  
-|Agregados ReportItem|Sin |Sin |Sin |Sin |Sin |Sin |Sin |Sin |  
-|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sin |Sin |  
-|Función de agregado|No|Sin |Sin |Sin |No|No|No|Sin |  
+|Valor actual|No|Sin|Sin|No|Sí|Sin|Sí|Sin|  
+|Primero<br /><br /> Último|Sin|Sin|No|No|Sí|No|No|No|  
+|Previous|Sí|Sí|Sí|No|Sí|Sin|Sí|Sin|  
+|Funciones de suma y otras de ordenación previa|Sin|No|Sin|No|Sí|No|Sí|Sin|  
+|Agregados ReportItem|Sin|No|Sin|No|Sin|No|Sin|Sin|  
+|Funciones de búsqueda|Sí|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sí<br /><br /> Nota 1|Sin|No|  
+|Función de agregado|Sin|Sin|Sin|Sin|Sin|Sin|Sin|Sin|  
   
 -   **Nota 1.** Las funciones de agregado solo se permiten dentro de la expresión *Source* de una función de búsqueda si la función de búsqueda no está contenida en un agregado. Las funciones de agregado no se permiten dentro de las expresiones *Destination* o *Result* de una función Lookup.  
   

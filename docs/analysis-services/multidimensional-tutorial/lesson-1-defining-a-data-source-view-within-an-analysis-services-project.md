@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b45d519b8abc40709780f21721e38927f96a06dc
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403707"
 ---
 # <a name="lesson-1-defining-a-data-source-view-within-an-analysis-services-project"></a>Lección 1: Definición de una vista del origen de datos en un proyecto de Analysis Services
@@ -37,7 +37,7 @@ En esta tarea, modificará los nombres de tabla en la vista del origen de datos,
   
   
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
+[Lección 2: Definir e implementar un cubo](lesson-2-defining-and-deploying-a-cube.md)  
   
 ## <a name="see-also"></a>Vea también  
 [Vistas del origen de datos en modelos multidimensionales](../multidimensional-models/data-source-views-in-multidimensional-models.md)   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dc58232ed3025063fb329392b58895ed667465f4
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098896"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Aplicación de formato a un texto (Generador de informes)
@@ -128,7 +128,7 @@ ms.locfileid: "66098896"
     UNION SELECT CAST('2009-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Report Builder' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Haga clic en Ejecutar (**!**) para ejecutar la consulta.  
+7.  Haga clic en Ejecutar ( **!** ) para ejecutar la consulta.  
   
      Los resultados de la consulta son los datos disponibles para mostrarse en su informe.  
   
@@ -269,7 +269,7 @@ ms.locfileid: "66098896"
   
 7.  En el **inicio** pestaña en el **párrafo** sección, haga clic en el **intermedio** y **Center** botones para colocar el texto en el centro de la celda vertical y horizontalmente.  
   
-8.  Haga clic en Ejecutar (**!**).  
+8.  Haga clic en Ejecutar ( **!** ).  
   
  Ahora el texto de la celda `[Territory]` está situado verticalmente desde la parte inferior a la parte superior de las celdas.  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66098896"
   
 7.  Haga clic en **Aceptar**.  
   
-8.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
+8.  Haga clic en Ejecutar ( **!** ) para obtener la vista previa del informe.  
   
  El texto del cuadro de texto se muestra como un encabezado, párrafo y lista con viñetas.  
   
@@ -327,7 +327,7 @@ ms.locfileid: "66098896"
   
 5.  (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.  
   
-6.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
+6.  Haga clic en Ejecutar ( **!** ) para obtener la vista previa del informe.  
   
  El informe muestra ahora datos dados con formato y es más fácil de leer.  
   

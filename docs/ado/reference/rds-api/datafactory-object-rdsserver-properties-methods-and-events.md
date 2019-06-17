@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: cfeb9b5965c61977ab8d152c67a626534bb88910
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718799"
 ---
 # <a name="datafactory-object-rdsserver-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto DataFactory (RDSServer)
@@ -40,7 +40,7 @@ ms.locfileid: "66718799"
 |[Synchronize (método) (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Sincronizar el conjunto de registros determinado con la base de datos especificada por la cadena de conexión (para su uso con ADO 2.5 o posterior).|  
 |[Método Synchronize21 (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Sincronizar el conjunto de registros determinado con la base de datos especificada por la cadena de conexión (para su uso con ADO 2.1).|  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Vea también  

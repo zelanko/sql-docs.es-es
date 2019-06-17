@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 599cf463-e19f-4baa-bacb-513cad7c6cd8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5e60b24dd437ec100616da264b54997c9021554d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8755695a805684338378efa4427c24c333c3da08
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834737"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796940"
 ---
 # <a name="executequery-method-sqlserverstatement"></a>Método executeQuery (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
 #### <a name="parameters"></a>Parámetros  
  *sql*  
   
- Un objeto **String** que contiene la instrucción SQL.  
+ Un valor **String** que contiene una instrucción SQL.  
   
 ## <a name="return-value"></a>Valor devuelto  
  Un objeto SQLServerResultSet.  
@@ -53,7 +53,7 @@ public java.sql.ResultSet executeQuery(java.lang.String sql)
   
  Si la ejecución de un procedimiento almacenado produce un recuento de actualización mayor que uno o que genera más de un conjunto de resultados, use el método [execute](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md) para ejecutar el procedimiento almacenado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

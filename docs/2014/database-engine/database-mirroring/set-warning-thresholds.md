@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 9f1c7c05a02c67fda968ea26bd114d16b0b73925
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805157"
 ---
 # <a name="set-warning-thresholds"></a>Establecer umbrales de advertencia
@@ -30,7 +30,7 @@ ms.locfileid: "65805157"
   
 ## <a name="options"></a>Opciones  
  *Instancia del servidor y su estado de conexión*  
- Nombre de una instancia del servidor asociado con el formato _SYSTEM_**\\**_INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
+ Nombre de una instancia del servidor asociado con el formato _SYSTEM_ **\\** _INSTANCE_NAME_. En el caso de una instancia de servidor predeterminada, solo se muestra el nombre del sistema.  
   
  Este campo también indica si el monitor está conectado actualmente a esta instancia del servidor. Los estados de conexión posibles son:  
   
@@ -41,7 +41,7 @@ ms.locfileid: "65805157"
 -   **Conectado a**  *nombre_instancia_servidor*  
   
     > [!NOTE]  
-    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)**.  
+    >  Si no es miembro del rol fijo de servidor **sysadmin** , este estado es **Conectado a** *nombre_instancia_servidor* **(permisos limitados)** .  
   
  El nombre de cada una de las instancias del servidor asociado se muestra en otro campo de *instancia del servidor y su estado de conexión* . En el campo superior se muestra el servidor principal cuando el monitor inició su ejecución.  
   

@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f372bd5bcc538d861ddd556b3bb420c181d59717
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66104648"
 ---
 # <a name="tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs"></a>Celdas, filas y columnas de la región de datos Tablix (Generador de informes y SSRS)
@@ -106,7 +106,7 @@ ms.locfileid: "66104648"
  Las celdas del área del cuerpo del Tablix pueden mostrar datos detallados cuando la celda está en una fila o columna de detalles, y datos de grupo agregados cuando la celda está en una fila o columna de grupo. El ámbito para los datos de una celda es la intersección del grupo de filas y el grupo de columnas más interiores a los que pertenece la celda.  
   
 > [!NOTE]  
->  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]**). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]**). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para más información sobre los agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
+>  Los datos reales que se muestran para cada celda son la expresión evaluada para el elemento de informe incluido en la celda, que generalmente es un cuadro de texto. En una celda que pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado los datos detallados (por ejemplo, **[LineTotal]** ). En una celda que no pertenece a una fila o columna de detalles, la expresión tiene como valor predeterminado una función de agregado (por ejemplo, **Sum[LineTotal]** ). Si una expresión no especifica una función de agregado aunque la celda pertenezca a una fila o columna de grupo, se muestra el primer valor del grupo. Para más información sobre los agregados, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](expression-scope-for-totals-aggregates-and-built-in-collections.md).  
   
 ### <a name="merging-and-splitting-cells"></a>Combinar y dividir celdas  
  Dentro de un área de Tablix, puede combinar juntas varias celdas adyacentes. Por ejemplo, puede crear celdas para etiquetas que abarcan varias columnas o filas.  

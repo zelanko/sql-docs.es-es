@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: aff33ad5722ad4b08c1429b795607d1217b95e39
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103937"
 ---
 # <a name="configure-report-manager-native-mode"></a>Configurar el Administrador de informes (modo nativo)
@@ -147,7 +147,7 @@ ms.locfileid: "66103937"
   
 2.  Abra Internet Explorer.  
   
-3.  Escriba la dirección URL del Administrador de informes. De forma predeterminada, es http://\<**nombreDeServidor**>/reports, pero si ha instalado Reporting Services como una instancia con nombre, la dirección URL predeterminada será http://\<**nombreDeServidor**>/reports\<**_nombreDeInstancia**>.  
+3.  Escriba la dirección URL del Administrador de informes. De forma predeterminada, es http://\<**nombreDeServidor**>/reports, pero si ha instalado Reporting Services como una instancia con nombre, la dirección URL predeterminada será http://\<**nombreDeServidor**>/reports\< **_nombreDeInstancia**>.  
   
 4.  Haga clic en **Configuración del sitio**.  
   

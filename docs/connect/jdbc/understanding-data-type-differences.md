@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab8fa00f-cb16-47e2-94b8-3a76f56c2b84
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 546dc71fad06fc69d816d16c1d6c2d67f59f968b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8dcffcb15493c5f7587999a41fc2bdf545b377cd
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773213"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801948"
 ---
 # <a name="understanding-data-type-differences"></a>Descripción de las diferencias entre los tipos de datos
 
@@ -42,7 +42,7 @@ Los tipos de datos de cadenas binarias JDBC son **binario**, **VARBINARY**, y **
 | --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Longitud fija    | El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **binario** tipo se asigna directamente a JDBC **binario** tipo. Es un tipo de longitud fija con relleno que proporciona el servidor en el caso de que la columna tenga habilitado SET ANSI_PADDING. Cuando las columnas char del servidor no tienen relleno, éste lo agrega el controlador JDBC.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **timestamp** tipo es un JDBC **binario** tipo con la longitud fija de 8 bytes. |
 | Longitud variable | El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **varbinary** tipo se asigna a JDBC **VARBINARY** tipo.<br /><br /> El **udt** escriba [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se asigna a JDBC como un **VARBINARY** tipo.                                                                                                                                                                                                                                 |
-| Long            | El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **imagen** tipo se asigna a JDBC **LONGVARBINARY** tipo. Este tipo se ha dejado de utilizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], por lo que en su lugar debería usar un tipo de valor grande, **varbinary(max)**.                                                                                                                                                                                           |
+| Long            | El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **imagen** tipo se asigna a JDBC **LONGVARBINARY** tipo. Este tipo se ha dejado de utilizar desde [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], por lo que en su lugar debería usar un tipo de valor grande, **varbinary(max)** .                                                                                                                                                                                           |
   
 ## <a name="exact-numeric-types"></a>Tipos numéricos exactos
 
@@ -78,6 +78,6 @@ JDBC **TIMESTAMP** tipo se asigna a la [!INCLUDE[ssNoVersion](../../includes/ssn
 
 La característica de asignación de tipos personalizados de JDBC que emplean las interfaces SQLData para los tipos avanzados de JDBC (UDT, Struct, etc.). no se incluye en el controlador JDBC.  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Describir los tipos de datos del controlador JDBC](../../connect/jdbc/understanding-the-jdbc-driver-data-types.md)  

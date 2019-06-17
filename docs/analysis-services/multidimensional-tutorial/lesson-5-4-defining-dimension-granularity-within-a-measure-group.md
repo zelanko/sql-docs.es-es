@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e6dadcc53120ce112ad3e9044e38bf14a525fded
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404087"
 ---
 # <a name="lesson-5-4---defining-dimension-granularity-within-a-measure-group"></a>Lección 5-4: definición de granularidad de dimensión dentro de un grupo de medida
@@ -127,7 +127,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     Observe que las dimensiones de cubo **Employee** y **Date** están vinculadas a los grupos de medida **Sales Quotas y Sales Quotas 1** a través de relaciones normales. Observe también que la dimensión de cubo **Sales Territory** no está vinculada a ninguno de estos grupos de medida.  
   
-4.  Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas** grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
+4.  Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas** grupo de medida y, a continuación, haga clic en el botón Examinar ( **...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -141,7 +141,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
 10. Haga clic en **Aceptar**.  
   
-11. Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas 1** grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
+11. Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas 1** grupo de medida y, a continuación, haga clic en el botón Examinar ( **...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 12. En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -163,7 +163,7 @@ En las tareas de este tema, debe agregar un grupo de medida Sales Quotas y defin
   
     Cambiar el nombre de la dimensión de cubo **Order Date** por **Date** facilita a los usuarios comprender su rol como dimensión de fecha principal del cubo.  
   
-20. Haga clic en el botón Examinar (**...** ) en la celda en la intersección de la **Sales Quotas** grupo de medida y la **fecha** dimensión.  
+20. Haga clic en el botón Examinar ( **...** ) en la celda en la intersección de la **Sales Quotas** grupo de medida y la **fecha** dimensión.  
   
 21. En el cuadro de diálogo **Definir relación** , seleccione **Regular** en la lista **Seleccionar tipo de relación** .  
   

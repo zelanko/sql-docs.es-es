@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6dab6158ba2d0854868bf60f2a73efce594b2cc9
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101441"
 ---
 # <a name="select-the-data-source"></a>Seleccionar el origen de datos
@@ -40,7 +40,7 @@ ms.locfileid: "66101441"
   
  Haga clic en **Editar** para especificar el servidor del origen de datos en el cuadro de diálogo **Propiedades de conexión** . Puede especificar un origen de datos local o remoto.  
   
- Haga clic en **Credenciales** para suministrar las credenciales de la base de datos. Como mínimo, las credenciales que especifique deben ser suficientes para poder conectarse al origen de datos con fines de diseño de informes. Cuando el informe se implemente en un servidor de informes, las credenciales de la base de datos deben adaptarse a todos los usuarios del informe. Por ejemplo, si quiere que todos los usuarios del informe se conecten al origen de datos usando sus credenciales, elija **Usar autenticación de Windows (seguridad integrada)**. Las credenciales que especifique deben ser válidas para el origen de datos; por tanto, si elige la autenticación de Windows, asegúrese de que el origen de datos acepta las conexiones de todas las cuentas de usuario que ejecutarán el informe. Las credenciales de la base de datos pueden administrarse independientemente del informe. Para obtener más información, vea [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md).  
+ Haga clic en **Credenciales** para suministrar las credenciales de la base de datos. Como mínimo, las credenciales que especifique deben ser suficientes para poder conectarse al origen de datos con fines de diseño de informes. Cuando el informe se implemente en un servidor de informes, las credenciales de la base de datos deben adaptarse a todos los usuarios del informe. Por ejemplo, si quiere que todos los usuarios del informe se conecten al origen de datos usando sus credenciales, elija **Usar autenticación de Windows (seguridad integrada)** . Las credenciales que especifique deben ser válidas para el origen de datos; por tanto, si elige la autenticación de Windows, asegúrese de que el origen de datos acepta las conexiones de todas las cuentas de usuario que ejecutarán el informe. Las credenciales de la base de datos pueden administrarse independientemente del informe. Para obtener más información, vea [Administrar orígenes de datos de informe](report-data/manage-report-data-sources.md).  
   
  **Convertir en origen de datos compartido**  
  Seleccione esta opción para almacenar el origen de datos en el proyecto como origen de datos compartido, en lugar de en el informe. De ese modo, puede utilizarlo como origen de datos para otros informes en el proyecto.  

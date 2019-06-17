@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8f2ff25b-71fd-46d7-b6de-d656095d2aad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 62f222a450798c7c685ce55f8d82e876b6e24d5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 76b7aea17e3dcee07a7472a2a830ca4fb5212bf6
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798334"
 ---
 # <a name="sqlxml-data-type-sample"></a>Ejemplos de tipos de datos SQLXML
 
@@ -24,7 +24,7 @@ ms.locfileid: "47628083"
 
 En esta aplicación de ejemplo de [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] se muestra cómo almacenar datos XML en una base de datos relacional, cómo recuperar datos XML desde una base de datos y cómo analizar datos XML con el tipo de datos **SQLXML** de Java.
 
-Los ejemplos de código de esta sección usan un analizador Simple API for XML (SAX). SAX es un estándar desarrollado públicamente para el análisis basado en eventos de documentos XML. También proporciona una interfaz de programación de aplicaciones para trabajar con datos XML. Tenga en cuenta que las aplicaciones también pueden usar cualquier otro analizador XML, como Document Object Model (DOM), Streaming API for XML (StAX) o cualquier otro. 
+Los ejemplos de código de esta sección usan un analizador Simple API for XML (SAX). SAX es un estándar desarrollado públicamente para el análisis basado en eventos de documentos XML. También proporciona una interfaz de programación de aplicaciones para trabajar con datos XML. Tenga en cuenta que las aplicaciones también pueden usar cualquier otro analizador XML, como Document Object Model (DOM), Streaming API for XML (StAX) o cualquier otro.
 
 Document Object Model (DOM) proporciona una representación programática de documentos, fragmentos, nodos y conjuntos de nodos XML. También proporciona una interfaz de programación de aplicaciones para trabajar con datos XML. Similarmente, Streaming API for XML (StAX) es una API basada en Java para análisis por extracciones de XML.
 
@@ -61,6 +61,6 @@ El método showTransformer muestra cómo obtener un dato XML desde una tabla e i
 
 [!code[JDBC#UsingSQLXML1](../../connect/jdbc/codesnippet/Java/sqlxml-data-type-sample_1.java)]
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Trabajar con tipos de datos &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)

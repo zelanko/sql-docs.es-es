@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 282c5753b0e1e966d1041944e936d341ed46a30f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108475"
 ---
 # <a name="lesson-3-design-the-parent-report-using-the-report-wizard"></a>Lección 3: Diseño del informe primario usando el Asistente para informes
@@ -39,7 +39,7 @@ ms.locfileid: "66108475"
   
     1.  Arrastre **ProductID**, **Name**, **ProductNumber**, **SafetyStockLevel**y **ReorderLevel** desde **Campos disponibles** hasta el cuadro **Valores** .  
   
-    2.  Haga clic en la flecha situada junto a **SUM (ProductID)**, **SUM (safetystocklevel)**, **SUM (ReorderLevel)** y desactive el **suma** selección.  
+    2.  Haga clic en la flecha situada junto a **SUM (ProductID)** , **SUM (safetystocklevel)** , **SUM (ReorderLevel)** y desactive el **suma** selección.  
   
 7.  Haga clic en **siguiente** dos veces y, a continuación, haga clic en **finalizar** para cerrar el **Asistente para informes**.  
   

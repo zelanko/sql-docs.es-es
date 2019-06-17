@@ -29,10 +29,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7e07f3083f29d40f67b8ecf7716aae7a68979bfb
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65502800"
 ---
 # <a name="create-xml-index-transact-sql"></a>CREATE XML INDEX (Transact-SQL)
@@ -100,7 +100,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  *index_name*  
  Es el nombre del índice. Los nombres de índice deben ser únicos en una tabla, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- Los nombres de índices XML principales no pueden comenzar por los siguientes caracteres: **#**, **##**, **@** o **@@**.  
+ Los nombres de índices XML principales no pueden comenzar por los siguientes caracteres: **#** , **##** , **@** o **@@** .  
   
  *xml_column_name*  
  Es la columna **xml** en la que se basa el índice. Solamente puede especificarse una columna **xml** en una única definición de índice XML, pero se pueden crear varios índices XML secundarios en una columna **xml**.  
@@ -148,7 +148,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
  La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de *fillfactor*.  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Si *fillfactor* es 100 o 0, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.  
   
 > [!NOTE]  
@@ -212,7 +212,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
  OFF  
  No se utilizan bloqueos de página.  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  Reemplaza la opción [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) durante la operación de índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
 > [!IMPORTANT]  

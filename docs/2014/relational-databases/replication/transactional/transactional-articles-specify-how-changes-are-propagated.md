@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: de28a4353c5d690e30cd2cefc20f50e4911c6ff1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62655680"
 ---
 # <a name="specify-how-changes-are-propagated-for-transactional-articles"></a>Especificar cómo se propagan los cambios para los artículos transaccionales
@@ -37,11 +37,11 @@ ms.locfileid: "62655680"
 ## <a name="default-and-custom-stored-procedures"></a>Procedimientos almacenados predeterminados y personalizados  
  Los tres procedimientos que crea la replicación de forma predeterminada en cada artículo de la tabla son:  
   
--   **sp_MSins_\<** *nombreDeTabla* **>**, que controla las inserciones.  
+-   **sp_MSins_\<** *nombreDeTabla* **>** , que controla las inserciones.  
   
--   **sp_MSupd_\<** *nombreDeTabla* **>**, que controla las actualizaciones.  
+-   **sp_MSupd_\<** *nombreDeTabla* **>** , que controla las actualizaciones.  
   
--   **sp_MSdel_\<** *nombreDeTabla* **>**, que controla las eliminaciones.  
+-   **sp_MSdel_\<** *nombreDeTabla* **>** , que controla las eliminaciones.  
   
  El valor **\<***tablename***>** usado en el procedimiento depende de cómo se haya agregado el artículo a la publicación y de si la base de datos de suscripciones contiene una tabla del mismo nombre con un propietario distinto.  
   

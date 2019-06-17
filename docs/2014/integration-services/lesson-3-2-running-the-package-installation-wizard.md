@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fe0862438943fec36728a3c4e6c796061c86593
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891583"
 ---
 # <a name="step-2-running-the-package-installation-wizard"></a>Paso 2: Ejecución del Asistente para la instalación de paquetes
@@ -46,7 +46,7 @@ ms.locfileid: "62891583"
   
 9. En la página Seleccionar la carpeta de instalación, haga clic en **Examinar**.  
   
-10. En el cuadro de diálogo **Buscar carpeta** , expanda **Mi PC** y, después, haga clic en **Disco local (C:)**.  
+10. En el cuadro de diálogo **Buscar carpeta** , expanda **Mi PC** y, después, haga clic en **Disco local (C:)** .  
   
 11. Haga clic en **Crear nueva carpeta** y reemplace el nombre predeterminado de la nueva carpeta, **Nueva carpeta**, por **DeploymentTutorialInstall**.  
   

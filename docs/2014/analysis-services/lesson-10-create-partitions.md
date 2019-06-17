@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 06ffe60802e52bd0ae141435628fc3812dc2c7c6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079199"
 ---
 # <a name="lesson-11-create-partitions"></a>Lección 11: Crear particiones
@@ -136,7 +136,7 @@ ms.locfileid: "66079199"
     ```  
   
 ## <a name="process-partitions"></a>Procesar particiones  
- En el cuadro de diálogo **Administrador de partición** , observe el asterisco (**\***) situado junto a los nombres de particiones de cada una de las nuevas particiones que acaba de crear. Este asterisco indica que la partición no se ha procesado (actualizado). Cuando crea nuevas particiones, debe ejecutar una operación Procesar particiones o Procesar tabla para actualizar los datos de esas particiones.  
+ En el cuadro de diálogo **Administrador de partición** , observe el asterisco ( **\*** ) situado junto a los nombres de particiones de cada una de las nuevas particiones que acaba de crear. Este asterisco indica que la partición no se ha procesado (actualizado). Cuando crea nuevas particiones, debe ejecutar una operación Procesar particiones o Procesar tabla para actualizar los datos de esas particiones.  
   
 #### <a name="to-process-internet-sales-partitions"></a>Para procesar particiones de Internet Sales  
   

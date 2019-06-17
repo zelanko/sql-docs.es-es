@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 9106ff624c9a8e50bd292166690fc220eaea527e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108566"
 ---
 # <a name="verify-a-reporting-services-installation"></a>Verify a Reporting Services Installation
@@ -89,9 +89,9 @@ ms.locfileid: "66108566"
   
 1.  Ejecute la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y conéctese a la instancia del servidor de informes recién instalada. La página Dirección URL del servicio web incluye un vínculo al servicio web del servidor de informes. Haga clic en el vínculo para comprobar que puede tener acceso al servidor. Si la base de datos del servidor de informes no está configurada, haga eso primero antes de hacer clic en el vínculo.  
   
-2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas**y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)**. El estado debe ser **Iniciado**.  
+2.  Abra las aplicaciones de la consola Servicios y compruebe que se está ejecutando el servicio Servidor de informes. Para ver el estado del servicio del servidor de informes, haga clic en **Inicio**, seleccione **Panel de control**, haga doble clic en **Herramientas administrativas**y, después, en **Servicios**. Cuando aparezca la lista de servicios, desplácese a **Servidor de informes (MSSQLSERVER)** . El estado debe ser **Iniciado**.  
   
-3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Puede usar la siguiente dirección URL para comprobar la instalación del servidor de informes: http://*\<nombre de equipo>*/ReportServer*\<_nombre de instancia>*. La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para obtener más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41; (Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
+3.  Abra un explorador y escriba la dirección URL del servidor de informes en la barra de direcciones. La dirección está formada por el nombre del servidor y el nombre del directorio virtual que haya especificado para el servidor de informes durante la instalación. De manera predeterminada, el directorio virtual del servidor de informes se denomina **ReportServer**. Puede usar la siguiente dirección URL para comprobar la instalación del servidor de informes: http:// *\<nombre de equipo>* /ReportServer *\<_nombre de instancia>* . La dirección URL será distinta si el servidor de informes se instala como una instancia con nombre. Para obtener más información sobre el formato de las direcciones URL, vea [Configurar las direcciones URL del servidor de informes &#40;Administrador de configuración de SSRS&#41;](configure-report-server-urls-ssrs-configuration-manager.md). Si es un administrador local en Windows Vista o Windows Server 2008, vea [Configure a Native Mode Report Server for Local Administration &#40;SSRS&#41; (Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;)](../report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
 4.  Ejecute informes para probar el funcionamiento del servidor de informes. Para este paso, puede crear un informe de muestra con el tutorial. Para más información, vea [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../create-a-basic-table-report-ssrs-tutorial.md).  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66108566"
   
 1.  Abra un explorador y escriba la dirección URL del Administrador de informes en la barra de direcciones. La dirección está compuesta del nombre del servidor y el nombre del directorio virtual que se especificó para el Administrador de informes durante la instalación, o en la página Dirección URL del Administrador de informes en la herramienta Configuración de Reporting Services. De manera predeterminada, el directorio virtual del Administrador de informes es **Reports**. Puede utilizar la dirección URL siguiente para comprobar la instalación del Administrador de informes:  
   
-     http://*\<nombre del equipo>*/Reports*\<_nombre de instancia>*.  
+     http:// *\<nombre del equipo>* /Reports *\<_nombre de instancia>* .  
   
 2.  Utilice el Administrador de informes para crear una carpeta o cargue un archivo para probar si se pasan definiciones a la base de datos del servidor de informes. Si estas operaciones son correctas, la conexión funciona.  
   

@@ -20,10 +20,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 2401fab80c6210e3061e9cb949f1c92bab456525
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63187927"
 ---
 # <a name="metadata-visibility-configuration"></a>Configuración de visibilidad de los metadatos
@@ -102,9 +102,9 @@ GO
 ## <a name="benefits-and-limits-of-metadata-visibility-configuration"></a>Beneficios y límites de la configuración de visibilidad de los metadatos  
  La configuración de visibilidad de los metadatos puede desempeñar un rol importante en el plan de seguridad global. Sin embargo, hay casos en los que un usuario con conocimientos y determinación puede forzar la divulgación de algunos metadatos. Es recomendable implementar permisos sobre los metadatos como una de las distintas medidas de defensa más completa.  
   
- Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &amp;#40;Transact-SQL&amp;#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Teóricamente, es posible forzar la emisión de metadatos en los mensajes de error mediante la manipulación del orden de evaluación de predicados en las consultas. La posibilidad de estos *ataques de prueba y error* no es específica de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es una implicación de las transformaciones asociativas y conmutativas que admite el álgebra relacional. Puede mitigar este riesgo mediante la limitación de la información que se devuelve en los mensajes de error. Para restringir más la visibilidad de metadatos de esta manera, puede iniciar el servidor con la marca de seguimiento 3625. Esta marca de seguimiento limita la cantidad de información que se muestra en los mensajes de error. A su vez, ayuda a evitar divulgaciones forzadas. La contrapartida es que los mensajes de error se simplificarán y puede resultar difícil su uso para fines de depuración. Para obtener más información, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md) y [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
- Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:   
+ Los metadatos que se muestran a continuación no están sujetos a una divulgación forzada:  
   
 -   El valor almacenado en la columna **provider_string** de **sys.servers**. Un usuario que no disponga de permiso ALTER ANY LINKED SERVER verá un valor NULL en esta columna.  
   
@@ -159,7 +159,7 @@ GO
 ### <a name="scope-of-permissions"></a>Ámbito de los permisos  
  Los permisos de un ámbito implican la posibilidad de ver los metadatos en dicho ámbito y en todos los ámbitos incluidos en el mismo. Por ejemplo, el permiso SELECT sobre un esquema implica que el receptor dispone del permiso SELECT sobre todos los elementos protegibles incluidos en dicho esquema. Por tanto, la concesión del permiso SELECT sobre un esquema permite al usuario ver los metadatos del esquema y todas las tablas, vistas, funciones, procedimientos, colas, sinónimos, tipos y colecciones de esquemas XML que estén incluidos en el mismo. Para obtener más información sobre ámbitos, vea [Jerarquía de permisos &#40;motor de base de datos&#41;](permissions-hierarchy-database-engine.md).  
   
-### <a name="precedence-of-deny"></a>Prioridad de DENY   
+### <a name="precedence-of-deny"></a>Prioridad de DENY  
  Normalmente, DENY tiene prioridad sobre otros permisos. Por ejemplo, si se concede a un usuario de la base de datos el permiso EXECUTE sobre un esquema, pero se le deniega el permiso EXECUTE sobre un procedimiento almacenado de dicho esquema, el usuario no podrá ver los metadatos de dicho procedimiento almacenado.  
   
  Además, si a un usuario se le deniega el permiso EXECUTE sobre un esquema pero se le concede el permiso EXECUTE sobre un procedimiento almacenado de dicho esquema, el usuario no podrá ver los metadatos de dicho procedimiento almacenado.  

@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 04dea4a32303e06d7f0e6c015eef38ba6d267a30
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070848"
 ---
 # <a name="powerpivot-data-refresh-with-sharepoint-2010"></a>Actualización de datos PowerPivot con SharePoint 2010
@@ -204,7 +204,7 @@ ms.locfileid: "66070848"
   
  Si ve **Integrated Security = SSPI** en la cadena de conexión no puede invalidar las credenciales en la cadena de conexión. La conexión siempre utilizará al usuario actual. Se omitirá cualquier credencial que proporcione.  
   
- Si ve **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >**, tendrá una cadena de conexión que aceptará invalidaciones de credenciales. Las credenciales que aparecen en una cadena de conexión (como las de identificación de usuario y contraseña) no son credenciales de Windows, sino que son inicios de sesión de base de datos u otras cuentas de inicio de sesión válidos para el origen de datos de destino.  
+ Si ve **Persist Security Info = False, Password =\* \* \* \* \* \* \* \* \* \* \*, UserID =\<userlogin >** , tendrá una cadena de conexión que aceptará invalidaciones de credenciales. Las credenciales que aparecen en una cadena de conexión (como las de identificación de usuario y contraseña) no son credenciales de Windows, sino que son inicios de sesión de base de datos u otras cuentas de inicio de sesión válidos para el origen de datos de destino.  
   
  **Cómo invalidar credenciales en la cadena de conexión**  
   

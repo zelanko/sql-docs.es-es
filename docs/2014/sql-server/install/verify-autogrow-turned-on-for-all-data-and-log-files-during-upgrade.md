@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0217d959759a59e49ce76e4a841c5d52e958e9ce
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091214"
 ---
 # <a name="verify-autogrow-is-turned-on-for-all-data-and-log-files-during-the-upgrade-process"></a>Comprobar que autogrow está activo para todos los datos y archivos de registro durante el proceso de actualización
@@ -67,7 +67,7 @@ ms.locfileid: "66091214"
 |Almacenar en memoria caché la tabla temp y los metadatos variables de temp|Para todos los metadatos de la tabla temporal y variable temp almacenados en la caché de metadatos por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se asignan dos páginas adicionales para **tempdb**.<br /><br /> Si un procedimiento almacenado o desencadenador crea una tabla temp o una variable temp, no se eliminará el objeto temporal cuando el procedimiento o el desencadenador finalicen su ejecución. En su lugar, el objeto temporal se trunca a una página y se reutiliza la próxima vez que se ejecute el procedimiento o el desencadenador.|  
 |Índices en tablas con particiones|Cuando el [!INCLUDE[ssDE](../../includes/ssde-md.md)] realiza una ordenación para generar los índices con particiones, espacio suficiente para albergar las ordenaciones intermedias de cada partición se requiere en **tempdb** si se especifica la opción de índice SORT_IN_TEMPDB.|  
 |[!INCLUDE[ssSB](../../includes/sssb-md.md)]|[!INCLUDE[ssSB](../../includes/sssb-md.md)] usa explícitamente **tempdb** hora de conservar el contexto del diálogo existente que no puede retenerse en memoria (aproximadamente 1 KB por cuadro de diálogo).<br /><br /> [!INCLUDE[ssSB](../../includes/sssb-md.md)] usa implícitamente **tempdb** mediante el almacenamiento en caché de objetos en el contexto de ejecución de la consulta. Por ejemplo, las tablas de trabajo utilizadas para los eventos del temporizador y las conversaciones entregadas en segundo plano.<br /><br /> Las características DBMail, notificaciones de eventos y notificaciones de consultas utilizan implícitamente [!INCLUDE[ssSB](../../includes/sssb-md.md)].|  
-|Tipos de datos de objetos grandes (LOB)<br /><br /> Variables y parámetros LOB|Los tipos de datos `varchar(max)`, `nvarchar(max)`, **texto varbinary (max)**, `ntext`, `image,` y `xml` son tipos de objetos grandes.<br /><br /> Cuando está habilitado un nivel de aislamiento de transacción basado en versiones de fila en la base de datos y se realizan modificaciones de objetos grandes, el fragmento cambiado del LOB se copia en el almacén de versiones en **tempdb**.<br /><br /> Los parámetros definidos como un tipo de datos de objetos grandes se almacenan en **tempdb**.|  
+|Tipos de datos de objetos grandes (LOB)<br /><br /> Variables y parámetros LOB|Los tipos de datos `varchar(max)`, `nvarchar(max)`, **texto varbinary (max)** , `ntext`, `image,` y `xml` son tipos de objetos grandes.<br /><br /> Cuando está habilitado un nivel de aislamiento de transacción basado en versiones de fila en la base de datos y se realizan modificaciones de objetos grandes, el fragmento cambiado del LOB se copia en el almacén de versiones en **tempdb**.<br /><br /> Los parámetros definidos como un tipo de datos de objetos grandes se almacenan en **tempdb**.|  
 |Expresiones de tabla comunes (CTE)|Tablas de trabajo temporales para las operaciones de cola se crean en **tempdb** cuando se ejecutan consultas de expresiones de tabla comunes.|  
   
 ## <a name="corrective-action"></a>Acción correctora  

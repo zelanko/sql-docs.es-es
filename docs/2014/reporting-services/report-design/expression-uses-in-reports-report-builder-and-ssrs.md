@@ -13,14 +13,14 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 13fd93468fafb99a5bd2869c207496b21dcb8174
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105902"
 ---
 # <a name="expression-uses-in-reports-report-builder-and-ssrs"></a>Usar expresiones en informes (Generador de informes y SSRS)
-  Las expresiones se usan durante la definición de informe para especificar o calcular valores para: parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>**.  
+  Las expresiones se usan durante la definición de informe para especificar o calcular valores para: parámetros, consultas, filtros, propiedades de elementos de informe, definiciones de ordenación y de grupos, propiedades de cuadros de texto, marcadores, mapas de documento, contenido de encabezados y pies de página dinámicos, imágenes y definiciones de orígenes de datos dinámicas. En este tema, se proporcionan ejemplos de los muchos lugares en los que se pueden usar expresiones para modificar el contenido o el aspecto de un informe. Esta lista no es una lista completa. Puede establecer una expresión para una propiedad de un cuadro de diálogo que muestre el botón (**fx**) de la expresión o en una lista desplegable que muestre **\<Expression...>** .  
   
  Las expresiones pueden ser simples o complejas. Las*expresiones simples* contienen una referencia a un único campo de conjunto de datos, parámetro o campo integrado. Las expresiones complejas pueden contener varias referencias, operadores y llamadas a función integrados. Por ejemplo, una expresión compleja podría incluir la función Sum aplicada al campo Sales.  
   
@@ -37,7 +37,7 @@ ms.locfileid: "66105902"
 |Funcionalidad|Propiedad, contexto y cuadro de diálogo|Valor de la propiedad|  
 |-------------------|---------------------------------------|--------------------|  
 |Especificar un campo de conjunto de datos para mostrarlo en un cuadro de texto.|Propiedad Value de un marcador de posición dentro de un cuadro de texto. Use **Propiedades del marcador de posición (cuadro de diálogo), General**.|`[Sales]`|  
-|Valores agregados para un grupo.|Propiedad Value de un marcador de posición dentro de una fila asociada a un grupo de Tablix. Use **Propiedades de cuadro de texto (cuadro de diálogo)**.|`[Sum(Sales)]`|  
+|Valores agregados para un grupo.|Propiedad Value de un marcador de posición dentro de una fila asociada a un grupo de Tablix. Use **Propiedades de cuadro de texto (cuadro de diálogo)** .|`[Sum(Sales)]`|  
 |Incluir un número de página.|Propiedad Value de un marcador de posición dentro de un cuadro de texto situado en un encabezado de página. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`[&PageNumber]`|  
 |Mostrar un valor de parámetro seleccionado.|Propiedad Value de un marcador de posición dentro de un cuadro de texto de la superficie de diseño. Use **Propiedades de cuadro de texto (cuadro de diálogo), General**.|`[@SalesThreshold]`|  
 |Especificar una definición de grupo para una región de datos.|Expresión de grupo del grupo de Tablix. Use **Propiedades de grupo de Tablix (cuadro de diálogo), General**.|`[Category]`|  

@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b97d62e7dede1cbbe4229f824407946f2fe43ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789824"
 ---
 # <a name="monitor-availability-groups-transact-sql"></a>Supervisar grupos de disponibilidad (Transact-SQL)
@@ -169,7 +169,7 @@ ms.locfileid: "62789824"
 >  La ubicación de la réplica principal es el origen autorizado para un grupo de disponibilidad.  
   
 > [!NOTE]  
->  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)**, **Vaciados de registro/s.**, **Errores de caché del grupo de registros/s.**, **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
+>  Para obtener más información sobre los contadores de rendimiento de [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] para bases de datos de disponibilidad (el objeto de rendimiento **SQLServer:Database Replica** ), vea [SQL Server, réplica de base de datos](../../../relational-databases/performance-monitor/sql-server-database-replica.md). Además, para supervisar la actividad del registro de transacciones en las bases de datos de disponibilidad, use los contadores siguientes del objeto de rendimiento **SQLServer:Databases**: **Tiempo de escritura de vaciados de registros (ms)** , **Vaciados de registro/s.** , **Errores de caché del grupo de registros/s.** , **Lecturas de disco del grupo de registros/s** y **Solicitudes del grupo de registros/s**. Para más información, vea [SQL Server, Databases Object](../../../relational-databases/performance-monitor/sql-server-databases-object.md).  
   
 ##  <a name="AGlisteners"></a> Supervisar agentes de escucha del grupo de disponibilidad  
  Para supervisar los agentes de escucha del grupo de disponibilidad en las subredes del clúster de WSFC, utilice las vistas siguientes:  

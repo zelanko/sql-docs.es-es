@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2df09cb9bf167c0af28c240ff69f8666cce01a6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62988647"
 ---
 # <a name="configure-and-view-sharepoint-and-diagnostic-logging"></a>Configurar y ver el registro de diagnóstico y de SharePoint
@@ -46,7 +46,7 @@ ms.locfileid: "62988647"
   
 2.  Haga clic en **Configurar registro de diagnósticos**.  
   
-3.  Desplácese hasta **Servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Desplácese hasta **Servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Expanda la categoría y seleccione categorías individuales.  
   
@@ -116,13 +116,13 @@ ms.locfileid: "62988647"
 #### <a name="entries-for-power-pivot-services"></a>Entradas para los servicios PowerPivot  
  En la tabla siguiente se describen las entradas para las operaciones de servidor de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] que es probable que se encuentren en un archivo de registro de SharePoint.  
   
-|Procesar|Área|Category|Nivel|de mensaje|Detalles|  
+|Process|Área|Category|Nivel|de mensaje|Detalles|  
 |-------------|----------|--------------|-----------|-------------|-------------|  
-|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
+|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Uso|Verbose|No hay ninguna estadística de solicitudes actuales, nada para registrar.|En los intervalos predefinidos, el servicio notifica las estadísticas de respuesta de las consultas como un evento de uso al sistema de recopilación de datos de uso. Este mensaje indica que no hubo ninguna estadística de consulta que notificar.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Empezar a buscar un servidor de aplicaciones para el origen de datos =\<*ruta de acceso*>|Cuando se recibe una solicitud de conexión, el servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] identifica un [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)] disponible para administrar la solicitud. Si hay solo un servidor en la granja, el servidor local acepta la solicitud en todos los casos.|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|La búsqueda del servidor de aplicaciones tuvo éxito.|La solicitud se asignó a una aplicación de servicio de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |w3wp.exe|[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ssNoVersion|Front end web|Verbose|Redireccionar la solicitud para el \< *origen de datos de PowerPivot*> a la [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|La solicitud se reenvió al [!INCLUDE[ssGeminiSrv_md](../../includes/ssgeminisrv-md.md)].|  
-|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] |Procesamiento de solicitudes|Verbose|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
+|w3wp.exe|Servicio[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]|Procesamiento de solicitudes|Verbose|Redireccionar la solicitud para el nombre de usuario\<*usuario de SharePoint*> a la base de datos|Una conexión suplantada con el origen de datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se creó en nombre del usuario de SharePoint.|  
   
 ## <a name="see-also"></a>Vea también  
  [Recopilación de datos de uso de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95b9ddc6bfee2f33702a77fcfcf85f5dffddab0d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020437"
 ---
 # <a name="attribute-properties---bind-an-attribute-to-a-name-column"></a>Propiedades de atributos: Enlazar un atributo a una columna de nombre
@@ -26,7 +26,7 @@ ms.locfileid: "63020437"
   
 2.  En la pestaña **Estructura de dimensión** del panel **Atributos** , haga clic con el botón derecho en el atributo que quiera configurar y, después, haga clic en **Propiedades**.  
   
-3.  En la ventana **Propiedades** , busque la propiedad **NameColumn** y, después, seleccione **(nuevo)**.  
+3.  En la ventana **Propiedades** , busque la propiedad **NameColumn** y, después, seleccione **(nuevo)** .  
   
 4.  En el cuadro de diálogo **Enlace de objetos** , para **Tipo de enlace**, seleccione **Enlace de columna**.  
   

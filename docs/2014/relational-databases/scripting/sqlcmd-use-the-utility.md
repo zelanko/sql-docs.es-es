@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 19c13fba697477174f671344304a9cd4befba53e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063637"
 ---
 # <a name="use-the-sqlcmd-utility"></a>Usar la utilidad sqlcmd
@@ -40,16 +40,16 @@ ms.locfileid: "66063637"
 ## <a name="typically-used-sqlcmd-options"></a>Opciones de sqlcmd que suelen utilizarse  
  Las siguientes opciones se usan con mayor frecuencia:  
   
--   La opción de servidor (**-S**) que identifica la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que `sqlcmd` se conecta.  
+-   La opción de servidor ( **-S**) que identifica la instancia de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la que `sqlcmd` se conecta.  
   
--   Las opciones de autenticación (**-E**, **- U**, y **-P**) que especifican las credenciales que `sqlcmd` usa para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Las opciones de autenticación ( **-E**, **- U**, y **-P**) que especifican las credenciales que `sqlcmd` usa para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
     > [!NOTE]  
     >  La opción **-E** es la predeterminada, por lo que no es necesario especificarla.  
   
--   Las opciones de entrada (**-Q**, **- q**, y **-i**) que identifican la ubicación de la entrada a `sqlcmd`.  
+-   Las opciones de entrada ( **-Q**, **- q**, y **-i**) que identifican la ubicación de la entrada a `sqlcmd`.  
   
--   La opción de salida (**-o**) que especifica el archivo en el que `sqlcmd` es poner su salida.  
+-   La opción de salida ( **-o**) que especifica el archivo en el que `sqlcmd` es poner su salida.  
   
 ## <a name="connecting-to-the-sqlcmd-utility"></a>Conectarse a la utilidad sqlcmd  
  A continuación se indican los usos más comunes de la utilidad `sqlcmd`:  

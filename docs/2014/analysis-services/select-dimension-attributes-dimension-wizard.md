@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 84f8612b4d420eed11308472c9c8fabfc56e23c0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069526"
 ---
 # <a name="select-dimension-attributes-dimension-wizard"></a>Seleccionar los atributos de la dimensión (Asistente para dimensiones)
@@ -54,7 +54,7 @@ ms.locfileid: "66069526"
 |----------|--------------|  
 |Una dimensión contiene una jerarquía de elementos primarios y secundarios, y la opción **Habilitar exploración** no está seleccionada|El asistente deja la propiedad `AttributeHierarchyEnabled` establecida en `True`y establece el atributo `AttributeHierarchyVisible` en `False` para el atributo clave.|  
 |Una tabla de una dimensión contiene una clave externa a una tabla que no se encuentra en la dimensión.|El asistente selecciona la clave externa como un atributo que se va a incluir pero no seleccionará **Habilitar exploración**. Si mantiene esta configuración, la propiedad `AttributeHiearchyEnabled` del atributo se establecerá en `True`y la propiedad `AttributeHieararchyVisible` se establecerá en `False`.|  
-|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> - y -<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene la propiedad `AttributeHiearchyEnabled` establecida en `True`y la propiedad `AttributeHieararchyVisible` establecida en `False`.|  
+|Una dimensión contiene tablas de copo de nieve a las que se tiene acceso a través de columnas de clave externa que admiten valores NULL<br /><br /> \- y -<br /><br /> la opción Habilitar exploración para el atributo que está basado en la clave de la tabla de copo de nieve no está seleccionada.|El asistente creará el nuevo atributo que tiene la propiedad `AttributeHiearchyEnabled` establecida en `True`y la propiedad `AttributeHieararchyVisible` establecida en `False`.|  
   
  **Tipo de atributo**  
  (Opcional) Establezca el tipo para el atributo. El valor predeterminado es **Regular**. El tipo de atributo proporciona orientación a las aplicaciones cliente sobre qué información podría contener el atributo.  

@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cdf171c66c19d87ea4919eeb55dca65f14b89ebd
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982876"
 ---
 # <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (Transact-SQL)
@@ -49,9 +49,9 @@ EXECUTE sys.sp_rda_test_connection
  @server_address = N'*azure_server_fully_qualified_address*'  
  La dirección completa del servidor de Azure.  
   
--   Si proporciona un valor para **@database_name**, pero la base de datos especificado no está habilitada para Stretch, entonces tendrá que proporcionar un valor para **@server_address**.  
+-   Si proporciona un valor para **@database_name** , pero la base de datos especificado no está habilitada para Stretch, entonces tendrá que proporcionar un valor para **@server_address** .  
   
--   Si proporciona un valor para **@database_name**y la base de datos habilitadas para Stretch, entonces no tendrá que proporcionar un valor para **@server_address**. Si proporciona un valor para **@server_address**, el procedimiento almacenado pasa por alto y utiliza existente de servidor de Azure ya asociado a la base de datos habilitadas para Stretch.  
+-   Si proporciona un valor para **@database_name** y la base de datos habilitadas para Stretch, entonces no tendrá que proporcionar un valor para **@server_address** . Si proporciona un valor para **@server_address** , el procedimiento almacenado pasa por alto y utiliza existente de servidor de Azure ya asociado a la base de datos habilitadas para Stretch.  
   
  @azure_username = N'*azure_username*  
  El nombre de usuario para el servidor remoto de Azure.  

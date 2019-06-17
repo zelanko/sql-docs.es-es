@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: aa992d78e8075459115fb4a298b8c8dba02a8157
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676063"
 ---
 # <a name="lesson-1-creating-the-web-service-client-project"></a>Lección 1: Creación del proyecto cliente del servicio web
@@ -37,7 +37,7 @@ ms.locfileid: "62676063"
      Expanda el nodo del proyecto en el Explorador de soluciones. Un archivo con el nombre predeterminado Program.cs (Module1.vb para [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[vbprvb](../includes/vbprvb-md.md)]) se ha agregado al proyecto.  
   
 ## <a name="see-also"></a>Vea también  
- [Lección 2: Agregar una referencia Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
+ [Lección 2: Agregar una referencia Web](../../2014/tutorials/lesson-2-adding-a-web-reference.md)   
  [Acceso a Report Server Web Service mediante Visual Basic o Visual C&#35; &#40;Tutorial de SSRS&#41;](../../2014/tutorials/access-report-server-web-service-vb-vcsharp-ssrs-tutorial.md)  
   
   

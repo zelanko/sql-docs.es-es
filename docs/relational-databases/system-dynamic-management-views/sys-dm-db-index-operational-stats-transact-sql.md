@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3d52fb28dd1093b81d8a46ec6a8d2dd3cce49807
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62684293"
 ---
 # <a name="sysdmdbindexoperationalstats-transact-sql"></a>sys.dm_db_index_operational_stats (Transact-SQL)
@@ -102,11 +102,11 @@ sys.dm_db_index_operational_stats (
 |**range_scan_count**|**bigint**|Recuento acumulado de recorridos de tabla e intervalo iniciados en el índice o el montón.|    
 |**singleton_lookup_count**|**bigint**|Recuento acumulado de recuperaciones de filas únicas del índice o montón.|    
 |**forwarded_fetch_count**|**bigint**|Recuento de filas que se capturan mediante un registro de reenvío.<br /><br /> 0 = Índices|    
-|**lob_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)**, **(nvarchar max)**, **varbinary (max)**, y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
+|**lob_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de objetos grandes (LOB) recuperadas desde la unidad de asignación LOB_DATA. Estas páginas contienen datos que se almacenan en columnas de tipo **texto**, **ntext**, **imagen**, **varchar (max)** , **(nvarchar max)** , **varbinary (max)** , y **xml**. Para obtener más información, vea [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md).|    
 |**lob_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de LOB recuperados.|    
 |**lob_orphan_create_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos creados para operaciones masivas.<br /><br /> 0 = Índice no clúster|    
 |**lob_orphan_insert_count**|**bigint**|Recuento acumulado de valores de LOB huérfanos insertados durante operaciones masivas.<br /><br /> 0 = Índice no clúster|    
-|**row_overflow_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **varchar**, **nvarchar (n)**, **varbinary**, y **sql_variant** que ha sido inserción no consecutiva.|    
+|**row_overflow_fetch_in_pages**|**bigint**|Recuento acumulado de páginas de datos de desbordamiento de fila recuperadas desde la unidad de asignación ROW_OVERFLOW_DATA.<br /><br /> Estas páginas contienen datos almacenados en columnas de tipo **varchar**, **nvarchar (n)** , **varbinary**, y **sql_variant** que ha sido inserción no consecutiva.|    
 |**row_overflow_fetch_in_bytes**|**bigint**|Recuento acumulado de bytes de datos de desbordamiento de fila recuperados.|    
 |**column_value_push_off_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han insertado de manera no consecutiva para que una fila insertada o actualizada entre en una página.|    
 |**column_value_pull_in_row_count**|**bigint**|Recuento acumulado de valores de columna de datos de LOB y datos de desbordamiento de fila que se han extraído de manera consecutiva. Esto ocurre cuando una operación de actualización libera espacio en un registro y proporciona una oportunidad para trasladar uno o más valores de manera no consecutiva de las unidades de asignación LOB_DATA o ROW_OVERFLOW_DATA a la unidad de asignación IN_ROW_DATA.|    

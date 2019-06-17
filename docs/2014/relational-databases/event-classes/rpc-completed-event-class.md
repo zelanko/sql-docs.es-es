@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c4b427047aeba970ad65a6bd2ac31a219978ea71
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63046770"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, clase de eventos
@@ -37,8 +37,8 @@ ms.locfileid: "63046770"
 |Duration|`bigint`|Cantidad de tiempo que emplea el evento. En microsegundos a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En milisegundos en versiones anteriores.|13|Sí|  
 |EndTime|`datetime`|Hora a la que finalizó la llamada a procedimiento remoto.|15|Sí|  
 |Error|`int`|Número de error de un evento dado.<br /><br /> 0=Aceptar<br /><br /> 1=Error<br /><br /> 2=Anular<br /><br /> 3=Omitido|31|Sí|  
-|EventClass|`int`|Tipo de evento = 10.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|`int`|Tipo de evento = 10.|27|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|`int`|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  

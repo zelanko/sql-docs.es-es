@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 96e21edc6c7207c2325ee1a6a3385ef92cad42e5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921173"
 ---
 # <a name="restore-database-general-page"></a>Restaurar la base de datos (página General)
@@ -40,7 +40,7 @@ ms.locfileid: "62921173"
   
 ## <a name="options"></a>Opciones  
   
-### <a name="source"></a>Source  
+### <a name="source"></a>`Source`  
  Las opciones del panel **Restore from**(Restaurar desde) identifican la ubicación de los conjuntos de copia de seguridad para la base de datos y los conjuntos de copia de seguridad que quiere restaurar.  
   
 |Término|Definición|  

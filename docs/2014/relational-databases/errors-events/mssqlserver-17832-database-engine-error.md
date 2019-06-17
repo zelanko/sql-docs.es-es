@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1280bb44d11ce4f8234d544bf113e796a9c3c85c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62915433"
 ---
 # <a name="mssqlserver17832"></a>MSSQLSERVER_17832
@@ -33,7 +33,7 @@ ms.locfileid: "62915433"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|SRV_BAD_LOGIN_PKT|  
-|Texto del mensaje|La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls |  
+|Texto del mensaje|La estructura del paquete de inicio de sesión utilizado para abrir la conexión no es válida; se cerró la conexión. Póngase en contacto con el proveedor de la biblioteca cliente.%.*ls|  
   
 ## <a name="explanation"></a>Explicación  
  El equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no pudo procesar el paquete de inicio de sesión de cliente. Esto puede deberse a que el paquete se creó incorrectamente o a que se dañó durante la transmisión. También puede deberse a la configuración del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La dirección IP enumerada es la del equipo cliente.  
@@ -59,7 +59,7 @@ ms.locfileid: "62915433"
   
 3.  Desplácese a **HKEY_LOCAL_MACHINE\System\CurrentControlSet\Control\Lsa\Kerberos\Parameters**.  
   
-4.  Si el parámetro **MaxTokenSize** no está presente, haga clic con el botón derecho en **Parameters**, seleccione **Nuevo** y haga clic en Valor de **DWORD (32 bits)**. Denomine a la entrada del Registro **MaxTokenSize**.  
+4.  Si el parámetro **MaxTokenSize** no está presente, haga clic con el botón derecho en **Parameters**, seleccione **Nuevo** y haga clic en Valor de **DWORD (32 bits)** . Denomine a la entrada del Registro **MaxTokenSize**.  
   
 5.  Haga clic con el botón derecho en **MaxTokenSize** y, a continuación, haga clic en **Modificar**.  
   

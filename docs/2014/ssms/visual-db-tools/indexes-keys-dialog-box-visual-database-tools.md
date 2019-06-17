@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f0244530672e9db4a43f3dbe80f0c67cc86f8a67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63015427"
 ---
 # <a name="indexes-and-keys-dialog-box-visual-database-tools"></a>Índices y claves (cuadro de diálogo, Visual Database Tools)
@@ -55,7 +55,7 @@ ms.locfileid: "63015427"
  Muestra el nombre de la clave o el índice. Cuando se crea un nuevo índice o una nueva clave, aparece un nombre predeterminado que se genera a partir de la tabla de la ventana que está activa en el Diseñador de tablas. Este nombre se puede cambiar en cualquier momento.  
   
  **Descripción**  
- Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
+ Proporciona un espacio para describir la clave o el índice. Para escribir una descripción más detallada, haga clic en **Descripción** y después en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad. De este modo, obtendrá un área más grande en la que escribir el texto.  
   
  **Categoría Diseñador de tablas**  
  Expandido, muestra la información de **Crear como CLUSTERED**.  
@@ -64,7 +64,7 @@ ms.locfileid: "63015427"
  Crear una clave o un índice clúster. Solo se permite un índice clúster en una tabla. Los datos de la tabla se almacenan en el orden del índice clúster. Para más información, consulte [Crear índices clúster](../../relational-databases/indexes/indexes.md) y [Crear índices no clúster](../../relational-databases/indexes/create-nonclustered-indexes.md).  
   
  **Especificación de espacio de datos**  
- Expandido, muestra información sobre **(Tipo de espacio de datos)**, **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
+ Expandido, muestra información sobre **(Tipo de espacio de datos)** , **Nombre de esquema de partición o grupo de archivo**y **Lista de columnas de particiones**.  
   
  **(Tipo de espacio de datos)**  
  Indica si este índice o esta clave pertenece a un grupo de archivos o a un esquema de partición.  

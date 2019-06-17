@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 627ab54ed35cbc0a43c5a0eac26a1397199edbd8
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014664"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
@@ -64,7 +64,7 @@ ms.locfileid: "66014664"
 </xsd:schema>  
 ```  
   
- El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Tenga en cuenta que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >**, tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
+ El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Tenga en cuenta que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >** , tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
@@ -115,7 +115,7 @@ ms.locfileid: "66014664"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Insertar un registro mediante la relación de elementos primarios y secundarios especificada en el esquema de asignación  
  Los elementos de esquema pueden estar relacionados. El  **\<SQL: Relationship >** elemento especifica la relación de elementos primarios y secundarios entre los elementos de esquema. Esta información se usa para actualizar las tablas correspondientes que tienen una relación de clave principal y clave externa.  
   
- El siguiente esquema de asignación (SampleSchema.xml) consta de dos elementos,  **\<orden >** y  **\<OD >**:  
+ El siguiente esquema de asignación (SampleSchema.xml) consta de dos elementos,  **\<orden >** y  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

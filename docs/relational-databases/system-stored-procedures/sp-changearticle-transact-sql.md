@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997948"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
@@ -48,9 +48,9 @@ sp_changearticle [ [@publication= ] 'publication' ]
   
 `[ @article = ] 'article'` Es el nombre del artículo cuya propiedad se va a cambiar. *artículo* es **sysname**, su valor predeterminado es null.  
   
-`[ @property = ] 'property'` Es una propiedad de artículo para cambiar. *propiedad* es **nvarchar (100)**.  
+`[ @property = ] 'property'` Es una propiedad de artículo para cambiar. *propiedad* es **nvarchar (100)** .  
   
-`[ @value = ] 'value'` Es el nuevo valor de la propiedad de artículo. *valor* es **nvarchar (255)**.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad de artículo. *valor* es **nvarchar (255)** .  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
@@ -64,7 +64,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**destination_owner**||Nombre del propietario del objeto de destino.|  
 |**filter**||Nuevo procedimiento almacenado para filtrar la tabla (filtrado horizontal). El valor predeterminado es NULL. No se puede cambiar para las publicaciones de replicación punto a punto.|  
 |**fire_triggers_on_snapshot**|**true**|Los desencadenadores de usuario replicados se ejecutan cuando se aplica la instantánea inicial.<br /><br /> Nota: Para los desencadenadores que replicarse, el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.|  
-||**False**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
+||**false**|Los desencadenadores de usuario replicados no se ejecutan cuando se aplica la instantánea inicial.|  
 |**identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
 |**ins_cmd**||Instrucción INSERT que se ejecuta; de lo contrario, se crea a partir del registro.|  
 |**pre_creation_cmd**||Comando de creación previa que puede quitar, eliminar o truncar la tabla de destino antes de que se aplique la sincronización.|  
@@ -73,7 +73,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**delete**|Elimina la tabla de destino.|  
 ||**truncate**|Trunca la tabla de destino.|  
 |**pub_identity_range**||Controla el tamaño de los intervalos de identidad asignados en el suscriptor. No se admite para la replicación punto a punto.|  
-|**schema_option**||Especifica el mapa de bits de la opción de generación del esquema para el artículo especificado. *schema_option* es **binary (8)**. Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
+|**schema_option**||Especifica el mapa de bits de la opción de generación del esquema para el artículo especificado. *schema_option* es **binary (8)** . Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
 ||**0x00**|Deshabilita el scripting del Agente de instantáneas.|  
 ||**0x01**|Genera la creación del objeto (CREATE TABLE, CREATE PROCEDURE, etc.).|  
 ||**0x02**|Genera los procedimientos almacenados que propagan los cambios del artículo, si se han definido.|  
@@ -104,7 +104,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x4000000**|Replica índices en **xml** columnas.|  
 ||**0x8000000**|Crea esquemas que aún no existen en el suscriptor.|  
 ||**0x10000000**|Convierte **xml** columnas a **ntext** en el suscriptor.|  
-||**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)**, **varchar (max)**, y **varbinary (max)**) que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que son compatibles en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)** , **varchar (max)** , y **varbinary (max)** ) que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que son compatibles en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica permisos.|  
 ||**0x80000000**|Intenta quitar dependencias a objetos que no forman parte de la publicación.|  
 ||**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en **varbinary (max)** columnas. No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicación de tablas que incluyen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de cómo se establece esta opción de esquema.<br /><br /> Vea la opción relacionada **0 x 800000000**.|  

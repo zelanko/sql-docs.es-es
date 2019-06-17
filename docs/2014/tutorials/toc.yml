@@ -116,7 +116,7 @@
               href: exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial.md
             - name: Crear un modelo de agrupación en clústeres de secuencia relacionado
               href: creating-a-related-sequence-clustering-model-intermediate-data-mining-tutorial.md
-            - name: 'Crear predicciones en un modelo de agrupación en clústeres de secuencia '
+            - name: Crear predicciones en un modelo de agrupación en clústeres de secuencia
               href: create-predictions-on-model-intermediate-data-mining-tutorial.md
         - name: 'Lección 5: Creación de modelos de red neuronal y de regresión logística'
           href: lesson-5-build-models-intermediate-data-mining-tutorial.md

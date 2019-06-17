@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 32facb58645e0fbb3750ca02da0d3a22b320fc67
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997041"
 ---
 # <a name="spchangemergefilter-transact-sql"></a>sp_changemergefilter (Transact-SQL)
@@ -52,7 +52,7 @@ sp_changemergefilter [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` Es el nombre de la propiedad que se va a cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor*es **nvarchar (1000)** , no tiene ningún valor predeterminado.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
@@ -65,7 +65,7 @@ sp_changemergefilter [ @publication= ] 'publication'
 |**join_articlename**||Nombre del artículo de combinación.|  
 |**join_filterclause**||Cláusula de filtro.|  
 |**join_unique_key**|**true**|La combinación se hace sobre una clave exclusiva.|  
-||**False**|La combinación no se hace sobre una clave exclusiva.|  
+||**false**|La combinación no se hace sobre una clave exclusiva.|  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` Confirma que la acción realizada por este procedimiento almacenado puede invalidar una instantánea existente. *force_invalidate_snapshot* es un **bit**, su valor predeterminado es **0**.  
   

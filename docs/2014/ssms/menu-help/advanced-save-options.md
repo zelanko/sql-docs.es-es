@@ -15,14 +15,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 175c1f5b1f507078f461a07e30c62fb68f7cfb02
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678999"
 ---
 # <a name="advanced-save-options"></a>Opciones avanzadas para guardar
-  Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. Para tener acceso a la **opciones avanzadas para guardar** cuadro de diálogo el **archivo** menú, haga clic en **guardar** \<nombre de la consulta >**.sql como** a Abra el **Guardar archivo como** cuadro de diálogo, haga clic en la flecha abajo en la **guardar** botón y, a continuación, haga clic en **guardar con codificación**.  
+  Utilice este cuadro de diálogo para seleccionar un esquema de codificación de idioma y especificar los caracteres que se van a insertar al final de cada línea. Para tener acceso a la **opciones avanzadas para guardar** cuadro de diálogo el **archivo** menú, haga clic en **guardar** \<nombre de la consulta > **.sql como** a Abra el **Guardar archivo como** cuadro de diálogo, haga clic en la flecha abajo en la **guardar** botón y, a continuación, haga clic en **guardar con codificación**.  
   
 ## <a name="options"></a>Opciones  
  **Codificación**  

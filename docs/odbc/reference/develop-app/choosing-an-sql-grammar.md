@@ -16,16 +16,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63026582"
 ---
 # <a name="choosing-an-sql-grammar"></a>Elegir una gramática SQL
 La primera decisión tomar al crear instrucciones SQL es qué gramática para usar. Además de las gramáticas disponibles en los diferentes organismos de estándares, como Open Group, ANSI e ISO, prácticamente todos los proveedores de DBMS define su propio gramatical, cada uno de los cuales varía ligeramente del estándar.  
   
- [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), se describe la gramática mínima de SQL que deben admitir todos los controladores ODBC. Esta gramática es un subconjunto del nivel de entrada de SQL-92. Los controladores pueden admitir gramática adicional para que se ajuste al nivel intermedio, completo o FIPS 127-2 transitorios niveles definidos en SQL-92. Para obtener más información, consulte [gramática mínima de SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) en el apéndice C: Gramática de SQL y SQL-92.  
+ [Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md), se describe la gramática mínima de SQL que deben admitir todos los controladores ODBC. Esta gramática es un subconjunto del nivel de entrada de SQL-92. Los controladores pueden admitir gramática adicional para que se ajuste al nivel intermedio, completo o FIPS 127-2 transitorios niveles definidos en SQL-92. Para obtener más información, consulte [gramática mínima de SQL](../../../odbc/reference/appendixes/sql-minimum-grammar.md) en el apéndice C: Gramática de SQL y SQL-92.  
   
  Apéndice C también define *secuencias de escape* que contiene la gramática estándar para características de lenguaje disponibles habitualmente, como las combinaciones externas, que no están cubiertos por la gramática de SQL-92. Para obtener más información, consulte [secuencias de Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) en el apéndice C: Gramática de SQL, y [secuencias de Escape](../../../odbc/reference/develop-app/escape-sequences.md), más adelante en esta sección.  
   

@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 501ee9f2bde6d77e8f07fcbdfa6a43a0fa6f3b3a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63007307"
 ---
 # <a name="passing-parameters-to-updategrams-sqlxml-40"></a>Pasar parámetros a diagramas de actualización (SQLXML 4.0)
@@ -32,7 +32,7 @@ ms.locfileid: "63007307"
  Los diagramas de actualización le permiten pasar NULL como un valor del parámetro. Para pasar el valor del parámetro es NULL, especifique el **nullvalue** atributo. El valor que se asigna a la **nullvalue** atributo, a continuación, se proporciona como el valor del parámetro. Los diagramas de actualización tratan este valor como NULL.  
   
 > [!NOTE]  
->  En  **\<sql:header >** y  **\<updg:header >**, debe especificar el **nullvalue** como no calificado; mientras que, en  **\<updg:sync >**, especifique el **nullvalue** como completo (por ejemplo, **updg:nullvalue**).  
+>  En  **\<sql:header >** y  **\<updg:header >** , debe especificar el **nullvalue** como no calificado; mientras que, en  **\<updg:sync >** , especifique el **nullvalue** como completo (por ejemplo, **updg:nullvalue**).  
   
 ## <a name="examples"></a>Ejemplos  
  Para crear ejemplos funcionales mediante los siguientes ejemplos, debe cumplir los requisitos especificados en [requisitos para ejecutar los ejemplos de SQLXML](../../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  

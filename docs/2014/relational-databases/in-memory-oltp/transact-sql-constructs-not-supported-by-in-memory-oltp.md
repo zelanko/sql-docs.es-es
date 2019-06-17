@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dda74f247f9899b9e0a23d43143a5031574d8c13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155302"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>Construcciones Transact-SQL no admitidas por OLTP en memoria
@@ -35,7 +35,7 @@ ms.locfileid: "63155302"
 ## <a name="databases-that-use-in-memory-oltp"></a>Bases de datos que utilizan OLTP en memoria  
  En la siguiente tabla se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto del mensaje de error que implica una base de datos OLTP en memoria.  
   
-|Tipo|Name|Solución|  
+|Tipo|NOMBRE|Solución|  
 |----------|----------|----------------|  
 |Opción|AUTO_CLOSE|La opción de base de datos AUTO_CLOSE=ON no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
 |Opción|ATTACH_REBUILD_LOG|La opción de base de datos ATTACH_REBUILD_LOG de CREATE no se admite con las bases de datos que tienen un grupo de archivos MEMORY_OPTIMIZED_DATA.|  
@@ -84,7 +84,7 @@ ms.locfileid: "63155302"
 ## <a name="indexes-on-memory-optimized-tables"></a>Índices de las tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con un índice de una tabla optimizada para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Name|Solución|  
+|Tipo|NOMBRE|Solución|  
 |----------|----------|----------------|  
 |Característica|Índice filtrado|Las tablas optimizadas para memoria no admiten índices filtrados. Omita la cláusula `WHERE` en la especificación de índice.|  
 |Característica|UNIQUE|Las tablas optimizadas para memoria no admiten índices únicos. Quite el argumento `UNIQUE` de la especificación de índice.|  
@@ -199,7 +199,7 @@ ms.locfileid: "63155302"
 ## <a name="transactions-that-access-memory-optimized-tables"></a>Transacciones que tienen acceso a tablas con optimización para memoria  
  En la tabla siguiente se enumeran las características y las palabras clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] que pueden aparecer en el texto de un mensaje de error relacionado con transacciones que tienen acceso a tablas optimizadas para memoria, así como la acción correctiva para resolver el error.  
   
-|Tipo|Name|Solución|  
+|Tipo|NOMBRE|Solución|  
 |----------|----------|----------------|  
 |Característica|punto de retorno|No se pueden crear puntos de retorno explícitos en transacciones que tienen acceso a tablas optimizadas para memoria.|  
 |Característica|Transacción enlazada|Las sesiones enlazadas no pueden participar en transacciones que tienen acceso a tablas optimizadas para memoria. No enlace la sesión antes de ejecutar el procedimiento.|  

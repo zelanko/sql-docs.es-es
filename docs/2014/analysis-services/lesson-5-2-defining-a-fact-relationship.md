@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078572"
 ---
 # <a name="defining-a-fact-relationship"></a>Definir una relación de hechos
@@ -87,7 +87,7 @@ ms.locfileid: "66078572"
   
      Observe que la dimensión de cubo **Internet Sales Order Details** está configurada automáticamente con una relación de hechos, como indica el icono único.  
   
-2.  Haga clic en el botón Examinar (**...** ) en el **Item Description** celda en la intersección de la **Internet Sales** grupo de medida y la **Internet Sales Order Details** dimensión, Revise las propiedades de relación de hechos.  
+2.  Haga clic en el botón Examinar ( **...** ) en el **Item Description** celda en la intersección de la **Internet Sales** grupo de medida y la **Internet Sales Order Details** dimensión, Revise las propiedades de relación de hechos.  
   
      Se abre el cuadro de diálogo **Definir relación** . Observe que no puede configurar ninguna de las propiedades.  
   

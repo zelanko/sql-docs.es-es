@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0cc3a132792cca8ecdf5a33a2fe4e4d40116c497
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66086648"
 ---
 # <a name="cross-validation-sql-server-data-mining-add-ins"></a>Validación cruzada (Complementos de minería de datos de SQL Server)
@@ -75,7 +75,7 @@ ms.locfileid: "66086648"
  Si elige una estructura que admite tanto modelos de agrupación en clústeres como otros tipos de modelos, los primeros no se probarán.  
   
 ## <a name="understanding-cross-validation-results"></a>Descripción de los resultados de la validación cruzada  
- Los resultados de la validación cruzada se muestran en una nueva hoja de cálculo, denominada **informe de validación cruzada para \<nombre_atributo >**. La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
+ Los resultados de la validación cruzada se muestran en una nueva hoja de cálculo, denominada **informe de validación cruzada para \<nombre_atributo >** . La nueva hoja de cálculo contiene varias secciones: la primera sección es un resumen que proporciona metadatos importantes sobre el modelo que se probó para que pueda saber a qué modelo o estructura corresponden los resultados.  
   
  La segunda sección del informe proporciona un resumen estadístico que indica el grado de eficacia del modelo original. En este resumen, se analizan las diferencias entre los modelos creados para cada plegamiento tres medidas clave: *error cuadrático medio*, *error medio absoluto*, y *depuntuaciónderegistro*. Éstas son medidas estadísticas estándar que se usan no solo en la minería de datos, sino también en la mayoría de los análisis estadísticos.  
   

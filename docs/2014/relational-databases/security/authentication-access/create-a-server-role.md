@@ -17,10 +17,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 22e08b5eb0bccc02303201b7fae46b55f1012fd8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011963"
 ---
 # <a name="create-a-server-role"></a>Crear un rol de servidor
@@ -67,9 +67,9 @@ ms.locfileid: "63011963"
   
 2.  Expanda la carpeta **Seguridad** .  
   
-3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor...**.  
+3.  Haga clic con el botón derecho en la carpeta **Roles del servidor** y seleccione **Nuevo rol de servidor...** .  
   
-4.  En el **nuevo rol de servidor -**_nombre_del_rol_de_servidor_ cuadro de diálogo el **General** , escriba un nombre para el nuevo rol de servidor en el **el nombre del rol de servidor**cuadro.  
+4.  En el **nuevo rol de servidor -** _nombre_del_rol_de_servidor_ cuadro de diálogo el **General** , escriba un nombre para el nuevo rol de servidor en el **el nombre del rol de servidor**cuadro.  
   
 5.  En el cuadro **Propietario** , escriba el nombre de la entidad de seguridad del servidor que poseerá el nuevo rol. Como alternativa, haga clic en los puntos suspensivos **(...)** para abrir el cuadro de diálogo **Seleccionar inicio de sesión o rol de servidor**.  
   

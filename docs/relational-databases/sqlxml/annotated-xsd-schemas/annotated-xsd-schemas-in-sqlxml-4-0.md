@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 03dcab928e63cb94cd8b2ea704a56e83eeff701e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025479"
 ---
 # <a name="annotated-xsd-schemas-in-sqlxml-40"></a>Esquemas XSD anotados en SQLXML 4.0
@@ -49,14 +49,14 @@ ms.locfileid: "63025479"
 ## <a name="other-resources"></a>Otros recursos  
  Puede buscar más información sobre el lenguaje de definición de esquemas XML (XSD), el lenguaje de rutas XML (XPath) y el lenguaje de transformación basado en hojas de estilo (XSLT) en los siguientes sitios web:  
   
--   XML Schema Part 0: Manual, W3C recomendación ()http://www.w3.org/TR/xmlschema-0/)  
+-   XML Schema Part 0: Manual, W3C recomendación (http://www.w3.org/TR/xmlschema-0/)  
   
--   Esquema XML parte 1: Estructuras, W3C recomendación ()http://www.w3.org/TR/xmlschema-1/)  
+-   Esquema XML parte 1: Estructuras, W3C recomendación (http://www.w3.org/TR/xmlschema-1/)  
   
--   Esquema XML parte 2:Datatypes, W3C recomendación ()http://www.w3.org/TR/xmlschema-2/)  
+-   Esquema XML parte 2:Datatypes, W3C recomendación (http://www.w3.org/TR/xmlschema-2/)  
   
--   XML Path Language (XPath) ()http://www.w3.org/TR/xpath)  
+-   XML Path Language (XPath) (http://www.w3.org/TR/xpath)  
   
--   (XSL Transformations (XSLT)http://www.w3.org/TR/xslt)  
+-   XSL Transformations (XSLT)(http://www.w3.org/TR/xslt)  
   
   

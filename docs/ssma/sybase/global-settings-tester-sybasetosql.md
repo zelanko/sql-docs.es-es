@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63126358"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configuración global (evaluador) (SybaseToSQL)
@@ -30,7 +30,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 **Modo de ahorro de tablas auxiliares**  
 Esta configuración especifica cómo se guardan las tablas auxiliares internas creadas durante la ejecución del caso de prueba. Siguientes opciones se pueden establecer para esta configuración concreta:  
@@ -52,7 +52,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 **Detener la ejecución de pruebas tras el primer error**  
 Esta configuración especifica si se debe detener la ejecución de caso de prueba actual, si se ha producido un error durante la ejecución. Conjunto de opciones de forma predeterminada es **Sí**.  
@@ -61,7 +61,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 ## <a name="see-also"></a>Vea también  
 [Finalización de la preparación del caso de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ee80fbdac31d58cdb4b4b4b60c61be01670ad65a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62993900"
 ---
 # <a name="spchangeagentprofile-transact-sql"></a>sp_change_agent_profile (Transact-SQL)
@@ -44,7 +44,7 @@ sp_change_agent_profile [ @profile_id = ] profile_id
   
 `[ @property = ] 'property'` Es el nombre de la propiedad. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (3000)** , no tiene ningún valor predeterminado.  
   
  Esta tabla describe las propiedades del perfil que se pueden modificar.  
   

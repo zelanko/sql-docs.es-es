@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e38cc3a111eb68688fcc9c30ef01bb607349afcb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022228"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
@@ -85,7 +85,7 @@ ms.locfileid: "63022228"
   
     -   Asegúrese de que las cadenas vacías no se insertan como valores de columna en la tabla publicada.  
   
-    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle (**-SkipErrors1400**).  
+    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle ( **-SkipErrors1400**).  
   
     -   Modifique el script de la tabla generada, quitando el atributo NOT NULL de cualquier columna de caracteres a la que puedan haberse asociado cadenas vacías y suministre el script modificado como script personalizado para el artículo mediante el parámetro @creation_script de [sp_addarticle](/sql/relational-databases/system-stored-procedures/sp-addarticle-transact-sql).  
   

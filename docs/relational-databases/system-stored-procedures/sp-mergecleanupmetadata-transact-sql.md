@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6924ef36c57036cf6cad6e25a6dc5cebfa5fa5f2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017850"
 ---
 # <a name="spmergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
@@ -39,9 +39,9 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que limpia los metadatos para todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%** , que limpia los metadatos para todas las publicaciones. La publicación debe existir, si se especifica explícitamente.  
   
-`[ @reinitialize_subscriber = ] 'subscriber'` Especifica si se debe reinicializar el suscriptor. *suscriptor* es **nvarchar (5)**, puede ser **TRUE** o **FALSE**, su valor predeterminado es **TRUE**. Si **TRUE**, las suscripciones se marcan para reinicialización. Si **FALSE**, las suscripciones no se marcan para reinicialización.  
+`[ @reinitialize_subscriber = ] 'subscriber'` Especifica si se debe reinicializar el suscriptor. *suscriptor* es **nvarchar (5)** , puede ser **TRUE** o **FALSE**, su valor predeterminado es **TRUE**. Si **TRUE**, las suscripciones se marcan para reinicialización. Si **FALSE**, las suscripciones no se marcan para reinicialización.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -53,11 +53,11 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  Después de **sp_mergecleanupmetadata** se ejecuta de forma predeterminada, todas las suscripciones en los suscriptores de publicaciones que tienen metadatos almacenados en **MSmerge_genhistory**, **MSmerge_contents**  y **MSmerge_tombstone** se marcan para reinicialización, se pierden los cambios pendientes en el suscriptor y la instantánea actual está marcado como obsoleta.  
 > 
 > [!NOTE]
->  Si hay varias publicaciones en una base de datos y una de estas publicaciones utiliza un período de retención de publicación infinito (**@retention**=**0**), en ejecución  **sp_mergecleanupmetadata** no limpiará el cambio de la replicación de mezcla metadatos para la base de datos de seguimiento. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones.  
+>  Si hay varias publicaciones en una base de datos y una de estas publicaciones utiliza un período de retención de publicación infinito ( **@retention** =**0**), en ejecución  **sp_mergecleanupmetadata** no limpiará el cambio de la replicación de mezcla metadatos para la base de datos de seguimiento. Por ese motivo, debe utilizar con cuidado la retención infinita de publicaciones.  
   
  Al ejecutar este procedimiento almacenado, puede elegir si desea reinicializar los suscriptores estableciendo el **@reinitialize_subscriber** parámetro **TRUE** (valor predeterminado) o **FALSE**. Si **sp_mergecleanupmetadata** se ejecuta con la **@reinitialize_subscriber** parámetro establecido en **TRUE**, incluso si la suscripción es una instantánea se vuelve a aplicar en el suscriptor se crea sin una instantánea (por ejemplo, si los datos de instantánea y el esquema se han aplicado de forma manual o ya existían en el suscriptor) inicial. Valor del parámetro **FALSE** debe utilizarse con precaución, porque si no se reinicializa la publicación, debe asegurarse de que se sincronizan datos en el publicador y suscriptor.  
   
- Independientemente del valor de **@reinitialize_subscriber**, **sp_mergecleanupmetadata** se produce un error si hay en curso combinar los procesos que están intentando cargar los cambios en el publicador o un suscriptor de republicación en la hora en que se invoca el procedimiento almacenado.  
+ Independientemente del valor de **@reinitialize_subscriber** , **sp_mergecleanupmetadata** se produce un error si hay en curso combinar los procesos que están intentando cargar los cambios en el publicador o un suscriptor de republicación en la hora en que se invoca el procedimiento almacenado.  
   
  **Ejecutar sp_mergecleanupmetadata con @reinitialize_subscriber = TRUE:**  
   

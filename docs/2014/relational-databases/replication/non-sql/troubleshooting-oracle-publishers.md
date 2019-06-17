@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c84bf2d98440ff9425cd26a4a71667abea2904e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63021906"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
@@ -68,7 +68,7 @@ ms.locfileid: "63021906"
   
 -   "La instancia del servidor de Oracle "\<*NombrePublicadorOracle*>" se ha configurado previamente para usar "\<*NombreDistribuidorSQLServer*>" como distribuidor. Para empezar a usar "\<*NewSQLServerDistributorName*>" como distribuidor, debe quitar la configuración de replicación actual de la instancia del servidor de Oracle, lo que eliminará todas las publicaciones existentes en esa instancia del servidor".  
   
--   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>.*\<NombreBaseDatosDistribución>*". Quite el publicador o el sinónimo público "*\<NombreSinónimo>*" para volver a crearlo".  
+-   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>. *\<NombreBaseDatosDistribución>* ". Quite el publicador o el sinónimo público " *\<NombreSinónimo>* " para volver a crearlo".  
   
  Al quitar un publicador de Oracle, los objetos de replicación de la base de datos de Oracle se limpian automáticamente. Sin embargo, en algunos casos es necesario limpiar manualmente los objetos de replicación de Oracle. Para limpiar manualmente los objetos de replicación de Oracle creados por la replicación:  
   
@@ -88,7 +88,7 @@ ms.locfileid: "63021906"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Aparece el error 21642 de SQL Server referente a un inicio de sesión duplicado en el servidor vinculado  
  Al configurar inicialmente el publicador de Oracle, se crea una entrada de servidor vinculado para la conexión entre el publicador y el distribuidor. El servidor vinculado tiene el mismo nombre que el servicio TNS de Oracle. Si intenta crear un servidor vinculado con el mismo nombre, aparecerá el siguiente mensaje de error:  
   
- "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre "*\<NombreServidorVinculado>*". Quítelo o elija otro nombre de publicador."  
+ "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre " *\<NombreServidorVinculado>* ". Quítelo o elija otro nombre de publicador."  
   
  Este error puede aparecer si intenta crear el servidor vinculado directamente o si quitó anteriormente la relación entre el publicador de Oracle y el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y está intentando volver a configurarla. Si recibe este error al intentar volver a configurar el publicador, quite el servidor vinculado con [sp_dropserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropserver-transact-sql).  
   
@@ -155,7 +155,7 @@ ms.locfileid: "63021906"
   
 2.  En el cuadro de diálogo **Ejecutar** , escriba **regedit**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<nombreInstancia>* \Providers.  
+3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<nombreInstancia>* \Providers.  
   
      Se debe incluir en Proveedores una carpeta denominada OraOLEDB.Oracle. En esta carpeta debe encontrarse el nombre de valor DWORD **AllowInProcess**, con un valor de **1**.  
   

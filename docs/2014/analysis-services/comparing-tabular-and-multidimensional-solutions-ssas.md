@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1da4224387e70ccc76e069aa3ce411dddb79b805
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087772"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions-ssas"></a>Comparar soluciones tabulares y multidimensionales (SSAS)
@@ -97,11 +97,11 @@ ms.locfileid: "66087772"
 ||||  
 |-|-|-|  
 ||**Multidimensional**|**Tabular**|  
-|Acciones|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sin |  
-|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Sin |  
+|Acciones|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|No|  
+|Objetos de agregación|[Sí](multidimensional-models/designing-aggregations-analysis-services-multidimensional.md)|Sin|  
 |Medidas calculadas|[Sí](multidimensional-models/create-calculated-members.md)|Sí|  
-|Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|Sin |  
-|Resúmenes personalizados|Sí|No|  
+|Ensamblados personalizados|[Sí](multidimensional-models/multidimensional-model-assemblies-management.md)|No|  
+|Resúmenes personalizados|Sí|Sin|  
 |Distinct Count|[Sí](multidimensional-models/use-aggregate-functions.md)|Sí (mediante DAX) *|  
 |Obtención de detalles|[Sí](multidimensional-models/actions-in-multidimensional-models.md)|Sí|  
 |Jerarquías|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  
@@ -114,9 +114,9 @@ ms.locfileid: "66087772"
 |Medidas de suma parcial|[Sí](multidimensional-models/define-semiadditive-behavior.md)|Sí (mediante DAX)|  
 |Translations|[Sí](multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|No|  
 |Jerarquías definidas por el usuario|[Sí](multidimensional-models/user-defined-hierarchies-create.md)|Sí|  
-|Reescritura|[Sí](multidimensional-models/set-partition-writeback.md)|No|  
+|Reescritura|[Sí](multidimensional-models/set-partition-writeback.md)|Sin|  
   
- * Si la solución debe admitir un gran número de recuentos distintivos (por ejemplo, muchos millones de identificadores de cliente), considere primero Tabular. Suele tener un mejor rendimiento en esta situación. Consulte la sección sobre recuentos distintivos en las notas del producto, [caso práctico de Analysis Services: Uso de modelos tabulares en soluciones comerciales a gran escala](https://msdn.microsoft.com/library/dn751533.aspx).  
+ \* Si la solución debe admitir un gran número de recuentos distintivos (por ejemplo, muchos millones de identificadores de cliente), considere primero Tabular. Suele tener un mejor rendimiento en esta situación. Consulte la sección sobre recuentos distintivos en las notas del producto, [caso práctico de Analysis Services: Uso de modelos tabulares en soluciones comerciales a gran escala](https://msdn.microsoft.com/library/dn751533.aspx).  
   
 ##  <a name="bkmk_modelsize"></a> Tamaño del modelo  
  El tamaño del modelo, en cuanto al número total de objetos, no varía según el tipo de la solución. Sin embargo, las herramientas de diseño que se usan para compilar cada solución varían en el modo en que se adaptan a trabajar con un gran número de objetos. Un modelo mayor es algo más fácil de crear en [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] porque proporciona más funciones para los objetos de diagramas y listas por tipo del Explorador de objetos y el explorador de soluciones.  

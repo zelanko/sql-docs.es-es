@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 354c2e39716dc0cfa215e4392945bf9aa5899da0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012362"
 ---
 # <a name="auto-stats-event-class"></a>Auto Stats [clase de eventos]
@@ -35,8 +35,8 @@ ms.locfileid: "63012362"
 |**Duración**|**bigint**|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |**EndTime**|**datetime**|Hora a la que finalizó el evento.|15|Sí|  
 |**Error**|**int**|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
-|**EventClass**|**int**|Tipo de evento = 58.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 58.|27|Sin|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |**EventSubClass**|**int**|Tipo de subclase de evento:<br /><br /> 1: Estadísticas creadas o actualizadas de forma sincrónica; **TextData** columna indica qué estadísticas y si se crea o se actualizaron.<br /><br /> 2: Actualización de estadísticas asincrónica; trabajo en cola.<br /><br /> 3: Actualización de estadísticas asincrónica; inicio del trabajo.<br /><br /> 4: Actualización de estadísticas asincrónica; trabajo completado.|21|Sí|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  

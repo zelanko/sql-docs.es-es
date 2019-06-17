@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8ab11ccb8853c00439583162f33e76d0e14622a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994314"
 ---
 # <a name="spchangedynamicsnapshotjob-transact-sql"></a>sp_changedynamicsnapshot_job (Transact-SQL)
@@ -121,9 +121,9 @@ sp_changedynamicsnapshot_job [ @publication = ] 'publication'
   
 `[ @active_end_time_of_day = ] active_end_time_of_day` Es la hora del día en que el agente de mezcla deja de estar programado, con el formato HHMMSS. *active_end_time_of_day* es **int**, su valor predeterminado es null.  
   
-`[ @job_login = ] 'job_login'` Es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción con un filtro de fila con parámetros. *job_login* es **nvarchar (257)**, su valor predeterminado es null.  
+`[ @job_login = ] 'job_login'` Es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción con un filtro de fila con parámetros. *job_login* es **nvarchar (257)** , su valor predeterminado es null.  
   
-`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_password* es **nvarchar (257)**, su valor predeterminado es null.  
+`[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows bajo la que se ejecuta el agente de instantáneas al generar la instantánea para una suscripción mediante un filtro de fila con parámetros. *job_password* es **nvarchar (257)** , su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  

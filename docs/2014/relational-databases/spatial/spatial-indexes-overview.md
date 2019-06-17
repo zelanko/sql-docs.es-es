@@ -12,10 +12,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 67f7ac024c2a2b779518a0a775705f17b423ecf5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014017"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
@@ -106,7 +106,7 @@ ms.locfileid: "66014017"
 #### <a name="deepest-cell-rule"></a>Regla de celda más profunda  
  La regla de celda más profunda se aprovecha del hecho de que todas las celdas de nivel inferior pertenecen a la celda superior: una celda de nivel 4 pertenece a una celda de nivel 3, una celda de nivel 3 pertenece a una celda de nivel 2 y una celda de nivel 2 pertenece a una celda de nivel 1. Por ejemplo, un objeto que pertenezca a la celda 1.1.1.1, también pertenece a la celda 1.1.1, a la celda 1.1 y a la celda 1. El conocimiento de dichas relaciones de jerarquía de celdas está integrado en el procesador de consultas. Por consiguiente, solo las celdas de nivel más profundo se tienen que grabar en el índice, minimizando la información que el índice tiene que almacenar.  
   
- En la ilustración siguiente, un polígono en forma de rombo relativamente pequeño se divide en mosaicos. El índice usa el límite de celdas por proyecto predeterminado de 16, que no se alcanza para este objeto pequeño. Por lo tanto, la teselación continúa bajando hasta el nivel 4. El polígono reside en el siguiente nivel 1 a través de las celdas de nivel 3: 4, 4.4, 4.4.10 y 4.4.14. Sin embargo, la teselación con la regla de celda más profunda, cuenta las doce celdas de nivel 4: 4.4.10.13-15 y 4.4.14.1-3, 4.4.14.5-7 y 4.4.14.9-11.  
+ En la ilustración siguiente, un polígono en forma de rombo relativamente pequeño se divide en mosaicos. El índice usa el límite de celdas por proyecto predeterminado de 16, que no se alcanza para este objeto pequeño. Por lo tanto, la teselación continúa bajando hasta el nivel 4. El polígono reside en las siguientes celdas desde el nivel 1 hasta el nivel 3: 4, 4.4, 4.4.10 y 4.4.14. Sin embargo, si se usa la regla de celda más profunda, la teselación solo cuenta las doce celdas del nivel 4: 4.4.10.13-15, 4.4.14.1-3, 4.4.14.5-7 y 4.4.14.9-11.  
   
  ![Optimización de celda más profunda](../../database-engine/media/spndx-opt-deepest-cell.gif "Optimización de celda más profunda")  
   
@@ -127,7 +127,7 @@ ms.locfileid: "66014017"
 >  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>El cuadro de límite  
- Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, `(` _x-min_**,**_y-min_ `)` y `(` _xmáxima_ **,**_y-max_`)`, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
+ Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, `(` _x-min_ **,** _y-min_ `)` y `(` _xmáxima_ **,** _y-max_`)`, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
   
 -   *x-min* es la coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
@@ -140,11 +140,11 @@ ms.locfileid: "66014017"
 > [!NOTE]  
 >  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [CREATE SPATIAL INDEX](/sql/t-sql/statements/create-spatial-index-transact-sql)[!INCLUDE[tsql](../../../includes/tsql-md.md)] .  
   
- El `(` _x-min_**,**_y-min_ `)` y `(` _x-max_**,** _y-max_ `)` coordenadas determinan la posición y las dimensiones del rectángulo. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
+ El `(` _x-min_ **,** _y-min_ `)` y `(` _x-max_ **,** _y-max_ `)` coordenadas determinan la posición y las dimensiones del rectángulo. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
   
  El índice espacial descompone el espacio que se encuentra dentro del cuadro de límite. La cuadrícula de nivel 1 de la jerarquía de cuadrículas rellena el cuadro de límite. Para colocar un objeto geométrico en la jerarquía de cuadrículas, el índice espacial compara las coordenadas del objeto con las coordenadas del cuadro de límite.  
   
- La siguiente ilustración muestra los puntos definidos por el `(` _x-min_**,**_y-min_ `)` y `(` _x máxima_  **,**_y-max_ `)` las coordenadas del rectángulo. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
+ La siguiente ilustración muestra los puntos definidos por el `(` _x-min_ **,** _y-min_ `)` y `(` _x máxima_  **,** _y-max_ `)` las coordenadas del rectángulo. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
   
  ![Cuadro de límite que muestra las coordenadas y la celda 0.](../../database-engine/media/spndx-bb-4x4-objects.gif "Cuadro de límite que muestra las coordenadas y la celda 0.")  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66014017"
 ##  <a name="methods"></a> Métodos admitidos por los índices espaciales  
   
 ###  <a name="geometry"></a> Métodos de Geometry que los índices espaciales admiten  
- Los índices espaciales admiten los siguientes métodos de geometry y orientados a conjuntos en determinadas condiciones: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() y STWithin(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE o JOIN ON de una consulta, y se deben producir dentro de un predicado con el formato general siguiente:  
+ En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geometría y están orientados a conjuntos: STContains(), STDistance(), STEquals(), STIntersects(), STOverlaps(), STTouches() y STWithin(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE o JOIN ON de una consulta, y se deben producir dentro de un predicado con el formato general siguiente:  
   
  *geometry1*.*nombre_método*(*geometry2*)*operador_comparación**número_válido*  
   
@@ -204,7 +204,7 @@ ms.locfileid: "66014017"
 -   *geometry1*.[STWithin](/sql/t-sql/spatial-geometry/stwithin-geometry-data-type)(*geometry2*)= 1  
   
 ###  <a name="geography"></a> Métodos de Geography admitidos por los índices espaciales  
- En determinadas condiciones, los índices espaciales admiten los siguientes métodos de geography orientados a conjuntos: Stintersects y STDistance(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE y se deben producir dentro de un predicado con el formato general siguiente:  
+ En ciertas condiciones, los índices espaciales son compatibles con los siguientes métodos de geografía orientados a conjuntos: STIntersects(), STEquals() y STDistance(). Para que un índice espacial los admita, estos métodos se deben usar dentro de la cláusula WHERE y se deben producir dentro de un predicado con el formato general siguiente:  
   
  *geography1*.*nombre_método*(*geography2*)*operador_comparación**número_válido*  
   

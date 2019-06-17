@@ -40,10 +40,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2686eb387854823ff16a722fe3219c6e2acb2adc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872221"
 ---
 # <a name="configure-database-mail"></a>Configuración de Correo electrónico de base de datos
@@ -129,7 +129,7 @@ ms.locfileid: "62872221"
  Escriba la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden dirigirse al administrador de la base de datos, danw@Adventure-Works.com.  
   
  **Nombre del servidor**  
- Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Esto está típicamente en un formato similar a `smtp.` *< su_compañía >*`.com`. Si necesita ayuda, consulte a su administrador de correo.  
+ Escriba el nombre o la dirección IP del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Esto está típicamente en un formato similar a `smtp.` *< su_compañía >* `.com`. Si necesita ayuda, consulte a su administrador de correo.  
   
  **Número de puerto**  
  Escriba el número de puerto del servidor SMTP de esta cuenta. La mayor parte de los servidores SMTP utilizan el puerto 25.  
@@ -170,13 +170,13 @@ ms.locfileid: "62872221"
  Muestra o actualiza la descripción de la cuenta. La descripción es opcional.  
   
  **Dirección de correo electrónico**  
- Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta del Agente Microsoft SQL Server puede enviar correo electrónico desde la dirección **SqlAgent@Adventure-Works.com**.  
+ Muestra o actualiza el nombre de la dirección de correo electrónico de la cuenta. Es la dirección desde la que se envía el correo electrónico. Por ejemplo, una cuenta del Agente Microsoft SQL Server puede enviar correo electrónico desde la dirección **SqlAgent@Adventure-Works.com** .  
   
  **Nombre para mostrar**  
  Muestra o actualiza el nombre que se muestra en los mensajes de correo electrónico enviados desde esta cuenta. Este nombre es opcional. Se trata del nombre que se muestra en los mensajes enviados desde esta cuenta. Por ejemplo, una cuenta del Agente SQL Server puede mostrar el nombre **SQL Server Agent Automated Mailer (Proveedor de servicio de envío de correo automatizado del Agente SQL Server)** en los mensajes de correo electrónico.  
   
  **Correo electrónico de respuesta**  
- Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente SQL Server pueden dirigirse al administrador de la base de datos, **danw@Adventure-Works.com**.  
+ Muestra o actualiza la dirección de correo electrónico que se utilizará para las respuestas a los mensajes enviados desde esta cuenta. Esta dirección es opcional. Por ejemplo, las respuestas a los mensajes de una cuenta del Agente SQL Server pueden dirigirse al administrador de la base de datos, **danw@Adventure-Works.com** .  
   
  **Nombre del servidor**  
  Muestra o actualiza el nombre del servidor SMTP que utiliza la cuenta para enviar correo electrónico. Típicamente está en un formato similar a **smtp.<su_compañía>.com**. Si necesita ayuda, consulte a su administrador de correo.  
@@ -367,7 +367,7 @@ ms.locfileid: "62872221"
  Tamaño máximo de los datos adjuntos en bytes.  
   
  **Extensiones de archivo adjunto prohibidas**  
- Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico. Haga clic en el botón Examinar (**...**) para agregar extensiones adicionales.  
+ Lista de extensiones separadas por comas que no se puede enviar como datos adjuntos en un mensaje de correo electrónico. Haga clic en el botón Examinar ( **...** ) para agregar extensiones adicionales.  
   
  **Vigencia mínima del ejecutable de Correo electrónico de base de datos (segundos)**  
  Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. El proceso permanecerá activo mientras queden mensajes en la cola del Correo electrónico de base de datos. Este parámetro especifica el tiempo que permanece activo el proceso si no hay ningún mensaje por procesar.  
@@ -394,7 +394,7 @@ ms.locfileid: "62872221"
 
   
 ###  <a name="TestEmail"></a> Send Test E-Mail Page  
- Use la página **Enviar correo electrónico de prueba desde**_<nombreDeInstancia>_ para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
+ Use la página **Enviar correo electrónico de prueba desde** _<nombreDeInstancia>_ para enviar un mensaje de correo electrónico con el perfil de Correo electrónico de base de datos especificado. Los miembros del rol fijo de servidor **sysadmin** son los únicos que pueden enviar un mensaje de correo electrónico de prueba mediante esta página.  
   
  **Perfil de Correo electrónico de base de datos**  
  Seleccione un perfil de Correo electrónico de base de datos de la lista. Este campo es obligatorio. Si no aparece ningún perfil, significa que no hay ninguno o que no tiene permiso para ninguno. Utilice el **Asistente para configuración de Correo electrónico de base de datos** para crear y configurar perfiles. Si no aparece ningún perfil, utilice el Asistente para configuración de Correo electrónico de base de datos para crear un perfil para su utilización.  
@@ -425,7 +425,7 @@ ms.locfileid: "62872221"
   
 2.  En la ventana **Explorador de plantillas** , expanda la carpeta **Correo electrónico de base de datos** .  
   
-3.  Haga doble clic en **Simple Database Mail Configuration (Configuración de correo electrónico de base de datos simple)**. Se abre la plantilla en una ventana de consulta nueva.  
+3.  Haga doble clic en **Simple Database Mail Configuration (Configuración de correo electrónico de base de datos simple)** . Se abre la plantilla en una ventana de consulta nueva.  
   
 4.  En el menú **Consulta** , seleccione **Especificar valores para parámetros de plantilla**. Se abre la ventana **Reemplazar parámetros de plantilla** .  
   

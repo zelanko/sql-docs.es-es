@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 5bc7caa063d14967e576fd009a23110b9647836b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689029"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
@@ -69,15 +69,15 @@ fIsMaxType
 |`SQLDATETIME`|Antes o después|**datetime**|  
 |`SQLBITN`|Antes o después|**bit-null**|  
 |`SQLBIT`|Antes o después|**bit**|  
-|`SQLBIGCHAR`|No|**char**|  
-|`SQLCHARACTER`|No|**char**|  
-|`SQLBIGVARCHAR`|No|**varchar**|  
-|`SQLVARCHAR`|No|**varchar**|  
+|`SQLBIGCHAR`|Sin|**char**|  
+|`SQLCHARACTER`|Sin|**char**|  
+|`SQLBIGVARCHAR`|Sin|**varchar**|  
+|`SQLVARCHAR`|Sin|**varchar**|  
 |`SQLTEXT`|Antes o después|**texto**|  
-|`SQLBIGBINARY`|No|**binario**|  
-|`SQLBINARY`|No|**Binario**|  
-|`SQLBIGVARBINARY`|No|**Varbinary**|  
-|`SQLVARBINARY`|No|**Varbinary**|  
+|`SQLBIGBINARY`|Sin|**binario**|  
+|`SQLBINARY`|Sin|**Binario**|  
+|`SQLBIGVARBINARY`|Sin|**Varbinary**|  
+|`SQLVARBINARY`|Sin|**Varbinary**|  
 |`SQLIMAGE`|Antes o después|**Image**|  
 |`SQLINTN`|Antes o después|**int-null**|  
 |`SQLDATETIMN`|Antes o después|**datetime-null**|  
@@ -92,8 +92,8 @@ fIsMaxType
 |`SQLMONEY4`|Antes o después|**Smallmoney**|  
 |`SQLFLT4`|Antes o después|**Real**|  
 |`SQLUNIQUEID`|Antes o después|**uniqueidentifier**|  
-|`SQLNCHAR`|No|**Nchar**|  
-|`SQLNVARCHAR`|No|**Nvarchar**|  
+|`SQLNCHAR`|Sin|**Nchar**|  
+|`SQLNVARCHAR`|Sin|**Nvarchar**|  
 |`SQLNTEXT`|Antes o después|**Ntext**|  
 |`SQLVARIANT`|Antes o después|**sql_variant**|  
 |`SQLINT8`|Antes o después|**Bigint**|  

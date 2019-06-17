@@ -15,17 +15,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8d86515646236916a9c651c7fa02923b88b995cd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089546"
 ---
 # <a name="trace-template-properties-events-selection-tab"></a>Propiedades de la plantilla de seguimiento (pestaña Selección de eventos)
   Utilice la pestaña **Selección de eventos** del cuadro de diálogo **Propiedades de la plantilla de seguimiento** para ver, editar o especificar las clases de eventos y las columnas de datos que se van a incluir en una plantilla de seguimiento del [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] .  
   
 ## <a name="options"></a>Opciones  
- Columna**Eventos**   
+ Columna**Eventos**  
  Active o desactive la casilla de la columna de eventos para especificar los eventos de los que debe realizarse un seguimiento. Los eventos se organizan por categoría.  
   
  Si ha seleccionado **Basar plantilla nueva en una existente** en la pestaña **General** , los eventos se seleccionan automáticamente de acuerdo con la plantilla especificada. Para obtener más información sobre las clases de eventos, vea [Referencia de las clase de eventos de SQL Server](../relational-databases/event-classes/sql-server-event-class-reference.md).  

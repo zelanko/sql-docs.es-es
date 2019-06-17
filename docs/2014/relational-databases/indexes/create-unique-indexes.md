@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: cf786e48e6e76ca6a16a0a50a954a2a07d3f7a66
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63162355"
 ---
 # <a name="create-unique-indexes"></a>Crear índices únicos
@@ -110,15 +110,15 @@ ms.locfileid: "63162355"
   
 6.  Seleccione el nuevo índice en el cuadro de texto **Clave principal o única, o índice seleccionado** .  
   
-7.  En la cuadrícula principal, en **(General)**, seleccione **Tipo** y luego **Índice** en la lista.  
+7.  En la cuadrícula principal, en **(General)** , seleccione **Tipo** y luego **Índice** en la lista.  
   
-8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)**.  
+8.  Seleccione **Columnas** y luego haga clic en el botón de puntos suspensivos **(...)** .  
   
 9. En el cuadro de diálogo **Columnas de índice** , debajo de **Nombre de columna**, seleccione las columnas que desea indizar. Puede seleccionar hasta 16 columnas. Para obtener un rendimiento óptimo, no seleccione más de una o dos columnas por cada índice. Para cada columna que seleccione, puede indicar si el índice organiza los valores de esta columna en orden ascendente o descendente.  
   
 10. Cuando haya seleccionado todas las columnas del índice, haga clic en **Aceptar**.  
   
-11. En la cuadrícula, en **(General)**, seleccione **Es Unique** y luego **Sí** en la lista.  
+11. En la cuadrícula, en **(General)** , seleccione **Es Unique** y luego **Sí** en la lista.  
   
 12. Opcional: En la cuadrícula principal, en **Diseñador de tablas**, seleccione **Omitir claves duplicadas** y, a continuación, elija **Sí** en la lista. Haga esto si desea omitir los intentos de agregar datos que crearían una clave duplicada en el índice único.  
   
@@ -134,13 +134,13 @@ ms.locfileid: "63162355"
   
 3.  Expanda la tabla en la que desea crear un índice único.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
 6.  Active la casilla **Único** .  
   
-7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+7.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 8.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_de_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice único.  
   

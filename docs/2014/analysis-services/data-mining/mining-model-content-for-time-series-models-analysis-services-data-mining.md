@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 73539ddcf9162cbedabfc0bad82da1fd9788d241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083532"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
@@ -51,7 +51,7 @@ ms.locfileid: "66083532"
  Las siguientes secciones explican cómo se organizan los nodos dentro de cada uno de estos tipos de modelo.  
   
 ### <a name="structure-of-an-artxp-model"></a>Estructura de un modelo ARTXP  
- El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]**, se crearía una bifurcación independiente para cada combinación de atributo y región.  
+ El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]** , se crearía una bifurcación independiente para cada combinación de atributo y región.  
   
  El nodo superior de la bifurcación ARTXP contiene la misma información que hay en el nodo raíz de un árbol de decisión. Esto incluye el número de elementos secundarios para ese nodo (CHILDREN_CARDINALITY), el número de casos que cumplen las condiciones de este nodo (NODE_SUPPORT), y diversas estadísticas descriptivas (NODE_DISTRIBUTION).  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66083532"
 >  Si desea ver las fórmulas, encontrará la fórmula de regresión completa en el nivel del nodo de hoja, pero no en los nodos intermedios o raíz.  
   
 ### <a name="structure-of-an-arima-model"></a>Estructura de un modelo ARIMA  
- El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Región]**) y un atributo de predicción (como **[Sales Amount]**)-la ecuación que describe el cambio del atributo predecible con el tiempo.  
+ El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Región]** ) y un atributo de predicción (como **[Sales Amount]** )-la ecuación que describe el cambio del atributo predecible con el tiempo.  
   
  La ecuación para cada serie se deriva de varios componentes, uno para cada estructura periódica encontrada en los datos. Por ejemplo, si tiene datos de ventas que se recopilan mensualmente, el algoritmo podría detectar estructuras mensuales, trimestrales o anuales.  
   

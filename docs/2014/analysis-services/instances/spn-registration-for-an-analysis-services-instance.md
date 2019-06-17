@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ee52be5eb8c9110e4486a1fa199e3e00572081f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079570"
 ---
 # <a name="spn-registration-for-an-analysis-services-instance"></a>Registro de SPN para una instancia de Analysis Services
@@ -79,7 +79,7 @@ ms.locfileid: "66079570"
 |Cuenta de servicio|Es la cuenta de inicio del servicio **MSSQLServerOLAPService** de Windows. Puede ser una cuenta de usuario de dominio de Windows, una cuenta virtual, una cuenta de servicio administrada o una cuenta integrada, como un SID por servicio, NetworkService o LocalSystem. Una cuenta de usuario de dominio de Windows se puede aplicar formato dominio\usuario o user@domain.|  
   
 ##  <a name="bkmk_virtual"></a> Registro de SPN para una cuenta virtual  
- Las cuentas virtuales son el tipo de cuenta predeterminado de los servicios de SQL Server. La cuenta virtual es **NT Service\MSOLAPService** para una instancia predeterminada y **NT Service\MSOLAP$**\<nombre-instancia > para una instancia con nombre.  
+ Las cuentas virtuales son el tipo de cuenta predeterminado de los servicios de SQL Server. La cuenta virtual es **NT Service\MSOLAPService** para una instancia predeterminada y **NT Service\MSOLAP$** \<nombre-instancia > para una instancia con nombre.  
   
  Como implica el nombre, estas cuentas no existen en Active Directory. Una cuenta virtual solo existe en el equipo local. Cuando se conecta a servicios, aplicaciones o dispositivos externos, la conexión se realiza mediante la cuenta de equipo local. Por esta razón, un registro de SPN para Analysis Services en ejecución en una cuenta virtual es realmente un registro de SPN para la cuenta de equipo.  
   
@@ -96,7 +96,7 @@ Setspn -s MSOLAPSvc.3/AW-SRV01.AdventureWorks.com AW-SRV01
   
  **Sintaxis de ejemplo para una instancia con nombre que se ejecuta como NT Service\MSOLAP$\<nombre de instancia >**  
   
- En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02** y el nombre de instancia es **AW-FINANCE**. Nuevamente, es la cuenta de equipo que se especifica para el SPN, en lugar de la cuenta virtual **NT Service\MSOLAP$**\<nombre de instancia >.  
+ En este ejemplo se muestra la sintaxis de **setspn** para una instancia con nombre en ejecución en la cuenta virtual predeterminada. En este ejemplo, el nombre de host del equipo es **AW-SRV02** y el nombre de instancia es **AW-FINANCE**. Nuevamente, es la cuenta de equipo que se especifica para el SPN, en lugar de la cuenta virtual **NT Service\MSOLAP$** \<nombre de instancia >.  
   
 ```  
 Setspn -s MSOLAPSvc.3/AW-SRV02.AdventureWorks.com:AW-FINANCE AW-SRV02  

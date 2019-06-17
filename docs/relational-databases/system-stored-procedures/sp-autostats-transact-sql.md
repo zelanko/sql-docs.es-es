@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62995687"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
@@ -45,7 +45,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tblname = ] 'table_or_indexed_view_name'` Es el nombre de la tabla o vista indizada para mostrar la opción AUTO_UPDATE_STATISTICS en. *table_or_indexed_view_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @tblname = ] 'table_or_indexed_view_name'` Es el nombre de la tabla o vista indizada para mostrar la opción AUTO_UPDATE_STATISTICS en. *table_or_indexed_view_name* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
   
 `[ @flagc = ] 'stats_value'` Actualiza la opción AUTO_UPDATE_STATISTICS a uno de estos valores:  
   
@@ -53,7 +53,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
   
  **OFF** = OFF  
   
- Cuando *stats_flag* no es se especifica, muestra la configuración actual de AUTO_UPDATE_STATISTICS. *stats_value* es **varchar (10)**, su valor predeterminado es null.  
+ Cuando *stats_flag* no es se especifica, muestra la configuración actual de AUTO_UPDATE_STATISTICS. *stats_value* es **varchar (10)** , su valor predeterminado es null.  
   
 `[ @indname = ] 'statistics_name'` Es el nombre de las estadísticas para mostrar o actualizar la opción AUTO_UPDATE_STATISTICS en. Para que se muestren las estadísticas de un índice, se puede usar el nombre del mismo; un índice y su objeto de estadísticas correspondiente tienen el mismo nombre.  
   

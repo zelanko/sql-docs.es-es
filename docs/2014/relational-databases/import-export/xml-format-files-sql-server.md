@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e323d686d739f832a6ae70707e4393a22a78b27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011554"
 ---
 # <a name="xml-format-files-sql-server"></a>XML, archivos de formato (SQL Server)
@@ -153,19 +153,19 @@ ms.locfileid: "66011554"
   
  <FIELD  
   
- ID **="*`fieldID`*"**  
+ ID **=" *`fieldID`* "**  
   
- xsi **:** type **="*`fieldType`*"**  
+ xsi **:** type **=" *`fieldType`* "**  
   
- [ LENGTH **="*`n`*"** ]  
+ [ LENGTH **=" *`n`* "** ]  
   
- [ PREFIX_LENGTH **="*`p`*"** ]  
+ [ PREFIX_LENGTH **=" *`p`* "** ]  
   
- [ MAX_LENGTH **="*`m`*"** ]  
+ [ MAX_LENGTH **=" *`m`* "** ]  
   
- [ COLLATION **="*`collationName`*"** ]  
+ [ COLLATION **=" *`collationName`* "** ]  
   
- [ TERMINATOR **="*`terminator`*"** ]  
+ [ TERMINATOR **=" *`terminator`* "** ]  
   
  />  
   
@@ -173,13 +173,13 @@ ms.locfileid: "66011554"
   
 |Atributo de FIELD|Descripción|Opcional /<br /><br /> Obligatorio|  
 |---------------------|-----------------|------------------------------|  
-|ID **="*`fieldID`*"**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> < FIELD ID **= "*`fieldID`*"**/ > se asigna a < COLUMN SOURCE **= "*`fieldID`*"**/>|Obligatorio|  
-|xsi:type **="*`fieldType`*"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
-|LENGTH **="*`n`*"**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
-|PREFIX_LENGTH **="*`p`*"**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 u 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
-|MAX_LENGTH **= "*`m`*"**|Este atributo es el número máximo de bytes que se pueden almacenar en un campo determinado. Sin una tabla de destino, la longitud máxima de la columna se desconoce. El atributo MAX_LENGTH restringe la longitud máxima de una columna de caracteres de salida y limita el almacenamiento asignado al valor de la columna. Esto resulta especialmente útil al usar la opción BULK de la función OPENROWSET en una cláusula SELECT FROM.<br /><br /> El valor de *m* debe ser un entero positivo. De forma predeterminada, la longitud máxima es de 8.000 caracteres para una columna **char** y de 4.000 caracteres para una columna **nchar** .|Opcional|  
-|INTERCALACIÓN **= "*`collationName`*"**|COLLATION solo se permite para campos de caracteres. Para ver una lista de los nombres de intercalación de SQL, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
-|TERMINADOR **= "*`terminator`*"**|Este atributo especifica el terminador de un campo de datos. El terminador puede ser cualquier carácter. Debe ser un carácter único que no forme parte de los datos.<br /><br /> De forma predeterminada, el terminador del campo es el carácter de tabulación (representado como \t). Para representar una marca de párrafo, utilice \r\n.|Solo se usa con xsi:type de datos de caracteres, que requiere este atributo|  
+|ID **=" *`fieldID`* "**|Especifica el nombre lógico del campo incluido en el archivo de datos. El valor de ID de un campo es la clave utilizada para referirse al campo.<br /><br /> < FIELD ID **= " *`fieldID`* "** / > se asigna a < COLUMN SOURCE **= " *`fieldID`* "** />|Obligatorio|  
+|xsi:type **=" *`fieldType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de la instancia del elemento. El valor de *fieldType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.|Obligatorio (en función del tipo de datos)|  
+|LENGTH **=" *`n`* "**|Este atributo define la longitud de una instancia de un tipo de datos de longitud fija.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional a no ser que el valor de xsi:type lo requiera|  
+|PREFIX_LENGTH **=" *`p`* "**|Este atributo define la longitud del prefijo para una representación de datos binarios. El valor de PREFIX_LENGTH, *p*, debe ser uno de los siguientes: 1, 2, 4 u 8.|Opcional a no ser que el valor de xsi:type lo requiera|  
+|MAX_LENGTH **= " *`m`* "**|Este atributo es el número máximo de bytes que se pueden almacenar en un campo determinado. Sin una tabla de destino, la longitud máxima de la columna se desconoce. El atributo MAX_LENGTH restringe la longitud máxima de una columna de caracteres de salida y limita el almacenamiento asignado al valor de la columna. Esto resulta especialmente útil al usar la opción BULK de la función OPENROWSET en una cláusula SELECT FROM.<br /><br /> El valor de *m* debe ser un entero positivo. De forma predeterminada, la longitud máxima es de 8.000 caracteres para una columna **char** y de 4.000 caracteres para una columna **nchar** .|Opcional|  
+|INTERCALACIÓN **= " *`collationName`* "**|COLLATION solo se permite para campos de caracteres. Para ver una lista de los nombres de intercalación de SQL, vea [Nombre de intercalación de SQL Server &#40;Transact-SQL&#41;](/sql/t-sql/statements/sql-server-collation-name-transact-sql).|Opcional|  
+|TERMINADOR **= " *`terminator`* "**|Este atributo especifica el terminador de un campo de datos. El terminador puede ser cualquier carácter. Debe ser un carácter único que no forme parte de los datos.<br /><br /> De forma predeterminada, el terminador del campo es el carácter de tabulación (representado como \t). Para representar una marca de párrafo, utilice \r\n.|Solo se usa con xsi:type de datos de caracteres, que requiere este atributo|  
   
 #####  <a name="XsiTypeValuesOfFIELD"></a> Valores xsi:type del elemento \<FIELD>  
  El valor xsi:type es una construcción XML (usada como atributo) que identifica el tipo de datos de una instancia de un elemento. Para obtener más información acerca de su uso, vea "Colocar el valor xsi:type en un conjunto de datos", más adelante en este tema.  
@@ -226,12 +226,12 @@ ms.locfileid: "66011554"
   
 |Atributo de COLUMN|Descripción|Opcional /<br /><br /> Obligatorio|  
 |----------------------|-----------------|------------------------------|  
-|SOURCE **="*`fieldID`*"**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> < COLUMN SOURCE **= "*`fieldID`*"**/ > se asigna a < FIELD ID **= "*`fieldID`*"**/>|Obligatorio|  
+|SOURCE **=" *`fieldID`* "**|Especifica el Id. del campo que se asigna a la columna.<br /><br /> < COLUMN SOURCE **= " *`fieldID`* "** / > se asigna a < FIELD ID **= " *`fieldID`* "** />|Obligatorio|  
 |NAME = "*columnName*"|Especifica el nombre de la columna en el conjunto de filas representado por el archivo de formato. Este nombre de columna se utiliza para identificar la columna en el conjunto de resultados y no es necesario que corresponda al nombre de columna usado en la tabla de destino.|Obligatorio|  
-|xsi **:** type **="*`ColumnType`*"**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: Los valores posibles de *ColumnType* y sus atributos asociados aparecen en la tabla siguiente.|Opcional|  
-|LENGTH **="*`n`*"**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
-|PRECISION **="*`n`*"**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
-|SCALE **="*`int`*"**|Indica el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una escala de 2.<br /><br /> El valor debe ser un entero.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
+|xsi **:** type **=" *`ColumnType`* "**|Es una construcción XML (utilizada como atributo) que identifica el tipo de datos de la instancia del elemento. El valor de *ColumnType* determina qué atributos opcionales (a continuación) necesita el usuario en una instancia determinada.<br /><br /> Nota: Los valores posibles de *ColumnType* y sus atributos asociados aparecen en la tabla siguiente.|Opcional|  
+|LENGTH **=" *`n`* "**|Define la longitud de una instancia de un tipo de datos de longitud fija. LENGTH se utiliza solo cuando xsi:type es un tipo de datos de cadena.<br /><br /> El valor de *n* debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de cadena)|  
+|PRECISION **=" *`n`* "**|Indica el número de dígitos de un número. Por ejemplo, el número 123,45 tiene una precisión de 5.<br /><br /> El valor debe ser un entero positivo.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
+|SCALE **=" *`int`* "**|Indica el número de dígitos situados a la derecha de la coma decimal de un número. Por ejemplo, el número 123,45 tiene una escala de 2.<br /><br /> El valor debe ser un entero.|Opcional (solo disponible si xsi:type es un tipo de datos de número variable)|  
 |NULLABLE **=** { **"** YES **"**<br /><br /> **"** NO **"** }|Indica si una columna puede aceptar valores NULL. Este atributo es completamente independiente de FIELDS. No obstante, si una columna tiene el valor de NULLABLE establecido en NO y el campo especifica NULL (es decir, no especifica ningún valor), se produce un error de tiempo de ejecución.<br /><br /> El atributo NULLABLE solo se usa si escribe una instrucción SELECT FROM OPENROWSET(BULK...) simple.|Opcional (disponible para cualquier tipo de datos)|  
   
 #####  <a name="XsiTypeValuesOfCOLUMN"></a> Valores xsi:type del elemento \<COLUMN>  
@@ -256,7 +256,7 @@ ms.locfileid: "66011554"
 ###  <a name="HowUsesROW"></a> Cómo usa la importación en bloque el elemento \<ROW>  
  El elemento \<ROW> se omite en algunos contextos. El hecho de que un elemento \<ROW> afecte a una operación de importación en bloque depende de cómo se realice la operación:  
   
--   Comando **bcp**   
+-   Comando **bcp**  
   
      Al cargar datos en una tabla de destino, **bcp** omite al componente \<ROW>. En su lugar, **bcp** carga los datos en función de los tipos de columnas de la tabla de destino.  
   

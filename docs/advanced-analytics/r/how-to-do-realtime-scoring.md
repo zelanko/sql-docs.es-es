@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62503770"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>Cómo generar predicciones con modelos de aprendizaje automático de SQL Server y previsiones
@@ -84,7 +84,7 @@ Para usar un modelo con cualquiera de las opciones rápidas de puntuación, guar
 
 **Uso de SQL**
 
-Desde el código SQL, puede entrenar el modelo mediante [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e insertar directamente los modelos entrenados en una tabla, en una columna de tipo **varbinary (max)**. Para obtener un ejemplo simple, vea [crear un modelo preditive en R](../tutorials/rtsql-create-a-predictive-model-r.md)
+Desde el código SQL, puede entrenar el modelo mediante [sp_execute_external_script](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)e insertar directamente los modelos entrenados en una tabla, en una columna de tipo **varbinary (max)** . Para obtener un ejemplo simple, vea [crear un modelo preditive en R](../tutorials/rtsql-create-a-predictive-model-r.md)
 
 **Uso de R**
 

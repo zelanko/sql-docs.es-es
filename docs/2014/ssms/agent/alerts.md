@@ -23,10 +23,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b385e6b02807ed79e2becb127a16e76d04329764
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473136"
 ---
 # <a name="alerts"></a>Alertas
@@ -92,7 +92,7 @@ ms.locfileid: "62473136"
   
      El umbral de la alerta y el comportamiento que genera la alerta. El umbral es un número. El comportamiento **puede ser: está por debajo de**, **es igual a**o **está por encima de un número especificado en Valor**. El **Valor** es un número que describe el contador de condición de rendimiento. Por ejemplo, para establecer una alerta que tendrá lugar para el objeto de rendimiento **SQLServer:Locks** cuando pasen 30 minutos del **Tiempo de espera de bloqueos** , deberá elegir **está por encima de** y **especificar 30 para el valor**.  
   
-     En otro ejemplo, puede especificar que una alerta tenga lugar para el objeto de rendimiento **SQLServer:Transactions** cuando el espacio disponible en **tempdb** esté por debajo de 1000 KB. Para ello, elegirá el contador **Espacio disponible en tempdb (KB)**, **está por debajo de**y un **Valor** de **1000**.  
+     En otro ejemplo, puede especificar que una alerta tenga lugar para el objeto de rendimiento **SQLServer:Transactions** cuando el espacio disponible en **tempdb** esté por debajo de 1000 KB. Para ello, elegirá el contador **Espacio disponible en tempdb (KB)** , **está por debajo de**y un **Valor** de **1000**.  
   
     > [!NOTE]  
     >  Se muestrean periódicamente los datos de rendimiento, lo que puede causar una pequeña demora (unos segundos) entre el momento en que se alcanza el umbral y la activación de la alerta relativa al rendimiento.  

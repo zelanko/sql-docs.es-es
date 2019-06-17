@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a685158e83569cd7d53e4b7da9edf3fa38436109
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078209"
 ---
 # <a name="defining-and-browsing-translations"></a>Definir y examinar traducciones
@@ -44,9 +44,9 @@ ms.locfileid: "66078209"
   
 6.  En la fila de la **título** de objeto para el **Month Name** atributo, escriba `Mes del Año` en el **español (España)** columna de traducción y `Mois d'Année` en el **Francés (Francia)** columna de traducción.  
   
-     Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos (**...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
+     Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos ( **...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
-7.  Haga clic en el botón de puntos suspensivos (**...** ) para el **español (España)** traducción para el **Month Name** atributo.  
+7.  Haga clic en el botón de puntos suspensivos ( **...** ) para el **español (España)** traducción para el **Month Name** atributo.  
   
      Aparecerá el cuadro de diálogo **Traducción de datos de atributos** .  
   
@@ -54,7 +54,7 @@ ms.locfileid: "66078209"
   
      ![Cuadro de diálogo traducción de datos de atributo](../../2014/tutorials/media/l9-translations-4.gif "cuadro de diálogo traducción de datos de atributo")  
   
-9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
+9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
   
 10. En la lista **Columnas de traducción** , seleccione **FrenchMonthName**y, después, haga clic en **Aceptar**.  
   

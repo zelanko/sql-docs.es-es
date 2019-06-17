@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89818f172ee9af09a44654dffc800bf6adc35de4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62630377"
 ---
 # <a name="subscription-expiration-and-deactivation"></a>Desactivación y expiración de las suscripciones
@@ -61,7 +61,7 @@ ms.locfileid: "62630377"
   
     -   La replicación no puede limpiar metadatos en las bases de datos de suscripciones y publicaciones hasta que se haya alcanzado el período de retención. Tenga cuidado al especificar un valor elevado para el período de retención, ya que puede afectar negativamente al rendimiento de la replicación. Se recomienda utilizar un valor bajo si puede prever con exactitud que todos los suscriptores se sincronizarán con regularidad dentro del período establecido.  
   
-    -   Es posible especificar que las suscripciones no expiren nunca (el valor 0 para **@retention**), pero se recomienda que no utilice este valor, porque los metadatos no se podrán limpiar.  
+    -   Es posible especificar que las suscripciones no expiren nunca (el valor 0 para **@retention** ), pero se recomienda que no utilice este valor, porque los metadatos no se podrán limpiar.  
   
 -   El período de retención de cualquier republicador debe establecerse en un valor igual o menor que el período de retención establecido en el publicador original. También debe utilizar los mismos valores de retención de la publicación para todos los publicadores y sus asociados de sincronización alternativos. El uso de valores distintos puede conducir a la no convergencia. Si necesita cambiar el valor de retención de la publicación, vuelva a inicializar el suscriptor a fin de evitar la no convergencia de los datos.  
   

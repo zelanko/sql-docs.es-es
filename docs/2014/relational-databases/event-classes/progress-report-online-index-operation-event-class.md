@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a09b4c8f6f6c600ac7b14faf35966a82c0b6905
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62520413"
 ---
 # <a name="progress-report-online-index-operation-event-class"></a>Informe de progreso: Clase de eventos Online Index Operation
@@ -36,8 +36,8 @@ ms.locfileid: "62520413"
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |Duration|`bigint`|Tiempo (en microsegundos) que tarda el evento.|13|Sí|  
 |EndTime|`datetime`|Hora a la que se completó la operación de índice en línea.|15|Sí|  
-|EventClass|`int`|Tipo de evento = 190.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventClass|`int`|Tipo de evento = 190.|27|Sin|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |EventSubClass|`int`|Tipo de la subclase de eventos.<br /><br /> 1=Inicio<br /><br /> 2=Empieza la ejecución de la fase 1<br /><br /> 3=Finaliza la ejecución de la fase 1<br /><br /> 4=Empieza la ejecución de la fase 2<br /><br /> 5=Finaliza la ejecución de la fase 2<br /><br /> 6=Recuento de filas insertadas<br /><br /> 7=Listo<br /><br /> La fase 1 hace referencia al objeto base (índice clúster o montón) o si la operación del índice solo implica a un índice no clúster. La fase 2 se usa cuando una operación de compilación de índice implica tanto al índice original recompilado como a índices no clúster adicionales.  Por ejemplo, si un objeto tiene un índice clúster y varios índices no clúster, 'rebuild all' recompilaría todos los índices. El objeto base (el índice clúster) se recompila en la fase 1 y, a continuación, todos los índices no clúster se recompilan en la fase 2.|21|Sí|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -51,7 +51,7 @@ ms.locfileid: "62520413"
 |ObjectName|`nvarchar`|Nombre del objeto al que se hace referencia.|34|Sí|  
 |PartitionId|`bigint`|Identificador de la partición que se está generando.|65|Sí|  
 |PartitionNumber|`int`|Número normal de la partición que se está generando.|25|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento.|14|Sí|  

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 41690da6a4a87bf79d411e2b467aeddfa56b5f00
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068222"
 ---
 # <a name="specify-query-criteria-usage-based-optimization-wizard"></a>Especificar los criterios de consulta (Asistente para optimización basada en el uso)
@@ -49,7 +49,7 @@ ms.locfileid: "66068222"
 >  Si no se selecciona la **Fecha de inicio** , se tienen en cuenta todas las consultas del registro de consultas de la fecha y hora especificada en esta opción o anteriores a esta.  
   
  **Usuarios**  
- Filtra consultas en el registro de consultas basándose en un conjunto de usuarios especificado. Haga clic en el botón de puntos suspensivos (**...**) para mostrar el cuadro de diálogo **Selección de usuarios** y elegir los usuarios sobre los que filtrar las consultas. Para obtener más información sobre el cuadro de diálogo **Selección de usuarios**, vea [Cuadro de diálogo Selección de usuarios &#40;Analysis Services - Datos multidimensionales&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
+ Filtra consultas en el registro de consultas basándose en un conjunto de usuarios especificado. Haga clic en el botón de puntos suspensivos ( **...** ) para mostrar el cuadro de diálogo **Selección de usuarios** y elegir los usuarios sobre los que filtrar las consultas. Para obtener más información sobre el cuadro de diálogo **Selección de usuarios**, vea [Cuadro de diálogo Selección de usuarios &#40;Analysis Services - Datos multidimensionales&#41;](user-selection-dialog-box-analysis-services-multidimensional-data.md).  
   
  **Consultas más frecuentes**  
  Filtra consultas en el registro de consultas basándose en el porcentaje más alto de consultas distintas que se han ejecutado con más frecuencia en las particiones seleccionadas. Elija o escriba un valor de porcentaje en el cuadro de texto.  

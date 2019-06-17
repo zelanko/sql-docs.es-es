@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9222253c884fdf3cfa52d283f250580a02a9f7ee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62523761"
 ---
 # <a name="delete-a-sql-server-agent-proxy"></a>Eliminar un proxy del Agente SQL Server
@@ -65,7 +65,7 @@ ms.locfileid: "62523761"
   
 3.  Haga clic en el signo más para expandir la carpeta **Servidores proxy** .  
   
-4.  Haga clic en el signo más para expandir el subsistema que contiene la cuenta de proxy que desee eliminar (por ejemplo, **Script de ActiveX)**.  
+4.  Haga clic en el signo más para expandir el subsistema que contiene la cuenta de proxy que desee eliminar (por ejemplo, **Script de ActiveX)** .  
   
 5.  Haga clic con el botón derecho en la cuenta de proxy que desea eliminar y seleccione **Eliminar**.  
   

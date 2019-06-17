@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a4b503c63706135b326490ccefc3f0d8ca6ceccb
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078267"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>Definir y utilizar una acción de obtención de detalles
@@ -106,9 +106,9 @@ ms.locfileid: "66078267"
   
 6.  Cambio la **nombre** propiedad para el **Order Date Key** atributo `Order Date` , a continuación, haga clic en el botón Examinar para el **nombre de columna** propiedad y en el **Columna nombre** cuadro de diálogo, seleccione **fecha** como la tabla de origen y SimpleDate como la columna de origen. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  Cambiar el **nombre** propiedad para el **Due Date Key** atributo `Due Date`y, después, usando el mismo método que el **Order Date Key** atributo, cambie el  **Columna de nombre** propiedad de este atributo por **Date.SimpleDate (WChar)**.  
+7.  Cambiar el **nombre** propiedad para el **Due Date Key** atributo `Due Date`y, después, usando el mismo método que el **Order Date Key** atributo, cambie el  **Columna de nombre** propiedad de este atributo por **Date.SimpleDate (WChar)** .  
   
-8.  Cambiar el **nombre** propiedad para el **Ship Date Key** atributo `Ship Date`y, a continuación, cambie el **nombre de columna** propiedad de este atributo por  **Date.SimpleDate (WChar)**.  
+8.  Cambiar el **nombre** propiedad para el **Ship Date Key** atributo `Ship Date`y, a continuación, cambie el **nombre de columna** propiedad de este atributo por  **Date.SimpleDate (WChar)** .  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   

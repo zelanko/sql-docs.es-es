@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: df6622abc3a507d917aefd2a8a5a1bf9505a2622
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66062258"
 ---
 # <a name="analyze-key-influencers-table-analysis-tools-for-excel"></a>Analizar influenciadores clave (Herramientas de análisis de tabla para Excel)
@@ -46,7 +46,7 @@ ms.locfileid: "66062258"
   
 6.  Si no se detecta ningún modelo, el asistente crea una nueva hoja de cálculo que contiene una descripción del problema.  
   
-7.  Si se detectan patrones, el asistente crea un informe en una nueva hoja de cálculo que muestra los patrones. El informe se denomina **Influenciadores clave de \<columna >**. Puede personalizar el informe como se describe en el procedimiento siguiente.  
+7.  Si se detectan patrones, el asistente crea un informe en una nueva hoja de cálculo que muestra los patrones. El informe se denomina **Influenciadores clave de \<columna >** . Puede personalizar el informe como se describe en el procedimiento siguiente.  
   
 #### <a name="create-a-custom-report"></a>Crear un informe personalizado  
   

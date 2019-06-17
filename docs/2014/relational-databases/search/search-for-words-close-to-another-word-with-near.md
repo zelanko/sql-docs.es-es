@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: fadff7e68404ffae528cb4630e1f6c4b8156ccc0
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011066"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>Buscar palabras cerca de otra palabra con NEAR
@@ -147,7 +147,7 @@ GO
   
      Cuando se utiliza NEAR en la función CONTAINSTABLE, el número de aciertos en un documento con respecto a su longitud, así como la distancia entre el primero y el último término de búsqueda de cada uno de los aciertos, afecta a la clasificación de cada documento. En el caso de un término de proximidad genérico, si los términos de búsqueda con coincidencia están a >50 términos lógicos, el rango devuelto de un documento es 0. Si se trata de un término de proximidad personalizado que no especifica un entero como la distancia máxima, un documento que solo contenga aciertos cuyo intervalo sea >100 términos lógicos recibirá una clasificación de 0. Para obtener más información acerca de la clasificación de búsquedas de proximidad personalizadas, vea [Limit Search Results with RANK](limit-search-results-with-rank.md).  
   
--   La opción de servidor **transformar palabras irrelevantes**   
+-   La opción de servidor **transformar palabras irrelevantes**  
   
      El valor de **transformar palabras irrelevantes** afecta a cómo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trata las palabras irrelevantes si se especifican en búsquedas por proximidad. Para más información, vea [transform noise words Server Configuration Option](../../database-engine/configure-windows/transform-noise-words-server-configuration-option.md).  
   

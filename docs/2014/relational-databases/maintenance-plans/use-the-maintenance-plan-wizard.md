@@ -35,10 +35,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 81e6b5b53f2cf12489ae199051ef837ae75d3875
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806407"
 ---
 # <a name="use-the-maintenance-plan-wizard"></a>Usar el Asistente para planes de mantenimiento
@@ -161,7 +161,7 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea.  
   
     -   **Todas las bases de datos**  
@@ -180,7 +180,7 @@ ms.locfileid: "62806407"
   
          Genera un plan de mantenimiento que ejecuta esta tarea solo en las bases de datos seleccionadas. Si elige esta opción, deberá seleccionar al menos una base de datos de la lista.  
   
-     Casilla**Incluir índices**   
+     Casilla**Incluir índices**  
      Comprueba la integridad de todas las páginas de índice y de todas las páginas de datos de tabla.  
   
 #### <a name="define-database-shrink-tasks"></a>Definir las tareas Reducir base de datos  
@@ -192,13 +192,13 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Cuadro**Reducir la base de datos cuando se incremente por encima de**   
+     Cuadro**Reducir la base de datos cuando se incremente por encima de**  
      Especifique el tamaño en megabytes que provoca la ejecución de esta tarea.  
   
-     Cuadro**Espacio disponible tras la reducción**   
+     Cuadro**Espacio disponible tras la reducción**  
      Detiene la reducción cuando el espacio disponible en los archivos de base de datos alcanza este tamaño (como un porcentaje).  
   
      **Mantener espacio liberado en los archivos de base de datos**  
@@ -213,47 +213,47 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**   
+     Lista**Objeto**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**   
+     Lista**Selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
-     Casilla**Compactar objetos grandes**   
+     Casilla**Compactar objetos grandes**  
      Cancela la asignación de espacio para tablas y vistas cuando es posible. Esta opción utiliza `ALTER INDEX ... LOB_COMPACTION = ON`.  
   
 2.  En la página **Definir la tarea Volver a generar índice** , seleccione una o varias bases de datos donde va a volver a crear varios índices. Esta tarea usa la instrucción `ALTER INDEX ... REBUILD PARTITION`. Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-index-transact-sql). Cuando termine, haga clic en **Siguiente**.  
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**   
+     Lista**Objeto**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**   
+     Lista**Selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
-     Área**Opciones de espacio disponible**   
+     Área**Opciones de espacio disponible**  
      Muestra opciones para aplicar un factor de relleno a índices y tablas.  
   
      **Espacio disponible predeterminado por página**  
      Reorganiza las páginas con la cantidad predeterminada de espacio disponible. Se quitarán los índices de las tablas de la base de datos y se volverán a crear con el factor de relleno que se especificó al crear los índices. Ésta es la opción predeterminada.  
   
-     Cuadro**Cambiar el espacio disponible por página a**   
+     Cuadro**Cambiar el espacio disponible por página a**  
      Quita los índices de las tablas de la base de datos y vuelve a crearlos con un nuevo factor de relleno calculado automáticamente, de forma que reserva la cantidad de espacio disponible especificada en las páginas de índice. Cuanto mayor sea el porcentaje, más espacio disponible se reservará en las páginas de índice y mayor tamaño tendrá el índice. Los valores válidos son de 0 a 100. Usa la opción `FILLFACTOR` .  
   
-     Área**Opciones avanzadas**   
+     Área**Opciones avanzadas**  
      Muestra opciones adicionales para ordenar índices y volver a indizar.  
   
-     Casilla**Ordenar resultados de tempdb**   
+     Casilla**Ordenar resultados de tempdb**  
      Usa la opción `SORT_IN_TEMPDB` que determina dónde se almacenan temporalmente los resultados de ordenación intermedios, generados durante la creación de índices. En caso de que sea necesario realizar una operación de ordenación o de que esta pueda realizarse en la memoria, se omitirá la opción `SORT_IN_TEMPDB` .  
   
-     Casilla**Mantener el índice en línea al volver a indizar**   
+     Casilla**Mantener el índice en línea al volver a indizar**  
      Usa la opción `ONLINE` para permitir a los usuarios obtener acceso a los datos de la tabla subyacente o del índice clúster y a todos los índices no clúster asociados durante las operaciones de índice. Al seleccionar esta opción activa opciones adicionales para volver a generar los índices que no se permiten para las recompilaciones en línea: **No volver a generar índices** y **volver a generar índices sin conexión**.  
   
     > [!NOTE]  
@@ -265,13 +265,13 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
-     Lista**Objeto**   
+     Lista**Objeto**  
      Limita la lista **Selección** para mostrar tablas, vistas o ambas cosas. Esta lista solo está disponible si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Lista**Selección**   
+     Lista**Selección**  
      Especifique las tablas o índices que se ven afectados por esta tarea. No estará disponible cuando se seleccione **Tablas y vistas** en el cuadro Objeto.  
   
      **Todas las estadísticas existentes**  
@@ -323,16 +323,16 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Lista**Tipo de copia de seguridad**   
+     Lista**Tipo de copia de seguridad**  
      Muestra el tipo de copia de seguridad que se va a realizar. Es de solo lectura.  
   
-     Lista**Bases de datos**   
+     Lista**Bases de datos**  
      Especifique las bases de datos a las que afecta esta tarea. Vea el paso 9 anterior para obtener más información sobre las opciones disponibles en esta lista.  
   
      **Componente de copia de seguridad**  
      Seleccione **Base de datos** para realizar una copia de seguridad de toda la base de datos. Seleccione **Archivo y grupos de archivos** para realizar una copia de seguridad únicamente de una parte de la base de datos. Si selecciona esta opción, debe especificar el nombre del archivo o del grupo de archivos. Cuando se seleccionan varias bases de datos en el cuadro **Bases de datos** , solo hay que especificar **Bases de datos** para **Componente de copia de seguridad**. Para realizar copias de seguridad de un archivo o grupo de archivos, cree una tarea para cada base de datos. Estas opciones solo están disponibles si se elige una sola base de datos en la lista **Bases de datos** anterior.  
   
-     Casilla**El conjunto de copia de seguridad expira**   
+     Casilla**El conjunto de copia de seguridad expira**  
      Especifica cuándo se puede sobrescribir el conjunto de copia de seguridad para esta copia de seguridad. Seleccione **Después de** y escriba un número de días para la expiración o seleccione **El** y especifique una fecha de expiración. Esta opción se deshabilita si la opción **Dirección URL** se selecciona como destino de la copia de seguridad.  
   
      **Copia de seguridad en**  
@@ -345,22 +345,22 @@ ms.locfileid: "62806407"
   
      Haga clic en **Contenido** para leer el encabezado de archivo y mostrar el contenido de copia de seguridad actual del archivo.  
   
-     Cuadro de diálogo**Seleccionar destino de la copia de seguridad**   
+     Cuadro de diálogo**Seleccionar destino de la copia de seguridad**  
      Seleccione el archivo, la unidad de cinta o el dispositivo de copia de seguridad que será el destino de la copia de seguridad. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
-     Lista**Si existen copias de seguridad**   
+     Lista**Si existen copias de seguridad**  
      Especifique la forma de controlar las copias de seguridad existentes. Seleccione **Anexar** para agregar las nuevas copias de seguridad después de otras copias de seguridad existentes en el archivo o en la cinta. Seleccione **Sobrescribir** para quitar el contenido antiguo de un archivo o una cinta y reemplazarlo por esta nueva copia de seguridad.  
   
      **Crear un archivo de copia de seguridad para cada base de datos**  
      Crea un archivo de copia de seguridad en la ubicación especificada en el cuadro de la carpeta. Se crea un archivo para cada base de datos seleccionada. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
-     Casilla**Crear un subdirectorio para cada base de datos**   
+     Casilla**Crear un subdirectorio para cada base de datos**  
      Crea un subdirectorio en el directorio de disco especificado que contiene la copia de seguridad de cada base de datos de la que se hace la copia de seguridad como parte del plan de mantenimiento.  
   
     > [!IMPORTANT]  
     >  El subdirectorio heredará permisos del directorio principal. Restrinja los permisos para evitar el acceso no autorizado.  
   
-     Cuadro**Carpeta**   
+     Cuadro**Carpeta**  
      Especifica la carpeta que va a contener los archivos de base de datos creados de forma automática. Esta opción se deshabilita si seleccionó Dirección URL como destino de la copia de seguridad.  
   
      **Credencial SQL**  
@@ -375,10 +375,10 @@ ms.locfileid: "62806407"
      **Prefijo URL:**  
      Esto se genera automáticamente en función de la información de la cuenta de almacenamiento almacenada en una credencial de SQL, y el nombre del contenedor de almacenamiento de Windows Azure que especificó. Se recomienda no editar la información de este campo a menos que esté usando un dominio que emplee un formato distinto de **\<cuenta de almacenamiento>.blob.core.windows.net**.  
   
-     Cuadro**Extensión del archivo de copia de seguridad**   
+     Cuadro**Extensión del archivo de copia de seguridad**  
      Especifique la extensión que se va a utilizar para los archivos de copia de seguridad. El valor predeterminado es .bak.  
   
-     Casilla**Comprobar integridad de copia de seguridad**   
+     Casilla**Comprobar integridad de copia de seguridad**  
      Comprueba que el conjunto de copias de seguridad está completo y que todos los volúmenes son legibles.  
   
      **Cifrado de copia de seguridad**  
@@ -398,7 +398,7 @@ ms.locfileid: "62806407"
   
      Solo se admiten las claves que residen en Administración extensible de claves (EKM).  
   
-     Lista**Establecer compresión de copia de seguridad**    
+     Lista**Establecer compresión de copia de seguridad**  
      En [!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)] (o en versiones posteriores), seleccione uno los siguientes valores de [compresión de copia de seguridad](../backup-restore/backup-compression-sql-server.md) :  
   
     |||  
@@ -438,16 +438,16 @@ ms.locfileid: "62806407"
      **Buscar en carpeta y eliminar archivos según su extensión**  
      Elimina todos los archivos con la extensión especificada de la carpeta indicada. Utilice esta opción para eliminar varios archivos a la vez, por ejemplo, todos los archivos de copia de seguridad de la carpeta Martes con la extensión .bak.  
   
-     Cuadro**Carpeta**   
+     Cuadro**Carpeta**  
      Ruta de acceso y nombre de la carpeta que contiene los archivos que se van a eliminar.  
   
-     Cuadro**Extensión del archivo**   
+     Cuadro**Extensión del archivo**  
      Indique la extensión de archivo de los archivos que se van a eliminar. Para eliminar varios archivos a la vez, como todos los archivos de copia de seguridad que tienen la extensión .bak en la carpeta Martes, especifique .bak.  
   
-     Casilla**Incluir subcarpetas de primer nivel**   
+     Casilla**Incluir subcarpetas de primer nivel**  
      Elimina archivos que tienen la extensión especificada en **Extensión del archivo** de las subcarpetas de primer nivel bajo la carpeta especificada en **Carpeta**.  
   
-     Casilla**Eliminar archivos en función de la antigüedad del archivo en el tiempo de ejecución de la tarea**   
+     Casilla**Eliminar archivos en función de la antigüedad del archivo en el tiempo de ejecución de la tarea**  
      Especifique la antigüedad mínima que deben tener los archivos que quiere eliminar; para ello, especifique un número y una unidad de tiempo en el cuadro **Eliminar archivos anteriores a** .  
   
      **Eliminar archivos anteriores a**  
@@ -459,13 +459,13 @@ ms.locfileid: "62806407"
   
      En esta página están disponibles las opciones siguientes.  
   
-     Casilla**Escribir un informe en un archivo de texto**   
+     Casilla**Escribir un informe en un archivo de texto**  
      Guarda el informe en un archivo.  
   
-     Cuadro**Ubicación de la carpeta**   
+     Cuadro**Ubicación de la carpeta**  
      Especifica la ubicación del archivo donde se incluirá el informe.  
   
-     Casilla**Enviar informe por correo electrónico**   
+     Casilla**Enviar informe por correo electrónico**  
      Envía un mensaje de correo electrónico cuando se produce un error en una tarea. Para usar esta tarea, Correo electrónico de base de datos debe haberse habilitado y configurado correctamente con MSDB como una base de datos host de correo y debe tener un operador del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una dirección de correo electrónico válida.  
   
      **Operador del agente**  

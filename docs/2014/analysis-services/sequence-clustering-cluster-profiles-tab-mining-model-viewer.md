@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f277abea585715f6a3656fffe7672f347233507
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66069095"
 ---
 # <a name="sequence-clustering-cluster-profiles-tab-mining-model-viewer"></a>Pestaña Perfiles del clúster de agrupación en clústeres de secuencia (Visor de modelos de minería de datos)
@@ -51,7 +51,7 @@ ms.locfileid: "66069095"
   
 -   **\<nombre de atributo > .samples**: Los histogramas de esta fila muestran las secuencias de elementos que son representativos de cada clúster. En términos DMX, estos son los casos de ejemplo de cada clúster.  
   
--   **\<attribute name>**: Los histogramas de esta fila describen todos los elementos que contiene el clúster y su distribución general. Haga clic en un histograma cuando la **Leyenda de minería de datos** esté visible y puede ver los valores numéricos de cada uno  
+-   **\<attribute name>** : Los histogramas de esta fila describen todos los elementos que contiene el clúster y su distribución general. Haga clic en un histograma cuando la **Leyenda de minería de datos** esté visible y puede ver los valores numéricos de cada uno  
   
  **Estados**  
  Esta columna del gráfico es opcional y se puede mostrar o quitar seleccionando la opción **Mostrar leyenda** . La columna **Estados** proporciona una guía de qué color del histograma de clústeres correspondiente representa a cada estado.  

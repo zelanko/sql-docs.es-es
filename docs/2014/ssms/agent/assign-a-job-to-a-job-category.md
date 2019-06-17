@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ab7695b6a80772ddcd01996e783fffd806447c59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62473206"
 ---
 # <a name="assign-a-job-to-a-job-category"></a>Asignar un trabajo a una categoría de trabajo
@@ -49,7 +49,7 @@ ms.locfileid: "62473206"
   
 4.  Haga clic con el botón derecho en el trabajo que desee editar y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo -**_nombre_trabajo_ , en la lista **Categoría** , seleccione la categoría de trabajo que quiere asignar al trabajo.  
+5.  En el cuadro de diálogo **Propiedades del trabajo -** _nombre_trabajo_ , en la lista **Categoría** , seleccione la categoría de trabajo que quiere asignar al trabajo.  
   
 6.  Haga clic en **Aceptar**.  
   

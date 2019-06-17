@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645501"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (Transact-SQL)
@@ -33,7 +33,7 @@ ms.locfileid: "62645501"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**backup_set_id**|**int**|Número de identificación exclusivo del archivo que contiene el conjunto de copia de seguridad. Referencias **backupset (backup_set_id)**.|  
+|**backup_set_id**|**int**|Número de identificación exclusivo del archivo que contiene el conjunto de copia de seguridad. Referencias **backupset (backup_set_id)** .|  
 |**first_family_number**|**tinyint**|Número de familia del primer medio que contiene este archivo de copia de seguridad. Puede ser NULL.|  
 |**first_media_number**|**smallint**|Número de medio del primer medio que contiene este archivo de copia de seguridad. Puede ser NULL.|  
 |**filegroup_name**|**nvarchar(128)**|Nombre del grupo de archivos que contiene un archivo de base de datos del que se ha realizado una copia de seguridad. Puede ser NULL.|  
@@ -46,8 +46,8 @@ ms.locfileid: "62645501"
 |**logical_name**|**nvarchar(128)**|Nombre lógico del archivo del que se hace una copia de seguridad. Puede ser NULL.|  
 |**physical_drive**|**nvarchar(260)**|Unidad física o nombre de partición. Puede ser NULL.|  
 |**physical_name**|**nvarchar(260)**|Resto del nombre de archivo físico (del sistema operativo). Puede ser NULL.|  
-|**state**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión <br /><br /> 1 = En restauración <br /><br /> 2 = En recuperación <br /><br /> 3 = Recuperación pendiente <br /><br /> 4 = Sospechoso <br /><br /> 6 = Sin conexión <br /><br /> 7 = Inactivo<br /><br /> 8 = QUITAR<br /><br /> Nota: Para que estos valores se corresponden con los valores de los Estados de base de datos, se omite el valor 5.|  
-|**state_desc**|**nvarchar(64)**|Descripción del estado del archivo, uno de los siguientes:<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state**|**tinyint**|Estado del archivo, uno de los siguientes:<br /><br /> 0 = Con conexión<br /><br /> 1 = En restauración<br /><br /> 2 = En recuperación<br /><br /> 3 = Recuperación pendiente<br /><br /> 4 = Sospechoso<br /><br /> 6 = Sin conexión<br /><br /> 7 = Inactivo<br /><br /> 8 = QUITAR<br /><br /> Nota: Para que estos valores se corresponden con los valores de los Estados de base de datos, se omite el valor 5.|  
+|**state_desc**|**nvarchar(64)**|Descripción del estado del archivo, uno de los siguientes:<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|Número de secuencia de registro en el que se creó el archivo.|  
 |**drop_lsn**|**numeric(25,0)**|Número de flujo de registro en el que se quitó el archivo. Puede ser NULL.<br /><br /> Si el archivo no se ha quitado, este valor es NULL.|  
 |**file_guid**|**uniqueidentifier**|Identificador único del archivo.|  

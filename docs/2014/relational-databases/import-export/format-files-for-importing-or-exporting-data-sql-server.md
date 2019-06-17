@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8089309c8abe94d392b073fc916b2b0b8fa9292f
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011950"
 ---
 # <a name="format-files-for-importing-or-exporting-data-sql-server"></a>Archivos de formato para importar o exportar datos (SQL Server)
@@ -110,7 +110,7 @@ bcp AdventureWorks.HumanResources.myTeam format nul -f myTeam.Xml -x -n -T
 -   Los caracteres de terminación o las longitudes de prefijo no coinciden entre las columnas del archivo de datos.  
   
 > [!NOTE]  
->  En caso de no disponer de ningún archivo de formato, si un comando **bcp** especifica un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**) o una operación BULK INSERT especifica la opción DATAFILETYPE, se usará el formato de datos especificado como método predeterminado para interpretar los campos del archivo de datos.  
+>  En caso de no disponer de ningún archivo de formato, si un comando **bcp** especifica un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**) o una operación BULK INSERT especifica la opción DATAFILETYPE, se usará el formato de datos especificado como método predeterminado para interpretar los campos del archivo de datos.  
   
  
   

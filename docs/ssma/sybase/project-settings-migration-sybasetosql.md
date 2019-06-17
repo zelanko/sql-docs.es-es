@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 442212b30f220960f86481f0638c6c12c17da270
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62504085"
 ---
 # <a name="project-settings-migration-sybasetosql"></a>Configuración del proyecto (migración) (SybaseToSQL)
@@ -53,7 +53,7 @@ El panel de la migración está disponible tanto en el **configuración del proy
 |**Mantener valores de identidad**|Especifica si SSMA conserva los valores de identidad de Sybase cuando agrega datos a SQL Server. Un valor False hace que los valores de identidad que se asignará el destino.<br /><br />**Modo predeterminado**:  True<br /><br />**Modo optimista**:  True<br /><br />**Modo completo**:  True|  
 |**Mantener valores NULL**|Especifica si SSMA conserva valores null en los datos de origen cuando agrega datos a SQL Server, independientemente de los valores predeterminados que se especifican en SQL Server.<br /><br />**Modo predeterminado**:  True<br /><br />**Modo optimista**:  True<br /><br />**Modo completo**:  True|  
 |**Al producirse un error**|Detiene la migración de datos cuando se produce un error. Tiene tres opciones:<br /><br />**Detener la migración:** Operación de migración de datos se detiene<br /><br />**Continúe con la tabla siguiente:** Detiene la migración de datos a la tabla actual y avanza a la siguiente<br /><br />**Continúe con el siguiente lote:** Detiene la migración de datos para el lote actual y avanza a la siguiente<br /><br />**Modo predeterminado**: Continúe con el siguiente lote<br /><br />**Modo optimista**: Continúe con el siguiente lote<br /><br />**Modo completo**: Continúe con el siguiente lote|  
-|**Redondear parte fraccionaria de números**|Especifica si se debe recortar las fracciones de datos decimal y numeric durante la migración a tipos enteros o mostrar el mensaje de error si la parte fraccionaria es no trivial<br /><br />**Modo predeterminado**:  No<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:  No|  
+|**Redondear parte fraccionaria de números**|Especifica si se debe recortar las fracciones de datos decimal y numeric durante la migración a tipos enteros o mostrar el mensaje de error si la parte fraccionaria es no trivial<br /><br />**Modo predeterminado**:  No<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:  No|  
 |**Sybase Unicode Endian**|Especifica el tipo de endian para las cadenas Sybase Unicode. Para esta configuración concreta, se pueden establecer las siguientes opciones:<br /><br />Little-endian<br /><br />Big-endian<br /><br />**Modo predeterminado**:  Little-endian<br /><br />**Modo optimista**:  Little-endian<br /><br />**Modo completo**:  Little-endian|  
 |**Bloqueo de tabla**|Especifica si SSMA bloquea las tablas cuando agrega datos a las tablas durante la migración de datos. Obtiene un bloqueo de actualización masiva para la duración de la operación de copia masiva. Si el valor es False, se establece un bloqueo en el nivel de fila.<br /><br />**Modo predeterminado**:  True<br /><br />**Modo optimista**:  True<br /><br />**Modo completo**:  True|  
 |**Usar cursores**|Se recuperan los datos de uso de cursores si establece esta opción de base de datos de origen.<br /><br />**Modo predeterminado**:  False<br /><br />**Modo optimista**:  False<br /><br />**Modo completo**:  False|  

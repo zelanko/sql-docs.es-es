@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62505162"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
@@ -47,7 +47,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
 ## <a name="remarks"></a>Comentarios  
  Si no especifica **MINING MODEL** o **MINING STRUCTURE**, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] busca el tipo de objeto según el nombre y procesa el objeto correcto. Si el servidor contiene una estructura y un modelo de minería de datos con el mismo nombre, se devuelve un error.  
   
- Mediante el uso de la segunda forma de sintaxis, INSERT INTO*\<objeto >*. COLUMN_VALUES, puede insertar datos directamente en las columnas del modelo sin entrenar el modelo. Este método proporciona datos de columna al modelo de forma concisa y ordenada que resultan útiles a la hora de trabajar con conjuntos de datos que contienen jerarquías o columnas ordenadas.  
+ Mediante el uso de la segunda forma de sintaxis, INSERT INTO *\<objeto >* . COLUMN_VALUES, puede insertar datos directamente en las columnas del modelo sin entrenar el modelo. Este método proporciona datos de columna al modelo de forma concisa y ordenada que resultan útiles a la hora de trabajar con conjuntos de datos que contienen jerarquías o columnas ordenadas.  
   
  Si usas **INSERT INTO** con un modelo de minería de datos o una estructura de minería de datos y dejar desactivada la \<asignar columnas del modelo > y \<consulta de origen de datos > argumentos, la instrucción se comporta como  **ProcessDefault**, con enlaces que ya existen. La instrucción devuelve un error cuando no existen enlaces. Para obtener más información acerca de **ProcessDefault**, consulte [opciones de procesamiento y la configuración &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md). En el siguiente ejemplo se muestra la sintaxis:  
   
@@ -61,11 +61,11 @@ INSERT INTO [MINING MODEL] <model>
   
 |.|Estado de los objetos|Resultado|  
 |---------------|----------------------|------------|  
-|INSERT INTO MINING MODEL*\<modelo >*|La estructura de minería de datos está procesada.|Se procesa el modelo de minería de datos.|  
+|INSERT INTO MINING MODEL *\<modelo >*|La estructura de minería de datos está procesada.|Se procesa el modelo de minería de datos.|  
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
 ||La estructura de minería de datos contiene modelos de minería de datos adicionales.|Se produce un error en el proceso. Deberá volver a procesar la estructura y los modelos de minería de datos asociados.|  
-|INSERT INTO MINING STRUCTURE*\<estructura >*|La estructura de minería de datos está procesada o sin procesar.|Se procesan la estructura de minería de datos y los modelos de minería de datos asociados.|  
-|INSERT INTO MINING MODEL*\<modelo >* que contiene una consulta de origen<br /><br /> o Administrador de configuración de<br /><br /> INSERT INTO MINING STRUCTURE*\<estructura >* que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante el uso de [eliminar &#40;DMX&#41;](../dmx/delete-dmx.md).|  
+|INSERT INTO MINING STRUCTURE *\<estructura >*|La estructura de minería de datos está procesada o sin procesar.|Se procesan la estructura de minería de datos y los modelos de minería de datos asociados.|  
+|INSERT INTO MINING MODEL *\<modelo >* que contiene una consulta de origen<br /><br /> o Administrador de configuración de<br /><br /> INSERT INTO MINING STRUCTURE *\<estructura >* que contiene una consulta de origen|La estructura o el modelo ya tienen contenido.|Se produce un error en el proceso. Debe borrar los objetos antes de realizar esta operación, mediante el uso de [eliminar &#40;DMX&#41;](../dmx/delete-dmx.md).|  
   
 ## <a name="mapped-model-columns"></a>Columnas de modelo asignadas  
  Mediante el uso de la \<asignar columnas del modelo > elemento, puede asignar las columnas del origen de datos a las columnas del modelo de minería de datos. El \<asignar columnas del modelo > elemento tiene el formato siguiente:  

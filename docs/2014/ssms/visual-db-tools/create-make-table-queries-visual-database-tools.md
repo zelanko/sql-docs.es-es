@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f53a0cdb7ccc30afb425197d12dad2b9ca5fa345
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676305"
 ---
 # <a name="create-make-table-queries-visual-database-tools"></a>Crear consultas de creación de tabla (Visual Database Tools)
@@ -65,7 +65,7 @@ WHERE country = 'UK'
   
      Para crear una tabla de destino en otra base de datos, especifique un nombre de tabla completo, incluido el nombre de la base de datos de destino, el propietario (si es necesario) y el nombre de la tabla.  
   
-4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija  **\* (todas las columnas)**.  
+4.  Defina las columnas que se van a copiar agregándolas a la consulta. Para detalles, consulte [Agregar columnas a las consultas &#40;Visual Database Tools&#41;](visual-database-tools.md). Las columnas se copian solo si se agregan a la consulta. Para copiar filas enteras, elija  **\* (todas las columnas)** .  
   
      El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   

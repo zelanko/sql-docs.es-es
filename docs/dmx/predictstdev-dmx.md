@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 56d8ade3b270f1e81cb2ac0455a245bd78cacd70
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62659011"
 ---
 # <a name="predictstdev-dmx"></a>PredictStdev (DMX)
@@ -32,7 +32,7 @@ PredictStdev(<scalar column reference>)
  Una columna escalar.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- Un valor escalar del tipo especificado por  *\<referencia de columna escalar >*.  
+ Un valor escalar del tipo especificado por  *\<referencia de columna escalar >* .  
   
 ## <a name="remarks"></a>Comentarios  
  Si la referencia de columna es discreta, **PredictStdev** devuelve 0 porque no se puede calcular la desviación estándar de valores discretos.  

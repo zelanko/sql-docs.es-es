@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 037b176dfacd9420fba64a405d8c851c558e93e3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66056189"
 ---
 # <a name="script-task-editor-script-page"></a>Editor de la tarea Script (página Script)
@@ -43,13 +43,13 @@ ms.locfileid: "66056189"
  Si cambia el nombre del método en el proyecto VSTA, deberá cambiar el valor de la propiedad **EntryPoint** .  
   
  **Variables de solo lectura**  
- Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Escriba una lista separada por comas de variables de solo lectura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos ( **…** ) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  
   
  **Variables de lectura/escritura**  
- Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos (**…**) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
+ Escriba una lista separada por comas de variables de lectura y escritura que estén disponibles para el script, o bien haga clic en el botón de puntos suspensivos ( **…** ) y seleccione las variables en el cuadro de diálogo **Seleccionar variables**.  
   
 > [!NOTE]  
 >  Los nombres de variables distinguen entre mayúsculas y minúsculas.  

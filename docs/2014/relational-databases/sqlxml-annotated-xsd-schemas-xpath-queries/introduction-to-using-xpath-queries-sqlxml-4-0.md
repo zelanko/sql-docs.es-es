@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4ada9351eca0b068838b38e59c8e0833d5a9af61
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012709"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>Introducción al uso de consultas XPath (SQLXML 4.0)
@@ -47,7 +47,7 @@ ms.locfileid: "66012709"
   
  En este documento,  **\<cliente >** es un nodo element, **cid** es un nodo de atributo, y **"Importante"** es un nodo de texto.  
   
- XPath es un lenguaje de navegación de grafos que se usa para seleccionar un conjunto de nodos de un documento XML. Cada operador XPath selecciona un conjunto de nodos basándose en un conjunto de nodos seleccionado por un operador XPath anterior. Por ejemplo, dado un conjunto de  **\<cliente >** nodos, XPath pueden seleccionar todo  **\<orden >** nodos con el **fecha** valor de atributo de **"7/14/1999"**. El conjunto de nodos resultante contiene todos los pedidos con la fecha de pedido 7/14/1999.  
+ XPath es un lenguaje de navegación de grafos que se usa para seleccionar un conjunto de nodos de un documento XML. Cada operador XPath selecciona un conjunto de nodos basándose en un conjunto de nodos seleccionado por un operador XPath anterior. Por ejemplo, dado un conjunto de  **\<cliente >** nodos, XPath pueden seleccionar todo  **\<orden >** nodos con el **fecha** valor de atributo de **"7/14/1999"** . El conjunto de nodos resultante contiene todos los pedidos con la fecha de pedido 7/14/1999.  
   
  World Wide Web Consortium (W3C) define el lenguaje XPath como un lenguaje de navegación estándar. SQLXML 4.0 implementa un subconjunto de la especificación XPath de W3C, que se encuentra en http://www.w3.org/TR/1999/PR-xpath-19991008.html.  
   

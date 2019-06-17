@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: 5507eae7bb2f8a5ce138223a031ac4946d9f0030
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62675670"
 ---
 # <a name="uninstall-analytics-platform-system-hotfixes"></a>Desinstalar revisiones de Analytics Platform System 
@@ -26,13 +26,13 @@ Para llevar a cabo estos pasos, necesitará:
   
 -   Un inicio de sesión de Analytics Platform System con permisos para tener acceso a la consola de administración para supervisar el dispositivo.  
   
--   La cuenta de administrador de dominio iniciar sesión en el <em>< appliance_domain ></em>**-HST01** nodo.  
+-   La cuenta de administrador de dominio iniciar sesión en el <em>< appliance_domain ></em> **-HST01** nodo.  
   
 -   Número de artículo de Knowledge Base para la revisión para desinstalar.  
   
 ## <a name="HowToUninstallPDW"></a>Para desinstalar una revisión de SQL Server PDW  
   
-1.  Inicie sesión en el <em>< appliance_domain ></em>**-HST01** nodo como el Administrador de dominio de Fabric.  
+1.  Inicie sesión en el <em>< appliance_domain ></em> **-HST01** nodo como el Administrador de dominio de Fabric.  
   
 2.  Usar la ejecución como opción de administrador para abrir un símbolo del sistema.  
   

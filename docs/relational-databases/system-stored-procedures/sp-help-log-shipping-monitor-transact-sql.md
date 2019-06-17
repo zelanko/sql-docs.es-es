@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 36e9d82a85c651044decbd951d49a0234568d5bb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62639221"
 ---
 # <a name="sphelplogshippingmonitor-transact-sql"></a>sp_help_log_shipping_monitor (Transact-SQL)
@@ -50,7 +50,7 @@ sp_help_log_shipping_monitor
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**status**|**bit**|Estado colectivo de los agentes de la base de datos de trasvase de registros:<br /><br /> **0** = errores sin agente y en buen Estados.<br /><br /> **1** = lo contrario.|  
-|**is_primary**|**bit**|Indica si esta fila es para una base de datos principal:: <br /><br /> **1** = la fila es para una base de datos principal.<br /><br /> **0** = la fila es para una base de datos secundaria.|  
+|**is_primary**|**bit**|Indica si esta fila es para una base de datos principal::<br /><br /> **1** = la fila es para una base de datos principal.<br /><br /> **0** = la fila es para una base de datos secundaria.|  
 |**servidor**|**sysname**|Nombre del servidor primario o secundario en el que reside esta base de datos.|  
 |**database_name**|**sysname**|Nombre de la base de datos.|  
 |**time_since_last_backup**|**int**|Período de tiempo, en minutos, transcurrido desde la última copia de seguridad de registros.<br /><br /> NULL = La información no está disponible o no es relevante.|  

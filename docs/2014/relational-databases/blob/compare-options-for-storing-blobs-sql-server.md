@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d682257669753665ac397133fcdec0f52e46dedd
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010348"
 ---
 # <a name="compare-options-for-storing-blobs-sql-server"></a>Comparar opciones para almacenar objetos Blob (SQL Server)
@@ -49,11 +49,11 @@ ms.locfileid: "66010348"
 |-------------|---------------------------------------|-------------------------|------------------------|  
 |**Un solo artículo para tareas de administración**|No|Sí|**Sí**|  
 |**Un solo conjunto de servicios**: búsquedas, informes, consultas, etc.|No|Sí|**Sí**|  
-|**Modelo de seguridad integrada**|Sin |Sí|**Sí**|  
-|**Actualizaciones en contexto de datos FILESTREAM**|Sí|Sin |**Sí**|  
-|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|Sin |No|**Sí**|  
-|**Compatibilidad con aplicaciones Windows**|Sí|Sin |**Sí**|  
-|**Acceso relacional a los atributos de archivo**|Sin |No|**Sí**|  
+|**Modelo de seguridad integrada**|Sin|Sí|**Sí**|  
+|**Actualizaciones en contexto de datos FILESTREAM**|Sí|Sin|**Sí**|  
+|**Jerarquía de archivos y de directorios que se mantiene en la base de datos**|Sin|Sin|**Sí**|  
+|**Compatibilidad con aplicaciones Windows**|Sí|Sin|**Sí**|  
+|**Acceso relacional a los atributos de archivo**|Sin|No|**Sí**|  
   
 ##  <a name="CompareRBS"></a> Comparar FILESTREAM y el almacén remoto de BLOBS (RBS)  
  Para obtener una comparación de estas dos características, consulte este blog del equipo RBS: [Comparación de características de SQL Server remoto BLOB Store y FILESTREAM](https://go.microsoft.com/fwlink/?LinkId=210317).  

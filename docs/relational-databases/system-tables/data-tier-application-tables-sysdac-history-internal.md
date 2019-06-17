@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 40696085bc8eb9980d1150feade91a9edd627be0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62471144"
 ---
 # <a name="data-tier-application-tables---sysdachistoryinternal"></a>Tablas de aplicación de capa de datos: sysdac_history_internal
@@ -60,8 +60,8 @@ ms.locfileid: "62471144"
 |**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
 |12|0|crear|dacpac|  
 |12|1|crear|login|  
-|12|2|crear|Base de datos|  
-|12|3|cambiar el nombre|Base de datos|  
+|12|2|crear|database|  
+|12|3|cambiar el nombre|database|  
   
  Las operaciones de DAC, como la eliminación, no quitan las filas de **sysdac_history_internal**. Puede usar la siguiente consulta para eliminar manualmente las filas de las DAC que ya no se implementen en una instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]:  
   

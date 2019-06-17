@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fb76e62e1816be53c312cc263053f854ad3b796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62625936"
 ---
 # <a name="add-or-edit-join"></a>Agregar o editar combinaciones
@@ -45,7 +45,7 @@ ms.locfileid: "62625936"
   
     -   Si está agregando una nueva combinación, seleccione **Usar generador de instrucciones para crear la instrucción** o **Escribir instrucción de combinación manualmente**. Si empieza a escribir la combinación manualmente, no podrá utilizar el generador.  
   
-         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador**y **Columna de tabla combinada**) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador (**=**, **<>**, **<=**, **\<**, **>=**, **>**, **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción (**AND** u **OR**) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
+         Si selecciona utilizar el generador, utilice las columnas de la cuadrícula (**Conjunción**, **Columna de tabla filtrada**, **Operador**y **Columna de tabla combinada**) para generar una instrucción de combinación. Cada columna de la cuadrícula contiene un cuadro de lista desplegable que le permite seleccionar dos columnas y un operador ( **=** , **<>** , **<=** , **\<** , **>=** , **>** , **like**). Los resultados se muestran en el área de texto **Vista previa** . Si la combinación implica a más de un par de columnas, seleccione una conjunción (**AND** u **OR**) de la columna **Conjunción** y, a continuación, escriba dos o más columnas y otro operador.  
   
          Si selecciona escribir la instrucción manualmente, escriba la instrucción de combinación en el área de texto **Instrucción de combinación** . Utilice los cuadros de lista **Columna de tabla filtrada** y **Columnas de tabla combinada** para arrastrar y colocar columnas en el área de texto **Instrucción de combinación** .  
   

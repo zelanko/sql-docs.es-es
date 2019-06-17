@@ -17,14 +17,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 57f4fd34cfe3896bb29ed31f02906ce675e4b854
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640502"
 ---
 # <a name="data-buffer-length"></a>Longitud del búfer de datos
-La aplicación pasa la longitud de bytes del búfer de datos para el controlador en un argumento, denominado *BufferLength* o un nombre similar. Por ejemplo, en la siguiente llamada a **SQLBindCol**, la aplicación especifica la longitud de la *ValuePtr* búfer (**sizeof (***ValuePtr***)**):  
+La aplicación pasa la longitud de bytes del búfer de datos para el controlador en un argumento, denominado *BufferLength* o un nombre similar. Por ejemplo, en la siguiente llamada a **SQLBindCol**, la aplicación especifica la longitud de la *ValuePtr* búfer (**sizeof (***ValuePtr***)** ):  
   
 ```  
 SQLCHAR      ValuePtr[50];  

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: e376b59404b6666a142c66cb96265fd66076ea3d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064638"
 ---
 # <a name="managing-services-how-to-topics-sql-server-configuration-manager"></a>Temas de procedimientos de administración de servicios (Administrador de configuración de SQL Server)
@@ -28,11 +28,11 @@ ms.locfileid: "66064638"
   
 -   [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
--   [Evitar el inicio automático de una instancia de SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
+-   [Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
--   [Cambiar la cuenta de inicio del servicio para SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
+-   [Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-service-startup-account.md)  
   
--   [Configurar opciones de inicio del servidor &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](configure-windows/scm-services-configure-server-startup-options.md)  
+-   [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-configure-server-startup-options.md)  
   
 -   [Cambiar la contraseña de las cuentas que usa SQL Server &#40;Administrador de configuración de SQL Server&#41;](configure-windows/scm-services-change-the-password-of-the-accounts-used.md)  
   

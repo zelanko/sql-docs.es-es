@@ -3,17 +3,17 @@ title: Tutorial para realizar análisis en bases de datos con R - SQL Server Mac
 description: Aprenda a incrustar el código de idioma en las funciones de Transact-SQL y procedimientos almacenados de SQL Server de programación R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: a631339980eae7640617f14b161e024a2f27a769
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511222"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140758"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de R para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ El propósito de este tutorial de varias partes es una introducción a un flujo 
 
 - [Lección 1: Explorar y visualizar la distribución y la forma de datos mediante una llamada a funciones de R en procedimientos almacenados](../tutorials/sqldev-explore-and-visualize-the-data.md)
 
-- [Lección 2: Crear características de datos mediante R en las funciones de Transact-SQL](sqldev-create-data-features-using-t-sql.md)
+- [Lección 2: Crear características de datos mediante R en las funciones de Transact-SQL](sqldev-create-data-features-using-t-sql.md)
   
 - [Lección 3: Entrenar y guardar un modelo de R mediante procedimientos almacenados y funciones](sqldev-train-and-save-a-model-using-t-sql.md)
   
@@ -55,7 +55,7 @@ Este tutorial supone que está familiarizado con operaciones de base de datos b�
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md#verify-installation) o [SQL Server 2017 Machine Learning Services con R habilitado](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
-+ [Bibliotecas de R](../r/determine-which-packages-are-installed-on-sql-server.md#get-the-r-library-location)
++ [Bibliotecas de R](../package-management/installed-package-information.md)
 
 + [Permisos](../security/user-permission.md)
 

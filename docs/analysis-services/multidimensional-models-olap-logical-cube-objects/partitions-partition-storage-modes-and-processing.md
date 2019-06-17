@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 57c73e3ae9661058277a377b7d17b6a4af393ba0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62640464"
 ---
 # <a name="partitions---partition-storage-modes-and-processing"></a>Particiones: Procesamiento y modos de almacenamiento de particiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario.  La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
+  El modo de almacenamiento de una partición afecta al rendimiento de las consultas y el procesamiento, a los requisitos de almacenamiento y a las ubicaciones de almacenamiento de la partición y de su grupo de medida y cubo primario. La elección del modo de almacenamiento afecta también a las opciones de procesamiento.  
   
  Una partición puede utilizar uno de estos tres modos de almacenamiento básicos:  
   

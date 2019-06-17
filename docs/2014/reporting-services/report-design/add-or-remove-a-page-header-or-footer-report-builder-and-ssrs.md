@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 88a4cb2598b8c57813f3d2034434eeef31f49a76
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106550"
 ---
 # <a name="add-or-remove-a-page-header-or-footer-report-builder-and-ssrs"></a>Agregar o quitar un encabezado o un pie de página (Generador de informes y SSRS)

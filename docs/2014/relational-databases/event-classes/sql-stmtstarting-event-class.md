@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 95a2e4a2bc7caeaae04ac8aab245ccf7edbb6af7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061311"
 ---
 # <a name="sqlstmtstarting-event-class"></a>SQL:StmtStarting [clase de eventos]
@@ -33,7 +33,7 @@ ms.locfileid: "63061311"
 |DatabaseID|`int`|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos ServerName en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |EventClass|`int`|Tipo de evento = 40.|27|No|  
-|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|EventSequence|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData2|`int`|Desplazamiento final (en bytes) de la instrucción que se está ejecutando.|55|Sí|  

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 00e3643a1beb3f69f8b370715001317e536c42e1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245749"
 ---
 # <a name="sql-server-agent-properties-alert-system-page"></a>Propiedades de Agente SQL Server (página Sistema de alerta)
@@ -96,7 +96,7 @@ ms.locfileid: "63245749"
  Esta sección le permite habilitar tokens de paso de trabajo que pueden utilizarse en trabajos ejecutados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para más información sobre los tokens de paso de trabajo, consulte [Usar tokens en pasos de trabajo](use-tokens-in-job-steps.md).  
   
 > [!IMPORTANT]  
->  Todos los usuarios de Windows con permisos de escritura en el Registro de eventos de Windows pueden tener acceso a pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Los tokens son: **$(A-DBN)**, **$(A-SVR)**, **$(A-ERR)**, **$(A-SEV)** y **$(A-MSG)**.  
+>  Todos los usuarios de Windows con permisos de escritura en el Registro de eventos de Windows pueden tener acceso a pasos de trabajo activados por alertas del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para evitar este riesgo de seguridad, se deshabilitan de manera predeterminada los tokens del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que pueden utilizarse en trabajos activados por alertas. Los tokens son: **$(A-DBN)** , **$(A-SVR)** , **$(A-ERR)** , **$(A-SEV)** y **$(A-MSG)** .  
 >   
 >  Si necesita utilizar estos tokens, asegúrese de que solo los miembros de grupos de seguridad confiables de Windows, tales como el grupo de administradores, tengan permisos de escritura en el Registro de eventos del equipo en el que reside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , antes de habilitarlos.  
   

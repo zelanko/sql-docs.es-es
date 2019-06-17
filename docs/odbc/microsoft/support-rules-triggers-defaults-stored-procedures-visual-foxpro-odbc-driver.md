@@ -30,10 +30,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63269860"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
@@ -44,7 +44,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
  Si su aplicación interactúa con los datos cuyas reglas, desencadenadores, valores predeterminados o llamar a procedimientos almacenados las otras funciones o los comandos de Visual FoxPro, el controlador generará un error. Consulte [no compatible de Visual FoxPro comandos y funciones](../../odbc/microsoft/unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver.md) para obtener una lista de comandos y funciones no admitidas por el controlador.  
   
 > [!TIP]  
->  Si desea insertar código condicional en sus reglas, desencadenadores o procedimientos almacenados que determina los comandos que se ejecutará cuando se llama el controlador, puede usar el **() versión** función. El **() versión** función devuelve "controlador ODBC de Visual FoxPro  *\<versión >*" cuando lo llama el controlador.  
+>  Si desea insertar código condicional en sus reglas, desencadenadores o procedimientos almacenados que determina los comandos que se ejecutará cuando se llama el controlador, puede usar el **() versión** función. El **() versión** función devuelve "controlador ODBC de Visual FoxPro  *\<versión >* " cuando lo llama el controlador.  
   
 ## <a name="visual-foxpro-commands-and-functions-supported-in-rules-triggers-default-values-and-stored-procedures"></a>Comandos de Visual FoxPro y las funciones admitidas en procedimientos almacenados, desencadenadores, valores predeterminados y reglas  
   

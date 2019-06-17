@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 30c50d1f6efc44c17eac76e0e03432c2461da296
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033692"
 ---
 # <a name="set-the-service-startup-account-for-sql-server-agent-sql-server-configuration-manager"></a>Establecer la cuenta de inicio del servicio para el Agente SQL Server (Administrador de configuración de SQL Server)
@@ -65,13 +65,13 @@ ms.locfileid: "63033692"
   
 2.  Haga clic en el signo más para expandir la carpeta **Grupos de servidores locales** .  
   
-3.  Haga clic con el botón derecho en la instancia de servidor donde quiera instalar la cuenta de inicio de servicio y seleccione **Administrador de configuración de SQL Server...**.  
+3.  Haga clic con el botón derecho en la instancia de servidor donde quiera instalar la cuenta de inicio de servicio y seleccione **Administrador de configuración de SQL Server...** .  
   
 4.  En el cuadro de diálogo **Control de cuentas de usuario** , haga clic en **Sí**.  
   
 5.  En el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en el panel de la consola, seleccione **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón secundario en **Agente SQL Server**_(server_name)_, donde *server_name* es el nombre de la instancia del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya cuenta de inicio de servicio desea cambiar y luego seleccione **Propiedades**.  
+6.  En el panel de detalles, haga clic con el botón secundario en **Agente SQL Server** _(server_name)_ , donde *server_name* es el nombre de la instancia del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cuya cuenta de inicio de servicio desea cambiar y luego seleccione **Propiedades**.  
   
 7.  En el cuadro de diálogo **Propiedades**_del_ **Propiedades** , en la pestaña **Iniciar sesión** , seleccione una de las opciones siguientes en **Iniciar sesión como**:  
   

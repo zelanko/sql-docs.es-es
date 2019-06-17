@@ -27,10 +27,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 21e709b20df80fdecc7aff80ff983b0f33bbf101
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713173"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Ediciones y características admitidas de SQL Server 2017 en Linux
@@ -96,23 +96,23 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
   
 |Característica|Enterprise|Estándar|Web|Express|  
 |-------------|----------------|--------------|---------|------------------------|  
-|Trasvase de registros|Sí|Sí|Sí|Sin|  
+|Trasvase de registros|Sí|Sí|Sí|No|  
 |Compresión de copia de seguridad|Sí|Sí|No|Sin| 
-|Instantáneas de base de datos|Sí|No|Sin|Sin|
-|Always On instancia en clúster de conmutación por error<sup>1</sup>|Sí|Sí|Sin|No| 
-|Grupos de disponibilidad Always On<sup>2</sup>|Sí|Sin|No|Sin|
-|Grupos de disponibilidad básica <sup>3</sup>|Sin|Sí|No|No|
-|Grupo de disponibilidad de confirmación de réplica mínima|Sí|Sí|Sin|No|
+|Instantáneas de base de datos|Sí|No|No|No|
+|Always On instancia en clúster de conmutación por error<sup>1</sup>|Sí|Sí|Sin|Sin| 
+|Grupos de disponibilidad Always On<sup>2</sup>|Sí|No|Sin|Sin|
+|Grupos de disponibilidad básica <sup>3</sup>|Sin|Sí|No|Sin|
+|Grupo de disponibilidad de confirmación de réplica mínima|Sí|Sí|Sin|Sin|
 |Grupo de disponibilidad sin clúster|Sí|Sí|No|Sin|
-|Restauración de archivos y páginas en línea|Sí|Sin|Sin|Sin|
+|Restauración de archivos y páginas en línea|Sí|No|Sin|Sin|
 |Índices en línea|Sí|No|Sin|No|
-|Recompilaciones de índices en línea reanudables|Sí|Sin|No|Sin|
-|Cambio de esquema en línea|Sí|No|Sin|Sin|
+|Recompilaciones de índices en línea reanudables|Sí|Sin|Sin|Sin|
+|Cambio de esquema en línea|Sí|Sin|Sin|Sin|
 |Recuperación rápida|Sí|Sin|No|Sin|
-|Copias de seguridad reflejadas|Sí|Sin|No|Sin|
-|Agregar memoria y CPU sin interrupción|Sí|Sin|Sin|Sin|
+|Copias de seguridad reflejadas|Sí|Sin|Sin|No|
+|Agregar memoria y CPU sin interrupción|Sí|No|Sin|Sin|
 |Copia de seguridad cifrada|Sí|Sí|Sin|Sin|
-|Copia de seguridad híbrida en Windows Azure (copia de seguridad en dirección URL)|Sí|Sí|Sin|Sin|
+|Copia de seguridad híbrida en Windows Azure (copia de seguridad en dirección URL)|Sí|Sí|No|Sin|
   
 <sup>1</sup> en Enterprise edition, el número de nodos es el sistema operativo máximo. En Standard Edition hay compatibilidad con dos nodos. 
 
@@ -126,15 +126,15 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |-------------|----------------|--------------|---------|------------------------| 
 |Almacén de columnas <sup>1</sup>|Sí|Sí|Sí|Sí|  
 |Archivos binarios de objetos de gran tamaño en índices de almacén de columnas en clúster|Sí|Sí|Sí|Sí|  
-|Recompilación de índices de almacén de columnas no en clúster en línea|Sí|No|No|No|
+|Recompilación de índices de almacén de columnas no en clúster en línea|Sí|Sin|Sin|Sin|
 |OLTP en memoria <sup>1</sup>|Sí|Sí|Sí|Sí|
 |Memoria principal persistente|Sí|Sí|Sí|Sí|
 |Particiones de tabla e índice|Sí|Sí|Sí|Sí|  
 |Compresión de datos|Sí|Sí|Sí|Sí|
-|regulador de recursos|Sí|No|Sin|Sin|  
-|Paralelismo de tabla con particiones|Sí|Sin|Sin|Sin|
-|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|Sin|No|Sin|
-|Regulación de recursos de E/S|Sí|Sin|Sin|Sin|  
+|regulador de recursos|Sí|Sin|Sin|Sin|  
+|Paralelismo de tabla con particiones|Sí|No|No|Sin|
+|Asignación de memoria de página grande habilitada para NUMA y matriz de búferes|Sí|Sin|Sin|Sin|
+|Regulación de recursos de E/S|Sí|Sin|No|No|  
 |Perdurabilidad diferida|Sí|Sí|Sí|Sí|
 |Ajuste automático|Sí|Sin|Sin|Sin|
 |Combinaciones adaptables de modo de proceso por lotes|Sí|Sin|No|Sin|
@@ -154,10 +154,10 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Enmascaramiento de datos dinámicos|Sí|Sí|Sí|Sí|   
 |Auditoría básica|Sí|Sí|Sí|Sí| 
 |Auditoría específica|Sí|Sí|Sí|Sí| 
-|Cifrado de base de datos transparente|Sí|No|Sin|No|   
+|Cifrado de base de datos transparente|Sí|Sin|No|Sin|   
 |Roles definidos por el usuario|Sí|Sí|Sí|Sí| 
 |Bases de datos independientes|Sí|Sí|Sí|Sí| 
-|Cifrado para copias de seguridad|Sí|Sí|Sin|No|  
+|Cifrado para copias de seguridad|Sí|Sí|No|Sin|  
 
 ##  <a name="RDBMSM"></a> Capacidad de administración de RDBMS  
   
@@ -166,16 +166,16 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Conexión de administración dedicada|Sí|Sí|Sí|Sí, con marca de seguimiento|Sí, con marca de seguimiento|   
 |Compatibilidad con PowerShell scripting|Sí|Sí|Sí|Sí| 
 |Compatibilidad con las operaciones de componentes de aplicación de capa de datos: extracción, implementación, actualización, eliminación|Sí|Sí|Sí|Sí| 
-|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|Sin|Sin|   
+|Automatización de directivas (comprobar en la programación y cambio)|Sí|Sí|Sí|Sin|No|   
 |Recopilador de datos de rendimiento|Sí|Sí|Sí|No|No| 
-|Informes de rendimiento estándar|Sí|Sí|Sí|Sin|Sin| 
-|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|No|Sin|   
+|Informes de rendimiento estándar|Sí|Sí|Sí|No|No| 
+|Guías del plan y congelación del plan para las guías del plan|Sí|Sí|Sí|No|No|   
 |Consulta directa de vistas indexadas (mediante la sugerencia NOEXPAND)|Sí|Sí|Sí|Sí| 
 |Mantenimiento automático de vistas indexadas|Sí|Sí|Sí|No|Sin| 
-|Vistas distribuidas con particiones|Sí|No|Sin|Sin| 
-|Operaciones indizadas en paralelo|Sí|Sin|Sin|Sin|  
-|Uso automático de vistas indexadas por el optimizador de consultas|Sí|Sin|Sin|No| 
-|Comprobación de coherencia en paralelo|Sí|No|Sin|Sin| 
+|Vistas distribuidas con particiones|Sí|No|Sin|No| 
+|Operaciones indizadas en paralelo|Sí|No|No|Sin|  
+|Uso automático de vistas indexadas por el optimizador de consultas|Sí|Sin|Sin|Sin| 
+|Comprobación de coherencia en paralelo|Sí|Sin|Sin|No| 
 |Punto de control de la utilidad de SQL Server|Sí|Sin|Sin|Sin|    
 
 ##  <a name="Programmability"></a> Programmability  
@@ -191,7 +191,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Tipos de datos de fecha y hora|Sí|Sí|Sí|Sí|  
 |Compatibilidad para internacionalización|Sí|Sí|Sí|Sí| 
 |Búsqueda de texto completo y semántica|Sí|Sí|Sí|Sí|No| 
-|Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|Sin|   
+|Especificación de idioma en la consulta|Sí|Sí|Sí|Sí|No|   
 |Service Broker (mensajería)|Sí|Sí|No (solo cliente)|No (solo cliente)|No (solo cliente)|   
 |Transact-SQL, extremos|Sí|Sí|Sí|Sin|Sin| 
 |Gráfico|Sí|Sí|Sí|Sí|  

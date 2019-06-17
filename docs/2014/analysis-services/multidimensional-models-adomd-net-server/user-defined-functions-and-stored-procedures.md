@@ -1,19 +1,26 @@
 ---
 title: Funciones definidas por el usuario y procedimientos almacenados | Microsoft Docs
-ms.date: 05/02/2018
-ms.prod: sql
+ms.custom: ''
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
+ms.reviewer: ''
 ms.technology: analysis-services
-ms.custom: adomd
-ms.topic: conceptual
-ms.author: owend
-ms.reviewer: owend
+ms.topic: reference
+helpviewer_keywords:
+- stored procedures [ADOMD.NET]
+- ADOMD.NET, user defined functions
+- user defined functions [ADOMD.NET]
+- ADOMD.NET, UDFs
+- ADOMD.NET, stored procedures
+ms.assetid: 07e8aa47-37d4-4bbc-8bff-49e422d12897
 author: minewiskan
-manager: kfile
+ms.author: owend
+manager: craigg
 ms.openlocfilehash: c81d64d8aee6bb44451ab8d2e9a7b671af2ac06a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62727861"
 ---
 # <a name="user-defined-functions-and-stored-procedures"></a>Funciones definidas por el usuario y procedimientos almacenados
@@ -86,7 +93,7 @@ WHERE [Measures].[Reseller Freight Cost]
 ### <a name="applying-a-filter-to-a-tuple"></a>Aplicar un filtro a una tupla  
  En el ejemplo siguiente, se define un UDF para que establezca un conjunto y aplique un filtro a cada tupla en el conjunto mediante el objeto Expression. Cualquier tupla que cumpla el filtro se agregará a un conjunto que se devuelve.  
   
- [!code-cs[Adomd.NetServer#FilterSet](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_1.cs)]  
+ [!code-csharp[Adomd.NetServer#FilterSet](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#filterset)]  
   
  En el siguiente ejemplo MDX se llama al ejemplo anterior, que filtra el conjunto por ciudades con nombres que empiezan por 'A.'  
   
@@ -99,6 +106,6 @@ From [Adventure Works]
 ## <a name="stored-procedure-example"></a>Ejemplo de procedimiento almacenado  
  En el ejemplo siguiente, un procedimiento almacenado basado en MDX utiliza AMO para crear particiones para Internet Sales si es necesario.  
   
- [!code-cs[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../analysis-services/multidimensional-models-adomd-net-server/codesnippet/csharp/user-defined-functions-a_2.cs)]  
+ [!code-csharp[Adomd.NetServer#CreateInternetSalesMeasureGroupPartitions](../../snippets/csharp/SQL14/adomd.net/adomd.netserver/cs/class1.cs#createinternetsalesmeasuregrouppartitions)]  
   
   

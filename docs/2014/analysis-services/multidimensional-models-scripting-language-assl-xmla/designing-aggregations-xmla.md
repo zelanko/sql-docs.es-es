@@ -19,10 +19,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81450789395dfef84f81896990fa251514d3489e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702122"
 ---
 # <a name="designing-aggregations-xmla"></a>Diseñar agregaciones (XMLA)
@@ -105,7 +105,7 @@ ms.locfileid: "62702122"
 |------------|---------------|-----------------|  
 |Pasos|Integer|El número de pasos que realiza el comando antes de devolver el control a la aplicación cliente.|  
 |Time|Entero largo|El número de milisegundos que tarda el comando antes de devolver el control a la aplicación cliente.|  
-|Optimization|Doble|El porcentaje estimado de mejora del rendimiento que alcanza el comando antes de devolver el control a la aplicación cliente.|  
+|Optimization|Double|El porcentaje estimado de mejora del rendimiento que alcanza el comando antes de devolver el control a la aplicación cliente.|  
 |Storage|Entero largo|El número estimado de bytes que toma el comando antes de devolver el control a la aplicación cliente.|  
 |Agregaciones|Entero largo|El número de agregaciones definido por el comando antes de devolver el control a la aplicación cliente.|  
 |LastStep|Boolean|Indica si los datos en el conjunto de filas representan el último paso del proceso de diseño. Si la propiedad `Materialize` del comando está establecida en true, el valor de esta columna está establecido en true.|  

@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 27095834c7f3b863bbc1a4f330898790cf467ec6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62699205"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
@@ -89,7 +89,7 @@ ms.locfileid: "62699205"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
   
- Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:**[agregaciones y diseños de agregaciones](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:** [agregaciones y diseños de agregaciones](../../multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Asignar medidas, atributos y jerarquías  
  Las medidas, los atributos y las jerarquías del cubo del ejemplo se derivan de las siguientes columnas de las tablas de dimensiones y de hechos del cubo.  
@@ -119,9 +119,9 @@ ms.locfileid: "62699205"
   
  En la tabla anterior, cada fila tiene los mismos valores para el **RouteKey**, **SourceKey**, y **TimeKey** columnas, que indica que dichas filas contribuyen a la misma celda del cubo.  
   
- En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:**[dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:** [dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:**[relaciones de dimensión](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:** [relaciones de dimensión](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Bases de datos de modelos multidimensionales &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  

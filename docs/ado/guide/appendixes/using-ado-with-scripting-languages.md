@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702767"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
@@ -29,17 +29,17 @@ Dentro de un entorno de scripting, ADO permite exponer los datos por medio de sc
 |Object|¿Es seguro para Scripting?|  
 |------------|-------------------------|  
 |Conexión de ADO|Sí|  
-|Comando de ADO|No|  
+|Comando de ADO|Sin|  
 |Parámetro de ADO|Sin|  
 |Conjunto de registros ADO|Sí|  
 |Registro de ADO|Sí|  
 |Stream de ADO|Sí|  
 |Error de ADO.|Sin|  
 |Catálogo ADOX|Sin|  
-|Conjunto de celdas ADOX|No|  
+|Conjunto de celdas ADOX|Sin|  
 |RDS DataControl|Sí|  
 |DataSpace RDS|Sí|  
-|RDS DataFactory|Sin|  
+|RDS DataFactory|No|  
   
  En la tabla siguiente se enumera los proveedores incluidos con Windows DAC/MDAC e indica si son seguros para scripting.  
   

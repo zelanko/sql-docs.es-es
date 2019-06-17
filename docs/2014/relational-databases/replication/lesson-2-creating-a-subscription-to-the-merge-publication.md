@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 495fb831490a35043b500caea2c835bfd80b6a8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721030"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-merge-publication"></a>Lección 2: Crear una suscripción a la publicación de combinación
@@ -40,7 +40,7 @@ ms.locfileid: "62721030"
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **SalesOrdersReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y, después, haga clic en **Siguiente**.  
   
-8.  En la página seguridad del agente de mezcla, haga clic en el botón de puntos suspensivos (**...** ) botón, escriba \< _nombre_equipo >_**\repl_merge** en el **cuenta de proceso** cuadro, proporcione la contraseña para esta cuenta, haga clic en **Aceptar**, haga clic en **siguiente**y, a continuación, haga clic en **siguiente** nuevo.  
+8.  En la página seguridad del agente de mezcla, haga clic en el botón de puntos suspensivos ( **...** ) botón, escriba \< _nombre_equipo >_ **\repl_merge** en el **cuenta de proceso** cuadro, proporcione la contraseña para esta cuenta, haga clic en **Aceptar**, haga clic en **siguiente**y, a continuación, haga clic en **siguiente** nuevo.  
   
 9. En la página Inicializar suscripciones, seleccione **En la primera sincronización** de la lista **Inicializar cuando** , haga clic en **Siguiente**y, después, otra vez en **Siguiente** .  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62721030"
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Bases de datos**, **SalesOrdersReplica**y **Seguridad**, haga clic con el botón derecho en **Usuarios**y, después, seleccione **Nuevo usuario**.  
   
-2.  En el **General** , escriba \< _nombre_equipo >_**\repl_merge** en el **nombre de usuario** cuadro, haga clic en el botón de puntos suspensivos () **...** ) botón, haga clic en **examinar**, seleccione \< _nombre_equipo >_**\repl_merge**, haga clic en **Aceptar**, haga clic en **comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
+2.  En el **General** , escriba \< _nombre_equipo >_ **\repl_merge** en el **nombre de usuario** cuadro, haga clic en el botón de puntos suspensivos () **...** ) botón, haga clic en **examinar**, seleccione \< _nombre_equipo >_ **\repl_merge**, haga clic en **Aceptar**, haga clic en **comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
 3.  En **Pertenencia al rol de la base de datos**, seleccione **db_owner**y haga clic en **Aceptar** para crear el usuario.  
   

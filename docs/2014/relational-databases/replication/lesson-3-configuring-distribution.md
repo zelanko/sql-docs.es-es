@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 8d873d3664c88963b17550734b488e6872a9cc84
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721100"
 ---
 # <a name="lesson-3-configuring-distribution"></a>Lección 3: Configurar la distribución
@@ -31,15 +31,15 @@ ms.locfileid: "62721100"
 2.  Haga clic con el botón derecho en la carpeta **Replicación** y luego haga clic en **Configurar distribución**.  
   
     > [!NOTE]  
-    >  Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con el servidor **'localhost'**. En el cuadro de diálogo de advertencia, haga clic en **Aceptar** . En el cuadro de diálogo **Conectar al servidor** , cambie el **Nombre del servidor** de **localhost** al nombre del servidor. Haga clic en **Conectar**.  
+    >  Si se ha conectado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizando **localhost** en lugar del nombre real del servidor, aparecerá una advertencia indicando que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar con el servidor **'localhost'** . En el cuadro de diálogo de advertencia, haga clic en **Aceptar** . En el cuadro de diálogo **Conectar al servidor** , cambie el **Nombre del servidor** de **localhost** al nombre del servidor. Haga clic en **Conectar**.  
   
      Se iniciará el Asistente para configurar la distribución.  
   
-3.  En el **distribuidor** página, seleccione **'**_\<ServerName >_**' actuará como su propio distribuidor; SQL Server creará una base de datos de distribución y un registro**y, a continuación, haga clic en **siguiente**.  
+3.  En el **distribuidor** página, seleccione **'** _\<ServerName >_ **' actuará como su propio distribuidor; SQL Server creará una base de datos de distribución y un registro**y, a continuación, haga clic en **siguiente**.  
   
 4.  Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se está ejecutando, en la página [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**Inicio del Agente** , seleccione **Sí**, configurar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] servicio del Agente para que se inicie automáticamente. Haga clic en **Siguiente**.  
   
-5.  Introduzca **\\\\**\<_nombreDeEquipo>_**\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde\<*nombreDeEquipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
+5.  Introduzca **\\\\** \<_nombreDeEquipo>_ **\repldata** en el cuadro de texto **Carpeta de instantáneas**, donde\<*nombreDeEquipo>* es el nombre del publicador y luego haga clic en **Siguiente**.  
   
 6.  Acepte los valores predeterminados en las páginas restantes del asistente.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "62721100"
   
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión**y, después, seleccione **Nuevo inicio de sesión**.  
   
-2.  En la página **General**, haga clic en **Buscar**, escriba \<_nombreDeEquipo>_**\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombreDeEquipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
+2.  En la página **General**, haga clic en **Buscar**, escriba \<_nombreDeEquipo>_ **\repl_snapshot** en el cuadro **Escriba el nombre del objeto que desea seleccionar**, donde \<*nombreDeEquipo>* es el nombre del servidor local del publicador, haga clic en **Comprobar nombres** y, después, haga clic en **Aceptar**.  
   
 3.  En la página **Asignación de usuarios** , en la lista **Usuarios asignados a este inicio de sesión** , seleccione las bases de datos de **distribución** y de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   

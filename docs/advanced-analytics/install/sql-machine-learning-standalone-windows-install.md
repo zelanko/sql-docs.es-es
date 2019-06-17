@@ -10,16 +10,16 @@ ms.author: davidph
 manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62747077"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar R Server (independiente) mediante el programa de instalación de SQL Server o Machine Learning Server (independiente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-El programa de instalación de SQL Server incluye un **características compartidas** opción para instalar una instancia ajenos a, servidor independiente de aprendizaje del equipo que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)**. En SQL Server 2017, se llama a **Machine Learning Server (independiente)** e incluye R y Python. 
+El programa de instalación de SQL Server incluye un **características compartidas** opción para instalar una instancia ajenos a, servidor independiente de aprendizaje del equipo que se ejecuta fuera de SQL Server. En SQL Server 2016, esta característica se denomina **R Server (independiente)** . En SQL Server 2017, se llama a **Machine Learning Server (independiente)** e incluye R y Python. 
 
 Es funcionalmente equivalente a las versiones sin marca de SQL de un servidor independiente, tal y como se instala el programa de instalación de SQL Server [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), admitiendo el mismo casos de uso y escenarios, incluidos:
 
@@ -61,7 +61,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 
 1. Iniciar al Asistente para instalación.
 
-2. Haga clic en el **instalación** pestaña y seleccione **instalación nueva Machine Learning Server (independiente)**.
+2. Haga clic en el **instalación** pestaña y seleccione **instalación nueva Machine Learning Server (independiente)** .
     
      ![Instale Machine Learning Server (independiente)](media/2017setup-installation-page-mlsvr.png "Iniciar instalación de Machine Learning Server (independiente)")
 
@@ -100,7 +100,7 @@ En instalaciones locales, debe ejecutar el programa de instalación como adminis
 
 1. Iniciar al Asistente para instalación.
 
-2. En el **instalación** , haga clic **instalación de nuevo R Server (independiente)**.
+2. En el **instalación** , haga clic **instalación de nuevo R Server (independiente)** .
     
      ![Iniciar la instalación de R Server Standalone](media/2016-setup-installation-rsvr.png "iniciar la instalación de R Server (independiente)")
 

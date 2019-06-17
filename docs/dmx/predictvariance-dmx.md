@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 876923763d6aad1319b0409143dd5fca6e23e92a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62658782"
 ---
 # <a name="predictvariance-dmx"></a>PredictVariance (DMX)
@@ -32,7 +32,7 @@ PredictVariance(<scalar column reference>)
  Una columna escalar.  
   
 ## <a name="return-type"></a>Tipo devuelto  
- Un valor escalar del tipo especificado por  *\<referencia de columna escalar >*.  
+ Un valor escalar del tipo especificado por  *\<referencia de columna escalar >* .  
   
 ## <a name="remarks"></a>Comentarios  
  Si la referencia de columna es discreta, **PredictVariance** devuelve 0 porque la varianza no se puede calcular a partir de valores discretos.  

@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8a898990af62b66bb330ad490bc614f23a479ad4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755238"
 ---
 # <a name="connect-to-server-connection-properties-page-analysis-services"></a>Conectar al servidor (página Propiedades de conexión de Analysis Services)
@@ -24,7 +24,7 @@ ms.locfileid: "62755238"
   
 ## <a name="options"></a>Opciones  
  **Conectar con base de datos**  
- Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >**, se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >**, puede examinar el servidor para que le gustaría conectarse a la base de datos.  
+ Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >** , se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >** , puede examinar el servidor para que le gustaría conectarse a la base de datos.  
   
  **Tiempo de espera de la conexión**  
  Escriba el número de segundos que hay que esperar a que se establezca una conexión antes de que se agote el tiempo de espera. El valor predeterminado es 15 segundos.  

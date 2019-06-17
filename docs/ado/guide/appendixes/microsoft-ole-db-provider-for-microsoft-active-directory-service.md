@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66702724"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
@@ -117,8 +117,8 @@ objectClass='user' AND objectCategory='Person'"
   
 |Método|¿Está disponible?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|  
-|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sin|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  

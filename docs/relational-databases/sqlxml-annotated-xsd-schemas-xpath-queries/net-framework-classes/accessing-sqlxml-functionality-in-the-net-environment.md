@@ -1,8 +1,9 @@
 ---
 title: Acceso a la funcionalidad SQLXML en el entorno .NET | Microsoft Docs
 ms.custom: ''
-ms.date: 06/13/2017
-ms.prod: sql-server-2014
+ms.date: 03/14/2017
+ms.prod: sql
+ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
 ms.technology: xml
 ms.topic: reference
@@ -12,24 +13,26 @@ helpviewer_keywords:
 - DiffGrams [SQLXML], accessing SQLXML functionality
 - .NET Framework [SQLXML], accessing SQLXML functionality
 ms.assetid: 74744535-2945-414d-9a5b-7e8cc363953a
-author: douglaslMS
-ms.author: douglasl
+author: MightyPen
+ms.author: genemi
 manager: craigg
+monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a04ee9ea48075635e192e2410c64fd6a357a76a2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719882"
 ---
 # <a name="accessing-sqlxml-functionality-in-the-net-environment"></a>Acceso a la funcionalidad de SQLXML en el entorno .NET
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Este ejemplo muestra:  
   
 -   Cómo usar [!INCLUDE[msCoName](../../../includes/msconame-md.md)] clases administradas de SQLXML (Microsoft.Data.SqlXml) para tener acceso a Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] entorno de .NET Framework.  
   
 -   Cómo pueden aplicar actualizaciones de datos a tablas los DiffGrams que se generan en el entorno de .NET Framework [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
- En esta aplicación se ejecuta una consulta XPath para un esquema XSD. La ejecución de la consulta XPath devuelve un documento XML que contiene los datos de contacto (**FirstName**, **LastName**). La aplicación carga el documento XML en el conjunto de datos en el entorno de .NET Framework. Se modifican los datos del conjunto de datos: el nombre del primer contacto del conjunto de datos cambia a "Susan". El DiffGram se genera a partir del conjunto de datos y después se aplica la actualización especificada en el DiffGram (el cambio en el nombre del empleado) a la tabla Person.Contact.   
+ En esta aplicación se ejecuta una consulta XPath para un esquema XSD. La ejecución de la consulta XPath devuelve un documento XML que contiene los datos de contacto (**FirstName**, **LastName**). La aplicación carga el documento XML en el conjunto de datos en el entorno de .NET Framework. Se modifican los datos del conjunto de datos: el nombre del primer contacto del conjunto de datos cambia a "Susan". El DiffGram se genera a partir del conjunto de datos y después se aplica la actualización especificada en el DiffGram (el cambio en el nombre del empleado) a la tabla Person.Contact.  
   
 > [!NOTE]  
 >  En el código, debe suministrarse el nombre de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la cadena de conexión.  

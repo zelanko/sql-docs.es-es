@@ -15,10 +15,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 13fb698d9a5be2e8fc949ad793cf19ac2aae97b1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738079"
 ---
 # <a name="table-valued-parameter-descriptor-fields"></a>Campos de descriptor de parámetros con valores de tabla
@@ -29,7 +29,7 @@ ms.locfileid: "62738079"
   
 ## <a name="remarks"></a>Comentarios  
   
-|Nombre|Location|Tipo|Descripción|  
+|NOMBRE|Location|Tipo|Descripción|  
 |----------|--------------|----------|-----------------|  
 |SQL_CA_SS_TYPE_NAME|IPD|SQLTCHAR*|Nombre del tipo de servidor del parámetro con valores de tabla.<br /><br /> Cuando se especifica un nombre de tipo del parámetro con valores de tabla en una llamada a SQLBindParameter, siempre debe especificarse como un valor Unicode, incluso en aplicaciones que se crean como aplicaciones de ANSI. El valor utilizado para el parámetro *StrLen_or_IndPtr* debería ser SQL_NTS o la longitud de cadena del nombre multiplicada por sizeof (WCHAR).<br /><br /> Cuando se especifica un nombre de tipo de parámetro con valores de tabla a través de SQLSetDescField, se puede especificar mediante el uso de un valor literal que se ajusta a la forma en que la aplicación se ha creado. El administrador de controladores ODBC realizará cualquier conversión Unicode que sea necesaria.|  
 |SQL_CA_SS_TYPE_CATALOG_NAME (solo lectura)|IPD|SQLTCHAR*|Catálogo donde se define el tipo.|  

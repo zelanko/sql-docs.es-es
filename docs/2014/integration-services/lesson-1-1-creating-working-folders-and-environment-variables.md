@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b58da11d973d169a0372e59c7e8d7e174e3cf789
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767661"
 ---
-# <a name="step-1-creating-working-folders-and-environment-variables"></a>Paso 1: Creación de carpetas de trabajo y Variables de entorno
+# <a name="step-1-creating-working-folders-and-environment-variables"></a>Paso 1: Creación de las carpetas de trabajo y las variables de entorno
   En esta tarea, creará la carpeta de trabajo (C:\DeploymentTutorial) y las nuevas variables de entorno del sistema (`DataTransfer` y `LoadXMLData`) que usará en posteriores tareas del tutorial.  
   
  La carpeta de trabajo está en la raíz de la unidad C. Si debe usar otra unidad o ubicación, puede hacerlo. No obstante, deberá anotar esta ubicación y usarla siempre que el tutorial haga referencia a la ubicación de la carpeta de trabajo DeploymentTutorial.  
@@ -32,7 +32,7 @@ ms.locfileid: "62767661"
   
 1.  Haga clic con el botón secundario en el menú Inicio y haga clic en Explorar.  
   
-2.  Haga clic en **Disco local (C:)**.  
+2.  Haga clic en **Disco local (C:)** .  
   
 3.  En el menú **Archivo** , seleccione **Nuevo**y haga clic en **Carpeta**.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: v-jizho2
-manager: craigg
-ms.openlocfilehash: 58248a2772377ccecba0c701d03276025785c964
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2d7cf1f31ce5cf42b9c2e4c7b72938b8def2ed4f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698063"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797735"
 ---
 # <a name="sql-server-login-dialog-box-odbc"></a>Cuadro de diálogo Inicio de sesión de SQL Server (ODBC)
 
@@ -103,6 +103,6 @@ Cuando se selecciona, se cifrarán los datos que se pasan a través de la conexi
 
 Esta opción solo es aplicable cuando **utilizar cifrado de alta seguridad para datos** está habilitado. Cuando se selecciona, no se validará el certificado del servidor para que el nombre de host correcto del servidor y ser emitido por una entidad de certificación de confianza.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)

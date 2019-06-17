@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9c2e25b51998d863809a57654b245b1cb63027b5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724070"
 ---
 # <a name="spcreateremovable-transact-sql"></a>sp_create_removable (Transact-SQL)
@@ -60,13 +60,13 @@ sp_create_removable
   
 `[ @syslogical = ] 'syslogical'` Es el nombre lógico del archivo que contiene las tablas del catálogo del sistema. *syslogical* es **sysname**.  
   
-`[ @sysphysical = ] 'sysphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene las tablas del catálogo del sistema. *sysphysical* es **nvarchar (260)**.  
+`[ @sysphysical = ] 'sysphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene las tablas del catálogo del sistema. *sysphysical* es **nvarchar (260)** .  
   
 `[ @syssize = ] syssize` Es el tamaño, en megabytes, del archivo que contiene el sistema de tablas del catálogo. *syssize* es **int**. El mínimo *syssize* es 1.  
   
 `[ @loglogical = ] 'loglogical'` Es el nombre lógico del archivo que contiene el registro de transacciones. *loglogical* es **sysname**.  
   
-`[ @logphysical = ] 'logphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene el registro de transacciones. *logphysical* es **nvarchar (260)**.  
+`[ @logphysical = ] 'logphysical'` Es el nombre físico. Se incluye la ruta de acceso completa al archivo que contiene el registro de transacciones. *logphysical* es **nvarchar (260)** .  
   
 `[ @logsize = ] logsize` Es el tamaño, en megabytes, del archivo que contiene el registro de transacciones. *logsize* es **int**. El mínimo *logsize* es 1.  
   
@@ -74,7 +74,7 @@ sp_create_removable
   
  Debe ser un número de archivos de datos comprendido entre 1 y 16. Normalmente, se crea más de un archivo de datos cuando se espera que la base de datos tenga un gran tamaño y deba distribuirse en varios discos.  
   
-`[ @dataphysical1 = ] 'dataphysical'` Es el nombre físico. Se incluye la ruta de acceso completa a un archivo que contiene tablas de datos. *dataphysical* es **nvarchar (260)**.  
+`[ @dataphysical1 = ] 'dataphysical'` Es el nombre físico. Se incluye la ruta de acceso completa a un archivo que contiene tablas de datos. *dataphysical* es **nvarchar (260)** .  
   
 `[ @datasize1 = ] 'datasize'` Es el tamaño, en megabytes, de un archivo que contiene tablas de datos. *DataSize* es **int**. El mínimo *datasize* es 1.  
   

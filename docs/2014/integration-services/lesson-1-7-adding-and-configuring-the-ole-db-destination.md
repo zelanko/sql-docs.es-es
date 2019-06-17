@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 97b155852a0d6941cff4da0bdd4565e08dc63e79
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767564"
 ---
-# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: Agregar y configurar el destino de OLE DB
+# <a name="step-7-adding-and-configuring-the-ole-db-destination"></a>Paso 7: Adición y configuración del destino de OLE DB
   Ahora, el paquete puede extraer datos de un origen de archivo plano y transformar dichos datos en un formato compatible con el destino. La tarea siguiente consiste realmente en cargar los datos transformados en el destino. Para cargar los datos, debe agregar un destino de OLE DB al flujo de datos. El destino de OLE DB puede utilizar una tabla de bases de datos, una vista o un comando SQL para cargar datos en distintas bases de datos compatibles con OLE DB.  
   
  En este procedimiento, se agrega y configura un destino de OLE DB para utilizar el administrador de conexiones de OLE DB creado con anterioridad.  
@@ -36,7 +36,7 @@ ms.locfileid: "62767564"
   
 6.  En el cuadro de diálogo **Editor de destino de OLE DB** , asegúrese de que **localhost.AdventureWorksDW2012** está seleccionado en el cuadro **Administrador de conexiones OLE DB** .  
   
-7.  En el cuadro **Nombre de la tabla o la vista** , escriba o seleccione **[dbo].[FactCurrencyRate]**.  
+7.  En el cuadro **Nombre de la tabla o la vista** , escriba o seleccione **[dbo].[FactCurrencyRate]** .  
   
 8.  Haga clic en el botón **Nuevo** para crear una nueva tabla.  Cambie el nombre de la tabla en el script a **NewFactCurrencyRate**.  Haga clic en **Aceptar**.  
   

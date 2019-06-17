@@ -278,7 +278,7 @@
   items:
     - name: Requisitos y consideraciones para la implementación de Analysis Services
       href: requirements-and-considerations-for-analysis-services-deployment.md
-- name: 'Base de datos multidimensional '
+- name: Base de datos multidimensional
   href: multidimensional-model-databases-ssas.md
   items:
     - name: Cambiar el nombre de una base de datos multidimensional

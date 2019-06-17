@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 89149645524adedf01b8d9fb7c116cf0ab0f26c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667892"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>Medir la latencia y validar las conexiones de la replicación transaccional
@@ -111,21 +111,21 @@ ms.locfileid: "62667892"
   
 2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_helpsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql). Compruebe que la suscripción existe y que el estado está activo.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) y especifique **@publication**. Anote el valor del parámetro de salida **@tracer_token_id** .  
+3.  En la base de datos de publicación del publicador, ejecute [sp_posttracertoken &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-posttracertoken-transact-sql) y especifique **@publication** . Anote el valor del parámetro de salida **@tracer_token_id** .  
   
 #### <a name="to-determine-latency-and-validate-connections-for-a-transactional-publication"></a>Para medir la latencia y validar las conexiones de una replicación transaccional  
   
 1.  Exponga un token de seguimiento en la publicación utilizando el procedimiento anterior.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) y especifique **@publication**. Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** que desee del conjunto de resultados.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) y especifique **@publication** . Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** que desee del conjunto de resultados.  
   
-3.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) y especifique **@publication** y el identificador del testigo de seguimiento del paso 2 para **@tracer_id**. Esto devuelve información de latencia del token de seguimiento seleccionado.  
+3.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql) y especifique **@publication** y el identificador del testigo de seguimiento del paso 2 para **@tracer_id** . Esto devuelve información de latencia del token de seguimiento seleccionado.  
   
 #### <a name="to-remove-tracer-tokens"></a>Para quitar los testigos de seguimiento  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) y especifique **@publication**. Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** del token de seguimiento que se va a eliminar del conjunto de resultados.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokens &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql) y especifique **@publication** . Esto devuelve una lista de todos los testigos de seguimiento expuestos en la publicación. Anote el **tracer_id** del token de seguimiento que se va a eliminar del conjunto de resultados.  
   
-2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id**.  
+2.  En la base de datos de publicación del publicador, ejecute [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql) y especifique **@publication** y el id. del seguimiento para eliminar desde el paso 2 para **@tracer_id** .  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo expone un registro de token de seguimiento y utiliza el Id. devuelto del token de seguimiento expuesto para ver información de la latencia.  

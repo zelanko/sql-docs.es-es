@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e2092ef7f755b9980ee29ee3d7080774d78a0094
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767317"
 ---
 # <a name="import-data-from-excel-or-export-data-to-excel-with-sql-server-integration-services-ssis"></a>Importación de datos desde Excel o exportación de datos a Excel con SQL Server Integration Services (SSIS)
@@ -110,11 +110,11 @@ Si va a exportar datos desde Excel y habilita esta opción, la primera fila de l
 
 Hay tres tipos de objetos de Excel que se pueden usar como origen o destino de los datos: una hoja de cálculo, un rango con nombre o un rango de celdas sin nombre que se especifique con su dirección.
 
--   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter `$` al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**). También puede buscar un nombre que acabe con el carácter `$` en la lista de las tablas y vistas existentes.
+-   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter `$` al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]** ). También puede buscar un nombre que acabe con el carácter `$` en la lista de las tablas y vistas existentes.
 
 -   **Rango con nombre.** Para especificar un rango con nombre, proporcione el nombre del rango (por ejemplo, **MiRangoDeDatos**). También puede buscar un nombre que no acabe con el carácter `$` en la lista de las tablas y vistas existentes.
     
--   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]**).
+-   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]** ).
 
 Para seleccionar o especificar el tipo de objeto de Excel que quiere usar como origen o destino de los datos, lleve a cabo una de las siguientes acciones:
 

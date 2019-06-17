@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78fc155c0007379c4b393b24476761aaf8a5a256
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d1d279371d425af60687e2c046d1c75316eeae67
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724903"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797480"
 ---
 # <a name="working-with-large-data"></a>Trabajar con datos grandes
 
@@ -38,7 +38,7 @@ En los temas de esta sección se describen las distintas formas en que puede usa
 | [Lectura de datos grandes con un ejemplo de procedimientos almacenados](../../../connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md) | Describe cómo recuperar un valor de parámetro CallableStatement OUT grande. |
 | [Actualización de un ejemplo de datos grandes](../../../connect/jdbc/code-samples/updating-large-data-sample.md)                                             | Describe cómo actualizar datos de valor grande en una base de datos.                |
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Aplicaciones del controlador JDBC de ejemplo](../../../connect/jdbc/code-samples/sample-jdbc-driver-applications.md)  
   

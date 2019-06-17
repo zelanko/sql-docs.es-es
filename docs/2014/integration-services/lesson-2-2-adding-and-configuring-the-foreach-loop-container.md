@@ -11,13 +11,13 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0e07d71e77fc3de250ca01bb4e7fb2fb0bf15817
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767527"
 ---
-# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: Agregar y configurar el contenedor de bucles Foreach
+# <a name="step-2-adding-and-configuring-the-foreach-loop-container"></a>Paso 2: Adición y configuración del contenedor de bucles Foreach
   En esta tarea, agregará la capacidad de buscar en una carpeta de archivos planos y aplicará la misma transformación de flujo de datos utilizada en la lección 1 a cada uno de dichos archivos planos. Para ello, agregará y configurará un contenedor de bucles Foreach para el flujo de control.  
   
  El contenedor de bucles Foreach que agregue debe poder conectarse a cada uno de los archivos planos de la carpeta. Puesto que todos los archivos de la carpeta tienen el mismo formato, el contenedor de bucles Foreach puede utilizar el mismo administrador de conexiones de archivos planos para conectarse a cada uno de estos archivos. El administrador de conexiones de archivos planos que el contenedor utilizará es el mismo administrador de conexiones de archivos planos que creó en la lección 1.  
@@ -45,7 +45,7 @@ ms.locfileid: "62767527"
   
 4.  En el **Editor de bucles Foreach** cuadro de diálogo el **General** página, para **nombre**, escriba `Foreach File in Folder`. Haga clic en **Aceptar**.  
   
-5.  Haga clic en el contenedor de bucles Foreach, haga clic en **propiedades**y en la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)**.  
+5.  Haga clic en el contenedor de bucles Foreach, haga clic en **propiedades**y en la ventana Propiedades, compruebe que la `LocaleID` propiedad está establecida en **inglés (Estados Unidos)** .  
   
 ### <a name="to-configure-the-enumerator-for-the-foreach-loop-container"></a>Para configurar el enumerador para el contenedor de bucles Foreach  
   
@@ -73,7 +73,7 @@ ms.locfileid: "62767527"
   
 1.  Haga clic en **Asignaciones de variables**.  
   
-2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable…>**.  
+2.  En la página **Asignaciones de variables**, en la columna **Variable**, haga clic en la celda vacía y seleccione **\<Nueva variable…>** .  
   
 3.  En el **agregar Variable** cuadro de diálogo para **nombre**, tipo `varFileName`.  
   

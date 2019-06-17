@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ac5d4f7d199e3ee3de6ffb43e2c43e232681b0d3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721458"
 ---
 # <a name="delete-a-pull-subscription"></a>Eliminar una suscripción de extracción
@@ -65,15 +65,15 @@ ms.locfileid: "62721458"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>Para eliminar una suscripción de extracción a una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication**, **@publisher**y **@publisher_db**.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_droppullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql). Especifique **@publication** , **@publisher** y **@publisher_db** .  
   
-2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber**. Especifique un valor de **all** para **@article**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+2.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql). Especifique **@publication** y **@subscriber** . Especifique un valor de **all** para **@article** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de extracción a una publicación de combinación  
   
-1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication**, **@publisher**y **@publisher_db**.  
+1.  En la base de datos de suscripciones del suscriptor, ejecute [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql). Especifique **@publication** , **@publisher** y **@publisher_db** .  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication**, **@subscriber**y **@subscriber_db**. Especifique un valor de **pull** para **@subscription_type**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@subscriber_db** . Especifique un valor de **pull** para **@subscription_type** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  El siguiente ejemplo elimina una suscripción de extracción en una publicación transaccional. El primer lote se ejecuta en el Suscriptor y el segundo lote se ejecuta en el Publicador.  

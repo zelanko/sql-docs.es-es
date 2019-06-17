@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4d9a83d4-08de-43a1-975c-0a94005edc94
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6dc56d020af182d657ec2766d996601e5442686
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: de58a006717a64d400e40ba2126eebcdb138aa3f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624993"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66796235"
 ---
 # <a name="connection-pooling-microsoft-drivers-for-php-for-sql-server"></a>Agrupación de conexiones (controladores de Microsoft para PHP para SQL Server)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -125,7 +125,7 @@ function getColumn($conn)
 ```
 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Conexión mediante la autenticación de Windows](../../connect/php/how-to-connect-using-windows-authentication.md)
 
 [Conexión mediante la autenticación de SQL Server](../../connect/php/how-to-connect-using-sql-server-authentication.md)  

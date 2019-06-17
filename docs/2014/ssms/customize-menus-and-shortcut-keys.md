@@ -21,14 +21,14 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1e0f635cc6eb6d985bb75f87583397d6f4c2baa4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245790"
 ---
 # <a name="customize-menus-and-shortcut-keys"></a>Personalizar los menús y los métodos abreviados de teclado
-  Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+*\<una letra>*. Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
+  Una tecla de método abreviado permite seleccionar un botón o comando de menú presionando ALT+ *\<una letra>* . Por ejemplo, para abrir el menú **Editar** , presione ALT+E. Puede reorganizar y modificar los botones, los menús y los comandos de menú de la barra de herramientas mediante el cuadro de diálogo **Personalizar** . Se proporcionan instrucciones para cambiar la configuración mediante el mouse (ratón) y mediante el teclado.  
   
  Las teclas de aceleración de los procedimientos almacenados que usan la tecla Ctrl se pueden crear desde la página **Teclado** del cuadro de diálogo **Herramientas**/**Opciones** .  
   

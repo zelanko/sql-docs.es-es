@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3cda7757d5cf7f62f5946dc69882e5bd8cd5c42
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404057"
 ---
 # <a name="lesson-6-1---defining-calculated-members"></a>Lección 6-1: definir miembros calculados
@@ -43,7 +43,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     ![Formulario de panel de expresiones de cálculo](../media/l6-calculatedmembers-02.gif "formulario del panel de expresiones de cálculo")  
   
-3.  En el cuadro **Nombre** , cambie el nombre de la medida calculada a **[Total Sales Amount]**.  
+3.  En el cuadro **Nombre** , cambie el nombre de la medida calculada a **[Total Sales Amount]** .  
   
     Si el nombre de un miembro calculado contiene un espacio, dicho nombre deberá ir entre corchetes.  
   
@@ -58,11 +58,11 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
 5.  Arrastre **Internet Sales-Sales Amount** de la pestaña **Metadatos** del panel **Herramientas de cálculo** al cuadro **Expresión** del panel de las **expresiones de cálculo** .  
   
-6.  En el cuadro **Expresión** , escriba un signo más (**+**) después de **[Measures].[Internet Sales-Sales Amount]**.  
+6.  En el cuadro **Expresión** , escriba un signo más ( **+** ) después de **[Measures].[Internet Sales-Sales Amount]** .  
   
 7.  En la pestaña **Metadatos** del panel **Herramientas de cálculo** , expanda **Venta del distribuidor**y, después, arrastre **Reseller Sales-Sales Amount** al cuadro **Expresión** del panel de las **expresiones de cálculo** después del signo más (+).  
   
-8.  En la lista **Cadena de formato** , seleccione **"Moneda"**.  
+8.  En la lista **Cadena de formato** , seleccione **"Moneda"** .  
   
 9. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -94,7 +94,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
     [Measures].[Internet Sales-Total Product Cost] + [Measures].[Reseller Sales-Total Product Cost]  
     ```  
   
-14. En la lista **Cadena de formato** , seleccione **"Moneda"**.  
+14. En la lista **Cadena de formato** , seleccione **"Moneda"** .  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Total Product Cost** y **Reseller Sales-Total Product Cost**y haga clic en **Aceptar**.  
   
@@ -104,7 +104,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
 1.  Compruebe que **[Total Product Cost]** está seleccionado en el panel **Organizador de scripts** y, después, haga clic en **Nuevo miembro calculado** en la barra de herramientas de la pestaña **Cálculos** .  
   
-2.  En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Internet GPM]**.  
+2.  En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Internet GPM]** .  
   
 3.  En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -114,13 +114,13 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
     [Measures].[Internet Sales-Sales Amount]  
     ```  
   
-4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+4.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 5.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 6.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-7.  En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Reseller GPM]**.  
+7.  En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Reseller GPM]** .  
   
 8.  En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -130,13 +130,13 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
     [Measures].[Reseller Sales-Sales Amount]  
     ```  
   
-9. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+9. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 10. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 11. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-12. En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Total GPM]**.  
+12. En el cuadro **Nombre** , cambie el nombre de esta nueva medida calculada a **[Total GPM]** .  
   
 13. En el cuadro **Expresión** , cree la siguiente expresión MDX:  
   
@@ -148,7 +148,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     Observe que este miembro calculado hace referencia a otros miembros calculados. Como este miembro calculado se calculará después de los miembros calculados a los que hace referencia, se tratará de un miembro calculado válido.  
   
-14. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+14. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 15. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   
@@ -172,7 +172,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     Si hace clic en el miembro calculado final del panel **Organizador de script** antes de hacer clic en **Nuevo miembro calculado** se asegurará de que el nuevo miembro calculado se escribe al final del script. Los scripts se ejecutan en el orden en el que aparecen en el panel **Organizador de script** .  
   
-3.  Cambie el nombre de este nuevo miembro calculado a **[Internet Sales Ratio to All Products]**.  
+3.  Cambie el nombre de este nuevo miembro calculado a **[Internet Sales Ratio to All Products]** .  
   
 4.  Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -189,13 +189,13 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
   
     Esta expresión MDX calcula la contribución al total de ventas por Internet de cada producto. La instrucción Case junto con la función IS EMPTY garantiza que no se produzca un error de división por cero cuando un producto no tiene ventas.  
   
-5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+5.  En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 6.  En la lista **Comportamiento si no está vacío** , active la casilla **Internet Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 7.  En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-8.  Cambie el nombre de este miembro calculado a **[Reseller Sales Ratio to All Products]**.  
+8.  Cambie el nombre de este miembro calculado a **[Reseller Sales Ratio to All Products]** .  
   
 9. Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -210,13 +210,13 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
         End  
     ```  
   
-10. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+10. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 11. En la lista **Comportamiento si no está vacío** , active la casilla **Reseller Sales-Sales Amount**y, después, haga clic en **Aceptar**.  
   
 12. En la barra de herramientas de la pestaña **Cálculos** , haga clic en **Nuevo miembro calculado**.  
   
-13. Cambie el nombre de este miembro calculado a **[Total Sales Ratio to All Products]**.  
+13. Cambie el nombre de este miembro calculado a **[Total Sales Ratio to All Products]** .  
   
 14. Escriba la siguiente expresión en el cuadro **Expresión** :  
   
@@ -231,7 +231,7 @@ En las tareas de este tema se definen medidas calculadas para permitir que los u
         End  
     ```  
   
-15. En la lista **Cadena de formato** , seleccione **"Porcentaje"**.  
+15. En la lista **Cadena de formato** , seleccione **"Porcentaje"** .  
   
 16. En la lista **Comportamiento si no está vacío** , active las casillas **Internet Sales-Sales Amount** y **Reseller Sales-Sales Amount**y haga clic en **Aceptar**.  
   

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ad2038e28afb455dd1ad239a2bf02cab99ed4d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807571"
 ---
 # <a name="mdx-cell-properties---formattedvalue-property"></a>Propiedades de celdas MDX: FORMATTED_VALUE propiedad
@@ -85,7 +85,7 @@ ms.locfileid: "62807571"
 |E|5,04E+03|FORMAT_STRING se establece en `Scientific` y LANGUAGE se establece explícitamente en `1034,` , por tanto, `,` (coma) será el separador decimal.|  
 |F|50,40 %|FORMAT_STRING se establece en `Percent` y LANGUAGE en `1033`, al heredar el valor de la configuración regional del sistema; por tanto, `.` (punto) será el separador decimal.<br /><br /> Observe que VALUE se ha modificado de 5040 a 0.5040|  
 |G|50,40 %|FORMAT_STRING se establece en `Percent`, al heredar de F, y LANGUAGE se establece explícitamente en `1034` ; por tanto, `,` (coma) será el separador decimal.<br /><br /> Observe que VALUE se ha heredado del valor F.|  
-|H|No|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
+|H|Sin|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; como no hay diferencia entre el inglés NO y el español NO, el usuario no puede apreciar ninguna diferencia en FORMATTED_VALUE.|  
 |I|SI|FORMAT_STRING se establece en `YES/NO`, VALUE se establece en 59 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato YES/NO, cualquier valor que no sea cero (0) es YES y, dado que el idioma está establecido en español, FORMATTED_VALUE es SI.|  
 |J|Desactivado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en 0 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió para el formato ON/OFF, cualquier valor igual a cero (0) es OFF y, dado que el idioma se estableció en español, FORMATTED_VALUE es Desactivado.|  
 |K|Activado|FORMAT_STRING se establece en `ON/OFF`, VALUE se establece en -312 y LANGUAGE se establece explícitamente en `1034`; tal y como se definió en el formato de ON/OFF, cualquier valor distinto de (0) es ON, y dado que el idioma está establecido en español, el valor de FORMATTED_VALUE es Activado.|  

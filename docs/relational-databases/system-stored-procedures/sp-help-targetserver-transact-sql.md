@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5c809679694811d23b01dee426aa1afdd7d5cf06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017821"
 ---
 # <a name="sphelptargetserver-transact-sql"></a>sp_help_targetserver (Transact-SQL)
@@ -41,7 +41,7 @@ sp_help_targetserver
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @server_name = ] 'server_name'` El nombre del servidor para el que se va a devolver información. *nombre_servidor* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @server_name = ] 'server_name'` El nombre del servidor para el que se va a devolver información. *nombre_servidor* es **nvarchar (30)** , su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: cab3797092b4f87c9831dcfe5fd26d77b5ec2884
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814546"
 ---
 # <a name="failover-and-failover-modes-alwayson-availability-groups"></a>Conmutación por error y modos de conmutación por error (grupos de disponibilidad AlwaysOn)
@@ -64,9 +64,9 @@ ms.locfileid: "62814546"
   
 ||Modo de confirmación asincrónica|Modo de confirmación sincrónica con modo de conmutación por error manual|Modo de confirmación sincrónica con modo de conmutación por error automática|  
 |-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
-|conmutación automática por error|No|No|Sí|  
+|conmutación automática por error|Sin|No|Sí|  
 |Conmutación por error manual planeada|No|Sí|Sí|  
-|conmutación por error forzada|Sí|Sí|Sí**<sup>*</sup>**|  
+|conmutación por error forzada|Sí|Sí|Sí **<sup>*</sup>**|  
   
  **<sup>*</sup>**  Si emite un comando de conmutación por error forzada en una réplica secundaria sincronizada, la réplica secundaria comporta igual que para una conmutación por error manual.  
   

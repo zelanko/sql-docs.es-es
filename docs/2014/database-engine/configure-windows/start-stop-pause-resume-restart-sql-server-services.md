@@ -41,10 +41,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808754"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser
@@ -76,7 +76,7 @@ ms.locfileid: "62808754"
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son programas ejecutables que funcionan como un servicio de Windows. Los programas que se ejecutan como servicio de Windows pueden seguir funcionando sin mostrar actividad alguna en la pantalla del equipo.  
   
  **[!INCLUDE[ssDE](../../includes/ssde-md.md)] del ssDE**  
- El proceso ejecutable que es [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede ser la instancia predeterminada (límite de una por equipo) o puede ser una de las numerosas instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar las instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que están instaladas en el equipo. La instancia predeterminada (si la instala) aparece como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)**. Las instancias con nombre (si las instala) aparecen como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nombre_instancia>)**. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)**.  
+ El proceso ejecutable que es [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssDE](../../includes/ssde-md.md)] puede ser la instancia predeterminada (límite de una por equipo) o puede ser una de las numerosas instancias con nombre de [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Use el Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para determinar las instancias de [!INCLUDE[ssDE](../../includes/ssde-md.md)] que están instaladas en el equipo. La instancia predeterminada (si la instala) aparece como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** . Las instancias con nombre (si las instala) aparecen como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<nombre_instancia>)** . De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala como **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** .  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Servicio del Agente**  
  Servicio de Windows que ejecuta tareas administrativas programadas, denominadas trabajos y alertas. Para obtener más información, consulte [SQL Server Agent](../../ssms/agent/sql-server-agent.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no está disponible en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  

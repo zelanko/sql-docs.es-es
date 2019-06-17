@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63004156"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (Transact-SQL)
@@ -59,16 +59,16 @@ sp_special_columns [ @table_name = ] 'table_name'
  Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
  [ @col_type=] '*col_type*'  
- Es el tipo de columna. *Col_type* es **char (** 1 **)**, su valor predeterminado es R. el tipo R devuelve la columna óptima o el conjunto de columnas que, al recuperar valores de la columna o columnas, permite que cualquier fila en la instancia especificada tabla para identificarse de forma exclusiva. Una columna puede ser una pseudocolumna diseñada específicamente para este propósito o bien la columna o columnas de cualquier índice único de la tabla. El tipo V devuelve la columna o columnas de la tabla especificada (en su caso) que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila.  
+ Es el tipo de columna. *Col_type* es **char (** 1 **)** , su valor predeterminado es R. el tipo R devuelve la columna óptima o el conjunto de columnas que, al recuperar valores de la columna o columnas, permite que cualquier fila en la instancia especificada tabla para identificarse de forma exclusiva. Una columna puede ser una pseudocolumna diseñada específicamente para este propósito o bien la columna o columnas de cualquier índice único de la tabla. El tipo V devuelve la columna o columnas de la tabla especificada (en su caso) que el origen de datos actualiza automáticamente cuando una transacción actualiza cualquier valor de la fila.  
   
  [ @scope=] '*ámbito*'  
- Es el ámbito mínimo necesario del ROWID. *ámbito* es **char (** 1 **)**, su valor predeterminado es T. el ámbito C especifica que el ROWID es válido solo cuando se coloca en esa fila. El ámbito T especifica que el ROWID es válido para la transacción.  
+ Es el ámbito mínimo necesario del ROWID. *ámbito* es **char (** 1 **)** , su valor predeterminado es T. el ámbito C especifica que el ROWID es válido solo cuando se coloca en esa fila. El ámbito T especifica que el ROWID es válido para la transacción.  
   
  [ @nullable=] '*que acepta valores NULL*'  
- Indica si las columnas especiales pueden o no aceptar un valor NULL. *que acepta valores NULL* es **char (** 1 **)**, su valor predeterminado es U. o especifica columnas especiales que no admiten valores null. U especifica columnas que admiten parcialmente valores NULL.  
+ Indica si las columnas especiales pueden o no aceptar un valor NULL. *que acepta valores NULL* es **char (** 1 **)** , su valor predeterminado es U. o especifica columnas especiales que no admiten valores null. U especifica columnas que admiten parcialmente valores NULL.  
   
  [ @ODBCVer=] '*ODBCVer*'  
- Es la versión de ODBC utilizada. *ODBCVer* es **int (** 4 **)**, con el valor predeterminado es 2. Esto indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, vea la especificación SQLSpecialColumns para ODBC versión 3.0.  
+ Es la versión de ODBC utilizada. *ODBCVer* es **int (** 4 **)** , con el valor predeterminado es 2. Esto indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, vea la especificación SQLSpecialColumns para ODBC versión 3.0.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -82,7 +82,7 @@ sp_special_columns [ @table_name = ] 'table_name'
 |DATA_TYPE|**smallint**|Tipo de datos de ODBC SQL.|  
 |TYPE_NAME|**sysname**|Nombre de tipo de datos dependiente del origen de datos; Por ejemplo, **char**, **varchar**, **dinero**, o **texto**.|  
 |PRECISION|**Int**|Precisión de la columna en el origen de datos. Este campo siempre devuelve un valor.|  
-|LENGTH|**Int**|Longitud, en bytes, necesario para el tipo de datos en su forma binaria en el origen de datos, por ejemplo, 10 para **char (** 10 **)**, 4 para **entero**y 2 para **smallint** .|  
+|LENGTH|**Int**|Longitud, en bytes, necesario para el tipo de datos en su forma binaria en el origen de datos, por ejemplo, 10 para **char (** 10 **)** , 4 para **entero**y 2 para **smallint** .|  
 |SCALE|**smallint**|Escala de la columna en el origen de datos. NULL se devuelve para los tipos de datos a los que no se aplica la escala.|  
 |PSEUDO_COLUMN|**smallint**|Indica si la columna es una pseudocolumna. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre devuelve 1:<br /><br /> 0 = SQL_PC_UNKNOWN<br /><br /> 1 = SQL_PC_NOT_PSEUDO<br /><br /> 2 = SQL_PC_PSEUDO|  
   

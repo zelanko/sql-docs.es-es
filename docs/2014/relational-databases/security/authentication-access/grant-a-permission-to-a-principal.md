@@ -13,10 +13,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 9b0ff18a9b3c6ff338a2b827b91ff20bbc7b2ce9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63011952"
 ---
 # <a name="grant-a-permission-to-a-principal"></a>Conceder un permiso a una entidad de seguridad
@@ -65,7 +65,7 @@ ms.locfileid: "63011952"
   
 4.  Haga clic con el botón derecho en un procedimiento almacenado y seleccione **Propiedades**.  
   
-5.  En el **propiedades del procedimiento almacenado -**_stored_procedure_name_ cuadro de diálogo Seleccionar una página, seleccione **permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
+5.  En el **propiedades del procedimiento almacenado -** _stored_procedure_name_ cuadro de diálogo Seleccionar una página, seleccione **permisos**. Utilice esta página para agregar usuarios o roles al procedimiento almacenado y especificar los permisos que los usuarios o los roles tienen.  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

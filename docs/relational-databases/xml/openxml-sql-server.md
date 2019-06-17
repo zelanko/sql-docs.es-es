@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2197039cd6517e27fef9711e56607418add0003e
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935886"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -166,11 +166,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Las asignaciones se pueden especificar de las dos maneras siguientes:  
   
--   Mediante el uso del parámetro *flags*   
+-   Mediante el uso del parámetro *flags*  
   
      La asignación que se especifica con el parámetro *flags* da por supuesto la correspondencia de nombres, según la cual los nodos XML se asignan a las columnas del conjunto de filas con el mismo nombre.  
   
--   Mediante el uso del parámetro *ColPattern*   
+-   Mediante el uso del parámetro *ColPattern*  
   
      *ColPattern*, una expresión XPath, se especifica como parte de *SchemaDeclaration* en la cláusula WITH. La asignación especificada en *ColPattern* sobrescribe la asignación que especifica el parámetro *flags* .  
   

@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c98f7a5714d7cd0813d5a4a7df6cf23c7b661414
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652549"
 ---
 # <a name="secondary-database-settings"></a>Configuración de base de datos secundaria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "51560492"
  Hace que [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] utilice una copia de seguridad existente de la base de datos principal para inicializar la base de datos secundaria. Escriba la ubicación de dicha copia de seguridad en el cuadro **Archivo de copia de seguridad** . Si ha especificado un nombre de base de datos nuevo en el cuadro Base de datos secundaria, la base de datos se creará como parte de la operación de restauración.  
   
  **Archivo de copia de seguridad**  
- Escriba la ruta de acceso y el nombre de archivo de la copia de seguridad completa de la base de datos que quiere usar para inicializar la base de datos secundaria si elige la opción **Sí, restaurar una copia de seguridad existente de la base de datos principal en la base de datos secundaria (y crear la base de datos secundaria si no existe)**.  
+ Escriba la ruta de acceso y el nombre de archivo de la copia de seguridad completa de la base de datos que quiere usar para inicializar la base de datos secundaria si elige la opción **Sí, restaurar una copia de seguridad existente de la base de datos principal en la base de datos secundaria (y crear la base de datos secundaria si no existe)** .  
   
  **Opciones de restauración**  
  Vea la descripción de este botón realizada anteriormente en este mismo tema.  
@@ -76,7 +76,7 @@ ms.locfileid: "51560492"
  Muestra el nombre del trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal al servidor secundario. Cuando se crea este trabajo por primera vez, se puede cambiar el nombre escribiéndolo en el cuadro.  
   
  **Programación**  
- Muestra la programación actual del trabajo de copia del Agente SQL Server utilizada para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal en el servidor secundario. Puede modificar esta programación haciendo clic en **Programar...**.  
+ Muestra la programación actual del trabajo de copia del Agente SQL Server utilizada para copiar los archivos de copia de seguridad del registro de transacciones del servidor principal en el servidor secundario. Puede modificar esta programación haciendo clic en **Programar...** .  
   
  **Programar...**  
  Modifique los parámetros del trabajo del Agente SQL Server que realiza las copias de seguridad del registro de transacciones del servidor principal en el servidor secundario.  
@@ -109,7 +109,7 @@ ms.locfileid: "51560492"
  Muestra el nombre del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Cuando se crea este trabajo por primera vez, se puede cambiar el nombre escribiéndolo en el cuadro.  
   
  **Programación**  
- Muestra la programación actual del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Puede modificar esta opción haciendo clic en **Programar...**.  
+ Muestra la programación actual del trabajo del Agente SQL Server utilizado para restaurar las copias de seguridad del registro de transacciones en la base de datos secundaria. Puede modificar esta opción haciendo clic en **Programar...** .  
   
  **Programar...**  
  Modifique los parámetros asociados con el trabajo de restauración del Agente SQL Server.  
@@ -117,7 +117,7 @@ ms.locfileid: "51560492"
  **Deshabilitar este trabajo**  
  Suspende las operaciones de restauración en la base de datos secundaria.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Acerca del trasvase de registros &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)  
   

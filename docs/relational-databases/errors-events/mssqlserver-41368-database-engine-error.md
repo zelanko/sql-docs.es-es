@@ -14,11 +14,11 @@ ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
 ms.openlocfilehash: 861e35fcb9c201057e7595316dc90b5f7cc33903
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47622613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632542"
 ---
 # <a name="mssqlserver41368"></a>MSSQLSERVER_41368
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ Al obtener acceso a una tabla optimizada para memoria desde una transacción exp
 ## <a name="user-action"></a>Acción del usuario  
 Utilice SNAPSHOT para tener acceso a una tabla optimizada para memoria desde una transacción READ COMMITTED explícita o implícita. Se puede tener acceso mediante la sugerencia de tabla WITH (SNAPSHOT) (para obtener más información, vea [Transacciones con tablas en memoria y procedimientos](~/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)) o estableciendo la opción de base de datos MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT en ON (para obtener más información, vea [Opciones de ALTER DATABASE SET &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql.md)).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

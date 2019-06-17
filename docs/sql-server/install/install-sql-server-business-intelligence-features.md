@@ -11,11 +11,11 @@ author: markingmyname
 ms.author: maghan
 manager: kfile
 ms.openlocfilehash: b181ab608b059890a74435e07f010e7633e965d4
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51696063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685046"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>Install SQL Server Business Intelligence Features (Instalar las características de SQL Server Business Intelligence)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "51696063"
 > [!NOTE]
 > SQL Server Data Tools (SSDT) no se incluye con SQL Server 2016. [Descargar SQL Server Data Tools](https://go.microsoft.com/fwlink/?LinkID=616714).
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Novedades de Reporting Services &#40;SSRS&#41;](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
  [Novedades de Analysis Services](../../analysis-services/what-s-new-in-analysis-services.md)   
  [Novedades de Integration Services](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   

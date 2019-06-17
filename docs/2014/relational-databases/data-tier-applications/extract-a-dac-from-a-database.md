@@ -22,10 +22,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7fc0aab989eb46b64ef6b9919f999ba13c4ef74f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872876"
 ---
 # <a name="extract-a-dac-from-a-database"></a>Extraer una DAC de una base de datos
@@ -51,7 +51,7 @@ ms.locfileid: "62872876"
   
 2.  Expanda el nodo **Bases de datos** .  
   
-3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...**.  
+3.  Haga clic con el botón derecho en el nodo de la base de datos del que se va a extraer la DAC, haga clic en **Tareas** y, después, seleccione **Extraer aplicación de capa de datos...** .  
   
 4.  Complete los cuadros de diálogo del asistente:  
   
@@ -77,7 +77,7 @@ ms.locfileid: "62872876"
 ###  <a name="SelectData"></a> Página Seleccionar datos  
  Use esta página del asistente para seleccionar los datos de referencia que desee incluir en el archivo de paquete de la aplicación de capa de datos (DAC). La inclusión de datos en el paquete DAC es opcional. El paquete DAC ya incluirá el esquema de todos los objetos de base de datos compatibles y los objetos de instancia relacionados con la base de datos  
   
- Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)**. Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
+ Puede incluir hasta 10 MB de datos de referencia en el archivo del paquete DAC. Pero, en cuanto a las tablas que se van a incluir en el DAC, puede que no contengan tipos de datos de objetos binarios grandes (BLOB) como **image** o **varchar(max)** . Para extraer cantidades de datos más grandes con el fin de transferirlos a otra base de datos, use SQL Server Integration Services, la utilidad de copia masiva o una de las muchas otras técnicas de migración de datos.  
   
  **Tabla de base de datos:** active la casilla situada junto a las tablas de base de datos que contengan los datos que quiera incluir en el paquete DAC. Puede seleccionar hasta diez tablas con 10.000 filas o menos.  
   

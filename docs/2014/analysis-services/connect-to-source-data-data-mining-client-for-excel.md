@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 468686314bb2446415a6883c6233708f9cbd1d2b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66087100"
 ---
 # <a name="connect-to-source-data-data-mining-client-for-excel"></a>Conectar con los datos de origen (Cliente de minería de datos para Excel)
@@ -60,7 +60,7 @@ ms.locfileid: "66087100"
   
 4.  Especifique el método de autenticación.  
   
-5.  Seleccione una base de datos desde el **CatalogName** lista desplegable. Si no existe ninguna base de datos en la instancia, seleccione **(valor predeterminado)**.  
+5.  Seleccione una base de datos desde el **CatalogName** lista desplegable. Si no existe ninguna base de datos en la instancia, seleccione **(valor predeterminado)** .  
   
 6.  Escriba un nombre descriptivo para la conexión.  
   

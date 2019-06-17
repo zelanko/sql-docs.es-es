@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: f652519efc4b77bd785cdded468fe114f6499200
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62891553"
 ---
 # <a name="step-6-adding-and-configuring-the-lookup-transformations"></a>Paso 6: Adición y configuración de transformaciones de búsqueda
@@ -114,7 +114,7 @@ ms.locfileid: "62891553"
   
     1.  En el cuadro de diálogo **Administrador de conexiones OLEDB** , asegúrese de que se muestra **localhost.AdventureWorksDW2012** .  
   
-    2.  En el cuadro **Usar una tabla o vista** , escriba o seleccione **[dbo].[DimDate]**.  
+    2.  En el cuadro **Usar una tabla o vista** , escriba o seleccione **[dbo].[DimDate]** .  
   
 8.  En la página **Columnas** , realice las selecciones siguientes:  
   

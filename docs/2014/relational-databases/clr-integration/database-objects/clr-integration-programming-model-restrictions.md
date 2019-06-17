@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: a9b51e0fc192c94b32b4d496523dbf3c9216efd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62873819"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
@@ -37,7 +37,7 @@ ms.locfileid: "62873819"
   
 -   El ensamblado es uno de los ensamblados compatibles. Para obtener más información, consulte [admite bibliotecas de .NET Framework](supported-net-framework-libraries.md).  
   
--   Usa `CREATE ASSEMBLY FROM`  *\<ubicación >,* y están disponibles en todos los ensamblados que se hace referencia y sus dependencias  *\<ubicación >*.  
+-   Usa `CREATE ASSEMBLY FROM`  *\<ubicación >,* y están disponibles en todos los ensamblados que se hace referencia y sus dependencias  *\<ubicación >* .  
   
 -   Usa `CREATE ASSEMBLY FROM`  *\<bytes... >,* y todas las referencias se especifican a través de espacio separados por bytes.  
   

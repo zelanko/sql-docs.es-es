@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62796188"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
@@ -54,7 +54,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
-`[ @operation = ] 'operation'` Operación válida del trabajo especificado. *operación* es **varchar(64)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @operation = ] 'operation'` Operación válida del trabajo especificado. *operación* es **varchar(64)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -68,11 +68,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SYNC-TIME**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
 |**UPDATE**|Operación de trabajo que sólo actualiza la **sysjobs** información para un trabajo, no los pasos de trabajo o programaciones. Se llama automáticamente **sp_update_job**.|  
   
-`[ @object_type = ] 'object_type'` El tipo de objeto para el trabajo especificado. *object_type* es **varchar(64)**, su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información sobre válido *object_type*valores, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
+`[ @object_type = ] 'object_type'` El tipo de objeto para el trabajo especificado. *object_type* es **varchar(64)** , su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información sobre válido *object_type*valores, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  
   
 `[ @object_name = ] 'object_name'` El nombre del objeto. *object_name* es **sysname**, su valor predeterminado es null. Si *object_type* es trabajo, *object_name*es el nombre del trabajo. Si *object_type*es servidor, *object_name*es el nombre del servidor.  
   
-`[ @target_server = ] 'target_server'` El nombre del servidor de destino. *target_server* es **nvarchar (128)**, su valor predeterminado es null.  
+`[ @target_server = ] 'target_server'` El nombre del servidor de destino. *target_server* es **nvarchar (128)** , su valor predeterminado es null.  
   
 `[ @has_error = ] has_error` Es si el trabajo tiene que reconocer errores. *has_error* es **tinyint**, su valor predeterminado es null, lo que indica que no se deben reconocer errores. **1** indica que se deben reconocer todos los errores.  
   

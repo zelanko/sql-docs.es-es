@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 6ac37c6d3a55be4f11a4ad925a950724d5d791d7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62934839"
 ---
 # <a name="data-accessor-functions---data-xquery"></a>Funciones del descriptor de acceso a datos: data (XQuery)
@@ -60,7 +60,7 @@ fn:data ($arg as item()*) as xdt:untypedAtomic*
   
 -   Si el nodo de elemento no se ha escrito, su valor con tipo es igual al valor de cadena que se devuelve como una instancia de **xdt: untypedAtomic**.  
   
- La siguiente información se aplica a los nodos de elemento con tipo:    
+ La siguiente información se aplica a los nodos de elemento con tipo:  
   
 -   Si el elemento tiene un tipo de contenido simple, **data()** devuelve el valor con tipo del elemento.  
   

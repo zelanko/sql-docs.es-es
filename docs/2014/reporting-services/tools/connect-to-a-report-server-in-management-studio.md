@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 93cd0c424a5173539eedfa4d53ac93fa04f5962c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100437"
 ---
 # <a name="connect-to-a-report-server-in-management-studio"></a>Conectar con un servidor de informes en Management Studio
@@ -45,7 +45,7 @@ ms.locfileid: "66100437"
   
 2.  Haga clic en **Conectar** para ver la lista de tipos de servidor y, a continuación, seleccione **Reporting Services**.  
   
-3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]*.  
+3.  En el cuadro de diálogo **Conectar al servidor** , escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]* .  
   
 4.  Seleccione el tipo de autenticación. Si está usando la autenticación de Windows, debe conectarse usando sus credenciales. Si selecciona la autenticación básica o la autenticación de formularios, escriba la cuenta y la contraseña.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "66100437"
   
 4.  Para **Nombre del servidor**, escriba un valor. El valor que debe especificar variará según el modo de servidor:  
   
-    -   Para un servidor de informes en modo nativo, escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]*.  
+    -   Para un servidor de informes en modo nativo, escriba el nombre de la instancia del servidor de informes. Los nombres de instancia del servidor de informes se basan en nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De manera predeterminada, el nombre de una instancia del servidor de informes local es únicamente el nombre del equipo. Si instaló el servidor de informes como una instancia con nombre, use esta sintaxis para especificar el servidor: *\<nombreDeServidor>[\\<nombreDeInstancia\>]* .  
   
     -   Para un servidor de informes que se ejecuta en el modo integrado con SharePoint, el servidor al que se va a conectar es el sitio de SharePoint con el que el servidor de informes está conectado. La conexión al sitio de SharePoint es necesaria para poder ver los niveles de permiso que controlan el acceso a las operaciones y el contenido del servidor de informes. Puede especificar cualquier sitio de la colección de sitios. En el ejemplo siguiente se ilustra la sintaxis: http://mysharepointsite.  
   

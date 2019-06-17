@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632775"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>Hora y funciones de fecha (el controlador ODBC de Visual FoxPro)
@@ -61,7 +61,7 @@ La tabla siguiente muestran funciones de fecha y hora ODBC compatibles con el co
 --(*vendor(Microsoft),product(ODBC) ts ''value' *)-  
 ```  
   
- En esta sintaxis, **d.** indica que *valor* es una fecha en la *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh: mm:*[.*f...*] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
+ En esta sintaxis, **d.** indica que *valor* es una fecha en la *aaaa-mm-dd* formato y **ts** indica que *valor*  es una marca de tiempo en el *aaaa-mm-dd hh: mm:* [.*f...* ] formato. La sintaxis abreviada para datos de fecha y la marca de tiempo es como sigue:  
   
 ```  
 {d 'value'}  

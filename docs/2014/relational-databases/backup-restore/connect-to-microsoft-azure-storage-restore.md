@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 506f074a8693e54bdc51882ab08b19e9ea3e1994
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876615"
 ---
 # <a name="connect-to-windows-azure-storage-restore"></a>Conectarse a Azure Storage (Restaurar)
@@ -29,10 +29,10 @@ ms.locfileid: "62876615"
  **Clave de cuenta**  
  Especifique la tecla de acceso de la cuenta de Almacenamiento de Windows Azure.  
   
- Casilla**Usar puntos de conexión seguros (HTTPS)**   
+ Casilla**Usar puntos de conexión seguros (HTTPS)**  
  Seleccione esta opción para establecer una conexión segura con Almacenamiento de Windows Azure (recomendado).  
   
- Casilla**Guardar clave de cuenta**   
+ Casilla**Guardar clave de cuenta**  
  Active esta casilla si desea que SQL Server recuerde la tecla de acceso para esta cuenta de almacenamiento.  
   
 ### <a name="sql-credential"></a>Credencial SQL  

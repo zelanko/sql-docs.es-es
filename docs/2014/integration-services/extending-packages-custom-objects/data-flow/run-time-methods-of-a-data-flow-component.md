@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e107660073716019f48def8578a424ead92abf32
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768641"
 ---
 # <a name="run-time-methods-of-a-data-flow-component"></a>Métodos en tiempo de ejecución de un componente de flujo de datos
@@ -56,7 +56,7 @@ ms.locfileid: "62768641"
 ### <a name="primeoutput-method"></a>Método PrimeOutput  
  Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> cuando un componente tiene por lo menos una salida, adjuntada a un componente de nivel inferior a través de un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100>, y la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A> de la salida es cero. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.PrimeOutput%2A> para los componentes de origen y para las transformaciones con salidas asincrónicas. A diferencia del método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> que se describe a continuación, cada componente que lo requiere llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.PrimeOutput%2A> una sola vez.  
   
-### <a name="processinput-method"></a>Método ProcessInput   
+### <a name="processinput-method"></a>Método ProcessInput  
  Un objeto <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> para los componentes que tienen al menos una salida adjuntada a un componente de nivel superior. Se llama al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSRuntimeComponent100.ProcessInput%2A> para los componentes de destino y para las transformaciones con salidas sincrónicas. Se llama a <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.ProcessInput%2A> varias veces hasta que no hay más filas de componentes de nivel superior que procesar.  
   
 ## <a name="working-with-inputs-and-outputs"></a>Trabajar con entradas y salidas  

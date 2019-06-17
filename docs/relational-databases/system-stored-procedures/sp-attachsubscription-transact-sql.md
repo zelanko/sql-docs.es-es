@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996102"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
@@ -56,7 +56,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>Argumentos  
 `[ @dbname = ] 'dbname'` Es la cadena que especifica la base de datos de suscripción de destino por nombre. *dbname* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @filename = ] 'filename'` Es el nombre y la ubicación física del MDF principal (**maestro** archivo de datos). *nombre de archivo* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
+`[ @filename = ] 'filename'` Es el nombre y la ubicación física del MDF principal (**maestro** archivo de datos). *nombre de archivo* es **nvarchar (260)** , no tiene ningún valor predeterminado.  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` Es el modo de seguridad del suscriptor que se utilizará al conectarse a un suscriptor durante la sincronización. *subscriber_security_mode* es **int**, su valor predeterminado es null.  
   
@@ -91,14 +91,14 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)** , no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para conexiones del agente con el distribuidor.  
   
 `[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado. El valor de *job_password* debe tener menos de 120 caracteres Unicode.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @db_master_key_password = ] 'db_master_key_password'` Es la contraseña de una definida por el usuario clave maestra. *db_master_key_password* es **nvarchar (524)**, su valor predeterminado es null. Si *db_master_key_password* no se especifica, se puede quitar y volver a crear una clave maestra de base de datos existente.  
+`[ @db_master_key_password = ] 'db_master_key_password'` Es la contraseña de una definida por el usuario clave maestra. *db_master_key_password* es **nvarchar (524)** , su valor predeterminado es null. Si *db_master_key_password* no se especifica, se puede quitar y volver a crear una clave maestra de base de datos existente.  
   
 > [!IMPORTANT]  
 >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  

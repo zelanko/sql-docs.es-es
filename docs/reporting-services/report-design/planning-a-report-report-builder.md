@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 79113505-1ce8-4f8c-9260-d861838f7813
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1e67d710530da43216873728ff5f1159ce8fa50f
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 9c65d1db987f5d317b0719ff101012b4db0a5873
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581474"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67038025"
 ---
 # <a name="planning-a-report-report-builder"></a>Planear un informe (Generador de informes)
   El Generador de informes permite crear varios tipos de informes paginados. Por ejemplo, puede crear informes que muestren los datos de ventas detallados o resumidos, las tendencias de marketing y de ventas, los informes de operaciones o los paneles. También puede crear informes que aprovechen el texto de formato enriquecido, por ejemplo, para pedidos de ventas, catálogos de productos o circulares. Todos estos informes se crean utilizando combinaciones diferentes de los mismos bloques de creación básicos en el Generador de informes. Para crear un informe útil, de fácil comprensión, sirve de ayuda planearlo primero. A continuación se detallan algunos de los aspectos que quizá desee considerar antes de empezar:  
@@ -51,7 +51,6 @@ ms.locfileid: "65581474"
   
 ## <a name="see-also"></a>Consulte también  
  [Generador de informes en SQL Server](../../reporting-services/report-builder/report-builder-in-sql-server-2016.md)   
- [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)   
- [Tutoriales del Generador de informes](../../reporting-services/report-builder-tutorials.md)  
+ [Reporting Services (SSRS) conceptos](../reporting-services-concepts-ssrs.md) [tutoriales del generador de informes](../../reporting-services/report-builder-tutorials.md)  
   
   

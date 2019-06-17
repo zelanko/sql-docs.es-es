@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 51147e4f-5f07-4ee6-8245-e937eefec71f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b48291a8b8ceed008d40048f1a27a3d5ba3c4b02
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 15cd2ab23a46bb9fa18a4b0fbf77b8ae3d958199
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733273"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66797037"
 ---
 # <a name="specifying-a-cursor-type-and-selecting-rows"></a>Especificación de un tipo de cursor y selección de filas
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -30,6 +30,6 @@ Puede crear un conjunto de resultados con filas a las que puede acceder en cualq
   
 -   [Cursor Types &#40;PDO_SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador PDO_SQLSRV&#41;)](../../connect/php/cursor-types-pdo-sqlsrv-driver.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
   

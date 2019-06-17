@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c1b95ee7-7e82-418f-8f30-948589086f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1af4961609b132ebf6b508b54386e4c02ee3e6e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6521405173f72ffe7a72974d0f8ea0ec261bc9e9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800398"
 ---
 # <a name="setnclob-method-javalangstring-javaioreader-long"></a>Método setNClob (java.lang.String, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public final void setNClob(java.lang.String parameterName,
   
  El método setNClob especifica este método setNClob en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setNClob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnclob-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)  
   

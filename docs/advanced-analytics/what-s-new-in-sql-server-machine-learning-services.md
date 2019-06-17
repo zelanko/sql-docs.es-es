@@ -10,12 +10,12 @@ ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c5871c6e33947f744dde571c329e8025b4a0813
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65993445"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140276"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -33,6 +33,7 @@ Esta versión agrega las características más solicitadas para las operaciones 
 
 | Versión | Actualización de características |
 |---------|----------------|
+| CTP 3.0 | No hay cambios. |
 | CTP 2.5 | No hay cambios. |
 | CTP 2.4 | Linux support para [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) R y Python. |
 | CTP 2.3 | En Windows solo, código de Python puede obtenerse en una biblioteca externa con la [CREATE EXTERNAL LIBRARY (Transact-SQL)](../t-sql/statements/create-external-library-transact-sql.md) instrucción. |

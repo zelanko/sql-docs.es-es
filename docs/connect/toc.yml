@@ -186,7 +186,7 @@
                 - name: Método getClob (SQLServerCallableStatement)
                   href: ../connect/jdbc/reference/getclob-method-sqlservercallablestatement.md
                   items:
-                    - name: 'Método getClob (int) '
+                    - name: Método getClob (int)
                       href: ../connect/jdbc/reference/getclob-method-int.md
                     - name: Método getClob (java.lang.String)
                       href: ../connect/jdbc/reference/getclob-method-java-lang-string.md
@@ -246,7 +246,7 @@
                 - name: Método getNClob (SQLServerCallableStatement)
                   href: ../connect/jdbc/reference/getnclob-method-sqlservercallablestatement.md
                   items:
-                    - name: 'Método getNClob (int) '
+                    - name: Método getNClob (int)
                       href: ../connect/jdbc/reference/getnclob-method-int.md
                     - name: Método getNClob (java.lang.String)
                       href: ../connect/jdbc/reference/getnclob-method-java-lang-string.md
@@ -1121,7 +1121,7 @@
                   href: ../connect/jdbc/reference/gettruststore-method-sqlserverdatasource.md
                 - name: Método getURL (SQLServerDataSource)
                   href: ../connect/jdbc/reference/geturl-method-sqlserverdatasource.md
-                - name: 'Método getSendTimeAsDatetime (SQLServerDataSource) '
+                - name: Método getSendTimeAsDatetime (SQLServerDataSource)
                   href: ../connect/jdbc/reference/getsendtimeasdatetime-method-sqlserverdatasource.md
                 - name: Método getUser (SQLServerDataSource)
                   href: ../connect/jdbc/reference/getuser-method-sqlserverdatasource.md
@@ -1177,7 +1177,7 @@
                   href: ../connect/jdbc/reference/setselectmethod-method-sqlserverdatasource.md
                 - name: Método setSendStringParametersAsUnicode (SQLServerDataSource)
                   href: ../connect/jdbc/reference/setsendstringparametersasunicode-method-sqlserverdatasource.md
-                - name: 'Método setSendTimeAsDatetime (SQLServerDataSource) '
+                - name: Método setSendTimeAsDatetime (SQLServerDataSource)
                   href: ../connect/jdbc/reference/setsendtimeasdatetime-method-sqlserverdatasource.md
                 - name: Método setServerName (SQLServerDataSource)
                   href: ../connect/jdbc/reference/setservername-method-sqlserverdatasource.md
@@ -1405,7 +1405,7 @@
                 - name: Método setAsciiStream (SQLServerPreparedStatement)
                   href: ../connect/jdbc/reference/setasciistream-method-sqlserverpreparedstatement.md
                   items:
-                    - name: 'Método setAsciiStream (int, java.io.InputStream) '
+                    - name: 'Método setAsciiStream (int, java.io.InputStream)'
                       href: ../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream.md
                     - name: 'Método setAsciiStream (int, java.io.InputStream, int)'
                       href: ../connect/jdbc/reference/setasciistream-method-int-java-io-inputstream-int.md
@@ -1901,7 +1901,7 @@
                       href: ../connect/jdbc/reference/updateblob-method-int-java-io-inputstream-long.md
                     - name: 'Método updateBlob (java.lang.String, java.sql.Blob)'
                       href: ../connect/jdbc/reference/updateblob-method-java-lang-string-java-sql-blob.md
-                    - name: 'Método updateBlob (java.lang.String, java.io.InputStream) '
+                    - name: 'Método updateBlob (java.lang.String, java.io.InputStream)'
                       href: ../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream.md
                     - name: 'Método updateBlob (java.lang.String, java.io.InputStream, long)'
                       href: ../connect/jdbc/reference/updateblob-method-java-lang-string-java-io-inputstream-long.md
@@ -1937,7 +1937,7 @@
                       href: ../connect/jdbc/reference/updatecharacterstream-method-int-java-io-reader-long.md
                     - name: 'Método updateCharacterStream (java.lang.String, java.io.Reader)'
                       href: ../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader.md
-                    - name: 'Método updateCharacterStream (java.lang.String, java.io.Reader, int) '
+                    - name: 'Método updateCharacterStream (java.lang.String, java.io.Reader, int)'
                       href: ../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-int.md
                     - name: 'Método updateCharacterStream (java.lang.String, java.io.Reader, long)'
                       href: ../connect/jdbc/reference/updatecharacterstream-method-java-lang-string-java-io-reader-long.md

@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a709d4badbd270d9ddffedd62ff040e8ca6c628
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63149469"
 ---
 # <a name="replay-option-distributed-replay-administration-tool"></a>Opción Replay (herramienta de administración de Distributed Replay)
@@ -58,7 +58,7 @@ ms.locfileid: "63149469"
  Cuando no se especifica el parámetro **-o**, no se genera el archivo de seguimiento de resultados. La salida de la consola devuelve información de resumen al final de la reproducción, pero no hay ninguna otra estadística de reproducción disponible.  
   
  **-s** *target_server*  
- Especifica la instancia de destino de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se debería volver a reproducir la carga de trabajo distribuida. Debe especificar este parámetro con el formato **nombre_servidor[\nombre de instancia]**.  
+ Especifica la instancia de destino de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en la que se debería volver a reproducir la carga de trabajo distribuida. Debe especificar este parámetro con el formato **nombre_servidor[\nombre de instancia]** .  
   
  No se puede utilizar "`localhost`" ni "`.`" como servidor de destino.  
   

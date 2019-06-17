@@ -2,17 +2,17 @@
 title: 'Problemas comunes con el servicio Launchpad y ejecución de script externo: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: ''
-ms.date: 05/31/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: bddc2d2e4021ee0df196078b47e3ecbba96833b6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509702"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140209"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>Problemas comunes con el servicio Launchpad y ejecución de scripts externos en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -185,7 +185,7 @@ EXEC sp_execute_external_script @language = N'R',
 Para resolver el problema, debe volver a instalar el paquete a la biblioteca de la instancia de SQL Server.
 
 >[!NOTE]
->Si ha actualizado una instancia de SQL Server 2016 para usar la versión más reciente de Microsoft R, la ubicación de la biblioteca predeterminada es diferente. Para obtener más información, consulte [Use SqlBindR para actualizar una instancia de R Services](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+>Si ha actualizado una instancia de SQL Server 2016 para usar la versión más reciente de Microsoft R, la ubicación de la biblioteca predeterminada es diferente. Para obtener más información, consulte [Use SqlBindR para actualizar una instancia de R Services](install/upgrade-r-and-python.md).
 
 ## <a name="launchpad-shuts-down-due-to-mismatched-dlls"></a>LaunchPad se cierra a causa de los archivos DLL que no coinciden
 

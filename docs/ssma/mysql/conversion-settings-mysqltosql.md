@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253262"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configuración de conversión (MySQLToSQL)
@@ -67,11 +67,11 @@ Estas opciones estarán disponibles en función del tipo de nodo de la Metabase.
   
         -   Sí  
   
-        -   No  
+        -   Sin  
   
         -   Convertir según la configuración del proyecto  
   
-    2.  Si **'Sí'**, esta configuración prohíbe la creación de la creación de la columna auxiliar ROWID en tablas de destino.  
+    2.  Si **'Sí'** , esta configuración prohíbe la creación de la creación de la columna auxiliar ROWID en tablas de destino.  
   
     3.  La configuración realizada por el usuario se guarda en el archivo de preferencias en cascada al hacer clic en **aplicar** botón.  
   

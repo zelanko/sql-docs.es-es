@@ -2,17 +2,17 @@
 title: 'Problemas conocidos de lenguaje R y la integración de Python: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/29/2019
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 2b9ed73b2b4cb65696f9809d757eb901367dde63
-ms.sourcegitcommit: b6ca8596c040fa731efd397e683226516c9f8359
+ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/29/2019
-ms.locfileid: "64906162"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140729"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Problemas conocidos de Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -136,7 +136,7 @@ Este mensaje aparece si cualquiera de las dos instrucciones siguientes es true,
 + Instaló R Server (independiente) en un equipo cliente mediante el Asistente para instalación [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
 + Ha instalado Microsoft R Server mediante el uso de la [separar el instalador de Windows](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-Para asegurarse de que el cliente y servidor usan la misma versión que es posible que deba usar _enlace_compatible para Microsoft R Server 9.0 y versiones posteriores actualizar los componentes de R en las instancias de SQL Server 2016. Para determinar si la compatibilidad con las actualizaciones está disponible para su versión de R Services, consulte [actualizar una instancia de R Services con SqlBindR.exe](r/use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md).
+Para asegurarse de que el cliente y servidor usan la misma versión que es posible que deba usar _enlace_compatible para Microsoft R Server 9.0 y versiones posteriores actualizar los componentes de R en las instancias de SQL Server 2016. Para determinar si la compatibilidad con las actualizaciones está disponible para su versión de R Services, consulte [actualizar una instancia de R Services con SqlBindR.exe](install/upgrade-r-and-python.md).
 
 **Se aplica a:** SQL Server 2016 R Services, con R Server versión 9.0.0 o versiones anteriores
 
@@ -484,7 +484,7 @@ go
 
 A partir de SQL Server 2017 CU2, puede aparecer el siguiente mensaje incluso si el código de Python en caso contrario, se ejecuta correctamente:
 
-> *Mensajes STDERR del script externo:*
+> *Mensajes STDERR del script externo:* 
 >  *~PYTHON_SERVICES\lib\site-packages\revoscalepy\utils\RxTelemetryLogger*
 > *SyntaxWarning: telemetry_state es usar antes de la declaración global*
 

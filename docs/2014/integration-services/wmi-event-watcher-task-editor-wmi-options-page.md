@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 52ca90b38975c8db762ec0937b265a91b03c5cb2
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66054382"
 ---
 # <a name="wmi-event-watcher-task-editor-wmi-options-page"></a>Editor de la tarea Monitor de eventos WMI (página Opciones WMI)
@@ -28,7 +28,7 @@ ms.locfileid: "66054382"
   
 ## <a name="static-options"></a>Opciones estáticas  
  **WMIConnectionName**  
- Seleccione un administrador de conexiones WMI de la lista, o bien haga clic en \<**Nueva conexión WMI…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones WMI de la lista, o bien haga clic en \<**Nueva conexión WMI…** > para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones WMI](connection-manager/wmi-connection-manager.md), [Editor del administrador de conexiones WMI](../../2014/integration-services/wmi-connection-manager-editor.md)  
   
@@ -67,13 +67,13 @@ ms.locfileid: "66054382"
   
 ### <a name="wqlquerysource--file-connection"></a>WQLQuerySource = Conexión de archivos  
  **WQLQuerySource**  
- Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="wqlquerysource--variable"></a>WQLQuerySource = Variable  
  **WQLQuerySource**  
- Seleccione una variable de la lista o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable de la lista o haga clic en \<**Nueva variable…** > para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

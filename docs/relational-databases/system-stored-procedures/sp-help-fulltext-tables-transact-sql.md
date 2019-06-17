@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 2148c5145ab9d28c698d04253871677560fea9d9
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980203"
 ---
 # <a name="sphelpfulltexttables-transact-sql"></a>sp_help_fulltext_tables (Transact-SQL)
@@ -46,7 +46,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @fulltext_catalog_name = ] 'fulltext_catalog_name'` Es el nombre del catálogo de texto completo. *fulltext_catalog_name* es **sysname**, su valor predeterminado es null. Si *fulltext_catalog_name* se omite o es NULL, se devuelven todas las tablas indizadas de texto completo asociadas a la base de datos. Si *fulltext_catalog_name* se especifica, pero *table_name* se omite o es NULL, se recupera la información de índice de texto completo para cada tabla indizada de texto completo asociado a este catálogo. Si ambos *fulltext_catalog_name* y *table_name* se especifican, se devuelve una fila si *table_name* está asociado con *fulltext_catalog_name*; en caso contrario, se produce un error.  
   
-`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para el que se solicitan los metadatos de texto completo. *table_name* es **nvarchar (517)**, su valor predeterminado es null. Si solo *table_name* se especifica, la fila relevante para *table_name* se devuelve.  
+`[ @table_name = ] 'table_name'` Es el nombre de tabla de una o dos partes para el que se solicitan los metadatos de texto completo. *table_name* es **nvarchar (517)** , su valor predeterminado es null. Si solo *table_name* se especifica, la fila relevante para *table_name* se devuelve.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -59,7 +59,7 @@ sp_help_fulltext_tables [ [ @fulltext_catalog_name = ] 'fulltext_catalog_name' ]
 |**TABLE_NAME**|**sysname**|Nombre de la tabla.|  
 |**FULLTEXT_KEY_INDEX_NAME**|**sysname**|Índice que impone la restricción UNIQUE a la columna designada como columna de clave única.|  
 |**FULLTEXT_KEY_COLID**|**int**|Id. de columna del índice único que identifica FULLTEXT_KEY_NAME.|  
-|**FULLTEXT_INDEX_ACTIVE**|**int**|Especifica si las columnas de esta tabla marcadas para indización de texto completo pueden utilizarse en consultas:<br /><br /> 0 = Inactivo <br /><br /> 1 = Activo|  
+|**FULLTEXT_INDEX_ACTIVE**|**int**|Especifica si las columnas de esta tabla marcadas para indización de texto completo pueden utilizarse en consultas:<br /><br /> 0 = Inactivo<br /><br /> 1 = Activo|  
 |**FULLTEXT_CATALOG_NAME**|**sysname**|Catálogo de texto completo en el que residen los datos de índice de texto completo.|  
   
 ## <a name="permissions"></a>Permisos  

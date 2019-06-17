@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 8f327cefbb916bf83f695db40a1d3c3025b7a5d2
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010937"
 ---
 # <a name="set-the-service-account-for-the-full-text-filter-daemon-launcher"></a>Establecer la cuenta del servicio para el selector del demonio de filtro completo
@@ -32,7 +32,7 @@ ms.locfileid: "66010937"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], **Herramientas de configuración**y, por último, **Administrador de configuración de SQL Server**.  
   
-2.  En **Administrador de configuración de SQL Server**, haga clic en **Services de SQL Server**, haga clic en **selector del demonio de filtro de texto completo SQL (*`instance name`*)** y, a continuación, haga clic en **propiedades**.  
+2.  En **Administrador de configuración de SQL Server**, haga clic en **Services de SQL Server**, haga clic en **selector del demonio de filtro de texto completo SQL ( *`instance name`* )** y, a continuación, haga clic en **propiedades**.  
   
 3.  Haga clic en la pestaña **Iniciar sesión** del cuadro de diálogo y luego seleccione o escriba la cuenta en la que se va a ejecutar cada proceso creado por el servicio Selector de demonio de filtro de texto completo de SQL.  
   

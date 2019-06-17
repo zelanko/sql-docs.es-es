@@ -28,10 +28,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 4a98a3496e237de1d4eeb530dfe5e22b70149890
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105848"
 ---
 # <a name="formatting-axis-labels-on-a-chart-report-builder-and-ssrs"></a>Aplicar formato a las etiquetas de los ejes de un gráfico (Generador de informes y SSRS)
@@ -77,7 +77,7 @@ ms.locfileid: "66105848"
 ### <a name="example-of-how-the-chart-calculates-axis-labels"></a>Ejemplo de cómo calcula el gráfico las etiquetas de los ejes  
  La tabla que se muestra a continuación contiene datos de ventas de ejemplo que se van a representar en un gráfico de columnas. El campo Nombre se agrega al área Grupos de categorías y el campo Cantidad se agrega al área Valores.  
   
-|Name|Cantidad|  
+|NOMBRE|Cantidad|  
 |----------|--------------|  
 |Michael Blythe|229|  
 |Jae Pak|112|  

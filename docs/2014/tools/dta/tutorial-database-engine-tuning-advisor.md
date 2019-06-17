@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 484919274e7b7df3c49ce03668950807c3627d30
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63268370"
 ---
 # <a name="tutorial-database-engine-tuning-advisor"></a>Tutorial: Database Engine Tuning Advisor
@@ -31,7 +31,7 @@ ms.locfileid: "63268370"
  [Lección 1: Navegación básica en el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/database-engine-tuning-advisor.md)  
  En esta lección, se familiarizará con la GUI del Asistente para la optimización de motor de base de datos y aprenderá a configurar las opciones de visualización y el diseño.  
   
- [Lección 2: Usar el Asistente para la optimización de motor de base de datos](lesson-2-using-database-engine-tuning-advisor.md)  
+ [Lección 2: Usar el Asistente para la optimización de motor de base de datos](lesson-2-using-database-engine-tuning-advisor.md)  
  En esta lección, aprenderá a realizar tareas básicas de optimización con la GUI del Asistente para la optimización de motor de base de datos.  
   
  [Lección 3: Usar la utilidad del símbolo del sistema dta](lesson-3-using-the-dta-command-prompt-utility.md)  

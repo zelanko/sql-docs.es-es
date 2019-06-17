@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 55102e5b91b9b544a38338dbbbbcd882bc66f84a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62767987"
 ---
 # <a name="preview-data-dialog-box-sql-server-import-and-export-wizard"></a>Cuadro de diálogo Vista previa de los datos (Asistente para importación y exportación de SQL Server)

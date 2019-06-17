@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 85ddbe528734e5824c80bd5cc00a15d3b32c9bec
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099551"
 ---
 # <a name="set-deployment-properties-reporting-services"></a>Establecer propiedades de implementación (Reporting Services)
@@ -63,7 +63,7 @@ ms.locfileid: "66099551"
     > [!NOTE]  
     >  Para un servidor de informes que se ejecuta en modo nativo, debe disponer de permisos de **publicación** en la carpeta de destino para poder publicar informes en dicha carpeta. Los permisos de publicación se proporcionan mediante una asignación de roles que asigne la cuenta de usuario a un rol que disponga de operaciones de publicación. Para obtener más información, vea [Crear y administrar asignaciones de roles](../security/create-and-manage-role-assignments.md). Para un servidor de informes que se ejecuta en el modo integrado de SharePoint, debe disponer del permiso **Miembro** o **Propietario** en el sitio de SharePoint. Para obtener más información, vea [Referencia de permisos de sitio y lista de SharePoint para los elementos del servidor de informes](../security/sharepoint-site-and-list-permission-reference-for-report-server-items.md).  
   
-10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http:*//servidor/servidorDeInformes* o https:*//servidor/servidorDeInformes)*. Se trata del directorio virtual del servidor de informes, y no del Administrador de informes.  
+10. En el cuadro de texto **TargetServerURL** , escriba la dirección URL del servidor de informes de destino. Antes de publicar un informe, establezca esta propiedad en la dirección URL de un servidor de informes válido. Al publicar en un servidor de informes que se ejecute en modo nativo, use la dirección URL del directorio virtual del servidor de informes (por ejemplo, http: *//servidor/servidorDeInformes* o https: *//servidor/servidorDeInformes)* . Se trata del directorio virtual del servidor de informes, y no del Administrador de informes.  
   
      Al publicar en un servidor de informes que se ejecute en el modo integrado de SharePoint, use una dirección URL a un sitio de nivel superior o un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, http://*nombreDeServidor*, http://*nombreDeServidor*/*sitio* o http://*nombreDeServidor*/*sitio*/*subsitio*).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "66099551"
   
 2.  En el cuadro de diálogo **Páginas de propiedades** del proyecto, haga clic en **Administrador de configuración**.  
   
-3.  En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa se muestra como **Active(***\<configuración>***)**.  
+3.  En el cuadro de diálogo **Administrador de configuración** , seleccione la configuración que desea modificar. La configuración activa se muestra como **Active(***\<configuración>***)** .  
   
 4.  En **Contextos del proyecto**, para cada proyecto de la solución, active o desactive **Generar** o **Implementar**.  
   

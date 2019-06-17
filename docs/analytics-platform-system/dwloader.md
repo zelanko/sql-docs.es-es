@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 982a1dad0b58315cff7b54445f998499ef80e68d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66175038"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos para el almacenamiento de datos paralelo de dwloader
@@ -222,7 +222,7 @@ Especifica un tipo de codificación de caracteres para los datos van a cargar de
 **-t** *field_delimiter*  
 El delimitador para cada campo (columna) en la fila. El delimitador de campo es uno o varios de estos caracteres de escape de ASCII o los valores hexadecimales de ASCII.  
   
-|Name|Carácter de escape|Carácter hexadecimal|  
+|NOMBRE|Carácter de escape|Carácter hexadecimal|  
 |--------|--------------------|-----------------|  
 |Pestaña|\t|0x09|  
 |Retorno de carro (CR)|\r|0x0d|  
@@ -398,7 +398,7 @@ El cargador inserta filas al final de las filas existentes en la tabla de destin
 fastappend  
 El cargador inserta filas directamente, sin usar una tabla temporal, al final de las filas existentes en la tabla de destino. fastappend requiere la transacción múltiple (-m) opción. No se puede especificar una base de datos provisional al usar fastappend. No hay ninguna reversión con fastappend, lo que significa que la recuperación a partir de una carga con errores o anuló deberá controlarse mediante su propio proceso de carga.  
   
-Upsert **-K***merge_column* [,...*n* ]    
+Upsert **-K***merge_column* [,...*n* ]  
 El cargador usa la instrucción Merge de SQL Server para actualizar las filas existentes e insertar filas nuevas.  
   
 La opción -K especifica la columna o columnas para basar la combinación. Estas columnas forman una clave de combinación, que debe representar una única fila. Si la clave de combinación existe en la tabla de destino, se actualiza la fila. Si no existe la clave de combinación en la tabla de destino, se anexa la fila.  
@@ -555,13 +555,13 @@ El modo append carga datos en dos fases. La primera fase carga los datos del arc
 |Tipo de tabla|Transacción múltiple<br />Modo (-m)|Tabla está vacía|Simultaneidad compatibles|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
 |Montón|Sí|Sí|Sí|mínimo|  
-|Montón|Sí|Sin |Sí|mínimo|  
-|Montón|No|Sí|No|mínimo|  
-|Montón|No|No|Sin |mínimo|  
-|Cl|Sí|Sí|No|mínimo|  
-|Cl|Sí|Sin |Sí|Completo|  
-|Cl|No|Sí|Sin |mínimo|  
-|Cl|No|Sin |Sí|Completo|  
+|Montón|Sí|Sin|Sí|mínimo|  
+|Montón|Sin|Sí|Sin|mínimo|  
+|Montón|Sin|Sin|No|mínimo|  
+|Cl|Sí|Sí|Sin|mínimo|  
+|Cl|Sí|Sin|Sí|Completo|  
+|Cl|No|Sí|Sin|mínimo|  
+|Cl|Sin|Sin|Sí|Completo|  
   
 Se muestra en la tabla anterior **dwloader** utilizando el modo append cargar en un montón o una tabla de índice agrupado (CI), con o sin la marca transaccional múltiple y cargar en una tabla vacía o una tabla no vacía. El bloqueo y el comportamiento de cada combinación de este tipo de carga de registro se muestra en la tabla. Por ejemplo, cargar fase (2) con el modo append en un índice clúster sin modo multi-transaccional y en un valor vacío tabla tendrá PDW crear un bloqueo exclusivo en la tabla y el registro es mínimo. Esto significa que un cliente no podrá cargar (2) fase y consultas simultáneamente en una tabla vacía. Sin embargo, cuando se cargan con la misma configuración en una tabla no vacía, PDW no emitirá un bloqueo exclusivo en la tabla y es posible la simultaneidad. Lamentablemente, se produce un registro completo, ralentizan el proceso.  
   

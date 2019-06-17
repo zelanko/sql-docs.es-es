@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 67a5dce0e92f9d9b90f5af3b6e638112b92d450b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63298108"
 ---
 # <a name="export-registered-server-information-sql-server-management-studio"></a>Exportar información de servidores registrados (SQL Server Management Studio)
@@ -48,7 +48,7 @@ ms.locfileid: "63298108"
      El grupo de servidores muestra solo los grupos del actual árbol de servidores registrados.  
   
      **Archivo de exportación**  
-     Escriba el nombre del archivo de exportación en el cuadro de texto o use el botón Examinar (**...**) para buscar un archivo de exportación en el equipo cliente. Si selecciona un archivo existente, la información del servidor registrado se anexa al archivo. Utilice la extensión .regsrvr. Si desea que la información del servidor registrado esté disponible para otros usuarios u otro equipo, puede guardar el archivo en la red. De este modo, otros usuarios podrán obtener acceso al archivo e importar parte o la totalidad de la información del servidor registrado. Si selecciona un archivo existente como archivo de exportación, el contenido del archivo se sobrescribirá con la información del servidor registrado.  
+     Escriba el nombre del archivo de exportación en el cuadro de texto o use el botón Examinar ( **...** ) para buscar un archivo de exportación en el equipo cliente. Si selecciona un archivo existente, la información del servidor registrado se anexa al archivo. Utilice la extensión .regsrvr. Si desea que la información del servidor registrado esté disponible para otros usuarios u otro equipo, puede guardar el archivo en la red. De este modo, otros usuarios podrán obtener acceso al archivo e importar parte o la totalidad de la información del servidor registrado. Si selecciona un archivo existente como archivo de exportación, el contenido del archivo se sobrescribirá con la información del servidor registrado.  
   
      **No incluir nombres de usuario ni contraseñas en el archivo de exportación**  
      Excluye los nombres de usuario en la exportación del archivo.  

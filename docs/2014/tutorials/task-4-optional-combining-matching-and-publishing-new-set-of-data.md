@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 2d27a5bcd87ffd84b33de229d955dc9494846a72
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489271"
 ---
 # <a name="task-4-optional-combining-matching-and-publishing-new-set-of-data"></a>Tarea 4 (opcional): Combinación, búsqueda de coincidencias y publicación de un conjunto de datos nuevo
@@ -94,7 +94,7 @@ ms.locfileid: "65489271"
   
      ![Excel - resultados coincidentes](../../2014/tutorials/media/et-combinematchandpublishnewsod-08.jpg "Excel - resultados coincidentes")  
   
-27. Seleccione el **fila duplicada (naranja)**, con el botón secundario y haga clic en **eliminar** para eliminar la fila.  
+27. Seleccione el **fila duplicada (naranja)** , con el botón secundario y haga clic en **eliminar** para eliminar la fila.  
   
 28. Eliminar el **CLUSTER_ID** columna Puesto que ya no es necesaria.  
   
@@ -111,6 +111,6 @@ ms.locfileid: "65489271"
 34. Ahora, cierre **Book1 - Microsoft Excel** ventana sin guardar el archivo.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Crear un atributo basado en dominio desde Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
+ [Tarea 5: Crear un atributo basado en dominio desde Excel](../../2014/tutorials/task-5-creating-a-domain-based-attribute-from-excel.md)  
   
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c0b0b8236187698917dddd3ca98830add6c3fde9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245668"
 ---
 # <a name="configure-wmi-to-show-server-status-in-sql-server-tools"></a>Configurar WMI para mostrar el estado del servidor en Herramientas de SQL Server
@@ -37,7 +37,7 @@ ms.locfileid: "63245668"
   
 6.  Agregue un grupo o un usuario al cuadro **Nombres de grupos o usuarios** y selecciónelo.  
   
-7.  En el **permisos para**_\<usuario o grupo >_ cuadro, seleccione el **permitir** columna, para el **llamada remota habilitada** permiso , para los usuarios que desee en forma remota detectan el estado del servicio.  
+7.  En el **permisos para** _\<usuario o grupo >_ cuadro, seleccione el **permitir** columna, para el **llamada remota habilitada** permiso , para los usuarios que desee en forma remota detectan el estado del servicio.  
   
 ## <a name="see-also"></a>Vea también  
  [Iniciar, detener o pausar el servicio del Agente SQL Server](agent/start-stop-or-pause-the-sql-server-agent-service.md)  

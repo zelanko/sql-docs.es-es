@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3ca69ca5ca402e06999e2817c24c11c6b52d75f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245497"
 ---
 # <a name="connect-to-server-connection-properties-page-database-engine"></a>Conectar al servidor (página Propiedades de conexión del motor de base de datos)
@@ -24,7 +24,7 @@ ms.locfileid: "63245497"
   
 ## <a name="options"></a>Opciones  
  **Conectar con base de datos**  
- Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >**, se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >**, puede examinar el servidor para la base de datos que se va a conectar.  
+ Seleccione en la lista una base de datos a la que conectarse. Si selecciona  **\<predeterminado >** , se conectará a la base de datos predeterminada para el servidor. Si selecciona  **\<Examinar servidor >** , puede examinar el servidor para la base de datos que se va a conectar.  
   
  Al conectarse a una instancia del motor de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de la base de datos de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], es preciso que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y especifique una base de datos en el cuadro de diálogo **Conectar al servidor** en la pestaña **Propiedades de conexión** . Asegúrese de que activa la casilla **Cifrar conexión** .  
   

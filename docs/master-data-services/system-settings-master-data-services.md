@@ -15,10 +15,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 327b0bdc83588ef988a716ba44e859aa5d3f8659
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65487994"
 ---
 # <a name="system-settings-master-data-services"></a>Configuración del sistema (Master Data Services)
@@ -83,7 +83,7 @@ ms.locfileid: "65487994"
   
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...**. Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
+|**Número predeterminado de miembros en la jerarquía**|**HierarchyChildNodeLimit**|En el área funcional del **Explorador** de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], el número máximo de miembros que se muestran en cada nodo de la jerarquía antes de que se muestre **...más...** . Puede hacer clic en **...más...** para mostrar el grupo siguiente de miembros. El valor predeterminado es **50**.|  
 |**Mostrar nombres en jerarquía de manera predeterminada**|**ShowNamesInHierarchy**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , determina la configuración predeterminada que se selecciona al ver jerarquías.<br /><br /> El valor predeterminado es **Sí** o **1**, que indica que se muestran el nombre y el código de cada miembro. Cambie a **No** o **2** para mostrar solo el código.|  
 |**Número de atributos basados en dominio de la lista**|**DBAListRowLimit**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **Explorer** functional area, the number of attributes that are displayed in a list when you double-click a domain-based attribute value in the grid. El valor predeterminado es **50**. Si hay más de 50 miembros, en su lugar se muestra un cuadro de diálogo en el que se puede buscar.|  
 ||**GridFilterDefaultFuzzySimilarityLevel**|En el área funcional del [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **de** , nivel de similitud que se usa cuando se utiliza el criterio de filtro **Coincide** . El valor predeterminado es **0.3**. Establezca el valor más próximo a **1** para devolver una coincidencia que se aproxime más al criterio de búsqueda. Establezca el valor en **1** para obtener una coincidencia exacta.|  
@@ -133,7 +133,7 @@ ms.locfileid: "65487994"
 
 |Configuración del Administrador de configuración|Configuración del sistema|Descripción|  
 |-----------------------------------|--------------------|-----------------|  
-|**Habilitar configuración de mejora del rendimiento**|**PerformanceImprovementEnable**|Esta opción se habilita de forma predeterminada (**se establece en 1**) para que la carga de la página relacionada con los permisos tenga un buen rendimiento. Pero en esta situación, la creación o modificación de entidades, atributos, usuarios o grupos tendrá un bajo rendimiento. Para evitarlo, puede deshabilitar esta configuración (**Establecido en 0**). Después de cambiar esta configuración. Tendrá que ejecutar el comando "**EXEC [mdm].[udpPerformanceToggleSwitch];**" para asegurarse de que la vista y los datos son los correctos.|  
+|**Habilitar configuración de mejora del rendimiento**|**PerformanceImprovementEnable**|Esta opción se habilita de forma predeterminada (**se establece en 1**) para que la carga de la página relacionada con los permisos tenga un buen rendimiento. Pero en esta situación, la creación o modificación de entidades, atributos, usuarios o grupos tendrá un bajo rendimiento. Para evitarlo, puede deshabilitar esta configuración (**Establecido en 0**). Después de cambiar esta configuración. Tendrá que ejecutar el comando "**EXEC [mdm].[udpPerformanceToggleSwitch];** " para asegurarse de que la vista y los datos son los correctos.|  
   
  Para obtener más información, consulte [Aplicar inmediatamente los permisos de los miembros &#40;Master Data Services&#41;](../master-data-services/immediately-apply-member-permissions-master-data-services.md).  
   

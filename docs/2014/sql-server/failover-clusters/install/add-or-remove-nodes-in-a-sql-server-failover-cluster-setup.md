@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1b6298020c1aa39f2c5c319efa492f6832c301f9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190283"
 ---
 # <a name="add-or-remove-nodes-in-a-sql-server-failover-cluster-setup"></a>Agregar o quitar nodos en un clúster de conmutación por error de SQL Server (programa de instalación)
@@ -49,7 +49,7 @@ ms.locfileid: "63190283"
   
 1.  Inserte el disco de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, en la carpeta raíz, haga doble clic en Setup.exe. Para realizar la instalación desde un recurso compartido de red, navegue hasta la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
-2.  El Asistente para la instalación iniciará el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para agregar un nodo a una instancia en clúster de conmutación por error existente, haga clic en **Instalación** en el panel izquierdo. Luego, seleccione **Agregar nodo a clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  El Asistente para la instalación iniciará el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para agregar un nodo a una instancia en clúster de conmutación por error existente, haga clic en **Instalación** en el panel izquierdo. Luego, seleccione **Agregar nodo a clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  El Comprobador de configuración del sistema ejecutará una operación de detección en su equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   
@@ -89,7 +89,7 @@ ms.locfileid: "63190283"
   
 1.  Inserte el medio de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . En la carpeta raíz, haga doble clic en setup.exe. Para realizar la instalación desde un recurso compartido de red, navegue hasta la carpeta raíz de dicho recurso y, a continuación, haga doble clic en Setup.exe.  
   
-2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para quitar un nodo de una instancia en clúster de conmutación por error existente, haga clic en **Mantenimiento** en el panel izquierdo y, después, seleccione **Eliminar nodo de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**.  
+2.  El Asistente para la instalación inicia el Centro de instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para quitar un nodo de una instancia en clúster de conmutación por error existente, haga clic en **Mantenimiento** en el panel izquierdo y, después, seleccione **Eliminar nodo de un clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]** .  
   
 3.  El Comprobador de configuración del sistema ejecutará una operación de detección en su equipo. Para continuar, [!INCLUDE[clickOK](../../../includes/clickok-md.md)].  
   

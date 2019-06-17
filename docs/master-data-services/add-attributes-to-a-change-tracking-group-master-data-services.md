@@ -16,10 +16,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 335bdd657c0aa2f687d89f31dfcdd45d757e0cbd
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484813"
 ---
 # <a name="add-attributes-to-a-change-tracking-group-master-data-services"></a>Agregar atributos a un grupo de seguimiento de cambios (Master Data Services)
@@ -66,7 +66,7 @@ ms.locfileid: "65484813"
   
 9. Haga clic en **Guardar atributo**.  
   
-     En el caso del atributo editado, la columna **Enable Change Tracking Group** (Habilitar grupo de seguimiento de cambios) de la cuadrícula cambia a **Yes (Group: entered group number)**[Sí (Grupo: número de grupo especificado)].  
+     En el caso del atributo editado, la columna **Enable Change Tracking Group** (Habilitar grupo de seguimiento de cambios) de la cuadrícula cambia a **Yes (Group: entered group number)** [Sí (Grupo: número de grupo especificado)].  
   
 10. Repita este procedimiento para todos los atributos que desea incluir en el grupo. Utilice el mismo número de grupo de seguimiento de cambios para cada atributo del grupo.  
   

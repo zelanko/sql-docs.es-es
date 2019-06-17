@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181533"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>Definición de datos de MDX: CREATE KPI
@@ -45,7 +45,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ## <a name="remarks"></a>Comentarios  
  Si especifica un cubo distinto del que está conectado actualmente, se genera un error. Por lo tanto, debe utilizar CURRENTCUBE en lugar de un nombre de cubo para indicar el cubo actual.  
   
-## <a name="kpi-properties"></a>Propiedades de KPI   
+## <a name="kpi-properties"></a>Propiedades de KPI  
  En la tabla siguiente se enumeran todas las propiedades de KPI. Ninguna de estas propiedades tiene un valor predeterminado. Por consiguiente, hasta que se haya asignado un valor concreto a una propiedad de KPI, las consultas de las propiedades devolverán un valor nulo.  
   
 |Identificador de la propiedad|Significado|  
@@ -69,7 +69,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ### <a name="kpi-graphics-in-sql-server-data-tools"></a>Gráficos KPI en Herramientas de datos de SQL Server  
  En [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], los gráficos KPI pueden tener tres o cinco estados. En la tabla siguiente define los valores para cada uno de esos Estados.  
   
-|Número de estados para el gráfico de KPI |Valor de esos estados|  
+|Número de estados para el gráfico de KPI|Valor de esos estados|  
 |--------------------------------------|---------------------------|  
 |3|Malo = De -1 a -0,5<br /><br /> Suficiente = De 0,4999 a 0,4999<br /><br /> Bueno = De 0,50 a 1|  
 |5|Malo = De -1 a -0,75<br /><br /> Riesgo = De -0,7499 a -0,25<br /><br /> Suficiente = De -0,2499 a 0,2499<br /><br /> En progreso = De 0,25 a -0,7499<br /><br /> Bueno = De 0,75 a 1|  

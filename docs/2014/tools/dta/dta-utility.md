@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0cde9ff4e640948c953bc0488517749fd776e438
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670702"
 ---
 # <a name="dta-utility"></a>dta, utilidad
@@ -211,7 +211,7 @@ dta -d AdventureWorks2012 ...
  Especifica el nombre y la ruta del archivo de carga de trabajo que se desea usar como entrada para la optimización. El archivo debe estar en uno de estos formatos: .trc (archivo de seguimiento de SQL Server Profiler) o .log (archivo de Seguimiento de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ). Debe especificarse un archivo de carga de trabajo o una tabla de carga de trabajo.  
   
  **-it** _workload_trace_table_name_  
- Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*]**.**[*owner_name*]**.**_table_name_.  
+ Especifica el nombre de una tabla que contiene el seguimiento de carga de trabajo para la optimización. El nombre se debe especificar en el formato [*database_name*] **.** [*owner_name*] **.** _table_name_.  
   
  En la tabla siguiente se muestran los valores predeterminados para cada parámetro:  
   
@@ -316,14 +316,14 @@ dta -n number_of_events -A 0
   
  *database_name*.[*schema_name*].*table_name* [*number_of_rows*]  
   
- Este argumento es una alternativa a especificar una lista de tablas en el símbolo del sistema (**-Tl**). No use un archivo de lista de tabla (**-Tf**) si usa **-Tl**. Si se usan ambos argumentos, **dta** devuelve un error.  
+ Este argumento es una alternativa a especificar una lista de tablas en el símbolo del sistema ( **-Tl**). No use un archivo de lista de tabla ( **-Tf**) si usa **-Tl**. Si se usan ambos argumentos, **dta** devuelve un error.  
   
  Si se omiten los argumentos **-Tf** y **-Tl** , todas las tablas de usuario de las bases de datos especificadas se tienen en cuenta para la optimización.  
   
  **-Tl** _table_list_  
  Especifica en el símbolo del sistema una lista de tablas que se optimizarán. Use una coma entre los nombres de tabla para separarlos. Si solo se especifica una base de datos con el argumento **-D** , no es necesario calificar los nombres de tabla con un nombre de base de datos. De lo contrario, se requiere el nombre completo en el formato *database_name.schema_name.table_name* para cada tabla.  
   
- Este argumento es una alternativa al uso de un archivo de lista de tablas (**-Tf**). Si se usa tanto **-Tl** como **-Tf** , **dta** devuelve un error.  
+ Este argumento es una alternativa al uso de un archivo de lista de tablas ( **-Tf**). Si se usa tanto **-Tl** como **-Tf** , **dta** devuelve un error.  
   
  **-U** _login_id_  
  Especifica el identificador de inicio de sesión para conectar con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

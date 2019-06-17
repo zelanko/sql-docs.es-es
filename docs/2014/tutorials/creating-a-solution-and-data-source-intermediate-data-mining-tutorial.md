@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 2f089f487586b6def3d2ddd4eecdbbde1532952b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62855347"
 ---
 # <a name="creating-a-solution-and-data-source-intermediate-data-mining-tutorial"></a>Crear una solución y un origen de datos (tutorial intermedio de minería de datos)
@@ -69,13 +69,13 @@ ms.locfileid: "62855347"
   
 |Escenario|Datos incluidos en la vista del origen de datos|  
 |--------------|-------------------------------------------|  
-|[Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Los informes de ventas mensuales para los modelos de bicicleta en distintas regiones, recopilados como una vista única.|  
+|[Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)|Los informes de ventas mensuales para los modelos de bicicleta en distintas regiones, recopilados como una vista única.|  
 |[Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-3-building-a-market-basket-scenario-intermediate-data-mining-tutorial.md)|Una tabla que contiene una lista de pedidos de cliente, y una tabla anidada que muestra las compras individuales para cada cliente.|  
 |[Lección 4: Creación de una escenario de clústeres de secuencia &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-4-build-sequence-clustering-scenario-intermediate-data-mining.md)|Los mismos datos que se utilizan para el análisis de la cesta de la compra, además de un identificador que muestra el orden en que los elementos se compraron.|  
 |[Lección 5: Creación de modelos de regresión logística y Red neuronal &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-5-build-models-intermediate-data-mining-tutorial.md)|Una única tabla que contiene algunos datos preliminares de seguimiento del rendimiento procedentes de un centro de llamadas.|  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Proyectos de minería de datos](../../2014/analysis-services/data-mining/data-mining-projects.md)   

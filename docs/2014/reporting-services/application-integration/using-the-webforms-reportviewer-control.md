@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6fa1b5f0cc1e4952523f53f02e219db42aa5b3c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63238217"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
@@ -38,7 +38,7 @@ ms.locfileid: "63238217"
   
      El control **ReportViewer** denominado reportViewer1 se agrega al formulario.  
   
- Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
+ Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>** , aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
   
  Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de especificar el nombre del archivo RDLC del informe en la propiedad **ReportPath** del control ReportViewer. Esta propiedad aparece en el nodo **LocalReport** del panel **Propiedades**.  
   

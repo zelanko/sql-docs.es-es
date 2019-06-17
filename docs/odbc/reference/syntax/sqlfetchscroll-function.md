@@ -21,10 +21,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 7a3243c45830cb3f49a7fa71c2991a9454fd6f5a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/11/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65537354"
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
@@ -165,7 +165,7 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Antes de comenzar*|1|  
 |*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
-|*CurrRowsetStart + RowsetSize*[1]*> LastResultRow*|*Después de finales*|  
+|*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Después de finales*|  
 |*Después de finales*|*Después de finales*|  
   
  [1] Si ha cambiado el tamaño del conjunto de filas desde la llamada anterior a capturar filas, esto es el tamaño del conjunto de filas que se usó con la llamada anterior.  

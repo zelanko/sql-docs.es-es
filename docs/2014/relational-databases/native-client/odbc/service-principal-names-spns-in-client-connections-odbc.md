@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 7f45e6124dbbad79802e290f935ccc6f3f45cee0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144410"
 ---
 # <a name="service-principal-names-spns-in-client-connections-odbc"></a>Nombres de entidad de seguridad del servicio (SPN) en conexiones de cliente (ODBC)
@@ -31,7 +31,7 @@ ms.locfileid: "63144410"
 ## <a name="connection-attributes"></a>Atributos de conexión  
  Los siguientes atributos de conexión permiten que las aplicaciones cliente especifiquen un SPN y consulten el método de autenticación.  
   
-|Name|Tipo|Uso|  
+|NOMBRE|Tipo|Uso|  
 |----------|----------|-----------|  
 |SQL_COPT_SS_SERVER_SPN<br /><br /> SQL_COPT_SS_FAILOVER_PARTNER_SPN|SQLTCHAR, lectura/escritura|Especifica el SPN del servidor. El valor predeterminado es una cadena vacía, que hace que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client use el valor predeterminado, SPN generado por controlador.<br /><br /> Este atributo solo podrá consultarse una vez que se haya establecido mediante programación o una vez que se haya abierto una conexión. Si se intenta consultar este atributo en una conexión que no está abierta y el atributo no se ha establecido mediante programación, se devuelve SQL_ERROR y se registra un error de diagnóstico con SQLState 08003 y el mensaje "Conexión no abierta".<br /><br /> Si se intenta establecer este atributo cuando hay una conexión abierta, se devuelve SQL_ERROR y se registra un error de diagnóstico con SQLState HY011 y el mensaje "Operación no válido en este momento".|  
 |SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD|SQLTCHAR, solo lectura|Devuelve el método de autenticación que utiliza la conexión. El valor devuelto a la aplicación es el valor que Windows devuelve a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client. Los valores posibles son:<br /><br /> -"NTLM", que se devuelve cuando se abre una conexión mediante la autenticación NTLM.<br />-"Kerberos", que se devuelve cuando se abre una conexión mediante la autenticación Kerberos.<br /><br /> Este atributo solamente puede leerse para una conexión abierta que use la autenticación de Windows. Si se intenta leer antes de que se haya abierto una conexión, se devuelve SQL_ERROR y se registra un error con SQLState 08003 y el mensaje "Conexión no abierta".<br /><br /> Si este atributo se consulta en una conexión que no utilizó la autenticación de Windows, se devuelve SQL_ERROR y se registra un error con SQLState HY092 y el mensaje "Identificador de opción/atributo no válido (SQL_COPT_SS_INTEGRATED_AUTHENTICATION_METHOD solamente está disponible para conexiones de confianza)".<br /><br /> Si no puede determinarse el método de autenticación, se devuelve SQL_ERROR y se registra un error con SQLState HY000 y el mensaje "Error general".|  

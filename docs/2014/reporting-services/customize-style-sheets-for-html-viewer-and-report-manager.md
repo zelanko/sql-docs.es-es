@@ -1,24 +1,20 @@
 ---
 title: Personalizar hojas de estilos para el Visor de HTML y el Administrador de informes | Microsoft Docs
-ms.custom: ''
-ms.date: 03/06/2017
 ms.prod: sql-server-2014
-ms.reviewer: ''
-ms.technology:
-- reporting-services-native
+ms.technology: reporting-services-native
 ms.topic: conceptual
-helpviewer_keywords:
-- style sheets [Reporting Services]
-ms.assetid: df805cff-b1de-4062-b2ac-423f37390fbd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: d9c4a57413db37c8f93b1a311542398417bfeff0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: HT
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 04/26/2019
+ms.openlocfilehash: 7c7745d69e234f81c2a331d214789e93e9fd4014
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63264863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64568267"
 ---
 # <a name="customize-style-sheets-for-html-viewer-and-report-manager"></a>Personalizar hojas de estilos para el Visor HTML y el Administrador de informes
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] ofrece estilos en cascada de forma predeterminada los archivos de hoja (.css) que definen estilos para el **informe** barra de herramientas en el Visor de HTML y para el Administrador de informes. Si es un programador web o tiene experiencia creando hojas de estilos en cascada, puede modificar los estilos predeterminados bajo su responsabilidad para cambiar los colores, las fuentes y el diseño de la barra de herramientas o el Administrador de informes. En esta versión no se documentan las hojas de estilos predeterminadas ni las instrucciones para modificarlas.  
@@ -37,9 +33,6 @@ ms.locfileid: "63264863"
 |-----------------|-----------------|  
 |Htmlviewer.css|Ofrece un ejemplo de hoja de estilos que puede utilizar como una plantilla para crear estilos personalizados para la barra de herramientas de **informe** en el Visor HTML.<br /><br /> Los estilos predeterminados utilizados por el Visor HTML se compilan en el servidor de informes. El archivo Htmlviewer.css ofrece un ejemplo de los estilos que utiliza el visor.|  
 |ReportingServices.css|Define estilos para el Administrador de informes.|  
-  
-> [!NOTE]  
->  Las siguientes hojas de estilos se usan para la documentación en línea del Administrador de informes y no deben modificarse nunca: SQL.CSS y Mailto.css. Otras hojas de estilos definen estilos para los informes y el Administrador de informes que se abren en elementos web de SharePoint. Estas hojas de estilos incluyen Rswebparts.css, Sp_full.css, y Sp_small.css. No se recomienda modificar las hojas de estilos de SharePoint. Para obtener más información sobre cómo se usan los elementos Web, consulte [ver y explorar nativo modo informes utilizando elementos Web de SharePoint &#40;SSRS&#41;](reports/view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md).  
   
 ## <a name="configuring-reporting-services-to-use-a-custom-style-sheet"></a>Configurar Reporting Services para utilizar una hoja de estilos personalizada  
  La hoja de estilos debe tener un archivo válido de hoja de estilos en cascada (.css) y debe estar ubicado en la carpeta Styles. De forma predeterminada, la carpeta Styles se encuentra en \< *unidad*>: \Program Files\Microsoft SQL Server\MSSQL. *n*\Reporting Services\ReportServer\Styles.  

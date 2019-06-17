@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 8fb38cb068aca480756db7d962540137c8d4bfac
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489205"
 ---
 # <a name="task-4-creating-an-ssis-project-using-sql-server-data-tools"></a>Tarea 4: Creación de un proyecto de SSIS con SQL Server Data Tools
@@ -39,6 +39,6 @@ ms.locfileid: "65489205"
 7.  Escriba **CleanseAndCurate.dtsx** y presione **ENTRAR**. Asegúrese de que la **extensión** siga siendo **.dtsx**.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Agregar una tarea de flujo de datos](task-5-adding-data-flow-task.md)  
+ [Tarea 5: Agregar una tarea de flujo de datos](task-5-adding-data-flow-task.md)  
   
   

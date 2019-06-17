@@ -10,20 +10,20 @@ ms.topic: conceptual
 ms.assetid: fac054f1-60dc-4261-bc1b-ed70d1ceb85f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75091cf0f8d051639fba58d29191898761ef948a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c5d876b3868a1f65dc9c94ed112fe51f116b3bda
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827803"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802785"
 ---
 # <a name="sqlserverdatasource-methods"></a>Métodos SQLServerDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
   Para obtener información sobre los miembros de SQLServerDataSource, vea [miembros SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-members.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)  
   
   

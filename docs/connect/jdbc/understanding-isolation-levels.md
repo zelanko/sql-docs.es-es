@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9341004225f619f4b15aabb1a641a8a39a2329b5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764863"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800168"
 ---
 # <a name="understanding-isolation-levels"></a>Descripción de los niveles de aislamiento
 
@@ -49,10 +49,10 @@ Un nivel de aislamiento menor significa que los usuarios tienen un mayor acceso 
 | Nivel de aislamiento  | Lectura de datos sucios | lectura no repetible | Fantasma |
 | ---------------- | ---------- | ------------------- | ------- |
 | Lectura no confirmada | Sí        | Sí                 | Sí     |
-| Lectura confirmada   | no         | Sí                 | Sí     |
-| Lectura repetible  | no         | no                  | Sí     |
-| Snapshot         | no         | no                  | no      |
-| Serializable     | no         | no                  | no      |
+| Lectura confirmada   | No         | Sí                 | Sí     |
+| Lectura repetible  | No         | No                  | Sí     |
+| Snapshot         | No         | No                  | No      |
+| Serializable     | No         | No                  | No      |
   
 Las transacciones se deben ejecutar en un nivel de aislamiento de lectura repetible, al menos, para evitar las pérdidas de actualizaciones que pueden producirse cuando dos transacciones recuperan la misma fila, y a continuación la actualizan según los valores recuperados originalmente. Si las dos transacciones actualizan las filas con una única instrucción UPDATE y no basan la actualización en los valores recuperados previamente, la pérdida de las actualizaciones no puede producirse en el nivel de aislamiento predeterminado de lectura confirmada.  
 
@@ -76,6 +76,6 @@ con.setTransactionIsolation(Connection.TRANSACTION_READ_COMMITTED + 4094);
 
 Para obtener más información sobre los niveles de aislamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Niveles de aislamiento en [!INCLUDE[ssDE](../../includes/ssde_md.md)]" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)  

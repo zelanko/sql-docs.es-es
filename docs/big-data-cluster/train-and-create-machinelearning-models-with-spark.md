@@ -12,10 +12,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: 348749b038b97138c4a6c85fd2f56b45b85c5d60
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66822924"
 ---
 # <a name="train-and-create-machine-learning-models-with-spark"></a>Entrenar y crear modelos de aprendizaje automático con Spark

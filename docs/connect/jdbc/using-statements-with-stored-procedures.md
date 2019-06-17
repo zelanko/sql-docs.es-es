@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d12b5d0940ea161e3650dc5126a10783c1afc3e6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2dd4ead601700baefaf356840fba4184ab427ef2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812853"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798548"
 ---
 # <a name="using-statements-with-stored-procedures"></a>Usar instrucciones con procedimientos almacenados
 
@@ -57,6 +57,6 @@ En los temas de esta sección se describen las formas en las que puede llamar a 
 |[Usar un procedimiento almacenado con un estado de devolución](../../connect/jdbc/using-a-stored-procedure-with-a-return-status.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que contengan valores de estado de devolución.|  
 |[Usar un procedimiento almacenado con un recuento de actualizaciones](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)|Describe cómo usar el controlador JDBC para ejecutar procedimientos almacenados que devuelvan recuentos de actualizaciones.|  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)  

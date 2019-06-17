@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: a9a9ffdd-7ce3-4e0a-907c-34d6a54e6865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c682e28244bf85ce761ab6f8d0b54d5f5f054679
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9c0d96ded45fe1b6cb68eda222039e01901ebc65
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680413"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801327"
 ---
 # <a name="getresponsebuffering-method-sqlserverstatement"></a>María getResponseBuffering (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public final java.lang.String getResponseBuffering()
   
  Para obtener más información sobre cómo usar el modo de almacenamiento en búfer de respuesta, consulte [usando almacenamiento en búfer adaptable](../../../connect/jdbc/using-adaptive-buffering.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setResponseBuffering &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/setresponsebuffering-method-sqlserverstatement.md)   
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

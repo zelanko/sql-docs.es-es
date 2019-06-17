@@ -21,10 +21,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 42f731f93f0344d5b96a8e3cba41f28dd7fadada
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253210"
 ---
 # <a name="command-line-options-in-ssma-console-mysqltosql"></a>Opciones de la línea de comandos en la consola SSMA (MySQLToSQL)
@@ -35,7 +35,7 @@ Descritos en este documento, la consola es opciones de comando.
   
 En esta sección, el término 'opción' también se conoce como 'switch'.  
   
-Las opciones no distinguen mayúsculas de minúsculas y puede comenzar por '**-**'o',**/**' caracteres.  
+Las opciones no distinguen mayúsculas de minúsculas y puede comenzar por ' **-** 'o', **/** ' caracteres.  
   
 Si se especifican opciones, es obligatorio para especificar los parámetros de la opción correspondiente.  
   

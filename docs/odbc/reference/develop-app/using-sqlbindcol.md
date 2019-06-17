@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63208476"
 ---
 # <a name="using-sqlbindcol"></a>Uso de SQLBindCol
@@ -35,7 +35,7 @@ La aplicación enlaza las columnas mediante una llamada a **SQLBindCol**. Esta f
   
  Por ejemplo, el código siguiente enlaza variables a las columnas de vendedor y CustID. Datos de las columnas se devolverán en *vendedor* y *CustID*. Dado que *vendedor* es un búfer de caracteres, la aplicación especifica la longitud de bytes (11) para que el controlador puede determinar si se debe truncar los datos. La longitud de bytes devuelto del título o, si es NULL, se devolverán en *SalesPersonLenOrInd*.  
   
- Dado que *CustID* es una variable de entero y tiene una longitud, fija no es necesario especificar la longitud de bytes; el controlador se considera que es **sizeof (** SQLUINTEGER **)**. La longitud en bytes del cliente devuelta Id. de datos, o si es NULL, se devolverán en *CustIDInd*. Tenga en cuenta que la aplicación está interesada únicamente en si el salario es NULL, dado que la longitud en bytes es siempre **sizeof (** SQLUINTEGER **)**.  
+ Dado que *CustID* es una variable de entero y tiene una longitud, fija no es necesario especificar la longitud de bytes; el controlador se considera que es **sizeof (** SQLUINTEGER **)** . La longitud en bytes del cliente devuelta Id. de datos, o si es NULL, se devolverán en *CustIDInd*. Tenga en cuenta que la aplicación está interesada únicamente en si el salario es NULL, dado que la longitud en bytes es siempre **sizeof (** SQLUINTEGER **)** .  
   
 ```  
 SQLCHAR       SalesPerson[11];  

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8f3adf5b-874e-4cf2-b4ef-672dda42d77a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec9b51d08e10df0f829308d163b573c0670c78e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b5994cc3e2e8ed10759985571c195f783b95dac4
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637263"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800110"
 ---
 # <a name="close-method-sqlserverresultset"></a>Método close (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public void close()
   
  Cuando se ejecuta una instrucción que genera un conjunto de resultados grande de solo avance y solo lectura, es posible que únicamente esté interesado en algún conjunto inicial de filas en el conjunto de resultados que se ha devuelto. En este caso, la aplicación podría llamar al método [cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md) del objeto de instrucción asociado antes de cerrar el conjunto de resultados con el fin de minimizar el tiempo de procesamiento necesario para descartar las filas innecesarias restantes. Recomendamos comparar los inconvenientes entre el tiempo de procesamiento que se ahorraría y el tiempo y el viaje de ida y vuelta al servidor que se necesita para cancelar la ejecución a la hora de decidir si utilizar o no esta técnica.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

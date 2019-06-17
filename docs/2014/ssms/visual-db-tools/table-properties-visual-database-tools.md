@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c56aef79df354ee8e355da215a241836f8c7ab45
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204690"
 ---
 # <a name="table-properties-visual-database-tools"></a>Propiedades de la tabla (Visual Database Tools)
@@ -65,7 +65,7 @@ ms.locfileid: "63204690"
  Muestra si la columna se replica en otra ubicación  
   
  **Categoría Especificación de espacio de datos normal**  
- Se expande para mostrar las propiedades de **(Tipo de espacio de datos)**, **Nombre de esquema de partición o grupo de archivos**y **Lista de columnas de particiones**.  
+ Se expande para mostrar las propiedades de **(Tipo de espacio de datos)** , **Nombre de esquema de partición o grupo de archivos**y **Lista de columnas de particiones**.  
   
  **(Tipo de espacio de datos)**  
  Indica si la tabla se almacena utilizando un grupo de archivos o un esquema de partición.  

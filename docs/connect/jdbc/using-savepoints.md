@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3b48eb13-32ef-4fb3-8e95-dbc9468c9a44
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd1ab1ab51a1fa7214d704ab6152af9368c0c67a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bd9903438f2bc52d6f3ac87bfc6628bf08e3b9f1
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47695933"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798633"
 ---
 # <a name="using-savepoints"></a>Usar puntos de retorno
 
@@ -32,6 +32,6 @@ En el siguiente ejemplo, se usa un punto de retorno a la vez que se realiza una 
 
 [!code[JDBC#UsingSavepoints1](../../connect/jdbc/codesnippet/Java/using-savepoints_1.java)]
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Realizar transacciones con el controlador JDBC](../../connect/jdbc/performing-transactions-with-the-jdbc-driver.md)

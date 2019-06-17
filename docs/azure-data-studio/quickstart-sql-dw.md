@@ -12,10 +12,10 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66800266"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar datos en Azure SQL Data Warehouse
@@ -54,7 +54,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
    ![Nuevo icono de conexión](media/quickstart-sql-dw/new-connection-screen.png) 
 
-3. 4.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+3. 4\.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-dw/firewall.png)  
 

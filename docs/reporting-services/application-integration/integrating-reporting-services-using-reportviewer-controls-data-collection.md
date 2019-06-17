@@ -1,6 +1,7 @@
 ---
 title: Recopilación de datos del control ReportViewer 2016
 uthor: markingmyname
+author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.reviewer: ''
@@ -10,12 +11,12 @@ ms.technology: application-integration
 ms.topic: reference
 ms.custom: ''
 ms.date: 09/18/2018
-ms.openlocfilehash: f1d24c2de0b6398b4effb2dcaa6129a7b252d130
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.openlocfilehash: 69d37c54e49943807c35102362f161e2dbf23068
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
-ms.locfileid: "65504132"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66823007"
 ---
 # <a name="integrating-reporting-services-using-reportviewer-controls---data-collection"></a>Integración de Reporting Services con los controles ReportViewer: recopilación de datos
 
@@ -27,14 +28,14 @@ En la [declaración de privacidad](https://go.microsoft.com/fwlink/?LinkID=86844
 
 Se puede deshabilitar la recopilación de datos de uso a través de la propiedad ```EnableTelemetry```.
 
-```
+```xml
 <rsweb:ReportViewer ID="ReportViewer1" runat="server" EnableTelemetry="false">
 </rsweb:ReportViewer>
 ```
 
 O mediante pragmática antes de representar el control.
     
-```
+```csharp
 protected void Page_Load(object sender, EventArgs e)
 {
     ReportViewer1.EnableTelemetry = false;

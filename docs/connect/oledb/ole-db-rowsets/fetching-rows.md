@@ -16,13 +16,13 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, fetching
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b744d36d6e5d51fa86107fc1335307900c016c17
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c4955b36c5a0d95c4fa4e8bfe0fceb77fc65efd9
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47597324"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803833"
 ---
 # <a name="fetching-rows"></a>Capturar filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "47597324"
   
 -   [Posición de captura siguiente](../../oledb/ole-db-rowsets/fetching-rows-next-fetch-position.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

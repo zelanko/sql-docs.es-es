@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e87ef65f-4b5a-4e1c-8db5-7f0932390bb0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 04be6bfd2e90c63476ce671ce8e12e1103184f4d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 93cd6a4f612af7de32dc790f497a3d7a11b9cd1e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691885"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803980"
 ---
 # <a name="getcatalog-method-sqlserverconnection"></a>Método getCatalog (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public java.lang.String getCatalog()
   
  Devuelve la propiedad de catálogo actual del objeto SQLServerConnection, o null si no se establece. La propiedad de catálogo se establece explícitamente con el método [setCatalog](../../../connect/jdbc/reference/setcatalog-method-sqlserverconnection.md) o se actualiza implícitamente mediante la lectura del cambio del entorno en el TDS correspondiente al catálogo actual.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   

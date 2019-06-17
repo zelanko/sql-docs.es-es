@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: aeec0a56-038e-45b1-98c8-b1046ebd25db
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5fad76cca594595a5efbf16a334975869684a039
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 175f3e33f77d5f4d082ae8b98780b9f7bcafaa43
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624873"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798451"
 ---
 # <a name="updatencharacterstream-method-int-javaioreader-long"></a>Método updateNCharacterStream (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,13 +51,13 @@ public void updateNCharacterStream(int columnIndex,
 ## <a name="remarks"></a>Notas  
  Este método updateNCharacterStream especificado por el método updateNCharacterStream en la interfaz java.sql.ResultSet.  
   
- Este método pasa los caracteres Unicode de un objeto de lector al seleccionado **nchar**, **nvarchar (max)**, **ntext**, y **xml** columnas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
+ Este método pasa los caracteres Unicode de un objeto de lector al seleccionado **nchar**, **nvarchar (max)** , **ntext**, y **xml** columnas. Si se utiliza este método en otras columnas de tipo de datos, se producirá una excepción.  
   
  Si la longitud del flujo es distinta a la especificada en el parámetro *length*, el controlador JDBC produce una excepción cuando la fila se actualiza o se inserta.  
   
  Si se desconoce la longitud del flujo, el parámetro *length* puede establecerse en -1 para indicar que el controlador debe aceptar el flujo independientemente de su longitud. Con sqljdbc4.jar, se recomienda usar el [Método updateNCharacterStream &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-int-java-io-reader.md) de JDBC 40 si la aplicación quiere actualizar la columna a partir de un flujo cuya longitud se desconoce.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateNCharacterStream &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatencharacterstream-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

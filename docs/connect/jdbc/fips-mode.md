@@ -7,17 +7,18 @@ ms.prod_service: connectivity
 ms.reviewer: craigg
 ms.technology: connectivity
 ms.topic: conceptual
-author: David-Engel
-ms.author: v-daveng
+author: MightyPen
+ms.author: genemi
 manager: kenvh
-ms.openlocfilehash: 8fb6ea7bf6abfb1f347d0541a01bae91aacf5f1c
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: d710bb6e83d6f9761f7926afac3280a2c33d2bec
+ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618282"
+ms.lasthandoff: 06/10/2019
+ms.locfileid: "66822232"
 ---
 # <a name="fips-mode"></a>Modo FIPS
+
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 Microsoft JDBC Driver para SQL Server es compatible con el que se ejecuta en JVM configurado para ser *compatible con FIPS 140*.

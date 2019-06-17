@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 8115ca58-8ae9-46ce-8515-7905d7bb25fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc43780fc7864614c550a0192f363219823376c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 54869f3c689b0c493cdaf19b86f5d95a43835929
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47776263"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802023"
 ---
 # <a name="getfetchsize-method-sqlserverstatement"></a>Método getFetchSize (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public final int getFetchSize()
 ## <a name="remarks"></a>Notas  
  Este método getFetchSize especificado por el método getFetchSize en la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

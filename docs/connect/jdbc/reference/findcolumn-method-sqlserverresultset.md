@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 7c29994a-0b53-420b-8a9b-82a9eef08587
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a5ff2173990dabafab5297dd195e617825768aef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4e3499748bc8c5e1b4a0251ef089bb498ba6aece
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47837733"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66799037"
 ---
 # <a name="findcolumn-method-sqlserverresultset"></a>Método findColumn (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public int findColumn(java.lang.String columnName)
   
  Si hay varias columnas con el mismo nombre, el método findColumn devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas. Si no hay coincidencias con distinción entre mayúsculas y minúsculas, este método devuelve la primera coincidencia con distinción entre mayúsculas y minúsculas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

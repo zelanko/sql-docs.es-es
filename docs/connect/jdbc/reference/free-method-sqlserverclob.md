@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: f3845548-5186-4986-953c-ddce14057ec1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d3dcaed0fecbb52b62f02b0c51046598979ee8dd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f5bd36ad4e8fc29753afca2aa8b4617c6afd6c59
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769541"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798998"
 ---
 # <a name="free-method-sqlserverclob"></a>Método free (SQLServerClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +36,7 @@ public void free()
 ## <a name="remarks"></a>Notas  
  El método fee especifica este método free en la interfaz java.sql.Clob.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Métodos SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-methods.md)   
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Clase SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-class.md)  

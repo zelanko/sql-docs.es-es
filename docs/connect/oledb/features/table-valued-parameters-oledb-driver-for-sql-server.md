@@ -13,13 +13,13 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB Driver for SQL Server)
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b68227ee34a15b36378e084fff194fddc4509d49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d520d07940acaefeb67d38c1e4da9547c8fea344
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749723"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802910"
 ---
 # <a name="table-valued-parameters-ole-db-driver-for-sql-server"></a>Parámetros con valores de tabla (controlador OLE DB para SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47749723"
   
  Para obtener información acerca de los parámetros con valores de tabla y OLE DB, consulte [parámetros con valores de tabla &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Controlador OLE DB para las características de SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md) 
   
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 37aaf09fd22a6f0a142a2b715b37d66de37d0f95
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 12258f95bd08d4fa196557efa7a6acf4feaa0d8f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823123"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798537"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>Usar instrucciones con el controlador JDBC
 
@@ -46,6 +46,6 @@ El controlador JDBC proporciona tres clases para la recuperación de datos desde
 | [Realizar operaciones por lotes](../../connect/jdbc/performing-batch-operations.md)                         | Describe cómo usar el controlador JDBC para llevar a cabo operaciones en lote.                                                                                      |
 | [Controlar instrucciones complejas](../../connect/jdbc/handling-complex-statements.md)                         | Describe cómo usar el controlador JDBC para ejecutar instrucciones complejas que realizan diversas tareas y pueden devolver tipos diferentes de datos.               |
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Introducción al controlador JDBC](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

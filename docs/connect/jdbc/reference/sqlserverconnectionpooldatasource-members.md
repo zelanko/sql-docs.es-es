@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: dac0337e-8088-488c-a25a-801a2190f6ca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 103dcc54b470be5db744dc6b5bf7bed6660de787
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ca125846062a77b19c324a50f9ed13c528f1e051
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746913"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800589"
 ---
 # <a name="sqlserverconnectionpooldatasource-members"></a>Miembros SQLServerConnectionPoolDataSource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "47746913"
 |java.sql.Wrapper|isWrapperFor, unwrap|  
 |javax.sql.ConnectionPoolDataSource|getLoginTimeout, getLogWriter, setLoginTimeout, setLogWriter, getPooledConnection|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  
   
   

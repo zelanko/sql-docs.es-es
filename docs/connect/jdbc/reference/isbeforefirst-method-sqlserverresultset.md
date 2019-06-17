@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: e0e2bd28-6949-47dc-b9dd-145ffb337069
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77ff7c0808f2d6e53fc15814612352abe3ad2479
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 699eb3385baba2d9db8f37237f3cc0af90b4912d
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47783913"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801204"
 ---
 # <a name="isbeforefirst-method-sqlserverresultset"></a>Método isBeforeFirst (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -46,7 +46,7 @@ public boolean isBeforeFirst()
   
  Si este método se utiliza con cursores dinámicos, incluso los de solo avance y solo lectura, y la propiedad de conexión selectMethod se ha establecido para el "cursor", se producirá una excepción.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

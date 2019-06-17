@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 24170524-e1ab-4e80-8fd1-6688efacfbde
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 27d8d04e3606306b32e569d1b5b4968629c9ecef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 6199d04c836df9990b5931cfb8ead5243e7c2d10
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639073"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803146"
 ---
 # <a name="sqlserverclob-class"></a>Clase SQLServerClob
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public class SQLServerClob
 ## <a name="remarks"></a>Notas  
  Un CLOB se almacena en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como un tipo de datos TEXT o NTEXT.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerClob](../../../connect/jdbc/reference/sqlserverclob-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

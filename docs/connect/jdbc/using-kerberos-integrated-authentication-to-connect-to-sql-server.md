@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d67a368c1c33d9f3c85e36d15ad2b77fe7837c88
-ms.sourcegitcommit: 879a5c6eca99e0e9cc946c653d4ced165905d9c6
+manager: jroth
+ms.openlocfilehash: 89c87ecb551e3e75397bc431bdefc47fad18f8d2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55736996"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798597"
 ---
-# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Mediante la autenticación integrada de Kerberos para conectarse a SQL Server
+# <a name="using-kerberos-integrated-authentication-to-connect-to-sql-server"></a>Usar la autenticación integrada de Kerberos para conectar con SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -195,7 +195,7 @@ La propiedad de nombre de usuario no requiere el dominio KERBEROS si el usuario 
 
 ## <a name="using-kerberos-authentication-from-unix-machines-on-the-same-domain"></a>Mediante la autenticación de Kerberos desde los equipos Unix en el mismo dominio
 
-Esta guía se da por supuesto un trabajo ya existe la configuración de Kerberos. Ejecute el siguiente código en un equipo Windows con la autenticación Kerberos para comprobar si el anterior es verdadero de trabajo. El código imprimirá "esquema de autenticación: KERBEROS"en la consola si se realiza correctamente. No hay marcas de tiempo de ejecución adicionales, dependencias o configuración del controlador es necesarios fuera de las que se proporcionan. El mismo bloque de código se puede ejecutar en Linux para comprobar las conexiones correctas.
+Esta guía se da por supuesto un trabajo ya existe la configuración de Kerberos. Ejecute el siguiente código en un equipo Windows con la autenticación Kerberos para comprobar si el anterior es verdadero de trabajo. El código imprimirá "Esquema de autenticación: KERBEROS" en la consola si se realiza correctamente. No hay marcas de tiempo de ejecución adicionales, dependencias o configuración del controlador es necesarios fuera de las que se proporcionan. El mismo bloque de código se puede ejecutar en Linux para comprobar las conexiones correctas.
 
 ```java
 SQLServerDataSource ds = new SQLServerDataSource();

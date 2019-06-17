@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 77905630-0135-46ad-a419-215e648996e2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70efc5220c5d09098d60eab19ae736fa2d87c44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 84459080ca6a28b2825547e16387e3fda8c8a5b0
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617083"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800457"
 ---
 # <a name="setncharacterstream-method-sqlservercallablestatement"></a>Método setNCharacterStream (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47617083"
 |[Método setNCharacterStream &#40;java.lang.String, java.io.Reader&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader.md)|Establece el parámetro designado en el objeto Reader especificado.|  
 |[Método setNCharacterStream &#40;java.lang.String, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setncharacterstream-method-java-lang-string-java-io-reader-long.md)|Establece el parámetro designado en el objeto Reader especificado, que es el número de caracteres indicado para la longitud.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

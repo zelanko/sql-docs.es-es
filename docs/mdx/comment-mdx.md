@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6469921572b8a1809e228fff0d25061475399ae7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63181570"
 ---
 # <a name="comment-mdx"></a>Comentario (MDX)
@@ -33,7 +33,7 @@ ms.locfileid: "63181570"
  Cadena que contiene el texto del comentario.  
   
 ## <a name="remarks"></a>Comentarios  
- El servidor no evalúa el texto situado entre los caracteres de comentario / * y \*/. Los comentarios pueden insertarse en una línea distinta o como parte de una instrucción de Expresiones multidimensionales (MDX).  Los comentarios de varias líneas deben indicarse con /\* y \*/.  
+ El servidor no evalúa el texto situado entre los caracteres de comentario / * y \*/. Los comentarios pueden insertarse en una línea distinta o como parte de una instrucción de Expresiones multidimensionales (MDX). Los comentarios de varias líneas deben indicarse con /\* y \*/.  
   
  No hay límite de longitud para los comentarios. Los comentarios pueden anidarse; por ejemplo, `/* Test /*Comment*/ Text*/` es un ejemplo de un comentario anidado.  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 7320c383-0b06-446d-963b-7005e50324a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ea08f3b58894ff269972dc2348d71fb2d589959c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 3e2d977647153ab74299a6b6f002ec33d3003558
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398207"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802538"
 ---
 # <a name="valueof-method-javasqltimestamp-javautilcalendar"></a>Método valueOf (java.sql.Timestamp, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -45,7 +45,7 @@ public static DateTimeOffset valueOf(java.sql.Timestamp timestamp, java.util.Cal
 ## <a name="remarks"></a>Notas  
  Este método también establece el objeto java.util.Calendar hasta el punto cronológico determinado por el objeto java.sql.Timestamp.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md)   
  [Miembros DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-members.md)  
   

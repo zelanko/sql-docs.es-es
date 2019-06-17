@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fd3294eb5ff9d25b6e5d067249d829b21428035a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: f4b5232a71eaaf44fb9896d73b6ef63c7bf48c5f
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814713"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798619"
 ---
 # <a name="using-multiple-result-sets"></a>Usar múltiples conjuntos de resultados
 
@@ -40,6 +40,6 @@ En este caso, se sabe que el número de conjuntos de resultados que se devuelven
 > [!NOTE]  
 > Al realizar la llamada al método getMoreResults de la clase SQLServerStatement, implícitamente se cierra el conjunto de resultados devuelto anteriormente.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Usar instrucciones con el controlador JDBC](../../connect/jdbc/using-statements-with-the-jdbc-driver.md)

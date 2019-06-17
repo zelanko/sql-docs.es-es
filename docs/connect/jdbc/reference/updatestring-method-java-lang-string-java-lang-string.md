@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3a9236bb-a307-45a8-b7d2-c4cbd9b3cb35
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6c1873264a8965ef03a00a507723595ee1deea7c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 09bb0a355a643f38b8ba9a2c1bb0cdbc0736b17e
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47672243"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66801188"
 ---
 # <a name="updatestring-method-javalangstring-javalangstring"></a>Método updateString (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public void updateString(java.lang.String columnName,
 ## <a name="remarks"></a>Notas  
  Este método updateString especificado por el método updateString en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [updateString (método) &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatestring-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - data updates [SQL Server], OLE DB
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: d50246e596472e2835add790101d92482161c02a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 39119e4444b22fdbeacbf9c1e1b6db22bbf31a79
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47657793"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803801"
 ---
 # <a name="updating-data-in-rowsets---resynchronizing-rows"></a>Actualizar datos en conjuntos de filas: volver a sincronizar filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "47657793"
 
   El controlador OLE DB para SQL Server admite **IRowsetResynch** en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] compatible con cursores conjuntos de filas únicamente. **IRowsetResynch** no está disponible a petición. El consumidor debe solicitar la interfaz antes de abrir el conjunto de filas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Actualizar datos en conjuntos de filas](../../oledb/ole-db-rowsets/updating-data-in-rowsets.md)  
   
   

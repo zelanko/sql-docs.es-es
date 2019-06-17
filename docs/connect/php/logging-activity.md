@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a777b3d9-2262-4e82-bc82-b62ad60d0e55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf960ec912f51c5a39f8d07366174e1c0cd4f7b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 8612874b351af1cfd9370b8ef29dae4a0c4235e2
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47600191"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800258"
 ---
 # <a name="logging-activity"></a>Actividad de registro
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -115,7 +115,7 @@ Puede especificar más de una opción a la vez agregando valores enteros juntos.
   
 `sqlsrv.LogSeverity = 3`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)

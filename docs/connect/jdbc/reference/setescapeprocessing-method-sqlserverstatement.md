@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 52a7931ffe5ffb80f0ca376318e8b50a8e21e6d5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ddd79fe975905baa5fb8cab945d6069be611adc3
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745603"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802982"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>Método setEscapeProcessing (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public final void setEscapeProcessing(boolean enable)
 ## <a name="remarks"></a>Notas  
  Este método setEscapeProcessing especificado por el método setEscapeProcessing en la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

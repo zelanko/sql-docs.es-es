@@ -54,7 +54,7 @@
   items:
     - name: Configuración
       items:
-        - name: 'Configuración de los votos y modos de quórum WSFC '
+        - name: Configuración de los votos y modos de quórum WSFC
           href: windows/wsfc-quorum-modes-and-voting-configuration-sql-server.md
         - name: Agrupación en clústeres de varias subredes de SQL Server
           href: windows/sql-server-multi-subnet-clustering-sql-server.md

@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198759"
 ---
 # <a name="managing-data-sources"></a>Administrar orígenes de datos
@@ -30,7 +30,7 @@ Después de haber instalado a un controlador ODBC desde el programa de instalaci
 > [!NOTE]  
 >  Para administrar un origen de datos que se conecta a un controlador de 32 bits en plataformas de 64 bits, utilice c:\windows\sysWOW64\odbcad32.exe. Para administrar un origen de datos que se conecta a un controlador de 64 bits, utilice c:\windows\system32\odbcad32.exe. En **herramientas administrativas** en un sistema operativo de Windows 8 de 64 bits, hay iconos de 32 bits tanto 64-bit **Administrador de orígenes de datos ODBC** cuadro de diálogo.  
   
- Si usas el odbcad32.exe 64 bits para configurar o quitar un DSN que se conecta a un controlador de 32 bits, por ejemplo, **controlador es Microsoft Access (\*.mdb)**, recibirá el mensaje de error siguiente:  
+ Si usas el odbcad32.exe 64 bits para configurar o quitar un DSN que se conecta a un controlador de 32 bits, por ejemplo, **controlador es Microsoft Access (\*.mdb)** , recibirá el mensaje de error siguiente:  
   
 ```  
 The specified DSN contains an architecture mismatch between the Driver and Application  

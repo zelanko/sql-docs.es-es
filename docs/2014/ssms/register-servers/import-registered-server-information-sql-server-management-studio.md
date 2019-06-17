@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0106bc32724bbe4e2e2faed4ead5750440508d7d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191908"
 ---
 # <a name="import-registered-server-information-sql-server-management-studio"></a>Importar información de servidores registrados (SQL Server Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "63191908"
 3.  En el cuadro de diálogo **Importar servidores registrados** , seleccione el archivo de servidores registrados que desea importar y, a continuación, haga clic en **Aceptar**.  
   
      **Importar archivo**  
-     Escriba el nombre del archivo de importación en el cuadro de texto o haga clic en el botón Explorar (**...**) para localizar el archivo en el equipo cliente. Si selecciona un archivo existente, la información del servidor registrado se anexa al archivo. El archivo de importación solo puede ser un archivo de servidor registrado exportado previamente. Los archivos de servidor registrado tienen una extensión .regsrvr.  
+     Escriba el nombre del archivo de importación en el cuadro de texto o haga clic en el botón Explorar ( **...** ) para localizar el archivo en el equipo cliente. Si selecciona un archivo existente, la información del servidor registrado se anexa al archivo. El archivo de importación solo puede ser un archivo de servidor registrado exportado previamente. Los archivos de servidor registrado tienen una extensión .regsrvr.  
   
      **Seleccionar el grupo de servidores de destino de la importación**  
      Seleccione el nodo raíz o un grupo de servidores específico al que se importarán las entradas del servidor registrado del archivo. Puede importar al archivo de exportación todos los servidores registrados, los servidores registrados de un grupo de servidores específico o un único servidor registrado. La funcionalidad de importación es recursiva; por ejemplo, si un grupo de servidores A contiene un grupo de servidores B, y un grupo de servidores B contiene grupos de servidores C y D; la importación del grupo de servidores A exporta todas las entradas de A, B, C y D.  

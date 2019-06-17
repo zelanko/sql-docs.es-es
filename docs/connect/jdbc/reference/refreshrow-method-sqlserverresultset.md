@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 048fe245-157f-4fd8-be75-ce54b83e02b3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 19bd400492ba8ce8547f48b83b2f94544bd28a2e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b13711007627872af8076f40ccbe94c521c68583
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47812624"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66802130"
 ---
 # <a name="refreshrow-method-sqlserverresultset"></a>Método refreshRow (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +47,7 @@ public void refreshRow()
   
  Todos los valores se vuelven a capturar en función del nivel de aislamiento de transacción y sensibilidad de cursor. Si se llama a este método después de llamar a un método de actualización, pero antes de llamar al método [updateRow](../../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md), las actualizaciones realizadas en la fila se perderán. Por lo general, si se llama a este método, el rendimiento será más lento.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

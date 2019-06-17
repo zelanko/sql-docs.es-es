@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3a1568d1-917b-46d3-b5cb-facdc740408f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 280667787916beade901c704c4679a14f689db6b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: cbcb076d33b45d8db58360c6c3741493aab2ed62
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47784803"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66800846"
 ---
 # <a name="python-sql-driver"></a>Controlador Python para SQL
 

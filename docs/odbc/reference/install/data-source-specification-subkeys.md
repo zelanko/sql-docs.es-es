@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ad210f91d00f9e692c8ee20fef01a808a01501c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63198208"
 ---
 # <a name="data-source-specification-subkeys"></a>Subclaves de la especificación del origen de datos
@@ -27,7 +27,7 @@ Cada origen de datos aparece en la subclave de orígenes de datos ODBC tiene una
   
  Los formatos de los valores son como se muestra en la tabla siguiente. Solo el valor de controlador es obligatorio.  
   
-|Nombre|Tipo de datos|Datos|  
+|NOMBRE|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |Descripción|REG_SZ|*description*|  
 |Controlador|REG_SZ|*driver-DLL-path*|  

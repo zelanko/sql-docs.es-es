@@ -3,17 +3,17 @@ title: Biblioteca de funciones de MicrosoftML R - SQL Server Machine Learning Se
 description: Introducción a la biblioteca de funciones de MicrosoftML en SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services con R.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/04/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 73d9dcf56c0eb5e69704adf169946f6aa28a432c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62641825"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140483"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +140,7 @@ En esta sección se enumera las funciones por categoría para darle una idea de 
 
 Las funciones de **MicrosoftML** son invocables en código R encapsulada en procedimientos almacenados. La mayoría de los desarrolladores crear **MicrosoftML** soluciones localmente, y, a continuación, migrar código de R terminado a los procedimientos almacenados como un ejercicio de implementación.
 
-El **MicrosoftML** de paquetes de R es instaladas "de-la-listos para usar" en SQL Server 2017. También está disponible para su uso con SQL Server 2016 si actualiza los componentes de R para la instancia: [Actualizar una instancia de SQL Server mediante el enlace](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
+El **MicrosoftML** de paquetes de R es instaladas "de-la-listos para usar" en SQL Server 2017. También está disponible para su uso con SQL Server 2016 si actualiza los componentes de R para la instancia: [Actualizar una instancia de SQL Server mediante el enlace](../install/upgrade-r-and-python.md)
 
 No se carga el paquete de forma predeterminada. Como primer paso, cargue el **MicrosoftML** del paquete y, a continuación, cargar **RevoScaleR** si debe usar contextos de cálculo remoto u objetos de origen de conectividad o los datos relacionados. A continuación, hacer referencia a las funciones individuales que necesita.
 

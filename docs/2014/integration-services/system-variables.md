@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 58254a5c9f9031e4657f7a3a2eb5cb73be4fbdea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62927237"
 ---
 # <a name="system-variables"></a>Variables del sistema
@@ -34,7 +34,7 @@ ms.locfileid: "62927237"
 |Variable del sistema|Tipo de datos|Descripción|  
 |---------------------|---------------|-----------------|  
 |**CancelEvent**|Int32|Identificador de un objeto de evento de Windows que la tarea puede señalar para indicar que la tarea debe dejar de ejecutarse.|  
-|`ContainerStartTime`|Datetime|Hora de inicio del contenedor.|  
+|`ContainerStartTime`|DateTime|Hora de inicio del contenedor.|  
 |**CreationDate**|DateTime|Fecha en que se creó el paquete.|  
 |`CreatorComputerName`|String|Equipo en el que se creó el paquete.|  
 |**CreatorName**|String|Nombre de la persona que creó el paquete.|  
@@ -47,7 +47,7 @@ ms.locfileid: "62927237"
 |**OfflineMode**|Boolean|Indica si el paquete está en el modo sin conexión. El modo sin conexión no adquiere conexiones a orígenes de datos.|  
 |**PackageID**|String|Identificador único del paquete.|  
 |**PackageName**|String|Nombre del paquete.|  
-|**StartTime**|Datetime|Hora a la que se inició la ejecución del paquete.|  
+|**StartTime**|DateTime|Hora a la que se inició la ejecución del paquete.|  
 |`ServerExecutionID`|Int64|Identificador de ejecución para el paquete que se ejecuta en el servidor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] .<br /><br /> El valor predeterminado es cero. El valor se cambia únicamente si el paquete lo ejecuta ISServerExec en el servidor de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] . Cuando hay un paquete secundario, el valor se pasa desde el paquete primario al paquete secundario.|  
 |**UserName**|String|Cuenta del usuario que inició el paquete. El nombre de usuario se encuentra calificado por el nombre de dominio.|  
 |**VersionBuild**|Int32|Versión del paquete.|  

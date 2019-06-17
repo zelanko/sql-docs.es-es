@@ -34,10 +34,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 257fdeadceb961fd9080956b3c6725c40e3c3c8e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63073996"
 ---
 # <a name="track-data-changes-sql-server"></a>Seguimiento de cambios de datos (SQL Server)
@@ -70,7 +70,7 @@ ms.locfileid: "63073996"
 |**Cambios sometidos a seguimiento**|||  
 |Cambios de DML|Sí|Sí|  
 |**Información sometida a seguimiento**|||  
-|Datos históricos|Sí|No|  
+|Datos históricos|Sí|Sin|  
 |Si la columna cambió|Sí|Sí|  
 |Tipo de DML|Sí|Sí|  
   
@@ -93,7 +93,7 @@ ms.locfileid: "63073996"
  Para obtener acceso a los datos modificados que están asociados a una instancia de captura, se debe conceder al usuario acceso exclusivo a todas las columnas capturadas de la tabla de origen asociada. Además, si se especifica un rol de acceso cuando se crea la instancia de captura, el autor de las llamadas también debe ser miembro del rol de acceso especificado. Otras funciones de captura de datos modificados generales para tener acceso a los metadatos serán accesibles para todos los usuarios de la base de datos a través del rol public, aunque el acceso a los metadatos devueltos también se conseguirá normalmente mediante un acceso exclusivo a las tablas de origen subyacentes y por pertenencia a cualquier rol de acceso definido.  
   
  **Operaciones DDL para las tablas de origen habilitadas para la captura de datos modificados**  
- Cuando una tabla está habilitada para la captura de datos modificados, solo un miembro del rol fijo de servidor `sysadmin` o de los roles de base de datos `database role db_owner` o `database role db_ddladmin` puede aplicarle las operaciones DDL.  Los usuarios a los que se les haya permitido explícitamente realizar operaciones DDL en la tabla recibirán el error 22914 si intentan esta operación.  
+ Cuando una tabla está habilitada para la captura de datos modificados, solo un miembro del rol fijo de servidor `sysadmin` o de los roles de base de datos `database role db_owner` o `database role db_ddladmin` puede aplicarle las operaciones DDL. Los usuarios a los que se les haya permitido explícitamente realizar operaciones DDL en la tabla recibirán el error 22914 si intentan esta operación.  
   
 ### <a name="data-type-considerations-for-change-data-capture"></a>Consideraciones sobre los tipos de datos para la captura de datos modificados  
  La captura de datos modificados admite todos los tipos de columna base. En la tabla siguiente, se especifican el comportamiento y las limitaciones para varios tipos de columna.  
@@ -101,7 +101,7 @@ ms.locfileid: "63073996"
 |Tipo de columna|Cambios capturados en tablas de cambios|Limitaciones|  
 |--------------------|---------------------------------------|-----------------|  
 |Columnas dispersas|Sí|No admite la captura de cambios cuando se usa un conjunto de columnas.|  
-|Columnas calculadas|No|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
+|Columnas calculadas|Sin|No se hace un seguimiento de los cambios realizados en columnas calculadas. La columna aparecerá en la tabla de cambios con el tipo adecuado, pero tendrá un valor NULL.|  
 |XML|Sí|No se hace un seguimiento de los cambios realizados en elementos XML individuales.|  
 |timestamp|Sí|El tipo de datos de la tabla de cambios se convierte a binario.|  
 |Tipos de datos BLOB|Sí|La imagen anterior de la columna BLOB solo se almacena si se cambia la propia columna.|  

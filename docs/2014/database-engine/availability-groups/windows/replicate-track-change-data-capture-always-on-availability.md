@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c52283ce9d512da6dc2e5ad05a4c8356524bef01
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62814061"
 ---
 # <a name="replication-change-tracking-change-data-capture-and-alwayson-availability-groups-sql-server"></a>Replicación, seguimiento de cambios, captura de datos modificados y grupos de disponibilidad AlwaysOn (SQL Server)
@@ -206,9 +206,9 @@ ms.locfileid: "62814061"
 |-|-|-|-|  
 ||**publicador**|**Distribuidor** <sup>3</sup>|**Suscriptor**|  
 |**Transaccional**|Sí<sup>1</sup>|No|Sí<sup>2</sup>|  
-|**P2P**|No|No|No|  
-|**Mezcla**|Sí|No|Sí<sup>2</sup>|  
-|**Snapshot**|Sí|No|Sí<sup>2</sup>|  
+|**P2P**|No|Sin|Sin|  
+|**Mezcla**|Sí|Sin|Sí<sup>2</sup>|  
+|**Snapshot**|Sí|Sin|Sí<sup>2</sup>|  
   
  <sup>1</sup> no incluye compatibilidad para la replicación transaccional bidireccional y recíproca.  
   

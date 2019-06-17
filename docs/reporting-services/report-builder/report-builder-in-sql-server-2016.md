@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 55bf4f9c-d037-412f-ae57-3fc39ce32fa5
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: d77b35851144967c9cfed408617fe5551debf37f
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.openlocfilehash: aa1dd3517002405a93185ea55adcdc5ecd808e6f
+ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65620601"
+ms.lasthandoff: 06/12/2019
+ms.locfileid: "67037839"
 ---
 # <a name="report-builder-in-sql-server"></a>Generador de informes en SQL Server
 
@@ -81,7 +81,7 @@ También puede publicar un informe paginado en el servicio Power BI. Obtenga má
  [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md)  
  Proporciona información acerca de lo que debería tener en cuenta antes de empezar a generar el informe.  
   
- [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)  
  Define conceptos básicos usados en toda la documentación del [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] .  
   
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)  

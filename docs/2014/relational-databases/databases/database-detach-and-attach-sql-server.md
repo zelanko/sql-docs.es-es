@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5eae331b064d83510d657f6f09a819955e6259a0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62762422"
 ---
 # <a name="database-detach-and-attach-sql-server"></a>Adjuntar y separar bases de datos (SQL Server)
@@ -92,7 +92,7 @@ ms.locfileid: "62762422"
 > [!NOTE]  
 >  Si el archivo de datos principal que se va a adjuntar es de solo lectura, [!INCLUDE[ssDE](../../includes/ssde-md.md)] considera que la base de datos es de solo lectura.  
   
- Cuando se adjunta una base de datos cifrada en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DESCIFRADO POR CONTRASEÑA = **'*`password`*'**. Se recomienda que habilite el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando se adjunta una base de datos cifrada en primer lugar a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el propietario de la base de datos debe abrir la clave maestra de la base de datos ejecutando la siguiente instrucción: OPEN MASTER KEY DESCIFRADO POR CONTRASEÑA = **' *`password`* '** . Se recomienda que habilite el descifrado automático de la clave maestra mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. Para obtener más información, vea [CREATE MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Las condiciones para adjuntar archivos de registro dependen, en parte, de si la base de datos es de lectura y escritura o de solo lectura. Vea a continuación:  
   

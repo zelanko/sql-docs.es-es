@@ -2,17 +2,17 @@
 title: 'Sugerencias para usar paquetes de R instalados en bibliotecas de usuario: SQL Server Machine Learning Services'
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/30/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: ee5dc9dc8b1730f26bada915d739f164a884801d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: bb354e1a0a7f7f22a39b690fdd0c0f4ae7778b8f
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642287"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140510"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Sugerencias para usar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +39,7 @@ Paquetes de R se ejecutan en varias plataformas informáticas. Asegúrese de que
 
 Si previamente ha modificado el entorno de R en el equipo, antes de instalar nada, asegúrese de que la variable de entorno de R `.libPath` usa una sola ruta de acceso.
 
-Esta ruta de acceso debe apuntar a la carpeta R_SERVICES para la instancia. Para obtener más información, incluida la forma de determinar qué paquetes ya están instalados, consulte [paquetes predeterminada de R y Python en SQL Server](installing-and-managing-r-packages.md).
+Esta ruta de acceso debe apuntar a la carpeta R_SERVICES para la instancia. Para obtener más información, incluida la forma de determinar qué paquetes ya están instalados, consulte [paquetes predeterminada de R y Python en SQL Server](../package-management/default-packages.md).
 
 ## <a name="new-to-sql-server"></a>Novedad en SQL Server
 
@@ -73,7 +73,7 @@ Esto no funciona cuando se ejecuta soluciones de R en SQL Server, porque los paq
 
 + Actualice el código para quitar las referencias directas a las rutas de acceso de paquetes de R o bibliotecas de R. 
 
-+ Saber qué biblioteca de paquetes está asociada a la instancia. Para obtener más información, consulte [paquetes predeterminada de R y Python en SQL Server](installing-and-managing-r-packages.md).
++ Saber qué biblioteca de paquetes está asociada a la instancia. Para obtener más información, consulte [paquetes predeterminada de R y Python en SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Vea también
 

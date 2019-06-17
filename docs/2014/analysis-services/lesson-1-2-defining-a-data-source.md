@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a9b2b248207d19f99aae3b07837d624fb9bb9cf6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079336"
 ---
 # <a name="defining-a-data-source"></a>Definir un origen de datos
@@ -36,7 +36,7 @@ ms.locfileid: "66079336"
   
 5.  En el **nombre del servidor** cuadro de texto, escriba `localhost`.  
   
-     Para conectarse a una instancia con nombre en el equipo local, escriba **localhost\\< nombre de instancia\>**. Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
+     Para conectarse a una instancia con nombre en el equipo local, escriba **localhost\\< nombre de instancia\>** . Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
   
 6.  Compruebe que la opción **Usar autenticación de Windows** está seleccionada. En la lista **Seleccione o escriba un nombre de base de datos** , seleccione **AdventureWorksDW2012**.  
   

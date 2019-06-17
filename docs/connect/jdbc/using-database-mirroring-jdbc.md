@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 4ff59218-0d3b-4274-b647-9839c4955865
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4478c2799ddc23ce647c607466e0206f72ccf7b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 2914adb0a69c680624365b7fe0af23f9615f6f05
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47638649"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66798655"
 ---
 # <a name="using-database-mirroring-jdbc"></a>Usar la creación de reflejo de la base de datos (JDBC)
 
@@ -34,7 +34,7 @@ En caso de que el servidor Partner_A se dañe de forma irreparable, se puede pon
 
 Las configuraciones alternativas de creación de reflejo de la base de datos proporcionan diferentes niveles de rendimiento y de seguridad de los datos, y admiten varias formas de conmutación por error. Para obtener más información, vea "Información general sobre la creación de reflejo de la base de datos" en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="programming-considerations"></a>Consideraciones de programación
+## <a name="programming-considerations"></a>Consideraciones sobre la programación
 
 Cuando el servidor principal genera un error, la aplicación cliente recibe mensajes de error como respuesta a las llamadas a la API que indican que se ha perdido la conexión a la base de datos. En este caso, se pierden todos los cambios sin confirmar introducidos en la base de datos y se revierte la transacción actual. Por lo tanto, la aplicación debe cerrar la conexión (o liberar el objeto de origen de datos) e intentar volver a abrirla. Una vez establecida la conexión, la nueva conexión se redirige de forma transparente a la base de datos reflejada, la cual actúa ahora como el servidor principal sin que el cliente tenga que modificar la cadena de conexión o el objeto de origen de datos.
 
@@ -109,6 +109,6 @@ public class ClientFailover {
 }
 ```
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Conexión a SQL Server con el controlador JDBC](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

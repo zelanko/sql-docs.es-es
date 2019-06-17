@@ -3,17 +3,17 @@ title: Actualización e instalación preguntas más frecuentes (P+F) - servicios
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/15/2018
+ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
 manager: cgronlun
-ms.openlocfilehash: 3a4a0c740268a8e2d6691e3c8a87634cc05f9ab1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
+ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62642318"
+ms.lasthandoff: 06/14/2019
+ms.locfileid: "67140365"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Preguntas más frecuentes de actualización e instalación de SQL Server Machine Learning o R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,7 +31,7 @@ Dependiendo de la compilación de SQL Server que va a instalar, podrían aplicar
 
 - En las primeras versiones de SQL Server 2016 R Services, se requería la notación 8.3 en la unidad que contiene el directorio de trabajo. Si instaló una versión preliminar, la actualización a SQL Server 2016 Service Pack 1 debe corregir este problema. Este requisito no es aplicable a las versiones después del SP1.
 
-- Actualmente, no se puede instalar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] en un clúster de conmutación por error. Sin embargo, vista previa de SQL Server 2019 proporcionan compatibilidad de conmutación por error si desea evaluar este capablity en un entorno de prueba. Para obtener más información, consulte [What ' s New](../what-s-new-in-sql-server-machine-learning-services.md).
+- Actualmente, no se puede instalar [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] en un clúster de conmutación por error. Sin embargo, vista previa de SQL Server 2019 proporcionan compatibilidad de conmutación por error si desea evaluar esta funcionalidad en un entorno de prueba. Para obtener más información, consulte [What ' s New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - En una máquina virtual de Azure, una configuración adicional podría ser necesaria. Por ejemplo, es posible que deba crear una excepción de firewall para permitir el acceso remoto.
 
@@ -63,7 +63,7 @@ Puede actualizar su versión de SQL Server al volver a ejecutar al Asistente par
 + [Actualizar SQL Server con el Asistente para instalación](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 Puede actualizar solo para la máquina de aprendizaje componentes mediante el uso de un proceso llamado enlace: 
-+ [Use SqlBindR para actualizar los componentes de aprendizaje automático](use-sqlbindr-exe-to-upgrade-an-instance-of-sql-server.md)
++ [Use SqlBindR para actualizar los componentes de aprendizaje automático](../install/upgrade-r-and-python.md)
 
 ### <a name="end-of-support-for-in-place-upgrades-from-prerelease-versions"></a>Finalización del soporte técnico para las actualizaciones en contexto desde versiones preliminares
 
@@ -99,7 +99,7 @@ Si ha instalado una versión preliminar de Microsoft R Server, debe desinstalarl
 
 2.  En el cuadro de diálogo con opciones para **Agregar**, **Reparar**o **Quitar** componentes, seleccione **Quitar**.
   
-3.  En la página **Seleccionar características** , en **Características compartidas**, seleccione **R Server (independiente)**. Haga clic en **Siguiente**y, después, haga clic en **Finalizar** para desinstalar los componentes seleccionados.
+3.  En la página **Seleccionar características** , en **Características compartidas**, seleccione **R Server (independiente)** . Haga clic en **Siguiente**y, después, haga clic en **Finalizar** para desinstalar los componentes seleccionados.
 
 ## <a name="r-services-and-r-server-standalone-side-by-side-errors"></a>R Services y errores de R Server (independiente) en paralelo 
 
@@ -123,7 +123,7 @@ Si este procedimiento no se puede resolver el problema, pruebe la siguiente solu
 
 3. Reinicie el servidor.
 
-4. Ejecute el programa de instalación de SQL Server y agregar sólo la característica R Services (In-Database). No seleccione **R Server (independiente)**.
+4. Ejecute el programa de instalación de SQL Server y agregar sólo la característica R Services (In-Database). No seleccione **R Server (independiente)** .
 
 Por lo general, se recomienda no instalar R Services (In-Database) y R Server (independiente) en el mismo equipo. Sin embargo, suponiendo que el servidor tiene capacidad suficiente, es posible que encuentre que r Server independiente puede resultar útil como una herramienta de desarrollo. Otro escenario posible es que necesita usar las características de puesta en marcha de R Server, pero también desea tener acceso a datos de SQL Server sin mover los datos.
 

@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270496"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática mínima de SQL
@@ -33,7 +33,7 @@ Esta sección describe la sintaxis SQL mínima que debe admitir un controlador O
   
  CREATE TABLE *nombre de la tabla de base*  
   
- (*identificador de la columna de tipo de datos* [*, identificador de la columna de tipo de datos*]...)  
+ (*identificador de la columna de tipo de datos* [ *, identificador de la columna de tipo de datos*]...)  
   
 > [!IMPORTANT]  
 >  Como un *tipo de datos* en un *instrucción create table*, las aplicaciones deben usar un tipo de datos de la columna TYPE_NAME del conjunto de resultados devuelto por **SQLGetTypeInfo**.  

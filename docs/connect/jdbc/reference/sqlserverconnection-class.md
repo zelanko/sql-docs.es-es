@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 937292a6-1525-423e-a2b2-a18fd34c2893
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6f83ca445468c0d230d0c2fd1660d58b2b75469
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: a14627f54e1d297642cb2c555fb8427acb2da5a7
+ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47645213"
+ms.lasthandoff: 06/07/2019
+ms.locfileid: "66803090"
 ---
 # <a name="sqlserverconnection-class"></a>Clase SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,7 +44,7 @@ public class SQLServerConnection
   
  Esta clase admite la acción de desencapsular para la interfaz de ISQLServerConnection, interfaz java.sql.connection y clase SQLServerConnection. Para obtener más información, consulte [contenedores e Interfaces](../../../connect/jdbc/wrappers-and-interfaces.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Referencia de API del controlador JDBC](../../../connect/jdbc/reference/jdbc-driver-api-reference.md)  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4c8af52dfe8c95b80f5b9550b41a14e1f70c7a6e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080171"
 ---
 # <a name="configure-http-access-to-analysis-services-on-internet-information-services-iis-80"></a>Configurar el acceso HTTP a Analysis Services en Internet Information Services (IIS) 8.0
@@ -84,7 +84,7 @@ ms.locfileid: "66080171"
   
 -   **Desarrollo de aplicaciones** | **Extensiones ISAPI**  
   
- Para comprobar o agregar estos componentes, use **Administrador del servidor** | **Administrar** | **Agregar roles y funciones**. Siga los pasos del asistente hasta llegar a **Roles de servidor**. Desplácese hacia abajo hasta encontrar **Servidor Web (IIS)**.  
+ Para comprobar o agregar estos componentes, use **Administrador del servidor** | **Administrar** | **Agregar roles y funciones**. Siga los pasos del asistente hasta llegar a **Roles de servidor**. Desplácese hacia abajo hasta encontrar **Servidor Web (IIS)** .  
   
 1.  Abra **Servidor web** | **Seguridad** y elija los métodos de autenticación.  
   

@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3cf60ccc0e220850f7a83ed2c25db3795c1e7796
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63312490"
 ---
 # <a name="positioned-update-and-delete-statements"></a>Actualización posicionada y las instrucciones Delete
@@ -34,7 +34,7 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  [**Donde** *condición de búsqueda*]  
   
- **PARA la actualización de** [*nombre-columna* [**,** *nombre de columna*]...]  
+ **PARA la actualización de** [*nombre-columna* [ **,** *nombre de columna*]...]  
   
  La aplicación, a continuación, coloca el cursor en la fila se deben actualizar o eliminar. Puede hacerlo mediante una llamada a **SQLFetchScroll** para recuperar un conjunto de filas que contiene las filas requerida y una llamada a **SQLSetPos** para colocar el cursor de conjunto de filas en esa fila. A continuación, la aplicación ejecuta la actualización por posición o la instrucción delete en una instrucción que la instrucción que se está usa el conjunto de resultados diferente. Es la sintaxis de estas instrucciones:  
   
@@ -42,7 +42,7 @@ Las aplicaciones pueden actualizar o eliminar la fila actual de un conjunto de r
   
  **SET** *column-identifier* **=** {*expression* &#124; **NULL**}  
   
- [**,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
+ [ **,** *column-identifier* **=** {*expression* &#124; **NULL**}]...  
   
  **WHERE CURRENT OF** *nombre de cursor*  
   

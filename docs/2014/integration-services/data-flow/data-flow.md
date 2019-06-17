@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 76c4f0d89e26e620b8c557383bd130bc8940b168
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62828003"
 ---
 # <a name="data-flow"></a>Flujo de datos
@@ -97,7 +97,7 @@ ms.locfileid: "62828003"
 ### <a name="sources-available-for-download"></a>Orígenes disponibles para la descarga  
  En la tabla siguiente se indican otros orígenes que puede descargar del sitio web de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Descripción|  
+|`Source`|Descripción|  
 |------------|-----------------|  
 |Origen de Oracle|El origen de Oracle es el componente de origen de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity. El Conector de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para Oracle por Attunity incluye también un administrador de conexiones y un destino. Para obtener más información, vea la página de descarga, [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Origen de SAP BI|El origen de SAP BI es el componente de origen de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI incluye también un administrador de conexiones y un destino. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://www.microsoft.com/download/details.aspx?id=16978).|  
@@ -108,7 +108,7 @@ ms.locfileid: "62828003"
 ## <a name="transformations"></a>Transformaciones  
  Las capacidades de las transformaciones presentan amplias variaciones. Las transformaciones pueden realizar tareas tales como actualizar, resumir, limpiar, combinar y distribuir datos. Puede modificar valores en columnas, buscar valores en tablas, limpiar datos y agregar valores de columna.  
   
- Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error que se ha producido, junto con los datos que no se pudo: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
+ Las entradas y salidas de una transformación definen las columnas de datos de entrada y salida. Según la operación realizada con los datos, algunas transformaciones tienen una sola entrada y varias salidas, mientras que otras transformaciones tienen varias entradas y una sola salida. Las transformaciones también pueden incluir salidas de error, que proporcionan información sobre el error ocurrido, junto con los datos que han generado errores: por ejemplo, datos de cadena que no se pueden convertir en un tipo de datos entero. El modelo de objetos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] no restringe la cantidad de entradas, salidas normales y salidas de error que pueden contener las transformaciones. Puede crear transformaciones personalizadas que implementan cualquier combinación de varias entradas, salidas normales y salidas de error.  
   
  La entrada de una transformación se define como una o más columnas de entrada. Algunas transformaciones de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] también pueden hacer referencia a columnas externas como entrada. Por ejemplo, la entrada de la transformación Comando de OLE DB incluye columnas externas. Una columna de salida es una columna que la transformación agrega al flujo de datos. Tanto las salidas normales como las salidas de error contienen columnas de salida. Estas columnas de salida a su vez funcionan como columnas de entrada para el siguiente componente en el flujo de datos, ya sea otra transformación o un destino.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "62828003"
 ### <a name="destinations-available-for-download"></a>Destinos disponibles para descarga  
  En la tabla siguiente se indican otros destinos que puede descargar del sitio web de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .  
   
-|Source|Descripción|  
+|`Source`|Descripción|  
 |------------|-----------------|  
 |Destino de Oracle|El destino de Oracle es el componente de destino de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para Oracle de Attunity incluye también un administrador de conexiones y un origen. Para obtener más información, vea la página de descarga de [Conectores de Microsoft para Oracle y Teradata de Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
 |Destino de SAP BI|El destino de SAP BI es el componente de destino de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector para SAP BI incluye también un administrador de conexiones y un origen. Para obtener más información, vea la página de descarga, [Feature Pack de Microsoft SQL Server 2008](https://go.microsoft.com/fwlink/?LinkId=110393).|  
@@ -184,7 +184,7 @@ ms.locfileid: "62828003"
  Los orígenes y las transformaciones siempre tienen salidas. Una salida contiene una o más columnas de salida, que pueden hacer referencia a las columnas externas si el componente de flujo de datos se ha configurado para usarlas. Las salidas se pueden configurar para proporcionar información útil para el procesamiento en dirección descendente de los datos. Por ejemplo, puede indicar si se ordena la salida. También puede proporcionar una descripción para la salida o actualizar el nombre de la salida. En el Diseñador [!INCLUDE[ssIS](../../../includes/ssis-md.md)] , las salidas se configuran mediante el cuadro de diálogo **Editor avanzado** .  
   
 ### <a name="error-outputs"></a>Salidas de error  
- Los orígenes, destinos y transformaciones pueden incluir salidas de error. Puede especificar de qué manera el componente de flujo de datos responde ante los errores en cada entrada o columna mediante el cuadro de diálogo **Configurar la salida de errores** . Si se produce un error o truncamiento de datos en el tiempo de ejecución y el componente de flujo de datos se configura para redirigir filas, las filas de datos con el error se envían a la salida de error. La salida de error se puede conectar a las transformaciones que aplican transformaciones adicionales o datos directos a un destino diferente. De forma predeterminada, una salida de error contiene las columnas de salida y dos columnas de error: **ErrorCode** y **ErrorColumn**. Las columnas de salida contienen los datos de la fila que generó el error, **ErrorCode** proporciona el código de error y **ErrorColumn** identifica la columna que genera el error.  
+ Los orígenes, destinos y transformaciones pueden incluir salidas de error. Puede especificar de qué manera el componente de flujo de datos responde ante los errores en cada entrada o columna mediante el cuadro de diálogo **Configurar la salida de errores** . Si se produce un error o truncamiento de datos en el tiempo de ejecución y el componente de flujo de datos se configura para redirigir filas, las filas de datos con el error se envían a la salida de error. La salida de error se puede conectar a las transformaciones que aplican transformaciones adicionales o datos directos a un destino diferente. Como opción predeterminada, una salida de error contiene las columnas de salida y dos columnas de error: **ErrorCode** y **ErrorColumn**. Las columnas de salida contienen los datos de la fila que generó el error, **ErrorCode** proporciona el código de error y **ErrorColumn** identifica la columna que genera el error.  
   
  Para más información, vea [Control de errores en los datos](error-handling-in-data.md).  
   

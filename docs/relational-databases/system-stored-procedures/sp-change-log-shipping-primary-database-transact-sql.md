@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a713687d41c21a3c99c30d6b7192d7c59e41505
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62994284"
 ---
 # <a name="spchangelogshippingprimarydatabase-transact-sql"></a>sp_change_log_shipping_primary_database (Transact-SQL)
@@ -53,9 +53,9 @@ sp_change_log_shipping_primary_database [ @database = ] 'database'
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] 'database'` Es el nombre de la base de datos en el servidor principal. *primary_database* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad en el servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad en el servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)** , no tiene ningún valor predeterminado, y no puede ser NULL.  
   
-`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red en el directorio de copia de seguridad en el servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red en el directorio de copia de seguridad en el servidor principal. *backup_share* es **nvarchar (500)** , no tiene ningún valor predeterminado, y no puede ser NULL.  
   
 `[ @backup_retention_period = ] 'backup_retention_period'` Es el período de tiempo, en minutos, que se retiene el archivo de copia de seguridad de registro en el directorio de copia de seguridad en el servidor principal. *backup_retention_period* es **int**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   

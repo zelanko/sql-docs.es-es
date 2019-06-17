@@ -11,13 +11,13 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 2216674bec52dd4d4800aa1b03aa4a2834667974
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524055"
 ---
-# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: SQL Server Backup and Restore al servicio de Windows Azure Blob Storage
+# <a name="tutorial-sql-server-backup-and-restore-to-windows-azure-blob-storage-service"></a>Tutorial: Copias de seguridad y restauración de SQL Server en el servicio Microsoft Azure Blob Storage
   Este es el tutorial Introducción a las copias de seguridad y la restauración de SQL Server con el servicio Azure Blob Storage. Este tutorial le ayudará a entender cómo escribir copias de seguridad en el servicio almacenamiento Blob de Windows Azure y cómo restaurar desde el mismo.  
   
 ## <a name="what-you-will-learn"></a>Aprendizaje  
@@ -26,7 +26,7 @@ ms.locfileid: "62524055"
  [Lección 1: Crear objetos de Azure Storage](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
  En esta lección, creará una cuenta de almacenamiento de Windows Azure y un contenedor de blobs.  
   
- [Lección 2: Crear una credencial SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
+ [Lección 2: Crear una credencial SQL Server](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  En esta lección, creará una credencial para almacenar la información de seguridad usada para tener acceso a la cuenta de almacenamiento de Windows Azure.  
   
  [Lección 3: Escribir una copia de seguridad de base de datos completa en el servicio de Windows Azure Blob Storage](../tutorials/lesson-3-write-a-full-database-backup-to-the-windows-azure-blob-storage-service.md)  

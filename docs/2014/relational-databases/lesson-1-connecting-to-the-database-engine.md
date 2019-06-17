@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 32b78c210647ab5b3722f01f334e9cb2e8bbfc13
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63145492"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
@@ -85,7 +85,7 @@ ms.locfileid: "63145492"
   
      Aparece el cuadro de diálogo **Inicio de sesión - Nuevo** .  
   
-2.  En el **General** página, en el **nombre de inicio de sesión** , escriba un inicio de sesión de Windows en el formato  *\<dominio >\\< inicio de sesión\>*.  
+2.  En el **General** página, en el **nombre de inicio de sesión** , escriba un inicio de sesión de Windows en el formato  *\<dominio >\\< inicio de sesión\>* .  
   
 3.  En el cuadro **Base de datos predeterminada** , seleccione [!INCLUDE[ssSampleDBobject](../includes/sssampledbobject-md.md)] , si está disponible. Si no lo está, seleccione **master**.  
   
@@ -101,6 +101,6 @@ ms.locfileid: "63145492"
 >  Esta información es básica para empezar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo entorno de seguridad y, obviamente, la seguridad es un aspecto importante de las operaciones de base de datos.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Conexión desde otro equipo](lesson-2-connecting-from-another-computer.md)  
+ [Lección 2: Conexión desde otro equipo](lesson-2-connecting-from-another-computer.md)  
   
   

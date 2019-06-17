@@ -24,10 +24,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7fbfa9066f5531eead9b12a3f1ebc8c2f110a56
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62661762"
 ---
 # <a name="properties-window-f1-help-management-studio"></a>Ventana Propiedades (Ayuda F1 de Management Studio)
@@ -40,7 +40,7 @@ ms.locfileid: "62661762"
  Muestra el objeto o los objetos seleccionados actualmente. Solo están visibles los objetos del editor o diseñador activo.  
   
  **Por categorías**  
- Muestra, por categoría, todas las propiedades y los valores de las propiedades del objeto seleccionado. Una categoría se puede contraer para reducir el número de propiedades visibles. Cuando se expande o contrae una categoría, verá un signo más (**+**) o un signo menos (**-**) a la izquierda del nombre de la categoría. Las categorías se muestran por orden alfabético.  
+ Muestra, por categoría, todas las propiedades y los valores de las propiedades del objeto seleccionado. Una categoría se puede contraer para reducir el número de propiedades visibles. Cuando se expande o contrae una categoría, verá un signo más ( **+** ) o un signo menos ( **-** ) a la izquierda del nombre de la categoría. Las categorías se muestran por orden alfabético.  
   
  **Alfabético**  
  Ordena alfabéticamente todas las propiedades y los eventos de tiempo de diseño para los objetos seleccionados.  

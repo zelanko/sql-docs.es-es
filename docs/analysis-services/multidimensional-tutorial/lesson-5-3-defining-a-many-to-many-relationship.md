@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3bf9211fb62db1452f48306e682638fd17041b8
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404067"
 ---
 # <a name="lesson-5-3---defining-a-many-to-many-relationship"></a>Lección 5-3: definir una relación varios a varios
@@ -50,7 +50,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
 7.  En la ventana Propiedades, cambie la propiedad **FriendlyName** de la tabla **DimSalesReason** por **SalesReason**y, a continuación, cambie la propiedad **FriendlyName** de la tabla **FactInternetSalesReason** por **InternetSalesReason**.  
   
-8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)**, haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.  
+8.  En el panel **Tablas** , expanda **InternetSalesReason (dbo.FactInternetSalesReason)** , haga clic en **SalesOrderNumber**y luego revise la propiedad **DataType** para esta columna de datos en la ventana Propiedades.  
   
     Observe que el tipo de datos para la columna **SalesOrderNumber** es un tipo de datos de cadena.  
   
@@ -134,7 +134,7 @@ En las tareas de este tema, debe definir la dimensión Sales Reasons y el grupo 
   
     Observe que la dimensión **Sales Reason** tiene una relación regular definida con el grupo de medida **Internet Sales Reason** , pero no tiene ninguna relación definida con los grupos de medida **Internet Sales** ni **Reseller Sales** . Observe también que la dimensión **Internet Sales Order Details** tiene una relación normal definida con la dimensión **Internet Sales Reason** , que a su vez tiene una **relación de hechos** con el grupo de medida **Internet Sales** . Si esta dimensión no estaba presente (u otra dimensión con una relación con **Internet Sales Reason** y el grupo de medida **Internet Sales** no estaban presentes), no se podría definir la relación de varios a varios.  
   
-2.  Haga clic en la celda en la intersección del grupo de medida **Internet Sales** y la dimensión **Sales Reasons** y, después, haga clic en el botón Examinar (**…**).  
+2.  Haga clic en la celda en la intersección del grupo de medida **Internet Sales** y la dimensión **Sales Reasons** y, después, haga clic en el botón Examinar ( **…** ).  
   
 3.  En el cuadro de diálogo **Definir relación** , seleccione **Varios a varios** en la lista **Seleccionar tipo de relación** .  
   

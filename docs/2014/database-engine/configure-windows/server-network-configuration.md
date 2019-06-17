@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3545732db24865e47853b023233a127695ada894
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809488"
 ---
 # <a name="server-network-configuration"></a>Configuración de red del servidor
@@ -39,7 +39,7 @@ ms.locfileid: "62809488"
  Si se utiliza la configuración para puertos dinámicos, el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede cambiar cada vez que se inicia. Si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a través de un firewall, debe abrir el puerto usado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que utilice un puerto específico, así podrá configurar el firewall para que permita la comunicación con el servidor. Para obtener más información, vea [Configurar un servidor para que escuche en un puerto TCP específico &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-a-specific-tcp-port.md).  
   
 ### <a name="changing-a-named-pipe"></a>Cambiar una canalización con nombre  
- Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. La instancia predeterminada del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha de forma predeterminada en la canalización \\\\.\pipe\sql\query en la instancia predeterminada y en \\\\.\pipe\MSSQL$*\<nombreDeInstancia>* \sql\query en una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
+ Puede configurar el protocolo de canalizaciones con nombre para que escuche en una canalización con nombre designada. La instancia predeterminada del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] escucha de forma predeterminada en la canalización \\\\.\pipe\sql\query en la instancia predeterminada y en \\\\.\pipe\MSSQL$ *\<nombreDeInstancia>* \sql\query en una instancia con nombre. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] solo puede escuchar en una canalización con nombre, pero puede cambiar la canalización a otro nombre si lo desea. El servicio Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ayuda a los clientes a identificar la canalización cuando se conectan. Para obtener más información, vea [Configurar un servidor para escuchar en una canalización alternativa &#40;Administrador de configuración de SQL Server&#41;](configure-a-server-to-listen-on-an-alternate-pipe.md).  
   
 ## <a name="force-encryption"></a>Forzar el cifrado  
  El [!INCLUDE[ssDE](../../includes/ssde-md.md)] se puede configurar para requerir el cifrado al comunicarse con aplicaciones cliente. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](enable-encrypted-connections-to-the-database-engine.md).  

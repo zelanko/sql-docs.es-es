@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660788"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
@@ -60,7 +60,7 @@ sp_help_job { [ @job_id = ] job_id
 > [!NOTE]  
 >  Para ver un trabajo específico, ya sea *job_id* o *job_name* debe especificarse.  Omitir ambos *job_id* y *job_name* para devolver información sobre todos los trabajos.
   
-`[ @job_aspect = ] 'job_aspect'` El atributo de trabajo para mostrar. *job_aspect* es **varchar (9)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @job_aspect = ] 'job_aspect'` El atributo de trabajo para mostrar. *job_aspect* es **varchar (9)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -70,11 +70,11 @@ sp_help_job { [ @job_id = ] job_id
 |**STEPS**|Información de los pasos del trabajo|  
 |**DESTINOS**|Información de los destinos|  
   
-`[ @job_type = ] 'job_type'` El tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)**, su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
+`[ @job_type = ] 'job_type'` El tipo de trabajos que se incluirán en el informe. *job_type* es **varchar (12)** , su valor predeterminado es null. *job_type* puede ser **LOCAL** o **MULTISERVIDOR**.  
   
 `[ @owner_login_name = ] 'login_name'` El nombre de inicio de sesión del propietario del trabajo. *login_name* es **sysname**, su valor predeterminado es null.  
   
-`[ @subsystem = ] 'subsystem'` El nombre del subsistema. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
+`[ @subsystem = ] 'subsystem'` El nombre del subsistema. *subsistema* es **nvarchar (40)** , su valor predeterminado es null.  
   
 `[ @category_name = ] 'category'` El nombre de la categoría. *categoría* es **sysname**, su valor predeterminado es null.  
   
@@ -98,7 +98,7 @@ sp_help_job { [ @job_id = ] job_id
   
 `[ @date_last_modified = ] date_modified` La fecha en que se modificó por última vez el trabajo. *DATE_MODIFIED* es **datetime**, su valor predeterminado es null.  
   
-`[ @description = ] 'description_pattern'` La descripción del trabajo. *description_pattern* es **nvarchar (512)**, su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia de patrones.  
+`[ @description = ] 'description_pattern'` La descripción del trabajo. *description_pattern* es **nvarchar (512)** , su valor predeterminado es null. *description_pattern* puede incluir los caracteres comodín de SQL Server para la coincidencia de patrones.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

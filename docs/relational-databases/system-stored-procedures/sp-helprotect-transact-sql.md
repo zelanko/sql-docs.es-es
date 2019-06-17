@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62635872"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (Transact-SQL)
@@ -48,7 +48,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'object_statement'` Es el nombre del objeto en la base de datos actual o una instrucción, que tiene los permisos para informes. *object_statement* es **nvarchar(776)**, su valor predeterminado es NULL, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _propietario_**.** _objeto_.  
+`[ @name = ] 'object_statement'` Es el nombre del objeto en la base de datos actual o una instrucción, que tiene los permisos para informes. *object_statement* es **nvarchar(776)** , su valor predeterminado es NULL, que devuelve todos los permisos de objetos e instrucciones. Si el valor es un objeto (tabla, vista, procedimiento almacenado o procedimiento almacenado extendido), tiene que ser un objeto válido de la base de datos actual. El nombre del objeto puede incluir un calificador de propietario en el formulario _propietario_ **.** _objeto_.  
   
  Si *object_statement* es una instrucción, puede ser una instrucción CREATE.  
   
@@ -56,7 +56,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
   
 `[ @grantorname = ] 'grantor'` Es el nombre de la entidad de seguridad que los permisos concedidos. *otorgante de permisos* es **sysname**, su valor predeterminado es NULL, que devuelve toda la información de permisos concedidos por la entidad de seguridad de la base de datos.  
   
-`[ @permissionarea = ] 'type'` Es una cadena de caracteres que indica si se muestran los permisos de objeto (cadena de caracteres **o**), los permisos de instrucción (cadena de caracteres **s**), o ambos (**os**). *tipo* es **varchar (10)**, su valor predeterminado es **os**. *tipo* puede ser cualquier combinación de **o** y **s**, con o sin comas o espacios en blanco entre **o** y **s**.  
+`[ @permissionarea = ] 'type'` Es una cadena de caracteres que indica si se muestran los permisos de objeto (cadena de caracteres **o**), los permisos de instrucción (cadena de caracteres **s**), o ambos (**os**). *tipo* es **varchar (10)** , su valor predeterminado es **os**. *tipo* puede ser cualquier combinación de **o** y **s**, con o sin comas o espacios en blanco entre **o** y **s**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

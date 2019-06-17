@@ -21,10 +21,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 820542c25947157b9e062608f1134e4bdeaa702a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737695"
 ---
 # <a name="specifying-axes-in-xpath-queries-sqlxml-40"></a>Especificar ejes en consultas XPath (SQLXML 4.0)
@@ -93,7 +93,7 @@ ms.locfileid: "62737695"
 /child::Customer/child::Order  
 ```  
   
- En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son TRUE si Customer y Order son  **\<elemento >** nodos, porque el  **\<elemento >** nodo es el nodo principal para el **secundarios** eje). Para cada nodo que coincide con  **\<cliente >**, los nodos que coinciden con  **\<pedidos >** se agregan al resultado. Solo  **\<orden >** se devuelve en el conjunto de resultados.  
+ En la consulta, `child` es el eje y `Customer` y `Order` son las pruebas de nodo (estas pruebas de nodo son TRUE si Customer y Order son  **\<elemento >** nodos, porque el  **\<elemento >** nodo es el nodo principal para el **secundarios** eje). Para cada nodo que coincide con  **\<cliente >** , los nodos que coinciden con  **\<pedidos >** se agregan al resultado. Solo  **\<orden >** se devuelve en el conjunto de resultados.  
   
  El **secundarios** es el eje predeterminado. Por lo tanto, la consulta puede especificarse como:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "62737695"
 </ROOT>  
 ```  
   
- Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, desde cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >**, la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
+ Si la consulta XPath se especifica como `Customer/Order/OrderDetail`, desde cada nodo que coincide con  **\<cliente >** la consulta navega a su  **\<orden >** elementos. Y para cada nodo que coincide con  **\<orden >** , la consulta agrega los nodos  **\<OrderDetail >** al resultado. Solo  **\<OrderDetail >** se devuelve en el conjunto de resultados.  
   
 ### <a name="c-use--to-specify-the-parent-axis"></a>C. Usar . para especificar el eje primario  
  La consulta siguiente recupera todos los  **\<orden >** elementos con un elemento primario  **\<cliente >** elemento con un **CustomerID** atributo valor 1. La consulta utiliza la **secundarios** eje en el predicado para buscar el elemento primario de la  **\<orden >** elemento.  
@@ -184,7 +184,7 @@ ms.locfileid: "62737695"
 ```  
   
 > [!NOTE]  
->  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de  **\<orden >**. Aunque puede haber elementos en el esquema de asignación que contengan  **\<orden >**, la expresión XPath no comenzó en ninguno de ellos; por lo tanto,  **\<orden >** se considera el tipo de elemento de nivel superior en el documento.  
+>  La consulta XPath `/Order[../@CustomerID="1"]` devolverá un error porque no hay ningún elemento primario de  **\<orden >** . Aunque puede haber elementos en el esquema de asignación que contengan  **\<orden >** , la expresión XPath no comenzó en ninguno de ellos; por lo tanto,  **\<orden >** se considera el tipo de elemento de nivel superior en el documento.  
   
 ##### <a name="to-test-the-xpath-query-against-the-mapping-schema"></a>Para probar la consulta XPath en el esquema de asignación  
   

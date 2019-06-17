@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 741fb8ac694568911c1b2b5def7bd07a8c86e8ec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662923"
 ---
 # <a name="deadlock-graph-event-class"></a>Deadlock Graph, clase de eventos
@@ -28,8 +28,8 @@ ms.locfileid: "62662923"
   
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
-|**EventClass**|**int**|Tipo de evento = 148.|27|No|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventClass**|**int**|Tipo de evento = 148.|27|Sin|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario. El valor para esta clase de eventos siempre es 1.|60|Sí|  
 |**LoginName**|**nvarchar**|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario). Este valor siempre es el usuario de sistema de este evento.|11|Sí|  
 |**LoginSid**|**image**|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor. Este valor siempre es el SID del usuario de sistema de este evento.|41|Sí|  

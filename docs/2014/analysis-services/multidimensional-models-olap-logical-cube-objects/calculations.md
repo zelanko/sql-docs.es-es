@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 871d248eec557033c181bbd3d162cd17875dd30c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702692"
 ---
 # <a name="calculations"></a>Cálculos
@@ -50,7 +50,7 @@ ms.locfileid: "62702692"
 ## <a name="script-commands"></a>Comandos de script  
  Un comando de script es un script MDX, incluido como parte de la definición del cubo. Los comandos de script permiten realizar prácticamente cualquier acción admitida por MDX en un cubo, como asignar un ámbito a un cálculo que solamente se aplique a parte del cubo. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], secuencias de comandos MDX se pueden aplicar a todo el cubo o a secciones específicas del cubo, en puntos específicos durante la ejecución de la secuencia de comandos. El comando de script predeterminado, que es la instrucción CALCULATE, rellena las celdas del cubo con datos agregados según el ámbito predeterminado.  
   
- El ámbito predeterminado es todo el cubo, pero puede definir un ámbito más restringido, denominado subcubo, y aplicar un script MDX solamente a dicho espacio de cubo. La instrucción SCOPE define el ámbito de todas las instrucciones y expresiones MDX posteriores en el script de cálculo hasta que finaliza o se vuelve a definir el ámbito. La instrucción THIS se utiliza para aplicar una expresión MDX al ámbito actual.  Puede utilizar la instrucción BACK_COLOR para especificar el color de fondo de celda de las celdas del ámbito actual, para ayudarle durante la depuración.   
+ El ámbito predeterminado es todo el cubo, pero puede definir un ámbito más restringido, denominado subcubo, y aplicar un script MDX solamente a dicho espacio de cubo. La instrucción SCOPE define el ámbito de todas las instrucciones y expresiones MDX posteriores en el script de cálculo hasta que finaliza o se vuelve a definir el ámbito. La instrucción THIS se utiliza para aplicar una expresión MDX al ámbito actual. Puede utilizar la instrucción BACK_COLOR para especificar el color de fondo de celda de las celdas del ámbito actual, para ayudarle durante la depuración.  
   
  Por ejemplo, puede utilizar un comando de script para asignar cuotas de venta a los empleados a lo largo del tiempo y el territorio de ventas según los valores ponderados de las ventas de un período de tiempo anterior.  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2a611de458537156740521dae8b732eed3e2653c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63270260"
 ---
 # <a name="modify-snapshot-initialization-options-for-sql-replication"></a>Modificación de las opciones de inicialización de instantáneas para la replicación de SQL
@@ -25,9 +25,9 @@ ms.locfileid: "63270260"
 Este artículo describe cómo modificar una serie de opciones cuando [inicializar una suscripción con una instantánea](initialize-a-subscription-with-a-snapshot.md).
 
 ## <a name="snapshot-format"></a>Formato de instantánea
-  Especifique el formato de instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+  Especifique el formato de instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
-1.  En la página **Instantánea**, del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, seleccione **SQL Server nativo: todos los suscriptores deben ser servidores que ejecuten SQL Server** o **Carácter: es necesario si un publicador o suscriptor no ejecuta SQL Server**. 
+1.  En la página **Instantánea**, del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , seleccione **SQL Server nativo: todos los suscriptores deben ser servidores que ejecuten SQL Server** o **Carácter: es necesario si un publicador o suscriptor no ejecuta SQL Server**. 
 
     > [!NOTE]  
     >  Se recomienda seleccionar el formato nativo, a menos que esta publicación deba ser compatible con suscripciones a una base de datos de [!INCLUDE[ssEW](../../../includes/ssew-md.md)] o una base de datos que no sea de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .    
@@ -38,24 +38,24 @@ Este artículo describe cómo modificar una serie de opciones cuando [inicializa
 ### <a name="default-snapshot-location"></a>Ubicación predeterminada de instantáneas
 Especifique la ubicación predeterminada de instantáneas (SQL Server Management Studio) de forma predeterminada la ubicación de la instantánea en la **carpeta de instantáneas** página del Asistente para configurar la distribución. Para obtener más información sobre cómo usar este asistente, vea [Configure Publishing and Distribution](configure-publishing-and-distribution.md) (Configurar la publicación y la distribución). Si crea una publicación en un servidor que no está configurado como un distribuidor, especifique una ubicación predeterminada de instantáneas en la página **Carpeta de instantáneas** del Asistente para nueva publicación. Para obtener más información sobre cómo usar este asistente, vea [Create a Publication](publish/create-a-publication.md) (Crear una publicación).  
   
- Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<distribuidor>**. Para obtener más información, vea [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación - \<publicación>**. Para más información, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Modifique la ubicación de instantáneas predeterminada en la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor \<distribuidor>** . Para obtener más información, vea [View and Modify Distributor and Publisher Properties](view-and-modify-distributor-and-publisher-properties.md) (Ver y modificar las propiedades del distribuidor y del publicador). Establezca la carpeta de instantáneas para cada publicación en el cuadro de diálogo **Propiedades de la publicación - \<publicación>** . Para más información, consulte [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
 #### <a name="modify-the-default-snapshot-location"></a>Modificación de la ubicación predeterminada de instantáneas  
   
-1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**, haga clic en el botón de propiedades (**...**) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.    
-2.  En el cuadro de diálogo **Propiedades del publicador - \<publicador>**, escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.
+1.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** , haga clic en el botón de propiedades ( **...** ) correspondiente al publicador para el que quiera cambiar la ubicación de instantáneas predeterminada.    
+2.  En el cuadro de diálogo **Propiedades del publicador - \<publicador>** , escriba un valor para la propiedad **Carpeta de instantáneas predeterminada**.
 
     > [!NOTE]  
     >  El Agente de instantáneas debe tener permisos de escritura para el directorio especificado y el Agente de distribución o de mezcla debe tener permisos de lectura. Si usa suscripciones de extracción, debe especificar un directorio compartido como ruta de acceso, según la convención de nomenclatura universal (UNC), por ejemplo \\\nombreDeEquipo\instantánea. Para obtener más información, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).    
 1.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
 ### <a name="alternate-snapshot-location"></a>Ubicación de instantáneas alternativa
-  Especifique una ubicación de instantáneas alternativa en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
+  Especifique una ubicación de instantáneas alternativa en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md). 
 
   
 #### <a name="specify-an-alternate-snapshot-location"></a>Especificar una ubicación de instantáneas alternativa  
   
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**:    
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :    
     1.  Seleccione **Poner los archivos en la siguiente carpeta**y haga clic en **Examinar** para navegar al directorio, o bien escriba la ruta de acceso al directorio en el que deben almacenarse los archivos de instantáneas.    
 
         > [!NOTE]  
@@ -66,9 +66,9 @@ Especifique la ubicación predeterminada de instantáneas (SQL Server Management
 
 
 ## <a name="compress-snapshot-files"></a>Comprimir archivos de instantáneas
-Especifique que se deben comprimir los archivos en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+Especifique que se deben comprimir los archivos en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
   
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**:  
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :  
   
     1.  Seleccione **Poner los archivos en la siguiente carpeta**y haga clic en **Examinar** para navegar al directorio, o bien escriba la ruta de acceso al directorio en el que deben almacenarse los archivos de instantáneas.    
         > [!NOTE]  
@@ -91,10 +91,10 @@ Especifique que se deben comprimir los archivos en la página **Instantánea** d
  Si comprime el archivo de instantáneas en formato CAB de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , los scripts también se comprimen y se colocan en el archivo CAB. Después de que el archivo de instantáneas comprimido se transfiere al suscriptor y se descomprime en un directorio de trabajo del suscriptor, se ejecutan los scripts indicados como anteriores a la instantánea. De la misma manera, los scripts posteriores a la instantánea se descomprimen y se ejecutan en el suscriptor como el último paso para la aplicación de la instantánea.  
 
 ### <a name="execute-a-script-before-or-after-a-snapshot-is-applied"></a>Ejecute una secuencia de comandos antes o después de aplicar una instantánea  
- Especifique un script opcional para que se ejecute antes o después de aplicar la instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
+ Especifique un script opcional para que se ejecute antes o después de aplicar la instantánea en la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](publish/view-and-modify-publication-properties.md).  
 
 
-1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**:    
+1.  En la página **Instantánea** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** :    
     -   Para especificar un script para que se ejecute antes de aplicar la instantánea, haga clic en **Examinar** para navegar al script, o escriba la ruta de acceso del script en el cuadro de texto **Antes de aplicar la instantánea, ejecutar este script** . 
    
         > [!NOTE]  

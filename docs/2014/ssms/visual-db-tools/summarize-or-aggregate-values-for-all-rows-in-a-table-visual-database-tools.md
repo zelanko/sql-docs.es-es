@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 33d44b48571839d9695893021f6cdc1c8bb63f06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63204610"
 ---
 # <a name="summarize-or-aggregate-values-for-all-rows-in-a-table-visual-database-tools"></a>Resumir o agregar los valores de todas las filas de una tabla (Visual Database Tools)
@@ -57,7 +57,7 @@ FROM titles
   
      El Diseñador de consultas y vistas asigna automáticamente un alias a la columna que va a resumir. Puede sustituir este alias por otro más significativo. Para detalles, consulte [Crear alias de columna &#40;Visual Database Tools&#41;](create-column-aliases-visual-database-tools.md).  
   
-4.  En el **Group By** columna de cuadrícula, seleccione la correspondiente función de agregado, como: **Suma**, **Avg**, **Min**, **Max**, **recuento**. Si solo desea agregar filas únicas en el conjunto de resultados, elija una función de agregado con las opciones DISTINCT, como **Min Distinct**. No elija **Group By**, **Expression**o **Where**, ya que estas opciones no se aplican cuando se agregan todas las filas.  
+4.  En la columna de cuadrícula **Agrupar por**, seleccione la función de agregado correspondiente, como: **Sum**, **Avg**, **Min**, **Max** o **Count**. Si solo desea agregar filas únicas en el conjunto de resultados, elija una función de agregado con las opciones DISTINCT, como **Min Distinct**. No elija **Group By**, **Expression**o **Where**, ya que estas opciones no se aplican cuando se agregan todas las filas.  
   
      El Diseñador de consultas y vistas sustituye el nombre de columna en la instrucción del [panel SQL](sql-pane-visual-database-tools.md) por la función de agregado que especifique. Por ejemplo, la instrucción SQL podría tener el siguiente aspecto:  
   

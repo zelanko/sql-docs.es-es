@@ -25,17 +25,17 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e747a85c816c8e57757be9acb61b14204266ff35
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782056"
 ---
 # <a name="manage-the-database-engine-services"></a>Administrar el servicio del motor de base de datos
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecuta en los sistemas operativos como un servicio. Un servicio es un tipo de aplicación que se ejecuta en segundo plano en el sistema. Los servicios suelen proporcionar características básicas del sistema operativo, como el servicio web, el registro de eventos o el servicio de archivos. Los servicios se pueden ejecutar sin mostrar una interfaz de usuario en el escritorio. El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y algunos otros componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se ejecutan como servicios. Estos servicios suelen iniciarse cuando se inicia el sistema operativo. Esto depende de lo que se especifique durante la instalación; algunos servicios no se inician de forma predeterminada. En esta sección se describe la administración de los diversos servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Antes de iniciar una sesión en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debe saber cómo iniciar, detener, pausar, reanudar y reiniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Una vez iniciada la sesión, puede realizar diversas tareas, como administrar el servidor o consultar la base de datos.  
   
 ## <a name="using-the-sql-server-service"></a>Usar el servicio SQL Server  
- Cuando se inicia una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], se inicia el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una vez iniciado el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los usuarios pueden establecer nuevas conexiones al servidor. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede iniciar y detener como un servicio, ya sea localmente o de forma remota. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conoce como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) si es la instancia predeterminada, o MSSQL$$*\<nombreDeInstancia>* en el caso de una instancia con nombre.  
+ Cuando se inicia una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], se inicia el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Una vez iniciado el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , los usuarios pueden establecer nuevas conexiones al servidor. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se puede iniciar y detener como un servicio, ya sea localmente o de forma remota. El servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se conoce como [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) si es la instancia predeterminada, o MSSQL$$ *\<nombreDeInstancia>* en el caso de una instancia con nombre.  
   
 ## <a name="using-sql-server-configuration-manager"></a>Usar el Administrador de configuración de SQL Server  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] le permite detener, iniciar o pausar diversos servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -57,9 +57,9 @@ ms.locfileid: "62782056"
   
 |||  
 |-|-|  
-|[Requisitos de seguridad para administrar servicios](security-requirements-for-managing-services.md)|[Evitar el inicio automático de una instancia de SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](scm-services-prevent-automatic-startup-of-an-instance.md)|  
-|[Configurar los permisos y las cuentas de servicio de Windows](configure-windows-service-accounts-and-permissions.md)|[Cambiar la cuenta de inicio del servicio para SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](scm-services-change-the-service-startup-account.md)|  
-|[Ejecutar SQL Server con o sin red](run-sql-server-with-or-without-a-network.md)|[Configurar opciones de inicio del servidor &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](scm-services-configure-server-startup-options.md)|  
+|[Requisitos de seguridad para administrar servicios](security-requirements-for-managing-services.md)|[Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](scm-services-prevent-automatic-startup-of-an-instance.md)|  
+|[Configurar los permisos y las cuentas de servicio de Windows](configure-windows-service-accounts-and-permissions.md)|[Cambiar la cuenta de inicio del servicio para SQL Server &#40;Administrador de configuración de SQL Server&#41;](scm-services-change-the-service-startup-account.md)|  
+|[Ejecutar SQL Server con o sin red](run-sql-server-with-or-without-a-network.md)|[Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](scm-services-configure-server-startup-options.md)|  
 |[Servicio SQL Server Browser &#40;motor de base de datos y SSAS&#41;](sql-server-browser-service-database-engine-and-ssas.md)|[Cambiar la contraseña de las cuentas que usa SQL Server &#40;Administrador de configuración de SQL Server&#41;](scm-services-change-the-password-of-the-accounts-used.md)|  
 |[Opciones de inicio del servicio de motor de base de datos](database-engine-service-startup-options.md)|[Configurar registros de errores de SQL Server](scm-services-configure-sql-server-error-logs.md)|  
 |[Iniciar, detener, pausar, reanudar y reiniciar el motor de base de datos, Agente SQL Server o el Servicio SQL Server Browser](start-stop-pause-resume-restart-sql-server-services.md)|[Cambiar el modo de autenticación del servidor](change-server-authentication-mode.md)|  

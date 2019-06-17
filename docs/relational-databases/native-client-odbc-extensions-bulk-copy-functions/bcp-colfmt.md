@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4013dbd3de9b0866aff0dd8d1256be0839299235
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62738842"
 ---
 # <a name="bcpcolfmt"></a>bcp_colfmt
@@ -128,7 +128,7 @@ RETCODE bcp_colfmt (
   
 -   La longitud de la secuencia de bytes de terminación opcional.  
   
- Cada llamada a **bcp_colfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** y, a continuación, llame a **bcp_colfmt** cinco veces, estableciendo con tres de esas llamadas el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en 0 y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, SQL_VARLEN_DATA y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
+ Cada llamada a **bcp_colfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** y, a continuación, llame a **bcp_colfmt** cinco veces, estableciendo con tres de esas llamadas el formato personalizado. Para las dos llamadas restantes, establezca *eUserDataType* en 0 y establezca *cbIndicator*, *cbUserData*y *cbUserDataTerm* en 0, SQL_VARLEN_DATA y 0, respectivamente. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
  Para *cbIndicator*, un valor de 8 para indicar un tipo de valor grande es válido ahora. Si se especifica el prefijo para un campo cuya columna correspondiente es un nuevo tipo max, solamente se puede establecer en 8. Para obtener más información, consulte [bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md).  
   

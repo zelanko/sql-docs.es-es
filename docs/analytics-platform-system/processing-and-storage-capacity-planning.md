@@ -10,10 +10,10 @@ ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
 ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62678555"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidad de procesamiento y almacenamiento en Analytics Platform System
@@ -86,8 +86,8 @@ Esta tabla se estima que puede cargar y almacenar hasta 6 petabytes de datos sin
 |HPE|1 TB|16 TB|8|128 TB|320 TB|7|2,240 TB|  
 |HPE|2 TB|32 TB|8|256 TB|640 TB|7|4,480 TB|  
 |HPE|4 TB|64 TB|8|512 TB|1280 TB|7|8,960 TB|  
-|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2.160 TB|  
-|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4.320 TB|  
+|DELL|1 TB|16 TB|9|144 TB|360 TB|6|2\.160 TB|  
+|DELL|2 TB|32 TB|9|288 TB|720 TB|6|4\.320 TB|  
 |DELL|4 TB|64 TB|9|576 TB|1440 TB|6|8,640 TB|   
   
 Explicación:  

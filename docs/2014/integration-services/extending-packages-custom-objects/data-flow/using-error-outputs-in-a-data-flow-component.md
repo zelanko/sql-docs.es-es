@@ -24,10 +24,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a330fea71ce84e7af82dd2bd92fc2e14f0883a0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62896055"
 ---
 # <a name="using-error-outputs-in-a-data-flow-component"></a>Usar las salidas de error en un componente de flujo de datos
@@ -35,7 +35,7 @@ ms.locfileid: "62896055"
   
  Para implementar y admitir las salidas de error de un componente, debe establecer primero la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.UsesDispositions%2A> del componente en `true`. A continuación, debe agregar una salida al componente con la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> establecida en `true`. Finalmente, el componente debe contener código que redirija las filas a la salida de error cuando se produzcan errores o truncamientos. Este tema cubre estos tres pasos y explica las diferencias entre las salidas de error sincrónicas y asincrónicas.  
   
-## <a name="creating-an-error-output"></a>Crear una salida de error   
+## <a name="creating-an-error-output"></a>Crear una salida de error  
  Puede crear una salida de error llamando al método <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutputCollection100.New%2A> de <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData100.OutputCollection%2A> y estableciendo a continuación la propiedad <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.IsErrorOut%2A> de la nueva salida en `true`. Si la salida es asincrónica, no se debe hacer nada más en la salida. Si la salida es sincrónica y hay otra salida que es sincrónica con la misma entrada, debe establecer también las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.ExclusionGroup%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSOutput100.SynchronousInputID%2A>. Las dos propiedades deben tener los mismos valores que la otra salida que es sincrónica con la misma entrada. Si estas propiedades no están establecidas en un valor distinto de cero, las filas proporcionadas por la entrada se envían a las dos salidas que son sincrónicas con la entrada.  
   
  Cuando un componente encuentra un error o un truncamiento durante la ejecución, continúa basándose en los valores de las propiedades <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.ErrorRowDisposition%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100.TruncationRowDisposition%2A> de la entrada o salida, o las columnas de entrada o de resultados, donde se produjo el error. El valor de estas propiedades se debe establecer de forma predeterminada en <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition.RD_NotUsed>. Cuando la salida de error del componente está conectada a un componente de nivel inferior, el usuario del componente establece esta propiedad y permite al usuario controlar cómo administra el componente el error o el truncamiento.  

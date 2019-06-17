@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63274382"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
@@ -137,7 +137,7 @@ ms.locfileid: "63274382"
   
 -   El parámetro **-SubscriptionStreams** del Agente de distribución y el parámetro **-MaxCmdsInTran**del Agente de registro del LOG.  
   
--   Las propiedades de artículo **@destination_owner** y **@destination_table**.  
+-   Las propiedades de artículo **@destination_owner** y **@destination_table** .  
 
 -   La replicación transaccional punto a punto no admite la creación de una suscripción transaccional unidireccional para una publicación punto a punto.
   
@@ -147,7 +147,7 @@ ms.locfileid: "63274382"
   
 -   La propiedad de artículo **@replicate_ddl** requiere un valor de `true`; **@identityrangemanagementoption** requiere un valor de `manual`; y **@status** requiere que la opción **24** está establecido.  
   
--   El valor de las propiedades de artículo **@ins_cmd**, **@del_cmd**, y **@upd_cmd** no puede establecerse en `SQL`.  
+-   El valor de las propiedades de artículo **@ins_cmd** , **@del_cmd** , y **@upd_cmd** no puede establecerse en `SQL`.  
   
 -   La propiedad de suscripción **@sync_type** requiere un valor de `none` o `automatic`.  
   

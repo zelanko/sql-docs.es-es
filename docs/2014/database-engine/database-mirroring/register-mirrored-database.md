@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b5be7eb52d0aa8c0a94b1a4ff63493e7f641bdbd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754460"
 ---
 # <a name="register-mirrored-database"></a>Registrar base de datos reflejada
@@ -46,10 +46,10 @@ ms.locfileid: "62754460"
   
 |Nombre de columna|Descripción|  
 |-----------------|-----------------|  
-|**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para anular el registro de una base de datos, cierre el **registrar base de datos reflejada** cuadro de diálogo, seleccione la base de datos en el árbol de navegación y seleccione **Unregister** desde el **acción** menú.|  
+|**Registrar**|Comprueba cada una de las bases de datos que desee registrar. Si se supervisa actualmente una base de datos, su casilla estará activada y permanecerá deshabilitada.<br /><br /> Nota: Para eliminar del Registro una base de datos, cierre el cuadro de diálogo **Registrar base de datos reflejada**, seleccione la base de datos en el árbol de navegación y seleccione **Eliminar del Registro** en el menú **Acción**.|  
 |**Base de datos**|Nombre de una base de datos reflejada en la instancia del servidor seleccionada.|  
 |**Rol actual**|Rol de creación de reflejo actual de la base de datos, ya sea principal o reflejada, en la instancia del servidor seleccionada.|  
-|**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión '***\<nombre de inicio de sesión>***'**. Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
+|**Asociado (Conectar como)**|Nombre del asociado de conmutación por error de la base de datos. Se muestra entre paréntesis **Autenticación de Windows del usuario de consola** o **Autenticación de SQL Server de inicio de sesión '***\<nombre de inicio de sesión>***'** . Esta información de autenticación es la que se utiliza actualmente (si la instancia se ha agregado antes) o la que se utilizará en un futuro (si la instancia no se ha agregado al monitor).|  
   
  **Mostrar el cuadro de diálogo para administrar conexiones de instancia del servidor cuando haga clic en Aceptar**  
  De forma predeterminada, el Monitor de creación de reflejo de la base de datos utiliza las credenciales de autenticación de Windows para instancias del servidor asociado, cuyas credenciales no se han proporcionado con anterioridad. Habilite esta opción para cambiar las credenciales de una o varias instancias del servidor al terminar de registrar las bases de datos.  

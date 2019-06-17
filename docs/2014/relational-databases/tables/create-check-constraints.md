@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a27b4bf288d6b1e436ba43fc9c1002d03cd9eaf4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62736205"
 ---
 # <a name="create-check-constraints"></a>Crear restricciones CHECK
@@ -51,7 +51,7 @@ ms.locfileid: "62736205"
   
 1.  En el **Explorador de objetos**, expanda la tabla a la que quiera agregar una restricción CHECK, haga clic con el botón derecho en **Restricciones** y haga clic en **Nueva restricción**.  
   
-2.  En el cuadro de diálogo **Comprobar restricciones**, haga clic en el campo **Expresión** y luego en los puntos suspensivos **(...)**.  
+2.  En el cuadro de diálogo **Comprobar restricciones**, haga clic en el campo **Expresión** y luego en los puntos suspensivos **(...)** .  
   
 3.  En el cuadro de diálogo **Expresión de restricción CHECK** , escriba expresiones SQL para la restricción CHECK. Por ejemplo, para limitar las entradas de la columna `SellEndDate` de la tabla `Product` a un valor que sea mayor o igual que la fecha de la columna `SellStartDate` o que sea un valor NULL, escriba:  
   

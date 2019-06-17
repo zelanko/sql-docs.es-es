@@ -19,10 +19,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9f00eb93492ca150278800c4bbdfa3565550fdef
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721947"
 ---
 # <a name="replication-system-stored-procedures-concepts"></a>Replication System Stored Procedures Concepts
@@ -48,7 +48,7 @@ ms.locfileid: "62721947"
   
 -   Use las características de generación de script que se proporcionan en los asistentes de replicación o  
   
--   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]  Para más información, consulte [Scripting Replication](../scripting-replication.md).  
+-   [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
 -   Utilice Replication Management Objects (RMO) para generar mediante programación el script y crear un objeto RMO.  
   

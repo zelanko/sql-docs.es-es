@@ -28,10 +28,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1985e7c3fc55f6783c88569c196713050fa40287
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918956"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
@@ -53,7 +53,7 @@ ms.locfileid: "62918956"
 |------------|-----------------|  
 |Distinguir mayúsculas de minúsculas (_CS)|Distingue entre letras mayúsculas y minúsculas. Si se selecciona, las letras minúsculas se ordenan por delante de sus versiones en mayúsculas. Si esta opción no está seleccionada, la intercalación no distinguirá mayúsculas de minúsculas. Es decir, que SQL Server considera las versiones mayúscula y minúscula de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir entre mayúsculas y minúsculas especificando _CI.|  
 |Distinguir acentos (_AS)|Distingue entre caracteres acentuados y no acentuados. Por ejemplo, 'a 'no es igual a'???'. Si esta opción no está seleccionada, la intercalación no distinguirá los acentos. Es decir, que SQL Server considera las versiones acentuadas y no acentuadas de las letras como letras idénticas para fines de ordenación. Puede seleccionar explícitamente no distinguir acentos especificando _AI.|  
-|Distinguir kana (_KS)|Distingue entre los dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, que SQL Server considera los caracteres Hiragana y Katakana como caracteres iguales para la ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|  
+|Distinguir kana (_KS)|Distingue entre dos tipos de caracteres kana japoneses: Hiragana y Katakana. Si esta opción no está seleccionada, la intercalación no distinguirá los caracteres kana. Es decir, que SQL Server considera los caracteres Hiragana y Katakana como caracteres iguales para la ordenación. La omisión de esta opción es el único método para especificar Kana-insensibilidad.|  
 |Distinguir ancho (_WS)|Distingue entre caracteres de ancho total y ancho medio. Si no se activa esta opción, SQL Server considera que la representación de ancho completo y de ancho medio del mismo carácter son idénticas para la ordenación. La omisión de esta opción es el único método para especificar no distinción de ancho.|  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite los siguientes conjuntos de intercalación:  

@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3a2b86b5f9b08e9915adae27132b6beb5647394f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755889"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639319"
 ---
 # <a name="best-practices-for-time-based-row-filters"></a>Prácticas recomendadas para filtros de fila basados en el tiempo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "47755889"
 WHERE SalesPersonID = CONVERT(INT,HOST_NAME()) AND OrderDate >= (GETDATE()-6)  
 ```  
   
- Con un filtro de este tipo, se suele asumir que siempre ocurren dos cosas cuando se ejecuta el agente de mezcla: las filas que cumplen este filtro se replican en los suscriptores y las filas que no lo cumplen se borran en los suscriptores. (Para obtener más información sobre cómo filtrar con **HOST_NAME()**, vea [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)). Sin embargo, la replicación de mezcla solo replica y borra los datos que han cambiado desde la última sincronización, independientemente de cómo defina un filtro de fila para esos datos.  
+ Con un filtro de este tipo, se suele asumir que siempre ocurren dos cosas cuando se ejecuta el agente de mezcla: las filas que cumplen este filtro se replican en los suscriptores y las filas que no lo cumplen se borran en los suscriptores. (Para obtener más información sobre cómo filtrar con **HOST_NAME()** , vea [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)). Sin embargo, la replicación de mezcla solo replica y borra los datos que han cambiado desde la última sincronización, independientemente de cómo defina un filtro de fila para esos datos.  
   
  Para que la replicación de mezcla procese una fila, los datos de la fila deben cumplir el filtro de fila y haber cambiado desde la última sincronización. En el caso de la tabla **SalesOrderHeader** , se incluye **OrderDate** cuando se inserta una fila. Las filas se replican en el suscriptor como se espera porque la inserción es un cambio en los datos. Sin embargo, si hay filas en el suscriptor que ya no cumplen el filtro (son para pedidos con más de siete días de antigüedad), no se quitan del suscriptor a menos que se actualicen por alguna otra razón.  
   
@@ -92,9 +92,9 @@ GO
   
  Los eventos para la semana siguiente se marcan ahora como listos para replicación. La próxima vez que se ejecute el agente de mezcla para la suscripción que utiliza el coordinador de eventos 112, se descargarán las filas 2, 3 y 4 en el suscriptor y se quitará la fila 1 del suscriptor.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [GETDATE &#40;Transact-SQL&#41;](../../../t-sql/functions/getdate-transact-sql.md)   
  [Implementar trabajos](../../../ssms/agent/implement-jobs.md)   
- [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
+ [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)  
   
   

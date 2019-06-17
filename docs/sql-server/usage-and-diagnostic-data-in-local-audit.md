@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
 ms.openlocfilehash: 97eac599fd057d8a9ae335943e7e818df4b49ba4
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65372446"
 ---
 # <a name="local-audit-for-sql-server-usage-and-diagnostic-data-collection-ceip"></a>Auditoría local para la recopilación de datos de uso y diagnóstico de SQL Server (CEIP)
@@ -65,7 +65,7 @@ Complete los pasos siguientes para obtener la cuenta de inicio de sesión del se
  
 1. Abra la consola **Servicios**. Para ello, presione la **tecla Windows + R** en el teclado para abrir el cuadro de diálogo **Ejecutar**. Después, escriba *services.msc* en el campo de texto y seleccione **Aceptar** para abrir la consola **Servicios**.  
 
-2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server** **(*Nombre-Instancia*)**. En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services**  **(*Nombre-Instancia*)**. En el caso de Integration Services, busque **Servicio CEIP para SQL Server Integration Services**.
+2. Vaya al servicio correspondiente. Por ejemplo, para el motor de base de datos, ubique **Servicio CEIP de SQL Server** **(*Nombre-Instancia*)** . En el caso de Analysis Services, busque **CEIP de SQL Server Analysis Services**  **(*Nombre-Instancia*)** . En el caso de Integration Services, busque **Servicio CEIP para SQL Server Integration Services**.
 
 3. Haga clic con el botón derecho en el servicio y elija **Propiedades**. 
 
@@ -73,7 +73,7 @@ Complete los pasos siguientes para obtener la cuenta de inicio de sesión del se
 
 ### <a name="configure-a-new-folder-for-the-local-audit-files"></a>Configure una carpeta nueva para los archivos de auditoría local.    
 
-Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local escribirá los registros. Por ejemplo, la ruta de acceso completa al directorio de auditoría local para una instancia predeterminada del motor de la base de datos sería la siguiente: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*. 
+Cree una carpeta nueva (directorio de auditoría local) donde la uditoría local escribirá los registros. Por ejemplo, la ruta de acceso completa al directorio de auditoría local para una instancia predeterminada del motor de la base de datos sería la siguiente: *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* . 
  
   >[!NOTE] 
   >Configure la ruta de acceso al directorio para auditoría local fuera de la ruta de instalación de SQL Server para evitar que el hecho de permitir la funcionalidad de auditoría y de aplicar revisiones provoque problemas potenciales con SQL Server.
@@ -140,7 +140,7 @@ Una vez que haya seguido los pasos de configuración previa, puede activar la au
 
 1. Haga clic con el botón derecho en **UserRequestedLocalAuditDirectory** y seleccione *Modificar*. 
 
-1. Para activar la auditoría local, escriba la ruta de acceso a la auditoría local; por ejemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\*.
+1. Para activar la auditoría local, escriba la ruta de acceso a la auditoría local; por ejemplo, *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* .
  
     Para desactivar la auditoría local, vacíe el valor de **UserRequestedLocalAuditDirectory**.
 
@@ -152,8 +152,8 @@ CEIP de SQL Server debe reconocer inmediatamente la configuración de auditorí
 
 1. Vaya al servicio correspondiente. 
 
-    - Para Motor de base de datos, use **Servicio CEIP de SQL Server (*Nombre-Instancia*)**.     
-    - Para Analysis Services, use **CEIP de SQL Server Analysis Services (*Nombre-Instancia*)**.
+    - Para Motor de base de datos, use **Servicio CEIP de SQL Server (*Nombre-Instancia*)** .     
+    - Para Analysis Services, use **CEIP de SQL Server Analysis Services (*Nombre-Instancia*)** .
     - Para Integration Services, 
         - Para SQL 2016, use *Servicio CEIP para SQL Server Integration Services 13.0*.
         - Para SQL 2017, use *Servicio CEIP para SQL Server Integration Services 14.0*.

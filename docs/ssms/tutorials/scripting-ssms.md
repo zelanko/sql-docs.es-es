@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: Script objects in SQL Server Management Studio'
+title: 'Tutorial: Creación de scripts de objetos en SQL Server Management Studio'
 description: Tutorial para la creación de scripts de objetos en SSMS
 keywords: SQL Server, SSMS, SQL Server Management Studio, scripts, scripting
 author: MashaMSFT
@@ -20,14 +20,15 @@ helpviewer_keywords:
 - solutions [SQL Server Management Studio], tutorials
 - SQL Server Management Studio [SQL Server], tutorials
 - scripts [SQL Server], SQL Server Management Studio
-ms.openlocfilehash: ce0ffdaa26e0ca48eef710f8368b8cb2b0c92191
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: b3a9bdd7735d7a1573567ca06076f83d400775c4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662829"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140620"
 ---
 # <a name="tutorial-script-objects-in-sql-server-management-studio"></a>Tutorial: Creación de scripts de objetos en SQL Server Management Studio
+
 En este tutorial aprenderá a crear scripts de Transact-SQL (T-SQL) para distintos objetos de SQL Server Management Studio (SSMS). En este tutorial encontrará ejemplos de cómo crear scripts de los siguientes objetos:
 
 > [!div class="checklist"]
@@ -197,6 +198,6 @@ En el siguiente artículo se presentan las plantillas T-SQL predefinidas de SSMS
 
 Vaya al siguiente artículo para más información:
 > [!div class="nextstepaction"]
-> [Pasos siguientes](templates-ssms.md)
+> [Pasos siguientes](ssms-configuration.md)
 
 

@@ -23,11 +23,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: dab6f53c5b75e1ef78eab346d2b0dd96a42e5861
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62703965"
 ---
 # <a name="xml-schema-collections-sql-server"></a>Colecciones de esquemas XML (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -170,7 +170,7 @@ ms.locfileid: "58510152"
   
 -   Escriba consultas Transact-SQL sobre las vistas de catálogo apropiadas para colecciones de esquemas XML.  
   
--   Use la función integrada **XML_SCHEMA_NAMESPACE()**. Puede aplicar métodos de tipo de datos **xml** al resultado de esta función. Sin embargo, no puede modificar los esquemas XML subyacentes.  
+-   Use la función integrada **XML_SCHEMA_NAMESPACE()** . Puede aplicar métodos de tipo de datos **xml** al resultado de esta función. Sin embargo, no puede modificar los esquemas XML subyacentes.  
   
  Los ejemplos siguientes ilustran lo comentado.  
   
@@ -191,7 +191,7 @@ WHERE    XSC.name = 'myCollection'
 SELECT XML_SCHEMA_NAMESPACE (N'dbo', N'myCollection')  
 ```  
   
- Es posible obtener esquemas XML individuales incluidos en la colección como instancias de tipo de datos **xml** ; para ello, especifique el espacio de nombres de destino como tercer argumento de **XML_SCHEMA_NAMESPACE()**. Esto se muestra en el ejemplo siguiente.  
+ Es posible obtener esquemas XML individuales incluidos en la colección como instancias de tipo de datos **xml** ; para ello, especifique el espacio de nombres de destino como tercer argumento de **XML_SCHEMA_NAMESPACE()** . Esto se muestra en el ejemplo siguiente.  
   
 ### <a name="example-output-a-specified-schema-from-an-xml-schema-collection"></a>Ejemplo: Obtener un esquema especificado a partir de una colección de esquemas XML  
  La instrucción siguiente genera como resultado el esquema XML con el espacio de nombres de destino _pretend_ http:/\/www.microsoft.com/books" a partir de la colección de esquemas XML "myCollection" dentro del esquema relacional dbo.  

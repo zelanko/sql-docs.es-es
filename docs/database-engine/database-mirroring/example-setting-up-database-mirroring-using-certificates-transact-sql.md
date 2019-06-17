@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 06d8ddd5710b41a80a41643bc2df194ad9c3981c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795481"
 ---
 # <a name="example-setting-up-database-mirroring-using-certificates-transact-sql"></a>Ejemplo: configurar la creación de reflejo de la base de datos con certificados (Transact-SQL)
@@ -263,7 +263,7 @@ ms.locfileid: "66795481"
     ```  
   
     > [!NOTE]  
-    >  Si piensa realizar la ejecución en modo de alta seguridad con conmutación automática por error, deje la seguridad de la transacción en FULL (configuración predeterminada) y agregue el testigo en cuanto sea posible después de ejecutar la segunda instrucción SET PARTNER **'***servidor_asociado***'**. Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
+    >  Si piensa realizar la ejecución en modo de alta seguridad con conmutación automática por error, deje la seguridad de la transacción en FULL (configuración predeterminada) y agregue el testigo en cuanto sea posible después de ejecutar la segunda instrucción SET PARTNER **'***servidor_asociado***'** . Tenga en cuenta que primero se debe configurar el testigo para conexiones salientes y entrantes.  
   
  [&#91;Inicio del ejemplo&#93;](#ExampleH2)  
   

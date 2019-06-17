@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1f996df18335b0444e2efe530870d952634c3e82
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045987"
 ---
 # <a name="mssqlserver2570"></a>MSSQLSERVER_2570
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ El valor de columna incluido en la columna especificada está fuera del interval
 ## <a name="user-action"></a>Acción del usuario  
 Este error es irreparable. Actualice la columna con un valor que se encuentre dentro del intervalo del tipo de datos de la columna y vuelva a ejecutar el comando.  Para obtener más información, vea este artículo de KB [923247](https://support.microsoft.com/kb/923247).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [UPDATE &#40;Transact-SQL&#41;](~/t-sql/queries/update-transact-sql.md)  
 [Tipos de datos &#40;Transact-SQL&#41;](~/t-sql/data-types/data-types-transact-sql.md)  
   

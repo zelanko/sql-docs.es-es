@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ea4397bddf9ab1c08c099df4c473a5e43c54c9ec
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489078"
 ---
 # <a name="task-4-setting-domain-rules"></a>Tarea 4: Configuración de reglas de dominio
-  En esta tarea, creará una regla para el **correo electrónico de contacto** dominio para comprobar si la dirección de correo electrónico termina con **@adventure-works.com**. Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
+  En esta tarea, creará una regla para el **correo electrónico de contacto** dominio para comprobar si la dirección de correo electrónico termina con **@adventure-works.com** . Vea el tema [Crear una regla de dominio](https://msdn.microsoft.com/library/hh510397.aspx) para obtener más detalles sobre la página.  
   
 1.  Haga clic en **Correo electrónico de contacto** en la lista **Dominio**.  
   
@@ -59,6 +59,6 @@ ms.locfileid: "65489078"
 13. Haga clic en **Cerrar** para cerrar el cuadro de diálogo **Probar regla de dominio** .  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 5: Relaciones basadas en términos de configuración](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
+ [Tarea 5: Relaciones basadas en términos de configuración](../../2014/tutorials/task-5-setting-term-based-relationships.md)  
   
   

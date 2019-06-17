@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ca7c735f00f4fa5c7baf102b26edb6634f57b90f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489247"
 ---
 # <a name="task-3-creating-and-running-a-data-quality-project-for-matching"></a>Tarea 3: Creación y ejecución de un proyecto de calidad de datos para buscar coincidencias
@@ -47,6 +47,6 @@ ms.locfileid: "65489247"
 12. Haga clic en **siguiente** para cambiar a la **exportar** página.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Exportar los resultados de la actividad de coincidencia a un archivo de Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
+ [Tarea 4: Exportar los resultados de la actividad de coincidencia a un archivo de Excel](../../2014/tutorials/task-4-exporting-the-results-from-matching-activity-to-an-excel-file.md)  
   
   

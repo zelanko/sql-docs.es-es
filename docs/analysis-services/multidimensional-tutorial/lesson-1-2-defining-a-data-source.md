@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e52d6b6ef2a98089f17fe83a55d50b7693dbbc1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404017"
 ---
 # <a name="lesson-1-2---defining-a-data-source"></a>Lección 1-2: definir un origen de datos
@@ -37,7 +37,7 @@ En la tarea siguiente, definirá la base de datos de ejemplo AdventureWorksDWSQL
   
 5.  En el cuadro de texto **Nombre de servidor** , escriba **localhost**.  
   
-    Para conectarse a una instancia con nombre del equipo local, escriba **localhost\\<instance name>**. Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
+    Para conectarse a una instancia con nombre del equipo local, escriba **localhost\\<instance name>** . Para conectarse al equipo especificado en lugar de al equipo local, escriba el nombre del equipo o la dirección IP.  
   
 6.  Compruebe que la opción **Usar autenticación de Windows** está seleccionada. En la lista **Seleccione o escriba un nombre de base de datos** , seleccione **AdventureWorksDW2012**.  
   

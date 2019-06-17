@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 0eb37b891afc31b56d0e518ba7aa73190491e5ea
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107808"
 ---
 # <a name="glossary-report-builder"></a>Glosario (Generador de informes)
@@ -78,7 +78,7 @@ ms.locfileid: "66107808"
 |common language runtime|Motor en el núcleo de la ejecución de código administrado. El motor de tiempo de ejecución proporciona código administrado con servicios como integración entre idiomas, seguridad de acceso del código, administración de la duración de objetos y compatibilidad con la depuración y la creación de perfiles.|  
 |expresión compleja|Expresión que no se puede representar como una única referencia de campo integrado y se muestra en la superficie de diseño como <\<Expr>>.|  
 |concatenación|Combinación de dos o más cadenas o expresiones de caracteres en una sola cadena o expresión de caracteres, o combinación de dos o más cadenas o expresiones binarias en una sola cadena o expresión binaria.|  
-|simultaneidad|Proceso que permite a varios usuarios tener acceso a, y modificar, datos compartidos al mismo tiempo. SQL Server utiliza bloqueos para permitir a varios usuarios el acceso y la modificación de datos compartidos de forma simultánea sin tener conflictos entre sí.|  
+|concurrency|Proceso que permite a varios usuarios tener acceso a, y modificar, datos compartidos al mismo tiempo. SQL Server utiliza bloqueos para permitir a varios usuarios el acceso y la modificación de datos compartidos de forma simultánea sin tener conflictos entre sí.|  
 |archivo config|Véase: archivo de configuración|  
 |configuración|Cuando se refiere a una sola microcomputadora, la suma de los componentes internos y externos de un sistema, incluidos la memoria, las unidades de disco, el teclado, el vídeo y, a menudo, el hardware complementario menos crítico, como un mouse, un módem o una impresora.|  
 |archivo de configuración|Archivo que contiene especificaciones de funcionamiento para hardware o software legibles por el equipo, o que contiene información acerca de otro archivo o un usuario específico.|  
@@ -215,7 +215,7 @@ ms.locfileid: "66107808"
 |MDX|Véase otro término: Expresiones multidimensionales (MDX)|  
 |proyección de Mercator|En un elemento de informe de mapa, proyección de mapa cilíndrica ideada por Gerardus Mercator en 1569.|  
 |metadatos|Información sobre las propiedades de datos, como el tipo de datos de una columna (numéricos, texto, etc.) o la longitud de una columna; información sobre un archivo, como su título, descripción, fecha de creación y fecha de la última modificación; información sobre la estructura de los datos o información que especifica el diseño de objetos como cubos o dimensiones.|  
-|método|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
+|method|Función que lleva a cabo una acción mediante un objeto COM, como en SQL-DMO, OLE DB y Objetos de datos ActiveX (ADO).|  
 |Tipo de MIME|Formato de archivo de una imagen, por ejemplo .bmp, .gif o .jpeg.|  
 |dependencia de modelos|Relación entre dos o más modelos en la que un modelo depende de la información de otro.|  
 |Expresiones multidimensionales (MDX)|Sintaxis utilizada para definir objetos multidimensionales, así como consultar y manipular datos multidimensionales.|  
@@ -302,7 +302,7 @@ ms.locfileid: "66107808"
 |controles ReportViewer|Control de servidor web y control de Windows Forms que ofrecen procesamiento incrustado de los informes en aplicaciones ASP.NET y de Windows Forms.|  
 |resource|Cualquier elemento de una base de datos del servidor de informes que no es un informe, carpeta ni elemento de origen de datos compartido.|  
 |conjunto de resultados|Conjunto de filas devueltas por la instrucción SELECT.|  
-|rol|1. Usuario o grupo al que se concede un conjunto de permisos específicos.  <br />2. En Analysis Services, un rol utiliza cuentas de seguridad de Windows para limitar el ámbito de acceso y los permisos cuando los usuarios tienen acceso a bases de datos, cubos, dimensiones y modelos de minería de datos.  <br />3. En una sesión de creación de reflejo de la base de datos, el servidor principal y el servidor reflejado tienen roles principales y reflejados complementarios. Opcionalmente, el rol de testigo la realiza una tercera instancia de servidor.|  
+|role|1. Usuario o grupo al que se concede un conjunto de permisos específicos.  <br />2. En Analysis Services, un rol utiliza cuentas de seguridad de Windows para limitar el ámbito de acceso y los permisos cuando los usuarios tienen acceso a bases de datos, cubos, dimensiones y modelos de minería de datos.  <br />3. En una sesión de creación de reflejo de la base de datos, el servidor principal y el servidor reflejado tienen roles principales y reflejados complementarios. Opcionalmente, el rol de testigo la realiza una tercera instancia de servidor.|  
 |asignación de roles|Directiva de seguridad que determina qué usuarios y grupos pueden tener acceso a elementos específicos y pueden realizar operaciones concretas.|  
 |definición de roles|Colección con nombre de tareas que define las operaciones que puede llevar a cabo un usuario en un servidor de informes.|  
 |fila|En una tabla de SQL, una sola repetición del objeto modelado por la tabla.|  
@@ -312,7 +312,7 @@ ms.locfileid: "66107808"
 |escalar|Campo de valor único, en oposición a agregado.|  
 |agregado escalar|Función de agregado, como MIN(), MAX() o AVG(), que se especifica en una lista de columnas de instrucción SELECT que solo contiene funciones de agregado.|  
 |esquema|En el estándar SQL-92, colección de objetos de base de datos que pertenecen a un solo usuario y forman un espacio de nombres único. Un espacio de nombres es un conjunto de objetos que no pueden tener nombres duplicados.|  
-|ámbito|Se utiliza en varios contextos. El ámbito puede especificar los datos que se deben utilizar para evaluar una expresión, el conjunto de cuadros de texto de una página representada, o el conjunto de elementos de informe que se pueden mostrar u ocultar mediante un comando alternante.|  
+|scope|Se utiliza en varios contextos. El ámbito puede especificar los datos que se deben utilizar para evaluar una expresión, el conjunto de cuadros de texto de una página representada, o el conjunto de elementos de informe que se pueden mostrar u ocultar mediante un comando alternante.|  
 |script|Recopilación de instrucciones Transact-SQL que se usan para realizar una operación.|  
 |elemento protegible|Entidades que se pueden proteger con permisos.|  
 |Capa de sockets seguros (SSL)|Estándar abierto propuesto para establecer un canal de comunicaciones seguro con el fin de evitar la interceptación de información crítica, como números de tarjeta de crédito. Principalmente, permite realizar transacciones financieras electrónicas seguras en World Wide Web, aunque también está diseñado para su uso en otros servicios de Internet.|  

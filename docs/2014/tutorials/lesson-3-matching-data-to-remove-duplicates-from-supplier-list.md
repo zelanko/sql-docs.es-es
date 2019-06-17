@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c59a2fce106b08f53722ce44ae69225b680d7925
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484653"
 ---
 # <a name="lesson-3-matching-data-to-remove-duplicates-from-supplier-list"></a>Lección 3: Búsqueda de datos coincidentes para quitar duplicados de lista de proveedores
@@ -25,6 +25,6 @@ ms.locfileid: "65484653"
  En esta lección, realizará una actividad de coincidencia para quitar duplicados de la lista de proveedores. Primero creará una directiva de coincidencia con una regla para identificar los duplicados de la lista de proveedores y publicará la directiva en la base de conocimiento. Después, creará y ejecutará un proyecto de calidad de datos para buscar coincidencias. Por último, exportará los resultados de la actividad de coincidencia a un archivo de Excel que usará más adelante para cargar datos en Master Data Services (MDS).  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 1: Definir una directiva de coincidencia](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
+ [Tarea 1: Definir una directiva de coincidencia](../../2014/tutorials/task-1-defining-a-matching-policy.md)  
   
   

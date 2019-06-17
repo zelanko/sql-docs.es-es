@@ -16,17 +16,17 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: d69b2a3eeb28d5fe23eb6674c8a0ca0ee7628a75
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66103409"
 ---
 # <a name="report-server-service-trace-log"></a>Registro de seguimiento del servicio del servidor de informes
   El registro de seguimiento del servidor de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] es un archivo de texto ASCII que contiene información detallada de las operaciones del servicio del servidor de informes, incluidas las operaciones realizadas por el servicio web del servidor de informes, el Administrador de informes y el procesamiento en segundo plano. El archivo de registro de seguimiento incluye información redundante que contienen otros archivos de registro, así como información adicional que no está disponible en ningún otro archivo. La información del registro de seguimiento resulta útil si se está depurando una aplicación que incluye un servidor de informes o se investiga un problema específico que se incluyó en el registro de eventos o de ejecución.  
   
 > [!NOTE]  
->  En versiones anteriores, hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los siguientes archivos están desusados y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ni en las versiones posteriores. ReportServerWebApp_*\<timestamp >*. log, ReportServer_*\<timestamp >*.log y ReportServerService_main_ *\< marca de tiempo >*. log.  
+>  En versiones anteriores, hubo varios archivos de registro de seguimiento, uno para cada aplicación. Los siguientes archivos están desusados y ya no se crean en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] ni en las versiones posteriores. ReportServerWebApp_ *\<timestamp >* . log, ReportServer_ *\<timestamp >* .log y ReportServerService_main_ *\< marca de tiempo >* . log.  
   
  **En este tema:**  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66103409"
 ##  <a name="bkmk_trace_configuration_settings"></a> Configuración de seguimiento  
  El comportamiento del registro de seguimiento se administra en el archivo de configuración **ReportingServicesrService.exe.config**. El archivo de configuración se encuentra en la ruta de la carpeta siguiente:  
   
- `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`   
+ `\Program Files\Microsoft SQL Server\MSRS12.<instance name>\Reporting Services\ReportServer\bin`  
   
  El ejemplo siguiente muestra la estructura XML de la configuración de `RStrace`. El valor de `DefaultTraceSwitch` determina el tipo de información agregada al registro. Excepto para el atributo `Components`, los valores de `RStrace` son los mismos en todos los archivos de configuración.  
   

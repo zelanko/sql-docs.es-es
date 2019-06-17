@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f6d9ebe43d45ce16ca4889d08656029cad22dcf
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65404037"
 ---
 # <a name="lesson-6-2---defining-named-sets"></a>Lección 6-2: definir conjuntos con nombre
@@ -33,7 +33,7 @@ En las tareas de este tema, definirá dos conjuntos con nombre: un conjunto con 
   
     Al definir un nuevo cálculo en la pestaña **Cálculos** , recuerde que los cálculos se resuelven en el orden en el que aparecen en el panel **Organizador de script** . Su enfoque en dicho panel al crear un nuevo cálculo determinará el orden de la ejecución del cálculo; un nuevo cálculo se define inmediatamente después del cálculo especificado.  
   
-3.  En el cuadro **Nombre** , cambie el nombre del nuevo conjunto con nombre por **[Core Products]**.  
+3.  En el cuadro **Nombre** , cambie el nombre del nuevo conjunto con nombre por **[Core Products]** .  
   
     En el panel **Organizador de script** , observe el icono único que diferencia un conjunto con nombre de un comando de script o de un miembro calculado.  
   
@@ -50,9 +50,9 @@ En las tareas de este tema, definirá dos conjuntos con nombre: un conjunto con 
   
 1.  Haga clic con el botón derecho en **[Core Products]** en el panel **Organizador de scripts** y, después, haga clic en **Nuevo conjunto con nombre**.  
   
-2.  En el cuadro **Nombre** , cambie el nombre de este conjunto con nombre por **[Large Resellers]**.  
+2.  En el cuadro **Nombre** , cambie el nombre de este conjunto con nombre por **[Large Resellers]** .  
   
-3.  En el cuadro **Expresión** , escriba **Exists()**.  
+3.  En el cuadro **Expresión** , escriba **Exists()** .  
   
     Usará la función Exists para devolver el conjunto de miembros de la jerarquía de atributo Reseller Name que forma intersección con el conjunto de miembros de la jerarquía de atributo Number of Employees que tiene el mayor número de empleados.  
   

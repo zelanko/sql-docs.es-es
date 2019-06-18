@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0a561b348b30afcbfe5305681f56e4f8314fa510
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072851"
 ---
 # <a name="synchronize-analysis-services-databases"></a>Sincronizar bases de datos de Analysis Services
@@ -100,7 +100,7 @@ ms.locfileid: "66072851"
      **Carpeta de destino**  
      Muestra el nombre de carpeta de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de destino en la que se sincronizará la partición local. Si la columna incluye el valor "(Default)", la ubicación predeterminada de la instancia de destino incluirá la partición local.  
   
-     Haga clic en el botón de puntos suspensivos (**…**) para que aparezca el cuadro de diálogo **Buscar carpeta remota** y especifique una carpeta en la instancia de destino en la que se deben sincronizar las particiones locales almacenadas en la ubicación seleccionada.  
+     Haga clic en el botón de puntos suspensivos ( **…** ) para que aparezca el cuadro de diálogo **Buscar carpeta remota** y especifique una carpeta en la instancia de destino en la que se deben sincronizar las particiones locales almacenadas en la ubicación seleccionada.  
   
     > [!NOTE]  
     >  Esta columna no se puede cambiar para las particiones locales almacenadas en la ubicación predeterminada para la instancia de origen.  
@@ -144,12 +144,12 @@ ms.locfileid: "66072851"
      **Servidor de destino**  
      Muestra el nombre de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se deben sincronizar las particiones remotas almacenadas en la ubicación especificada en **Servidor de origen** y **Carpeta de origen** .  
   
-     Haga clic en el botón de puntos suspensivos (**…**) para que aparezca el cuadro de diálogo **Administrador de conexiones** y especifique una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se deben sincronizar las particiones remotas almacenadas en la ubicación seleccionada.  
+     Haga clic en el botón de puntos suspensivos ( **…** ) para que aparezca el cuadro de diálogo **Administrador de conexiones** y especifique una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en la que se deben sincronizar las particiones remotas almacenadas en la ubicación seleccionada.  
   
      **Carpeta de destino**  
      Muestra el nombre de carpeta de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de destino en la que se sincronizará la partición remota. Si la columna incluye el valor "(Default)", la ubicación predeterminada de la instancia de destino incluirá la partición remota.  
   
-     Haga clic en el botón de puntos suspensivos (**…**) para que aparezca el cuadro de diálogo **Buscar carpeta remota** y especifique una carpeta en la instancia de destino en la que se deben sincronizar las particiones remotas almacenadas en la ubicación seleccionada.  
+     Haga clic en el botón de puntos suspensivos ( **…** ) para que aparezca el cuadro de diálogo **Buscar carpeta remota** y especifique una carpeta en la instancia de destino en la que se deben sincronizar las particiones remotas almacenadas en la ubicación seleccionada.  
   
      **Tamaño**  
      Muestra el tamaño estimado de las particiones remotas almacenadas en la ubicación.  

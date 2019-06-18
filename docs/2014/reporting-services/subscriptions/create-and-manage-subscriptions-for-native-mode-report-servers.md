@@ -14,10 +14,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: c929fd63cb886eaad301697d4eee245ffb30301c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100988"
 ---
 # <a name="create-modify-and-delete-standard-subscriptions-reporting-services-in-native-mode"></a>Crear, modificar, y eliminar suscripciones estándar (Reporting Services en modo nativo)
@@ -79,7 +79,7 @@ ms.locfileid: "66100988"
   
 8.  En Formato de representación, seleccione un formato de salida de informes para la entrega de archivos. Elija el formato correspondiente a la aplicación de escritorio que utilizará para abrir el informe. Evite formatos que no representen los informes en un solo flujo o que especifiquen una interactividad no admitida en un archivo estático (por ejemplo, HTML 4.0).  
   
-9. En los cuadros de texto **Nombre de usuario** y **Contraseña**, especifique las credenciales necesarias para obtener acceso al recurso compartido de archivos. Use el formato *\<dominio>*\\*\<nombreDeUsuario>* para el nombre de usuario.  
+9. En los cuadros de texto **Nombre de usuario** y **Contraseña**, especifique las credenciales necesarias para obtener acceso al recurso compartido de archivos. Use el formato *\<dominio>* \\ *\<nombreDeUsuario>* para el nombre de usuario.  
   
 10. Especifique las opciones de sobrescritura. Si hace clic en **No sobrescribir el archivo si existe una versión anterior**, la entrega no se realizará cuando se detecte que el archivo ya existe. Si hace clic en **Incrementar los nombres de archivo conforme se agregan versiones más recientes**, el servidor de informes agrega un número al nombre del archivo para distinguirlo de otros archivos existentes que tengan el mismo nombre.  
   

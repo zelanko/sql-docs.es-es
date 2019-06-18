@@ -33,10 +33,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71a2805eb935088f39c6b4a86714f263dc5ba643
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872443"
 ---
 # <a name="database-mail-configuration-objects"></a>Objetos de configuración de Correo electrónico de base de datos
@@ -127,14 +127,14 @@ ms.locfileid: "62872443"
   
 ### <a name="database-mail-settings"></a>Configuración de Correo electrónico de base de datos  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[sysmail_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql)|Cambia los valores de configuración de Correo electrónico de base de datos.|  
 |[sysmail_help_configure_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-help-configure-sp-transact-sql)|Muestra la configuración del Correo electrónico de base de datos.|  
   
 ### <a name="accounts-and-profiles"></a>Cuentas y perfiles  
   
-|Nombre|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[sysmail_add_profileaccount_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-profileaccount-sp-transact-sql)|Agrega una cuenta de correo a un perfil del Correo electrónico de base de datos.|  
 |[sysmail_delete_account_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-account-sp-transact-sql)|Elimina una cuenta del Correo electrónico de base de datos.|  
@@ -149,7 +149,7 @@ ms.locfileid: "62872443"
   
 ### <a name="security"></a>Seguridad  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |[sysmail_add_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-add-principalprofile-sp-transact-sql)|Concede permiso a una entidad de seguridad de base de datos para utilizar un perfil del Correo electrónico de base de datos.|  
 |[sysmail_delete_principalprofile_sp (Transact-SQL)](/sql/relational-databases/system-stored-procedures/sysmail-delete-principalprofile-sp-transact-sql)|Quita el permiso a un usuario de base de datos para utilizar un perfil público o privado del Correo electrónico de base de datos.|  

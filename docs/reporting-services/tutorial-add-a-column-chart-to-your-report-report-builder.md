@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 63480059-b7b9-44b5-9d7f-91780db708b6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 509bce618c902ea06b3e64498b3e7445e0eaae4e
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 55a74bcd165fd06d55eccd6afa718ccd775c7faf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56290663"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041397"
 ---
 # <a name="tutorial-add-a-column-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de columnas a un informe (Generador de informes)
 En este tutorial, creará un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con un gráfico de columnas que muestra una serie como un conjunto de barras verticales agrupadas por categoría. 
@@ -28,7 +28,7 @@ En la ilustración siguiente se muestra el gráfico de columnas que creará, con
   
 ![report-builder-column-chart-tutorial](../reporting-services/media/report-builder-column-chart-tutorial.png)    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -83,7 +83,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
     UNION SELECT CAST('2015-12-31' AS date) AS SalesDate, CAST(81946. AS money) AS Sales  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
 9. Haga clic en **Siguiente**.  
   
@@ -207,7 +207,7 @@ De forma predeterminada, el eje vertical muestra los valores en un formato gener
 
 10. Haga clic con el botón derecho en el título del eje vertical > **Propiedades del título del eje**.  
   
-10. Reemplace el texto del campo **Texto del título** con **Total de ventas (en miles)**. También puede especificar una gran variedad de opciones de formato para el título.  
+10. Reemplace el texto del campo **Texto del título** con **Total de ventas (en miles)** . También puede especificar una gran variedad de opciones de formato para el título.  
   
 11. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

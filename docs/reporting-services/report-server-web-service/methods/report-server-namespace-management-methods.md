@@ -11,14 +11,14 @@ helpviewer_keywords:
 - methods [Reporting Services], about methods
 - methods [Reporting Services]
 ms.assetid: 2aa43ce9-f51e-408a-8ce0-b40d3dd62561
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b09f9e6d9700a56eaa36ddd40ad038fd291c6058
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 678c987e2297c7345dd347957e395b9c4c81544e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47848133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284599"
 ---
 # <a name="report-server-namespace-management-methods"></a>Métodos de administración de los espacios de nombres del servidor de informes
   El servicio web de administración del servidor de informes contiene métodos que puede utilizar para administrar los informes, carpetas y recursos en la base de datos del servidor de informes.  
@@ -60,7 +60,7 @@ ms.locfileid: "47848133"
 |<xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>|Establece una o varias propiedades del sistema en el servidor de informes o la granja de SharePoint.|  
 |<xref:ReportService2010.ReportingService2010.ValidateExtensionSettings%2A>|Valida la configuración de la extensión de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

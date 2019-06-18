@@ -1,5 +1,5 @@
 ---
-title: 'Informes móviles de SQL Server: tutorial integral'
+title: 'Informes móviles de SQL Server: tutorial completo'
 description: Recorra la creación de informes móviles para cualquier tamaño de pantalla con Publicador de informes móviles de Microsoft SQL Server en el portal web de Reporting Services y véalos en las aplicaciones móviles de Power BI.
 ms.date: 12/07/2018
 ms.prod: reporting-services
@@ -8,16 +8,16 @@ ms.technology: mobile-reports
 ms.custom: seodec18
 ms.topic: conceptual
 ms.assetid: e198575e-b154-4342-b944-2bf19ec49bfd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c4c1735d7f6e896ecb3a0c29b6266cddc48dffae
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: db6f8c664dff6f7234e43a3e3f11f6cc01e2eac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62502425"
 ---
-# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial integral
+# <a name="sql-server-mobile-reports-end-to-end-walk-through"></a>Informes móviles de SQL Server: tutorial completo
 Recorra la creación de informes móviles para cualquier tamaño de pantalla con [!INCLUDE[PRODUCT_NAME](../../includes/ss-mobilereptpub-long.md)] en el portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] y véalos en las aplicaciones móviles de Power BI.
 
 Cree informes móviles en una superficie de diseño con cuadrícula ajustable de filas y columnas y elementos flexibles de informes móviles. Conéctese a una variedad de orígenes de datos locales o cargue libros de Excel para crear informes móviles. A continuación, guarde los informes en un portal web de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnoversion.md)] y véalos en un explorador o en las aplicaciones móviles de Power BI.  
@@ -36,7 +36,7 @@ Para poder continuar, necesita estos productos:
 * Para crear conjuntos de datos compartidos, [instale el Generador de informes](../install-windows/install-report-builder.md).  
 * Para crear informes móviles, [instale Publicador de informes móviles de SQL Server](https://go.microsoft.com/fwlink/?LinkId=717766).  
 * [Bases de datos de ejemplo AdventureWorks](https://github.com/Microsoft/sql-server-samples/releases).  
-*  O: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
+*  O BIEN: Base de datos de ejemplo de World Wide Importers, disponible en la página [Ejemplos de Microsoft SQL Server](../../sample/microsoft-sql-server-samples.md).
 * Para ver el resultado: 
   *   [Suscríbase al servicio Power BI](https://go.microsoft.com/fwlink/?LinkID=513879) y
   *  [Descargue la aplicación móvil de Power BI](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) a su dispositivo móvil: dispositivo iOS, teléfono Android o dispositivo Windows 10.  
@@ -79,7 +79,7 @@ Use una herramienta de cliente de [!INCLUDE[PRODUCT_NAME](../../includes/ssrsnov
 4. En el campo de nombre, escriba el nombre del servidor donde guardó el origen de datos, con el formato siguiente:   
    
    Nombre: https://*localhost*/ReportServer  
-   Elementos de tipo: Orígenes de datos (*.rsds)  
+   Elementos de tipo: orígenes de datos (*.rsds)  
    
 5. Haga clic en **Abrir**y desplácese hasta el origen de datos que creó en ese servidor.  
    
@@ -105,7 +105,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
    
    ![PBI_SSMRP_KPI_DatasetField](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpi-datasetfield.png)  
    
-3. Haga clic en los puntos suspensivos (**...**) de la casilla **Seleccionar campo de conjunto de datos** y seleccione un conjunto de datos del paso anterior.  
+3. Haga clic en los puntos suspensivos ( **...** ) de la casilla **Seleccionar campo de conjunto de datos** y seleccione un conjunto de datos del paso anterior.  
    
    ![PBI_SSMRP_KPIPickDataset](../../reporting-services/mobile-reports/media/pbi-ssmrp-kpipickdataset.png)  
    
@@ -121,7 +121,7 @@ Puede crear KPI directamente en el portal web de [!INCLUDE[PRODUCT_NAME](../../i
 
 7. En la casilla **Conjunto de tendencias** , haga clic en **Tendencia de conjunto de datos**.  
   
-6. En la casilla **Seleccionar tendencia de conjunto de datos** , haga clic en los puntos suspensivos (**...**)  
+6. En la casilla **Seleccionar tendencia de conjunto de datos** , haga clic en los puntos suspensivos ( **...** )  
    
 7. Seleccione un campo y haga clic en **Aceptar**.  
 

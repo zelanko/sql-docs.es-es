@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f7e3f2a66fd4963de77fa3545247f9d81690ddec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47734543"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62711919"
 ---
 # <a name="organize-columns-displayed-in-a-trace-sql-server-profiler"></a>Organizar las columnas mostradas en un seguimiento (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47734543"
 |1|12/12/2006 5:24:44 PM|SQL:StmtStarting|2124|  
 |25|12/12/2006 5:24:44 PM|SQL:StmtCompleted|648|  
   
--   Elija solo una columna para agrupar y agregar eventos de seguimiento. Al elegir solo una columna de datos para su agrupación, en la ventana del seguimiento se muestran los eventos agrupados por los valores de esa columna de datos y se contraen todos los eventos bajo ella. Aparece un signo más (**+**) a la izquierda del evento en la columna de datos elegida para la agrupación, mientras que el número de eventos contraídos bajo ella aparece entre paréntesis a la derecha del evento. En el siguiente ejemplo se muestra el modo en que se verá la cuadrícula de la ventana del seguimiento si elige solo la columna de datos **EventClass** para su agrupación. Tenga en cuenta que todos los eventos se organizan en la columna de datos **EventClass** . Para ver todos los eventos, haga clic en el signo más para expandir y mostrar todas las clases de eventos de ese tipo.  
+-   Elija solo una columna para agrupar y agregar eventos de seguimiento. Al elegir solo una columna de datos para su agrupación, en la ventana del seguimiento se muestran los eventos agrupados por los valores de esa columna de datos y se contraen todos los eventos bajo ella. Aparece un signo más ( **+** ) a la izquierda del evento en la columna de datos elegida para la agrupación, mientras que el número de eventos contraídos bajo ella aparece entre paréntesis a la derecha del evento. En el siguiente ejemplo se muestra el modo en que se verá la cuadrícula de la ventana del seguimiento si elige solo la columna de datos **EventClass** para su agrupación. Tenga en cuenta que todos los eventos se organizan en la columna de datos **EventClass** . Para ver todos los eventos, haga clic en el signo más para expandir y mostrar todas las clases de eventos de ese tipo.  
   
 |EventClass|StartTime|Duration|ClientProcessID|  
 |----------------|---------------|--------------|---------------------|  
@@ -80,11 +80,11 @@ ms.locfileid: "47734543"
   
 6.  Haga clic en **Aceptar** en el cuadro de diálogo **Organizar columnas** y, a continuación, en **Aceptar** en el cuadro de diálogo **Propiedades de la tabla de seguimiento** o **Propiedades del archivo de seguimiento** .  
   
-     Después de hacer clic en **Aceptar** en el cuadro de diálogo **Propiedades de la tabla de seguimiento** o **Propiedades del archivo de seguimiento** , las columnas de datos se reorganizan en el seguimiento mostrado. Todos los demás eventos de las columnas de datos se agregan bajo la columna de datos que ha movido a la lista **Grupos** . Haga clic en el signo más (**+**) situado a la izquierda del evento en la columna de datos elegida para la agregación para expandirla y ver todos los eventos de ese tipo. La columna elegida para su agregación permanece fija en la pantalla, pero puede desplazarse a la derecha o la izquierda para ver las demás columnas.  
+     Después de hacer clic en **Aceptar** en el cuadro de diálogo **Propiedades de la tabla de seguimiento** o **Propiedades del archivo de seguimiento** , las columnas de datos se reorganizan en el seguimiento mostrado. Todos los demás eventos de las columnas de datos se agregan bajo la columna de datos que ha movido a la lista **Grupos** . Haga clic en el signo más ( **+** ) situado a la izquierda del evento en la columna de datos elegida para la agregación para expandirla y ver todos los eventos de ese tipo. La columna elegida para su agregación permanece fija en la pantalla, pero puede desplazarse a la derecha o la izquierda para ver las demás columnas.  
   
 7.  Para volver a una vista normal de los datos del seguimiento, haga clic en **Vista agrupada** en el menú **Ver** , lo que cancela la selección. Si desea volver a la vista agregada, haga clic de nuevo en **Vista agregada** en el menú **Ver** para volver a seleccionarla. Recuerde que también puede hacer clic en **Vista agrupada** en el menú **Ver** para mostrar los eventos del seguimiento sin contraerlos.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear un seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-sql-server-profiler.md)   
  [Abrir una tabla de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-table-sql-server-profiler.md)   
  [Abrir un archivo de seguimiento &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/open-a-trace-file-sql-server-profiler.md)  

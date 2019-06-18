@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
 ms.assetid: 70a38879-856c-414b-8479-5f9dead38f15
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 73bc8332e4a0c6d86e9ef57b5fc6c94d39cbafae
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 471f9865809c38a2cce3815ef8f04a9cca3965de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50021662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63308191"
 ---
 # <a name="create-delete-or-modify-a-folder-web-portal"></a>Crear, eliminar o modificar una carpeta (portal web)
   Puede crear carpetas para organizar y administrar los elementos que publica en un servidor de informes. La creación de carpetas puede ayudar a los usuarios a buscar informes de su interés. Para administradores de contenido, las carpetas proporcionan un marco para aplicar permisos. Puede crear asignaciones de roles en carpetas concretas para restringir el acceso a los informes que se están desarrollando o que no se deberían distribuir de manera amplia.  
@@ -48,7 +48,7 @@ ms.locfileid: "50021662"
   
 6.  Haga clic en **Aplicar** para guardar los cambios.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Buscar, ver y administrar informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/finding-viewing-and-managing-reports-report-builder-and-ssrs.md)  
   
   

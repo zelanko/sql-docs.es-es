@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c962b0ff-ce8a-4742-8262-dc730901afcf
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 7da1fa318ac1bab2310cb8708215db3456d84d66
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 466415ebd4075afd5dda83e95a498a32b50af453
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399918"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651742"
 ---
 # <a name="lesson-2-modifying-the-report-data-source-properties"></a>Lesson 2: Modifying the Report Data Source Properties
 En esta lección de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] , usará el portal web para seleccionar un informe que se entregará a los destinatarios. La suscripción controlada por datos que va a definir distribuirá el informe **Sales Order** creado en el tutorial [Crear un informe de tabla básico &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md).  En los pasos siguientes, modificará la información de conexión del origen de datos que el informe utiliza para obtener los datos. Solo los informes que usan **credenciales almacenadas** para obtener acceso a un origen de datos del informe se pueden distribuir a través de una suscripción controlada por datos. Las credenciales almacenadas son necesarias para el procesamiento desatendido de informes.  
@@ -25,7 +25,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
 1.  Vaya al portal web de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con privilegios de administrador, por ejemplo, haga clic con el botón derecho en el icono de Internet Explorer y haga clic en **Ejecutar como administrador**.  
  
 2.    Vaya a la dirección URL del portal web.  Por ejemplo:   
-    `https://<server name>/reports`.  
+    Columnas en la tabla de origen capturadas`https://<server name>/reports`  
     `https://localhost/reports`
  **Nota:** La dirección URL del *portal* web es "Reports", no la dirección URL del *servidor* de informes de "Reportserver".  
 3.  Busque la carpeta que contiene el informe **Sales Orders** y, en el menú contextual del informe, haga clic en **Administrar**.  
@@ -89,7 +89,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
   
 3.  Compruebe que el **Inicio** es `OrderNumber`.  
   
-4.  Seleccione **Permitir valor en blanco ("")**.  
+4.  Seleccione **Permitir valor en blanco ("")** .  
   
 5.  Seleccione **Permitir valor NULL**.  
   
@@ -113,7 +113,7 @@ También modificará el conjunto de datos y el informe para usar un parámetro q
 + Configuró correctamente el informe para obtener datos usando credenciales almacenadas y los datos se pueden filtrar con un parámetro. 
 + En la siguiente lección, configurará la suscripción mediante las páginas del portal web Suscripción controlada por datos. Consulte la [Lección 3: Definir una suscripción controlada por datos](../reporting-services/lesson-3-defining-a-data-driven-subscription.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar orígenes de datos de informe](../reporting-services/report-data/manage-report-data-sources.md)  
 [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
 [Crear una suscripción controlada por datos &#40;Tutorial de SSRS&#41;](../reporting-services/create-a-data-driven-subscription-ssrs-tutorial.md)  

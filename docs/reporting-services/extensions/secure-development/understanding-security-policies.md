@@ -17,14 +17,14 @@ helpviewer_keywords:
 - security policies [Reporting Services]
 - named permission sets [Reporting Services]
 ms.assetid: a9bf043a-139a-4929-9a58-244815323df0
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 05d38729762a3226fa05a3362f5454a604aaf382
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6649017002fb3dd5df2dc3ee68a0d759ded24887
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47839399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193386"
 ---
 # <a name="understanding-security-policies"></a>Descripción de las directivas de seguridad
   Cualquier código ejecutado por un servidor de informes debe formar parte de una directiva de seguridad de acceso del código concreta. Estas directivas de seguridad constan de grupos de código que asignan evidencias a un conjunto de conjuntos de permisos con nombre. Con frecuencia, los grupos de código están asociados a un conjunto de permisos con nombre que especifica los permisos que puede tener el código de ese grupo. El motor en tiempo de ejecución usa las evidencias proporcionadas por un host de confianza o por el cargador para determinar a qué grupos de código pertenece el código y, por tanto, qué permisos se deben conceder al código. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] cumple esta arquitectura de la directiva de seguridad como lo define Common Language Runtime (CLR) de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. En las secciones siguientes se describen los distintos tipos de código de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] y las reglas de directivas asociadas a los mismos.  
@@ -73,7 +73,7 @@ ms.locfileid: "47839399"
   
  En algunos casos, puede que necesite realizar una operación que requiera permisos de código concretos en una expresión de informe. Normalmente, esto significa que una expresión de informe tiene que realizar una llamada a un método de biblioteca CLR protegido (como uno que tiene acceso a archivos o al Registro del sistema). La documentación de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] describe los permisos de código que se exigen para realizar esta llamada segura; para ejecutar la llamada, al código de llamada se le deben conceder estos permisos concretos y seguros. Si realiza la llamada desde una expresión de informe o el elemento **Code**, al ensamblado de expresiones se le deben conceder los permisos adecuados. Sin embargo, una vez que concede los permisos al ensamblado de expresiones, a todo el código que se ejecuta en cualquier expresión de cualquier informe se le concede dicho permiso concreto. Es mucho más seguro realizar la llamada desde un ensamblado personalizado y conceder los permisos concretos a dicho ensamblado personalizado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguridad de acceso del código en Reporting Services](../../../reporting-services/extensions/secure-development/code-access-security-in-reporting-services.md)   
  [Desarrollo seguro &#40;Reporting Services&#41;](../../../reporting-services/extensions/secure-development/secure-development-reporting-services.md)  
   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: d9e30521-f8ae-4c45-89c3-d40727f622f7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3e41b40bceadec4c841aa5b464e2946915003b93
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5a97a0cfc446a32e02172d22391dec8e5ca13af6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041211"
 ---
 # <a name="tutorial-creating-a-basic-table-report-report-builder"></a>Tutorial: Crear un informe de tabla básico (Generador de informes)
 Este tutorial muestra cómo crear un informe de tabla básico basado en datos de ventas de ejemplo. En la siguiente ilustración se muestra el informe que va a crear.  
@@ -124,7 +124,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
     ```  
   
-3.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**).  
+3.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ).  
   
     La consulta se ejecuta y muestra el conjunto de resultados para los campos SalesDate, Subcategory, Product, Sales y Quantity.  
   
@@ -184,7 +184,7 @@ Después de crear grupos, puede agregar filas y darles formato, para mostrar en 
   
 4.  Haga clic en **Siguiente** para obtener una vista previa de la tabla y después haga clic en **Finalizar**.  
   
-La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel Row Groups (Grupos de filas) muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
+La tabla se agrega a la superficie de diseño. La tabla tiene 5 columnas y 5 filas. El panel Grupos de filas muestra tres grupos de filas: SalesDate, Subcategory y Details. Los datos detallados son todos los datos recuperados por la consulta del conjunto de datos.  
   
 ## <a name="FormatCurrency"></a>2. Dar formato a los datos como moneda  
 De forma predeterminada, los datos de resumen del campo Sales se muestran en forma de número general. Aplíquele el formato adecuado para mostrar el número como moneda.   
@@ -197,7 +197,7 @@ De forma predeterminada, los datos de resumen del campo Sales se muestran en for
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** . Las celdas cambian para mostrar la moneda con formato.  
   
-    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
+    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
@@ -214,7 +214,7 @@ De forma predeterminada, en el campo SalesDate se muestra la fecha y la hora. Pu
   
 3.  En la cinta de opciones, en la pestaña **Inicio** , en el grupo **Número** , haga clic en la flecha y seleccione **Fecha**.  
   
-    La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve una fecha de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
+    La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve una fecha de ejemplo, en la pestaña **Inicio**, en el grupo **Número**, haga clic en la flecha situada junto al icono **Estilos de marcador de posición** > **Valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -236,7 +236,7 @@ Los valores SalesDate se muestran en el formato de fecha predeterminado.
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    La celda muestra la fecha de ejemplo **[31 de enero de 2000]**.  
+    La celda muestra la fecha de ejemplo **[31 de enero de 2000]** .  
   
 7.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
@@ -340,7 +340,7 @@ En este tutorial, exportará el informe a Excel y establecerá una propiedad en 
   
 4.  En el cuadro **Nombre de archivo** , escriba **Excel_Ventas_del_producto**.  
   
-5.  Compruebe que el tipo de archivo sea **Excel (\*.xlsx)**.  
+5.  Compruebe que el tipo de archivo sea **Excel (\*.xlsx)** .  
   
 6.  Haga clic en **Guardar**.  
   

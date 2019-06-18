@@ -11,14 +11,14 @@ helpviewer_keywords:
 - sessions [Reporting Services]
 - SessionHeader SOAP header
 ms.assetid: d8143a4b-08a1-4c38-9d00-8e50818ee380
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2652b7ac43daba48c214de00d9787a60c6a7b4c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8b9e33f7c4d1b3ed953882175cd430df2b1e6ce1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47857073"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991584"
 ---
 # <a name="identifying-execution-state"></a>Identificar el estado de ejecución
   El Protocolo de transferencia de hipertexto (HTTP) es un protocolo sin estado y sin conexión, lo que significa que no indica de manera automática si las diferentes solicitudes provienen del mismo cliente o si una instancia del explorador todavía está viendo una página o un sitio. Las sesiones crean una conexión lógica para mantener el estado entre el servidor y el cliente sobre HTTP. La información específica del usuario pertinente para una sesión determinada se conoce como estado de sesión.  
@@ -55,7 +55,7 @@ ms.locfileid: "47857073"
   
  También puede administrar una sesión de informe mediante comandos de acceso URL.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportExecution2005.ReportExecutionService.Render%2A>   
  [Referencia técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)   
  [Uso de encabezados SOAP de Reporting Services](../../reporting-services/report-server-web-service-net-framework-soap-headers/using-reporting-services-soap-headers.md)  

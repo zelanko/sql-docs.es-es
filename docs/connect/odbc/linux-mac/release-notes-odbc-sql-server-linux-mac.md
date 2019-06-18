@@ -11,11 +11,11 @@ author: karinazhou
 ms.author: v-jizho2
 manager: kenvh
 ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59042902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63190575"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Notas de la versión de Microsoft ODBC Driver para SQL Server en Linux y macOS
 
@@ -43,7 +43,7 @@ GeneMi.  2019/04/03.
 | Nuevas distribuciones compatibles. | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Modo de autenticación de Azure Active Directory Managed Service Identity (del sistema y asignado por el usuario). | Consulte [Uso de Azure Active Directory con el controlador ODBC](../using-azure-active-directory.md). |
 | Capacidad de transmitir en secuencias los parámetros de entrada con columnas Always Encrypted. | Para obtener más información, vea [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted) (Limitaciones del controlador ODBC al usar Always Encrypted). |
-| Transacciones distribuidas XA. | Vea [Uso de las transacciones XA](../use-xa-with-dtc.md).<br/><br/>"XA" son las siglas de _eXtended Architecture (arquitectura ampliada)_, que es un estándar para la ejecución de una transacción global que accede a más de un sistema de almacenamiento de datos del servidor. |
+| Transacciones distribuidas XA. | Vea [Uso de las transacciones XA](../use-xa-with-dtc.md).<br/><br/>"XA" son las siglas de _eXtended Architecture (arquitectura ampliada)_ , que es un estándar para la ejecución de una transacción global que accede a más de un sistema de almacenamiento de datos del servidor. |
 | &nbsp; | &nbsp; |
 
 ## <a name="172-july-2018"></a>17.2, julio de 2018

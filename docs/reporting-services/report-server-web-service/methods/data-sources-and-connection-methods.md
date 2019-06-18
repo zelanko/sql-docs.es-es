@@ -10,14 +10,14 @@ helpviewer_keywords:
 - reports [Reporting Services], data
 - data sources [Reporting Services], methods
 ms.assetid: 50999b52-fc7c-4333-9fb0-d04c37a4c90f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 52bc9d57540cdf3bd57e77e3da039e5e9c6d8e50
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 464a24e9a23103323a14140c25563e753c6c3e18
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838813"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512597"
 ---
 # <a name="data-sources-and-connection-methods"></a>Orígenes de datos y métodos de conexión
   Puede utilizar estos métodos para establecer y administrar las credenciales y las conexiones a un origen de datos.  
@@ -37,7 +37,7 @@ ms.locfileid: "47838813"
 |<xref:ReportService2010.ReportingService2010.TestConnectForDataSourceDefinition%2A>|Prueba la conexión para un origen de datos. Este método admite las pruebas directas del origen de datos.|  
 |<xref:ReportService2010.ReportingService2010.TestConnectForItemDataSource%2A>|Prueba la conexión para un origen de datos. Este método admite las pruebas de los orígenes de datos publicados que son utilizados por los informes o modelos, y por orígenes de datos compartidos.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

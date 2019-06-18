@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom authentication [Reporting Services]
 - extensions [Reporting Services], custom security
 ms.assetid: d2327e7c-0d48-49e3-bcd9-3bba4e67a68b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 5b84e2bf86ad41ffca05af115470fd23d2aef95f
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 6089e521e5b5fb5015816d2d18ce5a885a4c3327
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50030324"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193792"
 ---
 # <a name="implementing-a-security-extension"></a>Implementar una extensión de seguridad
   La autenticación de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows constituye el sistema principal para proteger los informes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En ciertos casos, sin embargo, puede necesitar extender el sistema de seguridad de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] para organizar la seguridad personalizada en una empresa. Para ello, puede usar la plataforma de desarrollo que proporciona la API de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]. En esta sección se presentará información general sobre las extensiones de seguridad en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
@@ -35,7 +35,7 @@ ms.locfileid: "50030324"
  [Autorización en Reporting Services](../../../reporting-services/extensions/security-extension/authorization-in-reporting-services.md)  
  Trata la autorización en [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:Microsoft.ReportingServices.Interfaces>   
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  

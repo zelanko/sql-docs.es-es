@@ -9,10 +9,10 @@ ms.assetid: 3a22eec3-57a7-478e-b6fc-102a9dbe0591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 56f701d86c180b6bb1d10c3c6ffebfbe057eaf7c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582086"
 ---
 # <a name="add-cascading-parameters-to-a-report-report-builder-and-ssrs"></a>Agregar parámetros en cascada a un informe (Generador de informes y SSRS)
@@ -43,7 +43,7 @@ ms.locfileid: "65582086"
   
     2.  Un parámetro de consulta para cada parámetro en cascada. Un parámetro de consulta limita los datos recuperados del origen de datos especificando determinados valores para incluirlos o excluirlos de la consulta. Normalmente, los parámetros de consulta se sitúan en una cláusula de restricción de la consulta. Por ejemplo, en una instrucción SELECT de [!INCLUDE[tsql](../../includes/tsql-md.md)] , los parámetros de consulta se sitúan en la cláusula WHERE.  
   
-6.  Haga clic en **Ejecutar** (**!**). Una vez incluidos los parámetros de la consulta y ejecutada la consulta, automáticamente se crean parámetros de informe correspondientes a los parámetros de la consulta.  
+6.  Haga clic en **Ejecutar** ( **!** ). Una vez incluidos los parámetros de la consulta y ejecutada la consulta, automáticamente se crean parámetros de informe correspondientes a los parámetros de la consulta.  
   
     > [!NOTE]  
     >  El orden que tienen los parámetros de la consulta la primera vez se ejecuta una consulta determina el orden en que se crean en el informe. Para cambiar el orden, vea [Cambiar el orden de un parámetro de informe &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/change-the-order-of-a-report-parameter-report-builder-and-ssrs.md).  
@@ -70,7 +70,7 @@ ms.locfileid: "65582086"
   
      El comando SELECT DISTINCT quita los valores duplicados del conjunto de resultados para que obtenga cada valor único de la columna y la tabla especificadas.  
   
-     Haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra los valores disponibles para este primer parámetro.  
+     Haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra los valores disponibles para este primer parámetro.  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

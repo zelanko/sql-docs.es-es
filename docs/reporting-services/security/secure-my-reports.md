@@ -15,10 +15,10 @@ ms.assetid: 3b23a382-13b8-4196-9a93-7fe62d03a63c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 7973c4ad5483193aa4ed2116b714f6d404c4da1c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65570697"
 ---
 # <a name="secure-my-reports"></a>Proteger Mis informes
@@ -32,7 +32,7 @@ ms.locfileid: "65570697"
   
  Una asignación de roles de **Mis informes** se compone de los siguientes elementos:  
   
--   La carpeta Mis informes del usuario, que está ubicada en la carpeta Carpetas de usuarios\\*\<nombre de usuario>* \Mis informes.  
+-   La carpeta Mis informes del usuario, que está ubicada en la carpeta Carpetas de usuarios\\ *\<nombre de usuario>* \Mis informes.  
   
 -   La cuenta de usuario, que se determina cuando se activa la carpeta Mis informes. La carpeta se activa cuando un usuario hace clic en una carpeta Mis informes en el Administrador de informes o cuando publica un informe a una carpeta Mis informes desde el Diseñador de informes. Esta carpeta también se activa cuando un usuario solicita propiedades en el vínculo Mis informes.  
   

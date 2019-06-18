@@ -9,10 +9,10 @@ ms.assetid: e3d61228-2aa4-42cc-955e-602dbf3406a7
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: b5b9846a20615cf613dd50752ac63f2669b1e399
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089659"
 ---
 # <a name="lesson-6-adding-grouping-and-totals-reporting-services"></a>Lesson 6: Adding Grouping and Totals (Reporting Services)
@@ -23,13 +23,13 @@ En la última lección del tutorial, agregará grupos y totales al informe de [!
 
 1. Seleccione la pestaña **Diseño**.
 2. Si no ve el panel **Grupos de filas**, haga clic con el botón derecho en la superficie de diseño y seleccione **Ver** >**Agrupar**.
-3. En el panel **Datos de informe**, arrastre el campo `[Date]` al panel **Grupos de filas**. Sitúelo encima de la fila que se muestra como **= (Detalles)**.
+3. En el panel **Datos de informe**, arrastre el campo `[Date]` al panel **Grupos de filas**. Sitúelo encima de la fila que se muestra como **= (Detalles)** .
 
     > [!NOTE]
     > Observe que el identificador de fila ahora tiene un corchete para indicar que se trata de un grupo. La tabla también tiene ahora dos columnas de expresión `[Date]`, una a ambos lados de una línea de puntos vertical.
     >
     >![Grupo de fecha agregado](media/rs-basictablegroups1design.png "Grupo de fecha agregado")
-4. En el panel **Datos de informe**, arrastre el campo `[Order]` hasta el panel **Grupos de filas**. Sitúelo debajo de **Date** y encima de **= (Detalles)**.
+4. En el panel **Datos de informe**, arrastre el campo `[Order]` hasta el panel **Grupos de filas**. Sitúelo debajo de **Date** y encima de **= (Detalles)** .
 
     ![ssrs_ssdt_addorderfield](media/ssrs-ssdt-addorderfield.png)
 

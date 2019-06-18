@@ -9,14 +9,14 @@ helpviewer_keywords:
 - report servers [Reporting Services], properties
 - system-specific properties [Reporting Services]
 ms.assetid: cd874117-00e5-4ae6-8629-eb9ba9f40478
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: b90ac3252dc0ed8072405064d825424b55aeb102
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 30455d77efff3c9a9e4f48b9cbeccfa983001220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47808713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128817"
 ---
 # <a name="reporting-services-properties---report-server-system-properties"></a>Propiedades de Reporting Services: propiedades del sistema del servidor de informes
   Los siguientes nombres de propiedades de sistema están reservados. No puede crear propiedades definidas por el usuario con el mismo nombre. Puede leer o modificar muchas de estas propiedades utilizando los métodos de servicio web.  
@@ -39,7 +39,7 @@ ms.locfileid: "47808713"
 |EnableIntegratedSecurity|Determina si se admite la seguridad integrada para las conexiones de origen de datos del informe. El valor predeterminado es **True**. Los valores válidos son los siguientes:<br /><br /> **True** = la seguridad integrada está habilitada.<br /><br /> **False** = la seguridad integrada no está habilitada. No se ejecutarán los orígenes de datos de informes que estén configurados para usar la seguridad integrada.|  
 |EnableRemoteErrors|Incluye información de errores externa (por ejemplo, sobre los orígenes de datos de informe) con los mensajes de error que se devuelven para los usuarios que solicitan informes de los equipos remotos. Los valores válidos son **true** y **false**. El valor predeterminado es **false**. Para más información, vea [Habilitar errores remotos &#40;Reporting Services&#41;](../../../reporting-services/report-server/enable-remote-errors-reporting-services.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportService2010.ReportingService2010.GetSystemProperties%2A>   
  <xref:ReportService2010.ReportingService2010.SetSystemProperties%2A>   
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

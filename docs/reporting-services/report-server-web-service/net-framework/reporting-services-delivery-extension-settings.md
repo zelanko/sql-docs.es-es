@@ -18,14 +18,14 @@ helpviewer_keywords:
 - mail [Reporting Services]
 - Web service [Reporting Services], delivery extension settings
 ms.assetid: 68c31a85-261c-4ec4-b8df-1f9842b46f8a
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1935b8ff2ac78ebd7d926950e6c2d97dbad75a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b801fc7ada9e370d12388ba341259f1c13c7a0f6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128849"
 ---
 # <a name="reporting-services-delivery-extension-settings"></a>Configuración de la extensión de entrega de Reporting Services
   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] contiene una extensión de entrega por correo electrónico y una extensión de entrega a recursos compartidos de archivos. La entrega por correo electrónico proporciona una manera de enviar un informe a usuarios individuales o grupos a través del correo electrónico. La entrega a recursos compartidos de archivos permite enviar los informes representados automáticamente a un recurso compartido de la red. Puede utilizar cualquiera de las dos extensiones de entrega admitidas con las suscripciones estándar o las suscripciones controladas por datos. La configuración de entrega específica del tipo de extensión de entrega se pasa siempre que se llama a los métodos <xref:ReportService2010.ReportingService2010.CreateSubscription%2A>,<xref:ReportService2010.ReportingService2010.CreateDataDrivenSubscription%2A>,<xref:ReportService2010.ReportingService2010.SetSubscriptionProperties%2A> y <xref:ReportService2010.ReportingService2010.SetDataDrivenSubscriptionProperties%2A>. Para recuperar mediante programación una lista de configuración de entrega, utilice el método <xref:ReportService2010.ReportingService2010.GetExtensionSettings%2A>.  
@@ -62,7 +62,7 @@ ms.locfileid: "47628493"
 |**PASSWORD**|Contraseña necesaria para tener acceso al recurso de la red o disco.|  
 |**WRITEMODE**|Modo de escritura que utilizar al tener acceso al disco. Los valores válidos son **None**, **Overwrite** y **AutoIncrement**.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia técnica &#40;SSRS&#41;](../../../reporting-services/technical-reference-ssrs.md)   
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)  
   

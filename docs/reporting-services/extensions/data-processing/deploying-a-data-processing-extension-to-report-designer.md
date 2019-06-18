@@ -9,14 +9,14 @@ helpviewer_keywords:
 - data processing extensions [Reporting Services], deploying
 - assemblies [Reporting Services], data processing extension deployments
 ms.assetid: 3614e601-004e-4a16-8388-836ffd67e9dd
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a248250c1f5584a12bc40444d27c96ccc7e69416
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ff2fbd4cc5b910cdb5191d4fc51941167d8bfb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194022"
 ---
 # <a name="deploying-a-data-processing-extension-to-report-designer"></a>Implementar una extensión de procesamiento de datos en el Diseñador de informes
   El Diseñador de informes utiliza las extensiones de procesamiento de datos para recuperar y procesar los datos mientras se diseñan los informes. Debería implementar el ensamblado de extensión de procesamiento de datos para el Diseñador de informes como un ensamblado privado. También tiene que realizar una entrada en el archivo de configuración del Diseñador de informes, RSReportDesigner.config.  
@@ -76,7 +76,7 @@ ms.locfileid: "47818693"
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Para poder comprobar la implementación, debe cerrar todas las instancias de [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] en el equipo local. Una vez que haya finalizado todas las sesiones actuales, puede comprobar si la extensión de procesamiento de datos se implementó correctamente para el Diseñador de informes creando un proyecto de informe nuevo en [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)]. La extensión se debe incluir en la lista de tipos de orígenes de datos disponibles al crear un conjunto de datos nuevo para el informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/deploying-a-data-processing-extension.md)   
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   

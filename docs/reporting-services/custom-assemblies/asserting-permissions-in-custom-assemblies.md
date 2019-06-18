@@ -14,14 +14,14 @@ helpviewer_keywords:
 - limited permission sets
 - security configuration files [Reporting Services]
 ms.assetid: 3afb9631-f15e-405e-990b-ee102828f298
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: ce5e4cf2928b166d100ba287d856e638b8272698
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dabfe56423a08c6624adc6da322cf442e5a63b7d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785313"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194326"
 ---
 # <a name="asserting-permissions-in-custom-assemblies"></a>Validar los permisos en ensamblados personalizados
   De forma predeterminada, el código de ensamblado personalizado se ejecuta con el conjunto de permisos de **Ejecución** limitado. En algunos casos, puede desear implementar un ensamblado personalizado que realice llamadas protegidas a los recursos protegidos dentro del sistema de seguridad (como un archivo o el Registro). Para ello, debe hacer lo siguiente:  
@@ -87,7 +87,7 @@ try
   
  Para obtener más información, vea el tema sobre la seguridad de .NET Framework en la Guía del programador de .NET Framework.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Usar ensamblados personalizados con informes](../../reporting-services/custom-assemblies/using-custom-assemblies-with-reports.md)  
   
   

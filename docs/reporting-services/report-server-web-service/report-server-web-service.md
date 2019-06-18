@@ -14,21 +14,21 @@ helpviewer_keywords:
 - XML Web service [Reporting Services]
 - Report Server Web service
 ms.assetid: 16c21dec-6b46-4497-9a0c-1b0f2b6ab8fc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2442d32a2540a85b26a19e27b0fafec7b42e76f3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 455fc4c5ea881f370257769d6794628a45017b3a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63070359"
 ---
 # <a name="report-server-web-service"></a>servicio web del servidor de informes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] proporciona acceso a la funcionalidad completa del servidor de informes a través del servicio web del servidor de informes. El servicio web del servidor de informes es un servicio web XML con una API SOAP. Utiliza SOAP sobre HTTP y actúa como interfaz de comunicaciones entre los programas clientes y el servidor de informes. El servicio web proporciona dos extremos, uno para la ejecución y otro para la administración de informes, con métodos que exponen la funcionalidad del servidor de informes y le permiten crear herramientas personalizadas para cualquier parte del ciclo de vida del informe.  
   
  Hay tres modos principales para desarrollar aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] basadas en el servicio web. Puede hacer lo siguiente:  
   
--   Desarrollar aplicaciones con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y el SDK de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. Para más información sobre cómo usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para generar las aplicaciones del servicio web, vea [Creación de aplicaciones con el servicio Web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
+-   Desarrollar aplicaciones con [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] y [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK. Para más información sobre cómo usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para generar las aplicaciones del servicio web, vea [Creación de aplicaciones con el servicio Web y .NET Framework](../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
   
 -   Desarrollar aplicaciones con la utilidad **rs** (RS.exe), el entorno de script de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Con los scripts de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] puede ejecutar cualquiera de las operaciones del servicio web del servidor de informes. Para más información sobre cómo crear scripts en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], vea [Script con la utilidad rs.exe y el servicio web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md).  
   
@@ -52,7 +52,7 @@ Opciones de desarrollo de servicio web disponibles en Reporting Services
  Contiene información sobre cómo desarrollar aplicaciones y servicios web que llaman a la API SOAP de Reporting Services.  
   
  [Script con la utilidad rs.exe y el servicio web](../../reporting-services/tools/script-with-the-rs-exe-utility-and-the-web-service.md)  
- Proporciona información general del entorno de scripting de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+ Proporciona información general del entorno de scripting de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  [Referencia técnica &#40;SSRS&#41;](../../reporting-services/technical-reference-ssrs.md)  
  Contiene material de referencia específico de los métodos de servicios web del servidor de informes y los tipos complejos correspondientes.  
@@ -70,7 +70,7 @@ Opciones de desarrollo de servicio web disponibles en Reporting Services
   
 -   Experiencia en desarrollo con un lenguaje compatible con [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[csprcs](../../includes/csprcs-md.md)] o [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)], si piensa usar [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] como plataforma de desarrollo.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Servicio web del servidor de informes](../../reporting-services/report-server-web-service/report-server-web-service.md)  
   
   

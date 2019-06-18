@@ -9,10 +9,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: e13654a38738c84095cc284a24fb723aa2b05327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580501"
 ---
 # <a name="reporting-services-site-collection-features"></a>Características de la colección de sitios de Reporting Services
@@ -34,7 +34,7 @@ El modo de SharePoint de Reporting Services proporciona tres características de
 |-------------|-----------------|  
 |**Característica Administración central del servidor de informes**|Habilita las características para administrar la integración con un servidor de informes de Reporting Services. Esta característica solo se instala y se puede usar en la colección de sitios de Administración central de SharePoint.<br /><br /> La característica de integración del servidor de informes se activa de forma automática en la colección de sitios Administración central de SharePoint tras instalar el Complemento [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] para los productos de SharePoint. En algunas situaciones, tendrá que activar la característica de forma manual. Para activar la característica del servidor de informes, use las páginas de Reporting Services de la página Configuración del sitio de Administración central de SharePoint.<br /><br /> La versión de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Reporting Services y posterior del complemento para productos de SharePoint activa la característica de integración del servidor de informes para todas las colecciones de sitios existentes cuando se instala el complemento. Además, la característica se activa automáticamente para las nuevas colecciones de sitios.|  
 |**Característica de integración del servidor de informes**|Permite la creación de informes avanzados mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Reporting Services<br /><br /> Esta característica está activa de forma predeterminada.|  
-|**Característica Power View Integration**|Habilita la exploración interactiva de los datos y la presentación visual de los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las bases de datos tabulares de Analysis Services.<br /><br /> Se puede tener acceso a la característica en los menús contextuales de los siguientes orígenes de datos:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> archivo de conexión **.bism** <br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] no aparece en los menús contextuales, compruebe que la **característica Power View Integration** está activada.<br /><br /> Esta característica está desactivada de forma predeterminada.|  
+|**Característica Power View Integration**|Habilita la exploración interactiva de los datos y la presentación visual de los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y las bases de datos tabulares de Analysis Services.<br /><br /> Se puede tener acceso a la característica en los menús contextuales de los siguientes orígenes de datos:<br /><br /> **.rdlx**<br /><br /> **.rsds**<br /><br /> archivo de conexión **.bism**<br /><br /> <br /><br /> Si [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] no aparece en los menús contextuales, compruebe que la **característica Power View Integration** está activada.<br /><br /> Esta característica está desactivada de forma predeterminada.|  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

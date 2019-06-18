@@ -9,17 +9,17 @@ helpviewer_keywords:
 - deploying [Reporting Services], extensions
 - rendering extensions [Reporting Services], deploying
 ms.assetid: 9fb8c887-5cb2-476e-895a-7b0e2dd11398
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2fdcc4d932d32177797f6f3944b59e70d9ca607f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 10c822b8cd292c975309443f9196fb7ceb66cbc5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193700"
 ---
 # <a name="deploying-a-rendering-extension"></a>Implementar una extensión de representación
-  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
+  Después de haber escrito y compilado la extensión de representación de informes de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] en una biblioteca de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] , es necesario hacer que el servidor de informes y el Diseñador de informes la puedan reconocer. Para ello, copie la extensión en el directorio adecuado y agregue las entradas a los archivos de configuración de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] adecuados.  
   
 ## <a name="configuration-file-rendering-extension-element"></a>Elemento Extension de representación de archivos de configuración  
  Una vez compilada una extensión de representación en una .DLL, agregue una entrada al archivo rsreportserver.config. De forma predeterminada, la ubicación es %Archivos de programa%\Microsoft SQL Server\MSRS10_50.\<nombreDeInstancia>\Reporting Services\ReportServer. El elemento primario es \<Render>. Bajo el elemento Render hay un elemento Extension para cada extensión de representación. El elemento **Extension** contiene dos atributos, Name y Type.  
@@ -67,7 +67,7 @@ ms.locfileid: "47621744"
 ## <a name="verifying-the-deployment"></a>Comprobación de la implementación  
  Puede abrir también el Administrador de informes y comprobar que la extensión está incluida en la lista de tipos de exportación disponibles para un informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementar una extensión de representación](../../../reporting-services/extensions/rendering-extension/implementing-a-rendering-extension.md)   
  [Información general de las extensiones de representación](../../../reporting-services/extensions/rendering-extension/rendering-extensions-overview.md)   
  [Implementar la interfaz IRenderingExtension](../../../reporting-services/extensions/rendering-extension/implementing-the-irenderingextension-interface.md)   

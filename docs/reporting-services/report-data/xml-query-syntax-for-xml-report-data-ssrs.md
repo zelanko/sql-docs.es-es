@@ -14,10 +14,10 @@ ms.assetid: d203886f-faa1-4a02-88f5-dd4c217181ef
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 3fc3cddc10dd53225867b910b8a3b3cb9c73d6ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574856"
 ---
 # <a name="xml-query-syntax-for-xml-report-data-ssrs"></a>Sintaxis de consulta XML para los datos de informe XML (SSRS)
@@ -38,7 +38,7 @@ ms.locfileid: "65574856"
  Para un extremo de servicios web al que señala una dirección URL de cadena de conexión, el elemento XML **Query** define el método del servicio web, la acción SOAP o ambos. El proveedor de datos XML crea una solicitud de servicio web que recupera los datos XML que se utilizarán para el informe.  
   
 > [!NOTE]  
->  Cuando un espacio de nombres de servicio web incluye un carácter de barra diagonal (**/)** , deben incluirse tanto el método del servicio web como la acción SOAP, de manera que la extensión de procesamiento de datos XML pueda derivar el espacio de nombres correctamente.  
+>  Cuando un espacio de nombres de servicio web incluye un carácter de barra diagonal ( **/)** , deben incluirse tanto el método del servicio web como la acción SOAP, de manera que la extensión de procesamiento de datos XML pueda derivar el espacio de nombres correctamente.  
   
  En el caso de los documentos XML incrustados, el elemento XML **Query** define los datos XML incrustados que se van a utilizar, incluye espacios de nombres opcionales y contiene un elemento XML **ElementPath**opcional.  
   

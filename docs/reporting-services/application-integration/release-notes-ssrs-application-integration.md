@@ -10,11 +10,11 @@ ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
 ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 7ccb8f28eafd79a1bddd523f71fe8b61c7634349
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/20/2019
-ms.locfileid: "58290954"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63226001"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>Notas de la versión para los controles de Visor de informes para formularios Web Forms y formularios Windows Forms de SSRS
 
@@ -27,7 +27,7 @@ Para las notas de la versión de SSRS, consulte [notas de la versión para SQL S
 | Descripción del cambio | Detalles |
 | :----------------- | :------ |
 | Corrija un error que impide que los informes sin parámetros se carguen a través de **Server.LoadReportDefinition**. | &nbsp; |
-| El control del Visor de informes WebForms. | Compatibilidad con la inserción en las páginas de derecha a izquierda (páginas que cambian el flujo de texto mediante la propiedad css *direction: rtl;*).<br/><br/>Compatibilidad con la personalización de texto del cuadro de diálogo de impresión a través de la interfaz de localización *IReportViewerMessages5*.<br/><br/>Compatibilidad de accesibilidad mejorada.<br/><br/>&bull; &nbsp; &nbsp; [Paquete de NuGet para el control de Visor de informes de WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
+| El control del Visor de informes WebForms. | Compatibilidad con la inserción en las páginas de derecha a izquierda (páginas que cambian el flujo de texto mediante la propiedad css *direction: rtl;* ).<br/><br/>Compatibilidad con la personalización de texto del cuadro de diálogo de impresión a través de la interfaz de localización *IReportViewerMessages5*.<br/><br/>Compatibilidad de accesibilidad mejorada.<br/><br/>&bull; &nbsp; &nbsp; [Paquete de NuGet para el control de Visor de informes de WebForms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Webforms/150.900.148) |
 | El control del Visor de informes WinForms. | Corrección para la impresión cuando se ejecuta una aplicación en modo con valores altos de PPP.<br/><br/>&bull; &nbsp; &nbsp; [Paquete de NuGet para el control de Visor de informes de Windows Forms](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.Winforms/150.900.148) |
 | &nbsp; | &nbsp; |
 

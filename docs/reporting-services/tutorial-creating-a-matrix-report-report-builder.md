@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 9ee19c2e-2a8c-4bb0-9274-04a5812c2e96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 812885a0638c9acf56cc0fc91f4f47915d6455cb
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: ed53800a1b45dd79548c59aaab57f71bd700d94d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291683"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294663"
 ---
-# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
+# <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz (Generador de informes)
 Este tutorial le enseña a crear un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] con una matriz de datos de ventas de ejemplo en los grupos anidados de filas y columnas. 
 
 También creará un grupo de columnas adyacente, dará formato a columnas y girará el texto. En la siguiente ilustración se muestra un informe similar al que creará.  
@@ -49,7 +49,7 @@ En esta sección, elegirá un origen de datos compartido, creará un conjunto de
   
 5.  Haga clic en **Siguiente**.  
   
-6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para obtener más información sobre la creación de un origen de datos incrustados, vea [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+6.  En la página **Elegir una conexión a un origen de datos** , seleccione un origen de datos existente o vaya al servidor de informes y seleccione un origen de datos. Si no hay disponible ningún origen de datos o no tiene acceso a un servidor de informes, puede utilizar un origen de datos incrustados en su lugar. Para más información sobre cómo crear un origen de datos insertado, vea [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -156,7 +156,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 3.  En la pestaña **Inicio** > **Número** > **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
-    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
+    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
     ![report-builder-placeholder-value](../reporting-services/media/report-builder-placeholder-value.png)
   
@@ -164,7 +164,7 @@ De forma predeterminada, los datos de resumen para el campo Sales muestran un n�
   
 5.  En el grupo **Número** > **Fecha**.  
   
-    La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
+    La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
 6.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   

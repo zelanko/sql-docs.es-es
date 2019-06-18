@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Report Server Web service, features
 - XML Web service [Reporting Services], methods
 ms.assetid: ce5afa27-e90c-44a7-b204-098a065b3665
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c05f1c21cac109938dcb740e6d0d657324ffe543
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b7425b205bdc630d17e5c962519348d2b1ce7a1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47796023"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284662"
 ---
 # <a name="report-server-web-service-methods"></a>Métodos de servicio web del servidor de informes
   Los servicios web del servidor de informes incluyen varias categorías de métodos que están basados en las características de componente. Estos métodos se proporcionan a través de varios extremos de servicios web (tres para la administración de informes y uno para la ejecución de informes) que se exponen como miembros de las clases <xref:ReportService2010.ReportingService2010> y <xref:ReportExecution2005.ReportExecutionService>. Estas clases se pueden generar a través de una herramienta de clase de proxy como wsdl.exe, que está incluida con el SDK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)]. Para más información sobre los servicios web del servidor de informes y [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], vea [Generar aplicaciones mediante el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md).  
@@ -42,7 +42,7 @@ ms.locfileid: "47796023"
 |[Métodos de suscripción y entrega](../../../reporting-services/report-server-web-service/methods/subscription-and-delivery-methods.md)|Describe métodos que puede utilizar para crear y administrar suscripciones y entrega de informes.|  
 |[Métodos de informes vinculados](../../../reporting-services/report-server-web-service/methods/linked-reports-methods.md)|Describe métodos que puede utilizar para crear y administrar los informes vinculados.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Acceso a la API de SOAP](../../../reporting-services/report-server-web-service/accessing-the-soap-api.md)   
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 67d8513e-8a70-464b-b87f-e91d010cfd82
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 42d55cf53d282b2c092769cf4435fd240ba0cbce
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 090729625991e3a1aaa6fb1ada3012a15ff20dce
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579345"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043043"
 ---
 # <a name="tutorial-format-text-report-builder"></a>Tutorial: Dar formato a texto (Generador de informes)
 
@@ -111,7 +111,7 @@ Para obtener información sobre los requisitos, vea [Requisitos previos para los
     UNION SELECT CAST('2015-01-06' AS date) as SalesDate, 'Fernando Ross' as FullName,'South' as Territory, 'Digital' as Subcategory, 'Slim Digital' as Product, CAST(6648.25 AS money) AS Sales, 35 as Quantity, 'What is New in Reporting Services (SSRS)' as Link, 'https://go.microsoft.com/fwlink/?LinkId=165064' AS URL  
     ```  
   
-7.  Haga clic en Ejecutar (**!**) para ejecutar la consulta.  
+7.  Haga clic en Ejecutar ( **!** ) para ejecutar la consulta.  
   
     Los resultados de la consulta son los datos disponibles para mostrarse en su informe.  
   
@@ -179,7 +179,7 @@ Cree esta tabla para tener un lugar donde colocar los hipervínculos y el texto 
   
 1.  En la pestaña **Insertar** > **Tabla** > **Asistente para tablas**.  
   
-2.  En la página **Elegir un conjunto de datos** del nuevo Asistente para tablas o matrices, haga clic en **Elegir un conjunto de datos existente en este informe o un conjunto de datos compartido** > **TextDataset (en este Informe)** > **Siguiente**.  
+2.  En la página **Elegir un conjunto de datos** del nuevo Asistente para tablas o matrices, haga clic en **Elegir un conjunto de datos existente en este informe o un conjunto de datos compartido** > **TextDataset (en este Informe)**  > **Siguiente**.  
   
 3.  En la página **Organizar campos** , arrastre los campos **Territory**, **LinkText**y **Product** hasta **Grupos de filas**, arrastre el campo **Sales** hasta **Valores**y después haga clic en **Siguiente**.  
 
@@ -254,7 +254,7 @@ En esta sección, girará parte del texto de la tabla de las secciones anteriore
    
 6.  En la pestaña **Inicio**, sección **Párrafo**, seleccione **Centro** y **Centrar** para colocar el texto en el centro de la celda tanto vertical como horizontalmente.  
   
-8.  Haga clic en Ejecutar (**!**).  
+8.  Haga clic en Ejecutar ( **!** ).  
   
 Ahora el texto de la celda `[Territory]` está situado verticalmente desde la parte inferior a la parte superior de las celdas.  
 
@@ -268,13 +268,13 @@ Ahora el texto de la celda `[Territory]` está situado verticalmente desde la pa
   
 3.  En la pestaña **Inicio** > grupo **Número** > botón **Moneda**.  
   
-4.  (Opcional)     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
+4.  (Opcional)     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
 
     ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
   
 5.  (Opcional) En la pestaña **Inicio** , en el grupo **Número** , haga clic dos veces en el botón **Disminuir decimales** para mostrar las cifras en dólares sin centavos.  
   
-6.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
+6.  Haga clic en Ejecutar ( **!** ) para obtener la vista previa del informe.  
   
 El informe muestra ahora datos dados con formato y es más fácil de leer.  
 
@@ -316,7 +316,7 @@ El informe muestra ahora datos dados con formato y es más fácil de leer.
   
 7.  Haga clic en **Aceptar**.  
   
-8.  Haga clic en Ejecutar (**!**) para obtener la vista previa del informe.  
+8.  Haga clic en Ejecutar ( **!** ) para obtener la vista previa del informe.  
   
 El texto del cuadro de texto se muestra como un encabezado, párrafo y lista con viñetas.  
   

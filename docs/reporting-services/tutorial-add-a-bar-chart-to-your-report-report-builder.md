@@ -6,17 +6,17 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 6956ebd6-0217-4087-a4fa-5cc1c3804691
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dce9cfd4ae9459ecdb4c2169a5fb6cb638792ab4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e6855a7a6a47021a635e12b2c53515ed20aa6f4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56296169"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041191"
 ---
-# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico de barras a un informe (Generador de informes)
-En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)]. Después, agregará un filtro y mejorará el gráfico. 
+# <a name="tutorial-add-a-bar-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico de barras a un informe (Generador de informes)
+En este tutorial, usará un asistente en [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] para crear un gráfico de barras en un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . Después, agregará un filtro y mejorará el gráfico. 
 
 Un gráfico de barras muestra los datos de categoría horizontalmente. Esto puede ayudar a:  
   
@@ -30,7 +30,7 @@ La siguiente ilustración muestra el gráfico de barras que creará, con ventas 
   
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo desplazarse a un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, crear un conjunto de datos y elegir un origen de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 15 minutos.  
   
@@ -83,7 +83,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
     UNION SELECT 'Brian' as FirstName, 'Burke' as LastName, CAST(187000. AS money) AS SalesYear2015, CAST(207000. AS money) AS SalesYear2014  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
 9. Haga clic en **Siguiente**.  
   
@@ -93,7 +93,7 @@ En el que puede crear un conjunto de datos incrustado, elegir un origen de datos
   
 2.  Haga clic en **Barras**y después en **Siguiente**.  
   
-    En la página **Organizar campos del gráfico** hay cuatro campos en el panel **Campos disponibles**: FirstName, LastName, SalesYear2015 y SalesYear2014.  
+    En la página **Organizar campos del gráfico** , hay cuatro campos en el panel **Campos disponibles** : FirstName, LastName, SalesYear2015 y SalesYear2014.  
   
 3.  Arrastre LastName hasta el panel Categorías.  
   
@@ -166,7 +166,7 @@ Al ordenar los datos en un gráfico, está cambiando el orden de valores en el e
   
 4.  Haga clic en **Ordenar**. La página **Cambiar opciones de ordenación** muestra una lista de expresiones de ordenación. De forma predeterminada, esta lista tiene una expresión de ordenación que es igual que la expresión de grupo de categorías original.  
   
-5.  En **Ordenar por**, haga clic en **[SalesYear2015]**.  
+5.  En **Ordenar por**, haga clic en **[SalesYear2015]** .  
   
 6.  en la lista **Ordenar** , seleccione **A a Z** para que los nombres aparezcan en orden de mayor a menor venta de 2015.
   
@@ -226,7 +226,7 @@ De forma predeterminada, el eje horizontal muestra los valores en un formato gen
   
 7.  En el cuadro **Título del eje** , escriba **Ventas en miles** y presione Entrar.  
 
-    >**Nota:** Mientras escribe, el cuadro Título del eje aparece en el eje vertical. Pero cuando presione Entrar, pasa al eje horizontal.
+    >**Nota:** mientras escribe, el cuadro Título del eje aparece en el eje vertical. Pero cuando presione Entrar, pasa al eje horizontal.
   
 9. Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   
@@ -245,7 +245,7 @@ Puede agregar un filtro al gráfico para especificar qué datos del conjunto de 
   
 5.  Haga clic en **Agregar**. Aparece un nuevo filtro en blanco.  
   
-6.  En **Expresión**, escriba **[Sum(SalesYear2015)]**. Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx** .  
+6.  En **Expresión**, escriba **[Sum(SalesYear2015)]** . Esto crea la expresión subyacente `=Sum(Fields!SalesYear2015.Value)`, que puede ver si hace clic en el botón **fx** .  
   
 7.  Compruebe que el tipo de datos es **Texto**.  
   

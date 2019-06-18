@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 79b7a54c511d483fde86d11eeb8670ce2ac2bc14
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 5d43534148ccf22419c630880192ff21eba2a441
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63195265"
 ---
 # <a name="using-the-winforms-reportviewer-control"></a>Usar el control ReportViewer de WinForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WinForms para representarlos en una aplicación Windows.  
@@ -38,7 +38,7 @@ ms.locfileid: "51813978"
   
  Una vez agregado el control al formulario, aparecerá la etiqueta inteligente **ReportViewer Tasks** y le solicitará que seleccione un informe.  
   
- Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecerán dos propiedades adicionales: **Dirección URL del servidor de informes** y **Ruta de acceso del informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
+ Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>** , aparecerán dos propiedades adicionales: **Dirección URL del servidor de informes** y **Ruta de acceso del informe**. **Dirección URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa al informe que quiere representar.  
   
  ![Seleccionar informe del servidor](../../reporting-services/application-integration/media/windowsapp-serverreportsettings.png "Seleccionar informe del servidor")  
   
@@ -501,7 +501,7 @@ Public Class Form1
 End Class  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
   
   

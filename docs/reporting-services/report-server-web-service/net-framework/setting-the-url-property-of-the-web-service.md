@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Web service [Reporting Services], proxies
 - Web references [Reporting Services]
 ms.assetid: 4eac4e40-dafb-4403-acde-13df317c8ec8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3b9f156fed4f83bfb385f70198ba69feaa0883d8
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 13fc37cd6b0b7396196ad8f514ec34fb9b317a16
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51812508"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63128832"
 ---
 # <a name="setting-the-url-property-of-the-web-service"></a>Establecer la propiedad Url del servicio web
   En las aplicaciones de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], puede modificar en cualquier momento la dirección URL base del servicio web del servidor de informes a la que se dirige la aplicación. Para ello, basta con establecer la propiedad **Url** del objeto de servicio. Por ejemplo:  
@@ -104,7 +104,7 @@ class Sample
   
  Para más información sobre cómo crear el proxy del servicio web inicial, vea [Crear el proxy del servicio web](../../../reporting-services/report-server-web-service/net-framework/creating-the-web-service-proxy.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  <xref:ReportService2010.ReportingService2010.CreateCatalogItem%2A>   
  <xref:ReportService2010.ReportingService2010.GetItemDefinition%2A>   
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   

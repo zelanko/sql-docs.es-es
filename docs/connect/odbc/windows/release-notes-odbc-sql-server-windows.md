@@ -12,11 +12,11 @@ author: v-makouz
 ms.author: v-makouz
 manager: kenvh
 ms.openlocfilehash: f74d5a70325fdceb311bb3a45ba6824e64242ff0
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872015"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63031213"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Notas de la versión de ODBC a SQL Server en Windows
 

@@ -12,14 +12,14 @@ helpviewer_keywords:
 - removing encryption keys
 - resetting encryption keys
 ms.assetid: 201afe5f-acc9-4a37-b5ec-121dc7df2a61
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d910518c2811877920c1656b36a771ea6aebc61b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2f2d3a496cbe2b8adda02b5d7425e49c09f44c77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47747203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513317"
 ---
 # <a name="ssrs-encryption-keys---delete-and-re-create-encryption-keys"></a>Claves de cifrado de SSRS: eliminar y volver a crear claves de cifrado
   Las actividades de eliminación y nueva creación de claves de cifrado quedan fuera del mantenimiento rutinario de las claves de cifrado. Estas tareas se realizan en respuesta a una amenaza específica al servidor de informes o como último recurso cuando ya no se tiene acceso a una base de datos del servidor de informes.  
@@ -33,7 +33,7 @@ ms.locfileid: "47747203"
   
  Solo se puede volver a crear la clave simétrica cuando el servidor de informes se encuentre en un estado de funcionamiento. La creación de claves de cifrado y el cifrado de contenido interrumpen las operaciones del servidor. Debe poner el servidor en modo sin conexión durante el proceso de nuevo cifrado. No se deben realizar solicitudes al servidor de informes durante este proceso.  
   
- Para restablecer la clave simétrica y los datos cifrados, se puede usar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** . Para más información sobre cómo se crea la clave simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
+ Para restablecer la clave simétrica y los datos cifrados, se puede usar la herramienta de configuración de Reporting Services o la utilidad **rskeymgmt** . Para obtener más información sobre cómo se crea la clave simétrica, vea [Inicializar un servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md).  
   
 ### <a name="how-to-re-create-encryption-keys-reporting-services-configuration-tool"></a>Cómo volver a crear claves de cifrado (herramienta de configuración de Reporting Services)  
   
@@ -112,7 +112,7 @@ ms.locfileid: "47747203"
   
 4.  Para suscripciones que utilizan datos cifrados (como la extensión de entrega de recurso compartido de archivos y todas las extensiones de entrega de terceros que utilicen cifrado), abra cada suscripción y vuelva a escribir las credenciales. Las suscripciones que usan entrega por correo electrónico del Servidor de informes no emplean datos cifrados y, por tanto, no les afecta el cambio de clave.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar y administrar claves de cifrado &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)  
   

@@ -15,10 +15,10 @@ ms.assetid: d9c7c0b3-fce4-4a65-b679-408273e6a925
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 41d02ba0cd1dc9067bd6425895e53d9a949fd0d3
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65573265"
 ---
 # <a name="analysis-services-mdx-query-designer-user-interface"></a>Interfaz de usuario del Diseñador de consultas MDX de Analysis Services
@@ -43,7 +43,7 @@ ms.locfileid: "65573265"
   
 |Panel|Función|  
 |----------|--------------|  
-|Botón Selección de cubo (**...**)|Muestra el cubo seleccionado actualmente.|  
+|Botón Selección de cubo ( **...** )|Muestra el cubo seleccionado actualmente.|  
 |Panel Metadatos|Muestra una lista jerárquica de medidas, indicadores clave de rendimiento (KPI) y dimensiones definidas en el cubo seleccionado.|  
 |Panel Miembros calculados|Muestra los miembros calculados definidos actualmente que se encuentran disponibles para utilizarse en la consulta.|  
 |Panel Filtro|Se utiliza a fin de elegir dimensiones y jerarquías relacionadas para filtrar datos en el origen y limitar datos devueltos al informe.|  
@@ -91,7 +91,7 @@ ms.locfileid: "65573265"
   
 |Panel|Función|  
 |----------|--------------|  
-|Botón Selección de cubo (**...**)|Muestra el cubo seleccionado actualmente.|  
+|Botón Selección de cubo ( **...** )|Muestra el cubo seleccionado actualmente.|  
 |Panel Metadatos/Funciones/Plantillas|Muestra una lista jerárquica de medidas, KPI y dimensiones definidas en el cubo seleccionado.|  
 |Panel de consulta|Muestra el texto de consulta.|  
 |Panel Resultado|Muestra los resultados de la ejecución de la consulta.|  

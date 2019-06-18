@@ -12,10 +12,10 @@ ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 2b2cb0ecbaf608a1dd7b11d610321fbc7e943334
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582005"
 ---
 # <a name="add-interactive-sort-to-a-table-or-matrix-report-builder-and-ssrs"></a>Agregar una ordenación interactiva a una tabla o una matriz (Generador de informes y SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65582005"
   
 3.  Seleccione **Habilitar la ordenación interactiva en este cuadro de texto**.  
   
-4.  En **Elija lo que va a ordenar:**, haga clic en **Filas de detalles**.  
+4.  En **Elija lo que va a ordenar:** , haga clic en **Filas de detalles**.  
   
 5.  En **Ordenar por**, especifique una expresión de ordenación. En la lista desplegable, seleccione el campo que corresponda a la columna para la que va a definir una acción de ordenación (por ejemplo, para un encabezado de columna denominado "Title", seleccione `[Title]`). Es preciso especificar una expresión de ordenación.  
   
@@ -73,7 +73,7 @@ ms.locfileid: "65582005"
   
 3.  Seleccione **Habilitar la ordenación interactiva en este cuadro de texto**.  
   
-4.  En **Elija lo que va a ordenar:**, haga clic en **Grupos**.  
+4.  En **Elija lo que va a ordenar:** , haga clic en **Grupos**.  
   
 5.  En la lista desplegable, seleccione el nombre del grupo que va a ordenar. Para los grupos basados en expresiones de grupo simples, el valor **Ordenar por** se rellena con una expresión de grupo.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "65582005"
   
 3.  Seleccione **Habilitar la ordenación interactiva en este cuadro de texto**.  
   
-4.  En **Elija lo que va a ordenar:**, haga clic en una de las siguientes opciones:  
+4.  En **Elija lo que va a ordenar:** , haga clic en una de las siguientes opciones:  
   
     -   **Detalles** : haga clic en **Detalles** para ordenar las filas de detalles. En la lista desplegable, seleccione el campo por el que desea realizar la ordenación. Para esta opción, debe especificar el valor por el que desea ordenar.  
   
@@ -152,7 +152,7 @@ ms.locfileid: "65582005"
   
 12. Seleccione **Habilitar la ordenación interactiva en este cuadro de texto**.  
   
-13. En **Elija lo que va a ordenar:**, haga clic en **Grupos**.  
+13. En **Elija lo que va a ordenar:** , haga clic en **Grupos**.  
   
 14. En la lista desplegable, seleccione el nombre del grupo que creó en el paso 5. La expresión de grupo se copia automáticamente en el cuadro de texto **Ordenar por** .  
   
@@ -203,7 +203,7 @@ ms.locfileid: "65582005"
   
 14. Seleccione **Habilitar la ordenación interactiva en este cuadro de texto**.  
   
-15. En **Elija lo que va a ordenar:**, haga clic en **Grupos**.  
+15. En **Elija lo que va a ordenar:** , haga clic en **Grupos**.  
   
 16. En la lista desplegable de **Grupos**, seleccione el nombre del grupo que va a ordenar. La expresión de grupo para este grupo se establece automáticamente para el valor **Ordenar por** .  
   

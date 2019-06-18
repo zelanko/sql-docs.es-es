@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: c99495c3-899b-4c84-af87-76e96d4afa23
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 23bee332835d0beb812d7737c254d6eccabee6d1
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 8e9d481e03efdcfb7ff109998eda3f4b2f6f3a3d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56288610"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64330639"
 ---
 # <a name="report-builder-tutorials"></a>Tutoriales del Generador de informes
 
@@ -29,16 +29,16 @@ Para obtener ayuda con estos requisitos previos, póngase en contacto con el adm
 [Maneras alternativas de obtener una conexión de datos &#40;Generador de informes&#41;](../reporting-services/alternative-ways-to-get-a-data-connection-report-builder.md)  
 La mayor parte de estos tutoriales usan orígenes de datos incrustados. Si tiene acceso a orígenes de datos compartidos, puede utilizarlos en su lugar. En este tema se proporciona el procedimiento para utilizar orígenes de datos compartidos.  
   
-[Tutorial: Creación de un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+[Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
 Siga los pasos de este tutorial para aprender a crear su primer informe. Este tutorial le muestra cómo trabajar con el Generador de informes para crear una conexión a un origen de datos, definir una consulta simple, generar un diseño para contener sus datos, dar formato a su informe y agregar agrupación y totales.  
   
 [Tutorial: Crear un informe de matriz &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-matrix-report-report-builder.md)  
 Siga los pasos de este tutorial para aprender a agregar y configurar una matriz. Utilizará el Asistente para tablas o matrices a fin de crear el origen de datos de informe, el conjunto de datos y el diseño, y a continuación mejorará la matriz dentro de la vista **Diseño** del Generador de informes.  
   
-[Tutorial: Creación de un informe de forma libre &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
+[Tutorial: Crear un informe de forma libre &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-free-form-report-report-builder.md)  
 Siga los pasos de este tutorial para aprender a crear informes de forma libre desde el principio. Este informe se parece a un boletín.  
   
-[Tutorial: Aplicación de formato a texto &#40;Generador de informes&#41;](../reporting-services/tutorial-format-text-report-builder.md).  
+[Tutorial: Dar formato a texto &#40;Generador de informes&#41;](../reporting-services/tutorial-format-text-report-builder.md)  
 Siga los pasos de este tutorial para obtener información acerca de las numerosas maneras en que puede dar formato al texto de los informes.  
   
 [Tutorial: Agregar un gráfico de columnas a un informe &#40;Generador de informes&#41;](../reporting-services/tutorial-add-a-column-chart-to-your-report-report-builder.md)  
@@ -53,7 +53,7 @@ Siga los pasos de este tutorial para aprender a agregar un gráfico de barras a 
 [Tutorial: Agregar un minigráfico a un informe &#40;Generador de informes&#41;](../reporting-services/tutorial-add-a-sparkline-to-your-report-report-builder.md)  
 Siga los pasos de este tutorial para obtener información acerca de cómo crear una matriz y, a continuación, agregar un conjunto de minigráficos a la matriz.  
   
-[Tutorial: Agregar un KPI a un informe &#40;Generador de informes&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
+[Tutorial: Agregar un KPI a un informe &#40;Generador de informes y SSRS&#41;](../reporting-services/tutorial-adding-a-kpi-to-your-report-report-builder.md)  
 Siga los pasos de este tutorial para aprender a agregar un indicador clave de rendimiento (KPI) a un informe.  
   
 [Tutorial: informe de asignaciones &#40;Generador de informes&#41;](../reporting-services/tutorial-map-report-report-builder.md)  
@@ -72,6 +72,6 @@ Siga los pasos de este tutorial para aprender a usar expresiones que le permitan
 
 [Vista de diseño de informe](../reporting-services/report-builder/report-design-view-report-builder.md)  
 [Generador de informes en SQL Server](../reporting-services/report-builder/report-builder-in-sql-server-2016.md)  
-[Tutorial: Creación de un informe de gráfico rápido sin conexión](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
+[Tutorial: crear un informe de gráfico rápido sin conexión](../reporting-services/report-builder/tutorial-create-a-quick-chart-report-offline-report-builder.md)  
 
 ¿Tiene alguna pregunta más? [Puede plantear sus dudas en el foro de Reporting Services](https://go.microsoft.com/fwlink/?LinkId=620231).

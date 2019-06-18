@@ -9,10 +9,10 @@ ms.assetid: 2fdf670a-5237-48fe-813d-97657c5c77d2
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 780cda075d8280d71f3438c79359c58ad1ac3133
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65575635"
 ---
 # <a name="formatting-pointers-on-a-gauge-report-builder-and-ssrs"></a>Aplicar formato a los punteros de un medidor (Generador de informes y SSRS)
@@ -37,7 +37,7 @@ ms.locfileid: "65575635"
 ##  <a name="DisplayingMultiple"></a> Mostrar varios punteros en el medidor  
  Puede agregar varios punteros al medidor para que apunten a varios valores en la misma escala. Esto puede ser útil para mostrar un valor alto y un valor bajo al mismo tiempo. Para especificar más de un puntero en el medidor para la misma escala, haga clic con el botón derecho en cualquier lugar dentro del medidor y haga clic en **Agregar puntero** en el menú contextual. O bien, puede agregar una escala haciendo clic con el botón derecho en cualquier lugar del medidor y, después, haciendo clic en **Agregar escala**. A continuación, podrá agregar un nuevo puntero que se asociará automáticamente a la última escala.  
   
- Cuando se superponen los punteros, el orden en el que se dibujan está determinado por el orden en el que se agregan al medidor. No es posible reorganizar el orden en el que se dibujan los punteros cambiando el orden de los campos en el panel de datos. Para cambiar el orden de dibujo de varios punteros, abra el panel Propiedades y haga clic en **Punteros (...)**. A continuación, cambie el orden de los punteros en la colección Puntero.  
+ Cuando se superponen los punteros, el orden en el que se dibujan está determinado por el orden en el que se agregan al medidor. No es posible reorganizar el orden en el que se dibujan los punteros cambiando el orden de los campos en el panel de datos. Para cambiar el orden de dibujo de varios punteros, abra el panel Propiedades y haga clic en **Punteros (...)** . A continuación, cambie el orden de los punteros en la colección Puntero.  
   
 ##  <a name="SettingGradients"></a> Establecer degradados en un extremo de aguja  
  Puede especificar un extremo de aguja que se puede dibujar encima o debajo del puntero únicamente en un medidor radial. Todos los estilos de extremos de aguja se dibujan utilizando degradados integrados que no se pueden modificar. La excepción es el estilo **RoundedDark** , donde puede especificar un color y un estilo de degradado.  

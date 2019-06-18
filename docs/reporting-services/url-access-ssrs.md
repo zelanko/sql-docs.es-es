@@ -16,10 +16,10 @@ ms.assetid: 52c3f2a3-3d6d-4fee-9c46-83f366919398
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a18ad4fd1d79bc7eae5f45318cece55037c78010
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574247"
 ---
 # <a name="url-access-ssrs"></a>Acceso URL (SSRS)
@@ -75,7 +75,7 @@ https://myspsite/subsite/_vti_bin/reportserver
  *pathinfo*  
  Nombre de la ruta de acceso relativa del elemento en la base de datos del servidor de informes en modo nativo o dirección URL completa del elemento en un catálogo de SharePoint.  
   
- Ruta de acceso del elemento del catálogo. En modo nativo, es la ruta de acceso relativa del elemento de la base de datos del servidor de informes, que empieza por una barra diagonal (**/**). Por ejemplo:  
+ Ruta de acceso del elemento del catálogo. En modo nativo, es la ruta de acceso relativa del elemento de la base de datos del servidor de informes, que empieza por una barra diagonal ( **/** ). Por ejemplo:  
   
 ```  
 /AdventureWorks 2008R2/Employee_Sales_Summary_2008R2  

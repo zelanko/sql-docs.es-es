@@ -8,10 +8,10 @@ ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
 ms.openlocfilehash: 490a21572d1a62bbf90754a8c33e0aa98bac0aea
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571349"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>Propiedades del servidor (página de opciones avanzadas) - Reporting Services
@@ -42,7 +42,7 @@ Número de días que mantener la información de ejecución de informes en el re
 > [!NOTE]
 > Si establece un valor de **0**, se *eliminan* todas las entradas del registro de ejecución. Un valor de **-1** mantiene las entradas del registro de ejecución y no las elimina.
 
-**RDLXReportTimetout** El valor de tiempo de espera de procesamiento del informe RDLX *(informes de Power View en SharePoint Server)*, en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.
+**RDLXReportTimetout** El valor de tiempo de espera de procesamiento del informe RDLX *(informes de Power View en SharePoint Server)* , en segundos, para todos los informes administrados en el espacio de nombres del servidor de informes. Este valor se puede invalidar en el nivel de informe. Si se establece esta propiedad, el servidor de informes intenta detener el procesamiento de un informe cuando ha expirado el tiempo especificado. Los valores válidos para esta propiedad van desde **-1** a **2** **147** **483** **647**. Si el valor es **-1**, no se agota el tiempo de espera de los informes del espacio de nombres durante el procesamiento. El valor predeterminado es **1800**.
 
 **SessionTimeout** La cantidad de tiempo, en segundos, que una sesión permanece activa. El valor predeterminado es **600**.  
 

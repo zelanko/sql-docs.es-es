@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: cc2f32dd81e8dd505b6eaa79359ce10c757ea744
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577768"
 ---
 # <a name="enable-and-disable-rdl-sandboxing-for-reporting-services-in-sharepoint-integrated-mode"></a>Habilitar y deshabilitar el espacio seguro para RDL para Reporting Services en el modo integrado de SharePoint
@@ -76,7 +76,7 @@ La característica de espacio aislado para el lenguaje RDL (Report Definition La
 |**Espacio de nombres**|Atributo de **Allow** que es el espacio de nombres que contiene uno o varios tipos que se aplican a Value. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
 |**AllowNew**|Atributo booleano de **Allow** que controla si se permite que las nuevas instancias del tipo se creen en expresiones RDL o en un elemento **\<Class>** de RDL.<br /><br /> Cuando se habilita **RDLSandboxing**, no se pueden crear nuevas matrices en expresiones RDL, independientemente de la configuración de **AllowNew**.|  
 |**Value**|Valor de **Allow** que es el nombre del tipo que se permitirá en las expresiones RDL. El valor **\*** indica que se permiten todos los tipos del espacio de nombres. Esta propiedad no distingue entre mayúsculas y minúsculas.|  
-|**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>**, la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
+|**Miembros**|Para la lista de tipos que se incluyen en el elemento **\<Types>** , la lista de nombres de miembro que no se permiten en las expresiones RDL.|  
 |**Denegar**|Nombre de un miembro que no se permite en expresiones RDL. Esta propiedad no distingue entre mayúsculas y minúsculas.<br /><br /> Cuando se especifica **Deny** para un miembro, no se permite ningún miembro con este nombre para todos los tipos.|  
   
 ## <a name="working-with-expressions-when-rdl-sandboxing-is-enabled"></a>Trabajar con expresiones cuando se habilita el espacio seguro para RDL
@@ -128,7 +128,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
  Para agregar funciones de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue los tipos correspondientes del espacio de nombres Microsoft.VisualBasic a la lista de permitidos.  
   
- Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>**:  
+ Para agregar palabras clave de tipo de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework a la lista de permitidos, agregue el tipo CLR correspondiente a la lista de permitidos. Por ejemplo, para usar la palabra clave **Integer** de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, agregue el fragmento XML siguiente al elemento **\<RDLSandboxing>** :  
   
 ```  
 <Allow Namespace="System">Int32</Allow>  
@@ -158,7 +158,7 @@ Puede modificar la característica de espacio aislado de RDL para administrar lo
   
 ### <a name="working-with-operators-and-new"></a>Trabajar con operadores y New
 
- De forma predeterminada, los operadores de lenguaje de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para **New**. El operador **New** es controlado por el atributo **AllowNew** del elemento **\<Allow>**. Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminado **!** y macros de conversión de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, como **CInt**, siempre se permiten.  
+ De forma predeterminada, los operadores de lenguaje de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework siempre están permitidos, excepto para **New**. El operador **New** es controlado por el atributo **AllowNew** del elemento **\<Allow>** . Otros operadores de lenguaje, como el operador de descriptor de acceso de colección predeterminado **!** y macros de conversión de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET Framework, como **CInt**, siempre se permiten.  
   
  No se admite la adición de operadores a la lista de bloqueados, incluidos los operadores personalizados. Para excluir los operadores de un tipo, debe realizar las siguientes operaciones:  
   

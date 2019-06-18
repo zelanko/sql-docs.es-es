@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 51f45290847444a1400f1d708755c6737a3b3f84
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65574787"
 ---
 # <a name="add-sql-server-reporting-services-report-viewer-web-part-to-a-sharepoint-page"></a>Agregar el elemento web Visor de informes de SQL Server Reporting Services a una página de SharePoint
@@ -56,7 +56,7 @@ Para configurar el elemento web para que señale a un informe específico, siga 
 
     ![Edite la página web desde el desplegable del elemento web.](media/sharepoint-edit-web-part.png)
 
-2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. La dirección URL debe tener un aspecto similar a *https://myrsserver/reportserver*.
+2. Escriba la **dirección URL del servidor de informes** que hospeda el informe. La dirección URL debe tener un aspecto similar a *https://myrsserver/reportserver* .
 
 3. Escriba la ruta de acceso y el nombre del informe que quiere mostrar en el elemento web. Será algo similar a */AdventureWorks Sample Reports/Company Sales*. En este ejemplo, el informe *Company Sales* (Ventas de la empresa) se encuentra en una carpeta denominada *AdventureWorks Sample Reports* (Informes de muestra de AdventureWorks).
 

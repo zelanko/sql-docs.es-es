@@ -9,10 +9,10 @@ ms.assetid: ae46efa9-6e04-48ec-afb4-5a2314dcb05a
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: a8bf8b6814f7989a904507cd89fbea397b8b6930
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105926"
 ---
 # <a name="lesson-5-formatting-a-report-reporting-services"></a>Lección 5: Aplicar formato a un informe (Reporting Services)
@@ -40,7 +40,7 @@ La expresión del campo LineTotal muestra un número general. Puede aplicarle fo
     - **Decimales: 2**
     - **Números negativos: ($12345.00)**
     - **Símbolo: $ Inglés (Estados Unidos)**
-4. Seleccione **Usar separador de miles (.)**. SI en el texto del ejemplo se muestra **$12,345.00**, la configuración es correcta.
+4. Seleccione **Usar separador de miles (.)** . SI en el texto del ejemplo se muestra **$12,345.00**, la configuración es correcta.
 5. Seleccione **Aceptar** para aplicar el formato.
 6. Obtenga una vista previa del informe para ver el cambio de la columna de la expresión `[LineTotal]` y, después, vuelva a cambiar a la vista de diseño.  
 

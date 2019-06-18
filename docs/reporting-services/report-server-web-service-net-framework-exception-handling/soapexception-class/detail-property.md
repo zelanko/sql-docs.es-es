@@ -9,14 +9,14 @@ helpviewer_keywords:
 - Detail property
 - SoapException class
 ms.assetid: c1ddaeb6-c540-49fa-b06e-b6359d377ee8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 87f5c6e9a7ec6251df814efacde0b5ef14dc8fb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 087f7f6da8882f181c55a187438d4493ec5b1a9b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47850443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62991556"
 ---
 # <a name="detail-property"></a>Propiedad Detail
   La propiedad **Detail** de la clase **SoapException** de [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] tiene la estructura XML siguiente:  
@@ -67,7 +67,7 @@ ms.locfileid: "47850443"
  **Advertencias**  
  Cadena XML que contiene las advertencias que se devolvieron al procesar el informe.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Introducción a la administración de excepciones en Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/introducing-exception-handling-in-reporting-services.md)   
  [Clase SoapException de Reporting Services](../../../reporting-services/report-server-web-service-net-framework-exception-handling/soapexception-class/reporting-services-soapexception-class.md)   
  [Uso de la propiedad Detail para administrar errores concretos](../../../reporting-services/report-server-web-service-net-framework-exception-handling/best-practices/using-the-detail-property-to-handle-specific-errors.md)  

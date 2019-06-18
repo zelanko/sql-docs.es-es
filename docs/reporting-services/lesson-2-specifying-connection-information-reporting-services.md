@@ -9,10 +9,10 @@ ms.assetid: 54405a3a-d7fa-4d95-8963-9aa224e5901e
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 0a0c21b2662fc14977c4ac57687754d15d544994
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65106052"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificar información de conexión (Reporting Services)
@@ -52,7 +52,7 @@ Para este informe, va a agregar la base de datos de ejemplo AdventureWorks2016 c
     >
     > Para más información sobre las cadenas de conexión, puede consultar la sección `See also` a continuación.
 
-6. Seleccione la pestaña **Credenciales** y, en la sección **Cambiar las credenciales utilizadas para conectarse al origen de datos**, seleccione el botón de radio **Usar autenticación de Windows (seguridad integrada)**.
+6. Seleccione la pestaña **Credenciales** y, en la sección **Cambiar las credenciales utilizadas para conectarse al origen de datos**, seleccione el botón de radio **Usar autenticación de Windows (seguridad integrada)** .
 
 7. Seleccione **Aceptar** para completar el proceso.
 

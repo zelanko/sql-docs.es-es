@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-server-web-service
 ms.topic: reference
 ms.assetid: d3e658c9-bb22-480b-a3d5-bcde8f537ab2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a6800914614ba495eb56ff38beaf7749aaa10976
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: baecfdb1baef4fbfcc50f2e18e4e898325f31e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47623304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284558"
 ---
 # <a name="model-methods---report-server-web-service"></a>Métodos de modelo: servicio web del servidor de informes
   Puede utilizar estos métodos para administrar los modelos.  
@@ -34,7 +34,7 @@ ms.locfileid: "47623304"
 |<xref:ReportService2010.ReportingService2010.SetModelDrillthroughReports%2A>|Asocia un conjunto de informes detallados junto con un modelo.|  
 |<xref:ReportService2010.ReportingService2010.SetModelItemPolicies%2A>|Establece las directivas de seguridad en un elemento de modelo.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

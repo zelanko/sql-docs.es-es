@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 19ccbdba-e3da-40a4-b652-32c628cf32e5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2d475716043c14c2dabac3090c58b12c9648b468
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 991610dacf7a13a467a3058f2bdbcfcc454ee71e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62512397"
 ---
 # <a name="lesson-8-create-a-data-filter"></a>Lección 8: Crear un filtro de datos
 Después de agregar una acción de obtención de detalles en el informe primario, el paso siguiente consiste en crear un filtro de los datos de la tabla de datos que definió para el informe secundario.  
@@ -39,7 +39,7 @@ Debe completar las tareas siguientes para implementar un filtro basado en una ta
   
 4.  En el campo **Expresión** , seleccione **ProductID** de la lista desplegable. Es la columna a la que se aplica el filtro.  
   
-5.  Seleccione el operador igual (**=**) en la lista desplegable **Operador** .  
+5.  Seleccione el operador igual ( **=** ) en la lista desplegable **Operador** .  
   
 6.  Seleccione el botón de expresión junto al campo **Valor** , seleccione **Parámetros** en el área **Categoría** y, después, haga doble clic en **productid** en el área **Valores** . El campo **Establecer expresión para: Valor** ahora debe contener una expresión similar a **=Parameters!productid.Value**.  
   

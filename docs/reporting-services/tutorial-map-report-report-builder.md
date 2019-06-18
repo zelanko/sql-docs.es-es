@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 8d831356-7efa-40cc-ae95-383b3eecf833
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 25f5dbcee0144b585fc3b328a699332c3346ce36
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4db47bde02745ddc554f17e1f951c836c1542cc8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298653"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041670"
 ---
-# <a name="tutorial-map-report-report-builder"></a>Tutorial: informe de asignaciones (Generador de informes)
+# <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de asignaciones (Generador de informes)
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , obtendrá información sobre las características de mapa que puede usar para mostrar datos en un fondo geográfico de un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
   
 Los mapas están basados en datos espaciales que normalmente está compuestos de puntos, líneas y polígonos. Por ejemplo, un polígono puede representar el perfil de un condado, una línea puede representar una carretera y un punto puede representar la ubicación de una ciudad. Cada tipo de datos espaciales se muestra en una capa de mapa independiente, como un conjunto de elementos de mapa.  
@@ -27,7 +27,7 @@ Para variar la apariencia de los elementos de mapa, especifique un campo que ten
 En este tutorial, compilará un informe de mapa que muestre ubicaciones de almacenes en los condados del Estado de Nueva York.  
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
+> En este tutorial, los pasos del asistente se fusionan en dos procedimientos: uno para crear el conjunto de datos y otro para crear una tabla. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos, crear un conjunto de datos y ejecutar el asistente, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 30 minutos.  
   
@@ -166,7 +166,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**).  
+9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ).  
   
     El conjunto de resultados contiene siete columnas que representan un conjunto de almacenes del estado de Nueva York que venden bienes de consumo. Aquí tiene una lista, con explicaciones de las que quizás no sean obvias: 
     *   **StoreKey**: un identificador del almacén.  
@@ -174,7 +174,7 @@ En esta sección, usará el asistente para capas de mapa para agregar una capa d
     *   **SellingArea**: el área disponible para la visualización del producto, que va de 138 a 342 metros cuadrados.
     *   **City**.
     *   **County**.
-    *   **Sales**: Ventas totales. 
+    *   **Sales**: ventas totales. 
     *   **SpatialLocation**: ubicación en longitud y latitud. 
 
     ![report-builder-map-design-query](../reporting-services/media/report-builder-map-design-query.png) 
@@ -313,7 +313,7 @@ En esta sección, para permitir que los elementos de una capa se muestren a trav
   
 3.  Haga clic en la flecha situada junto a PolygonLayer1 > **Datos de la capa**. Se abre el cuadro de diálogo **Propiedades de capa de polígono de mapa** .  
   
-4.  En la pestaña **Visibilidad** , en **Transparencia (porcentaje)**, escriba **30**.  
+4.  En la pestaña **Visibilidad** , en **Transparencia (porcentaje)** , escriba **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -413,7 +413,7 @@ De forma predeterminada, los datos tienen un formato general. En esta sección, 
   
 1.  Con la escala de colores aún seleccionada, en el panel Propiedades verá las propiedades de **MapColorScale**. 
   
-2. Expanda la sección Título y, en la propiedad Leyenda, escriba **Ventas (miles)**.
+2. Expanda la sección Título y, en la propiedad Leyenda, escriba **Ventas (miles)** .
 
 3. Cambie la propiedad TextColor a **Blanco**.  
 

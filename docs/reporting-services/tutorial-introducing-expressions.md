@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 2d05ef4c-5f91-48b2-8795-f0a201a0b3cc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a1dff1baf3d6a7cba7d1fc17f8febf6feeb68c3a
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 7a26065cc1d65e5c187123ead990888aa4de0e60
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63295608"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
 En este tutorial de [!INCLUDE[ssRBnoversion_md](../includes/ssrbnoversion.md)] , se usan expresiones con operadores y funciones comunes para crear informes paginados eficaces y flexibles de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] . 
@@ -89,7 +89,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
     ```  
 
   
-10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 23 líneas de datos con las columnas siguientes: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
+10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 23 filas de datos en las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
 
     ![report-builder-expression-tutorial-query-as-text](../reporting-services/media/report-builder-expression-tutorial-query-as-text.png)
   
@@ -147,7 +147,7 @@ En esta sección, creará un informe de tabla, un origen de datos y un conjunto 
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ## <a name="Concatenate"></a>3. Mostrar First Initial y Last Name  
-En esta sección, usará la función **Left** y el operador **Concatenate** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
+En esta sección, usará la función **Left** y el operador **Concatenate** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión** .   
   
 1.  Haga clic con el botón derecho en la columna **StateProvince** , seleccione **Insertar columna**y haga clic en **Izquierda**.  
   
@@ -169,7 +169,7 @@ En esta sección, usará la función **Left** y el operador **Concatenate** (**&
     
     ![report-builder-expression-tutorial-left-function](../reporting-services/media/report-builder-expression-tutorial-left-function.png)
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 7.  En la lista **Valores** , haga doble clic en **FirstName**.  
   
@@ -177,7 +177,7 @@ En esta sección, usará la función **Left** y el operador **Concatenate** (**&
   
     Esta expresión extrae un carácter del valor **FirstName** , contando desde la izquierda.  
   
-9. Escriba **&". "&**.  
+9. Escriba **&". "&** .  
 
     Esto agrega un punto y un espacio después de la expresión.
   
@@ -263,7 +263,7 @@ Para mantener el color que ha aplicado en la celda de la tabla cuando crea un in
   
 4.  En la lista **Elemento** , haga doble clic en **Cambiar**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 6.  En la lista **Valores** , haga doble clic en **Gender**.  
   
@@ -345,7 +345,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.  
+9. Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.  
   
     Los resultados de la consulta son los identificadores del país o región y los nombres.  
   
@@ -357,7 +357,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 ### <a name="to-look-up-values-in-the-countryregion-dataset"></a>Para buscar valores en el conjunto de datos CountryRegion  
   
-1.  Haga clic en el encabezado de columna **Country Region ID** y elimine el texto: **ID** para que se lea **Country Region**.  
+1.  Haga clic en el encabezado de columna **Country Region ID** y elimine el texto: **ID**para que quede **Country Region**.  
   
 2.  Haga clic con el botón derecho en la celda de datos de la columna **Country Region** y haga clic en **Expresión**.  
   
@@ -369,7 +369,7 @@ En esta sección, creará el conjunto de datos CountryRegion y usará la funció
   
 6.  En la lista **Categoría** , haga clic en **Campos (expresiones)** y, en la lista **Valores** , haga doble clic en **CountryRegionID**.  
   
-8.  Coloque el cursor inmediatamente después de `CountryRegionID.Value`y escriba **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")**.  
+8.  Coloque el cursor inmediatamente después de `CountryRegionID.Value`y escriba **,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")** .  
   
     La expresión completa es la siguiente: `=Lookup(Fields!CountryRegionID.Value,Fields!ID.value, Fields!CountryRegion.value, "CountryRegion")`  
   
@@ -409,7 +409,7 @@ En esta sección, agregará una columna y, después, usará la función **Now** 
     > [!WARNING]  
     > En los informes de producción no debe usar la función **Ahora** en las expresiones que se evalúan varias veces como representadores de informes (por ejemplo, en las filas de detalle de un informe). El valor de **Ahora** cambia de una fila a otra y los diferentes valores afectan a los resultados de evaluación de las expresiones, lo que conduce a resultados ligeramente incoherentes. En su lugar, use la variable global `ExecutionTime` que proporciona [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] .  
   
-15. Elimine el paréntesis de apertura después de `Now(`y, después, escriba un paréntesis de cierre **)**.  
+15. Elimine el paréntesis de apertura después de `Now(`y, después, escriba un paréntesis de cierre **)** .  
   
     La expresión completa es: `=DateDiff("d", Fields!LastPurchase.Value, Now)`  
     
@@ -430,7 +430,7 @@ Configurar el indicador y sus estados tiene muchos pasos. Si quiere, puede salta
   
     Se agrega una columna nueva a la derecha de la columna **YTD Purchase** .  
   
-2.  Haga clic en el encabezado de la columna y escriba **Ventas promedio + o -**.  
+2.  Haga clic en el encabezado de la columna y escriba **Ventas promedio + o -** .  
   
 ### <a name="to-add-an-indicator"></a>Para agregar un indicador  
   
@@ -587,7 +587,7 @@ Cree un parámetro de forma que los lectores del informe puedan especificar el c
   
 8. Haga clic en **Parámetros** y en la lista **Valores** , haga doble clic en **RowColor**.  
   
-22. Inmediatamente después de `Parameters!RowColor.Value`, escriba **, "Blanco")**.  
+22. Inmediatamente después de `Parameters!RowColor.Value`, escriba **, "Blanco")** .  
   
     La expresión completa es: `=IIF(RowNumber(Nothing) MOD 2, Parameters!RowColor.Value, "White")`  
     

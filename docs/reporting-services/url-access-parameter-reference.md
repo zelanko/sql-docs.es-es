@@ -12,10 +12,10 @@ ms.assetid: 1c3e680a-83ea-4979-8e79-fa2337ae12a3
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5627b752099438ad19f3ba31792f08666abdfe
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65620597"
 ---
 # <a name="url-access-parameter-reference"></a>Referencia de parámetros de acceso URL
@@ -35,7 +35,7 @@ ms.locfileid: "65620597"
 -   [Comandos de elemento web del visor de informes (rv:)](#bkmk_webpart)  
   
 ##  <a name="bkmk_htmlviewer"></a> Comandos del Visor HTML (rc:)  
- - Se usan comandos del Visor HTML para establecer como destino el Visor HTML y tienen el prefijo *rc:*:
+ - Se usan comandos del Visor HTML para establecer como destino el Visor HTML y tienen el prefijo *rc:* :
   
 -   *Toolbar* :  
                   Muestra u oculta la barra de herramientas. Si el valor de este parámetro es **false**, se omiten todas las opciones restantes. Si omite este parámetro, la barra de herramientas se muestra automáticamente para los formatos de representación que lo admiten. El valor predeterminado de este parámetro es **true**.  
@@ -276,7 +276,7 @@ ms.locfileid: "65620597"
                   Alterna el estado de mostrar u ocultar de una sección del informe. Especifique un entero positivo para representar la sección que desea alternar.  
   
 ##  <a name="bkmk_webpart"></a> Comandos de elemento web del visor de informes (rv:)  
- Los siguientes nombres de parámetros de informes reservados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se usan para tener como destino el elemento web del Visor de informes cuando se integra con SharePoint. Estos nombres de parámetro tienen como prefijo *rv:*. El elemento web del visor de informes también acepta el parámetro *rs:ParameterLanguage* .  
+ Los siguientes nombres de parámetros de informes reservados de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] se usan para tener como destino el elemento web del Visor de informes cuando se integra con SharePoint. Estos nombres de parámetro tienen como prefijo *rv:* . El elemento web del visor de informes también acepta el parámetro *rs:ParameterLanguage* .  
   
 -   *Toolbar*: controla la presentación de la barra de herramientas para el elemento web del Visor de informes. El valor predeterminado es **Full**. Los valores pueden ser:  
   

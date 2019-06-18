@@ -8,10 +8,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64775767"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>Instalar el primer servidor de informes en el modo de SharePoint
@@ -116,7 +116,7 @@ ms.locfileid: "64775767"
   
      Seleccione **Siguiente**.  
 
-5.  Se recomienda seleccionar **Usar Microsoft Update para buscar actualizaciones (recomendado)**. Esto es opcional.
+5.  Se recomienda seleccionar **Usar Microsoft Update para buscar actualizaciones (recomendado)** . Esto es opcional.
   
      Seleccione **Siguiente**.   
   

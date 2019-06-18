@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 30d0a3fd-5588-417e-b25d-cc5b7624cdb1
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9bf66cdaad2f0ad85ff0213bb0711723e6ed3d05
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4b702c79ad5c80254595ef5c4ff440919a8482e1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56291967"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280724"
 ---
 # <a name="add-drillthrough-from-a-mobile-report-to-other-mobile-reports-or-urls"></a>Agregar obtención de detalles de un informe para dispositivos móviles a otros informes para dispositivos móviles o direcciones URL
 Puede agregar obtención de detalles desde cualquier cuadrícula de datos, de gráfico o de medidor de un informe para dispositivos móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] a otro informe para dispositivos móviles o dirección URL personalizada. 
@@ -26,7 +26,7 @@ Los elementos de informe con obtención de detalles, en una dirección URL o en 
 
 ![mobile-report-gauge-drill-through](../../reporting-services/mobile-reports/media/mobile-report-gauge-drill-through.png) 
 
->**Sugerencia**: Antes de nada, cree el informe de destino y guárdelo en un portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)]. Si tiene previsto pasar parámetros desde el informe de origen, agregue dichos parámetros también al informe de destino. De este modo, podrá definir la obtención de detalles desde el informe de origen al informe de destino. [Agregar parámetros a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
+>**Sugerencia**: antes de nada, cree el informe de destino y guárdelo en un portal web de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] . Si tiene previsto pasar parámetros desde el informe de origen, agregue dichos parámetros también al informe de destino. De este modo, podrá definir la obtención de detalles desde el informe de origen al informe de destino. [Agregar parámetros a un informe para dispositivos móviles](../../reporting-services/mobile-reports/add-parameters-to-a-mobile-report-reporting-services.md).
  
 ## <a name="set-up-drillthrough-to-a-mobile-report"></a>Configurar la obtención de detalles de un informe para dispositivos móviles  
 
@@ -37,7 +37,7 @@ Los elementos de informe con obtención de detalles, en una dirección URL o en 
 2. En el panel **Propiedades de los elementos visuales** , seleccione **Obtener detalles del destino** > **Informe para dispositivos móviles**.  
 3. Seleccione el servidor y el informe para dispositivos móviles de destino.  
 
-   >Nota: Si el informe para dispositivos móviles de destino no está en el mismo servidor que el informe para dispositivos móviles de origen, conéctese con dirección URL personalizada en su lugar, como se explica en la siguiente sección.  
+   >Nota: si el informe para dispositivos móviles de destino no está en el mismo servidor que el informe para dispositivos móviles de origen, conéctese con dirección URL personalizada en su lugar, como se explica en la siguiente sección.  
  
 4. Tras seleccionar un informe para dispositivos móviles de destino, se muestran los parámetros de entrada disponibles, incluidas las propiedades que se pueden enlazar a controles de navegador y los parámetros configurados en los conjuntos de datos del informe para dispositivos móviles de destino.  
 

@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 7168c8d3-cef5-4c4a-a0bf-fff1ac5b8b71
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 4d1c367f530353991fca3f7b8301b8a1691f3833
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 44480672cc835e455062c70943e87379a18a059e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286933"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63294735"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales y de obtención de detalles (Generador de informes)
 En este tutorial se explica cómo crear dos tipos de informes paginados de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] : un informe detallado y un informe principal. Los datos de ventas de ejemplo utilizados en estos informes se recuperan de un cubo de Analysis Services. 
@@ -63,7 +63,7 @@ Una conexión de datos contiene la información necesaria para conectarse a un o
   
 4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de Analysis Services.  
   
@@ -101,7 +101,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)**.  
+1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -120,7 +120,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea**, en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -161,7 +161,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
   
 5.  Arrastre la medida Importe de venta hasta el panel de datos y, después, colóquela a la derecha de Product Subcategory Name (Nombre de subcategoría de producto).  
   
-6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)**.  
+6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -261,7 +261,7 @@ Los títulos de informe aparecen en la parte superior. Puede situar el título d
   
 2.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-3.  Escriba **Ventas y devoluciones por categoría:**.  
+3.  Escriba **Ventas y devoluciones por categoría:** .  
   
 4.  Haga clic con el botón derecho y, después, haga clic en **Crear marcador de posición**.  
   
@@ -361,7 +361,7 @@ Agregará un origen de datos incrustados al informe principal.
   
 4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -392,7 +392,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)**.  
+1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -411,7 +411,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 5.  En la lista de expresiones de filtro, expanda **Todos los canales**, haga clic en **En línea** y en **Distribuidor**y, después, en **Aceptar**.  
   
-    La consulta contiene ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
+    La consulta incluye ahora un filtro para incluir solo estos canales: En línea y Distribuidor.  
   
 6.  Expanda la dimensión Territorio de ventas y arrastre el Grupo del territorio de ventas a la columna **Jerarquía** (bajo **Nombre de canal**).  
   
@@ -479,7 +479,7 @@ Después, cree un conjunto de datos incrustado. Para esto, utilizará el diseña
   
 4.  Desde Miembros calculados, arrastre Ventas netas al panel de datos y colóquelo a la derecha de `Net QTY`.  
   
-5.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)**.  
+5.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
     Revise el conjunto de resultados de la consulta.  
   
@@ -511,7 +511,7 @@ Puede mostrar subtotales y totales generales en informes. Los datos del informe 
   
 1.  En la página **Elegir el diseño** , en **Opciones**, compruebe que esté seleccionada la opción **Mostrar subtotales y totales generales** .  
   
-    El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente forma: La primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`) y la cuarta fila contiene los totales.  
+    El panel Vista previa del asistente muestra una matriz con cuatro filas.  Al ejecutar el informe, cada fila se mostrará de la siguiente manera: la primera fila es el grupo de columnas, la segunda fila contiene los encabezados de columna, la tercera fila contiene los datos de la categoría de producto (`[Sum(Net_ QTY)]` y `[Sum(Net_Sales)]`y la fila cuarta contiene los totales.  
   
 2.  Haga clic en **Siguiente**.  
   
@@ -587,7 +587,7 @@ Utilice los indicadores para mostrar el estado de cantidades y ventas para los c
   
 4.  Escriba el tipo **3 Señales** y haga clic en **Aceptar**.  
   
-5.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)**. Seleccione `Net_QTY`.  
+5.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)** . Seleccione `Net_QTY`.  
   
 6.  Repita los pasos del 2 al 5 para la celda `[Sum(Net QTY)]` del grupo de filas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -599,7 +599,7 @@ Utilice los indicadores para mostrar el estado de cantidades y ventas para los c
   
 3.  Escriba el tipo **3 Señales** y haga clic en **Aceptar**.  
   
-4.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)**. Seleccione `Net_Sales`.  
+4.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)** . Seleccione `Net_Sales`.  
   
 5.  Repita los pasos del 1 al 4 para la celda `[Sum(Net_Sales)]` del grupo de filas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -627,7 +627,7 @@ Agregar un título al informe principal.
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:**.  
+2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor**.  
   
 3.  Seleccione el texto que escribió.  
   

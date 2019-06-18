@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: fe98a970-90d3-44d1-9189-9141c237f141
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 39b22e5d32d835281e6194e996ab7e27b2c3519d
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2658eb0eec1bd99c4e4503e8d8ae8894638e8c23
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56292293"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63280462"
 ---
 # <a name="add-data-grids-to-mobile-reports--reporting-services"></a>Agregar cuadrículas de datos a informes para dispositivos móviles | Reporting Services
 A veces, la mejor forma de visualizar los datos es, simplemente, verlos. Obtenga más información sobre las tres *cuadrículas de datos*, o tablas, que existen para mostrar datos en el [!INCLUDE[SS_MobileReptPub_Long](../../includes/ss-mobilereptpub-long.md)]:

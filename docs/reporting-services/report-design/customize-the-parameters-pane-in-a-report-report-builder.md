@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: report-design
 ms.topic: conceptual
 ms.assetid: 4ce9e8d5-911a-4422-928f-a8d005b79fc6
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cf68ea627b69377827cd6e9e33afc70a2c76ef2b
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: dc6445b64e323c3e5f8e5b0257d8573ec10d3af8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294936"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63218956"
 ---
 # <a name="customize-the-parameters-pane-in-a-report-report-builder"></a>Customize the Parameters Pane in a Report (Report Builder)
   Al crear informes paginados con parámetros en el Generador de informes, puede personalizar el panel de parámetros. En la vista de diseño de informe, puede arrastrar un parámetro a una columna y fila específicas del panel de parámetros. Puede agregar y quitar columnas para cambiar el diseño del panel.  

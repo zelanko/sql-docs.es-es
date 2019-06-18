@@ -6,16 +6,16 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eaadf7bf-c312-428a-b214-0a1fbf959c3f
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 10d17a596568fd706b696359ef43bc8f257afdf9
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b25a2f955ddd630c7093a1dc82a22c2cd0ba41b0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56293644"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041338"
 ---
-# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Incorporación de un gráfico circular a un informe (Generador de informes)
+# <a name="tutorial-add-a-pie-chart-to-your-report-report-builder"></a>Tutorial: Agregar un gráfico circular a un informe (Generador de informes)
 En este tutorial, creará un gráfico circular en un informe paginado de Reporting Services. Agregue porcentajes y combine segmentos pequeños en un único segmento.
 
 Los gráficos circulares y de anillos muestran los datos como una proporción del total. No tienen ejes. Al agregar un campo numérico en un gráfico circular, el gráfico calcula el porcentaje de cada valor en relación con el total.  
@@ -27,7 +27,7 @@ En la siguiente ilustración se muestra el gráfico circular que creará.
 Si hay demasiados puntos de datos en un gráfico circular, es posible que las etiquetas de los puntos de datos estén demasiado amontonadas y no puedan leerse. En ese caso, considere la posibilidad de combinar varios segmentos pequeños en un segmento mayor. Los gráficos circulares son más legibles al agregar los datos en algunos puntos de datos.  
  
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+> En este tutorial, los pasos del asistente se encuentran reunidos en dos procedimientos. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, agregar un origen de datos y agregar un conjunto de datos, vea el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 10 minutos  
   
@@ -73,7 +73,7 @@ En esta sección, usará el Asistente para gráficos con el fin de crear un conj
     UNION SELECT 'Full Frame Digital Camera' AS Product, CAST(247250.85 AS money) AS Sales  
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
 9. Haga clic en **Siguiente**.  
   
@@ -115,7 +115,7 @@ En cada sector del gráfico circular, puede mostrar un porcentaje de este sector
   
 4.  En el cuadro **Datos de etiqueta**, seleccione **#PERCENT**.  
     
-5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT**, escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}**.  
+5.  (Opcional) Para especificar el número de posiciones decimales que se deben mostrar en la etiqueta, en el cuadro **Datos de etiqueta** tras **#PERCENT**, escriba **{Pn}** , donde *n* es el número de posiciones decimales que se deben mostrar. Por ejemplo, para no mostrar ninguna posición decimal, escriba **#PERCENT{P0}** .  
 
 6.  Para mostrar los valores como porcentajes, la propiedad UseValueAsLabel debe ser falsa. Si se le pide que establezca este valor en el cuadro de diálogo **Confirmar acción** , haga clic en **Sí**.  
   

@@ -17,10 +17,10 @@ ms.assetid: bd6f958f-cce6-4e79-8a0f-9475da2919ce
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8f16f30aeba48be7f0d2e61d2ef28b37060a232c
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581285"
 ---
 # <a name="rsexe-utility-ssrs"></a>Utilidad RS.exe (SSRS)
@@ -90,9 +90,9 @@ rs {-?}
   
  `rs.exe -i myScriptFile.rss -s https://myServer/reportserver -v parentFolder="Financial Reports"`  
   
- Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **-v a=**"**1**" **-v b=**"**2**" da como resultado una variable llamada **a** con un valor de "**1**" y una variable **b** con un valor de "**2**".  
+ Se crean variables globales con los nombres indicados y se establecen en los valores proporcionados. Por ejemplo, **-v a=** "**1**" **-v b=** "**2**" da como resultado una variable llamada **a** con un valor de "**1**" y una variable **b** con un valor de "**2**".  
   
- Las variables globales están disponibles para todas las funciones del script. Si se especifica una barra diagonal inversa y comillas (**\\"**), se interpreta como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de las variables deben ser válidos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; deben comenzar por un carácter alfabético o de subrayado y deben contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
+ Las variables globales están disponibles para todas las funciones del script. Si se especifica una barra diagonal inversa y comillas ( **\\"** ), se interpreta como comillas dobles. Las comillas solo son necesarias si la cadena contiene un espacio. Los nombres de las variables deben ser válidos para [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]; deben comenzar por un carácter alfabético o de subrayado y deben contener caracteres alfabéticos, dígitos o caracteres de subrayado. No se pueden utilizar palabras reservadas como nombres de variables. Para más información sobre las variables globales, vea [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/built-in-collections-in-expressions-report-builder.md).  
   
  **-t**  
  (Opcional) Muestra mensajes de error en el registro de seguimiento. Este argumento no toma ningún valor. Para obtener más información, consulte [Report Server Service Trace Log](../../reporting-services/report-server/report-server-service-trace-log.md).  

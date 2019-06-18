@@ -11,14 +11,14 @@ helpviewer_keywords:
 - authentication [Reporting Services]
 - custom authentication [Reporting Services]
 ms.assetid: 103ce1f9-31d8-44bb-b540-2752e4dcf60b
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 2ec5ac57e69b74b97b027ce5119ab74ec97acee9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: c1092674266b518ec051dd20c51d4b05184ff4f0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651643"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193851"
 ---
 # <a name="authentication-in-reporting-services"></a>Autenticación de Windows en Reporting Services
   La autenticación es el proceso de establecer el derecho de un usuario en una identidad. Hay muchas técnicas que puede utilizar para autenticar a un usuario. La manera más común es mediante contraseñas. Por ejemplo, al implementar la autenticación de formularios, desea una implementación que consulte las credenciales (normalmente con alguna interfaz que solicita un nombre de inicio de sesión y una contraseña) de los usuarios y, a continuación, valida los usuarios con un almacén de datos, como una tabla de base de datos o un archivo de configuración. Si no se pueden validar las credenciales, se produce un error en el proceso de autenticación y el usuario asumirá una identidad anónima.  
@@ -144,7 +144,7 @@ internal static bool VerifyPassword(string suppliedUserName,
   
 -   [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] puede autenticar y autorizar a los usuarios con la autenticación de Windows o la autenticación personalizada, pero no con ambos. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] no admite el uso simultáneo de varias extensiones de seguridad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Implementación de una extensión de seguridad](../../../reporting-services/extensions/security-extension/implementing-a-security-extension.md)  
   
   

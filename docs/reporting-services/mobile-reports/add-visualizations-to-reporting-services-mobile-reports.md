@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: mobile-reports
 ms.topic: conceptual
 ms.assetid: 3b220b74-9ecd-4084-93fb-545208d5d7a2
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: cee144e7fed793cf08c246f3a83a4f9e213e80a4
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 42df96705e680643a9dacca3393e8c9c262c66c9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63316595"
 ---
 # <a name="add-visualizations-to-reporting-services-mobile-reports"></a>Agregar visualizaciones a informes móviles de Reporting Services
 Los gráficos son una parte esencial de la visualización de datos. Obtenga más información sobre los gráficos que puede utilizar en los informes móviles de [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] para cubrir una variedad de escenarios. 
@@ -143,7 +143,7 @@ Los gráficos de rectángulos muestran métricas al aplicar sus valores en el ta
 
      * En **El tamaño representa** , seleccione un campo numérico del tamaño de los iconos.
      * En **El color representa** , seleccione un campo numérico para el color de los iconos. 
-     * (opcional) **Valor de centro personalizado** solo puede usar **Valor de centro personalizado** cuando el tipo de visualización es HeatMapWithCustomCenterValue.
+     * [opcional] **Valor de centro personalizado**: solo puede usar **Valor de centro personalizado** cuando el tipo de visualización es HeatMapWithCustomCenterValue.
      
          El valor central decide el color de un cuadro. Cuánto mejor es la métrica en comparación con el valor central, más verde es. Cuánto peor es la métrica, más rojo es.
      

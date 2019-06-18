@@ -8,14 +8,14 @@ ms.topic: reference
 helpviewer_keywords:
 - ReportViewer controls
 ms.assetid: 4c200f36-4012-4108-8095-370b426ccf8d
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: dcd5aab378463274c8856241a948360c9ec2f72e
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: eb7c8687d1fa873c3439288a138f2d8af3778eee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51813038"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63194798"
 ---
 # <a name="using-the-webforms-reportviewer-control"></a>Usar el control ReportViewer de WebForms
   Para ver los informes implementados en un servidor de informes o los informes que existen en el sistema de archivos local, puede utilizar el control ReportViewer de WebForms para representarlos en una aplicación web.  
@@ -36,7 +36,7 @@ ms.locfileid: "51813038"
   
      El control **ReportViewer** denominado reportViewer1 se agrega al formulario.  
   
- Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>**, aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
+ Una vez agregado al formulario el control, aparece la etiqueta inteligente **ReportViewer Tasks**, que le pide que seleccione un informe. Si el informe que quiere ver se ha implementado en un servidor de informes, seleccione la opción **\<Servidor de informes>** en la lista desplegable **Elegir informe**. Una vez seleccionada la opción **\<Servidor de informes>** , aparecen dos propiedades adicionales: **URL del servidor de informes** y **Ruta de acceso del informe**. **URL del servidor de informes** es la dirección del servidor de informes y **Ruta de acceso del informe** es la ruta de acceso completa del informe que quiere representar.  
   
  Si quiere ver un informe en modo local, seleccione la opción **Diseñar nuevo informe** para iniciar el diseñador de informes o seleccione un informe que ya forme parte del proyecto existente. Después de haber seleccionado un informe, asegúrese de especificar el nombre del archivo RDLC del informe en la propiedad **ReportPath** del control ReportViewer. Esta propiedad aparece en el nodo **LocalReport** del panel **Propiedades**.  
   
@@ -479,7 +479,7 @@ Partial Class _Default
 End Class  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Integrar Reporting Services con los controles ReportViewer](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls.md)  
  [Recopilación de datos del control ReportViewer 2016](../../reporting-services/application-integration/integrating-reporting-services-using-reportviewer-controls-data-collection.md)
   

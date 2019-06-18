@@ -9,14 +9,14 @@ helpviewer_keywords:
 - interfaces [Reporting Services]
 - data processing extensions [Reporting Services], implementing
 ms.assetid: 698817e4-33da-4eb5-9407-4103e1c35247
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0b460481e74ad292148dc40805deea70212ab02d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b3ae11d41956f37f1a203235abad71639f942ae7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702823"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63193893"
 ---
 # <a name="preparing-to-implement-a-data-processing-extension"></a>Prepararse para implementar una extensión de procesamiento de datos
   Antes de implementar la extensión de procesamiento de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)], debería definir las interfaces que se van a implementar. Puede que quiera proporcionar implementaciones específicas de la extensión del conjunto completo de interfaces o simplemente centrar la implementación en un subconjunto, como las interfaces <xref:Microsoft.ReportingServices.DataProcessing.IDataReader> y <xref:Microsoft.ReportingServices.DataProcessing.IDbCommand> en las que los clientes interactuarían principalmente con un conjunto de resultados como un objeto **DataReader** y usarían la extensión de procesamiento de datos de [!INCLUDE[ssRS](../../../includes/ssrs.md)] como un puente entre el conjunto de resultados y el origen de datos.  
@@ -78,7 +78,7 @@ ms.locfileid: "47702823"
   
  Las interfaces de extensión de procesamiento de datos son idénticas a un subconjunto de las interfaces, métodos y propiedades del proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], siempre que sea posible. Para obtener más información sobre cómo implementar un proveedor de datos de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] completo, vea el tema sobre la implementación de un proveedor de datos de .NET Framework en la documentación del Kit de desarrollo de software (SDK) de [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extensions.md)   
  [Implementar una extensión de procesamiento de datos](../../../reporting-services/extensions/data-processing/implementing-a-data-processing-extension.md)   
  [Biblioteca de extensiones de Reporting Services](../../../reporting-services/extensions/reporting-services-extension-library.md)  

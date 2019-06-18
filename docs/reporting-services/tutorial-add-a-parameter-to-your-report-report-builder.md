@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: eab34ec4-b3ad-4a76-95cc-07b2f75ee6d7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 95e646fd442144ee00f36cd6fdf80440913ad0ac
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e4c4fe265b23b46ee6c283797d44335a636cb368
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56286953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63041794"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Agregar un parámetro a un informe (Generador de informes)
 En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssRSnoversion_md](../includes/ssrsnoversion-md.md)] para que los lectores del informe puedan filtrar los datos del informe para uno o más valores. 
@@ -23,7 +23,7 @@ En este tutorial, agregará un parámetro a un informe paginado de [!INCLUDE[ssR
 Los parámetros del informe se crean automáticamente para cada parámetro de la consulta que incluya en una consulta del conjunto de datos. El tipo de datos de parámetro determina cómo aparece en la barra de herramientas de visualización de informe. 
    
 > [!NOTE]  
-> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para instrucciones paso a paso sobre cómo desplazarse hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Creación de un informe de tabla básico &#40;generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md)  
+> En este tutorial, los pasos del asistente se encuentran reunidos en un único procedimiento. Para obtener instrucciones paso a paso sobre cómo ir hasta un servidor de informes, elegir un origen de datos y crear un conjunto de datos, consulte el primer tutorial de esta serie: [Tutorial: Crear un informe de tabla básico &#40;Generador de informes&#41;](../reporting-services/tutorial-creating-a-basic-table-report-report-builder.md).  
   
 Tiempo estimado para completar este tutorial: 25 minutos.  
   
@@ -80,9 +80,9 @@ Cree un informe de matriz, un origen de datos y un conjunto de datos.
   
     Esta consulta combina los resultados de varias instrucciones SELECT de [!INCLUDE[tsql_md](../includes/tsql-md.md)] dentro de una expresión de tabla común para especificar los valores que están basados en datos de ventas simplificados de cámaras de la base de datos de ejemplo Contoso. Las subcategorías son cámaras digitales, cámaras réflex digitales de una sola lente (SLR), cámaras de vídeo y accesorios.  
   
-11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**) para ver los datos.   
+11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ) para ver los datos.   
   
-    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos en cada subcategoría de cuatro almacenes e incluye las columnas siguientes: StoreID, Subcategoría, Cantidad. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
+    El conjunto de resultados consta de 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes en las columnas siguientes: StoreID, Subcategory, Quantity. El nombre del almacén no forma parte del conjunto de resultados. Más adelante en este tutorial, buscará en otro conjunto de datos el nombre del almacén que corresponde al identificador del almacén.  
   
     Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.   
   
@@ -142,9 +142,9 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
     WHERE StoreID = (@StoreID)  
     ```  
   
-    Se abre el cuadro de diálogo **de** limita los datos recuperados al identificador del almacén que se especifica mediante el parámetro de consulta *@StoreID*.  
+    Se abre el cuadro de diálogo **de** limita los datos recuperados al identificador del almacén que se especifica mediante el parámetro de consulta *@StoreID* .  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID*.  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID* .  
   
 5.  En **Valor de parámetro**, escriba **200**.  
   
@@ -156,7 +156,7 @@ Al agregar un parámetro de consulta a una consulta, el Generador de informes cr
   
 8.  En el panel Datos de informe, expanda la carpeta **Parámetros** .  
   
-Tenga en cuenta que ahora hay un parámetro de informe denominado *@StoreID*y un panel Parámetros donde puede diseñar los parámetros del informe.   
+Tenga en cuenta que ahora hay un parámetro de informe denominado *@StoreID* y un panel Parámetros donde puede diseñar los parámetros del informe.   
   
 ![ssRB_ParamPane](../reporting-services/media/ssrb-parampane.png)  
   
@@ -169,7 +169,7 @@ Después de crear un parámetro de informe, puede ajustar los valores predetermi
   
 De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **Texto**. Como el identificador de almacén es un entero, puede cambiar el tipo de datos a Entero.  
   
-1.  En el panel Datos de informe debajo del nodo **Parámetros** , haga clic con el botón derecho en *@StoreID*y luego haga clic en **Propiedades del parámetro**.  
+1.  En el panel Datos de informe debajo del nodo **Parámetros** , haga clic con el botón derecho en *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
   
 2.  En **Pedir datos**, escriba **¿Identificador del almacén?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
   
@@ -179,7 +179,7 @@ De manera predeterminada, el parámetro que ha creado tiene el tipo de datos **T
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Haga clic en **Ejecutar** para obtener la vista previa del informe. El visor de informes muestra **Store Identifier?** para *@StoreID*.  
+6.  Haga clic en **Ejecutar** para obtener la vista previa del informe. El visor de informes muestra **Store Identifier?** para *@StoreID* .  
   
 7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200**y, después, haga clic en **Ver informe**.  
   
@@ -220,7 +220,7 @@ Después de crear un conjunto de datos para proporcionar los valores disponibles
   
 ### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
   
-1.  En el panel Datos de informe, haga clic con el botón derecho en el parámetro *@StoreID*y luego haga clic en **Propiedades del parámetro**.  
+1.  En el panel Datos de informe, haga clic con el botón derecho en el parámetro *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
   
 2.  Haga clic en **Valores disponibles**y luego haga clic en **Obtener valores de una consulta**.  
   
@@ -253,7 +253,7 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y luego haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y luego haga clic en **Propiedades del parámetro**.  
   
 3.  Haga clic en **Valores predeterminados**y, después, haga clic en **Obtener valores de una consulta**.  
   
@@ -265,13 +265,13 @@ Puede especificar un valor predeterminado para cada parámetro de modo que el in
   
 7.  Obtenga una vista previa del informe.  
   
-For *@StoreID*, el visor de informes muestra el valor "Contoso North America Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+For *@StoreID* , el visor de informes muestra el valor "Contoso North America Online Store", porque es el primer valor del conjunto de resultados del conjunto de datos **Almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 ### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
   
 3.  Haga clic en **Valores predeterminados** > **Especificar valores** > **Agregar**. Se agrega una nueva fila de valor.  
   
@@ -281,7 +281,7 @@ For *@StoreID*, el visor de informes muestra el valor "Contoso North America Onl
   
 6.  Obtenga una vista previa del informe.  
   
-For *@StoreID*, el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
+For *@StoreID* , el visor de informes muestra "Contoso Catalog Store", porque es el nombre para mostrar del identificador de almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
 ## <a name="NameValue"></a>4d. Buscar un par Nombre/Valor  
 Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
@@ -308,7 +308,7 @@ Un conjunto de datos podría contener el identificador y el campo de nombre corr
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-    El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
+    El encabezado de columna del almacén contiene el texto para mostrar de una expresión compleja: **Expr**.  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -360,7 +360,7 @@ Los filtros ayudan a controlar qué datos se deben usar en un informe una vez qu
   
     La matriz solo muestra los datos de "Contoso Catalog Store".  
   
-9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?**, seleccione **Contoso Asia Online Store**y, después, haga clic en **Ver informe**.  
+9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?** , seleccione **Contoso Asia Online Store**y, después, haga clic en **Ver informe**.  
   
 La matriz muestra los datos correspondientes al almacén que había seleccionado.  
   
@@ -371,7 +371,7 @@ Para cambiar un parámetro de un solo valor a varios valores, debe cambiar la co
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
   
 3.  Seleccione **Permitir varios valores**.  
   

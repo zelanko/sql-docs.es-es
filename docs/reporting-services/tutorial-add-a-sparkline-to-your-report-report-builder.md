@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 18c90a36-48bf-4805-a960-2d1e8f00c2dc
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a4ea0601aff712034a58f73953718bcd70514351
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 4dbe5d5afdf507f3edfd68135aa8ee14aee5ae08
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56298613"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63043179"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Agregar un minigráfico a un informe (Generador de informes)
 
@@ -118,7 +118,7 @@ En un informe puede usar un conjunto de datos compartido que tenga una consulta 
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar (**!**).  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar ( **!** ).  
   
     La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
   
@@ -173,7 +173,7 @@ De manera predeterminada, los datos de resumen del campo **Sales** se muestran e
 
     ![generador-de-informes-marcador de posición-moneda](../reporting-services/media/report-builder-placeholder-currency.png)
   
-    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
+    Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** > **Valores de ejemplo**.  
     
     ![generador-de-informes-botón-valor-marcador-de-posición](../reporting-services/media/report-builder-placeholder-value-button.png)
    
@@ -184,7 +184,7 @@ De manera predeterminada, en el campo **SalesDate** se muestra información de f
   
 3.  En la pestaña **Inicio** > grupo **Número** > **Fecha**.  
   
-    La celda muestra la fecha de ejemplo **[1/31/2000]**.
+    La celda muestra la fecha de ejemplo **[1/31/2000]** .
      
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   

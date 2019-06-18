@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: bf6b699c7ff8830d1f74d14a077a4d0cb4e68116
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291661"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62723486"
 ---
 # <a name="sql-command-prompt-utilities-database-engine"></a>Utilidades de símbolo del sistema de SQL (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ Para obtener información sobre la *principal* interfaz gráfica de usuario SQL 
 |*cursiva*|Parámetros proporcionados por el usuario.|  
 |**Negrita**|Comandos, parámetros y otros elementos de sintaxis que deben escribirse exactamente como se muestran.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agente de distribución de replicación](../relational-databases/replication/agents/replication-distribution-agent.md)   
  [Agente de registro del LOG de replicación](../relational-databases/replication/agents/replication-log-reader-agent.md)   
  [Agente de mezcla de replicación](../relational-databases/replication/agents/replication-merge-agent.md)   

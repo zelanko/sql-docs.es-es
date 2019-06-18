@@ -12,14 +12,14 @@ helpviewer_keywords:
 - tasks [Reporting Services]
 - roles [Reporting Services], methods
 ms.assetid: 45e9cf2c-facf-4801-9482-c855403f42a8
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 3c6d344912019d3eb9f776b17bd2349f66786337
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 119b795eacb217aff6b5a4aeca2fffa12519c752
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47663963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63025939"
 ---
 # <a name="authorization-methods"></a>Métodos de autorización
   Puede utilizar estos métodos para administrar tareas, roles y directivas en el servidor de informes.  
@@ -42,7 +42,7 @@ ms.locfileid: "47663963"
 |<xref:ReportService2010.ReportingService2010.SetRoleProperties%2A>|Establece las propiedades de los metadatos de rol y asocia un conjunto de tareas a un rol. Este método se aplica solo al modo nativo.|  
 |<xref:ReportService2010.ReportingService2010.SetSystemPolicies%2A>|Establece la directiva del sistema que define los grupos y sus roles asociados. Este método se aplica solo al modo nativo.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

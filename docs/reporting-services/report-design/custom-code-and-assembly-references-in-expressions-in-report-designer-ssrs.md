@@ -18,10 +18,10 @@ ms.assetid: ae8a0166-2ccc-45f4-8d28-c150da7b73de
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 1a440ba648fd7ca0c377cc09b8bf67ac799e2e9a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581500"
 ---
 # <a name="custom-code-and-assembly-references-in-expressions-in-report-designer-ssrs"></a>Referencias a ensamblados y código personalizado en expresiones en el Diseñador de informes (SSRS)
@@ -50,7 +50,7 @@ ms.locfileid: "65581500"
 ##  <a name="Common"></a> Incluir referencias a funciones de uso frecuente  
  Use el cuadro de diálogo **Expresión** para ver una lista organizada en categorías de las funciones de uso frecuente integradas en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Si expande **Funciones comunes** y hace clic en una categoría, el panel **Elemento** muestra la lista de funciones que puede incluir en una expresión. En las funciones comunes se incluyen clases de los espacios de nombres [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Math> y <xref:System.Convert> , así como funciones de biblioteca en tiempo de ejecución de [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] . Para mayor comodidad, puede ver las funciones de uso más frecuente en el cuadro de diálogo **Expresión** , donde aparecen agrupadas por categorías: Texto, Fecha y hora, Matemáticas, Inspección, Flujo de programa, Agregado, Finanzas, Conversión y Varios. Las funciones de uso menos frecuente no aparecen en la lista, pero se pueden usar en una expresión.  
   
- Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(**, la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
+ Para usar una función integrada, haga doble clic en el nombre de la función en el panel Elemento. En el panel Descripción, aparece una descripción de la función; en el panel Ejemplo, aparece un ejemplo de la llamada a la función. En el panel de código, al escribir el nombre de la función seguido por un paréntesis izquierdo **(** , la Ayuda de IntelliSense muestra la sintaxis válida para la llamada a la función. Por ejemplo, para calcular el valor máximo de un campo denominado `Quantity` en una tabla, agregue la expresión simple `=Max(` al panel de código y, a continuación, use las etiquetas inteligentes para ver todas las posibles sintaxis válidas para la llamada a la función. Para completar este ejemplo, escriba `=Max(Fields!Quantity.Value)`.  
   
  Para más información sobre cada función, vea <xref:System.Math>, <xref:System.Convert>y [Miembros de la biblioteca en tiempo de ejecución de Visual Basic](https://go.microsoft.com/fwlink/?LinkId=198941) en MSDN.  
   

@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 900fdcafe18c2a885ea7191ce8619e46e8f0f963
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531823"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026269"
 ---
 # <a name="sql-server-distributed-replay"></a>SQL Server Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "52531823"
 |Describe cómo revisar los resultados de los datos de seguimiento de Distributed Replay.|[Revisar los resultados de la reproducción](../../tools/distributed-replay/review-the-replay-results.md)|  
 |Describe cómo usar la herramienta de administración para iniciar, supervisar y cancelar operaciones en el controlador.|[Opciones de línea de comandos de la herramienta de administración &#40;utilidad Distributed Replay&#41;](../../tools/distributed-replay/administration-tool-command-line-options-distributed-replay-utility.md)|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Foro de SQL Server Distributed Replay](https://social.technet.microsoft.com/Forums/sl/sqldru/)   
  [Usar Distributed Replay para la prueba de carga de SQL Server, parte 2](https://blogs.msdn.com/b/mspfe/archive/2012/11/14/using-distributed-replay-to-load-test-your-sql-server-part-2.aspx)   
  [Usar Distributed Replay para la prueba de carga de SQL Server, parte 1](https://blogs.msdn.com/b/mspfe/archive/2012/11/08/using-distributed-replay-to-load-test-your-sql-server-part-1.aspx)  

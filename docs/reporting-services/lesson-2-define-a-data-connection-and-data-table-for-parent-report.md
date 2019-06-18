@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: f02dee0c-85ad-45d4-b707-10e9e8541db9
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: c2daa3e5ab74a49e5d0e66bfd972cc4b4eff1663
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: e8bcfe976a8094c6faa22d8aab3db8a4a833d8cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62651603"
 ---
 # <a name="lesson-2-define-a-data-connection-and-data-table-for-parent-report"></a>Lección 2: Definir una conexión de datos y una tabla de datos para el informe primario
 Después de crear un proyecto de sitio Web nuevo con la plantilla de sitio Web ASP.NET para Visual C#, el paso siguiente consiste en crear una conexión de datos y una tabla de datos para el informe primario. En este tutorial, la conexión de datos se produce con la base de datos AdventureWorks2014.  

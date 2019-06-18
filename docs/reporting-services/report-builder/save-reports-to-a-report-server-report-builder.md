@@ -9,10 +9,10 @@ ms.assetid: 48dfef01-ed8c-4f23-90c3-de67c90a97dd
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 4e5a622aaca18bed1cda8c4ad8a1a1dec8f91849
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580670"
 ---
 # <a name="save-reports-to-a-report-server-report-builder"></a>Guardar informes en un servidor de informes (Generador de informes)
@@ -23,7 +23,7 @@ ms.locfileid: "65580670"
   
 ### <a name="to-save-a-report-to-a-report-server"></a>Guardar un informe en un servidor de informes  
   
-1.  Desde el botón Generador de informes, haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como**_\<elemento de informe>_.  
+1.  Desde el botón Generador de informes, haga clic en **Guardar**. Se abre el cuadro de diálogo **Guardar como** _\<elemento de informe>_ .  
   
     > [!NOTE]  
     >  Si vuelve a guardar un informe, automáticamente se guarda en su ubicación anterior. Utilice la opción Guardar como para cambiar la ubicación.  
@@ -38,7 +38,7 @@ ms.locfileid: "65580670"
   
 ### <a name="to-save-a-report-as-a-different-name"></a>Para guardar un informe con un nombre diferente  
   
-1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como**_\<elemento de informe>_.  
+1.  En el botón Generador de informes, haga clic en **Guardar como**. Se abre el cuadro de diálogo **Guardar como** _\<elemento de informe>_ .  
   
 2.  Vaya a la ubicación del servidor de informes o al recurso compartido de archivos donde desea guardar el informe.  
   

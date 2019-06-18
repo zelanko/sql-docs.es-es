@@ -11,10 +11,10 @@ ms.assetid: dd0410ea-8839-4e8c-9944-8cdfe5465591
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 54bd3d5acaf487909a4965c1f73a2e8c00aef82a
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580230"
 ---
 # <a name="importing-html-into-a-report-report-builder-and-ssrs"></a>Importar HTML en un informe (Generador de informes y SSRS)
@@ -73,9 +73,9 @@ ms.locfileid: "65580230"
   
 -   Los valores de CSS incorrectos se omiten de la misma manera que se omite el HTML incorrecto.  
   
--   Cuando en una misma etiqueta hay un atributo y atributos de estilo CSS, la propiedad de CSS tiene una prioridad más alta. Por ejemplo, si el texto es **\<p style="text-align: right" align="left">**, solo se aplicará el atributo text-align y el texto estará alineado a la derecha.  
+-   Cuando en una misma etiqueta hay un atributo y atributos de estilo CSS, la propiedad de CSS tiene una prioridad más alta. Por ejemplo, si el texto es **\<p style="text-align: right" align="left">** , solo se aplicará el atributo text-align y el texto estará alineado a la derecha.  
   
--   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">**, el texto estará alineado a la derecha.  
+-   Para los atributos y los estilos CSS, si una propiedad se especifica más de una vez, solo se aplica la última instancia de la propiedad. Por ejemplo, si el texto es **\<p align="left" align="right">** , el texto estará alineado a la derecha.  
   
 ## <a name="see-also"></a>Consulte también  
  [Representar en HTML &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/rendering-to-html-report-builder-and-ssrs.md)  

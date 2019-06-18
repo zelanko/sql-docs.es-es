@@ -15,11 +15,11 @@ author: yitam
 ms.author: v-yitam
 manager: mbarwin
 ms.openlocfilehash: 2fe78cc80cd7ca77f09465fb7d3e92482da7d008
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63181150"
 ---
 # <a name="how-to-send-and-retrieve-ascii-data-in-linux-and-macos"></a>Envío y recuperación de datos ASCII en Linux y Mac OS 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -164,7 +164,7 @@ try {
 ?>  
 ```  
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Recuperación de datos](../../connect/php/retrieving-data.md)  
 [Trabajar con datos UTF-8](../../connect/php/how-to-send-and-retrieve-utf-8-data-using-built-in-utf-8-support.md)
 [actualizar datos &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/updating-data-microsoft-drivers-for-php-for-sql-server.md)  

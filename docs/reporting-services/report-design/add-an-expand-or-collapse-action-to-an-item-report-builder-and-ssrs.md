@@ -9,10 +9,10 @@ ms.assetid: 49f07ad6-242b-4861-8fc1-91ca78c36d6c
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 23a4cddc93108a3e45828e79822eaf5f76f0fba7
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65582124"
 ---
 # <a name="add-an-expand-or-collapse-action-to-an-item-report-builder-and-ssrs"></a>Agregar una acción de expandir y contraer a un elemento (Generador de informes y SSRS)
@@ -65,7 +65,7 @@ ms.locfileid: "65582124"
   
 ### <a name="to-add-expand-and-collapse-action-to-a-report-item"></a>Para agregar una acción de expandir y contraer a un elemento de informe  
   
-1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>***Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>***Propiedades** del elemento de informe.  
+1.  En la vista de diseño del informe, haga clic con el botón derecho en el elemento de informe que quiera mostrar u ocultar y, después, haga clic en *Propiedades de \<elemento de informe>* **Propiedades**. Se abrirá el cuadro de diálogo *Propiedades de \<elemento de informe>* **Propiedades** del elemento de informe.  
   
 2.  Haga clic en **Visibilidad**.  
   

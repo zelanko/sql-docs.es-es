@@ -9,14 +9,14 @@ helpviewer_keywords:
 - linked reports [Reporting Services], methods
 - methods [Reporting Services], linked reports
 ms.assetid: 06941742-2c65-428e-a722-4b4dd59096a5
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 0ad67f5a187ae8ef314ee29122f3cefb866185b6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2bad756be9bf5431a93ba167cc8ec88fd0802a02
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47620963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63284418"
 ---
 # <a name="linked-reports-methods"></a>Métodos de informes vinculados
   Puede utilizar estos métodos para crear y administrar elementos vinculados.  
@@ -28,7 +28,7 @@ ms.locfileid: "47620963"
 |<xref:ReportService2010.ReportingService2010.ListDependentItems%2A>|Devuelve una lista de los elementos que están vinculados a un elemento especificado.|  
 |<xref:ReportService2010.ReportingService2010.SetItemLink%2A>|Especifica el elemento de catálogo que se utiliza para la definición de un elemento vinculado existente.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Creación de aplicaciones con el servicio web y .NET Framework](../../../reporting-services/report-server-web-service/net-framework/building-applications-using-the-web-service-and-the-net-framework.md)   
  [Servicio web del servidor de informes](../../../reporting-services/report-server-web-service/report-server-web-service.md)   
  [Métodos del servicio web del servidor de informes](../../../reporting-services/report-server-web-service/methods/report-server-web-service-methods.md)   

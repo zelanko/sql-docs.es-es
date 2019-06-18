@@ -10,10 +10,10 @@ author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: 5be6c645caadfc2b619e3fbd6d8f6b2a78ad2ff0
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65571577"
 ---
 # <a name="create-a-data-alert-in-data-alert-designer"></a>Crear una alerta de datos en el Diseñador de alertas de datos
@@ -75,7 +75,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 10. Escriba el valor de comparación.  
   
-11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)**.  
+11. De manera opcional, vuelva a hacer clic en los puntos suspensivos **(...)** .  
   
      Los puntos suspensivos **(...)** aparecen en la línea que contiene la primera cláusula.  
   
@@ -114,7 +114,7 @@ Las definiciones de alertas de datos se crean en el Diseñador de alertas de dat
   
 20. Si lo desea, en el cuadro de texto **Asunto** , actualice la línea de asunto del mensaje de alerta.  
   
-     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>**.  
+     El asunto predeterminado es **Alerta de datos para \<nombre de alerta>** .  
   
 21. Si lo desea, en el cuadro de texto **Descripción** , escriba una descripción del mensaje de alerta.  
   

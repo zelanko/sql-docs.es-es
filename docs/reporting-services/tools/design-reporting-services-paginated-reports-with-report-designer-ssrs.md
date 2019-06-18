@@ -11,10 +11,10 @@ ms.assetid: 3a26dccc-6ad6-48f5-a882-f96c6c0dd405
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 27da48f6d124baed5202d5cb75e8086b97fc684e
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577870"
 ---
 # <a name="design-reporting-services-paginated-reports-with-report-designer-ssrs"></a>Diseñar informes paginados de Reporting Services con el Diseñador de informes (SSRS)
@@ -99,7 +99,7 @@ Los informes paginados son archivos que se almacenan en un proyecto de informe. 
  Use la **Vista previa** para comprobar los datos del informe y el diseño del informe. Al obtener la vista previa de un informe, el procesador de este valida el esquema de definición del informe y la sintaxis de sus expresiones, y enumera los problemas en la ventana [Output](../../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md#bkmk_Output) .  
   
 > [!NOTE]  
->  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como *\<nombreDeInforme>*.rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
+>  Cuando se obtiene una vista previa de un informe, los datos de ese informe se almacenan en la caché en un archivo del equipo local. Cuando se obtiene de nuevo una vista previa del mismo informe mediante la misma consulta, los mismos parámetros y las mismas credenciales, el Diseñador de informes recupera la copia en caché en lugar de volver a ejecutar la consulta. El archivo de datos se guarda como *\<nombreDeInforme>* .rdl.data en el mismo directorio que el archivo de definición de informe. El archivo no se elimina cuando se cierra el Diseñador de informes.  
   
  Puede obtener una vista previa de un informe de varias maneras:  
   

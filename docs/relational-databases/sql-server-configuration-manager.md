@@ -23,11 +23,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 180a516e355703aaecba57c3764b6077cf87c442
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62662475"
 ---
 # <a name="sql-server-configuration-manager"></a>Administrador de configuración de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "56801009"
 ## <a name="managing-services"></a>Administrar servicios  
  Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar, pausar, continuar o detener los servicios, para ver las propiedades de estos o para cambiarlas.  
   
- Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar el [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando parámetros de inicio.  Para obtener más información, vea [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&amp;#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
+ Utilice el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] para iniciar el [!INCLUDE[ssDE](../includes/ssde-md.md)] utilizando parámetros de inicio.  Para obtener más información, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-configure-server-startup-options.md).  
   
 ## <a name="changing-the-accounts-used-by-the-services"></a>Cambiar las cuentas utilizadas por los servicios  
  Administre los servicios de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] mediante el Administrador de configuración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
@@ -94,6 +94,6 @@ ms.locfileid: "56801009"
   
  [Configurar una instancia de SQL Server para que se inicie automáticamente &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-set-an-instance-to-start-automatically.md)  
   
- [Evitar el inicio automático de una instancia de SQL Server &amp;amp;#40;Administrador de configuración de SQL Server&amp;amp;#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
+ [Evitar el inicio automático de una instancia de SQL Server &#40;Administrador de configuración de SQL Server&#41;](../database-engine/configure-windows/scm-services-prevent-automatic-startup-of-an-instance.md)  
   
   

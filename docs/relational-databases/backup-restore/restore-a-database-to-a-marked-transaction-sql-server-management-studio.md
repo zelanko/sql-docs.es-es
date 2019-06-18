@@ -18,11 +18,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 243f8b858798d788b046903ec909d39daab0010c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628443"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714392"
 ---
 # <a name="restore-a-database-to-a-marked-transaction-sql-server-management-studio"></a>Restaurar una base de datos en una transacción marcada (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "47628443"
     |**Base de datos**|Nombre de la base de datos en la que se confirmó la transacción marcada.|  
     |**Nombre de usuario**|Nombre del usuario de la base de datos que confirmó la transacción marcada.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Restore a Database Backup Using SSMS](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)   
  [Restaurar una copia de seguridad del registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/restore-a-transaction-log-backup-sql-server.md)  
   

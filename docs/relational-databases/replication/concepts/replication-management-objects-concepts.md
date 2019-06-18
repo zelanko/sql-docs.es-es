@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a42f77b21e8b06fc9795caac7064368af436bb4
-ms.sourcegitcommit: 96032813f6bf1cba680b5e46d82ae1f0f2da3d11
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54299712"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724641"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "54299712"
  Los temas de esta sección muestran cómo supervisar mediante programación una topología de replicación.  
   
 ## <a name="introduction-to-rmo-programming"></a>Introducción a la programación de RMO  
- RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
+ RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
   
 ## <a name="deploying-applications-based-on-rmo"></a>Implementar aplicaciones basadas en RMO  
  RMO depende de los componentes de replicación y de conectividad de cliente que están incluidos con todas las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] excepto SQL Server Compact. Para implementar una aplicación basada en RMO, debe instalar una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que incluya componentes de replicación y de conectividad de cliente en el equipo en el que se vaya a ejecutar la aplicación.  
@@ -68,7 +68,7 @@ ms.locfileid: "54299712"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#**. En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
+3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#** . En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
   
 4.  (Opcional) en **Nombre**, escriba el nombre de la nueva aplicación.  
   

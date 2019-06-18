@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5669af5105e8d46f346d279b3be8027b7c22088d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694999"
 ---
 # <a name="start-or-stop-a-collection-set"></a>Iniciar o detener un conjunto de recopilación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "47700103"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -60,10 +60,10 @@ ms.locfileid: "47700103"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol fijo de base de datos **dc_operator** . Si el conjunto de recopilación no tiene una cuenta de proxy, es necesaria la pertenencia al rol fijo de servidor **sysadmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-start-a-collection-set"></a>Para iniciar un conjunto de recopilación  
   
@@ -111,7 +111,7 @@ GO
 EXEC sp_syscollector_stop_collection_set @collection_set_id = 1;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Vistas del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 156a8e765812c14da0888148505311d52c267916
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62782388"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>Conectarse a SQL Server cuando los administradores del sistema no tienen acceso
@@ -40,12 +40,12 @@ ms.locfileid: "62782388"
 > [!NOTE]  
 >  Cuando inicie una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, detenga primero el servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] : de lo contrario, el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría conectarse primero e impedir que se conecte como un segundo usuario.  
   
- Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd** . Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
+ Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd** . Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"** .  
   
 > [!IMPORTANT]  
 >  No use esta opción como una característica de seguridad. La aplicación cliente proporciona el nombre de la misma y puede proporcionar un nombre falso como parte de la cadena de conexión.  
   
- Para obtener instrucciones detalladas sobre cómo iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el modo de usuario único, vea [Configurar opciones de inicio del servidor &amp;#40;Administrador de configuración de SQL Server&amp;#41;](scm-services-configure-server-startup-options.md).  
+ Para obtener instrucciones detalladas sobre cómo iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el modo de usuario único, vea [Configurar opciones de inicio del servidor &#40;Administrador de configuración de SQL Server&#41;](scm-services-configure-server-startup-options.md).  
   
 ## <a name="step-by-step-instructions"></a>Instrucciones paso a paso  
  Las instrucciones siguientes describen el proceso para conectarse a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] que se ejecuta en Windows 8 o posterior. Se proporcionan pequeñas modificaciones para las versiones anteriores de SQL Server o de Windows. Estas instrucciones deben realizarse mientras se tiene iniciada sesión en Windows como miembro del grupo local de administradores y en ellas se da por supuesto que [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] está instalado en el equipo.  

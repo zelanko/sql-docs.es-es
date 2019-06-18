@@ -24,11 +24,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8ec316925fcd21a80561750665386a72f096060d
-ms.sourcegitcommit: 8ae6e6618a7e9186aab3c6a37ea43776aa9a382b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 09/06/2018
-ms.locfileid: "43815891"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993785"
 ---
 # <a name="create-cryptographic-provider-transact-sql"></a>CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,7 @@ CREATE CRYPTOGRAPHIC PROVIDER provider_name
  Es el nombre del proveedor de Administración extensible de claves.  
   
  *path_of_DLL*  
- Es la ruta de acceso del archivo .dll que implementa la interfaz de Administración extensible de claves de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se usa el **Conector de SQL Server para Microsoft Azure Key Vault**, la ubicación predeterminada es **'C:\Archivos de programa\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'**.  
+ Es la ruta de acceso del archivo .dll que implementa la interfaz de Administración extensible de claves de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cuando se usa el **Conector de SQL Server para Microsoft Azure Key Vault**, la ubicación predeterminada es **'C:\Archivos de programa\Microsoft SQL Server Connector for Microsoft Azure Key Vault\Microsoft.AzureKeyVaultService.EKM.dll'** .  
   
 ## <a name="remarks"></a>Notas  
  Todas las claves creadas por un proveedor harán referencia al proveedor por su GUID. El GUID se retiene para todas las versiones de la DLL.  
@@ -77,7 +77,7 @@ CREATE CRYPTOGRAPHIC PROVIDER SecurityProvider
     FROM FILE = 'C:\SecurityProvider\SecurityProvider_v1.dll';  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administración extensible de claves &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)   
  [ALTER CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-cryptographic-provider-transact-sql.md)   
  [DROP CRYPTOGRAPHIC PROVIDER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-cryptographic-provider-transact-sql.md)   

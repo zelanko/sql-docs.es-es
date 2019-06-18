@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8983d2dc82da8d923eb5b29b0626b20aae0eb853
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776114"
 ---
 # <a name="write-international-transact-sql-statements"></a>Escribir instrucciones Transact-SQL internacionales
@@ -36,9 +36,9 @@ ms.locfileid: "64776114"
 
     Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
 
--   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)**. Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
+-   Hasta [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], reemplace todos los usos de los tipos de datos **char**, **varchar** y **varchar(max)** por **nchar**, **nvarchar** y **nvarchar(max)** . Esto evita problemas de conversión de página de códigos. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md). 
     > [!IMPORTANT]
-    > El tipo de datos **text** está en desuso y no debe usarse en nuevos trabajos de desarrollo. Planee la conversión de datos de tipo **text** a **varchar (max)**.
+    > El tipo de datos **text** está en desuso y no debe usarse en nuevos trabajos de desarrollo. Planee la conversión de datos de tipo **text** a **varchar (max)** .
   
 -   Cuando realice comparaciones y operaciones con los meses y días de la semana, utilice las partes numéricas de la fecha en lugar de cadenas de nombres. Las distintas configuraciones de idioma devuelven nombres diferentes para los meses y los días de la semana. Por ejemplo, `DATENAME(MONTH,GETDATE())` devuelve `May` cuando el idioma está establecido en inglés de EE. UU., devuelve `Mai` cuando el idioma está establecido en alemán y `mai` cuando el idioma está establecido en francés. En su lugar, utilice una función como [DATEPART](../../t-sql/functions/datepart-transact-sql.md) que utiliza el número del mes en lugar del nombre. Utilice los nombres DATEPART cuando genere conjuntos de resultados que se van a mostrar al usuario ya que, generalmente, los nombres de fecha resultan más significativos que una representación numérica. No codifique, sin embargo, ninguna lógica que dependa de que los nombres mostrados estén en un idioma determinado.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "64776114"
   
     -   Las aplicaciones ADO, OLE DB y ODBC deben utilizar la siguiente marca de tiempo, fecha y cláusulas de escape de hora ODBC:  
   
-         **{ ts"** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [**.**_fff_] **"}** como: **{ ts"1998-09-24 10:02:20"}**  
+         **{ ts"** _yyyy_ **-** _mm_ **-** _dd_ _hh_ **:** _mm_ **:** _ss_ [ **.** _fff_] **"}** como: **{ ts"1998-09-24 10:02:20"}**  
   
          **{ d"** _yyyy_ **-** _mm_ **-** _dd_ **"}** como: **{ d"1998-09-24"}**
   

@@ -19,16 +19,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: de1226d675859312e1ccaf908141586f865c8946
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63028392"
 ---
 # <a name="sql-server-native-client-odbc-data-sources"></a>Orígenes de datos de ODBC para SQL Server Native Client
   Un nombre del origen de datos (DSN) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifica un origen de datos ODBC que contiene toda la información que una aplicación ODBC necesita para conectar a una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor concreto. Existen dos métodos que puede utilizar para definir un nombre del origen de datos ODBC:  
   
--   En un equipo cliente, abra Herramientas administrativas en el Panel de Control y haga doble clic en **orígenes de datos (ODBC)**. Así abrirá el Administrador de orígenes de datos ODBC, que puede utilizar para crear un DSN.  
+-   En un equipo cliente, abra Herramientas administrativas en el Panel de Control y haga doble clic en **orígenes de datos (ODBC)** . Así abrirá el Administrador de orígenes de datos ODBC, que puede utilizar para crear un DSN.  
   
 -   En una aplicación ODBC, llame a [SQLConfigDataSource](../native-client-odbc-api/sqlconfigdatasource.md).  
   

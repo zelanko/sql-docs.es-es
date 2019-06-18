@@ -11,11 +11,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5a54ed2eb35a6a7f0b5d1255e5f2841b7ace6f3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47614793"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945688"
 ---
 # <a name="mssqlserver30053"></a>MSSQLSERVER_30053
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +51,13 @@ Seleccione la acción del usuario que sea adecuada según la causa probable de t
   
 |Causa probable|Acción del usuario|  
 |------------------|---------------|  
-|El separador de palabras del lenguaje de consulta está configurado incorrectamente.|Si usa un separador de palabras de otro fabricante, podría estar registrado incorrectamente en el sistema operativo. En este caso, registre de nuevo el separador de palabras. Para más información, vea [Revert the Word Breakers Used by Search to the Previous Version](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md) (Revertir los separadores de palabras usados por las búsquedas a la versión anterior).|  
+|El separador de palabras del lenguaje de consulta está configurado incorrectamente.|Si usa un separador de palabras de otro fabricante, podría estar registrado incorrectamente en el sistema operativo. En este caso, registre de nuevo el separador de palabras. Para más información, vea [Revertir los separadores de palabras usados por las búsquedas a la versión anterior](~/relational-databases/search/revert-the-word-breakers-used-by-search-to-the-previous-version.md) (Revertir los separadores de palabras usados por las búsquedas a la versión anterior).|  
 |El separador de palabras no funciona correctamente para una cadena de consulta determinada.|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el separador de palabras, póngase en contacto con el Servicio de atención al cliente y soporte técnico de Microsoft.|  
 |El separador de palabras devuelve demasiados datos para una cadena de consulta determinada.|Si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite el separador de palabras, póngase en contacto con el Servicio de atención al cliente y soporte técnico de Microsoft.|  
 |La configuración del proceso de demonio de filtro es incorrecta.|Asegúrese de que está utilizando la contraseña actual y que una directiva de dominio no está evitando que la cuenta de demonio de filtro se registre.|  
 |Se está ejecutando un alto volumen de carga de trabajo de consultas en la instancia de servidor.|Intente ejecutar de nuevo la consulta con menos carga.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Establecer la cuenta del servicio para el selector del demonio de filtro completo](~/relational-databases/search/set-the-service-account-for-the-full-text-filter-daemon-launcher.md)  
 [Búsqueda de texto completo](~/relational-databases/search/full-text-search.md)  
 [sp_help_fulltext_system_components &#40;Transact-SQL&#41;](~/relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)  

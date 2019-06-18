@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f2dc3cd6f52d0c43903cb663ec6e6aa6d8bd60f3
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946142"
 ---
 # <a name="specify-field-length-by-using-bcp-sql-server"></a>Especificar la longitud de campo mediante bcp (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946142"
   La longitud de campo indica el número máximo de caracteres necesarios para representar los datos en formato de carácter. La longitud de campo se conoce si los datos están almacenados en formato nativo; por ejemplo, el tipo de datos **int** ocupa 4 bytes. Si ha indicado 0 para la longitud del prefijo, el comando **bcp** le solicitará la longitud del campo, las longitudes predeterminadas de los campos y los efectos de la longitud del campo en el almacenamiento de datos en los archivos de datos que contienen datos de tipo **char** .  
   
 ## <a name="the-bcp-prompt-for-field-length"></a>Solicitud bcp para la longitud de campo  
- Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  
+ Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w** o **-N**), el comando solicita la longitud de campo de cada campo, de la manera siguiente:  
   
  `Enter length of field <field_name> [<default>]:`  
   

@@ -12,11 +12,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 80266fb75780e3d1797c2609576ba84dc437d3f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62714292"
 ---
 # <a name="audit-fulltext-event-class"></a>Clase de eventos Audit Fulltext
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "47618423"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |**Error**|**int**|Número de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , si este evento informa de un error.|31|Sí|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |**EventSubClass**|**int**|Tipo de conexión usada por el inicio de sesión. 1 = No agrupada, 2 = Agrupada.|21|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
@@ -38,7 +38,7 @@ ms.locfileid: "47618423"
 |**TargetLoginSid**|**int**|Para acciones dirigidas a un inicio de sesión (por ejemplo, agregar un nuevo inicio de sesión), el número de identificación de seguridad (SID) del inicio de sesión de destino.|43|Sí|  
 |**TextData**|**ntext**|Información de texto sobre el evento Full-Text. Normalmente este campo proporciona información sobre la conexión entre el proceso [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el proceso del demonio de filtro de texto completo|1|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   

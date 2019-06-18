@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7e91f5bd925ec0a9aba9998f0c4dbdae4afa599e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719953"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665749"
 ---
 # <a name="add-or-edit-filter"></a>Agregar filtro o Editar filtro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47719953"
   
  Una vez agregado o editado un filtro, haga clic en **Aceptar** para guardar los cambios y cerrar el cuadro de diálogo. El filtro que ha especificado se analiza y se ejecuta según la tabla de la cláusula SELECT. Si la instrucción de filtro contiene errores de sintaxis u otros problemas, se le notificará para que pueda editar la instrucción de filtro.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [Ver y modificar propiedades de publicación](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [Filtrar datos publicados](../../relational-databases/replication/publish/filter-published-data.md)   

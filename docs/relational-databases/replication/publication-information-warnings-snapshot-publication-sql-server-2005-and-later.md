@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3b6f01dd6e6b06464ac5fbaf76480a6c3aad2b38
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54123986"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62683826"
 ---
 # <a name="publication-information-warnings-snapshot-publication-sql-server-2005-and-later"></a>Información de publicación, Advertencias (Publicación de instantáneas, SQL Server 2005 y posteriores)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8cda2bf030b8e04cf40144c117359d553353ebf6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685879"
 ---
 # <a name="security-considerations-for-a-sql-server-installation"></a>Consideraciones de seguridad para una instalación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "47846763"
 ###  <a name="isolated_services"></a> Isolate Services  
  El aislamiento de servicios reduce el riesgo de que se utilice un servicio cuya seguridad se haya vulnerado para vulnerar la seguridad de otros servicios. Para aislar los servicios, tenga en cuenta estas instrucciones:  
   
--   Ejecute los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado en distintas cuentas de Windows. Siempre que sea posible, utilice derechos de Windows independientes y bajos, o cuentas de usuario local para cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Ejecute los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] por separado en distintas cuentas de Windows. Siempre que sea posible, utilice derechos de Windows independientes y bajos, o cuentas de usuario local para cada servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
 ###  <a name="sa_with_least_privileges"></a> Configure a Secure File System  
  Si se usa el sistema de archivos correcto, se aumenta la seguridad. En las instalaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , debería hacer lo siguiente:  
@@ -135,7 +135,7 @@ ms.locfileid: "47846763"
   
 -   Asocie los servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a las cuentas de usuario local de Windows con menos privilegios, o a las cuentas de usuario de dominio.  
   
--   Para obtener más información, vea [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+-   Para obtener más información, consulte [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
  **Modo de autenticación**  
   
@@ -154,7 +154,7 @@ ms.locfileid: "47846763"
 > [!IMPORTANT]  
 >  Durante la instalación de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] se agrega un inicio de sesión para el grupo BUILTIN\Users. Esto permite que todos los usuarios autenticados del equipo tengan acceso a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] como un miembro del rol public. El inicio de sesión BUILTIN\Users se pueden quitar de manera segura para restringir el acceso al [!INCLUDE[ssDE](../../includes/ssde-md.md)] a los usuarios de equipos que tienen inicios de sesión individuales o son miembros de otros grupos de Windows con inicios de sesión.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Requisitos de hardware y software para instalar SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)   
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)   
  [Registrar un nombre de entidad de seguridad de servicio para las conexiones con Kerberos](../../database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md)  

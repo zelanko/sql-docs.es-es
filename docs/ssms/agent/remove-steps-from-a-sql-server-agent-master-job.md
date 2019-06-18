@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 0d678f740c9aa5c457efdf94f2a97585099b3a7f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65088724"
 ---
 # <a name="remove-steps-from-a-sql-server-agent-master-job"></a>Remove Steps from a SQL Server Agent Master Job
@@ -63,7 +63,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 4.  Haga clic con el botón derecho en el trabajo del que desea eliminar los pasos y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo-**_nombre_de_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
+5.  En el cuadro de diálogo **Propiedades del trabajo-** _nombre_de_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
 
 6.  Bajo **Lista de pasos de trabajo**, seleccione el paso de trabajo que desea eliminar y haga clic en **Eliminar**.  
   

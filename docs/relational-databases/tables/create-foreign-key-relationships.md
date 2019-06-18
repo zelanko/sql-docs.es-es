@@ -15,11 +15,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2fffbb19685087883d9b788e7dc894eb413f4b0b
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802789"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516097"
 ---
 # <a name="create-foreign-key-relationships"></a>Crear relaciones de clave externa
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "56802789"
     
 -   Si la clave externa se define en una columna de tipo definido por el usuario CLR, la implementación del tipo debe admitir el orden binario. Para obtener más información, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).    
     
--   Una columna de tipo **varchar(max)** solo puede participar en una restricción FOREIGN KEY si la clave principal a la que hace referencia se define también como tipo **varchar(max)**.    
+-   Una columna de tipo **varchar(max)** solo puede participar en una restricción FOREIGN KEY si la clave principal a la que hace referencia se define también como tipo **varchar(max)** .    
     
 
     
@@ -77,7 +77,7 @@ ms.locfileid: "56802789"
     
 4.  Haga clic en la relación en la lista **Relación seleccionada** .    
     
-5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos (**...**) situados a la derecha de la propiedad.    
+5.  Haga clic en **Especificaciones de tablas y columnas** en la cuadrícula situada a la derecha y, después, haga clic en los puntos suspensivos ( **...** ) situados a la derecha de la propiedad.    
     
 6.  En el cuadro de diálogo **Tablas y columnas** , en la lista desplegable **Clave principal** , elija la tabla que estará en el lado de la clave principal de la relación.    
     

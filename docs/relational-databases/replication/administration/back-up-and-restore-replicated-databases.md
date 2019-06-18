@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b583be423e6f70fa23ae105082fe0b39f221072f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843603"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665107"
 ---
 # <a name="back-up-and-restore-replicated-databases"></a>Hacer copias de seguridad y restaurar bases de datos replicadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "47843603"
   
  Como parte de cualquier estrategia de recuperación, mantenga siempre el script actual de la configuración de replicación en un lugar seguro. En el caso de un error en un servidor o de que sea necesario establecer un entorno de pruebas, puede modificar el script con solo cambiar las referencias al nombre del servidor y utilizarla para volver a crear la configuración de replicación. Además de generar script para la configuración de replicación actual, debe generar script para habilitar y deshabilitar la replicación. Para obtener información acerca del scripting para de objetos de replicación, vea [Scripting Replication](../../../relational-databases/replication/scripting-replication.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Best Practices for Replication Administration](../../../relational-databases/replication/administration/best-practices-for-replication-administration.md)  
   

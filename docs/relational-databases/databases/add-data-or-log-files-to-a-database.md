@@ -20,11 +20,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 48881cbff003b37e0a58dd7d6eb3c11c220ed268
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507719"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62724600"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,10 +54,10 @@ ms.locfileid: "52507719"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-add-data-or-log-files-to-a-database"></a>Para agregar archivos de datos o de registro a una base de datos  
   
@@ -77,7 +77,7 @@ ms.locfileid: "52507719"
   
 8.  Especifique el tamaño inicial del archivo. Defina el mayor tamaño posible para los archivos de datos, según la cantidad de datos máxima prevista para la base datos.  
   
-9. Para especificar cómo debe crecer el archivo, haga clic en (**...**) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
+9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
   
     1.  Para permitir que el archivo actualmente seleccionado crezca cuando se necesite más espacio para los datos, active la casilla **Habilitar crecimiento automático** y, a continuación, elija una de las opciones siguientes:  
   
@@ -117,7 +117,7 @@ ms.locfileid: "52507719"
   
  Para obtener más ejemplos, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Database Files and Filegroups](../../relational-databases/databases/database-files-and-filegroups.md)   
  [Eliminar archivos de datos o de registro de una base de datos](../../relational-databases/databases/delete-data-or-log-files-from-a-database.md)   
  [Aumentar el tamaño de una base de datos](../../relational-databases/databases/increase-the-size-of-a-database.md)  

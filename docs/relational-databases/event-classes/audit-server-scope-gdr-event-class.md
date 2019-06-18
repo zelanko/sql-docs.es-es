@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a5f21b80cf27759ab3cef7dbf5c8dc84813e42ef
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802503"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62688442"
 ---
 # <a name="audit-server-scope-gdr-event-class"></a>Audit Server Scope GDR, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,8 +33,8 @@ ms.locfileid: "47802503"
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**DBUserName**|**nvarchar**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del cliente.|40|Sí|  
-|**EventClass**|**int**|Tipo de evento = 170.|27|no|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
+|**EventClass**|**int**|Tipo de evento = 170.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |**EventSubClass**|**int**|Tipo de la subclase de eventos.<br /><br /> 1=Conceder<br /><br /> 2=Revocar<br /><br /> 3=Denegar|21|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -43,11 +43,11 @@ ms.locfileid: "47802503"
 |**NTDomainName**|**nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**ObjectName**|**nvarchar**|Nombre del objeto al que se hace referencia.|34|Sí|  
-|**ObjectType**|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo **sys.objects** . Para ver los valores, vea [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
+|**ObjectType**|**int**|Valor que representa el tipo del objeto implicado en el evento. Este valor corresponde al de la columna Type de la vista de catálogo **sys.objects** . Para ver los valores, consulte [Columna de evento de seguimiento ObjectType](../../relational-databases/event-classes/objecttype-trace-event-column.md).|28|Sí|  
 |**OwnerName**|**nvarchar**|Nombre de usuario de base de datos del propietario del objeto.|37|Sí|  
 |**Permisos**|**bigint**|Valor entero que representa el tipo de permisos comprobado.<br /><br /> 1 = SELECT ALL<br /><br /> 2 = UPDATE ALL<br /><br /> 4 = REFERENCES ALL<br /><br /> 8 = INSERT<br /><br /> 16 = DELETE<br /><br /> 32 = EXECUTE (solo procedimientos)<br /><br /> 4096 = SELECT ANY (al menos una columna)<br /><br /> 8192 = UPDATE ANY|19|Sí|  
 |**IdSolicitud**|**int**|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|no|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  
@@ -58,7 +58,7 @@ ms.locfileid: "47802503"
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
 |**XactSequence**|**bigint**|Token que se utiliza para describir la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   

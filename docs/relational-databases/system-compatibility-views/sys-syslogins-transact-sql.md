@@ -22,10 +22,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62671934"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
@@ -56,7 +56,7 @@ ms.locfileid: "62671934"
 |**language**|**sysname**|Idioma predeterminado del usuario.|  
 |**denylogin**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows al que se le ha denegado el acceso.|  
 |**hasaccess**|**int**|1 = El inicio de sesión tiene acceso al servidor.|  
-|**isntname**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de Windows.<br /><br /> 0 = Es un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] |  
+|**isntname**|**int**|1 = El inicio de sesión corresponde a un usuario o grupo de Windows.<br /><br /> 0 = Es un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |**isntgroup**|**int**|1 = El inicio de sesión corresponde a un grupo de Windows.|  
 |**isntuser**|**int**|1 = El inicio de sesión corresponde a un usuario de Windows.|  
 |**sysadmin**|**int**|1 = Inicio de sesión es miembro de la **sysadmin** rol de servidor.|  

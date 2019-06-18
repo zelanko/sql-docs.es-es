@@ -26,11 +26,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: ba7afec0dc420d89a940db9aa4efbbd89043992f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665294"
 ---
 # <a name="replication-agents-overview"></a>Información general sobre los agentes de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "51675089"
 ## <a name="replication-maintenance-jobs"></a>Trabajos de mantenimiento de replicación  
  La replicación incluye varios trabajos de mantenimiento que realizan operaciones de mantenimiento programadas y a petición. Para obtener más información, vea [Administración del Agente de replicación](../../../relational-databases/replication/agents/replication-agent-administration.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Iniciar y detener un agente de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)   
  [Ejecutar trabajos de mantenimiento de replicación &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/administration/run-replication-maintenance-jobs-sql-server-management-studio.md)   
  [Conceptos de los ejecutables del Agente de replicación](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)   

@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4b919289d49901f64b26db0aa2d4b71eeb0e132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960851"
 ---
 # <a name="replication-agent-security-model"></a>Modelo de seguridad del Agente de replicación
@@ -77,9 +77,9 @@ ms.locfileid: "62960851"
 |Agente de distribución para suscripciones de inserción en suscriptores que no sean de SQL Server|**\<publicador>-\<baseDeDatosDePublicación>-\<publicación>-\<suscriptor>-\<entero>**|  
 |Agente de lectura de cola|**[\<distribuidor>].\<entero>**|  
   
- <sup>1</sup> para suscripciones de inserción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Publisher**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >**.  
+ <sup>1</sup> para suscripciones de inserción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Publisher**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >** .  
   
- <sup>2</sup> para suscripciones de extracción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Basededatosdedistribución**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >**.  
+ <sup>2</sup> para suscripciones de extracción a publicaciones de Oracle, es el nombre del trabajo  **\<Publisher >-\<Basededatosdedistribución**> en lugar de  **\<Publisher >-\< Basededatosdepublicación >** .  
   
  Al configurar la replicación se especifican las cuentas en las que se ejecutarán los agentes. No obstante, todos los pasos del trabajo se ejecutan en el contexto de seguridad de un *proxy*, por lo que la replicación lleva a cabo internamente las siguientes asignaciones para las cuentas de agente que especifique:  
   

@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fd0d493f71bd0a6ac0e2d81d1427027ccdb6496c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62679803"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>Especificar rutas de acceso y sugerencias de optimización para índices XML selectivos
@@ -370,8 +370,8 @@ WHERE T.xmldata.exist('
 |-----------------------|-----------------------|--------------------|  
 |**node()**|Sí|No|  
 |**SINGLETON**|Sí|Sí|  
-|**DATA TYPE**|Sí|No|  
-|**MAXLENGTH**|Sí|No|  
+|**DATA TYPE**|Sí|Sin|  
+|**MAXLENGTH**|Sí|Sin|  
   
 ### <a name="node-optimization-hint"></a>Sugerencia de optimización node()  
  Se aplica a: Tipos de datos XQuery  

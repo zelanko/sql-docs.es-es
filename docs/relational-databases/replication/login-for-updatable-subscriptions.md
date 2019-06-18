@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 223d1f8cab99a75d78bfa75b25a2092e4ba83865
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62760337"
 ---
 # <a name="login-for-updatable-subscriptions"></a>Inicio de sesión para suscripciones actualizables
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "53591579"
   
  Las conexiones las usan los desencadenadores que se activan en el suscriptor y propagan los cambios al publicador. Se necesita esta cuenta incluso si se selecciona **Poner en cola cambios y confirmar cuando sea posible** en la página **Suscripciones actualizables**. De forma predeterminada, el Asistente para nueva suscripción configura la actualización en cola con la capacidad de cambiar a actualización inmediata si fuera necesario.  
   
-> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_**_\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
+> **IMPORTANTE:** La cuenta especificada para la conexión solo debería tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicación. No debería tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_** _\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
   
  Hay tres opciones disponibles para el tipo de conexión:  
   
@@ -36,7 +36,7 @@ ms.locfileid: "53591579"
   
 -   Un servidor vinculado que crea la replicación; la conexión se establece con las credenciales del usuario que realiza el cambio en el suscriptor.  
   
- Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar con [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique un valor de **1** para el parámetro **@security_mode**.  
+ Las dos primeras opciones se pueden especificar en este asistente. La última opción solo se puede especificar con [sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md); especifique un valor de **1** para el parámetro **@security_mode** .  
   
 ## <a name="options"></a>Opciones  
  **Crear un servidor vinculado que se conecte mediante el siguiente inicio de sesión para la Autenticación de SQL Server:**  

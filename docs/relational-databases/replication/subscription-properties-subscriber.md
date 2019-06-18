@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 43268755a3de5cf3a8a84547bafe5dc66ad1ac48
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134085"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751679"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>Cuadro de diálogo Propiedades de la suscripción de Replicación de SQL Server 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>Opciones de publicador para todas las suscripciones  
  **Seguridad**  
- Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) para cambiar la cuenta con la que el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor. Para cambiar la cuenta en la que el Agente de distribución o el Agente de mezcla realizan conexiones al suscriptor, haga clic en **Conexión de suscriptor**y, a continuación, haga clic en el botón de propiedades (**…**).  
+ Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades ( **...** ) para cambiar la cuenta con la que el Agente de distribución o el Agente de mezcla se ejecutan en el distribuidor. Para cambiar la cuenta en la que el Agente de distribución o el Agente de mezcla realizan conexiones al suscriptor, haga clic en **Conexión de suscriptor**y, a continuación, haga clic en el botón de propiedades ( **…** ).  
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -64,7 +64,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 ## <a name="publisher-options-for-merge-subscriptions"></a>Opciones de publicador para las suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()** . De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()** , vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
@@ -86,7 +86,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 -   **Carpeta alternativa**: muestra una ubicación alternativa, que puede especificarse en el cuadro de diálogo **Propiedades de la publicación** . Para más información, vea [Especificación de las opciones de instantáneas](../../relational-databases/replication/snapshot-options.md).  
   
--   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+-   **Carpeta de instantáneas dinámicas**: muestra una ubicación de instantáneas para las publicaciones de combinación que utilizan filtros de fila con parámetros. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 -   **Carpeta FTP**: carpeta desde la que se tiene acceso al servidor Protocolo de transferencia de archivos (FTP). Para más información, vea [Entrega de una instantánea mediante FTP](../../relational-databases/replication/publish/deliver-a-snapshot-through-ftp.md).  
   
@@ -97,13 +97,13 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
  Determina si es posible sincronizar la suscripción con el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
   
  **Seguridad**  
- Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades (**...**) para cambiar la cuenta en la que se ejecuta el Agente de distribución o el Agente de mezcla en el suscriptor. Las opciones de seguridad relativas a las conexiones dependen del tipo de suscripción:  
+ Haga clic en la fila **Cuenta de proceso del agente** y, a continuación, haga clic en el botón de propiedades ( **...** ) para cambiar la cuenta en la que se ejecuta el Agente de distribución o el Agente de mezcla en el suscriptor. Las opciones de seguridad relativas a las conexiones dependen del tipo de suscripción:  
   
--   Para las sucripciones a una publicación transaccional: para cambiar la cuenta en la que el Agente de distribución realiza la conexión al distribuidor, haga clic en **Conexión del distribuidor**y, a continuación, en el botón de propiedades (**...**).  
+-   Para las sucripciones a una publicación transaccional: para cambiar la cuenta en la que el Agente de distribución realiza la conexión al distribuidor, haga clic en **Conexión del distribuidor**y, a continuación, en el botón de propiedades ( **...** ).  
   
--   Para las suscripción de actualización inmediatas a una publicación transaccional: además de la conexión Distributor describió sobre, puede cambiar el método utilizado para propagar los cambios en el Suscriptor al Publicador: haga clic en **Conexión del publicador**y, a continuación, haga clic en el botón (**...**) de propiedades.  
+-   Para las suscripción de actualización inmediatas a una publicación transaccional: además de la conexión Distributor describió sobre, puede cambiar el método utilizado para propagar los cambios en el Suscriptor al Publicador: haga clic en **Conexión del publicador**y, a continuación, haga clic en el botón ( **...** ) de propiedades.  
   
--   En las suscripciones a publicaciones de combinación, haga clic en **Conexión de publicador**y, a continuación, haga clic en el botón de propiedades (**...**).  
+-   En las suscripciones a publicaciones de combinación, haga clic en **Conexión de publicador**y, a continuación, haga clic en el botón de propiedades ( **...** ).  
   
  Para obtener más información acerca de los permisos necesarios para cada agente, vea [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
@@ -113,7 +113,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
   
 ## <a name="options-for-merge-subscriptions"></a>Opciones para suscripciones de mezcla  
  **Definición de partición (HOST_NAME)**  
- Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()**. De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()**, vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+ Para una publicación en la que se usan filtros con parámetros, la replicación de mezcla evalúa una de dos funciones del sistema (o ambas si el filtro hace referencia a las dos) durante la sincronización para determinar los datos que un suscriptor debe recibir: **SUSER_SNAME()** o **HOST_NAME()** . De manera predeterminada, **HOST_NAME()** devuelve el nombre del equipo en el que se ejecuta el Agente de mezcla, pero puede reemplazar este valor en el Asistente para nueva suscripción. Para obtener más información acerca de los filtros con parámetros y de cómo reemplazar **HOST_NAME()** , vea [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
  **Tipo de suscripción** y **Prioridad**  
  Muestra si la suscripción es una suscripción de cliente o de servidor (no podrá cambiarse una vez creada la suscripción). Las suscripciones de servidor pueden volver a publicar datos en otros suscriptores y es posible asignarles una prioridad para la resolución de conflictos.  
@@ -129,7 +129,7 @@ El cuadro de diálogo **Propiedades de suscripción** del suscriptor le permite 
  Si selecciona **True** para **Usar sincronización web**:  
   
 -   Escriba la dirección completa del servidor IIS en **Dirección de servidor web**.    
--   Haga clic en la fila **Conexión de servidor web** y, a continuación, haga clic en el botón de propiedades (**...**) para establecer o cambiar la cuenta con la que el suscriptor se conecta al servidor IIS.    
+-   Haga clic en la fila **Conexión de servidor web** y, a continuación, haga clic en el botón de propiedades ( **...** ) para establecer o cambiar la cuenta con la que el suscriptor se conecta al servidor IIS.    
 -   Si fuese necesario, cambie el **Tiempo de espera del servidor web** . El tiempo de espera es la cantidad de tiempo, en segundos, que transcurre antes de que expire la solicitud de sincronización web. 
 
  

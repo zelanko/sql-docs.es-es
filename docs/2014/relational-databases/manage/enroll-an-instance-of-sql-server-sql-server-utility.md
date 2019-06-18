@@ -21,10 +21,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 98350d5d68990fdf31d42bacff2fc2ebb77c116b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468278"
 ---
 # <a name="enroll-an-instance-of-sql-server-sql-server-utility"></a>Inscribir una instancia de SQL Server (Utilidad de SQL Server)
@@ -87,12 +87,12 @@ ms.locfileid: "62468278"
 -   [Inscripción de la instancia de SQL Server](#Enrolling)  
   
 ##  <a name="Welcome"></a> Introducción al Asistente Inscribir instancia  
- Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...**.  
+ Para iniciar el asistente, expanda el árbol explorador de la utilidad en un punto de control de la utilidad, haga clic con el botón derecho en **Instancias administradas** y seleccione **Agregar instancia administrada...** .  
   
  Para continuar, haga clic en **Siguiente**.  
   
 ##  <a name="Instance_name"></a> Especificar la instancia de SQL Server  
- Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...**. Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
+ Para seleccionar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el diálogo de conexión, haga clic en **Conectar...** . Proporcione el nombre del equipo y el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el formato nombreDeEquipo\nombreDeInstancia. Para obtener más información, vea [Conectar al servidor &#40;motor de base de datos&#41;](../../ssms/f1-help/connect-to-server-database-engine.md).  
   
  Para continuar, haga clic en **Siguiente**.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62468278"
 > [!NOTE]  
 >  Si la conexión está cifrada, se usará la conexión cifrada. Si la conexión no está cifrada, la Utilidad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] volverá a conectarse mediante una conexión cifrada.  
   
- Para continuar, haga clic en **Conectar...**.  
+ Para continuar, haga clic en **Conectar...** .  
   
 ##  <a name="Proxy_configuration"></a> Conjunto de recopilación de datos Información de la utilidad  
  Especifique una cuenta de dominio de Windows para ejecutar el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esta cuenta se utiliza como la cuenta de proxy del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el conjunto de recopilación de la utilidad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . De forma alternativa, puede utilizar la cuenta del servicio del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] existente. Para pasar los requisitos de validación, utilice las siguientes instrucciones con el fin de especificar la cuenta.  

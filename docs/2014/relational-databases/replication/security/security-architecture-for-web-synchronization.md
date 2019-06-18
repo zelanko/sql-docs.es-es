@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: fc091885b01821aaf8d2d12b9a321c6949d1523c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62959760"
 ---
 # <a name="security-architecture-for-web-synchronization"></a>Arquitectura de seguridad para la sincronización web
@@ -34,7 +34,7 @@ ms.locfileid: "62959760"
 |Tipo de cuenta|Dónde se especifica la cuenta|  
 |---------------------|------------------------------------|  
 |Usuario de Windows|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros **@job_login** y **@job_password** de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO (Replication Management Objects): las propiedades <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Login%2A> y <xref:Microsoft.SqlServer.Replication.IProcessSecurityContext.Password%2A> para <xref:Microsoft.SqlServer.Replication.PullSubscription.SynchronizationAgentProcessSecurity%2A>.|  
-|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] |  
+|Cuenta de servicio de Windows para el Agente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|Administrador de configuración de[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]|  
 |Aplicación independiente|El Agente de mezcla se ejecuta en el contexto del usuario de Windows que ejecuta la aplicación.|  
   
 ## <a name="b-connection-to-the-subscriber"></a>b. Conexión al suscriptor  
@@ -63,7 +63,7 @@ ms.locfileid: "62959760"
 |La autenticación básica se usa si se especifica uno de los siguientes:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: un valor de **0** para el **@internet_security_mode** parámetro de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: el valor <xref:Microsoft.SqlServer.Replication.SecurityMode.Standard> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Línea de comandos del agente de mezcla: el valor **0** para **- InternetSecurityMode**.|[!INCLUDE[tsql](../../../includes/tsql-md.md)]: los parámetros **@internet_login** y **@internet_password** de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetLogin%2A> y <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetPassword%2A>.<br /><br /> Línea de comandos del Agente de mezcla: **-InternetLogin** e **-InternetPassword**.|  
 |Autenticación integrada de\* se usa si no se especifica uno de los siguientes:<br /><br /> [!INCLUDE[tsql](../../../includes/tsql-md.md)]: un valor de **1** para el **@internet_security_mode** parámetro de [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql).<br /><br /> RMO: el valor <xref:Microsoft.SqlServer.Replication.SecurityMode.Integrated> para <xref:Microsoft.SqlServer.Replication.MergeSynchronizationAgent.InternetSecurityMode%2A>.<br /><br /> Línea de comandos del agente de mezcla: el valor **1** para **- InternetSecurityMode**.|El Agente de mezcla realiza conexiones en el contexto del usuario de Windows que se especifica para el Agente de mezcla (A).|  
   
- * Autenticación integrada puede usarse solo si todos los equipos están en el mismo dominio o están en varios dominios que tienen relaciones de confianza entre sí.  
+ \* Autenticación integrada puede usarse solo si todos los equipos están en el mismo dominio o están en varios dominios que tienen relaciones de confianza entre sí.  
   
 > [!NOTE]  
 >  La delegación es necesaria si se usa la autenticación integrada. Se recomienda usar la autenticación básica y SSL para las conexiones del suscriptor a IIS.  

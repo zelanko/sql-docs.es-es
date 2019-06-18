@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 328786411c61c5d92d25786b05dacb907b17114a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62645494"
 ---
 # <a name="view-or-change-collection-set-schedules-sql-server-management-studio"></a>Ver o cambiar las programaciones del conjunto de recopilación (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -162,7 +162,7 @@ ms.locfileid: "47777042"
   
  Utilice esta página para ver una descripción del conjunto de recopilación al que hace referencia esta página de propiedades.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar la recopilación de datos](../../relational-databases/data-collection/manage-data-collection.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)  
   

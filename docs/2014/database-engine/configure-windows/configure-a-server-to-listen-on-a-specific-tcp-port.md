@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e85b1a85ab9415c76fdaeee5453c992994a286ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62813591"
 ---
 # <a name="configure-a-server-to-listen-on-a-specific-tcp-port-sql-server-configuration-manager"></a>Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)
@@ -45,7 +45,7 @@ ms.locfileid: "62813591"
   
 #### <a name="to-assign-a-tcpip-port-number-to-the-sql-server-database-engine"></a>Para asignar un número de puerto TCP/IP al Motor de base de datos de SQL Server  
   
-1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y **Protocolos de \<nombre de instancia>**. Después, haga doble clic en **TCP/IP**.  
+1.  En el panel de la consola del Administrador de configuración de SQL Server, expanda **Configuración de red de SQL Server** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
   
 2.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP del equipo. Haga clic con el botón secundario en cada dirección y, a continuación, haga clic en **Propiedades** para identificar la dirección IP que desee configurar.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62813591"
   
 5.  En el panel de la consola, haga clic en **Servicios de SQL Server**.  
   
-6.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (**\<nombre de instancia>**)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+6.  En el panel de detalles, haga clic con el botón derecho en **SQL Server (** \<nombre de instancia> **)** y, después, haga clic en **Reiniciar** para detener y reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Después de haber configurado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que escuche en un puerto específico, dispone de tres métodos para conectarse a un puerto específico con una aplicación cliente:  
   

@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 888281421b04fde86b8ecbe2a549682312a9a945
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787864"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665703"
 ---
 # <a name="oledb-provider-information-event-class"></a>OLEDB Provider Information [clase de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -48,8 +48,8 @@ ms.locfileid: "47787864"
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**EventClass**|**int**|Tipo de evento = 194.|27|no|  
-|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
+|**EventClass**|**int**|Tipo de evento = 194.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IsSystem**|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -66,7 +66,7 @@ ms.locfileid: "47787864"
 |**TextData**|**ntext**|Valor de texto que depende de la clase de eventos capturada en el seguimiento.|1|Sí|  
 |**TransactionID**|**bigint**|Id. de la transacción asignado por el sistema.|4|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Objetos de automatización OLE en Transact-SQL](../../relational-databases/stored-procedures/ole-automation-objects-in-transact-sql.md)  

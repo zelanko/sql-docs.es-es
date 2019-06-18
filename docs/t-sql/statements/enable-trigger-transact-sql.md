@@ -24,11 +24,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 86b23a92006e4a2f3e3896cd1fe20c8b566d14e4
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652524"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62681498"
 ---
 # <a name="enable-trigger-transact-sql"></a>ENABLE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,7 @@ ENABLE Trigger Person.uAddress ON Person.Address;
 GO  
 ```  
   
-### <a name="b-enabling-a-ddl-trigger"></a>b. Habilitar un desencadenador DDL  
+### <a name="b-enabling-a-ddl-trigger"></a>B. Habilitar un desencadenador DDL  
 En este ejemplo se crea un desencadenador DDL `safety` con ámbito de base de datos y, después, se deshabilita y se habilita.  
   
 ```  

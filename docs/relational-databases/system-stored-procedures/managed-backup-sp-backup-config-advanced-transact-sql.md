@@ -22,10 +22,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 86db5a13ab1bdac2b35c6d5128ba1b2234bc24b7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62860991"
 ---
 # <a name="managedbackupspbackupconfigadvanced-transact-sql"></a>managed_backup.sp_backup_config_advanced (Transact-SQL)
@@ -66,7 +66,7 @@ EXEC managed_backup.sp_backup_config_advanced
  Para obtener más información sobre algoritmos de cifrado, vea [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md).  
   
  @encryptor_type  
- El tipo de sistema de cifrado, que puede ser cualquier certificado' ' o ' ASYMMETRIC_KEY ". El @encryptor_type es **nvarchar (32)**. Este parámetro es opcional si especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
+ El tipo de sistema de cifrado, que puede ser cualquier certificado' ' o ' ASYMMETRIC_KEY ". El @encryptor_type es **nvarchar (32)** . Este parámetro es opcional si especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  
   
  @encryptor_name  
  Nombre de un certificado existente o clave asimétrica que se usa para cifrar la copia de seguridad. El @encryptor_name es **SYSNAME**. Si utiliza una clave asimétrica, debe configurarse con la administración de claves extendida (EKM). Este parámetro es opcional si especifica NO_ENCRYPTION para el @encryption_algorithm parámetro.  

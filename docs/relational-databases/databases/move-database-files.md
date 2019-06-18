@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5436dc0ad0e3148fb152f5d72d5b8d05dc27ed5a
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559792"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62669050"
 ---
 # <a name="move-database-files"></a>Mover archivos de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "51559792"
 |[Mover bases de datos de usuario](../../relational-databases/databases/move-user-databases.md)|Describe los procedimientos para mover archivos de base de datos de usuario y archivos del catálogo de texto completo a una nueva ubicación.|  
 |[Mover bases de datos del sistema](../../relational-databases/databases/move-system-databases.md)|Describe el procedimiento para mover archivos de base de datos del sistema a una nueva ubicación.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)   
  [Adjuntar y separar bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-detach-and-attach-sql-server.md)  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 386d9ac822b1524169021c5f9c6f27b0701221fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663791"
 ---
 # <a name="cursorclose-event-class"></a>CursorClose, clase de eventos
@@ -34,8 +34,8 @@ ms.locfileid: "62663791"
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**EventClass**|**int**|Tipo de evento registrado = 78.|27|No|  
-|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|No|  
+|**EventClass**|**int**|Tipo de evento registrado = 78.|27|Sin|  
+|**EventSequence**|**int**|Secuencia de la clase de evento **CursorClose** en el lote.|51|Sin|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**Handle**|**int**|Identificador del objeto al que se hace referencia en el evento.|33|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
@@ -45,7 +45,7 @@ ms.locfileid: "62663791"
 |**NTDomainName**|**Nvarchar**|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |**NTUserName**|**nvarchar**|Nombre del usuario de Windows.|6|Sí|  
 |**IdSolicitud**|**int**|Identificación de la solicitud que cerró el cursor.|49|Sí|  
-|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|**nvarchar**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
 |**SessionLoginName**|**nvarchar**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|**int**|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|**datetime**|Hora a la que se inició el evento, si está disponible.|14|Sí|  

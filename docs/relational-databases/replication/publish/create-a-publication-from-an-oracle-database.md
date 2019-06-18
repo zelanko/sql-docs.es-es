@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 62d24228267d0f5fd104a26d46d4aae721ac2663
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47834363"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62509957"
 ---
 # <a name="create-a-publication-from-an-oracle-database"></a>Crear una publicación a partir de una base de datos de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,16 +37,16 @@ ms.locfileid: "47834363"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Antes de crear una publicación, debe instalar el software de Oracle en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y configurar la base de datos de Oracle. Para obtener más información, vea [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Cree una publicación de instantáneas o transaccional a partir de una base de datos de Oracle con el Asistente para nueva publicación.  
   
- La primera vez que cree una publicación a partir de una base de datos de Oracle, deberá identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (esto no es necesario para las publicaciones posteriores de la misma base de datos). Puede identificar el publicador de Oracle desde el Asistente para nueva publicación o el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**. En este tema se muestra el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**.  
+ La primera vez que cree una publicación a partir de una base de datos de Oracle, deberá identificar el publicador de Oracle en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (esto no es necesario para las publicaciones posteriores de la misma base de datos). Puede identificar el publicador de Oracle desde el Asistente para nueva publicación o el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . En este tema se muestra el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** .  
   
 #### <a name="to-identify-the-oracle-publisher-at-the-sql-server-distributor"></a>Para identificar el publicador de Oracle en el distribuidor de SQL Server  
   
@@ -54,7 +54,7 @@ ms.locfileid: "47834363"
   
 2.  Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, haga clic en **Propiedades del distribuidor**.  
   
-3.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**, haga clic en **Agregar** y, después, en **Agregar publicador de Oracle**.  
+3.  En la página **Publicadores** del cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** , haga clic en **Agregar** y, después, en **Agregar publicador de Oracle**.  
   
 4.  En el cuadro de diálogo **Conectar al servidor** , haga clic en el botón **Opciones** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "47834363"
   
      La opción **Completo** está diseñada para proporcionar publicaciones de instantáneas y transaccionales con todas las características compatibles con la publicación de Oracle. La opción **Puerta de enlace** proporciona optimizaciones de diseño específicas para mejorar el rendimiento en casos en los que la replicación sirva como puerta de enlace entre sistemas. La opción **Puerta de enlace** no se puede utilizar si tiene previsto publicar la misma tabla en varias publicaciones transaccionales. Una tabla puede aparecer como máximo en una publicación transaccional y en cualquier número de publicaciones de instantáneas si selecciona **Puerta de enlace**.  
   
-7.  Haga clic en **Conectar**para crear una conexión al publicador de Oracle y configurarla para la replicación. Se cerrará el cuadro de diálogo **Conectar con el servidor** y volverá al cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**.  
+7.  Haga clic en **Conectar**para crear una conexión al publicador de Oracle y configurarla para la replicación. Se cerrará el cuadro de diálogo **Conectar con el servidor** y volverá al cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** .  
   
     > [!NOTE]  
     >  En este punto, si hay algún problema con la configuración de la red, recibirá un error. Si tiene problemas para conectarse a la base de datos de Oracle, vea la sección en la que se explica qué hacer cuando el distribuidor de SQL Server no puede conectarse a la base de datos de Oracle, en el tema [Troubleshooting Oracle Publishers](../../../relational-databases/replication/non-sql/troubleshooting-oracle-publishers.md).  
@@ -116,34 +116,34 @@ ms.locfileid: "47834363"
   
 2.  Si no existe ningún distribuidor remoto, configúrelo. Para obtener más información, consulte [Configure Publishing and Distribution](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
-3.  En el distribuidor remoto que utilizará el publicador de Oracle, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Especifique el nombre TNS (Transparent Network Substrate, Sustrato de red transparente) de la instancia de base de datos de Oracle para **@publisher** y un valor de **ORACLE** o **ORACLE GATEWAY** para **@publisher_type**. `Specify` el modo de seguridad que se usa en la conexión desde el publicador de Oracle al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto como uno de los siguientes:  
+3.  En el distribuidor remoto que utilizará el publicador de Oracle, ejecute [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md). Especifique el nombre TNS (Transparent Network Substrate, Sustrato de red transparente) de la instancia de base de datos de Oracle para **@publisher** y un valor de **ORACLE** o **ORACLE GATEWAY** para **@publisher_type** . `Specify` el modo de seguridad que se usa en la conexión desde el publicador de Oracle al distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] remoto como uno de los siguientes:  
   
-    -   Para utilizar autenticación estándar de Oracle, el valor predeterminado, especifique el valor **0** para **@security_mode**, el inicio de sesión del esquema de usuario administrativo de replicación que creó en el publicador de Oracle durante la configuración para **@login**y la contraseña para **@password**.  
+    -   Para utilizar autenticación estándar de Oracle, el valor predeterminado, especifique el valor **0** para **@security_mode** , el inicio de sesión del esquema de usuario administrativo de replicación que creó en el publicador de Oracle durante la configuración para **@login** y la contraseña para **@password** .  
   
         > [!IMPORTANT]  
         >  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si almacena credenciales en un archivo de script, debe proteger el archivo para evitar el acceso no autorizado.  
   
-    -   Para utilizar autenticación de Windows, especifique el valor **1** para **@security_mode**.  
+    -   Para utilizar autenticación de Windows, especifique el valor **1** para **@security_mode** .  
   
         > [!NOTE]  
         >  Para usar autenticación de Windows, el servidor de Oracle debe estar configurado para admitir conexiones con credenciales de Windows (para obtener más información, vea la documentación de Oracle) y deberá haber iniciado una sesión con la misma cuenta de Microsoft Windows que especificó para el esquema de usuario administrativo de replicación.  
   
 4.  Cree un trabajo de Agente de registro del LOG para la base de datos de publicación.  
   
-    -   Si no está seguro de si existe un trabajo de Agente de registro del LOG para una base de datos publicada, ejecute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) en el distribuidor utilizado por el publicador de Oracle, en la base de datos de distribución. Especifique el nombre del publicador de Oracle en **@publisher**. Si el conjunto de resultados está vacío, es necesario crear un trabajo de Agente de registro del LOG.  
+    -   Si no está seguro de si existe un trabajo de Agente de registro del LOG para una base de datos publicada, ejecute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) en el distribuidor utilizado por el publicador de Oracle, en la base de datos de distribución. Especifique el nombre del publicador de Oracle en **@publisher** . Si el conjunto de resultados está vacío, es necesario crear un trabajo de Agente de registro del LOG.  
   
     -   Si ya existe un trabajo de Agente de registro del LOG para la base de datos de publicación, continúe en el paso 5.  
   
-    -   En la base de datos de distribución del distribuidor utilizado por el publicador de Oracle, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_login** y **@job_password**.  
+    -   En la base de datos de distribución del distribuidor utilizado por el publicador de Oracle, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_login** y **@job_password** .  
   
         > [!NOTE]  
         >  La opción **@job_login** debe coincidir con el inicio de sesión proporcionado en el paso 3. No proporcione información de seguridad del editor. El Agente de registro del LOG se conecta al publicador utilizando la información de seguridad proporcionada en el paso 3.  
   
 5.  En la base de datos de distribución del distribuidor, ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) para crear la publicación. Para obtener más información, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
   
-6.  En el distribuidor de la base de datos de distribución, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 4 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@job_name** y **@password**. Para utilizar la autenticación estándar de Oracle al conectarse al publicador, también debe especificar el valor **0** para **@publisher_security_mode** y la información de inicio de sesión de Oracle para **@publisher_login** y **@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
+6.  En el distribuidor de la base de datos de distribución, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 4 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@job_name** y **@password** . Para utilizar la autenticación estándar de Oracle al conectarse al publicador, también debe especificar el valor **0** para **@publisher_security_mode** y la información de inicio de sesión de Oracle para **@publisher_login** y **@publisher_password** . Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [Configuración del trabajo del conjunto de transacciones para un publicador de Oracle&#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   

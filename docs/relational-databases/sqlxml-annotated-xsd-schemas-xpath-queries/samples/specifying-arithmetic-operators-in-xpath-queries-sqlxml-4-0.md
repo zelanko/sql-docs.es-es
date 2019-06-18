@@ -18,10 +18,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6c0d615a1012c976e2ef4a6f195a5808e9a36885
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62737531"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
@@ -37,7 +37,7 @@ ms.locfileid: "62737531"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque el  **\< elemento >** nodo es el nodo principal para el **secundarios** eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >** , porque el  **\< elemento >** nodo es el nodo principal para el **secundarios** eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  

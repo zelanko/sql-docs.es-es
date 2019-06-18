@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e7edca09192abc207ef4879c8d8275777451d51a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618133"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649235"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>Establecer el período de expiración para las suscripciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47618133"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -51,12 +51,12 @@ ms.locfileid: "47618133"
   
     -   Es posible especificar que las suscripciones no expiren nunca, pero se recomienda encarecidamente no utilizar ese valor, ya que los metadatos no se podrían limpiar.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Establezca el período de expiración de las suscripciones en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Establezca el período de expiración de las suscripciones en la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>Para establecer el período de expiración para las suscripciones  
   
-1.  En la sección **Expiración de la suscripción** de la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, especifique si las suscripciones deben caducar.  
+1.  En la sección **Expiración de la suscripción** de la página **General** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , especifique si las suscripciones deben caducar.  
   
 2.  Si deben expirar, especifique un período de expiración.  
   
@@ -65,11 +65,11 @@ ms.locfileid: "47618133"
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para establecer el período de expiración de una suscripción en una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique el período de expiración deseado para la suscripción, en horas, para **@retention**. El período de expiración predeterminado es 336 horas. Para obtener más información, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique el período de expiración deseado para la suscripción, en horas, para **@retention** . El período de expiración predeterminado es 336 horas. Para obtener más información, vea [Crear una suscripción](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 #### <a name="to-set-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para establecer el período de expiración de una suscripción en una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique el valor deseado para el período de expiración de la suscripción en **@retention**. Especifique las unidades en las que se expresa el período de expiración para **@retention_period_unit**, que pueden ser unas de las siguientes:  
+1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique el valor deseado para el período de expiración de la suscripción en **@retention** . Especifique las unidades en las que se expresa el período de expiración para **@retention_period_unit** , que pueden ser unas de las siguientes:  
   
     -   **1** = semana  
   
@@ -81,11 +81,11 @@ ms.locfileid: "47618133"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>Para cambiar el período de expiración de una suscripción a una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, en horas, para **@value**.  
+1.  En el publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, en horas, para **@value** .  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>Para cambiar el período de expiración de una suscripción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** y **@publisher**. Tenga en cuenta el valor de **retention_period_unit** en el conjunto de resultados, que puede ser uno de los siguientes:  
+1.  En el publicador, ejecute [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md), especificando **@publication** y **@publisher** . Tenga en cuenta el valor de **retention_period_unit** en el conjunto de resultados, que puede ser uno de los siguientes:  
   
     -   **0** = día  
   
@@ -95,11 +95,11 @@ ms.locfileid: "47618133"
   
     -   **3** = año  
   
-2.  En el publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, como texto basado en la unidad de período de retención del paso 1, para **@value**.  
+2.  En el publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retención** para **@property** y el nuevo período de expiración de suscripción, como texto basado en la unidad de período de retención del paso 1, para **@value** .  
   
-3.  (Opcional) En el publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retention_period_unit** para **@property** y una nueva unidad para el período de expiración de la suscripción en **@value**.  
+3.  (Opcional) En el publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique **retention_period_unit** para **@property** y una nueva unidad para el período de expiración de la suscripción en **@value** .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../../../relational-databases/replication/subscription-expiration-and-deactivation.md)  
   

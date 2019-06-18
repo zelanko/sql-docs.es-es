@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463a6516b70c80d9e248ddb1502f34129a8ab0e7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63453636"
 ---
 # <a name="delete-a-push-subscription"></a>Eliminar una suscripción de inserción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47785633"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Elimine una suscripción de inserción en el publicador (desde la carpeta **Publicaciones locales** en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]) o el suscriptor (desde la carpeta **Suscripciones locales** ). Al eliminar una suscripción no se quitan los objetos ni los datos de la suscripción, y deben quitarse manualmente.  
   
 #### <a name="to-delete-a-push-subscription-at-the-publisher"></a>Para eliminar una suscripción de inserción en el publicador  
@@ -56,7 +56,7 @@ ms.locfileid: "47785633"
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y expanda el nodo de servidor.  
   
-2.  Expanda la carpeta **Replicación** y, a continuación, expanda la carpeta **Suscripciones locales** .  
+2.  Expanda la carpeta **Replicación** y, a continuación, la carpeta **Suscripciones locales**.  
   
 3.  Haga clic con el botón secundario en la suscripción que desea eliminar y, a continuación, haga clic en **Eliminar**.  
   
@@ -67,15 +67,15 @@ ms.locfileid: "47785633"
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para eliminar una suscripción de inserción a una publicación transaccional o de instantáneas  
   
-1.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **@publication** y **@subscriber**. Especifique un valor de **all** para **@article**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+1.  (Opcional) en la base de datos de publicación del publicador, ejecute [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md). Especifique **@publication** y **@subscriber** . Especifique un valor de **all** para **@article** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
 2.  (Opcional) En la base de datos de suscripciones del suscriptor, ejecute [sp_subscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-subscription-cleanup-transact-sql.md) para quitar los metadatos de replicación restantes en la base de datos de suscripciones.  
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de inserción a una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) especificando **@publication**, **@subscriber** y **@subscriber_db**. (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
+1.  En el publicador, ejecute [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) especificando **@publication** , **@subscriber** y **@subscriber_db** . (Opcional) Si no se puede tener acceso al Distribuidor, especifique un valor de **1** para **@ignore_distributor** para eliminar la suscripción sin quitar los objetos relacionados en el Distribuidor.  
   
-2.  En la base de datos de suscripciones del suscriptor, ejecute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Especifique **@publisher**, **@publisher_db**y **@publication**. Esto quita los metadatos de mezcla de la base de datos de suscripciones.  
+2.  En la base de datos de suscripciones del suscriptor, ejecute [sp_mergesubscription_cleanup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-mergesubscription-cleanup-transact-sql.md). Especifique **@publisher** , **@publisher_db** y **@publication** . Esto quita los metadatos de mezcla de la base de datos de suscripciones.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  En este ejemplo se elimina una suscripción de inserción a una publicación transaccional.  
@@ -86,12 +86,12 @@ ms.locfileid: "47785633"
   
  [!code-sql[HowTo#sp_dropmergesubscription](../../relational-databases/replication/codesnippet/tsql/delete-a-push-subscription_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Las clases RMO que se usan para eliminar una suscripción de inserción dependen del tipo de publicación a la se suscribe dicha suscripción.  
   
 #### <a name="to-delete-a-push-subscription-to-a-snapshot-or-transactional-publication"></a>Para eliminar una suscripción de inserción a una publicación transaccional o de instantáneas  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.TransSubscription> .  
   
@@ -105,7 +105,7 @@ ms.locfileid: "47785633"
   
 #### <a name="to-delete-a-push-subscription-to-a-merge-publication"></a>Para eliminar una suscripción de inserción a una publicación de combinación  
   
-1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> .  
+1.  Cree una conexión al suscriptor mediante la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection>.  
   
 2.  Cree una instancia de la clase <xref:Microsoft.SqlServer.Replication.MergeSubscription> .  
   
@@ -124,7 +124,7 @@ ms.locfileid: "47785633"
   
  [!code-vb[HowTo#rmo_vb_DropTranPushSub](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_droptranpushsub)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md)   
  [Prácticas recomendadas de seguridad de replicación](../../relational-databases/replication/security/replication-security-best-practices.md)  
   

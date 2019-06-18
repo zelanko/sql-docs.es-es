@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5aaf7031afb1b3c148bbef2bcafd5d40f4947f8d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63000345"
 ---
 # <a name="advanced-merge-replication-conflict-detection-and-resolution"></a>Detección y resolución de conflictos de replicación de mezcla avanzada
@@ -109,7 +109,7 @@ ms.locfileid: "63000345"
   
  El Visor de conflictos muestra información de tres tablas del sistema:  
   
--   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>**.  
+-   La replicación crea una tabla de conflictos por cada tabla de un artículo de mezcla, con un nombre en formato **MSmerge_conflict_\<NombreDePublicación>_\<NombreDeArtículo>** .  
   
      Las tablas de conflictos tienen la misma estructura que las tablas en las que se basan. Una fila de una de estas tablas consta de la versión perdedora de una fila de conflictos (la versión ganadora de esta fila se encuentra en la tabla real del usuario).  
   

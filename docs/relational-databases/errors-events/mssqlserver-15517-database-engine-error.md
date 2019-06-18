@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 1e0ba7408f4e58cd10693831eb6c4ae1f4c2c35c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47697863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62859023"
 ---
 # <a name="mssqlserver15517"></a>MSSQLSERVER_15517
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,6 +42,6 @@ También puede producirse el evento 15517 después de que alguien que no sea el 
 ALTER AUTHORIZATION ON DATABASE:: DBName TO [NewLogin]  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [OLTP en memoria &#40;optimización en memoria&#41;](~/relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   

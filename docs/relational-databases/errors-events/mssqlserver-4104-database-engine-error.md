@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 55bbf20609dc364fdb79c0c785ccffb691da991e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814393"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63018674"
 ---
 # <a name="mssqlserver4104"></a>MSSQLSERVER_4104
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +122,7 @@ El error 4104 indica que el identificador formado por varias partes especificado
   
 -   Utilice nombres únicos y definidos claramente para los identificadores. De este modo, el código es más fácil de leer y mantener, y también se reduce al mínimo el riesgo de que haya referencias ambiguas a varias entidades.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [MSSQLSERVER_107](~/relational-databases/errors-events/mssqlserver-107-database-engine-error.md)  
 [Identificadores de base de datos](~/relational-databases/databases/database-identifiers.md)  
   

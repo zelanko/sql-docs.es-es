@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 690e84fb754f7a50137ff6879bb8866127e2ed7e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128636"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661107"
 ---
 # <a name="create-an-updatable-subscription-to-a-transactional-publication"></a>Crear una suscripción actualizable en una publicación transaccional
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -228,10 +228,10 @@ Configure suscripciones actualizables en la página **Suscripciones actualizable
     * Una programación para el trabajo del Agente de distribución de esta suscripción.
 
 ## <a name="set-queued-updating-conflict-resolution-options"></a>Establecimiento de opciones de resolución de conflictos de actualización en cola 
-Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación - \<Publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
+Establezca las opciones de resolución de conflictos para las publicaciones que admiten suscripciones de actualización en cola en la página **Opciones de suscripción** del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
   
-1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>**, seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:  
+1.  En la página **Opciones de suscripción**, del cuadro de diálogo **Propiedades de la publicación - \<Publicación>** , seleccione uno de los siguientes valores para la opción **Directiva de resolución de conflictos**:  
   
     -   **Mantener el cambio del publicador**    
     -   **Mantener el cambio del suscriptor**    

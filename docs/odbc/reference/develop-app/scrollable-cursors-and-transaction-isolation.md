@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468602"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>Los cursores desplazables y aislamiento de transacción
@@ -41,17 +41,17 @@ En la tabla siguiente se enumera los factores que rigen la visibilidad de los ca
 |Cursor type\action|Self|El propietario<br /><br /> Txn|Otros<br /><br /> Txn<br /><br /> (RU[a])|Otros<br /><br /> Txn<br /><br /> (RC[a])|Otros<br /><br /> Txn<br /><br /> (RR[a])|Otros<br /><br /> Txn<br /><br /> (S[a])|  
 |-------------------------|----------|-----------------|----------------------------------|----------------------------------|----------------------------------|---------------------------------|  
 |Estático|||||||  
-|Insert|Tal vez [b]|No|No|No|No|No|  
-|Update|Tal vez [b]|No|No|No|No|No|  
-|DELETE|Tal vez [b]|No|No|No|No|No|  
+|Insert|Tal vez [b]|No|Sin|No|No|Sin|  
+|Update|Tal vez [b]|Sin|Sin|Sin|No|No|  
+|DELETE|Tal vez [b]|No|Sin|Sin|Sin|Sin|  
 |Dirigido por conjuntos de claves|||||||  
-|Insert|Tal vez [b]|No|No|No|No|No|  
-|Update|Sí|Sí|Sí|Sí|No|No|  
-|DELETE|Tal vez [b]|Sí|Sí|Sí|No|No|  
+|Insert|Tal vez [b]|Sin|Sin|Sin|No|No|  
+|Update|Sí|Sí|Sí|Sí|Sin|No|  
+|DELETE|Tal vez [b]|Sí|Sí|Sí|Sin|No|  
 |Dinámico|||||||  
-|Insert|Sí|Sí|Sí|Sí|Sí|No|  
-|Update|Sí|Sí|Sí|Sí|No|No|  
-|DELETE|Sí|Sí|Sí|Sí|No|No|  
+|Insert|Sí|Sí|Sí|Sí|Sí|Sin|  
+|Update|Sí|Sí|Sí|Sí|Sin|Sin|  
+|DELETE|Sí|Sí|Sí|Sí|Sin|Sin|  
   
  [a] las letras entre paréntesis indican el nivel de aislamiento de la transacción que contiene el cursor; el nivel de aislamiento de la otra transacción (en el que se realizó el cambio) es irrelevante.  
   

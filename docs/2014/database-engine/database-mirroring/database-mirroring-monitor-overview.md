@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 36dcb23a2e4dde09d5c57d7c837fa90eae3fddf5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62755027"
 ---
 # <a name="database-mirroring-monitor-overview"></a>Información general del Monitor de creación de reflejo de la base de datos
@@ -64,9 +64,9 @@ ms.locfileid: "62755027"
  *<PRINCIPAL_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor principal. El nombre adopta el siguiente formato:  
   
- *<SYSTEM_NAME>*[**\\**_<instance_name>_]  
+ *<SYSTEM_NAME>* [ **\\** _<instance_name>_ ]  
   
- donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_**\\**_<nombre_instancia>_.  
+ donde *<SYSTEM_NAME>* es el nombre del sistema en el que se encuentra la instancia del servidor. En una instancia del servidor no predeterminada, también se muestra el nombre de la instancia: _<SYSTEM_NAME>_ **\\** _<nombre_instancia>_ .  
   
  *<MIRROR_SERVER>*  
  Nombre del asociado que es actualmente la instancia del servidor reflejado. El formato es el mismo que el del servidor principal.  
@@ -81,7 +81,7 @@ ms.locfileid: "62755027"
   
  Un administrador del sistema puede ver la configuración actual de las advertencias para la base de datos; para ello, debe seleccionar la página con pestañas **Advertencias** . Desde dicha página, el administrador puede iniciar el cuadro de diálogo **Establecer umbrales de advertencia** para habilitar y configurar uno o varios umbrales de advertencia.  
   
- En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:**_\<fecha>_*\<hora>*. Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
+ En el titular situado encima de las pestañas, el panel de detalles muestra la última hora a la que el monitor actualizó la información de estado, como **Última actualización:** _\<fecha>_ *\<hora>* . Normalmente, el Monitor de creación de reflejo de la base de datos recupera información de estado de las instancias del servidor principal y reflejado a horas diferentes. Se muestran las dos horas de actualización más antiguas.  
   
 ## <a name="action-menu"></a>Menú Acción  
  El menú **Acción** siempre contiene los siguientes comandos:  

@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8919457cb10ae9feaa7e1c82eed5a73860fd6d42
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47829763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62446125"
 ---
 # <a name="mssqlserver5243"></a>MSSQLSERVER_5243
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ Ejecutar DBCC CHECKDB Si no hay una copia de seguridad limpia disponible, ejecut
 
 Si ejecuta DBCC CHECKDB con una de las cláusulas REPAIR y no se soluciona el problema, póngase en contacto con su proveedor principal de soporte.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Archivos y grupos de archivos de base de datos](~/relational-databases/databases/database-files-and-filegroups.md)  
   

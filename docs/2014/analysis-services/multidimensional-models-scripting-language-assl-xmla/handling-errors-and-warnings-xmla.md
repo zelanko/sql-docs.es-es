@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 856886a5edfa5dcae604b44f5c2dca356ba0addb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62702134"
 ---
 # <a name="handling-errors-and-warnings-xmla"></a>Controlar errores y advertencias (XMLA)
@@ -52,7 +52,7 @@ ms.locfileid: "62702134"
   
 |Nombre de columna|Tipo|Descripción|Permitida NULL<sup>1</sup>|  
 |-----------------|----------|-----------------|------------------------------|  
-|`ErrorCode`|`UnsignedInt`|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|No|  
+|`ErrorCode`|`UnsignedInt`|Código de retorno que indica la ejecución correcta o el error del método. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|Sin|  
 |`WarningCode`|`UnsignedInt`|Código de retorno que indica una condición de advertencia. El valor hexadecimal debe convertirse en un valor `UnsignedInt`.|Sí|  
 |`Description`|`String`|Texto y descripción del error o la advertencia devueltos por el componente que generó el error.|Sí|  
 |`Source`|`String`|Nombre del componente que generó el error o la advertencia.|Sí|  

@@ -15,16 +15,16 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 775b48eb5a7f2089d65c6e9548a986b2f7b9bec7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63284576"
 ---
 # <a name="procedure-calls"></a>Llamadas a procedimientos
 Un *procedimiento* es un objeto ejecutable almacenado en el origen de datos. Normalmente, se trata de una o varias instrucciones SQL compiladas. Es la secuencia de escape para llamar a un procedimiento  
   
- **{**[**?=**]**call** *procedure-name*[**(**[*parameter*][**,**[*parameter*]]...**)**]**}**  
+ **{** [ **?=** ]**call** *procedure-name*[ **(** [*parameter*][ **,** [*parameter*]]... **)** ] **}**  
   
  donde *nombre del procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento.  
   

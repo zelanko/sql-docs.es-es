@@ -15,11 +15,11 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || = sqlallproducts-allversions'
 ms.openlocfilehash: 75fb776049d55c18c2983e558df32072f28209e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62720060"
 ---
 # <a name="disable-compression-on-a-table-or-index"></a>Deshabilitar compresión de una tabla o un índice
 
@@ -53,16 +53,16 @@ ms.locfileid: "52516590"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o índice.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-compression-on-a-table"></a>Para deshabilitar la compresión en una tabla  
   
 1.  En el Explorador de objetos, expanda la base de datos que contiene la tabla en la que desea deshabilitar la compresión y después expanda la carpeta **Tablas** .  
   
-2.  Haga clic con el botón derecho en la tabla o el índice en el que quiera deshabilitar la compresión, seleccione **Almacenamiento** y, luego, **Administrar la compresión...**.  
+2.  Haga clic con el botón derecho en la tabla o el índice en el que quiera deshabilitar la compresión, seleccione **Almacenamiento** y, luego, **Administrar la compresión...** .  
   
 3.  Para deshabilitar la compresión en un índice, expanda la tabla que contiene el índice y después expanda la carpeta de **Índices** .  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52516590"
   
      Las siguientes opciones están disponibles en la página de **Seleccionar el tipo de compresión** :  
   
-     Casilla**Usar el mismo tipo de compresión para todas las particiones**   
+     Casilla**Usar el mismo tipo de compresión para todas las particiones**  
      Active esta casilla para configurar el mismo valor de compresión para todas las particiones. Esto habilita el cuadro de selección y deshabilita la columna **Tipo de compresión** en la cuadrícula. Cuando se activa, las opciones de la lista adyacente son **Ninguna**, **Fila**y **Página**.  
   
      **Número de partición**  

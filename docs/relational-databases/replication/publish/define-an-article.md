@@ -20,11 +20,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: c719c6897edfa956c70b7863811ccea98bee68b9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672134"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62507682"
 ---
 # <a name="define-an-article"></a>Definir un artículo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,8 +55,8 @@ ms.locfileid: "51672134"
 ##  <a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](../../../relational-databases/replication/publish/create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -105,7 +105,7 @@ ms.locfileid: "51672134"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>Para definir un artículo para una publicación transaccional o de instantáneas  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique el nombre de la publicación a la que pertenece el artículo para **@publication**, un nombre de artículo para **@article**, el objeto de base de datos que se está publicando para **@source_object**y cualquier otro parámetro opcional. Use **@source_owner** para especificar la propiedad del esquema del objeto, si no es **dbo**. Si el artículo no es un artículo de tabla basada en registros, especifique el tipo de artículo para **@type**; para obtener más información, vea [Especificar tipos de artículo &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique el nombre de la publicación a la que pertenece el artículo para **@publication** , un nombre de artículo para **@article** , el objeto de base de datos que se está publicando para **@source_object** y cualquier otro parámetro opcional. Use **@source_owner** para especificar la propiedad del esquema del objeto, si no es **dbo**. Si el artículo no es un artículo de tabla basada en registros, especifique el tipo de artículo para **@type** ; para obtener más información, vea [Especificar tipos de artículo &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  Para filtrar filas horizontalmente en una tabla o ver un artículo, use [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) para definir la cláusula de filtro. Para más información, consulte [Definir y modificar un filtro de fila estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
@@ -122,7 +122,7 @@ ms.locfileid: "51672134"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>Para definir un artículo para una publicación de combinación  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique el nombre de la publicación para **@publication**, un nombre para el nombre de artículo para **@article**y el objeto que se está publicando para **@source_object**. Para filtrar horizontalmente filas de tabla, especifique un valor para **@subset_filterclause**. Para obtener más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) y [Definir y modificar un filtro de fila estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si el artículo no es un artículo de tabla, especifique el tipo de artículo para **@type**. Para obtener más información, vea [Especificar tipos de artículo &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
+1.  En la base de datos de publicación del publicador, ejecute [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Especifique el nombre de la publicación para **@publication** , un nombre para el nombre de artículo para **@article** y el objeto que se está publicando para **@source_object** . Para filtrar horizontalmente filas de tabla, especifique un valor para **@subset_filterclause** . Para obtener más información, consulte [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) y [Definir y modificar un filtro de fila estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md). Si el artículo no es un artículo de tabla, especifique el tipo de artículo para **@type** . Para obtener más información, vea [Especificar tipos de artículo &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md).  
   
 2.  (Opcional) En la base de datos de publicación del publicador, ejecute [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) para definir un filtro de combinación entre dos artículos. Para más información, consulte [Definir y modificar un filtro de combinación entre artículos de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md).  
   
@@ -137,7 +137,7 @@ ms.locfileid: "51672134"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../relational-databases/replication/codesnippet/tsql/define-an-article_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede definir artículos mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que usa para definir un artículo dependen del tipo de publicación para la que se define el artículo.  
   
 ###  <a name="PShellExample"></a> Ejemplos (RMO)  
@@ -153,7 +153,7 @@ ms.locfileid: "51672134"
   
  [!code-vb[HowTo#rmo_vb_CreateMergeArticles](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createmergearticles)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md)   
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   

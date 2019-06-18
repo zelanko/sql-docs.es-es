@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a5a98994ab735e685e1d866ff9a28899cdef8c52
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326796"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638663"
 ---
 # <a name="revoke-type-permissions-transact-sql"></a>REVOKE (permisos de tipo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica un permiso que se puede revocar en un tipo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  ON TYPE **::** [ *schema_name* ] **.** *type_name*  
- Especifica el tipo en el que se va a revocar el permiso. El calificador de ámbito (**::**) es obligatorio. Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (**.**).  
+ Especifica el tipo en el que se va a revocar el permiso. El calificador de ámbito ( **::** ) es obligatorio. Si no se especifica *schema_name*, se usa el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema ( **.** ).  
   
  { FROM | TO } \<database_principal> especifica la entidad de seguridad a la que se revoca el permiso.  
   

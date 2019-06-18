@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ac3e9ee443f0c10a39128fc1d6aab6813ec4f4d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62524075"
 ---
 # <a name="define-the-response-to-an-alert-sql-server-management-studio"></a>Definir la respuesta a una alerta (SQL Server Management Studio)
@@ -69,7 +69,7 @@ ms.locfileid: "62524075"
   
 6.  Active la casilla **Ejecutar trabajo** y, en la lista situada debajo de la casilla **Ejecutar trabajo** , seleccione el trabajo que se ejecutará cuando se produzca la alerta. Puede crear un nuevo trabajo haciendo clic en **Nuevo trabajo**. Puede ver más información acerca del trabajo haciendo clic en **View Job**. Para más información sobre las opciones disponibles en los cuadros de diálogo **Nuevo trabajo** y **Propiedades de trabajo**_nombre_trabajo_ , consulte [Crear un trabajo](create-a-job.md) y [Ver un trabajo](view-a-job.md).  
   
-7.  Active la casilla **Notificar a los operadores** si desea notificar a los operadores cuándo se activará la alerta. En el **lista de operadores**, seleccione uno o varios de los métodos siguientes para notificar al operador o los operadores: **Correo electrónico**, **buscapersonas**, o **Net Send**. Puede crear un nuevo operador haciendo clic en **Nuevo operador**. Puede ver más información acerca de un operador haciendo clic en **Ver operador**. Para obtener más información acerca de las opciones disponibles en los cuadros de diálogo **Nuevo operador** y **Ver las propiedades del operador** , vea [Create an Operator](create-an-operator.md) y [View Information About an Operator](view-information-about-an-operator.md).  
+7.  Active la casilla **Notificar a los operadores** si desea notificar a los operadores cuándo se activará la alerta. En **Lista de operadores**, seleccione uno o más de los métodos siguientes para notificar al operador o a los operadores: **Correo electrónico**, **Buscapersonas** o **Net Send**. Puede crear un nuevo operador haciendo clic en **Nuevo operador**. Puede ver más información acerca de un operador haciendo clic en **Ver operador**. Para obtener más información acerca de las opciones disponibles en los cuadros de diálogo **Nuevo operador** y **Ver las propiedades del operador** , vea [Create an Operator](create-an-operator.md) y [View Information About an Operator](view-information-about-an-operator.md).  
   
 8.  Cuando termine, haga clic en **Aceptar**.  
   

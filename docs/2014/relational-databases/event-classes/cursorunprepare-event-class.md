@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aac3a20511012e0a058fff6988c793c4f51d594d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663399"
 ---
 # <a name="cursorunprepare-event-class"></a>CursorUnprepare, clase de eventos
@@ -34,8 +34,8 @@ ms.locfileid: "62663399"
 |**ClientProcessID**|**int**|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|**int**|Identificador de la base de datos especificada mediante la instrucción USE o la base de datos predeterminada si no se emite la instrucción USE para una determinada instancia. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|**EventClass**|**int**|Tipo de evento registrado = 77.|27|No|  
-|**EventSequence**|**int**|Secuencia por lotes de la clase de evento **CursorUnprepare** .|51|No|  
+|**EventClass**|**int**|Tipo de evento registrado = 77.|27|Sin|  
+|**EventSequence**|**int**|Secuencia por lotes de la clase de evento **CursorUnprepare** .|51|Sin|  
 |**GroupID**|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**Handle**|**Int**|Identifica el identificador preparado cuya preparación se ha cancelado.|33|Sí|  
 |**HostName**|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  

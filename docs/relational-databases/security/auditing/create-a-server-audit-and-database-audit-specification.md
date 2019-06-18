@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a2213a6f87aa11db9201dc052efa5a5513e185a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716122"
 ---
 # <a name="create-a-server-audit-and-database-audit-specification"></a>Crear una especificación de auditoría de servidor y de auditoría de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,19 +54,19 @@ ms.locfileid: "52539163"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 -   Los usuarios con el permiso ALTER ANY DATABASE AUDITpueden crear las especificaciones de auditoría de base de datos y enlazarlas a cualquier auditoría.  
   
 -   Después de crearse una especificación de auditoría de base de datos, podrá ser vista por las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY DATABASE AUDIT, o por la cuenta sysadmin.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...**. Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
+2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** . Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md).  
   
 3.  Cuando termine de seleccionar opciones, haga clic en **Aceptar**.  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52539163"
   
 2.  Expanda la carpeta **Seguridad** .  
   
-3.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **Nueva especificación de auditoría de base de datos...**.  
+3.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de base de datos** y seleccione **Nueva especificación de auditoría de base de datos...** .  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de base de datos** .  
   

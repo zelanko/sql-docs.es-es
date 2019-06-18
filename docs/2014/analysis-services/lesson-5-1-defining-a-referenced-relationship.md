@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a404c18f47fb13464d01f5be6af9869fd10292cc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078626"
 ---
 # <a name="defining-a-referenced-relationship"></a>Definir una relación referenciada
@@ -46,7 +46,7 @@ ms.locfileid: "66078626"
   
      Observe que la dimensión del cubo **Geography** actualmente no tiene ninguna relación con el grupo de medida **Internet Sales** ni con el grupo de medida **Reseller Sales** .  
   
-8.  Haga clic en el botón de puntos suspensivos (**...** ) en el **nombre completo** celda en la intersección de la **cliente** dimensión y el **Internet Sales** grupo de medida.  
+8.  Haga clic en el botón de puntos suspensivos ( **...** ) en el **nombre completo** celda en la intersección de la **cliente** dimensión y el **Internet Sales** grupo de medida.  
   
      En el cuadro de diálogo **Definir relación** , observe que hay una relación **Regular** definida entre la tabla de la dimensión **DimCustomer** y la tabla del grupo de medida **FactInternetSales** basada en la columna **CustomerKey** de cada una de estas tablas. Todas las demás relaciones que ha definido en este tutorial hasta este punto han sido relaciones regulares.  
   
@@ -56,7 +56,7 @@ ms.locfileid: "66078626"
   
 9. Haga clic en **Cancelar**.  
   
-10. Haga clic en el botón de puntos suspensivos (**...** ) en la celda sin nombre en la intersección de la **Geography** dimensión y el **Reseller Sales** grupo de medida.  
+10. Haga clic en el botón de puntos suspensivos ( **...** ) en la celda sin nombre en la intersección de la **Geography** dimensión y el **Reseller Sales** grupo de medida.  
   
      En el cuadro de diálogo **Definir relación** , observe que actualmente no hay ninguna relación definida entre la dimensión del cubo Geography y el grupo de medida Reseller Sales. No se puede definir una relación regular porque no existe ninguna relación directa entre la tabla de dimensiones de la dimensión Geography y la tabla de hechos del grupo de medida Reseller Sales.  
   
@@ -88,7 +88,7 @@ ms.locfileid: "66078626"
   
      El atributo Geography Key de la dimensión Reseller solamente se utilizará para vincular la dimensión Geography a la tabla de hechos Reseller Sales. Puesto que no se utilizará para examinar, definir esta jerarquía de atributo como visible no aporta ningún valor. Además, ordenar y optimizar la jerarquía de atributo solo afectaría negativamente al proceso. No obstante, el atributo debe estar habilitado para poder servir como vínculo entre las dos dimensiones.  
   
-4.  Cambie al diseñador de cubos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo del Tutorial, haga clic en el **uso de dimensiones** pestaña y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) en la intersección de la **Reseller Sales** grupo de medida y la **Geography** dimensión de cubo.  
+4.  Cambie al diseñador de cubos para el [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cubo del Tutorial, haga clic en el **uso de dimensiones** pestaña y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) en la intersección de la **Reseller Sales** grupo de medida y la **Geography** dimensión de cubo.  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   

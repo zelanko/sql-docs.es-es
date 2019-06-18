@@ -16,11 +16,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: c746a02b57e548735e534960a1ca63c075e8a00d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62685902"
 ---
 # <a name="cursors-event-category"></a>Cursores (categoría de eventos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47791123"
 |[CursorRecompile (clase de eventos)](../../relational-databases/event-classes/cursorrecompile-event-class.md)|Describe los eventos de recompilación de cursores que se producen en los cursores API.|  
 |[CursorUnprepare (clase de eventos)](../../relational-databases/event-classes/cursorunprepare-event-class.md)|Describe los eventos de cancelación de preparación de cursores que se producen en los cursores API.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 539b47ebbd8f4a2374849c0b1d5244d187cdd3df
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721554"
 ---
 # <a name="configure-iis-7-for-web-synchronization"></a>Configurar IIS 7 para la sincronización web
@@ -64,7 +64,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 6.  Cree un directorio virtual en IIS. El directorio virtual se debe crear en el sitio web creado en el paso 4 y asignarse al directorio creado en el paso 1. Asigne a este directorio el mínimo de permisos posible. Debe seleccionar los permisos **Lectura** y **Ejecutar** como mínimo.  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, en el panel **Conexiones** , haga clic con el botón secundario en **Sitio web predeterminado**y, a continuación, seleccione **Agregar directorio virtual**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , en el panel **Conexiones** , haga clic con el botón secundario en **Sitio web predeterminado**y, a continuación, seleccione **Agregar directorio virtual**.  
   
     2.  Para **Alias**, escriba `SQLReplication`.  
   
@@ -72,7 +72,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 7.  Configure IIS para permitir la ejecución de replisapi.dll.  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, haga clic en **Sitio web predeterminado**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , haga clic en **Sitio web predeterminado**.  
   
     2.  En el panel del centro, haga clic en **Asignaciones de controlador**.  
   
@@ -101,7 +101,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 #### <a name="to-configure-iis-authentication"></a>Para configurar la autenticación IIS  
   
-1.  En **Administrador de Internet Information Services (IIS)**, haga clic en **Sitio web predeterminado**.  
+1.  En **Administrador de Internet Information Services (IIS)** , haga clic en **Sitio web predeterminado**.  
   
 2.  En el panel central, haga doble clic en **Autenticación**.  
   
@@ -129,7 +129,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 #### <a name="to-require-ssl-security-for-a-web-site"></a>Para exigir la seguridad SSL en un sitio web  
   
-1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
+1.  En el **Administrador de Internet Information Services (IIS)** , expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
   
 2.  En el panel central, haga doble clic en **Configuración SSL**.  
   
@@ -137,7 +137,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 #### <a name="to-create-a-self-signed-certificate-for-testing"></a>Para crear un certificado autofirmado para pruebas  
   
-1.  En el **Administrador de Internet Information Services (IIS)**, haga clic en el nodo de servidor local y, a continuación, en el panel del centro, haga doble clic en **Certificados de servidor**.  
+1.  En el **Administrador de Internet Information Services (IIS)** , haga clic en el nodo de servidor local y, a continuación, en el panel del centro, haga doble clic en **Certificados de servidor**.  
   
 2.  En el panel **Acciones** , haga clic en **Crear certificado autofirmado**.  
   
@@ -157,9 +157,9 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 1.  En **Enternet Enformation Services (IIS) Manager**, haga clic en **Sitio web predeterminado.**  
   
-2.  En el panel **Acciones**, haga clic en **Examinar \*:443(https)**.  
+2.  En el panel **Acciones**, haga clic en **Examinar \*:443(https)** .  
   
-3.  Se abre Internet Explorer, con un mensaje que indica que "Hay un problema con el certificado de seguridad de este sitio web". Esta advertencia indica que el certificado asociado no fue emitido por una entidad de certificación reconocida y podría no ser de confianza. Es una advertencia esperada, de modo que haga clic en **Pasar a este sitio web (no recomendado)**.  
+3.  Se abre Internet Explorer, con un mensaje que indica que "Hay un problema con el certificado de seguridad de este sitio web". Esta advertencia indica que el certificado asociado no fue emitido por una entidad de certificación reconocida y podría no ser de confianza. Es una advertencia esperada, de modo que haga clic en **Pasar a este sitio web (no recomendado)** .  
   
 4.  Si se pide confirmación para **Conectar a localhost**, escriba un nombre de usuario y contraseña para continuar. Debe aparecer la página predeterminada del sitio web.  
   
@@ -218,7 +218,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     2.  En la pestaña **Seguridad** , haga clic en **Editar**.  
   
-    3.  En el cuadro de diálogo **Permisos de \<nombreDeCarpeta>**, haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
+    3.  En el cuadro de diálogo **Permisos de \<nombreDeCarpeta>** , haga clic en **Agregar** para agregar la cuenta que creó en el paso 1.  
   
     4.  Compruebe que en **Desde esta ubicación** aparece el nombre del equipo local (no un dominio). Si no aparece el nombre del equipo local, haga clic en **Ubicaciones**. En el cuadro de diálogo **Ubicaciones** , seleccione el equipo local y, a continuación, haga clic en **Aceptar**.  
   
@@ -226,9 +226,9 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     6.  Seleccione los usuarios o grupos que no requieran acceso al directorio , haga clic en **Quitar**y, después, en **Aceptar**.  
   
-4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)**:  
+4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)** :  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, en el panel **Conexiones** , expanda el nodo del servidor local.  
+    1.  En **Administrador de Internet Information Services (IIS)** , en el panel **Conexiones** , expanda el nodo del servidor local.  
   
     2.  Haga clic con el botón secundario en **Grupos de aplicaciones**y haga clic en **Grupo de aplicaciones**.  
   
@@ -239,7 +239,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 5.  Asocie la cuenta al grupo de aplicaciones:  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo del servidor y, después, haga clic en **Grupos de aplicaciones**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo del servidor y, después, haga clic en **Grupos de aplicaciones**.  
   
     2.  Haga clic con el botón secundario en el grupo de aplicaciones que ha creado y, a continuación, haga clic en **Establecer valores predeterminados de grupos de aplicaciones**.  
   
@@ -255,7 +255,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
 6.  Asocie el grupo de aplicaciones al sitio web de replicación:  
   
-    1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
+    1.  En el **Administrador de Internet Information Services (IIS)** , expanda el nodo de servidor local y, a continuación, haga clic en **Sitio web predeterminado** (o el sitio de sincronización web si es diferente del sitio web predeterminado).  
   
     2.  En el panel **Acciones** , en **Administrar sitio web**, haga clic en **Configuración avanzada**.  
   
@@ -280,7 +280,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
   
     4.  Si se utiliza un servidor proxy, haga clic en **Utilizar un servidor proxy para su LAN** y **No usar servidor proxy para direcciones locales**y, después, en **Aceptar**.  
   
-2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: **https://server.domain.com/directory/replisapi.dll?diag**.  
+2.  En el suscriptor, en Internet Explorer, conéctese al servidor en modo de diagnóstico agregando `?diag` a la dirección de replisapi.dll. Por ejemplo: **https://server.domain.com/directory/replisapi.dll?diag** .  
   
     > [!NOTE]  
     >  En el ejemplo anterior, **servidor.dominio.com** se debe reemplazar con el nombre de **Emitido** exacto que aparece en la sección **Certificados de servidor** en el Administrador de IIS.  
@@ -307,7 +307,7 @@ La sincronización web es compatible con IIS, a partir de la versión 5.0. El As
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>**, especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>** , especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas de **estado** de la página sea **SUCCESS**.  
   

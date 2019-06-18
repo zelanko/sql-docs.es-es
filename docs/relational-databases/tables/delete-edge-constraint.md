@@ -18,11 +18,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 3761d9e8507eb7051fe7a6cc39b83abfa091566d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47774689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62515889"
 ---
 # <a name="delete-edge-constraints"></a>Eliminar restricciones perimetrales
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,11 +39,11 @@ ms.locfileid: "47774689"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  

@@ -29,10 +29,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75beb2bb5fa33f20050efc38060ae82ba78c588a
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095335"
 ---
 # <a name="create-login-transact-sql"></a>CREATE LOGIN (Transact-SQL)
@@ -51,7 +51,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||||
 |-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 ||||||
 
 &nbsp;
@@ -88,25 +88,25 @@ CREATE LOGIN login_name { WITH <option_list1> | FROM <sources> }
 
 ## <a name="arguments"></a>Argumentos
 
-*login_name* Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicios de sesión: inicios de sesión de SQL Server, de Windows, asignados a certificados y asignados a claves asimétricas. Cuando crea inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe utilizar el nombre de inicio de sesión de usuario anterior a Windows 2000 con el formato[\<domainName>\\<login_name>]. No puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este artículo. Los inicios de sesión con autenticación son del tipo **sysname**, deben seguir las reglas de los [Identificadores](../../relational-databases/databases/database-identifiers.md) y no pueden contener "**\\**". Los inicios de sesión de Windows pueden contener un carácter '**\\**”. Los inicios de sesión basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.
+*login_name* Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicios de sesión: inicios de sesión de SQL Server, de Windows, asignados a certificados y asignados a claves asimétricas. Cuando crea inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe utilizar el nombre de inicio de sesión de usuario anterior a Windows 2000 con el formato[\<domainName>\\<login_name>]. No puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este artículo. Los inicios de sesión con autenticación son del tipo **sysname**, deben seguir las reglas de los [Identificadores](../../relational-databases/databases/database-identifiers.md) y no pueden contener " **\\** ". Los inicios de sesión de Windows pueden contener un carácter ' **\\** ”. Los inicios de sesión basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.
 
-PASSWORD **=**"*contraseña*" Solo se aplica a los inicios de sesión de SQL Server. Especifica la contraseña del inicio de sesión que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de SQL Server 2012 (11.x), la información de contraseña almacenada se calcula con SHA-512 de la contraseña cifrada con sal.
+PASSWORD **=** "*contraseña*" Solo se aplica a los inicios de sesión de SQL Server. Especifica la contraseña del inicio de sesión que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de SQL Server 2012 (11.x), la información de contraseña almacenada se calcula con SHA-512 de la contraseña cifrada con sal.
 
 En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres de longitud y no pueden superar los 128 caracteres. Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.
 
-PASSWORD **=***hashed\_password* Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
+PASSWORD **=** *hashed\_password* Se aplica solo a la palabra clave HASHED. Especifica el valor con hash de la contraseña para el inicio de sesión que se está creando.
 
 HASHED Solo se aplica a inicios de sesión de SQL Server. Especifica que la contraseña especificada después del argumento PASSWORD ya tiene aplicado el algoritmo hash. Si no se selecciona esta opción, se aplicará el algoritmo hash a la cadena especificada como contraseña antes de almacenarla en la base de datos. Esta opción solo se debería utilizar para migrar las bases de datos de un servidor a otro. No utilice la opción HASHED para crear nuevos inicios de sesión. La opción HASHED no se puede usar con los valores hash creados con SQL 7 o una versión anterior.
 
 MUST_CHANGE solo se aplica a inicios de sesión de SQL Server. Si se incluye esta opción, SQL Server solicita al usuario una contraseña nueva la primera vez que se use el inicio de sesión nuevo.
 
-CREDENTIAL **=**_credential\_name_ Nombre de una credencial que se debe asignar al nuevo inicio de sesión de SQL Server. La credencial debe existir en la base de datos. Actualmente esta opción solo vincula la credencial a un inicio de sesión. Las credenciales no se pueden asignar al inicio de sesión del administrador del sistema (sa).
+CREDENTIAL **=** _credential\_name_ Nombre de una credencial que se debe asignar al nuevo inicio de sesión de SQL Server. La credencial debe existir en la base de datos. Actualmente esta opción solo vincula la credencial a un inicio de sesión. Las credenciales no se pueden asignar al inicio de sesión del administrador del sistema (sa).
 
-SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. SID del inicio de sesión de SQL Server: un valor literal (**binary(16)**) de 16 bytes basado en un GUID. Por ejemplo, `SID = 0x14585E90117152449347750164BA00A7`.
+SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. SID del inicio de sesión de SQL Server: un valor literal (**binary(16)** ) de 16 bytes basado en un GUID. Por ejemplo, `SID = 0x14585E90117152449347750164BA00A7`.
 
-DEFAULT_DATABASE **=**_database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión. Si no se incluye esta opción, el valor predeterminado es master.
+DEFAULT_DATABASE **=** _database_ Especifica una base de datos predeterminada que debe asignarse al inicio de sesión. Si no se incluye esta opción, el valor predeterminado es master.
 
-DEFAULT_LANGUAGE **=**_language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. Si no se incluye esta opción, el idioma predeterminado es el del servidor. Si el idioma predeterminado del servidor se cambia más tarde, el del inicio de sesión se mantiene igual.
+DEFAULT_LANGUAGE **=** _language_ Especifica el idioma predeterminado que debe asignarse al inicio de sesión. Si no se incluye esta opción, el idioma predeterminado es el del servidor. Si el idioma predeterminado del servidor se cambia más tarde, el del inicio de sesión se mantiene igual.
 
 CHECK_EXPIRATION **=** { ON | **OFF** } Se aplica solo a inicios de sesión de SQL Server. Especifica si debe aplicarse la directiva de caducidad de contraseñas en este inicio de sesión. El valor predeterminado es OFF.
 
@@ -259,7 +259,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|**_\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_**|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|** _\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_ **|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -281,11 +281,11 @@ CREATE LOGIN login_name
 
 *login_name* Especifica el nombre del inicio de sesión que se va a crear. El grupo de bases de datos elásticas o la base de datos única de Azure SQL Database solo admite inicios de sesión de SQL.
 
-PASSWORD **='** password**'* Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.
+PASSWORD **='** password* *'* Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.
 
 En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres de longitud y no pueden superar los 128 caracteres. Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.
 
-SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Database, esto es un literal (**binary(32)**) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Database, esto es un literal (**binary(32)** ) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notas
 
@@ -301,11 +301,11 @@ SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a in
 
 La instrucción **CREATE LOGIN** debe ser la única de un lote.
 
-En algunos métodos de conexión con SQL Database, como **sqlcmd**, debe anexar el nombre del servidor de SQL Database al nombre de inicio de sesión en la cadena de conexión mediante la notación *\<inicio_de_sesión>*@*\<servidor>*. Por ejemplo, si el inicio de sesión es `login1` y el nombre completo del servidor de SQL Database es `servername.database.windows.net`, el parámetro *nombre_de_usuario* de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total del parámetro *username* es de 128 caracteres, *login_name* se limita a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.
+En algunos métodos de conexión con SQL Database, como **sqlcmd**, debe anexar el nombre del servidor de SQL Database al nombre de inicio de sesión en la cadena de conexión mediante la notación *\<inicio_de_sesión>* @ *\<servidor>* . Por ejemplo, si el inicio de sesión es `login1` y el nombre completo del servidor de SQL Database es `servername.database.windows.net`, el parámetro *nombre_de_usuario* de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total del parámetro *username* es de 128 caracteres, *login_name* se limita a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.
 
 En SQL Database, debe estar conectado a la base de datos maestra para crear un inicio de sesión.
 
-Las reglas de SQL Server permiten crear un inicio de sesión con autenticación de SQL Server con el formato \<nombreDeInicioDeSesión>@\<nombreDeServidor>. Si el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es **myazureserver** y el inicio de sesión es **myemail@live.com**, debe proporcionar un inicio de sesión como **myemail@live.com@myazureserver**.
+Las reglas de SQL Server permiten crear un inicio de sesión con autenticación de SQL Server con el formato \<nombreDeInicioDeSesión>@\<nombreDeServidor>. Si el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es **myazureserver** y el inicio de sesión es **myemail@live.com** , debe proporcionar un inicio de sesión como **myemail@live.com@myazureserver** .
 
 En SQL Database, los datos de inicio de sesión necesarios para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -379,7 +379,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|**_\* Instancia administrada de <br />SQL Database \*_**|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|** _\* Instancia administrada de <br />SQL Database \*_ **|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -412,7 +412,7 @@ PASSWORD **=** '*password*' Especifica la contraseña del inicio de sesión SQL 
 
 En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres de longitud y no pueden superar los 128 caracteres. Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.
 
-SID **=** *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a los inicios de sesión con autenticación de SQL Server. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Database, esto es un literal (**binary(32)**) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+SID **=** *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a los inicios de sesión con autenticación de SQL Server. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Database, esto es un literal (**binary(32)** ) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notas
 
@@ -560,7 +560,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|**_\* SQL Data<br />Warehouse \*_**|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|** _\* SQL Data<br />Warehouse \*_ **|[Analytics Platform<br />System (PDW)](create-login-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -582,11 +582,11 @@ CREATE LOGIN login_name
 
 *login_name* Especifica el nombre del inicio de sesión que se va a crear. Azure SQL Database solo admite los inicios de sesión SQL.
 
-PASSWORD **='** password**'* Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.
+PASSWORD **='** password* *'* Especifica la contraseña del inicio de sesión SQL que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], la información de la contraseña almacenada se calcula con las funciones SHA-512 de la contraseña salada.
 
 En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres de longitud y no pueden superar los 128 caracteres. Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.
 
- SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Data Warehouse, esto es un literal (**binary(32)**) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
+ SID = *sid* Se usa para volver a crear un inicio de sesión. Solo se aplica a inicios de sesión con autenticación de SQL Server, no a los de Windows. Especifica el SID del nuevo inicio de sesión con autenticación de SQL Server. Si no se usa esta opción, SQL Server asigna un SID de manera automática. La estructura de SID depende de la versión de SQL Server. Para SQL Data Warehouse, esto es un literal (**binary(32)** ) de 32 bytes que consta de `0x01060000000000640000000000000000` más 16 bytes que representan un GUID. Por ejemplo, `SID = 0x0106000000000064000000000000000014585E90117152449347750164BA00A7`.
 
 ## <a name="remarks"></a>Notas
 
@@ -600,11 +600,11 @@ En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñ
 
 La instrucción **CREATE LOGIN** debe ser la única de un lote.
 
-En algunos métodos de conexión con SQL Data Warehouse, como **sqlcmd**, debe anexar el nombre del servidor de SQL Data Warehouse al nombre de inicio de sesión en la cadena de conexión mediante la notación *\<inicio_de_sesión>*@*\<servidor>*. Por ejemplo, si el inicio de sesión es `login1` y el nombre completo del servidor de SQL Data Warehouse es `servername.database.windows.net`, el parámetro *nombre_de_usuario* de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total del parámetro *username* es de 128 caracteres, *login_name* se limita a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.
+En algunos métodos de conexión con SQL Data Warehouse, como **sqlcmd**, debe anexar el nombre del servidor de SQL Data Warehouse al nombre de inicio de sesión en la cadena de conexión mediante la notación *\<inicio_de_sesión>* @ *\<servidor>* . Por ejemplo, si el inicio de sesión es `login1` y el nombre completo del servidor de SQL Data Warehouse es `servername.database.windows.net`, el parámetro *nombre_de_usuario* de la cadena de conexión debe ser `login1@servername`. Dado que la longitud total del parámetro *username* es de 128 caracteres, *login_name* se limita a 127 caracteres menos la longitud del nombre del servidor. En el ejemplo, `login_name` solo puede tener 117 caracteres porque `servername` es de 10 caracteres.
 
 En SQL Data Warehouse, debe estar conectado a la base de datos maestra para crear un inicio de sesión.
 
-Las reglas de SQL Server permiten crear un inicio de sesión con autenticación de SQL Server con el formato \<nombreDeInicioDeSesión>@\<nombreDeServidor>. Si el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es **myazureserver** y el inicio de sesión es **myemail@live.com**, debe proporcionar un inicio de sesión como **myemail@live.com@myazureserver**.
+Las reglas de SQL Server permiten crear un inicio de sesión con autenticación de SQL Server con el formato \<nombreDeInicioDeSesión>@\<nombreDeServidor>. Si el servidor de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] es **myazureserver** y el inicio de sesión es **myemail@live.com** , debe proporcionar un inicio de sesión como **myemail@live.com@myazureserver** .
 
 En SQL Data Warehouse, los datos de inicio de sesión necesarios para autenticar una conexión y las reglas de firewall de nivel de servidor se almacenan temporalmente en caché en cada base de datos. Esta caché se actualiza regularmente. Para forzar una actualización de la caché de autenticación y garantizar que una base de datos tenga la versión más reciente de la tabla de inicios de sesión, ejecute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -674,7 +674,7 @@ GO
 
 > ||||||
 > |-|-|-|-|-|
-> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](create-login-transact-sql.md?view=sql-server-2017)|[Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-current)|[Instancia administrada de<br />SQL Database](create-login-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-login-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 
@@ -697,9 +697,9 @@ CREATE LOGIN loginName { WITH <option_list1> | FROM WINDOWS }
 
 ## <a name="arguments"></a>Argumentos
 
-*login_name* Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicios de sesión: inicios de sesión de SQL Server, de Windows, asignados a certificados y asignados a claves asimétricas. Cuando crea inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe utilizar el nombre de inicio de sesión de usuario anterior a Windows 2000 con el formato[\<domainName>\\<login_name>]. No puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este artículo. Los inicios de sesión con autenticación son del tipo **sysname**, deben seguir las reglas de los [Identificadores](../../relational-databases/databases/database-identifiers.md) y no pueden contener "**\\**". Los inicios de sesión de Windows pueden contener un carácter '**\\**”. Los inicios de sesión basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.
+*login_name* Especifica el nombre del inicio de sesión que se va a crear. Hay cuatro tipos de inicios de sesión: inicios de sesión de SQL Server, de Windows, asignados a certificados y asignados a claves asimétricas. Cuando crea inicios de sesión que se asignan desde una cuenta de dominio de Windows, debe utilizar el nombre de inicio de sesión de usuario anterior a Windows 2000 con el formato[\<domainName>\\<login_name>]. No puede utilizar un UPN con el formato login_name@DomainName. Vea el ejemplo D más adelante en este artículo. Los inicios de sesión con autenticación son del tipo **sysname**, deben seguir las reglas de los [Identificadores](../../relational-databases/databases/database-identifiers.md) y no pueden contener " **\\** ". Los inicios de sesión de Windows pueden contener un carácter ' **\\** ”. Los inicios de sesión basados en usuarios de Active Directory se limitan a nombres de menos de 21 caracteres.
 
-PASSWORD **="**_contraseña_" Solo se aplica a inicios de sesión de SQL Server. Especifica la contraseña del inicio de sesión que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de SQL Server 2012 (11.x), la información de contraseña almacenada se calcula con SHA-512 de la contraseña cifrada con sal.
+PASSWORD **="** _contraseña_" Solo se aplica a inicios de sesión de SQL Server. Especifica la contraseña del inicio de sesión que se está creando. Utilice una contraseña segura. Para obtener más información, vea [Contraseñas seguras](../../relational-databases/security/strong-passwords.md) y [Directiva de contraseñas](../../relational-databases/security/password-policy.md). A partir de SQL Server 2012 (11.x), la información de contraseña almacenada se calcula con SHA-512 de la contraseña cifrada con sal.
 
 En las contraseñas se distingue entre mayúsculas y minúsculas. Las contraseñas siempre deben ser de al menos 8 caracteres de longitud y no pueden superar los 128 caracteres. Las contraseñas pueden incluir a-z, A-Z, 0-9 y la mayoría de los caracteres no alfanuméricos. Las contraseñas no pueden contener comillas simples ni *login_name*.
 

@@ -19,10 +19,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: f32cf35670149a42941c91572d25bdd235c503d1
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946122"
 ---
 # <a name="specify-file-storage-type-by-using-bcp-sql-server"></a>Especificar el tipo de almacenamiento de archivos mediante bcp (SQL Server)
@@ -30,7 +30,7 @@ ms.locfileid: "64946122"
   El *tipo de almacenamiento en archivo* describe cómo se almacenan los datos en el archivo de datos. La información se puede exportar a un archivo de datos como el tipo de tabla de base de datos correspondiente (formato nativo), como su representación en caracteres (formato de caracteres) o como cualquier tipo de datos que admita la conversión implícita (por ejemplo, si copia un elemento **smallint** como **int**). Los tipos de datos definidos por el usuario se exportan como sus tipos base correspondientes.  
   
 ## <a name="the-bcp-prompt-for-file-storage-type"></a>Comando bcp para el tipo de almacenamiento en archivo  
- Si un comando **bcp** interactivo contiene la opción **in** u **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**), el comando solicita el tipo de almacenamiento de archivos de cada campo de datos, de la manera siguiente:  
+ Si un comando **bcp** interactivo contiene la opción **in** u **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), el comando solicita el tipo de almacenamiento de archivos de cada campo de datos, de la manera siguiente:  
   
  `Enter the file storage type of field <field_name> [<default>]:`  
   
@@ -78,7 +78,7 @@ ms.locfileid: "64946122"
   
      \*La interacción de longitud de campo, longitud de prefijo y terminadores determina la cantidad de espacio de almacenamiento que se asigna en un archivo de datos a datos que no son de caracteres que se exportan como el tipo de almacenamiento de archivos **char** .  
   
-     \*\* Los tipos de datos **ntext**, **text**e **image** se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En proyectos de desarrollo nuevos evite el uso de estos tipos de datos y planee la modificación de las aplicaciones que los utilicen actualmente. Use **nvarchar(max)**, **varchar(max)** y **varbinary(max)** en su lugar.  
+     \*\* Los tipos de datos **ntext**, **text**e **image** se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En proyectos de desarrollo nuevos evite el uso de estos tipos de datos y planee la modificación de las aplicaciones que los utilicen actualmente. Use **nvarchar(max)** , **varchar(max)** y **varbinary(max)** en su lugar.  
   
 ## <a name="native-file-storage-types"></a>Tipos de almacenamiento en archivo nativos  
  Cada tipo de almacenamiento en archivo nativo se registra en el archivo de formato como el tipo de datos de archivo host correspondiente.  

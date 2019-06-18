@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: aaf8d8f1410295439f5083fa8c33067d61b0ffa1
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256480"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672363"
 ---
 # <a name="query-expressions-and-uniform-resource-names"></a>Expresiones de consulta y nombres de recursos uniformes
 
@@ -134,7 +134,7 @@ Server[@Name='MYCOMPUTER']/Database[@Name='AdventureWorks2012']/Table[@Name='Sal
 Server[@Name='MYCOMPUTER']/Database[@AutoClose=false()]  
 ```  
   
-### <a name="b-enumerating-objects-using-contains"></a>b. Enumerar objetos mediante contains  
+### <a name="b-enumerating-objects-using-contains"></a>B. Enumerar objetos mediante contains  
  Esta expresión de consulta enumera todas las bases de datos con distinción entre mayúsculas y minúsculas, y cuyo nombre contiene el carácter 'm'.  
   
 ```  

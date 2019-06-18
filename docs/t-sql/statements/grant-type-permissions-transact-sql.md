@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: a97a63633dd2d1260cf83de6236bd4924af02f6d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326476"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62636274"
 ---
 # <a name="grant-type-permissions-transact-sql"></a>GRANT (permisos de tipo de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ GRANT permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name
  *permission*  
  Especifica un permiso que se puede conceder para un tipo. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- ON TYPE **::** [ _schema_name_**.** ] *type_name*  
- Especifica el tipo en el que se va a conceder el permiso. El calificador de ámbito (**::**) es obligatorio. Si no se especifica *schema_name*, se usará el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema (**.**).  
+ ON TYPE **::** [ _schema_name_ **.** ] *type_name*  
+ Especifica el tipo en el que se va a conceder el permiso. El calificador de ámbito ( **::** ) es obligatorio. Si no se especifica *schema_name*, se usará el esquema predeterminado. Si se especifica *schema_name*, se necesita el calificador de ámbito de esquema ( **.** ).  
   
  TO \<database_principal> especifica la entidad de seguridad a la que se concede el permiso.  
   

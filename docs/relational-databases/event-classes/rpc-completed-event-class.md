@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e93775f61f4a60173447a734db1f6e567b49bc7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830123"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62632795"
 ---
 # <a name="rpccompleted-event-class"></a>RPC:Completed, clase de eventos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,8 +37,8 @@ ms.locfileid: "47830123"
 |Duration|**bigint**|Cantidad de tiempo que emplea el evento. En microsegundos a partir de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. En milisegundos en versiones anteriores.|13|Sí|  
 |EndTime|**datetime**|Hora a la que finalizó la llamada a procedimiento remoto.|15|Sí|  
 |Error|**int**|Número de error de un evento dado.<br /><br /> 0=Aceptar<br /><br /> 1=Error<br /><br /> 2=Anular<br /><br /> 3=Omitido|31|Sí|  
-|EventClass|**int**|Tipo de evento = 10.|27|no|  
-|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|no|  
+|EventClass|**int**|Tipo de evento = 10.|27|No|  
+|EventSequence|**int**|Secuencia de un evento determinado de la solicitud.|51|No|  
 |GroupID|**int**|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|**nvarchar**|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IsSystem|**int**|Indica si el evento ha ocurrido en un proceso del sistema o en un proceso de usuario. 1 = sistema, 0 = usuario.|60|Sí|  
@@ -59,7 +59,7 @@ ms.locfileid: "47830123"
 |Writes|**bigint**|Número de escrituras de páginas emitidas por la llamada a procedimiento remoto.|17|Sí|  
 |XactSequence|**bigint**|Token que describe la transacción actual.|50|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

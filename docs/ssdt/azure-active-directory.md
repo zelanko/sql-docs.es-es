@@ -11,11 +11,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
 ms.openlocfilehash: 4d607a7fa7dd9ce91c5ca97bf144f89e1624ed93
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62660159"
 ---
 # <a name="azure-active-directory-support-in-sql-server-data-tools-ssdt"></a>Compatibilidad de Azure Active Directory con SQL Server Data Tools (SSDT)
 
@@ -82,7 +82,7 @@ Azure AD proporciona la aplicación de MFA a través de esta ventana emergente d
 - No se admite la comparación de datos de SSDT para la autenticación de Azure AD.  
 
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 
 [Autenticación multifactor](https://docs.microsoft.com/azure/sql-database/sql-database-ssms-mfa-authentication)  
 [Autenticación de Azure Active Directory con SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure)  

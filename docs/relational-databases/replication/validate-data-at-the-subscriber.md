@@ -19,11 +19,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: e697adb4df3127468e5e74d5e5c4cbbebbae6615
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135805"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62508339"
 ---
 # <a name="validate-replicated-data"></a>Validar datos replicados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 
 #### <a name="all-articles"></a>Todos los artículos 
   
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Especifique **@publication** y uno de los siguientes valores para **@rowcount_only**:  
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_publication_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publication-validation-transact-sql.md). Especifique **@publication** y uno de los siguientes valores para **@rowcount_only** :  
   
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
@@ -119,7 +119,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
   
 #### <a name="single-article"></a>Artículo único  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication**, el nombre del artículo para **@article**y uno de los siguientes valores para **@rowcount_only**:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication** , el nombre del artículo para **@article** y uno de los siguientes valores para **@rowcount_only** :  
   
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
@@ -133,9 +133,9 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
 #### <a name="single-subscriber"></a>Suscriptor único 
   
 1.  En el publicador de la base de datos de publicación, abra una transacción explícita mediante [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md).    
-2.  En la base de datos de publicación del publicador, ejecute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Especifique la publicación para **@publication**, el nombre del suscriptor para **@subscriber**y el nombre de la base de datos de suscripciones para **@destination_db**.    
+2.  En la base de datos de publicación del publicador, ejecute [sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql.md). Especifique la publicación para **@publication** , el nombre del suscriptor para **@subscriber** y el nombre de la base de datos de suscripciones para **@destination_db** .    
 3.  (Opcional) Repita el paso 2 para cada suscripción que se está validando.    
-4.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication**, el nombre del artículo para **@article**y uno de los siguientes valores para **@rowcount_only**:    
+4.  En la base de datos de publicación del publicador, ejecute [sp_article_validation &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md). Especifique **@publication** , el nombre del artículo para **@article** y uno de los siguientes valores para **@rowcount_only** :    
     -   **1** : solo comprobación del recuento de filas (el valor predeterminado)    
     -   **2** : recuento de filas y suma de comprobación binaria.  
   
@@ -213,7 +213,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
     3.  Vea información en la pestaña **Historial de sincronizaciones** en el área de texto **Último mensaje de la sesión seleccionada:** .  
 
 ### <a name="using-transact-sql"></a>Usar Transact-SQL
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Especifique **@publication**, el nombre del suscriptor para **@subscriber**, el nombre de la base de datos de suscripciones para **@subscriber_db**y uno de los siguientes valores para **@level**:   
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md). Especifique **@publication** , el nombre del suscriptor para **@subscriber** , el nombre de la base de datos de suscripciones para **@subscriber_db** y uno de los siguientes valores para **@level** :   
     -   **1** : validación solo del recuento de filas.    
     -   **3** : validación de la suma de comprobación binaria del recuento de filas.  
   
@@ -240,7 +240,7 @@ La replicación transaccional y la replicación de mezcla le permiten validar qu
     3.  Vea información en la pestaña **Historial de sincronizaciones** en el área de texto **Último mensaje de la sesión seleccionada:** . 
   
 ### <a name="using-transact-sql"></a>Usar Transact-SQL
-1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Especifique **@publication** y uno de los siguientes valores para **@level**:    
+1.  En el publicador de la base de datos de publicaciones, ejecute [sp_validatemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql.md). Especifique **@publication** y uno de los siguientes valores para **@level** :    
     -   **1** : validación solo del recuento de filas.   
     -   **3** : validación de la suma de comprobación binaria del recuento de filas.  
   

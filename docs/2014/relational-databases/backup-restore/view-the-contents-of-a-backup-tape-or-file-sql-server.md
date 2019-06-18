@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: dfee2d0f32ffaaf73527effdeea13d43b83a39fb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921228"
 ---
 # <a name="view-the-contents-of-a-backup-tape-or-file-sql-server"></a>Ver el contenido de una cinta o un archivo de copia de seguridad (SQL Server)

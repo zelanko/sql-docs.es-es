@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 660515f10797e1f11fac22c1baf4ed74e9f67c0c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157236"
 ---
 # <a name="supported-sql-server-features"></a>Características admitidas de SQL Server
@@ -39,7 +39,7 @@ ms.locfileid: "63157236"
   
 -   Objetos de administración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para más información, vea [Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria](sql-server-management-objects-support-for-in-memory-oltp.md).  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  Para más información, vea [Compatibilidad de SQL Server Management Studio con OLTP en memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Para más información, vea [Compatibilidad de SQL Server Management Studio con OLTP en memoria](sql-server-management-studio-support-for-in-memory-oltp.md).  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell. Para obtener más información, vea [Información general de SQL Server PowerShell](https://msdn.microsoft.com/library/cc281954\(SQL.105\).aspx).  
   
@@ -107,7 +107,7 @@ ms.locfileid: "63157236"
   
 |Bases de datos|Permitido|Descripción|  
 |---------------|-------------|-----------------|  
-|Bases de datos de usuario, modelo y msdb|No|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
+|Bases de datos de usuario, modelo y msdb|Sin|Las consultas y transacciones entre bases de datos no se admiten.<br /><br /> Las consultas y transacciones que tienen acceso a tablas optimizadas para memoria o a procedimientos almacenados compilados de forma nativa no pueden tener acceso a otras bases de datos, excepto a las bases de datos del sistema maestra (acceso de solo lectura) y tempdb.|  
 |Base de datos de recursos y tempdb|Sí|No hay restricciones en las transacciones entre bases de datos que, además de una base de datos de usuario único, usan solo la base de datos de recursos y tempdb.|  
 |maestra|solo lectura|Las transacciones entre bases de datos que tocan OLTP en memoria y la base de datos maestra no pueden confirmarse si incluyen operaciones de escritura en la base de datos maestra. Se permiten las transacciones entre bases de datos que solo leen de la base de datos maestra y usan una base de datos de un solo usuario.|  
   

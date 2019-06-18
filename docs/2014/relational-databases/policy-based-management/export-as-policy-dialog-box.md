@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: df28974c9fc6fdf3c9ef974ea5dd868f775af134
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62705199"
 ---
 # <a name="export-as-policy-dialog-box"></a>Exportar como directiva (cuadro de diálogo)
@@ -33,7 +33,7 @@ ms.locfileid: "62705199"
  Seleccione esta opción para guardar la directiva en la instancia de servidor local.  
   
  **A archivo**  
- Para guardar la directiva como un archivo XML, escriba la ruta de acceso y el nombre del archivo o use el botón Examinar (**...**).  
+ Para guardar la directiva como un archivo XML, escriba la ruta de acceso y el nombre del archivo o use el botón Examinar ( **...** ).  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar servidores mediante administración basada en directivas](administer-servers-by-using-policy-based-management.md)  

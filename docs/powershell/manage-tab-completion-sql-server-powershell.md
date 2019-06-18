@@ -11,17 +11,17 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: afe3a53c3bc6208bc723ec5f30afc6f8add1f46a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47762535"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672508"
 ---
 # <a name="manage-tab-completion-sql-server-powershell"></a>Administrar la finalización mediante tabulador (SQL Server PowerShell)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 
-Los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell introducen tres variables (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**y **$SqlServerIncludeSystemObjects**) para controlar la finalización mediante el tabulador de Windows PowerShell. La finalización mediante el tabulador reduce la cantidad de texto que se debe escribir al devolver las tablas de elementos cuyos nombres empiezan por la cadena que está escribiendo.  
+Los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell introducen tres variables ( **$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**y **$SqlServerIncludeSystemObjects**) para controlar la finalización mediante el tabulador de Windows PowerShell. La finalización mediante el tabulador reduce la cantidad de texto que se debe escribir al devolver las tablas de elementos cuyos nombres empiezan por la cadena que está escribiendo.  
 
 > [!NOTE]
 > Hay dos módulos de SQL Server PowerShell: **SqlServer** y **SQLPS**. El módulo **SQLPS** está incluido en la instalación de SQL Server (por motivos de compatibilidad con versiones anteriores), pero ya no se actualiza. El módulo de PowerShell más actualizado es **SqlServer**. El módulo **SqlServer** contiene versiones actualizadas de los cmdlets en **SQLPS**, así como nuevos cmdlets para admitir las características más recientes de SQL.  
@@ -40,7 +40,7 @@ Los complementos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] prese
  **$SqlServerMaximumChildItems =** *n*  
  Especifica el número máximo de objetos mostrados por **Get-ChildItem**. Si se ejecuta **Get-ChildItem** en un nodo de ruta de acceso que tiene más de *n* objetos, la lista se trunca en *n*. *n* es un entero. El valor predeterminado es 0, es decir, no hay límite para el número de objetos que se muestran.  
   
- **$SqlServerIncludeSystemObjects =** { **$True** | **$False** }  
+ **$SqlServerIncludeSystemObjects =** { **$True** |  **$False** }  
  Si es **$True**, los objetos del sistema se muestran con finalización mediante tabulador y **Get-ChildItem**. Si es **$False**, no se muestran objetos del sistema. El valor de configuración predeterminado es **$False**.  
   
 ## <a name="set-the-sql-server-tab-completion-variables"></a>Establecer las variables de finalización mediante tabulador de SQL Server  
@@ -56,7 +56,7 @@ $SqlServerIncludeSystemObjects = $False
 dir variable:sqlserver*  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

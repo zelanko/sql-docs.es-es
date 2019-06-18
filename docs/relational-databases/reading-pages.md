@@ -14,11 +14,11 @@ author: pmasl
 ms.author: pelopes
 manager: craigg
 ms.openlocfilehash: 0384f081f3c660bb54d75b72992b991e822ec630
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47677963"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62678713"
 ---
 # <a name="reading-pages"></a>Leer páginas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,6 +55,6 @@ Por ejemplo, supongamos que dispone de una tabla con 500.000 páginas. El Usuari
 
 Sin el recorrido avanzado, cada usuario tendría que competir por espacio en búfer y se produciría una contención en el brazo del disco. Entonces se leerían las mismas páginas una vez por cada usuario, en lugar de leerlas una vez y compartirlas entre varios usuarios, lo que ralentizaría el rendimiento y consumiría muchos recursos.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 [Guía de arquitectura de páginas y extensiones](../relational-databases/pages-and-extents-architecture-guide.md)   
  [Escribir páginas](../relational-databases/writing-pages.md)

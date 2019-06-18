@@ -14,14 +14,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1dec9e1281d2ff61dcab9312cdf5a7ad1ecb8da3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62866842"
 ---
 # <a name="date-and-time-improvements-ole-db"></a>Mejoras en la fecha y la hora (OLE DB)
-  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce nuevos tipos de datos de fecha y hora. En esta sección se describe la forma en que estos nuevos tipos se exponen como extensiones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  Para obtener información general de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la nueva fecha y tipos de datos de hora, vea [mejoras de fecha y hora](../native-client/features/date-and-time-improvements.md). Para obtener un ejemplo, vea [mejoradas de fecha de uso y las características en tiempo &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
+  [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] introduce nuevos tipos de datos de fecha y hora. En esta sección se describe la forma en que estos nuevos tipos se exponen como extensiones en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client. Para obtener información general de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client con la nueva fecha y tipos de datos de hora, vea [mejoras de fecha y hora](../native-client/features/date-and-time-improvements.md). Para obtener un ejemplo, vea [mejoradas de fecha de uso y las características en tiempo &#40;OLE DB&#41;](../native-client-ole-db-how-to/use-enhanced-date-and-time-features-ole-db.md).  
   
  Para obtener información general acerca de los tipos de datos de fecha y hora, vea [datetime &#40;Transact-SQL&#41;](/sql/t-sql/data-types/datetime-transact-sql).  
   

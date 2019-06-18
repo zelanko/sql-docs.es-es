@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: af316bd77056bb08d37551ba5cd2a812bda4ad04
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326556"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664503"
 ---
 # <a name="deny-certificate-permissions-transact-sql"></a>DENY (permisos de certificado de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ DENY permission  [ ,...n ]
  *permission*  
  Especifica un permiso que se puede denegar en un certificado. Se muestra a continuación.  
   
- ON CERTIFICATE **::**_certificate_name_  
+ ON CERTIFICATE **::** _certificate_name_  
  Especifica el certificado en el que se va a denegar el permiso. Es preciso utilizar el calificador de ámbito "::".  
   
  *database_principal*  

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0db445635960511c7aed8db54bb7015e3b8a12a7
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819183"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67231920"
 ---
 SQL Server 2012 Integration Services \(SSIS\)

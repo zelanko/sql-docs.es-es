@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a7a882660203ee2c23e1cdb6cb9dbf6aa7df407d
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124305"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62742011"
 ---
 # <a name="parameterized-filters---optimize-for-precomputed-partitions"></a>Filtros con parámetros: optimizar para las particiones precalculadas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "54124305"
   
  No obstante, si el publicador y el suscriptor se están ejecutando en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] o una versión posterior y utiliza particiones precalculadas, la pertenencia a particiones de todos los cambios efectuados en el publicador se calcula previamente y se mantiene en el momento en que se realizan los cambios. Como resultado, cuando un suscriptor se sincroniza con el publicador, puede empezar a descargar inmediatamente los cambios relativos a su partición sin tener que pasar por el proceso de evaluación de particiones. Esto puede producir importantes mejoras de rendimiento cuando una publicación tiene un número elevado de cambios, suscriptores o artículos.  
   
- Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
+ Además de utilizar particiones precalculadas, genere instantáneas previamente o permita a los suscriptores que soliciten la generación y aplicación de instantáneas la primera vez que se sincronizan. Utilice una de estas opciones o las dos para proporcionar instantáneas para publicaciones que utilicen filtros con parámetros. Si no especifica una de estas opciones, las suscripciones se inicializan utilizando una serie de instrucciones SELECT e INSERT, en lugar de la utilidad **bcp** ; este proceso es mucho más lento. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
  **Para utilizar particiones precalculadas**  
   

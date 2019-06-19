@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ff434efd0a9f4fcb3316143e598e636bff85f487
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63157831"
 ---
 # <a name="introduction-to-memory-optimized-tables"></a>Introducción a las tablas con optimización para memoria
@@ -48,7 +48,7 @@ ms.locfileid: "63157831"
   
 -   A través de procedimientos almacenados compilados de forma nativa.  
   
- Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa.	 Algunos ejemplos de acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
+ Se puede tener acceso a las tablas con optimización para memoria de forma más eficaz desde procedimientos almacenados compilados de forma nativa ([Procedimientos almacenados compilados de forma nativa](natively-compiled-stored-procedures.md)). Se puede tener acceso también a las tablas con optimización para memoria con [!INCLUDE[tsql](../../../includes/tsql-md.md)]interpretado (tradicional). [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado hace referencia al acceso a tablas optimizadas para memoria sin un procedimiento almacenado compilado de forma nativa. Algunos ejemplos de acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado son el acceso a una tabla optimizada para memoria desde un desencadenador DML, un lote ad hoc de [!INCLUDE[tsql](../../../includes/tsql-md.md)] , una vista y una función con valores de tabla.  
   
  En la tabla siguiente se resume el acceso con [!INCLUDE[tsql](../../../includes/tsql-md.md)] interpretado y nativo para varios objetos.  
   

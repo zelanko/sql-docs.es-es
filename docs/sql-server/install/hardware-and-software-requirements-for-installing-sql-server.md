@@ -46,10 +46,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 3342007b5d122d2c780583636758f838851edc06
-ms.sourcegitcommit: 249c0925f81b7edfff888ea386c0deaa658d56ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66413583"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>Requisitos de hardware y software para instalar SQL Server
@@ -81,7 +81,7 @@ En este artículo se enumeran los requisitos mínimos de hardware y software par
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client  
   
-    -   Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
+    -   Archivos auxiliares del programa de instalación de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
   
 -   Para conocer los requisitos mínimos de versión para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[win8srv](../../includes/win8srv-md.md)] o [!INCLUDE[win8](../../includes/win8-md.md)], vea [Usar SQL Server en Windows 8 y versiones posteriores del sistema operativo Windows](https://support.microsoft.com/kb/2681562).  
   

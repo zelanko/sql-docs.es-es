@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f5aa6fd5a6ebc10cc91f749ee4745e3676c4a3c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811419"
 ---
 # <a name="configure-the-query-wait-server-configuration-option"></a>Establecer la opción de configuración del servidor Espera de consulta
@@ -41,7 +41,7 @@ ms.locfileid: "62811419"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **Seguimiento:**  [Después de configurar la opción query wait](#FollowUp)  
+-   **Seguimiento:**  [Después de configurar la opción Espera de consulta](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -90,7 +90,7 @@ GO
   
  Para obtener más información, vea [Opciones de configuración de servidor &#40;SQL Server&#41;](server-configuration-options-sql-server.md).  
   
-##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción query wait  
+##  <a name="FollowUp"></a> Seguimiento: Después de configurar la opción Espera de consulta  
  La configuración surte efecto inmediatamente, sin necesidad de reiniciar el servidor.  
   
 ## <a name="see-also"></a>Vea también  

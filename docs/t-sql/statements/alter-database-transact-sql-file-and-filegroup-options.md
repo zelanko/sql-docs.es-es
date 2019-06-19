@@ -44,11 +44,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 47dca205ad7ac3dd2a82ce404bc2e7fb20938346
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63201699"
 ---
 # <a name="alter-database-transact-sql-file-and-filegroup-options"></a>Opciones File y Filegroup de ALTER DATABASE (Transact-SQL)
 
@@ -64,7 +64,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 |||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
+|** _\* SQL Server \*_ ** &nbsp;|[Instancia administrada de<br />SQL Database](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
 |||
 
 &nbsp;
@@ -179,7 +179,7 @@ NEWNAME *new_logical_file_name* Especifica un nombre lógico nuevo para el archi
 
 *new_logical_file_name* Es el nombre que reemplaza el nombre del archivo lógico existente. El nombre debe ser único en la base de datos y debe cumplir las mismas reglas que los [identificadores](../../relational-databases/databases/database-identifiers.md). El nombre puede ser una constante Unicode o de caracteres, un identificador regular o un identificador delimitado.
 
-FILENAME { **"**_os\_file\_name_**"** | **"**_filestream\_path_**"** | **"**_memory\_optimized\_data\_path_**"**} Especifica el nombre de archivo (físico) del sistema operativo.
+FILENAME { **"** _os\_file\_name_ **"** | **"** _filestream\_path_ **"** | **"** _memory\_optimized\_data\_path_ **"** } Especifica el nombre de archivo (físico) del sistema operativo.
 
 "*os_file_name*"Para un grupo de archivos estándar (ROWS), se trata de la ruta de acceso y el nombre de archivo que utiliza el sistema operativo al crear el archivo. El archivo debe residir en el servidor donde esté instalado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La ruta especificada debe existir antes de ejecutar la instrucción ALTER DATABASE.
 
@@ -279,7 +279,7 @@ REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de arc
 > [!NOTE]
 > A menos que el recolector de elementos no utilizados de FILESTREAM haya quitado todos los archivos de un contenedor de FILESTREAM, la operación `ALTER DATABASE REMOVE FILE` para quitar un contenedor de FILESTREAM no se ejecutará correctamente y devolverá un error. Vea la sección [Quitar un contenedor de FILESTREAM](#removing-a-filestream-container) más adelante en este tema.
 
-MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.
+MODIFY FILEGROUP *filegroup_name* { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.
 
 \<filegroup_updatability_option> Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.
 
@@ -397,7 +397,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Agregar a una base de datos un grupo de archivos con dos archivos
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Agregar a una base de datos un grupo de archivos con dos archivos
 
 En el siguiente ejemplo se crea el grupo de archivos `Test1FG1` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] y se agregan dos archivos de 5 MB al grupo de archivos.
 
@@ -684,7 +684,7 @@ GO
 
 > |||
 > |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* Instancia administrada de <br />SQL Database \*_**<br />&nbsp;|
+> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|** _\* Instancia administrada de <br />SQL Database \*_ **<br />&nbsp;|
 
 &nbsp;
 
@@ -812,7 +812,7 @@ ALTER DATABASE sql_db_mi ADD FILE (NAME='sql_db_mi_mod') TO FILEGROUP sql_db_mi_
 
 REMOVE FILEGROUP Quitar grupo de archivos *filegroup_name* Quita un grupo de archivos de la base de datos. El grupo de archivos no se puede quitar a menos que esté vacío. Quita todos los archivos del primer grupo de archivos. Para más información, vea "REMOVE FILE *logical_file_name*" anteriormente en este tema.
 
-MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=**_new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.
+MODIFY FILEGROUP _filegroup\_name_ { \<filegroup_updatability_option> | DEFAULT | NAME **=** _new\_filegroup\_name_ } Modifica el grupo de archivos al establecer el estado en READ_ONLY o READ_WRITE, lo que convierte al grupo de archivos en predeterminado para la base de datos o cambia el nombre del grupo de archivos.
 
 \<filegroup_updatability_option> Establece la propiedad de solo lectura o solo lectura/escritura para el grupo de archivos.
 
@@ -878,7 +878,7 @@ ADD FILE
 GO
 ```
 
-### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>b. Agregar a una base de datos un grupo de archivos con dos archivos
+### <a name="b-adding-a-filegroup-with-two-files-to-a-database"></a>B. Agregar a una base de datos un grupo de archivos con dos archivos
 
 En el siguiente ejemplo se crea el grupo de archivos `Test1FG1` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] y se agregan dos archivos de 5 MB al grupo de archivos.
 

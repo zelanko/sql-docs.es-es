@@ -19,10 +19,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 0167cb17dfe0f551bcfe5e1ed42d2248d14f6df7
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65938550"
 ---
 # <a name="stmpolyfromwkb-geometry-data-type"></a>STMPolyFromWKB (tipo de datos geometry)
@@ -39,7 +39,7 @@ STMPolyFromWKB ( 'WKB_multipolygon' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipolygon*  
- Es la representación WKB de la instancia de **geometryMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)** .  
+ Es la representación WKB de la instancia de **geometryMultiPolygon** que se quiere devolver. *WKB_multipolygon* es una expresión **varbinary(max)**.  
   
  *SRID*  
  Es una expresión de tipo **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiPolygon** que se quiere devolver.  

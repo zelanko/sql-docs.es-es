@@ -12,10 +12,10 @@ ms.author: aliceku
 manager: ajayj
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1cf3b95ec5836ac86770bd0cd9784f0617b91846
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65580977"
 ---
 # <a name="static-data-masking"></a>Enmascaramiento estático de datos
@@ -93,7 +93,7 @@ El reemplazo se realiza en el nivel de almacenamiento. Como resultado, no es pos
 
 A continuación se muestra una guía paso a paso para ejecutar el enmascaramiento estático de datos. 
  
-1. Inicie SQL Server Management Studio. Conéctese a la base de datos. En el panel **Explorador de objetos** en el lado izquierdo, expanda la carpeta Bases de datos. Haga clic con el botón derecho en la base de datos que quiera enmascarar. Haga clic en **Tareas**. Haga clic en **Enmascarar base de datos... (versión preliminar)**.
+1. Inicie SQL Server Management Studio. Conéctese a la base de datos. En el panel **Explorador de objetos** en el lado izquierdo, expanda la carpeta Bases de datos. Haga clic con el botón derecho en la base de datos que quiera enmascarar. Haga clic en **Tareas**. Haga clic en **Enmascarar base de datos... (versión preliminar)** .
  
  ![Menú Tareas](../../relational-databases/security/media/sql-static-data-masking/task_data_masking.PNG)
  
@@ -140,7 +140,7 @@ El enmascaramiento NULL reemplaza todos los valores de la columna con el valor N
 
 ### <a name="single-value-masking"></a>Enmascaramiento de un solo valor
 
-El enmascaramiento de un solo valor reemplaza todos los valores de la columna con un único valor fijo, especificado por el usuario. El formato de la entrada debe ser convertible al tipo que tenga la columna seleccionada. Para especificar el valor, haga clic en **Configurar...**, proporcione un valor y después haga clic en **Aceptar**. 
+El enmascaramiento de un solo valor reemplaza todos los valores de la columna con un único valor fijo, especificado por el usuario. El formato de la entrada debe ser convertible al tipo que tenga la columna seleccionada. Para especificar el valor, haga clic en **Configurar...** , proporcione un valor y después haga clic en **Aceptar**. 
 
 ![Parámetro de enmascaramiento de un solo valor](../../relational-databases/security/media/sql-static-data-masking/single_value_parameter.PNG)
 
@@ -167,7 +167,7 @@ A continuación se muestra un ejemplo de enmascaramiento aleatorio sin mantener 
 | 612-72-1026  | 116-30-8733  | 209-36-1971 |  
 
 ### <a name="group-shuffle-masking"></a>Enmascaramiento de orden aleatorio de grupo
-Orden aleatorio de grupo enlaza varias columnas en un grupo de orden aleatorio. Las columnas de un grupo de orden aleatorio se mezclarán juntas. El usuario debe especificar el nombre del grupo de orden aleatorio mediante la opción **Configurar...**.
+Orden aleatorio de grupo enlaza varias columnas en un grupo de orden aleatorio. Las columnas de un grupo de orden aleatorio se mezclarán juntas. El usuario debe especificar el nombre del grupo de orden aleatorio mediante la opción **Configurar...** .
 
 ![Parámetro de enmascaramiento de orden aleatorio de grupo](../../relational-databases/security/media/sql-static-data-masking/group_shuffle_parameter.PNG)
 

@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 3dc7c4b9b32ee872ec48e78ecb05a713f2cf8a12
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62651494"
 ---
 # <a name="create-nonclustered-indexes"></a>Crear índices no clúster
@@ -92,11 +92,11 @@ ms.locfileid: "62651494"
   
 3.  Expanda la tabla en la que desea crear un índice no clúster.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre_tabla_ , active las casillas de las columnas de tabla que se van a agregar al índice no agrupado.  
   

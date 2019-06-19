@@ -35,10 +35,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 68f12f498946e7eb230aaab5185973eeb810e7e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917364"
 ---
 # <a name="manage-metadata-when-making-a-database-available-on-another-server-instance-sql-server"></a>Administrar los metadatos cuando una base de datos pasa a estar disponible en otra instancia de servidor (SQL Server)
@@ -134,7 +134,7 @@ ms.locfileid: "62917364"
   
  Para habilitar el cifrado automático de la clave maestra de una instancia de servidor, se cifra una copia de esta clave mediante la clave maestra de servicio. Esta copia cifrada se almacena en la base de datos y en **maestra**. Por lo general, la copia almacenada en la base de datos **maestra** se actualiza automáticamente al cambiar la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta primero descifrar la clave maestra de base de datos con la clave maestra de servicio de la instancia. Si ese descifrado produce errores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] buscará en el almacén de credenciales las credenciales de clave maestra con el mismo GUID de familia que la base de datos para la que necesita la clave maestra. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intentará después descifrar la clave maestra de la base de datos con cada credencial coincidente hasta que el descifrado se realice correctamente o no queden más credenciales. Para abrir una clave maestra que no se haya cifrado con la clave maestra de servicio, debe utilizarse la instrucción OPEN MASTER KEY y una contraseña.  
   
- Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***contraseña***'**. Se recomienda habilitar luego el descifrado automático de la clave maestra de la base de datos mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
+ Cuando se copia, restaura o adjunta una base de datos a una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una copia de la clave maestra de la base de datos cifrada por la clave maestra de servicio no se almacena en **maestra** en la instancia de servidor de destino. Se debe abrir la clave maestra de la base de datos en esta instancia. Para abrir la clave maestra, ejecute la instrucción siguiente: OPEN MASTER KEY DECRYPTION BY PASSWORD **='***contraseña***'** . Se recomienda habilitar luego el descifrado automático de la clave maestra de la base de datos mediante la ejecución de la siguiente instrucción: ALTER MASTER KEY ADD ENCRYPTION BY SERVICE MASTER KEY. La instrucción ALTER MASTER KEY proporciona a la instancia de servidor una copia de la clave maestra de la base de datos que se ha cifrado con la clave maestra de servicio. Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/open-master-key-transact-sql) y [ALTER MASTER KEY &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-master-key-transact-sql).  
   
  Para obtener información sobre cómo habilitar el descifrado automático de la clave maestra de base de datos de una base de datos reflejada, vea [Establecer una base de datos reflejada cifrada](../../database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md).  
   

@@ -16,17 +16,17 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e5d91c82d892888d2e6edde5615ba05a2a9ebf3c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011754"
 ---
 # <a name="specify-prefix-length-in-data-files-by-using-bcp-sql-server"></a>Especificar la longitud de prefijo en los archivos de datos mediante bcp (SQL Server)
   Para proporcionar el almacenamiento en archivo más compacto para exportar de forma masiva datos en formato nativo a un archivo de datos, el comando **bcp** precede cada campo con uno o varios caracteres que indican la longitud del campo. Estos caracteres se denominan *caracteres de prefijo de longitud*.  
   
 ## <a name="the-bcp-prompt-for-prefix-length"></a>Petición bcp de longitud de prefijo  
- Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato (**-f**) o un modificador de formato de datos (**-n**, **-c**, **-w**o **-N**), el comando solicita la longitud de prefijo de cada campo, de la manera siguiente:  
+ Si un comando **bcp** interactivo contiene la opción **in** o **out** sin el modificador de archivo de formato ( **-f**) o un modificador de formato de datos ( **-n**, **-c**, **-w**o **-N**), el comando solicita la longitud de prefijo de cada campo, de la manera siguiente:  
   
  `Enter prefix length of field <field_name> [<default>]:`  
   

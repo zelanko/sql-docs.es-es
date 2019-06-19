@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060091"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
@@ -115,7 +115,7 @@ ms.locfileid: "66060091"
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
 |`ExecuteDTS80PackageTaskBegin`|Indica que la tarea inició la ejecución del paquete DTS 2000.|  
-|`ExecuteDTS80PackageTaskEnd`|Indica que finalizó la tarea.<br /><br /> Nota: El paquete DTS 2000 puede continuar ejecutándose una vez finalizada la tarea.|  
+|`ExecuteDTS80PackageTaskEnd`|Indica que finalizó la tarea.<br /><br /> Nota: Es posible que el paquete DTS 2000 continúe ejecutándose una vez finalizada la tarea.|  
 |`ExecuteDTS80PackageTaskTaskInfo`|Proporciona información descriptiva sobre la tarea.|  
 |`ExecuteDTS80PackageTaskTaskResult`|Informa del resultado de la ejecución del paquete DTS 2000 que ejecutó la tarea.|  
   

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66701205"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Proveedor Microsoft OLE DB para Microsoft Introducción al servicio de indización
@@ -96,7 +96,7 @@ MSIDXS
 
 |Método|¿Está disponible?|
 |------------|----------------|
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sin|

@@ -19,10 +19,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b824129d1687dce8471800f79d106328b9ee36f6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62892288"
 ---
 # <a name="integration-services-ssis-variables"></a>Variables de Integration Services (SSIS)
@@ -103,7 +103,7 @@ ms.locfileid: "62892288"
  Solo lectura  
  Cuando la propiedad está establecida en `False`, la variable es de lectura\escritura.  
   
- Ámbito  
+ Scope  
  > [!NOTE]  
 >  Para cambiar este valor de la propiedad, basta con hacer clic en **Mover variable** en la ventana **Variables** .  
   

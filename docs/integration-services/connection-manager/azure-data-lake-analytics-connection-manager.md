@@ -16,10 +16,10 @@ author: yanancai
 ms.author: yanacai
 manager: craigg
 ms.openlocfilehash: 735822224ef24dc609ca0f84c3265e89f1f63240
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462607"
 ---
 # <a name="azure-data-lake-analytics-connection-manager"></a>Administrador de conexiones de Azure Data Lake Analytics

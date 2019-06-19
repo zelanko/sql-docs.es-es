@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 59e9b89200e9510266f40e7ae8e471d4f6283a0f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595423"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051722"
 ---
 # <a name="management-data-warehouse"></a>almacén de administración de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,7 +126,7 @@ ms.locfileid: "47595423"
 |Se ha agregado la tabla core.performance_counter_report_group_items a la sección "Esquema de núcleo".|  
 |Se ha actualizado la lista de tablas de la sección "Esquema de instantáneas". Se ha agregado snapshots.os_memory_clerks, snapshots.sql_process_and_system_memory y snapshots.io_virtual_file_stats. Se ha quitado snapshots.os_process_memory y snapshots.distinct_query_stats.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Procedimientos almacenados de almacén de administración de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/management-data-warehouse-stored-procedures-transact-sql.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   

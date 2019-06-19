@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b454197982685882610fc808d9319835053e21bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134215"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661095"
 ---
 # <a name="configure-snapshot-properties-replication-transact-sql-programming"></a>Configurar propiedades de instantáneas (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "54134215"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-snapshot-or-transactional-publication"></a>Para configurar propiedades de instantáneas al crear una instantánea o una publicación transaccional  
   
-1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique un nombre de publicación para **@publication**, el valor **snapshot** o **continuous** para **@repl_freq**y uno o más de los siguientes parámetros relacionados con instantáneas:  
+1.  En el publicador, ejecute [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md). Especifique un nombre de publicación para **@publication** , el valor **snapshot** o **continuous** para **@repl_freq** y uno o más de los siguientes parámetros relacionados con instantáneas:  
   
     -   **@alt_snapshot_folder** - especifique una ruta si a la instantánea de esta publicación se tiene acceso desde esa ubicación en lugar o además de desde la carpeta predeterminada para instantáneas.    
     -   **@compress_snapshot** - especifique el valor **true** si los archivos de instantáneas de la carpeta de instantáneas están comprimidos en el formato de archivo CAB de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .    
@@ -40,7 +40,7 @@ ms.locfileid: "54134215"
   
 ### <a name="to-configure-snapshot-properties-when-creating-a-merge-publication"></a>Para configurar propiedades de instantáneas al crear una publicación de combinación  
   
-1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique un nombre de publicación para **@publication**, el valor **snapshot** o **continuous** para **@repl_freq**y uno o más de los siguientes parámetros relacionados con instantáneas:  
+1.  En el publicador, ejecute [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). Especifique un nombre de publicación para **@publication** , el valor **snapshot** o **continuous** para **@repl_freq** y uno o más de los siguientes parámetros relacionados con instantáneas:  
   
     -   **@alt_snapshot_folder** - especifique una ruta si a la instantánea de esta publicación se tiene acceso desde esa ubicación en lugar o además de desde la carpeta predeterminada para instantáneas.    
     -   **@compress_snapshot** - especifique el valor **true** si los archivos de instantáneas de la carpeta de instantáneas están comprimidos en el formato de archivo CAB.   
@@ -52,9 +52,9 @@ ms.locfileid: "54134215"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-snapshot-or-transactional-publication"></a>Para modificar las propiedades de instantánea de una instantánea o de una publicación transaccional existente  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property**:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property** :  
   
-    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value**.    
+    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value** .    
     -   **compress_snapshot** - especifique también el valor **true** o **false** para **@value** para indicar si los archivos de instantáneas de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
     -   **pre_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
     -   **post_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
@@ -69,15 +69,15 @@ ms.locfileid: "54134215"
   
 ### <a name="to-modify-snapshot-properties-of-an-existing-merge-publication"></a>Para modificar las propiedades de instantánea de una publicación de combinación existente  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property**:  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md). Especifique el valor **1** para **@force_invalidate_snapshot** y uno de los valores siguientes para **@property** :  
   
-    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value**.    
+    -   **alt_snapshot_folder** - especifique también una nueva ruta a la carpeta de instantáneas alternativa para **@value** .    
     -   **compress_snapshot** - especifique también el valor **true** o **false** para **@value** para indicar si los archivos de instantáneas de la carpeta de instantáneas alternativa están comprimidos en el formato de archivo CAB.    
     -   **pre_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
     -   **post_snapshot_script** - especifique también para **@value** el nombre de archivo y la ruta completa de un archivo **.sql** que se ejecutará en el suscriptor durante la inicialización antes de que se aplique la instantánea inicial.    
     -   **snapshot_in_defaultfolder** - especifique también el valor **true** o **false** para indicar si la instantánea está disponible únicamente en una ubicación que no es la predeterminada.  
   
-2.  Ejecute el [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) desde el símbolo del sistema o inicie el trabajo del Agente de instantáneas para generar una nueva instantánea. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+2.  Ejecute el [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md) desde el símbolo del sistema o inicie el trabajo del Agente de instantáneas para generar una nueva instantánea. Para más información, consulte [Crear y aplicar la instantánea inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se crea una publicación que usa una carpeta de instantáneas alternativa y una instantánea comprimida.  

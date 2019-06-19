@@ -12,10 +12,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: f189af664a634d362485e97044ba6d19cae8275b
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015053"
 ---
 # <a name="file-snapshot-backups-for-database-files-in-azure"></a>Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure
@@ -26,7 +26,7 @@ ms.locfileid: "66015053"
   
  **Descargar**  
   
--   Para descargar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)** .  
+-   Para descargar [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], vaya al  **[Centro de evaluación](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**.  
   
 -   ¿Tiene una cuenta de Azure?  Si es así, haga clic **[aquí](https://azure.microsoft.com/services/virtual-machines/sql-server/)** para poner en marcha una máquina virtual con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ya instalado.  
   

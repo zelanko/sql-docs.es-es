@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a62f6c2e1ef86a6fcd5e532b2ef413d8142698e6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63253560"
 ---
 # <a name="configure-a-user-to-create-and-manage-sql-server-agent-jobs"></a>Configurar un usuario para crear y administrar trabajos del Agente SQL Server
@@ -27,12 +27,12 @@ ms.locfileid: "63253560"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para configurar un usuario para crear y administrar trabajos del Agente SQL Server, utilizando:**  [SQL Server Management Studio](#SSMS)  
+-   **Para configurar un usuario para crear y administrar trabajos del Agente SQL Server, utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
- Para configurar un usuario para crear o ejecutar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trabajos del agente, primero debe agregar un rol msdb o inicio de sesión de SQL Server existente a uno de los siguientes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente fijas de base de datos en la base de datos msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
+ Para configurar un usuario con el fin de crear o ejecutar trabajos del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], primero debe agregar un inicio de sesión de SQL Server existente o un rol msdb a uno de los siguientes roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos msdb: SQLAgentUserRole, SQLAgentReaderRole o SQLAgentOperatorRole.  
   
  De forma predeterminada, los miembros de estos roles de la base de datos pueden crear sus propios pasos de trabajo que se ejecutan como ellos mismos. Si estos usuarios no administrativos desean ejecutar trabajos que ejecuten otros tipos de pasos de trabajo (por ejemplo, paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] ), necesitarán tener acceso a una cuenta de proxy. Todos los miembros del rol fijo de servidor sysadmin tienen permiso para crear, modificar o eliminar cuentas de proxy. Para más información sobre los permisos asociados con estos roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , consulte [Roles fijos de base de datos del Agente SQL Server](sql-server-agent-fixed-database-roles.md).  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716947"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (base de datos de SSISDB)
@@ -41,16 +41,16 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)** .  
   
  [@environment_name =] *environment_name*  
- El nombre del entorno. *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [@variable_name =] *variable_name*  
- Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)** .  
   
  [@data_type =] *data_type*  
- Tipo de datos de la variable. Los tipos de datos de las variables de entorno admitidos incluyen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** y **UInt64**. Los tipos de datos de las variables de entorno no admitidos incluyen **Char**, **DBNull**, **Object** y **Sbyte**. El tipo de datos del parámetro *data_type* es **nvarchar(128)**.  
+ Tipo de datos de la variable. Los tipos de datos de las variables de entorno admitidos incluyen **Boolean**, **Byte**, **DateTime**, **Double**, **Int16**, **Int32**, **Int64**, **Single**, **String**, **UInt32** y **UInt64**. Los tipos de datos de las variables de entorno no admitidos incluyen **Char**, **DBNull**, **Object** y **Sbyte**. El tipo de datos del parámetro *data_type* es **nvarchar(128)** .  
   
  [@sensitive =] *sensitive*  
  Indica si la variable contiene un valor confidencial o no. Use un valor de `1` para indicar que el valor de la variable de entorno es confidencial o un valor de `0` para indicar que no lo es. Un valor confidencial se cifra cuando se almacena. Un valor que no es confidencial se almacena en texto no cifrado.*Sensitive* es de tipo **bit**.  
@@ -59,7 +59,7 @@ catalog.create_environment_variable [@folder_name =] folder_name
  Valor de la variable de entorno. El parámetro *value* es de tipo **sql_variant**.  
   
  [@description =] *description*  
- Descripción de la variable de entorno. El parámetro *value* es de tipo **nvarchar(1024)**.  
+ Descripción de la variable de entorno. El parámetro *value* es de tipo **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

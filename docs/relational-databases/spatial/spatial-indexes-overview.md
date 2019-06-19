@@ -14,10 +14,10 @@ ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 6cad42165bfb79e411a6e1fe6edef0c1b2ef9caa
-ms.sourcegitcommit: 57c3b07cba5855fc7b4195a0586b42f8b45c08c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65939206"
 ---
 # <a name="spatial-indexes-overview"></a>Información general sobre los índices espaciales
@@ -101,7 +101,7 @@ ms.locfileid: "65939206"
   
  Por ejemplo, piense en la ilustración anterior, que muestra un octágono que se ajusta por completo a la celda 15 de la cuadrícula de nivel 1. En la ilustración, se ha realizado la teselación en la celda 15, diseccionando el octágono en nueve celdas de nivel 2. Esta ilustración supone que el límite de celdas por proyecto es 9 o más. Sin embargo, si el límite de celdas por proyecto fuera 8 o menos, no se realizaría la teselación en la celda 15 y solo se contaría dicha celda 15 para el objeto.  
   
- De forma predeterminada, el límite de celdas por proyecto es de 16 celdas por objeto, lo que proporciona un equilibrio satisfactorio entre espacio y precisión para la mayoría de los índices espaciales. Sin embargo, la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] admite una cláusula CELLS_PER_OBJECT **=** _n_ que le permite especificar un límite de celdas por proyecto entre 1 y 8192, incluidos.  
+ De forma predeterminada, el límite de celdas por proyecto es de 16 celdas por objeto, lo que proporciona un equilibrio satisfactorio entre espacio y precisión para la mayoría de los índices espaciales. Sin embargo, la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] admite una cláusula CELLS_PER_OBJECT**=**_n_ que le permite especificar un límite de celdas por proyecto entre 1 y 8192, incluidos.  
   
 > [!NOTE]  
 >  El valor **cells_per_object** de un índice espacial es visible en la vista de catálogo [sys.spatial_index_tessellations](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md) .  
@@ -130,7 +130,7 @@ ms.locfileid: "65939206"
 >  Puede especificar explícitamente este esquema de teselación con la cláusula USING (GEOMETRY_AUTO_GRID/GEOMETRY_GRID) de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
 ##### <a name="the-bounding-box"></a>El cuadro de límite  
- Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, **(** _x-min_ **,** _y-min_ **)** y **(** _x-max_ **,** _y-max_ **)** , que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
+ Los datos geométricos ocupan un plano que puede ser infinito. Sin embargo, en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], un índice espacial requiere un espacio finito. Para establecer un espacio finito para descomposición, el esquema de teselación de cuadrícula de geometría exige un *cuadro de límite*rectangular. El cuadro de límite está definido por cuatro coordenadas, **(**_x-min_**,**_y-min_**)** y **(**_x-max_**,**_y-max_**)**, que se almacenan como propiedades del índice espacial. Estas coordenadas representan lo siguiente:  
   
 -   *x-min* es la coordenada x de la esquina inferior izquierda del cuadro de límite.  
   
@@ -143,11 +143,11 @@ ms.locfileid: "65939206"
 > [!NOTE]  
 >  Estas coordenadas están especificadas por la cláusula BOUNDING_BOX de la instrucción [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] .  
   
- Las coordenadas **(** _x-min_ **,** _y-min_ **)** y **(** _x-max_ **,** _y-max_ **)** determinan la posición y las dimensiones del cuadro de límite. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
+ Las coordenadas **(**_x-min_**,**_y-min_**)** y **(**_x-max_**,**_y-max_**)** determinan la posición y las dimensiones del cuadro de límite. El espacio exterior del cuadro de límite se trata como una celda única con el número 0.  
   
  El índice espacial descompone el espacio que se encuentra dentro del cuadro de límite. La cuadrícula de nivel 1 de la jerarquía de cuadrículas rellena el cuadro de límite. Para colocar un objeto geométrico en la jerarquía de cuadrículas, el índice espacial compara las coordenadas del objeto con las coordenadas del cuadro de límite.  
   
- La ilustración siguiente muestra los puntos definidos por las coordenadas **(** _x-min_ **,** _y-min_ **)** y **(** _x-max_ **,** _y-max_ **)** del cuadro de límite. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
+ La ilustración siguiente muestra los puntos definidos por las coordenadas **(**_x-min_**,**_y-min_**)** y **(**_x-max_**,**_y-max_**)** del cuadro de límite. El nivel superior de la jerarquía de cuadrículas se muestra como una cuadrícula 4x4. Para la ilustración, se omiten los niveles inferiores. Un cero (0) indica el espacio exterior del cuadro de límite. Tenga en cuenta que el objeto 'A' se extiende, en parte, más allá del cuadro y el objeto 'B' permanece por completo fuera del cuadro de la celda 0.  
   
  ![Cuadro de límite que muestra las coordenadas y la celda 0.](../../relational-databases/spatial/media/spndx-bb-4x4-objects.gif "Cuadro de límite que muestra las coordenadas y la celda 0.")  
   

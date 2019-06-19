@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 9525ef65973baa38ae19ba4681e4a93f949c004a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63071828"
 ---
 # <a name="creating-natively-compiled-stored-procedures"></a>Crear procedimientos almacenados compilados de forma nativa
@@ -57,7 +57,7 @@ go
 |------------|-----------------|  
 |`SCHEMABINDING`|Los procedimientos almacenados compilados de forma nativa se debe enlazar al esquema de objetos al que hacen referencia. Esto significa que no se puede anular la tabla a la que hace referencia el procedimiento. Las tablas que se hace referencia en el procedimiento deben incluir su nombre de esquema y los caracteres comodín (\*) no se permiten en las consultas. `SCHEMABINDING` solo se admite para los procedimientos almacenados compilados de forma nativa en esta versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].|  
 |`EXECUTE AS`|Los procedimientos almacenados compilados de forma nativa no admiten `EXECUTE AS CALLER`, que es el contexto de ejecución predeterminado. Por tanto, se deberá especificar el contexto de ejecución. Las opciones `EXECUTE AS OWNER`, `EXECUTE AS` *usuario*, y `EXECUTE AS SELF` son compatibles.|  
-|`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL`  Consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE`  El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
+|`BEGIN ATOMIC`|El cuerpo de un procedimiento almacenado compilado de forma nativa debe constar exactamente de un solo bloque atomic. Los bloques atomic garantizan la ejecución atómica del procedimiento almacenado. Si se invoca el procedimiento fuera del contexto de una transacción activa, iniciará una nueva transacción, que se confirma al final del bloque atomic. Los bloques atomic de los procedimientos almacenados compilados de forma nativa tienen dos opciones obligatorias:<br /><br /> `TRANSACTION ISOLATION LEVEL` Consulte [Transaction Isolation Levels](../../database-engine/transaction-isolation-levels.md) para los niveles de aislamiento admitidos.<br /><br /> `LANGUAGE` El lenguaje del procedimiento almacenado se debe establecer en uno de los lenguajes o de alias de lenguaje disponibles.|  
   
  En relación con `EXECUTE AS` y los inicios de sesión de Windows, puede aparecer un error debido a la suplantación realizada con `EXECUTE AS`. Si una cuenta de usuario usa la autenticación de Windows, debe haber plena confianza entre la cuenta de servicio utilizada para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y el dominio del inicio de sesión de Windows. Si no hay plena confianza, se devuelve el siguiente mensaje de error al crear compilado de forma nativa de procedimiento almacenado: Mensaje 15404, no se pudo obtener información acerca de Windows NT grupo o usuario 'nombreDeUsuario', código de error 0 x 5.  
   

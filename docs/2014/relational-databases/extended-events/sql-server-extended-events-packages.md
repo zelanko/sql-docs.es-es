@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1982a1ed16479ca1f7891a7b81d761ee7a0b1621
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62638742"
 ---
 # <a name="sql-server-extended-events-packages"></a>Paquetes de SQL Server Extended Events
@@ -36,7 +36,7 @@ ms.locfileid: "62638742"
   
  Un paquete puede contener cualquiera de los objetos siguientes, o todos ellos, que se describen pormenorizadamente más adelante en este tema:  
   
--   Eventos  
+-   Events  
   
 -   Destinos  
   
@@ -55,7 +55,7 @@ ms.locfileid: "62638742"
   
  ![La relación de un módulo, paquetes y un objeto](../../database-engine/media/xepackagesobjects.gif "La relación de un módulo, paquetes y un objeto")  
   
-### <a name="events"></a>Eventos  
+### <a name="events"></a>Events  
  Los eventos son puntos de supervisión de interés en la ruta de ejecución de un programa, como [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La activación de un evento conlleva el hecho de que se ha llegado al punto de interés, así como información de estado del momento en que se activó el evento.  
   
  Los eventos se pueden utilizar únicamente para realizar el seguimiento o para activar acciones. Estas acciones pueden ser sincrónicas o asincrónicas.  

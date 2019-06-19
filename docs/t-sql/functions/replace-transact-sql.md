@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65948782"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
@@ -63,7 +63,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## <a name="remarks"></a>Notas  
  REPLACE realiza comparaciones basándose en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede usar [COLLATE](~/t-sql/statements/collations.md) para aplicar una intercalación explícita a la entrada.  
   
- 0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  
+ 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo reemplaza la cadena `cde` de `abcdefghi` por `xxx`.  

@@ -22,10 +22,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62668971"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
@@ -54,7 +54,7 @@ ms.locfileid: "62668971"
 |column_id|**int**|Identificador de la columna. Es único en el objeto.<br /><br /> Los Id. de columna no tienen que ser secuenciales.|  
 |system_type_id|**tinyint**|Id. del tipo de sistema de la columna.|  
 |user_type_id|**int**|Id. del tipo de la columna, tal como lo ha definido el usuario.<br /><br /> Para devolver el nombre del tipo, unir a la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) en esta columna de la vista de catálogo.|  
-|max_length|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el valor max_length será 16 o el valor establecido por la opción "text in row" de sp_tableoption.|  
+|max_length|**smallint**|Longitud máxima de la columna, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , o **xml**.<br /><br /> Para **texto** columnas, el valor max_length será 16 o el valor establecido por la opción "text in row" de sp_tableoption.|  
 |precisión|**tinyint**|Precisión de la columna si basado en numerales; en caso contrario, es 0.|  
 |escala|**tinyint**|La escala de la columna se basa en valores numéricos; en caso contrario, es 0.|  
 |collation_name|**sysname**|Nombre de la intercalación de la columna si basados en caracteres; en caso contrario, es NULL.|  

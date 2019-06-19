@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe22de3cc0718647de84345260017a4dd4e477e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067309"
 ---
 # <a name="partitions-and-directquery-mode-ssas-tabular"></a>Particiones y el modo DirectQuery (SSAS tabular)
@@ -42,7 +42,7 @@ ms.locfileid: "66067309"
   
  Hay dos opciones de procesamiento para la partición DirectQuery. Para establecer esta propiedad, use el **Administrador de particiones** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], y seleccione la propiedad **Opción de procesamiento** . En la tabla siguiente se muestran los valores de esta propiedad y se describen los efectos de cada valor cuando se combinan con la propiedad DirectQueryUsage en la cadena de conexión:  
   
-|**DirectQueryUsage** propiedad|Propiedad**Opción de procesamiento** |Notas|  
+|**DirectQueryUsage** propiedad|Propiedad**Opción de procesamiento**|Notas|  
 |-----------------------------------|------------------------------------|-----------|  
 |DirectQuery|No procesar nunca esta partición|Cuando el modelo utiliza Solo DirectQuery, el procesamiento no es necesario nunca.<br /><br /> En los modelos híbridos, es posible configurar la partición DirectQuery para que no se procese nunca. Por ejemplo, si está trabajando con un conjunto de datos muy grande y no desea que los resultados completos se agreguen a la memoria caché, puede especificar que la partición DirectQuery incluya la unión de los resultados para el resto de particiones de la tabla y no procesar nunca dicha unión. Las consultas dirigidas al origen relacional no se verán afectadas, y las consultas en los datos en caché combinarán datos del resto de particiones|  
 |InMemory con DirectQuery|Permitir procesar la partición|Si el modelo utiliza el modo híbrido, debe usar la misma partición para las consultas en memoria y las consultas en el origen de datos de DirectQuery.|  

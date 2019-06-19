@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: db6522f15d520a1171665b96b928ae6b3c548939
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47684553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661035"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>Definir una relación de registros lógicos entre artículos de tabla de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +45,13 @@ ms.locfileid: "47684553"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Si agrega, modifica o elimina un registro lógico una vez inicializadas las suscripciones a la publicación, deberá generar una instantánea nueva y reinicializar todas las suscripciones después de realizar el cambio. Para obtener más información sobre los requisitos para los cambios de propiedad, consulte [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Defina registros lógicos en el cuadro de diálogo **Agregar combinación**, que está disponible en el Asistente para nueva publicación y en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el uso del asistente y el acceso al cuadro de diálogo, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) (Crear una publicación) y [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
  Los registros lógicos se pueden definir en el cuadro de diálogo **Agregar combinación** solamente si se aplican a un filtro de combinación en una publicación de combinación y la publicación cumple los requisitos para utilizar particiones precalculadas. Debe utilizar procedimientos almacenados para definir registros lógicos que no se aplican a los filtros de combinación y para establecer la detección y resolución de conflictos en el nivel de registro lógico.  
@@ -172,7 +172,7 @@ ms.locfileid: "47684553"
   
     -   El nombre de la publicación para <xref:Microsoft.SqlServer.Replication.Article.PublicationName%2A>.  
   
-    -   (Opcional) Si se filtra el artículo horizontalmente, especifique la cláusula de filtro de filas para la propiedad <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Utilice esta propiedad para especificar un filtro de fila estático o con parámetros. Para obtener más información, consulte [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+    -   (Opcional) Si se filtra el artículo horizontalmente, especifique la cláusula de filtro de filas para la propiedad <xref:Microsoft.SqlServer.Replication.MergeArticle.FilterClause%2A> . Utilice esta propiedad para especificar un filtro de fila estático o con parámetros. Para obtener más información, consulte [Filtros de fila con parámetros](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
      Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -203,7 +203,7 @@ ms.locfileid: "47684553"
   
  [!code-vb[HowTo#rmo_vb_CreateLogicalRecord](../../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_createlogicalrecord)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Definir y modificar un filtro de combinación entre artículos de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)   
  [Definición y modificación de un filtro de fila con parámetros para un artículo de mezcla](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)   
  [Definir y modificar un filtro de fila estático](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)   

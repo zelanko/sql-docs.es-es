@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 050220781f484b4a9e595551496d7e58c06f954c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871960"
 ---
 # <a name="detach-a-database"></a>Separar una base de datos
@@ -85,7 +85,7 @@ ms.locfileid: "62871960"
   
     -   Cuando una base de datos está implicada en una replicación, el **Estado** es **No está listo** y la columna **Mensaje** muestra **Base de datos replicada**.  
   
-    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra _< número_de_conexiones_activas >_**Conexiones activas** , por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
+    -   Cuando una base de datos tiene una o más conexiones activas, el **estado** es **no está listo** y **mensaje** columna muestra _< número_de_conexiones_activas >_ **Conexiones activas** , por ejemplo: **1 conexión activa**). Antes de separar la base de datos, debe desconectar todas las conexiones activas seleccionando **Quitar conexiones**.  
   
      Para obtener más información acerca de un mensaje, haga clic en el texto con hipervínculo para abrir el Monitor de actividad.  
   

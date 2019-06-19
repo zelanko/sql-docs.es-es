@@ -15,10 +15,10 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: 9aa75a4d0ca9b66c37cb57ee603d513c6912b751
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794971"
 ---
 # <a name="configure-sql-server-on-a-server-core-installation"></a>Configurar SQL Server en una instalación Server Core
@@ -108,9 +108,9 @@ Estos pasos están pensados para realizarse en un equipo donde se ejecute la edi
   
 4. En el árbol de consola, debajo de **Administración de equipos** del equipo con Server Core, haga clic en **Servicios y Aplicaciones**.  
   
-5. Haga doble clic en el **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
+5. Haga doble clic en el **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
   
-6. En el **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , haga clic en **Servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<nombre de instancia>), donde \<nombre de instancia> es el nombre de una instancia del servidor local para la que quiere habilitar los Grupos de disponibilidad AlwaysOn, y haga clic en Propiedades.  
+6. En el **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, haga clic en **Servicios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, haga clic con el botón derecho en **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** (\<nombre de instancia>), donde \<nombre de instancia> es el nombre de una instancia del servidor local para la que quiere habilitar los Grupos de disponibilidad AlwaysOn, y haga clic en Propiedades.  
   
 7. Seleccione la pestaña **Alta disponibilidad de AlwaysOn** .  
   

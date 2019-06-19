@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798022"
 ---
-# <a name="sql-server-central-management-servers-extension-preview"></a>Extensión de servidores de Administración Central de SQL Server (versión preliminar)
+# <a name="sql-server-central-management-servers-extension-preview"></a>Extensión Servidores de administración central de SQL Server (versión preliminar)
 La extensión de servidores de Administración Central permite a los usuarios almacenar una lista de instancias de SQL Server que se organizan en uno o varios grupos. Las acciones que se realizan mediante un grupo CMS actúan en todos los servidores del grupo de servidores.
 
 Esta experiencia está actualmente en su versión preliminar inicial. Notificar problemas y solicitudes de características [aquí](https://github.com/microsoft/azuredatastudio/issues).

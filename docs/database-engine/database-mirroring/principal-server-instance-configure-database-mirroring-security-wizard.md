@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: d1d80825613f751b3425727020e441656f4e01bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66795316"
 ---
 # <a name="principal-server-instance-configure-database-mirroring-security-wizard"></a>Instancia de servidor principal (Asistente para la configuración de seguridad de la creación de reflejo de bases de datos)

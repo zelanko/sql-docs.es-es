@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: f24ee3e02daaaa906c8285cd6d78dacb9973c6ac
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66079884"
 ---
 # <a name="example-of-a-minimum-privilege-configuration-for-powerpivot-for-sharepoint-2013"></a>Ejemplo de configuración con privilegios mínimos de PowerPivot para SharePoint 2013
@@ -25,7 +25,7 @@ ms.locfileid: "66079884"
   
  En la tabla siguiente se resumen las tres cuentas usadas en este ejemplo de configuración con privilegios mínimos.  
   
-|Ámbito|Name|  
+|Ámbito|NOMBRE|  
 |-----------|----------|  
 |Cuenta de administrador de SharePoint|**SPAdmin**|  
 |Cuenta de granja de SharePoint|**SPFarm**|  

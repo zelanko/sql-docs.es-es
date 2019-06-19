@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 28d0de4233147ae0a0dd5f0874d281a4697d93d0
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063200"
 ---
 # <a name="xml-editor-sql-server-management-studio"></a>Editores XML (SQL Server Management Studio)
@@ -81,10 +81,10 @@ ms.locfileid: "66063200"
 ## <a name="data-view"></a>Vista de datos  
  La vista de datos proporciona una cuadrícula de datos que puede utilizarse para modificar archivos .xml. En la vista de datos, solo se puede editar el contenido (pero no las etiquetas ni la estructura) de un archivo XML.  
   
- En la vista de datos, hay dos áreas bien diferenciadas: **Las tablas de datos** y **datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
+ Hay dos áreas independientes en la vista de datos: **Tablas de datos** y **Datos**. El área **Tablas de datos** es una lista de relaciones definidas en el archivo XML, colocadas en el orden de su anidamiento (de exterior a interior). El área **Datos** es una cuadrícula de datos que muestra los datos en función de la selección realizada en el área Tablas de datos.  
   
 > [!NOTE]  
->  Los archivos XML recién creados no contienen ningún dato y, por lo tanto, no pueden mostrarse en la vista de datos. Existen también algunas instancias de documentos XML donde no se puede invocar la vista de datos. Aunque el código XML se consideraría con formato correcto, si no tiene datos estructurados intentando cambiar a los datos de vista generará el siguiente mensaje: "Aunque este documento está bien formado, contiene una estructura que no se puede mostrar la vista de datos."  
+>  Los archivos XML recién creados no contienen ningún dato y, por lo tanto, no pueden mostrarse en la vista de datos. Existen también algunas instancias de documentos XML donde no se puede invocar la vista de datos. Aunque se considere que el documento XML tiene un formato correcto, si no está formado por datos estructurados que están intentando cambiar a la vista de datos, se generará el siguiente mensaje: "Aunque este documento XML está bien formado, contiene una estructura que la Vista de datos no puede mostrar".  
   
  En la vista de datos se pueden realizar las siguientes acciones:  
   

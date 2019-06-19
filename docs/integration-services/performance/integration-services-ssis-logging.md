@@ -31,10 +31,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: eca7e157593ff4ea9d40528b592f71227cc8cb0d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65719586"
 ---
 # <a name="integration-services-ssis-logging"></a>Registro de Integration Services (SSIS)
@@ -313,7 +313,7 @@ ms.locfileid: "65719586"
  El campo de la descripción se puede modificar. Haga clic en la descripción predeterminada del registro y, a continuación, modifíquela.  
   
  **Configuración**  
- Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…** > para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
+ Seleccione un administrador de conexiones de la lista o haga clic en \<**Nueva conexión…**> para crear un administrador de conexiones nuevo. En función del tipo de proveedor de registro, puede configurar un administrador de conexiones OLE DB o un administrador de conexiones de archivos. El proveedor de registro para Registro de eventos de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows no requiere conexión.  
   
  Temas relacionados: [Administrador de conexiones OLE DB](../../integration-services/connection-manager/ole-db-connection-manager.md), [Administrador de conexiones de archivos](../../integration-services/connection-manager/file-connection-manager.md)  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 07bcf5a82df9f60f539ea763cf70b0a0a60633c0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825473"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672336"
 ---
 # <a name="specify-instances-in-the-sql-server-powershell-provider"></a>Especificar instancias del proveedor de PowerShell de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,7 @@ Las rutas de acceso especificadas para el proveedor de PowerShell de SQL Server 
 > Para instalar el módulo **SqlServer**, consulte [Instalar SQL Server PowerShell](download-sql-server-ps-module.md).
   
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El primer nodo situado a continuación de SQLSERVER:\SQL en una ruta de acceso de proveedor de SQL Server es el nombre del equipo en el que se ejecuta la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)], por ejemplo:  
   
 ```  
@@ -79,9 +79,9 @@ Set-Location SQLSERVER:\SQL\localhost\DEFAULT
     Set-Location SQLSERVER:\SQL\%28local%29\DEFAULT  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Identificadores de SQL Server en PowerShell](sql-server-identifiers-in-powershell.md)   
- [SQL Server PowerShell Provider](sql-server-powershell-provider.md)   
+ [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

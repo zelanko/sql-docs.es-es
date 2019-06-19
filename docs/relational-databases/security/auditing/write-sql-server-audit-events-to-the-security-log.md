@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 53f613bd2a791eb210d908e3e84f8f09098db977
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47723403"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715882"
 ---
 # <a name="write-sql-server-audit-events-to-the-security-log"></a>Escribir eventos de auditoría de SQL Server en el registro de seguridad  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,14 +42,14 @@ La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no podrá detectar que el sistema no puede grabar eventos en el registro de seguridad, lo que provoca la posible pérdida de eventos de auditoría  
 -   Después de que el administrador corrija el registro de seguridad, el comportamiento de registro volverá a la normalidad.  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
  Los administradores del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] deberían saber que una directiva de dominio puede sobrescribir la configuración regional del registro de seguridad. En este caso, la directiva de dominio puede sobrescribir el valor de subcategoría (**auditpol /get /subcategory:"aplicación generada"**). Esto puede afectar a la capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] de registrar los eventos sin que haya ninguna manera de detectar que los eventos que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está intentando auditar no van a ser grabados.  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe ser administrador de Windows para configurar estos valores.  
   
 ##  <a name="auditpolAccess"></a> Para configurar el valor Auditar el acceso a objetos en Windows utilizando auditpol  
@@ -104,7 +104,7 @@ La directiva de auditoría de Windows puede afectar a la auditoría de [!INCLUDE
   
 7.  Cierre la herramienta Directiva de seguridad.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Audit &#40;motor de base de datos&#41;](../../../relational-databases/security/auditing/sql-server-audit-database-engine.md)  
   
   

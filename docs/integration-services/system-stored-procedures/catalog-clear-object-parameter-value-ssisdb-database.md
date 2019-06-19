@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 036fa3398103108cd4b49d1690cd5943cc53ff02
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65717050"
 ---
 # <a name="catalogclearobjectparametervalue-ssisdb-database"></a>catalog.clear_object_parameter_value (base de datos de SSISDB)
@@ -39,19 +39,19 @@ catalog.clear_object_parameter [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ \@folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)** .  
   
  [ \@project_name = ] *project_name*  
- Nombre del proyecto. *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto. *project_name* es **nvarchar(128)** .  
   
  [ \@object_type = ] *object_type*  
  Tipo de objeto. Los valores válidos incluyen `20` para un proyecto y `30` para un paquete. *object_type* es **smallInt**.  
   
  [ \@ object _name = ] *object _name*  
- Nombre del paquete. *object _name* es **nvarchar(260)**.  
+ Nombre del paquete. *object _name* es **nvarchar(260)** .  
   
  [ \@parameter_ name = ] *parameter_name*  
- Nombre del parámetro. *parameter_ name* es **nvarchar(128)**.  
+ Nombre del parámetro. *parameter_ name* es **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

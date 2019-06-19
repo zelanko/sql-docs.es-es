@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1fcc82b03ff6d44e8c7c85088f625feb6bd8102f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108356"
 ---
 # <a name="manage-a-reporting-services-sharepoint-service-application"></a>Administrar una aplicación de servicio de SharePoint para Reporting Services
@@ -160,7 +160,7 @@ Get-SPRSServiceApplication | select typename, name, service, ueaccountname
  Seleccione para especificar una cuenta.  
   
  **Cuenta**  
- Especifique una cuenta de usuario de dominio de Windows. Use este formato: *\<dominio>\\<cuenta de usuario\>*.  
+ Especifique una cuenta de usuario de dominio de Windows. Use este formato: *\<dominio>\\<cuenta de usuario\>* .  
   
  **Contraseña**  
  Escriba la contraseña.  

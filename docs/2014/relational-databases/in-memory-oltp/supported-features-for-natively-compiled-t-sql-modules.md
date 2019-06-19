@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b4fd1a406848006739b83c1b8a0886d5c2d4bdfa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63155716"
 ---
 # <a name="supported-constructs-in-natively-compiled-stored-procedures"></a>Construcciones admitidas en procedimientos almacenados compilados de forma nativa
@@ -172,7 +172,7 @@ ms.locfileid: "63155716"
 ##  <a name="los"></a> Limitaciones de ordenación  
  Puede ordenar más de 8000 filas en una consulta que use [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql). Pero sin la [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) puede ordenar hasta 8000 filas (si hay combinaciones, menos filas).  
   
- Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >*, línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
+ Si la consulta usa el operador [TOP &#40;Transact-SQL&#41;](/sql/t-sql/queries/top-transact-sql) y una [cláusula ORDER BY &#40;Transact-SQL&#41;](/sql/t-sql/queries/select-order-by-clause-transact-sql), puede especificar hasta 8192 filas para el operador TOP. Si especifica más de 8192 filas obtendrá el mensaje de error: **Mensaje 41398, nivel 16, estado 1, procedimiento  *\<NombreDeProcedimiento >* , línea  *\<lineNumber >* el operador TOP puede devolver un máximo de 8192 filas;  *\<número >* se solicitó.**  
   
  Si no tiene una cláusula TOP, puede ordenar cualquier número de filas con ORDER BY.  
   

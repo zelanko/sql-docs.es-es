@@ -12,11 +12,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 30361f7f70dc6e738b8cc586dff090bb456a0627
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47739973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047929"
 ---
 # <a name="cross-database-queries"></a>Consultas entre bases de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,7 +121,7 @@ En este ejemplo se muestra un método para transferir datos desde una base de da
     GO 
     ```
    
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Migrar a OLTP en memoria](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)  
   
   

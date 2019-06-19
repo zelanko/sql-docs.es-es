@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 336bef606147bf8c525ae580a05865f5f250998e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47831689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63046620"
 ---
 # <a name="mssqlserver2575"></a>MSSQLSERVER_2575
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,6 +59,6 @@ Si ejecuta DBCC CHECKDB con una de las cláusulas REPAIR y no se soluciona el pr
 #### <a name="results-of-running-repair-options"></a>Resultados de ejecutar opciones REPAIR  
 DBCC volverá a generar el índice.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
   

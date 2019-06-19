@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 41946fdf50ec72d7c81340dd40c99447a9dbbf40
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715969"
 ---
 # <a name="catalogrevokepermission-ssisdb-database"></a>catalog.revoke_permission (base de datos de SSISDB)
@@ -41,7 +41,7 @@ catalog.revoke_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @object_type = ] *object_type*  
- Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint**_._  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint** _._  
   
  [ @object_id = ] *object_id*  
  Es el identificador único (id.) del objeto protegible. El parámetro *object_id* es **bigint**.  

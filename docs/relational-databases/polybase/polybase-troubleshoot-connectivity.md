@@ -13,10 +13,10 @@ ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
 ms.openlocfilehash: 3a6e9206bb252d90a9bca498ffdc27ce507556c9
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64776011"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
@@ -40,7 +40,7 @@ Ayuda a comprender el protocolo Kerberos por encima. Aquí participan tres actor
 1. Recursos protegidos (HDFS, MR2, YARN, historial de trabajos, etc.)
 1. Centro de distribución de claves (que en Active Directory se denomina controlador de dominio)
 
-Cada uno de los recursos protegidos de Hadoop se registra en el **Centro de distribución de claves (KDC)** con un **Nombre de entidad de seguridad de servicio (SPN)** único cuando Kerberos se configura en el clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado **Vale de concesión de vales (TGT)**, para solicitar otro vale temporal, llamado **Vale de servicio (ST)**, desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio que desea acceder.  
+Cada uno de los recursos protegidos de Hadoop se registra en el **Centro de distribución de claves (KDC)** con un **Nombre de entidad de seguridad de servicio (SPN)** único cuando Kerberos se configura en el clúster de Hadoop. El objetivo es que el cliente obtenga un vale de usuario temporal, llamado **Vale de concesión de vales (TGT)** , para solicitar otro vale temporal, llamado **Vale de servicio (ST)** , desde el Centro de distribución de claves contra el nombre de entidad de seguridad de servicio que desea acceder.  
 
 En PolyBase, cuando se solicita autenticación con respecto a cualquier recurso protegido con Kerberos, se produce el siguiente protocolo de enlace de cuatro recorridos de ida y vuelta:
 

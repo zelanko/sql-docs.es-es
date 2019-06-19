@@ -22,10 +22,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6a358aacd5bbfe165b908a3c737d4809cf1555f0
-ms.sourcegitcommit: c1cc44c3b5ad030d8726be8819594341fc3d9f91
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65461814"
 ---
 # <a name="restore-and-recovery-overview-sql-server"></a>Información general sobre restauración y recuperación (SQL Server)
@@ -91,9 +91,9 @@ ms.locfileid: "65461814"
 |-----------------------|-------------------------|---------------------------------|---------------------------|  
 |Recuperación de datos|Recuperación completa (si el registro está disponible).|Existe el riesgo de perder algunos datos.|Se perderán los datos desde la última copia de seguridad completa o diferencial.|  
 |Restauración a un momento dado|Cualquier momento cubierto por las copias de seguridad de registros.|No está permitida si la copia de seguridad de registros contiene algún cambio registrado de forma masiva.|No compatible.|  
-|File restore **\***|Totalmente compatible.|A veces.**\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
-|Page restore **\***|Totalmente compatible.|A veces.**\*\***|Ninguno.|  
-|Restauración por etapas (nivel de grupos de archivos) **\***|Totalmente compatible.|A veces.**\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
+|File restore **\***|Totalmente compatible.|A veces. **\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
+|Page restore **\***|Totalmente compatible.|A veces. **\*\***|Ninguno.|  
+|Restauración por etapas (nivel de grupos de archivos) **\***|Totalmente compatible.|A veces. **\*\***|Solo está disponible para archivos secundarios de solo lectura.|  
   
  **\*** Disponible solo en la edición Enterprise de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

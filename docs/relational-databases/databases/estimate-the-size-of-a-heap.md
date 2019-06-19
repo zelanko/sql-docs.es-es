@@ -19,11 +19,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9f57b07be679195794df5f0f9fe2329417a0b30f
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62860691"
 ---
 # <a name="estimate-the-size-of-a-heap"></a>Estimar el tamaño de un montón
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "53591769"
   
 3.  Una parte de la fila, conocida como el mapa de bits NULL, se reserva para administrar la nulabilidad en las columnas. Calcule el tamaño:  
   
-     **_Null_Bitmap_**  = 2 + ((**_Num_Cols_** + 7) / 8)  
+     **_Null_Bitmap_**  = 2 + (( **_Num_Cols_** + 7) / 8)  
   
      Solo debe utilizarse la parte entera de la expresión anterior. Descarte el resto.  
   
@@ -55,7 +55,7 @@ ms.locfileid: "53591769"
   
      Si hay columnas de longitud variable en la tabla, determine cuánto espacio se utiliza para almacenar las columnas en la fila:  
   
-     **_Variable_Data_Size_**  = 2 + (**_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
+     **_Variable_Data_Size_**  = 2 + ( **_Num_Variable_Cols_** x 2) + **_Max_Var_Size_**  
   
      Los bytes agregados a **_Max_Var_Size_** son para el seguimiento de cada columna de longitud variable. En esta fórmula se supone que todas las columnas de longitud variable están llenas al 100%. Si prevé que se va a usar un porcentaje inferior del espacio de almacenamiento de columnas de longitud variable, puede ajustar el valor de **_Max_Var_Size_** en función de ese porcentaje para obtener una estimación más precisa del tamaño global de la tabla.  
   
@@ -66,19 +66,19 @@ ms.locfileid: "53591769"
   
 5.  Calcule el tamaño total de la fila:  
   
-     **_Row_Size_**  = **_Fixed_Data_Size_** + **_Variable_Data_Size_** + **_Null_Bitmap_** + 4  
+     **_Row_Size_**   =  **_Fixed_Data_Size_**  +  **_Variable_Data_Size_**  +  **_Null_Bitmap_** + 4  
   
      El valor 4 de la fórmula representa la sobrecarga del encabezado de la fila de datos.  
   
 6.  Calcule el número de filas por página (8096 bytes libres por página):  
   
-     **_Rows_Per_Page_**  = 8096 / (**_Row_Size_** + 2)  
+     **_Rows_Per_Page_**  = 8096 / ( **_Row_Size_** + 2)  
   
      Dado que las filas no abarcan varias páginas, el número de filas por página debe redondearse hacia abajo a la fila completa más cercana. El valor 2 de la fórmula representa la entrada de la fila en la matriz de zonas de la página.  
   
 7.  Calcule el número de páginas necesarias para almacenar todas las filas:  
   
-     **_Num_Pages_**  = **_Num_Rows_** / **_Rows_Per_Page_**  
+     **_Num_Pages_**   =  **_Num_Rows_**  /  **_Rows_Per_Page_**  
   
      El número de páginas estimado debe redondearse hacia arriba a la página completa más cercana.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "53591769"
   
 -   Valores de objetos grandes (LOB)  
   
-     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)**, **varbinary(max)**, **nvarchar(max)**, **text**, **ntextxml**e **image** es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
+     El algoritmo para determinar exactamente la cantidad de espacio que se usará para almacenar los tipos de datos LOB y los valores **varchar(max)** , **varbinary(max)** , **nvarchar(max)** , **text**, **ntextxml**e **image** es complejo. Basta con agregar solamente el tamaño medio de los valores de LOB que se esperan y agregarlo al tamaño total del montón.  
   
 -   Compresión  
   

@@ -19,10 +19,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 5861f16d20d95ae6ba9d2024d2199b853934d355
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65098116"
 ---
 # <a name="how-to-create-a-new-database-project"></a>Procedimientos: Creación de un nuevo proyecto de base de datos
@@ -76,5 +76,5 @@ Los dos procedimientos siguientes consiguen básicamente el mismo objetivo crean
 9. Haga clic con el botón derecho en el proyecto **TradeDev** en el **Explorador de soluciones** y seleccione **Compilar** para compilar el proyecto de base de datos.  
   
 ## <a name="see-also"></a>Consulte también  
-[Cómo: Cambiar la plataforma de destino y publicación de un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
+[Cómo: Cambio de la plataforma de destino y publicación de un proyecto de base de datos](../ssdt/how-to-change-target-platform-and-publish-a-database-project.md)  
   

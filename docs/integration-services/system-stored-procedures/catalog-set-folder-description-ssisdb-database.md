@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 631e838751ce47c19eb51b1f2a7158e89d57d6f6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715818"
 ---
 # <a name="catalogsetfolderdescription-ssisdb-database"></a>catalog.set_folder_description (base de datos de SSISDB)
@@ -36,10 +36,10 @@ catalog.set_folder_description [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta. *folder_name* es **nvarchar(128)** .  
   
  [ @folder_description = ] *folder_description*  
- Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)**.  
+ Descripción de la carpeta. El parámetro *folder_description* es **nvarchar(MAX)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  None  

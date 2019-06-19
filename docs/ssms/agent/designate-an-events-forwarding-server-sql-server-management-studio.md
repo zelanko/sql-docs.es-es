@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: 425fa57e064f5bebb76a1de1149ba56f43dcfce2
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65096612"
 ---
 # <a name="designate-an-events-forwarding-server-sql-server-management-studio"></a>Designate an Events Forwarding Server (SQL Server Management Studio)
@@ -56,7 +56,7 @@ Requiere la pertenencia al rol fijo de servidor **sysadmin** .
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
   
-3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -**_nombre_de_servidor_, en **Seleccionar una página**, haga clic en **Avanzadas**.  
+3.  En el cuadro de diálogo **Propiedades de Agente SQL Server -** _nombre_de_servidor_, en **Seleccionar una página**, haga clic en **Avanzadas**.  
   
 4.  En **Reenvío de eventos de SQL Server**, active la casilla **Reenviar eventos a otro servidor** .  
   

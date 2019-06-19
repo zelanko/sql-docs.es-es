@@ -19,10 +19,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1c56b15a5d6887c3e00047c9a0c3a66f907ef468
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102812"
 ---
 # <a name="compare-roles-and-tasks-in-reporting-services-to-sharepoint-groups-and-permissions"></a>Comparar roles y tareas de Reporting Services con grupos y permisos de SharePoint
@@ -58,7 +58,7 @@ ms.locfileid: "66102812"
 ##  <a name="bkmk_compare_roles_groups"></a> Comparación de los roles de modo nativo y los grupos de SharePoint  
  En la tabla siguiente se comparan las definiciones de roles predefinidas en [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] en modo nativo con las de los grupos de SharePoint estándar. Si los grupos de SharePoint no coinciden con el rol específico que desea, puede crear un grupo personalizado y asignar niveles de permiso en SharePoint.  
   
- **Tenga en cuenta**: Los grupos predeterminados de SharePoint disponibles dependen de la plantilla de sitio usada para crear el sitio de SharePoint.  
+ **Nota**: Los grupos predeterminados de SharePoint disponibles dependen de la plantilla de sitio usada para crear el sitio de SharePoint.  
   
 |[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Rol|Grupos de SharePoint|  
 |--------------------------------------|-----------------------|  

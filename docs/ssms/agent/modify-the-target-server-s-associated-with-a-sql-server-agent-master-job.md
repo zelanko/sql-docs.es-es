@@ -13,10 +13,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: dd62d1c9961a5ae8cdd9018a01966fc0b6d3a4db
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105549"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server
@@ -63,7 +63,7 @@ A menos que sea miembro del rol fijo de servidor **sysadmin** , solo podrá modi
   
 4.  Haga clic con el botón derecho en el trabajo en el que desea modificar el servidor de destino y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades de trabajo -**_nombre_de_trabajo_, en **Seleccionar una página**, haga clic en **Destinos**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Destinos&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
+5.  En el cuadro de diálogo **Propiedades de trabajo -** _nombre_de_trabajo_, en **Seleccionar una página**, haga clic en **Destinos**. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página Destinos&#41;](../../ssms/agent/job-properties-new-job-targets-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

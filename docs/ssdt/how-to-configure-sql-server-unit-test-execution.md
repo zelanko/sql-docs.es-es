@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: a1c1d288b79d9058a9aff7609290d2381c715575
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090181"
 ---
 # <a name="how-to-configure-sql-server-unit-test-execution"></a>Procedimientos: Configuración de una ejecución de prueba unitaria de SQL Server
@@ -38,7 +38,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
 1.  Haga clic con el botón derecho en el proyecto de pruebas unitarias en el **Explorador de soluciones** y haga clic en **Configuración de prueba de SQL Server**.  
   
-    Se abre el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'**.  
+    Se abre el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'** .  
   
 2.  En **Conexiones de base de datos**, puede hacer lo siguiente:  
   
@@ -50,7 +50,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
     En este paso se crea la cadena de conexión `ExecutionContext`, que se usa para ejecutar el script de prueba en la prueba unitaria. Si también se especifica una conexión secundaria, también se crea la cadena de conexión de `PrivilegedContext`. Esta conexión se usa para probar las interacciones con la base de datos fuera del script de prueba en la prueba unitaria. Para obtener más información, consulte [Información general acerca de las cadenas de conexión y los permisos](../ssdt/overview-of-connection-strings-and-permissions.md).  
   
-3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'**.  
+3.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'** .  
   
 4.  Recompile el proyecto de prueba para aplicar los cambios de configuración.  
   
@@ -66,7 +66,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
 3.  Haga clic con el botón derecho en el proyecto de pruebas unitarias en el **Explorador de soluciones** y haga clic en **Configuración de prueba de SQL Server**.  
   
-    Se abre el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'**.  
+    Se abre el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'** .  
   
 4.  En **Implementación**, puede hacer lo siguiente:  
   
@@ -76,7 +76,7 @@ Estos valores controlan cómo se conecta la prueba a la base de datos que probar
   
     -   Debajo de **Configuración de implementación**, haga clic en la configuración de proyecto en la que desea implementar. Las opciones son **Depuración**, **Predeterminada** o **Liberar**. Sin embargo, si crea una configuración para la prueba unitaria, dicha configuración también aparece como opción.  
   
-5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'**.  
+5.  Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Configuración de prueba de SQL Server -'<projectname>'** .  
   
     Al inicio de la ejecución de pruebas, se ejecuta el script de Transact\-SQL generado en el paso 1. En esta acción se implementa el esquema en la base de datos de destino.  
   

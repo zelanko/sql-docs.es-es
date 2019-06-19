@@ -28,10 +28,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 131e5ee4436cc1cf1e5a5f2f979504e75c169d93
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503249"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
@@ -108,7 +108,7 @@ A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, data
 > Azure SQL Database no admite la lectura de archivos de Windows.
 
 
-**'** _data_source_name_ **'**   
+**'** _data_source_name_ **'**    
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 Es un origen de datos externo con nombre que apunta a la ubicación de Azure Blob Storage del archivo que se importará. El origen de datos externo se debe crear con la opción `TYPE = BLOB_STORAGE` que se ha incluido en [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. Para más información, vea [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md).    
  
@@ -118,7 +118,7 @@ FROM 'data/orders.dat'
 WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 ```
 
- BATCHSIZE **=**_batch_size_  
+ BATCHSIZE **=** _batch_size_  
  Especifica el número de filas de un lote. Cada lote se copia en el servidor como una transacción. Si no ocurre así, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] confirma o revierte la transacción de cada lote. De forma predeterminada, todos los datos del archivo de datos especificado componen un lote. Para obtener información acerca de consideraciones de rendimiento, vea la sección "Comentarios" más adelante en este tema.  
   
  CHECK_CONSTRAINTS  
@@ -134,7 +134,7 @@ WITH ( DATA_SOURCE = 'MyAzureBlobStorageAccount');
 > [!NOTE]  
 >  La opción MAXERRORS no se aplica a la comprobación de restricciones.  
   
- CODEPAGE **=** { **'** ACP **'** | **'** OEM **'** | **'** RAW **'** | **'**_code_page_**'** }  
+ CODEPAGE **=** { **'** ACP **'**  |  **'** OEM **'**  |  **'** RAW **'**  |  **'** _code_page_ **'** }  
  Especifica la página de códigos de los datos incluidos en el archivo de datos. CODEPAGE solo es pertinente si los datos contienen columnas de tipo **char**, **varchar** o **text** con valores de caracteres mayores que **127** o menores que **32**.  
 
 ```sql
@@ -157,7 +157,7 @@ WITH ( CODEPAGE=65001 ); -- UTF-8 encoding
 |*code_page*|Número específico de una página de códigos; por ejemplo, 850.<br /><br /> **&#42;&#42;Importante&#42;&#42;** Las versiones anteriores a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] no admiten la página de códigos 65001 (codificación UTF-8).|  
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }  
+DATAFILETYPE **=** { **'char'**  |  **'native'**  |  **'widechar'**  |  **'widenative'** }  
 Especifica que BULK INSERT realiza la operación de importación con el valor de tipo de archivo de datos especificado.  
 
 &nbsp;
@@ -170,7 +170,7 @@ Especifica que BULK INSERT realiza la operación de importación con el valor de
 |**widenative**|Tipos de datos nativos (base de datos), salvo en las columnas **char**, **varchar** y **text**, en las que los datos se almacenan como datos Unicode. Cree el archivo de datos **widenative** mediante la importación masiva de datos desde [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con la utilidad **bcp**.<br /><br /> El valor **widenative** ofrece una alternativa de mayor rendimiento a **widechar**. Si el archivo de datos contiene caracteres extendidos [!INCLUDE[vcpransi](../../includes/vcpransi-md.md)], especifique **widenative**.<br /><br /> Para obtener más información, vea [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/use-unicode-native-format-to-import-or-export-data-sql-server.md).|  
 | &nbsp; | &nbsp; |
 
-ERRORFILE **='**_file_name_**'**  
+ERRORFILE **='** _file_name_ **'**  
 Especifica el archivo utilizado para recopilar filas que tienen errores de formato y no pueden convertirse en un conjunto de filas OLE DB. Estas filas se copian en este archivo de errores desde el archivo de datos "tal cual".
 
 El archivo de errores se crea cuando se ejecuta el comando. Se produce un error si el archivo ya existe. Además, se crea un archivo de control con la extensión .ERROR.txt. Este archivo hace referencia a cada fila del archivo de errores y proporciona diagnósticos de errores. Tan pronto como se corrigen los errores, se pueden cargar los datos.  
@@ -215,7 +215,7 @@ LASTROW **=** _last_row_ Especifica el número de la última fila que va a carga
 > [!NOTE]  
 >  La opción MAX_ERRORS no se aplica a comprobaciones de restricciones ni para convertir tipos de datos **money** y **bigint**.  
   
- ORDER ( { *column* [ ASC | DESC ] } [ **,**... *n* ] )  
+ ORDER ( { *column* [ ASC | DESC ] } [ **,** ... *n* ] )  
  Especifica la forma en que están ordenados los datos del archivo de datos. El rendimiento de la importación masiva mejora si los datos importados se ordenan según el índice clúster de la tabla, si lo hay. Si el archivo de datos se ordena siguiendo otro criterio que no sea el orden de una clave de índice agrupado, o si no hay ningún índice agrupado en la tabla, se omite la cláusula ORDER. Los nombres de columna facilitados deben ser nombres válidos en la tabla de destino. De forma predeterminada, la operación de inserción masiva presupone que los datos del archivo no están ordenados. En las importaciones masivas optimizadas, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también valida que los datos importados estén ordenados.  
   
  *n*  
@@ -262,10 +262,10 @@ Especifica un carácter que se usará como carácter de comillas en el archivo C
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 A partir de [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, format_file_path puede estar en Azure Blob Storage.
 
- FIELDTERMINATOR **='**_field_terminator_**'**  
+ FIELDTERMINATOR **='** _field_terminator_ **'**  
  Especifica el terminador de campo que se va a usar para archivos de datos de tipo **char** y **widechar**. El terminador de campo predeterminado es \t (tabulador). Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
- ROWTERMINATOR **='**_row_terminator_**'**  
+ ROWTERMINATOR **='** _row_terminator_ **'**  
  Especifica el terminador de fila que se va a usar para archivos de datos de tipo **char** y **widechar**. El terminador de fila predeterminado es **\r\n** (carácter de nueva línea).  Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
 
   
@@ -341,7 +341,7 @@ GO
 
 ## <a name="general-remarks"></a>Notas generales  
 
- Para obtener una comparación de la instrucción BULK INSERT, la instrucción INSERT ... SELECT \* FROM OPENROWSET(BULK...) y el comando **bcp**, vea [Importar y exportar datos de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
+ Para obtener una comparación de la instrucción BULK INSERT, la instrucción INSERT ... Para saber más sobre la instrucción SELECT \* FROM OPENROWSET(BULK...) y el comando **bcp**, vea [Importar y exportar datos de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md).  
   
  Para más información sobre cómo preparar datos para importaciones masivas, vea [Preparar los datos para exportar o importar de forma masiva &#40;SQL Server&#41;](../../relational-databases/import-export/prepare-data-for-bulk-export-or-import-sql-server.md).  
   
@@ -446,7 +446,7 @@ EXEC(@bulk_cmd);
 ```  
   
 > [!NOTE]  
->  Debido al modo en que Microsoft Windows trata los archivos de texto, **(\n** se reemplaza automáticamente por **\r\n)**.  
+>  Debido al modo en que Microsoft Windows trata los archivos de texto, **(\n** se reemplaza automáticamente por **\r\n)** .  
 
 > [!IMPORTANT]
 > Azure SQL Database no admite la lectura de archivos de Windows.

@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7f379b3cbc335da74b4d029d19b8fa3bdab603c9
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403507"
 ---
 # <a name="lesson-9-1---defining-and-browsing-perspectives"></a>Lección 9-1: definir y examinar perspectivas
@@ -53,37 +53,37 @@ En las tareas de este tema, definirá varias perspectivas diferentes y, a contin
   
 5.  Desactive la casilla de los siguientes objetos:  
   
-    -   Grupo de medida**Reseller Sales**   
+    -   Grupo de medida**Reseller Sales**  
   
-    -   Grupo de medida**Sales Quotas**   
+    -   Grupo de medida**Sales Quotas**  
   
-    -   Grupo de medida**Sales Quotas 1**   
+    -   Grupo de medida**Sales Quotas 1**  
   
-    -   Dimensión de cubo**Reseller**   
+    -   Dimensión de cubo**Reseller**  
   
-    -   Dimensión de cubo**Reseller Geography**   
+    -   Dimensión de cubo**Reseller Geography**  
   
-    -   Dimensión del cubo**Sales Territory**   
+    -   Dimensión del cubo**Sales Territory**  
   
-    -   Dimensión de cubo**Employee**   
+    -   Dimensión de cubo**Employee**  
   
-    -   Dimensión de cubo**Promotion**   
+    -   Dimensión de cubo**Promotion**  
   
-    -   **Reseller Revenue**   
+    -   **Reseller Revenue**  
   
-    -   Conjunto con nombre**Large Resellers**   
+    -   Conjunto con nombre**Large Resellers**  
   
-    -   Miembro calculado**Total Sales Amount**   
+    -   Miembro calculado**Total Sales Amount**  
   
-    -   Miembro calculado**Total Product Cost**   
+    -   Miembro calculado**Total Product Cost**  
   
-    -   Miembro calculado**Reseller GPM**   
+    -   Miembro calculado**Reseller GPM**  
   
-    -   Miembro calculado**Total GPM**   
+    -   Miembro calculado**Total GPM**  
   
-    -   Miembro calculado**Reseller Sales Ratio to All Products**   
+    -   Miembro calculado**Reseller Sales Ratio to All Products**  
   
-    -   Miembro calculado**Total Sales Ratio to All Products**   
+    -   Miembro calculado**Total Sales Ratio to All Products**  
   
     Estos objetos no tienen relación con Internet Sales.  
   
@@ -102,29 +102,29 @@ En las tareas de este tema, definirá varias perspectivas diferentes y, a contin
   
 4.  Desactive la casilla de los siguientes objetos:  
   
-    -   Grupo de medida**Internet Sales**   
+    -   Grupo de medida**Internet Sales**  
   
-    -   Grupo de medida**Internet Sales Reason**   
+    -   Grupo de medida**Internet Sales Reason**  
   
-    -   Dimensión de cubo**Customer**   
+    -   Dimensión de cubo**Customer**  
   
-    -   Dimensión de cubo**Internet Sales Order Details**   
+    -   Dimensión de cubo**Internet Sales Order Details**  
   
-    -   Dimensión de cubo**Sales Reason**   
+    -   Dimensión de cubo**Sales Reason**  
   
-    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**   
+    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**  
   
-    -   Miembro calculado**Total Sales Amount**   
+    -   Miembro calculado**Total Sales Amount**  
   
-    -   Miembro calculado**Total Product Cost**   
+    -   Miembro calculado**Total Product Cost**  
   
-    -   Miembro calculado**Internet GPM**   
+    -   Miembro calculado**Internet GPM**  
   
-    -   Miembro calculado**Total GPM**   
+    -   Miembro calculado**Total GPM**  
   
-    -   Miembro calculado**Internet Sales Ratio to All Products**   
+    -   Miembro calculado**Internet Sales Ratio to All Products**  
   
-    -   Miembro calculado**Total Sales Ratio to All Products**   
+    -   Miembro calculado**Total Sales Ratio to All Products**  
   
     Estos objetos no tienen relación con Resellers Sales.  
   
@@ -139,27 +139,27 @@ En las tareas de este tema, definirá varias perspectivas diferentes y, a contin
   
 3.  Desactive la casilla de los siguientes objetos:  
   
-    -   Grupo de medida**Internet Sales**   
+    -   Grupo de medida**Internet Sales**  
   
-    -   Grupo de medida**Reseller Sales**   
+    -   Grupo de medida**Reseller Sales**  
   
-    -   Grupo de medida**Internet Sales Reason**   
+    -   Grupo de medida**Internet Sales Reason**  
   
-    -   Grupo de medida**Sales Quotas**   
+    -   Grupo de medida**Sales Quotas**  
   
-    -   Grupo de medida**Sales Quotas1**   
+    -   Grupo de medida**Sales Quotas1**  
   
-    -   Dimensión de cubo**Internet Sales Order Details**   
+    -   Dimensión de cubo**Internet Sales Order Details**  
   
-    -   Dimensión de cubo**Sales Reason**   
+    -   Dimensión de cubo**Sales Reason**  
   
-    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**   
+    -   Acción de obtención de detalles**Internet Sales Details Drillthrough Action**  
   
 4.  Active la casilla de los siguientes objetos:  
   
-    -   Medida**Internet Sales Count**   
+    -   Medida**Internet Sales Count**  
   
-    -   Medida**Reseller Sales Count**   
+    -   Medida**Reseller Sales Count**  
   
 ## <a name="browsing-the-cube-through-each-perspective"></a>Examinar el cubo a través de cada perspectiva  
   

@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63013220"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
@@ -41,7 +41,7 @@ sys.dm_exec_plan_attributes ( plan_handle )
   
 ## <a name="arguments"></a>Argumentos  
  *plan_handle*  
- Identifica de forma exclusiva un plan de consulta de un lote que se ha ejecutado y cuyo plan reside en la memoria caché del plan. *plan_handle* es **varbinary (64)**. El identificador del plan puede obtenerse a partir del [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) vista de administración dinámica.  
+ Identifica de forma exclusiva un plan de consulta de un lote que se ha ejecutado y cuyo plan reside en la memoria caché del plan. *plan_handle* es **varbinary (64)** . El identificador del plan puede obtenerse a partir del [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md) vista de administración dinámica.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   
@@ -103,7 +103,7 @@ En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE 
 |QUOTED_IDENTIFIER|64|  
 |ANSI_NULL_DFLT_ON|128|  
 |ANSI_NULL_DFLT_OFF|256|  
-|NoBrowseTable <br /><br /> Indica que el plan no usa una tabla de trabajo para implementar una operación FOR BROWSE.|512|  
+|NoBrowseTable<br /><br /> Indica que el plan no usa una tabla de trabajo para implementar una operación FOR BROWSE.|512|  
 |TriggerOneRow<br /><br /> Indica que el plan contiene la optimización de una fila para las tablas delta de desencadenadores AFTER.|1024|  
 |ResyncQuery<br /><br /> Indica que la consulta fue enviada por procedimientos almacenados del sistema internos.|2048|  
 |ARITH_ABORT|4096|  

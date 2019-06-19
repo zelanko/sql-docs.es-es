@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: fbd30a8b0e112d74bf9bd0d009592d753688fadd
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099549"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-modify-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para modificar el plan de implementación
@@ -625,7 +625,7 @@ A continuación, compile la biblioteca de clases.
   
 3.  Haga clic en **Firmar el ensamblado**.  
   
-4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>**.  
+4.  En **Elegir un archivo de clave de nombre seguro**, haga clic en **<New>** .  
   
 5.  En el cuadro de diálogo **Crear clave de nombre seguro** , en el **Nombre del archivo clave**, escriba **MyRefKey**.  
   
@@ -707,7 +707,7 @@ Después de haber seguido uno de estos métodos, puede usar MSBuild con el fin d
   
     1.  Abra Visual Studio y abra la solución que contiene el proyecto de SQL.  
   
-    2.  Haga clic con el botón derecho en el proyecto del Explorador de soluciones y elija la opción **Publicar…**.  
+    2.  Haga clic con el botón derecho en el proyecto del Explorador de soluciones y elija la opción **Publicar…** .  
   
     3.  Establezca el nombre del servidor y de la base de datos en los que vaya a publicar.  
   

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 66d5bda44de11bb28582442696b4feea41488703
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723079"
 ---
 # <a name="lesson-1-5-add-and-configure-the-flat-file-source"></a>Lección 1-5: Adición y configuración del origen de archivo plano
@@ -45,7 +45,7 @@ Para esta tarea, configurará el origen de archivo plano para que use el adminis
   
 8.  Haga clic con el botón derecho en el origen del archivo plano y seleccione **Propiedades**.  
   
-9. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)**.  
+9. En la ventana **Propiedades**, compruebe que la propiedad **LocaleID** esté establecida en **Inglés (Estados Unidos)** .  
   
 ## <a name="go-to-next-task"></a>Ir a la tarea siguiente
 [Paso 6: Adición y configuración de las transformaciones Lookup](../integration-services/lesson-1-6-adding-and-configuring-the-lookup-transformations.md)  

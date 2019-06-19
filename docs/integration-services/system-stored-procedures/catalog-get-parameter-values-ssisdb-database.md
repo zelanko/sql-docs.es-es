@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 391a47edc45145bac21ce351e36c613f2a76addd
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716102"
 ---
 # <a name="cataloggetparametervalues-ssisdb-database"></a>catalog.get_parameter_values (base de datos de SSISDB)
@@ -39,13 +39,13 @@ catalog.get_parameter_values [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nombre del proyecto donde los parámetros residen. *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto donde los parámetros residen. *project_name* es **nvarchar(128)** .  
   
  [ @package_name = ] *package_name*  
- Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. Utilice NULL para recuperar todos los parámetros de proyecto y los parámetros de todos los paquetes. El parámetro *package_name* es de tipo **nvarchar(260)**.  
+ Nombre del paquete. Especifique el nombre del paquete para recuperar todos los parámetros de proyecto y los parámetros de un paquete concreto. Utilice NULL para recuperar todos los parámetros de proyecto y los parámetros de todos los paquetes. El parámetro *package_name* es de tipo **nvarchar(260)** .  
   
  [ @reference_id = ] *reference_id*  
  Identificador único de una referencia de entorno. Este parámetro es opcional. *reference_id* es **bigint**.  

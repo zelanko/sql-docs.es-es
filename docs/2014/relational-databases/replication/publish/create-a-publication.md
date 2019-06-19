@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 142dd6544cafde4cea2839f955f23685a3a673f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022503"
 ---
 # <a name="create-a-publication"></a>Create a Publication
@@ -45,13 +45,13 @@ ms.locfileid: "63022503"
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
--   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>**, que está disponible en la página **Artículos**.  
+-   Los nombres de publicaciones y artículos no pueden contener ninguno de los siguientes caracteres: % , \* , [ , ] , | , : , " , ? , ' , \ , / , \< , >. Si los objetos de la base de datos incluyen cualquiera de estos caracteres y quiere replicarlos, debe especificar un nombre de artículo diferente del nombre del objeto del cuadro de diálogo **Propiedades del artículo: \<<artículo>** , que está disponible en la página **Artículos**.  
   
 ###  <a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar credenciales, use los [servicios de cifrado](https://go.microsoft.com/fwlink/?LinkId=34733) (en inglés) proporcionados por [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows .NET Framework.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md).  
+ Cree publicaciones y defina artículos con el Asistente para nueva publicación. Después de crear una publicación, vea y modifique las propiedades de la publicación en el cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener información sobre cómo crear una publicación de una base de datos de Oracle, vea [Crear una publicación a partir de una base de datos de Oracle](create-a-publication-from-an-oracle-database.md).  
   
 #### <a name="to-create-a-publication-and-define-articles"></a>Para crear publicaciones y definir artículos  
   
@@ -108,16 +108,16 @@ ms.locfileid: "63022503"
   
     -   Si no está seguro de que exista un Agente de registro del LOG para una base de datos publicada, ejecute [sp_helplogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql) en la base de datos de publicación del publicador.  
   
-    -   Si el conjunto de resultados está vacío, cree un trabajo de Agente de registro del LOG. En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique las credenciales de Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] con las que se ejecuta el agente para **@job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Continúe en el paso 3.  
+    -   Si el conjunto de resultados está vacío, cree un trabajo de Agente de registro del LOG. En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql). Especifique las credenciales de Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] con las que se ejecuta el agente para **@job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Continúe en el paso 3.  
   
-3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación para **@publication**y para el **@repl_freq** parámetro, especifique un valor de `snapshot` para una publicación de instantáneas o un valor de `continuous` para un publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
+3.  En el publicador, ejecute [sp_addpublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql). Especifique un nombre de publicación para **@publication** y para el **@repl_freq** parámetro, especifique un valor de `snapshot` para una publicación de instantáneas o un valor de `continuous` para un publicación transaccional. Especifique cualquier otra opción de publicación. Esto define la publicación.  
   
     > [!NOTE]  
     >  Los nombres de publicación no pueden incluir los caracteres siguientes:  
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-4.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 3 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
+4.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 3 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
     > [!IMPORTANT]  
     >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  
@@ -137,7 +137,7 @@ ms.locfileid: "63022503"
     >   
     >  % * [ ] | : " ? \ / \< >  
   
-3.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 2 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
+3.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql). Especifique el nombre de publicación usado en el paso 2 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
     > [!IMPORTANT]  
     >  Al configurar un publicador con un distribuidor remoto, los valores suministrados para todos los parámetros, incluidos *job_login* y *job_password*, se envían al distribuidor como texto sin formato. Antes de ejecutar este procedimiento almacenado, se recomienda cifrar la conexión entre el publicador y su distribuidor remoto. Para obtener más información, vea [Habilitar conexiones cifradas en el motor de base de datos &#40;Administrador de configuración de SQL Server&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md).  

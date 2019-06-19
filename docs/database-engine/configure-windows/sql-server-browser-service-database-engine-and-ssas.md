@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
 ms.openlocfilehash: 6be7286056ce59e9080e58fa9706370481fb5fce
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66775439"
 ---
 # <a name="sql-server-browser-service-database-engine-and-ssas"></a>Servicio SQL Server Browser (motor de base de datos y SSAS)
@@ -119,7 +119,7 @@ ms.locfileid: "66775439"
   
 -   Cualquier cuenta **de dominio o local**  
   
--   Cuenta de **servicio local**   
+-   Cuenta de **servicio local**  
   
 -   La cuenta de **sistema local** (no recomendada, ya que tiene privilegios innecesarios)  
   

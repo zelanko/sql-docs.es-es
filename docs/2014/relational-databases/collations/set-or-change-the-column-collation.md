@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4a16794bb2cd61829058d9fac7be11438f563d44
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918969"
 ---
 # <a name="set-or-change-the-column-collation"></a>Establecer o cambiar la intercalación de columnas
@@ -36,7 +36,7 @@ ms.locfileid: "62918969"
     GO  
     ```  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  Para obtener más información, vea [Collation and Unicode Support](collation-and-unicode-support.md).  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Para obtener más información, vea [Collation and Unicode Support](collation-and-unicode-support.md).  
   
 -   Mediante el `Column.Collation` propiedad [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO).  
   

@@ -18,10 +18,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 013e0d0d28d961496e4bec367775d16f994a5e97
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723515"
 ---
 # <a name="integration-services-user-interface"></a>Interfaz de usuario de Integration Services
@@ -47,12 +47,12 @@ ms.locfileid: "65723515"
 |Cuadro de diálogo|Finalidad|Acceso|  
 |----------------|-------------|------------|  
 |**Introducción**|Tener acceso a ejemplos, tutoriales y vídeos.|En la superficie de diseño de la pestaña **Flujo de control** o de la pestaña **Flujo de datos** , haga clic con el botón derecho y elija **Introducción**.<br /><br /> Para mostrar automáticamente la ventana **Introducción** cada vez que cree un proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] , seleccione **Mostrar siempre en los proyectos nuevos** en la parte inferior de la ventana.|  
-|**Configurar registros SSIS**|Configurar el registro de un paquete y sus tareas agregando registros y configurando detalles de registro.|En el menú **SSIS** , haga clic en **Registro**.<br /><br /> - O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Registro**.|  
+|**Configurar registros SSIS**|Configurar el registro de un paquete y sus tareas agregando registros y configurando detalles de registro.|En el menú **SSIS** , haga clic en **Registro**.<br /><br /> \- O bien -<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Registro**.|  
 |**Organizador de configuraciones de paquetes**|Agregar y editar configuraciones de paquetes Desde este cuadro de diálogo se ejecuta el Asistente para la configuración de paquetes.|En el menú **SSIS** , haga clic en **Configuraciones de paquetes**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Configuraciones de paquetes**.|  
 |**Firma digital**|Firmar un paquete o quitar la firma del paquete.|En el menú **SSIS** , haga clic en **Firma digital**.<br /><br /> -O bien-<br /><br /> Haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Firma digital**.|  
 |**Establecer puntos de interrupción**|Habilitar puntos de interrupción en tareas y establecer las propiedades de los puntos de interrupción.|En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en una tarea o contenedor y, luego, haga clic en **Editar puntos de interrupción**. Para establecer un punto de interrupción en el paquete, haga clic con el botón derecho en cualquier punto de la superficie de diseño de la pestaña **Flujo de control** y, luego, haga clic en **Editar puntos de interrupción**.|  
   
- La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *unidad>\<*:\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<unidad>*:\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
+ La ventana de **Introducción** proporciona vínculos a ejemplos, tutoriales y vídeos. Para agregar vínculos al contenido adicional, modifique el archivo SamplesSites.xml que se incluye con la versión actual de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]. Se recomienda que no modifique el valor del elemento \<GettingStartedSamples> que especifica la dirección URL de la fuente RSS. El archivo se encuentra en la carpeta *unidad>\<* :\Archivos de programa\Microsoft SQL Server\110\DTS\Binn. En un equipo de 64 bits, el archivo se encuentra en la carpeta *\<unidad>* :\Archivos de programa(x86)\Microsoft SQL Server\110\DTS\Binn.  
   
  Si el archivo SamplesSites.xml se daña, reemplace el XML del archivo por el XML predeterminado siguiente.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "65723515"
   
 -   El menú **Edición** proporciona funciones de copiado y pegado para copiar objetos en las superficies de diseño.  
   
--   El menú **Ver** proporciona opciones para modificar la representación gráfica de objetos en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)]   
+-   El menú **Ver** proporciona opciones para modificar la representación gráfica de objetos en el Diseñador [!INCLUDE[ssIS](../includes/ssis-md.md)]  
   
  Para obtener más información sobre otras ventanas y menús, vea la documentación sobre Visual Studio.  
   

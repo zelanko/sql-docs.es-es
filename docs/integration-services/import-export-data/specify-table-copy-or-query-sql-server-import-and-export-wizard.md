@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: c147014aa6554612a51be0ed2369aba053c8c68a
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723694"
 ---
 # <a name="specify-table-copy-or-query-sql-server-import-and-export-wizard"></a>Especificar copia de tabla o consulta (Asistente para importación y exportación de SQL Server)
@@ -54,7 +54,7 @@ Después de hacer clic en **Siguiente**, escriba una instrucción SQL para espec
 ## <a name="why-isnt-the-copy-option-available"></a>¿Por qué no está disponible la opción Copiar?    
  Es posible que la opción **Copiar los datos de una o varias tablas o vistas** no esté disponible si el asistente usa un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] para conectarse al origen de datos. Esto ocurre cuando el asistente no tiene información suficiente sobre el proveedor de datos para pedir una lista de tablas y vistas desde el origen de datos. 
  
-Puede seguir usando la opción **Write a query (Escribir una consulta)**, aunque normalmente no escriba consultas SQL, siempre y cuando conozca el nombre de la tabla que quiere exportar. En el cuadro de diálogo **Proporcionar una consulta de origen**, que se muestra después de hacer clic en **Siguiente**, escriba la consulta como `SELECT * FROM <name of table>`. Si el nombre de la tabla contiene espacios u otros caracteres especiales, escriba el nombre entre corchetes (`SELECT * FROM [<name of table>]`).
+Puede seguir usando la opción **Write a query (Escribir una consulta)** , aunque normalmente no escriba consultas SQL, siempre y cuando conozca el nombre de la tabla que quiere exportar. En el cuadro de diálogo **Proporcionar una consulta de origen**, que se muestra después de hacer clic en **Siguiente**, escriba la consulta como `SELECT * FROM <name of table>`. Si el nombre de la tabla contiene espacios u otros caracteres especiales, escriba el nombre entre corchetes (`SELECT * FROM [<name of table>]`).
 
 ### <a name="more-info"></a>Más información
  La opción **Copiar los datos de una o varias tablas o vistas** solo está disponible para los proveedores que tienen la sección ProviderDescription en el archivo ProviderDescriptors.xml. (De forma predeterminada, este archivo se encuentra en \<*unidad*>:\Archivos de programa\Microsoft SQL Server\130\DTS\ProviderDescriptors). Cada sección ProviderDescription del archivo contiene la información que necesita para recuperar los metadatos del proveedor correspondiente.    

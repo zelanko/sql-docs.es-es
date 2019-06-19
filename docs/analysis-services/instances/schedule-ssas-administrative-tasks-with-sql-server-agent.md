@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 171caf19d960533c1043cdbfaea7226207d277f5
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357510"
 ---
 # <a name="schedule-ssas-administrative-tasks-with-sql-server-agent"></a>Programar tareas administrativas de SSAS con el Agente SQL Server
@@ -81,7 +81,7 @@ ms.locfileid: "65357510"
   
 6.  En el cuadro de diálogo **Nuevo paso de trabajo** , escriba un nombre de paso en **Nombre del paso**.  
   
-7.  En **Servidor**, escriba **localhost** para una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y **localhost\\**\<*nombre de instancia*> para una instancia con nombre.  
+7.  En **Servidor**, escriba **localhost** para una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y **localhost\\** \<*nombre de instancia*> para una instancia con nombre.  
   
      Si va a ejecutar el trabajo desde un equipo remoto, use el nombre de servidor y el nombre de instancia donde se ejecutará el trabajo. Use el formato \< *nombre del servidor*> para una instancia predeterminada, y \< *nombre del servidor*>\\<*instancia nombre*> para una instancia con nombre.  
   

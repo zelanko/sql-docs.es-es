@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6aa634f154eb0594c76ae7e65b8d237175a3f92e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288517"
 ---
 # <a name="asynchronous-execution-notification-method"></a>Ejecución asincrónica (método de notificación)
@@ -44,7 +44,7 @@ ODBC permite la ejecución asincrónica de conexión y las operaciones de la ins
 |------------------------------|----------------------------|--------------------|--------------|  
 |Nueva aplicación de cualquier versión ODBC|ODBC 3.81|3,80 ODBC Driver|Aplicación puede utilizar esta característica si el controlador admite esta característica, en caso contrario, el Administrador de controladores generará un error.|  
 |Nueva aplicación de cualquier versión ODBC|ODBC 3.81|Controlador ODBC de pre 3,80|El Administrador de controladores generará un error si el controlador no admite esta característica.|  
-|Nueva aplicación de cualquier versión ODBC|3.81 pre-ODBC|Cualquiera|Cuando la aplicación usa esta característica, un administrador de controladores antiguos considerará los nuevos atributos como atributos específicos del controlador y el controlador debe el error. Un nuevo administrador de controladores no pasará estos atributos para el controlador.|  
+|Nueva aplicación de cualquier versión ODBC|3\.81 pre-ODBC|Cualquiera|Cuando la aplicación usa esta característica, un administrador de controladores antiguos considerará los nuevos atributos como atributos específicos del controlador y el controlador debe el error. Un nuevo administrador de controladores no pasará estos atributos para el controlador.|  
   
  Una aplicación debe comprobar la versión del Administrador de controladores antes de usar esta característica. En caso contrario, si un controlador mal escrito no producirá ningún error y la versión del Administrador de controladores es anterior a ODBC 3.81, comportamiento es indefinido.  
   

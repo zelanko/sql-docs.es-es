@@ -25,10 +25,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: a336b58ed148fa135835f4d991d73644c5f1799e
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503233"
 ---
 # <a name="alter-queue-transact-sql"></a>ALTER QUEUE (Transact-SQL)
@@ -101,7 +101,7 @@ WITH
  ACTIVATION  
  Especifica información acerca del procedimiento almacenado que se activa para procesar mensajes que llegan a esta cola.  
   
- STATUS (activación)   
+ STATUS (activación)  
  Especifica si una cola activa o no el procedimiento almacenado. Si STATUS = ON, la cola inicia el procedimiento almacenado especificado con PROCEDURE_NAME cuando el número de procedimientos que se ejecutan actualmente es menor que MAX_QUEUE_READERS y cuando los mensajes llegan a la cola antes de que los procedimientos almacenados reciban mensajes. Si STATUS = OFF, la cola no activa el procedimiento almacenado.  
   
  REBUILD [ WITH \<queue_rebuild_options> ]  

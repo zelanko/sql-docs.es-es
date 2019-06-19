@@ -11,10 +11,10 @@ ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65581347"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>Reporting Services en SQL Server Data Tools (SSDT)
@@ -93,7 +93,7 @@ ms.locfileid: "65581347"
   
  Use el panel de propiedades para:  
   
--   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)**. La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>**). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
+-   Establecer las propiedades del elemento seleccionado en la superficie de diseño. Algunas propiedades proporcionan una lista desplegable de valores. También puede escribir directamente el valor en la celda. En algunas propiedades se incluye una colección de valores, que se indica con el valor **(Colección)** . La mayoría de las propiedades pueden aceptar una expresión (las expresiones complejas se indican con el valor **\<Expression>** ). Haga clic en **\<Expression>** para abrir el cuadro de diálogo **Expresión**. Para obtener más información, vea [Expression Dialog Box](https://msdn.microsoft.com/library/e6c74ccb-4594-4d4f-b958-618d710e34eb).  
   
 -   Use los botones de la barra de herramientas del panel de propiedades para cambiar la cuadrícula de la vista por categorías a la vista alfabética. En la vista por categorías, es probable que tenga que expandir una categoría para ver todas las propiedades de la misma. Para abrir el cuadro de diálogo Propiedades de un elemento, haga clic en el botón **Páginas de propiedades** en la barra de herramientas, o bien haga clic con el botón derecho en el elemento y seleccione **Propiedades**.  
   
@@ -237,7 +237,7 @@ ms.locfileid: "65581347"
   
 
 ##  <a name="bkmk_SourceControl"></a> Control de código fuente  
- [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo Opciones** para especificar el complemento y configurar las propiedades.  
+ [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] se puede integrar con complementos de origen. Use las páginas Proyectos y Soluciones del cuadro de diálogo **Opciones** para especificar el complemento y configurar las propiedades.  
   
 ##  <a name="bkmk_CustomReportTemplates"></a> Plantillas de informe personalizadas  
  Para usar informes personalizados como plantillas para los informes nuevos, basta con copiarlas en la carpeta ReportProject del equipo en el que [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] está instalado. De forma predeterminada, esta carpeta se encuentra en la ubicación siguiente: `<drive>:\Program Files\Microsoft Visual Studio 14.0\Common7\IDE\Private Assemblies\ProjectItems\ReportProject`. Al agregar un elemento nuevo al proyecto de informe, el informe personalizado aparece en el panel de plantillas.  

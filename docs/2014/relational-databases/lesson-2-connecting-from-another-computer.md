@@ -11,10 +11,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: eedbde338ad3cc2af5477cc263eac7444707c0d8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63144803"
 ---
 # <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
@@ -44,7 +44,7 @@ ms.locfileid: "63144803"
     > [!NOTE]  
     >  Es posible que estén disponibles las opciones de 32 y 64 bits.  
   
-2.  En **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server**y, a continuación, haga clic en **protocolos de**  _\<nombreDeInstancia >_.  
+2.  En **Administrador de configuración de SQL Server**, expanda **configuración de red de SQL Server**y, a continuación, haga clic en **protocolos de**  _\<nombreDeInstancia >_ .  
   
      La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] se instala como **SQLEXPRESS**, a menos que se haya cambiado el nombre durante la instalación.  
   
@@ -112,7 +112,7 @@ ms.locfileid: "63144803"
   
 2.  En el cuadro de diálogo **Conectar al servidor** , confirme **Motor de base de datos** en el cuadro **Tipo de servidor** .  
   
-3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:**_<nombre_equipo>_. En nuestro ejemplo de una instancia con nombre, escriba **tcp:**_<nombre_equipo>_**,49172**.  
+3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:** _<nombre_equipo>_ . En nuestro ejemplo de una instancia con nombre, escriba **tcp:** _<nombre_equipo>_ **,49172**.  
   
     > [!NOTE]  
     >  Si omite **tcp:** en el cuadro **Nombre del servidor** , el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  

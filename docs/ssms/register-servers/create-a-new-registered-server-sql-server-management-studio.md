@@ -17,10 +17,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: cbe062925826b40c6f7612f6becf1af0986461a4
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105170"
 ---
 # <a name="create-a-new-registered-server-sql-server-management-studio"></a>Crear un servidor registrado (SQL Server Management Studio)
@@ -54,7 +54,7 @@ ms.locfileid: "65105170"
      Cuando se registra un servidor desde Servidores registrados, el cuadro **Tipo de servidor** es de solo lectura y coincide con el tipo de servidor que se muestra en el panel Servidores registrados. Para registrar un tipo de servidor diferente, haga clic en **Motor de base de datos**, **Analysis Server**, **Reporting Services**o **Integration Services** en la barra de herramientas de **Servidores registrados** antes de empezar a registrar un nuevo servidor.  
   
      **Nombre del servidor**  
-     Seleccione la instancia del servidor que se va a registrar en el formato *\<nombreDelServidor>*[\\*\<nombreDeInstancia>*].  
+     Seleccione la instancia del servidor que se va a registrar en el formato *\<nombreDelServidor>* [\\ *\<nombreDeInstancia>* ].  
   
      **Autenticación**  
      Están disponibles dos modos de autenticación cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

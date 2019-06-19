@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 72f6c3fd862e6b122513eed605658835ec61442e
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105995"
 ---
 # <a name="create-insert-results-queries-visual-database-tools"></a>Crear consultas de inserción de resultados (Visual Database Tools)
@@ -78,7 +78,7 @@ Cuando se crea una consulta de inserción de resultados, el panel Criterios var�
     > [!NOTE]  
     > El Diseñador de consultas y vistas no puede determinar con antelación las tablas y vistas que se pueden actualizar. Por tanto, en la lista **Nombre de la tabla** del cuadro de diálogo **Elegir tabla de destino para Insertar resultados** , se muestran todas las tablas y vistas disponibles en la conexión de datos que está consultando, incluso aquellas en las que no se pueden copiar filas.  
   
-4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija **&#42; (Todas las columnas)**.  
+4.  En el rectángulo que representa la tabla o el objeto con valores de tabla, elija los nombres de las columnas cuyo contenido desea copiar. Para copiar filas enteras, elija **&#42; (Todas las columnas)** .  
   
     El Diseñador de consultas y vistas agrega las columnas elegidas a la columna **Columna** del panel Criterios.  
   

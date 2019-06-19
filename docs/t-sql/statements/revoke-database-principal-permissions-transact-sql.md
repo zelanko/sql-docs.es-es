@@ -20,11 +20,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: afb12785dd744ddfd938fd2ddfd02e058f2e4034
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63033847"
 ---
 # <a name="revoke-database-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de base de datos de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,15 +63,15 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Especifica un permiso que se puede revocar en la entidad de seguridad de base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  USER ::*database_user*  
- Especifica la clase y nombre del usuario en el que se revoca el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y nombre del usuario en el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  ROLE ::*database_role*  
- Especifica la clase y nombre del rol en el que se revoca el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y nombre del rol en el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  APPLICATION ROLE ::*application_role*  
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
- Especifica la clase y nombre del rol de aplicación en el que se revoca el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica la clase y nombre del rol de aplicación en el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  GRANT OPTION  
  Indica que se revocará el derecho de conceder el permiso especificado a otras entidades de seguridad. No se revocará el permiso.  
@@ -160,7 +160,7 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-revoking-control-permission-on-a-user-from-another-user"></a>A. Revocar el permiso CONTROL en un usuario desde otro usuario  
- En el siguiente ejemplo se revoca el permiso `CONTROL` para el usuario [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de `Wanida` al usuario `RolandX`.  
+ En el siguiente ejemplo se revoca el permiso `CONTROL` para el usuario `Wanida` de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al usuario `RolandX`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -168,8 +168,8 @@ REVOKE CONTROL ON USER::Wanida FROM RolandX;
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>b. Revocar el permiso VIEW DEFINITION para un rol desde un usuario para el que se concedió WITH GRANT OPTION  
- En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el rol [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de`SammamishParking` del usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso `VIEW DEFINITION``WITH GRANT OPTION`.  
+### <a name="b-revoking-view-definition-permission-on-a-role-from-a-user-to-which-it-was-granted-with-grant-option"></a>B. Revocar el permiso VIEW DEFINITION para un rol desde un usuario para el que se concedió WITH GRANT OPTION  
+ En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el rol [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de`SammamishParking` del usuario de base de datos `JinghaoLiu`. Se especifica la opción `CASCADE` porque al usuario `JinghaoLiu` se le concedió el permiso `VIEW DEFINITION` `WITH GRANT OPTION`.  
   
 ```  
 USE AdventureWorks2012;  
@@ -179,7 +179,7 @@ GO
 ```  
   
 ### <a name="c-revoking-impersonate-permission-on-a-user-from-an-application-role"></a>C. Revocar el permiso IMPERSONATE para un usuario desde un rol de aplicación  
- En el siguiente ejemplo se revoca el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] de `AccountsPayable17`.  
+ En el siguiente ejemplo se revoca el permiso `IMPERSONATE` para el usuario `HamithaL` al rol de aplicación `AccountsPayable17` de [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   

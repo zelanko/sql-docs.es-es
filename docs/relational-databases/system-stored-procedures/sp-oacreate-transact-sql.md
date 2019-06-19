@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b7a56afb2ffa11dbe4ec8937efb602c13c9599d
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450020"
 ---
 # <a name="spoacreate-transact-sql"></a>sp_OACreate (Transact-SQL)
@@ -41,14 +41,14 @@ sp_OACreate { progid | clsid } , objecttoken OUTPUT [ , context ]
   
 ## <a name="arguments"></a>Argumentos  
  *progid*  
- Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'**_OLEComponent_**.** _Objeto_**'**  
+ Es el identificador de programa (ProgID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **'** _OLEComponent_ **.** _Objeto_ **'**  
   
  *OLEComponent* es el nombre del componente del servidor de automatización OLE, y *objeto* es el nombre del objeto OLE. El objeto OLE especificado debe ser válido y debe admitir la **IDispatch** interfaz.  
   
  Por ejemplo, SQLDMO. SQLServer es el ProgID de SQL-DMO **SQLServer** objeto. SQL-DMO tiene un nombre de componente de SQLDMO, el **SQLServer** objeto es válido y (como SQL-DMO todos los objetos de) la **SQLServer** admite **IDispatch**.  
   
  *clsid*  
- Es el identificador de clase (CLSID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **' {**_nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_**}'**. El objeto OLE especificado debe ser válido y debe admitir la **IDispatch** interfaz.  
+ Es el identificador de clase (CLSID) del objeto OLE que se va a crear. Esta cadena de caracteres describe la clase del objeto OLE y tiene el formato: **' {** _nnnnnnnn-nnnn-nnnn-nnnn-nnnnnnnnnnnn_ **}'** . El objeto OLE especificado debe ser válido y debe admitir la **IDispatch** interfaz.  
   
  Por ejemplo, {00026BA1-0000-0000-C000-000000000046} es el CLSID de SQL-DMO **SQLServer** objeto.  
   

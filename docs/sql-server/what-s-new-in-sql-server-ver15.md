@@ -1,7 +1,7 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
 ms.date: 05/28/2019
-ms.prod: sql-server-2019
+ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
 ms.topic: article
@@ -9,16 +9,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d165900617723fcd91a88c17db630b2d4ac29c1c
-ms.sourcegitcommit: d44fa4170c2f586f264e31906c7916a74d080aef
+ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66810283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836299"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] se basa en versiones anteriores para potenciar SQL Server como una plataforma que proporciona diversas opciones de lenguajes de desarrollo, tipos de datos, entornos locales o en la nube, y sistemas operativos. En este artículo se resumen las novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -60,6 +60,7 @@ Además, se han incorporado o mejorado las características siguientes de [!INCL
 |[Base de datos en memoria](../relational-databases/in-memory-database.md) agrega la nueva sintaxis DDL para controlar el grupo de búferes híbrido. <sup>2</sup>|Con el [grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md), se accede directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario.|
 |Incorporación de una nueva característica de base de datos en memoria: metadatos tempdb optimizados para memoria.|Vea [Metadatos tempdb optimizados para memoria](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata).|
 |Los servidores vinculados admiten la codificación de caracteres UTF-8. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
+|Se ha cambiado el nombre de la intercalación BIN2_UTF8 a Latin1_General_100_BIN2_UTF8. |[Collation and Unicode Support](../relational-databases/collations/collation-and-unicode-support.md) |
 |El programa de instalación de SQL Server incluye recomendaciones MaxDOP que siguen las directrices documentadas. |[Establecer la opción de configuración del servidor Grado máximo de paralelismo](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)|
 |`sys.dm_exec_query_plan_stats` devuelve información sobre el grado de paralelismo y la concesión de memoria para planes de consulta. |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 | &nbsp; | &nbsp; |

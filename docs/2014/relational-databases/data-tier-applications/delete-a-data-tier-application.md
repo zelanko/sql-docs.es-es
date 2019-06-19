@@ -21,10 +21,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5b8b6b1d5975ff94fda98784449330571cc93cec
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62872724"
 ---
 # <a name="delete-a-data-tier-application"></a>Eliminar una aplicación de capa de datos
@@ -67,7 +67,7 @@ ms.locfileid: "62872724"
   
 3.  Expanda el nodo **Aplicaciones de capa de datos** .  
   
-4.  Haga clic con el botón derecho en la DAC que quiere eliminar y luego seleccione **Eliminar aplicación de capa de datos...**.  
+4.  Haga clic con el botón derecho en la DAC que quiere eliminar y luego seleccione **Eliminar aplicación de capa de datos...** .  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -84,7 +84,7 @@ ms.locfileid: "62872724"
   
  **No volver a mostrar esta página.** - Haga clic en la casilla para evitar que la página se muestre en el futuro.  
   
- **Siguiente >**: continúa hasta la página **Elegir método**.  
+ **Siguiente >** : continúa hasta la página **Elegir método**.  
   
  **Cancelar** : termina el asistente sin eliminar una aplicación de capa de datos o base de datos.  
   
@@ -103,7 +103,7 @@ ms.locfileid: "62872724"
   
  **\< Anterior** : vuelve a la página **Introducción** .  
   
- **Siguiente >**: avanza a la página **Resumen**.  
+ **Siguiente >** : avanza a la página **Resumen**.  
   
  **Cancelar** : termina el asistente sin eliminar la DAC o la base de datos.  
   
@@ -114,7 +114,7 @@ ms.locfileid: "62872724"
   
  **\< Anterior** : vuelve a la página **Elegir método** para elegir otro método de eliminación.  
   
- **Siguiente >**: elimina la instancia de DAC mediante el método elegido en la página anterior y avanza a la página **Eliminar aplicación de capa de datos**.  
+ **Siguiente >** : elimina la instancia de DAC mediante el método elegido en la página anterior y avanza a la página **Eliminar aplicación de capa de datos**.  
   
  **Cancelar** : finaliza el asistente sin eliminar la instancia de DAC.  
   

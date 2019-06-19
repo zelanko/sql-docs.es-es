@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cfa09322af5b4838ccdc2bb9dc85d13a412bc359
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107079"
 ---
 # <a name="sharepoint-list-connection-type-ssrs"></a>Tipo de conexión de lista de SharePoint (SSRS)
@@ -50,9 +50,9 @@ ms.locfileid: "66107079"
 ||Credenciales admitidas|Autenticación de Windows de modo clásico|<sup>3</sup> autenticación mediante formularios|  
 |-|---------------------------|-----------------------------------------|----------------------------------------|  
 |Lista de SharePoint de granja local|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|Sí|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|No|No|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|No|Sin|  
 |Lista remota de SharePoint|Autenticación de Windows (integrada) o Token de usuario de SharePoint|Sí|No<sup>2</sup>|  
-||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|No|No<sup>2</sup>|  
+||Almacenada, Pedir, Ninguna (con credenciales de Windows<sup>1</sup>)|Sin|No<sup>2</sup>|  
   
  <sup>1</sup> almacenadas y símbolo del sistema con credenciales que no son Windows no se admite.  
   

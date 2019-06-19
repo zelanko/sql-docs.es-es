@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6b568790f9a61c01054d4a7225e4a2dbf9a39887
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071506"
 ---
 # <a name="deploy-powerpivot-solutions-to-sharepoint"></a>Implementar las soluciones de PowerPivot en SharePoint
@@ -104,7 +104,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Haga clic en **Implementar solución**.  
   
-4.  En **implementarla?**, seleccione la aplicación web de SharePoint para el que desea agregar compatibilidad con las características de PowerPivot.  
+4.  En **implementarla?** , seleccione la aplicación web de SharePoint para el que desea agregar compatibilidad con las características de PowerPivot.  
   
 5.  Haga clic en **Aceptar**.  
   

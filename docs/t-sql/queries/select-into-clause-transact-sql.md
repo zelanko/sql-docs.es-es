@@ -31,11 +31,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4246ac153e28393db2bfaefd443f85235e8cf6db
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62705650"
 ---
 # <a name="select---into-clause-transact-sql"></a>SELECT: cláusula INTO (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ SELECT…INTO crea una tabla en el grupo de archivos predeterminado e inserta la
  **Se aplica a:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
   
 ## <a name="data-types"></a>Tipos de datos  
- El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)**. Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
+ El atributo FILESTREAM no transfiere a la nueva tabla. Los BLOB FILESTREAM se copian y se almacenan en la nueva tabla como BLOB **varbinary(max)** . Sin el atributo FILESTREAM, el tipo de datos **varbinary(max)** tiene una limitación de 2 GB. Si un FILESTREAM BLOB supera este valor, se produce el error 7119 y se detiene la instrucción.  
   
  Cuando se selecciona una columna de identidad existente en una nueva tabla, la nueva columna hereda la propiedad IDENTITY, a menos que se cumpla una de las siguientes condiciones:  
   
@@ -126,7 +126,7 @@ FROM Person.Person AS c
 GO  
 ```  
   
-### <a name="b-inserting-rows-using-minimal-logging"></a>b. Insertar las filas utilizando el registro mínimo  
+### <a name="b-inserting-rows-using-minimal-logging"></a>B. Insertar las filas utilizando el registro mínimo  
  El ejemplo siguiente crea la tabla `dbo.NewProducts` e inserta filas de la tabla `Production.Product`. El ejemplo supone que el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] está establecido en FULL. Para asegurarse de que se utiliza el registro mínimo, el modelo de recuperación de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] se establece en BULK_LOGGED antes de que las filas se inserten y se restablece en FULL después de la instrucción SELECT...INTO. De esta manera se asegura de que la instrucción SELECT...INTO use el espacio mínimo en el registro de transacciones y funcione eficazmente.  
   
 ```sql  

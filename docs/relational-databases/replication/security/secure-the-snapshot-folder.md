@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73ae886682890c68c34ac90af33438d7f7b9644
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644756"
 ---
 # <a name="secure-the-snapshot-folder"></a>Proteger la carpeta de instantáneas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "54124185"
 > [!NOTE]  
 >  Control de cuentas de usuario (UAC) ayuda a los administradores a administrar sus derechos de usuario elevados (que a veces reciben el nombre de *privilegios*). Cuando se ejecuta en sistemas operativos que tienen UAC habilitado, los administradores no utilizan sus derechos administrativos. En su lugar, realizan la mayoría de acciones como usuarios estándar (no administrativos) y solo usan sus derechos administrativos de forma temporal cuando es necesario. UAC puede impedir el acceso administrativo al recurso compartido de instantáneas. Por lo tanto, debe conceder de forma explícita permisos del recurso compartido de instantáneas a las cuentas de Windows usadas por el Agente de instantáneas, el Agente de distribución y el Agente de mezcla. Debe hacerlo incluso si las cuentas de Windows pertenecen al grupo Administradores.  
   
- Al configurar un distribuidor mediante el Asistente para configurar la distribución o el Asistente para nueva publicación, la carpeta de instantáneas tiene como valor predeterminado una ruta de acceso local: X:\Archivos de programa\Microsoft SQL Server\\*\<instancia*\MSSQL\ReplData. Si usa un distribuidor remoto o suscripciones de extracción, debe especificar un recurso compartido de red UNC (como \\\\<*nombre de equipo>* \instantánea) en lugar de una ruta de acceso local.  
+ Al configurar un distribuidor mediante el Asistente para configurar la distribución o el Asistente para nueva publicación, la carpeta de instantáneas tiene como valor predeterminado una ruta de acceso local: X:\Archivos de programa\Microsoft SQL Server\\ *\<instancia*\MSSQL\ReplData. Si usa un distribuidor remoto o suscripciones de extracción, debe especificar un recurso compartido de red UNC (como \\\\<*nombre de equipo>* \instantánea) en lugar de una ruta de acceso local.  
   
  Los permisos para tener acceso a la carpeta de instantáneas deben concederse según la forma en la que se tiene acceso a la carpeta. En [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 2003 se utilizan las pestañas del siguiente cuadro de diálogo:  
   

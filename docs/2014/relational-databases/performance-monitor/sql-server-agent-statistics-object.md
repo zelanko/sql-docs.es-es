@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 34539c79bc0e2d90841837abef895bdceb2eb20d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250848"
 ---
 # <a name="sql-server-agent-statistics-object"></a>Statistics (objeto del Agente SQL Server)
@@ -25,7 +25,7 @@ ms.locfileid: "63250848"
   
  La tabla siguiente muestra los contadores **SQLAgent:Statistics** .  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
 |**SQL Server reiniciado**|Número de veces que el Agente SQL Server ha reiniciado correctamente Microsoft SQL Server desde la última vez que se inició el Agente SQL Server.|  
   

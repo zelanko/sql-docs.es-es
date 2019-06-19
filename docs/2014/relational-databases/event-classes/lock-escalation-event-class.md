@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c85b6983cbff901ae39c365503a6ab1ae0fcede1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662379"
 ---
 # <a name="lockescalation-event-class"></a>Lock:Escalation (clase de eventos)
@@ -33,9 +33,9 @@ ms.locfileid: "62662379"
 |**ClientProcessID**|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |**DatabaseID**|`int`|Identificador de la base de datos en la que se ha adquirido el bloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] muestra el nombre de la base de datos si se captura la columna de datos **ServerName** en el seguimiento y el servidor está disponible. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|`nvarchar`|Nombre de la base de datos en la que ha ocurrido la extensión.|35|Sí|  
-|**EventClass**|`int`|Tipo de evento = 60.|27|No|  
+|**EventClass**|`int`|Tipo de evento = 60.|27|Sin|  
 |**EventSubClass**|`int`|Causa de la ampliación del bloqueo:<br /><br /> **0 - LOCK_THRESHOLD** indica que la instrucción superó el umbral del bloqueo.<br /><br /> **1 - MEMORY_THRESHOLD** indica que la instrucción superó el umbral de memoria.|21|Sí|  
-|**EventSequence**|`int`|Secuencia de un evento determinado de la solicitud.|51|No|  
+|**EventSequence**|`int`|Secuencia de un evento determinado de la solicitud.|51|Sin|  
 |**GroupID**|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |**HostName**|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |**IntegerData**|`int`|Recuento de bloqueo de HoBT. El número de bloqueos para el HoBT en el momento de la ampliación del bloqueo.|25|Sí|  
@@ -52,7 +52,7 @@ ms.locfileid: "62662379"
 |**Offset**|`int`|Desplazamiento inicial de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] .|61|Sí|  
 |**OwnerID**|`int`|1=TRANSACTION<br /><br /> 2=CURSOR<br /><br /> 3=SESSION<br /><br /> 4=SHARED_TRANSACTION_WORKSPACE<br /><br /> 5=EXCLUSIVE_TRANSACTION_WORKSPACE<br /><br /> 6=WAITFOR_QUERY|58|Sí|  
 |**IdSolicitud**|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|**ServerName**|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|**ServerName**|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
 |**SessionLoginName**|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, **SessionLoginName** muestra inicioDeSesión1 y **LoginName** muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |**SPID**|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |**StartTime**|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  

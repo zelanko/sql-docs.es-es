@@ -21,11 +21,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9cdb5c17a74b600b640872d7b153f715da8e15a
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590239"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62999610"
 ---
 # <a name="deploy-a-database-by-using-a-dac"></a>Implementar una base de datos mediante una DAC
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,7 +69,7 @@ ms.locfileid: "53590239"
   
 3.  Expanda el nodo **Bases de datos** .  
   
-4.  Haga clic con el botón derecho en la base de datos que quiera implementar, seleccione **Tareas** y, después, seleccione **Implementar base de datos en SQL Azure...**.  
+4.  Haga clic con el botón derecho en la base de datos que quiera implementar, seleccione **Tareas** y, después, seleccione **Implementar base de datos en SQL Azure...** .  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -105,7 +105,7 @@ ms.locfileid: "53590239"
   
  **[!INCLUDE[ssSDS](../../includes/sssds-md.md)] :**  
   
--   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]**: seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
+-   **Edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]** : seleccione la edición de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] en el menú desplegable.  
   
 -   **Tamaño máximo de la base de datos**: seleccione el tamaño máximo de la base de datos en el menú desplegable.  
   

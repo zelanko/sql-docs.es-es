@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 450b1cdde9185edee5eac41f52d209e43a7ae22f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996259"
 ---
 # <a name="spauditwrite-transact-sql"></a>sp_audit_write (Transact-SQL)
@@ -49,7 +49,7 @@ sp_audit_write [ @user_defined_event_id = ] user_defined_event_id
  Parámetro pasado por el usuario para indicar si el evento se realizó correctamente o no. Aparece en la columna "succeeded" del registro de auditoría. `@succeeded` es **bits**.  
   
  `[ @user_defined_information = ] 'user_defined_information'`  
- Es el texto definido por el usuario y registrado en la nueva columna user_defined_event_id column del registro de auditoría. `@user_defined_information` es **nvarchar (4000)**.  
+ Es el texto definido por el usuario y registrado en la nueva columna user_defined_event_id column del registro de auditoría. `@user_defined_information` es **nvarchar (4000)** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3c690becefb71b71c154131b6957c1063872b540
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489125"
 ---
 # <a name="task-5-exporting-cleansing-results-to-an-excel-file"></a>Tarea 5: Exportación de los resultados de la limpieza a un archivo de Excel
@@ -42,7 +42,7 @@ ms.locfileid: "65489125"
   
     3.  Busque **Los Ángeles** y verá que el **estado** está establecido en **CA**.  
   
-    4.  Confirme que no hay ningún término **Co.**, **Corp.**, y **Inc.**.  
+    4.  Confirme que no hay ningún término **Co.** , **Corp.** , y **Inc.** .  
   
     5.  Eliminar el **validación de direcciones** columna de la hoja de cálculo y guarde el archivo de excel. Esta columna adicional corresponde al dominio de compuesto Validación de direcciones.  
   

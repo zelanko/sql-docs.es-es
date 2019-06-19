@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 5689c86e530fd7bf7f78cb58f3e1e53f9b731bc3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690633"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686828"
 ---
 # <a name="background-job-error-event-class"></a>Background Job Error [clase de eventos]
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "47690633"
 |**DatabaseID**|**int**|Id. de la base de datos especificada por el trabajo. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |**DatabaseName**|**nvarchar**|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
 |**Error**|**int**|Número de error del último intento (solo**EventSubClass** 1).|31|Sí|  
-|**EventClass**|**int**|Tipo de evento = 193.|27|no|  
-|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|no|  
+|**EventClass**|**int**|Tipo de evento = 193.|27|No|  
+|**EventSequence**|**int**|Secuencia de un evento determinado dentro de la solicitud.|51|No|  
 |**EventSubClass**|**int**|Tipo de la subclase de eventos.<br /><br /> 1 = Abandono del trabajo en segundo plano después de un error.<br /><br /> 2 = Trabajo en segundo plano quitado; la cola está llena.<br /><br /> 3 = El trabajo en segundo plano devolvió un error.|21|Sí|  
 |**IndexID**|**int**|Id. del índice del objeto afectado por el evento. Para determinar el Id. de índice de un objeto, utilice la columna **indid** de la tabla del sistema **sysindexes** .|24|Sí|  
 |**IntegerData**|**int**|Número de intentos del trabajo (solo**EventSubClass** 1).|25|Sí|  
@@ -45,7 +45,7 @@ ms.locfileid: "47690633"
 |**TextData**|**ntext**|Descripción del valor de subclase de evento.|1|Sí|  
 |**Tipo**|**int**|Tipo de trabajo.|57|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Eventos extendidos](../../relational-databases/extended-events/extended-events.md)   
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)   
  [Auto Stats (clase de eventos)](../../relational-databases/event-classes/auto-stats-event-class.md)  

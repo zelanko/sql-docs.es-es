@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 32ddb009c4cbeb843e3c2150431a43d86219fc5d
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62945775"
 ---
 # <a name="revoke-server-principal-permissions-transact-sql"></a>REVOKE (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,10 +59,10 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }
  Especifica un permiso que se puede revocar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  LOGIN **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. Se necesita el calificador de ámbito (**::**).  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se va a revocar el permiso. Se necesita el calificador de ámbito ( **::** ).  
   
  SERVER ROLE **::** *server_role*  
- Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica el rol de servidor para el que se revoca el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  { FROM | TO } \<server_principal> Especifica el inicio de sesión o el rol de servidor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] desde el que se va a revocar el permiso.  
   
@@ -122,7 +122,7 @@ REVOKE IMPERSONATE ON LOGIN::WanidaBenshoof FROM [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-revoking-view-definition-permission-with-cascade"></a>b. Revocar el permiso VIEW DEFINITION con CASCADE  
+### <a name="b-revoking-view-definition-permission-with-cascade"></a>B. Revocar el permiso VIEW DEFINITION con CASCADE  
  En el siguiente ejemplo se revoca el permiso `VIEW DEFINITION` para el inicio de sesión `EricKurjan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del inicio de sesión `RMeyyappan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción `CASCADE` indica que el permiso `VIEW DEFINITION` para `EricKurjan` también se revocará a las entidades de seguridad a las que `RMeyyappan` concedió el permiso.  
   
 ```  

@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4eaa4667db1e8b6ed789e2adb90bc8d72c1b02e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012350"
 ---
 # <a name="client-side-vs-server-side-xml-formatting-sqlxml-40"></a>Lado cliente y Aplicación de formato XML en el servidor (SQLXML 4.0)
@@ -179,7 +179,7 @@ CREATE VIEW ContactView AS (SELECT ContactID as CID,
 </ROOT>  
 ```  
   
- Si el formato XML se realiza en el servidor (**client-side-xml = "0"**), puede utilizar el alias para las columnas que devuelven consultas dbobject en qué tabla y columna reales se devuelven los nombres (aunque haya especificado alias). Por ejemplo, la plantilla siguiente ejecuta una consulta y el formato XML se realiza en el servidor (el **client-side-xml** no se especifica la opción y la **ejecutar en el cliente** opción no está seleccionada para el raíz virtual). La consulta especifica también el modo AUTO (no el modo NESTED del lado cliente).  
+ Si el formato XML se realiza en el servidor (**client-side-xml = "0"** ), puede utilizar el alias para las columnas que devuelven consultas dbobject en qué tabla y columna reales se devuelven los nombres (aunque haya especificado alias). Por ejemplo, la plantilla siguiente ejecuta una consulta y el formato XML se realiza en el servidor (el **client-side-xml** no se especifica la opción y la **ejecutar en el cliente** opción no está seleccionada para el raíz virtual). La consulta especifica también el modo AUTO (no el modo NESTED del lado cliente).  
   
 ```  
 <ROOT xmlns:sql="urn:schemas-microsoft-com:xml-sql">  

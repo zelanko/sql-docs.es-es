@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: a9957625e09bde8bb733eca6e564dfdcfbb0bd98
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65484736"
 ---
 # <a name="task-2-testing-and-publishing-the-matching-policy"></a>Tarea 2: Prueba y publicación de la directiva de coincidencia
@@ -24,7 +24,7 @@ ms.locfileid: "65484736"
   
 2.  Examine todos los registros coincidentes y su puntuación de coincidencia en el cuadro de lista. Un registro que tiene un **verde** icono asociado a ella es un duplicado del registro dinámico que lo precede. He aquí un par de ejemplos:  
   
-    1.  El registro con **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)**, **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
+    1.  El registro con **Id. de registro: 1000005** es una coincidencia del registro con **Id. de registro: 1000004** con **puntuación: 100%** porque ambos registros tienen los mismos valores para **SupplierID (requisito previo)** , **Supplier Name**, y **ContactEmailAddress columnas**. DQS elige aleatoriamente un registro como registro dinámico para un clúster.  
   
     2.  El registro **1000023** es una coincidencia del registro **1000022** con la puntuación de coincidencia: 93% porque los dos registros tienen los mismos valores para **SupplierID (requisito previo)** y **Supplier Name** columnas, pero valores diferentes para el **ContactEmailAddress** columna.  
   
@@ -50,6 +50,6 @@ ms.locfileid: "65484736"
 7.  En el cuadro de diálogo de SQL Server Data Quality Services, haga clic en **publicar** y haga clic en **Aceptar** en el cuadro de mensaje. Ahora, se publica la directiva de coincidencia que definió en el **proveedores** Knowledge Base. Puede usar la base de conocimiento para ejecutar el proceso de búsqueda de coincidencias en un archivo de entrada para identificar y quitar duplicados.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 3: Crear y ejecutar un proyecto de calidad de datos para buscar coincidencias](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
+ [Tarea 3: Crear y ejecutar un proyecto de calidad de datos para buscar coincidencias](../../2014/tutorials/task-3-creating-and-running-a-data-quality-project-for-matching.md)  
   
   

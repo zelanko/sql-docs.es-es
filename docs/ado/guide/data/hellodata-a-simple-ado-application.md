@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66700638"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: una aplicación ADO sencilla
@@ -45,15 +45,15 @@ Los pasos de esta aplicación simple a través de cada una de las cuatro operaci
   
 |Tipo de control|Property|Valor|  
 |------------------|--------------|-----------|  
-|Form|NOMBRE|Form1|  
+|Form|Name|Form1|  
 ||Alto|6500|  
 ||Ancho|6500|  
-|Cuadrícula de datos de MS|Name|grdDisplay1|  
-|TextBox|Name|txtDisplay1|  
+|Cuadrícula de datos de MS|NOMBRE|grdDisplay1|  
+|TextBox|NOMBRE|txtDisplay1|  
 ||Varias líneas|true|  
 |Botón de comando|NOMBRE|cmdGetData|  
 ||Título|Get Data|  
-|Botón de comando|Name|cmdExamineData|  
+|Botón de comando|NOMBRE|cmdExamineData|  
 ||Título|Examinar los datos|  
 |Botón de comando|NOMBRE|cmdEditData|  
 ||Título|Editar datos|  

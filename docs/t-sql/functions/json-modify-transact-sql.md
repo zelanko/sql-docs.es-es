@@ -13,10 +13,10 @@ ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
 ms.openlocfilehash: 8c12a2213c39a8a464a29697e5621a382b6daf69
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65577456"
 ---
 # <a name="jsonmodify-transact-sql"></a>JSON_MODIFY (Transact-SQL)
@@ -48,7 +48,7 @@ JSON_MODIFY ( expression , path , newValue )
  `[append] [ lax | strict ] $.<json path>`  
   
 - *append*  
-    Modificador opcional que especifica que el nuevo valor se debe anexar a la matriz a la que hace referencia *\<json path>*.  
+    Modificador opcional que especifica que el nuevo valor se debe anexar a la matriz a la que hace referencia *\<json path>* .  
   
 - *lax*  
     Especifica que la propiedad a la que hace referencia *\<json path>* no tiene que existir necesariamente. Si la propiedad no está presente, JSON_MODIFY intenta insertar el nuevo valor en la ruta de acceso especificada. Es posible que la inserción no se realice si la propiedad no se puede insertar en la ruta de acceso. Si no se especifica *lax* o *strict*, *lax* es el modo predeterminado.  

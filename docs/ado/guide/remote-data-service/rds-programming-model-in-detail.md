@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 55f5d599ea2399697a0b96cc3d316776179b7562
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66699588"
 ---
 # <a name="rds-programming-model-in-detail"></a>Modelo detallado de programación de RDS
@@ -65,7 +65,7 @@ Estos son los elementos clave del modelo de programación de RDS:
   
  El **RDS. DataControl** objeto también tiene sus propios métodos para explorar, ordenar y filtrar las filas del asociado **Recordset** objeto. Estos métodos son similares, pero no igual que con los métodos de ADO **Recordset** objeto.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  RDS admite dos de sus propios eventos, que son independientes del modelo de eventos de ADO. El [onReadyStateChange](../../../ado/reference/rds-api/onreadystatechange-event-rds.md) se llama al evento cada vez que el **RDS. DataControl** [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) los cambios de propiedad, lo que le avise cuando se haya completado correctamente una operación asincrónica, finalizado o ha experimentado un error. El [onError](../../../ado/reference/rds-api/onerror-event-rds.md) se llama al evento cada vez que se produce un error, incluso si el error se produce durante una operación asincrónica.  
   
 > [!NOTE]

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62942978"
 ---
 # <a name="escape-sequences-in-odbc"></a>Secuencias de escape de ODBC
@@ -47,9 +47,9 @@ Un número de características del lenguaje, como las combinaciones externas y l
  La secuencia de escape se reconocen y se analizan los controladores, que sustituyen a las secuencias de escape con gramática específicos para DBMS. Para obtener más información sobre la sintaxis de la secuencia de escape, consulte [secuencias de Escape ODBC](../../../odbc/reference/appendixes/odbc-escape-sequences.md) en el apéndice C: Gramática de SQL.  
   
 > [!NOTE]  
->  En ODBC 2. *x*, esto fue la sintaxis estándar de la secuencia de escape: **--(\*proveedor (**_nombre de proveedor_**), producto (** _nombre de producto_**)**_extensión_  **\*):**  
+>  En ODBC 2. *x*, esto fue la sintaxis estándar de la secuencia de escape: **--(\*proveedor (** _nombre de proveedor_ **), producto (** _nombre de producto_ **)** _extensión_  **\*):**  
 >   
->  Además de esta sintaxis, se definió una sintaxis abreviada del formulario: **{**_extensión_**}**  
+>  Además de esta sintaxis, se definió una sintaxis abreviada del formulario: **{** _extensión_ **}**  
 >   
 >  En ODBC 3. *x*, el formato largo de la secuencia de escape en desuso y la forma abreviada se utiliza exclusivamente.  
   

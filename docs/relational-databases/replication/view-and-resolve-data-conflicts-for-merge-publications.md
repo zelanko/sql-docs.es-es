@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b9a3f872a87695da3e6c57ad90012cfe1307109
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129385"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047343"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolución de conflictos para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "54129385"
   
     -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar**, lo que equivale a hacer clic en el botón **Enviar ganador** (sin realizar cambios en los datos).  
   
-    -   Hacer clic en el botón de propiedades (**…**) para ver más información acerca de la columna involucrada en el conflicto.  
+    -   Hacer clic en el botón de propiedades ( **…** ) para ver más información acerca de la columna involucrada en el conflicto.  
   
     -   Editar datos en la columna **Ganador del conflicto** o **Perdedor del conflicto** antes de enviar los datos (los datos son de solo lectura si la columna está en color gris).  
   
@@ -70,7 +70,7 @@ ms.locfileid: "54129385"
   
     -   Hacer clic en **Enviar perdedor** para anular la resolución y propagar el valor designado como perdedor del conflicto a todos los nodos de la topología.  
   
-    -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar (**...**) y navegue al archivo apropiado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
+    -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar ( **...** ) y navegue al archivo apropiado. Haga clic en **Aceptar** para salir del cuadro de diálogo **Opciones** .  
   
 6.  Cierre el Visor de conflictos de replicación.  
 
@@ -88,7 +88,7 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
         > [!NOTE]  
         >  El comportamiento del registro de conflictos de una publicación de combinación se establece usando el parámetro **@conflict_logging** de [sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md). El uso del parámetro **@centralized_conflicts** ha quedado desusado.  
   
-     La tabla siguiente describe los valores de estas columnas basados en el valor especificado para **@conflict_logging**.  
+     La tabla siguiente describe los valores de estas columnas basados en el valor especificado para **@conflict_logging** .  
   
     |Valor @conflict_logging|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -100,9 +100,9 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
   
 3.  (Opcional) Revise las filas de conflicto para los artículos de interés. Según los valores de **centralized_conflicts** y **decentralized_conflicts** del paso 1, realice una de las siguientes operaciones:  
   
-    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table**. (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve datos de fila y otra información para la fila perdedora.  
+    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve datos de fila y otra información para la fila perdedora.  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table**. Esto devuelve datos de fila y otra información para la fila perdedora.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md). Especifique una tabla de conflictos para el artículo (del paso 1) para **@conflict_table** . Esto devuelve datos de fila y otra información para la fila perdedora.  
   
 ## <a name="conflict-where-delete-failed"></a>Conflicto de error de eliminación   
   
@@ -119,12 +119,12 @@ Cuando se resuelve un conflicto en la replicación de mezcla, los datos de la fi
   
 3.  (Opcional) Revise la información de conflictos para conflictos de eliminación. Según los valores de **centralized_conflicts** y **decentralized_conflicts** del paso 1, realice una de las siguientes operaciones:  
   
-    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object**. (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el publicador.  
+    -   En la base de datos de publicación del publicador, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el publicador.  
   
-    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object**. (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el suscriptor.  
+    -   En el suscriptor de la base de datos de suscripciones, ejecute [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md). Especifique el nombre de la tabla de origen (del paso 1) en la que el conflicto se produjo para **@source_object** . (Opcional) Especifique un valor de **@publication** para restringir la información de conflicto devuelta a una publicación concreta. Esto devuelve elimine la información de eliminación de conflictos almacenada en el suscriptor.  
   
 ## <a name="see-also"></a>Consulte también  
- [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Especificar un solucionador de artículos de mezcla](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)  
   
   

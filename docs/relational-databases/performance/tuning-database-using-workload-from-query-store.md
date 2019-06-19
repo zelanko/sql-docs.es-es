@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 15f9bb429509f64909888883a718325b76efae27
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63013677"
 ---
 # <a name="tuning-database-using-workload-from-query-store"></a>Optimización de la base de datos mediante carga de trabajo del Almacén de consultas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

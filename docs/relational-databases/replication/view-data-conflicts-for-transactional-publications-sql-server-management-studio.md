@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0df33614cbb10708c6438db69807a1ec3c78d4c3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129876"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047939"
 ---
 # <a name="view-data-conflicts-for-transactional-publications-sql-server-management-studio"></a>Ver conflictos de datos para publicaciones transaccionales (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +58,9 @@ ms.locfileid: "54129876"
   
     -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar**para quitar las filas de la tabla de metadatos de conflictos.  
   
-    -   Hacer clic en el botón de propiedades (**…**) para ver más información acerca de la columna involucrada en el conflicto.  
+    -   Hacer clic en el botón de propiedades ( **…** ) para ver más información acerca de la columna involucrada en el conflicto.  
   
-    -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar (**...**) y navegue al archivo apropiado. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Opciones** .  
+    -   Seleccionar **Registrar los detalles de este conflicto** para registrar los datos del conflicto en un archivo. Para especificar la ubicación del archivo, elija el menú **Ver** y haga clic en **Opciones**. Escriba un valor o haga clic en el botón Examinar ( **...** ) y navegue al archivo apropiado. Haga clic en **Aceptar** para cerrar el cuadro de diálogo **Opciones** .  
   
 6.  Cierre el Visor de conflictos de replicación.  
   

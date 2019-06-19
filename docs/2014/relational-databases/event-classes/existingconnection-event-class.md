@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d30a857647b9796afb919b078553ecce58344c21
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63023400"
 ---
 # <a name="existingconnection-event-class"></a>ExistingConnection, clase de eventos
@@ -33,8 +33,8 @@ ms.locfileid: "63023400"
 |ClientProcessID|`int`|Identificador que el equipo host asigna al proceso en el que se ejecuta la aplicación cliente. Esta columna de datos se rellena si el cliente proporciona el identificador de proceso del cliente.|9|Sí|  
 |DatabaseID|`int`|El Id. de la base de datos actual de la conexión de usuario. Identificador de la base de datos especificada mediante la instrucción USE *database* o la base de datos predeterminada si no se emite la instrucción USE *database* para una determinada instancia. Determina el valor de una base de datos mediante la función DB_ID.|3|Sí|  
 |DatabaseName|`nvarchar`|Nombre de la base de datos en la que se ejecuta la instrucción del usuario.|35|Sí|  
-|EventClass|`int`|Tipo de evento = 17.|27|No|  
-|EventSequence|`int`|La secuencia de este evento dentro de este seguimiento.|51|No|  
+|EventClass|`int`|Tipo de evento = 17.|27|Sin|  
+|EventSequence|`int`|La secuencia de este evento dentro de este seguimiento.|51|Sin|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
 |HostName|`nvarchar`|Nombre del equipo en el que se está ejecutando el cliente. Esta columna de datos se rellena si el cliente proporciona el nombre del host. Para determinar el nombre del host, utilice la función HOST_NAME.|8|Sí|  
 |IntegerData|`int`|El tamaño de paquete de red que se utiliza para la conexión.|25|Sí|  

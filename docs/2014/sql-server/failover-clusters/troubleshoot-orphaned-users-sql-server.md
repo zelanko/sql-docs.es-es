@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 38a33b34b64cf285e94f66c547b2309b8daf1ae8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63035687"
 ---
 # <a name="troubleshoot-orphaned-users-sql-server"></a>Solucionar problemas de usuarios huérfanos (SQL Server)
@@ -46,7 +46,7 @@ ms.locfileid: "63035687"
 >  Un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión no puede tener acceso a una base de datos que le falte un usuario de base de datos correspondiente a menos que **invitado** está habilitada en esa base de datos. Para obtener información acerca de cómo crear una cuenta de usuario de base de datos, vea [CREATE USER &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-user-transact-sql).  
   
 ## <a name="to-detect-orphaned-users"></a>Para detectar usuarios huérfanos  
- Ejecute las instrucciones de Transact-SQL siguientes:   
+ Ejecute las instrucciones de Transact-SQL siguientes:  
   
 ```  
 USE <database_name>;  
@@ -63,7 +63,7 @@ GO;
 ## <a name="to-resolve-an-orphaned-user"></a>Para resolver un usuario huérfano  
  Utilice el siguiente procedimiento:  
   
-1.  El siguiente comando vuelve a vincular la cuenta de inicio de sesión de servidor especificada por *< login_name >* con el usuario de base de datos especificado por *< database_user >*.  
+1.  El siguiente comando vuelve a vincular la cuenta de inicio de sesión de servidor especificada por *< login_name >* con el usuario de base de datos especificado por *< database_user >* .  
   
     ```  
     USE <database_name>;  

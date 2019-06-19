@@ -21,11 +21,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ac5e76c2d6e93bb8eb2fe334f38a22325e74d37f
-ms.sourcegitcommit: 019b6f355a69aa409e6601de8977a8c307f793cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/16/2019
-ms.locfileid: "56331595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62520711"
 ---
 # <a name="openxml-transact-sql"></a>OPENXML (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ OPENXML( idoc int [ in] , rowpattern nvarchar [ in ] , [ flags byte [ in ] ] )
 |**8**|Puede combinarse (OR lógico) con XML_ATTRIBUTES o XML_ELEMENTS. Si se trata de una recuperación, esta marca informa de que los datos consumidos no se deberían copiar a la propiedad de desbordamiento **\@mp:xmltext**.|  
   
  _SchemaDeclaration_  
- Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [**,**_ColNameColType_ [_ColPattern_ | _MetaProperty_]…]  
+ Es la definición de esquema de la forma: _ColName_*ColType* [_ColPattern_ | _MetaProperty_] [ **,** _ColNameColType_ [_ColPattern_ | _MetaProperty_]…]  
   
  _ColName_  
  Es el nombre de columna en el conjunto de filas.  
@@ -155,7 +155,7 @@ NULL       NULL
 NULL       NULL  
 ```  
   
-### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>b. Especificar ColPattern para la asignación entre columnas y los atributos XML  
+### <a name="b-specifying-colpattern-for-mapping-between-columns-and-the-xml-attributes"></a>B. Especificar ColPattern para la asignación entre columnas y los atributos XML  
  En la siguiente consulta se devuelven los atributos de CustomerID, OrderDate, ProductID y Quantity del documento XML. *rowpattern* identifica los elementos `<OrderDetails>`. `ProductID` y `Quantity` son los atributos del elemento `<OrderDetails>`. No obstante, `OrderID`, `CustomerID` y `OrderDate` son los atributos del elemento primario (`<Orders>`).  
   
  El elemento opcional *ColPattern* se especifica para las siguientes asignaciones:  

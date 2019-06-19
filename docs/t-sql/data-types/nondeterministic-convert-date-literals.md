@@ -14,11 +14,11 @@ ms.reviewer: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4ca2837780145af3c7f4428c446215ed3510bc50
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783367"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63214259"
 ---
 # <a name="nondeterministic-conversion-of-literal-date-strings-into-date-values"></a>Conversión no determinista de las cadenas de fecha literales en valores DATE
 
@@ -82,7 +82,7 @@ The preceding claim of "no guarantee" might be incorrect, in the minds of the SQ
 
 En Japón y China, se utiliza el DATEFORMAT **ymd**. Los elementos del formato están en una secuencia que va de la unidad mayor a la menor. Por lo tanto, este formato es útil cuando se quiere ordenar. Este formato se considera el _formato internacional_. Es internacional porque los cuatro dígitos del año son inequívocos y ningún país en la tierra usa el formato arcaico **ydm**.
 
-En otros países, como Alemania y Francia, el DATEFORMAT es **dmy**, lo que significa **“dd-mm-aaaa”**. El formato **dmy** no es adecuado para ordenar, pero es una secuencia razonable de la unidad más pequeña a la mayor.
+En otros países, como Alemania y Francia, el DATEFORMAT es **dmy**, lo que significa **“dd-mm-aaaa”** . El formato **dmy** no es adecuado para ordenar, pero es una secuencia razonable de la unidad más pequeña a la mayor.
 
 Los Estados Unidos y los Estados Federados de Micronesia son los únicos países que utilizan **mdy**, que no se puede ordenar. La secuencia mixta del formato coincide con un patrón para decir fechas en comunicación verbal.
 

@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5a79ba9f2ff211ed4bf56e749acba7f1d4601643
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832430"
 ---
 # <a name="column-value-distribution-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de distribución de valores de columna (tarea de generación de perfiles de datos)
@@ -59,7 +59,7 @@ ms.locfileid: "62832430"
   
 #### <a name="column-options"></a>Opciones de Column  
  **IsWildCard**  
- Especifica si se ha seleccionado el carácter comodín **(\*)**. Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
+ Especifica si se ha seleccionado el carácter comodín **(\*)** . Esta opción está establecida en **True** si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Es **False** si ha seleccionado una columna individual para la que generar un perfil. Esta opción es de solo lectura.  
   
  **ColumnName**  
  Muestra el nombre de la columna seleccionada. Esta opción está en blanco si ha seleccionado **(\*)** para generar un perfil de todas las columnas. Esta opción es de solo lectura.  

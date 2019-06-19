@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 875eada43d37add815b3e4f3c0634273be324174
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727921"
 ---
 # <a name="cdc-control-task"></a>Tarea Control CDC
@@ -149,7 +149,7 @@ ms.locfileid: "65727921"
  Esto solo está disponible si se ha seleccionado **Persistencia de estado automática** y es un parámetro obligatorio.  
   
  **Tabla que se va a usar para almacenar el estado**  
- Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)**.  
+ Escriba el nombre de la tabla de estado que se va a usar para almacenar el estado de CDC. La tabla especificada debe tener dos columnas denominadas **nombre** y **estado** y ambas columnas deben ser del tipo de datos **varchar (256)** .  
   
  Opcionalmente, puede seleccionar **Nueva** para obtener un script SQL que cree una nueva tabla de estado con las columnas necesarias. Cuando se selecciona **Persistencia de estado automática** , el desarrollador debe crear una tabla de estado según los requisitos descritos anteriormente.  
   

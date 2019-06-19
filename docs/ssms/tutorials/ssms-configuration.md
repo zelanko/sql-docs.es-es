@@ -1,5 +1,5 @@
 ---
-Title: 'Tutorial: SQL Server Management Studio components and configuration'
+title: 'Tutorial: Componentes y configuración de SQL Server Management Studio'
 description: Tutorial en el que se describen los componentes y las opciones de configuración básicas para su entorno de SQL Server Management Studio.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
@@ -11,14 +11,15 @@ ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
 manager: craigg
-ms.openlocfilehash: 173123f180047c35ce93a64928770f55525f651b
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: 10be7a0bcc588961321713e365819a5f699bcbc9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66822274"
 ---
 # <a name="tutorial-sql-server-management-studio-components-and-configuration"></a>Tutorial: Componentes y configuración de SQL Server Management Studio
+
 En este tutorial se describen los distintos componentes de ventana que hay en SQL Server Management Studio (SSMS), así como algunas opciones de configuración básicas para el área de trabajo. En este artículo aprenderá a: 
 
 > [!div class="checklist"]

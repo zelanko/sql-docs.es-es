@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: a7923439456ba1b2e697b7e634130c9376b82ef6
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716341"
 ---
 # <a name="catalogdeployproject-ssisdb-database"></a>catalog.deploy_project (base de datos de SSISDB)
@@ -38,10 +38,10 @@ catalog.deploy_project [@folder_name =] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [@folder_name =] *folder_name*  
- Es el nombre de la carpeta donde se implementará el proyecto. *folder_name* es **nvarchar(128)**.  
+ Es el nombre de la carpeta donde se implementará el proyecto. *folder_name* es **nvarchar(128)** .  
   
  [@project_name =] *project_name*  
- Nombre del proyecto nuevo o actualizado en la carpeta. *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto nuevo o actualizado en la carpeta. *project_name* es **nvarchar(128)** .  
   
  [@projectstream =] *projectstream*  
  Contenido binario de un archivo de implementación de proyecto (extensión .ispac) de [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  

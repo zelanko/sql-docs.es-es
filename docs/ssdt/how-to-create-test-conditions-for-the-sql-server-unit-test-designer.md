@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 52975d96b6db206b4cdd2b6b201bc55eb572131c
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65090267"
 ---
 # <a name="how-to-create-test-conditions-for-the-sql-server-unit-test-designer"></a>Procedimientos: Creación de condiciones de prueba para el Diseñador de pruebas unitarias de SQL Server
@@ -179,7 +179,7 @@ La clase de la condición de prueba personalizada hereda de la clase base [TestC
 |Parámetro del atributo|Posición|Descripción|  
 |-----------------------|------------|---------------|  
 |DisplayName|1|Identifica la cadena en el cuadro combinado “Condiciones de prueba”. El nombre debe ser único. Si hay dos condiciones con el mismo nombre para mostrar, se mostrará al usuario la primera condición encontrada y se mostrará una advertencia en el Administrador de errores de Visual Studio.|  
-|ImplementingType|2|Se emplea para identificar la extensión de manera única. Necesita cambiar este parámetro para que coincida con el tipo en el que pone el atributo. Este ejemplo usa el tipo **ResultSetColumnCountCondition**, por tanto use **typeof(ResultSetColumnCountCondition)**. Si el tipo es **NewTestCondition**, utilice **typeof(NewTestCondition)**.|  
+|ImplementingType|2|Se emplea para identificar la extensión de manera única. Necesita cambiar este parámetro para que coincida con el tipo en el que pone el atributo. Este ejemplo usa el tipo **ResultSetColumnCountCondition**, por tanto use **typeof(ResultSetColumnCountCondition)** . Si el tipo es **NewTestCondition**, utilice **typeof(NewTestCondition)** .|  
   
 En este ejemplo, se agregan dos propiedades. Los usuarios de la condición de prueba personalizada pueden usar la propiedad ResultSet con el fin de especificar para qué conjunto de resultados se debe comprobar el recuento de columnas. Después, los usuarios pueden emplear la propiedad Count para especificar el recuento de columnas esperado.  
   

@@ -17,11 +17,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 7895158afd1f0302182ca7601cb138af4afc36f1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326336"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639270"
 ---
 # <a name="revoke-system-object-permissions-transact-sql"></a>REVOKE (permisos de objeto de sistema de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ REVOKE { SELECT | EXECUTE } ON [sys.]system_object FROM principal
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**sys.**] .  
+ [**sys.** ] .  
  Solo se necesita el calificador **sys** para hacer referencia a vistas de catálogo y vistas de administración dinámica.  
   
  *system_object*  

@@ -12,10 +12,10 @@ ms.author: janinez
 author: janinezhang
 manager: craigg
 ms.openlocfilehash: 8a2d8444e0b19ed4672e9582ef9802d0cd6f6fe7
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65720741"
 ---
 # <a name="load-data-into-azure-sql-data-warehouse-with-sql-server-integration-services-ssis"></a>Cargar datos en Azure SQL Data Warehouse con SQL Server Integration Services (SSIS)
@@ -52,9 +52,9 @@ SQL Server Integration Services (SSIS) es un conjunto de herramientas flexible q
 ## <a name="prerequisites"></a>Prerequisites
 Para realizar este tutorial, necesita lo siguiente:
 
-1. **SQL Server Integration Services (SSIS)**. SSIS es un componente de SQL Server y exige una versión con licencia, de desarrollador o de evaluación de SQL Server. Para obtener una versión de evaluación de SQL Server, vea [Evaluaciones de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
+1. **SQL Server Integration Services (SSIS)** . SSIS es un componente de SQL Server y exige una versión con licencia, de desarrollador o de evaluación de SQL Server. Para obtener una versión de evaluación de SQL Server, vea [Evaluaciones de SQL Server](https://www.microsoft.com/evalcenter/evaluate-sql-server-2017-rtm).
 2. **Visual Studio** (opcional). Para obtener la edición gratuita de Visual Studio Community, vea [Visual Studio Community][Visual Studio Community]. Si no quiere instalar Visual Studio, puede instalar solo SQL Server Data Tools (SSDT). SSDT instala una versión de Visual Studio con funcionalidad limitada.
-3. **SQL Server Data Tools para Visual Studio (SSDT)**. Para obtener SQL Server Data Tools para Visual Studio, vea [Descargar SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
+3. **SQL Server Data Tools para Visual Studio (SSDT)** . Para obtener SQL Server Data Tools para Visual Studio, vea [Descargar SQL Server Data Tools (SSDT)][Download SQL Server Data Tools (SSDT)].
 4. **Una base de datos de Azure SQL Data Warehouse y permisos**. Este tutorial se conecta a una instancia de SQL Data Warehouse y carga datos en ella. Necesita permisos para conectarse, crear una tabla y cargar datos.
 
 ## <a name="create-a-new-integration-services-project"></a>Crear un proyecto de Integration Services

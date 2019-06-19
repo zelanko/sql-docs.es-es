@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: e20ae3e7392c01195ecb8cb829976efb3d6ad2c9
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65723736"
 ---
 # <a name="select-source-tables-and-views-sql-server-import-and-export-wizard"></a>Seleccionar tablas y vistas de origen (Asistente para importación y exportación de SQL Server)
@@ -75,16 +75,16 @@ Después de obtener una vista previa de los datos, es posible que quiera cambiar
 
 ### <a name="excel-source-tables"></a>Tablas de origen de Excel
 En la lista de vistas y tablas de origen para un origen de datos de Excel se incluyen dos tipos de objetos de Excel.
--   **Hojas de cálculo.** Los nombres de las hojas de cálculo van seguidos del signo de dólar ($) (por ejemplo, **"Hoja1$"**).
+-   **Hojas de cálculo.** Los nombres de las hojas de cálculo van seguidos del signo de dólar ($) (por ejemplo, **"Hoja1$"** ).
 -   **Rangos con nombre.** Los rangos con nombre, si los hay, se enumeran por nombre.
 
-Si quiere cargar datos desde un intervalo de celdas específico y sin nombre (por ejemplo, **[Hoja1$A1:B4]**) o con destino a ese intervalo, tendrá que escribir una consulta. Vuelva a la página **Especificar copia de tabla o consulta** y seleccione **Escribir una consulta para especificar los datos que se van a transferir**.
+Si quiere cargar datos desde un intervalo de celdas específico y sin nombre (por ejemplo, **[Hoja1$A1:B4]** ) o con destino a ese intervalo, tendrá que escribir una consulta. Vuelva a la página **Especificar copia de tabla o consulta** y seleccione **Escribir una consulta para especificar los datos que se van a transferir**.
 
 ### <a name="excel-destination-tables"></a>Tablas de destino de Excel
 Si va a exportar datos a Excel, puede especificar el destino de una de las tres formas siguientes.
--   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]**).
+-   **Hoja de cálculo.** Para especificar una hoja de cálculo, anexe el carácter $ al final del nombre de la hoja y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$]** ).
 -   **Rango con nombre.** Para especificar un rango con nombre, use simplemente el nombre del rango (por ejemplo, **MiRangoDeDatos**).
--   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]**).
+-   **Rango sin nombre.** Para especificar un rango de celdas al que no ha asignado un nombre, anexe el carácter $ al final del nombre de la hoja, agregue la especificación del rango y agregue delimitadores alrededor de la cadena (por ejemplo, **[Hoja1$A1:B4]** ).
 
 > [!TIP]
 > Si usa Excel como origen o destino, es una buena idea hacer clic en **Editar asignaciones** y revisar las asignaciones de tipos de datos de la página **Asignaciones de columnas** . 

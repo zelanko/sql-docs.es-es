@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 237838d4d9780c6180adebcae264949b10af94e9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63061257"
 ---
 # <a name="sqlstmtrecompile-event-class"></a>SQL:StmtRecompile, clase de eventos
@@ -52,7 +52,7 @@ ms.locfileid: "63061257"
 |ServerName|`nvarchar`|Nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del que se realiza un seguimiento.|26|No|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, SessionLoginName muestra inicioDeSesión1 y LoginName muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Id. de proceso de servidor de la conexión.|12|Sí|  
-|SqlHandle|`varbinary`|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|No|  
+|SqlHandle|`varbinary`|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a sys.dm_exec_sql_text para recuperar el texto SQL asociado.|63|Sin|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
 |TextData|`ntext`|Texto de la instrucción Transact-SQL que se ha recompilado.|1|Sí|  
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  

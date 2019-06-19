@@ -19,11 +19,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 650c5bd55365fbf1729fe3514bd31b6af73f6981
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53978821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62716249"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53978821"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 -   Para crear, modificar o quitar una auditoría de servidor, las entidades de seguridad deben tener el permiso ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
@@ -61,13 +61,13 @@ ms.locfileid: "53978821"
   
 -   Una vez creada una especificación de auditoría de servidor, las entidades de seguridad que cuenten con los permisos CONTROL SERVER o ALTER ANY SERVER AUDIT, así como la cuenta sysadmin, o las entidades de seguridad que tengan acceso explícito a la auditoría podrán ver dicha especificación.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-server-audit"></a>Para crear una auditoría de servidor  
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...**.  
+2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** .  
   
      Las siguientes opciones están disponibles en la página **General** del cuadro de diálogo **Crear auditoría** .  
   
@@ -90,14 +90,14 @@ ms.locfileid: "53978821"
     > [!IMPORTANT]  
     >  Cuando la auditoría está en un estado de error, la conexión de administrador dedicada puede seguir realizando eventos auditados.  
   
-     Lista**Destino de auditoría**   
+     Lista**Destino de auditoría**  
      Especifica el destino de los datos de la auditoría. Las opciones disponibles son un archivo binario, el registro de aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](../../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
   
      **Ruta del archivo**  
      Especifica la ubicación de la carpeta donde se escriben los datos de la auditoría si se ha especificado un archivo **Destino de auditoría** .  
   
      **Puntos suspensivos (...)**  
-     Abre el cuadro de diálogo **Buscar carpeta -**_nombre\_servidor_ para especificar una ruta de acceso a un archivo o para crear una carpeta en la que se escribirá el archivo de auditoría.  
+     Abre el cuadro de diálogo **Buscar carpeta -** _nombre\_servidor_ para especificar una ruta de acceso a un archivo o para crear una carpeta en la que se escribirá el archivo de auditoría.  
   
      **Límite máximo del archivo de auditoría:**  
      **Máximo de archivos de sustitución incremental**  
@@ -106,16 +106,16 @@ ms.locfileid: "53978821"
      **Número máximo de archivos**  
      Especifica que, si se alcanza el número máximo de archivos de auditoría, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
   
-     Casilla**Ilimitado**   
+     Casilla**Ilimitado**  
      Cuando se activa la casilla **Ilimitado** en **Máximo de archivos de sustitución incremental** , no se impone ningún límite en cuanto al número de archivos de auditoría que se crearán. La casilla **Ilimitado** está activada de forma predeterminada y se aplica a las selecciones de **Máximo de archivos de sustitución incremental** y **Máximo de archivos** .  
   
-     Casilla**Número de archivos**   
+     Casilla**Número de archivos**  
      Especifica el número de archivos de auditoría que se crearán, hasta 2.147.483.647. Esta opción solo está disponible si se desactiva la casilla **Ilimitado** .  
   
      **Tamaño máximo del archivo**  
      Especifica el tamaño máximo de un archivo de auditoría en megabytes (MB), gigabytes (GB) o terabytes (TB). Puede especificar entre 1024 MB y 2.147.483.647 TB. La activación de la casilla **Ilimitado** no pone un límite en el tamaño del archivo. La especificación de un valor inferior a 1024 MB producirá y devolverá un error. La casilla **Ilimitado** está activada de forma predeterminada.  
   
-     Casilla**Reservar espacio en disco**   
+     Casilla**Reservar espacio en disco**  
      Especifica que se debe preasignar una cantidad de espacio en disco igual al tamaño máximo de archivo especificado. Este valor solo se puede utilizar si la casilla **Ilimitado** en **Tamaño máximo del archivo** no está activada. Esta casilla no está activada de forma predeterminada.  
   
 3.  Opcionalmente, en la página **Filtrar** , escriba un predicado, o la cláusula `WHERE` , para la auditoría de servidor de modo que se especifiquen opciones adicionales no disponibles en la página **General** . Encierre el predicado entre paréntesis; por ejemplo: `(object_name = 'EmployeesTable')`.  
@@ -126,7 +126,7 @@ ms.locfileid: "53978821"
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor...**.  
+2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor...** .  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de servidor** .  
   

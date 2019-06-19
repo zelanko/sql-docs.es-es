@@ -15,15 +15,15 @@ author: MashaMSFT
 ms.author: mathoma
 manager: jroth
 ms.openlocfilehash: 9b9bf633e4014197dcf92d730806b669540f6403
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66777625"
 ---
 # <a name="specify-replicas-page-new-availability-group-wizard-add-replica-wizard"></a>Página Especificar réplicas (Asistente para nuevo grupo de disponibilidad: Asistente para agregar réplica)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** y a **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]**. Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
+  En este tema se describen las opciones de la página **Especificar réplicas** . Esta página se aplica a **[!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)]** y a **[!INCLUDE[ssAoAddRepWiz](../../../includes/ssaoaddrepwiz-md.md)]** . Use la página **Especificar réplicas** para especificar y configurar una o varias réplicas de disponibilidad para agregar al grupo de disponibilidad. Esta página contiene cuatro pestañas, que se presentan en la tabla siguiente. Haga clic en el nombre de una pestaña de la tabla para ir a la sección correspondiente, más adelante en este tema.  
   
 |Pestaña|Descripción breve|  
 |---------|-----------------------|  
@@ -147,7 +147,7 @@ ms.locfileid: "66777625"
  Especifique sus preferencias de agente de escucha para este grupo de disponibilidad del siguiente modo:  
   
  **Nombre DNS del agente de escucha**  
- Especifique el nombre de red del agente de escucha. Este nombre debe ser único en el dominio y solo puede contener caracteres alfanuméricos, guiones (**-**) y guiones bajos (**_**) en cualquier orden. Cuando se especifica mediante la pestaña **Agente de escucha** , el nombre DNS puede tener hasta 15 caracteres.  
+ Especifique el nombre de red del agente de escucha. Este nombre debe ser único en el dominio y solo puede contener caracteres alfanuméricos, guiones ( **-** ) y guiones bajos ( **_** ) en cualquier orden. Cuando se especifica mediante la pestaña **Agente de escucha** , el nombre DNS puede tener hasta 15 caracteres.  
   
 > [!IMPORTANT]  
 >  Si escribe un nombre de agente de escucha DNS (o número de puerto) no válido en la pestaña **Agente de escucha** , el botón **Siguiente** de la página **Especificar réplicas** estará deshabilitado.  
@@ -166,10 +166,10 @@ ms.locfileid: "66777625"
   
  Si se selecciona **Dirección IP estática** como modo de red (esta es la selección predeterminada), una cuadrícula muestra las columnas **Subret** y **Dirección IP** , y se muestran los botones **Agregar** y **Quitar** asociados. Tenga en cuenta que la cuadrícula estará vacía hasta que se agregue la primera subred.  
   
- Columna**Subret**   
+ Columna**Subret**  
  Muestra la dirección de subred seleccionada para cada subred agregada para el agente de escucha.  
   
- Columna**Dirección IP**   
+ Columna**Dirección IP**  
  Muestra la dirección IPv4 o IPv6 especificada para una subred determinada.  
   
  **Agregar**  

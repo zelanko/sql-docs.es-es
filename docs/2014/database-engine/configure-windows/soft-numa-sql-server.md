@@ -14,10 +14,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 6ad0e30c0db83daf7e0cae4f7353d1f0a96a96d9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809049"
 ---
 # <a name="configure-sql-server-to-use-soft-numa-sql-server"></a>Configurar SQL Server para que use NUMA de software (SQL Server)
@@ -57,7 +57,7 @@ Para configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para q
   
  La instancia A, que experimenta actividades de E/S importantes, tiene ahora dos subprocesos de E/S y un subprocesos de escritura diferida, mientras que la instancia B, que realiza operaciones que requieren un uso intensivo del procesador, solo tiene un subproceso de E/S y un subproceso de escritura diferida. Se pueden asignar diferentes cantidades de memoria a las instancias, pero, a diferencia de lo que ocurre con el NUMA de hardware, ambas reciben memoria del mismo bloque de memoria del sistema operativo y no hay afinidad entre la memoria y el procesador.  
   
- El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, siempre que el hardware se presente como nodos físicos de NUMA, será igual al número de subprocesos de escritura diferida que se creen. Para más información, vea [Cómo funciona: NUMA de software, subproceso de finalización de E/S, los trabajadores de la escritura diferida y nodos de memoria](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ El subproceso de escritura diferida está enlazado a la vista del sistema operativo SQL de los nodos físicos de memoria de NUMA. Por consiguiente, siempre que el hardware se presente como nodos físicos de NUMA, será igual al número de subprocesos de escritura diferida que se creen. Para más información, vea [Cómo funciona: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx) (Cómo funciona: soft-NUMA, subproceso de finalización de E/S, trabajos de escritura diferida y nodos de memoria).  
   
 > [!NOTE]  
 >  Las claves del Registro de **Soft-NUMA** no se copian al actualizar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

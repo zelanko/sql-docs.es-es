@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: f49d7d43e136adaadb2bda5b37fa6f7e8b63f4e7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101938"
 ---
 # <a name="walkthrough-creating-and-running-a-sql-server-unit-test"></a>Tutorial: Crear y ejecutar una prueba unitaria de SQL Server
@@ -242,7 +242,7 @@ Para completar este tutorial, debe poder conectarse a un servidor de bases de da
   
 #### <a name="to-import-a-database-schema-from-a-script"></a>Para importar un esquema de la base de datos de un script  
   
-1.  En el menú **Proyecto**, haga clic en **Importar** y, a continuación, en  **Script (\*.sql)**.  
+1.  En el menú **Proyecto**, haga clic en **Importar** y, a continuación, en  **Script (\*.sql)** .  
   
 2.  Haga clic en **Siguiente** después de leer la página de bienvenida.  
   
@@ -276,7 +276,7 @@ De forma predeterminada, al presionar F5 se implementa (o publica) la base de da
   
 3.  Active las casillas de los cinco procedimientos almacenados: **Sales.uspCancelOrder**, **Sales.uspFillOrder**, **Sales.uspNewCustomer**, **Sales.uspPlaceNewOrder** y **Sales.uspShowOrderDetails**.  
   
-4.  En la lista desplegable **Proyecto**, seleccione **Crear un nuevo proyecto de prueba de Visual C#**.  
+4.  En la lista desplegable **Proyecto**, seleccione **Crear un nuevo proyecto de prueba de Visual C#** .  
   
 5.  Acepte los nombres predeterminados para el nombre de proyecto y el nombre de clase, y haga clic en **Aceptar**.  
   
@@ -556,7 +556,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
 4.  En el panel **Condiciones de prueba** , haga clic en **Esquema esperado** en la lista y, a continuación, haga clic en **Agregar condición de prueba**.  
   
-5.  En la ventana **Propiedades**, en la propiedad **Configuración**, haga clic en el botón Examinar ("**…**").  
+5.  En la ventana **Propiedades**, en la propiedad **Configuración**, haga clic en el botón Examinar (" **…** ").  
   
 6.  En el cuadro de diálogo **Configuración de expectedSchemaCondition1** , especifique una conexión a la base de datos. Por ejemplo, si usó la ubicación de implementación predeterminada, que es LocalDB, haría clic en **Nueva conexión** y especificaría **(LocalDB)\Projects**. Después, elija el nombre de la base de datos.  
   
@@ -621,7 +621,7 @@ Las pruebas suponen que la base de datos se inicia en un estado limpio. Creará 
   
 13. En el panel **Condiciones de prueba** , haga clic en **Suma de comprobación de datos** en la lista y, a continuación, haga clic en **Agregar condición de prueba**.  
   
-14. En la ventana **Propiedades**, en la propiedad **Configuración**, haga clic en el botón Examinar ("**…**").  
+14. En la ventana **Propiedades**, en la propiedad **Configuración**, haga clic en el botón Examinar (" **…** ").  
   
 15. En el cuadro de diálogo **Configuración de checksumCondition1** , especifique una conexión a la base de datos.  
   

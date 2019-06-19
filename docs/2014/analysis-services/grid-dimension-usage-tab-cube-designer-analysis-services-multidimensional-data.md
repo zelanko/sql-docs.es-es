@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 294b40d07731f588267e94ff748adaf871a8ac3b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080809"
 ---
 # <a name="grid-dimension-usage-tab-cube-designer-analysis-services---multidimensional-data"></a>Cuadrícula (pestaña Uso de dimensiones, Diseñador de cubos) (Analysis Services - Datos multidimensionales)
@@ -26,7 +26,7 @@ ms.locfileid: "66080809"
 |------------|----------------|  
 |**Grupos de medida**|Seleccione los grupos de medida que deben mostrarse como columnas en el panel **Cuadrícula** . Si selecciona **(Mostrar todos)** , se muestran todos los grupos de medida disponibles.<br /><br /> Haga clic en un encabezado de la columna seleccionada para un grupo de medida para cambiar el nombre de dicho grupo.|  
 |**Dimensions**|Seleccione las dimensiones de cubo que deben mostrarse como filas en el panel **Cuadrícula** . Si selecciona **(Mostrar todos)** , se muestran todas las dimensiones de cubo disponibles.<br /><br /> Haga clic en un encabezado de la fila seleccionada para una dimensión para cambiar el nombre de la dimensión de cubo.|  
-|**(Cell)**|Seleccione una celda y haga clic en el botón de puntos suspensivos (**...**) para mostrar el cuadro de diálogo **Definir relación** y defina la relación de dimensión que existe entre una dimensión de cubo y un grupo de medida. Para más información sobre el cuadro de diálogo **Definir relación**, vea [Cuadro de diálogo Definir relación &#40;Analysis Services - Datos multidimensionales&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
+|**(Cell)**|Seleccione una celda y haga clic en el botón de puntos suspensivos ( **...** ) para mostrar el cuadro de diálogo **Definir relación** y defina la relación de dimensión que existe entre una dimensión de cubo y un grupo de medida. Para más información sobre el cuadro de diálogo **Definir relación**, vea [Cuadro de diálogo Definir relación &#40;Analysis Services - Datos multidimensionales&#41;](define-relationship-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="context-menu"></a>Menú contextual  
  Aquí se indican las opciones disponibles en el menú contextual, que se muestran al hacer clic con el botón derecho en el panel **Cuadrícula** :  

@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 0554182b6a18478d917ecf83c8ea4d9ebdb69e23
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65982737"
 ---
 # <a name="-wildcard---match-one-character-transact-sql"></a>_ (comodín, coincidir un carácter) (Transact-SQL)
@@ -36,7 +36,7 @@ Use el carácter de subrayado _ para hacer coincidir todos los caracteres de una
   
 ## <a name="examples"></a>Ejemplos  
 
-## <a name="a-simple-example"></a>A: Ejemplo sencillo   
+## <a name="a-simple-example"></a>A. Ejemplo sencillo   
 
 En el ejemplo siguiente se devuelven todos los nombres de base de datos que comienzan por la letra `m` y tienen `d` como la tercera letra. El carácter de subrayado especifica que el segundo carácter del nombre puede ser cualquier letra. Las bases de datos `model` y `msdb` cumplen este criterio. La base de datos `master` no lo cumple.
 

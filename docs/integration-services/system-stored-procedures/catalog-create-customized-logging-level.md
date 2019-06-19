@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8b7c145b516bc580858658a81a1e0a76375bd668
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65716966"
 ---
 # <a name="catalogcreatecustomizedlogginglevel"></a>catalog.create_customized_logging_level 
@@ -41,12 +41,12 @@ catalog.create_customized_logging_level [ @level_name = ] level_name
  [ @level_name = ] *level_name*  
  Nombre del nuevo nivel de registro personalizado.  
   
- El parámetro *level_name* es de tipo **nvarchar(128)**.  
+ El parámetro *level_name* es de tipo **nvarchar(128)** .  
   
  [ @level_description = ] *level_description*  
  Descripción del nuevo nivel de registro personalizado.  
   
- El parámetro *level_description* es de tipo **nvarchar(max)**.  
+ El parámetro *level_description* es de tipo **nvarchar(max)** .  
   
  [ @profile_value =] *profile_value*  
  Estadísticas que quiere que registre el nuevo nivel de registro personalizado.  

@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d171270a7605c258f9bc347781cd9a4d91c7a348
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014678"
 ---
 # <a name="updating-data-using-xml-updategrams-sqlxml-40"></a>Actualizar datos con diagramas de actualización XML (SQLXML 4.0)
@@ -263,7 +263,7 @@ ms.locfileid: "66014678"
   
  Los elementos y atributos especificados en el diagrama de actualización hacen referencia a los elementos y atributos del esquema de asignación.  
   
- El esquema de asignación XSD siguiente tiene  **\<cliente >**,  **\<orden >**, y  **\<OD >** elementos que se asignan a las Tablas Sales.Customer, Sales.SalesOrderHeader y Sales.SalesOrderDetail de la base de datos.  
+ El esquema de asignación XSD siguiente tiene  **\<cliente >** ,  **\<orden >** , y  **\<OD >** elementos que se asignan a las Tablas Sales.Customer, Sales.SalesOrderHeader y Sales.SalesOrderDetail de la base de datos.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -357,7 +357,7 @@ ms.locfileid: "66014678"
   
  Dado que un alumno se puede inscribir en muchos cursos y un curso puede tener muchos alumnos, hace falta una tercera tabla, la tabla Enrollment, que represente esta relación M:N.  
   
- El siguiente esquema de asignación XSD proporciona una vista XML de las tablas mediante el  **\<Student >**,  **\<curso >**, y  **\<inscripción >** elementos. El **IDREFS** atributos en el esquema de asignación especifican la relación entre estos elementos. El **StudentIDList** atributo el  **\<curso >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna StudentID de la tabla Enrollment. Del mismo modo, el **EnrolledIn** atributo el  **\<Student >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna CourseID de la inscripción tabla.  
+ El siguiente esquema de asignación XSD proporciona una vista XML de las tablas mediante el  **\<Student >** ,  **\<curso >** , y  **\<inscripción >** elementos. El **IDREFS** atributos en el esquema de asignación especifican la relación entre estos elementos. El **StudentIDList** atributo el  **\<curso >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna StudentID de la tabla Enrollment. Del mismo modo, el **EnrolledIn** atributo el  **\<Student >** elemento es un **IDREFS** atributo de tipo que hace referencia a la columna CourseID de la inscripción tabla.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

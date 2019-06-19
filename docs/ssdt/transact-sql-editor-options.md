@@ -29,10 +29,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 3d95c52bc55df0a7693ee698cc5f01252c05949f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102057"
 ---
 # <a name="transact-sql-editor-options"></a>Opciones del Editor de Transact-SQL
@@ -68,7 +68,7 @@ Este tema contiene información sobre algunas de las opciones del Editor de Tran
 |**SET CURSOR_CLOSE_ON_COMMIT**|Controla si un cursor se cierra o no cuando se confirma una instrucción. Para más información, consulte [SET CURSOR_CLOSE_ON_COMMIT](https://go.microsoft.com/fwlink/?LinkId=238754).|  
 |**SET ANSI_PADDING**|Controla el modo en que la columna almacena valores más cortos que el tamaño que tiene definido y cómo almacena valores con espacios en blanco a la derecha en datos de tipo **char**, **varchar**, **binary**y **varbinary** . Para más información, consulte [SET ANSI_PADDING](https://go.microsoft.com/fwlink/?LinkId=238755).|  
 |**SET ANSI_WARNINGS**|Especifica el comportamiento estándar de SQL-92 para varias condiciones de error. Para más información, consulte [SET ANSI_WARNINGS](https://go.microsoft.com/fwlink/?LinkId=238758).|  
-|**SET ANSI_NULLS**|Especifica el comportamiento conforme a SQL-92 para los operadores de comparación Igual que (**=**) y Distinto de (**<>**) cuando se usan con valores NULL. Para más información, consulte [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
+|**SET ANSI_NULLS**|Especifica el comportamiento conforme a SQL-92 para los operadores de comparación Igual que ( **=** ) y Distinto de ( **<>** ) cuando se usan con valores NULL. Para más información, consulte [SET ANSI_NULLS](https://go.microsoft.com/fwlink/?LinkId=238759).|  
   
 ## <a name="QueryResults"></a>Resultados de la consulta  
   

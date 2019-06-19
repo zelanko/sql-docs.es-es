@@ -13,10 +13,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: a6f9701371b9a6007f831d1e06dd6bbd0605e7dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063580"
 ---
 # <a name="breakpoints-window"></a>Ventana de puntos de interrupción
@@ -34,7 +34,7 @@ ms.locfileid: "66063580"
  Muestra el nombre del punto de interrupción. El depurador proporciona los nombres para los puntos de interrupción. Este nombre incluye el de la ventana Editor de consultas del motor de base de datos que contiene el punto de interrupción y el número de línea del Editor de consultas en el que está establecido.  
   
  **Condición**  
- Muestra **(sin condición)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
+ Muestra **(sin condición)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
   
  **Número de llamadas**  
  Muestra**interrumpir siempre**.  
@@ -42,7 +42,7 @@ ms.locfileid: "66063580"
  Puede agregar y quitar las columnas siguientes seleccionándolos en la lista **Columnas** .  
   
  **Filter**  
- Muestra **(ninguno)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
+ Muestra **(ninguno)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
   
  **Al visitar**  
  Muestra **Interrumpir**.  

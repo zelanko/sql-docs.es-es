@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b0e6e85161ea95a9494bbaf91338b4ddc559ecbf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058788"
 ---
 # <a name="flat-file-connection-manager-editor-advanced-page"></a>Editor del administrador de conexiones de archivos planos (página Avanzadas)
@@ -43,10 +43,10 @@ ms.locfileid: "66058788"
 |**ColumnType**|Denota si la columna es delimitada, de ancho fijo o derecho irregular. Esta propiedad es de solo lectura. Los archivos de derecho irregular son archivos en los que todas las columnas tienen un ancho fijo, a excepción de la última. Se delimita mediante el delimitador de fila.|  
 |**OutputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, el valor corresponde a un recuento de caracteres. En la tarea Flujo de datos este valor se utiliza para establecer el ancho de la columna de salida para el origen del archivo plano.<br /><br /> Nota: En el modelo de objetos, el nombre de esta propiedad es MaximumWidth.|  
 |**DataType**|Seleccione los tipos de datos disponibles en la lista. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**TextQualified**|Indica si los datos de texto está rodeados por caracteres de calificador de texto como caracteres de comillas. Los valores válidos son:<br /><br /> **True**: Se califican los datos de texto en el archivo plano.<br /><br /> **False**: No se califican los datos de texto en el archivo plano.|  
+|**TextQualified**|Indica si los datos de texto está rodeados por caracteres de calificador de texto como caracteres de comillas. Los valores válidos son:<br /><br /> **True**: Se califican los datos de texto del archivo plano.<br /><br /> **False**: No se califican los datos de texto del archivo plano.|  
 |**Name**|Proporcione un nombre de columna descriptivo. Si no se escribe un nombre, [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] crea uno automáticamente con el formato Columna 0, Columna 1, etc.|  
 |**DataScale**|Especifique la escala de los datos numéricos. La escala hace referencia al número de posiciones decimales. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
-|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}**. Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}**. Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}**. Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}**. Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}**. Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}**. Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}**. Las columnas se delimitan mediante una barra vertical.|  
+|**ColumnDelimiter**|Seleccione los delimitadores de columna disponibles en la lista. Elija delimitadores que no sea probable encontrar en el texto. Este valor se omite para las columnas de ancho fijo.<br /><br /> **{CR}{LF}** . Las columnas se delimitan mediante una combinación de retorno de carro y avance de línea.<br /><br /> **{CR}** . Las columnas se delimitan mediante un retorno de carro.<br /><br /> **{LF}** . Las columnas se delimitan mediante un avance de línea.<br /><br /> **Punto y coma {;}** . Las columnas se delimitan mediante un punto y coma.<br /><br /> **Dos puntos {:}** . Las columnas se delimitan mediante un punto y coma.<br /><br /> **Coma {,}** . Las columnas se delimitan mediante una coma.<br /><br /> **Tabulación {t}** . Las columnas se delimitan mediante un tabulador.<br /><br /> **Barra vertical {&#124;}** . Las columnas se delimitan mediante una barra vertical.|  
 |**DataPrecision**|Especifique la precisión de los datos numéricos. La precisión hace referencia al número de dígitos. Para obtener más información, vea [Integration Services Data Types](data-flow/integration-services-data-types.md).|  
 |**InputColumnWidth**|Especifique un valor que se almacenará como recuento de bytes; en los archivos Unicode, aparecerá como recuento de caracteres. Este valor se omite para las columnas delimitadas.<br /><br /> **Nota** En el modelo de objetos, el nombre de esta propiedad es ColumnWidth.|  
   

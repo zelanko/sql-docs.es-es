@@ -13,14 +13,14 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 0571271f347c2aebcc2a0e0e25f2fff09b98fa89
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070353"
 ---
 # <a name="relational-objects-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Objetos relacionales (Analysis Services - Datos multidimensionales)
-  Use el cuadro de diálogo **Objetos relacionales** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar tablas, vistas u otros objetos de un origen de datos en el cual desea establecer el almacenamiento en caché automático. Puede visualizar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] haciendo clic en el botón de puntos suspensivos (**…**) de cualquiera de las opciones de **Especificar tablas de seguimiento** de la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** .  
+  Use el cuadro de diálogo **Objetos relacionales** en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para seleccionar tablas, vistas u otros objetos de un origen de datos en el cual desea establecer el almacenamiento en caché automático. Puede visualizar este cuadro de diálogo en [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] haciendo clic en el botón de puntos suspensivos ( **…** ) de cualquiera de las opciones de **Especificar tablas de seguimiento** de la pestaña **Notificaciones** del cuadro de diálogo **Opciones de almacenamiento** .  
   
 ## <a name="options"></a>Opciones  
  **Seleccione los objetos relacionales para los que desea establecer el almacenamiento en caché automático**  

@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4b57a3ca1893d44cc2ed3fd60e20a39c4e43f473
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715935"
 ---
 # <a name="catalogsetenvironmentvariableproperty-ssisdb-database"></a>catalog.set_environment_variable_property (base de datos de SSISDB)
@@ -39,19 +39,19 @@ catalog.set_environment_variable_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno. *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [ @variable_name = ] *variable_name*  
- Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)**.  
+ Nombre de la variable de entorno. El parámetro *variable_name* es de tipo **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nombre de la propiedad de variable de entorno. *property_name* es **nvarchar(128)**.  
+ Nombre de la propiedad de variable de entorno. *property_name* es **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Valor de la propiedad de variable de entorno. El parámetro *property_value* es de tipo **nvarchar(4000)**.  
+ Valor de la propiedad de variable de entorno. El parámetro *property_value* es de tipo **nvarchar(4000)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

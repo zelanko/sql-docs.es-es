@@ -29,10 +29,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 6d4d453c1e5c6de342ac81fdd828a570bdc33e5a
-ms.sourcegitcommit: 8d288ca178e30549d793c40510c4e1988130afb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65805267"
 ---
 # <a name="package-management-ssis-service"></a>Administración de paquetes (servicio SSIS)
@@ -143,15 +143,15 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   Para importar desde una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
     -   Para importar desde el sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
   
     -   Para importar desde el almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
 7.  Si lo desea, actualice el nombre del paquete.  
   
@@ -187,7 +187,7 @@ Para detener la ejecución de un paquete de la carpeta **Paquetes en ejecución*
   
     -   Para exportar al almacén de paquetes [!INCLUDE[ssIS](../../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
+         Haga clic en el botón Examinar **(…)** , expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
 7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   

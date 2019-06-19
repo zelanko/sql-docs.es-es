@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 6e58a1f5e36ea4c8f9412c06ad08729716d02eef
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65101970"
 ---
 # <a name="using-msdeploy-with-dbsqlpackage-provider"></a>Usar MSDeploy con el proveedor de dbSqlPackage
@@ -47,15 +47,15 @@ Especifique los verbos de MS-Deploy con el modificador **-verb** en la línea de
   
 |Verbo|Descripción|  
 |--------|---------------|  
-|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_ruta_de_acceso_del_archivo_.dacpac_**"**|  
-|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,parámetros_de_origen_de_DbSqlPackage] -_**dest:dbSqlPackage**="input" *[,parámetros_de_destino_de_DbSqlPackage]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
+|volcado|Proporciona información, como el nombre, el número de versión y la descripción, acerca de una base de datos de origen contenida en un archivo .dacpac. Especifique la base de datos de origen con el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="** _ruta_de_acceso_del_archivo_.dacpac_ **"**|  
+|sync|Especifique las acciones dbSqlPackage usando el formato siguiente en la línea de comandos:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,parámetros_de_origen_de_DbSqlPackage] -_ **dest:dbSqlPackage**="input" *[,parámetros_de_destino_de_DbSqlPackage]*<br /><br />Vea las secciones a continuación para conocer los parámetros de origen y de destino para el verbo sync.|  
   
 ## <a name="dbsqlpackage-source"></a>Origen de dbSqlPackage  
 El proveedor de **dbSqlPackage** obtiene una entrada que es una cadena de conexión válida de SQL Server o SQL Azure o bien una ruta de acceso a un archivo .dacpac en el disco.  La sintaxis para especificar el origen de entrada para el proveedor es la siguiente:  
   
 |Entrada|Valor predeterminado|Descripción|  
 |---------|-----------|---------------|  
-|**-source:dbSqlPackage=**{*input*}|**N/D**|*input* es una cadena de conexión válida de SQL Server o SQL Azure o una ruta de acceso a un archivo .dacpac en el disco.<br /><br />**NOTA:** Las únicas propiedades de cadena de conexión que se admiten cuando se usa una cadena de conexión como origen de entrada son *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* y *ConnectionTimeout*.|  
+|**-source:dbSqlPackage=** {*input*}|**N/D**|*input* es una cadena de conexión válida de SQL Server o SQL Azure o una ruta de acceso a un archivo .dacpac en el disco.<br /><br />**NOTA:** Las únicas propiedades de cadena de conexión que se admiten cuando se usa una cadena de conexión como origen de entrada son *InitialCatalog, DataSource, UserID, Password, IntegratedSecurity, Encrypt, TrustServerCertificate* y *ConnectionTimeout*.|  
   
 Si el origen de entrada es una cadena de conexión a una base de datos activa de SQL Server o SQL Azure, **dbSqlPackage** extraerá una instantánea de base de datos con formato de archivo .dacpac a partir de una base de datos de SQL Server o SQL Azure.  
   

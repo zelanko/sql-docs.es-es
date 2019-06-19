@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4f0498fd93a6ed613078b4339e36e3d71e929b8f
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65961365"
 ---
 # <a name="mining-model-content-for-sequence-clustering-models"></a>Contenido del modelo de minería de datos para los modelos de agrupación en clústeres de secuencia
@@ -21,7 +21,7 @@ ms.locfileid: "65961365"
   En este tema se describe el contenido del modelo de minería de datos específico de los modelos que utilizan el algoritmo de clústeres de secuencia de Microsoft. Para obtener una explicación de terminología general y de estadística relacionada con el contenido del modelo de minería de datos válida para todos los tipos de modelo, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
 ## <a name="understanding-the-structure-of-a-sequence-clustering-model"></a>Descripción de la estructura de un modelo de agrupación en clústeres de secuencia  
- Un modelo de agrupación en clústeres de secuencia tiene un nodo primario único (NODE_TYPE = 1) que representa el modelo y sus metadatos. El nodo primario, que se etiqueta **(Todos)**, tiene un nodo de secuencia relacionado (NODE_TYPE = 13) que muestra todas las transiciones que se hayan detectado en los datos de entrenamiento.  
+ Un modelo de agrupación en clústeres de secuencia tiene un nodo primario único (NODE_TYPE = 1) que representa el modelo y sus metadatos. El nodo primario, que se etiqueta **(Todos)** , tiene un nodo de secuencia relacionado (NODE_TYPE = 13) que muestra todas las transiciones que se hayan detectado en los datos de entrenamiento.  
   
  ![Estructura del modelo de clústeres de secuencia](../../analysis-services/data-mining/media/modelcontent-seqclust.gif "estructura del modelo de clústeres de secuencia")  
   

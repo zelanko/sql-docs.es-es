@@ -42,10 +42,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
 ms.openlocfilehash: b673b21eca837e9ccaacd3a47c819287a854e6f8
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65947042"
 ---
 # <a name="restore-statements-transact-sql"></a>Instrucciones RESTORE (Transact-SQL)
@@ -64,7 +64,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||
 |-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+|** _\* SQL Server \*_ ** &nbsp;|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 ||||
 
 &nbsp;
@@ -736,7 +736,7 @@ RESTORE DATABASE Sales
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* Instancia administrada de <br />SQL Database \*_**|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|** _\* Instancia administrada de <br />SQL Database \*_ **|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
 
 &nbsp;
 
@@ -877,7 +877,7 @@ WHERE r.command = 'RESTORE DATABASE'
 
 > ||||
 > |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_**
+> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[Instancia administrada de<br />SQL Database](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ **
 
 &nbsp;
 

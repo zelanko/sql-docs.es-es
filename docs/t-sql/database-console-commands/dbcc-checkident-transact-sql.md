@@ -31,10 +31,10 @@ ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions
 ms.openlocfilehash: e0bf1d84d568d9c23723b0b1adead72ad9ebe2f7
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65104348"
 ---
 # <a name="dbcc-checkident-transact-sql"></a>DBCC CHECKIDENT (Transact-SQL)
@@ -82,7 +82,7 @@ DBCC CHECKIDENT
 |-----------------------------|---------------------------------------------|  
 |DBCC CHECKIDENT ( *table_name*, NORESEED )|No se restablece el valor de identidad actual. DBCC CHECKIDENT devuelve el valor de identidad actual y el valor máximo actual de la columna de identidad. Si los dos valores no coinciden, debe restablecer el valor de identidad para evitar posibles errores o espacios en la secuencia de valores.|  
 |DBCC CHECKIDENT ( *table_name* )<br /><br /> o Administrador de configuración de<br /><br /> DBCC CHECKIDENT ( *table_name*, RESEED )|Si el valor de identidad actual de una tabla es menor que el valor de identidad máximo almacenado en la columna de identidad, se restablece con el valor máximo de la columna de identidad. Vea la sección "Excepciones" que aparece más adelante.|  
-|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|El valor de identidad actual se establece en *new_reseed_value*. Si no se han insertado filas en la tabla desde su creación, o si todas las filas se han quitado con la instrucción TRUNCATE TABLE, la primera fila insertada después de ejecutar DBCC CHECKIDENT usa *new_reseed_value* como identidad. Si hay filas en la tabla, o bien si todas las filas se han quitado mediante la instrucción DELETE, la siguiente fila insertada usa el valor *new_reseed_value* y el valor del [incremento actual](../../t-sql/functions/ident-incr-transact-sql.md). Si una transacción inserta una fila y posteriormente se revierte, la siguiente fila insertada usa *new_reseed_value* más el valor de [incremento actual](../../t-sql/functions/ident-incr-transact-sql.md) como si se hubiera eliminado la fila. Si la tabla no está vacía y se establece el valor de identidad en un número menor que el valor máximo de la columna de identidad, puede darse una de las siguientes condiciones:<br /><br /> - Si existe una restricción PRIMARY KEY o UNIQUE en la columna de identidad, se generará el mensaje de error 2627 en las operaciones de inserción en la tabla posteriores, ya que el valor de identidad generado provocará un conflicto con los valores existentes.<br /><br /> - Si no existe una restricción PRIMARY KEY o UNIQUE, las operaciones de inserción posteriores provocarán la duplicación de los valores de identidad.|  
+|DBCC CHECKIDENT ( *table_name*, RESEED, *new_reseed_value* )|El valor de identidad actual se establece en *new_reseed_value*. Si no se han insertado filas en la tabla desde su creación, o si todas las filas se han quitado con la instrucción TRUNCATE TABLE, la primera fila insertada después de ejecutar DBCC CHECKIDENT usa *new_reseed_value* como identidad. Si hay filas en la tabla, o bien si todas las filas se han quitado mediante la instrucción DELETE, la siguiente fila insertada usa el valor *new_reseed_value* y el valor del [incremento actual](../../t-sql/functions/ident-incr-transact-sql.md). Si una transacción inserta una fila y posteriormente se revierte, la siguiente fila insertada usa *new_reseed_value* más el valor de [incremento actual](../../t-sql/functions/ident-incr-transact-sql.md) como si se hubiera eliminado la fila. Si la tabla no está vacía y se establece el valor de identidad en un número menor que el valor máximo de la columna de identidad, puede darse una de las siguientes condiciones:<br /><br /> \- Si existe una restricción PRIMARY KEY o UNIQUE en la columna de identidad, se generará el mensaje de error 2627 en las operaciones de inserción en la tabla posteriores, ya que el valor de identidad generado provocará un conflicto con los valores existentes.<br /><br /> \- Si no existe una restricción PRIMARY KEY o UNIQUE, las operaciones de inserción posteriores provocarán la duplicación de los valores de identidad.|  
   
 ## <a name="exceptions"></a>Excepciones
 

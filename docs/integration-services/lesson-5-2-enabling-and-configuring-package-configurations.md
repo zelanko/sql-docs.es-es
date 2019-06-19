@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ee2c54b072cf9cd219bed10b0ade7f59fa8bc354
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65721525"
 ---
 # <a name="lesson-5-2-enable-and-configure-package-configurations"></a>Lección 5-2: Habilitar y configurar configuraciones de paquetes
@@ -45,11 +45,11 @@ En esta tarea se convierte el proyecto al modelo de implementación de paquetes 
   
 7.  Vuelva a la pestaña **Flujo de control** y haga doble clic en el contenedor **Foreach File in Folder** .  
   
-8.  En la página **Colección** del **Editor de bucles Foreach**, seleccione **Expresiones** y luego el botón de puntos suspensivos **(…)**.  
+8.  En la página **Colección** del **Editor de bucles Foreach**, seleccione **Expresiones** y luego el botón de puntos suspensivos **(…)** .  
   
 9. En el **Editor de expresiones de propiedad**, seleccione la lista **Propiedad** y luego **Directory**.  
   
-10. En el cuadro **Expresión**, seleccione el botón de puntos suspensivos **(…)**.  
+10. En el cuadro **Expresión**, seleccione el botón de puntos suspensivos **(…)** .  
   
 11. En el **Generador de expresiones**, expanda la carpeta **Variables y parámetros** y arrastre la variable **User::varFolderName** al cuadro **Expresión**.  
   
@@ -109,7 +109,7 @@ En esta tarea se convierte el proyecto al modelo de implementación de paquetes 
   
 ## <a name="create-and-populate-a-new-sample-data-folder"></a>Crear y rellenar una carpeta de nuevos datos de ejemplo  
   
-1.  En el Explorador de Windows, en el nivel raíz de la unidad (por ejemplo, **C:\\**), cree una carpeta denominada **Nuevos datos de ejemplo**.  
+1.  En el Explorador de Windows, en el nivel raíz de la unidad (por ejemplo, **C:\\** ), cree una carpeta denominada **Nuevos datos de ejemplo**.  
   
 2.  Busque los archivos de ejemplo en su equipo y copie tres de los archivos de la carpeta.  
   

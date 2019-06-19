@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bbe4fbfc2cad2df41a1d9bd14fcb2620e2dec5c1
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403647"
 ---
 # <a name="lesson-3-2---modifying-the-customer-dimension"></a>Lección 3-2: modificar la dimensión Customer
@@ -106,7 +106,7 @@ Una vez que ha creado un cálculo con nombre en la vista del origen de datos, pu
   
 4.  En el campo de la propiedad **Name** , escriba **Full Name**.  
   
-5.  Haga clic en el **NameColumn** propiedad de campo en la parte inferior y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
+5.  Haga clic en el **NameColumn** propiedad de campo en la parte inferior y, a continuación, haga clic en el ( **...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 6.  Seleccione **FullName** al final de la lista **Columna de origen** y haga clic en **Aceptar**.  
   
@@ -178,7 +178,7 @@ La propiedad **KeyColumns** contiene la columna o columnas que representan la cl
   
 2.  En el panel **Atributos** , haga clic en el atributo **City** .  
   
-3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** junto a la parte final y, después, haga clic en el botón Examinar (**...**).  
+3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** junto a la parte final y, después, haga clic en el botón Examinar ( **...** ).  
   
 4.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **StateProvinceName**y, después, haga clic en el botón **>** .  
   
@@ -186,7 +186,7 @@ La propiedad **KeyColumns** contiene la columna o columnas que representan la cl
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
+6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar ( **...** ).  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **City**y, después, haga clic en **Aceptar**.  
   
@@ -198,7 +198,7 @@ La propiedad **KeyColumns** contiene la columna o columnas que representan la cl
   
 2.  En el panel **Atributos** , haga clic en el atributo **State-Province** .  
   
-3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
+3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar ( **...** ).  
   
 4.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **EnglishCountryRegionName**y, después, haga clic en el botón **>** .  
   
@@ -206,7 +206,7 @@ La propiedad **KeyColumns** contiene la columna o columnas que representan la cl
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para establecer la propiedad **NameColumn** del atributo **State-Province** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
+6.  Para establecer la propiedad **NameColumn** del atributo **State-Province** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar ( **...** ).  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **StateProvinceName**y, después, haga clic en **Aceptar**.  
   

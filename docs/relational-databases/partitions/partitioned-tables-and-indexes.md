@@ -18,10 +18,10 @@ ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: d5e5a00bbe461062412882124a6419cc804c5721
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65713318"
 ---
 # <a name="partitioned-tables-and-indexes"></a>Partitioned Tables and Indexes
@@ -109,7 +109,7 @@ Por ejemplo, suponga que una tabla tiene 100 millones de filas y columnas `A`, `
 
 Las consultas que usan operadores como TOP o MAX/MIN en columnas distintas de la columna de partición pueden experimentar un menor rendimiento con las particiones porque se deben evaluar todas las particiones.  
 
-Si ejecuta con frecuencia consultas que implican una combinación de igualdad entre dos o más tablas con particiones, sus columnas con particiones deberían ser las mismas que las columnas en las que se combinan las tablas. Además, las tablas, o sus índices, deberían colocarse. Esto significa que, o bien utilizan la misma función de partición, o bien utilizan funciones distintas que son esencialmente la misma, dado que:  
+Si ejecuta con frecuencia consultas que implican una combinación de igualdad entre dos o más tablas con particiones, sus columnas con particiones deberían ser las mismas que las columnas en las que se combinan las tablas. Además, las tablas, o sus índices, deberían colocarse. Esto significa que, o bien utilizan la misma función de partición, o bien utilizan funciones distintas que son esencialmente la misma, dado que:
 -  Tienen el mismo número de parámetros que se utilizan para crear particiones y los parámetros correspondientes son de los mismos tipos de datos.
 -  Definen el mismo número de particiones.
 -  Definen los mismos valores de límite para las particiones.

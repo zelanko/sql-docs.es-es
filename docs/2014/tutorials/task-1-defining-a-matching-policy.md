@@ -11,14 +11,14 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 3e4777cf05e7f3eab62c389ace8b8d8a96cae304
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481314"
 ---
 # <a name="task-1-defining-a-matching-policy"></a>Tarea 1: Definición de una directiva de coincidencia
-  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%**.  
+  En esta tarea, creará una directiva de coincidencia que contiene una regla. La regla tendrá un requisito previo: **Id. de proveedor**, lo que significa que debe coincidir con los identificadores de proveedor antes de usar los demás dominios de la regla. La regla usa otros dos dominios: **Nombre de proveedor** con **similitud** valor establecido en **70%** y **correo electrónico de contacto** con **similitud** valor establecido en **30%** .  
   
 1.  En la página principal de **cliente DQS**, haga clic en **flecha derecha** junto a **proveedores** knowledge base y, a continuación, seleccione **directiva de coincidencia**.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "65481314"
   
 12. Repita los dos pasos anteriores para agregar **correo electrónico de contacto** dominio con **30** para el **peso**.  
   
-13. Tenga en cuenta que el **min puntuación de coincidencia** está establecido en **80%**, que es el valor que aparece en el **General** pestaña de la **configuración** página de **Administración de DQS**. Solo puede aumentar esta puntuación por encima de este valor de umbral aquí.  
+13. Tenga en cuenta que el **min puntuación de coincidencia** está establecido en **80%** , que es el valor que aparece en el **General** pestaña de la **configuración** página de **Administración de DQS**. Solo puede aumentar esta puntuación por encima de este valor de umbral aquí.  
   
 14. Tenga en cuenta que **clústeres superpuestos** está seleccionada. Con esta opción, un registro puede aparecer en varios clústeres. Si cambia el valor a Clústeres no superpuestos, los clústeres que tienen registros comunes se combinan en un único clúster.  
   
@@ -66,6 +66,6 @@ ms.locfileid: "65481314"
 16. Haga clic en **siguiente** para cambiar a la **resultados coincidentes** página.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 2: Probar y publicar la directiva de coincidencia](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
+ [Tarea 2: Probar y publicar la directiva de coincidencia](../../2014/tutorials/task-2-testing-and-publishing-the-matching-policy.md)  
   
   

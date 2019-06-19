@@ -16,10 +16,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: d2c08af731fc8f75089250c92ec4f0912a96eee6
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65099574"
 ---
 # <a name="import-into-a-database-project"></a>Importar en un proyecto de base de datos
@@ -42,7 +42,7 @@ La capacidad de importar el esquema a partir de una base de datos o un archivo .
   
 En la importación, las definiciones de objeto se incluirán en archivos de proyecto con los valores predeterminados de la organización de SSDT para los nuevos objetos: nuevos archivos para los objetos de nivel superior, elementos secundarios jerárquicos definidos en el mismo archivo que el primario, restricciones de tabla y columna definidas insertadas siempre que sea posible. Para definir más la visibilidad y el control de cada objeto, use Comparación de esquema en lugar de Importar.  
   
-Si el origen de la importación contiene scripts previos o posteriores a la implementación, RefactorLogs o definiciones de variables SQLCMD, se importarán en el proyecto.  Si el proyecto ya contiene alguno de estos artefactos, los archivos importados se agregarán a una carpeta **Omitido al importar** del proyecto.  
+Si el origen de la importación contiene scripts previos o posteriores a la implementación, RefactorLogs o definiciones de variables SQLCMD, se importarán en el proyecto. Si el proyecto ya contiene alguno de estos artefactos, los archivos importados se agregarán a una carpeta **Omitido al importar** del proyecto.  
   
 **Carpeta Omitido al importar**  
   

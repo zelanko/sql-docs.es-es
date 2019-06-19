@@ -15,10 +15,10 @@ ms.author: mathoma
 manager: jroth
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
 ms.openlocfilehash: 6e09beb701d42562e2134186be6a0ec7c26f5314
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66772226"
 ---
 # <a name="polybase-connectivity-configuration-transact-sql"></a>Configuración de conectividad de PolyBase (Transact-SQL)
@@ -46,10 +46,10 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **@configname=** ] **'**_nombre\_opción_**'**  
+ [ **@configname=** ] **'** _nombre\_opción_ **'**  
  Es el nombre de una opción de configuración. *option_name* es **varchar(35)** y su valor predeterminado es NULL. Si no se especifica, se devuelve la lista completa de opciones.  
   
- [ **@configvalue=** ] **'**_valor_**'**  
+ [ **@configvalue=** ] **'** _valor_ **'**  
  Es la nueva configuración. *value* es de tipo **int**y su valor predeterminado es NULL. El valor máximo depende de la opción individual.  
   
  **'conectividad de hadoop'**  

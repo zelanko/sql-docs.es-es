@@ -21,11 +21,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0557a0ebec0b742088dc6240022f5622e679d8f8
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56803260"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62960019"
 ---
 # <a name="execute-a-stored-procedure"></a>Ejecutar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +68,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 -   Ejecutar procedimientos almacenados del sistema  
   
-     Los procedimientos del sistema comienzan por el prefijo **sp_**. Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
+     Los procedimientos del sistema comienzan por el prefijo **sp_** . Puesto que aparecen lógicamente en todas las bases de datos definidas por el usuario y por el sistema, se pueden ejecutar desde cualquier base de datos sin necesidad de calificar totalmente el nombre del procedimiento. Pero se recomienda calificar como de esquema todos los nombres de procedimientos del sistema con el nombre de esquema **sys** para evitar conflictos de nombres. En el ejemplo siguiente se muestra el método recomendado para llamar a un procedimiento del sistema.  
   
     ```sql  
     EXEC sys.sp_who;  
@@ -125,10 +125,10 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
 ###  <a name="Security"></a> Seguridad  
  Para obtener más información, vea [EXECUTE AS &#40;Transact-SQL&#41;](../../t-sql/statements/execute-as-transact-sql.md) y [EXECUTE AS &#40;Cláusula de Transact-SQL&#41;](../../t-sql/statements/execute-as-clause-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para obtener más información, vea la sección "Permisos" de [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
@@ -161,7 +161,7 @@ En este tema se describe cómo ejecutar un procedimiento almacenado en [!INCLUDE
   
 #### <a name="to-execute-a-stored-procedure"></a>Para ejecutar un procedimiento almacenado  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -176,7 +176,7 @@ GO
   
 #### <a name="to-set-or-clear-a-procedure-for-executing-automatically"></a>Para establecer o borrar un procedimiento para que se ejecute automáticamente  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   
@@ -192,7 +192,7 @@ EXEC sp_procoption @ProcName = '<procedure name>'
   
 #### <a name="to-stop-a-procedure-from-executing-automatically"></a>Para que un procedimiento deje de ejecutarse automáticamente  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

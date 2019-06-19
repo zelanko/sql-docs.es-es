@@ -1,6 +1,6 @@
 ---
 title: AT TIME ZONE (Transact-SQL) | Microsoft Docs
-ms.date: 11/16/2016
+ms.date: 06/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017 ||= sqlallproducts-allversions
-ms.openlocfilehash: ea975f49b5333c2ada88569d6ae3e6d84fac64e8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.openlocfilehash: f366514d23a2de7180eb84d12997434f9414c427
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
-ms.locfileid: "65981103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66836357"
 ---
 # <a name="at-time-zone-transact-sql"></a>AT TIME ZONE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ Puesto que parte de la información (por ejemplo, las reglas de zona horaria) se
 ### <a name="a-add-target-time-zone-offset-to-datetime-without-offset-information"></a>A. Agregar un desplazamiento de zona horaria de destino a una fecha y hora sin información de desplazamiento  
  Use **AT TIME ZONE** para agregar un desplazamiento basado en reglas de zona horaria cuando sepa que los valores **datetime** originales se proporcionan en la misma zona horaria:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
@@ -137,21 +137,20 @@ FROM Sales.SalesOrderHeader;
 ### <a name="b-convert-values-between-different-time-zones"></a>B. Convertir valores entre zonas horarias diferentes  
  En el ejemplo siguiente se convierten valores entre zonas horarias diferentes:  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   
 SELECT SalesOrderID, OrderDate,   
     OrderDate AT TIME ZONE 'Pacific Standard Time' AS OrderDate_TimeZonePST,  
-    OrderDate AT TIME ZONE 'Pacific Standard Time'   
-    AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
+    OrderDate AT TIME ZONE 'Central European Standard Time' AS OrderDate_TimeZoneCET  
 FROM Sales.SalesOrderHeader;  
 ```  
   
 ### <a name="c-query-temporal-tables-using-local-time-zone"></a>C. Consultar tablas temporales con la zona horaria local  
  En el ejemplo siguiente se seleccionan datos de una tabla temporal.  
   
-```  
+```sql
 USE AdventureWorks2016;  
 GO  
   

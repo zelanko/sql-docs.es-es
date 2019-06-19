@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5157fcfeb54e22c404dcba29655771a1c2034e2c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62921832"
 ---
 # <a name="file-restores-simple-recovery-model"></a>Restauraciones de archivos (modelo de recuperación simple)
@@ -62,13 +62,13 @@ ms.locfileid: "62921832"
   
  La secuencia de restauración solo contiene dos instrucciones de [!INCLUDE[tsql](../../../includes/tsql-md.md)] . La primera instrucción restaura un archivo secundario, el archivo `A`, que se restaura usando WITH NORECOVERY. La segunda operación restaura otros dos archivos, `B` y `C` , que se restauran usando WITH RECOVERY desde un dispositivo de copia de seguridad diferente:  
   
-1.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_A_  
+1.  RESTORE DATABASE *base_de_datos* FILE **=** _nombre_de_archivo_A_  
   
      FROM *copia_de_seguridad_de_archivo_A*  
   
      WITH NORECOVERY **;**  
   
-2.  RESTORE DATABASE *base_de_datos* FILE **=**_nombre_de_archivo_B_**,**_nombre_de_archivo_C_  
+2.  RESTORE DATABASE *base_de_datos* FILE **=** _nombre_de_archivo_B_ **,** _nombre_de_archivo_C_  
   
      FROM *copia_de_seguridad_de_archivos_B_y_C*  
   

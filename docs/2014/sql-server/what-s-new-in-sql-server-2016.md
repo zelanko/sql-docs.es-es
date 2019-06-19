@@ -18,10 +18,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: 26d0c84194f6f2aafb8bc499ff5404a1438ee577
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63295245"
 ---
 # <a name="what39s-new-in-sql-server-2014"></a>¿Qué&#39;s de SQL Server 2014
@@ -77,7 +77,7 @@ ms.locfileid: "63295245"
 -   **Nueva DMF para recuperar el búfer de entrada en SQL Server:** Ahora está disponible una nueva DMF para recuperar el búfer de entrada de una sesión o solicitud (sys.dm_exec_input_buffer). Es funcionalmente equivalente a DBCC INPUTBUFFER. [Consulte el blog para obtener más información](https://blogs.msdn.microsoft.com/sql_server_team/new-dmf-for-retrieving-input-buffer-in-sql-server/).
 -   **Mitigación de concesión de memoria de subestimar y subestimados:** Se ha agregado nuevas sugerencias de consulta para el regulador de recursos a través de MIN_GRANT_PERCENT y MAX_GRANT_PERCENT. Esto le permite aprovechar estas sugerencias durante la ejecución de consultas restringiendo sus concesiones de memoria para evitar la contención de memoria. Para obtener más información, consulte [KB310740 del artículo de knowledge base](https://support.microsoft.com/en-us/kb/3107401)
 -   **Mejores diagnósticos de concesión o uso de memoria:** Se agregó un nuevo evento extendido a la lista de funciones de seguimiento de SQL Server (query_memory_grant_usage) para realizar el seguimiento de concesiones de memoria solicitado y concedidos. Esto proporciona mejores capacidades de seguimiento y análisis para solucionar problemas de ejecución de consulta relacionados con concesiones de memoria. Para obtener más información, consulte [el artículo de knowledge base KB3107173](https://support.microsoft.com/en-us/kb/3107173).
--   **Diagnóstico de desbordamiento de tempdb de la ejecución de consulta:**-advertencia de Hash y Sort Warnings ahora tienen columnas adicionales para realizar un seguimiento físico estadísticas de E/S, memoria usada y las filas afectadas. También presentamos un nuevo evento extendido hash_spill_details. Ahora puede realizar un seguimiento de información más pormenorizada para sus advertencias hash y ordenar ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Esta mejora ahora también se expone a través de los planes de consulta XML en forma de un nuevo atributo al tipo complejo SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Establecer las estadísticas en ahora muestra las estadísticas de tabla de trabajo de ordenación. .
+-   **Diagnóstico de desbordamiento de tempdb de la ejecución de consulta:** -advertencia de Hash y Sort Warnings ahora tienen columnas adicionales para realizar un seguimiento físico estadísticas de E/S, memoria usada y las filas afectadas. También presentamos un nuevo evento extendido hash_spill_details. Ahora puede realizar un seguimiento de información más pormenorizada para sus advertencias hash y ordenar ([KB3107172](https://support.microsoft.com/en-us/kb/3107172)). Esta mejora ahora también se expone a través de los planes de consulta XML en forma de un nuevo atributo al tipo complejo SpillToTempDbType ([KB3107400](https://support.microsoft.com/en-us/kb/3107400)). Establecer las estadísticas en ahora muestra las estadísticas de tabla de trabajo de ordenación. .
 -   **Diagnóstico mejorado para los planes de ejecución de consultas que implican la aplicación del predicado residual:** Las filas reales de lectura ahora se notifica en los planes de ejecución de consulta para ayudar a mejorar la solución de problemas de rendimiento de consulta. Esto debe invalidar la necesidad de capturar SET STATISTICS IO por separado. Esto ahora permite ver información relacionada con una aplicación del predicado residual en un plan de consulta. Para obtener más información, consulte [el artículo de knowledge base KB3107397](https://support.microsoft.com/en-us/kb/3107397).
 
 

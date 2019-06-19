@@ -21,11 +21,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: f2c07b756c608e5e28de3351d887d7a7b2f051ce
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334412"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927673"
 ---
 # <a name="readtext-transact-sql"></a>READTEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ _table_ **.** _column_
 Es el nombre de la tabla y de la columna donde se va a leer. Los nombres de tablas y columnas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). Es necesario especificar los nombres de la tabla y de la columna; sin embargo, es opcional especificar el nombre de la base de datos y del propietario.  
   
 _text\_ptr_  
-Es un puntero de texto válido. _text\_ptr_ debe ser **binary(16)**.  
+Es un puntero de texto válido. _text\_ptr_ debe ser **binary(16)** .  
   
 _offset_  
 Es el número de bytes cuando se usan los tipos de datos **text** o **image**. Puede ser también el número de bytes de los caracteres cuando el tipo de datos **ntext** se usa para omitir los datos de **text**, **image** o **ntext** antes de comenzar a leerlos.  

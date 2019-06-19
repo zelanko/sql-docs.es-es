@@ -12,11 +12,11 @@ ms.author: shkale
 manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
 ms.openlocfilehash: 99edc393a8d831373fd3b7175af545f00655980c
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62465715"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -41,7 +41,7 @@ EXPLAIN SQL_statement
  Requiere el permiso **SHOWPLAN** y el permiso para ejecutar *SQL_statement*. Vea [Permisos: GRANT, DENY, REVOKE &#40;Azure SQL Data Warehouse, Almacenamiento de datos paralelos&#41;](../../t-sql/statements/permissions-grant-deny-revoke-azure-sql-data-warehouse-parallel-data-warehouse.md).  
   
 ## <a name="return-value"></a>Valor devuelto  
- El valor devuelto del comando **EXPLAIN** es un documento XML con la estructura que se muestra a continuación. En este documento XML se enumeran todas las operaciones en el plan de consulta para la consulta especificada, delimitadas por la etiqueta `<dsql_operation>`. El valor devuelto es de tipo **nvarchar(max)**.  
+ El valor devuelto del comando **EXPLAIN** es un documento XML con la estructura que se muestra a continuación. En este documento XML se enumeran todas las operaciones en el plan de consulta para la consulta especificada, delimitadas por la etiqueta `<dsql_operation>`. El valor devuelto es de tipo **nvarchar(max)** .  
   
  En el plan de consulta devuelto se representan instrucciones SQL secuenciales; cuando la consulta lo ejecuta puede implicar operaciones en paralelo, por lo que es posible que algunas de las instrucciones secuenciales que se muestran se ejecuten al mismo tiempo.  
   

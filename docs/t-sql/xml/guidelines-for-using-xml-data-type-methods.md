@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 890e5d02f72f9af0d0609602e3815b872d870b45
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578135"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62928977"
 ---
 # <a name="guidelines-for-using-xml-data-type-methods"></a>Directrices para utilizar los métodos del tipo de datos xml
 
@@ -48,7 +48,7 @@ SET @c = @x.value('/root[1]', 'varchar(11)')
 PRINT @c
 ```
 
-## <a name="the-group-by-clause"></a>La cláusula GROUP BY 
+## <a name="the-group-by-clause"></a>La cláusula GROUP BY
 
 Los métodos del tipo de datos **xml** se tratan internamente como subconsultas. Como GROUP BY requiere un valor escalar y no permite agregados ni subconsultas, no se pueden especificar los métodos del tipo de datos **xml** en la cláusula GROUP BY. Una solución es llamar a una función definida por el usuario que utilice métodos XML en su interior.
 
@@ -70,7 +70,7 @@ XQuery [xmldb_test.xmlcol.query()]: Attribute may not appear outside of an eleme
 
 ## <a name="singleton-checks"></a>Comprobaciones de singleton
 
-Los pasos de ubicación, los parámetros de funciones y los operadores que requieren singleton devolverán un error si el compilador no puede determinar si se garantiza un singleton en tiempo de ejecución. Este problema es frecuente con datos sin tipo. Por ejemplo, la búsqueda de un atributo requiere un elemento primario singleton. Es suficiente con un ordinal que seleccione un solo nodo primario. Es posible que la evaluación de una combinación **node()**-**value()** para extraer valores de atributos no requiera la especificación del ordinal. Esto se muestra en el ejemplo siguiente.
+Los pasos de ubicación, los parámetros de funciones y los operadores que requieren singleton devolverán un error si el compilador no puede determinar si se garantiza un singleton en tiempo de ejecución. Este problema es frecuente con datos sin tipo. Por ejemplo, la búsqueda de un atributo requiere un elemento primario singleton. Es suficiente con un ordinal que seleccione un solo nodo primario. Es posible que la evaluación de una combinación **node()** -**value()** para extraer valores de atributos no requiera la especificación del ordinal. Esto se muestra en el ejemplo siguiente.
 
 ### <a name="example-known-singleton"></a>Ejemplo: singleton conocido
 

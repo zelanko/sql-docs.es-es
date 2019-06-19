@@ -11,10 +11,10 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 999f58014d661f2eb476cd195e11788b2a565937
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62468361"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
@@ -24,12 +24,12 @@ ms.locfileid: "62468361"
   
 |Tema|Información general|  
 |-----------|--------------|  
-| [Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#resolve-database-restore-failures-due-to-oom) |Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos de servidor "*\<nombreDeGrupoDeRecursos>*"".|  
+| [Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#resolve-database-restore-failures-due-to-oom) |Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<nombreDeGrupoDeRecursos>* "".|  
 | [Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#resolve-impact-of-low-memory-or-oom-conditions-on-the-workload)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-| [Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos "*\<nombreDeGrupoDeRecursos>*". ..." cuando hay suficiente memoria disponible para la operación.|  
+| [Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available) |Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos " *\<nombreDeGrupoDeRecursos>* ". ..." cuando hay suficiente memoria disponible para la operación.|  
   
 ## <a name="resolve-database-restore-failures-due-to-oom"></a>Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando se intenta restaurar una base de datos obtendrá el mensaje de error: "Error de base de datos de la operación de restauración '*\<databaseName >*'debido a memoria insuficiente en el grupo de recursos'*\<Nombredegrupoderecursos >*'." Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente aumentando la memoria disponible.  
+ Cuando se intenta restaurar una base de datos obtendrá el mensaje de error: "Error de base de datos de la operación de restauración ' *\<databaseName >* 'debido a memoria insuficiente en el grupo de recursos' *\<Nombredegrupoderecursos >* '." Antes de poder restaurar correctamente la base de datos, debe resolver el problema de memoria insuficiente aumentando la memoria disponible.  
   
  Para resolver el error de recuperación debido a memoria insuficiente, aumente la memoria disponible mediante alguno de estos medios (o todos ellos) para incrementar temporalmente la memoria disponible para la operación de recuperación.  
   
@@ -135,7 +135,7 @@ GO
 > Vea el tema [prácticas recomendadas: Usar OLTP en memoria en un entorno de máquina virtual](../../database-engine/using-in-memory-oltp-in-a-vm-environment.md) para obtener más información.  
   
 ## <a name="resolve-page-allocation-failures-due-to-insufficient-memory-when-sufficient-memory-is-available"></a>Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible  
- Si recibe el mensaje de error "no se permiten asignaciones de página de base de datos '*\<databaseName >*'debido a memoria insuficiente en el grupo de recursos'*\<Nombredegrupoderecursos >*'. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obtener más información. " en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
+ Si recibe el mensaje de error "no se permiten asignaciones de página de base de datos ' *\<databaseName >* 'debido a memoria insuficiente en el grupo de recursos' *\<Nombredegrupoderecursos >* '. Consulte '<https://go.microsoft.com/fwlink/?LinkId=330673>' para obtener más información. " en el registro de errores cuando hay suficiente memoria física disponible para asignar la página, puede ser debido a un regulador de recursos deshabilitado. Cuando el Regulador de recursos está deshabilitado, MEMORYBROKER_FOR_RESERVE induce una presión de memoria artificial.  
   
  Para resolver este problema necesita habilitar el Regulador de recursos.  
   

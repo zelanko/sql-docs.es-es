@@ -20,10 +20,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 86f54b00e530e70d1952461ce7b98b9238e4c3f3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109160"
 ---
 # <a name="fill-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Relleno (Generador de informes y SSRS)
@@ -31,7 +31,7 @@ ms.locfileid: "66109160"
   
 ## <a name="options"></a>Opciones  
  **Color de relleno**  
- Haga clic en el botón de color para seleccionar un color de relleno para el rectángulo. Haga clic en el botón **Expresión**_(fx)_ para editar la expresión, que puede ser un valor hexadecimal para el color RGB o uno de los nombres de colores predefinidos del cuadro de diálogo **Expresión** . Para ver una lista de los colores predefinidos, seleccione **Web** en el panel **Elemento**. Los nombres de colores del panel **Título** pueden escribirse en el panel de texto de expresiones. No use el signo igual (=) ni comillas ("") cuando escriba el nombre del color.  
+ Haga clic en el botón de color para seleccionar un color de relleno para el rectángulo. Haga clic en el botón **Expresión** _(fx)_ para editar la expresión, que puede ser un valor hexadecimal para el color RGB o uno de los nombres de colores predefinidos del cuadro de diálogo **Expresión** . Para ver una lista de los colores predefinidos, seleccione **Web** en el panel **Elemento**. Los nombres de colores del panel **Título** pueden escribirse en el panel de texto de expresiones. No use el signo igual (=) ni comillas ("") cuando escriba el nombre del color.  
   
  **Seleccione el origen de imagen**  
  Indique dónde se encuentra almacenada la imagen para que, a la hora de representar el informe, el procesador de informes pueda mostrarla.  
@@ -47,7 +47,7 @@ ms.locfileid: "66109160"
   
  Si va a incrustar la imagen, elija la imagen que quiere agregar al informe en la lista desplegable. Haga clic en **Importar** para agregar la imagen a la lista desplegable. Si agregó una imagen al panel **Datos** , podrá seleccionarla eligiendo **Incrustada** y seleccionando la imagen en la lista desplegable.  
   
- Si selecciona la opción **Externo** , escriba la dirección URL de la imagen. Un informe publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa (por ejemplo, http://*\<servername >*/images/image1.jpg). Un informe publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
+ Si selecciona la opción **Externo** , escriba la dirección URL de la imagen. Un informe publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa (por ejemplo, http:// *\<servername >* /images/image1.jpg). Un informe publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http:// *\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
   
  **Importar**  
  Esta opción está disponible cuando se selecciona **Incrustada**. Haga clic en esta opción para agregar una imagen a la lista desplegable **Usar esta imagen** .  

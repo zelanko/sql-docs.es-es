@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: dab04f5c544e84c5763b8101cb166741463d460a
-ms.sourcegitcommit: be09f0f3708f2e8eb9f6f44e632162709b4daff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65993940"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>Uso del Asistente para tablas externas con archivos CSV
@@ -77,7 +77,7 @@ En la ventana siguiente, podrá modificar las columnas de la tabla externa que s
 
 ## <a name="summary"></a>Resumen
 
-Este paso proporciona un resumen de las selecciones. Proporciona la instancia principal de SQL e información de la tabla externa propuesta. En este paso, verá la opción **"Generar Script"** , que creará en T-SQL los scripts con la sintaxis para crear el origen de datos externo, o bien **Crear**, que creará el objeto de origen de datos externo.
+Este paso proporciona un resumen de las selecciones. Proporciona la instancia principal de SQL e información de la tabla externa propuesta. En este paso, verá la opción **"Generar Script"**, que creará en T-SQL los scripts con la sintaxis para crear el origen de datos externo, o bien **Crear**, que creará el objeto de origen de datos externo.
 
 ![Pantalla de resumen](media/data-virtualization/csv-virtualize-data-summary.png)
 

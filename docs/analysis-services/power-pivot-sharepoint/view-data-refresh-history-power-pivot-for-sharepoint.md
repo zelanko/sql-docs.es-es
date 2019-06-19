@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 355ade7f4c90b595356efc5d39c2fa7cf587b11b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62509954"
 ---
 # <a name="view-data-refresh-history-power-pivot-for-sharepoint"></a>Ver el Historial de actualización de datos (Power Pivot para SharePoint)
@@ -45,7 +45,7 @@ ms.locfileid: "62509954"
   
 2.  Seleccione el libro y, a continuación, haga clic en la flecha abajo que aparece a la derecha.  
   
-3.  Seleccione **Administrar actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+3.  Seleccione **Administrar actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
  La página del historial aparece y muestra un registro completo de toda la actividad de actualización para los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] del libro de Excel actual.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "62509954"
   
 |Elemento|Descripción|  
 |----------|-----------------|  
-|Name|Especifica el nombre de archivo del libro de Excel que contiene los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
+|NOMBRE|Especifica el nombre de archivo del libro de Excel que contiene los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
 |Estado actual|Los valores son **Programado**, **Actualizando**, **Correcto**o **Error**.<br /><br /> **Programado** aparece cuando se crea por primera vez la programación. Después de que la actualización de datos se ejecuta la primera vez, este mensaje de estado ya no aparece.<br /><br /> **Actualizando** indica que la actualización de datos está en curso. Una solicitud está en la cola de procesos o ejecutándose activamente en el servidor.<br /><br /> **Correcto** indica que la última operación de actualización de datos se completó y que el libro actualizado se vuelve a poner en la biblioteca de SharePoint.<br /><br /> **Error** indica que la última operación de actualización de datos no tuvo éxito. Los datos actualizados no se guardaron. El libro contiene los mismos datos que tenía antes de que la actualización de datos comenzara.|  
 |Última actualización correcta|Especifica la fecha en la que la última actualización de datos se completó correctamente.|  
 |Siguiente actualización de programación|Especifica la fecha en la que la siguiente actualización de datos está programada para que se produzca.<br /><br /> El vínculo **Configurar programación** le lleva a la página de definición de la programación. Si tiene permisos de contribución en el libro, puede hacer clic en el vínculo para ver y modificar la información de programación que controla la actualización de datos desatendida de los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] del libro.|  

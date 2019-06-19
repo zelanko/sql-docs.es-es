@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 613156430d7c85977aee2e147c5b158124316a94
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078666"
 ---
 # <a name="defining-parent-attribute-properties-in-a-parent-child-hierarchy"></a>Definir propiedades de atributo primario en una jerarquía de elementos primarios y secundarios
@@ -37,7 +37,7 @@ ms.locfileid: "66078666"
   
 3.  Seleccione el miembro **Ken J. Sánchez** .  
   
-     Observe que el nombre de nivel para este miembro es **Level 02**. (El nombre de nivel aparece después de **Nivel actual:**, justo encima del miembro **All Employees**.) En esta tarea, definirá nombres más descriptivos para cada nivel.  
+     Observe que el nombre de nivel para este miembro es **Level 02**. (El nombre de nivel aparece después de **Nivel actual:** , justo encima del miembro **All Employees**.) En esta tarea, definirá nombres más descriptivos para cada nivel.  
   
 4.  Expanda **Ken J. Sánchez** para ver los nombres de los empleados que informan a este director y, después, seleccione **Brian S. Welcker** para ver el nombre de este nivel.  
   
@@ -69,11 +69,11 @@ ms.locfileid: "66078666"
   
      Observe el icono único de este atributo. Este icono significa que el atributo es la clave principal de una jerarquía de elementos primarios y secundarios. Observe también que, en la ventana Propiedades, la propiedad **Usage** del atributo está definida como **Primaria**. Esta propiedad se estableció con el Asistente para dimensiones cuando se diseñó la dimensión. El asistente detectó automáticamente la relación de elementos primarios y secundarios.  
   
-3.  En la ventana Propiedades, haga clic en el botón de puntos suspensivos (**...**) de la celda de la propiedad **NamingTemplate** .  
+3.  En la ventana Propiedades, haga clic en el botón de puntos suspensivos ( **...** ) de la celda de la propiedad **NamingTemplate** .  
   
      En el cuadro de diálogo **Plantilla de asignación de nombres de nivel**, debe definir la plantilla de asignación de nombres de nivel que determina los nombres de nivel de la jerarquía de elementos primarios y secundarios que se muestran a los usuarios cuando examinan los cubos.  
   
-4.  En la segunda fila, la fila **\***, escriba **Employee Level \*** en la columna **Nombre** y después haga clic en la tercera fila.  
+4.  En la segunda fila, la fila **\*** , escriba **Employee Level \*** en la columna **Nombre** y después haga clic en la tercera fila.  
   
      Observe que, bajo **Resultado**, cada nivel ahora se denominará "Employee Level" seguido por un número que aumenta de forma secuencial.  
   

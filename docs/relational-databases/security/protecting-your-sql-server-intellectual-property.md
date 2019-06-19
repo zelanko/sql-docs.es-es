@@ -15,11 +15,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 040377ce7f0879b11ec19f0abd21dd984ef363d4
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399808"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665032"
 ---
 # <a name="protecting-your-sql-server-intellectual-property"></a>Proteger su propiedad intelectual de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ Hay varias maneras de configurar el acceso a los datos de los clientes sin neces
 
 También puede hospedar un sistema [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] en su propia red y permitir a los clientes acceder a los datos a través de su red, ya sea directamente o a través de una aplicación web.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Centro de seguridad para el motor de base de datos SQL Server y la base de datos SQL Azure](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)  
 [Proteger SQL Server](../../relational-databases/security/securing-sql-server.md)  

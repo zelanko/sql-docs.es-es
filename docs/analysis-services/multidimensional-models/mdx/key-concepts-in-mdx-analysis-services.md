@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a402c385be8c89f71824e5312ffc57fd6c1b0a2c
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65357329"
 ---
 # <a name="key-concepts-in-mdx-analysis-services"></a>Conceptos clave de MDX (Analysis Services)
@@ -57,11 +57,11 @@ ms.locfileid: "65357329"
   
  ![Tabla dinámica con todos los miembros que se mencionan](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot2-allmember.png "tabla dinámica con todos los miembros que se mencionan")  
   
- Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"**. Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, suroeste es el miembro hoja.  
+ Vaya expandiendo la jerarquía y llegará al nivel más bajo. Es lo que se conoce como el **miembro "hoja"** . Un miembro hoja es un miembro de una jerarquía que no posee miembros secundarios. En este ejemplo, suroeste es el miembro hoja.  
   
  ![Tabla dinámica con documentos de calle de miembro hoja](../../../analysis-services/multidimensional-models/mdx/media/ssas-keyconcepts-pivot3-leafparent.PNG "tabla dinámica con documentos de calle de miembro hoja")  
   
- Todo lo que está por encima se denomina **miembro "primario"**. Estados Unidos es el elemento primario de suroeste.  
+ Todo lo que está por encima se denomina **miembro "primario"** . Estados Unidos es el elemento primario de suroeste.  
   
  **Los componentes de una jerarquía de atributo**  
   

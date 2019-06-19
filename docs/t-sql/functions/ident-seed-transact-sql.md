@@ -21,16 +21,16 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 002d4632dbe988fa29e25eb775afe5bd90ffdeea
-ms.sourcegitcommit: 83f061304fedbc2801d8d6a44094ccda97fdb576
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/20/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65946400"
 ---
 # <a name="identseed-transact-sql"></a>IDENT_SEED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Devuelve el valor de inicialización original (devuelto como **numeric**( **@@** MAXPRECISION,0)) que se especificó al crear una columna de identidad en una tabla o una vista. La acción de cambiar el valor actual de una columna de identidad utilizando DBCC CHECKIDENT no cambia el valor devuelto por esta función.  
+  Devuelve el valor de inicialización original (devuelto como **numeric**(**@@** MAXPRECISION,0)) que se especificó al crear una columna de identidad en una tabla o una vista. La acción de cambiar el valor actual de una columna de identidad utilizando DBCC CHECKIDENT no cambia el valor devuelto por esta función.  
   
  ![Icono de vínculo a artículo](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo a artículo") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   

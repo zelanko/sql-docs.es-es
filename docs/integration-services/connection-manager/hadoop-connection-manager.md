@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: ed5bc5e0d93cfb657612e1806bee52d242392604
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728222"
 ---
 # <a name="hadoop-connection-manager"></a>Administrador de conexiones de Hadoop
@@ -168,7 +168,7 @@ En el controlador de dominio:
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
 
-2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el siguiente ejemplo, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM@AD.COM**.
+2.  Establezca una confianza entre el dominio de Windows y el dominio Kerberos. En el siguiente ejemplo, `[password]` es la contraseña de la entidad de seguridad **krbtgt/REALM.COM@AD.COM** .
 
     `C:> netdom trust REALM.COM /Domain: AD.COM /add /realm /password:[password]`
 

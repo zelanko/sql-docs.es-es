@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a3bd6de297f4b5b677db10861e594afc36f74bb5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072958"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>Establezca las opciones de suplantación (SSAS - multidimensional)
@@ -37,7 +37,7 @@ ms.locfileid: "66072958"
 3.  Elija una opción descrita en [Opciones de suplantación](#bkmk_options) en este tema.  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Establezca las opciones de suplantación en Management Studio  
- En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación** , haga clic en el botón de puntos suspensivos (**…**) para las propiedades siguientes de estos cuadros de diálogo:  
+ En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], abra el cuadro de diálogo **Información de suplantación** , haga clic en el botón de puntos suspensivos ( **…** ) para las propiedades siguientes de estos cuadros de diálogo:  
   
 -   El cuadro de diálogo**Propiedades de la base de datos** , mediante la propiedad Información de suplantación de origen de datos.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "66072958"
  Todas las opciones están disponibles en el cuadro de diálogo, pero no todas las opciones son adecuadas para cada escenario. Utilice la siguiente información para determinar la mejor opción para el escenario.  
   
  **Utilizar un nombre de usuario y una contraseña específicos**  
- Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Nombre de dominio >***\\***\<nombre de la cuenta de usuario >*.  
+ Seleccione esta opción para que el [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objetos usar las credenciales de seguridad de una cuenta de usuario de Windows especificada en este formato: *\<Nombre de dominio >***\\***\<nombre de la cuenta de usuario >* .  
   
  Elija esta opción para usar una identidad de usuario de Windows dedicada con los privilegios mínimos que ha creado específicamente para el acceso a los datos. Por ejemplo, si suele crear una cuenta de uso general para leer los datos que se recuperan en los informes, puede especificar esa cuenta aquí.  
   

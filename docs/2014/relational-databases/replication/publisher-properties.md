@@ -16,10 +16,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2ea467b00223e31ec7672d4d54a49150cf05368c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261974"
 ---
 # <a name="sql-server-replication-publisher-properties"></a>Propiedades del publicador de replicación de SQL Server
@@ -70,7 +70,7 @@ ms.locfileid: "63261974"
   
 ### <a name="options"></a>Opciones  
  **Suscriptores**  
- La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades (**...**) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
+ La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades ( **...** ) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
   
  **Agregar**  
  Haga clic en **Agregar** para agregar un suscriptor, y luego haga clic en **Agregar suscriptor de SQL Server** o en **Agregar suscriptor que no sea de SQL Server**.  

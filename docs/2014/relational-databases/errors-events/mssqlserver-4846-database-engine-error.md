@@ -1,11 +1,11 @@
 ---
 title: MSSQLSERVER_4846 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/04/2017
-ms.prod: sql
+ms.date: 03/06/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: supportability
-ms.topic: language-reference
+ms.topic: conceptual
 helpviewer_keywords:
 - 4846 (Database Engine error)
 ms.assetid: a455e809-1883-4c7d-b3e3-835ee5bfe258
@@ -13,15 +13,14 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5b43cd194a2bfcf93b74b53fa2e9cb3a6a3eaff2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62913795"
 ---
 # <a name="mssqlserver4846"></a>MSSQLSERVER_4846
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  
+    
 ## <a name="details"></a>Detalles  
   
 |||  
@@ -34,10 +33,10 @@ ms.locfileid: "62913795"
 |Texto del mensaje|El proveedor de conjuntos masivos de datos no pudo asignar memoria.|  
   
 ## <a name="explanation"></a>Explicación  
-Se produjo un error de asignación de memoria.  
+ Se produjo un error de asignación de memoria.  
   
 ## <a name="user-action"></a>Acción del usuario  
-Para solucionar errores de memoria, siga estos pasos generales:  
+ Para solucionar errores de memoria, siga estos pasos generales:  
   
 1.  Compruebe si otras aplicaciones o servicios están consumiendo memoria en este servidor. Vuelva a configurar las aplicaciones o servicios menos críticos para que consuman menos memoria.  
   
@@ -51,19 +50,19 @@ Para solucionar errores de memoria, siga estos pasos generales:
   
     -   **memoria mínima por consulta**  
   
-    Observe si hay algún valor fuera de lo normal. Corríjalos según sea necesario. Investigue los requisitos de memoria para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La configuración predeterminada se enumera en "Establecer las opciones de configuración del servidor" en los Libros en pantalla de SQL Server.  
+     Observe si hay algún valor fuera de lo normal. Corríjalos según sea necesario. Investigue los requisitos de memoria para [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. La configuración predeterminada se enumera en "Establecer las opciones de configuración del servidor" en los Libros en pantalla de SQL Server.  
   
 4.  Observe la salida de DBCC MEMORYSTATUS y la forma en que cambia cuando aparecen estos mensajes de error.  
   
 5.  Compruebe la carga de trabajo (por ejemplo, el número de sesiones simultáneas y las consultas que se están ejecutando actualmente).  
   
-Las siguientes acciones pueden hacer que haya más memoria disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+ Las siguientes acciones pueden hacer que haya más memoria disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Si otras aplicaciones están consumiendo recursos, intente detener su ejecución o plantéese ejecutarlas en otro servidor. Esto quitará presión externa de la memoria.  
   
 -   Si ha configurado **max server memory**, aumente su valor.  
   
-Ejecute los siguientes comandos DBCC para liberar varias cachés de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Ejecute los siguientes comandos DBCC para liberar varias cachés de la memoria de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 -   DBCC FREESYSTEMCACHE  
   
@@ -71,5 +70,6 @@ Ejecute los siguientes comandos DBCC para liberar varias cachés de la memoria d
   
 -   DBCC FREEPROCCACHE  
   
-Si el problema persiste, necesitará investigar más y, posiblemente, reducir la carga de trabajo.  
+ Si el problema persiste, necesitará investigar más y, posiblemente, reducir la carga de trabajo.  
+  
   

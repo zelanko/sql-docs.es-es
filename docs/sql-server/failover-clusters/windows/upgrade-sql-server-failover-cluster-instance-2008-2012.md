@@ -12,11 +12,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a73eda4fbb3898846894a4cf35de4253cffedbc3
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872255"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63243379"
 ---
 # <a name="upgrade-sql-server-instances-running-on-windows-server-20082008-r22012-clusters"></a>Actualizar instancias de SQL Server que se ejecutan en clústeres de Windows Server 2008/2008 R2/2012
 
@@ -46,7 +46,7 @@ La estrategia de migración adecuada dependerá de ciertos parámetros de la top
 
 |                                   | Requiere todos los objetos de servidor y VNNS | Requiere todos los objetos de servidor y VNNS | No requiere ningún objeto de servidor ni VNN\* | No requiere ningún objeto de servidor ni VNN\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_¿Grupos de disponibilidad? (S/N)_**                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
+| ** _¿Grupos de disponibilidad? (S/N)_ **                  | **_S_**                              | **_N_**                                                            | **_S_**    | **_N_**    |
 | **El clúster solo usa FCI de SQL**         | [Escenario 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [Escenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [Escenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Escenario 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **El clúster usa instancias independientes** | [Escenario 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [Escenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [Escenario 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [Escenario 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 
@@ -283,7 +283,7 @@ Realizar la migración de un clúster que usa grupos de disponibilidad con répl
 
     Los enlaces de servicio remoto funcionarán adecuadamente después de la migración, ya que se realizará correctamente la migración de cualquier usuario que use esta función.
 
-### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
+### <a name="includessnoversionincludesssnoversion-mdmd-agent"></a>e[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 -   **Jobs**
 

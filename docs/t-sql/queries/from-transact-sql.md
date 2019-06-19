@@ -36,10 +36,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 124e42175f82928fd601a1d8af2833e40a1ff458
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462685"
 ---
 # <a name="from-clause-plus-join-apply-pivot-transact-sql"></a>Cláusula FROM más JOIN, APPLY, PIVOT (Transact-SQL)
@@ -365,7 +365,7 @@ ON (p.ProductID = v.ProductID);
  Es la columna de valores del operador PIVOT. Si se usa con UNPIVOT, *value_column* no puede ser el nombre de una columna existente en el parámetro *table_source* de entrada.  
   
  FOR *pivot_column*  
- Es la columna dinámica del operador PIVOT. *pivot_column* debe ser de un tipo que se pueda convertir implícita o explícitamente en **nvarchar()**. Esta columna no puede ser **image** ni **rowversion**.  
+ Es la columna dinámica del operador PIVOT. *pivot_column* debe ser de un tipo que se pueda convertir implícita o explícitamente en **nvarchar()** . Esta columna no puede ser **image** ni **rowversion**.  
   
  Si se usa UNPIVOT, *pivot_column* es el nombre de la columna de salida restringida a partir de *table_source*. No puede haber ninguna columna en *table_source* con ese nombre.  
   
@@ -385,7 +385,7 @@ ON (p.ProductID = v.ProductID);
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
 
   
- Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *\<date_time>*. El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>*.   
+ Devuelve una tabla con un único registro por cada fila que contenga los valores que fueran reales (actuales) en el momento determinado especificado en el pasado. Internamente, se realiza una unión entre la tabla temporal y su tabla de historial y los resultados se filtran para devolver los valores de la fila que era válida en el momento determinado especificado por el parámetro *\<date_time>* . El valor de una fila se considera válido si el valor de *system_start_time_column_name* es menor o igual que el valor del parámetro *\<date_time>* y el valor de *system_end_time_column_name* es mayor que el valor del parámetro *\<date_time>* .   
   
  FROM \<start_date_time> TO \<end_date_time>
 
@@ -398,7 +398,7 @@ ON (p.ProductID = v.ProductID);
 
 **Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
- Igual que la descripción anterior de **FROM \<start_date_time> TO \<end_date_time>**, salvo que incluye las filas que se activaron en el límite superior definido por el punto de conexión \<end_date_time>.  
+ Igual que la descripción anterior de **FROM \<start_date_time> TO \<end_date_time>** , salvo que incluye las filas que se activaron en el límite superior definido por el punto de conexión \<end_date_time>.  
   
  CONTAINED IN (\<start_date_time> , \<end_date_time>)  
 

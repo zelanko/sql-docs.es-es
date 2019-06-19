@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 92d0b5adcdb6b5c482b2a0abcf4ca00f83674df9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63240158"
 ---
 # <a name="open-with-new-file"></a>Abrir con (Nuevo archivo)
@@ -39,7 +39,7 @@ ms.locfileid: "63240158"
  Para especificar un editor predeterminado (y las opciones de codificación de lenguaje, si procede) para el tipo de archivo seleccionado, elija un programa en la lista **Seleccione el programa que desee usar** y haga clic en **Predeterminado**. La próxima vez que abra este tipo de archivo en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], el documento se abrirá en el nuevo editor predeterminado.  
   
 > [!NOTE]  
->  En la lista **Seleccione el programa que desee usar**, el nombre del editor predeterminado del tipo de archivo seleccionado aparece seguido de **(Predeterminado)**.  
+>  En la lista **Seleccione el programa que desee usar**, el nombre del editor predeterminado del tipo de archivo seleccionado aparece seguido de **(Predeterminado)** .  
   
 ## <a name="see-also"></a>Vea también  
  [Asociar extensiones de archivo a un editor de código](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md)  

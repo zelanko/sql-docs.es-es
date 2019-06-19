@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 77828ab512373c93313c8b0602423a9eaa38a426
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56827955"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62939801"
 ---
 # <a name="set-quotedidentifier-transact-sql"></a>SET QUOTED_IDENTIFIER (Transact-SQL)
 
@@ -59,7 +59,7 @@ SET QUOTED_IDENTIFIER ON
 
 Cuando SET QUOTED_IDENTIFIER es ON, los identificadores pueden delimitarse con comillas dobles y los literales deben delimitarse con comillas simples. Cuando SET QUOTED_IDENTIFIER es OFF, los identificadores no pueden entrecomillarse y deben seguir todas las reglas para identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md). Los literales se pueden delimitar con comillas simples o dobles.
 
-Cuando SET QUOTED_IDENTIFIER es ON (valor predeterminado), todas las cadenas delimitadas con comillas dobles se interpretan como identificadores de objeto. Por ello, los identificadores entrecomillados no tienen que seguir las reglas para identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pueden ser palabras clave reservadas e incluir caracteres que normalmente no se admiten en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. No se pueden utilizar comillas dobles para delimitar expresiones de cadenas literales; para delimitar las cadenas literales se deberán utilizar comillas simples. Si una comilla simple (**'**) forma parte de la cadena literal, se puede representar mediante dos comillas simples (**"**). SET QUOTED_IDENTIFIER debe ser ON cuando se utilicen palabras reservadas como nombres de objetos de la base de datos.
+Cuando SET QUOTED_IDENTIFIER es ON (valor predeterminado), todas las cadenas delimitadas con comillas dobles se interpretan como identificadores de objeto. Por ello, los identificadores entrecomillados no tienen que seguir las reglas para identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. Pueden ser palabras clave reservadas e incluir caracteres que normalmente no se admiten en los identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]. No se pueden utilizar comillas dobles para delimitar expresiones de cadenas literales; para delimitar las cadenas literales se deberán utilizar comillas simples. Si una comilla simple ( **'** ) forma parte de la cadena literal, se puede representar mediante dos comillas simples ( **"** ). SET QUOTED_IDENTIFIER debe ser ON cuando se utilicen palabras reservadas como nombres de objetos de la base de datos.
 
 Cuando SET QUOTED_IDENTIFIER es OFF, las cadenas literales de las expresiones se pueden delimitar con comillas simples o dobles. Si una cadena literal se delimita con comillas dobles, podrá contener comillas simples incrustadas, como, por ejemplo, apóstrofos.
 
@@ -137,7 +137,7 @@ SET QUOTED_IDENTIFIER OFF;
 GO
 ```
 
-### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>b. Utilizar la opción de identificador entre comillas simples y dobles
+### <a name="b-using-the-quoted-identifier-setting-with-single-and-double-quotation-marks"></a>B. Utilizar la opción de identificador entre comillas simples y dobles
 
  En este ejemplo se muestra el uso de las comillas simples y dobles en las expresiones de cadena con `SET QUOTED_IDENTIFIER` establecido en `ON` y `OFF`.
 

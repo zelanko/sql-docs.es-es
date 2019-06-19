@@ -15,11 +15,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 764f32bec05d2ab12542f0739dc72498a8229ec3
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62649392"
 ---
 # <a name="sql-server-memory-manager-object"></a>Memory Manager (objeto de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53379716"
 |**Concesiones de memoria otorgadas**|Especifica el número total de procesos que consiguieron una concesión de memoria del área de trabajo.|  
 |**Concesiones de memoria pendientes**|Especifica el número total de procesos en espera de una concesión de memoria del área de trabajo.|  
 |**Memoria del optimizador (KB)**|Especifica la cantidad total de memoria dinámica que el servidor usa para la optimización de consultas.|  
-|**Memoria de servidor reservada (KB)**|Indica la cantidad de memoria que el servidor ha reservado para el uso futuro. Este contador muestra la cantidad actual de memoria sin usar concedida inicialmente que se muestra en **Memoria de área de trabajo concedida (KB)**.|  
+|**Memoria de servidor reservada (KB)**|Indica la cantidad de memoria que el servidor ha reservado para el uso futuro. Este contador muestra la cantidad actual de memoria sin usar concedida inicialmente que se muestra en **Memoria de área de trabajo concedida (KB)** .|  
 |**Memoria caché de SQL (KB)**|Especifica la cantidad total de memoria dinámica que el servidor usa para la memoria caché dinámica de SQL.|  
 |**Memoria de servidor descartada (KB)**|Especifica la cantidad de memoria que el servidor usa para otro fin distinto a las páginas de base de datos.|  
 |**Memoria del servidor de destino (KB)**|Indica la cantidad ideal de memoria dinámica que el servidor puede usar.|  

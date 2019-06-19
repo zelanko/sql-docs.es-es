@@ -14,15 +14,15 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 8b47ec263ad22317990fd547e93a5ec3821abdb1
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65105091"
 ---
 # <a name="full-text-index-columns-dialog-box-visual-database-tools"></a>Columnas de índice de texto completo (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-En este cuadro de diálogo se enumeran las columnas que participan en el índice de texto completo de la tabla abierta en el Diseñador tablas. Para acceder a este cuadro de diálogo, haga clic con el botón derecho en la tabla en el Diseñador de tablas, seleccione **Índice de texto completo** y, en el cuadro de diálogo **Índice de texto completo**, haga clic en el índice con columnas que quiera ver o editar, haga clic en el campo **Columnas** de la cuadrícula situada a la derecha y haga clic en los puntos suspensivos (**...**).  
+En este cuadro de diálogo se enumeran las columnas que participan en el índice de texto completo de la tabla abierta en el Diseñador tablas. Para acceder a este cuadro de diálogo, haga clic con el botón derecho en la tabla en el Diseñador de tablas, seleccione **Índice de texto completo** y, en el cuadro de diálogo **Índice de texto completo**, haga clic en el índice con columnas que quiera ver o editar, haga clic en el campo **Columnas** de la cuadrícula situada a la derecha y haga clic en los puntos suspensivos ( **...** ).  
   
 ## <a name="options"></a>Opciones  
 **Columna**  

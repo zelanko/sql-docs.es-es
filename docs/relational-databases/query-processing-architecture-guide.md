@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 40dac2df410456b0f3db7aff931e523fe350960b
-ms.sourcegitcommit: fa2afe8e6aec51e295f55f8cc6ad3e7c6b52e042
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/03/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66462717"
 ---
 # <a name="query-processing-architecture-guide"></a>Guía de arquitectura de procesamiento de consultas
@@ -334,7 +334,7 @@ El Optimizador de consultas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md
   * Predicados de condiciones de búsqueda de la cláusula WHERE
   * Operaciones de combinación
   * Funciones de agregado
-  * Cláusulas`GROUP BY` 
+  * Cláusulas`GROUP BY`
   * Referencias a tabla
 * El costo estimado de utilización del índice es el más bajo de todos los mecanismos de acceso que tiene en cuenta el optimizador de consultas. 
 * Todas las tablas a las que se hace referencia en la consulta (directamente o con la expansión de una vista para tener acceso a sus tablas subyacentes) que se correspondan con una referencia a tabla de la vista indizada deben tener el mismo conjunto de sugerencias de la consulta aplicado en ellas.
@@ -753,7 +753,7 @@ Entre las construcciones que impiden el paralelismo se incluyen las siguientes:
 >   Para obtener más información sobre los cursores, vea [DECLARE CURSOR](../t-sql/language-elements/declare-cursor-transact-sql.md).
 > - **Consultas recursivas**    
 >   Para obtener más información sobre la recursión, vea [Instrucciones para definir y usar expresiones de tabla comunes recursivas](../t-sql/queries/with-common-table-expression-transact-sql.md#guidelines-for-defining-and-using-recursive-common-table-expressions) y [Recursion in T-SQL](https://msdn.microsoft.com/library/aa175801(v=sql.80).aspx) (La recursión en T-SQL).
-> - **Funciones con valores de tabla (TVF)**    
+> - **Funciones con valores de tabla (TVF)**     
 >   Para obtener más información sobre las TVF, vea [Creación de funciones definidas por el usuario (motor de base de datos)](../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 > - **Palabra clave TOP**    
 >   Para obtener más información, vea [TOP (Transact-SQL)](../t-sql/queries/top-transact-sql.md).

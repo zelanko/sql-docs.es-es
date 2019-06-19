@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66718169"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaz ADORecordConstruction
@@ -38,7 +38,7 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="remarks"></a>Comentarios  

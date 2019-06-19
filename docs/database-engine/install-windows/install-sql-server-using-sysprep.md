@@ -12,17 +12,17 @@ ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: jroth
 ms.openlocfilehash: fb7ccf97443bf95187918fc92dcc9f2c7d03ef83
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66794874"
 ---
 # <a name="install-sql-server-with-sysprep"></a>Instalar SQL Server con SysPrep
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relacionadas con SysPrep. La página **Avanzadas** del **Centro de instalación** tiene dos opciones: **Preparar imagen de una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Completar imagen de una instancia independiente preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Las secciones [Preparar](#prepare) y [Completar](#complete) describen el proceso de instalación en detalle. Para obtener más información, vea [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   
 También puede preparar y completar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el símbolo del sistema o un archivo de configuración. Para obtener más información, vea:  
   
@@ -88,13 +88,13 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 3. El Comprobador de configuración del sistema ejecuta una operación de detección en el equipo. Para continuar, haga clic en **Aceptar**. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
-4. En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** . 
+4. En la página Actualizaciones del producto se muestran las actualizaciones del producto [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] más recientes disponibles. Si no quiere incluir las actualizaciones, desactive la casilla **Incluir actualizaciones de productos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Si no se detectan actualizaciones de producto, el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no muestra esta página y pasa automáticamente a la página **Instalar archivos de instalación** . 
   
 5. En la página Instalar archivos de instalación, el programa de instalación proporciona el progreso de descarga, extracción e instalación de los archivos de instalación. Si se encuentra una actualización para la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y se especifica que debe incluirse, esa actualización también se instalará. 
   
 6. El Comprobador de configuración del sistema comprueba el estado del sistema del equipo antes de seguir con la instalación. Puede ver los detalles en la pantalla haciendo clic en **Mostrar detalles**o, como un informe HTML, haciendo clic en **Ver informe detallado**. 
   
-7. En la página **Tipo de imagen para preparar**, seleccione **Preparar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. 
+7. En la página **Tipo de imagen para preparar**, seleccione **Preparar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . 
   
      Solo se muestra la página **Tipo de imagen para preparar** cuando se tiene una instancia preparada sin configurar de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la máquina. Puede optar por preparar una nueva instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o agregar las características compatibles de preparación del sistema en una instancia preparada existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo. Para obtener más información acerca de cómo agregar características a una instancia preparada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , vea [Agregar características a una instancia preparada](#AddFeatures). 
   
@@ -232,7 +232,7 @@ Para más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../inclu
   
 4. En la página Archivos auxiliares del programa de instalación, haga clic en **Instalar** para instalar los archivos auxiliares del programa de instalación. 
   
-5. En la página **Tipo de imagen para preparar**, seleccione la opción **Agregar características a una instancia preparada existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. Seleccione la instancia preparada específica a la que desee agregar características en la lista desplegable de las instancias preparadas disponibles. 
+5. En la página **Tipo de imagen para preparar**, seleccione la opción **Agregar características a una instancia preparada existente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** . Seleccione la instancia preparada específica a la que desee agregar características en la lista desplegable de las instancias preparadas disponibles. 
   
 6. En la página **Selección de características** , especifique las características que desee agregar a la instancia preparada especificada. 
   

@@ -16,11 +16,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 95748a37b656c1ab203ed0cff354c5a641a9c7ed
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974374"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63027013"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>Guía de arquitectura de páginas y extensiones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -109,10 +109,10 @@ Las estructuras de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dos tipos de mapas de asignación para registrar la asignación de las extensiones: 
 
-- **Mapa de asignación global (GAM)**   
+- **Mapa de asignación global (GAM)**    
   Las páginas GAM registran las extensiones que han sido asignadas. Cada GAM cubre 64 000 extensiones o casi 4 GB de datos. La página GAM tiene un bit por cada extensión del intervalo que cubre. Si el bit es 1, la extensión está disponible; si el bit es 0, la extensión está asignada. 
 
-- **Mapa de asignación global compartido (SGAM)**   
+- **Mapa de asignación global compartido (SGAM)**    
   Las páginas SGAM registran las extensiones que actualmente se están utilizando como extensiones mixtas y además tienen al menos una página sin utilizar. Cada SGAM cubre 64 000 extensiones o casi 4 GB de datos. La SGAM tiene un bit por cada extensión del intervalo que cubre. Si el bit es 1, la extensión se está utilizando como extensión mixta y tiene una página disponible. Si el bit es 0, la extensión no se utiliza como extensión mixta o se trata de una extensión mixta cuyas páginas están todas en uso. 
 
 Todas las extensiones tienen establecidos los siguientes patrones de bits en las página GAM y SGAM, basados en su uso actual. 
@@ -177,10 +177,10 @@ Si [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] necesita insertar 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa dos estructuras de datos internas para realizar un seguimiento de las extensiones modificadas mediante operaciones de copia masiva y de las extensiones modificadas desde la última copia de seguridad completa. Esas estructuras de datos aceleran en gran medida las copias de seguridad diferenciales. También aceleran el registro de las operaciones de copia masiva cuando una base de datos utiliza el modelo de recuperación optimizado para cargas masivas de registros. Al igual que las páginas del mapa de asignación global (GAM) y del mapa de asignación global compartido (SGAM), estas nuevas estructuras son mapas de bits en los que cada bit representa una única extensión. 
 
-- **Mapa cambiado diferencial (DCM)**   
+- **Mapa cambiado diferencial (DCM)**    
    Realiza un seguimiento de las extensiones que han cambiado desde la última instrucción `BACKUP DATABASE`. Si el bit de una extensión es 1, esta se ha modificado desde la última instrucción `BACKUP DATABASE`. Si el bit es 0, la extensión no se ha modificado. Las copias de seguridad diferenciales solo leen las páginas DCM para determinar las extensiones que se han modificado. Esto reduce enormemente el número de páginas que debe recorrer una copia de seguridad diferencial. El tiempo de ejecución de una copia de seguridad diferencial es proporcional al número de extensiones modificadas desde la última instrucción BACKUP DATABASE y no al tamaño global de la base de datos. 
 
-- **Mapa cambiado masivamente (BCM)**   
+- **Mapa cambiado masivamente (BCM)**    
    Realiza un seguimiento de las extensiones que se han modificado mediante operaciones de registro masivo desde la última instrucción `BACKUP LOG`. Si el bit de una extensión es 1, esta se ha modificado mediante una operación de registro masivo después de la última instrucción `BACKUP LOG`. Si el bit es 0, la extensión no se ha modificado mediante operaciones de registro masivo. Aunque las páginas BCM aparecen en todas las bases de datos, son relevantes únicamente cuando la base de datos está utilizando el modelo de recuperación optimizado para cargas masivas de registros. En este modelo de recuperación, cuando se ejecuta `BACKUP LOG`, el proceso de copia de seguridad recorre los BCM buscando extensiones que se hayan modificado. A continuación incluye dichas extensiones en la copia de seguridad del registro. Esto permite recuperar operaciones de registro masivo si se restaura la base de datos a partir de una copia de seguridad y una secuencia de copias de seguridad de registro de transacciones. Las páginas BCM no son relevantes en una base de datos que está utilizando el modelo de recuperación simple, porque no se registran las operaciones de registro masivo. No son relevantes en una base de datos que utiliza el modelo de recuperación completa, porque este modelo trata las operaciones de registro masivo como operaciones de registro completo. 
 
 El intervalo entre las páginas DCM y BCM es el mismo que el intervalo entre las páginas GAM y SGAM, es decir, 64.000 extensiones. Las páginas DCM y BCM se colocan después de las páginas GAM y SGAM en un archivo físico:

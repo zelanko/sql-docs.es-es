@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d9b414c8f47cbe8942f4448d0f071b125a7d6518
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65726466"
 ---
 # <a name="resolve-column-reference-editor"></a>Resolver el editor de referencias de columna
@@ -34,16 +34,16 @@ ms.locfileid: "65726466"
  Una vez resueltas todas las referencias de columna, si no hay otros errores de ruta de acceso de datos, no se mostrarán iconos de error al lado de las rutas de acceso de datos.  
   
 ## <a name="options"></a>Opciones  
- **Columnas de salida no asignadas (origen)**    
+ **Columnas de salida no asignadas (origen)**     
  Columnas de la ruta de acceso de nivel superior que no están asignadas actualmente.  
   
-**Columnas asignadas (origen)**    
+**Columnas asignadas (origen)**     
  Columnas de la ruta de acceso de nivel superior que están asignadas a columnas de la ruta de acceso de nivel inferior.  
   
-**Columnas asignadas (destino)**    
+**Columnas asignadas (destino)**     
  Columnas de la ruta de acceso de nivel superior que están asignadas a columnas de la ruta de acceso de nivel inferior.  
   
-**Columnas de entrada no asignadas (destino)**    
+**Columnas de entrada no asignadas (destino)**     
  Columnas de la ruta de acceso de nivel inferior que no están asignadas actualmente.  
   
 **Eliminar columnas de entrada no asignadas**  

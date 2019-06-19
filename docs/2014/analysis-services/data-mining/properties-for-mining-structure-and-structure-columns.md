@@ -16,10 +16,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: daa647673653280bfc4cf52398751aedfd65b9c8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083063"
 ---
 # <a name="properties-for-mining-structure-and-structure-columns"></a>Propiedades de estructuras de minería de datos y columnas de estructuras
@@ -67,8 +67,8 @@ ms.locfileid: "66083063"
 |**ModelingFlags**|Establece parámetros adicionales que el algoritmo establece como disponibles.|  
 |`Name`|Nombre de la columna.|  
 |**NameColumn**|Identifica la columna que proporciona el nombre del elemento primario.|  
-|**Source**|Muestra el origen de la columna.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)**.<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
-|**SourceMeasureGroup**|Muestra el origen del grupo de medida.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)**.<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
+|**Source**|Muestra el origen de la columna.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)** .<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
+|**SourceMeasureGroup**|Muestra el origen del grupo de medida.<br /><br /> Para los orígenes de datos no relacionales, el valor siempre es **(ninguno)** .<br /><br /> Para las estructuras que se basan en un cubo OLAP, el valor es la instrucción MDX que define el segmento que se usa como origen para la tabla anidada.|  
 |**Tipo**|El tipo de datos del contenido de la columna.|  
   
  Para obtener más información sobre cómo establecer o modificar las propiedades, vea [Tareas y procedimientos de las estructuras de minería de datos](mining-structure-tasks-and-how-tos.md).  

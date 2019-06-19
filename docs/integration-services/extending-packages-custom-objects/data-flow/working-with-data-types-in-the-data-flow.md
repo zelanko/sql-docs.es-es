@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 0fed13e0b351e53e36d09eb5e2ed2e0e405c18c3
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65724617"
 ---
 # <a name="working-with-data-types-in-the-data-flow"></a>Trabajar con tipos de datos del flujo de datos
@@ -100,7 +100,7 @@ ms.locfileid: "65724617"
 > [!NOTE]  
 >  Los archivos de asignación en formato XML que se instalan de forma predeterminada en C:\Archivos de programa\Microsoft SQL Server\130\DTS\MappingFiles no tienen que ver con la asignación de tipo de datos descrita en este tema. Estos archivos asignan los tipos de datos de una versión de base de datos o sistema a otra (por ejemplo, de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a Oracle) y solo los usa el Asistente para importación y exportación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información sobre estos archivos de asignación, vea [Asistente para importación y exportación de SQL Server](~/integration-services/import-export-data/welcome-to-sql-server-import-and-export-wizard.md).  
   
-### <a name="mapping-between-integration-services-and-managed-data-types"></a>Realizar asignaciones entre los tipos de datos de Integration Services y los administrados   
+### <a name="mapping-between-integration-services-and-managed-data-types"></a>Realizar asignaciones entre los tipos de datos de Integration Services y los administrados  
  Los métodos <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.BufferTypeToDataRecordType%2A> y <xref:Microsoft.SqlServer.Dts.Pipeline.PipelineComponent.DataRecordTypeToBufferType%2A> asignan los tipos de datos de [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] a los tipos de datos administrados.  
   
 > [!CAUTION]  

@@ -33,10 +33,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c1ff17941e837474d2d27919dcbd821d241d8394
-ms.sourcegitcommit: cc4651df495920413ad54f585dbbe5ccef728899
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66749189"
 ---
 # <a name="reorganize-and-rebuild-indexes"></a>Reorganizar y volver a generar índices
@@ -63,7 +63,7 @@ El conjunto de resultados devuelto por la función **sys.dm_db_index_physical_st
   
 Una vez determinada la magnitud de la fragmentación, utilice la siguiente tabla para determinar el mejor método para corregir la fragmentación propiamente dicha.  
   
-|Valor de**avg_fragmentation_in_percent** |Instrucción correctiva|  
+|Valor de**avg_fragmentation_in_percent**|Instrucción correctiva|  
 |-----------------------------------------------|--------------------------|  
 |> 5% y < = 30%|ALTER INDEX REORGANIZE|  
 |> 30%|ALTER INDEX REBUILD WITH (ONLINE = ON) <sup>1</sup>|  

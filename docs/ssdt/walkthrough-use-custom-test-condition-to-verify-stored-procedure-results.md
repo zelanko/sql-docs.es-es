@@ -12,10 +12,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9a262107294988e0d624e4b423147b5e5183a629
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65097444"
 ---
 # <a name="walkthrough-using-a-custom-test-condition-to-verify-the-results-of-a-stored-procedure"></a>Tutorial: Uso de una condición de prueba personalizada para comprobar el resultado de un procedimiento almacenado
@@ -54,7 +54,7 @@ Después, firme el proyecto.
   
 2.  En la pestaña **Firma**, active la casilla **Firmar el ensamblado**.  
   
-3.  En el cuadro **Elegir un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>**.  
+3.  En el cuadro **Elegir un archivo de clave de nombre seguro**, haga clic en **\<Nuevo...>** .  
   
     Aparecerá el cuadro de diálogo **Crear clave de nombre seguro**.  
   
@@ -375,7 +375,7 @@ Después, necesitamos crear una prueba unitaria. Para crear una prueba unitaria 
   
 3.  En **Nombre de la prueba**, escriba **SampleUnitTest**.  
   
-4.  En **Agregar a proyecto de prueba**, haga clic en **Crear un nuevo proyecto de prueba de Visual C\#**. Después, haga clic en **Aceptar** para mostrar el cuadro de diálogo **Nuevo proyecto de prueba**.  
+4.  En **Agregar a proyecto de prueba**, haga clic en **Crear un nuevo proyecto de prueba de Visual C\#** . Después, haga clic en **Aceptar** para mostrar el cuadro de diálogo **Nuevo proyecto de prueba**.  
   
 5.  Escriba **SampleUnitTest** como nombre del proyecto.  
   

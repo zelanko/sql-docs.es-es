@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62996364"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
@@ -45,9 +45,9 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica el número de secuencia exacta menor valor para devolver. *xact_seqno_start* es **nchar (22)**, su valor predeterminado es 0 x 00000000000000000000.  
+`[ @xact_seqno_start = ] 'xact_seqno_start'` Especifica el número de secuencia exacta menor valor para devolver. *xact_seqno_start* es **nchar (22)** , su valor predeterminado es 0 x 00000000000000000000.  
   
-`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica el número de secuencia exacta de mayor a devolver. *xact_seqno_end* es **nchar (22)**, su valor predeterminado es 0xFFFFFFFFFFFFFFFFFFFF.  
+`[ @xact_seqno_end = ] 'xact_seqno_end'` Especifica el número de secuencia exacta de mayor a devolver. *xact_seqno_end* es **nchar (22)** , su valor predeterminado es 0xFFFFFFFFFFFFFFFFFFFF.  
   
 `[ @originator_id = ] 'originator_id'` Especifica si los comandos con los valores especificados *originator_id* se devuelven. *originator_id* es **int**, su valor predeterminado es null.  
   

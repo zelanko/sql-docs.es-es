@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6429fb7f30c748c7ac0a8ab69bc16c3d63b4d3ae
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067298"
 ---
 # <a name="deploy-from-sql-server-data-tools-ssas-tabular"></a>Implementar con SQL Server Data Tools (SSAS tabular)
@@ -54,7 +54,7 @@ ms.locfileid: "66067298"
   
 #### <a name="to-deploy-a-tabular-model-solution"></a>Para implementar una solución de modelo tabular  
   
--   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >**.  
+-   En [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >** .  
   
      Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo, o use una aplicación cliente de informes para conectarse al modelo implementado.  
   

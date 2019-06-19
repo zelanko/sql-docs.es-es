@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 45ef593e13643ac38184f8b88cbe4cdf38f0126c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66071888"
 ---
 # <a name="configuration-setting-reference-powerpivot-for-sharepoint"></a>Referencia de las opciones de configuración (PowerPivot para SharePoint)
@@ -65,14 +65,14 @@ ms.locfileid: "66071888"
 ##  <a name="AllocationScheme"></a> Equilibrio de carga  
  Una de las funciones que el servicio PowerPivot realiza es determinar dónde se cargarán los datos de Analysis Services entre las instancias de servicio PowerPivot disponibles. El valor `AllocationMethod` especifica los criterios con los que se selecciona una instancia de servicio.  
   
-|NOMBRE|Default|Valores válidos|Descripción|  
+|Name|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Método de asignación|RoundRobin|Round Robin<br /><br /> Basado en estado|Esquema para asignar las solicitudes de carga entre dos o más instancias de servidor de Analysis Services.<br /><br /> De forma predeterminada, el servicio PowerPivot alternará las solicitudes basadas en el estado del servidor. Si se basa en el estado, las solicitudes se asignan al servidor que tiene el mayor número de recursos del sistema disponibles en función de la memoria disponible y la utilización de la CPU.<br /><br /> La operación por turnos rota las solicitudes entre los servidores disponibles en orden secuencial, independientemente del estado actual de la carga o del servidor.|  
   
 ##  <a name="DataRefresh"></a> Actualización de datos  
  Especifique el intervalo de horas que define un día laboral normal o típico en una organización. Esta configuración determina cuándo se produce el procesamiento de datos después del horario comercial en las operaciones de actualización de datos. El procesamiento después del horario comercial puede comenzar a la hora en que finaliza la jornada laboral. El procesamiento después del horario comercial es una opción de programación para los propietarios de documentos que desean actualizar un origen de datos PowerPivot con datos de transacciones que se generaron durante los horarios laborales normales.  
   
-|NOMBRE|Default|Valores válidos|Descripción|  
+|Name|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Hora de inicio|04:00 a. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite inferior de un intervalo del horario laboral.|  
 |Hora de finalización|08:00 p. m.|1 a 12 horas, donde el valor es un entero válido dentro de ese intervalo.<br /><br /> El tipo es Time.|Establece el límite superior de un intervalo del horario laboral.|  
@@ -83,7 +83,7 @@ ms.locfileid: "66071888"
 ##  <a name="UsageData"></a> Recopilación de datos de uso  
  Los informes de uso que aparecen en el Panel de administración de PowerPivot pueden proporcionar información importante acerca de cómo se utilizan los libros habilitados para PowerPivot. Los siguientes valores de configuración controlan los aspectos de la recopilación de datos de uso para los eventos de servidor de PowerPivot que se presentan después en los informes de actividad o de uso.  
   
-|Name|Default|Valores válidos|Descripción|  
+|NOMBRE|Default|Valores válidos|Descripción|  
 |----------|-------------|------------------|-----------------|  
 |Intervalo de informes de consulta|300 (en segundos)|1 a n segundos, donde n es un número entero válido.|Para asegurarse de que la recopilación de datos de uso no consume un exceso de la capacidad de transferencia de datos de la granja, se recopilan estadísticas de consulta en cada conexión y se notifican como un único evento. El intervalo de informes de consulta determina con qué frecuencia se notifica un evento. De forma predeterminada, las estadísticas de consulta se notifican cada cinco minutos.<br /><br /> Dado que las conexiones se cierran de inmediato en cuanto se envía una solicitud, el sistema genera un número muy grande de conexiones para incluso un único usuario que tenga acceso a un único origen de datos PowerPivot. Por esta razón, se crean grupos de conexiones para cada combinación de usuario y origen de datos PowerPivot, de modo que una vez creada una conexión, el mismo usuario pueda reutilizarla para los mismos datos. Periódicamente, en los intervalos especificados a través de esta opción de configuración, la aplicación de servicio PowerPivot notifica los datos de uso de cada conexión del grupo de conexiones.<br /><br /> Al aumentar el valor de tiempo de notificación, se registrarán menos eventos. Sin embargo, si se establece en un valor demasiado alto, se arriesga a perder los datos de los eventos si el servidor se reinicia o se cierra una conexión.<br /><br /> Al bajar el valor, se registrarán más eventos con una mayor frecuencia, lo que supone agregar más datos de uso relacionados con PowerPivot al sistema de recopilación de datos de la base de datos de uso de SharePoint.<br /><br /> Generalmente, no cambie esta opción de configuración a menos que esté intentando resolver un problema concreto (por ejemplo, si la base de datos de uso está creciendo demasiado rápidamente como resultado de los datos de uso de PowerPivot).|  
 |Historial de datos de uso|365 (en días)|0, ó 1 a n días, donde n es un número entero válido.<br /><br /> 0 significa que el historial siempre se retiene y no se elimina nunca.|De forma predeterminada, los datos de uso se mantienen durante un año en la base de datos de aplicación de servicio PowerPivot. Los registros anteriores a un año se quitan de la base de datos.<br /><br /> Diariamente se comprueba si los datos históricos han expirado, cuando se ejecuta el trabajo de procesamiento de datos de uso de Microsoft SharePoint Foundation. El trabajo de temporizador leerá este valor y desencadenará un comando de eliminación de datos para el historial expirado en la base de datos de aplicación de servicio PowerPivot.|  

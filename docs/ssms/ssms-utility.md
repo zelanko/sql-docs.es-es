@@ -18,10 +18,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65102607"
 ---
 # <a name="ssms-utility"></a>Ssms (Utilidad)
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  Especifica una solución para abrirla. El parámetro debe contener la ruta completa al archivo de solución.  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
   Nombre del servidor  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   Nombre de la base de datos  
 
- [**-G**] Conexión con la autenticación de Azure Active Directory. El tipo de conexión se determina en función de si se incluye **-P** y **-U**.
+ [ **-G**] Conexión con la autenticación de Azure Active Directory. El tipo de conexión se determina en función de si se incluye **-P** y **-U**.
  - Si **-U** y **-P** *no* se incluyen, se usa **Active Directory - Integrado** y no se mostrará ningún cuadro de diálogo.
  - Si se incluye tanto **-U** como **-P**, se usa **Active Directory - Contraseña**. **No se recomienda** usar esta opción, ya que hay que especificar una contraseña no cifrada en la línea de comandos, lo cual no es aconsejable.
  - Si se incluye **-U**, pero no **-P**, se abrirá el cuadro de diálogo de autenticación, pero todos los intentos de inicio de sesión serán infructuosos. 
 
   Es preciso decir que **Active Directory - Universal compatible con MFA** no se admite actualmente. 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  Nombre de usuario cuando se conecta con "Autenticación de SQL" o "Active Directory - Contraseña".  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  Contraseña cuando se conecta con "Autenticación de SQL" o "Active Directory - Contraseña".
   
-[**-E**]  
+[ **-E**]  
  Conectar con la autenticación de Windows.  
   
-[**-nosplash**]  
+[ **-nosplash**]  
  Impide que [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] muestre el gráfico de la pantalla de presentación mientras se abre. Utilice esta opción cuando se conecte con un equipo que ejecute [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] mediante Terminal Services en una conexión con ancho de banda limitado. Este argumento no distingue entre mayúsculas y minúsculas y puede aparecer antes o después de otros argumentos.  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  Registra la actividad de [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en el archivo especificado para la solución de problemas  
   
-[**-?**]  
+[ **-?** ]  
  Muestra la ayuda de la línea de comandos.  
   
 ## <a name="remarks"></a>Notas  

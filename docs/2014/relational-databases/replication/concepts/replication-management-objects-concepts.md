@@ -21,10 +21,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 2cbc3571aa26728fa94957bb0c2f207ff769f4c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721797"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
@@ -51,7 +51,7 @@ ms.locfileid: "62721797"
  Los temas de esta sección muestran cómo supervisar mediante programación una topología de replicación.  
   
 ## <a name="introduction-to-rmo-programming"></a>Introducción a la programación de RMO  
- RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework.  El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
+ RMO está diseñado para programar todos los aspectos de la replicación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El espacio de nombres de RMO es <xref:Microsoft.SqlServer.Replication> y lo implementa Microsoft.SqlServer.Rmo.dll, que es un ensamblado de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework. El ensamblado Microsoft.SqlServer.Replication.dll, que también pertenece al espacio de nombres <xref:Microsoft.SqlServer.Replication>, implementa una interfaz de código administrado para programar varios agentes de replicación (Agente de instantáneas, Agente de distribución y Agente de mezcla). Se puede tener acceso a sus clases desde RMO para sincronizar las suscripciones. Las clases en el espacio de nombres <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport>, que implementa el ensamblado Microsoft.SqlServer.Replication.BusinessLogicSupport.dll, se utilizan para crear una lógica empresarial personalizada para la replicación de mezcla. Este ensamblado es independiente de RMO.  
   
 ## <a name="deploying-applications-based-on-rmo"></a>Implementar aplicaciones basadas en RMO  
  RMO depende de los componentes de replicación y de conectividad de cliente que están incluidos con todas las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] excepto SQL Server Compact. Para implementar una aplicación basada en RMO, debe instalar una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que incluya componentes de replicación y de conectividad de cliente en el equipo en el que se vaya a ejecutar la aplicación.  
@@ -65,7 +65,7 @@ ms.locfileid: "62721797"
   
 2.  En el menú **Archivo**, haga clic en **Nuevo proyecto**. Aparecerá el cuadro de diálogo **Nuevo proyecto** .  
   
-3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#**. En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
+3.  En el cuadro de diálogo **Tipos de proyecto**, seleccione **Proyectos de Visual C#** . En el panel **Plantillas**, seleccione **Aplicación para Windows**.  
   
 4.  (Opcional) en **Nombre**, escriba el nombre de la nueva aplicación.  
   
@@ -175,7 +175,7 @@ ms.locfileid: "62721797"
 >  Cuando varios clientes de RMO o varias instancias de un objeto de programación de RMO están teniendo acceso al mismo objeto de replicación en el servidor, se puede llamar al método `Refresh` del objeto RMO para actualizar las propiedades según el estado actual del objeto del servidor.  
   
 ### <a name="caching-property-changes"></a>Almacenar en memoria caché los cambios de propiedades  
- Cuando la propiedad <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> está establecida en <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> todas las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] generadas por RMO se capturan para que se puedan ejecutar manualmente en un lote único utilizando alguno de los métodos de ejecución. RMO le permite almacenar en memoria caché los cambios de las propiedades y las confirma conjuntamente en un único lote utilizando el método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> del objeto. Para almacenar en caché los cambios de las propiedades, la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> del objeto debe estar establecida en `true`.  Al almacenar en memoria caché los cambios de las propiedades en RMO, el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> todavía controla cuándo se envían los cambios al servidor. Para obtener más información sobre cómo almacenar en caché los cambios de las propiedades de un objeto de replicación, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
+ Cuando la propiedad <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes> está establecida en <xref:Microsoft.SqlServer.Management.Common.SqlExecutionModes.CaptureSql> todas las instrucciones [!INCLUDE[tsql](../../../includes/tsql-md.md)] generadas por RMO se capturan para que se puedan ejecutar manualmente en un lote único utilizando alguno de los métodos de ejecución. RMO le permite almacenar en memoria caché los cambios de las propiedades y las confirma conjuntamente en un único lote utilizando el método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> del objeto. Para almacenar en caché los cambios de las propiedades, la propiedad <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> del objeto debe estar establecida en `true`. Al almacenar en memoria caché los cambios de las propiedades en RMO, el objeto <xref:Microsoft.SqlServer.Management.Common.ServerConnection> todavía controla cuándo se envían los cambios al servidor. Para obtener más información sobre cómo almacenar en caché los cambios de las propiedades de un objeto de replicación, vea [Ver y modificar las propiedades del distribuidor y del publicador](../view-and-modify-distributor-and-publisher-properties.md).  
   
 > [!IMPORTANT]  
 >  Aunque la clase <xref:Microsoft.SqlServer.Management.Common.ServerConnection> permite declarar las transacciones explícitas al establecer las propiedades, tales transacciones pueden interferir con las transacciones de replicación internas, producir resultados imprevistos y no se deberían utilizar con RMO.  

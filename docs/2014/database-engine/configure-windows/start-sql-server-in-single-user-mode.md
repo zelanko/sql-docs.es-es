@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 245ae929b9a267f06b675b9380760f3db6067d1c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62809059"
 ---
 # <a name="start-sql-server-in-single-user-mode"></a>Iniciar SQL Server en modo de usuario único
@@ -36,7 +36,7 @@ ms.locfileid: "62809059"
   
  Al iniciar una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] puede conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Se podría producir un error en el Explorador de objetos de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] porque requiere más de una conexión para algunas operaciones. Para administrar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único, ejecute las instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] conectándose solo a través del Editor de consultas de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]o use la [utilidad sqlcmd](../../tools/sqlcmd-utility.md).  
   
- Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd** . Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"**.  
+ Cuando use la opción **-m** con **sqlcmd** o [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], puede limitar las conexiones a una aplicación cliente especificada. Por ejemplo, **-m"sqlcmd"** limita las conexiones a una conexión única y esa conexión se debe identificar como el programa cliente **sqlcmd** . Use esta opción cuando esté iniciando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en modo de usuario único y una aplicación cliente desconocida esté usando la única conexión disponible. Para conectarse a través del Editor de consultas en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], use **-m"Microsoft SQL Server Management Studio - Query"** .  
   
 > [!IMPORTANT]  
 >  No use esta opción como una característica de seguridad. La aplicación cliente proporciona el nombre de la misma y puede proporcionar un nombre falso como parte de la cadena de conexión.  
@@ -55,7 +55,7 @@ ms.locfileid: "62809059"
   
 4.  Compruebe en el administrador de clústeres o en la consola de administración de clústeres de conmutación por error que el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sigue estando sin conexión.  
   
-5.  Conectarse a la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<servername >.  
+5.  Conéctese a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando ahora el siguiente comando y realice la operación necesaria: SQLCMD -E -S\<nombreDeServidor>.  
   
 6.  Una vez completada la operación, cierre el símbolo del sistema y vuelva a poner en línea SQL y otros recursos mediante el administrador de clústeres.  
   

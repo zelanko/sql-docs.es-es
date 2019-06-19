@@ -18,10 +18,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 86340f1bdb9b178c23295c61378d781e2d4a83cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789857"
 ---
 # <a name="active-secondaries-readable-secondary-replicas-always-on-availability-groups"></a>Secundarias activas: Réplicas secundarias legibles (siempre en grupos de disponibilidad)
@@ -271,9 +271,9 @@ GO
   
     |¿Réplica secundaria legible?|¿Nivel de aislamiento de instantánea o de RCSI habilitado?|Base de datos principal|Base de datos secundaria|  
     |---------------------------------|-----------------------------------------------|----------------------|------------------------|  
-    |No|No|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
-    |No|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
-    |Sí|No|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
+    |Sin|Sin|Sin versiones de fila ni sobrecarga de 14 bytes|Sin versiones de fila ni sobrecarga de 14 bytes|  
+    |Sin|Sí|Con versiones de fila y sobrecarga de 14 bytes|Sin versiones de fila pero con sobrecarga de 14 bytes|  
+    |Sí|Sin|Sin versiones de fila pero con sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
     |Sí|Sí|Con versiones de fila y sobrecarga de 14 bytes|Con versiones de fila y sobrecarga de 14 bytes|  
   
 ##  <a name="bkmk_RelatedTasks"></a> Tareas relacionadas  

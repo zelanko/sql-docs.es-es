@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 147452998a4ad9501d0a8cf50791d8e12c533a26
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727273"
 ---
 # <a name="copy-a-package-in-sql-server-data-tools"></a>Copiar un paquete en herramientas de datos de SQL Server
@@ -53,7 +53,7 @@ ms.locfileid: "65727273"
   
 9. También puede hacer clic en el fondo de la pestaña **Flujo de control** y luego hacer clic en **Propiedades**.  
   
-10. En la ventana Propiedades, haga clic en el valor de la propiedad ID y luego, en la lista desplegable, haga clic en **\<Generar nuevo Id.>**.  
+10. En la ventana Propiedades, haga clic en el valor de la propiedad ID y luego, en la lista desplegable, haga clic en **\<Generar nuevo Id.>** .  
   
 11. En el menú **Archivo** , haga clic en **Guardar los elementos seleccionados** para guardar el nuevo paquete.  
   

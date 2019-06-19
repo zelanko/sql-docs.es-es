@@ -1,9 +1,8 @@
 ---
 title: Iniciar sesión en una instancia de SQL Server (símbolo del sistema) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
-ms.prod: sql
-ms.prod_service: high-availability
+ms.date: 06/13/2017
+ms.prod: sql-server-2014
 ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
@@ -18,14 +17,13 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: ec0250a6928dc2dd7b2d1881fbede89eb0aa51f7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62781782"
 ---
 # <a name="log-in-to-an-instance-of-sql-server-command-prompt"></a>Iniciar una sesión en una instancia de SQL Server (símbolo del sistema)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   En este tema se describe cómo probar la conectividad a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]mediante la utilidad **sqlcmd** .  
   
 ##  <a name="SSMSProcedure"></a>  

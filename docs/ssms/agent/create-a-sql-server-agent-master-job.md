@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: b999b7a06f07df346f9fd38f8118913321d893fb
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65095556"
 ---
 # <a name="create-a-sql-server-agent-master-job"></a>Crear un trabajo maestro del Agente SQL Server
@@ -73,7 +73,7 @@ Si se producen errores en los pasos de trabajo que utilizan cuentas de proxy dur
   
 2.  Haga clic en el signo más para expandir **Agente SQL Server**.  
   
-3.  Haga clic con el botón derecho en la carpeta **Trabajos** y, después, seleccione **Nuevo trabajo...**.  
+3.  Haga clic con el botón derecho en la carpeta **Trabajos** y, después, seleccione **Nuevo trabajo...** .  
   
 4.  En el cuadro de diálogo **Nuevo trabajo** , en la página **General** , modifique las propiedades generales del trabajo. Para más información sobre las opciones disponibles en esta página, consulte [Propiedades de trabajo - Nuevo trabajo &#40;Página general&#41;](../../ssms/agent/job-properties-new-job-general-page.md)  
   

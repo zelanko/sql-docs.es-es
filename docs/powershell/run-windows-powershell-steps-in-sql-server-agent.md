@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d9034e88276192c14eb8d7008ced10b7041e40c9
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241204"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478550"
 ---
 # <a name="run-windows-powershell-steps-in-sql-server-agent"></a>Ejecutar los pasos Windows PowerShell del Agente SQL Server
 
@@ -69,7 +69,7 @@ Cada paso de trabajo del Agente [!INCLUDE[ssNoVersion](../includes/ssnoversion-m
   
 3.  En el cuadro de diálogo **Nuevo paso de trabajo** , escriba un nombre para el paso de trabajo en **Nombre del paso**.  
   
-4.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)**.  
+4.  En la lista **Tipo** , elija **Sistema operativo (CmdExec)** .  
   
 5.  En la lista **Ejecutar como** , seleccione la cuenta e proxy con las credenciales que utilizará el trabajo. De forma predeterminada, los pasos de trabajo de CmdExec se ejecutan en el contexto de la cuenta de servicio de Agente SQL Server.  
   

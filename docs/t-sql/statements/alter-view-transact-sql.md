@@ -22,11 +22,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 780d2929180657afc705335ff2110b9f3f9cc6c6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62664727"
 ---
 # <a name="alter-view-transact-sql"></a>ALTER VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -73,7 +73,7 @@ AS select_statement
  Cifra las entradas en [sys.syscomments](../../relational-databases/system-compatibility-views/sys-syscomments-transact-sql.md) que contienen el texto de la instrucción ALTER VIEW. WITH ENCRYPTION evita que la vista se publique como parte de la replicación de SQL Server.  
   
  SCHEMABINDING  
- Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de forma que afecten a la definición de la vista. La propia definición de la vista debe modificarse o quitarse primero para eliminar las dependencias de la tabla que se va a modificar. Cuando se usa SCHEMABINDING, _select\_statement_ debe incluir los nombres de dos partes (_schema_**.**_object_) de tablas, vistas o funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
+ Enlaza la vista al esquema de las tablas subyacentes. Cuando se especifica SCHEMABINDING, las tablas base no se pueden modificar de forma que afecten a la definición de la vista. La propia definición de la vista debe modificarse o quitarse primero para eliminar las dependencias de la tabla que se va a modificar. Cuando se usa SCHEMABINDING, _select\_statement_ debe incluir los nombres de dos partes (_schema_ **.** _object_) de tablas, vistas o funciones definidas por el usuario a las que se hace referencia. Todos los objetos a los que se hace referencia se deben encontrar en la misma base de datos.  
   
  Las vistas o las tablas que participan en una vista creada con la cláusula SCHEMABINDING no se pueden quitar a menos que se quite o cambie esa vista de forma que deje de tener un enlace de esquema. En caso contrario, [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error. Además, se genera un error al ejecutar las instrucciones ALTER TABLE sobre tablas que participan en vistas que tienen enlaces de esquemas si estas instrucciones afectan a la definición de la vista.  
   
@@ -134,7 +134,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md)   
  [DROP VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/drop-view-transact-sql.md)   

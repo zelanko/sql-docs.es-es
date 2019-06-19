@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 34f07a3b0518e202cbbcba0f15d7782da56921d4
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65728592"
 ---
 # <a name="process-inserts-updates-and-deletes"></a>Procesar inserciones, actualizaciones y eliminaciones
@@ -34,7 +34,7 @@ ms.locfileid: "65728592"
  En la consulta de ejemplo que recupera los datos modificados, la función **cdc.fn_cdc_get_net_changes__<capture_instance>** solo devuelve la columna de metadatos denominada **__$operation**. Esta columna de metadatos contiene un valor ordinal que indica la operación que ha causado el cambio.  
   
 > [!NOTE]  
->  Para obtener más información sobre la consulta que usa llamadas a la función **cdc.fn_cdc_get_net_changes_ <capture_instance>**, vea [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
+>  Para obtener más información sobre la consulta que usa llamadas a la función **cdc.fn_cdc_get_net_changes_ <capture_instance>** , vea [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md).  
   
  Hacer coincidir un valor ordinal con su operación correspondiente no es tan fácil como utilizar una tecla de acceso para la operación. Por ejemplo, 'D' puede representar fácilmente una operación de eliminación e 'I' una operación de inserción. La consulta de ejemplo que se creó en el tema, [Crear la función para recuperar los datos modificados](../../integration-services/change-data-capture/create-the-function-to-retrieve-the-change-data.md)realiza esta conversión de un valor ordinal a un valor de cadena descriptivo que se devuelve en una nueva columna. El segmento de código siguiente muestra esta conversión:  
   

@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: be62f7dfe7cce25d6b4cd63767bdea211dacd1a5
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242183"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64478522"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -130,7 +130,7 @@ ms.locfileid: "59242183"
      `BACKUP LOG <database_name> TO <backup_device> WITH NORECOVERY`  
   
     > [!IMPORTANT]  
-    >  En el momento de la restauración, el cuadro de diálogo Restaurar base de datos muestra el tipo de una copia del final del registro como **Registro de transacciones (solo copia)**.  
+    >  En el momento de la restauración, el cuadro de diálogo Restaurar base de datos muestra el tipo de una copia del final del registro como **Registro de transacciones (solo copia)** .  
   
 15. Si va a realizar copias de seguridad en una unidad de cinta (según se haya especificado en la sección **Destino** de la página **General** ), la opción **Descargar la cinta después de realizar la copia de seguridad** está activa. Al hacer clic en esta opción se activa la opción **Rebobinar la cinta antes de descargar** .  
   

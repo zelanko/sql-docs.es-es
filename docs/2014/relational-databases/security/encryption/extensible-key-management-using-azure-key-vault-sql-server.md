@@ -16,12 +16,12 @@ ms.assetid: 3efdc48a-8064-4ea6-a828-3fbf758ef97c
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 852f65073a55cbe6e8d29b1dc17981cb5356d95f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: f211a7300dceb542235538e0e7067e8dd989fe6d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63011529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046750"
 ---
 # <a name="extensible-key-management-using-azure-key-vault-sql-server"></a>Administración extensible de claves con Azure Key Vault (SQL Server)
   El [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conector para [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Azure Key Vault permite [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cifrado para aprovechar el servicio de Azure Key Vault como un [administración Extensible de claves &#40;EKM&#41; ](extensible-key-management-ekm.md) proveedor para proteger su claves de cifrado.  
@@ -52,7 +52,7 @@ ms.locfileid: "63011529"
  ![Administración extensible de claves de SQL mediante Azure Key Vault](../../../database-engine/media/ekm-using-azure-key-vault.png "Administración extensible de claves de SQL mediante Azure Key Vault")  
   
 ##  <a name="Step1"></a> Paso 1: Configuración de Key Vault para su uso con SQL Server  
- Siga estos pasos para configurar un Almacén de claves y poder usarlo con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para la protección de claves de cifrado. Puede que la organización ya use un almacén. Si no existe un almacén, el administrador de Azure de su organización encargado de administrar las claves de cifrado puede crear uno, generar una clave asimétrica en él y, a continuación, autorizar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usar la clave. Para familiarizarse con la revisión del servicio de almacén de claves, consulte [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)y la referencia sobre [cmdlets del almacén de claves de Azure](/powershell/module/azurerm.keyvault/) de PowerShell.  
+ Siga estos pasos para configurar un Almacén de claves y poder usarlo con [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)] para la protección de claves de cifrado. Puede que la organización ya use un almacén. Si no existe un almacén, el administrador de Azure de su organización encargado de administrar las claves de cifrado puede crear uno, generar una clave asimétrica en él y, a continuación, autorizar a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] a usar la clave. Para familiarizarse con la revisión del servicio de almacén de claves, consulte [Introducción al almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)y la referencia sobre [cmdlets del almacén de claves de Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) de PowerShell.  
   
 > [!IMPORTANT]  
 >  Si tiene varias suscripciones de Azure, debe usar la suscripción que contenga [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -98,7 +98,7 @@ ms.locfileid: "63011529"
   
     -   [Introducción al Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521402)  
   
-    -   Referencia de [cmdlets del Almacén de claves de Azure](https://go.microsoft.com/fwlink/?LinkId=521403) de PowerShell  
+    -   Referencia de [cmdlets del Almacén de claves de Azure](https://docs.microsoft.com/powershell/module/azurerm.keyvault) de PowerShell  
   
 ##  <a name="Step2"></a> Paso 2: Instalar el conector de SQL Server  
  El administrador del equipo de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] descarga e instala el conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El conector de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se puede descargar desde el [Centro de descarga de Microsoft](https://go.microsoft.com/fwlink/p/?LinkId=521700).  Busque el **conector de SQL Server para el Almacén de claves de Microsoft Azure**, revise los detalles, los requisitos del sistema y las instrucciones de instalación y elija la opción de descargar el conector e iniciar la instalación con **Ejecutar**. Revise la licencia, acéptela y continúe.  

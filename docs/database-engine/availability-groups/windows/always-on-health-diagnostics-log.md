@@ -12,10 +12,10 @@ author: rothja
 ms.author: jroth
 manager: jroth
 ms.openlocfilehash: f9df88d021ffa6aebbc30f3a733ece3b395ac102
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789584"
 ---
 # <a name="sql-server-resource-dll-health-diagnostic-logs-for-availability-groups"></a>Registros de diagnóstico de mantenimiento de la DLL del recurso de SQL Server para grupos de disponibilidad

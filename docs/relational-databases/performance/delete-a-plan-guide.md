@@ -13,11 +13,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 6e01fbd98d2004566c4831db8b1ac28878095868
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62652539"
 ---
 # <a name="delete-a-plan-guide"></a>Eliminar una guía de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,10 +39,10 @@ ms.locfileid: "54143405"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La eliminación de una guía de plan OBJECT requiere el permiso ALTER en el objeto (por ejemplo: función, procedimiento almacenado) al que hace referencia la guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-plan-guide"></a>Para eliminar una guía de plan  
   

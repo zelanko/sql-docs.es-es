@@ -23,10 +23,10 @@ ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6269db9bcf9c242162a01ab144ebc55de6aa0803
-ms.sourcegitcommit: 04c031f7411aa33e2174be11dfced7feca8fbcda
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/30/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "64946619"
 ---
 # <a name="keep-nulls-or-use-default-values-during-bulk-import-sql-server"></a>Mantener valores NULL o usar valores predeterminados durante la importación masiva (SQL Server)
@@ -154,7 +154,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_null_fmt"></a>
+### **Usar [BCP](../../tools/bcp-utility.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_null_fmt"></a>
 Modificadores **-k** y **-f** . En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -182,7 +182,7 @@ REM Review results
 SQLCMD -Q "SELECT * FROM TestDatabase.dbo.myNulls;"
 ```
   
-### **Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bcp_default_fmt"></a>
+### **Usar [BCP](../../tools/bcp-utility.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bcp_default_fmt"></a>
 Modificador **-f** .  En el símbolo del sistema, escriba el siguiente comando:
 
 ```cmd
@@ -215,7 +215,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_null_fmt"></a>
+### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_null_fmt"></a>
 El argumento**KEEPNULLS** y **FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -253,7 +253,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="bulk_default_fmt"></a>
+### **Usar [BULK INSERT](../../t-sql/statements/bulk-insert-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="bulk_default_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -271,7 +271,7 @@ BULK INSERT dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__null_fmt"></a>
+### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y mantener valores NULL con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__null_fmt"></a>
 Argumento**FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql
@@ -290,7 +290,7 @@ INSERT INTO dbo.myNulls
 SELECT * FROM TestDatabase.dbo.myNulls;
 ```
 
-### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)**<a name="openrowset__default_fmt"></a>
+### **Usar [OPENROWSET(BULK...)](../../t-sql/functions/openrowset-transact-sql.md) y usar valores predeterminados con un [archivo de formato no XML](../../relational-databases/import-export/non-xml-format-files-sql-server.md)** <a name="openrowset__default_fmt"></a>
 Sugerencia de tabla**KEEPDEFAULTS** y argumento **FORMATFILE** .  Ejecutar el siguiente Transact-SQL en Microsoft [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS):
 
 ```sql

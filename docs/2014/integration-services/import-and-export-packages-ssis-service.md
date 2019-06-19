@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 9a1d50afde56843942c470017a8534ffa797eb69
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058152"
 ---
 # <a name="import-and-export-packages-ssis-service"></a>Importar y exportar paquetes (servicio SSIS)
@@ -82,15 +82,15 @@ ms.locfileid: "66058152"
   
     -   Para importar desde una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], seleccione la opción **SQL Server** y luego especifique el servidor y seleccione el modo de autenticación. Si selecciona Autenticación de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , proporcione un nombre de usuario y una contraseña.  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
     -   Para importar desde el sistema de archivos, seleccione la opción **Sistema de archivos** .  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Abrir**.  
   
     -   Para importar desde el almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
+         Haga clic en el botón Examinar **(…)** , seleccione el paquete que quiera importar y, después, haga clic en **Aceptar**.  
   
 7.  Si lo desea, actualice el nombre del paquete.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "66058152"
   
     -   Para exportar al almacén de paquetes [!INCLUDE[ssIS](../includes/ssis-md.md)] , seleccione la opción **Almacén de paquetes SSIS** y especifique el servidor.  
   
-         Haga clic en el botón Examinar **(…)**, expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+         Haga clic en el botón Examinar **(…)** , expanda la carpeta **Paquetes SSIS** y seleccione la carpeta donde quiera guardar el paquete. Opcionalmente, escriba un nuevo nombre para el paquete en el cuadro de texto **Nombre del paquete** . [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 7.  Para actualizar el nivel de protección del paquete, haga clic en el botón Examinar **(…)** y seleccione otro nivel de protección con el cuadro de diálogo **Nivel de protección de paquetes**. Si se selecciona la opción **Cifrar la información confidencial con una contraseña** o la opción **Cifrar todos los datos con una contraseña** , escriba y confirme una contraseña.  
   

@@ -14,10 +14,10 @@ manager: craigg
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
 ms.openlocfilehash: 1825b26912b507b8e58b1828437102cf3650d5e6
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015036"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Ejecutar paquetes en la escalabilidad horizontal de Integration Services (SSIS)
@@ -66,7 +66,7 @@ Tras implementar los paquetes en el servidor de Integration Services, puede ejec
 
 1.  Cree las ejecuciones.
 
-    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro **@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de escalabilidad horizontal ejecutar el paquete, establezca el parámetro **@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **@useanyworker**, consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
+    Llame a `[catalog].[create_execution]` para cada paquete. Establezca el parámetro **@runinscaleout** en `True`. Si no se permite a todos los equipos de trabajo de escalabilidad horizontal ejecutar el paquete, establezca el parámetro **@useanyworker** en `False`. Para obtener más información sobre este procedimiento almacenado y el parámetro **@useanyworker** , consulte [catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md). 
 
 2. Establezca los parámetros de ejecución.
 

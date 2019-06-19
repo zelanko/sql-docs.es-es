@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6555f47c1d390180bbf2d2ccca1f29f07889465d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108800"
 ---
 # <a name="install-reporting-services-and-internet-information-services-side-by-side-ssrs-native-mode"></a>Instalar Reporting Services e Internet Information Services en paralelo (modo nativo de SSRS)
@@ -43,9 +43,9 @@ ms.locfileid: "66108800"
   
 |Ejemplo|Solicitud|  
 |-------------|-------------|  
-|http://123.234.345.456:80/reports|Recibe todas las solicitudes que se envían a http://123.234.345.456/reports o http://\<nombreDeEquipo > /Reports si un servicio de nombres de dominio puede resolver la dirección IP a dicho nombre de host.|  
+|http://123.234.345.456:80/reports|Recibe todas las solicitudes que se envían a http://123.234.345.456/reports o http://\< nombreDeEquipo > /Reports si un servicio de nombres de dominio puede resolver la dirección IP a dicho nombre de host.|  
 |http://+:80/reports|Recibe las solicitudes enviadas a cualquier dirección IP o nombre de host válido para dicho equipo siempre que la dirección URL contenga el nombre de directorio virtual "reports".|  
-|http://123.234.345.456:80|Recibe cualquier solicitud que especifica http://123.234.345.456 o http://\<nombreDeEquipo > Si un servicio de nombres de dominio puede resolver la dirección IP a dicho nombre de host.|  
+|http://123.234.345.456:80|Recibe cualquier solicitud que especifica http://123.234.345.456 o http://\< nombreDeEquipo > Si un servicio de nombres de dominio puede resolver la dirección IP a dicho nombre de host.|  
 |http://+:80|Recibe solicitudes que aún no se han recibido por otras aplicaciones, para cualquier extremo de aplicación asignado a **Todas asignadas**.|  
 |http://*:80|Recibe solicitudes que aún no se han recibido por otras aplicaciones, para cualquier extremo de aplicación asignado a **Todas sin asignar**.|  
   

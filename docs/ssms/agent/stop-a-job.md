@@ -17,10 +17,10 @@ ms.author: maghan
 manager: craigg
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
 ms.openlocfilehash: daedb5dbd9bb08c0ee68e149ee70deab24426782
-ms.sourcegitcommit: bb5484b08f2aed3319a7c9f6b32d26cff5591dae
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/06/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65089450"
 ---
 # <a name="stop-a-job"></a>Stop a Job
@@ -31,7 +31,7 @@ ms.locfileid: "65089450"
 
 En este tema se describe cómo detener un trabajo del Agente [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un trabajo es una serie especificada de acciones que realiza el Agente SQL Server.  
   
--   **Antes de empezar:**   
+-   **Antes de empezar:**  
   
     [Limitaciones y restricciones](#Restrictions)  
   

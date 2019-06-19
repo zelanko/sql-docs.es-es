@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a0c28420d711fd009dfc2b1e36ef4a613b3ecfaf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66072112"
 ---
 # <a name="partitions-restore-database-dialog-box-analysis-services---multidimensional-data"></a>Particiones (cuadro de diálogo Restaurar base de datos) (Analysis Services - Datos multidimensionales)
@@ -66,7 +66,7 @@ ms.locfileid: "66072112"
 |**Partición**|Muestra el nombre de la partición local.|  
 |**Tamaño (MB)**|Muestra el tamaño de la partición local en megabytes.|  
 |**Carpeta original**|Muestra el nombre de la carpeta original en la que se almacenó la partición local.|  
-|**Carpeta de restauración**|Escriba el nombre de la carpeta de restauración de la partición local, o bien haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccione la ruta de acceso a la carpeta que quiera usar. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Carpeta de restauración**|Escriba el nombre de la carpeta de restauración de la partición local, o bien haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Buscar carpeta remota** y seleccione la ruta de acceso a la carpeta que quiera usar. Para obtener más información sobre el cuadro de diálogo **Buscar carpeta remota**, vea [Cuadro de diálogo Buscar carpeta remota &#40;Analysis Services - Datos multidimensionales&#41;](browse-for-remote-folder-dialog-box-analysis-services-multidimensional-data.md).|  
   
  **Restaurar particiones remotas**  
  Seleccione esta opción para restaurar particiones remotas almacenadas en archivos de copia de seguridad remotos.  
@@ -80,7 +80,7 @@ ms.locfileid: "66072112"
 |------------|-----------------|  
 |**Server**|Muestra el nombre de la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra la partición remota.|  
 |**Origen de datos**|Muestra el nombre del origen de datos del archivo de copia de seguridad que representa la base de datos que contiene la partición remota.|  
-|**Archivo de copia de seguridad**|Escriba la ruta de acceso completa y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar, o bien haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Buscar archivos de la base de datos** y seleccionar la ruta de acceso y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Archivo de copia de seguridad**|Escriba la ruta de acceso completa y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar, o bien haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Buscar archivos de la base de datos** y seleccionar la ruta de acceso y el nombre de archivo del archivo de copia de seguridad remoto que quiere usar. Para más información sobre el cuadro de diálogo **Buscar archivos de base de datos**, vea [Cuadro de diálogo Buscar archivos de la base de datos &#40;Analysis Services - Datos multidimensionales&#41;](locate-database-files-dialog-box-analysis-services-multidimensional-data.md).|  
 |**...**|Haga clic en este botón para mostrar el cuadro de diálogo **Particiones remotas - Configuración avanzada** y modificar opciones avanzadas, como la cadena de conexión del origen de datos, para restaurar la partición remota. Para más información sobre el cuadro de diálogo **Particiones remotas - Configuración avanzada**, vea [Cuadro de diálogo Particiones remotas: configuración avanzada &#40;Analysis Services - Datos multidimensionales&#41;](remote-partitions-advanced-settings-dialog-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  

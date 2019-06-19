@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 663ef21dc9c4d0f3698ae468637fe0a8fd55a16e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078898"
 ---
 # <a name="modifying-measures"></a>Modificar medidas
@@ -28,7 +28,7 @@ ms.locfileid: "66078898"
   
      Es más fácil cambiar las propiedades para varios elementos del cubo cuando la ventana Propiedades permanece abierta.  
   
-3.  En la ventana Propiedades, haga clic en la lista **FormatString** y escriba **#,#**.  
+3.  En la ventana Propiedades, haga clic en la lista **FormatString** y escriba **#,#** .  
   
 4.  En la barra de herramientas de la pestaña **Estructura de cubo** , haga clic en el icono **Mostrar la cuadrícula de medidas** situado a la izquierda.  
   

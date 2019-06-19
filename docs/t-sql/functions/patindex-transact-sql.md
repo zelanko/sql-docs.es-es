@@ -24,10 +24,10 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0a6f6f8c8699cc911d747d07edd9655fd363d667
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66696979"
 ---
 # <a name="patindex-transact-sql"></a>PATINDEX (Transact-SQL)
@@ -51,7 +51,7 @@ PATINDEX ( '%pattern%' , expression )
  [expression](../../t-sql/language-elements/expressions-transact-sql.md) es una expresión, normalmente una columna en la que se busca el patrón especificado. *expression* es de la categoría del tipo de datos de cadena de caracteres.  
   
 ## <a name="return-types"></a>Tipos devueltos  
-**bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)**; en caso contrario, **int**.  
+**bigint** si *expression* es de los tipos de datos **varchar(max)** o **nvarchar(max)** ; en caso contrario, **int**.  
   
 ## <a name="remarks"></a>Notas  
 Si *pattern* o *expression* son NULL, PATINDEX devuelve NULL.  
@@ -63,7 +63,7 @@ PATINDEX realiza comparaciones basadas en la intercalación de la entrada. Para 
 ## <a name="supplementary-characters-surrogate-pairs"></a>Caracteres adicionales (pares suplentes)  
 Cuando se usan intercalaciones SC, el valor devuelto contará cualquier par suplente UTF-16 en el parámetro *expression* como un solo carácter. Para más información, consulte [Compatibilidad con la intercalación y Unicode](../../relational-databases/collations/collation-and-unicode-support.md).  
   
-0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en PATINDEX.  
+0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en PATINDEX.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -21,10 +21,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 247dd2950365a1b75a3b911fe6dfda1a4dd044df
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107371"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Orígenes de datos admitidos por Reporting Services (SSRS)
@@ -95,11 +95,11 @@ ms.locfileid: "66107371"
   
 -   Versión del proveedor de datos subyacente (opcional): Algunos tipos de orígenes de datos admiten más de un proveedor de datos. Puede tratarse de distintas versiones del mismo proveedor o de distintas implementaciones por parte de terceros para un tipo de proveedor de datos. El nombre del proveedor suele aparecer en la cadena de conexión después de configurarse un origen de datos. Esta columna responde a la pregunta: "Después de seleccionar el tipo de origen de datos, ¿qué proveedor de datos se selecciona en el cuadro de diálogo **Propiedades de conexión**?"  
   
--   Origen de datos *\<plataforma>*: La plataforma del origen de datos admitida por el proveedor de datos o de extensiones de procesamiento de datos para el origen de datos de destino. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos para el proveedor de datos recuperar datos desde un origen de datos en este tipo de plataforma?"  
+-   Origen de datos *\<plataforma>* : La plataforma del origen de datos admitida por el proveedor de datos o de extensiones de procesamiento de datos para el origen de datos de destino. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos para el proveedor de datos recuperar datos desde un origen de datos en este tipo de plataforma?"  
   
 -   Versión de origen de datos: La versión del origen de datos de destino admitido por la DPE o proveedor de datos. Esta columna responde a la pregunta: "¿Puede esta extensión de procesamiento de datos para el proveedor de datos recuperar datos desde esta versión del origen de datos?"  
   
--   RS *\<plataforma>*: Las plataformas para el servidor de informes y el cliente de creación de informes donde puede instalar una DPE o datos un proveedor personalizado. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integradas se incluyen con todas las instalaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una extensión de datos personalizada o un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se deben compilar de forma nativa para una plataforma específica. Esta columna responde a la pregunta: "Esta extensión de procesamiento de datos para el proveedor de datos se puede instalar en este tipo de plataforma?"  
+-   RS *\<plataforma>* : Las plataformas para el servidor de informes y el cliente de creación de informes donde puede instalar una DPE o datos un proveedor personalizado. Las extensiones de procesamiento de datos de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] integradas se incluyen con todas las instalaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. Una extensión de datos personalizada o un proveedor de datos de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] se deben compilar de forma nativa para una plataforma específica. Esta columna responde a la pregunta: "Esta extensión de procesamiento de datos para el proveedor de datos se puede instalar en este tipo de plataforma?"  
   
 ###  <a name="DataSourcesTable"></a> Tipos de orígenes de datos  
   

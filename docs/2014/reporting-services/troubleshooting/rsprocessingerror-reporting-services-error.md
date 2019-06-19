@@ -13,10 +13,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 46b8f7326578b9d8276c164577adf691accdd48e
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099140"
 ---
 # <a name="rsprocessingerror---reporting-services-error"></a>rsProcessingError - Error de Reporting Services
@@ -98,11 +98,11 @@ ms.locfileid: "66099140"
 ### <a name="cannot-compare-data-types-for-a-filter"></a>No se pueden comparar los tipos de datos para un filtro  
  En una ecuación de filtro, la expresión de filtro que define lo que se ha de filtrar y el valor de filtro deben ser del mismo tipo de datos para poder compararse. Si ve alguno de los errores siguientes, modifique la expresión de campo o el valor de filtro para que los tipos de datos coincidan:  
   
--   No se puede efectuar el procesamiento de *\<tipo de elemento de informe>* del *\<nombre del elemento de informe>*. No se pueden comparar los datos de los tipos *\<tipo>* y *\<tipo>*. Compruebe el tipo de datos devuelto por el *\<nombre del elemento de informe>*.  
+-   No se puede efectuar el procesamiento de *\<tipo de elemento de informe>* del *\<nombre del elemento de informe>* . No se pueden comparar los datos de los tipos *\<tipo>* y *\<tipo>* . Compruebe el tipo de datos devuelto por el *\<nombre del elemento de informe>* .  
   
--   Error al evaluar el *\<nombre de propiedad>*.  
+-   Error al evaluar el *\<nombre de propiedad>* .  
   
--   Error al evaluar el *\<nombre de propiedad>*. Hace referencia a un campo de conjunto de datos que contiene un error: *\<cadena de error>*.  
+-   Error al evaluar el *\<nombre de propiedad>* . Hace referencia a un campo de conjunto de datos que contiene un error: *\<cadena de error>* .  
   
  Para obtener más información, vea [Filtrar, agrupar y ordenar datos &#40;Generador de informes y SSRS&#41;](../report-design/filter-group-and-sort-data-report-builder-and-ssrs.md).  
   
@@ -111,13 +111,13 @@ ms.locfileid: "66099140"
   
  También se puede pasar el nombre de un ámbito concreto a una función de agregado. El ámbito puede hacer referencia al nombre de un conjunto de datos, una región de datos o el nombre un ámbito superior en la jerarquía de datos. Esto se aplica a los mensajes siguientes:  
   
--   El *\<tipo de elemento de informe>* "*\<nombre de elemento de informe>*" tiene el ámbito no válido "*\<nombre de ámbito>*". El ámbito debe ser el actual o estar dentro del actual.  
+-   El *\<tipo de elemento de informe>* " *\<nombre de elemento de informe>* " tiene el ámbito no válido " *\<nombre de ámbito>* ". El ámbito debe ser el actual o estar dentro del actual.  
   
--   La expresión *\<nombre de propiedad>* del *\<tipo de elemento de informe>* "*\<nombre de elemento de informe>*" tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
+-   La expresión *\<nombre de propiedad>* del *\<tipo de elemento de informe>* " *\<nombre de elemento de informe>* " tiene un parámetro de ámbito que no es válido para una función de agregado. El parámetro de ámbito debe establecerse en una constante de cadena que sea igual al nombre de un grupo contenedor, al nombre de una región de datos contenedora o al nombre de un conjunto de datos.  
   
  Para las funciones de agregado que calculan totales acumulados (`Previous`, `RunningValue` o `RowNumber`), se puede especificar un parámetro de ámbito que sea un nombre de grupo de filas o de grupo de columnas, pero no ambos. Esto se aplica al mensaje de error siguiente:  
   
--   `Previous`, `RunningValue` o `RowNumber` utilizadas en las celdas de datos de las funciones de agregado el  *\<tipo de elemento de informe >* '*\<el nombre del elemento de informe >*' hacen referencia a los ámbitos de agrupación en las columnas y filas de la  *\<tipo de elemento de informe >*. Los parámetros de ámbito de todos los `Previous`, `RunningValue` y `RowNumber` agregar funciones dentro de un  *\<tipo de elemento de informe >* puede hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
+-   `Previous`, `RunningValue` o `RowNumber` utilizadas en las celdas de datos de las funciones de agregado el  *\<tipo de elemento de informe >* ' *\<el nombre del elemento de informe >* ' hacen referencia a los ámbitos de agrupación en las columnas y filas de la  *\<tipo de elemento de informe >* . Los parámetros de ámbito de todos los `Previous`, `RunningValue` y `RowNumber` agregar funciones dentro de un  *\<tipo de elemento de informe >* puede hacer referencia a las agrupaciones de filas o agrupaciones de columnas de datos, pero no ambos.  
   
  Para más información, vea [Ámbito de expresión para los totales, agregados y colecciones integradas &#40;Generador de informes y SSRS&#41;](../report-design/expression-scope-for-totals-aggregates-and-built-in-collections.md) y [Colecciones integradas en expresiones &#40;Generador de informes y SSRS&#41;](../report-design/built-in-collections-in-expressions-report-builder.md).  
   

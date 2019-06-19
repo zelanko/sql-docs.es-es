@@ -12,10 +12,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 427af0f98682975e040452f1e2fd009526bd067d
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65715945"
 ---
 # <a name="catalogsetenvironmentproperty-ssisdb-database"></a>catalog.set_environment_property (base de datos de SSISDB)
@@ -38,16 +38,16 @@ catalog.set_environment_property [ @folder_name = ] folder_name
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el entorno. *folder_name* es **nvarchar(128)** .  
   
  [ @environment_name = ] *environment_name*  
- El nombre del entorno. *environment_name* es **nvarchar(128)**.  
+ El nombre del entorno. *environment_name* es **nvarchar(128)** .  
   
  [ @property_name = ] *property_name*  
- Nombre de una propiedad del entorno. *property_name* es **nvarchar(128)**.  
+ Nombre de una propiedad del entorno. *property_name* es **nvarchar(128)** .  
   
  [ @property_value = ] *property_value*  
- Valor de la propiedad del entorno. *property_value* es **nvarchar(1024)**.  
+ Valor de la propiedad del entorno. *property_value* es **nvarchar(1024)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

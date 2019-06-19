@@ -13,10 +13,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 64c565c45288de157a3ba4c6c367ae7f8849dfee
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62808714"
 ---
 # <a name="connect-to-server-integration-services"></a>Conectar al servidor (Integration Services)
@@ -30,7 +30,7 @@ ms.locfileid: "62808714"
  Seleccione el servidor al que va a conectarse. De forma predeterminada, aparecerá la instancia de servidor a la que se ha conectado por última vez.  
   
 > [!NOTE]  
->  No use  *\<servername >*\\*\<instancename >*, ya que [!INCLUDE[ssIS](../includes/ssis-md.md)] no admite varias instancias en un equipo.  
+>  No use  *\<servername >* \\ *\<instancename >* , ya que [!INCLUDE[ssIS](../includes/ssis-md.md)] no admite varias instancias en un equipo.  
   
  **Autenticación**  
  La autenticación [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows solo está disponible para [!INCLUDE[ssIS](../includes/ssis-md.md)]. Windows permite al usuario conectarse mediante una cuenta de usuario de Windows.  

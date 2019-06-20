@@ -26,10 +26,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e72b960db0fd5b733119cafeca98f124eaa15f38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62871142"
 ---
 # <a name="use-the-copy-database-wizard"></a>Usar el Asistente para copiar bases de datos
@@ -112,7 +112,7 @@ ms.locfileid: "62871142"
 2.  En la página **Seleccionar un servidor de origen** , especifique el servidor donde se encuentra la base de datos que se va a mover o copiar, y para escribir la información de inicio de sesión. Después de seleccionar el método de autenticación y especificar la información de inicio de sesión, haga clic en **Siguiente** para establecer la conexión al servidor de origen. Esta conexión permanece abierta durante toda la sesión.  
   
      **Servidor de origen**  
-     Seleccione el nombre del servidor donde se encuentra la base de datos o las bases de datos que desea mover o copiar, o haga clic en el botón examinar (**...**) para buscar el servidor que desee. El servidor debe ser por lo menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
+     Seleccione el nombre del servidor donde se encuentra la base de datos o las bases de datos que desea mover o copiar, o haga clic en el botón examinar ( **...** ) para buscar el servidor que desee. El servidor debe ser por lo menos [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].  
   
      **Utilizar autenticación de Windows**  
      Permita que un usuario se conecte a través de una cuenta de usuario de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows.  
@@ -132,7 +132,7 @@ ms.locfileid: "62871142"
 3.  En la página **Seleccionar un servidor de destino** , especifique el servidor al que se va a mover o copiar la base de datos. Si establece los servidores de origen y de destino en la misma instancia de servidor, realizará una copia de una base de datos. En este caso, debe cambiar el nombre de la base de datos posteriormente en el asistente. Puede usarse el nombre de la base de datos de origen para la base de datos copiada o movida únicamente si no existe algún conflicto de nombres en el servidor de destino. Si existe algún conflicto de nombre, debe solucionarse manualmente en el servidor de destino antes de poder utilizar el nombre de la base de datos de origen.  
   
      **Servidor de destino**  
-     Seleccione el nombre del servidor al que va a moverse o copiarse la base de datos o las bases de datos, o haga clic en el botón Examinar (**...**) para buscar un servidor de destino.  
+     Seleccione el nombre del servidor al que va a moverse o copiarse la base de datos o las bases de datos, o haga clic en el botón Examinar ( **...** ) para buscar un servidor de destino.  
   
     > [!NOTE]  
     >  Puede usar un destino que sea un servidor en clúster; el Asistente para copiar bases de datos se asegurará de que solo se seleccionen unidades compartidas en un servidor de destino en clúster.  

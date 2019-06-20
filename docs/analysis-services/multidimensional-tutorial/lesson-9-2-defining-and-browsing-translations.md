@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: dfa0021eb23620c4950949094e661f100aa4ac6f
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403487"
 ---
 # <a name="lesson-9-2---defining-and-browsing-translations"></a>Lección 9-2: definir y examinar traducciones
@@ -41,13 +41,13 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
     Aparecerá otra columna de idioma en la que definirá las traducciones de francés.  
   
-5.  En la fila del objeto **Caption** de la dimensión **Date**, escriba **Fecha** en la columna de traducción **Español (España)** y **Temps** en la columna de traducción **Francés (Francia)**.  
+5.  En la fila del objeto **Caption** de la dimensión **Date**, escriba **Fecha** en la columna de traducción **Español (España)** y **Temps** en la columna de traducción **Francés (Francia)** .  
   
 6.  En la fila para el objeto **Caption** del atributo **Month Name** , escriba **Mes del año** en la columna de traducción **Español (España)** y **Mois d'Année** en la columna de traducción **Francés (Francia)** .  
   
-    Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos (**...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
+    Tenga en cuenta que al escribir estas traducciones, un botón de puntos suspensivos ( **...** ) aparece. Si hace clic en estos puntos suspensivos podrá especificar una columna en la tabla subyacente que proporciona traducciones para cada miembro de la jerarquía de atributo.  
   
-7.  Haga clic en el botón de puntos suspensivos (**...** ) para el **español (España)** traducción para el **Month Name** atributo.  
+7.  Haga clic en el botón de puntos suspensivos ( **...** ) para el **español (España)** traducción para el **Month Name** atributo.  
   
     Aparecerá el cuadro de diálogo **Traducción de datos de atributos** .  
   
@@ -55,7 +55,7 @@ En las tareas de este tema, se definen las traducciones de metadatos de un conju
   
     ![Cuadro de diálogo traducción de datos de atributo](../media/l9-translations-4.gif "cuadro de diálogo traducción de datos de atributo")  
   
-9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos (**...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
+9. Haga clic en **Aceptar**y, a continuación, haga clic en el botón de puntos suspensivos ( **...** ) para el **francés (Francia)** traducción para el **Month Name** atributo.  
   
 10. En la lista **Columnas de traducción** , seleccione **FrenchMonthName**y, después, haga clic en **Aceptar**.  
   

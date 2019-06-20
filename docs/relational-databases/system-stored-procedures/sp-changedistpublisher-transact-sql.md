@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997815"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (Transact-SQL)
@@ -45,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Es una propiedad para cambiar para el publicador indicado. *propiedad* es **sysname** y puede tener uno de estos valores.  
   
-`[ @value = ] 'value'` Es el valor de la propiedad especificada. *valor* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el valor de la propiedad especificada. *valor* es **nvarchar (255)** , su valor predeterminado es null.  
   
 `[ @storage_connection_string = ] 'storage_connection_string'` Es necesario para la instancia administrada de SQL Database, debe coincidir con la clave de acceso para el volumen de almacenamiento de Azure SQL Database. 
 
@@ -57,7 +57,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 |Property|Valores|Descripción|  
 |--------------|------------|-----------------|  
 |**active**|**true**|Activa el publicador.|  
-||**False**|Desactiva el publicador.|  
+||**false**|Desactiva el publicador.|  
 |**distribution_db**||Nombre de la base de datos de distribución.|  
 |**login**||Nombre de inicio de sesión.|  
 |**password**||Contraseña segura para el inicio de sesión que se ha proporcionado.|  

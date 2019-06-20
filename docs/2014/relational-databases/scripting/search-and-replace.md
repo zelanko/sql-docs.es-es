@@ -29,14 +29,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: cce96567d465c4b0c10741ac8a10b08902405368
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66090202"
 ---
 # <a name="search-and-replace"></a>Buscar y reemplazar
-  Existen varias maneras de buscar y reemplazar texto. En el **editar** menú, **buscar y reemplazar** ofrece cuatro opciones: **Búsqueda rápida**, **reemplazo rápido**, **buscar en archivos**, o **reemplazar en archivos**. Cada una abre versiones del cuadro de diálogo **Buscar y reemplazar** . También es posible buscar sin un cuadro de diálogo mediante los métodos abreviados de teclado para búsqueda incremental. Estas técnicas permiten controlar el ámbito de búsqueda y reemplazo y elegir el método de revisión de las coincidencias de búsqueda y los reemplazos.  
+  Existen varias maneras de buscar y reemplazar texto. En el menú **Editar**, **Buscar y reemplazar** ofrece cuatro opciones: **Búsqueda rápida**, **Reemplazo rápido**, **Buscar en archivos** o **Reemplazar en archivos**. Cada una abre versiones del cuadro de diálogo **Buscar y reemplazar** . También es posible buscar sin un cuadro de diálogo mediante los métodos abreviados de teclado para búsqueda incremental. Estas técnicas permiten controlar el ámbito de búsqueda y reemplazo y elegir el método de revisión de las coincidencias de búsqueda y los reemplazos.  
   
  A la hora de buscar y reemplazar texto, es necesario tener en cuenta lo siguiente:  
   

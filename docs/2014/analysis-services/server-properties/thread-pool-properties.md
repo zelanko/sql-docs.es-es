@@ -18,10 +18,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1fe324da14460d69d6930bf9d398a50e816f676f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068836"
 ---
 # <a name="thread-pool-properties"></a>Propiedades de grupos de subprocesos
@@ -87,7 +87,7 @@ ms.locfileid: "66068836"
   
  Las propiedades se muestran en orden alfabético.  
   
-|NOMBRE|Tipo|Descripción|Default|Instrucciones|  
+|Name|Tipo|Descripción|Default|Instrucciones|  
 |----------|----------|-----------------|-------------|--------------|  
 |`IOProcess` \ `Concurrency`|double|Valor de punto flotante de doble precisión que determina el algoritmo para establecer un destino en el número de subprocesos que se pueden poner en cola al mismo tiempo.|2.0|Una propiedad avanzada que no debería cambiar, salvo a petición de expertos en soporte técnico de [!INCLUDE[msCoName](../../includes/msconame-md.md)] .<br /><br /> Se utiliza simultaneidad para inicializar grupos de subprocesos, que se implementan utilizando puertos de terminación de E/S en Windows. Vea [I/O Completion Ports (Puertos de terminación de E/S)](https://msdn.microsoft.com/library/windows/desktop/aa365198\(v=vs.85\).aspx) para obtener más detalles.<br /><br /> Se aplica solo a modelos multidimensionales.|  
 |`IOProcess` \ `GroupAffinity`|string|Matriz de valores hexadecimales correspondientes a los grupos de procesadores en el sistema, que se usa para establecer la afinidad de los subprocesos en el grupo de subprocesos IOProcess y los procesadores lógicos de cada grupo de procesadores.|none|Puede utilizar esta propiedad para crear afinidades personalizadas. La propiedad está vacía de forma predeterminada.<br /><br /> Vea [Configurar GroupAffinity para establecer afinidad entre subprocesos y procesadores en un grupo de procesadores](#bkmk_groupaffinity) para obtener más detalles.<br /><br /> Se aplica solo a modelos multidimensionales.|  

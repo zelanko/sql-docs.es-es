@@ -10,10 +10,10 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/06/2017
 ms.openlocfilehash: 00eb4dc7d90226f7d5c944ea3b878aefb4c8a105
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66109762"
 ---
 # <a name="compare-business-intelligence-capabilities-in-different-microsoft-environments"></a>Comparar funciones de Business Intelligence en diferentes entornos de Microsoft
@@ -26,18 +26,18 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
   
 ||SQL Server 2014 & SharePoint Server 2013|SharePoint Online Plan 2|Power BI para Office 365|  
 |-|----------------------------------------------|------------------------------|-----------------------------|  
-|Sitios BI|Galería de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|Sin |Sitio de Power BI|  
+|Sitios BI|Galería de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]|No|Sitio de Power BI|  
 |Centralización de datos y uso compartido y administración de datos|No|No|Sí **<sup>1</sup>**|  
-|Integración con Master Data Services (MDS) and Data Quality Services (DQS)|Sí|Sin |No|  
+|Integración con Master Data Services (MDS) and Data Quality Services (DQS)|Sí|No|Sin |  
 |Programar actualizaciones de datos|Sí, pero no ofrece compatibilidad para libros que contienen datos de Power Query|No|Sí|  
-|Consultas en lenguaje natural (preguntas y respuestas)|No|Sin |Sí **<sup>2</sup>**|  
+|Consultas en lenguaje natural (preguntas y respuestas)|Sin |Sin |Sí **<sup>2</sup>**|  
 |Previsión de predicción|Sin |Sin |Sí **<sup>3</sup>**|  
 |Integración de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Sí|Sin |Sin |  
-|Integración de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional y tabular)|Sí|Sin |No|  
-|Exportar el panel interactivo de Power View a presentación de PowerPoint|Sí|No|Sin |  
+|Integración de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] (multidimensional y tabular)|Sí|Sin |Sin |  
+|Exportar el panel interactivo de Power View a presentación de PowerPoint|Sí|Sin |Sin |  
 |Creación del panel en el explorador|Sí|Sin |Sin |  
 |Supervisión de la utilización|Sí|Sin |Sí|  
-|Aprovechamiento de seguridad basada en filas de cubos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Sí|Sin |Sin |  
+|Aprovechamiento de seguridad basada en filas de cubos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Sí|Sin |No|  
   
  **<sup>1</sup>**[descripción del rol de administradores de datos de administración de datos](https://support.office.com/Article/Understanding-the-Role-of-Data-Stewards-in-Data-Management-ae3352f3-4389-45e8-a682-7fd6edb92524?ui=en-US&rs=en-US&ad=US) y [vídeo: Administración de información de BI y centralización de datos de energía](https://www.youtube.com/watch?v=8dHOj68ts7c).  
   
@@ -51,8 +51,8 @@ Para obtener más información comparando SharePoint Server y SharePoint Online,
 |-|----------------------------------------------|------------------------------|-----------------------------|  
 |Vea libros de Microsoft Excel en un explorador.|Sí, si el tamaño del libro es inferior a 2 GB|Sí, si el tamaño del libro es inferior a 10 MB|Sí, si el tamaño del libro es inferior a 250 MB|  
 |Exploración de datos en el explorador en HTML5|Sin |Sin |Sí|  
-|Aplicación de BI para móviles para acceder a informes y paneles de forma remota|Sin |Sin |Sí **<sup>1</sup>**|  
-|Libro de Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como origen de datos **<sup>2</sup>**|Sí|No|No|  
+|Aplicación de BI para móviles para acceder a informes y paneles de forma remota|Sin |No|Sí **<sup>1</sup>**|  
+|Libro de Excel con [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] como origen de datos **<sup>2</sup>**|Sí|Sin |Sin |  
 |Capacidad para usar las funciones en distintos exploradores y versiones|Sí, para las visualizaciones que no sean en Power View **<sup>3</sup>**|Sí, tamaños de archivos de libros inferiores a 10 MB **<sup>3</sup>**|Sí **<sup>3</sup>**|  
   
  **<sup>1</sup>**  [Microsoft Power BI](http://apps.microsoft.com/windows/app/microsoft-power-bi/b7e7c94d-2ea3-4fa6-a277-9d19a1f697ba).  

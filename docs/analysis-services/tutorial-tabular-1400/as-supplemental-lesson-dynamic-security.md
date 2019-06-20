@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile"
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9fbc474dbf7621b0da68edb7b310bb55ffcde7d5
-ms.sourcegitcommit: d5cd4a5271df96804e9b1a27e440fb6fbfac1220
+ms.openlocfilehash: 8496868bc3b5b6ee42ac4f222724e859797662a4
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/28/2019
-ms.locfileid: "64776090"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263340"
 ---
 # <a name="supplemental-lesson---dynamic-security"></a>Lección complementaria: Seguridad dinámica
 
@@ -25,7 +25,7 @@ En esta lección complementaria, creará un rol adicional que implementa la segu
   
 Para implementar seguridad dinámica, agregar una tabla al modelo que contiene los nombres de usuario de los usuarios que pueden conectarse al modelo y examinar los datos y objetos del modelo. El modelo que crea con este tutorial está en el contexto de Adventure Works; Sin embargo, para completar esta lección, debe agregar una tabla que contiene los usuarios de su propio dominio. No necesita las contraseñas para los nombres de usuario que se agregan. Para crear una tabla EmployeeSecurity con una pequeña muestra de los usuarios de su propio dominio, utilice la función de pegar pegar datos de empleados desde una hoja de cálculo de Excel. En un escenario real, la tabla que contiene los nombres de usuario normalmente sería una tabla de una base de datos real como origen de datos; Por ejemplo, una tabla DimEmployee real.  
   
-Para implementar seguridad dinámica, se usan dos funciones DAX: [Función USERNAME (DAX)](http://msdn.microsoft.com/22dddc4b-1648-4c89-8c93-f1151162b93f) y [función LOOKUPVALUE (DAX)](http://msdn.microsoft.com/73a51c4d-131c-4c33-a139-b1342d10caab). Estas funciones, aplicadas en una fórmula de filtro de columna, se definen en un nuevo rol. Mediante el uso de la función LOOKUPVALUE, la fórmula especifica un valor de la tabla EmployeeSecurity. La fórmula, a continuación, pasa a que el valor a la función USERNAME, que especifica el nombre de usuario de la sesión del usuario pertenece a este rol. El usuario, a continuación, puede examinar solo los datos especificados por los filtros de fila del rol. En este escenario, puede especificar que los empleados de ventas solo podrán examinar los datos de ventas por Internet para los territorios de ventas en los que son miembros.  
+Para implementar seguridad dinámica, se usan dos funciones DAX: [Función USERNAME (DAX)](/dax/username-function-dax) y [función LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax). Estas funciones, aplicadas en una fórmula de filtro de columna, se definen en un nuevo rol. Mediante el uso de la función LOOKUPVALUE, la fórmula especifica un valor de la tabla EmployeeSecurity. La fórmula, a continuación, pasa a que el valor a la función USERNAME, que especifica el nombre de usuario de la sesión del usuario pertenece a este rol. El usuario, a continuación, puede examinar solo los datos especificados por los filtros de fila del rol. En este escenario, puede especificar que los empleados de ventas solo podrán examinar los datos de ventas por Internet para los territorios de ventas en los que son miembros.  
   
 Las tareas que son únicas de este escenario de modelo tabular de Adventure Works, pero que no se aplicarían necesariamente en un escenario real, se identifican como tales. Cada tarea incluye información adicional que describe el propósito de la tarea.  
   
@@ -100,7 +100,7 @@ La tabla FactInternetSales, DimGeography y DimSalesTerritory todas contienen una
   
 1.  En la vista de diagrama, en el **DimGeography** de tabla, haga clic y mantenga presionado el **SalesTerritoryId** columna, a continuación, arrastre el cursor hasta la **SalesTerritoryId** columna en el **DimSalesTerritory** de tabla y suéltelo.  
   
-2.  En el **FactInternetSales** de tabla, haga clic y mantenga presionado el **SalesTerritoryId** columna, a continuación, arrastre el cursor hasta la **SalesTerritoryId** columna en el  **DimSalesTerritory** de tabla y suéltelo.  
+2.  En el **FactInternetSales** de tabla, haga clic y mantenga presionado el **SalesTerritoryId** columna, a continuación, arrastre el cursor hasta la **SalesTerritoryId** columna en el **DimSalesTerritory** de tabla y suéltelo.  
   
     Observe la propiedad Active de esta relación es False, lo que significa que está inactiva. La tabla FactInternetSales ya tiene otra relación activa.  
   
@@ -188,6 +188,6 @@ En esta tarea, utilice la analizar en función de Excel en SSDT para probar la e
   
 ## <a name="see-also"></a>Vea también  
 
-[función USERNAME (DAX)](https://msdn.microsoft.com/library/hh230954.aspx)  
-[función LOOKUPVALUE (DAX)](https://msdn.microsoft.com/library/gg492170.aspx)  
-[Función CUSTOMDATA (DAX)](https://msdn.microsoft.com/library/hh213140.aspx)  
+[función USERNAME (DAX)](/dax/username-function-dax)  
+[función LOOKUPVALUE (DAX)](/dax/lookupvalue-function-dax)  
+[Función CUSTOMDATA (DAX)](/dax/customdata-function-dax)  

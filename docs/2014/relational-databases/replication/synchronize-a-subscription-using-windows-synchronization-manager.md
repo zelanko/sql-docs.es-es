@@ -14,16 +14,16 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 04b1c5322408f66ab2a4023e3d215cc7e669eab6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62745764"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager-windows-synchronization-manager"></a>Sincronizar una suscripción mediante el Administrador de sincronización de Windows (Administrador de sincronización de Windows)
   El Administrador de sincronización de[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows solo se puede usar para sincronizar suscripciones con publicaciones de Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] si se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el mismo equipo que el Administrador de sincronización (también se puede usar para sincronizar archivos y páginas web sin conexión). Para utilizar el Administrador de sincronización:  
   
-1.  Habilite la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows en el cuadro de diálogo **Propiedades de suscripción - \<Suscriptor>: \<BaseDeDatosDeSuscripción>**. Para más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
+1.  Habilite la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows en el cuadro de diálogo **Propiedades de suscripción - \<Suscriptor>: \<BaseDeDatosDeSuscripción>** . Para más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-pull-subscription-properties.md) (Ver y modificar las propiedades de una suscripción de extracción).  
   
 2.  Obtenga acceso al Administrador de sincronización a través del menú **Inicio** en Windows.  
   
@@ -34,7 +34,7 @@ ms.locfileid: "62745764"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Para habilitar la sincronización de suscripciones de extracción con el Administrador de sincronización de Windows  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>**, seleccione un valor de **Habilitar** para la opción **Utilizar el Administrador de sincronización de Windows**.  
+1.  En la página **General** del cuadro de diálogo **Propiedades de la suscripción - \<Suscriptor>: \<baseDeDatosDeSuscripción>** , seleccione un valor de **Habilitar** para la opción **Utilizar el Administrador de sincronización de Windows**.  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

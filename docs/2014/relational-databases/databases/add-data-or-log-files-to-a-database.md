@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 4519ed412e3148d8e0c70a77c00db969be73a9c0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917735"
 ---
 # <a name="add-data-or-log-files-to-a-database"></a>Agregar archivos de datos o de registro a una base de datos
@@ -75,7 +75,7 @@ ms.locfileid: "62917735"
   
 8.  Especifique el tamaño inicial del archivo. Defina el mayor tamaño posible para los archivos de datos, según la cantidad de datos máxima prevista para la base datos.  
   
-9. Para especificar cómo debe crecer el archivo, haga clic en (**...**) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
+9. Para especificar cómo debe crecer el archivo, haga clic en ( **...** ) en la columna **Crecimiento automático**. Seleccione una de las opciones siguientes:  
   
     1.  Para permitir que el archivo actualmente seleccionado crezca cuando se necesite más espacio para los datos, active la casilla **Habilitar crecimiento automático** y, a continuación, elija una de las opciones siguientes:  
   

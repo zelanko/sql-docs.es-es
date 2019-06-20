@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: bf87f2441488810286523a75137a3285aabc1956
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66081085"
 ---
 # <a name="general-database-designer-analysis-services---multidimensional-data"></a>General (Diseñador de bases de datos) (Analysis Services - Datos multidimensionales)
@@ -48,7 +48,7 @@ ms.locfileid: "66081085"
  **Lenguaje**  
  Seleccione el idioma de la transacción especificada.  
   
- Para agregar una nueva traducción a la cuadrícula, haga clic en  **\<agregar nueva traducción >**.  
+ Para agregar una nueva traducción a la cuadrícula, haga clic en  **\<agregar nueva traducción >** .  
   
  **Título traducido**  
  Escriba el título de la base de datos en el idioma adecuado para la traducción. Si lo deja en blanco, se utilizará el título predeterminado para la base de datos.  
@@ -67,7 +67,7 @@ ms.locfileid: "66081085"
  **Name**  
  Escriba el nombre del tipo de cuenta.  
   
- Para agregar un nuevo tipo de cuenta, haga clic en  **\<Agregar nuevo tipo de cuenta >**.  
+ Para agregar un nuevo tipo de cuenta, haga clic en  **\<Agregar nuevo tipo de cuenta >** .  
   
  **Alias**  
  Establece el nombre predeterminado del tipo de cuenta que usará el Asistente de Business Intelligence. Si se deja esta columna vacía, se utilizará el valor predeterminado de la columna **Nombre** .  

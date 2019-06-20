@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63245991"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Roles fijos de base de datos del Agente SQL Server
@@ -50,10 +50,10 @@ ms.locfileid: "63245991"
   
 |Acción|Operadores|Trabajos locales<br /><br /> (solo trabajos que les pertenecen)|Programación de trabajos<br /><br /> (solo programaciones que les pertenecen)|Servidores proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Crear, modificar o eliminar|No|Sí <sup>1</sup>|Sí|No|  
+|Crear, modificar o eliminar|No|Sí <sup>1</sup>|Sí|Sin|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí <sup>3</sup>|  
 |Habilitar o deshabilitar|No|Sí|Sí|No aplicable|  
-|Ver propiedades|No|Sí|Sí|No|  
+|Ver propiedades|Sin|Sí|Sí|Sin|  
 |Ejecutar, detener o iniciar|No aplicable|Sí|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|No aplicable|No aplicable|  
 |Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|No aplicable|No aplicable|  
@@ -77,14 +77,14 @@ ms.locfileid: "63245991"
   
 |Acción|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|No|Sí <sup>1</sup> (propiedad de sólo los trabajos)|No|Sí (solo programaciones que les pertenecen)|No|  
+|Crear, modificar o eliminar|Sin|Sí <sup>1</sup> (propiedad de sólo los trabajos)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí|Sí <sup>3</sup>|  
-|Habilitar o deshabilitar|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No aplicable|  
-|Ver propiedades|No|Sí|Sí|Sí|No|  
-|Modificar propiedades|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No|  
-|Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|No|No aplicable|No aplicable|  
+|Habilitar o deshabilitar|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|No aplicable|  
+|Ver propiedades|Sin|Sí|Sí|Sí|No|  
+|Modificar propiedades|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|No|  
+|Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|Sin|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|No|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|Sin|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
   
  <sup>1</sup> no se puede cambiar la propiedad de un trabajo.  
@@ -109,12 +109,12 @@ ms.locfileid: "63245991"
   
 |Acción|Trabajos|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|No|No|Sí <sup>2</sup> (propiedad de sólo los trabajos)|No|Sí (solo programaciones que les pertenecen)|No|  
+|Crear, modificar o eliminar|No|Sin|Sí <sup>2</sup> (propiedad de sólo los trabajos)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
 |Ver lista (enumerar)|Sí|Sí <sup>1</sup>|Sí|Sí|Sí|Sí|  
-|Habilitar o deshabilitar|No|No|Sí <sup>3</sup>|No|Sí <sup>4</sup>|No aplicable|  
+|Habilitar o deshabilitar|No|Sin|Sí <sup>3</sup>|No|Sí <sup>4</sup>|No aplicable|  
 |Ver propiedades|Sí|Sí|Sí|Sí|Sí|Sí|  
-|Modificar propiedades|No|No|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No|  
-|Ejecutar, detener o iniciar|No aplicable|No aplicable|Sí|No|No aplicable|No aplicable|  
+|Modificar propiedades|Sin|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
+|Ejecutar, detener o iniciar|No aplicable|No aplicable|Sí|Sin|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|No aplicable|Sí|Sí|No aplicable|No aplicable|  
 |Eliminar historial de trabajos|No aplicable|No aplicable|Sí|No|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
@@ -123,9 +123,9 @@ ms.locfileid: "63245991"
   
  <sup>2</sup> no se puede cambiar la propiedad de un trabajo.  
   
- <sup>3</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar trabajos locales que no les pertenecen utilizando el procedimiento almacenado **sp_update_job** y especificando valores para el **@enabled** y **@job_id** (o **@job_name**) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
+ <sup>3</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar trabajos locales que no les pertenecen utilizando el procedimiento almacenado **sp_update_job** y especificando valores para el **@enabled** y **@job_id** (o **@job_name** ) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
   
- <sup>4</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar programaciones que no les pertenecen utilizando el procedimiento almacenado **sp_update_schedule** y especificando valores para el **@enabled** y **@schedule_id** (o **@name**) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
+ <sup>4</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar programaciones que no les pertenecen utilizando el procedimiento almacenado **sp_update_schedule** y especificando valores para el **@enabled** y **@schedule_id** (o **@name** ) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
   
 ## <a name="assigning-users-multiple-roles"></a>Asignar a los usuarios varios roles  
  Los miembros del rol fijo de servidor **sysadmin** tienen acceso a toda la funcionalidad del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si un usuario no es miembro del rol **sysadmin** , pero sí lo es de más de un rol fijo de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante recordar el modelo de permisos concéntricos de estos roles. Debido a que los roles con más privilegios siempre contienen todos los permisos de los roles con menos privilegios, un usuario que sea miembro de más de un rol automáticamente tendrá los permisos asociados con el rol con más privilegios del que sea miembro.  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1d14aeb7b261959ab0c95bda6a2ef4435a5b68e5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078612"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>Definir las propiedades de miembro desconocido y de procesamiento de valores NULL
@@ -89,7 +89,7 @@ ms.locfileid: "66078612"
   
 9. En el **atributos** panel, cambie el nombre de este nuevo atributo por `Category`.  
   
-10. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
+10. En la ventana Propiedades, haga clic en el **NameColumn** propiedad de campo y, a continuación, haga clic en el ( **...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 11. Seleccione **EnglishProductCategoryName** en la lista **Columna de origen** y haga clic en **Aceptar**.  
   

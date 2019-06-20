@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 25eccb27b75028fdebafaa7a855137946465676b
-ms.sourcegitcommit: 603d5ef9b45c2f111d36d11864dc032917e4a321
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/08/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65450112"
 ---
 # <a name="spoamethod-transact-sql"></a>sp_OAMethod (Transact-SQL)
@@ -69,7 +69,7 @@ sp_OAMethod objecttoken , methodname
   
  Para obtener el valor devuelto de un parámetro de salida, *parámetro* debe ser una variable local del tipo de datos adecuado, y **salida** debe especificarse. Si se especifica un parámetro constante, o si **salida** no se especifica, todos de retorno se omite el valor de un parámetro de salida.  
   
- Si se especifica, *parametername* debe ser el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en cuenta que **@**_parametername_is no un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable local. El signo de arroba (**@**) se quita, y *parametername*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
+ Si se especifica, *parametername* debe ser el nombre de la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] parámetro con nombre. Tenga en cuenta que **@** _parametername_is no un [!INCLUDE[tsql](../../includes/tsql-md.md)] variable local. El signo de arroba ( **@** ) se quita, y *parametername*se pasa al objeto OLE como el nombre del parámetro. Todos los parámetros con nombre deben especificarse después de especificar todos los parámetros de posición.  
   
  *n*  
  Es un marcador de posición que indica que se pueden especificar varios parámetros.  

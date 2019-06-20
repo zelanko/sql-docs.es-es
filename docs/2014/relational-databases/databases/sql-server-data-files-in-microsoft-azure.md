@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 588e656ca71bc5843e3483879f5a58951373aff5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62916589"
 ---
 # <a name="sql-server-data-files-in-windows-azure"></a>Archivos de datos de SQL Server en Windows Azure
@@ -99,7 +99,7 @@ ON
   
 -   En la versión actual de esta característica, no se admite almacenar datos `FileStream` en Azure Storage. Puede almacenar datos `Filestream` en una base de datos local integrada de Azure Storage, pero no puede mover datos FILESTREAM entre equipos con Azure Storage. Para los datos `FileStream`, se recomienda que siga usando las técnicas tradicionales para mover archivos (.mdf, .ldf) asociadas con Filestream entre varios equipos.  
   
--   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código **5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"**.  
+-   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código **5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"** .  
   
 -   Solo los archivos .mdf, .ldf y .ndf se pueden almacenar en el almacenamiento de Microsoft Azure con la característica Archivos de datos de SQL Server en Microsoft Azure.  
   
@@ -142,13 +142,13 @@ ON
   
  **Errores de autenticación**  
   
--   *No se puede quitar la credencial '%.\*ls' porque la usa un archivo de base de datos activo.*   
+-   *No se puede quitar la credencial '%.\*ls' porque la usa un archivo de base de datos activo.*    
     Solución: puede ver este error si intenta quitar una credencial que todavía esté utilizando un archivo de base de datos activo en Azure Storage. Para quitar la credencial, en primer lugar, debe eliminar el blob asociado que tiene este archivo de base de datos. Para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
   
--   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*   
+-   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*    
      Solución: Asegúrese de que ha creado una firma de acceso compartido en el contenedor correctamente. Consulte las instrucciones de la lección 2 del [Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
--   *La credencial de SQL Server no se ha creado correctamente.*   
+-   *La credencial de SQL Server no se ha creado correctamente.*    
     Solución: asegúrese de que ha usado "Firma de acceso compartido" en el campo **Identidad** y que ha creado un secreto correctamente. Consulte las instrucciones de la lección 3 del [Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
  **Errores de concesión de blobs:**  
@@ -163,8 +163,8 @@ ON
 2.  *Errores al ejecutar la instrucción Alter*   
     Solución: Asegúrese de ejecutar la instrucción Alter Database cuando la base de datos está en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Consulte las instrucciones de la lección 7 del [Tutorial: Archivos de datos de SQL Server en el servicio de almacenamiento de Windows Azure](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*   
-    Solución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*.  
+3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*    
+    Solución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"* .  
   
      Para resolver este problema, determine en primer lugar si necesita que el ServidorA obtenga acceso al archivo de base de datos de Almacenamiento de Windows Azure o no. Si no es así, basta con quitar las conexiones entre el ServidorA y los archivos de base de datos de Almacenamiento de Windows Azure. Para ello, siga estos pasos:  
   

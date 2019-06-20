@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: d434df95a26485d4d7795d3ab960b8d2457b8ff6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63185575"
 ---
 # <a name="basic-data-mining-tutorial"></a>Tutorial básico de minería de datos
@@ -45,7 +45,7 @@ ms.locfileid: "63185575"
  [Lección 1: Preparar el análisis de servicios de base de datos &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial.md)  
  En esta lección, aprenderá a crear una nueva base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] , agregar un origen de datos y una vista del origen de datos, y preparar la nueva base de datos que se va a utilizar para la minería de datos.  
   
- [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
  En esta lección, aprenderá a crear una estructura de modelos de minería de datos que se puede utilizar como parte de un escenario de distribución de correo directo.  
   
  [Lección 3: Agregar y procesar los modelos](../../2014/tutorials/lesson-3-adding-and-processing-models.md)  

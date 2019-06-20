@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 61173f4b9ef6c8f836b3654bdc5b7366a8a54461
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62654069"
 ---
 # <a name="modify-the-target-servers-associated-with-a-sql-server-agent-master-job"></a>Modificar los servidores de destino asociados a un trabajo maestro del Agente SQL Server
@@ -56,7 +56,7 @@ ms.locfileid: "62654069"
   
 4.  Haga clic con el botón derecho en el trabajo en el que desea modificar el servidor de destino y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades de trabajo -**_nombre_de_trabajo_, en **Seleccionar una página**, haga clic en **Destinos**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
+5.  En el cuadro de diálogo **Propiedades de trabajo -** _nombre_de_trabajo_, en **Seleccionar una página**, haga clic en **Destinos**. Para obtener más información sobre las opciones disponibles en esta página, vea [propiedades del trabajo: Nuevo trabajo &#40;tiene como destino de la página&#41;](job-properties-new-job-targets-page.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
   

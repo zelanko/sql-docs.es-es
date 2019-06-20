@@ -22,10 +22,10 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62632703"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
@@ -59,7 +59,7 @@ ms.locfileid: "62632703"
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-listing-all-the-permissions-of-database-principals"></a>R: Enumerar todos los permisos de las entidades de seguridad de base de datos  
+### <a name="a-listing-all-the-permissions-of-database-principals"></a>A. Enumerar todos los permisos de las entidades de seguridad de base de datos  
  La consulta siguiente enumera los permisos que se otorgan o deniegan específicamente a las entidades de seguridad de base de datos.  
   
 > [!IMPORTANT]  
@@ -105,7 +105,7 @@ JOIN sys.database_permissions AS pe
     ON pe.grantee_principal_id = pr.principal_id;  
 ```  
   
-### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D: Enumerar los permisos de objetos de esquema dentro de una base de datos  
+### <a name="d-listing-permissions-on-schema-objects-within-a-database"></a>D. Enumerar los permisos de objetos de esquema dentro de una base de datos  
  La siguiente consulta combinaciones `sys.database_principals` y `sys.database_permissions` a `sys.objects` y `sys.schemas` enumerar los permisos concedidos o denegados a objetos de esquema específico.  
   
 ```  

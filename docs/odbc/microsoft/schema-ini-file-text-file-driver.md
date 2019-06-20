@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 708442d30b571f165f7f9d70f346a958764316d0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127909"
 ---
 # <a name="schemaini-file-text-file-driver"></a>Archivo Schema.ini (controlador de archivo de texto)
@@ -100,7 +100,7 @@ n=ColumnNametype [#]
 |Parámetro|Descripción|  
 |---------------|-----------------|  
 |*ColumnName*|El nombre de la columna de texto. Si el nombre de columna contiene espacios incrustados, debe encerrarlo entre comillas dobles.|  
-|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Moneda<br /><br /> Único<br /><br /> Doble<br /><br /> Datetime<br /><br /> Text<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
+|*Tipo*|Tipos de datos son los siguientes:<br /><br /> **Tipos de datos Microsoft Jet**<br /><br /> bit<br /><br /> Byte<br /><br /> Short<br /><br /> Long<br /><br /> Currency<br /><br /> Único<br /><br /> Double<br /><br /> DateTime<br /><br /> Text<br /><br /> Memorándum<br /><br /> **Tipos de datos ODBC** Char (igual que el texto)<br /><br /> Float (igual que Double)<br /><br /> Entero (igual que Short)<br /><br /> LongChar (igual que Memo)<br /><br /> Fecha *formato de fecha*|  
 |**Width**|El valor de cadena literal `Width`. Indica que el número siguiente designa el ancho de la columna (opcional para archivos delimitados por caracteres; necesario para los archivos de longitud fija).|  
 |*#*|El valor entero que designa el ancho de la columna (obligatorio si **ancho** se especifica).|  
   

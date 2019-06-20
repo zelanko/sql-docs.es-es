@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 81e8f9ae90db3c7613ccb99039d70d9a28c5a113
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66067058"
 ---
 # <a name="impersonation-ssas-tabular"></a>Suplantación (SSAS tabular)
@@ -67,7 +67,7 @@ ms.locfileid: "66067058"
   
 |Opción|ImpersonationMode<sup>1</sup>|Descripción|  
 |------------|-----------------------------------|-----------------|  
-|**Nombre de usuario de Windows específico y la contraseña** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato:**\<nombre de dominio >\\< nombre de la cuenta de usuario\>**. Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
+|**Nombre de usuario de Windows específico y la contraseña** <sup>2</sup>|ImpersonateWindowsUserAccount|Esta opción especifica que el modelo usa una cuenta de usuario de Windows para importar o procesar datos del origen de datos. El dominio y el nombre de la cuenta de usuario tienen el siguiente formato: **\<nombre de dominio >\\< nombre de la cuenta de usuario\>** . Esta es la opción predeterminada al crear un modelo nuevo mediante el Asistente para la importación de tablas.|  
 |**Cuenta de servicio**|ImpersonateServiceAccount|Esta opción especifica que el modelo usa las credenciales de seguridad asociadas a la instancia de servicio de Analysis Services que administra el modelo.|  
   
  <sup>1</sup>ImpersonationMode especifica el valor de la [elemento DataSourceImpersonationInfo &#40;ASSL&#41; ](https://docs.microsoft.com/bi-reference/assl/properties/impersonationinfo-element-assl) propiedad del origen de datos.  

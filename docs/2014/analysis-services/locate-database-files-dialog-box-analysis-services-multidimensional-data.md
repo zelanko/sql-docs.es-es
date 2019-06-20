@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1a013ed1ca80e17f89baba65b89c460b6ee68691
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078029"
 ---
 # <a name="locate-database-files-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Buscar archivos de la base de datos (Analysis Services - Datos multidimensionales)
@@ -24,7 +24,7 @@ ms.locfileid: "66078029"
   
 -   Al hacer clic en **Examinar** en la página **General** del cuadro de diálogo **Restaurar base de datos** .  
   
--   Al hacer clic en el botón de puntos suspensivos (**…**) en la columna **Archivo de copia de seguridad** de la cuadrícula de la opción **Restaurar particiones de copia de seguridad** en la página **Particiones** del cuadro de diálogo **Restaurar base de datos** .  
+-   Al hacer clic en el botón de puntos suspensivos ( **…** ) en la columna **Archivo de copia de seguridad** de la cuadrícula de la opción **Restaurar particiones de copia de seguridad** en la página **Particiones** del cuadro de diálogo **Restaurar base de datos** .  
   
 ## <a name="options"></a>Opciones  
  **Seleccione la carpeta**  

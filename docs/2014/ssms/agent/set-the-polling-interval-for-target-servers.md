@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1578bbefc9ae17baae56799d943e5ae6186628ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63033652"
 ---
 # <a name="set-the-polling-interval-for-target-servers"></a>Establecer el intervalo de sondeo para servidores de destino
@@ -26,7 +26,7 @@ ms.locfileid: "63033652"
   
 -   **Antes de empezar:**  [Seguridad](#Security)  
   
--   **Para establecer el intervalo de sondeo para servidores de destino, utilizando:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
+-   **Para establecer el intervalo de sondeo para servidores de destino, utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS), [Transact-SQL](#TSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Cada servidor de destino puede ejecutar una instancia del mismo trabajo al mismo tiempo. Cada servidor de destino sondea periódicamente al servidor maestro, descarga una copia de cualquier nuevo trabajo asignado al servidor de destino y, a continuación, se desconecta. El servidor de destino ejecuta el trabajo de manera local y, a continuación, se vuelve a conectar al servidor maestro para cargar el estado del resultado del trabajo.  

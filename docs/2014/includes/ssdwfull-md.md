@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 7b10a8e90bf98d2c302e7e11b872401491bae87a
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819585"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232137"
 ---
 Almacenamiento de datos paralelo de SQL Server 2008 R2

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: b05d670e7873cab5b44c1bce0c62c716809af476
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66107289"
 ---
 # <a name="extended-field-properties-for-an-analysis-services-database-ssrs"></a>Propiedades de campo extendidas para una base de datos de Analysis Services (SSRS)
@@ -46,7 +46,7 @@ ms.locfileid: "66107289"
 |------------------|--------------|---------------------------------------|  
 |`Value`|`Object`|Especifica el valor de los datos del campo.|  
 |`IsMissing`|`Boolean`|Indica si se ha encontrado el campo en el conjunto de datos resultante.|  
-|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado podría ser *[Employee]. [ Departamento del empleado]. [Departamento]. & [ventas]. & [director de ventas de Norteamérica]. & [272]*.|  
+|`UniqueName`|`String`|Devuelve el nombre completo de un nivel. Por ejemplo, el `UniqueName` el valor de un empleado podría ser *[Employee]. [ Departamento del empleado]. [Departamento]. & [ventas]. & [director de ventas de Norteamérica]. & [272]* .|  
 |`BackgroundColor`|`String`|Devuelve el color de fondo del campo, definido en la base de datos.|  
 |`Color`|`String`|Devuelve el color de primer plano del elemento, definido en la base de datos.|  
 |`FontFamily`|`String`|Devuelve el nombre de la fuente del elemento, definido en la base de datos.|  

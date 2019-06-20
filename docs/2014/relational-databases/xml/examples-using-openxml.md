@@ -27,10 +27,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9887a9af6735b54a78dd72ed3a90aeff70c7990f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205107"
 ---
 # <a name="examples-using-openxml"></a>Ejemplos: Uso de OPENXML
@@ -95,7 +95,7 @@ LILAS      Carlos Gonzlez
   
  Si se ejecuta la misma instrucción SELECT con el parámetro *flags* establecido en **2** para indicar una asignación centrada en elementos, puesto que los elementos <`Customer`> no disponen de subelementos, los valores de **CustomerID** y **ContactName** de ambos clientes se devuelven como NULL.  
   
- @xmlDocument también puede ser de tipo **xml** o de tipo **(n)varchar(max)**.  
+ @xmlDocument también puede ser de tipo **xml** o de tipo **(n)varchar(max)** .  
   
  En el documento XML, si <`CustomerID`> y <`ContactName`> son subelementos, la asignación centrada en elementos recupera los valores.  
   
@@ -474,7 +474,7 @@ EXEC sp_xml_removedocument @docHandle
   
  En *SchemaDeclaration* , en la cláusula WITH, también se especifica *ColPattern* con los parámetros *ColName* y *ColType* . El parámetro opcional *ColPattern* es el patrón XPath especificado para indicar lo siguiente:  
   
--   El patrón XPath (**.**) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
+-   El patrón XPath ( **.** ) especificado como *ColPattern* en la columna **ProdID** del conjunto de filas identifica el nodo de contexto (nodo actual). En cuanto al valor *rowpattern* especificado, es el atributo **ProductID** del elemento <`OrderDetail`>.  
   
 -   *ColPattern*, **../\@Quantity**, especificado para la columna **Qty** del conjunto de filas, identifica el atributo **Quantity** del nodo principal (`OrderDetail`) del nodo de contexto \<ProductID>.  
   
@@ -523,7 +523,7 @@ ProdID      Qty         OID
 ```  
   
 ### <a name="h-specifying-an-xml-document-that-has-multiple-text-nodes"></a>H. Especificar un documento XML con varios nodos de texto  
- Si dispone de varios nodos de texto en un documento XML, una instrucción SELECT con *ColPattern*, **text()**, solamente devuelve el primer nodo de texto en lugar de todos. Por ejemplo:  
+ Si dispone de varios nodos de texto en un documento XML, una instrucción SELECT con *ColPattern*, **text()** , solamente devuelve el primer nodo de texto en lugar de todos. Por ejemplo:  
   
 ```  
 DECLARE @h int  
@@ -576,7 +576,7 @@ FROM   OPENXML (@h, '/Root/row', 10)
 EXEC sp_xml_removedocument @h  
 ```  
   
- Específicamente, se está pasando una variable de tipo **xml** (\@x) a la función **sp_xml_preparedocument()**.  
+ Específicamente, se está pasando una variable de tipo **xml** (\@x) a la función **sp_xml_preparedocument()** .  
   
  Éste es el resultado:  
   
@@ -595,7 +595,7 @@ id  lname   xmlname                   OverFlow
   
  Tenga en cuenta las siguientes observaciones en cuanto al resultado:  
   
--   En el caso de la columna **lname** de tipo **varchar(30)**, su valor se recupera del elemento <`lname`> correspondiente.  
+-   En el caso de la columna **lname** de tipo **varchar(30)** , su valor se recupera del elemento <`lname`> correspondiente.  
   
 -   En el caso de la columna **xmlname** de tipo **xml** , se devuelve el elemento del mismo nombre como su valor.  
   

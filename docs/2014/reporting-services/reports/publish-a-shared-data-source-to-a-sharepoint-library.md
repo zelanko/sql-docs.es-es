@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2866b0b8a72e48dbb6c93b37b2a1a83e20e12821
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102542"
 ---
 # <a name="publish-a-shared-data-source-to-a-sharepoint-library"></a>Publicar un origen de datos compartido en una biblioteca de SharePoint
@@ -30,17 +30,17 @@ ms.locfileid: "66102542"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra un proyecto de servidor de informes nuevo o uno existente.  
   
-2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de _\<proyecto>_.  
+2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de _\<proyecto>_ .  
   
 3.  Elija la **Configuración** que utilice para publicar en un sitio de SharePoint.  
   
 4.  Si desea publicar los orígenes de datos compartidos del proyecto y sobrescribir los publicados anteriormente, establezca **OverwriteDataSources** en **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o a una carpeta de bibliotecas. Por ejemplo, *http://TestServer/TestSite/Documents/DataSources*.  
+5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o a una carpeta de bibliotecas. Por ejemplo, *http://TestServer/TestSite/Documents/DataSources* .  
   
      Si no se especifica ningún valor, se usa el valor **TargetReportFolder** .  
   
-6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o a una carpeta de bibliotecas. Por ejemplo, http:*//TestServer/TestSite/Documents/Reports*.  
+6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o a una carpeta de bibliotecas. Por ejemplo, http: *//TestServer/TestSite/Documents/Reports*.  
   
 7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica ningún sitio, se usa el sitio de nivel superior predeterminado. Por ejemplo, http://*nombreDeServidor*, http://*nombreDeServidor*/*sitio*o http://*nombreDeServidor*/*sitio*/*subsitio*.  
   

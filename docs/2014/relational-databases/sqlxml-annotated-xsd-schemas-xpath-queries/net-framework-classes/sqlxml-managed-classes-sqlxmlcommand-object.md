@@ -31,10 +31,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d002208a83b58a4c8547bc6ce85db073ced70974
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010741"
 ---
 # <a name="sqlxmlcommand-object-sqlxml-managed-classes"></a>Objeto SqlXmlCommand (clases administradas SQLXML)
@@ -101,7 +101,7 @@ public SqlXmlCommand(string cnString)
  Texto del comando. Esta propiedad se usa para especificar el texto del comando que se desea ejecutar. Para obtener un ejemplo funcional, consulte [Executing SQL Queries &#40;SQLXML Managed Classes&#41;](sqlxml-4-0-net-framework-support-managed-classes.md).  
   
  CommandStream  
- La secuencia de comandos. Esta propiedad resulta útil si desea ejecutar un comando desde un archivo (por ejemplo, una plantilla XML). Cuando usas CommandStream, sólo **"Plantilla"**, **"UpdateGram"** y **"DiffGram" CommandType** se admiten los valores. Para obtener un ejemplo funcional, consulte [ejecutar archivos de plantilla mediante el uso de la propiedad CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
+ La secuencia de comandos. Esta propiedad resulta útil si desea ejecutar un comando desde un archivo (por ejemplo, una plantilla XML). Cuando usas CommandStream, sólo **"Plantilla"** , **"UpdateGram"** y **"DiffGram" CommandType** se admiten los valores. Para obtener un ejemplo funcional, consulte [ejecutar archivos de plantilla mediante el uso de la propiedad CommandStream](executing-template-files-by-using-the-commandstream-property.md).  
   
  CommandType  
  Identifica el tipo de comando. Esta propiedad se usa para especificar el tipo de comando que se desea ejecutar. Los valores de la tabla siguiente determinan el tipo del comando. Para obtener un ejemplo funcional, consulte [acceso a la funcionalidad de SQLXML en el entorno .NET](accessing-sqlxml-functionality-in-the-net-environment.md).  

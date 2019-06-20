@@ -23,10 +23,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4833ee0dd6514b6a05118b80b756c5fd2de069a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62836816"
 ---
 # <a name="working-with-variables-programmatically"></a>Trabajar con variables mediante programación
@@ -46,7 +46,7 @@ ms.locfileid: "62836816"
   
 -   Se pueden crear variables personalizadas para todos los tipos de contenedores: paquetes, contenedores de **bucles Para cada uno**, contenedores de **bucles Para**, contenedores de **secuencias**, TaskHosts y controladores de eventos. Para más información, vea [Variables de Integration Services &#40;SSIS&#41;](../integration-services-ssis-variables.md) y [Usar variables en paquetes](../use-variables-in-packages.md).  
   
-## <a name="scope"></a>Ámbito  
+## <a name="scope"></a>Scope  
  Cada contenedor tiene su propia colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables>. Cuando se crea una nueva variable, está dentro del ámbito de su contenedor primario. Dado que el contenedor del paquete se encuentra en la parte superior de la jerarquía de contenedores, las variables con ámbito de paquete funcionan como variables globales y están visibles para todos los contenedores del paquete. Los elementos secundarios del contenedor también pueden tener acceso a la colección de variables para el contenedor a través de la colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables>, utilizando el nombre de variable o el índice de la variable en la colección.  
   
  Dado que la visibilidad de una variable afecta desde arriba hacia abajo, las variables declaradas en el nivel de paquete están visibles para todos los contenedores del paquete. Por consiguiente, la colección <xref:Microsoft.SqlServer.Dts.Runtime.Variables> de un contenedor incluye todas las variables que pertenecen a su elemento primario además de sus propias variables.  

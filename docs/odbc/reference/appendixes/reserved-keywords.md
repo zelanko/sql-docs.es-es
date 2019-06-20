@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 1d77d6632d689a1f169c61cb636e3bc89a900419
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62628900"
 ---
 # <a name="reserved-keywords"></a>Palabras clave reservadas
@@ -40,7 +40,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |ASC|LOWER|  
 |ASSERTION|MATCH|  
 |AT|MAX|  
-|AUTHORIZATION |MIN|  
+|AUTHORIZATION|MIN|  
 |AVG|MINUTE|  
 |BEGIN|MODULE|  
 |BETWEEN|MONTH|  
@@ -97,7 +97,7 @@ Las siguientes palabras están reservadas para su uso en llamadas a funciones de
 |DISCONNECT|SET|  
 |DISTINCT|SIZE|  
 |DOMAIN|SMALLINT|  
-|DOUBLE|SOME|  
+|Double|SOME|  
 |DROP|SPACE|  
 |ELSE|SQL|  
 |END|SQLCA|  

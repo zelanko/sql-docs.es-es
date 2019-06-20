@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 476815dc8378c1e8ca790091021c1bd3ec95ba9a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66100266"
 ---
 # <a name="grouping-pane"></a>Panel de agrupación
@@ -63,11 +63,11 @@ ms.locfileid: "66100266"
   
 -   **KeepTogether**:  
   
--   `KeepWithGroup`  booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto.  
+-   `KeepWithGroup` booleano. Solo para miembros de fila estáticos. Siempre que sea posible, mantenga esta fila con el siguiente miembro dinámico relacionado anterior o posterior, si no está oculto.  
   
 -   **RepeatOnNewPage**: booleano. Solo para miembros de fila estáticos y siempre que KeepWithGroup no sea None. Siempre que sea posible, repita esta fila estática en todas las páginas que tengan al menos una instancia del miembro dinámico especificado por KeepWithGroup.  
   
--   `Hidden`  booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
+-   `Hidden` booleano. Indica si la fila o la columna debe estar oculta inicialmente.  
   
 -   **ToggleItem** Cadena. Nombre del cuadro de texto al que se va a agregar la imagen de alternancia. El cuadro de texto debe estar en el mismo ámbito de grupo o en un ámbito contenedor.  
   

@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 2b6c9d003d4b70a593631a5b0e25d0d76578d21b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099089"
 ---
 # <a name="tutorial-add-a-parameter-to-your-report-report-builder"></a>Tutorial: Adición de un parámetro al informe (Generador de informes)
@@ -118,7 +118,7 @@ ms.locfileid: "66099089"
   
      Esta consulta no contiene parámetros de consulta. Agregará los parámetros de consulta posteriormente en este tutorial.  
   
-11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las siguientes columnas: StoreID, Subcategory, Quantity.  
+11. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 11 filas de datos que muestran la cantidad de elementos vendidos para cada subcategoría de cuatro almacenes e incluye las siguientes columnas: StoreID, Subcategory, Quantity.  
   
 12. Haga clic en **Siguiente**.  
   
@@ -172,9 +172,9 @@ ms.locfileid: "66099089"
     WHERE StoreID = (@StoreID)  
     ```  
   
-     El `WHERE` cláusula limita los datos recuperados al identificador del almacén especificado por el parámetro de consulta *@StoreID*.  
+     El `WHERE` cláusula limita los datos recuperados al identificador del almacén especificado por el parámetro de consulta *@StoreID* .  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID*.  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). Se abre el cuadro de diálogo **Definir parámetros de consulta** y se le pide un valor para el parámetro de consulta *@StoreID* .  
   
 5.  En **Valor de parámetro**, escriba **200**.  
   
@@ -186,14 +186,14 @@ ms.locfileid: "66099089"
   
 8.  En el panel Datos de informe, expanda la carpeta **Parámetros** .  
   
- Observe que ahora hay un parámetro de informe denominado *@StoreID*. De forma predeterminada, el parámetro tiene tipo de datos **texto**. Como el identificador de almacén es un entero, va a cambiar el tipo de datos a Entero en el procedimiento siguiente.  
+ Observe que ahora hay un parámetro de informe denominado *@StoreID* . De forma predeterminada, el parámetro tiene tipo de datos **texto**. Como el identificador de almacén es un entero, va a cambiar el tipo de datos a Entero en el procedimiento siguiente.  
   
 ##  <a name="ChangeDefaultProperties"></a> 4. Cambiar el tipo de datos predeterminado y otras propiedades de un parámetro de informe  
  Después de crear un parámetro, puede ajustar los valores predeterminados de las propiedades.  
   
 #### <a name="to-change-the-default-data-type-for-a-report-parameter"></a>Para cambiar el tipo de datos predeterminado para un parámetro de informe  
   
-1.  En el panel datos de informe en el **parámetros** nodo, haga clic en *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
+1.  En el panel datos de informe en el **parámetros** nodo, haga clic en *@StoreID* y, a continuación, haga clic en **propiedades de parámetro**.  
   
 2.  ¿En el símbolo del sistema, escriba **identificador Store?** Este texto aparece en la barra de herramientas del visor de informes al ejecutar el informe.  
   
@@ -203,7 +203,7 @@ ms.locfileid: "66099089"
   
 5.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-6.  Obtenga una vista previa del informe. El Visor de informes muestra el símbolo del sistema para *@StoreID*.  
+6.  Obtenga una vista previa del informe. El Visor de informes muestra el símbolo del sistema para *@StoreID* .  
   
 7.  En la barra de herramientas del visor de informes, al lado de Store ID, escriba **200**y, después, haga clic en **Ver informe**.  
   
@@ -242,7 +242,7 @@ ms.locfileid: "66099089"
   
 #### <a name="to-provide-available-values-for-a-parameter-from-a-dataset"></a>Para proporcionar los valores disponibles para un parámetro desde un conjunto de datos  
   
-1.  En el panel datos de informe, haga clic en el parámetro *@StoreID*y, a continuación, haga clic en **propiedades de parámetro**.  
+1.  En el panel datos de informe, haga clic en el parámetro *@StoreID* y, a continuación, haga clic en **propiedades de parámetro**.  
   
 2.  Haga clic en **Valores disponibles**y luego haga clic en **Obtener valores de una consulta**.  
   
@@ -262,7 +262,7 @@ ms.locfileid: "66099089"
   
 9. Obtenga una vista previa del informe.  
   
-     En la barra de herramientas del Visor de informes, el cuadro de texto del parámetro es ahora una lista desplegable que muestra  **\<seleccione un valor >**.  
+     En la barra de herramientas del Visor de informes, el cuadro de texto del parámetro es ahora una lista desplegable que muestra  **\<seleccione un valor >** .  
   
 10. En la lista desplegable, seleccione Contoso Catalog Store y, a continuación, haga clic en **Ver informe**.  
   
@@ -275,7 +275,7 @@ ms.locfileid: "66099089"
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
   
 3.  Haga clic en **valores predeterminados**y, a continuación, haga clic en **obtener valores de una consulta**.  
   
@@ -287,13 +287,13 @@ ms.locfileid: "66099089"
   
 7.  Obtenga una vista previa del informe.  
   
- Para *@StoreID*, el Visor de informes muestra el valor "Contoso North America Online Store". Este es el primer valor desde el conjunto de resultados para el conjunto de datos **almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
+ Para *@StoreID* , el Visor de informes muestra el valor "Contoso North America Online Store". Este es el primer valor desde el conjunto de resultados para el conjunto de datos **almacenes**. El informe muestra la cantidad vendida de cámaras digitales para el identificador del almacén **199**.  
   
 #### <a name="to-specify-a-custom-default-value"></a>Para especificar un valor predeterminado personalizado  
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
   
 3.  Haga clic en **valores predeterminados**y haga clic en **especificar valores**y, a continuación, haga clic en **agregar**. Se agrega una nueva fila de valor.  
   
@@ -303,7 +303,7 @@ ms.locfileid: "66099089"
   
 6.  Obtenga una vista previa del informe.  
   
- Para *@StoreID*, el Visor de informes muestra el valor "Contoso Catalog Store". Este es el nombre para mostrar para el identificador del almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
+ Para *@StoreID* , el Visor de informes muestra el valor "Contoso Catalog Store". Este es el nombre para mostrar para el identificador del almacén **200**. El informe muestra la cantidad vendida de accesorios, cámaras de vídeo y cámaras digitales SLR para el identificador de almacén **200**.  
   
 ##  <a name="NameValue"></a> 4d. Buscar un valor de un conjunto de datos que tiene pares de name y valor  
  Un conjunto de datos podría contener el identificador y el campo de nombre correspondiente. Si solo tiene un identificador, puede buscar el nombre correspondiente en un conjunto de datos que haya creado y que tenga pares de nombre/valor.  
@@ -326,7 +326,7 @@ ms.locfileid: "66099089"
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-     El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **<\<Expr>>**.  
+     El encabezado de columna de almacén contiene el texto para mostrar de una expresión compleja: **<\<Expr>>** .  
   
 8.  Obtenga una vista previa del informe.  
   
@@ -376,7 +376,7 @@ ms.locfileid: "66099089"
   
      La matriz solo muestra los datos de "Contoso Catalog Store".  
   
-9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?**, seleccione **Contoso Asia Online Store**y, después, haga clic en **Ver informe**.  
+9. En la barra de herramientas del visor de informes, para **¿Nombre del almacén?** , seleccione **Contoso Asia Online Store**y, después, haga clic en **Ver informe**.  
   
  La matriz muestra los datos correspondientes al almacén que había seleccionado.  
   
@@ -387,7 +387,7 @@ ms.locfileid: "66099089"
   
 1.  Cambie a la vista de diseño.  
   
-2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID*y haga clic en **Propiedades del parámetro**.  
+2.  En el panel Datos de informe, haga clic con el botón derecho en *@StoreID* y haga clic en **Propiedades del parámetro**.  
   
 3.  Seleccione **Permitir varios valores**.  
   

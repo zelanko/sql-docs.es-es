@@ -11,10 +11,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 780772f7703e4499c13eb9373ccad4252097b536
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089435"
 ---
 # <a name="modify-the-trace-results-view"></a>Modificar la vista de resultados del seguimiento
@@ -229,7 +229,7 @@ ms.locfileid: "66089435"
   
     -   **Detalles**. Utilice esta opción para buscar todas las columnas (promocionadas y no promocionadas) en la ventana de seguimiento que se seleccionaron antes de abrir el **buscar en eventos extendidos** cuadro de diálogo.  
   
-    -   **\<Nombre de columna de evento >**. Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
+    -   **\<Nombre de columna de evento >** . Utilice esta opción para buscar en una columna de evento concreta de la lista desplegable.  
   
 5.  Utilice las siguientes opciones para especificar cómo desea definir la búsqueda:  
   

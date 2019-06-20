@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 69e887cc2a8f35710a0c7c910e0e912d6a4a0a61
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62922856"
 ---
 # <a name="back-up-the-transaction-log-when-the-database-is-damaged-sql-server"></a>Realizar una copia de seguridad del registro de transacciones cuando la base de datos está dañada (SQL Server)

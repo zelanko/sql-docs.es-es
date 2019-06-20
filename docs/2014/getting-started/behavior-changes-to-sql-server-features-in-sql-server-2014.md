@@ -11,10 +11,10 @@ author: mightypen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69918a47cf32a389355d76b7ca3b0f781c2e3536
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089511"
 ---
 # <a name="behavior-changes-to-sql-server-features-in-sql-server-2014"></a>Cambios de comportamiento en las características de SQL Server en SQL Server 2014

@@ -11,10 +11,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 7f652d512f27b935b158a71a80b61c43ac6b7183
-ms.sourcegitcommit: 553ecea0427e4d2118ea1ee810f4a73275b40741
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65619587"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>Prácticas recomendadas y solución de problemas de Copia de seguridad en URL de SQL Server
@@ -94,7 +94,7 @@ ms.locfileid: "65619587"
 -   Al restaurar desde una copia de seguridad comprimida, puede aparecer el siguiente error:  
   
     -   **SqlException 3284. Gravedad: 16 estado: 5**  
-        **Marca de archivo del mensaje en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak' no está alineada. Vuelva a emitir la instrucción Restore con el mismo tamaño de bloque usado para crear el backupset: '65536' parece un valor posible.**  
+        **Marca de archivo del mensaje en el dispositivo 'https://mystorage.blob.core.windows.net/mycontainer/TestDbBackupSetNumber2_0.bak ' no está alineada. Vuelva a emitir la instrucción Restore con el mismo tamaño de bloque usado para crear el backupset: '65536' parece un valor posible.**  
   
          Para resolver este error, vuelva a emitir la instrucción `BACKUP` especificando `BLOCKSIZE = 65536`.  
   
@@ -117,15 +117,15 @@ ms.locfileid: "65619587"
   
  Los servidores proxy pueden tener configuraciones que limitan el número de conexiones por minuto. Copia de seguridad en URL es un proceso multiproceso y, por tanto, puede sobrepasar este límite. Si esto ocurre, el servidor proxy elimina la conexión. Para resolver este problema, cambie la configuración de proxy para que SQL Server no utilice el proxy.   A continuación se muestran algunos ejemplos de los tipos o mensajes de error que puede ver en el registro de errores:  
   
--   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak" Error: BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
+-   Escribir en "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak " Error: BACKUP TO URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
   
--   Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". No se pudo recopilar el error del punto de conexión remoto.  
+-   Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ". No se pudo recopilar el error del punto de conexión remoto.  
   
      Mensaje 3013, nivel 16, estado 1, línea 2  
   
      Fin anómalo de BACKUP DATABASE.  
   
--   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak'. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
+-   Backupiorequest:: Reportioerror: error de escritura en el dispositivo de copia de seguridad 'http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak '. Error de sistema operativo Copia de seguridad en URL recibió una excepción del extremo remoto. Mensaje de excepción: No se puede leer datos de la conexión de transporte: Se cerró la conexión.  
   
  Si activa el registro detallado mediante la marca de seguimiento 3051, puede ver también el mensaje siguiente en los registros:  
   
@@ -133,7 +133,7 @@ ms.locfileid: "65619587"
   
  **Configuración de proxy predeterminada no seleccionada:**  
   
- A veces, la configuración predeterminada no se selecciona, lo que produce errores de autenticación del proxy como el que se muestra a continuación: *Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak:". La copia de seguridad en URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: El servidor remoto devolvió un error: (407)*  **Requerida autenticación del proxy**.  
+ A veces, la configuración predeterminada no se selecciona, lo que produce errores de autenticación del proxy como el que se muestra a continuación: *Error de E/S irrecuperable en el archivo "http://storageaccount.blob.core.windows.net/container/BackupAzurefile.bak: ". La copia de seguridad en URL recibió una excepción del punto de conexión remoto. Mensaje de excepción: El servidor remoto devolvió un error: (407)*  **Requerida autenticación del proxy**.  
   
  Para resolver este problema, cree un archivo de configuración que permita al proceso Copia de seguridad en URL utilizar la configuración de proxy predeterminada mediante los pasos siguientes:  
   

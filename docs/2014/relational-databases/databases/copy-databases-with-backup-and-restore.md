@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a35156a465e521ceea60fa090142836da6a4c1a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917472"
 ---
 # <a name="copy-databases-with-backup-and-restore"></a>Copiar bases de datos con Copias de seguridad y restauración
@@ -78,7 +78,7 @@ ms.locfileid: "62917472"
  El nombre de base de datos que se proporciona explícitamente al restaurar una base de datos se utiliza de forma automática como el nuevo nombre de la base de datos. Debido a que el nombre de la base de datos no existe, se crea uno nuevo con los archivos de la copia de seguridad.  
   
 ## <a name="when-upgrading-a-database-by-using-restore"></a>Actualizar una base de datos utilizando la restauración  
- Al restaurar copias de seguridad de una versión anterior, es útil conocer de antemano si la ruta de acceso (unidad y directorio) de cada uno de los catálogos de texto completo de una copia de seguridad existe en el equipo de destino. Para obtener una lista de los nombres lógicos y físicos, la ruta de acceso y el nombre de archivo de todos los archivos de una copia de seguridad, incluidos los archivos de catálogo, use una instrucción RESTORE FILELISTONLY FROM *<backup_device>*. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
+ Al restaurar copias de seguridad de una versión anterior, es útil conocer de antemano si la ruta de acceso (unidad y directorio) de cada uno de los catálogos de texto completo de una copia de seguridad existe en el equipo de destino. Para obtener una lista de los nombres lógicos y físicos, la ruta de acceso y el nombre de archivo de todos los archivos de una copia de seguridad, incluidos los archivos de catálogo, use una instrucción RESTORE FILELISTONLY FROM *<backup_device>* . Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql).  
   
  Si no existe la misma ruta de acceso en el equipo de destino, son dos las alternativas válidas:  
   

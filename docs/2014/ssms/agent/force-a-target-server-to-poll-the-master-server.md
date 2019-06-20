@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7e9580839c18ed40a6163ab933ce40276bc413ab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63044060"
 ---
 # <a name="force-a-target-server-to-poll-the-master-server"></a>Forzar que un servidor de destino sondee el servidor maestro
@@ -32,7 +32,7 @@ ms.locfileid: "63044060"
   
 -   **Antes de empezar:**  [Limitaciones y restricciones](#Restrictions), [Seguridad](#Security)  
   
--   **Para forzar que un servidor de destino sondee el servidor maestro, utilizando:**  [SQL Server Management Studio](#SSMS)  
+-   **Acción de forzar que un servidor de destino sondee el servidor maestro utilizando lo siguiente:**  [SQL Server Management Studio](#SSMS)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   

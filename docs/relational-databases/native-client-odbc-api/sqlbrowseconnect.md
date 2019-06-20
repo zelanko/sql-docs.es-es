@@ -16,10 +16,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63014737"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
@@ -32,17 +32,17 @@ ms.locfileid: "63014737"
   
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
 |-------------|--------------------|---------------|-----------------|  
-|DSN|N/D|No|Nombre del origen de datos devuelto por **SQLDataSources**. No se puede utilizar la palabra clave DSN si se utiliza la palabra clave DRIVER.|  
-|DRIVER|N/D|No|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el nombre del controlador ODBC de Native Client {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. No se puede utilizar la palabra clave DRIVER si se utiliza la palabra clave DSN.|  
+|DSN|N/D|Sin|Nombre del origen de datos devuelto por **SQLDataSources**. No se puede utilizar la palabra clave DSN si se utiliza la palabra clave DRIVER.|  
+|DRIVER|N/D|Sin|Microsoft® [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es el nombre del controlador ODBC de Native Client {[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 11}. No se puede utilizar la palabra clave DRIVER si se utiliza la palabra clave DSN.|  
   
 ## <a name="level-2"></a>Nivel 2  
   
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
 |-------------|--------------------|---------------|-----------------|  
-|SERVER|Sí|No|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
-|UID|No|Sí|Id. de inicio de sesión de usuario.|  
+|SERVER|Sí|Sin|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
+|UID|Sin|Sí|Id. de inicio de sesión de usuario.|  
 |PWD|No|Sí (depende del usuario)|Contraseña especificada por el usuario.|  
-|APP|No|Sí|Nombre de la aplicación que llama **SQLBrowseConnect**.|  
+|APP|Sin|Sí|Nombre de la aplicación que llama **SQLBrowseConnect**.|  
 |WSID|No|Sí|Id. de estación de trabajo. Normalmente, éste es el nombre de red del equipo en el que se ejecuta la aplicación.|  
   
 ## <a name="level-3"></a>Nivel 3  

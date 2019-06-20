@@ -14,20 +14,20 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b824b240c6801317b16ac84820e0fc82054875b0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63193006"
 ---
 # <a name="wildcard-components-and-content-validation"></a>Componentes comodín y validación del contenido
   Los componentes comodín se utilizan para aumentar la flexibilidad en cuanto a lo que se permite que aparezca en un modelo de contenido. El lenguaje XSD admite estos componentes de las formas siguientes:  
   
--   Componentes de carácter comodín de elementos. Se representan mediante el elemento **\<xsd:any>**.  
+-   Componentes de carácter comodín de elementos. Se representan mediante el elemento **\<xsd:any>** .  
   
--   Componentes de carácter comodín de atributos. Se representan mediante el elemento **\<xsd:anyAttribute>**.  
+-   Componentes de carácter comodín de atributos. Se representan mediante el elemento **\<xsd:anyAttribute>** .  
   
- Ambos elementos de carácter comodín, **\<xsd:any>** y **\<xsd:anyAttribute>**, admiten el uso de un atributo **processContents**. Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
+ Ambos elementos de carácter comodín, **\<xsd:any>** y **\<xsd:anyAttribute>** , admiten el uso de un atributo **processContents**. Esto permite especificar un valor que indica el modo en que las aplicaciones XML controlan la validación del contenido de los documentos asociado a estos elementos de caracteres comodín. A continuación se exponen los distintos valores y su efecto:  
   
 -   El valor **strict** especifica que se valida totalmente el contenido.  
   

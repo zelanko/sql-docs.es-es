@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 698a5941bc8e9920942e7ec7c962144b4ab24b62
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62998284"
 ---
 # <a name="sparticlefilter-transact-sql"></a>sp_articlefilter (Transact-SQL)
@@ -48,7 +48,7 @@ sp_articlefilter [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @filter_name = ] 'filter_name'` Es el nombre del procedimiento almacenado de filtro que se creará a partir del *filter_name*. *filter_name* es **nvarchar (386)**, su valor predeterminado es null. Debe especificar un nombre único para el filtro de artículo.  
+`[ @filter_name = ] 'filter_name'` Es el nombre del procedimiento almacenado de filtro que se creará a partir del *filter_name*. *filter_name* es **nvarchar (386)** , su valor predeterminado es null. Debe especificar un nombre único para el filtro de artículo.  
   
 `[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause* es **ntext**, su valor predeterminado es null.  
   

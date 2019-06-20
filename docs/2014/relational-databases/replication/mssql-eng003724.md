@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f3ea7c8720d43fdba53821091c0664bfe375a57b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63191451"
 ---
 # <a name="mssqleng003724"></a>MSSQL_ENG003724
@@ -30,7 +30,7 @@ ms.locfileid: "63191451"
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|No se puede %1! %2! '%3!' porque se está utilizando para la replicación.|  
+|Texto del mensaje|No se puede % S_MSG % S_MSG ' %. * ls' porque se está usando para la replicación.|  
   
 ## <a name="explanation"></a>Explicación  
  Cuando se replican objetos en una base de datos, se marcan como replicados en la tabla del sistema **sysarticles** (en publicaciones de instantáneas y transaccionales) o **sysmergearticles** (en publicaciones de combinación). Si intenta quitar un objeto replicado, se produce este error.  

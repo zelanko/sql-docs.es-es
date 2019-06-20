@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 96d211defa789888a3fd7b513b4dff60fa795cb6
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66058990"
 ---
 # <a name="execute-sql-task-editor-general-page"></a>Editor de la tarea Ejecutar SQL (página General)
@@ -57,7 +57,7 @@ ms.locfileid: "66058990"
  **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [Administrador de conexiones ODBC](connection-manager/odbc-connection-manager.md), [Administrador de conexiones ADO](connection-manager/ado-connection-manager.md), [Administrador de conexiones ADO.NET](connection-manager/ado-net-connection-manager.md), [Administrador de conexiones con SQL Server Compact Edition](connection-manager/sql-server-compact-edition-connection-manager.md)  
   
  **Conexión**  
- Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…**>.  
+ Elija la conexión en la lista de administradores de conexión definidos. Para crear una conexión, seleccione \<**Nueva conexión…** >.  
   
  **SQLSourceType**  
  Seleccione el tipo de origen de la instrucción SQL que ejecuta la tarea.  
@@ -101,13 +101,13 @@ ms.locfileid: "66058990"
   
 ### <a name="sqlsourcetype--file-connection"></a>SQLSourceType = Conexión de archivos  
  **FileConnection**  
- Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...**> para crear un nuevo administrador de conexiones.  
+ Seleccione un administrador de conexiones de archivos existente o haga clic en \<**Nueva conexión...** > para crear un nuevo administrador de conexiones.  
   
  **Temas relacionados:** [Administrador de conexiones de archivos](connection-manager/file-connection-manager.md), [Editor de administrador de conexiones de archivos](../../2014/integration-services/file-connection-manager-editor.md)  
   
 ### <a name="sqlsourcetype--variable"></a>SQLSourceType = Variable  
  **SourceVariable**  
- Seleccione una variable existente o haga clic en \<**Nueva variable…**> para crear una.  
+ Seleccione una variable existente o haga clic en \<**Nueva variable…** > para crear una.  
   
  **Temas relacionados:** [Variables de Integration Services &#40;SSIS&#41;](integration-services-ssis-variables.md), [Agregar variable](../../2014/integration-services/add-variable.md)  
   

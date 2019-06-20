@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4d2e3607426ecbc51b1d04dfc97b12f83faf328b
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085582"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Crear una consulta de contenido en un modelo de minería de datos
@@ -40,11 +40,11 @@ ms.locfileid: "66085582"
   
      La plantilla **Consulta de contenido** se abre en el editor de código adecuado. El panel de metadatos muestra los modelos que están disponibles en la base de datos actual. Para cambiar la base de datos, seleccione una diferente en la lista **Bases de datos disponibles** .  
   
-5.  Escriba el nombre de un modelo de minería de datos en la línea, `FROM` [*\<modelo de minería de datos, nombre, MiModelo >*]`.CONTENT`. Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
+5.  Escriba el nombre de un modelo de minería de datos en la línea, `FROM` [ *\<modelo de minería de datos, nombre, MiModelo >* ]`.CONTENT`. Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
   
      Si no desea escribir el nombre, puede seleccionar un modelo de minería de datos en el **Explorador de objetos** y arrastrarlo a la plantilla.  
   
-6.  En la línea, `SELECT` *\<lista de selección, lista de expresión, \* >*, escriba los nombres de columnas en el conjunto de filas de esquema de contenido de modelo de minería de datos.  
+6.  En la línea, `SELECT` *\<lista de selección, lista de expresión, \* >* , escriba los nombres de columnas en el conjunto de filas de esquema de contenido de modelo de minería de datos.  
   
      Para obtener una lista de las columnas que puede devolver en las consultas de contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](mining-model-content-analysis-services-data-mining.md).  
   

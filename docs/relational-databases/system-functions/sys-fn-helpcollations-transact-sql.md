@@ -20,17 +20,17 @@ ms.assetid: b5082e81-1fee-4e2c-b567-5412eaee41c1
 author: rothja
 ms.author: jroth
 manager: craigg
-monikerRange: '>=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 157cb3b24d04337c4949e3d6cfe38337895b3bea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=aps-pdw-2016|| = azure-sqldw-latest ||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
+ms.openlocfilehash: cae28e453e37f6f2d91826aefef265b7991ef51d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719428"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263254"
 ---
 # <a name="sysfnhelpcollations-transact-sql"></a>sys.fn_helpcollations (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-pdw-md](../../includes/appliesto-ss-asdb-xxxx-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
   Devuelve una lista de todas las intercalaciones admitidas.  
   
@@ -55,7 +55,10 @@ fn_helpcollations ()
   
 ## <a name="examples"></a>Ejemplos
 
- En el ejemplo siguiente se devuelven todos los nombres de intercalación que comienzan por la letra `L` y que son intercalaciones de orden binario.  
+ En el ejemplo siguiente se devuelven todos los nombres de intercalación que comienzan por la letra `L` y que son intercalaciones de orden binario.
+
+> [!Note]
+> En la base de datos maestra, se deben ejecutar consultas de Azure SQL Data Warehouse en fn_helpcollations.  
   
 ```sql  
 SELECT Name, Description FROM fn_helpcollations()  

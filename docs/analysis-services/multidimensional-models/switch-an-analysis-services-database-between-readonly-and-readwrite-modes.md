@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e1ae8fc032a1f728372e9b4e764281ea8df8ddaa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63020058"
 ---
 # <a name="switch-an-analysis-services-database-between-readonly-and-readwrite-modes"></a>Cambiar entre los modos ReadOnly y ReadWrite en una base de datos de Analysis Services
@@ -40,7 +40,7 @@ ms.locfileid: "63020058"
   
 4.  En el Explorador de objetos, haga clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-5.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
+5.  En el cuadro de texto **Carpeta** , escriba la ubicación original de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar ( **...** ) para buscar la carpeta de base de datos.  
   
 6.  Seleccione el modo de lectura/escritura para la base de datos.  
   

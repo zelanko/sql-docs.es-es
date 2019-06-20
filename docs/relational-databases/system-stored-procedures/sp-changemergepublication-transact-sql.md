@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997124"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
@@ -53,37 +53,37 @@ sp_changemergepublication [ @publication= ] 'publication'
 |Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
 |**allow_anonymous**|**true**|Se admiten las suscripciones anónimas.|  
-||**False**|No se admiten las suscripciones anónimas.|  
+||**false**|No se admiten las suscripciones anónimas.|  
 |**allow_partition_realignment**|**true**|Las eliminaciones se envían al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de los datos que han dejado de formar parte de la partición del suscriptor. Éste es el comportamiento predeterminado.|  
-||**False**|Los datos de la partición antigua se dejan en el suscriptor, donde los cambios realizados en estos datos del publicador no se replican en este suscriptor. En cambio, los cambios realizados en el suscriptor se replican en el publicador. Esto sirve para conservar los datos de una partición antigua en una suscripción cuando es necesario que los datos estén accesibles con fines históricos.|  
+||**false**|Los datos de la partición antigua se dejan en el suscriptor, donde los cambios realizados en estos datos del publicador no se replican en este suscriptor. En cambio, los cambios realizados en el suscriptor se replican en el publicador. Esto sirve para conservar los datos de una partición antigua en una suscripción cuando es necesario que los datos estén accesibles con fines históricos.|  
 |**allow_pull**|**true**|Se permiten suscripciones de extracción para la publicación indicada.|  
-||**False**|No se permiten suscripciones de extracción para la publicación indicada.|  
+||**false**|No se permiten suscripciones de extracción para la publicación indicada.|  
 |**allow_push**|**true**|Se permiten suscripciones de inserción para la publicación indicada.|  
-||**False**|No se permiten suscripciones de inserción para la publicación indicada.|  
+||**false**|No se permiten suscripciones de inserción para la publicación indicada.|  
 |**allow_subscriber_initiated_snapshot**|**true**|El suscriptor puede iniciar el proceso de instantáneas.|  
-||**False**|El suscriptor no puede iniciar el proceso de instantáneas.|  
+||**false**|El suscriptor no puede iniciar el proceso de instantáneas.|  
 |**allow_subscription_copy**|**true**|Puede copiar las bases de datos de suscripciones suscritas a esta publicación.|  
-||**False**|No puede copiar las bases de datos de suscripciones suscritas a esta publicación.|  
+||**false**|No puede copiar las bases de datos de suscripciones suscritas a esta publicación.|  
 |**allow_synctoalternate**|**true**|Permite que un asociado de sincronización alternativo se sincronice con este publicador.|  
-||**False**|No permite que un modelo de sincronización alternativo se sincronice con este publicador.|  
+||**false**|No permite que un modelo de sincronización alternativo se sincronice con este publicador.|  
 |**allow_web_synchronization**|**true**|Las suscripciones se pueden sincronizar por HTTPS.|  
-||**False**|Las suscripciones no se pueden sincronizar por HTTPS.|  
+||**false**|Las suscripciones no se pueden sincronizar por HTTPS.|  
 |**alt_snapshot_folder**||Especifica la ubicación de la carpeta alternativa para la instantánea.|  
 |**automatic_reinitialization_policy**|**1**|Los cambios se cargan desde el suscriptor antes de reinicializar la suscripción.|  
 ||**0**|La suscripción se reinicializa sin cargar primero los cambios.|  
 |**centralized_conflicts**|**true**|Todos los registros de conflictos se almacenan en el publicador. Si cambia esta propiedad, se deben reinicializar los suscriptores existentes.|  
-||**False**|Los registros de conflictos se almacenan en el servidor que perdió en la resolución de conflictos. Si cambia esta propiedad, se deben reinicializar los suscriptores existentes.|  
+||**false**|Los registros de conflictos se almacenan en el servidor que perdió en la resolución de conflictos. Si cambia esta propiedad, se deben reinicializar los suscriptores existentes.|  
 |**compress_snapshot**|**true**|La instantánea de una carpeta de instantáneas alternativa se comprime en formato CAB. La instantánea de la carpeta de instantáneas predeterminada no se puede comprimir. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
-||**False**|De forma predeterminada, no se comprime la instantánea. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
+||**false**|De forma predeterminada, no se comprime la instantánea. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**conflict_logging**|**publicador**|Los registros de conflictos se almacenan en el publicador.|  
 ||**suscriptor**|Los registros de conflictos se almacenan en el suscriptor que causó el conflicto. No se admite para [!INCLUDE[ssEW](../../includes/ssew-md.md)] suscriptores *.*|  
 ||**ambos**|Los registros de conflictos se almacenan tanto en el publicador como en el suscriptor.|  
 |**conflict_retention**||Un **int** que especifica el período de retención en días, para el que se conservan los conflictos. Establecer *conflict_retention* a **0** significa que no es necesaria ninguna limpieza de conflictos.|  
 |**description**||Descripción de la publicación.|  
 |**dynamic_filters**|**true**|La publicación se filtra según una cláusula dinámica.|  
-||**False**|La publicación no se filtra dinámicamente.|  
+||**false**|La publicación no se filtra dinámicamente.|  
 |**enabled_for_internet**|**true**|La publicación para Internet está habilitada. El protocolo de transferencia de archivos (FTP) se puede utilizar para transferir los archivos de instantáneas a un suscriptor. Los archivos de sincronización para la publicación se colocan en el directorio C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\ftp.|  
-||**False**|No se habilita la publicación para Internet.|  
+||**false**|No se habilita la publicación para Internet.|  
 |**ftp_address**||Dirección de red del servicio FTP para el distribuidor. Especifica la ubicación de los archivos de instantáneas de la publicación.|  
 |**ftp_login**||Nombre de usuario que se usa para conectarse al servicio FTP.|  
 |**ftp_password**||Contraseña de usuario que se usa para conectarse al servicio FTP.|  
@@ -91,7 +91,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**ftp_subdirectory**||Especifica dónde se crean los archivos de instantáneas si la publicación admite la propagación de instantáneas mediante FTP.|  
 |**generation_leveling_threshold**|**int**|Especifica el número de cambios que se encuentran en una generación. Una generación es un conjunto de cambios que se entregan a un publicador o suscriptor.|  
 |**keep_partition_changes**|**true**|La sincronización se optimiza y solo se ven afectados los suscriptores que tienen filas en las particiones que han cambiado. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
-||**False**|La sincronización no se optimiza y las particiones que se envían a todos los suscriptores se comprueban cuando los datos cambian en una partición. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
+||**false**|La sincronización no se optimiza y las particiones que se envían a todos los suscriptores se comprueban cuando los datos cambian en una partición. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
 |**max_concurrent_merge**||Se trata de un **int** que representa el número máximo de procesos de mezcla simultáneos que se pueden ejecutar con una publicación. Si es 0, no hay límite. Si se programa un número de procesos de mezcla superior a éste para que se ejecuten a la vez, el exceso de trabajos se coloca en una cola y se espera hasta que termine de procesarse la mezcla que se está ejecutando.|  
 |**max_concurrent_dynamic_snapshots**||Se trata de un **int** que representa el número máximo de sesiones de instantáneas para generar los datos filtrados de instantánea que puede ejecutar simultáneamente con una publicación de mezcla que utiliza filtros de filas con. Si **0**, no hay ningún límite. Si se programa un número de procesos de instantáneas superior a éste para que se ejecuten a la vez, el exceso de trabajos se coloca en una cola y se espera hasta que termine de procesarse la mezcla que se está ejecutando.|  
 |**post_snapshot_script**||Especifica un puntero a un **.sql** ubicación del archivo. El Agente de distribución o el Agente de mezcla ejecutan el script posterior a la instantánea después de que se aplique el resto de scripts de objetos replicados y datos durante la sincronización inicial. Para cambiar esta propiedad, se requiere una instantánea nueva.|  
@@ -99,7 +99,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 ||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|Este parámetro ha quedado desusado y solo se admite para la compatibilidad de scripts con versiones anteriores. Ya no es posible agregar información de publicación a Active Directory.|  
-||**False**|Quita la información de publicaciones de Active Directory.|  
+||**false**|Quita la información de publicaciones de Active Directory.|  
 |**replicate_ddl**|**1**|Las instrucciones de lenguaje de definición de datos (DDL) que se ejecutan en el publicador se replican.|  
 ||**0**|Las instrucciones de DDL no se replican.|  
 |**retention**||Se trata de un **int** que representa el número de *retention_period_unit* unidades para el que se va a guardar los cambios para la publicación indicada. Si la suscripción no está sincronizada en el período de retención y se han quitado, por medio de una operación de limpieza en el distribuidor, los cambios pendientes que podía haber recibido, la suscripción expira y es necesario reinicializarla. El período de retención máximo admitido es el número de días entre el 31 de diciembre de 9999 y la fecha actual.<br /><br /> Nota: El período de retención para las publicaciones de combinación tiene un plazo de gracia de 24 horas para adaptarse a los suscriptores de las diferentes zonas horarias.|  
@@ -108,15 +108,15 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**month**|El período de retención se especifica en meses.|  
 ||**year**|El período de retención se especifica en años.|  
 |**snapshot_in_defaultfolder**|**true**|Los archivos de instantánea se almacenan en la carpeta de instantáneas predeterminada.|  
-||**False**|Los archivos de instantánea se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenan tanto en la ubicación predeterminada como en la alternativa.|  
+||**false**|Los archivos de instantánea se almacenan en la ubicación alternativa especificada por *alt_snapshot_folder*. Esta combinación especifica que los archivos de instantáneas se almacenan tanto en la ubicación predeterminada como en la alternativa.|  
 |**snapshot_ready**|**true**|Está disponible la instantánea para la publicación.|  
-||**False**|No está disponible la instantánea para la publicación.|  
+||**false**|No está disponible la instantánea para la publicación.|  
 |**status**|**active**|La publicación está en estado activo.|  
 ||**inactive**|La publicación está en estado inactivo.|  
 |**sync_mode**|**nativo** o<br /><br /> **bcp nativo**|La salida del programa de copia masiva de todas las tablas en modo nativo se utiliza para la instantánea inicial.|  
 ||**character**<br /><br /> o **carácter bcp**|La salida del programa de copia masiva de todas las tablas en modo de carácter se utiliza para la instantánea inicial, que se necesita para todos los suscriptores que no lo son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**use_partition_groups**<br /><br /> Nota: Después de utilizar partition_groups, si se revierte al uso **setupbelongs**y establezca **use_partition_groups = false** en **changemergearticle**, esto podría no ser correctamente refleja después de tomar una instantánea. Los desencadenadores que genera una instantánea son conformes con los grupos de particiones.<br /><br /> La solución para este escenario consiste en establecer el estado en Inactive, modificar el **use_partition_groups**y, a continuación, establezca el estado en activo.|**true**|La publicación utiliza particiones previamente calculadas.|  
-||**False**|La publicación no utiliza particiones previamente calculadas.|  
+||**false**|La publicación no utiliza particiones previamente calculadas.|  
 |**validate_subscriber_info**||Muestra las funciones que se utilizan para recuperar información del suscriptor. Después, valida los criterios de filtro dinámico que se están utilizando para que el suscriptor compruebe que la información se está dividiendo de un modo coherente.|  
 |**web_synchronization_url**||Valor predeterminado de la URL de Internet utilizada para la sincronización web.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para *propiedad*.|  

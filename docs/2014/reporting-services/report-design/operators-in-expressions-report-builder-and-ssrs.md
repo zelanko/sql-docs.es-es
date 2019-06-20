@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: cb4ea26e646453b3acd85a4f5e13ab9557f950fa
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105500"
 ---
 # <a name="operators-in-expressions-report-builder-and-ssrs"></a>Usar operadores en expresiones (Generador de informes y SSRS)
@@ -47,7 +47,7 @@ ms.locfileid: "66105500"
 |>=|Mayor o igual que.|  
 |=|Igual que.|  
 |<>|No es igual a.|  
-|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La siguiente muestra los caracteres que pueden utilizarse como caracteres comodín:<br /><br /> **%**: Cualquier cadena de cero o más caracteres.<br /><br /> **_**: Cualquier carácter individual.<br /><br /> **[ ]**: Cualquier carácter individual dentro del intervalo especificado (por ejemplo, [a-f]) o conjunto (por ejemplo, [aeiou]).<br /><br /> **[^]**: Cualquier carácter individual fuera del intervalo especificado (por ejemplo, [^ a-f]) o conjunto (por ejemplo, [^ aeiou]).|  
+|Like|Determina si una cadena de caracteres específica coincide con un patrón especificado. Un patrón puede contener caracteres normales y caracteres comodín. Durante la operación de búsqueda de coincidencias de patrón, los caracteres normales deben coincidir exactamente con los caracteres especificados en la cadena de caracteres. Sin embargo, los caracteres comodín pueden coincidir con fragmentos arbitrarios de la cadena. El uso de caracteres comodín hace que el operador LIKE sea más flexible que los operadores de comparación de cadenas = y !=.<br /><br /> La siguiente muestra los caracteres que pueden utilizarse como caracteres comodín:<br /><br /> **%** : Cualquier cadena de cero o más caracteres.<br /><br /> **_** : Cualquier carácter individual.<br /><br /> **[ ]** : Cualquier carácter individual dentro del intervalo especificado (por ejemplo, [a-f]) o conjunto (por ejemplo, [aeiou]).<br /><br /> **[^]** : Cualquier carácter individual fuera del intervalo especificado (por ejemplo, [^ a-f]) o conjunto (por ejemplo, [^ aeiou]).|  
 |Is|Compara dos referencias a objeto.|  
   
 ### <a name="string-concatenation"></a>Concatenación de cadenas  

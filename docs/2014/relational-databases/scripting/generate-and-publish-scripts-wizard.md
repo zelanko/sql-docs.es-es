@@ -43,10 +43,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9b3bb00837c4c3e8e6fae187a902d95c54736882
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063988"
 ---
 # <a name="generate-and-publish-scripts-wizard"></a>Asistente generar y publicar scripts
@@ -192,7 +192,7 @@ ms.locfileid: "66063988"
   
 -   **Incluir USE DATABASE** -agrega el `USE DATABASE` instrucción a la secuencia de comandos. Para asegurarse de que se creen objetos de base de datos en la base de datos correcta, incluya la instrucción `USE DATABASE`. Cuando se espera que el script se puede usar en otra base de datos, seleccione **False** para omitir la `USE DATABASE` instrucción. El valor predeterminado es **True**. Para obtener más información, vea [USE &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/use-transact-sql).  
   
--   **Tipos de datos en el script** : selecciona lo que debe estar en el script: **Solo datos**, **solo esquema**, o ambos. El valor predeterminado **Solo esquema**.  
+-   **Tipos de datos para generar por script**: selecciona lo que se debe generar por script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado **Solo esquema**.  
   
  **Opciones de tabla o vista** : las siguientes opciones solo se aplican a scripts para tablas o vistas.  
   
@@ -260,7 +260,7 @@ ms.locfileid: "66063988"
   
 11. **Incluir enlaces** : incluye enlaces para los objetos predeterminados y de regla en el script enviado al proveedor para su publicación. El valor predeterminado es **True**. Para obtener más información, vea [CREATE DEFAULT &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-default-transact-sql) y [CREATE RULE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-rule-transact-sql).  
   
-12. **Tipos de datos que se va a publicar** : selecciona lo que debe estar en el script: **Solo datos**, **solo esquema**, o ambos. El valor predeterminado es **Esquema y datos**.  
+12. **Tipos de datos para publicar**: selecciona lo que se debe generar por script: **Solo datos**, **Solo esquema** o ambos. El valor predeterminado es **Esquema y datos**.  
   
  **Opciones de publicación**: especifica si se usarán transacciones al publicar el proveedor de hospedaje web.  
   

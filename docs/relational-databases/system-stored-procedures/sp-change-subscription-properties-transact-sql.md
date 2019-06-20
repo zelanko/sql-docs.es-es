@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997101"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
@@ -95,9 +95,9 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**publisher_security_mode**|**1**|Se utiliza la autenticación de Windows para la conexión con el publicador. Cambiar *publisher_security_mode* solo se admite para que las suscripciones a publicaciones de combinación.|  
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el publicador.|  
 |**use_ftp**|**true**|Utiliza FTP en lugar del protocolo regular para recuperar instantáneas.|  
-||**False**|Se utiliza el protocolo habitual para recuperar instantáneas.|  
+||**false**|Se utiliza el protocolo habitual para recuperar instantáneas.|  
 |**use_web_sync**|**true**|Habilita la sincronización web.|  
-||**False**|Deshabilita la sincronización web.|  
+||**false**|Deshabilita la sincronización web.|  
 |**working_directory**||Nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y de esquema para la publicación cuando se utiliza el protocolo de transferencia de archivos (FTP) para transferir archivos de instantáneas.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

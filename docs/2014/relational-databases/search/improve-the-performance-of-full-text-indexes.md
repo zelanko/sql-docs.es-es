@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 42aa89a111697f17f23613761eeeb462494bdd27
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011260"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>Mejorar el rendimiento de los índices de texto completo
@@ -128,10 +128,10 @@ ms.locfileid: "66011260"
   
 |Plataforma|Estimar los requisitos de memoria de fdhost.exe en MB -*F*<sup>1</sup>|Fórmula para calcular la memoria de servidor máxima -*M*<sup>2</sup>|  
 |--------------|---------------------------------------------------------------------|---------------------------------------------------------------|  
-|x86|_F_ **=** _número de intervalos de rastreo_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)-*`F`* -**  500|  
+|x86|_F_ **=** _número de intervalos de rastreo_ **&#42;** 50|_M_ **= mínimo (** _T_ **,** 2000 **)- *`F`* -**  500|  
 |x64|_F_ **=** _número de intervalos de rastreo_ **&#42;** 10 **&#42;** 8|_M_ **=** _T_ **-** _F_ **-** 500|  
   
- <sup>1</sup> si varios procesos de rellenado completos en curso, calcule los requisitos de memoria de fdhost.exe de cada uno por separado, como *F1*, *F2*, y así sucesivamente. Después calcule *M* como _T_**-** sigma **(**_F_i **)**.  
+ <sup>1</sup> si varios procesos de rellenado completos en curso, calcule los requisitos de memoria de fdhost.exe de cada uno por separado, como *F1*, *F2*, y así sucesivamente. Después calcule *M* como _T_ **-** sigma **(** _F_i **)** .  
   
  <sup>2</sup> 500 MB es una estimación de la memoria requerida por otros procesos en el sistema. Si el sistema está realizando trabajo adicional, aumente este valor en consecuencia.  
   

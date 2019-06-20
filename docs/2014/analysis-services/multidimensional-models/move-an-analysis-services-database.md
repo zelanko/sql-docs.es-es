@@ -15,10 +15,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 02d084aea4491982d560f1cf0b8dc449b8502f09
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66073598"
 ---
 # <a name="move-an-analysis-services-database"></a>Mover una base de datos de Analysis Services
@@ -53,7 +53,7 @@ ms.locfileid: "66073598"
   
 6.  Haga doble clic en el **bases de datos** carpeta y seleccione **adjuntar...**  
   
-7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar (**...** ) para buscar la carpeta de base de datos.  
+7.  En el cuadro de texto **Carpeta** , escriba la nueva ubicación de la carpeta de la base de datos. Como alternativa, puede usar el botón Examinar ( **...** ) para buscar la carpeta de base de datos.  
   
 8.  Seleccione el `ReadWrite` modo para la base de datos.  
   

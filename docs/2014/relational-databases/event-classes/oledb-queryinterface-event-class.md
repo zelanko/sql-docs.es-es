@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b420e0b4b9c9531209f3d3227f534116e26dd206
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032427"
 ---
 # <a name="oledb-queryinterface-event-class"></a>OLEDB QueryInterface, clase de eventos
@@ -37,7 +37,7 @@ ms.locfileid: "63032427"
 |Duration|`bigint`|Tiempo necesario para completar el evento QueryInterface de OLE DB.|13|No|  
 |EndTime|`datetime`|Hora a la que finalizó el evento.|15|Sí|  
 |Error|`int`|Número de error de un evento dado. Con frecuencia, es el número de error almacenado en la vista de catálogo **sys.messages** .|31|Sí|  
-|EventClass|`int`|Tipo de evento = 120.|27|No|  
+|EventClass|`int`|Tipo de evento = 120.|27|Sin |  
 |EventSequence|`int`|Secuencia de la clase de evento OLE DB en el lote.|51|No|  
 |EventSubClass|`int`|0=Inicio<br /><br /> 1=Completado|21|No|  
 |GroupID|`int`|Id. del grupo de carga de trabajo donde se activa el evento de Seguimiento de SQL.|66|Sí|  
@@ -46,7 +46,7 @@ ms.locfileid: "63032427"
 |LinkedServerName|`nvarchar`|Nombre del servidor vinculado.|45|Sí|  
 |LoginName|`nvarchar`|Nombre del inicio de sesión del usuario (inicio de sesión de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o credenciales de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con el formato DOMINIO\nombreDeUsuario).|11|Sí|  
 |LoginSid|`image`|SID (número de identificación de seguridad) del usuario que ha iniciado la sesión. Puede buscar esta información en la vista de catálogo sys.server_principals. Cada SID es único para cada inicio de sesión en el servidor.|41|Sí|  
-|MethodName|`nvarchar`|Nombre del método de llamada.|47|No|  
+|MethodName|`nvarchar`|Nombre del método de llamada.|47|Sin |  
 |NTDomainName|`nvarchar`|Dominio de Windows al que pertenece el usuario.|7|Sí|  
 |NTUserName|`nvarchar`|Nombre del usuario de Windows.|6|Sí|  
 |ProviderName|`nvarchar`|Nombre del proveedor OLE DB.|46|Sí|  
@@ -54,7 +54,7 @@ ms.locfileid: "63032427"
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` muestra inicioDeSesión1 y `LoginName` muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |StartTime|`datetime`|Hora a la que se inició el evento, si está disponible.|14|Sí|  
-|TextData|`nvarchar`|Parámetros enviados y recibidos en la llamada OLE DB.|1|No|  
+|TextData|`nvarchar`|Parámetros enviados y recibidos en la llamada OLE DB.|1|Sin |  
 |TransactionID|`bigint`|Id. de la transacción asignado por el sistema.|4|Sí|  
   
 ## <a name="see-also"></a>Vea también  

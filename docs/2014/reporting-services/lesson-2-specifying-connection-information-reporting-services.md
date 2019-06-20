@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 69d7ad1e3a65f49aa850e016e5e5bd609039ccf3
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66108519"
 ---
 # <a name="lesson-2-specifying-connection-information-reporting-services"></a>Lección 2: Especificación de información de conexión (Reporting Services)
@@ -50,7 +50,7 @@ ms.locfileid: "66108519"
     >   
     >  Para obtener más información acerca de las cadenas de conexión, consulte [conexiones de datos, orígenes de datos y cadenas de conexión en Reporting Services](data-connections-data-sources-and-connection-strings-in-reporting-services.md) y [cuadro de diálogo de propiedades de origen de datos, General](data-source-properties-dialog-box-general.md).  
   
-6.  Haga clic en **Credenciales** en el panel izquierdo y haga clic en **Usar autenticación de Windows (seguridad integrada)**.  
+6.  Haga clic en **Credenciales** en el panel izquierdo y haga clic en **Usar autenticación de Windows (seguridad integrada)** .  
   
 7.  [!INCLUDE[clickOK](../includes/clickok-md.md)] origen de datos [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] se agrega a la **datos de informe** panel.  
   

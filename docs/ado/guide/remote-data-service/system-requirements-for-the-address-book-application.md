@@ -15,10 +15,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 7891fbeeaa04df2078826f059a3a985ce3f284da
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66704147"
 ---
 # <a name="system-requirements-for-the-address-book-application"></a>Requisitos del sistema para la aplicación de la libreta de direcciones

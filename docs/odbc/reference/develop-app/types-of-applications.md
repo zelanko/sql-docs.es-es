@@ -18,10 +18,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 50e3e733a4ddd4855da2ea7722407e5f061eee47
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63305724"
 ---
 # <a name="types-of-applications"></a>Tipos de aplicaciones
@@ -37,10 +37,10 @@ Las aplicaciones ODBC pueden clasificarse como sigue:
     -   No se han recopilado con encabezados de ODBC 3.5.  
   
 -   **Puro ODBC 2.**  
-     **_x_ vuelve a compilar la aplicación** una pura ODBC 2. *x* aplicación que se ha vuelto a compilar con los archivos de encabezado ODBC 3.5, estableciendo ODBCVER = 0x0250.  
+     **_x_ vuelve a compilar la aplicación** una pura ODBC 2.* x* aplicación que se ha vuelto a compilar con los archivos de encabezado ODBC 3.5, estableciendo ODBCVER = 0x0250.  
   
 -   **Puro ODBC 2.**  
-     **_x_ aplicación Unicode** una pura ODBC 2. *x* vuelve a compilar la aplicación que es compatible con Unicode y utiliza el tipo de datos SQL_WCHAR.  
+     **_x_ aplicación Unicode** una pura ODBC 2.* x* vuelve a compilar la aplicación que es compatible con Unicode y utiliza el tipo de datos SQL_WCHAR.  
   
 -   **Open Group puras e ISO**-**compatible con aplicaciones ODBC** aplicación de 32 bits que:  
   

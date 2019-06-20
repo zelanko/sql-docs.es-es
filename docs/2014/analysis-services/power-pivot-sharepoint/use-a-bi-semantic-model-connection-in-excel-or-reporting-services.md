@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 9a8e2b976fca00293d93cbf1e9987e115631bd81
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66070930"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar una conexión de modelo semántico de BI en Excel o Reporting Services

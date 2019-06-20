@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b1d7cc485899a7f8173552788471ef6ec45ce49c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62645181"
 ---
 # <a name="backupfilegroup-transact-sql"></a>backupfilegroup (Transact-SQL)
@@ -41,7 +41,7 @@ ms.locfileid: "62645181"
 |**filegroup_id**|**int**|Id. del grupo de archivos; único en la base de datos. Corresponde a **data_space_id** en **sys.filegroups**.|  
 |**filegroup_guid**|**uniqueidentifier**|Identificador único global para el grupo de archivos. Puede ser NULL.|  
 |**Tipo**|**char(2)**|Tipo de contenido, uno de los siguientes:<br /><br /> FG = Grupo de archivos "Rows"<br /><br /> SL = Grupo de archivos de registro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
-|**type_desc**|**nvarchar(60)**|Descripción del tipo de función, una de:<br /><br /> ROWS_FILEGROUP <br /><br /> SQL_LOG_FILEGROUP |  
+|**type_desc**|**nvarchar(60)**|Descripción del tipo de función, una de:<br /><br /> ROWS_FILEGROUP<br /><br /> SQL_LOG_FILEGROUP|  
 |**is_default**|**bit**|Grupo de archivos predeterminado, que se utiliza cuando no se ha especificado ningún otro en CREATE TABLE o CREATE INDEX.|  
 |**is_readonly**|**bit**|1 = El grupo de archivos es de solo lectura.|  
 |**log_filegroup_guid**|**uniqueidentifier**|Puede ser NULL.|  

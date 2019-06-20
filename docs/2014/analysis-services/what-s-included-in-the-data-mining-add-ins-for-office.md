@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 98e87bb2243a8bb024fdcdc819fa5914f462eb66
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66065329"
 ---
 # <a name="what39s-included-in-the-data-mining-add-ins-for-office"></a>¿Qué&#39;incluido en los datos a los complementos de minería de datos para Office

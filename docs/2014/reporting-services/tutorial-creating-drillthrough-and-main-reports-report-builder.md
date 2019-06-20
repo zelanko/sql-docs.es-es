@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: ff48bab49e2ef0889bda054d6a1ff656f0916585
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098875"
 ---
 # <a name="tutorial-creating-drillthrough-and-main-reports-report-builder"></a>Tutorial: Crear informes principales (generador de informes) y obtención de detalles
@@ -110,7 +110,7 @@ ms.locfileid: "66098875"
   
 4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de Analysis Services.  
   
@@ -148,7 +148,7 @@ ms.locfileid: "66098875"
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)**.  
+1.  En la página **Diseñar una consulta**, en el panel Metadatos, haga clic en el botón **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -208,7 +208,7 @@ ms.locfileid: "66098875"
   
 5.  Arrastre la medida Importe de venta hasta el panel de datos y, después, colóquela a la derecha de Product Subcategory Name (Nombre de subcategoría de producto).  
   
-6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)**.  
+6.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
 7.  Haga clic en **Siguiente**.  
   
@@ -315,7 +315,7 @@ ms.locfileid: "66098875"
   
 2.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-3.  Escriba **Ventas y devoluciones por categoría:**.  
+3.  Escriba **Ventas y devoluciones por categoría:** .  
   
 4.  Haga clic con el botón derecho y, después, haga clic en **Crear marcador de posición**.  
   
@@ -411,7 +411,7 @@ ms.locfileid: "66098875"
   
 4.  En **Seleccionar un tipo de conexión**, seleccione **Microsoft SQL Server Analysis Services**y, después, haga clic en **Compilar**.  
   
-5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)**.  
+5.  En **Origen de datos**, compruebe que el origen de datos es **Microsoft SQL Server Analysis Services (AdomdClient)** .  
   
 6.  En **Nombre del servidor**, escriba el nombre de un servidor donde esté instalada una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] .  
   
@@ -442,7 +442,7 @@ ms.locfileid: "66098875"
   
 #### <a name="to-create-query-filters"></a>Crear filtros de consulta  
   
-1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)**.  
+1.  En la página **Diseñar una consulta**, en la sección de cubo del panel Metadatos, haga clic en el botón de puntos suspensivos **(...)** .  
   
 2.  En el cuadro de diálogo **Selección de cubo** , haga clic en Ventas y, después, en **Aceptar**.  
   
@@ -529,7 +529,7 @@ ms.locfileid: "66098875"
   
 4.  Desde Miembros calculados, arrastre Ventas netas al panel de datos y colóquelo a la derecha de `Net QTY`.  
   
-5.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)**.  
+5.  En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar (!)** .  
   
      Revise el conjunto de resultados de la consulta.  
   
@@ -644,7 +644,7 @@ ms.locfileid: "66098875"
   
 4.  Escriba el tipo **3 Señales** y haga clic en **Aceptar**.  
   
-5.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)**. Seleccione `Net_QTY`.  
+5.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)** . Seleccione `Net_QTY`.  
   
 6.  Repita los pasos del 2 al 5 para la celda `[Sum(Net QTY)]` del grupo de filas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -656,7 +656,7 @@ ms.locfileid: "66098875"
   
 3.  Escriba el tipo **3 Señales** y haga clic en **Aceptar**.  
   
-4.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)**. Seleccione `Net_Sales`.  
+4.  Haga clic con el botón derecho en el indicador y en el panel de Datos del medidor, haga clic en la flecha abajo situada junto a **(No especificado)** . Seleccione `Net_Sales`.  
   
 5.  Repita los pasos del 1 al 4 para la celda `[Sum(Net_Sales)]` del grupo de filas `[Product_Category_Name]` dentro de **Total**.  
   
@@ -684,7 +684,7 @@ ms.locfileid: "66098875"
   
 1.  En la superficie de diseño, haga clic en **Haga clic para agregar título**.  
   
-2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:**.  
+2.  Escriba **Ventas por categoría de producto de 2009: categoría En línea y Distribuidor:** .  
   
 3.  Seleccione el texto que escribió.  
   

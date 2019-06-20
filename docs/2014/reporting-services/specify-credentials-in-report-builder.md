@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 432b41216418cd1ad1bae70557c95a589f5e78dc
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66101138"
 ---
 # <a name="specify-credentials-in-report-builder"></a>Especificar credenciales en el Generador de informes
@@ -62,7 +62,7 @@ ms.locfileid: "66101138"
 -   No se necesitan credenciales.  
   
 ### <a name="windows-integrated-security"></a>Seguridad integrada de Windows  
- Al seleccionar **Usar autenticación de Windows (seguridad integrada)**, se pasa el token del usuario actual al origen de datos. En este caso, no se solicita al usuario que escriba un nombre de usuario ni una contraseña. Esta opción requiere normalmente que las características de delegación estén habilitadas. Si estas características no están habilitadas, solamente puede usar esta opción para tener acceso a un origen de datos ubicado en el mismo servidor.  
+ Al seleccionar **Usar autenticación de Windows (seguridad integrada)** , se pasa el token del usuario actual al origen de datos. En este caso, no se solicita al usuario que escriba un nombre de usuario ni una contraseña. Esta opción requiere normalmente que las características de delegación estén habilitadas. Si estas características no están habilitadas, solamente puede usar esta opción para tener acceso a un origen de datos ubicado en el mismo servidor.  
   
 ### <a name="user-name-and-password-login"></a>Inicio de sesión con nombre de usuario y contraseña  
  Cuando se selecciona la opción **Usar este nombre de usuario y esta contraseña**, debe especificarse un nombre de usuario y una contraseña para obtener acceso al origen de datos. En el caso de una base de datos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] , las credenciales podrían servir para iniciar sesión en la base de datos. Las credenciales se pasan al origen de datos externo para su autenticación.  

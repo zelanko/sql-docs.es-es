@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 3fb4771c7345eb270e91a377d2755a25606f9a93
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66080423"
 ---
 # <a name="input-selection-tab-mining-accuracy-chart-view"></a>Pestaña Selección de entrada (vista Gráfico de precisión de minería de datos)
@@ -25,7 +25,7 @@ ms.locfileid: "66080423"
  **Para obtener más información:** [Prueba y validación &#40;minería de datos&#41;](data-mining/testing-and-validation-data-mining.md)  
   
 ## <a name="options"></a>Opciones  
- **Sincronizar columnas y valores de** **predicción**  
+ **Sincronizar columnas y valores de ****predicción**  
  Seleccione esta opción para coordinar los atributos de predicción de la cuadrícula a fin de que se deriven de la misma columna de estructura de minería de datos de predicción, incluso aunque tengan un nombre diferente, durante el entrenamiento del modelo.  
   
  **Nota** : esta opción no está seleccionada de forma predeterminada. Solamente debería activar esta casilla en los casos en los que sepa que dos columnas de estructura de minería de datos se derivan del mismo origen multidimensional o relacional subyacente, y en los que las columnas contengan los mismos estados o se hayan discretizado del mismo modo.  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 33618c019e59c044e681c45130130adc79d53122
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 22109f1cd7f3ebce652ae4c006473866321f7f0e
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472204"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263421"
 ---
 # <a name="data-types-supported-in-tabular-models"></a>Tipos de datos admitidos en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
 |Boolean|Boolean|Valor True o False.|  
 |Text|String|Cadena de datos de carácter Unicode. Pueden ser cadenas, números o fechas representados en un formato de texto.|  
 |date|Fecha y hora|Fechas y horas en una representación de fecha y hora aceptada.<br /><br /> Las fechas válidas son todas las fechas posteriores al 1 de marzo de 1900.|  
-|Moneda|Moneda|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
+|Currency|Currency|El tipo de datos de moneda permite los valores comprendidos entre -922.337.203.685.477,5808 y 922.337.203.685.477,5807 con cuatro dígitos decimales de precisión fija.|  
 |N/D|En blanco|Un tipo en blanco es un tipo de datos de DAX que representa y reemplaza los valores NULL de SQL. Un valor en blanco se puede crear con la función BLANK y se puede comprobar si es tal con la función lógica ISBLANK.|  
   
  \* Si intenta importar datos con valores numéricos grandes, puede producir un error de importación con el siguiente error:  
@@ -59,7 +59,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
 >  No puede importar de una columna **varchar(max)** que contenga una longitud de cadena superior a 131 072 caracteres.  
   
 ### <a name="table-data-type"></a>Tipo de datos de tabla  
- Además, DAX usa un tipo de datos de *tabla* . DAX usa este tipo de datos en muchas funciones, como agregaciones y cálculos de inteligencia de tiempo. Algunas funciones requieren una referencia a una tabla y otras devuelven una tabla que se puede usar como entrada para otras funciones. En algunas funciones que requieren una tabla como entrada, puede especificar una expresión que se evalúa como una tabla; para otras funciones, se requiere una referencia a una tabla base. Para obtener información sobre los requisitos de funciones concretas, vea [Referencia de funciones DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Además, DAX usa un tipo de datos de *tabla* . DAX usa este tipo de datos en muchas funciones, como agregaciones y cálculos de inteligencia de tiempo. Algunas funciones requieren una referencia a una tabla y otras devuelven una tabla que se puede usar como entrada para otras funciones. En algunas funciones que requieren una tabla como entrada, puede especificar una expresión que se evalúa como una tabla; para otras funciones, se requiere una referencia a una tabla base. Para obtener información sobre los requisitos de funciones concretas, vea [Referencia de funciones DAX](/dax/dax-function-reference).  
   
 ##  <a name="bkmk_implicit"></a> Conversión de tipos de datos implícitas y explícitas en las fórmulas DAX
   
@@ -136,7 +136,7 @@ Cuando se importan datos o se usa un valor en una fórmula, incluso si el origen
  Por ejemplo, si un entero se combina con un valor de moneda en una operación de división, ambos valores se convierten a números reales y el resultado también es un número real.  
   
 #### <a name="comparison-operators"></a>Operadores de comparación  
-Se admite solo un conjunto limitado de combinaciones de tipos mixtos de datos para las operaciones de comparación. Para más información, vea [Referencia de operadores de DAX](https://msdn.microsoft.com/library/ee634237.aspx).  
+Se admite solo un conjunto limitado de combinaciones de tipos mixtos de datos para las operaciones de comparación. Para más información, vea [Referencia de operadores de DAX](/dax/dax-operator-reference).  
   
 ## <a name="bkmk_hand_blanks"></a> Control de espacios en blanco, cadenas vacías y valores cero  
  En la tabla siguiente se resume las diferencias entre DAX y Microsoft Excel, en la forma en que se tratan los espacios en blanco:  
@@ -157,5 +157,5 @@ Se admite solo un conjunto limitado de combinaciones de tipos mixtos de datos pa
 |BLANK OR BLANK|En blanco|Error|  
 |BLANK AND BLANK|En blanco|Error|  
   
- Para obtener información detallada sobre cómo una determinada función u operador trata los valores en blanco, vea los temas de cada función DAX en la sección [Referencia de funciones DAX](http://msdn.microsoft.com/4dbb28a1-dd1a-4fca-bcd5-e90f74864a7b).  
+ Para obtener información detallada sobre cómo una determinada función u operador trata los valores en blanco, vea los temas de cada función DAX en la sección [Referencia de funciones DAX](/dax/dax-function-reference).  
   

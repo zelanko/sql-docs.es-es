@@ -25,10 +25,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 6ceac86445154648b946148d6267f6e8949af423
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62918044"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
@@ -61,7 +61,7 @@ ms.locfileid: "62918044"
   
 3.  Haga clic con el botón secundario en el nombre de la base de datos.  
   
-4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...**.  
+4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...** .  
   
 5.  Complete los cuadros de diálogo del asistente:  
   

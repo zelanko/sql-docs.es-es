@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 526c5b0bb1b7c5dd0d7cf1485f7e399b6f1fbff9
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62666980"
 ---
 # <a name="mssqleng004929"></a>MSSQL_ENG004929
@@ -30,7 +30,7 @@ ms.locfileid: "62666980"
 |Origen del evento|MSSQLSERVER|  
 |Componente|[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]|  
 |Nombre simbólico||  
-|Texto del mensaje|No se puede modificar el %1! '%2!' porque se está publicando para replicación.|  
+|Texto del mensaje|No se puede modificar el % S_MSG ' %. * ls' porque se está publicando para replicación.|  
   
 ## <a name="explanation"></a>Explicación  
  Normalmente este error se produce si intenta quitar la restricción de clave principal en una tabla que está publicada para replicación transaccional. La replicación transaccional requiere una clave principal para cada tabla publicada; por tanto, no se puede quitar la restricción.  

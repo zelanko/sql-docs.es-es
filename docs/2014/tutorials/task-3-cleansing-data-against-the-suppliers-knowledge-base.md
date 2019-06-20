@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: dea74f8fc22bea5a0903a3dae17f6c969849181c
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65485051"
 ---
 # <a name="task-3-cleansing-data-against-the-suppliers-knowledge-base"></a>Tarea 3: Limpieza de datos en la base de conocimiento Proveedores
@@ -31,6 +31,6 @@ ms.locfileid: "65485051"
 3.  Haga clic en **Siguiente** para cambiar a la página **Administrar y ver resultados** .  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Administrar y ver resultados](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
+ [Tarea 4: Administrar y ver resultados](../../2014/tutorials/task-4-manaing-and-viewing-results.md)  
   
   

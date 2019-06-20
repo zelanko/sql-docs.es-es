@@ -16,12 +16,12 @@ ms.assetid: 783fd581-2e5f-496b-b79c-d4de1e09ea30
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 94bcee6d2b1ed9a9ad81bddcb7351ebea51c0449
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.openlocfilehash: 7c1c423bad8742b0a9760945e3823d6ef159c1e0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
-ms.locfileid: "66011871"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046703"
 ---
 # <a name="prepare-data-for-bulk-export-or-import-sql-server"></a>Preparar los datos para exportar o importar de forma masiva (SQL Server)
   En esta sección se explican las consideraciones implicadas en el planeamiento de operaciones de exportación masiva y los requisitos para operaciones de importación masiva.  
@@ -67,7 +67,7 @@ ms.locfileid: "66011871"
   
      Para realizar la importación masiva de los datos de un archivo de tabla de [!INCLUDE[msCoName](../../includes/msconame-md.md)] FoxPro o de Visual FoxPro (.dbf), o de un archivo de hoja de cálculo de [!INCLUDE[ofprexcel](../../includes/ofprexcel-md.md)] (.xls), habría que convertir los datos en un archivo CSV que cumpliera las restricciones anteriores. La extensión de archivo normalmente será .csv. A continuación, podrá usar el archivo .csv como un archivo de datos en una operación de importación masiva de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-     En sistemas de 32 bits, es posible importar datos CSV en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin optimizaciones de importación masiva mediante [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) con el proveedor OLE DB para Jet. Jet trata los archivos de texto como tablas, con el esquema definido por un archivo schema.ini que se encuentra en el mismo directorio que el origen de datos.  Con los datos CSV, uno de los parámetros del archivo schema.ini sería "FORMAT=CSVDelimited". Para usar esta solución, tendría que entender cómo funciona Jet Test IISAMm: la sintaxis de las cadenas de conexión, el uso de schema.ini, las opciones de los valores del Registro, etc.).  Los orígenes que contienen la información más adecuada sobre esto son la Ayuda de Microsoft Access y los artículos de Knowledge Base (KB). Para obtener más información, vea [Inicializar el controlador de origen de datos de texto](https://go.microsoft.com/fwlink/?LinkId=128503), [Procedimientos para usar una consulta distribuida de SQL Server 7.0 con un servidor vinculado para bases de datos de acceso seguro](https://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDIMIENTO: Usar el proveedor OLE DB de Jet 4.0 para conectarse a bases de datos ISAM](https://go.microsoft.com/fwlink/?LinkId=128505) y [Procedimientos para abrir archivos de texto delimitados con IIsam de texto del proveedor Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
+     En sistemas de 32 bits, es posible importar datos CSV en una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sin optimizaciones de importación masiva mediante [OPENROWSET](/sql/t-sql/functions/openrowset-transact-sql) con el proveedor OLE DB para Jet. Jet trata los archivos de texto como tablas, con el esquema definido por un archivo schema.ini que se encuentra en el mismo directorio que el origen de datos.  Con los datos CSV, uno de los parámetros del archivo schema.ini sería "FORMAT=CSVDelimited". Para usar esta solución, tendría que entender cómo funciona Jet Test IISAMm: la sintaxis de las cadenas de conexión, el uso de schema.ini, las opciones de los valores del Registro, etc.).  Los orígenes que contienen la información más adecuada sobre esto son la Ayuda de Microsoft Access y los artículos de Knowledge Base (KB). Para obtener más información, vea [Inicializar el controlador de origen de datos de texto](https://docs.microsoft.com/office/client-developer/access/desktop-database-reference/initializing-the-text-data-source-driver), [Procedimientos para usar una consulta distribuida de SQL Server 7.0 con un servidor vinculado para bases de datos de acceso seguro](https://go.microsoft.com/fwlink/?LinkId=128504), [PROCEDIMIENTO: Usar el proveedor OLE DB de Jet 4.0 para conectarse a bases de datos ISAM](https://go.microsoft.com/fwlink/?LinkId=128505) y [Procedimientos para abrir archivos de texto delimitados con IIsam de texto del proveedor Jet](https://go.microsoft.com/fwlink/?LinkId=128501).  
   
  Además, la importación masiva de datos desde un archivo de datos a una tabla requiere lo siguiente:  
   

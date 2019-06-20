@@ -22,10 +22,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a52ce206eee69fa585a72788e46f8f7174d936a8
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980826"
 ---
 # <a name="specifying-a-target-namespace-using-the-targetnamespace-attribute-sqlxml-40"></a>Especificar un espacio de nombres de destino mediante el atributo targetNamespace (SQLXML 4.0)
@@ -38,7 +38,7 @@ ms.locfileid: "65980826"
  Para crear muestras funcionales mediante los ejemplos siguientes, debe cumplir determinados requisitos. Para obtener más información, consulte [requisitos para ejecutar los ejemplos de SQLXML](../../relational-databases/sqlxml/requirements-for-running-sqlxml-examples.md).  
   
 ### <a name="a-specifying-a-target-namespace"></a>A. Especificar un espacio de nombres de destino  
- El siguiente esquema XSD especifica un espacio de nombres de destino mediante el uso de la **xsd: targetNamespace** atributo. El esquema establece también el **elementFormDefault** y **attributeFormDefault** a los valores de atributo **"unqualified"** (el valor predeterminado para estos atributos). Esto es una declaración global y afecta a todos los elementos locales (**\<orden >** en el esquema) y atributos (**CustomerID**, **ContactName**y  **OrderID** en el esquema).  
+ El siguiente esquema XSD especifica un espacio de nombres de destino mediante el uso de la **xsd: targetNamespace** atributo. El esquema establece también el **elementFormDefault** y **attributeFormDefault** a los valores de atributo **"unqualified"** (el valor predeterminado para estos atributos). Esto es una declaración global y afecta a todos los elementos locales ( **\<orden >** en el esquema) y atributos (**CustomerID**, **ContactName**y  **OrderID** en el esquema).  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -132,7 +132,7 @@ ms.locfileid: "65980826"
   
      Para obtener más información, consulte [utilizar ADO para ejecutar consultas SQLXML](../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md).  
   
- Si el esquema especifica **elementFormDefault** y **attributeFormDefault** atributos con valor **"qualified"**, el documento de instancia tendrá todos de la variable local califican elementos y atributos. Puede cambiar el esquema anterior para incluir estos atributos en el  **\<xsd: schema >** elemento y vuelva a ejecutar la plantilla. Como los atributos están ahora certificados en la instancia, la consulta XPath cambiará e incluirá el prefijo de espacio de nombres.  
+ Si el esquema especifica **elementFormDefault** y **attributeFormDefault** atributos con valor **"qualified"** , el documento de instancia tendrá todos de la variable local califican elementos y atributos. Puede cambiar el esquema anterior para incluir estos atributos en el  **\<xsd: schema >** elemento y vuelva a ejecutar la plantilla. Como los atributos están ahora certificados en la instancia, la consulta XPath cambiará e incluirá el prefijo de espacio de nombres.  
   
  Esta es la consulta XPath modificada:  
   

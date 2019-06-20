@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 66e77d0badf14a804cb82249d03ed552e1f8dcfb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63205648"
 ---
 # <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Conversión de una tabla en una estructura jerárquica
@@ -39,6 +39,6 @@ ms.locfileid: "63205648"
  [Examen de la estructura actual de la tabla Empleado](lesson-1-1-examining-the-current-structure-of-the-employee-table.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Creación y administración de datos en una tabla jerárquica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
+ [Lección 2: Creación y administración de datos en una tabla jerárquica](lesson-2-creating-and-managing-data-in-a-hierarchical-table.md)  
   
   

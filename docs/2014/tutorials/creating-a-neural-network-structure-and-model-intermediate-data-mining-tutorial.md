@@ -17,10 +17,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 6787db165770f944838a312ecd3e0386d161da38
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62856327"
 ---
 # <a name="creating-a-neural-network-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de red neuronal (Tutorial intermedio de minería de datos)
@@ -52,7 +52,7 @@ ms.locfileid: "62856327"
   
 4.  En el **crear la estructura de minería de datos** , comprueba que la opción **crear estructura de minería de datos con un modelo de minería de datos** está seleccionada.  
   
-5.  Haga clic en la lista desplegable para la opción **qué técnica de minería de datos desea utilizar?**, a continuación, seleccione **redes neuronales de Microsoft**.  
+5.  Haga clic en la lista desplegable para la opción **qué técnica de minería de datos desea utilizar?** , a continuación, seleccione **redes neuronales de Microsoft**.  
   
      Dado que los modelos de regresión logística se basan en las redes neuronales, puede volver a usar la misma estructura y agregar un nuevo modelo de minería de datos.  
   
@@ -102,7 +102,7 @@ ms.locfileid: "62856327"
     |LevelOneOperators|Continuous|Long|  
     |LevelTwoOperators|Continuous|Long|  
     |Orders|Continuous|Long|  
-    |ServiceGrade|Continuous|Doble|  
+    |ServiceGrade|Continuous|Double|  
     |Shift|Discrete|Text|  
     |WageType|Discrete|Text|  
   

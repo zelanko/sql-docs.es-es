@@ -11,10 +11,10 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
 ms.openlocfilehash: f5406ce0e67322a8f7148fc83b83d0789f27e1ae
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66770777"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Uso del Acelerador de código de PROSE de Wrangling de datos
@@ -114,7 +114,7 @@ Para obtener más información, consulte el [documentación](https://aka.ms/pros
 Otro escenario común es detectar patrones en una columna de cadena con el fin de limpieza o de agrupación. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos diferentes. Con el fin de normalizar los valores, puede escribir instrucciones condicionales mediante expresiones regulares.
 
 
-|   |NOMBRE                      |BirthDate      |
+|   |Name                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Desconocido        |

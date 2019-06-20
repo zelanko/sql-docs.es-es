@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 5fa153b16e8fd978cab74838c9e0cee8a17cf72f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65489238"
 ---
 # <a name="task-3-optional-reviewing-the-subscription-views"></a>Tarea 3 (opcional): Revisión de las vistas de suscripciones
@@ -31,4 +31,4 @@ ms.locfileid: "65489238"
      ![SQL Server Management Studio: MDM. Ver proveedores](../../2014/tutorials/media/et-reviewingthesubscriptionviews.jpg "SQL Server Management Studio: MDM. Vista de proveedores")  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 4: Crear un proyecto de SSIS con SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)
+ [Tarea 4: Crear un proyecto de SSIS con SQL Server Data Tools](../../2014/tutorials/task-4-creating-an-ssis-project-using-sql-server-data-tools.md)

@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 184018d0c0973f41e686f9111b9664e12f91cd20
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754496"
 ---
 # <a name="role-switching-during-a-database-mirroring-session-sql-server"></a>Conmutación de roles durante una sesión de creación de reflejo de la base de datos (SQL Server)
@@ -67,9 +67,9 @@ ms.locfileid: "62754496"
   
 ||Alto rendimiento|Modo de alta seguridad sin ningún testigo|Modo de alta seguridad con un testigo|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
-|conmutación automática por error|No|No|Sí|  
-|conmutación por error manual|No|Sí|Sí|  
-|Servicio forzado|Sí|Sí|No|  
+|conmutación automática por error|Sin|Sin|Sí|  
+|conmutación por error manual|Sin|Sí|Sí|  
+|Servicio forzado|Sí|Sí|Sin|  
   
  Tras una conmutación de roles, deben existir ciertos metadatos en ambos asociados para garantizar que todos los usuarios de bases de datos puedan tener acceso a la nueva base de datos principal. Además, se deben crear los trabajos de copia de seguridad en el nuevo servidor principal para garantizar que se siga realizando una copia de seguridad de la base de datos de acuerdo con su programación periódica. Para obtener más información, vea [Administración de inicios de sesión y trabajos tras la conmutación de roles &#40;SQL Server&#41;](../../sql-server/failover-clusters/management-of-logins-and-jobs-after-role-switching-sql-server.md).  
   

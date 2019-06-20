@@ -20,10 +20,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca1882faa9c61536d1ef025058322f141beedafd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63316326"
 ---
 # <a name="analyze-deadlocks-with-sql-server-profiler"></a>Analizar interbloqueos con SQL Server Profiler
@@ -31,7 +31,7 @@ ms.locfileid: "63316326"
   
  Para realizar un seguimiento de los eventos de interbloqueo, agregue la clase de evento **Deadlock graph** a un seguimiento. Esta clase de evento rellena la columna de datos **TextData** del seguimiento con datos XML acerca de los procesos y objetos implicados en el interbloqueo. [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] pueden extraer el documento XML a un archivo XML de interbloqueo (.xdl) que puede ver después en SQL Server Management Studio. Puede configurar el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para extraer eventos **Deadlock graph** en un solo archivo que contenga todos los eventos **Deadlock graph** o en archivos independientes. Esta extracción se puede hacer de las siguientes formas:  
   
--   Al configurar el seguimiento, mediante la pestaña **Configuración de extracción de eventos** . Tenga en cuenta que esta pestaña no aparece hasta que haya seleccionado el evento Deadlock graph en la pestaña **Selección de eventos** .  
+-   Al configurar el seguimiento, mediante la pestaña **Configuración de extracción de eventos** . Tenga en cuenta que esta pestaña no aparece hasta que haya seleccionado el evento **Deadlock graph** en la pestaña **Selección de eventos** .  
   
 -   Mediante la opción **Extraer eventos de SQL Server** del menú **Archivo** .  
   

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: df4afbecebd3c076f80064dbd3d13f35ba2cbcf0
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 53de714a7db50b653a24fa42662fc7e0aeffa88d
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62472085"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263399"
 ---
 # <a name="specify-mark-as-date-table-for-use-with-time-intelligence"></a>Especificar marcar como tabla de fechas para su uso con inteligencia de tiempo
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -52,6 +52,6 @@ ms.locfileid: "62472085"
   
 ## <a name="see-also"></a>Vea también  
  [Cálculos](../../analysis-services/tabular-models/calculations-ssas-tabular.md)   
- [Funciones de inteligencia de tiempo (DAX)](http://msdn.microsoft.com/91df278d-4b28-40c1-a572-cdb91f081517)  
+ [Funciones de inteligencia de tiempo (DAX)](/dax/time-intelligence-functions-dax)  
   
   

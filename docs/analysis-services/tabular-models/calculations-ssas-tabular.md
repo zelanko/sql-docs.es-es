@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 53455f542e10e816aa55272026a875cf3cf87107
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
+ms.openlocfilehash: c7096cac1f4721531f1905b11f2ca3b901661204
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984076"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263429"
 ---
 # <a name="calculations-in-tabular-models"></a>Cálculos en modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52984076"
 |-----------|-----------------|  
 |[Descripción de DAX en modelos tabulares](../../analysis-services/tabular-models/understanding-dax-in-tabular-models-ssas-tabular.md)|Describe el lenguaje de fórmulas Expresiones de análisis de datos (DAX) que se utiliza para crear cálculos para columnas calculadas, medidas y filtros de fila en modelos tabulares.|  
 |[Compatibilidad de las fórmulas DAX en el modo DirectQuery](http://msdn.microsoft.com/981b6a68-434d-4db6-964e-d92f8eb3ee3e)|Se describen las diferencias, se enumeran las funciones que no se admiten en el modo DirectQuery y se enumeran las funciones que sí se admiten pero pueden devolver resultados distintos.|  
-|[Referencia de expresiones de análisis de datos (DAX)](http://msdn.microsoft.com/70a82136-0926-4a91-bcb3-e18e82593b0d)|En esta sección se proporcionan descripciones detalladas de sintaxis, operadores, y funciones de DAX.|  
+|[Referencia de expresiones de análisis de datos (DAX)](/dax/data-analysis-expressions-dax-reference)|En esta sección se proporcionan descripciones detalladas de sintaxis, operadores, y funciones de DAX.|  
   
 > [!NOTE]  
 >  En esta sección no se proporcionan las tareas paso a paso para crear cálculos. Dado que los cálculos se especifican en columnas calculadas, medidas y filtros de fila (en roles), se proporcionan instrucciones sobre dónde crear fórmulas DAX en las tareas relacionadas con esas características. Para obtener más información, consulte [crear una columna calculada](../../analysis-services/tabular-models/ssas-calculated-columns-create-a-calculated-column.md), [crear y administrar medidas](../../analysis-services/tabular-models/create-and-manage-measures-ssas-tabular.md), y [crear y administrar Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  

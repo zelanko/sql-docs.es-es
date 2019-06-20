@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 087c30045fdee1e769471cb12188cf31b524c618
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: 2768449e242b7da66406b9c1a5b95084e0f04949
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072402"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263377"
 ---
 # <a name="calculated-columns"></a>Columnas calculadas
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "53072402"
   
 -   Al cambiar el nombre de una columna calculada, se deben actualizar manualmente las fórmulas que se basan en dicha columna. A menos que esté en modo de actualización manual, la actualización de los resultados de las fórmulas tiene lugar automáticamente. Sin embargo, esta operación podría tardar algún tiempo.  
   
--   Algunos caracteres no se pueden usar en los nombres de columnas. Para más información, consulte los requisitos de nomenclatura en [DAX Syntax Reference](http://msdn.microsoft.com/098630f4-7d1d-467e-976c-99b2279430d5)(Referencia de sintaxis de DAX).  
+-   Algunos caracteres no se pueden usar en los nombres de columnas. Para más información, consulte los requisitos de nomenclatura en [DAX Syntax Reference](/dax/dax-syntax-reference)(Referencia de sintaxis de DAX).  
   
 ##  <a name="bkmk_perf"></a> Performance of calculated columns  
  La fórmula para una columna calculada puede consumir más recursos que la fórmula para una medida. Uno de los motivos para ello es que el resultado de una columna calculada siempre se calcula para cada fila de una tabla, mientras que una medida solo se calcula para las celdas definidas por el filtro utilizado en un informe, una tabla dinámica o un gráfico dinámico. Por ejemplo, una tabla con un millón de filas siempre tendrá una columna calculada con un millón de resultados y un efecto correspondiente en el rendimiento. Sin embargo, una tabla dinámica generalmente filtra los datos aplicando encabezados de columnas y de filas; por consiguiente, una medida solo se calcula para el subconjunto de datos en cada celda de la tabla dinámica.  

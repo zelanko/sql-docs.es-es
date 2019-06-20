@@ -17,10 +17,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b571bec94c873b830654126e39d75d554599e5fa
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721737"
 ---
 # <a name="create-a-push-subscription"></a>Crear una suscripción de inserción
@@ -91,20 +91,20 @@ ms.locfileid: "62721737"
   
     -   Si el valor de **allow_push** es **1**, se admiten las suscripciones de inserción.  
   
-    -   Si el valor de **allow_push** es **0**, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value**.  
+    -   Si el valor de **allow_push** es **0**, ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value** .  
   
-2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication**, **@subscriber** y **@destination_db**. Especifique un valor **push** para **@subscription_type**. Para obtener información acerca de cómo actualizar suscripciones, vea [crear una suscripción actualizable a una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
+2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addsubscription](/sql/relational-databases/system-stored-procedures/sp-addsubscription-transact-sql). Especifique **@publication** , **@subscriber** y **@destination_db** . Especifique un valor **push** para **@subscription_type** . Para obtener información acerca de cómo actualizar suscripciones, vea [crear una suscripción actualizable a una publicación transaccional](publish/create-an-updatable-subscription-to-a-transactional-publication.md)  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Especifique lo siguiente:  
   
-    -   Los parámetros **@subscriber**, **@subscriber_db**y **@publication** .  
+    -   Los parámetros **@subscriber** , **@subscriber_db** y **@publication** .  
   
-    -   Los parámetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el distribuidor para **@job_login** y **@job_password**.  
+    -   Los parámetros [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows con las que se ejecuta el Agente de distribución en el distribuidor para **@job_login** y **@job_password** .  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de distribución siempre realiza la conexión local con el distribuidor mediante la autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password** . Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
     -   Una programación para el trabajo del Agente de distribución de esta suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   
@@ -117,30 +117,30 @@ ms.locfileid: "62721737"
   
     -   Si el valor de **allow_push** es **1**, la publicación admite operaciones de inserción.  
   
-    -   Si el valor de **allow_push** no **1**, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value**.  
+    -   Si el valor de **allow_push** no **1**, ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando **allow_push** para **@property** y `true` para **@value** .  
   
 2.  En el publicador de la base de datos de publicaciones, ejecute [sp_addmergesubscription](/sql/relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql)y especifique los siguientes parámetros:  
   
-    -   **@publication**. Éste es el nombre de la publicación.  
+    -   **@publication** . Éste es el nombre de la publicación.  
   
-    -   **@subscriber_type**. Para una suscripción de cliente, especifique **local** y para una suscripción de servidor, especifique **global**.  
+    -   **@subscriber_type** . Para una suscripción de cliente, especifique **local** y para una suscripción de servidor, especifique **global**.  
   
-    -   **@subscription_priority**. Para una suscripción de servidor, especifique una prioridad para la suscripción (de**0,00** a **99,99**).  
+    -   **@subscription_priority** . Para una suscripción de servidor, especifique una prioridad para la suscripción (de**0,00** a **99,99**).  
   
          Para obtener más información, consulte [Advanced Merge Replication Conflict Detection and Resolution](merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   
 3.  En el publicador de la base de datos de publicaciones, ejecute [sp_addmergepushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql). Especifique lo siguiente:  
   
-    -   Los parámetros **@subscriber**, **@subscriber_db**y **@publication** .  
+    -   Los parámetros **@subscriber** , **@subscriber_db** y **@publication** .  
   
-    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el distribuidor para **@job_login** y **@job_password**.  
+    -   Las credenciales de Windows con las que se ejecuta el Agente de mezcla en el distribuidor para **@job_login** y **@job_password** .  
   
         > [!NOTE]  
-        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password**. El Agente de mezcla siempre realiza la conexión local con el distribuidor mediante la Autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
+        >  Las conexiones que se realicen con la Autenticación integrada de Windows siempre usan las credenciales de Windows especificadas por **@job_login** y **@job_password** . El Agente de mezcla siempre realiza la conexión local con el distribuidor mediante la Autenticación integrada de Windows. De forma predeterminada, el agente se conectará con el suscriptor mediante la autenticación integrada de Windows.  
   
-    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password**. Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
+    -   (Opcional) El valor **0** para **@subscriber_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@subscriber_login** y **@subscriber_password** . Especifique estos parámetros si necesita usar Autenticación de SQL Server al conectarse al suscriptor.  
   
-    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Especifique estos valores si necesita usar Autenticación de SQL Server al conectarse al publicador.  
+    -   (Opcional) El valor **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Especifique estos valores si necesita usar Autenticación de SQL Server al conectarse al publicador.  
   
     -   Una programación para el Agente de mezcla para la suscripción. Para obtener más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

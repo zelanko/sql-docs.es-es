@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 9f719119929b40b1f29468905b2bb10de2071469
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65818097"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67225207"
 ---
 SQL Database V12

@@ -14,10 +14,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 69a521cb72e68141f5706f5187a0288a3f44f241
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061375"
 ---
 # <a name="azure-data-lake-store-file-system-task"></a>Tarea Sistema de archivos de Azure Data Lake Store
@@ -28,8 +28,8 @@ Para agregar una tarea Sistema de archivos de Azure Data Lake Store a un paquete
 
 La propiedad **Operación** especifica la operación del sistema de archivos que se va a realizar. Se admiten las siguientes operaciones.
 
-* **CopyToADLS:** Cargar archivos en ADLS.
-* **CopyFromADLS:** Descargar archivos de ADLS.
+* **CopyToADLS:** Cargue archivos en ADLS.
+* **CopyFromADLS:** Descargue archivos de ADLS.
 
 Para cualquier operación, tendrá que especificar un administrador de conexiones de Azure Data Lake.
 
@@ -38,13 +38,13 @@ Estas son las descripciones de las propiedades específicas de cada operación.
 ## <a name="copytoadls"></a>CopyToADLS
 
 * **LocalDirectory:** Especifica el directorio de origen que contiene archivos para cargar.
-* **FileNamePattern:** Especifica un filtro de nombre de archivo para archivos de origen. Se cargará solo los archivos cuyo nombre coincide con el patrón especificado. Se admite el uso de los caracteres comodín `*` y `?`.
-* **SearchRecursively:** Especifica si se debe buscar en el directorio de origen de archivos para cargar de forma recursiva.
-* **AzureDataLakeDirectory:** Especifica el directorio de destino de ADLS para cargar archivos a.
+* **FileNamePattern:** especifica un filtro de nombre de archivo para los archivos de código fuente. Se cargará solo los archivos cuyo nombre coincide con el patrón especificado. Se admite el uso de los caracteres comodín `*` y `?`.
+* **SearchRecursively:** especifica si se deben buscar de forma recursiva en el directorio de origen los archivos para cargar.
+* **AzureDataLakeDirectory:** especifica el directorio de destino de ADLS al que cargar archivos.
 * **FileExpiry:** Especifica una fecha de expiración y la hora de los archivos cargan en ADLS o dejar en blanco para indicar que no expiren nunca los archivos de esta propiedad.
 
 ## <a name="copyfromadls"></a>CopyFromADLS
 
-* **AzureDataLakeDirectory:** Especifica el directorio de origen ADLS que contiene los archivos para descargar.
-* **SearchRecursively:** Especifica si se debe buscar en el directorio de origen para descargar los archivos de forma recursiva.
-* **LocalDirectory:** Especifica el directorio de destino para almacenar los archivos descargados.
+* **AzureDataLakeDirectory:** especifica el directorio de origen de ADLS que contiene los archivos que se descargarán.
+* **SearchRecursively:** especifica si se deben buscar de forma recursiva en el directorio de origen archivos para descargar.
+* **LocalDirectory:** especifica el directorio de destino para almacenar los archivos descargados.

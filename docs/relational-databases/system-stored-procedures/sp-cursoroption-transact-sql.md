@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5a686f78ea5dff8a3ea551016d9fbe9c9046b110
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724440"
 ---
 # <a name="spcursoroption-transact-sql"></a>sp_cursoroption (Transact-SQL)
@@ -46,7 +46,7 @@ sp_cursoroption cursor, code, value
  *código*  
  Se usa para estipular varios factores de los valores devueltos del cursor. *código* requiere uno de los siguientes **int** valores de entrada:  
   
-|Valor|Name|Descripción|  
+|Valor|NOMBRE|Descripción|  
 |-----------|----------|-----------------|  
 |0x0001|TEXTPTR_ONLY|Devuelve el puntero de texto y no los datos reales, para ciertas columnas de imagen o texto designado.<br /><br /> TEXTPTR_ONLY permite que los punteros de texto que se usará como *identificadores* para objetos blob que posteriormente se pueden recuperar de forma selectiva o actualizan utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)] o DBLIB (p. ej. [!INCLUDE[tsql](../../includes/tsql-md.md)] Herramienta READTEXT o DBLIB DBWRITETEXT).<br /><br /> Si se asigna el valor "0", todas las columnas de imagen y texto de la lista de selección devolverán punteros de texto en lugar de datos.|  
 |0x0002|CURSOR_NAME|Asigna el nombre especificado en *valor* hasta el cursor. Esto, a su vez, permite a ODBC utilizar [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones UPDATE o DELETE posicionadas en los cursores abiertos a través de sp_cursoropen.<br /><br /> La cadena se puede especificar como cualquier tipo de datos Unicode o de caracteres.<br /><br /> Puesto que [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones UPDATE o DELETE posicionadas operan de forma predeterminada, en la primera fila de un cursor grueso, sp_cursor SETPOSITION se debe usar para colocar el cursor antes de emitir la instrucción UPDATE o DELETE posicionada.|  

@@ -10,12 +10,12 @@ ms.assetid: 29a00a41-5b0d-44b2-8a86-1b16fe507768
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 83ead8522e506fcf4ab81d2e904c354424cdb6fd
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.openlocfilehash: 9b6516c427f15c960c6bfb459c4fc375e798b798
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
-ms.locfileid: "66080155"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046671"
 ---
 # <a name="connection-string-properties-analysis-services"></a>Propiedades de cadena de conexión (Analysis Services)
   En este tema se documentan las propiedades de cadena de conexión que puede establecer en una de las herramientas de diseñador o de administración, o ver en las cadenas de conexión generadas por las aplicaciones cliente que se conectan a Analysis Services y consultan datos. Por tanto, solo se tratan un subconjunto de las propiedades disponibles. La lista completa incluye numerosas propiedades de servidor y base de datos, lo que permite personalizar una conexión para una aplicación específica, independientemente de cómo esté configurada la instancia o la base de datos en el servidor.  
@@ -82,7 +82,7 @@ ms.locfileid: "66080155"
   
 |Property|Descripción|  
 |--------------|-----------------|  
-|`Application Name`|Establece el nombre de la aplicación asociada a la conexión. Este valor puede ser útil para supervisar eventos de seguimiento, especialmente si varias aplicaciones tienen acceso a las mismas bases de datos. Por ejemplo, agregar Application Name = 'test' a una causas de cadena de conexión 'test' aparezca en un seguimiento de SQL Server Profiler, como se muestra en la captura de pantalla siguiente:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Los alias para esta propiedad incluyen `sspropinitAppName`, `AppName`. Para obtener más información, vea [Usar el parámetro de nombre de aplicación al conectarse a SQL Server](https://go.microsoft.com/fwlink/?LinkId=301699).|  
+|`Application Name`|Establece el nombre de la aplicación asociada a la conexión. Este valor puede ser útil para supervisar eventos de seguimiento, especialmente si varias aplicaciones tienen acceso a las mismas bases de datos. Por ejemplo, agregar Application Name = 'test' a una causas de cadena de conexión 'test' aparezca en un seguimiento de SQL Server Profiler, como se muestra en la captura de pantalla siguiente:<br /><br /> ![SSAS_AppNameExcample](../media/ssas-appnameexcample.gif "SSAS_AppNameExcample")<br /><br /> Los alias para esta propiedad incluyen `sspropinitAppName`, `AppName`. Para obtener más información, vea [Usar el parámetro de nombre de aplicación al conectarse a SQL Server](https://www.connectionstrings.com/use-application-name-sql-server/).|  
 |`AutoSyncPeriod`|Establece la frecuencia (en milisegundos) de sincronización de caché de cliente y servidor. ADOMD.NET proporciona almacenamiento en caché de cliente para los objetos usados con frecuencia que tienen una sobrecarga mínima de memoria. Esto ayuda a reducir el número de ciclos de ida y vuelta al servidor. El valor predeterminado es de 10000 milisegundos (o diez segundos). Cuando se establece en NULL o en 0, se desactiva la sincronización automática.|  
 |`Character Encoding`|Define cómo se codifican los caracteres en la solicitud. Los valores válidos son Default (predeterminado) o UTF-8 (son equivalentes) y UTF-16|  
 |`CompareCaseSensitiveStringFlags`|Ajusta las comparaciones de cadenas con distinción entre mayúsculas y minúsculas para una configuración regional especificada. Para obtener más información sobre la configuración de esta, vea [CompareCaseSensitiveStringFlags (Propiedad)](https://msdn.microsoft.com/library/aa237459\(v=sql.80\).aspx).|  

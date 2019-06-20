@@ -31,10 +31,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 7f3bbe0b7ebe9d516ab23339632e96db184db1e7
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980708"
 ---
 # <a name="specifying-relationships-using-sqlrelationship-sqlxml-40"></a>Especificar relaciones mediante sql:relationship (SQLXML 4.0)
@@ -57,7 +57,7 @@ ms.locfileid: "65980708"
  Especifica el nombre único de la relación.  
   
  **Parent**  
- Especifica a la relación principal (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que utilicen la misma  **\<SQL: Relationship >** pero elementos primarios diferentes, no se especifica el atributo primario en  **\<sql: relación >**. Esta información se obtiene de la jerarquía del esquema.  
+ Especifica a la relación principal (tabla). Es un atributo opcional; si no se especifica, el nombre de la tabla primaria se obtiene a partir de la información de la jerarquía secundaria del documento. Si el esquema especifica dos jerarquías de elementos primarios y secundarios que utilicen la misma  **\<SQL: Relationship >** pero elementos primarios diferentes, no se especifica el atributo primario en  **\<sql: relación >** . Esta información se obtiene de la jerarquía del esquema.  
   
  **parent-key**  
  Especifica la clave principal del elemento primario. Si la clave principal se compone de varias columnas, los valores se especifican con un espacio entre ellos. Hay una asignación de posición entre los valores que se especifican para la clave de varias columnas y la clave secundaria correspondiente.  
@@ -71,7 +71,7 @@ ms.locfileid: "65980708"
  **Inverse**  
  Este atributo especificado en  **\<SQL: Relationship >** es utilizado por la actualización. Para obtener más información, consulte [especificar el atributo sql:inverse en SQL: Relationship](../../relational-databases/sqlxml-annotated-xsd-schemas-using/specifying-the-sql-inverse-attribute-on-sql-relationship-sqlxml-4-0.md).  
   
- La **SQL: Key-campos** anotación debe especificarse en un elemento que contiene un elemento secundario, que tiene un  **\<SQL: Relationship >** definido entre el elemento y el elemento secundario, y que no proporcione la clave principal de la tabla especificada en el elemento primario. Incluso si el esquema no especifica  **\<SQL: Relationship >**, se debe especificar **SQL: Key-campos** para producir la jerarquía apropiada. Para obtener más información, consulte [identificar columnas de clave mediante el uso de SQL: Key-campos](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
+ La **SQL: Key-campos** anotación debe especificarse en un elemento que contiene un elemento secundario, que tiene un  **\<SQL: Relationship >** definido entre el elemento y el elemento secundario, y que no proporcione la clave principal de la tabla especificada en el elemento primario. Incluso si el esquema no especifica  **\<SQL: Relationship >** , se debe especificar **SQL: Key-campos** para producir la jerarquía apropiada. Para obtener más información, consulte [identificar columnas de clave mediante el uso de SQL: Key-campos](../../relational-databases/sqlxml-annotated-xsd-schemas-using/identifying-key-columns-using-sql-key-fields-sqlxml-4-0.md).  
   
  Para producir una anidación adecuada en el resultado, se recomienda que **SQL: Key-campos** se especifican en todos los esquemas.  
   
@@ -241,7 +241,7 @@ ms.locfileid: "65980708"
 </xsd:schema>  
 ```  
   
- En lugar de especificar una relación con nombre, puede especificar una relación anónima. En este caso, todo el contenido de  **\<anotación >**...  **\</annotation >**, que describe las dos relaciones, aparecen como un elemento secundario de  **\<producto >**.  
+ En lugar de especificar una relación con nombre, puede especificar una relación anónima. En este caso, todo el contenido de  **\<anotación >** ...  **\</annotation >** , que describe las dos relaciones, aparecen como un elemento secundario de  **\<producto >** .  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -385,9 +385,9 @@ ms.locfileid: "65980708"
 ```  
   
 ### <a name="d-specifying-sqlrelationship-on-multiple-elements"></a>D. Especificar sql:relationship en varios elementos  
- En este ejemplo, el esquema XSD anotado contiene el  **\<cliente >**,  **\<orden >**, y  **\<OrderDetail >** elementos.  
+ En este ejemplo, el esquema XSD anotado contiene el  **\<cliente >** ,  **\<orden >** , y  **\<OrderDetail >** elementos.  
   
- La  **\<orden >** es un elemento secundario de la  **\<cliente >** elemento. **\<SQL: Relationship >** se especifica en la  **\<orden >** elemento secundario; por lo tanto, los pedidos que pertenecen a un cliente aparecen como elementos secundarios de  **\<cliente >**.  
+ La  **\<orden >** es un elemento secundario de la  **\<cliente >** elemento. **\<SQL: Relationship >** se especifica en la  **\<orden >** elemento secundario; por lo tanto, los pedidos que pertenecen a un cliente aparecen como elementos secundarios de  **\<cliente >** .  
   
  La  **\<orden >** elemento incluye el  **\<OrderDetail >** elemento secundario. **\<SQL: Relationship >** se especifica en  **\<OrderDetail >** elemento secundario, por lo que los detalles del pedido que pertenecen a un orden aparecen como elementos secundarios de los que **\<pedido >** elemento.  
   
@@ -527,7 +527,7 @@ Emp2(SalesPersonID, FirstName, LastName, ReportsTo)
 </xsd:schema>  
 ```  
   
- En el esquema, tanto el  **\<Emp1 >** elemento y  **\<Emp2 >** elemento son de tipo **EmpType**. El tipo **EmpType** describe un  **\<orden >** elemento secundario y la correspondiente  **\<SQL: Relationship >**. En este caso, no hay ningún elemento primario único que puede identificarse en  **\<SQL: Relationship >** utilizando el **primario** atributo. En esta situación, no se especifica la **primario** atributo  **\<SQL: Relationship >**; el **primario** se obtiene información de atributos de la jerarquía del esquema.  
+ En el esquema, tanto el  **\<Emp1 >** elemento y  **\<Emp2 >** elemento son de tipo **EmpType**. El tipo **EmpType** describe un  **\<orden >** elemento secundario y la correspondiente  **\<SQL: Relationship >** . En este caso, no hay ningún elemento primario único que puede identificarse en  **\<SQL: Relationship >** utilizando el **primario** atributo. En esta situación, no se especifica la **primario** atributo  **\<SQL: Relationship >** ; el **primario** se obtiene información de atributos de la jerarquía del esquema.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
   

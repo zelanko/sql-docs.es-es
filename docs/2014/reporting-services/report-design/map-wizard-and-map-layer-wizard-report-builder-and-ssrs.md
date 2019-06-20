@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: dab4c978bc9309564d8d2f32410ae798becc4d8d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105542"
 ---
 # <a name="map-wizard-and-map-layer-wizard-report-builder-and-ssrs"></a>Asistente para mapas y Asistente para capas de mapa (Generador de informes y SSRS)
@@ -129,7 +129,7 @@ ms.locfileid: "66105542"
  Para extender la galería de mapas, puede agregar o quitar informes del directorio de la galería de mapas, y agregar carpetas para organizar los mapas. Para más información, vea [Mapas &#40;Generador de informes y SSRS&#41;](maps-report-builder-and-ssrs.md).  
   
 ###  <a name="Shapefile"></a> What is an ESRI shapefile?  
- Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>*.shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>*.dbf.  
+ Un archivo de forma ESRI es un conjunto de archivos con datos que cumplen el formato de datos espaciales de los archivos de forma del Environmental Systems Research Institute, Inc. (ESRI). El conjunto de archivos suele incluir el archivo *\<nombreDeArchivo>* .shp que contiene datos espaciales y un archivo auxiliar, *\<nombreDeArchivo>* .dbf.  
   
  Al especificar un archivo de forma como origen de datos espaciales, si se encuentra en el equipo local, los datos espaciales se incrustan automáticamente en el informe. Para usar los datos espaciales de un archivo ESRI dinámicamente, debe hacer lo siguiente:  
   

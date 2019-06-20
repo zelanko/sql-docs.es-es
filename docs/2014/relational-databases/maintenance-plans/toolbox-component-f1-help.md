@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b3a6620b3cfdc5a450f54754b1260abe543e122d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62806833"
 ---
 # <a name="toolbox-component-f1-help"></a>Cuadro de herramientas (Ayuda F1)
@@ -26,7 +26,7 @@ El**cuadro de herramientas** muestra varios elementos que se utilizan en los pro
 Los iconos del**cuadro de herramientas** pueden arrastrarse y colocarse, o bien copiarse y pegarse en los editores de código o en superficies de vistas de diseño de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="using-the-toolbox"></a>Usar el cuadro de herramientas  
- El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más (**+**) que aparece junto a su nombre. Para contraer una pestaña, haga clic en el signo menos (**-**) que aparece junto a su nombre.  
+ El cuadro de herramientas es un control de árbol deslizante cuyo comportamiento es muy parecido al del Explorador de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows, pero sin líneas de cuadrícula ni de conexión. Pueden expandirse varios segmentos del **cuadro de herramientas** (denominados "pestañas") al mismo tiempo, y todo el árbol se desplaza dentro de la ventana del **cuadro de herramientas** . Para expandir una pestaña del **cuadro de herramientas**, haga clic en el signo más ( **+** ) que aparece junto a su nombre. Para contraer una pestaña, haga clic en el signo menos ( **-** ) que aparece junto a su nombre.  
   
  Cada vez que regresa a un editor a diseñador, el **cuadro de herramientas** se desplaza automáticamente hasta la pestaña y el elemento seleccionado de forma más reciente. Al cambiar el foco a un editor o diseñador distinto, la selección actual del **cuadro de herramientas** también cambia.  
   

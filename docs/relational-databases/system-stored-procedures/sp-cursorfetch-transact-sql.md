@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724580"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (Transact-SQL)
@@ -47,7 +47,7 @@ sp_cursorfetch cursor
  *fetchtype*  
  Especifica qué búfer de cursor se va a capturar. *fetchType* es un parámetro opcional que requiere uno de los siguientes valores de entrada de enteros.  
   
-|Valor|Name|Descripción|  
+|Valor|NOMBRE|Descripción|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|Captura el primer búfer de *nrows* filas. Si *nrows* es igual a 0, el cursor se coloca antes del conjunto de resultados y se devuelve ninguna fila.|  
 |0x0002|NEXT|Captura el siguiente búfer de *nrows* filas.|  

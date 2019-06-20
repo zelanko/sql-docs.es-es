@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 432438fe9a6e1b39c849188050b67f816d895187
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63250209"
 ---
 # <a name="mdx-data-definition---create-member"></a>Definición de datos de MDX: CREATE MEMBER
@@ -58,7 +58,7 @@ CREATE [ SESSION ] [HIDDDEN] [ CALCULATED ] MEMBER CURRENTCUBE | Cube_Name.Membe
   
  Para obtener más información acerca de las propiedades de miembro definidas por OLE DB, vea la documentación de OLE DB.  
   
-## <a name="scope"></a>Ámbito  
+## <a name="scope"></a>Scope  
  Los miembros calculados pueden existir en cualquiera de los ámbitos que se incluyen en la siguiente tabla:  
   
  Ámbito de consulta  

@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 0a8c3ae37e2e1ce5abaf67d60e5856ea41b38452
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65817784"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232080"
 ---
 Microsoft SQL Server 2012 Enterprise

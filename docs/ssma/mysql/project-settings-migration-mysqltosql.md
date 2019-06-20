@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 4a423404a8f5db4e20331c3b187365a889bea48a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63261819"
 ---
 # <a name="project-settings-migration-mysqltosql"></a>Configuración del proyecto (migración) (MySQLToSQL)
@@ -46,8 +46,8 @@ El panel de la migración está disponible en el **configuración del proyecto**
 |**Migración de fechas no válidas**|Especifica cómo se migran las fechas no válidas con como ' 2007-04-23' o ' 2000-06-31 10:00:00 ' en formatos de fecha y la fecha y hora.<br /><br />**Modo predeterminado**:  Establecer en NULL<br /><br />**Modo optimista**:  Establecer en NULL<br /><br />**Modo completo**:  Establecer en NULL|  
 |**Valores de tiempo negativos migración**|Especifica cómo migrar los valores negativos como '-30:11:00' en las columnas de tiempo.<br /><br />**Modo predeterminado**:  Establecer en NULL<br /><br />**Modo optimista**:  Establecer en NULL<br /><br />**Modo completo**:  Establecer en NULL|  
 |**Valores de tiempo en 24 horas de migración**|Especifica cómo migrar los valores de tiempo de más de ' 23:59:59 ' en las columnas de tiempo.<br /><br />**Modo predeterminado**:  Establecer en NULL<br /><br />**Modo optimista**:  Establecer en NULL<br /><br />**Modo completo**:  Establecer en NULL|  
-|**Truncar los valores binarios para caber en la columna**|En caso afirmativo, SSMA trunca los valores binarios de MySQL que no caben en columnas de tablas SQL y genera el mensaje de error adecuado. Si No, produce un error en la fila<br /><br />**Modo predeterminado**:  No<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:  No|  
-|**Truncar los valores de caracteres para caber en la columna**|SSMA trunca los valores de caracteres de MySQL que no caben en columnas de tablas SQL y genera el mensaje de error adecuado.<br /><br />**Modo predeterminado**:  No<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:  No|  
+|**Truncar los valores binarios para caber en la columna**|En caso afirmativo, SSMA trunca los valores binarios de MySQL que no caben en columnas de tablas SQL y genera el mensaje de error adecuado. Si No, produce un error en la fila<br /><br />**Modo predeterminado**:  Sin<br /><br />**Modo optimista**:  No<br /><br />**Modo completo**:  Sin|  
+|**Truncar los valores de caracteres para caber en la columna**|SSMA trunca los valores de caracteres de MySQL que no caben en columnas de tablas SQL y genera el mensaje de error adecuado.<br /><br />**Modo predeterminado**:  Sin<br /><br />**Modo optimista**:  Sin<br /><br />**Modo completo**:  No|  
 |**Migración de cero fechas**|Especifica cómo se migran las fechas de cero, como ' 0000-00-00' o ' 0000-00-00 00:00:00 ' en las columnas DATE y DATETIME.<br /><br />**Modo predeterminado**:  Establecer en NULL<br /><br />**Modo optimista**:  Establecer en NULL<br /><br />**Modo completo**:  Establecer en NULL|  
 |**Cero en la migración de fechas**|Especifica cómo se migran las fechas con cero elementos, como ' 2009-01: 00' o ' 2000-00-00-11:00:00 ' en las columnas DATE y DATETIME.<br /><br />**Modo predeterminado**:  Establecer en NULL<br /><br />**Modo optimista**:  Establecer en NULL<br /><br />**Modo completo**:  Establecer en NULL|  
   

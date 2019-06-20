@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cc8252d0049953f0958ea331015aae51fd737709
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62663488"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Clase de eventos Umbral de la CPU superado
@@ -32,7 +32,7 @@ ms.locfileid: "62663488"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|`int`|Uso de la CPU en milisegundos.|18|Sí|  
-|EventClass|`int`|214|27|No|  
+|EventClass|`int`|214|27|Sin |  
 |EventSubClass|`int`|Infracción del límite de la CPU.|21|Sí|  
 |GroupID|`int`|Id. del grupo donde se produjo la infracción.|66|Sí|  
 |OwnerID|`int`|SPID del proceso que produjo la infracción.|58|Sí|  

@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 495b03b98e6c497bfd7a1527d9e2e2d81f25b762
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62805571"
 ---
 # <a name="create-custom-templates"></a>Crear plantillas personalizadas
@@ -67,7 +67,7 @@ ms.locfileid: "62805571"
   
 10. En el Editor de consultas, escriba **EXECUTE dbo.WorkOrdersForBlade**y, después, pulse F5 para ejecutar la consulta. Confirme que el panel **Resultados** devuelve una lista de los pedidos de trabajo relativos a cuchillas.  
   
-11. Editar la plantilla de secuencia de comandos (la secuencia de comandos en el paso 7), reemplace el nombre del producto hoja con el parámetro  <strong>*<* product_name</strong>, `nvarchar(50)`, <strong>nombre*>*</strong> , en cuatro lugares.  
+11. Editar la plantilla de secuencia de comandos (la secuencia de comandos en el paso 7), reemplace el nombre del producto hoja con el parámetro <strong> *<* product_name</strong>, `nvarchar(50)`, <strong>nombre *>* </strong>, en cuatro lugares.  
   
     > [!NOTE]  
     >  Los parámetros requieren tres elementos: el nombre del parámetro que desea reemplazar, el tipo de datos del parámetro y un valor predeterminado para el parámetro.  

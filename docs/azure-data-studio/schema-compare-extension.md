@@ -12,13 +12,13 @@ author: yualan
 ms.author: alayu
 manager: jroth
 ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66798086"
 ---
-# <a name="schema-compare-extension-preview"></a>Extensión del esquema de comparación (versión preliminar)
+# <a name="schema-compare-extension-preview"></a>Extensión Comparación de esquemas (versión preliminar)
 La extensión de comparación de esquemas proporciona una experiencia fácil de usar para comparar las bases de datos y archivos .dacpac y aplicar los cambios del origen al destino.
 
 Esta experiencia está actualmente en su versión preliminar inicial. Notificar problemas y solicitudes de características [aquí.](https://github.com/microsoft/azuredatastudio/issues)

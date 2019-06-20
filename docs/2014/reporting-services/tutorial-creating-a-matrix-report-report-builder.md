@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: f87c1188b0abd1b576da63412829464368275b0f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098917"
 ---
 # <a name="tutorial-creating-a-matrix-report-report-builder"></a>Tutorial: Crear un informe de matriz [Generador de informes]
@@ -176,13 +176,13 @@ ms.locfileid: "66098917"
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda**. Las celdas cambian para mostrar la moneda con formato.  
   
-     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
+     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
   
 4.  Haga clic en la celda que contiene `[SalesDate]`.  
   
 5.  En el **número** grupo, en la lista desplegable, seleccione **fecha**.  
   
-     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
+     La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
 6.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   

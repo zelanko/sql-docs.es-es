@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-thobro
 ms.openlocfilehash: 40e591615850d16994c4023b63a354aa2061da59
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63287495"
 ---
 # <a name="connecting-to-sql-server-oracletosql"></a>Conexión a SQL Server (OracleToSQL)
@@ -55,7 +55,7 @@ Al definir las propiedades de conexión, también se especifique la base de dato
   
 2.  En el cuadro de diálogo de conexión, escriba o seleccione el nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-    -   Si se conecta a la instancia predeterminada en el equipo local, puede escribir **localhost** o un punto (**.**).  
+    -   Si se conecta a la instancia predeterminada en el equipo local, puede escribir **localhost** o un punto ( **.** ).  
   
     -   Si se conecta a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
   

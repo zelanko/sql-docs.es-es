@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62660806"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
@@ -43,22 +43,22 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @publication **=** ] **'**_publicación_**'**  
- Nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones de mezcla en la base de datos actual.  
+ [ @publication **=** ] **'** _publicación_ **'**  
+ Nombre de la publicación. *publicación*es **sysname**, su valor predeterminado es **%** , que devuelve información sobre todas las publicaciones de mezcla en la base de datos actual.  
   
  [ @found **=** ] **'***encuentra***'** salida  
  Marca que indica las filas devueltas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es null. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
- [ @publication_id **=**] **'***publication_id***'** salida  
+ [ @publication_id **=** ] **'***publication_id***'** salida  
  El número de identificación de la publicación. *publication_id* es **uniqueidentifier** y un parámetro OUTPUT y su valor predeterminado es null.  
   
- [ @reserved **=**] **'***reservada***'**  
- [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* es **nvarchar (20)**, su valor predeterminado es null.  
+ [ @reserved **=** ] **'***reservada***'**  
+ [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *reservado* es **nvarchar (20)** , su valor predeterminado es null.  
   
- [ @publisher**=** ] **'***publisher***'**  
+ [ @publisher **=** ] **'***publisher***'**  
  El nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
- [@publisher_db**=** ] **'***publisher_db***'**  
+ [@publisher_db **=** ] **'***publisher_db***'**  
  El nombre de la base de datos de publicación. *publisher_db* es **sysname**, su valor predeterminado es null.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

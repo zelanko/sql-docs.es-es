@@ -17,10 +17,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 206a91032b0eb2e1928846ebcdbfcb97f04ba12c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62768961"
 ---
 # <a name="creating-a-destination-with-the-script-component"></a>Crear un destino con el componente de script
@@ -68,7 +68,7 @@ ms.locfileid: "62768961"
 ### <a name="adding-variables"></a>Agregar variables  
  Si desea utilizar variables existentes en el script, puede agregarlas en los `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades el **Script** página de la **Editor de transformación Script**.  
   
- Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos (**...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
+ Cuando agregue varias variables a los campos de propiedades, separe sus nombres con comas. También puede seleccionar varias variables, haga clic en el botón de puntos suspensivos ( **...** ) situado junto a la `ReadOnlyVariables` y `ReadWriteVariables` campos de propiedades y, a continuación, seleccionar las variables en el **seleccionar variables** cuadro de diálogo.  
   
  Para obtener información general sobre la forma de usar variables con el componente de script, vea [Using Variables in the Script Component](../extending-packages-scripting/data-flow-script-component/using-variables-in-the-script-component.md) (Uso de variables con el componente de script).  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62768961"
   
 3.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Un origen puede conectarse directamente a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **Ciudad** columnas.  
+4.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación). Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo que contiene al menos el **AddressID** y **Ciudad** columnas.  
   
 5.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas de entrada **AddressID** y **City**.  
   
@@ -236,7 +236,7 @@ public class ScriptMain:
   
 2.  Agregue un nuevo componente de script a la superficie del diseñador de flujo de datos y configúrelo como destino.  
   
-3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Un origen puede conectarse directamente a un destino sin ninguna transformación.) Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo y debe contener al menos el **AddressID** y **Ciudad** columnas.  
+3.  Conecte la salida de un origen o transformación de nivel superior al componente de destino en el Diseñador [!INCLUDE[ssIS](../../includes/ssis-md.md)]. (Puede conectar directamente un origen a un destino sin ninguna transformación). Esta salida debe proporcionar datos de la **Person.Address** tabla de la `AdventureWorks` base de datos de ejemplo y debe contener al menos el **AddressID** y **Ciudad** columnas.  
   
 4.  Abra el **Editor de transformación Script**. En la página **Columnas de entrada**, seleccione las columnas **AddressID** y **City**.  
   

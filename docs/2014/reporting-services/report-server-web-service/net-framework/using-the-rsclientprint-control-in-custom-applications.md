@@ -16,10 +16,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 28f4cdf562db1b3008db239a08b76097dc5d7e46
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62519125"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
@@ -67,12 +67,12 @@ ms.locfileid: "62519125"
   
 |Property|Tipo|RW|Default|Descripción|  
 |--------------|----------|--------|-------------|-----------------|  
-|MarginLeft|Doble|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginRight|Doble|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginTop|Doble|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|MarginBottom|Doble|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
-|PageWidth|Doble|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
-|PageHeight|Doble|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
+|MarginLeft|Double|RW|Valor del informe|Obtiene o establece el margen izquierdo. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginRight|Double|RW|Valor del informe|Obtiene o establece el margen derecho. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginTop|Double|RW|Valor del informe|Obtiene o establece el margen superior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|MarginBottom|Double|RW|Valor del informe|Obtiene o establece el margen inferior. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está especificado en el informe, es 12,2 milímetros.|  
+|PageWidth|Double|RW|Valor del informe|Obtiene o establece el ancho de página. El valor predeterminado, si no lo ha establecido el desarrollador o no está incluido en la definición de informe, es de 215,9 milímetros.|  
+|PageHeight|Double|RW|Valor del informe|Obtiene o establece el alto de página. El valor predeterminado, si no lo ha establecido el desarrollador de software o no está incluido en la definición de informe, es 279,4 milímetros.|  
 |Culture|Int32|RW|Configuración regional del explorador|Especifica el identificador de configuración regional (LCID). Este valor determina la unidad de medida para la entrada del usuario. Por ejemplo, si un usuario escribe `3`, el valor se medirá en milímetros si el idioma es francés o pulgadas, si el idioma es inglés (Estados Unidos). Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |UICulture|String|RW|Valor de cultura del cliente|Especifica la traducción de las cadenas del cuadro de diálogo. Texto en el cuadro de diálogo Imprimir está traducido a estos idiomas: Chino simplificado, chino tradicional, inglés, francés, alemán, italiano, japonés, coreano y español. Los valores válidos incluyen: 1028, 1031, 1033, 1036, 1040, 1041, 1042, 2052, 3082.|  
 |Authenticate|Boolean|RW|False|Especifica si el control envía un comando GET en el servidor de informes para iniciar una conexión para la impresión fuera de sesión.|  

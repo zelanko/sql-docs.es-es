@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0b42e3d5b74b730a197b4c8cb595e871a247c6
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403517"
 ---
 # <a name="lesson-8-1---defining-and-using-a-drillthrough-action"></a>Lección 8-1: definir y utilizar una acción de obtención de detalles
@@ -107,9 +107,9 @@ En las tareas de este tema, definirá una acción de obtención de detalles para
   
 6.  Cambie la propiedad **Nombre** del atributo **Order Date Key** por **Order Date** . Después, haga clic en el botón Examinar de la propiedad **Columna de nombre** y, en el cuadro de diálogo **Columna de nombre** , seleccione **Date** como tabla de origen y SimpleDate como columna de origen. [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-7.  Cambie la propiedad **Nombre** del atributo **Due Date Key** por **Due Date**y, después, usando el mismo método que en el caso del atributo **Order Date Key** , cambie la propiedad **Columna de nombre** de este atributo por **Date.SimpleDate (WChar)**.  
+7.  Cambie la propiedad **Nombre** del atributo **Due Date Key** por **Due Date**y, después, usando el mismo método que en el caso del atributo **Order Date Key** , cambie la propiedad **Columna de nombre** de este atributo por **Date.SimpleDate (WChar)** .  
   
-8.  Cambie la propiedad **Nombre** del atributo **Ship Date Key** por **Ship Date**y, después, cambie la propiedad **Columna de nombre** de este atributo por **Date.SimpleDate (WChar)**.  
+8.  Cambie la propiedad **Nombre** del atributo **Ship Date Key** por **Ship Date**y, después, cambie la propiedad **Columna de nombre** de este atributo por **Date.SimpleDate (WChar)** .  
   
 9. Cambie a la pestaña **Acciones** del Diseñador de cubos para el cubo Tutorial de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   

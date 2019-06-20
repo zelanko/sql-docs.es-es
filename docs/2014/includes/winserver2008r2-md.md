@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: f2e7d302938868af7ce33bd790474f38b42fa4e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65820039"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67210700"
 ---
 Windows Server 2008 R2

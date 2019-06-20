@@ -16,10 +16,10 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 0b516d76c1c814cb70215bfe37f3cddb60e614d5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66095222"
 ---
 # <a name="feature-selection"></a>Selección de características
@@ -89,7 +89,7 @@ ms.locfileid: "66095222"
 ## <a name="installing-adventureworks-sample-databases"></a>Instalar Bases de datos de ejemplo AdventureWorks  
  De forma predeterminada, las bases de datos y el código de ejemplo no se instalan como parte del programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para obtener más información acerca de cómo instalar las bases de datos de ejemplo y ejemplos de código, vea el [Microsoft SQL Server Community Projects & Samples](https://go.microsoft.com/fwlink/?LinkId=87843) (https://go.microsoft.com/fwlink/?LinkId=87843).  
   
- Una vez instalado [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], está disponible la información adicional sobre los ejemplos. Desde el **iniciar** menú, haga clic en **todos los programas**, haga clic en **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]**, haga clic en **documentación y tutoriales** y, a continuación, haga clic en  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
+ Una vez instalado [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], está disponible la información adicional sobre los ejemplos. Desde el **iniciar** menú, haga clic en **todos los programas**, haga clic en **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]** , haga clic en **documentación y tutoriales** y, a continuación, haga clic en  **[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Samples Overview**.  
   
 ## <a name="see-also"></a>Vea también  
  [Ediciones y componentes de SQL Server 2014](../editions-and-components-of-sql-server-2016.md)  

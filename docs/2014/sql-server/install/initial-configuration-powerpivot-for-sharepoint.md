@@ -11,10 +11,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: adf5d9682ad1b2b9002a69884a183b30b3454c61
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66094686"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>Configuración inicial (PowerPivot para SharePoint)
@@ -73,7 +73,7 @@ ms.locfileid: "66094686"
   
 4.  Haga clic en **implementar la solución.**  
   
-5.  En **implementarla?**, seleccione la aplicación web de SharePoint a la que desea agregar compatibilidad con las características de PowerPivot.  
+5.  En **implementarla?** , seleccione la aplicación web de SharePoint a la que desea agregar compatibilidad con las características de PowerPivot.  
   
 6.  Haga clic en **Aceptar**.  
   
@@ -158,7 +158,7 @@ ms.locfileid: "66094686"
   
  Si el Servicio de almacenamiento seguro no aparece, siga estos pasos para habilitarlo ahora. Si se habilita el almacenamiento seguro, los autores de libros y los propietarios de documentos pueden tener acceso a más opciones de conexión a orígenes de datos al programar actualizaciones de datos para los libros publicados.  
   
-##### <a name="part-1-enable-secure-store-service"></a>Parte 1: Habilitar el servicio Store segura  
+##### <a name="part-1-enable-secure-store-service"></a>Parte 1: Habilitar el servicio Store segura  
   
 1.  En Administración central, en Administración de aplicaciones, haga clic en **Administrar aplicaciones de servicio**.  
   
@@ -180,7 +180,7 @@ ms.locfileid: "66094686"
   
 10. Acepte los valores predeterminados restantes y, a continuación, haga clic en **Aceptar.** La aplicación de servicio aparecerá junto a otros servicios administrados en la lista de aplicaciones de servicio de la granja de servidores.  
   
-##### <a name="part-2-generate-the-master-key"></a>Parte 2: Generar la clave maestra  
+##### <a name="part-2-generate-the-master-key"></a>Parte 2: Generar la clave maestra  
   
 1.  Haga clic en la aplicación Servicio de almacenamiento seguro en la lista.  
   
@@ -192,7 +192,7 @@ ms.locfileid: "66094686"
   
 5.  Haga clic en **Aceptar**.  
   
-##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: Configurar la cuenta de actualización de datos desatendida de PowerPivot  
+##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>Parte 3: Configurar la cuenta de actualización de datos desatendida de PowerPivot  
  A menudo se requiere crear una cuenta de actualización de datos desatendida para el acceso a datos PowerPivot y el acceso a datos externos durante la actualización de datos. Por ejemplo, si Kerberos no está habilitado, debe crear una cuenta desatendida que el servicio PowerPivot pueda utilizar para conectarse a los orígenes de datos externos.  
   
  Para obtener instrucciones sobre cómo crear los datos PowerPivot desatendidos actualización cuenta u otras credenciales almacenadas que se usan en actualización de datos, vea [configurar la cuenta de actualización de datos desatendida de PowerPivot &#40;PowerPivot para SharePoint&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) y [configurar credenciales almacenadas para la actualización de datos PowerPivot &#40;PowerPivot para SharePoint&#41;](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md).  

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: a6a6e123e525512a72d70bcc8ca2eba549d1347e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62676271"
 ---
 # <a name="lesson-1-creating-the-market-basket-mining-structure"></a>Lección 1: Creación de la estructura de minería de la cesta de la compra
@@ -187,6 +187,6 @@ CREATE MINING STRUCTURE [Mining Structure Name]
  En la siguiente lección agregará modelos de minería de datos a la estructura de minería de datos Market Basket que acaba de crear.  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
+ [Lección 2: Agregar modelos de minería de datos a la estructura de minería de datos Market Basket](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md)  
   
   

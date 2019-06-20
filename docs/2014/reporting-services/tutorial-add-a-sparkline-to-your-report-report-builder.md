@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a543182d5c367be9cc1be875f05c1ab5d4c9bfcf
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099040"
 ---
 # <a name="tutorial-add-a-sparkline-to-your-report-report-builder"></a>Tutorial: Adición de un minigráfico a un informe (Generador de informes)
@@ -146,7 +146,7 @@ ms.locfileid: "66099040"
        'Slim Digital' as Product, CAST(26576.00 AS money) AS Sales, 88 as Quantity  
     ```  
   
-4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar (**!**).  
+4.  En la barra de herramientas del diseñador de consultas, haga clic en Ejecutar ( **!** ).  
   
      La consulta se ejecuta y muestra el conjunto de resultados para los campos **SalesDate**, **Subcategory**, **Product**, **Sales**y **Quantity**.  
   
@@ -254,7 +254,7 @@ ms.locfileid: "66099040"
   
 3.  En la pestaña **Inicio** , en el grupo **Número** , haga clic en el botón **Moneda** . Las celdas cambian para mostrar la moneda con formato.  
   
-     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [**$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
+     Si la configuración regional es Inglés (Estados Unidos), el texto de ejemplo predeterminado es [ **$12,345.00**]. Si no ve un valor de moneda de ejemplo, haga clic en **estilos de marcador de posición** en el **números** de grupo y, a continuación, haga clic en **valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener una vista previa del informe.  
   
@@ -271,7 +271,7 @@ ms.locfileid: "66099040"
   
 3.  En la cinta de opciones, en el **inicio** ficha la **número** grupo, en la lista desplegable, seleccione **fecha**.  
   
-     La celda muestra la fecha de ejemplo **[1/31/2000]**. Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
+     La celda muestra la fecha de ejemplo **[1/31/2000]** . Si no ve un valor de fecha de ejemplo, haga clic en **Estilos de marcador de posición** en el grupo **Números** y, después, haga clic en **Valores de ejemplo**.  
   
 4.  Haga clic en **Ejecutar** para obtener la vista previa del informe.  
   

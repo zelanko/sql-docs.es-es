@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 372d3b2df79d66084f5599b4ac098b8c273ee78a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63127830"
 ---
 # <a name="set-collate-command"></a>Comando COLLATE Set
@@ -47,7 +47,7 @@ SET COLLATE TO cSequenceName
 |UNIQWT|Peso único|  
   
 > [!NOTE]  
->  Cuando se especifica la opción español, *ch* es una letra única que ordena entre *c* y *d.*, y *ll* ordena entre  *l* y *m*.  
+>  Cuando se especifica la opción español, *ch* es una letra única que ordena entre *c* y *d.* , y *ll* ordena entre  *l* y *m*.  
   
  Si especifica una opción de secuencia de intercalación como una cadena de caracteres literales, asegúrese de encerrarlo entre comillas en la opción:  
   

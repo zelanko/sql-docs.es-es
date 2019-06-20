@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: d96004357962ee822df7458a30d740fc836de658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62723888"
 ---
 # <a name="spdropuser-transact-sql"></a>sp_dropuser (Transact-SQL)
@@ -55,7 +55,7 @@ sp_dropuser [ @name_in_db = ] 'user'
   
  Cuando se quita un usuario de base de datos, también se quitan los alias que el usuario tuviera. Si el usuario posee un esquema vacío con su mismo nombre, se eliminará también el esquema. Si el usuario posee otros elementos protegibles en la base de datos, no se eliminará el usuario. La propiedad de los objetos debe transferirse primero a otra entidad de seguridad. Para obtener más información, vea [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md). Al quitar un usuario de la base de datos se quitan automáticamente los permisos que tiene asociados y, también, se quita el usuario de todos los roles de los que es miembro.  
   
- **sp_dropuser** no se puede usar para quitar el propietario de la base de datos (**dbo**) **INFORMATION_SCHEMA** a los usuarios, o la **invitado** usuario desde el **maestro**  o **tempdb** bases de datos. En las bases de datos ajenos al sistema, `EXEC sp_dropuser 'guest'` revocará el permiso CONNECT al usuario **invitado**. Pero no se quitará al usuario.  
+ **sp_dropuser** no se puede usar para quitar el propietario de la base de datos (**dbo**) **INFORMATION_SCHEMA** a los usuarios, o la **invitado** usuario desde el **maestro ** o **tempdb** bases de datos. En las bases de datos ajenos al sistema, `EXEC sp_dropuser 'guest'` revocará el permiso CONNECT al usuario **invitado**. Pero no se quitará al usuario.  
   
  **sp_dropuser** no se puede ejecutar dentro de una transacción definida por el usuario.  
   

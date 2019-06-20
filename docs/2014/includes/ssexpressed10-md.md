@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 8f8445191720962be7eeb87afad4859aafd6192c
-ms.sourcegitcommit: c29150492383f48ef484fa02a483cde1cbc68aca
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/17/2019
-ms.locfileid: "65819512"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67223786"
 ---
 SQL Server 2008 Express

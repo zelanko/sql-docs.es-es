@@ -13,10 +13,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62667725"
 ---
 # <a name="running-test-cases-sybasetosql"></a>Ejecución de casos de prueba (SybaseToSQL)
@@ -45,7 +45,7 @@ Suponga que la tabla comprobada se denomina USER_TABLE. Para este tipo de tabla,
   
 Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o SSMATESTER2008db y a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la base de datos ssmatesterdb_syb.  
   
-|Nombre|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
 |USER_TABLE$Aud|Table|Tabla donde se guardan las filas eliminadas y sobrescribir.|  
@@ -57,7 +57,7 @@ Los siguientes objetos se crean en Sybase en la base de datos SSMATESTER2005db o
   
 El siguiente objeto se crea en la base de datos de tabla comprobado en Sybase y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-|Name|Tipo|Descripción|  
+|NOMBRE|Tipo|Descripción|  
 |--------|--------|---------------|  
 |USER_TABLE$Trg|Desencadenador|Auditoría de los cambios en la tabla comprobado el desencadenador.|  
   

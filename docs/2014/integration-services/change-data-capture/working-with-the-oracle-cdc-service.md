@@ -11,10 +11,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 2f8854dba3c1d998d572481c285ee75dc933e480
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62771185"
 ---
 # <a name="working-with-the-oracle-cdc-service"></a>Trabajar con el servicio CDC de Oracle
@@ -94,7 +94,7 @@ ms.locfileid: "62771185"
 |NAME|Nombre de la base de datos de Oracle en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .|  
 |config_version|Marca de tiempo (UTC) del último cambio en la tabla **xdbcdc_config** de la base de datos CDC correspondiente o marca de tiempo (UTC) de la fila actual de esta tabla.<br /><br /> El desencadenador UPDATE aplica un valor GETUTCDATE() para este elemento. **config_version** permite al servicio CDC identificar la instancia CDC que hay que comprobar para ver si hay un cambio de configuración o para ver si está habilitada/deshabilitada.|  
 |cdc_service_name|Este elemento determina qué servicio CDC de Oracle controla la base de datos de Oracle seleccionada.|  
-|enabled|Indica si la instancia CDC de Oracle está activa (1) o deshabilitada (0). Cuando el servicio CDC de Oracle se inicia, solo se inician las instancias marcadas como habilitadas (1).<br /><br /> **Tenga en cuenta**: Una instancia CDC de Oracle puede deshabilitarse debido a un error que no se puede reintentar. En este caso, la instancia se debe reiniciar manualmente después de que se resuelva el error.|  
+|enabled|Indica si la instancia CDC de Oracle está activa (1) o deshabilitada (0). Cuando el servicio CDC de Oracle se inicia, solo se inician las instancias marcadas como habilitadas (1).<br /><br /> **Nota**: Una instancia CDC de Oracle puede deshabilitarse debido a un error que no se puede reintentar. En este caso, la instancia se debe reiniciar manualmente después de que se resuelva el error.|  
   
 ###  <a name="BKMK_dboxdbcdc_services"></a> dbo.xdbcdc_services  
  Esta tabla enumera los servicios CDC asociados a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del host. La Consola del diseñador CDC emplea esta tabla para determinar la lista de servicios CDC configurados para la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También la usa el servicio CDC para asegurarse de que solo un servicio de Windows en ejecución administra un nombre dado de servicio CDC de Oracle.  
@@ -217,7 +217,7 @@ ms.locfileid: "62771185"
   
  **sql-username**y **sql-password** son las credenciales de autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se están actualizando. Si sqlacct tiene un nombre de usuario vacío y una contraseña vacía, el servicio CDC de Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Tenga en cuenta**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_create"></a> Crear  
  Use `Create` para crear un servicio CDC de Oracle desde un script. El comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Create` :  
@@ -243,7 +243,7 @@ ms.locfileid: "62771185"
   
  **sql-username**y **sql-password** son el nombre de cuenta y la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usados para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si ambos parámetros están vacíos, el servicio CDC para Oracle conectará con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la autenticación de Windows.  
   
- **Tenga en cuenta**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ###  <a name="BKMK_delete"></a> Delete  
  Use `Delete` para eliminar correctamente el servicio CDC de Oracle desde un script. Este comando debe ser ejecutado por un administrador del equipo. A continuación se muestra un ejemplo del comando `Delete` .  
@@ -258,7 +258,7 @@ ms.locfileid: "62771185"
   
  **cdc-service-name** es el nombre del servicio CDC que se va a eliminar.  
   
- **Tenga en cuenta**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
+ **Nota**: Los parámetros que contienen espacios en blanco o comillas dobles se deben escribir entre comillas dobles ("). Las comillas dobles incrustadas se deben duplicar (por ejemplo, para usar **"A#B" D** como contraseña debe escribir **""A#B"" D"**).  
   
 ## <a name="see-also"></a>Vea también  
  [Cómo usar la interfaz de línea de comandos del servicio CDC](how-to-use-the-cdc-service-command-line-interface.md)   

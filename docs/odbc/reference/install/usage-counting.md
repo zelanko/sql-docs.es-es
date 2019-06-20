@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ca2a52eb08cdf1b1b9cb5a23805da34aab915b7a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273391"
 ---
 # <a name="usage-counting"></a>Recuento de uso
@@ -60,7 +60,7 @@ ms.locfileid: "63273391"
   
  En la tabla siguiente se muestra el formato del valor de recuento de uso del archivo.  
   
-|Name|Tipo de datos|Datos|  
+|NOMBRE|Tipo de datos|Datos|  
 |----------|---------------|----------|  
 |*full-path*|REG_DWORD|*Recuento*|  
   

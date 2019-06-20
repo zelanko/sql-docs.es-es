@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63034922"
 ---
 # <a name="diagnostic-messages"></a>Mensajes de diagnóstico
@@ -51,4 +51,4 @@ Con cada SQLSTATE, se devuelve un mensaje de diagnóstico. A menudo se devuelve 
   
  [1] en este caso, el controlador actúa como el controlador y el origen de datos.  
   
- Corchetes (**[]**) debe estar incluido en el mensaje y no indican elementos opcionales.
+ Corchetes ( **[]** ) debe estar incluido en el mensaje y no indican elementos opcionales.

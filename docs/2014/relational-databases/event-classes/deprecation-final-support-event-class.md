@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f2833f1f342aa212b73611d257b8e29606a14cce
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62662986"
 ---
 # <a name="deprecation-final-support-event-class"></a>Deprecation Final Support, clase de eventos
@@ -46,7 +46,7 @@ ms.locfileid: "62662986"
 |ObjectID|`int`|Número de identificador de la característica desusada.|22|Sí|  
 |ObjectName|`nvarchar`|Nombre de la característica desusada.|34|Sí|  
 |IdSolicitud|`int`|Identificador de la solicitud que contiene la instrucción.|49|Sí|  
-|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|No|  
+|ServerName|`nvarchar`|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de la que se realiza un seguimiento.|26|Sin|  
 |SessionLoginName|`nvarchar`|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usando inicioDeSesión1 y ejecuta una instrucción como inicioDeSesión2, `SessionLoginName` muestra inicioDeSesión1 y `LoginName` muestra inicioDeSesión2. En esta columna se muestran los inicios de sesión tanto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como de Windows.|64|Sí|  
 |SPID|`int`|Identificador de la sesión en la que se produjo el evento.|12|Sí|  
 |SqlHandle|`image`|Identificador de binarios que se puede utilizar para identificar procedimientos almacenados o lotes SQL.|63|Sí|  

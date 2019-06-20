@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Agregar y modificar un diagrama de base de datos | Microsoft Docs'
+title: 'Tutorial: Incorporación y cambio de un diagrama de base de datos | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 59225dd445ec2d075b9c7c8ca7eac52af2020a68
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63273743"
 ---
 # <a name="walkthrough-adding-and-changing-a-database-diagram"></a>Tutorial: Incorporación y cambio de un diagrama de base de datos
@@ -58,7 +58,7 @@ ms.locfileid: "63273743"
   
 1.  Haga clic con el botón secundario en la tabla `Address` . En el menú contextual, seleccione **Vista de tabla**y, a continuación, haga clic en **Estándar**.  
   
-     La cuadrícula de tabla muestra tres columnas: **Nombre de columna**, **tipo de datos**, y **permitir valores NULL**.  
+     La cuadrícula de tabla muestra tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
   
 2.  Haga clic con el botón derecho en la tabla `Address` , haga clic en **Vista de tabla** y seleccione **Claves**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "63273743"
   
 2.  En el **Elegir nombre** cuadro de diálogo, haga clic en **Aceptar** para aceptar el nombre predeterminado `Table1`.  
   
-     Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **tipo de datos**, y **permitir valores NULL**.  
+     Aparecerá una nueva cuadrícula de tabla con tres columnas: **Nombre de columna**, **Tipo de datos**, y **Permitir nulos**.  
   
 3.  Agregue la siguiente información para `Table1`:  
   
@@ -130,7 +130,7 @@ ms.locfileid: "63273743"
   
 2.  Arrastre `T2col1` hasta `T1col1`.  
   
-     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **tablas y columnas** en primer plano.  
+     Aparecen dos cuadros de diálogo: **Relación de clave externa** en segundo plano y **Tablas y columnas** en primer plano.  
   
 3.  Haga clic en **Aceptar** para guardar la nueva relación.  
   

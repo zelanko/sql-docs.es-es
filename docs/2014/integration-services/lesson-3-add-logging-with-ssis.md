@@ -10,12 +10,12 @@ ms.assetid: 64cd24cc-ba8e-4bd7-b10b-6b80d8b04af6
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 1a3a32b35503ff6dae2e103f46e45a28359b948d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e716b808d5d9ada8aeaf50d92006cc6453c6e47d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62767547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67046761"
 ---
 # <a name="lesson-3-adding-logging"></a>Lección 3: Adición de registro
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] incluye características de registro que permiten supervisar y solucionar los problemas de ejecución de paquetes mediante el seguimiento de eventos de tarea y de contenedor. La características de registro son flexibles, pueden habilitarse en el nivel de paquete o en tareas y contendores individuales del paquete. Puede seleccionar qué eventos deben registrarse y crear varios registros para un único paquete.  
@@ -35,7 +35,7 @@ ms.locfileid: "62767547"
  En esta lección, creará una copia del paquete que creó en [lección 2: Agregar bucle](lesson-2-adding-looping-with-ssis.md). Utilizando este nuevo paquete, luego agregará y configurará el registro para supervisar eventos específicos durante la ejecución del paquete. Si no ha finalizado cualquiera de las lecciones anteriores, también puede copiar el paquete de la lección 2 finalizada incluido en el tutorial.  
   
 > [!IMPORTANT]  
->  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información acerca de cómo instalar e implementar **AdventureWorksDW2012**, [Reporting Services Product Samples de CodePlex](https://go.microsoft.com/fwlink/p/?LinkID=52691).  
+>  Para este tutorial, se necesita la base de datos de ejemplo **AdventureWorksDW2012** . Para obtener más información acerca de cómo instalar e implementar **AdventureWorksDW2012**, [Reporting Services Product Samples en GitHub](https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 ## <a name="lesson-tasks"></a>Tareas de la lección  
  Esta lección contiene las siguientes tareas:  

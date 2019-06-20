@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: v-pelars
 ms.openlocfilehash: ed7f16c6cee61281a8320b2b8874282fdfae6b24
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63288369"
 ---
 # <a name="connect-to-sql-server--oracletosql"></a>Conectarse a SQL Server (OracleToSQL)
@@ -24,7 +24,7 @@ Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la insta
 **Nombre del servidor**  
 Escriba o seleccione la instancia de SQL Server para conectarse a. De forma predeterminada, se muestra la instancia que se haya conectado más recientemente.  
   
--   Si se conecta a la instancia predeterminada en el equipo local, puede escribir cualquiera **localhost** o un punto (**.**).  
+-   Si se conecta a la instancia predeterminada en el equipo local, puede escribir cualquiera **localhost** o un punto ( **.** ).  
   
 -   Si se conecta a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
   

@@ -13,10 +13,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: d3e8b5f0be58d9153fbe4d0ffd0287ea753fcc5e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721077"
 ---
 # <a name="lesson-2-creating-a-subscription-to-the-transactional-publication"></a>Lección 2: Crear una suscripción a la publicación transaccional
@@ -40,7 +40,7 @@ ms.locfileid: "62721077"
   
 7.  En el cuadro de diálogo **Nueva base de datos** , escriba **ProductReplica** en el cuadro **Nombre de la base de datos** , haga clic en **Aceptar**y luego, en **Siguiente**.  
   
-8.  En el **seguridad del agente de distribución** diálogo cuadro, haga clic en el botón de puntos suspensivos (**...** ) botón, escriba \< _nombre_equipo >_**\repl_distribution** en el **cuenta de proceso** , escriba la contraseña para este cuenta y, a continuación, haga clic en **Aceptar**y, a continuación, haga clic en **siguiente**.  
+8.  En el **seguridad del agente de distribución** diálogo cuadro, haga clic en el botón de puntos suspensivos ( **...** ) botón, escriba \< _nombre_equipo >_ **\repl_distribution** en el **cuenta de proceso** , escriba la contraseña para este cuenta y, a continuación, haga clic en **Aceptar**y, a continuación, haga clic en **siguiente**.  
   
 9. Haga clic en **Finalizar** para aceptar los valores predeterminados en las páginas restantes y finalizar el asistente.  
   
@@ -50,7 +50,7 @@ ms.locfileid: "62721077"
   
 2.  En la página **General** , en la lista **Tipo de usuario** , seleccione **Usuario de Windows**.  
   
-3.  Seleccione el **nombre de usuario** cuadro y haga clic en el botón de puntos suspensivos (...), en el **escriba el nombre de objeto a seleccionar** cuadro, escriba < nombre_equipo >**\repl_distribution**, haga clic en  **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
+3.  Seleccione el **nombre de usuario** cuadro y haga clic en el botón de puntos suspensivos (...), en el **escriba el nombre de objeto a seleccionar** cuadro, escriba < nombre_equipo > **\repl_distribution**, haga clic en  **Comprobar nombres**y, a continuación, haga clic en **Aceptar**.  
   
 4.  En la página **Pertenencia** , en el área **Pertenencia al rol de la base de datos** , seleccione **db_owner**y haga clic en **Aceptar** para crear el usuario.  
   

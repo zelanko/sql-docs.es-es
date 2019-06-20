@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: a7cbf3b3e6e378f27e5c56de6b043c95c56774f8
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66099449"
 ---
 # <a name="url-examples-for-published-report-items-on-a-report-server-in-sharepoint-mode-ssrs"></a>Ejemplos de dirección URL para los elementos de informe publicados en un servidor de informes en modo de SharePoint (SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66099449"
   
 |Object|Descripción|  
 |------------|-----------------|  
-|Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación web tiene una dirección URL (por ejemplo, http:*//nombreDeServidor*) y puede contener varios sitios.|  
+|Aplicación web de SharePoint|Una aplicación web de SharePoint puede instalarse como un servidor independiente o en un grupo de servidores que contenga una colección de servidores virtuales. Una aplicación web tiene una dirección URL (por ejemplo, http: *//nombreDeServidor*) y puede contener varios sitios.|  
 |Sitio|Un sitio es un sitio primario para una aplicación web o un subsitio.|  
 |Biblioteca de SharePoint|Una biblioteca contiene documentos o carpetas. Una biblioteca o una carpeta de una biblioteca es el único objeto del sitio que puede almacenar informes, modelos de informe, orígenes de datos compartidos e imágenes externas.|  
 |Elemento|Entre los elementos del servidor de informes a los que se puede hacer referencia en una dirección URL, figuran una definición de informe para un informe o subinforme, un modelo de informe, un origen de datos compartido o una imagen externa.|  
@@ -44,9 +44,9 @@ ms.locfileid: "66099449"
 ### <a name="url-for-a-sharepoint-server"></a>Dirección URL para un servidor de SharePoint  
  Debe usar una dirección URL para el servidor de SharePoint al implementar un servidor de informes o un proyecto de modelos de informe desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] en el servidor de informes.  
   
- Para buscar el nombre del servidor que se va usar, abra un explorador y busque la biblioteca de SharePoint en que desea publicar el informe. El nombre del servidor aparece justo después del prefijo de protocolo (por ejemplo, http:*//nombreDeServidor*).  
+ Para buscar el nombre del servidor que se va usar, abra un explorador y busque la biblioteca de SharePoint en que desea publicar el informe. El nombre del servidor aparece justo después del prefijo de protocolo (por ejemplo, http: *//nombreDeServidor*).  
   
- No se admite el uso del extremo proxy de dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En un punto de conexión proxy se incluye un número de puerto (por ejemplo, http:*//nombreDeServidor:8080/reportserver*).  
+ No se admite el uso del extremo proxy de dirección URL de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . En un punto de conexión proxy se incluye un número de puerto (por ejemplo, http: *//nombreDeServidor:8080/reportserver*).  
   
 ### <a name="url-for-a-sharepoint-server-site-or-subsite"></a>Dirección URL para un sitio o subsitio del servidor de SharePoint  
  Al implementar un informe o un origen de datos de informe, debe usar una dirección URL para el sitio y el subsitio de SharePoint, si lo hay. En la dirección URL, el nombre del sitio aparece justo después del nombre del servidor (por ejemplo, http://*nombreDeServidor/sitio* o http://*nombreDeServidor/sitio/subsitio*).  

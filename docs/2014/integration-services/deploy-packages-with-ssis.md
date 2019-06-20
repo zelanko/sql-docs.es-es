@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 3752c7e0f99a62534a670743c0ee7deb3c2e07a8
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62899013"
 ---
 # <a name="ssis-tutorial-deploying-packages"></a>Tutorial de SSIS: Implementación de paquetes
@@ -62,7 +62,7 @@ ms.locfileid: "62899013"
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la base de datos AdventureWorks.  
   
--   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]   
+-   [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]  
   
 -   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  
   
@@ -78,7 +78,7 @@ ms.locfileid: "62899013"
  [Lección 1: Preparar la creación del paquete de implementación](../integration-services/lesson-1-preparing-to-create-the-deployment-bundle.md)  
  En esta lección, se preparará para implementar una solución ETL creando un nuevo proyecto de [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] y agregando los paquetes y otros archivos necesarios al proyecto.  
   
- [Lección 2: Crear el paquete de implementación](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
+ [Lección 2: Crear el paquete de implementación](../integration-services/lesson-2-create-the-deployment-bundle-in-ssis.md)  
  En esta lección, generará una utilidad de implementación y comprobará que el paquete de implementación incluye los archivos necesarios.  
   
  [Lección 3: Instalación de paquetes](../integration-services/lesson-3-install-ssis-package.md)  

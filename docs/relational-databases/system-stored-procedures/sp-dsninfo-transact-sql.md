@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e6eacb453fc2f66f4b87790770fa50916916a27c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724030"
 ---
 # <a name="spdsninfo-transact-sql"></a>sp_dsninfo (Transact-SQL)
@@ -42,9 +42,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dsn = ] 'dsn'` Es el nombre del servidor vinculado DSN de ODBC u OLE DB. *DSN* es **varchar (128)**, no tiene ningún valor predeterminado.  
+`[ @dsn = ] 'dsn'` Es el nombre del servidor vinculado DSN de ODBC u OLE DB. *DSN* es **varchar (128)** , no tiene ningún valor predeterminado.  
   
-`[ @infotype = ] 'info_type'` Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @infotype = ] 'info_type'` Es el tipo de información que se va a devolver. Si *tipo_de_info* no se especifica o si se especifica NULL, se devuelven todos los tipos de información. *tipo_de_info* es **varchar (128)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -53,9 +53,9 @@ sp_dsninfo [ @dsn =] 'dsn'
 |**DATABASE_NAME**|Especifica el nombre de la base de datos.|  
 |**SQL_SUBSCRIBER**|Especifica que el origen de datos puede ser un suscriptor.|  
   
-`[ @login = ] 'login'` Es el inicio de sesión para el origen de datos. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *inicio de sesión*es **varchar (128)**, su valor predeterminado es null.  
+`[ @login = ] 'login'` Es el inicio de sesión para el origen de datos. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *inicio de sesión*es **varchar (128)** , su valor predeterminado es null.  
   
-`[ @password = ] 'password'` Es la contraseña para el inicio de sesión. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *contraseña*es **varchar (128)**, su valor predeterminado es null.  
+`[ @password = ] 'password'` Es la contraseña para el inicio de sesión. Si el origen de datos incluye un inicio de sesión, especifique NULL u omita el parámetro. *contraseña*es **varchar (128)** , su valor predeterminado es null.  
   
 `[ @dso_type = ] dso_type` Es el tipo de origen de datos. *dso_type* es **int**, y puede tener uno de estos valores.  
   

@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7c8f75360bb3eb4b304c2a56a150218e8f8c8eff
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62960845"
 ---
 # <a name="secure-the-subscriber"></a>Proteger el suscriptor
@@ -53,7 +53,7 @@ ms.locfileid: "62960845"
  Para más información, vea [Crear una suscripción actualizable en una publicación transaccional](../publish/create-an-updatable-subscription-to-a-transactional-publication.md) y [Ver y modificar la configuración de seguridad de la replicación](view-and-modify-replication-security-settings.md) .  
   
 > [!IMPORTANT]  
->  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_**_\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
+>  La cuenta especificada para la conexión solo debe tener permiso para insertar, actualizar y eliminar datos en las vistas que crea la replicación en la base de datos de publicaciones; no debe tener ningún permiso adicional. Conceda permisos para las vistas de la base de datos de publicación designadas con el formato **syncobj_** _\<númeroHexadecimal>_ a la cuenta de configuró en cada suscriptor.  
   
 ## <a name="queued-updating-subscriptions"></a>Suscriptores de actualización en cola  
  Al configurar suscripciones de actualización en cola, hay dos áreas relacionadas con la seguridad que debe tener en cuenta:  

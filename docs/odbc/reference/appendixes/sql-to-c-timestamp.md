@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63259259"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a C: Timestamp
@@ -51,4 +51,4 @@ La siguiente tabla muestra los tipos de datos a la que se pueden convertir los d
   
  [f] trata del tamaño del tipo de datos C correspondiente.  
 
-Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres de C, la cadena resultante tiene el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...*] "formato, donde se puede usar hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por la configuración de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)
+Cuando los datos de SQL de marca de tiempo se convierte en datos de caracteres de C, la cadena resultante tiene el "*aaaa*-*mm*-*dd* *hh* :*mm*:*ss*[.*f...* ] "formato, donde se puede usar hasta nueve dígitos de fracciones de segundo. Este formato no se ve afectado por la configuración de país Windows®. (Salvo el separador decimal y fracciones de segundo, todo el formato debe utilizarse, independientemente de la precisión del tipo de datos SQL de marca de tiempo.)

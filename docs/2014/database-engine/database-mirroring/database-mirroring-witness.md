@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 682a3692414f89beb0c5e0f0204bc1a69b532e64
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807640"
 ---
 # <a name="database-mirroring-witness"></a>Database Mirroring Witness
@@ -62,7 +62,7 @@ ms.locfileid: "62807640"
   
 -   Si el servidor reflejado está desconectado del testigo y también del servidor principal, no se puede realizar la conmutación automática por error, independientemente del estado del servidor principal.  
   
- El requisito de que al menos dos de las instancias de servidor estén conectadas se denomina *quórum*. El quórum garantiza el servicio de la base de datos únicamente por parte de un asociado cada vez. Para obtener información acerca de cómo funciona el quórum y su impacto en una sesión, vea [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ El requisito de que al menos dos de las instancias de servidor estén conectadas se denomina *quórum*. El quórum garantiza el servicio de la base de datos únicamente por parte de un asociado cada vez. Para obtener más información sobre el funcionamiento del cuórum y su repercusión en una sesión, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ##  <a name="AddRemoveWitness"></a> Para agregar o quitar un testigo  
  **Para agregar un testigo**  
@@ -78,7 +78,7 @@ ms.locfileid: "62807640"
 ## <a name="see-also"></a>Vea también  
  [Conmutación de roles durante una sesión de creación de reflejo de la base de datos &#40;SQL Server&#41;](role-switching-during-a-database-mirroring-session-sql-server.md)   
  [Modos de funcionamiento de la creación de reflejo de la base de datos](database-mirroring-operating-modes.md)   
- [Quórum: Cómo un testigo afecta a la disponibilidad de la base de datos &#40;la creación de reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
+ [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;reflejo de base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md)   
  [Posibles errores durante la creación de reflejo de la base de datos](possible-failures-during-database-mirroring.md)   
  [Estados de creación de reflejo &#40;SQL Server&#41;](mirroring-states-sql-server.md)  
   

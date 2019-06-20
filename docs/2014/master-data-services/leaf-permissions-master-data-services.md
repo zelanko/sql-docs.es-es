@@ -17,10 +17,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: ee587881b95821c2ae23580b54d298fa496cec15
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479170"
 ---
 # <a name="leaf-permissions-master-data-services"></a>Permisos de hoja (Master Data Services)
@@ -52,7 +52,7 @@ ms.locfileid: "65479170"
 ### <a name="example"></a>Ejemplo  
  Para la entidad Product, asigne el permiso **Actualizar** al atributo Subcategory. Deniegue el permiso al resto de los atributos.  
   
-|Name|Código|Subcategory (actualizar)|  
+|NOMBRE|Código|Subcategory (actualizar)|  
 |----------|----------|----------------------------|  
 |Mountain-100|BK-M101|{5} Bicicletas de montaña|  
 |Mountain-100|BK-M201|{5} Bicicletas de montaña|  

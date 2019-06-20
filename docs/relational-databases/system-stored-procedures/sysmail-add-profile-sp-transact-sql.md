@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b00e0eed5a27c9d795de027f82b01763c44ab80e
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63472114"
 ---
 # <a name="sysmailaddprofilesp-transact-sql"></a>sysmail_add_profile_sp (Transact-SQL)
@@ -44,7 +44,7 @@ sysmail_add_profile_sp [ @profile_name = ] 'profile_name'
 ## <a name="arguments"></a>Argumentos  
 `[ @profile_name = ] 'profile\_name'` El nombre del nuevo perfil. *nombre_perfil* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @description = ] 'description'` La descripción opcional para el nuevo perfil. *descripción* es **nvarchar (256)**, no tiene ningún valor predeterminado.  
+`[ @description = ] 'description'` La descripción opcional para el nuevo perfil. *descripción* es **nvarchar (256)** , no tiene ningún valor predeterminado.  
   
 `[ @profile_id = ] _new\_profile\_idOUTPUT` Devuelve el identificador del nuevo perfil. *new_profile_id* es **int**, su valor predeterminado es null.  
   

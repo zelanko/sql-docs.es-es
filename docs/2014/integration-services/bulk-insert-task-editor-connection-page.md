@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: b6834a2a4cd75e70de253419cc42ec5904ce0793
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66061221"
 ---
 # <a name="bulk-insert-task-editor-connection-page"></a>Editor de la tarea Inserción masiva (página Conexión)
@@ -28,7 +28,7 @@ ms.locfileid: "66061221"
   
 ## <a name="options"></a>Opciones  
  **Conexión**  
- Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
+ Seleccione un administrador de conexiones OLE DB de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
   
  **Temas relacionados:** [Administrador de conexiones OLE DB](connection-manager/ole-db-connection-manager.md), [configurar el Administrador de conexiones OLE DB](../../2014/integration-services/configure-ole-db-connection-manager.md)  
   
@@ -44,7 +44,7 @@ ms.locfileid: "66061221"
 |**Especificar**|Especifique el formato. Al seleccionar esta opción muestra las opciones dinámicas `RowDelimiter` y `ColumnDelimiter`.|  
   
  **Archivo**  
- Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…**> para crear una conexión.  
+ Seleccione un administrador de conexiones de archivos o archivos planos de la lista, o bien haga clic en \<**Nueva conexión…** > para crear una conexión.  
   
  La ubicación del archivo es relativa al motor de base de datos de SQL Server especificado en el administrador de conexiones para esta tarea. Es preciso que el motor de base de datos de SQL Server tenga acceso al archivo de texto en un disco duro local en el servidor o mediante una unidad compartida o asignada a SQL Server. El tiempo de ejecución de SSIS no tiene acceso al archivo.  
   
@@ -59,11 +59,11 @@ ms.locfileid: "66061221"
   
 ### <a name="format--use-file"></a>Formato = Utilizar archivo  
  **FormatFile**  
- Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos (**…**) para buscar el archivo de formato.  
+ Escriba la ruta de acceso del archivo de formato, o bien haga clic en el botón de puntos suspensivos ( **…** ) para buscar el archivo de formato.  
   
 ### <a name="format--specify"></a>Formato = Especificar  
  `RowDelimiter`  
- Especifique el delimitador de filas en el archivo de origen. El valor predeterminado es **{CR}{LF}**.  
+ Especifique el delimitador de filas en el archivo de origen. El valor predeterminado es **{CR}{LF}** .  
   
  `ColumnDelimiter`  
  Especifique el delimitador de columna en el archivo de origen. El valor predeterminado es **Tab**.  

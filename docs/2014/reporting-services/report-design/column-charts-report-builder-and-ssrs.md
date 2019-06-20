@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: e8477b4e8e0e6c0fc6e4801a975b11d79dadf83f
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106226"
 ---
 # <a name="column-charts-report-builder-and-ssrs"></a>Gráficos de columnas (Generador de informes y SSRS)
@@ -35,9 +35,9 @@ ms.locfileid: "66106226"
   
 -   **Cilindro 3D**: Gráfico de columnas cuyas barras tienen forma de cilindro en un gráfico 3D.  
   
--   `Histogram`  Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
+-   `Histogram` Gráfico de columnas que se calcula para que las barras se organicen en una distribución normal.  
   
--   `Pareto`  Gráfico de columnas cuyas barras se organizan de mayor a menor.  
+-   `Pareto` Gráfico de columnas cuyas barras se organizan de mayor a menor.  
   
 ## <a name="data-considerations-for-a-column-chart"></a>Consideraciones sobre los datos para un gráfico de columnas  
   

@@ -23,10 +23,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63025561"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>Cómo especificar un esquema de asignación anotado en un diagrama de actualización (SQLXML 4.0)
@@ -39,9 +39,9 @@ ms.locfileid: "63025561"
 >  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="dealing-with-data-types"></a>Trabajar con tipos de datos  
- Si el esquema especifica la **imagen**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos (mediante el uso de **SQL: DataType**) y no lo hace Especifique un tipo de datos XML, el diagrama de actualización, se da por supuesto que el tipo de datos XML es **binarios en base 64**. Si los datos son **bin.base** tipo, debe especificar explícitamente el tipo (**dt:type=bin.base** o **tipo = "xsd: hexBinary"**).  
+ Si el esquema especifica la **imagen**, **binario**, o **varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos (mediante el uso de **SQL: DataType**) y no lo hace Especifique un tipo de datos XML, el diagrama de actualización, se da por supuesto que el tipo de datos XML es **binarios en base 64**. Si los datos son **bin.base** tipo, debe especificar explícitamente el tipo (**dt:type=bin.base** o **tipo = "xsd: hexBinary"** ).  
   
- Si el esquema especifica la **dateTime**, **fecha**, o **tiempo** tipos de datos XSD, debe especificar también el correspondiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos mediante el uso de  **SQL: DataType = "dateTime"**.  
+ Si el esquema especifica la **dateTime**, **fecha**, o **tiempo** tipos de datos XSD, debe especificar también el correspondiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos mediante el uso de  **SQL: DataType = "dateTime"** .  
   
  Al administrar parámetros de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **dinero** tipo, debe especificar explícitamente **SQL: DataType = "money"** en el nodo correspondiente en el esquema de asignación.  
   
@@ -67,7 +67,7 @@ ms.locfileid: "63025561"
 </xsd:schema>  
 ```  
   
- El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Tenga en cuenta que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >**, tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
+ El diagrama de actualización siguiente inserta un registro en la tabla Sales.Customer y se basa en el esquema de asignación anterior para asignar correctamente estos datos a la tabla. Tenga en cuenta que el diagrama de actualización usa el mismo nombre de elemento,  **\<cliente >** , tal como se define en el esquema. Esto resulta obligatorio porque el diagrama de actualización especifica un esquema determinado.  
   
 ##### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   
@@ -118,7 +118,7 @@ ms.locfileid: "63025561"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>b. Insertar un registro mediante la relación de elementos primarios y secundarios especificada en el esquema de asignación  
  Los elementos de esquema pueden estar relacionados. El  **\<SQL: Relationship >** elemento especifica la relación de elementos primarios y secundarios entre los elementos de esquema. Esta información se usa para actualizar las tablas correspondientes que tienen una relación de clave principal y clave externa.  
   
- El siguiente esquema de asignación (SampleSchema.xml) consta de dos elementos,  **\<orden >** y  **\<OD >**:  
+ El siguiente esquema de asignación (SampleSchema.xml) consta de dos elementos,  **\<orden >** y  **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

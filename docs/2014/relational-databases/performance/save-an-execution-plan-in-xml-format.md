@@ -17,10 +17,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: b2e058eba4e21e5e9060e2315dad3c865c46bb78
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63150861"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
@@ -65,7 +65,7 @@ ms.locfileid: "63150861"
   
 4.  En el panel **Resultados** , haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
   
-5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
+5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)** .  
   
 6.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
   
@@ -77,7 +77,7 @@ ms.locfileid: "63150861"
   
      Como alternativa, también puede elegir **Guardar plan de ejecución como** en el menú **Archivo** .  
   
-3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)**.  
+3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)** .  
   
 4.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
   

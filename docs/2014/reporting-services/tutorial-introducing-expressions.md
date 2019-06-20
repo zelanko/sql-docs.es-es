@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 79563abac2c6a9ed64dff93667ff3d3966b70bc5
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098845"
 ---
 # <a name="tutorial-introducing-expressions"></a>Tutorial: Introducción a las expresiones
@@ -123,7 +123,7 @@ ms.locfileid: "66098845"
   
      La consulta especifica los nombres de columna que incluyen una fecha de nacimiento, un nombre, un apellido, el estado o provincia, el identificador de país o región, el sexo y compras anuales.  
   
-10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
+10. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ). El conjunto de resultados muestra 20 filas de datos e incluye las siguientes columnas: FirstName, LastName, StateProvince, CountryRegionID, Gender, YTDPurchase y LastPurchase.  
   
 11. Haga clic en **Siguiente**.  
   
@@ -179,7 +179,7 @@ ms.locfileid: "66098845"
 4.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
 ##  <a name="Concatenate"></a> 3. Mostrar First Name, Initial y Last Name  
- Use la función **Izquierda** y el operador **Concatenar** (**&**) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión**.  
+ Use la función **Izquierda** y el operador **Concatenar** ( **&** ) en una expresión que da como resultado un nombre que incluye una inicial y un apellido. Puede compilar la expresión paso a paso o avanzar en el procedimiento y copiar y pegar la expresión desde el tutorial al cuadro de diálogo **Expresión**.  
   
 #### <a name="to-add-the-name-column"></a>Para agregar la columna Nombre  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66098845"
   
      La función **Izquierda** se agrega a la expresión.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 7.  En la lista **Valores** , haga doble clic en **FirstName**.  
   
@@ -274,7 +274,7 @@ ms.locfileid: "66098845"
   
 4.  En la lista **Elemento** , haga doble clic en **Cambiar**.  
   
-5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+5.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 6.  En la lista **Valores** , haga doble clic en **Gender**.  
   
@@ -332,7 +332,7 @@ ms.locfileid: "66098845"
     UNION SELECT 12 AS ID, 'United Kingdom' AS CountryRegion  
     ```  
   
-9. Haga clic en **Ejecutar** (**!**) para ejecutar la consulta.  
+9. Haga clic en **Ejecutar** ( **!** ) para ejecutar la consulta.  
   
      Los resultados de la consulta son los identificadores del país o región y los nombres.  
   
@@ -354,7 +354,7 @@ ms.locfileid: "66098845"
   
 5.  En la lista **Elemento**, haga doble clic en **Búsqueda**.  
   
-6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+6.  En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 7.  En el **valores** lista, haga doble clic en `CountryRegionID`.  
   
@@ -393,7 +393,7 @@ ms.locfileid: "66098845"
   
 8.  Escriba **"d",**  
   
-9. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+9. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 10. En la lista **Valores**, haga doble clic en **LastPurchase**.  
   
@@ -431,7 +431,7 @@ ms.locfileid: "66098845"
   
 #### <a name="to-add-an-indicator"></a>Para agregar un indicador  
   
-1.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Indicador** y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -**.  
+1.  En la pestaña **Insertar** de la cinta de opciones, haga clic en **Indicador** y, después, haga clic en la celda de datos de la columna **Ventas promedio + o -** .  
   
      Se abrirá el cuadro de diálogo **Seleccionar tipo de indicador**.  
   
@@ -449,7 +449,7 @@ ms.locfileid: "66098845"
   
 4.  En la lista **Elemento**, haga doble clic en **Redondear**.  
   
-5.  En la lista **Categoría**, haga clic en **Campos (Expresiones)**.  
+5.  En la lista **Categoría**, haga clic en **Campos (Expresiones)** .  
   
 6.  En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -461,7 +461,7 @@ ms.locfileid: "66098845"
   
 10. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-11. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+11. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 12. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -481,7 +481,7 @@ ms.locfileid: "66098845"
   
 19. En la lista **Elemento**, haga doble clic en **Redondear**.  
   
-20. En la lista **Categoría**, haga clic en **Campos (Expresiones)**.  
+20. En la lista **Categoría**, haga clic en **Campos (Expresiones)** .  
   
 21. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -493,7 +493,7 @@ ms.locfileid: "66098845"
   
 25. En la lista **Elemento**, haga doble clic en **Promedio**.  
   
-26. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+26. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 27. En la lista **Valores**, haga doble clic en **YTDPurchase**.  
   
@@ -588,7 +588,7 @@ ms.locfileid: "66098845"
   
 9. En la lista **Elemento**, haga doble clic en **RunningValue**.  
   
-10. En la lista **Categoría** , haga clic en **Campos (Expresiones)**.  
+10. En la lista **Categoría** , haga clic en **Campos (Expresiones)** .  
   
 11. En la lista **Valores**, haga doble clic en **FirstName**.  
   

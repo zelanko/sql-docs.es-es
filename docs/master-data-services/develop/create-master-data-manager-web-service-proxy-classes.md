@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 4d71d15ada91055b7aff128bd750e1fd192b6e8f
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65480216"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Crear clases de proxy del servicio web Master Data Manager
@@ -29,7 +29,7 @@ ms.locfileid: "65480216"
   
 1.  Abra el archivo Web.config de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un editor de texto. Este archivo se encuentra en la carpeta WebApplication de la ruta de instalación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Busque la sección **mdsWsHttpBehavior** en **\<serviceBehaviors>**. Para el elemento **\<serviceMetadata>**, establezca **httpGetEnabled** en **true**.  
+2.  Busque la sección **mdsWsHttpBehavior** en **\<serviceBehaviors>** . Para el elemento **\<serviceMetadata>** , establezca **httpGetEnabled** en **true**.  
   
     > [!NOTE]  
     >  Si quiere habilitar los servicios web mediante la capa de sockets seguros (SSL), establezca **httpsGetEnabled** en **true** en la sección **mdsWsHttpBehavior** del archivo web.config. También debe modificar **mdsWsHTTPBinding** para que esté configurado para SSL y convertir en comentario la sección que no es de SSL.  

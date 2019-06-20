@@ -23,17 +23,17 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 1d8a6390ded6250355936dbef29051f76be14266
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980694"
 ---
 # <a name="specifying-the-sqlinverse-attribute-on-sqlrelationship-sqlxml-40"></a>Especificar el atributo sql:inverse en sql:relationship (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   El **SQL: Inverse** atributo es útil solo cuando se usa el esquema XSD para la carga masiva o por un diagrama de actualización. El **SQL: Inverse** atributo puede especificarse en el  **\<SQL: Relationship >** elemento. En diagramas de actualización, la lógica del diagrama de actualización interpreta el esquema para determinar las tablas y columnas actualizadas mediante la operación del diagrama de actualización. Las relaciones entre elementos primarios y secundarios que se especifican en el esquema determinan el orden en que se modifican (insertan o eliminan) los registros.  
   
- Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, el **SQL: Inverse** se especifica el atributo (**SQL: Inverse = "true"**) en el  **\<SQL: Relationship >** elemento y la lógica del diagrama de actualización interpreta su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
+ Si tiene un esquema XSD en el que la relación entre elementos primarios y secundarios se especifica en el orden inverso de la relación de clave principal y clave externa entre las columnas de base de datos correspondientes, se producirán errores en la operación de inserción o eliminación del diagrama de actualización debido a una infracción de clave principal o clave externa. En tales casos, el **SQL: Inverse** se especifica el atributo (**SQL: Inverse = "true"** ) en el  **\<SQL: Relationship >** elemento y la lógica del diagrama de actualización interpreta su interpretación de la relación de elementos primarios y secundarios especificada en el esquema.  
   
  El **SQL: Inverse** atributo toma un valor booleano (0 = false, 1 = true). Los valores permitidos son 0, 1, true y false.  
   

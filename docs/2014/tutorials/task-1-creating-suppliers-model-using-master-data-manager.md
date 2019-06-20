@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: 7515c259d8ee978f60ddd8e09ce817f133670cd6
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65481342"
 ---
 # <a name="task-1-creating-suppliers-model-using-master-data-manager"></a>Tarea 1: Creación del modelo Proveedores mediante Master Data Manager
@@ -41,6 +41,6 @@ ms.locfileid: "65481342"
 6.  Haga clic en **Guardar modelo** en la barra de herramientas.  
   
 ## <a name="next-step"></a>Paso siguiente  
- [Tarea 2: Cargar datos de proveedor en MDS con el complemento MDS para Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
+ [Tarea 2: Cargar datos de proveedor en MDS con el complemento MDS para Excel](../../2014/tutorials/task-2-uploading-supplier-data-to-mds-using-mds-add-in-for-excel.md)  
   
   

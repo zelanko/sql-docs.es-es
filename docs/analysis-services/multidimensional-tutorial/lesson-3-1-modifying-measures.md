@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9a9d0559a0421d8badd5e939a85947a53e0f6e8b
-ms.sourcegitcommit: 54c8420b62269f6a9e648378b15127b5b5f979c1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65403957"
 ---
 # <a name="lesson-3-1---modifying-measures"></a>Lección 3-1: modificar medidas
@@ -29,7 +29,7 @@ Puede usar la propiedad **FormatString** para definir parámetros de formato que
   
     Es más fácil cambiar las propiedades para varios elementos del cubo cuando la ventana Propiedades permanece abierta.  
   
-3.  En la ventana Propiedades, haga clic en la lista **FormatString** y escriba **#,#**.  
+3.  En la ventana Propiedades, haga clic en la lista **FormatString** y escriba **#,#** .  
   
 4.  En la barra de herramientas de la pestaña **Estructura de cubo** , haga clic en el icono **Mostrar la cuadrícula de medidas** situado a la izquierda.  
   

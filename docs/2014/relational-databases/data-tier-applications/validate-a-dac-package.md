@@ -18,10 +18,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917919"
 ---
 # <a name="validate-a-dac-package"></a>Validar un paquete de DAC
@@ -39,15 +39,15 @@ ms.locfileid: "62917919"
   
  **Ver una DAC en SQL Server Developer Tools**  
   
-1.  Abra el menú **Archivo**, seleccione **Nuevo** y, después, **Proyecto...**.  
+1.  Abra el menú **Archivo**, seleccione **Nuevo** y, después, **Proyecto...** .  
   
 2.  Seleccione la plantilla de proyecto de **SQL Server** y especifique los valores de **Nombre**, **Ubicación**y **Nombre de solución**.  
   
-3.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo y seleccione **Propiedades...**.  
+3.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo y seleccione **Propiedades...** .  
   
 4.  En la pestaña **Configuración de proyecto** , en la sección **Tipos de salida** , active la casilla **Aplicación de capa de datos (archivo .dacpac)** y, después, cierre el cuadro de diálogo de propiedades.  
   
-5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos...**.  
+5.  En el **Explorador de soluciones**, haga clic con el botón derecho en el nodo de proyecto y seleccione **Importar aplicación de capa de datos...** .  
   
 6.  Use el **Explorador de soluciones** para abrir todos los archivos de la DAC, como la directiva de selección de servidor y los scripts previos y posteriores a la implementación.  
   

@@ -13,10 +13,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: a99ce67c4b42cc1def10127c8b1862a859d20723
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66064380"
 ---
 # <a name="backup-database-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Copia de seguridad de la base de datos (Analysis Services - Datos multidimensionales)
@@ -92,7 +92,7 @@ ms.locfileid: "66064380"
 |**Server**|Muestra la instancia de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que administra las particiones remotas.|  
 |**Base de datos**|Muestra la base de datos de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que contiene las particiones remotas.|  
 |**Lista de particiones**|Muestra la lista de particiones remotas contenidas en la base de datos que se muestra en **Base de datos**.|  
-|**Archivo de copia de seguridad remoto**|Escriba la ruta de acceso completa y el nombre del archivo de copia de seguridad remoto que quiere usar o haga clic en el botón de puntos suspensivos (**…**) para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad remoto que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
+|**Archivo de copia de seguridad remoto**|Escriba la ruta de acceso completa y el nombre del archivo de copia de seguridad remoto que quiere usar o haga clic en el botón de puntos suspensivos ( **…** ) para mostrar el cuadro de diálogo **Guardar archivo como** y seleccione la ruta de acceso y el nombre del archivo de copia de seguridad remoto que quiere usar. Para obtener más información sobre el cuadro de diálogo **Guardar archivo como**, vea [Cuadro de diálogo Guardar archivo como &#40;Analysis Services - Datos multidimensionales&#41;](save-file-as-dialog-box-analysis-services-multidimensional-data.md).|  
   
 ## <a name="see-also"></a>Vea también  
  [Diseñadores y cuadros de diálogo de Analysis Services &#40;datos multidimensionales&#41;](analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   

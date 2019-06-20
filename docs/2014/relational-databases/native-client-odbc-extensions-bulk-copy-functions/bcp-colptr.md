@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 269ab3c748557d1d2870195524310f2371b79c52
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62689150"
 ---
 # <a name="bcpcolptr"></a>bcp_colptr
@@ -54,7 +54,7 @@ idxServerCol
   
  Si *pData* se establece en NULL y la columna correspondiente al campo enlazado no es un tipo de valor grande, **bcp_colptr** se produce un error.  
   
- Para obtener más información sobre los tipos de valor grandes, consulte [bcp_bind](bcp-bind.md)**.**  
+ Para obtener más información sobre los tipos de valor grandes, consulte [bcp_bind](bcp-bind.md) **.**  
   
  *idxServerCol*  
  Es la posición ordinal de la columna en la tabla de base de datos en la que se copian los datos. La primera columna de una tabla es la columna 1. La posición ordinal de una columna se notifica mediante [SQLColumns](../native-client-odbc-api/sqlcolumns.md).  

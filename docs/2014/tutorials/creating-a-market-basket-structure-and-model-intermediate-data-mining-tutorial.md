@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 207d82f740b7b5ff174e220e647d67d5bac7f9ea
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63190833"
 ---
 # <a name="creating-a-market-basket-structure-and-model-intermediate-data-mining-tutorial"></a>Crear una estructura y un modelo de cesta de la compra (Tutorial intermedio de minería de datos)
@@ -31,7 +31,7 @@ ms.locfileid: "63190833"
   
 3.  En el **seleccionar el método de definición** , comprueba que **desde el almacén de datos o base de datos relacional existente** está seleccionada y, a continuación, haga clic en **siguiente**.  
   
-4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?**, seleccione **reglas de asociación de Microsoft** en la lista y, a continuación, haga clic en **Siguiente**. El **seleccionar vista del origen de datos** aparece la página.  
+4.  En el **crear la estructura de minería de datos** página, en **qué técnica de minería de datos desea utilizar?** , seleccione **reglas de asociación de Microsoft** en la lista y, a continuación, haga clic en **Siguiente**. El **seleccionar vista del origen de datos** aparece la página.  
   
 5.  Seleccione **pedidos**en **vistas del origen de datos disponibles**y, a continuación, haga clic en **siguiente**.  
   

@@ -14,10 +14,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: a69d4805a21cfbd83bd9a8d79b5150460d4977be
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62721692"
 ---
 # <a name="create-and-apply-the-initial-snapshot"></a>Crear y aplicar la instantánea inicial
@@ -44,7 +44,7 @@ ms.locfileid: "62721692"
   
 3.  Haga clic con el botón secundario en la publicación para la que desee crear una instantánea y, a continuación, haga clic en **Ver estado del agente de instantáneas**.  
   
-4.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<Publicación>**, haga clic en **Iniciar**.  
+4.  En el cuadro de diálogo **Ver estado del Agente de instantáneas: \<Publicación>** , haga clic en **Iniciar**.  
   
  Cuando el Agente de instantáneas termina de generar la instantánea, aparece un mensaje del tipo "[100%] Se ha generado una instantánea de 17 artículos".  
   
@@ -82,9 +82,9 @@ ms.locfileid: "62721692"
   
     -   **@job_login, que especifica** las credenciales de autenticación de Windows con las que se ejecuta el Agente de instantáneas en el distribuidor.  
   
-    -   **@job_password**, que es la contraseña para las credenciales de Windows proporcionadas.  
+    -   **@job_password** , que es la contraseña para las credenciales de Windows proporcionadas.  
   
-    -   (Opcional) El valor **0** para **@publisher_security_mode** si el agente va a utilizar autenticación de SQL Server para conectarse al publicador. En este caso, debe especificar también la información de inicio de sesión de autenticación de SQL Server para **@publisher_login** y **@publisher_password**.  
+    -   (Opcional) El valor **0** para **@publisher_security_mode** si el agente va a utilizar autenticación de SQL Server para conectarse al publicador. En este caso, debe especificar también la información de inicio de sesión de autenticación de SQL Server para **@publisher_login** y **@publisher_password** .  
   
     -   (Opcional) Un programa de sincronización para el trabajo del Agente de instantáneas. Para más información, consulte [Specify Synchronization Schedules](specify-synchronization-schedules.md).  
   

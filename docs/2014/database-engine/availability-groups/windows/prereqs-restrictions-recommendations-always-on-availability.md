@@ -20,10 +20,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 047d635be9ff9a9b04770f4ebe3f9e31408ff83d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62789874"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-alwayson-availability-groups-sql-server"></a>Requisitos previos, restricciones y recomendaciones para Grupos de disponibilidad AlwaysOn (SQL Server)
@@ -99,7 +99,7 @@ ms.locfileid: "62789874"
   
 3.  Use el cmdlet `Get-ClusterResource` para buscar el recurso de nombre de red y use después el cmdlet `Set-ClusterParameter` para establecer el valor `HostRecordTTL`, de la manera siguiente:  
   
-     Get-ClusterResource "*\<nombreRecursoRed>*" | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
+     Get-ClusterResource " *\<nombreRecursoRed>* " | Set-ClusterParameter HostRecordTTL *\<tiempoEnSegundos>*  
   
      En el ejemplo siguiente de PowerShell se establece el HostRecordTTL en 300 segundos para un recurso de nombre de red denominado “`SQL Network Name (SQL35)`”.  
   

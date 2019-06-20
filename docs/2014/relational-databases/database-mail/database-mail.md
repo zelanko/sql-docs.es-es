@@ -15,10 +15,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c763c6db472f52df320d0c89dc47483636bf9f5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917975"
 ---
 # <a name="database-mail"></a>Correo electrónico de base de datos
@@ -41,37 +41,37 @@ ms.locfileid: "62917975"
   
 ### <a name="scalability"></a>Escalabilidad  
   
--   Entrega en segundo plano: Correo electrónico de base de datos proporciona en segundo plano, o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
+-   Entrega en segundo plano: El Correo electrónico de base de datos permite realizar entregas en segundo plano o asincrónicas. Cuando se llama a **sp_send_dbmail** para enviar un mensaje, Correo electrónico de base de datos agrega una solicitud a una cola de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . El procedimiento almacenado se devuelve inmediatamente. El componente de correo electrónico externo recibe la solicitud y entrega el mensaje.  
   
--   Varios perfiles: Correo electrónico de base de datos permite crear varios perfiles en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia. También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
+-   Varios perfiles: El Correo electrónico de base de datos permite crear varios perfiles en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. También se puede elegir el perfil del Correo electrónico de base de datos para enviar el mensaje.  
   
 -   Varias cuentas: Cada perfil puede incluir varias cuentas de conmutación por error. Se pueden configurar varios perfiles con distintas cuentas para distribuir el correo electrónico entre varios servidores de correo.  
   
--   compatibilidad con 64 bits: Correo electrónico de base de datos es totalmente compatible con las instalaciones de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+-   Compatibilidad con 64 bits: El Correo electrónico de base de datos es totalmente compatible con las versiones de 64 bits de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### <a name="security"></a>Seguridad  
   
--   Desactivado de forma predeterminada: Para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], procedimientos almacenados de correo electrónico de base de datos están deshabilitados de forma predeterminada.  
+-   Desactivada de forma predeterminada: Para reducir el área expuesta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados del Correo electrónico de base de datos están deshabilitados de forma predeterminada.  
   
 -   Seguridad de correo electrónico: para enviar Correo electrónico de base de datos debe ser miembro del rol de base de datos **DatabaseMailUserRole** en la base de datos **msdb** .  
   
--   Seguridad del perfil: Correo electrónico de base de datos aplica seguridad para perfiles de correo electrónico. El usuario elige cuáles son los usuarios o grupos de la base de datos **msdb** que tienen acceso a los perfiles del Correo electrónico de base de datos. Se puede conceder acceso a usuarios específicos o a todos los usuarios de **msdb**. Un perfil privado restringe el acceso a una lista especificada de usuarios. Un perfil público está disponible para todos los usuarios de la base de datos.  
+-   Seguridad de los perfiles: El Correo electrónico de base de datos aplica la seguridad para los perfiles de correo. El usuario elige cuáles son los usuarios o grupos de la base de datos **msdb** que tienen acceso a los perfiles del Correo electrónico de base de datos. Se puede conceder acceso a usuarios específicos o a todos los usuarios de **msdb**. Un perfil privado restringe el acceso a una lista especificada de usuarios. Un perfil público está disponible para todos los usuarios de la base de datos.  
   
--   Regulador del tamaño de los datos adjuntos: Correo electrónico de base de datos aplica un límite configurable en el tamaño del archivo de datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
+-   Regulador del tamaño de los datos adjuntos: El Correo electrónico de base de datos aplica un límite configurable para el tamaño de archivo de los datos adjuntos. Puede cambiar este límite usando el procedimiento almacenado [sysmail_configure_sp](/sql/relational-databases/system-stored-procedures/sysmail-configure-sp-transact-sql) .  
   
--   Extensiones de archivo prohibidas: Correo electrónico de base de datos mantiene una lista de extensiones de archivo prohibidas. Los usuarios no pueden adjuntar archivos con las extensiones de la lista. Puede cambiar esta lista utilizando sysmail_configure_sp.  
+-   Extensiones de archivo prohibidas: El Correo electrónico de base de datos mantiene una lista de extensiones de archivo prohibidas. Los usuarios no pueden adjuntar archivos con las extensiones de la lista. Puede cambiar esta lista utilizando sysmail_configure_sp.  
   
 -   Correo electrónico de base de datos se ejecuta bajo la cuenta de servicio de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para adjuntar un archivo de una carpeta a un mensaje de correo electrónico, la cuenta de motor de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe tener permisos de acceso a la carpeta con el archivo.  
   
 ### <a name="supportability"></a>Compatibilidad  
   
--   Configuración integrada: Correo electrónico de base de datos mantiene la información de cuentas de correo electrónico dentro de [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
+-   Configuración integrada: El Correo electrónico de base de datos mantiene la información para las cuentas de correo electrónico en [!INCLUDE[ssDEnoversion](../../includes/tsql-md.md)].  
   
 -   Registro. Correo electrónico de base de datos registra la actividad de correo electrónico en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en el registro de eventos de aplicación de Microsoft Windows y en las tablas de la base de datos **msdb** .  
   
--   Auditoría: Correo electrónico de base de datos conserva copias de mensajes y datos adjuntos enviados en la **msdb** base de datos. Puede auditar fácilmente el uso del Correo electrónico de base de datos y revisar los mensajes conservados.  
+-   Auditoría: El Correo electrónico de base de datos conserva copias de los mensajes y datos adjuntos enviados en la base de datos **msdb**. Puede auditar fácilmente el uso del Correo electrónico de base de datos y revisar los mensajes conservados.  
   
--   Compatibilidad con HTML: Correo electrónico de base de datos le permite enviar correo electrónico con el formato HTML.  
+-   Compatibilidad con HTML: El Correo electrónico de base de datos permite enviar mensajes de correo electrónico con el formato HTML.  
   
 
   

@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62642324"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services en SQL Server 2016
@@ -22,7 +22,7 @@ R Services es un complemento a una instancia de motor de base de datos de SQL Se
 
 R Services incluye una distribución de base de R, que se superpone con paquetes de R enterprise de Microsoft para que pueda cargar y procesar grandes cantidades de datos en varios núcleos y agregar los resultados en una única salida consolidada. Funciones de R y los algoritmos de Microsoft están diseñados para el escalado y utilidad: entrega de análisis predictivo, modelado estadístico, visualizaciones de datos y algoritmos en un producto de servidor comercial ingeniería de aprendizaje de automático de vanguardia y compatible con Microsoft. 
 
-Las bibliotecas de R incluyen [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)**](ref-r-microsoftml.md)y otros. Puesto que R Services está integrado con el motor de base de datos, puede mantener análisis cerca de los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos.
+Las bibliotecas de R incluyen [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)** ](ref-r-microsoftml.md)y otros. Puesto que R Services está integrado con el motor de base de datos, puede mantener análisis cerca de los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos.
 
 > [!Note]
 > Se cambió el nombre de R Services en SQL Server 2017 que [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), que refleja la adición de Python.

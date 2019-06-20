@@ -24,10 +24,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 46b9fef97433609310169c98d8ffc623a21a10c7
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62876121"
 ---
 # <a name="possible-media-errors-during-backup-and-restore-sql-server"></a>Errores posibles de medios durante copia de seguridad y restauración (SQL Server)
@@ -58,7 +58,7 @@ ms.locfileid: "62876121"
   
 2.  Aunque se incluyan sumas de comprobación de página, BACKUP genera una suma de comprobación de copia de seguridad independiente para las secuencias de copia de seguridad. Opcionalmente, las operaciones de restauración pueden utilizar la suma de comprobación de copia de seguridad para confirmar que la copia de seguridad no está dañada. La suma de comprobación de copia de seguridad se almacena en el medio de copia de seguridad y no en las páginas de la base de datos. La suma de comprobación de copia de seguridad se puede utilizar opcionalmente en el momento de la restauración.  
   
-3.  El conjunto de copia de seguridad se marca para indicar que contiene sumas de comprobación de copia de seguridad (en la columna **has_backup_checksums** de **msdb..backupset)**. Para obtener más información, vea [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
+3.  El conjunto de copia de seguridad se marca para indicar que contiene sumas de comprobación de copia de seguridad (en la columna **has_backup_checksums** de **msdb..backupset)** . Para obtener más información, vea [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
  Durante una operación de restauración, si hay sumas de comprobación de copia de seguridad en los medios de copia de seguridad, de forma predeterminada, las operaciones RESTORE y RESTORE VERIFYONLY comprueban las sumas de comprobación de copia de seguridad y las sumas de comprobación de página. Si no hay ninguna suma de comprobación de copia de seguridad, cualquiera de las dos operaciones de restauración continúa sin realizar ninguna comprobación; esto se debe a que, sin una suma de comprobación de copia de seguridad, la restauración no puede comprobar de forma confiable las sumas de comprobación de página.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "62876121"
   
 2.  Registra el error en el registro de errores de SQL Server.  
   
-3.  Marca el conjunto de copia de seguridad como conjunto que contiene este tipo de error (en la columna **is_damaged** de **msdb.backupset)**. Para obtener más información, vea [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
+3.  Marca el conjunto de copia de seguridad como conjunto que contiene este tipo de error (en la columna **is_damaged** de **msdb.backupset)** . Para obtener más información, vea [backupset &#40;Transact-SQL&#41;](/sql/relational-databases/system-tables/backupset-transact-sql).  
   
 4.  Emite un mensaje que indica que la copia de seguridad se generó correctamente, pero contiene errores de página.  
   

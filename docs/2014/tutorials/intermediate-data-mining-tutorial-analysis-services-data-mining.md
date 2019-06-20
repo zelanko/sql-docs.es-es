@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 4c244701d8a58765061ef3bde1f918c8be5a941d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017176"
 ---
 # <a name="intermediate-data-mining-tutorial-analysis-services---data-mining"></a>Tutorial intermedio de minería de datos (Analysis Services - Minería de datos)
@@ -47,7 +47,7 @@ ms.locfileid: "63017176"
  [Lección 1: Creación de la solución de minería de datos intermedios &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-1-create-solution-intermediate-data-mining-tutorial.md)  
  En esta lección creará un nuevo proyecto basado en la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] que admite varias vistas del origen de datos nuevas y muchos más modelos de minería de datos.  
   
- [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
+ [Lección 2: Generar un escenario de pronóstico &#40;intermedio de Tutorial de minería de datos&#41;](../../2014/tutorials/lesson-2-building-a-forecasting-scenario-intermediate-data-mining-tutorial.md)  
  En esta lección aprenderá a crear un modelo de minería de datos que se pueda utilizar como parte de un escenario de previsión. Analizará también los modelos de minería de datos creados con el algoritmo de serie temporal de [!INCLUDE[msCoName](../includes/msconame-md.md)].  
   
  Creará modelos para regiones individuales y, a continuación, creará un modelo general que se pueda utilizar en la predicción cruzada.  

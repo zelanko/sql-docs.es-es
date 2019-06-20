@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d5ac074bef7570dc49a5597500bd15c8075235ba
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: bdcd5b9a30d19fc6fd0018fac1d24a275f236518
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148140"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263160"
 ---
 # <a name="use-analysis-services-templates-in-sql-server-management-studio"></a>Usar las plantillas de Analysis Services en SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "50148140"
  Este ejemplo muestra cómo crear una consulta MDX en SQL Server Management Studio, con una base de datos de modelo tabular como origen de datos. Para repetir este ejemplo en el equipo, puede [descargar el proyecto de ejemplo de modelo tabular de Adventureworks](http://go.microsoft.com/fwlink/?LinkId=231183).  
   
 > [!WARNING]  
->  No puede utilizar consultas MDX en modelos tabulares que se hayan implementado en el modo de consulta directa. Sin embargo, puede enviar consultas equivalentes usando consultas de la tabla DAX con el comando EVALUATE. Para más información, consulte [Parámetros para las consultas DAX](http://msdn.microsoft.com/c5841b4e-3395-4237-815b-9822a691e544).  
+>  No puede utilizar consultas MDX en modelos tabulares que se hayan implementado en el modo de consulta directa. Sin embargo, puede enviar consultas equivalentes usando consultas de la tabla DAX con el comando EVALUATE. Para más información, consulte [Parámetros para las consultas DAX](/dax/dax-queries#parameters-in-dax-queries).  
   
 #### <a name="create-an-mdx-query-from-a-template"></a>Crear una consulta MDX a partir de una plantilla  
   
@@ -58,15 +58,15 @@ ms.locfileid: "50148140"
   
 3.  Mediante el **Explorador de metadatos**, arrastre los campos y las medidas siguientes en la plantilla de consulta:  
   
-    1.  Reemplace \<row_axis, mdx_set > con **[categoría de producto]. [ Nombre de categoría de producto]**.  
+    1.  Reemplace \<row_axis, mdx_set > con **[categoría de producto]. [ Nombre de categoría de producto]** .  
   
     2.  Reemplace \<column_axis, mdx_set > con **[Date]. [ Año natural]. [Calendar Year]** .  
   
-    3.  Reemplace \<from_clause, mdx_name > con **[venta por Internet]**.  
+    3.  Reemplace \<from_clause, mdx_name > con **[venta por Internet]** .  
   
-    4.  Reemplace \<where_clause, mdx_set > con **[Measures]. [ Ventas totales en Internet]**.  
+    4.  Reemplace \<where_clause, mdx_set > con **[Measures]. [ Ventas totales en Internet]** .  
   
-4.  Puede ejecutar la consulta tal cual, pero probablemente deseará hacer algunos cambios, como agregar una función para devolver miembros concretos. Por ejemplo, escriba **.members** después de **[Categoría de producto]. [Nombre de categoría de producto]**. Para más información, vea [Using Member Expressions](../../mdx/using-member-expressions.md).  
+4.  Puede ejecutar la consulta tal cual, pero probablemente deseará hacer algunos cambios, como agregar una función para devolver miembros concretos. Por ejemplo, escriba **.members** después de **[Categoría de producto]. [Nombre de categoría de producto]** . Para más información, vea [Using Member Expressions](../../mdx/using-member-expressions.md).  
   
 ##  <a name="bkmk_backup"></a> Crear un script XMLA a partir de una plantilla  
  Las plantillas de comandos XMLA que se proporcionan en el Explorador de plantillas se pueden utilizar para crear scripts que permitan supervisar y actualizar los objetos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , independientemente de si la instancia está en modo multidimensional y minería de datos, o en el modo tabular. Las plantillas **XMLA** incluyen ejemplos de los siguientes tipos de scripts:  
@@ -154,14 +154,14 @@ SELECT * FROM $system.DISCOVER_SCHEMA_ROWSETS
 ##  <a name="bkmk_Ref"></a> Referencia de las plantillas de Analysis Services  
  Las plantillas siguientes se proporcionan para trabajar con bases de datos de Analysis Services y los objetos de la base de datos, incluidas las restricciones de minería de datos y los modelos de minería de datos, los cubos y los modelos tabulares:  
   
-|Categoría|Plantilla de elementos|Descripción|  
+|Category|Plantilla de elementos|Descripción|  
 |--------------|-------------------|-----------------|  
-|DMX\Contenido del modelo|Content Query|Muestra cómo usar el DMX SELECT FROM  *\<modelo >*. Instrucción contenido que se va a recuperar el contenido de conjunto de filas de esquema del modelo de minería de datos para un modelo de minería de datos especificado.|  
+|DMX\Contenido del modelo|Content Query|Muestra cómo usar el DMX SELECT FROM  *\<modelo >* . Instrucción contenido que se va a recuperar el contenido de conjunto de filas de esquema del modelo de minería de datos para un modelo de minería de datos especificado.|  
 ||Continuous Column Values|Muestra cómo usar el DMX SELECT DISTINCT FROM  *\<modelo >* instrucción con DMX **RangeMin** y **RangeMax** funciones para recuperar un conjunto de valores en un intervalo especificado de las columnas continuas de un modelo de minería de datos especificado.|  
 ||Discrete Column Values|Muestra cómo usar el DMX SELECT DISTINCT FROM  *\<modelo >* instrucción recuperar un conjunto completo de valores de las columnas discretas de un modelo de minería de datos especificado.|  
 ||Drillthrough Query|Muestra cómo usar la instrucción DMX SELECT * FROM Model.CASES con la función DMX IsInNode para llevar a cabo una consulta de obtención de detalles.|  
 ||Model Attributes|Muestra cómo usar la función DMX System.GetModelAttributes para obtener la lista de los atributos utilizados por un modelo.|  
-||PMML Content|Muestra cómo usar la instrucción SELECT de DMX \* FROM  *\<modelo >*. Instrucción PMML para recuperar la representación del lenguaje de marcado de modelos de predicción (PMML) del modelo de minería de datos, para los algoritmos que admiten esta funcionalidad.|  
+||PMML Content|Muestra cómo usar la instrucción SELECT de DMX \* FROM  *\<modelo >* . Instrucción PMML para recuperar la representación del lenguaje de marcado de modelos de predicción (PMML) del modelo de minería de datos, para los algoritmos que admiten esta funcionalidad.|  
 |DMX\Administración de modelos|Add Model|Muestra cómo usar la instrucción DMX ALTER MINING MODEL STRUCTURE para agregar un modelo de minería de datos.|  
 ||Clear Model|Muestra cómo usar la instrucción DMX DELETE * FROM MINING MODEL para eliminar el contenido de un modelo de minería de datos especificado.|  
 ||Clear Structure Cases|Muestra cómo usar la instrucción DMX DELETE FROM MINING STRUCTURE para borrar casos de estructura de modelo de minería de datos.|  

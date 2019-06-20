@@ -9,11 +9,11 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ms.openlocfilehash: 502f46b67dbf282a7b3daeac76882915a7c3ac84
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64505445"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>Datos de taxis de Nueva York demostración para ver tutoriales de Python de SQL Server y R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +57,7 @@ En la tabla siguiente se resume los objetos creados en la base de datos de demos
 
 |**Nombre de objeto**|**Tipo de objeto**|**Descripción**|
 |----------|------------------------|---------------|
-|**NYCTaxi_Sample** | Base de datos | Crea una base de datos y dos tablas:<br /><br />tabla dbo.nyctaxi_sample: Contiene el conjunto de datos NYC Taxi principal. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. El ejemplo de 1% del conjunto de datos NYC Taxi se insertará en esta tabla.<br /><br />tabla dbo.nyc_taxi_models: Se usa para conservar el modelo de análisis avanzado entrenado.|
+|**NYCTaxi_Sample** | database | Crea una base de datos y dos tablas:<br /><br />tabla dbo.nyctaxi_sample: Contiene el conjunto de datos NYC Taxi principal. Un índice de almacén de columnas agrupado se agrega a la tabla para mejorar el rendimiento de almacenamiento y de consulta. El ejemplo de 1% del conjunto de datos NYC Taxi se insertará en esta tabla.<br /><br />tabla dbo.nyc_taxi_models: Se usa para conservar el modelo de análisis avanzado entrenado.|
 |**fnCalculateDistance** |función escalar | Calcula la distancia directa entre las ubicaciones de recogida y destino. Esta función se utiliza en [crear características de datos](sqldev-create-data-features-using-t-sql.md), [entrenar y guardar un modelo](sqldev-train-and-save-a-model-using-t-sql.md) y [Operacionalizar el modelo de R](sqldev-operationalize-the-model.md).|
 |**fnEngineerFeatures** |función con valores de tabla | Crea nuevas características de datos de entrenamiento del modelo. Esta función se utiliza en [crear características de datos](sqldev-create-data-features-using-t-sql.md) y [Operacionalizar el modelo de R](sqldev-operationalize-the-model.md).|
 

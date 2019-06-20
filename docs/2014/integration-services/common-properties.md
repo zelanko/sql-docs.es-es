@@ -20,10 +20,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 5b20a0d2f47e89070712a4063acba4da0225b85d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66060961"
 ---
 # <a name="common-properties"></a>Propiedades comunes
@@ -113,7 +113,7 @@ ms.locfileid: "66060961"
 |Id.|Integer|Valor que identifica la entrada de forma inequívoca.|  
 |IdentificationString|String|Cadena que identifica la entrada.|  
 |IsSorted|Boolean|Indica si los datos de la entrada están ordenados.|  
-|Name|String|Nombre de la entrada.|  
+|NOMBRE|String|Nombre de la entrada.|  
 |SourceLocale|Integer|El Id. de configuración regional (LCID) de los datos de entrada.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. . Los valores son `Fail component`, `Ignore failure` y `Redirect row`.|  
   
@@ -159,7 +159,7 @@ ms.locfileid: "66060961"
 |IdentificationString|String|Cadena que identifica la salida.|  
 |IsErrorOut|Boolean|Indica si la salida es una salida de errores.|  
 |IsSorted|Boolean|Indica si la salida está ordenada. El valor predeterminado es `False`.<br /><br /> **\*\* Importante \* \***  estableciendo el valor de la `IsSorted` propiedad `True` no se ordenan los datos. Esta propiedad únicamente proporciona una sugerencia a los componentes de nivel inferior acerca de que los datos se han ordenado previamente. Para obtener más información, vea [Ordenar datos para las transformaciones Mezclar y Combinación de mezcla](data-flow/transformations/sort-data-for-the-merge-and-merge-join-transformations.md).|  
-|Name|String|Nombre de la salida.|  
+|NOMBRE|String|Nombre de la salida.|  
 |SynchronousInputID|Integer|El Id. de una entrada que es sincrónica con la salida.|  
 |TruncationRowDisposition|<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.DTSRowDisposition>|Valor que determina la forma en que el componente administra los truncamientos producidos al procesar las filas. Los valores son `Fail component`, `Ignore failure` y `Redirect row`.|  
   

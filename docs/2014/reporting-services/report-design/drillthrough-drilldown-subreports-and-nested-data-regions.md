@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 6ab8c48b9c02f7bcf9f2c9457b56cb2533125756
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66105977"
 ---
 # <a name="drillthrough-drilldown-subreports-and-nested-data-regions-report-builder-and-ssrs"></a>Obtención de detalles, informes detallados, subinformes y regiones de datos anidadas (Generador de informes y SSRS)
@@ -44,7 +44,7 @@ ms.locfileid: "66105977"
 |Recuperación de datos|Los datos se recuperan al mismo tiempo que el informe principal.|Los datos se recuperan en un informe detallado cada vez.|Los datos se recuperan todos al mismo tiempo que el informe principal.|  
 |Proceso y representación|Con el informe principal|Cuando se hace clic en el vínculo.|Con el informe principal|  
 |Rendimiento|Más lento (pero recupera todos los datos con el informe principal).|Más rápido (pero no recupera todos los datos con el informe principal).|Más rápido (y recupera todos los datos con el informe principal).|  
-|Uso de parámetros|Sí|Sí|Sin |  
+|Uso de parámetros|Sí|Sí|No|  
 |Reusabilidad|Como informe, subinforme o informe detallado en otros informes.|Como informe, subinforme o informe detallado en otros informes.|No se puede volver a utilizar.|  
 |Ubicación|Fuera del informe principal, en el mismo servidor de informes o en otro distinto.|Fuera del informe principal, en el mismo servidor de informes.|Dentro del informe principal.|  
 |Presentación|En el informe principal|En otro informe|En el informe principal|  

@@ -16,10 +16,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 8572feb3e9eb3ac5ba7ba8a3d61abb2ad2dc1b5d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66059719"
 ---
 # <a name="data-profile-viewer-f1-help"></a>Visor de perfiles de datos (Ayuda F1)
@@ -31,13 +31,13 @@ ms.locfileid: "66059719"
  **Abrir**  
  Haga clic para buscar el archivo guardado que contiene la salida de la Tarea de generación de perfiles de datos.  
   
- Panel**Perfiles**   
+ Panel**Perfiles**  
  Expanda el árbol del panel **Perfiles** para ver los perfiles que están incluidos en la salida. Seleccione un perfil para ver los resultados de ese perfil.  
   
- Panel**Mensaje**   
+ Panel**Mensaje**  
  Muestra mensajes de estado.  
   
- Panel**Obtención de detalles**   
+ Panel**Obtención de detalles**  
  Muestra las filas de datos que coinciden con un valor en la salida, si el origen de datos que usa la Tarea de generación de perfiles de datos está disponible.  
   
  Por ejemplo, si está viendo la salida de un perfil Distribución de valores de columna de una columna de estados americanos, el panel **Distribución de valor detallado** podría contener una fila para "WA". Haga doble clic en la fila en el panel **Distribución de valores detallados** para ver las filas de datos en las que el valor de la columna de estado sea "WA" en el panel de obtención de detalles.  
@@ -174,7 +174,7 @@ ms.locfileid: "66059719"
  Muestra el número de filas en las que el valor de columna determinante determina la columna dependiente.  
   
  **Recuento de infracciones**  
- Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el que se muestra en la columna **\<nombre de columna dependiente>**).  
+ Muestra el número de filas en las que el valor de columna determinante no determina la columna dependiente. (Estas son las filas en las que el valor dependiente es el que se muestra en la columna **\<nombre de columna dependiente>** ).  
   
  **Porcentaje admitido**  
  Muestra el porcentaje de filas en las que el valor de columna determinante determina la columna dependiente.  

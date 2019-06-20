@@ -11,10 +11,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: c44e1830b1f04b1a7686bf7db1efea4549ae143e
-ms.sourcegitcommit: 5748d710960a1e3b8bb003d561ff7ceb56202ddb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65479556"
 ---
 # <a name="create-master-data-manager-web-service-proxy-classes"></a>Crear clases de proxy del servicio web Master Data Manager
@@ -25,14 +25,14 @@ ms.locfileid: "65479556"
   
 1.  Abra el archivo Web.config de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un editor de texto. Este archivo se encuentra en la carpeta WebApplication de la ruta de instalación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
-2.  Buscar el `mdsWsHttpBehavior` sección  **\<serviceBehaviors >**. Para el  **\<serviceMetadata >** elemento, establezca `httpGetEnabled` a `true`.  
+2.  Buscar el `mdsWsHttpBehavior` sección  **\<serviceBehaviors >** . Para el  **\<serviceMetadata >** elemento, establezca `httpGetEnabled` a `true`.  
   
     > [!NOTE]  
     >  Si desea habilitar los servicios web sobre la capa de (SSL) sockets seguros, establezca `httpsGetEnabled` a `true` en la sección de `mdsWsHttpBehavior` de archivo web.config. También debe cambiar `mdsWsHTTPBinding` para configurarlo para SSL y comentar la sección que no es de SSL.  
   
 3.  Guarde los cambios realizados en el archivo.  
   
-4.  Pruebe la publicación de metadatos yendo a la dirección URL del servicio (por ejemplo, http://yourserver/MDS/service/service.svc). Si la publicación de metadatos está habilitada, se muestra una página que empieza con   
+4.  Pruebe la publicación de metadatos yendo a la dirección URL del servicio (por ejemplo, http://yourserver/MDS/service/service.svc ). Si la publicación de metadatos está habilitada, se muestra una página que empieza con   
     "Ha creado un servicio".  
   
 ## <a name="creating-proxy-classes-by-using-visual-studio"></a>Crear clases de proxy usando Visual Studio  

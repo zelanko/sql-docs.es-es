@@ -21,10 +21,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 8b52319eaa9af7305c2d3044f3e19762437fff62
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66084015"
 ---
 # <a name="microsoft-decision-trees-algorithm-technical-reference"></a>Referencia técnica del algoritmo de árboles de decisión de Microsoft
@@ -149,7 +149,7 @@ ms.locfileid: "66084015"
  *SCORE_METHOD*  
  Determina el método usado para calcular el resultado de la división. Las siguientes opciones están disponibles:  
   
-|Id.|NOMBRE|  
+|Id.|Name|  
 |--------|----------|  
 |1|Entropía|  
 |3|Bayesiano con prioridad K2|  
@@ -162,7 +162,7 @@ ms.locfileid: "66084015"
  *SPLIT_METHOD*  
  Determina el método usado para dividir el nodo. Las siguientes opciones están disponibles:  
   
-|Id.|Name|  
+|Id.|NOMBRE|  
 |--------|----------|  
 |1|**Binario:** Indica que, independientemente del número real de valores para el atributo, el árbol se debería dividir en dos bifurcaciones.|  
 |2|**Complete:** Indica que el árbol puede crear tantas divisiones como valores de atributo.|  

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: da78f21c6346281dc23332f40e8e6f46ff07aa06
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62774668"
 ---
 # <a name="upgrade-master-data-services"></a>Actualizar Master Data Services
@@ -105,7 +105,7 @@ ms.locfileid: "62774668"
   
  Para realizar esta tarea, complete los siguientes pasos.  
   
-1.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sólo**: Abra **Panel de Control** > **programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
+1.  **Solo en el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : abra el **Panel de control** > **Programas y características** y desinstale Microsoft [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)].  
   
 2.  Actualice el motor de base de datos a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -117,7 +117,7 @@ ms.locfileid: "62774668"
   
     4.  Finalice el asistente.  
   
-3.  **Para [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] sólo**: Una vez completada la actualización, agregue el **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** característica.  
+3.  **Solo en el caso de [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]** : Una vez completada la actualización, agregue el **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** característica.  
   
     1.  Abra el Asistente para la instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -127,7 +127,7 @@ ms.locfileid: "62774668"
   
     4.  En el **tipo de instalación** página del asistente, seleccione el **agregar características a una instancia existente** opción y elija la instancia donde está instalada la base de datos MDS.  
   
-    5.  En el **selección de características** página, en **características compartidas**, seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]**.  
+    5.  En el **selección de características** página, en **características compartidas**, seleccione **[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]** .  
   
     6.  Finalice el asistente.  
   

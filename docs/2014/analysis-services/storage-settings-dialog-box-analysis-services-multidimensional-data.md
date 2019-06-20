@@ -14,16 +14,16 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ecd796d2fb2bc37c4c2ad6d9fac00ef4258ec038
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66068030"
 ---
 # <a name="storage-settings-dialog-box-analysis-services---multidimensional-data"></a>Cuadro de diálogo Configuración de almacenamiento (Analysis Services - Datos multidimensionales)
   Use el cuadro de diálogo **Configuración de almacenamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] para establecer la configuración del almacenamiento en caché automático, del almacenamiento y de las notificaciones para una dimensión, un cubo, un grupo de medida o una partición. Puede abrir el cuadro de diálogo **Configuración de almacenamiento** de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] de distintas maneras:  
   
--   Al hacer clic en el botón de puntos suspensivos (**...** ) para el `ProactiveCaching` valor de propiedad de una dimensión, cubo, grupo de medida o partición en la **propiedades** ventana de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
+-   Al hacer clic en el botón de puntos suspensivos ( **...** ) para el `ProactiveCaching` valor de propiedad de una dimensión, cubo, grupo de medida o partición en la **propiedades** ventana de [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
 -   Expandir un grupo de medida en la pestaña **Particiones** del **Diseñador de cubos** y hacer clic en **Configuración de almacenamiento**.  
   

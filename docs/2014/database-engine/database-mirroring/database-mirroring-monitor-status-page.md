@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cec7e92d8c32cd8c50098ece83082b61bca7ae2
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62754714"
 ---
 # <a name="database-mirroring-monitor-status-page"></a>Monitor de creación de reflejo de la base de datos (página Estado)
@@ -45,7 +45,7 @@ ms.locfileid: "62754714"
 |**Historial**|Haga clic en este botón para mostrar el historial de creación de reflejo en la instancia del servidor. Se abrirá el cuadro de diálogo **Historial de creación de reflejo de la base de datos** , que muestra el historial del estado de creación de reflejo y las estadísticas de una base de datos reflejada en una instancia del servidor determinada.<br /><br /> El botón **Historial** se atenúa si el monitor no está conectado a la instancia del servidor.|  
   
  **Registro del servidor principal (** *\<hora>* **)**  
- Estado del registro en la instancia del servidor principal según la hora local de la instancia del servidor, indicado por *\<hora>*. Aparecen los siguientes parámetros:  
+ Estado del registro en la instancia del servidor principal según la hora local de la instancia del servidor, indicado por *\<hora>* . Aparecen los siguientes parámetros:  
   
  **Registro sin enviar**  
  Cantidad de registro a la espera en la cola de envío (expresada en kilobytes).  
@@ -63,7 +63,7 @@ ms.locfileid: "62754714"
  Tasa a la que se escriben las transacciones entrantes en el registro del servidor principal en KB por segundo. Para determinar si la creación de reflejo se retrasa, se mantiene o mejora, compare este valor con **Hora de envío de registro (estimada)** .  
   
  **Registro del servidor reflejado (** *\<hora>* **)**  
- Estado del registro en la instancia del servidor reflejado según la hora local de la instancia del servidor, indicado por *\<hora>*. Aparecen los siguientes parámetros:  
+ Estado del registro en la instancia del servidor reflejado según la hora local de la instancia del servidor, indicado por *\<hora>* . Aparecen los siguientes parámetros:  
   
  **Registro sin restaurar**  
  Cantidad de registro a la espera en la cola rehecha (expresada en KB).  
@@ -93,7 +93,7 @@ ms.locfileid: "62754714"
 -   **Seguridad alta con conmutación automática por error (sincrónico)**  
   
 ## <a name="remarks"></a>Comentarios  
- Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos**para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)**.  
+ Los miembros del rol fijo de base de datos **dbm_monitor** pueden ver el estado actual de la creación de reflejo mediante el Monitor de creación de reflejo de la base de datos o el procedimiento almacenado **sp_dbmmonitorresults** . No obstante, estos usuarios no pueden actualizar la tabla de estado. Dependen del **Trabajo del Monitor de creación de reflejo de la base de datos**para actualizar la tabla de estado a intervalos regulares. Para conocer la antigüedad del estado presentado, los usuarios pueden examinar las horas en las etiquetas **Registro del servidor principal (***\<hora>***)** y **Registro del servidor reflejado (***\<hora>***)** .  
   
  Si este trabajo no existe o el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se detiene, el estado quedará cada vez más desusado y puede que deje de reflejar la configuración de la sesión de creación de reflejo. Por ejemplo, después de una conmutación por error, es posible que parezca que los asociados comparten el mismo rol (de servidor principal o reflejado) o que el servidor principal actual se muestre como reflejado, a la vez que el servidor reflejado actual se muestra como principal.  
   

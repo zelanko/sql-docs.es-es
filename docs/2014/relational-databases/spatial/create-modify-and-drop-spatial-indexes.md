@@ -17,10 +17,10 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 ms.openlocfilehash: 7e5dcd71dec0a2189e9f3b51bb7a68b50b070416
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66014266"
 ---
 # <a name="create-modify-and-drop-spatial-indexes"></a>Crear, modificar y quitar índices espaciales
@@ -62,7 +62,7 @@ ms.locfileid: "66014266"
   
 11. En la página **Espacial** , especifique los valores que desee usar para las propiedades espaciales del índice.  
   
-     Al crear un índice en una `geometry` columna de tipo, debe especificar el **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** las coordenadas del rectángulo. Para un índice de un `geography` columna de tipo, los campos del cuadro de límite serán de solo lectura después de especificar el **cuadrícula de geografía** esquema de teselación, porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
+     Al crear un índice en una `geometry` columna de tipo, debe especificar el **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** las coordenadas del rectángulo. Para un índice de un `geography` columna de tipo, los campos del cuadro de límite serán de solo lectura después de especificar el **cuadrícula de geografía** esquema de teselación, porque la teselación de cuadrícula de geografía no usa un cuadro de límite.  
   
      Opcionalmente, puede especificar valores no predeterminados para el campo **Celdas por objeto** y para la densidad de cuadrícula en cualquier nivel del esquema de teselación. El número predeterminado de celdas por objeto es 16 para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] u 8 para [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] o posterior y la densidad de cuadrícula predeterminada es **Media** para [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

@@ -24,10 +24,10 @@ ms.reviewer: ''
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 84011f13a222ee66fdbfe5bf57d3ef74dd41a052
-ms.sourcegitcommit: 5ed48c7dc6bed153079bc2b23a1e0506841310d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/21/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65980752"
 ---
 # <a name="specifying-depth-in-recursive-relationships-by-using-sqlmax-depth"></a>Especificar la profundidad en relaciones recursivas utilizando sql:max-depth
@@ -62,7 +62,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
   
  En este fragmento, el empleado 5 es subordinado directo del empleado 4, el empleado 4 es subordinado directo del empleado 3 y los empleados 3 y 2 son subordinados directos del empleado 1.  
   
- Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >**, Emp es el elemento primario y la tabla secundaria.  
+ Para generar este resultado, puede usar el siguiente esquema XSD y especificar una consulta XPath en él. El esquema describe un  **\<Emp >** elemento de tipo EmployeeType, que consta de un  **\<Emp >** elemento secundario del mismo tipo, EmployeeType. Se trata de una relación recursiva (el elemento y su antecesor son del mismo tipo). Además, el esquema usa un  **\<SQL: Relationship >** para describir la relación de elementos primarios y secundarios entre el supervisor y el supervisado. Tenga en cuenta que en este  **\<SQL: Relationship >** , Emp es el elemento primario y la tabla secundaria.  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
@@ -286,7 +286,7 @@ Emp (EmployeeID, FirstName, LastName, ReportsTo)
 ### <a name="nonrecursive-elements"></a>Elementos no recursivos  
  Si el **SQL-profundidad** anotación se especifica en un elemento en el esquema que no presenta ninguna recursión, se omite. En el siguiente esquema, un  **\<Emp >** elemento consta de un  **\<constante >** elemento secundario, que, a su vez, tiene un  **\<Emp >** elemento secundario.  
   
- En este esquema, el **SQL-profundidad** la anotación especificada en el  **\<constante >** se omite el elemento porque no hay ninguna recursión entre el  **\<Emp >** primario y el  **\<constante >** elemento secundario. Pero hay recursión entre el  **\<Emp >** antecesor y  **\<Emp >** secundarios. El esquema especifica la **SQL-profundidad** anotación en ambos. Por lo tanto, el **SQL-profundidad** anotación que se especifica en el antecesor (**\<Emp >** en el rol de supervisor) tiene prioridad.  
+ En este esquema, el **SQL-profundidad** la anotación especificada en el  **\<constante >** se omite el elemento porque no hay ninguna recursión entre el  **\<Emp >** primario y el  **\<constante >** elemento secundario. Pero hay recursión entre el  **\<Emp >** antecesor y  **\<Emp >** secundarios. El esquema especifica la **SQL-profundidad** anotación en ambos. Por lo tanto, el **SQL-profundidad** anotación que se especifica en el antecesor ( **\<Emp >** en el rol de supervisor) tiene prioridad.  
   
 #### <a name="example-c"></a>Ejemplo C  
   
@@ -330,9 +330,9 @@ xmlns:sql="urn:schemas-microsoft-com:mapping-schema">
  Para probar este esquema, siga los pasos que se proporcionaron para el Ejemplo A anteriormente en este tema.  
   
 ## <a name="complex-types-derived-by-restriction"></a>Tipos complejos derivados por restricción  
- Si tiene una derivación de tipo complejo por  **\<restricción >**, elementos de tipo complejo base correspondiente no se pueden especificar el **SQL-profundidad** anotación. En estos casos, el **SQL-profundidad** anotación puede agregarse al elemento del tipo derivado.  
+ Si tiene una derivación de tipo complejo por  **\<restricción >** , elementos de tipo complejo base correspondiente no se pueden especificar el **SQL-profundidad** anotación. En estos casos, el **SQL-profundidad** anotación puede agregarse al elemento del tipo derivado.  
   
- Por otro lado, si tiene una derivación de tipo complejo por  **\<extensión >**, pueden especificar los elementos de tipo complejo base correspondiente el **SQL-profundidad** anotación.  
+ Por otro lado, si tiene una derivación de tipo complejo por  **\<extensión >** , pueden especificar los elementos de tipo complejo base correspondiente el **SQL-profundidad** anotación.  
   
  Por ejemplo, el siguiente esquema XSD genera un error porque el **SQL-profundidad** anotación se especifica en el tipo base. Esta anotación no se admite en un tipo que se deriva por  **\<restricción >** de otro tipo. Para corregir este problema, debe cambiar el esquema y especificar el **SQL-profundidad** anotación en el elemento en el tipo derivado.  
   

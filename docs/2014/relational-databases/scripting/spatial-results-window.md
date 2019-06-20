@@ -11,10 +11,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 606ac348ce4ee7bed65a7bcbe6d7ebbbd0a7f87d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66063799"
 ---
 # <a name="spatial-results-window"></a>Ventana Resultados espaciales
@@ -33,7 +33,7 @@ ms.locfileid: "66063799"
  Esta opción no está disponible si solo se devuelven instancias de punto en una consulta.  
   
  **Seleccionar proyección**  
- Muestre los datos de geografía en una de estas cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
+ Muestre los datos geográficos en una de las cuatro proyecciones: Equirectangular, Mercator, Robinson o Bonne.  
   
  Esta opción no está disponible para los datos de geometría.  
   

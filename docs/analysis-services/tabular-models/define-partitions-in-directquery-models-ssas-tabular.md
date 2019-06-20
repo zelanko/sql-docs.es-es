@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6de0417055adc506fc6d9940aa3fa349f59c658
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63019297"
 ---
 # <a name="define-partitions-in-directquery-models"></a>Definición de particiones en los modelos DirectQuery
@@ -69,7 +69,7 @@ ms.locfileid: "63019297"
   
  Hay dos opciones de procesamiento para la partición DirectQuery. Para establecer esta propiedad, use el **Administrador de particiones** en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], y seleccione la propiedad **Opción de procesamiento** . En la tabla siguiente se muestran los valores de esta propiedad y se describen los efectos de cada valor cuando se combinan con la propiedad DirectQueryUsage en la cadena de conexión:  
   
-|Propiedad**Cadena de conexión** |Propiedad**Opción de procesamiento** |Notas|  
+|Propiedad**Cadena de conexión**|Propiedad**Opción de procesamiento**|Notas|  
 |------------------------------------|------------------------------------|-----------|  
 |DirectQuery|No procesar nunca esta partición|Cuando el modelo utiliza Solo DirectQuery, el procesamiento no es necesario nunca.<br /><br /> En los modelos híbridos, es posible configurar la partición DirectQuery para que no se procese nunca. Por ejemplo, si está trabajando con un conjunto de datos muy grande y no desea que los resultados completos se agreguen a la memoria caché, puede especificar que la partición DirectQuery incluya la unión de los resultados para el resto de particiones de la tabla y no procesar nunca dicha unión. Las consultas dirigidas al origen relacional no se verán afectadas, y las consultas en los datos en caché combinarán datos del resto de particiones|  
 |DataView=Sample<br /><br /> Se aplica a modelos tabulares mediante vistas de datos de ejemplo|Permitir procesar la partición|Si el modelo utiliza datos de ejemplo, puede procesar la tabla para que devuelva un conjunto de datos filtrado que proporciona indicaciones visuales durante el diseño del modelo.|  

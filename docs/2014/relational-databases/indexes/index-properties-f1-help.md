@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: d97fecf49f9d74e2a74444c12dfdf598fb1da469
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63161909"
 ---
 # <a name="index-properties-f1-help"></a>Propiedades del índice (Ayuda F1)
@@ -180,7 +180,7 @@ ms.locfileid: "63161909"
 ### <a name="bounding-box"></a>Cuadro de límite  
  El *cuadro de límite* es el perímetro de la cuadrícula de nivel superior de un plano geométrico. Los parámetros de cuadro de límite solo existen en la teselación de cuadrícula de geometría. Estos parámetros no están disponibles si **Esquema de teselación** es **Cuadrícula de geografía**.  
   
- El panel muestra la **(*`X-min`*,*`Y-min`*)** y **(*`X-max`*,*`Y-max`*)** las coordenadas del rectángulo. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
+ El panel muestra la **( *`X-min`* , *`Y-min`* )** y **( *`X-max`* , *`Y-max`* )** las coordenadas del rectángulo. No hay valores predeterminados para las coordenadas. Por consiguiente, cuando cree un nuevo índice espacial en una columna de tipo `geometry`, deberá especificar los valores de las coordenadas.  
   
  `X-min`  
  La coordenada x de la esquina inferior izquierda del cuadro de límite.  

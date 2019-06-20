@@ -10,10 +10,10 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 06b3aace2320882d209e6a7ab0f67a16a6f8a6df
-ms.sourcegitcommit: e4794943ea6d2580174d42275185e58166984f8c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/09/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65503621"
 ---
 # <a name="adventure-works-internet-sales-tutorial-1200"></a>Tutorial de Adventure Works Internet Sales (1200)
@@ -76,7 +76,7 @@ Este tutorial incluye las siguientes lecciones:
 |Lección|Tiempo estimado para completar la lección|  
 |----------|------------------------------|  
 |[Lección 1: Cree un nuevo proyecto de modelo Tabular](lesson-1-create-a-new-tabular-model-project.md)|10 minutos|  
-|[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
+|[Lección 2: Agregar datos](lesson-2-add-data.md)|20 minutos|  
 |[Lección 3: Marcar como tabla de fechas](lesson-3-mark-as-date-table.md)|3 minutos|  
 |[Lección 4: Crear relaciones](lesson-4-create-relationships.md)|10 minutos|  
 |[Lección 5: Crear columnas calculadas](lesson-5-create-calculated-columns.md)|15 minutos|

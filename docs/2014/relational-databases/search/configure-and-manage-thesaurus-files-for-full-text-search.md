@@ -15,10 +15,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: e52399dc77fce220bf33939b7c7921e32cd2438c
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66011477"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
@@ -29,7 +29,7 @@ ms.locfileid: "66011477"
   
 -   Configuración de signos diacríticos  
   
-     Para un diccionario de sinónimos determinado, son todos los patrones de búsqueda distinguen o no los signos diacríticos, por ejemplo, una tilde (**~**), acento agudo (**??** ), o diéresis (**??** ) (es decir, *acentos* o *no distinguir acentos*). Por ejemplo, imagine que especifica el patrón "esté??" Reemplazar por otros patrones en una consulta de texto completo. Si el diccionario de sinónimos no distingue acentos, búsqueda de texto completo reemplaza lo patrones "esté"?? y "cafe". Si el diccionario de sinónimos distingue acentos, búsqueda de texto completo reemplaza solo el patrón "esté??". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
+     Para un diccionario de sinónimos determinado, son todos los patrones de búsqueda distinguen o no los signos diacríticos, por ejemplo, una tilde ( **~** ), acento agudo ( **??** ), o diéresis ( **??** ) (es decir, *acentos* o *no distinguir acentos*). Por ejemplo, imagine que especifica el patrón "esté??" Reemplazar por otros patrones en una consulta de texto completo. Si el diccionario de sinónimos no distingue acentos, búsqueda de texto completo reemplaza lo patrones "esté"?? y "cafe". Si el diccionario de sinónimos distingue acentos, búsqueda de texto completo reemplaza solo el patrón "esté??". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
   
 -   Conjunto de expansión  
   

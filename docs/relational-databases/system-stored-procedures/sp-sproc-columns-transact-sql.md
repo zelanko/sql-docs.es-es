@@ -20,10 +20,10 @@ ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63032746"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (Transact-SQL)
@@ -47,15 +47,15 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @procedure_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar (** 390 **)**, su valor predeterminado es %, lo que significa que todas las tablas de la base de datos actual. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ @procedure_name = ] 'name'` Es el nombre del procedimiento utilizado para devolver información del catálogo. *nombre* es **nvarchar (** 390 **)** , su valor predeterminado es %, lo que significa que todas las tablas de la base de datos actual. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @procedure_owner = ] 'owner'` Es el nombre del propietario del procedimiento. *propietario*es **nvarchar (** 384 **)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
+`[ @procedure_owner = ] 'owner'` Es el nombre del propietario del procedimiento. *propietario*es **nvarchar (** 384 **)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de procedimiento del DBMS subyacente.  
   
  Si el usuario actual es propietario de un procedimiento que tiene el nombre especificado, se devuelve información sobre ese procedimiento. Si *propietario*no se especifica y el usuario actual no posee un procedimiento con el nombre especificado, **sp_sproc_columns** busca un procedimiento con el nombre especificado que pertenezca al propietario de la base de datos. Si el procedimiento existe, se devuelve información sobre sus columnas.  
   
 `[ @procedure_qualifier = ] 'qualifier'` Es el nombre del calificador del procedimiento. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (*qualifier.owner.name*). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
-`[ @column_name = ] 'column_name'` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *column_name* es **nvarchar (** 384 **)**, su valor predeterminado es null. Si *column_name* es se omite, se devuelven todas las columnas. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
+`[ @column_name = ] 'column_name'` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *column_name* es **nvarchar (** 384 **)** , su valor predeterminado es null. Si *column_name* es se omite, se devuelven todas las columnas. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de ISO (caracteres comodín % y _).  
   
 `[ @ODBCVer = ] 'ODBCVer'` Se está usando la versión de ODBC. *ODBCVer* es **int**, su valor predeterminado es 2, lo que indica ODBC versión 2.0. Para obtener más información acerca de las diferencias entre ODBC versión 2.0 y ODBC versión 3.0, consulte ODBC **SQLProcedureColumns** especificación de ODBC versión 3.0  
   

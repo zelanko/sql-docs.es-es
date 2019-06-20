@@ -1,6 +1,6 @@
 ---
 title: Grupos de cálculo en los modelos tabulares de Analysis Services | Microsoft Docs
-ms.date: 06/09/2019
+ms.date: 06/17/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: tabular-models
@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: abc1f51d21613676fd94271f931e1a7692cc1efc
-ms.sourcegitcommit: 96090bb369ca8aba364c2e7f60b37165e5af28fc
+ms.openlocfilehash: 6dfe3516a36fa0ee6e8644b46b5caeb2a7cca92b
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/10/2019
-ms.locfileid: "66822691"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263441"
 ---
 # <a name="calculation-groups-preview"></a>Grupos de cálculo (versión preliminar)
  
@@ -64,7 +64,7 @@ Antes de entrar en detalles, vamos a introducir algunas nuevas funciones de DAX 
 
 [ISSELECTEDMEASURE](https://docs.microsoft.com/dax/isselectedmeasure-function-dax) : se utilizan expresiones para los elementos de cálculo determinar la medida que se encuentra en el contexto se especifica en una lista de medidas.
 
-[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) : se utilizan expresiones para los elementos de cálculo recuperar la cadena de formato de la medida que se encuentra en el contexto.
+[SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) : se utilizan expresiones para los elementos de cálculo recuperar la cadena de formato de la medida que se encuentra en el contexto.
 
 ### <a name="time-intelligence-example"></a>Ejemplo de inteligencia de tiempo
 
@@ -195,11 +195,11 @@ Los modelos tabulares admiten el formato dinámico de medidas mediante el uso de
 
 ### <a name="dynamic-format-strings-for-time-intelligence"></a>Cadenas de formato dinámicas para la inteligencia de tiempo
 
-Si observamos el ejemplo de inteligencia de tiempo mostrado anteriormente, el cálculo de todos los elementos excepto **YOY %** debe tener el formato de la medida actual en contexto. Por ejemplo, **YTD** calcula la medida Sales base debe ser moneda. Si se tratara de un grupo de cálculo para algo como una medida de base de pedidos, el formato sería numérico. **YOY %** , sin embargo, debe ser un porcentaje independientemente del formato de la medida base.
+Si observamos el ejemplo de inteligencia de tiempo mostrado anteriormente, el cálculo de todos los elementos excepto **YOY %** debe tener el formato de la medida actual en contexto. Por ejemplo, **YTD** calcula la medida Sales base debe ser moneda. Si se tratara de un grupo de cálculo para algo como una medida de base de pedidos, el formato sería numérico. **YOY %**, sin embargo, debe ser un porcentaje independientemente del formato de la medida base.
 
-Para **YOY %** , es posible invalidar la cadena de formato estableciendo la propiedad de expresión de cadena de formato en **0,00%;-0.00%; 0,00%** . Para obtener más información acerca de las propiedades de expresión de cadena de formato, vea [propiedades de celdas MDX: contenido de la cadena de formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
+Para **YOY %**, es posible invalidar la cadena de formato estableciendo la propiedad de expresión de cadena de formato en **0,00%;-0.00%; 0,00%**. Para obtener más información acerca de las propiedades de expresión de cadena de formato, vea [propiedades de celdas MDX: contenido de la cadena de formato](../multidimensional-models/mdx/mdx-cell-properties-format-string-contents.md#numeric-values).
 
-En este objeto visual de matriz en Power BI, verá **ventas actual/YOY** y **pedidos actual/YOY** conservar sus cadenas de formato de la medida base respectivo. **Ventas YOY %** y **ordena YOY %** , sin embargo, reemplaza la cadena de formato para usar *porcentaje* formato.
+En este objeto visual de matriz en Power BI, verá **ventas actual/YOY** y **pedidos actual/YOY** conservar sus cadenas de formato de la medida base respectivo. **Ventas YOY %** y **ordena YOY %**, sin embargo, reemplaza la cadena de formato para usar *porcentaje* formato.
 
 ![Inteligencia de tiempo en el objeto visual de matriz](media/calculation-groups/calc-groups-dynamicstring-timeintel.png)
 
@@ -251,7 +251,7 @@ SELECTEDVALUE(
     SELECTEDMEASUREFORMATSTRING()
 )
 ```
-La expresión de cadena de formato debe devolver una cadena escalar. Usa el nuevo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasurefromatstring-function-dax) función Revertir a la cadena de formato de la medida base si hay varias monedas en contexto de filtro.
+La expresión de cadena de formato debe devolver una cadena escalar. Usa el nuevo [SELECTEDMEASUREFORMATSTRING](https://docs.microsoft.com/dax/selectedmeasureformatstring-function-dax) función Revertir a la cadena de formato de la medida base si hay varias monedas en contexto de filtro.
 
 La siguiente animación muestra la conversión de moneda formato dinámico de la **ventas** medida en un informe.
 
@@ -407,8 +407,6 @@ Grupos de cálculo no se admiten todavía en Visual Studio con las extensiones d
 [Seguridad de nivel de objeto](object-level-security.md) (OLS) definido en el cálculo de las tablas de grupo no se admite. Sin embargo, se pueden definir OLS en otras tablas en el mismo modelo. Si un elemento de cálculo hace referencia a un objeto protegido OLS, se devuelve un error genérico.
 
 [Seguridad de nivel de fila](roles-ssas-tabular.md#bkmk_rowfliters) (RLS) no se admite. Puede definir RLS en las tablas en el mismo modelo, pero no en los propios grupos de cálculo (directa o indirectamente).
-
-[Expresiones de filas de detalle](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md) no son compatibles con grupos de cálculo.
 
 ## <a name="see-also"></a>Vea también  
 

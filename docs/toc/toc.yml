@@ -8215,12 +8215,12 @@
               href: ../azure-data-studio/extensibility-apis.md
         - name: Recursos
           items:
+            - name: P+F
+              href: ../azure-data-studio/faq.md
             - name: Repositorio de GitHub de Azure Data Studio >
               href: 'https://www.github.com/Microsoft/azuredatastudio'
             - name: Blog de SQL Server >
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: P+F
-              href: ../azure-data-studio/faq.md
             - name: Notificación de problemas y sugerencias >
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: Utilidades del símbolo del sistema

@@ -11,10 +11,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62791886"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
@@ -28,7 +28,7 @@ ms.locfileid: "62791886"
   
  Use un proveedor de datos que admita la versión (TDS) 7.4 del protocolo de flujo de datos tabular u otra más reciente, como SQL Server Native Client 11.0 o el Proveedor de datos de SQL Server de .NET Framework 4.02.  
   
- **(Para cargas de trabajo de solo lectura)**. El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
+ **(Para cargas de trabajo de solo lectura)** . El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
   
 ##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: uso de una réplica secundaria para las operaciones de solo lectura  
  A menos que la solución de Analysis Services incluya reescritura, puede configurar una conexión a un origen de datos para utilizar una réplica secundaria legible. Si tiene una conexión de red rápida, la replicación secundaria tiene una latencia de datos muy baja, proporcionando datos casi idénticos a los de la réplica primaria. Con la réplica secundaria para las operaciones de Analysis Services, puede reducir la contención de lectura/escritura de la replicación primaria y conseguir una mejor utilización de las réplicas secundarias en el grupo de disponibilidad.  

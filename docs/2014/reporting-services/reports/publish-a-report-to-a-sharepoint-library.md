@@ -15,10 +15,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 1cc957af5596acbf2478d55645b1386283970e33
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66102525"
 ---
 # <a name="publish-a-report-to-a-sharepoint-library"></a>Publicar un informe en una biblioteca de SharePoint
@@ -30,19 +30,19 @@ ms.locfileid: "66102525"
   
 1.  En [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra un nuevo proyecto de servidor de informes o uno existente.  
   
-2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de _\<proyecto>_.  
+2.  En el menú **Proyecto** , haga clic en **Propiedades**. Se abre el cuadro de diálogo **Páginas de propiedades** de _\<proyecto>_ .  
   
-3.  En la lista **Configuración** , seleccione el nombre de una configuración de generación de soluciones para usarla en la generación y publicación del informe. La configuración actual aparece como **Active**(*\<configuración>*).  
+3.  En la lista **Configuración** , seleccione el nombre de una configuración de generación de soluciones para usarla en la generación y publicación del informe. La configuración actual aparece como **Active**( *\<configuración>* ).  
   
 4.  Si desea publicar los orígenes de datos compartidos del proyecto y sobrescribir los publicados anteriormente, establezca **OverwriteDataSources** en **True**.  
   
-5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o una carpeta de biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/DataSources)*.  
+5.  (Opcional) Para **TargetDataSourceFolder**, escriba una dirección URL a una biblioteca de SharePoint o una carpeta de biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/DataSources)* .  
   
      Si no se especifica ningún valor, se usa el valor **TargetReportFolder** .  
   
-6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o carpeta de biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/Reports)*.  
+6.  Para **TargetReportFolder**, escriba una dirección URL a una biblioteca o carpeta de biblioteca (por ejemplo, *http://TestServer/TestSite/Documents/Reports)* .  
   
-7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica un sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, *http://servername*, *http://servername/site*, o *http://servername/site/subsite*).  
+7.  Para **TargetServerURL**, escriba una dirección URL a un sitio de nivel superior o a un subsitio de SharePoint. Si no especifica un sitio, se usa el sitio de nivel superior predeterminado (por ejemplo, *http://servername* , *http://servername/site* , o *http://servername/site/subsite* ).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66066628"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
@@ -75,7 +75,7 @@ ms.locfileid: "66066628"
   
  Los filtros de fila solo se pueden definir para los roles que tengan permisos de lectura y de lectura y procesamiento. De forma predeterminada, si no se define un filtro de fila para una tabla determinada, los miembros de un rol que tenga permisos de lectura o de lectura y procesamiento pueden consultar todas las filas de la tabla, a menos que se aplique un filtro cruzado de otra tabla.  
   
- Una vez definido un filtro de fila para una tabla determinada, una fórmula DAX, que debe devolver un valor TRUE/FALSE, será la que defina las filas que pueden ser consultadas por los miembros de ese rol en especial. Las filas no incluidas en la fórmula DAX no podrán ser consultadas. Por ejemplo, para los miembros del rol Sales, la tabla Customers con la fila de la siguiente expresión de filtro, *= Customers [Country] = "USA"*, los miembros del rol Sales, solo podrán ver clientes de Estados Unidos.  
+ Una vez definido un filtro de fila para una tabla determinada, una fórmula DAX, que debe devolver un valor TRUE/FALSE, será la que defina las filas que pueden ser consultadas por los miembros de ese rol en especial. Las filas no incluidas en la fórmula DAX no podrán ser consultadas. Por ejemplo, para los miembros del rol Sales, la tabla Customers con la fila de la siguiente expresión de filtro, *= Customers [Country] = "USA"* , los miembros del rol Sales, solo podrán ver clientes de Estados Unidos.  
   
  Los filtros de fila se aplican a las filas especificadas y también a las filas relacionadas. Si una tabla tiene varias relaciones, los filtros aplican seguridad a la relación que está activa. Los filtros de fila se intersecarán con otros filtros de fila definidos para las tablas relacionadas, por ejemplo:  
   

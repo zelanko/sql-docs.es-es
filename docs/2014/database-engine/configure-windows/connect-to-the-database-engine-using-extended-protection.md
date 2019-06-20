@@ -18,10 +18,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5b1317bc41be836cfad5159339a4e7c90fcfbc83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62811289"
 ---
 # <a name="connect-to-the-database-engine-using-extended-protection"></a>Conectar al motor de base de datos con protección ampliada
@@ -85,7 +85,7 @@ ms.locfileid: "62811289"
   
 1.  En el menú **Inicio** , elija **Todos los programas**, elija **Microsoft SQL Server** y haga clic en **Administrador de configuración de SQL Server**.  
   
-2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia*>* y, luego, haga clic en **Propiedades**.  
+2.  Expanda **Configuración de red de SQL Server**, haga clic con el botón derecho en **Protocolos de** *\<* nombreDeInstancia *>* y, luego, haga clic en **Propiedades**.  
   
 3.  Para el enlace de canal y el enlace de servicio, en la pestaña **Opciones avanzadas** , establezca **Protección ampliada** en el valor adecuado.  
   

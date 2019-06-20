@@ -34,10 +34,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3d6069d5720121b02c627528ec772cb61ddb0a10
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110078"
 ---
 # <a name="action-properties-dialog-box-report-builder-and-ssrs"></a>Cuadro de diálogo Propiedades de acción (Generador de informes y SSRS)
@@ -58,7 +58,7 @@ ms.locfileid: "66110078"
   
  En el caso de un informe publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa sin la extensión del nombre de archivo. Si el informe se encuentra en la misma carpeta que el actual, use solo el nombre del informe. Si el informe está en una carpeta diferente del mismo servidor de informes, use una ruta de acceso relativa o una ruta de acceso completa. Una ruta de acceso relativa comienza en la carpeta actual y sube por la jerarquía de carpetas, por ejemplo, ../Carpeta2/Informe1. Una ruta de acceso completa se inicia en /, la carpeta Inicio. Por ejemplo, /Informes/Informe1.  
   
- En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*/Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
+ En el caso de un informe publicado en un servidor de informes configurado en el modo integrado de SharePoint, utilice una dirección URL completa, incluida la extensión del nombre de archivo (.rdl). Por ejemplo, http:// *\<Nombredeservidorsharepoint > /\<sitio >* /Documents/Report1.rdl. No se admiten las rutas de acceso relativas.  
   
  Para obtener más información, vea [Especificar las rutas de acceso a los elementos externos &#40;Generador de informes y SSRS&#41;](report-design/specifying-paths-to-external-items-report-builder-and-ssrs.md) en la [la documentación del Generador de informes](https://go.microsoft.com/fwlink/?LinkId=154494) en msdn.microsoft.com.  
   
@@ -98,7 +98,7 @@ ms.locfileid: "66110078"
  Elija esta opción para definir un vínculo a una página web. Escriba o seleccione la dirección URL de una página web o una expresión que se evalúe como la dirección URL de una página web. Haga clic en el botón **Expresión** (*fx*) para modificar la expresión. Esta expresión puede incluir un campo que contenga una dirección URL. Al seleccionar **Ir a dirección URL**, aparece la siguiente opción adicional.  
   
  **Seleccione la dirección URL**  
- Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http://*\<servername >*  /images/image1.jpg. Un elemento publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http://*\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
+ Escriba o especifique la dirección URL del elemento. En el caso de un elemento publicado en un servidor de informes configurado para el modo nativo, use una ruta de acceso completa o relativa. Por ejemplo, http:// *\<servername >*  /images/image1.jpg. Un elemento publicado en un servidor de informes configurado en modo integrado de SharePoint, use una dirección URL completa (por ejemplo, http:// *\<Nombredeservidorsharepoint > /\<sitio >*  /documentos/images / Image1.jpg).  
   
 ## <a name="see-also"></a>Vea también  
  [Gráficos &#40;Generador de informes y SSRS&#41;](report-design/charts-report-builder-and-ssrs.md)   

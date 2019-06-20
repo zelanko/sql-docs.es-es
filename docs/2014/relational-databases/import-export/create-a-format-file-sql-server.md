@@ -13,10 +13,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 9596aefb51c8b895abdb69ddf179282d5d930d76
-ms.sourcegitcommit: 02df4e7965b2a858030bb508eaf8daa9bc10b00b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/28/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66265148"
 ---
 # <a name="create-a-format-file-sql-server"></a>Crear un archivo de formato (SQL Server)
@@ -29,7 +29,7 @@ ms.locfileid: "66265148"
 > [!NOTE]  
 >  La versión de la utilidad **bcp** (Bcp.exe) que se emplee para leer un archivo de formato debe ser la misma versión, o una versión posterior, a la que se use para crear el archivo de formato. Por ejemplo, [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp** puede leer un formato de archivo de la versión 10.0, generado por [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp**, pero [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]**bcp** no puede leer un formato de archivo de la versión 11.0, generado por [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]**bcp**.  
   
- En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada (**-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
+ En este tema se describe cómo utilizar la [utilidad bcp](../../tools/bcp-utility.md) para crear un archivo de formato para una tabla determinada. El archivo de formato se basa en la opción de tipo de datos especificada ( **-n**, **-c**, **-w**o **-N**) y en los delimitadores de la vista o de la tabla.  
   
 ## <a name="creating-a-non-xml-format-file"></a>Crear un archivo de formato no XML  
  Si quiere usar un comando **bcp** para crear un archivo de formato, especifique el argumento **format** y use **nul** en lugar de una ruta de acceso de archivo de datos. La opción **format** también requiere la opción **-f** , como:  
@@ -115,7 +115,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -c -f Department-c.f
  Para obtener más información, vea [Archivos de formato no XML &#40;SQL Server&#41;](xml-format-files-sql-server.md).  
   
 #### <a name="c-creating-a-non-xml-format-file-for-unicode-native-data"></a>C. Crear un archivo de formato no XML para datos nativos Unicode  
- Para crear un archivo de formato no XML para datos nativos Unicode para la tabla `HumanResources.Department`, utilice el comando siguiente:   
+ Para crear un archivo de formato no XML para datos nativos Unicode para la tabla `HumanResources.Department`, utilice el comando siguiente:  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-n.fmt  
@@ -124,7 +124,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -N -f Department-
  Para obtener más información sobre cómo usar datos nativos Unicode, vea [Usar el formato nativo Unicode para importar o exportar datos &#40;SQL Server&#41;](use-unicode-native-format-to-import-or-export-data-sql-server.md).  
   
 #### <a name="d-creating-a-non-xml-format-file-for-unicode-character-data"></a>D. Crear un archivo de formato no XML para datos de caracteres Unicode  
- Para crear un archivo de formato no XML para datos de caracteres Unicode para la tabla `HumanResources.Department` que usa terminadores predeterminados, use el comando siguiente:   
+ Para crear un archivo de formato no XML para datos de caracteres Unicode para la tabla `HumanResources.Department` que usa terminadores predeterminados, use el comando siguiente:  
   
 ```  
 bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-w.fmt  
@@ -163,7 +163,7 @@ bcp AdventureWorks2012.HumanResources.Department format nul -T -w -f Department-
 |----------------|-----------------|  
 |**formatnul-f** _format_file_ **-x**|Especifica el archivo de formato XML.|  
 |**-c**|Especifica los datos de caracteres.|  
-|**-t** `,`|Especifica una coma (**,**) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t**.|  
+|**-t** `,`|Especifica una coma ( **,** ) como terminador de campo.<br /><br /> Nota: Si el archivo de datos usa el terminador de campo predeterminado (`\t`), no es necesario el modificador **-t**.|  
 |**-T**|Especifica que la utilidad **bcp** se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una conexión de confianza utilizando la seguridad integrada. Si no se especifica **-T** , es necesario especificar **-U** y **-P** para poder iniciar sesión correctamente.|  
   
  En el símbolo del sistema de Windows, escriba el siguiente comando `bcp` :  

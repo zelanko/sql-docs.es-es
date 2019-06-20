@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66694795"
 ---
 # <a name="index-property"></a>Propiedad Index
@@ -46,7 +46,7 @@ Indica el nombre del índice actualmente en vigor para un [Recordset](../../../a
   
  Si se puede establecer el índice y el [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedad es **adLockPessimistic** o **adLockOptimistic**, a continuación, implícita [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) se realiza la operación. Esto libera los grupos afectados y actuales. Se liberan todos los filtros existentes, y se cambia la posición de fila actual a la primera fila de la reordenada **Recordset**.  
   
- El **índice** propiedad se utiliza junto con el [Seek](../../../ado/reference/ado-api/seek-method.md) método. Si el proveedor subyacente no admite la **índice** propiedad y, por tanto, el **Seek** método, considere el uso de la [buscar](../../../ado/reference/ado-api/find-method-ado.md) método en su lugar. Determinar si el **Recordset** objeto admite índices con el [admite](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** método.  
+ El **índice** propiedad se utiliza junto con el [Seek](../../../ado/reference/ado-api/seek-method.md) método. Si el proveedor subyacente no admite la **índice** propiedad y, por tanto, el **Seek** método, considere el uso de la [buscar](../../../ado/reference/ado-api/find-method-ado.md) método en su lugar. Determinar si el **Recordset** objeto admite índices con el [admite](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** método.  
   
  Integrado **índice** propiedad no está relacionado con el dinámico [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad, aunque ambas tienen que ver con los índices.  
   

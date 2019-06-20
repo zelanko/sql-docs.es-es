@@ -23,10 +23,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 085b1783214e7f629f1cb91084303edacd151c25
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62874642"
 ---
 # <a name="retrieving-udt-data"></a>Recuperar datos UDT
@@ -44,7 +44,7 @@ ms.locfileid: "62874642"
  Se puede utilizar `System.Data.SqlClient.SqlDataReader` en el código del cliente para recuperar un conjunto de resultados que contiene una columna UDT, el cual se expone como una instancia del objeto.  
   
 ### <a name="example"></a>Ejemplo  
- En este ejemplo se muestra cómo utilizar el método `Main` para crear un nuevo objeto `SqlDataReader`.  En el ejemplo de código se producen las siguientes acciones:  
+ En este ejemplo se muestra cómo utilizar el método `Main` para crear un nuevo objeto `SqlDataReader`. En el ejemplo de código se producen las siguientes acciones:  
   
 1.  El método Main crea un nuevo objeto `SqlDataReader` y recupera los valores de la tabla Points, que tiene una columna de UDT denominada Point.  
   

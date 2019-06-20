@@ -19,10 +19,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: e3277e64e4c4e04e270298d3532ebc0c2b1f93c5
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62724210"
 ---
 # <a name="spcursor-transact-sql"></a>sp_cursor (Transact-SQL)
@@ -51,7 +51,7 @@ sp_cursor  cursor, optype, rownum, table
  *optype*  
  Es un parámetro necesario que designa qué operación realizará el cursor. *optype* requiere uno de los siguientes **int** valores de entrada.  
   
-|Valor|Name|Descripción|  
+|Valor|NOMBRE|Descripción|  
 |-----------|----------|-----------------|  
 |0X0001|UPDATE|Se usa para actualizar una o varias filas en el búfer de captura.  Las filas especificadas en *rownum* se vuelve a tener acceso a y se actualizan.|  
 |0x0002|SUPRIMIR|Se usa para eliminar una o varias filas en el búfer de captura. Las filas especificadas en *rownum* se vuelve a tener acceso a y se eliminan.|  

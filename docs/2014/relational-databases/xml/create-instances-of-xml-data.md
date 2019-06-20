@@ -20,10 +20,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: ae842748d2d510c5c00f329f5e28cd49a0c86ef3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62637613"
 ---
 # <a name="create-instances-of-xml-data"></a>Crear instancias de datos XML
@@ -40,7 +40,7 @@ ms.locfileid: "62637613"
 -   Usar la carga masiva.  
   
 ## <a name="type-casting-string-and-binary-instances"></a>Instancias de cadenas de conversión de tipo e instancias binarias  
- Puede analizar ninguno de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como tipos de datos de cadena [**n**] [**var**]**char**, **texto [n]**,  **varbinary**, y **imagen**, en el `xml` de tipo de datos de conversión (CAST) o convirtiendo (CONVERT) la cadena para el `xml` tipo de datos. Se comprueba el XML sin tipo para confirmar que su formato es correcto. Si hay un esquema asociado con el `xml` también se realiza la validación de tipo. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](compare-typed-xml-to-untyped-xml.md).  
+ Puede analizar ninguno de los [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como tipos de datos de cadena [**n**] [**var**]**char**, **texto [n]** ,  **varbinary**, y **imagen**, en el `xml` de tipo de datos de conversión (CAST) o convirtiendo (CONVERT) la cadena para el `xml` tipo de datos. Se comprueba el XML sin tipo para confirmar que su formato es correcto. Si hay un esquema asociado con el `xml` también se realiza la validación de tipo. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](compare-typed-xml-to-untyped-xml.md).  
   
  Los documentos XML pueden codificarse con distintas codificaciones (por ejemplo, UTF-8, UTF-16, windows-1252). A continuación se describen de forma resumida las reglas que establecen el modo en que los tipos de origen de cadena y binarios interactúan con la codificación del documento XML y cómo se comporta el analizador.  
   

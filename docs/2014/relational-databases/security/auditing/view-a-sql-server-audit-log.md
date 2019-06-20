@@ -15,10 +15,10 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: fa30824e32faae5feee1612305c1ca292d44e8e4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63012017"
 ---
 # <a name="view-a-sql-server-audit-log"></a>Ver un registro de SQL Server Audit
@@ -49,7 +49,7 @@ ms.locfileid: "63012017"
   
 2.  Expanda la carpeta **Auditorías** .  
   
-3.  Haga clic con el botón derecho en el registro de auditoría que quiera ver y seleccione **Ver registros de auditoría**. Se abrirá el **Log File Viewer -**_nombre_servidor_ cuadro de diálogo. Para más información, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
+3.  Haga clic con el botón derecho en el registro de auditoría que quiera ver y seleccione **Ver registros de auditoría**. Se abrirá el **Log File Viewer -** _nombre_servidor_ cuadro de diálogo. Para más información, consulte [Log File Viewer F1 Help](../../logs/log-file-viewer-f1-help.md).  
   
 4.  Cuando termine, haga clic en **Cerrar**.  
   

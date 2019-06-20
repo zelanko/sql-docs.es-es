@@ -19,10 +19,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2d5d777686bd40fa1b405f20da6173fc2de82640
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63226244"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
@@ -106,7 +106,7 @@ cbValue
   
 -   La longitud de la secuencia de bytes de terminación opcional.  
   
- Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](bcp-columns.md)**(5)** y, a continuación, llame a **bcp_setcolfmt** cinco veces y con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
+ Cada llamada a **bcp_setcolfmt** especifica el formato de una columna de archivo de usuario. Por ejemplo, para cambiar la configuración predeterminada de tres columnas de un archivo de datos de usuario de cinco columnas, primero llame a [bcp_columns](bcp-columns.md) **(5)** y, a continuación, llame a **bcp_setcolfmt** cinco veces y con tres de esas llamadas establezca el formato personalizado. Para las dos llamadas restantes, establezca BCP_FMT_TYPE en 0 y establezca respectivamente BCP_FMT_INDICATOR_LENGTH, BCP_FMT_DATA_LEN y *cbValue* en 0, SQL_VARLEN_DATA y 0. Este procedimiento copia las cinco columnas, tres con el formato personalizado y dos con el formato predeterminado.  
   
  Se debe llamar a la función **bcp_columns** antes de llamar a **bcp_setcolfmt**.  
   

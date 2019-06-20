@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: bd5f23f2f6b9074c317c88fc51567412f08142bb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/24/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63453562"
 ---
 # <a name="global-settings-logging-accesstosql"></a>Configuración global (registro) (AccessToSQL)
@@ -51,7 +51,7 @@ En cada opción **mensajes nivel**, configure uno de los siguientes niveles de r
 |**Depuración**|Escribir todos los mensajes, incluidos los mensajes, en el registro de depuración.|  
   
 **Ruta de acceso de archivo de registro**  
-La ruta de acceso y nombre de los archivos de registro SSMA. Para especificar un nombre diferente, haga clic en la ruta de acceso actual y, a continuación, haga clic en el (**...** ) botón.  
+La ruta de acceso y nombre de los archivos de registro SSMA. Para especificar un nombre diferente, haga clic en la ruta de acceso actual y, a continuación, haga clic en el ( **...** ) botón.  
   
 **Tamaño del archivo de registro**  
 El tamaño máximo del archivo de registro en KB. El tamaño mínimo es de 10 KB. El tamaño predeterminado es 10240 KB.  

@@ -16,10 +16,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 0c5c59a8802597b893110a5f2c26c919c16c8e83
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63192963"
 ---
 # <a name="create-a-multiserver-environment"></a>Crear un entorno multiservidor
@@ -37,13 +37,13 @@ ms.locfileid: "63192963"
   
 ||**TSX = 7.0**|**TSX = 8.0 < SP3**|**TSX = 8.0 SP3 o superior**|**TSX = 9.0**|**TSX= 10.0**|**TSX = 10.5**|**TSX = 11.0**|  
 |-|--------------------|---------------------------|----------------------------------|--------------------|--------------------|---------------------|---------------------|  
-|**MSX = 7.0**|Sí|Sí|No|No|No|No|No|  
-|**MSX = 8.0 &LT; SP3**|Sí|Sí|No|No|No|No|No|  
-|**MSX = 8.0 SP3 o superior**|No|No|Sí|Sí|Sí|Sí|Sí|  
-|**MSX = 9.0**|No|No|No|Sí|Sí|Sí|Sí|  
-|**MSX = 10.0**|No|No|No|No|Sí|Sí|Sí|  
-|**MSX = 10.5**|No|No|No|No|No|Sí|Sí|  
-|**MSX = 11.0**|No|No|No|No|No|No|Sí|  
+|**MSX = 7.0**|Sí|Sí|No|No|Sin|No|Sin|  
+|**MSX = 8.0 &LT; SP3**|Sí|Sí|No|Sin|No|Sin|Sin|  
+|**MSX = 8.0 SP3 o superior**|Sin|Sin|Sí|Sí|Sí|Sí|Sí|  
+|**MSX = 9.0**|Sin|Sin|No|Sí|Sí|Sí|Sí|  
+|**MSX = 10.0**|Sin|Sin|Sin|Sin|Sí|Sí|Sí|  
+|**MSX = 10.5**|Sin|No|Sin|No|No|Sí|Sí|  
+|**MSX = 11.0**|Sin|Sin|No|Sin|No|Sin|Sí|  
   
  Considere lo siguiente cuando cree un entorno multiservidor:  
   

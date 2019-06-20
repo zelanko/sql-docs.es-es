@@ -23,10 +23,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 209bc81c63998cea299d2c377175955ee99470c4
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875717"
 ---
 # <a name="recovery-of-related--databases-that-contain-marked-transaction"></a>Recuperación de bases de datos relacionadas que contienen transacciones marcadas
@@ -61,11 +61,11 @@ BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'
 ## <a name="transact-sql-syntax-for-recovering-to-a-mark"></a>Sintaxis de Transact-SQL para recuperar hasta una marca  
  Si el destino es una transacción marcada con la instrucción[RESTORE LOG](/sql/t-sql/statements/restore-statements-transact-sql), puede usar una de las cláusulas siguientes para detenerse en la marca o inmediatamente antes:  
   
--   Utilice la cláusula WITH STOPATMARK = **'*`<mark_name>`*'** cláusula para especificar que la transacción marcada es el punto de recuperación.  
+-   Utilice la cláusula WITH STOPATMARK = **' *`<mark_name>`* '** cláusula para especificar que la transacción marcada es el punto de recuperación.  
   
      STOPATMARK pone al día hasta la marca e incluye la transacción marcada en la puesta al día.  
   
--   Utilice WITH STOPBEFOREMARK = **'*`<mark_name>`*'** cláusula para especificar que el registro que está inmediatamente antes de que la marca es el punto de recuperación.  
+-   Utilice WITH STOPBEFOREMARK = **' *`<mark_name>`* '** cláusula para especificar que el registro que está inmediatamente antes de que la marca es el punto de recuperación.  
   
      STOPBEFOREMARK pone al día hasta la marca y excluye la transacción marcada de la puesta al día.  
   

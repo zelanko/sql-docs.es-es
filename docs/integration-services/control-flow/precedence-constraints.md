@@ -21,10 +21,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: d4d6daa4efcd865502429dad0cc8edd498e8a94f
-ms.sourcegitcommit: fd71d04a9d30a9927cbfff645750ac9d5d5e5ee7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/16/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "65727559"
 ---
 # <a name="precedence-constraints"></a>Restricciones de precedencia
@@ -147,7 +147,7 @@ Utilice el cuadro de diálogo **Editor de restricciones de precedencia** para co
   
 2.  En el Explorador de soluciones, haga doble clic en el paquete para abrirlo.  
   
-3.  Haga clic en la pestaña **Flujo de control** . En la superficie de diseño de la pestaña Flujo de control , haga clic con el botón derecho en la restricción de precedencia y, luego, haga clic en **Propiedades**. En la ventana Propiedades, modifique los valores de las propiedades.  
+3.  Haga clic en la pestaña **Flujo de control** . En la superficie de diseño de la pestaña **Flujo de control** , haga clic con el botón derecho en la restricción de precedencia y, luego, haga clic en **Propiedades**. En la ventana Propiedades, modifique los valores de las propiedades.  
   
 4.  En la ventana **Propiedades** , establezca las siguientes propiedades de lectura y escritura para las restricciones de precedencia:  
   

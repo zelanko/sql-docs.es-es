@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 3b456d165ef9c4f09bb040cefb63644efb51c112
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66098862"
 ---
 # <a name="tutorial-map-report-report-builder"></a>Tutorial: Informe de mapa (generador de informes)
@@ -191,7 +191,7 @@ ms.locfileid: "66098862"
     CAST(1500000 as money) as Sales, CAST('POINT(-73.5626737425063 42.6940551238618)' as geography) AS SpatialLocation  
     ```  
   
-9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** (**!**).  
+9. En la barra de herramientas del diseñador de consultas, haga clic en **Ejecutar** ( **!** ).  
   
      El conjunto de resultados muestra siete columnas: StoreKey, StoreName, SellingArea, City, County, Sales y SpatialLocation. Estos datos representan un conjunto de almacenes del Estado de Nueva York que venden bienes de consumo. Cada fila del conjunto de resultados contiene un identificador de almacén, un nombre de almacén, el área disponible para la exhibición del producto, la ciudad y el condado donde se encuentra el almacén, el total de ventas y la ubicación espacial en longitud y latitud. El área de exhibición va de 455 a 1.125 pies cuadrados.  
   
@@ -223,7 +223,7 @@ ms.locfileid: "66098862"
   
 19. Agregue un título a la leyenda. Haga clic con el botón secundario en el título de la leyenda y, a continuación, haga clic en **Propiedades del título de la leyenda**.  
   
-20. Elimine el título y escriba **Área de presentación (pies cuadrados)**.  
+20. Elimine el título y escriba **Área de presentación (pies cuadrados)** .  
   
 21. [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -318,7 +318,7 @@ ms.locfileid: "66098862"
   
 4.  Haga clic en **Visibilidad**.  
   
-5.  En **Transparencia (%)**, escriba **30**.  
+5.  En **Transparencia (%)** , escriba **30**.  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   

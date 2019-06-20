@@ -17,10 +17,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62997094"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (Transact-SQL)
@@ -84,11 +84,11 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**sync_type**|**automatic**|El esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor.|  
 ||**Ninguno**|El suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas; los datos y las tablas del sistema se transfieren siempre.|  
 |**use_ftp**|**true**|Se utiliza FTP en lugar del protocolo habitual para recuperar instantáneas.|  
-||**False**|Utiliza el protocolo habitual para recuperar instantáneas.|  
+||**false**|Utiliza el protocolo habitual para recuperar instantáneas.|  
 |**use_web_sync**|**true**|La suscripción se puede sincronizar a través de HTTP.|  
-||**False**|La suscripción no se puede sincronizar a través de HTTP.|  
+||**false**|La suscripción no se puede sincronizar a través de HTTP.|  
 |**use_interactive_resolver**|**true**|Durante la reconciliación se utiliza el Solucionador interactivo.|  
-||**False**|No se utiliza el Solucionador interactivo.|  
+||**false**|No se utiliza el Solucionador interactivo.|  
 |**working_directory**||Ruta de acceso completa al directorio donde se transfieren los archivos de instantáneas por medio de FTP, cuando se especifica esa opción.|  
 |NULL (predeterminado)||Devuelve la lista de valores admitidos para *propiedad*.|  
   

@@ -14,10 +14,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 767d77eefe8c54fe5a3d584c670cc991b284178e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62917048"
 ---
 # <a name="master-database"></a>Base de datos maestra
@@ -38,7 +38,7 @@ ms.locfileid: "62917048"
   
 |Opción de base de datos|Valor predeterminado|Se puede modificar|  
 |---------------------|-------------------|---------------------|  
-|ALLOW_SNAPSHOT_ISOLATION|ON|No|  
+|ALLOW_SNAPSHOT_ISOLATION|ON|Sin|  
 |ANSI_NULL_DEFAULT|OFF|Sí|  
 |ANSI_NULLS|OFF|Sí|  
 |ANSI_PADDING|OFF|Sí|  
@@ -46,25 +46,25 @@ ms.locfileid: "62917048"
 |ARITHABORT|OFF|Sí|  
 |AUTO_CLOSE|OFF|No|  
 |AUTO_CREATE_STATISTICS|ON|Sí|  
-|AUTO_SHRINK|OFF|No|  
+|AUTO_SHRINK|OFF|Sin|  
 |AUTO_UPDATE_STATISTICS|ON|Sí|  
 |AUTO_UPDATE_STATISTICS_ASYNC|OFF|Sí|  
-|CHANGE_TRACKING|OFF|No|  
+|CHANGE_TRACKING|OFF|Sin|  
 |CONCAT_NULL_YIELDS_NULL|OFF|Sí|  
 |CURSOR_CLOSE_ON_COMMIT|OFF|Sí|  
 |CURSOR_DEFAULT|GLOBAL|Sí|  
-|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|No<br /><br /> No<br /><br /> No|  
+|Opciones de disponibilidad de la base de datos|ONLINE<br /><br /> MULTI_USER<br /><br /> READ_WRITE|Sin<br /><br /> Sin<br /><br /> Sin|  
 |DATE_CORRELATION_OPTIMIZATION|OFF|Sí|  
-|DB_CHAINING|ON|No|  
-|ENCRYPTION|OFF|No|  
+|DB_CHAINING|ON|Sin|  
+|ENCRYPTION|OFF|Sin|  
 |NUMERIC_ROUNDABORT|OFF|Sí|  
 |PAGE_VERIFY|CHECKSUM|Sí|  
 |PARAMETERIZATION|SIMPLE|Sí|  
 |QUOTED_IDENTIFIER|OFF|Sí|  
-|READ_COMMITTED_SNAPSHOT|OFF|No|  
+|READ_COMMITTED_SNAPSHOT|OFF|Sin|  
 |RECOVERY|SIMPLE|Sí|  
 |RECURSIVE_TRIGGERS|OFF|Sí|  
-|Opciones de Service Broker|DISABLE_BROKER|No|  
+|Opciones de Service Broker|DISABLE_BROKER|Sin|  
 |TRUSTWORTHY|OFF|Sí|  
   
  Para obtener una descripción de estas opciones de la base de datos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql).  

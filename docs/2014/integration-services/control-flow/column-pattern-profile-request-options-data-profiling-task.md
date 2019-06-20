@@ -13,10 +13,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 4ceb9402780788d3a2a45e8d2b838c156c28faab
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62832612"
 ---
 # <a name="column-pattern-profile-request-options-data-profiling-task"></a>Opciones de Solicitud de perfil de patrón de columnas (tarea de generación de perfiles de datos)
@@ -46,9 +46,9 @@ ms.locfileid: "62832612"
 |Etiqueta|Término|  
 |---------|----------|  
 |Dirección|East|  
-|Dirección|West|  
-|Dirección|North|  
-|Dirección|South|  
+|Direction|West|  
+|Direction|North|  
+|Direction|South|  
   
  Podría utilizar otra etiqueta para agrupar las diferentes palabras que expresan la noción de "calle" en una dirección:  
   

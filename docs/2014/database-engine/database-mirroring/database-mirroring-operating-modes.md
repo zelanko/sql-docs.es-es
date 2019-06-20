@@ -13,10 +13,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5975008849ec4ef8a4d50aa559bb69554b65132a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62807679"
 ---
 # <a name="database-mirroring-operating-modes"></a>Modos de funcionamiento de la creación de reflejo de la base de datos
@@ -80,7 +80,7 @@ ms.locfileid: "62807679"
 -   Si se pierde el servidor principal, forzar el servicio en el servidor reflejado requiere que éste se conecte al testigo.  
   
 > [!NOTE]  
->  Para obtener información acerca de los tipos de quórum, vea [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+>  Para obtener información sobre los tipos de cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
 ###  <a name="WhenPrincipalFails"></a> Responder ante los errores del servidor principal  
  Si se produce un error en el servidor principal, el propietario de la base de datos tiene varias opciones:  
@@ -146,7 +146,7 @@ ms.locfileid: "62807679"
   
  A diferencia de los dos asociados, el testigo no sirve a la base de datos. El testigo simplemente admite la conmutación automática por error al comprobar que el servidor principal se encuentre activo y en funcionamiento. El servidor reflejado inicia la conmutación automática por error solo si éste y el testigo permanecen mutuamente conectados después de haberse desconectado del servidor principal.  
   
- Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, consulte [testigo de creación de reflejo de base de datos](database-mirroring-witness.md) y [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Cuando se define un testigo, la sesión requiere *quórum*, una relación entre al menos dos instancias de servidor que permite que la base de datos pueda estar disponible. Para obtener más información, vea [Testigo de creación de reflejo de la base de datos](database-mirroring-witness.md) y [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  La conmutación automática por error requiere las condiciones siguientes:  
   
@@ -208,7 +208,7 @@ ms.locfileid: "62807679"
   
 -   Cuando hay un testigo pero no está conectado a un asociado, el testigo tiene el estado UNKOWN o DISCONNECTED en relación con el asociado. En este caso, el testigo carece de quórum con ese asociado y, si los asociados no están conectados entre sí, la base de datos se vuelve no disponible.  
   
- Para obtener información acerca del quórum, consulte [quórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
+ Para obtener información sobre el cuórum, vea [Cuórum: cómo un testigo afecta a la disponibilidad de la base de datos &#40;creación de reflejo de la base de datos&#41;](quorum-how-a-witness-affects-database-availability-database-mirroring.md).  
   
  El estado de cada testigo en una instancia del servidor se registra en la vista de catálogo **sys.database_mirroring**, en las columnas **mirroring_witness_state** y **mirroring_witness_state_desc**. Para obtener más información, vea [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   

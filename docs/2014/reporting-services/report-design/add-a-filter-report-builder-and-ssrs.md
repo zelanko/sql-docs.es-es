@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: kfile
 ms.openlocfilehash: 38d400b85e8c6f4523bcd20807310912100e587d
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66106853"
 ---
 # <a name="add-a-filter-report-builder-and-ssrs"></a>Agregar un filtro (Generador de informes y SSRS)
@@ -33,7 +33,7 @@ ms.locfileid: "66106853"
   
 1.  Abra un informe en la vista **Diseño** .  
   
-2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en _\<Propiedades de_ **<región de datos>**. Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo _\<Propiedades de_ **región de datos>**.  
+2.  En la superficie de diseño, seleccione la región de datos y, después, haga clic con el botón derecho en _\<Propiedades de_ **<región de datos>** . Si se trata de un medidor, seleccione **Propiedades del panel de medidores**. Se abre el cuadro de diálogo _\<Propiedades de_ **región de datos>** .  
   
     > [!NOTE]  
     >  En una región de datos Tablix, haga clic con el botón derecho en la celda de la esquina o en un identificador de fila o columna y, después, haga clic en **Propiedades de Tablix**.  

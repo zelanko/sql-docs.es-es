@@ -19,10 +19,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: a9d2ee9e659e9cae8bb93a1ea50b0f2d8e355701
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62719990"
 ---
 # <a name="specifying-a-location-path-sqlxml-40"></a>Especificar una ruta de acceso de ubicación (SQLXML 4.0)
@@ -41,7 +41,7 @@ ms.locfileid: "62719990"
      Una ruta de acceso de ubicación relativa comienza en el nodo de contexto del documento. Una ruta de acceso de ubicación consta de un flujo de uno o más pasos de ubicación separados por una barra diagonal (/). Cada paso selecciona un conjunto de nodos relativos al nodo de contexto. La secuencia inicial de pasos selecciona un conjunto de nodos relativo a un nodo de contexto. Cada uno de los nodos de este conjunto se utiliza como un nodo de contexto en el paso siguiente. Los conjuntos de nodos identificados por este paso se unen. Por ejemplo, **child:: Order/child:: OrderDetail** selecciona el  **\<OrderDetail >** elementos secundarios de la  **\<orden >** elemento elementos secundarios del nodo de contexto.  
   
     > [!NOTE]  
-    >  En la implementación SQLXML 4.0 de XPath, cada consulta XPath comienza en el contexto raíz, aunque la consulta XPath no sea explícitamente absoluta. Por ejemplo, una consulta XPath que comienza por "Customer" se trata como "/Customer". En la consulta XPath **Customer [Order]**, Customer comienza en el contexto raíz, pero Order comienza en el contexto de cliente. Para obtener más información, consulte [Introducción a las consultas de XPath utilizando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
+    >  En la implementación SQLXML 4.0 de XPath, cada consulta XPath comienza en el contexto raíz, aunque la consulta XPath no sea explícitamente absoluta. Por ejemplo, una consulta XPath que comienza por "Customer" se trata como "/Customer". En la consulta XPath **Customer [Order]** , Customer comienza en el contexto raíz, pero Order comienza en el contexto de cliente. Para obtener más información, consulte [Introducción a las consultas de XPath utilizando &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/introduction-to-using-xpath-queries-sqlxml-4-0.md).  
   
 ## <a name="location-steps"></a>Pasos de ubicación  
  Una ruta de acceso de ubicación (absoluta o relativa) está compuesta por pasos de ubicación que contienen tres partes:  
@@ -52,7 +52,7 @@ ms.locfileid: "62719990"
   
 -   **prueba de nodo**  
   
-     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, y **self**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >**. Para el **primario**, **secundarios**, y **self** ejes, el tipo de nodo principal es  **\<elemento >**.  
+     Una prueba de nodo especifica el tipo de nodo seleccionado por el paso de ubicación. Cada eje (**secundarios**, **primario**, **atributo**, y **self**) tiene un tipo de nodo principal. Para el **atributo** eje, el tipo de nodo principal es  **\<atributo >** . Para el **primario**, **secundarios**, y **self** ejes, el tipo de nodo principal es  **\<elemento >** .  
   
      Por ejemplo, si especifica la ruta de acceso de ubicación **child:: Customer**,  **\<cliente >** se seleccionan los elementos secundarios del nodo de contexto. Dado que el **secundarios** eje tiene  **\<elemento >** como su tipo de nodo principal, la prueba de nodo, Customer, es TRUE si el cliente es un  **\<elemento >** nodo.  
   

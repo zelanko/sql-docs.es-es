@@ -11,10 +11,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1a60d9e5d8569324cc3f68200d4a5a232b930d8b
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63017588"
 ---
 # <a name="change-steps-of-a-sql-server-agent-master-job"></a>Change Steps of a SQL Server Agent Master Job
@@ -56,13 +56,13 @@ ms.locfileid: "63017588"
   
 4.  Haga clic con el botón derecho en el trabajo del que quiera modificar los pasos y seleccione **Propiedades**.  
   
-5.  En el cuadro de diálogo **Propiedades del trabajo-**_nombre_de_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
+5.  En el cuadro de diálogo **Propiedades del trabajo-** _nombre_de_trabajo_, en **Seleccionar una página**, seleccione **Pasos**.  
   
-6.  Haga clic en **editar** para abrir el **Job Step Properties –**_nombre_de_paso_de_trabajo_ cuadro de diálogo. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página General&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página avanzadas&#41;](job-step-properties-new-job-step-advanced-page.md).  
+6.  Haga clic en **editar** para abrir el **Job Step Properties –** _nombre_de_paso_de_trabajo_ cuadro de diálogo. Para obtener más información sobre las opciones disponibles en este cuadro de diálogo, vea [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página General&#41; ](../../integration-services/general-page-of-integration-services-designers-options.md) y [propiedades de paso de trabajo: Nuevo paso de trabajo &#40;página avanzadas&#41;](job-step-properties-new-job-step-advanced-page.md).  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   
-8.  En el **Job Properties -**_job_name_ cuadro de diálogo, haga clic en **Aceptar**.  
+8.  En el **Job Properties -** _job_name_ cuadro de diálogo, haga clic en **Aceptar**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -13,10 +13,10 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 71d26e3f46034019d51bd69b86686f40eb9ce63e
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62779229"
 ---
 # <a name="guidelines-for-using-indexes-on-memory-optimized-tables"></a>Directrices para usar índices en las tablas con optimización para memoria
@@ -72,8 +72,8 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 |Index scan, recupera todas las filas de la tabla.|Sí|Sí|Sí|  
 |Index seek en predicados de igualdad (=).|Sí<br /><br /> (Clave completa necesaria.)|Sí <sup>1</sup>|Sí|  
 |Index seek en predicados de desigualdad (>, <, \<=, > =, BETWEEN).|No (resultados en un examen de índice)|Sí <sup>1</sup>|Sí|  
-|Recupere las filas en un orden que coincida con la definición de índice.|No|Sí|Sí|  
-|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|No|No|Sí|  
+|Recupere las filas en un orden que coincida con la definición de índice.|Sin|Sí|Sí|  
+|Recupere las filas en un orden que coincida con el opuesto de la definición de índice.|Sin|Sin|Sí|  
   
  En la tabla, Sí se refiere a que el índice puede prestar servicio correctamente a la solicitud y No se refiere a que el índice no se puede usar correctamente para atender la solicitud.  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 2530d42c70b506fe927d35fd4e6f862e22e1ea1a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078929"
 ---
 # <a name="modifying-the-customer-dimension"></a>Modificar la dimensión Customer
@@ -105,7 +105,7 @@ ms.locfileid: "66078929"
   
 4.  En el **nombre** propiedad, escriba `Full Name`.  
   
-5.  Haga clic en el **NameColumn** propiedad de campo en la parte inferior y, a continuación, haga clic en el (**...** ) para abrir el **nombre de columna** cuadro de diálogo.  
+5.  Haga clic en el **NameColumn** propiedad de campo en la parte inferior y, a continuación, haga clic en el ( **...** ) para abrir el **nombre de columna** cuadro de diálogo.  
   
 6.  Seleccione `FullName` en la parte inferior de la **columna de origen** lista y, a continuación, haga clic en **Aceptar**.  
   
@@ -177,7 +177,7 @@ ms.locfileid: "66078929"
   
 2.  En el panel **Atributos** , haga clic en el atributo **City** .  
   
-3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** junto a la parte final y, después, haga clic en el botón Examinar (**...**).  
+3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** junto a la parte final y, después, haga clic en el botón Examinar ( **...** ).  
   
 4.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **StateProvinceName**y, después, haga clic en el botón **>** .  
   
@@ -185,7 +185,7 @@ ms.locfileid: "66078929"
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar (**...**).  
+6.  Para establecer la propiedad **NameColumn** del atributo **City** , haga clic en el campo **NameColumn** en la ventana Propiedades y, después, haga clic en el botón Examinar ( **...** ).  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **City**y, después, haga clic en **Aceptar**.  
   
@@ -197,7 +197,7 @@ ms.locfileid: "66078929"
   
 2.  En el **atributos** panel, haga clic en el `State-Province` atributo.  
   
-3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar (**...**).  
+3.  En la ventana **Propiedades** , haga clic en el campo **KeyColumns** y, después, haga clic en el botón Examinar ( **...** ).  
   
 4.  En el cuadro de diálogo **Columnas de clave** , en la lista **Columnas disponibles** , seleccione la columna **EnglishCountryRegionName**y, después, haga clic en el botón **>** .  
   
@@ -205,7 +205,7 @@ ms.locfileid: "66078929"
   
 5.  Haga clic en **Aceptar**.  
   
-6.  Para establecer el **NameColumn** propiedad de la `State-Province` atributo, haga clic en el **NameColumn** en la ventana Propiedades de campo y, a continuación, haga clic en el (**...** ) botón.  
+6.  Para establecer el **NameColumn** propiedad de la `State-Province` atributo, haga clic en el **NameColumn** en la ventana Propiedades de campo y, a continuación, haga clic en el ( **...** ) botón.  
   
 7.  En el cuadro de diálogo **Columna de nombre** , en la lista **Columna de origen** , seleccione **StateProvinceName**y, después, haga clic en **Aceptar**.  
   

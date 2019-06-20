@@ -19,10 +19,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 90269bc6fab7cd496561b9dfe5cae6bf0ff36bbe
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62875045"
 ---
 # <a name="restore-files-and-filegroups-over-existing-files-sql-server"></a>Restaurar archivos y grupos de archivos en archivos existentes (SQL Server)
@@ -101,7 +101,7 @@ ms.locfileid: "62875045"
   
 6.  En el panel **Seleccionar una página** , haga clic en la página **Opciones** .  
   
-7.  En el panel **Opciones de restauración** , seleccione **Sobrescribir la base de datos existente (WITH REPLACE)**. La operación de restauración sobrescribe las bases de datos especificadas y sus archivos relacionados, aunque ya exista otra base de datos u otro archivo con el mismo nombre.  
+7.  En el panel **Opciones de restauración** , seleccione **Sobrescribir la base de datos existente (WITH REPLACE)** . La operación de restauración sobrescribe las bases de datos especificadas y sus archivos relacionados, aunque ya exista otra base de datos u otro archivo con el mismo nombre.  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

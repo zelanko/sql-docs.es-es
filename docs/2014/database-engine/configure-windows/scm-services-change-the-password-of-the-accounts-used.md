@@ -20,10 +20,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 865c23dc88571e0c9ee317eca280286a6c37118f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62810440"
 ---
 # <a name="change-the-password-of-the-accounts-used-by-sql-server-sql-server-configuration-manager"></a>Cambiar la contraseña de las cuentas que usa SQL Server (Administración de configuración de SQL Server)
@@ -55,9 +55,9 @@ ms.locfileid: "62810440"
   
 2.  En Administrador de configuración de SQL Server, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **(**\<nombreDeInstancia>**)** de SQL Server y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **(** \<nombreDeInstancia> **)** de SQL Server y, luego, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (**\<nombreDeInstancia>**) de SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de (** \<nombreDeInstancia> **) de SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
   
      La contraseña surte efecto inmediatamente, sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -67,9 +67,9 @@ ms.locfileid: "62810440"
   
 2.  En Administrador de configuración de SQL Server, haga clic en **Servicios de SQL Server**.  
   
-3.  En el panel de detalles, haga clic con el botón derecho en **Agente SQL Server (**\<nombreDeInstancia>**)** y, luego, haga clic en **Propiedades**.  
+3.  En el panel de detalles, haga clic con el botón derecho en **Agente SQL Server (** \<nombreDeInstancia> **)** y, luego, haga clic en **Propiedades**.  
   
-4.  En el cuadro de diálogo **Propiedades de (**\<nombreDeInstancia>**) de Agente SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
+4.  En el cuadro de diálogo **Propiedades de (** \<nombreDeInstancia> **) de Agente SQL Server**, en la pestaña Iniciar sesión, en la cuenta que aparece en el cuadro **Nombre de cuenta**, escriba la nueva contraseña en los cuadros **Contraseña** y **Confirmar contraseña**. Luego, haga clic en **Aceptar**.  
   
      En una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la contraseña surte efecto inmediatamente, sin necesidad de reiniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En una instancia en clúster, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] podría cambiar el recurso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a sin conexión y requerir un reinicio.  
   

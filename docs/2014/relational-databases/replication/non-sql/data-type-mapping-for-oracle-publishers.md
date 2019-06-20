@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 463dd08cfa9434396a1afea1e4851549f16496cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63022643"
 ---
 # <a name="data-type-mapping-for-oracle-publishers"></a>Data Type Mapping for Oracle Publishers
@@ -33,30 +33,30 @@ ms.locfileid: "63022643"
 |CHAR([1-2000])|CHAR([1-2000])|Sí|  
 |CLOB|VARCHAR(MAX)|Sí|  
 |DATE|DATETIME|Sí|  
-|FLOAT|FLOAT|No|  
-|FLOAT([1-53])|FLOAT([1-53])|No|  
+|FLOAT|FLOAT|Sin |  
+|FLOAT([1-53])|FLOAT([1-53])|Sin |  
 |FLOAT([54-126])|FLOAT|No|  
 |INT|NUMERIC(38)|Sí|  
 |INTERVAL|DATETIME|Sí|  
 |LONG|VARCHAR(MAX)|Sí|  
 |LONG RAW|IMAGE|Sí|  
-|NCHAR([1-1000])|NCHAR([1-1000])|No|  
+|NCHAR([1-1000])|NCHAR([1-1000])|Sin |  
 |NCLOB|NVARCHAR(MAX)|Sí|  
 |NUMBER|FLOAT|Sí|  
-|NUMBER([1-38])|NUMERIC([1-38])|No|  
+|NUMBER([1-38])|NUMERIC([1-38])|Sin |  
 |NUMBER([0-38],[1-38])|NUMERIC([0-38],[1-38])|Sí|  
 |NVARCHAR2([1-2000])|NVARCHAR([1-2000])|No|  
 |RAW([1-2000])|VARBINARY([1-2000])|No|  
-|REAL|FLOAT|No|  
-|ROWID|CHAR(18)|No|  
+|REAL|FLOAT|Sin |  
+|ROWID|CHAR(18)|Sin |  
 |timestamp|DATETIME|Sí|  
 |MARCA DE TIEMPO(0-7)|DATETIME|Sí|  
 |TIMESTAMP(8-9)|DATETIME|Sí|  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|No|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA|VARCHAR(37)|Sin |  
 |MARCA DE TIEMPO (0-7) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sí|  
-|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|No|  
-|UROWID|CHAR(18)|No|  
+|MARCA DE TIEMPO (8-9) CON ZONA HORARIA LOCAL|VARCHAR(37)|Sin |  
+|UROWID|CHAR(18)|Sin |  
 |VARCHAR2([1-4000])|VARCHAR([1-4000])|Sí|  
   
 ## <a name="considerations-for-data-type-mapping"></a>Consideraciones para la asignación de tipos de datos  

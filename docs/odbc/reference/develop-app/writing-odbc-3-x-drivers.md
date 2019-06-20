@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 3f548e1496ce45d9fdb4677fd9659de349e5c5cc
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62636110"
 ---
 # <a name="writing-odbc-3x-drivers"></a>Controladores ODBC 3.x de escritura
@@ -28,83 +28,83 @@ En la tabla siguiente se muestra la compatibilidad de la función en una aplicac
   
 |Función|Admitida<br /><br /> por un<br /><br /> ODBC 3.*x*<br /><br /> ¿controlador?|Admitida<br /><br /> por un<br /><br /> ODBC 3.*x*<br /><br /> ¿aplicación?|Compatible o asignado<br /><br /> por ODBC 3. *x*<br /><br /> Administrador de controladores para<br /><br /> una aplicación ODBC 3. ¿ *x* controlador?|  
 |--------------|----------------------------------------------------|---------------------------------------------------------|---------------------------------------------------------------------------------------------|  
-|**SQLAllocConnect**|No|No[1]|Sí|  
-|**SQLAllocEnv**|No|No[1]|Sí|  
-|**SQLAllocHandle**|Sí|Sí|No|  
-|**SQLAllocStmt**|No|No[1]|Sí|  
-|**SQLBindCol**|Sí|Sí|No|  
-|**SQLBindParam**|No|Sí [2]|Sí|  
+|**SQLAllocConnect**|Sin|No[1]|Sí|  
+|**SQLAllocEnv**|Sin|No[1]|Sí|  
+|**SQLAllocHandle**|Sí|Sí|Sin|  
+|**SQLAllocStmt**|Sin|No[1]|Sí|  
+|**SQLBindCol**|Sí|Sí|Sin|  
+|**SQLBindParam**|Sin|Sí [2]|Sí|  
 |**SQLBindParameter**|Sí|Sí|No|  
-|**SQLBrowseConnect**|Sí|Sí|No|  
+|**SQLBrowseConnect**|Sí|Sí|Sin|  
 |**SQLBulkOperations**|Sí|Sí|No|  
 |**SQLCancel**|Sí|Sí|No|  
-|**SQLCloseCursor**|Sí|Sí|No|  
+|**SQLCloseCursor**|Sí|Sí|Sin|  
 |**SQLColAttribute**|Sí|Sí|No|  
-|**SQLColAttributes**|No[3]|No|Sí|  
-|**SQLColumnPrivileges**|Sí|Sí|No|  
-|**SQLColumns**|Sí|Sí|No|  
-|**SQLConnect**|Sí|Sí|No|  
+|**SQLColAttributes**|No[3]|Sin|Sí|  
+|**SQLColumnPrivileges**|Sí|Sí|Sin|  
+|**SQLColumns**|Sí|Sí|Sin|  
+|**SQLConnect**|Sí|Sí|Sin|  
 |**SQLCopyDesc**|Sí|Sí|Sí [4]|  
-|**SQLDataSources**|No|Sí|Sí|  
-|**SQLDescribeCol**|Sí|Sí|No|  
-|**SQLDescribeParam**|Sí|Sí|No|  
-|**SQLDisconnect**|Sí|Sí|No|  
-|**SQLDriverConnect**|Sí|Sí|No|  
-|**SQLDrivers**|No|Sí|Sí|  
-|**SQLEndTran**|Sí|Sí|No|  
-|**SQLError**|No|No[1]|Sí|  
-|**SQLExecDirect**|Sí|Sí|No|  
-|**SQLExecute**|Sí|Sí|No|  
-|**SQLExtendedFetch**|Sí|No|No|  
-|**SQLFetch**|Sí|Sí|No|  
-|**SQLFetchScroll**|Sí|Sí|No|  
-|**SQLForeignKeys**|Sí|Sí|No|  
+|**SQLDataSources**|Sin|Sí|Sí|  
+|**SQLDescribeCol**|Sí|Sí|Sin|  
+|**SQLDescribeParam**|Sí|Sí|Sin|  
+|**SQLDisconnect**|Sí|Sí|Sin|  
+|**SQLDriverConnect**|Sí|Sí|Sin|  
+|**SQLDrivers**|Sin|Sí|Sí|  
+|**SQLEndTran**|Sí|Sí|Sin|  
+|**SQLError**|Sin|No[1]|Sí|  
+|**SQLExecDirect**|Sí|Sí|Sin|  
+|**SQLExecute**|Sí|Sí|Sin|  
+|**SQLExtendedFetch**|Sí|Sin|Sin|  
+|**SQLFetch**|Sí|Sí|Sin|  
+|**SQLFetchScroll**|Sí|Sí|Sin|  
+|**SQLForeignKeys**|Sí|Sí|Sin|  
 |**SQLFreeConnect**|No|Sí [1]|Sí|  
-|**SQLFreeEnv**|No|Sí [1]|Sí|  
-|**SQLFreeHandle**|Sí|Sí|No|  
-|**SQLFreeStmt**|Sí|Sí|No|  
-|**SQLGetConnectAttr**|Sí|Sí|No|  
+|**SQLFreeEnv**|Sin|Sí [1]|Sí|  
+|**SQLFreeHandle**|Sí|Sí|Sin|  
+|**SQLFreeStmt**|Sí|Sí|Sin|  
+|**SQLGetConnectAttr**|Sí|Sí|Sin|  
 |**SQLGetConnectOption**|No[5]|No[1]|Sí|  
-|**SQLGetCursorName**|Sí|Sí|No|  
+|**SQLGetCursorName**|Sí|Sí|Sin|  
 |**SQLGetData**|Sí|Sí|No|  
-|**SQLGetDescField**|Sí|Sí|No|  
-|**SQLGetDescRec**|Sí|Sí|No|  
-|**SQLGetDiagField**|Sí|Sí|No|  
+|**SQLGetDescField**|Sí|Sí|Sin|  
+|**SQLGetDescRec**|Sí|Sí|Sin|  
+|**SQLGetDiagField**|Sí|Sí|Sin|  
 |**SQLGetDiagRec**|Sí|Sí|No|  
 |**SQLGetEnvAttr**|Sí|Sí|No|  
 |**SQLGetFunctions**|No[6]|Sí|Sí|  
-|**SQLGetInfo**|Sí|Sí|No|  
-|**SQLGetStmtAttr**|Sí|Sí|No|  
+|**SQLGetInfo**|Sí|Sí|Sin|  
+|**SQLGetStmtAttr**|Sí|Sí|Sin|  
 |**SQLGetStmtOption**|No[5]|No[1]|Sí|  
 |**SQLGetTypeInfo**|Sí|Sí|No|  
-|**SQLMoreResults**|Sí|Sí|No|  
-|**SQLNativeSql**|Sí|Sí|No|  
-|**SQLNumParams**|Sí|Sí|No|  
+|**SQLMoreResults**|Sí|Sí|Sin|  
+|**SQLNativeSql**|Sí|Sí|Sin|  
+|**SQLNumParams**|Sí|Sí|Sin|  
 |**SQLNumResultCols**|Sí|Sí|No|  
-|**SQLParamData**|Sí|Sí|No|  
-|**SQLParamOptions**|No|No|Sí|  
-|**SQLPrepare**|Sí|Sí|No|  
-|**SQLPrimaryKeys**|Sí|Sí|No|  
-|**SQLProcedureColumns**|Sí|Sí|No|  
-|**SQLProcedures**|Sí|Sí|No|  
-|**SQLPutData**|Sí|Sí|No|  
-|**SQLRowCount**|Sí|Sí|No|  
-|**SQLSetConnectAttr**|Sí|Sí|No|  
+|**SQLParamData**|Sí|Sí|Sin|  
+|**SQLParamOptions**|Sin|Sin|Sí|  
+|**SQLPrepare**|Sí|Sí|Sin|  
+|**SQLPrimaryKeys**|Sí|Sí|Sin|  
+|**SQLProcedureColumns**|Sí|Sí|Sin|  
+|**SQLProcedures**|Sí|Sí|Sin|  
+|**SQLPutData**|Sí|Sí|Sin|  
+|**SQLRowCount**|Sí|Sí|Sin|  
+|**SQLSetConnectAttr**|Sí|Sí|Sin|  
 |**SQLSetConnectOption**|No[5]|No[1]|Sí|  
 |**SQLSetCursorName**|Sí|Sí|No|  
-|**SQLSetDescField**|Sí|Sí|No|  
-|**SQLSetDescRec**|Sí|Sí|No|  
-|**SQLSetEnvAttr**|Sí|Sí|No|  
+|**SQLSetDescField**|Sí|Sí|Sin|  
+|**SQLSetDescRec**|Sí|Sí|Sin|  
+|**SQLSetEnvAttr**|Sí|Sí|Sin|  
 |**SQLSetPos**|Sí|Sí|No|  
-|**SQLSetParam**|No|No|Sí|  
+|**SQLSetParam**|No|Sin|Sí|  
 |**SQLSetScrollOption**|Sí|Sí|No|  
-|**SQLSetStmtAttr**|Sí|Sí|No|  
+|**SQLSetStmtAttr**|Sí|Sí|Sin|  
 |**SQLSetStmtOption**|No[5]|No[1]|Sí|  
-|**SQLSpecialColumns**|Sí|Sí|No|  
-|**SQLStatistics**|Sí|Sí|No|  
-|**SQLTablePrivileges**|Sí|Sí|No|  
-|**SQLTables**|Sí|Sí|No|  
-|**SQLTransact**|No|No[1]|Sí|  
+|**SQLSpecialColumns**|Sí|Sí|Sin|  
+|**SQLStatistics**|Sí|Sí|Sin|  
+|**SQLTablePrivileges**|Sí|Sí|Sin|  
+|**SQLTables**|Sí|Sí|Sin|  
+|**SQLTransact**|Sin|No[1]|Sí|  
   
  [1] esta función está en desuso en ODBC 3. *x*. ODBC 3. *x* aplicaciones no deben utilizar esta función. Sin embargo, un grupo de abierto o aplicación compatible con ISO CLI puede llamar a esta función.  
   

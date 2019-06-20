@@ -10,10 +10,10 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
 ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 074d44994b6e84fe4552ad4843d2ce0882b92871
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/05/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66713290"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use Visual Studio para crear bases de datos de SQL Server en Linux
@@ -110,8 +110,8 @@ Si está familiarizado con Transact-SQL, consulte [Tutorial: Escribir instruccio
 
 Para obtener más información sobre el desarrollo de una base de datos con herramientas de datos de SQL, consulte [documentos de MSDN de SSDT]
 
-[Descargue e instale Visual Studio]:https://www.visualstudio.com/downloads/
+[Descargue e instale Visual Studio]: https://www.visualstudio.com/downloads/
 [Download and Install SSDT]:https://aka.ms/ssdt-download
 [Documentos de MSDN de SSDT]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[Tutorial: Escribir instrucciones Transact-SQL]:https://msdn.microsoft.com/library/ms365303.aspx
-[Referencia de Transact-SQL (motor de base de datos)]:https://msdn.microsoft.com/library/bb510741.aspx
+[Tutorial: Escribir instrucciones Transact-SQL]: https://msdn.microsoft.com/library/ms365303.aspx
+[Referencia de Transact-SQL (motor de base de datos)]: https://msdn.microsoft.com/library/bb510741.aspx

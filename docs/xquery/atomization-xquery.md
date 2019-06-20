@@ -17,10 +17,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: bddb70c6c79ab983d1931bb17c741ff0dd531857
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63047599"
 ---
 # <a name="atomization-xquery"></a>Atomización (XQuery)
@@ -50,7 +50,7 @@ SELECT @x.query('sum(data(ROOT/Location/@LaborHours))')
   
 -   Al construir el atributo OrigninalLaborHours, la atomización se aplica implícitamente a la secuencia singleton devuelta por (`$WC/@LaborHours`). El valor con tipo del atributo LaborHours se asigna a OrigninalLaborHours.  
   
--   Al construir el atributo UpdatedLaborHoursV1, el operador aritmético requiere valores atómicos. Por lo tanto, **data()** se aplica implícitamente al atributo LaborHours devuelto por (`$WC/@LaborHours`). A continuación, se le agrega el valor atómico 1. La creación del atributo UpdatedLaborHoursV2 muestra la aplicación explícita de **data()**, pero no es necesario.  
+-   Al construir el atributo UpdatedLaborHoursV1, el operador aritmético requiere valores atómicos. Por lo tanto, **data()** se aplica implícitamente al atributo LaborHours devuelto por (`$WC/@LaborHours`). A continuación, se le agrega el valor atómico 1. La creación del atributo UpdatedLaborHoursV2 muestra la aplicación explícita de **data()** , pero no es necesario.  
   
 ```  
 SELECT Instructions.query('  

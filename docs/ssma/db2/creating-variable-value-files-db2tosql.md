@@ -11,10 +11,10 @@ author: Shamikg
 ms.author: Shamikg
 manager: craigg
 ms.openlocfilehash: cf62d09de1180687598d817ff9199d7098008829
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63299142"
 ---
 # <a name="creating-variable-value-files-db2tosql"></a>Creación de archivos de valor Variable (DB2ToSQL)
@@ -22,7 +22,7 @@ Archivo de valores de variable es un archivo XML que contiene los valores de par
   
 > [!NOTE]  
 > 1.  Los nombres de variable son el prefijo y sufijo con un símbolo $ (dólar). Si las variables no se asignan un valor en el archivo de valor de la variable, se producirá un error durante el análisis del archivo de script, lo que detienen el proceso de ejecución de la consola.  
-> 2.  El carácter de escape para **$** es **$$**. Si el valor de un valor estático o variable de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
+> 2.  El carácter de escape para **$** es **$$** . Si el valor de un valor estático o variable de un parámetro contiene **$** símbolos (dólar), a continuación, **$$** debe especificarse para tratarlo como un carácter en lugar de una variable.  
 > 3.  Para fines de mantenimiento, se pueden declarar variables dentro `'variable-group'` elementos para una separación lógica del usuario definen las variables.  Uso de este elemento no es obligatorio.  
   
 **Ejemplos:**  

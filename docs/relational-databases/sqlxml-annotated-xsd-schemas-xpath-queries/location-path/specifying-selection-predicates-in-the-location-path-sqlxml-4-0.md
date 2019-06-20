@@ -20,10 +20,10 @@ ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 4ace1b9a52853ed96ccc9cf74099760c30332dfd
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62720035"
 ---
 # <a name="specifying-selection-predicates-in-the-location-path-sqlxml-40"></a>Especificar predicados de selección en la ruta de acceso de ubicación (SQLXML 4.0)
@@ -42,7 +42,7 @@ ms.locfileid: "62720035"
 /child::Customer[attribute::CustomerID="ALFKI"]  
 ```  
   
- En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >**, porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de **atributo** eje).  
+ En esta consulta XPath, `child` y `attribute` son nombres de eje. `Customer` es la prueba de nodo (TRUE si `Customer` es un  **\<nodo element >** , porque  **\<elemento >** es el tipo de nodo principal para el `child` eje). `attribute::CustomerID="ALFKI"` es el predicado. En el predicado, `attribute` es el eje y `CustomerID` es la prueba de nodo (TRUE si **CustomerID** es un atributo del nodo de contexto, porque  **\<atributo >** es la entidad de seguridad tipo de nodo de **atributo** eje).  
   
  Con la sintaxis abreviada, la consulta XPath también se puede especificar como:  
   

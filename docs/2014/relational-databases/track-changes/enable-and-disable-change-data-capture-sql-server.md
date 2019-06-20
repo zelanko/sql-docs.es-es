@@ -16,10 +16,10 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: f66cb56380f0e027d08e53154c05b7ad1e3be89f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62670581"
 ---
 # <a name="enable-and-disable-change-data-capture-sql-server"></a>Habilitar y deshabilitar la captura de datos modificados (SQL Server)
@@ -72,7 +72,7 @@ GO
   
  Se pueden especificar las opciones siguientes al crear una instancia de captura:  
   
- `Columns in the source table to be captured`   
+ `Columns in the source table to be captured`  
   
  De forma predeterminada, todas las columnas de la tabla de origen se identifican como columnas capturadas. Si solo es necesario realizar el seguimiento de un subconjunto de las columnas, por ejemplo, por motivos de privacidad o de rendimiento, use el parámetro *@captured_column_list* para especificar el subconjunto de columnas.  
   

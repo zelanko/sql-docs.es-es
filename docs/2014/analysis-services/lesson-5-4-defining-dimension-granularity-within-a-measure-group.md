@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 46d69f2bcc82ba1ff4ae49e9bfa5e3aa7a61ad2a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66078456"
 ---
 # <a name="defining-dimension-granularity-within-a-measure-group"></a>Definir la granularidad de las dimensiones en un grupo de medida
@@ -126,7 +126,7 @@ ms.locfileid: "66078456"
   
      Tenga en cuenta que el **empleado** y `Date` las dimensiones del cubo se vinculan a la **Sales Quotas y Sales Quotas 1** grupos a través de relaciones normales de medida. Observe también que la dimensión de cubo **Sales Territory** no está vinculada a ninguno de estos grupos de medida.  
   
-4.  Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el `Sales Quotas` grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
+4.  Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el `Sales Quotas` grupo de medida y, a continuación, haga clic en el botón Examinar ( **...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 5.  En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "66078456"
   
 10. Haga clic en **Aceptar**.  
   
-11. Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas 1** grupo de medida y, a continuación, haga clic en el botón Examinar (**...** ). Se abre el cuadro de diálogo **Definir relación** .  
+11. Haga clic en la celda en la intersección de la **Sales Territory** dimensión y el **Sales Quotas 1** grupo de medida y, a continuación, haga clic en el botón Examinar ( **...** ). Se abre el cuadro de diálogo **Definir relación** .  
   
 12. En la lista **Seleccionar tipo de relación** , seleccione **Referenciada**.  
   
@@ -162,7 +162,7 @@ ms.locfileid: "66078456"
   
      Cambiar el nombre de la **Order Date** dimensión de cubo a `Date` facilita a los usuarios comprender su rol como dimensión de fecha principal de este cubo.  
   
-20. Haga clic en el botón Examinar (**...** ) en la celda en la intersección de la `Sales Quotas` grupo de medida y el `Date` dimensión.  
+20. Haga clic en el botón Examinar ( **...** ) en la celda en la intersección de la `Sales Quotas` grupo de medida y el `Date` dimensión.  
   
 21. En el cuadro de diálogo **Definir relación** , seleccione **Regular** en la lista **Seleccionar tipo de relación** .  
   

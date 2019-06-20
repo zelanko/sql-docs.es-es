@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: e0904239933361b80727700c94b03e379751251f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "63164055"
 ---
 # <a name="exploring-the-sequence-clustering-model-intermediate-data-mining-tutorial"></a>Explorar el modelo de agrupación en clústeres de secuencia (Tutorial intermedio de minería de datos)
@@ -159,7 +159,7 @@ ms.locfileid: "63164055"
   
      La probabilidad de esta transición se muestra en forma de porcentaje.  
   
-7.  En el **clúster** lista desplegable, seleccione **población (todo)**.  
+7.  En el **clúster** lista desplegable, seleccione **población (todo)** .  
   
      La lista de atributos se actualiza para mostrar las características de todos los pedidos usados para crear el modelo. En este modelo de minería de datos, la característica más importante para distinguir entre clústeres es `Region`, con un valor de **Norteamérica**.  
   

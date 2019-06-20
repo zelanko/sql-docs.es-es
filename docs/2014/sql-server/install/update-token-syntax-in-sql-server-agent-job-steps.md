@@ -14,17 +14,17 @@ author: mashamsft
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6b69d3e84938f93828a908141a4a05365bd0f07a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66091665"
 ---
 # <a name="update-token-syntax-in-sql-server-agent-job-steps"></a>Actualizar la sintaxis de tokens en los pasos de trabajo del Agente SQL Server
   La sintaxis que utiliza tokens en los pasos de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha cambiado.  
   
 ## <a name="component"></a>Componente  
- e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]   
+ e[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
 ## <a name="description"></a>Descripción  
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente utiliza paréntesis, por ejemplo, $(DATE), en lugar de corchetes, como [DATE].  

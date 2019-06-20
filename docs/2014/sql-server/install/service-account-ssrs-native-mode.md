@@ -13,10 +13,10 @@ author: markingmyname
 ms.author: maghan
 manager: craigg
 ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66092180"
 ---
 # <a name="service-account-ssrs-native-mode"></a>Cuenta de servicio (Modo nativo de SSRS)
@@ -36,7 +36,7 @@ ms.locfileid: "66092180"
  Seleccione **Servicio de red**, **Sistema local**o **Servicio local** en la lista. Solo se recomienda **Servicio de red** ; sin embargo, puede configurar la cuenta para utilizar cualquier cuenta que esté disponible.  
   
  **Usar otra cuenta**  
- Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio con este formato:  *\<dominio >\\< usuario\>*. Especifique una cuenta de usuario de Windows local en este formato:  *\<nombre_equipo >\\< usuario\>*. Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
+ Seleccione esta opción para especificar una cuenta de usuario de Windows. Puede escribir una cuenta de usuario de Windows local o una cuenta de usuario de dominio. Especifique una cuenta de dominio con este formato:  *\<dominio >\\< usuario\>* . Especifique una cuenta de usuario de Windows local en este formato:  *\<nombre_equipo >\\< usuario\>* . Solo puede seleccionar una cuenta existente; no puede crear cuentas nuevas en Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .  
   
  El límite máximo es 20 caracteres para la cuenta.  
   

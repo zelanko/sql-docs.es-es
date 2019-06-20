@@ -13,16 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 5f289257d64a691a93d44d63d2a30991227802e1
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66110111"
 ---
 # <a name="reordering-data-in-a-hierarchical-table-using-hierarchical-methods"></a>Reordenar los datos de una tabla jerárquica mediante métodos jerárquicos
   Reorganizar una jerarquía es una tarea de mantenimiento común. En esta tarea, usaremos una instrucción UPDATE con el método [GetReparentedValue](/sql/t-sql/data-types/getreparentedvalue-database-engine) para mover primero una única fila a una nueva ubicación en la jerarquía. A continuación, moveremos un subárbol completo a una nueva ubicación.  
   
- El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/**, dejando los dos últimos nodos (**2/3/**) sin modificar. Debe proporcionar los nodos que cambian (**/1/4/**) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/**. No es necesario que los dos argumentos tengan el mismo número de niveles.  
+ El método `GetReparentedValue` tiene dos argumentos. El primer argumento describe la parte de la jerarquía que se va a modificar. Por ejemplo, si una jerarquía es **/1/4/2/3/** y quiere cambiar la sección **/1/4/** , la jerarquía se vuelve **/2/1/2/3/** , dejando los dos últimos nodos (**2/3/** ) sin modificar. Debe proporcionar los nodos que cambian ( **/1/4/** ) como el primer argumento. El segundo argumento proporciona el nuevo nivel de jerarquía; en nuestro ejemplo, **/2/1/** . No es necesario que los dos argumentos tengan el mismo número de niveles.  
   
 ### <a name="to-move-a-single-row-to-a-new-location-in-the-hierarchy"></a>Para mover una fila única a una nueva ubicación en la jerarquía  
   
@@ -52,7 +52,7 @@ ms.locfileid: "66110111"
     GO  
     ```  
   
-     Wanida está ahora en el nodo **/3/1/**.  
+     Wanida está ahora en el nodo **/3/1/** .  
   
 ### <a name="to-reorganize-a-section-of-a-hierarchy"></a>Para reorganizar una sección de una jerarquía  
   
@@ -63,7 +63,7 @@ ms.locfileid: "66110111"
     GO  
     ```  
   
-2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/**. Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
+2.  Ahora Kevin notifica a Wanida, quien notifica a Jill, quien, a su vez, notifica a David. Eso quiere decir que Kevin está en el nivel **/3/1/1/** . Para mover todos los subordinados de Jill a un nuevo administrador, vamos a actualizar a un nuevo valor todos los nodos que tienen **/3/** como **OrgNode** . Ejecute el código siguiente para actualizar a Wanida de manera que dependa de Sariya, pero dejando que Kevin dependa de Wanida:  
   
     ```  
     DECLARE @OldParent hierarchyid, @NewParent hierarchyid  

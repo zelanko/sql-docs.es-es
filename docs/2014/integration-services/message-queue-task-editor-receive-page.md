@@ -15,10 +15,10 @@ author: janinezhang
 ms.author: janinez
 manager: craigg
 ms.openlocfilehash: 51c26583e24ca0e5247c2aca65ea6fa617932e5a
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66057673"
 ---
 # <a name="message-queue-task-editor-receive-page"></a>Editor de la tarea Cola de mensajes (página Recibir)
@@ -85,7 +85,7 @@ ms.locfileid: "66057673"
 |**De paquete**|El mensaje solo recibe mensajes del paquete seleccionado. Al seleccionar este valor se muestra la opción dinámica **Identifier**.|  
   
  **Variable**  
- Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "66057673"
  A menos que la opción **Comparar** se haya establecido en **Ninguno**, deberá indicar la cadena con la que se comparará el mensaje.  
   
  **Variable**  
- Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…**> y configure una nueva variable.  
+ Escriba el nombre de la variable para retener el mensaje recibido, o bien haga clic en \<**Nueva variable…** > y configure una nueva variable.  
   
  **Temas relacionados:** [Agregar variable](../../2014/integration-services/add-variable.md)  
   

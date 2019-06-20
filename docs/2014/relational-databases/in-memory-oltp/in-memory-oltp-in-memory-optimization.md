@@ -13,14 +13,15 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c3be59fd99f072b7cb3a9156b92d5ee794208f1f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 6bcd8c20039b048cf717c24981124ffd61cf51f4
+ms.sourcegitcommit: 6f8f975f7f97cd12fa008b05dc8d52cd1e94577f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63158010"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67251005"
 ---
 # <a name="in-memory-oltp-in-memory-optimization"></a>OLTP en memoria (optimización en memoria)
+
   Es una novedad en [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)], [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] puede mejorar significativamente el rendimiento de la aplicación de base de datos OLTP. [!INCLUDE[hek_2](../../../includes/hek-2-md.md)] es un motor de base de datos optimizados para memoria integrado en el motor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], optimizado para OLTP.  
   
 |||  
@@ -90,7 +91,11 @@ ms.locfileid: "63158010"
   
 -   [OLTP en memoria y los patrones de carga de trabajo comunes y consideraciones para la migración](https://msdn.microsoft.com/library/dn673538.aspx)  
   
--   [Información general de los aspectos internos OLTP en memoria SQL Server](https://msdn.microsoft.com/library/dn720242.aspx)  
+-   [Información general de los aspectos internos OLTP en memoria SQL Server](https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)  
+    <!--
+         (https://download.microsoft.com/download/8/3/6/8360731A-A27C-4684-BC88-FC7B5849A133/SQL_Server_2016_In_Memory_OLTP_White_Paper.pdf)
+         (/sql/relational-databases/in-memory-oltp/sql-server-in-memory-oltp-internals-for-sql-server-2016?view=sql-server-2016)
+    -->
   
 ## <a name="see-also"></a>Vea también  
  [Características de la base de datos](../database-features.md)  

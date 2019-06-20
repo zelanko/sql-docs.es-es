@@ -12,10 +12,10 @@ author: lrtoyou1223
 ms.author: lle
 manager: craigg
 ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66015102"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>Alta disponibilidad y recuperación ante desastres para Master Data Services
@@ -233,7 +233,7 @@ Las instancias de clúster de conmutación por error mejoran la alta disponibili
 
     Figura 10
 
-2.  En el cuadro de diálogo **Propiedades de SQL Server** **(MSSQLSERVER)**, haga clic en la pestaña **Alta disponibilidad de AlwaysOn** y, luego, marque la casilla **Habilitar los grupos de disponibilidad de AlwaysOn**. Cuando se muestre un valor en el cuadro de texto **Nombre del clúster de conmutación por error de Windows**, haga clic en **Aceptar** para continuar. Vea la figura 11.
+2.  En el cuadro de diálogo **Propiedades de SQL Server** **(MSSQLSERVER)** , haga clic en la pestaña **Alta disponibilidad de AlwaysOn** y, luego, marque la casilla **Habilitar los grupos de disponibilidad de AlwaysOn**. Cuando se muestre un valor en el cuadro de texto **Nombre del clúster de conmutación por error de Windows**, haga clic en **Aceptar** para continuar. Vea la figura 11.
 
     ![Opción Habilitar los grupos de disponibilidad de AlwaysOn](media/Fig11_EnableAlwaysOn.png)
 
@@ -248,7 +248,7 @@ Las instancias de clúster de conmutación por error mejoran la alta disponibili
 4.  Haga clic en **Reiniciar** para reiniciar el servicio **SQL Server** y hacer que este cambio surta efecto. Vea la figura 10.
 
 >[!NOTE] 
->Puede cambiar la cuenta de servicio que se ejecuta en el servicio SQL Server mediante el **Administrador de configuración de SQL Server**. Haga clic en la pestaña **Iniciar sesión** en el cuadro de diálogo **Propiedades de SQL Server** **(MSSQLSERVER)**. Vea la figura 11.
+>Puede cambiar la cuenta de servicio que se ejecuta en el servicio SQL Server mediante el **Administrador de configuración de SQL Server**. Haga clic en la pestaña **Iniciar sesión** en el cuadro de diálogo **Propiedades de SQL Server** **(MSSQLSERVER)** . Vea la figura 11.
 
 ### <a name="create-an-availability-group"></a>Creación de un grupo de disponibilidad
 

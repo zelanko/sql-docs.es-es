@@ -11,10 +11,10 @@ author: craigg-msft
 ms.author: craigg
 manager: craigg
 ms.openlocfilehash: eb3422b859ce4e58fc05564357876c5fe09fcdff
-ms.sourcegitcommit: f40fa47619512a9a9c3e3258fda3242c76c008e6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66089209"
 ---
 # <a name="options-text-editor---xml---miscellaneous-page"></a>Opciones (Editor de texto - XML - Página Varios)
@@ -26,7 +26,7 @@ El cuadro de diálogo **Opciones** permite modificar las opciones de finalizaci�
  El Editor de texto agrega etiquetas de cierre al crear elementos XML. Si se selecciona la etiqueta de inicio de un elemento, el editor inserta la etiqueta de cierre correspondiente, incluido el prefijo de espacio de nombres. Esta casilla está activada de forma predeterminada.  
   
  **Comillas de atributo**  
- Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación (**^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
+ Al crear atributos XML, el editor inserta los caracteres `="``"` y coloca el símbolo de intercalación ( **^)** dentro de las comillas. Esta casilla está activada de forma predeterminada.  
   
  **Declaraciones de Namespace**  
  El editor inserta automáticamente declaraciones de espacios de nombres cuando son necesarias. Esta casilla está activada de forma predeterminada.  

@@ -16,10 +16,10 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 2ca89efb197083b095ee7b1db18d3114525084a5
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66012466"
 ---
 # <a name="specifying-arithmetic-operators-in-xpath-queries-sqlxml-40"></a>Especificar operadores aritméticos en consultas XPath (SQLXML 4.0)
@@ -34,7 +34,7 @@ ms.locfileid: "66012466"
 /child::OrderDetail[@UnitPrice * @Quantity = 12.350]  
 ```  
   
- En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >**, porque el  **\< elemento >** nodo es el nodo principal para el `child` eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
+ En la consulta, `child` es el eje y `OrderDetail` es la prueba de nodo (TRUE si **OrderDetail** es un  **\<nodo element >** , porque el  **\< elemento >** nodo es el nodo principal para el `child` eje). Para todos los  **\<OrderDetail >** nodos de elemento, la prueba del predicado se aplica y se devuelven únicamente los nodos que satisfacen la condición.  
   
 > [!NOTE]  
 >  Los números en XPath son números de punto flotante de precisión doble y la comparación de números de punto flotante, como los del ejemplo, hace que éstos se redondeen.  

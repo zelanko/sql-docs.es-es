@@ -15,10 +15,10 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 6f361b15458230c62d8710e56164e1c80de5d95a
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "62722377"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
@@ -64,7 +64,7 @@ ms.locfileid: "62722377"
   
 1.  Inicie sesión como administrador en el equipo en el que se ejecuta IIS.  
   
-2.  Inicie el **Administrador de Internet Information Services (IIS)**:  
+2.  Inicie el **Administrador de Internet Information Services (IIS)** :  
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "62722377"
   
 3.  Ejecute el Asistente para certificados IIS:  
   
-    1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, la carpeta **Sitios web** .  
+    1.  En el **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, la carpeta **Sitios web** .  
   
     2.  Haga clic con el botón secundario en **Sitio web predeterminado**y, después, en **Propiedades**.  
   
@@ -169,7 +169,7 @@ ms.locfileid: "62722377"
   
 8.  En la página **Acceso a directorio** :  
   
-    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en la página **Información del servidor web** del Asistente para nueva suscripción o como el valor del parámetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)*@internet_login* .  
+    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en la página **Información del servidor web** del Asistente para nueva suscripción o como el valor del parámetro [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql) *@internet_login* .  
   
 9. En la página **Acceso a recurso compartido de instantáneas** , escriba el recurso compartido de instantáneas: en este recurso compartido se establecen los permisos adecuados para que los suscriptores puedan obtener acceso a los archivos de instantáneas. Para obtener más información sobre los permisos del recurso compartido, vea [Proteger la carpeta de instantáneas](security/secure-the-snapshot-folder.md).  
   
@@ -272,13 +272,13 @@ ms.locfileid: "62722377"
   
     7.  Haga clic en **Aceptar**.  
   
-4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)**:  
+4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)** :  
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
     2.  En el **abierto** , escriba `inetmgr`y, a continuación, haga clic en **Aceptar**.  
   
-    3.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** .  
+    3.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** .  
   
     4.  Haga clic con el botón secundario en **Grupos de aplicaciones**, seleccione **Nuevo** y, a continuación, haga clic en **Grupo de aplicaciones**.  
   
@@ -286,7 +286,7 @@ ms.locfileid: "62722377"
   
 5.  Asocie la cuenta al grupo de aplicaciones:  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, expanda **Grupos de aplicaciones**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, expanda **Grupos de aplicaciones**.  
   
     2.  Haga clic con el botón secundario en el grupo de aplicaciones que ha creado y, a continuación, haga clic en **Propiedades**.  
   
@@ -298,11 +298,11 @@ ms.locfileid: "62722377"
   
 6.  Asocie el grupo de aplicaciones al directorio virtual que se utiliza para la sincronización web:  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, expanda **Sitios web**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, expanda **Sitios web**.  
   
     2.  Expanda el sitio web que está utilizando para la sincronización web, haga clic con el botón secundario en el directorio virtual que creó para la sincronización web y, a continuación, haga clic en **Propiedades**.  
   
-    3.  En la pestaña **Directorio virtual** del cuadro de diálogo **\<Propiedades de <nombreDeDirectorioVirtual>**, en la lista desplegable **Grupo de aplicaciones**, seleccione el grupo de aplicaciones creado en el paso 5.  
+    3.  En la pestaña **Directorio virtual** del cuadro de diálogo **\<Propiedades de <nombreDeDirectorioVirtual>** , en la lista desplegable **Grupo de aplicaciones**, seleccione el grupo de aplicaciones creado en el paso 5.  
   
     4.  Haga clic en **Aceptar**.  
   
@@ -347,7 +347,7 @@ ms.locfileid: "62722377"
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>**, especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>** , especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas de **estado** de la página sea **SUCCESS**.  
   

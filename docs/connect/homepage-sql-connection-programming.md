@@ -11,13 +11,13 @@ ms.topic: conceptual
 ms.reviewer: v-daveng
 ms.author: genemi
 ms.openlocfilehash: d773e05a3ed953e5210c0ade3226b4a32e82aeab
-ms.sourcegitcommit: 8cc38f14ec72f6f420479dc1b15eba64b1a58041
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/08/2018
-ms.locfileid: "51289905"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63182208"
 ---
-# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de cliente de programación para Microsoft SQL Server
+# <a name="homepage-for-client-programming-to-microsoft-sql-server"></a>Página principal de la programación de clientes de Microsoft SQL Server
 
 
 Le damos la bienvenida a nuestra página principal sobre programación para interactuar con Microsoft SQL Server y con Azure SQL Database en la nube del cliente. En este artículo se proporciona la siguiente información:
@@ -54,7 +54,7 @@ En la tabla siguiente, cada imagen de lenguaje es un vínculo a los detalles sob
 | &nbsp; | &nbsp; | &nbsp; |
 | :-- | :-- | :-- |
 | &nbsp; [![Logotipo de C#][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework de .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Logotipo de Java][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Logotipo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![CPP más grande][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
+| &nbsp; [![Logotipo de Node.js][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [ **`ODBC for C++`** ](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![Logotipo PHP][image-ref-360-php]](#an-170-php-docu) |
 | &nbsp; [![Logotipo de Python][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Logotipo de Ruby][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
 | &nbsp; | &nbsp; | <br />|
 
@@ -181,7 +181,7 @@ El controlador de conexión de Node.js para SQL Server se implementa en JavaScri
 
 ## <a name="odbc-for-c"></a>ODBC de C++ 
 
-![Logotipo ODBC][image-ref-350-odbc] ![CPP más grande][image-ref-322-cpp]
+![Logotipo ODBC][image-ref-350-odbc] ![cpp-big-plus][image-ref-322-cpp]
 
 Conectividad abierta de base de datos (ODBC) se desarrolló en la década de 1990, y es anterior a .NET Framework. ODBC está diseñado para ser independiente de cualquier sistema de base de datos determinada e independiente del sistema operativo.
 
@@ -201,7 +201,7 @@ El contenido ODBC en esta sección se centra en obtener acceso a SQL Server o Az
 | Área | Subárea | Descripción |
 | :--- | :------ | :---------- |
 | [ODBC de C++](./odbc/index.md) | Raíz de nuestra documentación. |
-| [Mac-Linux](./odbc/linux-mac/index.md) | &nbsp; | Información sobre cómo usar ODBC en los sistemas operativos Linux o MacOS. |
+| [Linux-Mac](./odbc/linux-mac/index.md) | &nbsp; | Información sobre cómo usar ODBC en los sistemas operativos Linux o MacOS. |
 | [Windows](./odbc/windows/index.md)     | &nbsp; | Información sobre cómo usar ODBC en el sistema operativo Windows. |
 | [Administración](../odbc/admin/index.md) | &nbsp; | La herramienta administrativa para administrar orígenes de datos ODBC. |
 | [Microsoft](../odbc/microsoft/index.md)  | &nbsp; | Varios controladores ODBC que se crean y proporcionados por Microsoft. |

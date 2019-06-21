@@ -12,12 +12,12 @@ ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9ab544235e842e38024ce98763094c300bb06275
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a9c1510030f61896f686b49f4bc134a7dfcb42b
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66067230"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284873"
 ---
 # <a name="directquery-mode-ssas-tabular"></a>Modo DirectQuery (SSAS tabular)
   El *modo DirectQuery*de Analysis Services le permite recuperar datos y crear informes de un modelo tabular recuperando los datos y agregándolos directamente desde un sistema de base de datos relacional. En este tema se presentan las diferencias entre los modelos tabulares estándar que residen únicamente en la memoria y los modelos tabulares que pueden realizar consultas en un origen de datos relacional, y se explica cómo crear e implementar un modelo para utilizar en el modo DirectQuery.  
@@ -82,7 +82,7 @@ ms.locfileid: "66067230"
   
 -   **Restricciones de cliente:** Cuando un modelo está en el modo DirectQuery, solo se puede consultar mediante DAX. No se puede utilizar MDX para crear consultas. Esto significa que no podrá utilizar el cliente dinámico de Excel, porque Excel usa MDX.  
   
-     Sin embargo, puede crear consultas en un modelo DirectQuery en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si usa una consulta de tabla DAX como parte de una instrucción Execute de XMLA, para obtener más información, consulte [sintaxis de consulta DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+     Sin embargo, puede crear consultas en un modelo DirectQuery en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] si usa una consulta de tabla DAX como parte de una instrucción Execute de XMLA, para obtener más información, vea [referencia de sintaxis de consulta DAX] (/ / dax--referencia de sintaxis dax
   
  Una vez haya resuelto todos los problemas de diseño y probado el modelo, estará listo para la implementación. En este momento, puede establecer el método preferido para responder a las consultas sobre el modelo. ¿Desea que los usuarios obtengan acceso a la memoria caché, o que utilicen siempre solamente el origen de datos relacional?  
   

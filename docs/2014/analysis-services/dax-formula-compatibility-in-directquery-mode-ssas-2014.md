@@ -10,12 +10,12 @@ ms.assetid: de83cfa9-9ffe-4e24-9c74-96a3876cb4bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 6da2326c22d0581f59c2307abf018a54915857a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2136c162846b31c4d221d7aaad6476ba70508287
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62732477"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284957"
 ---
 # <a name="dax-formula-compatibility-in-directquery-mode-ssas-2014"></a>Compatibilidad de fórmulas DAX en el modo DirectQuery (SSAS 2014)
 El lenguaje de expresiones de análisis de datos (DAX) puede usarse para crear medidas y otras fórmulas personalizadas para su uso en los modelos tabulares de Analysis Services, [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos de datos en los libros de Excel y modelos de datos de Power BI Desktop. En todos los sentidos, los modelos crean en estos entornos son idénticos, y puede usar el mismo medidas, relaciones y los KPI, etcetera. Sin embargo, si se crea un modelo Tabular de Analysis Services e implementarlo en el modo DirectQuery, hay algunas restricciones en las fórmulas que puede usar. En este tema proporciona información general sobre estas diferencias, se enumera las funciones que no se admiten en el modelo de tabulars de SQL Server 2014 Analysis Services en el nivel de compatibilidad 1100 o 1103 y en el modo DirectQuery, y enumera las funciones que se admiten pero puede ser devolver resultados diferentes.  
@@ -78,14 +78,14 @@ No hay ninguna función de conversión como tal en DAX, pero las conversiones im
 -   Los valores booleanos siempre se tratan como valores lógicos en las comparaciones y cuando se usan con EXACT, AND, OR, &amp;&amp;o ||.  
   
 **Conversión de valores de cadena en valores booleanos**  
-En memoria y los modelos DirectQuery, se permiten las conversiones en valores booleanos de estas cadenas sólo: **""** (cadena vacía), **"true"** , **"false"** ; donde una cadena vacía conversiones de tipos en un valor false.  
+En memoria y los modelos DirectQuery, se permiten las conversiones en valores booleanos de estas cadenas sólo: **""** (cadena vacía), **"true"**, **"false"**; donde una cadena vacía conversiones de tipos en un valor false.  
   
 Las conversiones de cualquier otra cadena al tipo de datos booleano producirán un error.  
   
 **Conversión de valores de cadena en valores de fecha y hora**  
 En el modo DirectQuery, las conversiones de representaciones de cadena de fechas y horas en valores **datetime** reales se comportan de la misma manera que en SQL Server.  
   
-Para obtener información acerca de las reglas que rigen las conversiones de cadena a **datetime** tipos de datos de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, vea el [sintaxis de DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Para obtener información acerca de las reglas que rigen las conversiones de cadena a **datetime** tipos de datos de [!INCLUDE[ssGemini](../includes/ssgemini-md.md)] modelos, consulte la [referencia de sintaxis DAX] (/ / dax--referencia de sintaxis dax
   
 Los modelos que utilizan el almacén de datos en memoria admiten una gama más limitada de formatos de texto para fechas que los formatos de cadena para fechas que admite SQL Server. Sin embargo, DAX admite formatos de fecha y hora personalizados.  
   
@@ -133,7 +133,7 @@ SQL Server procesa los valores NULL y los valores en blanco de forma diferente a
   
 Las mismas limitaciones se aplican a las demás funciones logarítmicas: LOG10 y LN.  
   
-Para más información sobre el tipo de datos **blank** de DAX, vea see [Especificación de sintaxis de DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+Para obtener más información sobre la **en blanco** tipo de datos en DAX, vea [referencia de sintaxis DAX] (/ / dax--referencia de sintaxis dax
   
 **División por 0 y división por un valor en blanco**  
 En el modo DirectQuery, la división por cero (0) o la división por un valor en blanco siempre producirá un error. SQL Server no admite la noción de infinito y, dado que el resultado natural de una división por 0 es infinito, el resultado es un error. Sin embargo, SQL Server admite la división por valores NULL, y el resultado siempre deberá ser un valor NULL.  

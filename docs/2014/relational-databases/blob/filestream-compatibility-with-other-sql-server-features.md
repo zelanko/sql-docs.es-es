@@ -14,10 +14,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aba8bdc3182cd0e3784908a8af32b6f2fbebd6e9
-ms.sourcegitcommit: 45a9d7ffc99502c73f08cb937cbe9e89d9412397
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/22/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66010194"
 ---
 # <a name="filestream-compatibility-with-other-sql-server-features"></a>Compatibilidad de FILESTREAM con otras características de SQL Server
@@ -51,7 +51,7 @@ ms.locfileid: "66010194"
  Puede utilizar la transformación Importar columna para cargar archivos del sistema de archivos en una columna FILESTREAM. También puede usar la transformación Exportar columna para extraer archivos de una columna FILESTREAM a otra ubicación en el sistema de archivos.  
   
 ##  <a name="distqueries"></a> Consultas distribuidas y servidores vinculados  
- Puede trabajar con datos FILESTREAM a través de las consultas distribuidas y servidores vinculados si los trata como `varbinary(max)` datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()**.  
+ Puede trabajar con datos FILESTREAM a través de las consultas distribuidas y servidores vinculados si los trata como `varbinary(max)` datos. La función FILESTREAM **PathName()** no puede usar en consultas distribuidas en las que se usa un nombre de cuatro partes, aunque el nombre haga referencia al servidor local. Pero puede usar **PathName()** en una consulta interna de una consulta de paso a través que use **OPENQUERY()** .  
   
 ##  <a name="encryption"></a> Cifrado  
  Los datos FILESTREAM no se cifran ni siquiera cuando está habilitado el cifrado de datos transparente.  

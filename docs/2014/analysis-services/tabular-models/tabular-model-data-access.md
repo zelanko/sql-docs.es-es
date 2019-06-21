@@ -10,12 +10,12 @@ ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7881df645a02e70948d81baa6fd8a029d06ea1b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5bf8d4af44f7596bb632a05483c387752ba2e056
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066458"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284862"
 ---
 # <a name="tabular-model-data-access"></a>Acceso a datos de modelos tabulares
   A las bases de datos modelo tabulares de Analysis Services se puede tener acceso con la mayoría de los clientes, interfaces e idiomas que se usan para recuperar los datos o metadatos de un modelo multidimensional. Para más información, vea [Acceso a datos de modelos multidimensionales &#40;Analysis Services: datos multidimensionales&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -65,7 +65,7 @@ ms.locfileid: "66066458"
   
  Además, puede utilizar expresiones DAX dentro del contexto de una instrucción de comando EXECUTE XMLA para enviar consultas a un modelo tabular que se haya implementado en el modo DirectQuery.  
   
- Para obtener ejemplos de consultas en un modelo tabular con DAX, vea [Referencia de la sintaxis de las consultas DAX](https://msdn.microsoft.com/library/ee634217.aspx).  
+ Para obtener ejemplos de consultas en un modelo tabular con DAX, vea [referencia de sintaxis de consulta DAX] (/ / dax--referencia de sintaxis dax
   
 ### <a name="mdx"></a>MDX  
  Puede utilizar MDX para crear consultas en modelos tabulares que usen la memoria caché en memoria como método preferido de consulta (es decir, los modelos que no se hayan implementado en modo DirectQuery). Aunque los clientes como [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] usan DAX tanto para crear agregaciones como para consultar el modelo como un origen de datos, si conoce MDX, puede ser una forma rápida de crear consultas de ejemplo en MDX (vea [Generar medidas en MDX](../multidimensional-models/mdx/mdx-building-measures.md)).  

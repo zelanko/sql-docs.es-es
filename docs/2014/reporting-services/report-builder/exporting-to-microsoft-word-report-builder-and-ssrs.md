@@ -10,17 +10,17 @@ ms.assetid: 0cd8ae26-4682-4473-8f15-af084951defd
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 003b950e908abab7e385836e761b5c230caa7fcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3eaaace0d8ae5924305024e6ee67f7f3fefb415c
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107875"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67285034"
 ---
 # <a name="exporting-to-microsoft-word-report-builder-and-ssrs"></a>Exportar a Microsoft Word (Generador de informes y SSRS)
   La extensión de representación de Word representa informes en el formato nativo de [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010. El formato es Office Open XML.  
   
- El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint instalado. Para obtener más información sobre el Paquete de compatibilidad, vea [Paquete de compatibilidad de Microsoft Office para formatos de archivo de Word, Excel y PowerPoint](https://go.microsoft.com/fwlink/?LinkID=205622).  
+ El representador de Word es compatible con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2007-2010, así como con [!INCLUDE[ofprword](../../includes/ofprword-md.md)] 2003 con el Paquete de compatibilidad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office para Word, Excel y PowerPoint instalado. 
   
  El tipo de contenido de los archivos generados por este representador es **application/vnd.openxmlformats-officedocument.wordprocessingml.document** y la extensión de los archivos es .docx.  
   

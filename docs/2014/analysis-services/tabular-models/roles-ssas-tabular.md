@@ -10,12 +10,12 @@ ms.assetid: e547382a-c064-4bc6-818c-5127890af334
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 77114194f36ac24ff34e48b580513a939d8a4467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd4e54a0099e459d52577de23acc5c4f2989edc5
+ms.sourcegitcommit: 0818f6cc435519699866db07c49133488af323f4
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66066628"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67284859"
 ---
 # <a name="roles-ssas-tabular"></a>Roles (SSAS tabular)
   Los roles, en los modelos tabulares, definen los permisos de los miembros para un modelo. Cada rol contiene miembros, por nombre de usuario de Windows o por grupo de Windows, y permisos (de lectura, de procesamiento, de administrador). Los miembros del rol pueden realizar en el modelo las acciones definidas por el permiso de rol. Los roles que se han definido con permisos de lectura también pueden proporcionar seguridad adicional en el nivel de fila mediante filtros de fila.  
@@ -96,8 +96,8 @@ ms.locfileid: "66066628"
   
 |Función|Descripción|  
 |--------------|-----------------|  
-|[Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)|Devuelve el dominio\nombredeusuario del usuario que ha iniciado sesión actualmente.|  
-|[Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)|Devuelve la propiedad CustomData en una cadena de conexión.|  
+|[Función USERNAME &#40;DAX&#41;](/dax/username-function-dax)|Devuelve el dominio\nombredeusuario del usuario que ha iniciado sesión actualmente.|  
+|[Función CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)|Devuelve la propiedad CustomData en una cadena de conexión.|  
   
  Puede utilizar la función LOOKUPVALUE para devolver valores para una columna en la que el nombre de usuario de Windows sea el mismo que el nombre de usuario devuelto por la función USERNAME o una cadena devuelta por la función CustomData. Las consultas se pueden restringir a los casos en que los valores devueltos por LOOKUPVALUE coincidan con los valores en la misma tabla o en una tabla relacionada.  
   
@@ -140,8 +140,8 @@ ms.locfileid: "66066628"
 ## <a name="see-also"></a>Vea también  
  [Perspectivas &#40;SSAS tabular&#41;](perspectives-ssas-tabular.md)   
  [Analizar en Excel &#40;SSAS tabular&#41;](analyze-in-excel-ssas-tabular.md)   
- [Función USERNAME &#40;DAX&#41;](https://msdn.microsoft.com/library/hh230954.aspx)   
- [La función LOOKUPVALUE &#40;DAX&#41;](https://msdn.microsoft.com/library/gg492170.aspx)   
- [Función CUSTOMDATA &#40;DAX&#41;](https://msdn.microsoft.com/library/hh213140.aspx)  
+ [Función USERNAME &#40;DAX&#41;](/dax/username-function-dax)   
+ [La función LOOKUPVALUE &#40;DAX&#41;](/dax/lookupvalue-function-dax)   
+ [Función CUSTOMDATA &#40;DAX&#41;](/dax/customdata-function-dax)  
   
   

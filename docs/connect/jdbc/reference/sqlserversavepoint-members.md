@@ -1,5 +1,5 @@
 ---
-title: Los miembros de SQLServerSavepoint | Microsoft Docs
+title: Miembros SQLServerSavepoint | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3aef1550-3798-4095-bd1c-1a4be09804e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f2cd95f2747f60a1a4377ab799e29961f94eae5f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 3c15755e2099f96a1fccc8fbf6c5dcdbdd25a751
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802709"
 ---
 # <a name="sqlserversavepoint-members"></a>Miembros de SQLServerSavepoint
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +50,7 @@ ms.locfileid: "47632763"
 |---------------------------|-------------|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  
   
   

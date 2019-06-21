@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 3fe74b50-9ccd-4973-a93a-6da2c20a4154
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5cf5ece7dff3a6e749025828ef0886ccb15eabf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b991bd56c730fbee833aca2aa965b294df05a7e4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47777223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799697"
 ---
 # <a name="getblob-method-javalangstring"></a>Método getBlob (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +49,7 @@ public java.sql.Blob getBlob(java.lang.String sCol)
 ## <a name="remarks"></a>Notas  
  El método getBlob especifica este método getBlob en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método getBlob &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getblob-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

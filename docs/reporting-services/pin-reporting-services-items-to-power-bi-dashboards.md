@@ -16,10 +16,10 @@ ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66500029"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Anclado de elementos de informe paginados de Reporting Services a paneles de Power BI
@@ -40,7 +40,7 @@ Puede anclar un elemento de informe paginado de [!INCLUDE[ssRSnoversion](../incl
   
 -   Tendrá que configurar los informes para las credenciales almacenadas si quiere que el elemento anclado se actualice.  Cuando se ancla un elemento, se crea automáticamente una suscripción de [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] para administrar la actualización de datos del elemento en el panel.  Si en el informe no se usan credenciales almacenadas, cuando se ejecute la suscripción, verá un mensaje de error similar a este en la página **Mis suscripciones**.  
   
-    PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: (Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error:) La acción actual no se puede completar. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario".
+    "PowerBI Delivery error: dashboard: IT Spend Analysis Sample, visual: Chart2, error: (Error de entrega de PowerBI: panel: ejemplo de análisis de gasto en TI, objeto visual: gráfico 2, error:) La acción actual no se puede completar. Las credenciales del origen de datos del usuario no cumplen los requisitos necesarios para ejecutar este informe o conjunto de datos compartido. Es posible que las credenciales del origen de datos del usuario".
  
     Para más información sobre cómo almacenar credenciales, vea la sección "Configurar credenciales almacenadas para un origen de datos específico de informe (modo Nativo)" de [Almacenamiento de las credenciales en un origen de datos de Reporting Services](../reporting-services/report-data/store-credentials-in-a-reporting-services-data-source.md).  
   
@@ -96,7 +96,7 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
   
 ##  <a name="bkmk-troubleshoot"></a> Solucionar problemas  
   
--   **No[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] hay ningún botón en la barra de herramientas del Visor de informes:** esto indica que el servidor de informes no se ha integrado con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
+-   **No[!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] hay ningún botón en la barra de herramientas del Visor de informes:** este mensaje indica que el servidor de informes no se ha integrado con [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]. Para más información, vea [Integración del servidor de informes de Power BI &#40;Administrador de configuración&#41;](../reporting-services/install-windows/power-bi-report-server-integration-configuration-manager.md).  
   
 - **No se puede anclar:** al intentar anclar un elemento, se muestra el siguiente mensaje de error (vea la sección [Elementos que puede anclar](#bkmk_supported_items)).  
   
@@ -112,7 +112,7 @@ En el panel de [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)] , el elemento 
   
         Cannot Pin: Unexpected Server Error: Missing, invalid or expired Power BI credentials.  
   
--   **No se puede anclar**: si intenta anclar elementos a un panel que se encuentra en estado de solo lectura, verá un mensaje de error similar al siguiente:  
+-   **No se puede anclar**: si intenta anclar elementos a un panel que se encuentra en estado de solo lectura, verá un mensaje de error similar a este:  
   
         Server Error: The item 'Dashboard deleted 015cf022-8e2f-462e-88e5-75ab0a04c4d0' can't be found. (rsItemNotFound)  
   

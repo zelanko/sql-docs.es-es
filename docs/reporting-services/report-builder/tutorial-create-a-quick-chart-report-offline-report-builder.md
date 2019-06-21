@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6b1db67a-cf75-494c-b70c-09f1e6a8d414
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 429ee4c7dcd0b6d58b2cbb3e223e8f7407339327
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 72e6846ef10bc86c1711958e144601d8bff5caac
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65571766"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037964"
 ---
 # <a name="tutorial-create-a-quick-chart-report-offline-report-builder"></a>Tutorial: Crear un informe de gráfico rápido sin conexión (Generador de informes)
 
@@ -105,7 +105,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
     </Query>  
     ```  
   
-11. (Opcional) Haga clic en el botón **Ejecutar** (**!**) para ver los datos en los que se basará su gráfico.  
+11. (Opcional) Haga clic en el botón **Ejecutar** ( **!** ) para ver los datos en los que se basará su gráfico.  
   
      ![Consulta de diseño del Generador de informes](../../reporting-services/report-builder/media/rb-designquery.png "Consulta de diseño del Generador de informes")  
   
@@ -169,7 +169,7 @@ Puede hacerlo de dos maneras diferentes: Ambos métodos tienen como resultado un
     UNION SELECT 450 AS Sales, 'Ranjit Varkey' AS FullName   
     ```  
   
-8.  (Opcional) Haga clic en el botón Ejecutar (**!**) para ver los datos en los que se basará su gráfico.  
+8.  (Opcional) Haga clic en el botón Ejecutar ( **!** ) para ver los datos en los que se basará su gráfico.  
   
 9. Haga clic en **Siguiente**.  
   
@@ -226,7 +226,7 @@ Observe que la superficie de diseño aumenta a medida que realiza la acción de 
   
  Finalmente, para guardar los informes en un servidor de informes o en un sitio de SharePoint integrado con un servidor de informes, necesitará la dirección URL y los permisos necesarios. Puede ejecutar cualquier informe que cree directamente desde su equipo, pero los informes tienen más funcionalidad cuando se ejecutan desde el servidor de informes o desde el sitio de SharePoint. Necesita permisos para ejecutar sus informes u otros desde el servidor de informes o desde el sitio de SharePoint donde estén publicados. Hable con el administrador del sistema para obtener acceso.  
   
- Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Vea [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
+ Podría resultarle de ayuda leer sobre algunos conceptos y términos antes de empezar. Vea [Conceptos de Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md). Además, dedique algún tiempo al planeamiento antes de crear su primer informe. Será tiempo bien invertido. Consulte [Planear un informe &#40;Generador de informes&#41;](../../reporting-services/report-design/planning-a-report-report-builder.md).  
 
 ## <a name="next-steps"></a>Pasos siguientes
 

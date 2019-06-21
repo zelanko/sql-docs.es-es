@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 93d4d6bb84b3279e60b0b6b69e1b684d6ca75e9a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786539"
 ---
 # <a name="updatearray-method-int-javasqlarray"></a>Método updateArray (int, java.sql.Array)
@@ -43,7 +43,7 @@ public void updateArray(int columnIndex,
   
  *x*  
   
- Matriz de objetos.  
+ Un objeto Array.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

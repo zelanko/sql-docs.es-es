@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: fb74dd4b80256ad85e03a258a0adc5d93ba1880d
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765887"
 ---
 # <a name="getdouble-method-javalangstring-sqlserverresultset"></a>Método getDouble (java.lang.String) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public double getDouble(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getDate especifica este método getDate en la interfaz java.sql.ResultSet.  
+ El método getDouble especifica este método getDouble en la interfaz java.sql.ResultSet.  
   
  Este método devuelve todos los tipos de datos basados en número con fidelidad **double** de Java.  
   

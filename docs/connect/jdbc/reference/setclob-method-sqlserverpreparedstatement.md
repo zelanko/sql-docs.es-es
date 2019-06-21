@@ -12,22 +12,22 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 5fd95488f82b6d38bcdfd30e0875228c7ea868e6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66793989"
 ---
 # <a name="setclob-method-sqlserverpreparedstatement"></a>Método setClob (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Establece el parámetro designado para el objeto java.sql.Clob determinado.  
+  Establece el parámetro designado para un objeto java.sql.Clob.  
   
 ## <a name="overload-list"></a>Lista de sobrecargas  
   
 |Nombre|Descripción|  
 |----------|-----------------|  
-|[Método setClob &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Establece el parámetro designado para el objeto java.sql.Clob determinado.|  
+|[Método setClob &#40;int, java.io.Reader&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader.md)|Establece el parámetro designado para un objeto java.sql.Clob.|  
 |[Método setClob &#40;int, java.sql.Clob&#41;](../../../connect/jdbc/reference/setclob-method-int-java-sql-clob.md)|Establece el parámetro designado para el objeto java.sql.Clob determinado.|  
 |[Método setClob &#40;int, java.io.Reader, long&#41;](../../../connect/jdbc/reference/setclob-method-int-java-io-reader-long.md)|Establece el parámetro designado en un objeto java.sql.Clob especificado, que es el número de caracteres especificado para la longitud.|  
   

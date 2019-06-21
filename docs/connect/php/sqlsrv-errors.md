@@ -17,13 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1fcffec-f34f-46de-9a0e-343f3b5dbae2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47403e17df946ada2fe5a5ed913d9e16c8b62271
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9284b6148fecd96f881778ef82dec45b40acf178
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640733"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796890"
 ---
 # <a name="sqlsrverrors"></a>sqlsrv_errors
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -71,7 +71,7 @@ Una **matriz** de matrices, o bien el valor **Null**. Cada **matriz** de la **ma
   
 |Key|Descripción|  
 |-------|---------------|  
-|SQLSTATE|En los errores que se originan desde el controlador ODBC, el valor de SQLSTATE que devuelve ODBC. Para obtener información sobre los valores de SQLSTATE para ODBC, vea [Códigos de error ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de IMSSP.<br /><br />Para las advertencias que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de 01SSP.|  
+|SQLSTATE|En los errores que se originan desde el controlador ODBC, el valor de SQLSTATE que devuelve ODBC. Para obtener información sobre los valores de SQLSTATE para ODBC, consulte los [códigos de error ODBC](../../odbc/reference/appendixes/appendix-a-odbc-error-codes.md).<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de IMSSP.<br /><br />Para las advertencias que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], un valor de SQLSTATE de 01SSP.|  
 |código|Para los errores que se originan desde SQL Server, el código de error de SQL Server nativo.<br /><br />Para los errores que se originan desde el controlador ODBC, el código de error que devuelve ODBC.<br /><br />Para los errores que se originan desde los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], el código de error de dichos [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] . Para obtener más información, consulte [Handling Errors and Warnings](../../connect/php/handling-errors-and-warnings.md).|  
 |message|Descripción del error.|  
   
@@ -117,7 +117,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  

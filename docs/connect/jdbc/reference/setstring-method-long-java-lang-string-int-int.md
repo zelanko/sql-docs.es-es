@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 604e39fcf2d8bd6bfb218fe33fda391c2b53403a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762237"
 ---
 # <a name="setstring-method-long-javalangstring-int-int"></a>Método setString (long, java.lang.String, int, int)
@@ -62,7 +62,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notas  
- El método setString especifica este método setString en la interfaz java.sql.CallableStatement.  
+ El método setString especifica este método setString en la interfaz java.sql.Clob.  
   
  Los datos de caracteres se sobrescriben tomando como punto de inicio la posición especificada y pueden sobrescribir la longitud inicial del CLOB. Si se especifica un valor position+1, se anexará la cadena. Si se especifican valores position+2 o superiores (o cero o menos), se producirá un error de la posición.  
   

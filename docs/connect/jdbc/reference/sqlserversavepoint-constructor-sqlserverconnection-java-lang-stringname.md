@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: fb77db6b-ebf8-4b12-8153-2c4bdb8d72f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 97119b0f89ae0fc3851a20c04aec3a5de6dfddc7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 41675553cfb5993f9eab95b427488f5ef8b213ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47655253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802731"
 ---
 # <a name="sqlserversavepoint-constructor-sqlserverconnection-javalangstringname"></a>Constructor SQLServerSavepoint (SQLServerConnection, java.lang.StringName)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,13 +39,13 @@ public SQLServerSavepoint(SQLServerConnection con,
 #### <a name="parameters"></a>Parámetros  
  *con*  
   
- Objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
+ Un objeto [SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md).  
   
  *sName*  
   
  Un objeto **String** que contiene el nombre del punto de retorno.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-constructors.md)   
  [Miembros de SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-members.md)   
  [Clase SQLServerSavepoint](../../../connect/jdbc/reference/sqlserversavepoint-class.md)  

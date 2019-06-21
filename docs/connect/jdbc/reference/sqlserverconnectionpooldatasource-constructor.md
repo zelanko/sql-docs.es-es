@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 0f5d1ee5-7996-4e20-956e-fe72cb64a588
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe3cbfde7f4de00055553ca7c5ab05b6e9272c88
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 902d74a808e24db3f8291b32e89c9cd908c0fee5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47637323"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800606"
 ---
 # <a name="sqlserverconnectionpooldatasource-constructor-"></a>Constructor SQLServerConnectionPoolDataSource ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "47637323"
 public SQLServerConnectionPoolDataSource()  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-constructors.md)   
  [Miembros SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-members.md)   
  [Clase SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)  

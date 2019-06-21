@@ -9,14 +9,14 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a6166d7d-ef34-4f87-bd1b-838d3ca59ae7
 ms.author: v-chojas
-manager: craigg
+manager: jroth
 author: MightyPen
-ms.openlocfilehash: 59a1458c98fb12f2f053bfd71649f40ddc5d1e4e
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 84e729cd60a28ff8a58760bd3810ec538a327007
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55047219"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800487"
 ---
 # <a name="custom-keystore-providers"></a>Proveedores de almacén de claves personalizados
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -83,7 +83,7 @@ typedef struct CEKeystoreProvider {
 
 |Nombre de campo|Descripción|
 |:--|:--|
-|`Name`|El nombre del proveedor de almacén de claves. No debe ser igual que cualquier otro proveedor de almacén de claves se cargaron previamente por el controlador o está presente en esta biblioteca. Terminada en null, amplia-cadena de caracteres.|
+|`Name`|El nombre del proveedor de almacén de claves. No debe ser igual que cualquier otro proveedor de almacén de claves se cargaron previamente por el controlador o está presente en esta biblioteca. Cadena de caracteres anchos* terminada en NULL.|
 |`Init`|Función de inicialización. Si no se requiere una función de inicialización, este campo puede ser null.|
 |`Read`|Proveedor de read, función. Puede ser null si no es necesario.|
 |`Write`|Función de escritura de proveedor. Requerido si lectura no es null. Puede ser null si no es necesario.|
@@ -140,8 +140,8 @@ Nombre de marcador de posición para una función definida por el proveedor de d
 |:--|:--|
 |`ctx`|[Entrada] Contexto de la operación.|
 |`onError`|[Entrada] Función de notificación de error.|
-|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar una CMK controlada por este proveedor.|
-|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
+|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar una CMK controlada por este proveedor.|
+|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
 |`ecek`|[Entrada] Puntero a la que se va a descifrar ECEK.|
 |`ecekLen`|[Entrada] Longitud de ECEK.|
 |`cekOut`|[Salida] El proveedor deberá asignar memoria para ECEK descifrado y escribir su dirección en el puntero apuntado a cekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * cekOut a un puntero nulo.|
@@ -157,8 +157,8 @@ Nombre de marcador de posición para una función definida por el proveedor de c
 |:--|:--|
 |`ctx`|[Entrada] Contexto de la operación.|
 |`onError`|[Entrada] Función de notificación de error.|
-|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar una CMK controlada por este proveedor.|
-|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Terminada en null amplia-cadena de caracteres. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
+|`keyPath`|[Entrada] El valor de la [KEY_PATH](../../t-sql/statements/create-column-master-key-transact-sql.md) atributo de metadatos para la CMK ECEK determinado al que hace referencia. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar una CMK controlada por este proveedor.|
+|`alg`|[Entrada] El valor de la [algoritmo](../../t-sql/statements/create-column-encryption-key-transact-sql.md) atributo de metadatos para ECEK determinado. Cadena de caracteres anchos* terminada en NULL. Esto está pensado para identificar el algoritmo de cifrado usado para cifrar el ECEK determinado.|
 |`cek`|[Entrada] Puntero a la CEK se cifren.|
 |`cekLen`|[Entrada] Longitud de la CEK.|
 |`ecekOut`|[Salida] El proveedor deberá asignar memoria para la CEK cifrada y escribir su dirección en el puntero apuntado a ecekOut. Debe ser posible liberar este bloque de memoria utilizando la [LocalFree](/windows/desktop/api/winbase/nf-winbase-localfree) (Windows) o función (Linux/Mac) gratis. Si no hay memoria se ha asignado debido a un error o en caso contrario, el proveedor debe establecer * ecekOut a un puntero nulo.|
@@ -187,7 +187,7 @@ El **onError** parámetro señala a una función de informes de errores, con el 
 |Argumento|Descripción|
 |:--|:--|
 |`ctx`|[Entrada] Para notificar el error en el contexto.|
-|`msg`|[Entrada] El mensaje de error para el informe. Cadena de caracteres anchos terminada en null. Para permitir que se presente la información con parámetros, esta cadena puede contener secuencias de formato para insertar el formato aceptado por el [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) función. Funcionalidad extendida se puede especificar mediante este parámetro, tal como se describe a continuación.|
+|`msg`|[Entrada] El mensaje de error para el informe. Cadena de caracteres anchos terminada en NULL. Para permitir que se presente la información con parámetros, esta cadena puede contener secuencias de formato para insertar el formato aceptado por el [FormatMessage](/windows/desktop/api/winbase/nf-winbase-formatmessage) función. Funcionalidad extendida se puede especificar mediante este parámetro, tal como se describe a continuación.|
 |…|[Entrada] Parámetros adicionales variadic ajustar especificadores de formato de mensaje, según corresponda.|
 
 Para notificar cuando se ha producido un error, el onError de llamadas de proveedor, proporcionando el parámetro de contexto se pasa a la función de proveedor por el controlador y un mensaje de error con parámetros adicionales opcionales para dar formato. El proveedor puede llamar a esta función varias veces para enviar varios mensajes de error consecutivas en la invocación de una función de proveedor. Por ejemplo:

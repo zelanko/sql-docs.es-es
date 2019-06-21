@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: dc73d1c3-e756-43af-b1fc-ac438cbd0965
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bf42996fac6ac5f48a41311aa072866ebd79f8b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d4ae744a27156a59c926f2181ca9aec1146e8cd7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801660"
 ---
 # <a name="execute-method-javalangstring-int"></a>Método execute (java.lang.String, int[])
 
@@ -38,7 +38,7 @@ public final boolean execute(
 #### <a name="parameters"></a>Parámetros
 *sql*
 
-Un objeto **String** que contiene la instrucción SQL.
+Un valor **String** que contiene una instrucción SQL.
 
 *columnIndexes*
 
@@ -51,9 +51,9 @@ Una matriz de valores **int** que indica que los índices de columna de las clav
 [SQLServerException](./sqlserverexception-class.md)
 
 ## <a name="remarks"></a>Notas
-Este método execute se especifica mediante el método execute en la interfaz java.sql.Statement.
+El método execute especifica este método execute en la interfaz java.sql.Statement.
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Método Execute &#40;SQLServerStatement&#41;](./execute-method-sqlserverstatement.md)
 

@@ -12,21 +12,21 @@ ms.assetid: ac7ab037-300c-499d-89d4-756f8d8e99f6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 8cf0b0008efb05d15f7e34827ab0f80855fb526d
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506578"
 ---
 # <a name="configure-available-memory-for-report-server-applications"></a>Configurar la memoria disponible para las aplicaciones del servidor de informes
  Aunque [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] puede usar toda la memoria disponible, puede invalidar el comportamiento predeterminado configurando un límite superior en la cantidad total de los recursos de memoria asignados a las aplicaciones de servidor [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . También puede establecer umbrales que hacen que el servidor de informes cambie la manera de asignar prioridades y procesa las solicitudes dependiendo de si la presión de memoria es baja, media o alta. En niveles bajos de presión de memoria, el servidor de informes responde concediendo una prioridad ligeramente superior al procesamiento de informes a petición o interactivo. En los niveles altos de presión de memoria, el servidor de informes usa varias técnicas para seguir siendo operativo usando los recursos limitados que están disponibles para él.  
   
- En este tema se describe la configuración que puede especificar y la manera en la que el servidor responde cuando la presión de memoria se convierte en un factor en las solicitudes de procesamiento.  
+ En este artículo se describe la configuración que puede especificar y la manera en la que el servidor responde cuando la presión de memoria se convierte en un factor en las solicitudes de procesamiento.  
   
 ## <a name="memory-management-policies"></a>Directivas de administración de memoria  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] responde a las restricciones de recursos del sistema ajustando la cantidad de memoria que se asigna a aplicaciones concretas y tipos de solicitudes de procesamiento. Entre las aplicaciones que se ejecutan en el servicio del servidor de informes y que están sujetas a la administración de memoria se incluyen:  
   
--   El Administrador de informes, que es una aplicación front-end web para el servidor de informes.  
+-   El portal web, que es una aplicación front-end web para el servidor de informes.  
   
 -   El servicio web del servidor de informes, que se usa para el procesamiento de informes interactivo y las solicitudes a petición.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "66506578"
 > [!NOTE]  
 >  Las configuraciones**MemoryLimit** y **MaximumMemoryLimit** están obsoletas en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y later versions. Si ha actualizado una instalación existente o está usando un archivo RSReportServer.config que incluye dicha configuración, el servidor de informes ya no leerá dichos valores.  
   
-#### <a name="example-of-memory-configuration-settings"></a>Ejemplo de los valores de configuración de memoria  
+#### <a name="example-of-memory-configuration-settings"></a>Ejemplo de las opciones de configuración de memoria  
  El ejemplo siguiente muestra los valores de configuración para un equipo del servidor de informes que usa valores de configuración de memoria personalizados. Si desea agregar **WorkingSetMaximum** o **WorkingSetMinimum**, debe escribir los elementos y los valores en el archivo RSReportServer.config. Ambos valores son enteros que expresan kilobytes de RAM que está asignando a las aplicaciones de servidor. El ejemplo siguiente especifica que la asignación de memoria total para las aplicaciones del servidor de informes no puede superar los 4 gigabytes. Si el valor predeterminado de **WorkingSetMinimum** es aceptable (el 60 % de **WorkingSetMaximum**), puede omitirlo y especificar únicamente **WorkingSetMaximum** en el archivo RSReportServer.config. Este ejemplo incluye **WorkingSetMinimum** para mostrar cómo aparecería si deseara agregarlo:  
   
 ''' Los archivos de configuración <MemorySafetyMargin>80</MemorySafetyMargin>  

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 8472d839-8124-4a62-a83c-7e771b0d4962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0f435b3f2308557654259395e296c07956a2c337
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 6452fc506814cdfdeee4f61085ec9a1ee0cededa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801490"
 ---
 # <a name="cursor-types-sqlsrv-driver"></a>Tipos de cursor (controlador SQLSRV)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -122,7 +122,7 @@ sqlsrv_close( $conn );
 ## <a name="client-side-cursors-and-the-sqlsrv-driver"></a>Los cursores del lado cliente y el controlador SQLSRV  
 Los cursores del lado cliente son una característica agregada en la versión 3.0 de la [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] que permite almacenar en caché un completo conjunto de resultados en memoria. Recuento de filas está disponible después de la consulta se ejecuta cuando se utiliza un cursor de cliente.  
   
-Los cursores de cliente deben usarse para conjuntos de resultados de tamaño pequeño a mediano. Usar cursores de servidor para grandes conjuntos de resultados.  
+Los cursores del lado cliente deben usarse para conjuntos de resultados de tamaño pequeño a mediano. Usar cursores de servidor para grandes conjuntos de resultados.  
   
 Una consulta devolverá false si el búfer no es suficientemente grande para contener el conjunto de resultados completo. Puede aumentar el tamaño del búfer hasta el límite de memoria PHP.  
   

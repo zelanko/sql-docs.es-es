@@ -14,13 +14,13 @@ helpviewer_keywords:
 ms.assetid: f95cdbce-e7c2-4e56-a9f7-8fa3a920a125
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db4df94d04a27df5715abe4bf5e4947850c687e4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+manager: jroth
+ms.openlocfilehash: 1f3e311b0f7d27b6a0ca2d12ae510960859ae80d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125845"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797513"
 ---
 # <a name="connecting-to-sql-server"></a>Conectarse a SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -53,7 +53,7 @@ Server = [protocol:]server[,port]
 #  
 ```  
 
-También puede especificar el protocolo y el puerto para conectarse al servidor. Por ejemplo, **Server = tcp:**_servername_**, 12345**. Tenga en cuenta que es el único protocolo compatible con los controladores de Linux y macOS `tcp`.
+También puede especificar el protocolo y el puerto para conectarse al servidor. Por ejemplo, **Server = tcp:** _servername_ **, 12345**. Tenga en cuenta que es el único protocolo compatible con los controladores de Linux y macOS `tcp`.
 
 Para conectarse a una instancia con nombre en un puerto estático, use <b>Server=</b>*servername*,**port_number**. No se admite la conexión a un puerto dinámico.  
 

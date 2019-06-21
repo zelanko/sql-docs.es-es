@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 16ff77f9-7928-415c-abf6-97ed59e3e396
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 75d36097c8fad4f15b06497561ff52dbfcea19ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 34ad7079a11823343cfd8e8ae37adc9332a12a2b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47827853"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800333"
 ---
 # <a name="setnull-method-javalangstring-int-javalangstring"></a>Método setNull (java.lang.String, int, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,13 +42,13 @@ public void setNull(java.lang.String sCol,
   
  Un objeto **String** que contiene el nombre de parámetro.  
   
- *nLas*  
+ *nType*  
   
  Un código de tipo JDBC que es definido por java.sql.Types.  
   
  *sTypeName*  
   
- Un objeto **String** que indica el nombre completo del parámetro que se establece.  
+ Un valor **String** que indica el nombre completo del parámetro que se establece.  
   
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
@@ -56,7 +56,7 @@ public void setNull(java.lang.String sCol,
 ## <a name="remarks"></a>Notas  
  El método setNull especifica este método setNull en la interfaz java.sql.CallableStatement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setNull &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/setnull-method-sqlservercallablestatement.md)   
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  

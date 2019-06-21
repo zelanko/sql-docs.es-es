@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 157882dd-1a96-4501-a895-46e88a49266e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5a38ff98a8df384e16fabf93a4eae6afc57ddc8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: bfa9190cc945a6df49582b47aa52815dd331bcd3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795630"
 ---
 # <a name="setclob-method-int-javaioreader-long"></a>Método setClob (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -51,7 +51,7 @@ public final void setClob(int parameterIndex,
 ## <a name="exceptions"></a>Excepciones  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método setClob &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setclob-method-sqlserverpreparedstatement.md)   
  [Miembros SQLServerPreparedStatement](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)  
   

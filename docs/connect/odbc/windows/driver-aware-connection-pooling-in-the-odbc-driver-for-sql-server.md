@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56cb2a6a28e60aa34a2bb74d9d7c506f7d3b9523
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403180"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797799"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>Agrupación de conexiones dependientes del controlador ODBC para SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -49,8 +49,8 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`AnsiNPW`|Sí|Sí|
     |`App`|Sí|Sí|
     |`ApplicationIntent`|Sí|Sí|  
-    |`Authentication`|Sí|no|
-    |`ColumnEncryption`|Sí|no|
+    |`Authentication`|Sí|No|
+    |`ColumnEncryption`|Sí|No|
     |`Database`|Sí|Sí|
     |`Encrypt`|Sí|Sí|  
     |`Failover_Partner`|Sí|Sí|
@@ -73,11 +73,11 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`SQL_ATTR_CURRENT_CATALOG`|Sí|Sí|
     |`SQL_ATTR_PACKET_SIZE`|Sí|Sí|
     |`SQL_COPT_SS_ANSI_NPW`|Sí|Sí|
-    |`SQL_COPT_SS_ACCESS_TOKEN`|Sí|no|
-    |`SQL_COPT_SS_AUTHENTICATION`|Sí|no|
+    |`SQL_COPT_SS_ACCESS_TOKEN`|Sí|No|
+    |`SQL_COPT_SS_AUTHENTICATION`|Sí|No|
     |`SQL_COPT_SS_ATTACHDBFILENAME`|Sí|Sí|
     |`SQL_COPT_SS_BCP`|Sí|Sí|
-    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sí|no|
+    |`SQL_COPT_SS_COLUMN_ENCRYPTION`|Sí|No|
     |`SQL_COPT_SS_CONCAT_NULL`|Sí|Sí|
     |`SQL_COPT_SS_ENCRYPT`|Sí|Sí|
     |`SQL_COPT_SS_FAILOVER_PARTNER`|Sí|Sí|
@@ -88,7 +88,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`SQL_COPT_SS_SERVER_SPN`|Sí|Sí|
     |`SQL_COPT_SS_TRUST_SERVER_CERTIFICATE`|Sí|Sí|
     |`SSPROP_AUTH_REPL_SERVER_NAME`|Sí|Sí|
-    |`SQL_COPT_SS_TNIR`|Sí|no|
+    |`SQL_COPT_SS_TNIR`|Sí|No|
  
 -   El controlador puede restablecer y ajustar los siguientes atributos y palabras clave de conexión sin realizar una llamada de red adicional. El controlador restablece estos parámetros para garantizar que la conexión no contenga información incorrecta.  
   
@@ -127,7 +127,7 @@ Si uno de los siguientes id. de atributo de conexión o palabras clave de cadena
     |`SQL_COPT_SS_USER_DATA`|  Sí|Sí|
     |`SQL_COPT_SS_WARN_ON_CP_ERROR`|Sí|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Microsoft ODBC Driver for SQL Server en Windows](../../../connect/odbc/windows/microsoft-odbc-driver-for-sql-server-on-windows.md)  
   
   

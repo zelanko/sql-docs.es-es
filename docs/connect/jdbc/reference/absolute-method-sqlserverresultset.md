@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b0572ed756bd8b347c01e05168873ac543a0ea7e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66783562"
 ---
 # <a name="absolute-method-sqlserverresultset"></a>Método absolute (SQLServerResultSet)
@@ -47,7 +47,7 @@ public boolean absolute(int row)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getDate especifica este método getDate en la interfaz java.sql.ResultSet.  
+ El método absolute especifica este método absolute en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

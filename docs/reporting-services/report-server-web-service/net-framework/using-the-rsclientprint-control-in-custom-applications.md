@@ -11,14 +11,14 @@ helpviewer_keywords:
 - custom printing [Reporting Services]
 - client-side printing
 ms.assetid: 8c0bdd18-8905-4e22-9774-a240fc81a8a7
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: a12d08348a88529efdd84fd1ae5dab3c64d7d1c1
-ms.sourcegitcommit: 9ece10c2970a4f0812647149d3de2c6b75713e14
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: b0da6d086754b63a2d796c4f7ff8e1b7fd2d2cad
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51814188"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63249809"
 ---
 # <a name="using-the-rsclientprint-control-in-custom-applications"></a>Usar el control RSClientPrint en aplicaciones personalizadas
   El control ActiveX de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] **RSPrintClient** proporciona impresión del lado cliente para los informes mostrados en el Visor HTML. Proporciona un cuadro de diálogo **Imprimir** para que un usuario pueda iniciar un trabajo de impresión, obtener una vista previa de un informe, especificar las páginas que se van a imprimir y cambiar los márgenes. Durante una operación de impresión del lado cliente, el servidor de informes representa el informe en la extensión de representación en imágenes (EMF) y utiliza las capacidades de impresión del sistema operativo para crear el trabajo de impresión y enviarlo a una impresora.  
@@ -103,7 +103,7 @@ ms.locfileid: "51814188"
 |Argumento|E/S|Tipo|Descripción|  
 |--------------|----------|----------|-----------------|  
 |ServerPath|Entrada|String|Especifica el directorio virtual del servidor de informes (por ejemplo, `https://adventure-works/reportserver`).|  
-|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo, "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
+|ReportPathParameters|Entrada|String|Especifica el nombre completo para obtener acceso al informe en el espacio de nombres de carpetas del servidor de informes, incluidos los parámetros. Los informes se recuperan mediante el acceso a una dirección URL. Por ejemplo: "/AdventureWorks Sample Reports/Employee Sales Summary&EmpID=1234"|  
 |ReportName|Entrada|String|Nombre corto del informe (en el ejemplo anterior, el nombre corto es Employee Sales Summary). Aparece en el cuadro de diálogo Imprimir y en la cola de impresión.|  
   
 ### <a name="example"></a>Ejemplo  
@@ -139,7 +139,7 @@ ms.locfileid: "51814188"
   
  `</BODY>`  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Imprimir informes desde un explorador usando el control de impresión &#40;Generador de informes y SSRS&#41;](../../../reporting-services/report-builder/print-reports-from-a-browser-with-the-print-control-report-builder-and-ssrs.md)   
  [Imprimir informes &#40;Generador de informes y SSRS&#41;](../../../reporting-services/report-builder/print-reports-report-builder-and-ssrs.md)   
  [Configuración de la información del dispositivo de imagen](../../../reporting-services/image-device-information-settings.md)  

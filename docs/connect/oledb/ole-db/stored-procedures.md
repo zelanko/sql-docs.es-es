@@ -15,13 +15,13 @@ helpviewer_keywords:
 - stored procedures [OLE DB], about OLE DB stored procedures
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 7d9a26049a09f45ff7588324d8c0421c4287db2b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 64654f5ba2f4356a4bb6efad5455ca4610689f3b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47767203"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795890"
 ---
 # <a name="stored-procedures"></a>Procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "47767203"
   
 -   [Llamar a un procedimiento almacenado &#40;OLE DB&#41;](../../oledb/ole-db/stored-procedures-calling.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Programación del controlador OLE DB para SQL Server](../../oledb/ole-db/oledb-driver-for-sql-server-programming.md)  
   
   

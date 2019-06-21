@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: c02f6942-0484-4567-a78e-fe8aa2053536
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c030a6a3d2ba5caad755abfd92a5cf1adb01cc25
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5a582a95223fd47863a6e42b8426ccfb13fcda59
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748513"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796076"
 ---
 # <a name="sqlsrvfieldmetadata"></a>sqlsrv_field_metadata
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -74,12 +74,12 @@ En la tabla siguiente se proporciona más información sobre las claves de cada 
 |NVARCHAR|SQL_WVARCHAR (-9)|||0 < *n* < 4000 <sup>1</sup>|  
 |REAL|SQL_REAL (7)|4/4|||  
 |smalldatetime|SQL_TYPE_TIMESTAMP (93)|16/16|0/0||  
-|SMALLINT|SQL_SMALLINT (5)|||2 bytes|  
+|SMALLINT|SQL_SMALLINT (5)|||2 bytes|  
 |Smallmoney|SQL_DECIMAL (3)|10/10|4/4||  
 |texto|SQL_LONGVARCHAR (-1)|||2 GB|  
 |time|SQL_SS_TIME2 (-154)|8/16|0/7||  
-|TIMESTAMP|SQL_BINARY (-2)|||8 bytes|  
-|tinyint|SQL_TINYINT (-6)|||1 byte|  
+|TIMESTAMP|SQL_BINARY (-2)|||8 bytes|  
+|TINYINT|SQL_TINYINT (-6)|||1 byte|  
 |udt|SQL_SS_UDT (-151)|||variable|  
 |UNIQUEIDENTIFIER|SQL_GUID (-11)|||16|  
 |varbinary|SQL_VARBINARY (-3)|||0 < *n* < 8000 <sup>1</sup>|  
@@ -129,7 +129,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
 
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)  

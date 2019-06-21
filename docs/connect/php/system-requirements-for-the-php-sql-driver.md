@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 5db4b75f-c605-4785-9560-399a533c0fc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d53a3233d2e2af6aa9806cdea06b2a203e31bf89
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+manager: jroth
+ms.openlocfilehash: 0cea4c62c7976e1f6d84dc046abc1046179ef125
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658419"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803908"
 ---
 # <a name="system-requirements-for-the-microsoft-drivers-for-php-for-sql-server"></a>Requisitos del sistema para los controladores de Microsoft para PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -58,7 +58,7 @@ Se requiere la versión correcta de Microsoft ODBC Driver for SQL Server en el e
 
 Si va a descargar la versión de Windows del controlador en una versión de 64 bits de Windows, el programa de instalación ODBC 64-bit instala a controladores ODBC de 32 bits y 64 bits. Si usa una versión de 32 bits de Windows, utilice ODBC x86 instalador. En las plataformas que no sean Windows, versiones sólo de 64 bits del controlador están disponibles.
 
-|PHP para la versión del controlador de SQL Server&#8594;<br />&#8595;Versión del controlador ODBC|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
+|PHP para la versión del controlador de SQL Server&#8594;<br />Versión del controlador ODBC &#8595;|5.6|5.3|5.2|4.3|4.0|3.2|3.1|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |ODBC Driver 17+ |S|S|S| | | | |
 |ODBC Driver 13.1|S|S|S|S|S| | |

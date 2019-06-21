@@ -17,13 +17,13 @@ helpviewer_keywords:
 - rowsets [OLE DB], schema
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: b09e62a5057a948e2a12bb6272c9a0e431ba7507
-ms.sourcegitcommit: a251adad8474b477363df6a121431b837f22bf77
+manager: jroth
+ms.openlocfilehash: 575ce4f2522299be723be159bb87e19f8fff1a1d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47864163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66795962"
 ---
 # <a name="schema-rowsets---distributed-query-support"></a>Conjuntos de filas de esquema: compatibilidad con consultas distribuidas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47864163"
 
   Para admitir consultas distribuidas de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la interfaz **IDBSchemaRowset** del controlador OLE DB para SQL Server devuelve metadatos en servidores vinculados.  
   
- Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir los resultados del conjunto de filas de esquema por catálogo, el controlador OLE DB para SQL Server reconoce un nombre de dos partes que contiene el nombre del servidor vinculado y del catálogo. Para los conjuntos de filas de esquema que figuran en la siguiente tabla, especificar un nombre de catálogo de dos partes, como _servidor\_vinculado_**.**_catálogo_ restringe los resultados al catálogo aplicable del servidor con nombre vinculado.  
+ Si la propiedad SSPROP_QUOTEDCATALOGNAMES de DBPROPSET_SQLSERVERSESSION es VARIANT_TRUE, puede especificarse un identificador entrecomillado para el nombre del catálogo (por ejemplo, "my.catalog"). Al restringir los resultados del conjunto de filas de esquema por catálogo, el controlador OLE DB para SQL Server reconoce un nombre de dos partes que contiene el nombre del servidor vinculado y del catálogo. Para los conjuntos de filas de esquema que figuran en la siguiente tabla, especificar un nombre de catálogo de dos partes, como _servidor\_vinculado_ **.** _catálogo_ restringe los resultados al catálogo aplicable del servidor con nombre vinculado.  
   
 |Conjunto de filas de esquema|Restricción de catálogo|  
 |-------------------|-------------------------|  
@@ -50,8 +50,8 @@ ms.locfileid: "47864163"
  
  El controlador OLE DB para SQL Server define el conjunto de filas de esquema LINKEDSERVERS y devuelve una lista de los orígenes de datos OLE DB registrados como servidores vinculados.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Compatibilidad con conjuntos de filas de esquema &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowset-support-ole-db.md)   
- [Conjunto de filas LINKEDSERVERS &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
+ [LINKEDSERVERS Rowset &#40;OLE DB&#41;](../../oledb/ole-db/schema-rowsets-linkedservers-rowset.md)  
   
   

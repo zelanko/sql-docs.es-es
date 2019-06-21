@@ -10,11 +10,11 @@ author: david-puglielli
 ms.author: v-dapugl
 manager: v-hakaka
 ms.openlocfilehash: a2361c8a2e8cbc709d50a9139678a08e2e850e2d
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305923"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62522035"
 ---
 # <a name="idle-connection-resiliency"></a>Resistencia de conexión inactiva
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -25,8 +25,8 @@ Resistencia de la conexión se implementa con dos palabras clave de conexión qu
 
 |Palabra clave|Valores|Valor predeterminado|Descripción|
 |-|-|-|-|
-|**ConnectRetryCount**| Número entero comprendido entre 0 y 255 (ambos inclusive)|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para restablecer una conexión cuando ha interrumpido. Un valor de 0 significa que no se intentará ninguna reconexión.|
-|**ConnectRetryInterval**| Número entero comprendido entre 1 y 60 (inclusive)|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente al detectar una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de intentarlo de nuevo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
+|**ConnectRetryCount**| Un entero comprendido entre 0 y 255, ambos incluidos|1|El número máximo de intentos para restablecer una conexión interrumpida antes de desistir. De forma predeterminada, se realiza un intento único para restablecer una conexión cuando ha interrumpido. Un valor de 0 significa que no se intentará ninguna reconexión.|
+|**ConnectRetryInterval**| Un entero comprendido entre 1 y 60, ambos incluidos|1| El tiempo, en segundos, entre los intentos para restablecer una conexión. La aplicación intentará volver a conectarse inmediatamente al detectar una conexión interrumpida y, a continuación, esperará **ConnectRetryInterval** segundos antes de intentarlo de nuevo. Esta palabra clave se omite si **ConnectRetryCount** es igual a 0.
 
 Si el producto de **ConnectRetryCount** multiplicado por **ConnectRetryInterval** es mayor que **LoginTimeout**, a continuación, el cliente dejará de intentar conectarse una vez  **LoginTimeout** se alcanza; en caso contrario, continuará volver a conectar hasta **ConnectRetryCount** se alcanza.
 

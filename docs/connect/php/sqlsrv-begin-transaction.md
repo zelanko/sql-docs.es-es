@@ -17,18 +17,18 @@ helpviewer_keywords:
 ms.assetid: 0b223bc8-4047-4329-9cbf-d350ab0fb886
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a7387890ef61348ed473bee7928a4bebc38d882
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 9f01ffdced922414f83c18a86ff3d4d2c059e44d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618763"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797031"
 ---
 # <a name="sqlsrvbegintransaction"></a>sqlsrv_begin_transaction
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-Inicia una transacción de una conexión especificada. La transacción actual incluye en la conexión especificada todas las instrucciones que se han ejecutado después de la llamada a **sqlsrv_begin_transaction** y antes de realizar cualquier llamada a [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) o [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
+Inicia una transacción de una conexión especificada. La transacción actual incluye todas las instrucciones de la conexión especificada que se ejecutaron después de llamar a **sqlsrv_begin_transaction** y antes de llamar a [sqlsrv_rollback](../../connect/php/sqlsrv-rollback.md) o [sqlsrv_commit](../../connect/php/sqlsrv-commit.md).  
   
 > [!NOTE]  
 > [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] se encuentra de forma predeterminada en modo de confirmación automática. Es decir, todas las consultas se confirman de forma automática cuando se realizan correctamente, salvo que se hayan designado como parte de una transacción explícita mediante **sqlsrv_begin_transaction**.  
@@ -124,7 +124,7 @@ Con el fin de resaltar el comportamiento de las transacciones, en el ejemplo ant
 > [!NOTE]  
 > No utilice instrucciones de Transact-SQL incrustadas para realizar transacciones. Por ejemplo, para iniciar una transacción, no ejecute una instrucción con "BEGIN TRANSACTION" como consulta de Transact-SQL. No se puede garantizar que las transacciones se comporten de la forma esperada cuando se usan instrucciones de Transact-SQL insertadas para realizar transacciones.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Realización de transacciones](../../connect/php/how-to-perform-transactions.md)

@@ -1,5 +1,5 @@
 ---
-title: Los miembros de SQLServerResource | Microsoft Docs
+title: Miembros SQLServerResource | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 66f30e853c8673fd020dd08239c34b0fd2c3ad77
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 427bee6c3a70238dcfc1abede9d6afb0b86aa088
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814573"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801539"
 ---
 # <a name="sqlserverresource-members"></a>Miembros de SQLServerResource
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "47814573"
 |java.util.ResourceBundle|getBundle, getLocale, getObject, getString, getStringArray, setParent|  
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md)  
   
   

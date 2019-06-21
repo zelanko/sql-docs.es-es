@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 276bd9c1-9329-4fc9-9622-ed673c83a12d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49bd0845e6bebf1365ab8c26cb48bda2a92a6b4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: d1cbd1194833561719ec08a042f1dacdac7d508c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840173"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803645"
 ---
 # <a name="cancel-method-sqlserverstatement"></a>Método cancel (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,11 +39,11 @@ public final void cancel()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método de cancelación especificado por el método cancel en la interfaz java.sql.Statement.  
+ El método cancel especifica este método cancel en la interfaz java.sql.Statement.  
   
  Cuando se ejecuta una instrucción que genera un conjunto de resultados grande de solo avance y solo lectura, es posible que únicamente esté interesado en algún conjunto inicial de filas en el conjunto de resultados que se ha devuelto. En este caso, la aplicación podría llamar al método [cancel](../../../connect/jdbc/reference/cancel-method-sqlserverstatement.md) del objeto de instrucción asociado antes de cerrar el conjunto de resultados con el fin de minimizar el tiempo de procesamiento necesario para descartar las filas innecesarias restantes. Recomendamos comparar los inconvenientes entre el tiempo de procesamiento que se ahorraría y el tiempo y el viaje de ida y vuelta al servidor que se necesita para cancelar la ejecución a la hora de decidir si utilizar o no esta técnica.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  
   

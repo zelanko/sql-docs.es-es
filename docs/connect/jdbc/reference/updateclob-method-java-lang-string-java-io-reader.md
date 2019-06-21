@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 338a2bf2-b110-469d-ad08-a0f2bbefcb88
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f58bee8fa6bc36ea7bae17ee6f432a26b7c288ce
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 541ec983b9564d9008724701564b7154102231cb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799083"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801696"
 ---
 # <a name="updateclob-method-javalangstring-javaioreader"></a>Método updateClob (java.lang.String, java.io.Reader)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -44,9 +44,9 @@ public void updateClob(java.lang.String columnLabel,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método updateClob especificado por el método updateClob en la interfaz java.sql.ResultSet.  
+ El método updateClob especifica este método updateClob en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método updateClob &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateclob-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  

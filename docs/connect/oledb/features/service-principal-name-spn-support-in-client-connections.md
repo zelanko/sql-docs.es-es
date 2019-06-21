@@ -14,13 +14,13 @@ helpviewer_keywords:
 - SPNs [SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 125b3de50e127e4b1e7d567da58b71f58e2f72aa
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+manager: jroth
+ms.openlocfilehash: 9055af8a085b6566a542ed44ab6b13bda62e0c3f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980291"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802929"
 ---
 # <a name="service-principal-name-spn-support-in-client-connections"></a>Compatibilidad con Nombre de la entidad de seguridad del servicio (SPN) en conexiones cliente
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53980291"
 |Escenario|Descripción|  
 |--------------|-----------------|  
 |Una aplicación heredada no especifica ningún SPN.|Este escenario de compatibilidad garantiza que no habrá ningún cambio de comportamiento en las aplicaciones desarrolladas para versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Si no se especifica ningún SPN, la aplicación se basa en los SPN generados y no tiene ningún conocimiento del método de autenticación utilizado.|  
-|Una aplicación cliente que usa la versión actual del controlador OLE DB para SQL Server especifica un SPN en la cadena de conexión como un usuario de dominio o cuenta de equipo, como un SPN específico de la instancia o como una cadena definida por el usuario.|La palabra clave **ServerSPN** puede usarse en una cadena de conexión, inicialización o proveedor para hacer lo siguiente:<br /><br /> - Especificar la cuenta usada por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para una conexión. Esto simplifica el acceso a la autenticación Kerberos. Si hay presente un centro de distribución de claves Kerberos (KDC) y se especifica la cuenta correcta, es más probable que se use la autenticación Kerberos que la autenticación NTLM. El KDC reside normalmente en el mismo equipo que el controlador de dominio.<br /><br /> - Especificar un SPN para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se generan dos SPN predeterminados que pueden usarse para este propósito. No obstante, no se garantiza que estas claves estén presentes en Active Directory, por lo que en esta situación no se garantiza la autenticación Kerberos.<br /><br /> - Especificar un SPN que se usará para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ésta puede ser cualquier cadena definida por el usuario que se asigne a la cuenta de servicio. En este caso, la clave debe registrarse manualmente en el KDC y debe cumplir las reglas de un SPN definido por el usuario.<br /><br /> La palabra clave **FailoverPartnerSPN** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error. El intervalo de valores de cuenta y de clave de Active Directory es el mismo que los valores que pueden especificarse para el servidor principal.|  
+|Una aplicación cliente que usa la versión actual del controlador OLE DB para SQL Server especifica un SPN en la cadena de conexión como un usuario de dominio o cuenta de equipo, como un SPN específico de la instancia o como una cadena definida por el usuario.|La palabra clave **ServerSPN** puede usarse en una cadena de conexión, inicialización o proveedor para hacer lo siguiente:<br /><br /> \- Especificar la cuenta usada por la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para una conexión. Esto simplifica el acceso a la autenticación Kerberos. Si hay presente un centro de distribución de claves Kerberos (KDC) y se especifica la cuenta correcta, es más probable que se use la autenticación Kerberos que la autenticación NTLM. El KDC reside normalmente en el mismo equipo que el controlador de dominio.<br /><br /> \- Especificar un SPN para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se generan dos SPN predeterminados que pueden usarse para este propósito. No obstante, no se garantiza que estas claves estén presentes en Active Directory, por lo que en esta situación no se garantiza la autenticación Kerberos.<br /><br /> \- Especificar un SPN que se usará para buscar la cuenta de servicio para la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Ésta puede ser cualquier cadena definida por el usuario que se asigne a la cuenta de servicio. En este caso, la clave debe registrarse manualmente en el KDC y debe cumplir las reglas de un SPN definido por el usuario.<br /><br /> La palabra clave **FailoverPartnerSPN** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error. El intervalo de valores de cuenta y de clave de Active Directory es el mismo que los valores que pueden especificarse para el servidor principal.|  
 |Una aplicación OLE DB especifica un SPN como una propiedad de inicialización del origen de datos para el servidor principal o para un servidor del asociado de conmutación por error.|La propiedad de conexión **SSPROP_INIT_SERVER_SPN** del conjunto de propiedades **DBPROPSET_SQLSERVERDBINIT** puede usarse para especificar el SPN de una conexión.<br /><br /> La propiedad de conexión **SSPROP_INIT_FAILOVER_PARTNER_SPN** de **DBPROPSET_SQLSERVERDBINIT** puede usarse para especificar el SPN para el servidor del asociado de conmutación por error.|   
 |El usuario especifica un SPN para un servidor o servidor de asociado de conmutación por error en un cuadro de diálogo **Vínculo de datos** o **Inicio de sesión** de OLE DB.|El SPN puede especificarse en un cuadro de diálogo **Vínculo de datos** o **Inicio de sesión** .|   
 |Una aplicación OLE DB determina el método de autenticación que se usa para establecer una conexión.|Cuando una conexión se ha abierto correctamente, una aplicación puede consultar la propiedad de conexión **SSPROP_AUTHENTICATION_METHOD** en el conjunto de propiedades **DBPROPSET_SQLSERVERDATASOURCEINFO** para determinar qué método de autenticación se ha utilizado. Entre los valores se incluyen **NTLM** y **Kerberos**.|  
@@ -70,18 +70,18 @@ ms.locfileid: "53980291"
  El nuevo comportamiento de conexión lo implementa el cliente; por lo tanto, no es específico de una versión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
 ## <a name="linked-servers-and-delegation"></a>Servidores vinculados y delegación  
- Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacer esto son las mismas de especificar los SPN en las cadenas de conexión de cliente: Es más sencillo y confiable establecer conexiones que usen la autenticación Kerberos.  
+ Cuando se crean servidores vinculados, el parámetro **@provstr** de [sp_addlinkedserver](../../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md) puede usarse para especificar los SPN del servidor y del asociado de conmutación por error. Las ventajas de hacerlo son las mismas que cuando los SPN se especifican en las cadenas de conexión del cliente: resulta más sencillo y confiable establecer conexiones que usan la autenticación Kerberos.  
   
  La delegación con servidores vinculados requiere la autenticación Kerberos.  
   
 ## <a name="management-aspects-of-spns-specified-by-applications"></a>Aspectos de la administración de los SPN especificados por aplicaciones  
  A la hora de decidir si debe especificar los SPN en una aplicación (a través de cadenas de conexión) o mediante programación a través de propiedades de conexión (en lugar de confiar en el proveedor predeterminado que generó los SPN), tenga en cuenta los factores siguientes:  
   
--   Seguridad: ¿revela el SPN especificado información protegida?  
+-   Seguridad: ¿el SPN especificado revela información protegida?  
   
--   Confiabilidad: para habilitar el uso de SPN predeterminados, la cuenta de servicio en la que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe tener suficientes privilegios para actualizar Active Directory en el KDC.  
+-   Confiabilidad: para habilitar el uso de los SPN predeterminados, la cuenta de servicio en la que se ejecuta la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] debe tener suficientes privilegios para actualizar Active Directory en el KDC.  
   
--   Comodidad y transparencia de ubicación: ¿cómo afectará a los SPN de una aplicación que su base de datos se mueva a una instancia distinta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
+-   Comodidad y transparencia de ubicación: ¿cómo afectará a los SPN de una aplicación que su base de datos se mueva a una instancia distinta de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ? Esto se aplica tanto al servidor principal como a su asociado de conmutación por error si se usa la creación de reflejo de la base de datos. Si un servidor cambia, ¿significa que deben modificarse los SPN?, ¿cómo afectará esto a las aplicaciones?, ¿se administrarán los cambios?  
   
 ## <a name="specifying-the-spn"></a>Especificar el SPN  
  Un SPN puede especificarse en cuadros de diálogo y en el código. En esta sección se muestra cómo especificar un SPN.  

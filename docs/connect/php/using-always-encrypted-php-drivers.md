@@ -10,11 +10,11 @@ author: v-kaywon
 ms.author: v-kaywon
 manager: mbarwin
 ms.openlocfilehash: 5c82c32922712b377fd732b6745b1761e9f32a82
-ms.sourcegitcommit: afc0c3e46a5fec6759fe3616e2d4ba10196c06d1
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/08/2019
-ms.locfileid: "55890006"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63126762"
 ---
 # <a name="using-always-encrypted-with-the-php-drivers-for-sql-server"></a>Uso de Always Encrypted con los controladores PHP para SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "55890006"
  
 ## <a name="introduction"></a>Introducción
 
-Este artículo proporciona información sobre cómo desarrollar aplicaciones de PHP con [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y [PHP Driver for SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
+En este artículo se proporciona información sobre cómo desarrollar aplicaciones PHP mediante [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) y los [controladores PHP para SQL Server](../../connect/php/Microsoft-php-driver-for-sql-server.md).
 
 Always Encrypted permite a las aplicaciones cliente cifrar la información confidencial y nunca revelar los datos ni las claves de cifrado en SQL Server o Azure SQL Database. Un controlador habilitado para Always Encrypted, como ODBC Driver for SQL Server, cifra y descifra de manera transparente la información confidencial en la aplicación cliente. El controlador determina automáticamente qué parámetros de consulta corresponden a columnas de bases de datos confidenciales (protegidas mediante Always Encrypted) y cifra los valores de esos parámetros antes de pasar los datos a SQL Server o Azure SQL Database. De forma similar, el controlador descifra de manera transparente los datos que se han recuperado de las columnas de bases de datos cifradas de los resultados de la consulta. Para obtener más información, vea [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md). Los controladores de PHP para SQL Server usan el controlador ODBC para SQL Server cifrar datos confidenciales.
 
 ## <a name="prerequisites"></a>Prerequisites
 
- -   Configure Always Encrypted en su base de datos. Esta configuración implica el aprovisionamiento de las claves Always Encrypted y la configuración del cifrado para las columnas de las bases de datos seleccionadas. Si todavía no tiene una base de datos configurada con Always Encrypted, siga las instrucciones de [Introducción a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En concreto, la base de datos debe contener las definiciones de metadatos para una clave maestra de columna (CMK), una clave de cifrado de columna (CEK) y una tabla que contiene una o varias columnas cifradas mediante ese CEK.
+ -   Configure Always Encrypted en su base de datos. Esta configuración implica el aprovisionamiento de las claves Always Encrypted y la configuración del cifrado para las columnas de las bases de datos seleccionadas. Si todavía no tiene una base de datos configurada con Always Encrypted, siga las instrucciones de [Introducción a Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md#getting-started-with-always-encrypted). En concreto, la base de datos debe contener las definiciones de metadatos para una clave maestra de columna (CMK), una clave de cifrado de columna (CEK) y una tabla que contiene una o varias columnas cifradas mediante dicha CEK.
  -   Asegúrese de que el controlador ODBC para SQL Server versión 17 o posterior está instalado en el equipo de desarrollo. Para obtener más información, consulte [ODBC Driver para SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md).
 
 ## <a name="enabling-always-encrypted-in-a-php-application"></a>Habilitar Always Encrypted en una aplicación PHP
@@ -49,24 +49,24 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-Habilitar Always Encrypted no es suficiente para el cifrado o descifrado se realice correctamente; También deberá asegurarse de que:
- -   La aplicación tiene los permisos de base de datos VIEW ANY COLUMN MASTER KEY DEFINITION y VIEW ANY COLUMN ENCRYPTION KEY DEFINITION, que se requieren para tener acceso a los metadatos sobre las claves Always Encrypted de la base de datos. Para obtener más información, consulte [permiso de base de datos](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
- -   La aplicación puede tener acceso a la CMK que protege el CEK para las columnas cifradas consultadas. Este requisito depende de que el proveedor de almacén de claves que almacena la CMK. Para obtener más información, consulte [trabajar con almacenes de claves maestras de columna](#working-with-column-master-key-stores).
+Habilitar Always Encrypted no es suficiente para que el cifrado o el descifrado se realicen correctamente; también debe asegurarse de que:
+ -   La aplicación tiene los permisos de base de datos VIEW ANY COLUMN MASTER KEY DEFINITION y VIEW ANY COLUMN ENCRYPTION KEY DEFINITION, que se requieren para tener acceso a los metadatos sobre las claves Always Encrypted de la base de datos. Para más información, vea [Permiso para la base de datos](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions).
+ -   La aplicación puede acceder a la CMK que protege las CEK de las columnas cifradas consultadas. Este requisito depende de que el proveedor de almacén de claves que almacena la CMK. Para más información, vea [Trabajar con almacenes de claves maestras de columna](#working-with-column-master-key-stores).
 
 ## <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar los datos de las columnas cifradas
 
-Una vez que habilite Always Encrypted en una conexión, puede usar las API de SQLSRV estándar (consulte [referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) o las API PDO_SQLSRV (consulte [referencia de API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) para recuperar o modificar datos en las columnas de la base de datos cifrada. Suponiendo que la aplicación tiene los permisos de base de datos necesarios y puede tener acceso a la clave maestra de columna, el controlador cifra los parámetros de consulta que como destino las columnas cifradas y descifrar los datos recuperados de columnas cifradas, que se comporta de forma transparente a la aplicación como si no se cifran las columnas.
+Una vez que habilite Always Encrypted en una conexión, puede usar las API de SQLSRV estándar (consulte [referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)) o las API PDO_SQLSRV (consulte [referencia de API del controlador PDO_SQLSRV](../../connect/php/pdo-sqlsrv-driver-reference.md)) para recuperar o modificar datos en las columnas de la base de datos cifrada. Suponiendo que la aplicación tiene los permisos de base de datos necesarios y puede acceder a la clave maestra de columna, el controlador cifra todos los parámetros de consulta destinados a las columnas cifradas y descifra los datos recuperados de las columnas cifradas, con un comportamiento transparente en la aplicación, como si las columnas no estuvieran cifradas.
 
-Si Always Encrypted no está habilitado, se produce un error en las consultas con parámetros que tengan como destino las columnas cifradas. Las datos todavía se pueden recuperar de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas. Sin embargo, el controlador no intenta realizar cualquier descifrado y la aplicación recibe los datos binarios cifrados (como matrices de bytes).
+Si Always Encrypted no está habilitado, se produce un error en las consultas con parámetros que tengan como destino las columnas cifradas. Las datos todavía se pueden recuperar de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas. Sin embargo, el controlador no intenta descifrar nada, y la aplicación recibe los datos binarios cifrados (como matrices de bytes).
 
 En la tabla siguiente se resume el comportamiento de las consultas, dependiendo de si Always Encrypted está habilitado o no:
 
 |Característica de las consultas|Always Encrypted está habilitado y la aplicación puede tener acceso a las claves y a los metadatos de clave|Always Encrypted está habilitado y la aplicación no puede tener acceso a las claves ni a los metadatos de clave|Always Encrypted está deshabilitado|
 |---|---|---|---|
-|Parámetros que se dirigen a columnas cifradas.|Los valores de parámetro se cifran de manera transparente.|Error|Error|
-|Recuperación de datos de las columnas cifradas, sin parámetros que tengan como destino las columnas cifradas.|Los resultados de las columnas cifradas se descifran de manera transparente. La aplicación recibe valores de columna de texto simple. |Error|Los resultados de las columnas cifradas no se descifran. La aplicación recibe valores cifrados como matrices de bytes.|
+|Parámetros que tienen como destino las columnas cifradas.|Los valores de parámetro se cifran de manera transparente.|Error|Error|
+|Recuperación de datos de las columnas cifradas, sin parámetros que tengan como destino las columnas cifradas.|Los resultados de las columnas cifradas se descifran de manera transparente. La aplicación recibe valores de columna de texto no cifrado. |Error|Los resultados de las columnas cifradas no se descifran. La aplicación recibe valores cifrados como matrices de bytes.|
  
-En el siguiente ejemplo se ilustra la recuperación y la modificación de datos en las columnas cifradas. Los ejemplos supone una tabla con el siguiente esquema. Las columnas SSN y BirthDate están cifradas.
+En el siguiente ejemplo se ilustra la recuperación y la modificación de datos en las columnas cifradas. En el ejemplo se supone que hay una tabla con el esquema siguiente. Las columnas SSN y BirthDate están cifradas.
 ```
 CREATE TABLE [dbo].[Patients](
  [PatientId] [int] IDENTITY(1,1),
@@ -87,8 +87,8 @@ CREATE TABLE [dbo].[Patients](
 ### <a name="data-insertion-example"></a>Ejemplo de inserción de datos
 
 Los ejemplos siguientes muestran cómo usar los controladores de SQLSRV y PDO_SQLSRV para insertar una fila en la tabla paciente. Tenga en cuenta lo siguiente:
- -   No existe nada específico al cifrado en el código de ejemplo. El controlador detecta automáticamente y cifra los valores de los parámetros de SSN y BirthDate, que se dirigen a columnas cifradas. Este mecanismo hace que el cifrado se realice de manera transparente en la aplicación.
- -   Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados. Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasan como literales incrustados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar de otro modo, los literales en consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
+ -   No existe nada específico al cifrado en el código de ejemplo. El controlador detecta y cifra automáticamente los valores del SSN y los parámetros de fecha de nacimiento, cuyo destino son las columnas cifradas. Este mecanismo hace que el cifrado se realice de manera transparente en la aplicación.
+ -   Los valores que se insertan en las columnas de bases de datos, incluidas las columnas cifradas, se pasan como parámetros enlazados. Aunque el uso de parámetros es opcional al enviar valores a las columnas no cifradas (aunque es altamente recomendable porque ayuda a evitar la inyección de código SQL), es necesario para los valores que tienen como destino las columnas cifradas. Si los valores insertados en las columnas SSN o BirthDate se pasaran como literales insertados en la instrucción de consulta, la consulta produciría un error porque el controlador no intenta cifrar o procesar los literales en las consultas. Como resultado, el servidor los rechazará considerándolos incompatibles con las columnas cifradas.
  -   Cuando se insertan valores con parámetros de enlace, se debe pasar un tipo SQL que es idéntico al tipo de datos de la columna de destino o cuya conversión al tipo de datos de la columna de destino es compatible para la base de datos. Este requisito es porque Always Encrypted admite algunas conversiones de tipo (para obtener más información, consulte [Always Encrypted (motor de base de datos)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)). Los dos controladores PHP de SQLSRV y PDO_SQLSRV, cada uno tiene un mecanismo para ayudar al usuario determinar el tipo SQL del valor. Por lo tanto, el usuario no tiene que proporcionar explícitamente el tipo de SQL.
   -   Para el controlador SQLSRV, el usuario tiene dos opciones:
    -   Se basan en el controlador PHP para determinar y establecer el tipo correcto de SQL. En este caso, el usuario debe usar `sqlsrv_prepare` y `sqlsrv_execute` para ejecutar una consulta con parámetros.
@@ -150,7 +150,7 @@ $stmt->bindParam(4, $birthDate);
 $stmt->execute();
 ```
 
-### <a name="plaintext-data-retrieval-example"></a>Ejemplo de recuperación de datos de texto simple
+### <a name="plaintext-data-retrieval-example"></a>Ejemplo de recuperación de datos de texto no cifrado
 
 Los ejemplos siguientes muestran datos filtrados según valores cifrados y la recuperación de datos de texto simple de las columnas cifradas con los controladores de SQLSRV y PDO_SQLSRV. Tenga en cuenta lo siguiente:
  -   El valor que se ha usado en la cláusula WHERE para filtrar por la columna SSN necesita pasarse mediante el parámetro bind, de forma que el controlador pueda cifrarlo de manera transparente antes de enviarlo al servidor.
@@ -221,7 +221,7 @@ Always Encrypted admite algunas conversiones para los tipos de datos cifrados. V
  -   Cuando se usa el controlador SQLSRV con `sqlsrv_prepare` y `sqlsrv_execute` se determina automáticamente el tipo SQL, junto con el tamaño de columna y el número de dígitos decimales del parámetro.
  -   Cuando se usa el controlador PDO_SQLSRV para ejecutar una consulta, automáticamente se determina el tipo SQL con el tamaño de columna y el número de dígitos decimales del parámetro
  -   Cuando se usa el controlador SQLSRV con `sqlsrv_query` para ejecutar una consulta:
-  -   El tipo SQL del parámetro o es exactamente el mismo que el tipo de la columna de destino o se admite la conversión de tipo SQL al tipo de la columna.
+  -   El tipo SQL del parámetro es exactamente el mismo que el tipo de la columna de destino, o se admite la conversión del tipo SQL al tipo de la columna.
   -   La precisión y la escala de los parámetros que tienen como destino columnas de los tipos de datos `decimal` y `numeric` de SQL Server debe ser la misma que la precisión y la escala configurada para la columna de destino.
   -   La precisión de los parámetros que tienen como destino las columnas de tipos de datos `datetime2`, `datetimeoffset` o `time` de SQL Server no debe ser superior a la precisión de la columna de destino, en las consultas que modifiquen la columna de destino.
  -   No utilice los atributos de instrucción PDO_SQLSRV `PDO::SQLSRV_ATTR_DIRECT_QUERY` o `PDO::ATTR_EMULATE_PREPARES` en una consulta parametrizada
@@ -243,31 +243,31 @@ Como Always Encrypted es una tecnología de cifrado del lado cliente, la mayorí
  
 ### <a name="round-trips-to-retrieve-metadata-for-query-parameters"></a>Ciclos de ida y vuelta para recuperar metadatos para los parámetros de consulta
 
-De forma predeterminada, si Always Encrypted está habilitado para una conexión, ODBC Driver llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, si es así, se devuelve la información relacionada con el cifrado para cada parámetro permitir que el controlador cifrarlos.
+De forma predeterminada, si Always Encrypted está habilitado para una conexión, ODBC Driver llamará a [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) para cada consulta con parámetros, al pasar la instrucción de consulta (sin ningún valor de parámetro) a SQL Server. Este procedimiento almacenado analiza la instrucción de consulta para averiguar si algún parámetro necesita cifrarse y, de ser así, devuelve la información relacionada con el cifrado de cada parámetro que permitirá al controlador realizar el cifrado.
 
 Puesto que los controladores PHP permiten al usuario enlazar un parámetro en una instrucción preparada sin proporcionar el código SQL, escriba, al enlazar un parámetro en una conexión habilitado para Always Encrypted, llame los controladores de PHP [SQLDescribeParam](../../odbc/reference/syntax/sqldescribeparam-function.md) en el parámetro para obtener el tipo SQL, el tamaño de columna y dígitos decimales. Los metadatos, a continuación, se usan para llamar a [SQLBindParameter]( ../../odbc/reference/syntax/sqlbindparameter-function.md). Estos adicional `SQLDescribeParam` llamadas no requieren de ida y vuelta adicional a la base de datos como el controlador ODBC ya ha almacenado la información del cliente cuando `sys.sp_describe_parameter_encryption` llamó.
 
-Los comportamientos anteriores garantizan un alto nivel de transparencia para la aplicación cliente (y el desarrollador de aplicaciones) no necesita tener en cuenta qué consultas acceden a las columnas cifradas, siempre y cuando los valores que se dirigen a columnas cifradas se pasan al controlador en parámetros.
+Los comportamientos anteriores garantizan un alto nivel de transparencia de la aplicación cliente: la aplicación y el desarrollador de la aplicación no necesitan conocer qué consultas tienen acceso a las columnas cifradas, siempre y cuando los valores que tienen como destino estas columnas se pasen al controlador en parámetros.
 
 A diferencia de ODBC Driver for SQL Server, habilitar Always Encrypted en el nivel de instrucción o consulta no todavía admite los controladores PHP. 
 
 ### <a name="column-encryption-key-caching"></a>Almacenamiento en memoria caché de claves de cifrado de columnas
 
-Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columna (CEK), el controlador almacena en caché el CEK de texto simple en la memoria. Después de recibir la CEK cifrada (ECEK) de metadatos de la base de datos, en primer lugar el controlador ODBC intenta encontrar la CEK de texto simple correspondiente al valor de clave cifrado en la memoria caché. El controlador llama al almacén de claves que contiene la CMK solo si no encuentra el CEK de texto sin formato correspondiente en la memoria caché.
+Para reducir el número de llamadas a un almacén de claves maestras de columna para descifrar las claves de cifrado de columnas (CEK), el controlador almacena en memoria caché las claves de cifrado de columnas de texto no cifrado en la memoria. Después de recibir la CEK cifrada (ECEK) de los metadatos de la base de datos, el controlador primero intenta encontrar la CEK de texto no cifrado correspondiente para el valor de la clave cifrada en la caché. El controlador llama al almacén de claves que contiene la CMK solo si no puede encontrar la CEK de texto no cifrado correspondiente en la caché.
 
-Nota: En el controlador ODBC para SQL Server, las entradas de la memoria caché se expulsan después de un tiempo de espera de dos horas. Este comportamiento significa que para un determinado ECEK, el controlador se pone en contacto el almacén de claves solo una vez durante la vigencia de la aplicación o cada dos horas, lo que sea menor.
+Nota: En el controlador ODBC para SQL Server, las entradas de la memoria caché se desalojan después de un tiempo de expiración de dos horas. Este comportamiento significa que, para una ECEK específica, el controlador se pone en contacto con el almacén de claves solo una vez durante la vigencia de la aplicación o cada dos horas, lo que menos tiempo tarde.
 
 ## <a name="working-with-column-master-key-stores"></a>Trabajar con almacenes de claves maestras de columna
 
-Para cifrar o descifrar los datos, el controlador necesita obtener una CEK que esté configurada para la columna de destino. Las CEK se almacenan en formato cifrado (ECEKs) en los metadatos de la base de datos. Cada CEK tiene una CMK correspondiente que se usó para cifrarlo. El [los metadatos de la base de datos](../../t-sql/statements/create-column-master-key-transact-sql.md) no almacena la CMK sí; solo contiene el nombre del almacén de claves e información que puede usar el almacén de claves para buscar la CMK.
+Para cifrar o descifrar los datos, el controlador necesita obtener una CEK que esté configurada para la columna de destino. Las CEK se almacenan con formato cifrado (ECEK) en los metadatos de la base de datos. Cada CEK tiene una CMK correspondiente que se usó para cifrarla. Los [metadatos de la base de datos](../../t-sql/statements/create-column-master-key-transact-sql.md) no almacenan la propia CMK; solo contiene el nombre el almacén de claves e información que el almacén de claves puede usar para buscar la CMK.
 
-Para obtener el valor de texto simple de un ECEK, el controlador obtiene los metadatos acerca de la CEK y su CMK correspondiente y, a continuación, usa esta información para ponerse en contacto con el almacén de claves que contiene la CMK y lo solicita descifrar ECEK. El controlador se comunica con un almacén de claves mediante un proveedor de almacén de claves.
+Para obtener el valor de texto no cifrado de una ECEK, el controlador primero obtiene los metadatos sobre la CEK y su CMK correspondiente y, después, usa esta información para ponerse en contacto con el almacén de claves que contiene la CMK y le pide que descifre la ECEK. El controlador se comunica con un almacén de claves mediante un proveedor de almacén de claves.
 
 Microsoft Driver 5.3.0 para PHP para SQL Server, se admiten sólo Windows Certificate Store Provider y Azure Key Vault. Aún no se admite el otro proveedor de almacén de claves compatibles con el controlador ODBC (proveedor de almacén de claves personalizado).
 
 ### <a name="using-the-windows-certificate-store-provider"></a>Uso del proveedor para el Almacén de certificados de Windows
 
-El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrada para el Store de certificados de Windows denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en macOS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y no es necesaria para usarlo con el controlador de ninguna configuración adicional por parte de la aplicación. Sin embargo, la aplicación debe tener acceso al certificado y su clave privada en el almacén. Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
+El controlador ODBC para SQL Server en Windows incluye un proveedor de almacén de claves maestras de columna integrado para el almacén de certificados de Windows, denominado `MSSQL_CERTIFICATE_STORE`. (Este proveedor no está disponible en macOS o Linux). Con este proveedor, la CMK se almacena localmente en el equipo cliente y la aplicación no requiere ninguna configuración adicional para usarla con el controlador. Sin embargo, la aplicación debe tener acceso al certificado y a su clave privada en el almacén. Para obtener más información, vea [Create and Store Column Master Keys (Always Encrypted) (Crear y almacenar claves maestras de columna (Always Encrypted))](../../relational-databases/security/encryption/create-and-store-column-master-keys-always-encrypted.md).
 
 ### <a name="using-azure-key-vault"></a>Uso de Azure Key Vault
 
@@ -297,7 +297,7 @@ $connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "Co
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
-PDO_SQLSRV: Con una cuenta de Azure Active Directory:
+PDO_SQLSRV: Uso de una cuenta de Azure Active Directory:
 ```
 $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
@@ -308,7 +308,7 @@ $connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStor
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
-## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitaciones de los controladores PHP cuando se usa Always Encrypted
+## <a name="limitations-of-the-php-drivers-when-using-always-encrypted"></a>Limitaciones de los controladores PHP al usar Always Encrypted
 
 SQLSRV y PDO_SQLSRV:
  -   Linux y macOS no admiten Windows Certificate Store Provider

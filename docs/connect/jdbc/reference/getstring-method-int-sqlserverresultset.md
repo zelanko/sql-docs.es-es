@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8690984c3795bb07497a3d255d85766930c1ab07
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66773890"
 ---
 # <a name="getstring-method-int-sqlserverresultset"></a>Método getString (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public java.lang.String getString(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getLong especifica este método getLong en la interfaz java.sql.ResultSet.  
+ El método getString especifica este método getString en la interfaz java.sql.ResultSet.  
   
  Todas las columnas en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] se pueden devolver como un valor de tipo String. Esto indica que se puede devolver una representación de tipo **String** de todos los tipos basados en número y en caracteres y una representación de una cadena hexadecimal de columnas binarias como binary, varbinary, varbinary(max), image, timestamp y uniqueidentifier.  
   

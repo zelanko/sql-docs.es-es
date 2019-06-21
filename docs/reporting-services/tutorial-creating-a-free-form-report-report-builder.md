@@ -9,10 +9,10 @@ ms.assetid: 87288b59-faf2-4b1d-a8e4-a7582baedf2f
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 567abd4423f546f853abea4caa5c944ce9d8ccdb
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499561"
 ---
 # <a name="tutorial-creating-a-free-form-report-report-builder"></a>Tutorial: Crear un informe de forma libre (Generador de informes)
@@ -505,7 +505,7 @@ Para obtener más información sobre las listas, consulte:
 * [Creación de facturas y formularios con listas](../reporting-services/report-design/create-invoices-and-forms-with-lists-report-builder-and-ssrs.md)
 * [Celdas, filas y columnas de la región de datos Tablix &#40;Generador de informes y SSRS&#41;](../reporting-services/report-design/tablix-data-region-cells-rows-and-columns-report-builder-and-ssrs.md).  
   
-Para más información sobre los diseñadores de consultas, vea [Diseñadores de consultas &#40;Generador de informes&#41;](report-data/query-design-tools-ssrs.md) e [Interfaz de usuario del Diseñador de consultas basado en texto &#40;Generador de informes&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
+Para más información sobre los diseñadores de consultas, vea [Herramientas de diseño de consulta (SSRS)](report-data/query-design-tools-ssrs.md) e [Interfaz de usuario del diseñador de consultas basado en texto &#40;Generador de informes&#41;](../reporting-services/report-data/text-based-query-designer-user-interface-report-builder.md).  
   
 ## <a name="see-also"></a>Consulte también  
 [Tutoriales del Generador de informes](../reporting-services/report-builder-tutorials.md) 

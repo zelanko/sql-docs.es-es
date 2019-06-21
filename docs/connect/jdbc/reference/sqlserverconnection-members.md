@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3115a533-756b-4c78-aee9-4ba7253c85e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 77065f64067ef505714bbd5e831d63abf41337bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 4612b0762d8a0d619a19b61b8bb10ef6a68d1ba0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804973"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803076"
 ---
 # <a name="sqlserverconnection-members"></a>Miembros SQLServerConnection
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -95,7 +95,7 @@ ms.locfileid: "47804973"
 |java.lang.Object|clone, equals, finalize, getClass, hashCode, notify, notifyAll, toString, wait|  
 |java.lang.Wrapper|isWrapperFor, unwrap|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Método setString (long, java.lang.String, int, int) | Microsoft Docs
+title: Método setString (long, java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: b23c0c5de87fc5df557d5d02958a72eaa336f8fb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66771669"
 ---
 # <a name="setstring-method-long-javalangstring"></a>Método setString (long, java.lang.String)
@@ -52,7 +52,7 @@ public int setString(long pos,
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Notas  
- El método setString especifica este método setString en la interfaz java.sql.CallableStatement.  
+ El método setString especifica este método setString en la interfaz java.sql.Clob.  
   
  Los datos de caracteres se sobrescriben tomando como punto de inicio la posición especificada y pueden saturar la longitud inicial del CLOB. Si se especifica un valor position+1, se anexará la cadena. Si especifica valores de position+2 o superiores (o cero o menos), producirán un error de la posición.  
   

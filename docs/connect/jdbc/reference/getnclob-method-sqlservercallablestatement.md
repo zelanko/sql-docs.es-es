@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 89680823c75d680ce3ef7e4d967e91ad0d171ee8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66762840"
 ---
 # <a name="getnclob-method-sqlservercallablestatement"></a>Método getNClob (SQLServerCallableStatement)
@@ -28,7 +28,7 @@ ms.locfileid: "66762840"
 |Nombre|Descripción|  
 |----------|-----------------|  
 |[Método getNClob &#40;int&#41;](../../../connect/jdbc/reference/getnclob-method-int.md)|Recupera el valor del parámetro JDBC **NCLOB** designado como un objeto **NClob** en el lenguaje de programación Java.|  
-|[Método getNClob &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Recupera el valor del parámetro JDBC **NCLOB** designado como un objeto **NClob** en el lenguaje de programación Java.|  
+|[Método getNClob &#40;java.lang.String&#41;](../../../connect/jdbc/reference/getnclob-method-java-lang-string.md)|Recupera el valor del parámetro JDBC **NCLOB** como un objeto **NClob** en el lenguaje de programación Java.|  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   

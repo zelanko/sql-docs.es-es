@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: c832210e-bb2a-47b5-a505-160b02d1d95e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 500e9e48d541c3f518dc6dec0e779b90c896ee9d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b8844ad89a8f0e7c1663bc8aadf8479764987b31
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47640631"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802371"
 ---
 # <a name="sqlsrvnumrows"></a>sqlsrv_num_rows
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -40,7 +40,7 @@ sqlsrv_num_rows( resource $stmt )
 Se devolverá**False** si se produce un error al calcular el número de filas. De lo contrario, se devolverá el número de filas del conjunto de resultados.  
   
 ## <a name="remarks"></a>Notas  
-sqlsrv_num_rows requiere un cursor de cliente, estático o de conjunto de claves, y devolverá **False** si utiliza un cursor de avance o un cursor dinámico. (el valor predeterminado es un cursor de avance). Para obtener más información sobre los cursores, vea [sqlsrv_query](../../connect/php/sqlsrv-query.md) y [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md).  
+sqlsrv_num_rows requiere un cursor de cliente, estático o de conjunto de claves, y devolverá **False** si utiliza un cursor de avance o un cursor dinámico. (El valor predeterminado es un cursor de avance). Para obtener más información sobre los cursores, vea [sqlsrv_query](../../connect/php/sqlsrv-query.md) y [Cursor Types &#40;SQLSRV Driver&#41; (Tipos de cursor &#40;Controlador SQLSRV&#41;)](../../connect/php/cursor-types-sqlsrv-driver.md).  
   
 ## <a name="example"></a>Ejemplo  
   
@@ -93,6 +93,6 @@ echo "\nRow count for second result set = $row_count\n";
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)  
   

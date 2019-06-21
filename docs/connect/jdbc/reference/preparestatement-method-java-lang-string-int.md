@@ -1,5 +1,5 @@
 ---
-title: Método prepareStatement (java.lang.String, int[]) | Microsoft Docs
+title: Método prepareStatement (java.lang.String) | Microsoft Docs
 ms.custom: ''
 ms.date: 02/07/2017
 ms.prod: sql
@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 4fd42fccc0e6e3e15feb3d866ccb8d40531a1d4f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66796703"
 ---
 # <a name="preparestatement-method-javalangstring"></a>Método prepareStatement (java.lang.String)

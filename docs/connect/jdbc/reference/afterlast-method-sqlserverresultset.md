@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: cecaaa96-b07e-4038-a760-33164b283e42
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c3041b9e70c34d25fde4f8c0b461b864c572f6af
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 717b8788f29d226c3c5cef1bbd86b08af12d5d99
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47830803"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803706"
 ---
 # <a name="afterlast-method-sqlserverresultset"></a>Método afterLast (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,9 +39,9 @@ public void afterLast()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método afterLast especificado por el método afterLast en la interfaz java.sql.ResultSet.  
+ Este método afterLast se especifica en el método afterLast en la interfaz java.sql.ResultSet.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

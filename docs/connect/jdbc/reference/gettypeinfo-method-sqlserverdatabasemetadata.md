@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788633"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>Método getTypeInfo (SQLServerDatabaseMetaData)
@@ -42,7 +42,7 @@ public java.sql.ResultSet getTypeInfo()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getTables especifica este método getTables en la interfaz java.sql.DatabaseMetaData.  
+ El método getTypeInfo especifica este método getTypeInfo en la interfaz java.sql.DatabaseMetaData.  
   
  El conjunto de resultados devuelto por el método getTypeInfo contendrá la siguiente información:  
   

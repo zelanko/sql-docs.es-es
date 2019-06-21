@@ -14,10 +14,10 @@ ms.assetid: 21e5c32f-ad67-4917-b55a-8e21bd64f5a6
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: 25b695456bbac34e2c6ce8bf8c312c4108dd852e
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506654"
 ---
 # <a name="reporting-services-configuration-files"></a>Archivos de configuración de Reporting Services
@@ -26,9 +26,9 @@ ms.locfileid: "66506654"
  Solo es necesario modificar los archivos de configuración cuando se agrega o configura la configuración avanzada. Los parámetros de configuración se especifican como atributos o elementos XML. Si comprende XML y los archivos de configuración, puede utilizar un editor de texto o de código para modificar las opciones de configuración definibles por el usuario. Para más información sobre cómo modificar un archivo de configuración o sobre cómo lee el servidor de informes los valores de configuración nuevos y actualizados, vea [Modificar un archivo de configuración de Reporting Services &#40;RSreportserver.config&#41;](../../reporting-services/report-server/modify-a-reporting-services-configuration-file-rsreportserver-config.md).  
   
 > [!NOTE]  
-> En versiones anteriores, el Administrador de informes tenía su propio archivo de configuración denominado RSWebApplication.config. Ahora ese archivo está obsoleto. Si actualizó desde una instalación anterior, no se eliminará el archivo pero el servidor de informes no leerá ningún valor del mismo. Si el archivo está en su equipo, debe eliminarlo. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, todos los parámetros de configuración del Administrador de informes se almacenan y se leen del archivo RSReportServer.config. Para examinar una lista de las configuraciones eliminadas o movidas, vea [Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
+> En versiones anteriores, el Administrador de informes tenía su propio archivo de configuración denominado RSWebApplication.config. Ahora ese archivo está obsoleto. Si actualizó desde una instalación anterior, no se eliminará el archivo pero el servidor de informes no leerá ningún valor del mismo. Si el archivo está en su equipo, debe eliminarlo. En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, todas las opciones de configuración del Administrador de informes y del portal web se almacenan y se leen del archivo RSReportServer.config. Para examinar una lista de las configuraciones eliminadas o movidas, vea [Cambios substanciales de SQL Server Reporting Services en SQL Server 2016](../../reporting-services/breaking-changes-in-sql-server-reporting-services-in-sql-server-2016.md).  
   
- En este artículo  
+ En este artículo:  
   
 -   [Resumen de archivos de configuración (modo nativo)](#bkmk_config_file_Summary_native_mode)  
   
@@ -39,7 +39,7 @@ ms.locfileid: "66506654"
   
 ''' Instalar rutas de acceso  
 C:\Program Files\Microsoft SQL Server\MSRSxx.MSSQLSERVER (donde xx es el número de versión de MS SQL) o  
-C:\Program Files\Microsoft SQL Server Reporting Services  
+C:\Program Files\Microsoft SQL Server Reporting Services\SSRS  
   Dependiendo de la versión SSRS
 ```  
   
@@ -66,7 +66,7 @@ C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServi
   
 |Se almacena en:|Descripción|Ubicación|  
 |----------------|-----------------|--------------|  
-|RSReportServer.config|Almacena los parámetros de configuración para las áreas de característica del servicio del servidor de informes: el Administrador de informes, el servicio web del servidor de informes y el procesamiento en segundo plano. Para obtener más información sobre cada configuración, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Directorio de instalación> \Reporting Services \ReportServer|  
+|RSReportServer.config|Almacena las opciones de configuración para las áreas de característica del servicio del servidor de informes: el Administrador de informes o el portal web, el servicio web del servidor de informes y el procesamiento en segundo plano. Para obtener más información sobre cada configuración, vea [El archivo de configuración RSReportServer.config](../../reporting-services/report-server/rsreportserver-config-configuration-file.md).|\<Directorio de instalación> \Reporting Services \ReportServer|  
 |RSSrvPolicy.config|Almacena las directivas de seguridad de acceso del código para las extensiones del servidor. Para obtener más información acerca de este archivo, vea [Using Reporting Services Security Policy Files](../../reporting-services/extensions/secure-development/using-reporting-services-security-policy-files.md).|\<Directorio de instalación> \Reporting Services \ReportServer|  
 |Web.config para el servicio web del servidor de informes.|Incluye solo los valores que son necesarios para ASP.NET si es aplicable para la versión SSRS.|\<Directorio de instalación> \Reporting Services \ReportServer|  
 |Parámetros del Registro|Almacena el estado de la configuración y otras configuraciones utilizadas para desinstalar Reporting Services. También almacena información sobre cada aplicación de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] .<br /><br /> No modifique directamente estos valores, ya que podría invalidar su instalación.|HKEY_LOCAL_MACHINE \SOFTWARE \Microsoft \Microsoft SQL Server \\<idDeInstancia\> \Setup<br /><br /> Identificador de instancia de ejemplo: MSSQL13.MSSQLSERVER<br /><br /> **- Y -**<br /><br /> HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\Reporting Services\Service Applications|  

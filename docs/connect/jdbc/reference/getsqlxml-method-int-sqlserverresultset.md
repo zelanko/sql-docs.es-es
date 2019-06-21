@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6222dddd0b563400506d6728062f031bd48a1c50
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66774166"
 ---
 # <a name="getsqlxml-method-int-sqlserverresultset"></a>Método getSQLXML (int) (SQLServerResultSet)
@@ -42,7 +42,7 @@ public final java.sql.SQLXML getSQLXML(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getSQLXML especifica este método getSQLXML en la interfaz java.sql.CallableStatement.  
+ El método getSQLXML especifica este método getSQLXML en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método getSQLXML &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getsqlxml-method-sqlserverresultset.md)   

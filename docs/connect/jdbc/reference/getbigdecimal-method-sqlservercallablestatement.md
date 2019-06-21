@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: bc81b9a3-96ae-4c9c-b6c4-abd7b83175e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad30b6d99037946d0395d6604a02f103cb7897f9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: b4184dd39fa016f4379cf24c83e78488e3f9c2ec
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66799866"
 ---
 # <a name="getbigdecimal-method-sqlservercallablestatement"></a>Método getBigDecimal (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "47725163"
 |[getBigDecimal (java.lang.String)](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string.md)|Recupera el valor del parámetro designado como java.math.BigDecimal con precisión completa según el nombre de parámetro.|  
 |[getBigDecimal (java.lang.String, int)](../../../connect/jdbc/reference/getbigdecimal-method-java-lang-string-int.md)|(En desuso) recupera el valor del parámetro designado como java.math.BigDecimal según el nombre de parámetro y la escala.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-members.md)   
  [Clase SQLServerCallableStatement](../../../connect/jdbc/reference/sqlservercallablestatement-class.md)  
   

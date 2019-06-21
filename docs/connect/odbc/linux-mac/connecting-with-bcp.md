@@ -14,10 +14,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: d4eaf16d364927b8439bcf98e7ac6655d4a2f7bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789872"
 ---
 # <a name="connecting-with-bcp"></a>Conexión con bcp
@@ -79,7 +79,7 @@ Especifica el número de la primera fila que se exportará desde una tabla o que
 Especifica que las columnas vacías deben conservar un valor NULL durante la operación, en vez de tener valores predeterminados para las columnas insertadas.  
   
 - -l  
-Especifica un tiempo de espera de inicio de sesión. La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en  agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
+Especifica un tiempo de espera de inicio de sesión. La opción -l especifica el número de segundos que tienen que transcurrir antes de que un inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] agote el tiempo de espera cuando se trate de conectar a un servidor. El tiempo de espera de inicio de sesión predeterminado es 15 segundos. El período de tiempo de espera de inicio de sesión debe ser un número comprendido entre 0 y 65534. Si el valor proporcionado no es numérico o no está dentro de este intervalo, `bcp` genera un mensaje de error. Un valor de 0 especifica un tiempo de espera infinito.
   
 - -L *last_row*  
 Especifica el número de la última fila que se exportará desde una tabla o que se importará desde un archivo de datos.  

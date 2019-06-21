@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 3387b6b5631130347baaa5f49563ffc9fb658c96
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66797165"
 ---
 # <a name="updatelong-method-int-long"></a>Método updateLong (int, long)
@@ -49,7 +49,7 @@ public void updateLong(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getLong especifica este método getLong en la interfaz java.sql.ResultSet.  
+ El método updateLong especifica este método updateLong en la interfaz java.sql.ResultSet.  
   
 ## <a name="see-also"></a>Consulte también  
  [Método updateLong &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatelong-method-sqlserverresultset.md)   

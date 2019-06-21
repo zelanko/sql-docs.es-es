@@ -1,6 +1,6 @@
 ---
 title: Procesar informes grandes | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8100f0e074f407b2733a5ede0fec97497356cfab
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 574fcc9c8e180b75d5d3def6d97798708c40996c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581438"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140261"
 ---
 # <a name="process-large-reports"></a>Procesar informes grandes
   Los informes de gran tamaño presentan determinados problemas de procesamiento y requieren determinadas configuraciones para que se ejecuten correctamente. Estos informes no deben ejecutarse a petición a menos que estén configurados para admitir paginación.  
@@ -31,12 +31,12 @@ ms.locfileid: "65581438"
   
  En el caso de informes que incluyen datos volátiles, el tamaño puede variar drásticamente de una ejecución a otra del informe. En este caso, debe supervisar el origen de datos para determinar cómo afecta la volatilidad de los datos al informe y si es preciso seguir los pasos que se exponen en este tema.  
   
- Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](https://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.com.  
+ Para obtener más información y sugerencias sobre cómo diagnosticar errores de tiempo de espera y errores de memoria insuficiente, vea el artículo sobre [cómo diagnosticar problemas cuando se ejecutan informes en el servidor de informes](https://go.microsoft.com/fwlink/?LinkId=85634) en blogs.msdn.microsoft.com.  
   
 ## <a name="configuration-recommendations"></a>Recomendaciones para la configuración  
  Entre las recomendaciones para la ejecución de informes, la representación de informes y el acceso a los informes, se contemplan los siguientes aspectos:  
   
--   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, vea [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
+-   El informe debe diseñarse para que admita paginación. El servidor de informes envía los informes página por página. Si el informe incluye paginación, podrá controlar el volumen de datos que se envía al explorador. Para obtener más información, consulte [cargar previamente la memoria caché (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md).  
   
 -   El informe debe configurarse para que se ejecute como una instantánea de informe programado y evitar que se ejecute a petición. No establezca un valor de tiempo de espera para la ejecución del informe. Ejecute el informe durante las horas de menor actividad.  
   
@@ -46,7 +46,7 @@ ms.locfileid: "65581438"
   
 -   El acceso al informe debe limitarse. Configure el informe para que utilice seguridad de nivel de elemento y reemplace las asignaciones de roles predeterminados por otras nuevas que solo permitan el acceso a los usuarios que lo necesitan.  
   
-     De forma predeterminada, los usuarios pueden abrir cualquier informe que vean en la jerarquía de carpetas. Incluso si configura un informe para que se ejecute como una instantánea, los usuarios que puedan ver el elemento de informe en una carpeta también podrán abrir el informe. Si el informe es muy grande, podría hacer que el explorador deje de responder cuando un usuario abra el informe con el Administrador de informes.  
+     De forma predeterminada, los usuarios pueden abrir cualquier informe que vean en la jerarquía de carpetas. Incluso si configura un informe para que se ejecute como una instantánea, los usuarios que puedan ver el elemento de informe en una carpeta también podrán abrir el informe. Si el informe es muy grande, podría hacer que el explorador deje de responder cuando un usuario abra el informe con el portal web.  
   
 ## <a name="rendering-recommendations"></a>Recomendaciones para la representación  
  Antes de configurar la distribución de los informes es importante saber qué clientes de representación pueden trabajar con documentos de gran tamaño. El formato recomendado es la extensión de representación en HTML predeterminada con salto de página automático, pero puede elegir cualquier formato que admita paginación.  
@@ -54,7 +54,7 @@ ms.locfileid: "65581438"
  El rendimiento y el consumo de memoria varían según cada uno de los formatos de representación. El mismo informe se representará a diferentes velocidades y requerirá distintas cantidades de memoria en función del formato que seleccione. Los formatos más rápidos y que requieren menor cantidad de memoria son CSV, XML y HTML. PDF y Excel tienen el rendimiento más bajo, pero por diferentes motivos. PDF hace un uso importante de CPU, mientras que Excel utiliza una gran cantidad de RAM. Las representaciones de imágenes se encuentra entre los dos grupos. Puede especificar el formato al definir el modo de distribución del informe.  
   
 ## <a name="deployment-and-distribution-recommendations"></a>Recomendaciones para la implementación y la distribución  
- Si utiliza saltos de página para controlar la representación de informe, puede implementar un informe de gran tamaño del mismo modo que implementaría cualquier informe. Puede proporcionar acceso al informe mediante el Administrador de informes, un elemento web de SharePoint o una dirección URL que se agrega a un portal o sitio web. Todas estas opciones de implementación admiten acceso a petición, así como también una instantánea de informe ejecutada con anterioridad.  
+ Si utiliza saltos de página para controlar la representación de informe, puede implementar un informe de gran tamaño del mismo modo que implementaría cualquier informe. Puede proporcionar acceso al informe mediante el portal web, un elemento web de SharePoint o una dirección URL que se agrega a un portal o sitio web. Todas estas opciones de implementación admiten acceso a petición, así como también una instantánea de informe ejecutada con anterioridad.  
   
  Una estrategia de implementación alternativa es distribuir informes a usuarios individuales. Puede distribuir informes de gran tamaño mediante suscripciones si configura las opciones de entrega con cuidado. Puede utilizar una suscripción estándar o una controlada por datos para efectuar la entrega del informe. Entre las recomendaciones de suscripción y entrega, se incluyen los siguientes aspectos:  
   
@@ -66,11 +66,9 @@ ms.locfileid: "65581438"
   
  Si desea utilizar la entrega de informes por correo electrónico, configure la suscripción para que incluya un vínculo. Evite enviar el informe como datos adjuntos.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
  [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md)   
  [Especificar información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   
  [Administración de contenido del servidor de informes &#40;Modo nativo de SSRS&#41;](../../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md)   
- [Cargar previamente la memoria caché &#40;Administrador de informes&#41;](../../reporting-services/report-server/preload-the-cache-report-manager.md)  
-  
-  
+ [Carga previa de la memoria caché (SSRS)](../../reporting-services/report-server/preload-the-cache-report-manager.md)  

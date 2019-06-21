@@ -1,5 +1,5 @@
 ---
-title: SQLServerDriver Members | Microsoft Docs
+title: Miembros SQLServerDriver | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 07d5be731e1e647f9a3be7957d35591702910488
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66779460"
 ---
 # <a name="sqlserverdriver-members"></a>Miembros de SQLServerDriver

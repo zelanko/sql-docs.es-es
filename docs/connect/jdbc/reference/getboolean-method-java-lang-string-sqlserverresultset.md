@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 6d10e44472d5a40007d7ead9f464af89e5cf8734
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66777467"
 ---
 # <a name="getboolean-method-javalangstring-sqlserverresultset"></a>Método getBoolean (java.lang.String) (SQLServerResultSet)
@@ -47,12 +47,12 @@ public boolean getBoolean(java.lang.String columnName)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getBoolean especifica este método getBoolean en la interfaz java.sql.CallableStatement.  
+ El método getBoolean especifica este método getBoolean en la interfaz java.sql.ResultSet.  
   
  Este método se admite únicamente en los tipos de datos numéricos y de caracteres. Convierte valores "1", 1, y "**true**" a **true**y los valores de "0", 0, y "**false**" a **false**. Para el resto de los valores no se ha definido el comportamiento.  
   
 ## <a name="see-also"></a>Consulte también  
- [Método updateBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
+ [Método getBoolean &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/getboolean-method-sqlserverresultset.md)   
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

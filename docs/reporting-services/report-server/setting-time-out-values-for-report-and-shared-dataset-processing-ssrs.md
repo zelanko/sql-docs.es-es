@@ -14,10 +14,10 @@ ms.assetid: 0f9dc61d-d03c-4bbf-8090-7a53844350f8
 author: maggiesMSFT
 ms.author: maggies
 ms.openlocfilehash: f4d98747a2f00de41dd5661b76a05a9f22d341df
-ms.sourcegitcommit: 561cee96844b82ade6cf543a228028ad5c310768
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66506438"
 ---
 # <a name="setting-time-out-values-for-report-and-shared-dataset-processing-ssrs"></a>Establecer valores de tiempo de espera para el procesamiento de informes y conjuntos de datos compartidos (SSRS)
@@ -42,7 +42,7 @@ ms.locfileid: "66506438"
  Los valores de tiempo de espera de la consulta se especifican en segundos en el servidor de informes al crear o administrar un conjunto de datos compartido. De forma predeterminada, este valor está establecido en 0 segundos, que equivalen a no asignar ningún valor de tiempo de espera. Para más información, vea [Administrar conjuntos de datos compartidos](../../reporting-services/report-data/manage-shared-datasets.md).  
   
 ## <a name="setting-a-report-execution-time-out"></a>Establecer un valor de tiempo de espera de informe  
- El valor de tiempo de espera de ejecución del informe permite limitar el tiempo que emplea un servidor de informes en procesar un informe. Los valores de tiempo de espera de ejecución del informe pueden especificarse desde el Administrador de informes. También existe la posibilidad de establecer un valor predeterminado para todos los informes desde la página Configuración del sitio, y reemplazarlo posteriormente desde la página de propiedades Ejecución para un informe específico. De forma predeterminada, este valor está establecido en 1.800 segundos. Para más información, vea [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md).  
+ El valor de tiempo de espera de ejecución del informe permite limitar el tiempo que emplea un servidor de informes en procesar un informe. Los valores de tiempo de espera de ejecución del informe pueden especificarse desde el portal web. También existe la posibilidad de establecer un valor predeterminado para todos los informes desde la página Configuración del sitio, y reemplazarlo posteriormente desde la página de propiedades Ejecución para un informe específico. De forma predeterminada, este valor está establecido en 1.800 segundos. Para más información, vea [Establecer las propiedades del procesamiento de informes](../../reporting-services/report-server/set-report-processing-properties.md).  
   
 ## <a name="how-report-execution-time-out-values-are-evaluated"></a>Evaluar los valores de tiempo de espera de ejecución del informe  
  El servidor de informes evalúa los trabajos en ejecución a intervalos de 60 segundos. En cada intervalo, el servidor de informes compara el tiempo de procesamiento real con el valor de tiempo de espera de ejecución para el informe. El proceso se detendrá si el tiempo de procesamiento de un informe es superior al valor de tiempo de espera de ejecución del informe.  

@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66789948"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>Descargar controlador ODBC para SQL Server
@@ -28,17 +28,17 @@ ms.locfileid: "66789948"
 
 ### <a name="linux-and-macos"></a>Linux y macOS
 
-#### <a name="debian"></a>Debian:
+#### <a name="debian"></a>Debian
 - [Debian 9 .deb paquetes](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
 - [Paquetes de .deb Debian 8](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>RedHat
-- [RedHat 7 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Paquetes de RedHat 7 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
 - [Los paquetes de Red Hat 6 .rpm (msodbcsql17-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
+- [Paquetes de SuSE 12 .rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/12/prod/)
+- [Paquetes de SuSE 11 .rpm (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Paquetes de Ubuntu 18.04 .deb](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
@@ -60,16 +60,16 @@ Vea también [instalar el controlador](linux-mac/installing-the-microsoft-odbc-d
 
 ### <a name="linux-and-macos"></a>Linux y macOS
 
-#### <a name="debian"></a>Debian:
+#### <a name="debian"></a>Debian
 - [Paquetes de .deb Debian 8](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
-- [RedHat 7 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
-- [RedHat 6 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
+- [Paquetes de RedHat 7 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
+- [Paquetes de RedHat 6 .rpm (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm packages (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
+- [Paquetes de SuSE 12 .rpm (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
+- [Paquetes de SuSE 11 .rpm (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
 - [Paquetes de Ubuntu 17.04 .deb](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)

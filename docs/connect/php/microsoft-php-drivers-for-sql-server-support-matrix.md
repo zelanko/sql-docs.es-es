@@ -11,11 +11,11 @@ author: David-Engel
 ms.author: genemi
 manager: ''
 ms.openlocfilehash: 0790d2cc0497ef2912f96cd4679e4541fc9b2262
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645507"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63180273"
 ---
 # <a name="microsoft-php-drivers-for-sql-server-support-matrix"></a>Controladores de Microsoft para PHP para SQL Server Support Matrix
 
@@ -31,24 +31,24 @@ Las opciones de soporte técnico extendido y personalizado no están disponibles
 
 Se admiten los siguientes controladores de Microsoft para PHP hasta la fecha indicada de finalización del soporte técnico.
 
-|Nombre del controlador|Versión del paquete de controladores|Finalización de soporte técnico|
+|Nombre del controlador|Versión del paquete de controladores|Finalización del soporte estándar|
 |-|:-:|-|
-|Controladores de Microsoft para PHP 5.6 para SQL Server|5.6|21 de febrero de 2024|
-|Controladores de Microsoft para PHP 5.3 para SQL Server|5.3|20 de julio de 2023|
-|Controladores de Microsoft para PHP 5.2 para SQL Server|5.2|9 de febrero de 2023|
-|4.3 de controladores de Microsoft para PHP para SQL Server|4.3|6 de julio de 2022|
-|Microsoft PHP Driver 4.0 for SQL Server|4.0|11 de julio de 2021|
-|3.2 de controladores de Microsoft para PHP para SQL Server|3.2|9 de marzo de 2020|
-|3.1 de controladores de Microsoft para PHP para SQL Server|3.1|12 de diciembre de 2019|
+|Controladores PHP de Microsoft 5.6 para SQL Server|5.6|21 de febrero de 2024|
+|Controladores PHP de Microsoft 5.3 para SQL Server|5.3|20 de julio de 2023|
+|Controladores PHP de Microsoft 5.2 para SQL Server|5.2|9 de febrero de 2023|
+|Controladores PHP de Microsoft 4.3 para SQL Server|4.3|6 de julio de 2022|
+|Controladores PHP de Microsoft 4.0 para SQL Server|4.0|11 de julio de 2021|
+|Controladores PHP de Microsoft 3.2 para SQL Server|3.2|9 de marzo de 2020|
+|Controladores PHP de Microsoft 3.1 para SQL Server|3.1|12 de diciembre de 2019|
 | &nbsp; | &nbsp; | &nbsp; |
 
 Ya no se admiten los siguientes controladores de Microsoft para PHP.
 
-|Nombre del controlador|Versión del paquete de controladores|Finalización de soporte técnico|
+|Nombre del controlador|Versión del paquete de controladores|Finalización del soporte estándar|
 |-|:-:|-|
-|Controladores 3.0 de Microsoft para PHP para SQL Server|3.0|6 de marzo de 2017|
-|Controladores de Microsoft para PHP 2.0 para SQL Server|2.0|10 de agosto de 2015|
-|Controladores de Microsoft para PHP 1.0 para SQL Server|1,0|28 de abril de 2014|
+|Controladores PHP de Microsoft 3.0 para SQL Server|3.0|6 de marzo de 2017|
+|Controladores PHP de Microsoft 2.0 para SQL Server|2.0|10 de agosto de 2015|
+|Controladores PHP de Microsoft 1.0 para SQL Server|1,0|28 de abril de 2014|
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-version-certified-compatibility"></a>Certificada de compatibilidad de versión de SQL Server
@@ -56,7 +56,7 @@ Ya no se admiten los siguientes controladores de Microsoft para PHP.
 
 |PHP para la versión del controlador de SQL Server&#8594;<br />&#8595; versión de SQL Server|5.6|5.3|5.2|4.3|4.0|3.2|3.1|3.0|2.0|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Instancia administrada de Azure SQL<br/> (Versión preliminar privada extendida)|S|S|S|S| | | | | |
+|Instancia administrada de Azure SQL<br/> (Versión preliminar privada ampliada)|S|S|S|S| | | | | |
 |Almacenamiento de datos SQL de Azure|S|S|S|S| | | | | |
 |SQL Server 2017         |S|S|S|S| | | | | |
 |SQL Server 2016         |S|S|S|S|S| | | | |

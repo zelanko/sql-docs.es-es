@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 987be5ee9fd49385acf02e52108e1e657fbc08a4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66786519"
 ---
 # <a name="deleterow-method-sqlserverresultset"></a>Método deleteRow (SQLServerResultSet)
@@ -43,7 +43,7 @@ public void deleteRow()
   
  No se puede llamar a este método cuando el cursor está en la fila de inserción.  
   
- Al utilizar los cursores del conjunto de claves, este método deja un hueco en el conjunto de resultados. Puede buscar este hueco mediante el método [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Los números de fila de las filas en el conjunto de resultados no se ven modificados.  
+ Al utilizar los cursores del conjunto de claves, este método deja un intervalo en el conjunto de resultados. Puede probar este intervalo mediante el método [rowDeleted](../../../connect/jdbc/reference/rowdeleted-method-sqlserverresultset.md). Los números de fila de las filas en el conjunto de resultados no se ven modificados.  
   
 ## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   

@@ -15,13 +15,13 @@ helpviewer_keywords:
 - OLE DB rowsets, properties
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 8c78c56d08535b5d9947b5bd215afaf2f8e23e44
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: c3bb95de560e0e4ec6b5e01fda8623858a73aaf4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47754833"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66803804"
 ---
 # <a name="rowset-properties-and-behaviors"></a>Propiedades y comportamientos de conjuntos de filas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -71,7 +71,7 @@ ms.locfileid: "47754833"
 |DBPROP_MAYWRITECOLUMN|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_MEMORYUSAGE|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_NOTIFICATIONGRANULARITY|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
-|DBPROP_NOTIFICATIONPHASES|L/E: solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124; DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124; DBPROPVAL_NP_DIDEVENT<br /><br /> Descripción: El controlador OLE DB para SQL Server es compatible con todas las fases de notificación.|  
+|DBPROP_NOTIFICATIONPHASES|L/E: solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO &#124;  DBPROPVAL_NP_SYNCHAFTER &#124; DBPROPVAL_NP_FAILEDTODO &#124;  DBPROPVAL_NP_DIDEVENT<br /><br /> Descripción: El controlador OLE DB para SQL Server es compatible con todas las fases de notificación.|  
 |DBPROP_NOTIFYCOLUMNSET DBPROP_NOTIFYROWDELETE DBPROP_NOTIFYROWFIRSTCHANGE DBPROP_NOTIFYROWINSERT DBPROP_NOTIFYROWRESYNCH DBPROP_NOTIFYROWSETRELEASE DBPROP_NOTIFYROWSETFETCH-POSITIONCHANGE DBPROP_NOTIFYROWUNDOCHANGE DBPROP_NOTIFYROWUNDODELETE DBPROP_NOTIFYROWUNDOINSERT DBPROP_NOTIFYROWUPDATE|L/E: solo lectura<br /><br /> Valor predeterminado: DBPROPVAL_NP_OKTODO &#124; DBPROPVAL_NP_ABOUTTODO<br /><br /> Descripción: las fases de notificación del controlador OLE DB para SQL Server pueden cancelarse antes de intentar realizar la modificación indicada en el conjunto de filas. El controlador OLE DB para SQL Server no admite la cancelación de fases una vez completado el intento.|  
 |DBPROP_ORDEREDBOOKMARKS|Esta propiedad de conjunto de filas no está implementada por el controlador OLE DB para SQL Server. Al intentar leer o escribir el valor de propiedad, se genera un error.|  
 |DBPROP_OTHERINSERT DBPROP_OTHERUPDATEDELETE DBPROP_OWNINSERT DBPROP_OWNUPDATEDELETE|L/E: lectura y escritura<br /><br /> Valor predeterminado: VARIANT_FALSE<br /><br /> Descripción: el establecimiento de propiedades de visibilidad de cambios hace que el controlador OLE DB para SQL Server use los cursores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para admitir el conjunto de filas. Para obtener más información, vea [Conjuntos de filas y cursores de SQL Server](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
@@ -104,7 +104,7 @@ ms.locfileid: "47754833"
 |SSPROP_QP_NOTIFICATION_OPTIONS|Columna: no<br /><br /> L/E: lectura y escritura<br /><br /> Tipo: VT_BSTR<br /><br /> Valor predeterminado: cadena vacía<br /><br /> Descripción: opciones de notificación de consulta. Se especifican en una cadena con `name=value`. El usuario es responsable de la creación del servicio y de la lectura de las notificaciones fuera de la cola. La sintaxis de la cadena de opciones de notificación de consulta es la siguiente:<br /><br /> `service=<service-name>[;(local database=<database>&#124;broker instance=<broker instance>)]`<br /><br /> Por ejemplo:<br /><br /> `service=mySSBService;local database=mydb`|  
 |SSPROP_QP_NOTIFICATION_TIMEOUT|Columna: no<br /><br /> L/E: lectura y escritura<br /><br /> Tipo: VT_UI4<br /><br /> Valor predeterminado: 432000 segundos (5 días)<br /><br /> Mínimo: 1 segundo<br /><br /> Máximo: 2^31-1 segundos<br /><br /> Descripción: número de segundos que la notificación de consulta va a permanecer activa.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Conjuntos de filas](../../oledb/ole-db-rowsets/rowsets.md)  
   
   

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 9393f975-a4ef-4c50-b4dd-14892fc55cc9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98c3848ad344fcbb964d1b3a5e9ec1a6afe8703f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ae32c7693b724deec25c8d923e02cdf929e893ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796976"
 ---
 # <a name="sqlsrvconfigure"></a>sqlsrv_configure
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -52,13 +52,13 @@ sqlsrv_configure( string $setting, mixed $value )
 Si se llama a **sqlsrv_configure** con un valor o una configuración no compatibles, la función devuelve el valor **False**. De lo contrario, devuelve **True**.  
   
 ## <a name="remarks"></a>Notas  
-1) Para obtener más información sobre las consultas de cliente, vea [Cursor Types &#1;SQLSRV Driver&#40;](../../connect/php/cursor-types-sqlsrv-driver.md) (Tipos de cursor &#40;Controlador SQLSRV&#41;).  
+1\) Para obtener más información sobre las consultas de cliente, vea [Cursor Types &#1;SQLSRV Driver&#40;](../../connect/php/cursor-types-sqlsrv-driver.md) (Tipos de cursor &#40;Controlador SQLSRV&#41;).  
   
-2) Para obtener más información sobre la actividad de registro, consulte [Logging Activity](../../connect/php/logging-activity.md) (Actividad de registro).  
+2\) Para obtener más información sobre la actividad de registro, consulte [Logging Activity](../../connect/php/logging-activity.md) (Actividad de registro).  
   
-3) Para obtener más información sobre cómo configurar el control de errores y advertencias, vea [Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
+3\) Para obtener más información sobre cómo configurar el control de errores y advertencias, vea [Cómo configurar el control de errores y advertencias con el controlador SQLSRV](../../connect/php/how-to-configure-error-and-warning-handling-using-the-sqlsrv-driver.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Programación de guía para los controladores de Microsoft para PHP para SQL Server](../../connect/php/programming-guide-for-php-sql-driver.md) 

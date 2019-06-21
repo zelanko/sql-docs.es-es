@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 40d7fced-cce1-4534-b794-71bc735e53e0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 91bc0dfccf175b2d6bc4f1e19bf32de2b0e5c012
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: ade5c312691c1f6586e5d0b14253bc41c27c1490
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66804212"
 ---
 # <a name="updatedatetimeoffset-sqlserverresultset"></a>updateDateTimeOffset (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "47698373"
 |[updateDateTimeOffset(int, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-int-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Actualiza el valor de la columna especificada al valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md), según un ordinal de columna basado en cero.|  
 |[updateDateTimeOffset(string, microsoft.sql.DateTimeOffset)](../../../connect/jdbc/reference/updatedatetimeoffset-string-microsoft-sql-datetimeoffset-sqlserverresultset.md)|Actualiza el valor de la columna especificada al valor de la [clase DateTimeOffset](../../../connect/jdbc/reference/datetimeoffset-class.md) según un nombre de columna.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Miembros SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-members.md)   
  [Clase SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md)  
   

@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 52205f03-ff29-4254-bfa8-07cced155c86
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 789046b7df230b88ca1761d1d89cc147074e12a9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+manager: jroth
+ms.openlocfilehash: adf71b7f701d96ddf56f5070475fb853f89042ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56663121"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801727"
 ---
 # <a name="using-azure-active-directory-with-the-odbc-driver"></a>Uso de Azure Active Directory con el controlador ODBC
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -34,7 +34,7 @@ El `Authentication` palabra clave puede utilizarse al conectarse con una cadena 
 
 |Nombre|Valores|Valor predeterminado|Descripción|
 |-|-|-|-|
-|`Authentication`|(no establecido) (cadena vacía), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(sin establecer)|Controla el modo de autenticación.<table><tr><th>Valor<th>Descripción<tr><td>(sin establecer)<td>Modo de autenticación determinado por otras palabras clave (opciones de conexión heredados existentes).<tr><td>(cadena vacía)<td>La cadena de conexión es: '{0}' Invalidar y anular un `Authentication` valor establecido en el DSN.<tr><td>`SqlPassword`<td>Autenticar directamente a una instancia de SQL Server mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryPassword`<td>Autenticar con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryIntegrated`<td>_Sólo el controlador Windows_. Autenticar con una identidad de Azure Active Directory mediante la autenticación integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Sólo el controlador Windows_. Autenticar con una identidad de Azure Active Directory mediante la autenticación interactiva.<tr><td>`ActiveDirectoryMsi`<td>Autenticar con identidad de Azure Active Directory mediante la autenticación de identidad de servicio administradas. Para la identidad asignada por el usuario, UID se establece en el identificador de objeto de las identidades de usuario.</table>|
+|`Authentication`|(no establecido) (cadena vacía), `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryIntegrated`, `ActiveDirectoryInteractive`, `ActiveDirectoryMsi` |(sin establecer)|Controla el modo de autenticación.<table><tr><th>Valor<th>Descripción<tr><td>(sin establecer)<td>Modo de autenticación determinado por otras palabras clave (opciones de conexión heredados existentes).<tr><td>(cadena vacía)<td>Cadena de conexión Invalidar y anular un `Authentication` valor establecido en el DSN.<tr><td>`SqlPassword`<td>Autenticar directamente a una instancia de SQL Server mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryPassword`<td>Autenticar con una identidad de Azure Active Directory mediante un nombre de usuario y una contraseña.<tr><td>`ActiveDirectoryIntegrated`<td>_Sólo el controlador Windows_. Autenticar con una identidad de Azure Active Directory mediante la autenticación integrada.<tr><td>`ActiveDirectoryInteractive`<td>_Sólo el controlador Windows_. Autenticar con una identidad de Azure Active Directory mediante la autenticación interactiva.<tr><td>`ActiveDirectoryMsi`<td>Autenticar con identidad de Azure Active Directory mediante la autenticación de identidad de servicio administradas. Para la identidad asignada por el usuario, el UID se establece en el identificador de objeto de la identidad del usuario.</table>|
 |`Encrypt`|(sin establecer), `Yes`, `No`|(vea la descripción)|Controla el cifrado de una conexión. Si el valor del atributo previa la `Authentication` configuración no es _ninguno_ en la cadena de conexión o DSN, el valor predeterminado es `Yes`. De lo contrario, el valor predeterminado es `No`. Si el atributo `SQL_COPT_SS_AUTHENTICATION` invalida el valor del atributo previa `Authentication`explícitamente establezca el valor de cifrado en el DSN o la cadena de conexión o el atributo de conexión. Es el valor del atributo preliminar del cifrado `Yes` si el valor se establece en `Yes` en la cadena de conexión o DSN.|
 
 ## <a name="new-andor-modified-connection-attributes"></a>Atributos de conexión nuevos o modificados
@@ -105,7 +105,7 @@ Estas opciones se corresponden con los mismos cinco disponibles en la configurac
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. Usa autenticación de identidad de servicio administrada de AAD asignado por el sistema o la identidad asignada por el usuario para la autenticación establecer conexión. Para la identidad asignada por el usuario, UID se establece en el identificador de objeto de la identidad del usuario.<br>
+8. Usa autenticación de identidad de servicio administrada de AAD asignado por el sistema o la identidad asignada por el usuario para la autenticación establecer conexión. Para la identidad asignada por el usuario, el UID se establece en el identificador de objeto de la identidad del usuario.<br>
 Para la identidad asignada por el sistema,<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 Para la identidad asignada por el usuario con Id. de objeto es igual a myObjectId,<br>
@@ -168,7 +168,7 @@ La siguiente es una cadena de conexión de ejemplo para su uso con la autenticac
 ~~~
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;Authentication=ActiveDirectoryInteractive"
 ~~~
-La siguiente es una cadena de conexión de ejemplo para su uso con Azure Managed Service Identity autenticación de Active Directory. Tenga en cuenta que los UID se establece en el identificador de objeto de la identidad del usuario para la identidad asignada por el usuario.
+La siguiente es una cadena de conexión de ejemplo para su uso con Azure Managed Service Identity autenticación de Active Directory. Tenga en cuenta que el UID se establece en el identificador de objeto de la identidad del usuario para la identidad asignada por el usuario.
 ~~~
 // For system-assigned identity,
 SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};Authentication=ActiveDirectoryMsi"

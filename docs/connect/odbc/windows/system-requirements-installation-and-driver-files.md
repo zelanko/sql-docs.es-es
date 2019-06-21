@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: d90fa182-1dab-4d6f-bd85-a04dd1479986
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dd37c097873b104f3f53e9ca92e50b6f7c1acafe
-ms.sourcegitcommit: 4cf0fafe565b31262e4148b572efd72c2a632241
+manager: jroth
+ms.openlocfilehash: 9b48188cbc1eb25774bc127246514d82ca5ef475
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56464771"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66841083"
 ---
 # <a name="system-requirements-installation-and-driver-files"></a>Requisitos del sistema, instalación y archivos del controlador
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -28,7 +28,9 @@ ODBC Driver 11 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 
 ODBC Driver 13 y 13.1 para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], además de lo anterior, es compatible con SQL Server 2016. 
 
 ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite todas las anteriores y también SQL Server 2017.
-  
+
+ODBC Driver 17 for SQL Server es compatible con la versión 17.3 del controlador a partir de SQL Server 2019.
+
 Es el nombre del controlador que se especifica en una cadena de conexión `ODBC Driver 11 for SQL Server` o `ODBC Driver 13 for SQL Server` (de 13 y 13.1) o `ODBC Driver 17 for SQL Server`.
   
 ## <a name="supported-operating-systems"></a>Sistemas operativos admitidos
@@ -76,7 +78,7 @@ msiexec /quiet /passive /qn /i msodbcsql.msi IACCEPTMSODBCSQLLICENSETERMS=YES AD
 msiexec /quiet /passive /qn /uninstall msodbcsql.msi  
 ```  
   
-Cuando una aplicación utiliza el controlador, esta debe indicar que depende del controlador mediante la opción de instalación `APPGUID`. De este modo, el instalador del controlador puede notificar cuáles son las aplicaciones dependientes antes de que se lleve a cabo la desinstalación. Para especificar una dependencia del controlador, establezca el parámetro de línea de comandos `APPGUID` en el código de producto cuando se instale en modo silencioso el controlador. (se debe crear un código de producto al usar Microsoft Installer para empaquetar el programa de instalación de la aplicación). Por ejemplo:  
+Cuando una aplicación utiliza el controlador, esta debe indicar que depende del controlador mediante la opción de instalación `APPGUID`. De este modo, el instalador del controlador puede notificar cuáles son las aplicaciones dependientes antes de que se lleve a cabo la desinstalación. Para especificar una dependencia del controlador, establezca el parámetro de línea de comandos `APPGUID` en el código de producto cuando se instale en modo silencioso el controlador. (Se debe crear un código de producto al usar Microsoft Installer para empaquetar el programa de instalación de la aplicación). Por ejemplo:  
   
 ```  
 msiexec /i msodbcsql.msi APPGUID={ <Your dependent application's APPGUID> }  

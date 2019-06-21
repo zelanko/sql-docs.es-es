@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2b2677e5614fd8e50c34084624dda19c3ced54d6
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+manager: jroth
+ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51600335"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801475"
 ---
 # <a name="default-php-data-types"></a>Tipos de datos PHP predeterminados
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +39,7 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
 |bit|Integer|Carácter de 8 bits<sup>1</sup>|  
 |char|String|Carácter de 8 bits<sup>1</sup>|  
 |date<sup>4</sup>|DATETIME|No aplicable|  
-|fecha y hora<sup>4</sup>|DATETIME|No aplicable|  
+|datetime<sup>4</sup>|DATETIME|No aplicable|  
 |datetime2<sup>4</sup>|DATETIME|No aplicable|  
 |datetimeoffset<sup>4</sup>|DATETIME|No aplicable|  
 |Decimal|String|Carácter de 8 bits<sup>1</sup>|  
@@ -90,7 +90,7 @@ En la tabla siguiente se muestra el tipo de datos de SQL Server (el tipo de dato
   
 9.  Los datos uniqueidentifier son GUID que se representan mediante la siguiente expresión regular:  
   
-    [0-9a-fA-F] {8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>Otras características y tipos de datos de SQL Server 2008 nuevos  
@@ -98,17 +98,17 @@ En los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], no se admiten 
   
 |Característica|Compatibilidad de PHP|  
 |-----------|---------------|  
-|Parámetro con valores de tabla|no|  
+|Parámetro con valores de tabla|No|  
 |Columnas dispersas|Parcial|  
 |Compresión de bits Null|Sí|  
 |Tipos de datos CLR definidos por el usuario (UDT) de gran tamaño|Sí|  
-|Nombre de entidad de seguridad de servicio|no|  
+|Nombre de entidad de seguridad de servicio|No|  
 |MERGE|Sí|  
 |FILESTREAM|Parcial|  
   
 En el caso de que la compatibilidad del tipo en cuestión sea parcial, no se podrán realizar consultas mediante programación del tipo de datos de la columna.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Constantes &#40;controladores de Microsoft para PHP para SQL Server&#41;](../../connect/php/constants-microsoft-drivers-for-php-for-sql-server.md)
 
 [Converting Data Types](../../connect/php/converting-data-types.md)

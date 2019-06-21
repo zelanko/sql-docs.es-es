@@ -1,6 +1,6 @@
 ---
 title: Establecer las propiedades del procesamiento de informes | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/10/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,25 +15,25 @@ helpviewer_keywords:
 ms.assetid: b5cbc453-5986-423e-af44-1f243ef3edb1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 8f12b5734d0ea3715c93a8c346023743be44eda4
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 4a7729e8880e811494e6e1016b827831674cd812
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577718"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140400"
 ---
 # <a name="set-report-processing-properties"></a>Establecer las propiedades del procesamiento de informes
   Las propiedades de ejecución del informe controlan el modo en que se procesa un informe. Estas propiedades deben establecerse de forma individual para cada uno de los informes.  
   
- Para establecer las propiedades de ejecución, abra el informe en el Administrador de informes y navegue a la página de propiedades Ejecución. Para más información, vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0). También puede establecer propiedades mediante [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]; vea [Página de propiedades Opciones de procesamiento &#40;Administrador de informes&#41;](https://msdn.microsoft.com/library/28f07c70-7132-4d15-9505-4fdf31dc9cc0).  
+ Para establecer las propiedades de ejecución de informes, navegue hasta el informe en el portal web, haga clic en el informe y seleccione **administrar** desde el menú desplegable.
   
 ## <a name="report-execution-modes"></a>Modos de ejecución del informe  
  Los informes pueden ejecutarse a petición o como una instantánea. La siguiente sección describe cada una de estas opciones.  
   
-### <a name="running-reports-on-demand"></a>Ejecutar informes a petición  
+### <a name="running-reports-on-demand"></a>Ejecutar informes a petición 
  Puede especificar que un informe consulte un origen de datos cada vez que un usuario ejecute el informe, lo cual da lugar a informes a petición que contienen los datos más actualizados. Por cada usuario que abre o solicita el informe se crea una instancia del informe; cada nueva instancia contiene los resultados de una nueva consulta. Cuando se usa esta opción, si diez usuarios abren el informe a la vez, se enviarán diez consultas para procesar al origen de datos.  
   
-### <a name="running-reports-on-demand-from-cache"></a>Ejecutar informes a petición desde la caché  
+### <a name="running-reports-on-demand-from-cache"></a>Ejecutar informes a petición desde la caché 
  Para mejorar el rendimiento puede especificar que un informe (y sus datos) se almacene temporalmente en caché mientras un usuario lo esté ejecutando. La copia en caché estará disponible posteriormente para otros usuarios que tengan acceso al mismo informe. Con esta opción, si diez usuarios abren el informe, solamente la primera solicitud dará lugar al procesamiento del informe. El informe se almacena posteriormente en caché y los nueve usuarios restantes ven el informe almacenado en caché.  
   
  Los informes en caché se eliminan a intervalos definidos por el usuario. Estos intervalos pueden especificarse en minutos o se puede programar una fecha y hora específicas para vaciar la caché. Para más información, vea [Informes almacenados en caché &#40;SSRS&#41;](../../reporting-services/report-server/caching-reports-ssrs.md).  
@@ -53,11 +53,9 @@ ms.locfileid: "65577718"
   
  Cuando se cumpla esta condición, el servidor de informes deshabilitará la suscripción la próxima vez que esté programada su ejecución. Para volver a activarla, abra y guarde la suscripción. Al abrir la suscripción, el servidor de informes actualiza los valores de parámetro de la suscripción con los valores especificados para la instantánea. Para más información sobre las suscripciones, vea [Suscripciones y entrega &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Establecer opciones de procesamiento &#40;Reporting Services en el modo integrado de SharePoint&#41;](../../reporting-services/report-server-sharepoint/set-processing-options-reporting-services-in-sharepoint-integrated-mode.md)   
- [Configurar las propiedades de ejecución de un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md)   
  [Conceptos de Reporting Services &#40;SSRS&#41;](../../reporting-services/reporting-services-concepts-ssrs.md)   
- [Cómo agregar una instantánea al historial de informes](../../reporting-services/report-server/add-a-snapshot-to-report-history-report-manager.md)   
+ [Crear, modificar y eliminar instantáneas del historial de informes](create-modify-and-delete-snapshots-in-report-history.md)   
  [Especificación de información de credenciales y conexión para los orígenes de datos de informes](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)  
-  
   

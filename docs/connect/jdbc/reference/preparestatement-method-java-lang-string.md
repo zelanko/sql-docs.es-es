@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1bec0d56782a7e9cacd236011c79aba2ab2c806a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 11ff6a1b5c919f44bfc9cfd56e1e94ac57b673e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814493"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802647"
 ---
 # <a name="preparestatement-method-javalangstring-int"></a>Método prepareStatement (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +39,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 #### <a name="parameters"></a>Parámetros  
  *sql*  
   
- Un objeto **String** que contiene la instrucción SQL.  
+ Un valor **String** que contiene una instrucción SQL.  
   
  *columnIndexes*  
   
@@ -54,7 +54,7 @@ public java.sql.PreparedStatement prepareStatement(java.lang.String sql,
 ## <a name="remarks"></a>Notas  
  Este método prepareStatement especificado por el método prepareStatement en la interfaz java.sql.Connection.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método prepareStatement &#40;SQLServerConnection&#41;](../../../connect/jdbc/reference/preparestatement-method-sqlserverconnection.md)   
  [Miembros SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-members.md)   
  [Clase SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md)  

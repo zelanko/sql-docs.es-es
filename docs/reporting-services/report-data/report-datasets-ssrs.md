@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: f2e42303-e355-4c1f-bb3b-3338fbdd230d
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 666623579f6cd195908318c194ec4c0036493edf
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.openlocfilehash: 921bb8bf3e0b601a567e54bf326c5b35824cc848
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
-ms.locfileid: "66500304"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67037950"
 ---
 # <a name="report-datasets-ssrs"></a>Conjuntos de datos de informe (SSRS)
   Para agregar datos a un informe, cree conjuntos de datos. Cada conjunto de datos representa el conjunto de resultados obtenidos al ejecutar un comando de consulta en un origen de datos. Las columnas del conjunto de resultados son la colección de campos y las filas, los datos. Un conjunto de resultados no contiene los datos reales, sino la información necesaria para recuperar un conjunto de datos específico a partir de un origen de datos.  
@@ -94,7 +94,7 @@ ms.locfileid: "66500304"
   
  Para ejecutar una consulta, debe tener credenciales de tiempo de diseño. Para obtener más información, consulte [especificar credenciales y la información de conexión de orígenes de datos de informe](specify-credential-and-connection-information-for-report-data-sources.md) y [conexiones de datos, orígenes de datos y cadenas de conexión &#40;generador de informes y SSRS&#41; ](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md).  
   
- Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Diseñadores de consultas &#40;Generador de informes&#41;](query-design-tools-ssrs.md).  
+ Los proveedores de datos se ocupan de la comunicación entre una extensión de datos y el origen de datos externo. Cada proveedor de datos determina la compatibilidad con la sintaxis de comandos de consulta, los parámetros de consulta y los tipos de datos de los valores en el conjunto de resultados. Para más información, vea el tema del tipo específico de extensión de datos y [Herramientas de diseño de consulta &#40;SSRS&#41;](query-design-tools-ssrs.md).  
   
   
 ##  <a name="HowTo"></a> Temas de procedimientos  
@@ -131,6 +131,6 @@ ms.locfileid: "66500304"
   
 ## <a name="see-also"></a>Consulte también  
  [Vista de diseño de informe &#40;Generador de informes&#41;](../../reporting-services/report-builder/report-design-view-report-builder.md)   
- [Conceptos de creación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-design/report-authoring-concepts-report-builder-and-ssrs.md)  
+ [Conceptos de Reporting Services (SSRS)](../reporting-services-concepts-ssrs.md)
   
   

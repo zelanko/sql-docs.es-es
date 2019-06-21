@@ -1,6 +1,6 @@
 ---
 title: Base de datos del servidor de informes (modo nativo de SSRS) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -15,30 +15,30 @@ helpviewer_keywords:
 ms.assetid: 0fc5c033-3fe1-4cea-86c7-66ea5e424d65
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 1790841420d86eea3cc3d7a19ccbd2e72283a425
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: a7e49888ddeb4d0666a8b46849560c63c4ac22f5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65577575"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826887"
 ---
 # <a name="report-server-database-ssrs-native-mode"></a>Base de datos del servidor de informes (Modo nativo de SSRS)
-  Un servidor de informes es un servidor sin estado que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para almacenar metadatos y definiciones de objeto. Una instalación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] emplea dos bases de datos para separar los requisitos de almacenamiento persistente de datos de los de almacenamiento temporal. Las bases de datos se crean juntas y se enlazan mediante el nombre. De forma predeterminada, los nombres de base de datos son **reportserver** y **reportservertempdb**, respectivamente.  
+  Un servidor de informes es un servidor sin estado que usa el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)] para almacenar metadatos y definiciones de objeto. Una instalación en modo nativo de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] emplea dos bases de datos para separar los requisitos de almacenamiento persistente de datos de los de almacenamiento temporal. Las bases de datos se crean juntas y se enlazan mediante el nombre. De forma predeterminada, los nombres de base de datos son **ReportServer** y **ReportServerTempDB**, respectivamente.  
   
  Una instalación en modo SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] también creará una base de datos para la característica de alerta de datos. Las tres bases de datos en modo de SharePoint están asociadas a las aplicaciones de servicio de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información, vea [Administrar una aplicación de servicio de SharePoint para Reporting Services](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).  
   
  Las bases de datos se pueden ejecutar en una instancia local o remota del [!INCLUDE[ssDE](../../includes/ssde-md.md)] . La elección de una instancia local es útil si tiene recursos suficientes del sistema o si desea conservar licencias de software, pero la ejecución de las bases de datos en un equipo remoto puede mejorar el rendimiento.  
   
- Puede trasladar o reutilizar una base de datos de servidor de informes existente de una instalación anterior u otra instancia con otra instancia del servidor de informes. El esquema de la base de datos del servidor de informes debe ser compatible con la instancia del servidor de informes. Si la base de datos está en un formato anterior, se le solicitarán que la actualice al formato actual. Las versiones más recientes no se pueden pasar a una versión anterior. Si tiene una base de datos de servidor de informes más reciente, no puede utilizarla con una versión anterior de una instancia del servidor de informes. Para más información sobre cómo se actualizan las bases de datos del servidor de informes a formatos más recientes, vea [Actualizar una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md).  
+ Puede trasladar o reutilizar una base de datos de servidor de informes existente de una instalación anterior u otra instancia con otra instancia del servidor de informes. El esquema de la base de datos del servidor de informes debe ser compatible con la instancia del servidor de informes. Si la base de datos está en un formato anterior, se le solicitarán que la actualice al formato actual. Las versiones más recientes no se pueden pasar a una versión anterior. Si tiene una base de datos de servidor de informes más reciente, no puede usarla con una versión anterior de una instancia del servidor de informes. Para más información sobre cómo se actualizan las bases de datos del servidor de informes a formatos más recientes, vea [Actualizar una base de datos del servidor de informes](../../reporting-services/install-windows/upgrade-a-report-server-database.md).  
   
 > [!IMPORTANT]  
->  La estructura de tabla para las bases de datos se optimiza para las operaciones de servidor y no se debe modificar ni ajustar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] podría cambiar la estructura de tabla en una versión posterior. Si modifica o amplía la base de datos, es posible que esté limitando o anulando la capacidad de ejecutar futuras actualizaciones o aplicar Service Pack. También podría realizar cambios que dificultaran las operaciones del servidor de informes. Por ejemplo, si activa READ_COMMITTED_SNAPSHOT en la base de datos ReportServer, interrumpirá la característica de ordenación interactiva.  
+> La estructura de tabla para las bases de datos se optimiza para las operaciones de servidor y no se debe modificar ni ajustar. [!INCLUDE[msCoName](../../includes/msconame-md.md)] podría cambiar la estructura de tabla en una versión posterior. Si modifica o amplía la base de datos, es posible que esté limitando o anulando la capacidad de ejecutar futuras actualizaciones o aplicar Service Pack. También podría realizar cambios que dificultaran las operaciones del servidor de informes. Por ejemplo, si activa READ_COMMITTED_SNAPSHOT en la base de datos ReportServer, interrumpirá la característica de ordenación interactiva.  
   
- Todos los accesos a una base de datos del servidor de informes deben controlarse a través del servidor de informes. Para acceder al contenido de una base de datos del servidor de informes se pueden usar herramientas de administración del servidor de informes (como el Administrador de informes y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o interfaces de programación como el acceso URL, el servicio web del servidor de informes o el proveedor de Instrumental de administración de Windows (WMI).  
+ Todos los accesos a una base de datos del servidor de informes deben controlarse a través del servidor de informes. Para acceder al contenido de una base de datos del servidor de informes se pueden usar herramientas de administración del servidor de informes (como el portal web y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]) o interfaces de programación, como el acceso URL, el servicio web del servidor de informes o el proveedor de Instrumental de administración de Windows (WMI).  
   
  La conexión a la base de datos del servidor de informes se define generalmente a través del Administrador de configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . No obstante, se puede definir durante la instalación si decide instalar la configuración predeterminada. Para más información sobre la conexión del servidor de informes a la base de datos, vea [Configurar una conexión a la base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-report-server-database-connection-ssrs-configuration-manager.md).  
   
-## <a name="report-server-database"></a>base de datos del servidor de informes  
+## <a name="report-server-database"></a>Base de datos del servidor de informes  
  La base de datos del servidor de informes es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde se almacena el siguiente contenido:  
   
 -   Elementos administrados por un servidor de informes (informes e informes vinculados, orígenes de datos compartidos, modelos de informe, carpetas, recursos) y todas las propiedades y la configuración de seguridad asociadas a dichos elementos.  
@@ -62,12 +62,11 @@ ms.locfileid: "65577575"
   
  Si realiza una copia de seguridad de la base de datos temporal y posteriormente la restaura, debería eliminar el contenido. Generalmente, se puede eliminar el contenido de la base de datos temporal en cualquier momento. No obstante, deberá reiniciar el servicio Servidor de informes de Windows una vez realizada esa operación.  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Hospedar una base de datos del servidor de informes en un clúster de conmutación por error de SQL Server](../../reporting-services/install-windows/host-a-report-server-database-in-a-sql-server-failover-cluster.md)   
  [Almacenar datos cifrados del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [Servidor de informes de Reporting Services](../../reporting-services/report-server-sharepoint/reporting-services-report-server.md)   
  [Administrar una base de datos del servidor de informes &#40;modo nativo de SSRS&#41;](../../reporting-services/report-server/administer-a-report-server-database-ssrs-native-mode.md)   
  [Crear una base de datos del servidor de informes &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-report-server-database.md)   
  [Operaciones de copia de seguridad y restauración de Reporting Services](../../reporting-services/install-windows/backup-and-restore-operations-for-reporting-services.md)  
-  
   

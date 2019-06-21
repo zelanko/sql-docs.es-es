@@ -21,13 +21,13 @@ helpviewer_keywords:
 - ISSCommandWithParameters interface
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 1cab9f8d7810216fff9e56fc9bab99cf1b58c92e
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: efc2c82f047beca82f1daeda6318f16803499f86
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52396359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66802863"
 ---
 # <a name="using-user-defined-types"></a>Usar tipos definidos por el usuario
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52396359"
 ### <a name="data-bindings-and-coercions"></a>Enlaces y conversiones de datos  
  En la tabla siguiente se describe el enlace y la conversión que tiene lugar al usar los tipos de datos enumerados con un UDT de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Las columnas UDT se exponen a través del controlador OLE DB para SQL Server como DBTYPE_UDT. Puede obtener metadatos mediante los conjuntos de filas de esquema adecuados, de modo que pueda administrar sus propios tipos definidos como objetos.  
   
-|Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **no UDT**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **no UDT**|  
+|Tipo de datos|A datos XML<br /><br /> **UDT**|A datos XML<br /><br /> **non-UDT**|Desde datos XML<br /><br /> **UDT**|Desde datos XML<br /><br /> **non-UDT**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
 |DBTYPE_UDT|Admite<sup>6</sup>|Error<sup>1</sup>|Admite<sup>6</sup>|Error<sup>5</sup>|  
 |DBTYPE_BYTES|Admite<sup>6</sup>|N/D<sup>2</sup>|Admite<sup>6</sup>|N/D<sup>2</sup>|  
@@ -194,7 +194,7 @@ ms.locfileid: "52396359"
  Es posible diferenciar una columna UDT del servidor de otros tipos binarios cuando el parámetro DBCOLUMN_TYPE está establecido en DBTYPE_UDT; para ello, es necesario examinar los metadatos UDT agregados especificados en la tabla anterior. Si esos datos están parcialmente completos, el tipo del servidor es un UDT. Para los tipos del servidor que no son UDT, estas columnas se devuelven siempre como NULL.  
  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características del controlador OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

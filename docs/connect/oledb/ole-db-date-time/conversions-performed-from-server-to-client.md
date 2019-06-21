@@ -14,10 +14,10 @@ author: pmasl
 ms.author: pelopes
 manager: jroth
 ms.openlocfilehash: 3ff9bc3f85340eb86aa0fa21820977e70ab51c5b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66769366"
 ---
 # <a name="conversions-performed-from-server-to-client"></a>Conversiones realizadas de servidor a cliente
@@ -32,12 +32,12 @@ ms.locfileid: "66769366"
   
 |A -><br /><br /> De|DATE|DBDATE|DBTIME|DBTIME2|DBTIMESTAMP|DBTIMESTAMPOFFSET|FILETIME|BYTES|VARIANT|SSVARIANT|BSTR|STR|WSTR|  
 |----------------------|----------|------------|------------|-------------|-----------------|-----------------------|--------------|-----------|-------------|---------------|----------|---------|----------|  
-|date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|date|1, 7|Aceptar|-|-|1|1, 3|1, 7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Time|5, 6, 7|-|9|Aceptar|6|3, 6|5, 6|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Smalldatetime|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |DATETIME|5, 7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
-|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
-|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|OK (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetime2|5, 7|8|9, 10|10|7|3|5, 7|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
+|Datetimeoffset|5, 7, 11|8, 11|9, 10, 11|10, 11|7, 11|Aceptar|5, 7, 11|-|Aceptar (VT_BSTR)|Aceptar|Aceptar|4|4|  
 |Char, Varchar,<br /><br /> Nchar, Nvarchar|7, 13|12|12, 9|12|12|12|7, 13|N/D|N/D|N/D|N/D|N/D|N/D|  
 |Sql_variant<br /><br /> (datetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  
 |Sql_variant<br /><br /> (smalldatetime)|7|8|9, 10|10|Aceptar|3|7|-|7 (VT_DATE)|Aceptar|Aceptar|4|4|  

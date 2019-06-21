@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: 3414992c-61c0-4e7d-b509-72517e52c1bb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbc6d4e971a810d581b8ace2de8fd7882171c460
-ms.sourcegitcommit: c1105ce638078d2c941cd656b34f78486e6b2d89
+manager: jroth
+ms.openlocfilehash: 85fc9956e8e88398703adf283c91517972aa7e77
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56676063"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797068"
 ---
 # <a name="retrieving-data"></a>Recuperación de datos
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -76,7 +76,7 @@ Puede ver cuántas filas se encuentran en un conjunto de resultados si especific
 |[Uso de parámetros direccionales](../../connect/php/using-directional-parameters.md)|Describe cómo usar parámetros direccionales cuando se llama a un procedimiento almacenado.|  
 |[Especificación de un tipo de cursor y selección de filas](../../connect/php/specifying-a-cursor-type-and-selecting-rows.md)|Muestra cómo crear un conjunto de resultados con filas que se pueden acceder en cualquier orden.|  
 |[Recuperación de los tipos de fecha y hora como cadenas con el controlador SQLSRV](../../connect/php/how-to-retrieve-date-and-time-type-as-strings-using-the-sqlsrv-driver.md)|Describe cómo recuperar los tipos de fecha y hora como cadenas con el controlador SQLSRV.|  
-|[Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Describe cómo recuperar tipos de fecha y hora como objetos mediante el controlador PDO_SQLSRV.|  
+|[Recuperación de los tipos de fecha y hora como objetos de fecha y hora PHP mediante el controlador PDO_SQLSRV](../../connect/php/how-to-retrieve-datetime-objects-using-pdo-sqlsrv-driver.md)|Describe cómo recuperar los tipos de fecha y hora como objetos mediante el controlador PDO_SQLSRV.|  
 |[Cadenas con formato decimal con el controlador SQLSRV](../../connect/php/formatting-decimals-sqlsrv-driver.md)|Muestra cómo dar formato a valores decimales o dinero con el controlador SQLSRV.|  
 |[Cadenas con formato decimal con el controlador PDO_SQLSRV](../../connect/php/formatting-decimals-pdo-sqlsrv-driver.md)|Muestra cómo dar formato a valores decimales o dinero utilizando el controlador PDO_SQLSRV.|  
   

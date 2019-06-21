@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.assetid: 47a882b7-efe5-4ee6-bef4-06118eb56903
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: 9d591d3fb8e3852564429742a4bd0c2cf3af2653
-ms.sourcegitcommit: 3daacc4198918d33179f595ba7cd4ccb2a13b3c0
-ms.translationtype: HT
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2aa2fefb5df874b08a34c4a7091d450afdfd4828
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50028314"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62513167"
 ---
 # <a name="lesson-1-creating-a-sample-subscriber-database"></a>Lección 1: Crear una base de datos de suscriptor de ejemplo
 
@@ -25,7 +25,7 @@ En esta lección se da por hecho que está usando [!INCLUDE[ssManStudioFull_md](
   
 1.  Inicie [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]y abra una conexión a una instancia del [!INCLUDE[ssDEnoversion_md](../includes/ssdenoversion-md.md)].  
   
-2.  Haga clic con el botón derecho en Bases de datos y seleccione **Nueva base de datos...**.  
+2.  Haga clic con el botón derecho en Bases de datos y seleccione **Nueva base de datos...** .  
   
 3.  En el cuadro de diálogo Nueva base de datos, en **Nombre de la base de datos**, escriba *Subscribers*. 
 4. [!INCLUDE[clickOK](../includes/clickok-md.md)]  

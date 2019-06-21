@@ -17,10 +17,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: a00f2c9f9e0b59e0e77f765d08b8e57709c33729
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66765696"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>Método getByte (int) (SQLServerResultSet)
@@ -47,7 +47,7 @@ public byte getByte(int columnIndex)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- El método getDate especifica este método getDate en la interfaz java.sql.ResultSet.  
+ El método getByte especifica este método getByte en la interfaz java.sql.ResultSet.  
   
  Este método solo se admite en los tipos de datos [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que pueden devolver de forma segura un valor de bytes, como por ejemplo, tinyint y bit. El resto de tipos de datos producirá una excepción.  
   

@@ -15,13 +15,13 @@ apitype: Assembly
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b303a9002194f05d1ceb2c3c9f154ed26f6524d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 95683f46799802410669ac97035f6a0f03379a37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47797893"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66801649"
 ---
 # <a name="execute-method-javalangstring-sqlserverstatement"></a>Método execute (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public boolean execute(java.lang.String sql)
 #### <a name="parameters"></a>Parámetros  
  *sql*  
   
- Un objeto **String** que contiene la instrucción SQL.  
+ Un valor **String** que contiene una instrucción SQL.  
   
 ## <a name="return-value"></a>Valor devuelto  
  **True** si el primer resultado es un conjunto de resultados. De lo contrario, se devuelve el valor **False**.  
@@ -47,9 +47,9 @@ public boolean execute(java.lang.String sql)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Notas  
- Este método execute se especifica mediante el método execute en la interfaz java.sql.Statement.  
+ El método execute especifica este método execute en la interfaz java.sql.Statement.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Método Execute &#40;SQLServerStatement&#41;](../../../connect/jdbc/reference/execute-method-sqlserverstatement.md)   
  [Miembros SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-members.md)   
  [Clase SQLServerStatement](../../../connect/jdbc/reference/sqlserverstatement-class.md)  

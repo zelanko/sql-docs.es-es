@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: 3e2d3679-436a-45d8-8bdc-7c633b65a720
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9feacf047b9c949bae25958a3030fce4661c1583
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 5cf0c29f6d095361cb3fd8a1d1cb316beb646433
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47710453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66797010"
 ---
 # <a name="sqlsrvclientinfo"></a>sqlsrv_client_info
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -42,7 +42,7 @@ sqlsrv_client_info( resource $conn)
 ## <a name="return-value"></a>Valor devuelto  
 Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente, o bien **False** si el valor del recurso de conexión es Null.  
   
-**Para PHP (versiones 3.2 y 3.1 de SQL Server)**:  
+**Para PHP (versiones 3.2 y 3.1 de SQL Server)** :  
   
 |Key|Descripción|  
 |-------|---------------|  
@@ -51,7 +51,7 @@ Se devuelve una matriz asociativa con las claves descritas en la tabla siguiente
 |DriverVer|Versión de la DLL de ODBC Driver 11 for SQL Server:<br /><br />xx.yy.zzzz (versión 3.2 o 3.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])|  
 |ExtensionVer|Versión de php_sqlsrv.dll:<br /><br />3.2.xxxx.x (para la versión 3.2 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])<br /><br />3.1.xxxx.x (para la versión 3.1 de los [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)])|  
   
-**Para PHP (versiones 3.0 y 2.0 de SQL Server)**:  
+**Para PHP (versiones 3.0 y 2.0 de SQL Server)** :  
   
 |Key|Descripción|  
 |-------|---------------|  
@@ -93,7 +93,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Referencia de API del controlador SQLSRV](../../connect/php/sqlsrv-driver-api-reference.md)
 
 [Sobre los ejemplos de código de la documentación](../../connect/php/about-code-examples-in-the-documentation.md)  

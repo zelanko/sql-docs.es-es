@@ -30,13 +30,13 @@ helpviewer_keywords:
 - COLUMNS rowset
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 729d2f7288e6156cdd0688f6eed4b3e5acada5ff
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+manager: jroth
+ms.openlocfilehash: 8de7c74e41a3f61105c7b70cc453ee8d361ba7ff
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52391463"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66796070"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "52391463"
 
   En [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se ha introducido un tipo de datos **xml** que permite almacenar fragmentos y documentos XML en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. El tipo de datos **xml** es un tipo de datos integrado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y es de algún modo similar a otros tipos integrados, como **int** y **varchar**. Al igual que ocurre con otros tipos integrados, el tipo de datos **xml** puede usarse como un tipo de columna al crear una tabla, como un tipo de variable, un tipo de parámetro, un tipo de valor devuelto por una función o en funciones CAST y CONVERT.  
   
-## <a name="programming-considerations"></a>Consideraciones de programación  
+## <a name="programming-considerations"></a>Consideraciones sobre la programación  
  El XML puede ser autodescriptivo ya que puede incluir un encabezado XML que especifique la codificación del documento como, por ejemplo:  
   
  `<?xml version="1.0" encoding="windows-1252"?><doc/>`  
@@ -86,9 +86,9 @@ ms.locfileid: "52391463"
   
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **Distinto de XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **Distinto de XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|Paso a través<sup>6,7</sup>|Error<sup>1</sup>|ACEPTAR<sup>11, 6</sup>|Error<sup>8</sup>|  
+|DBTYPE_XML|Paso a través<sup>6,7</sup>|Error<sup>1</sup>|Correcto<sup>11, 6</sup>|Error<sup>8</sup>|  
 |DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/D<sup>2</sup>|Correcto<sup>11, 6</sup>|N/D <sup>2</sup>|  
-|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|ACEPTAR<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
@@ -230,7 +230,7 @@ ms.locfileid: "52391463"
  El método **IRowsetFind::FindNextRow** no funciona con el tipo de datos **xml**. Cuando se llama a **IRowsetFind::FindNextRow** y el argumento *hAccessor* especifica una columna DBTYPE_XML, se devuelve DB_E_BADBINDINFO. Esto ocurre independientemente del tipo de columna que se esté buscando. En los demás tipos de enlaces, se produce un error en **FindNextRow** con DB_E_BADCOMPAREOP si el tipo de datos de la columna que va a buscarse es **xml**.  
  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Características del controlador OLE DB para SQL Server](../../oledb/features/oledb-driver-for-sql-server-features.md)    
  [ISSCommandWithParameters &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/isscommandwithparameters-ole-db.md)  
   

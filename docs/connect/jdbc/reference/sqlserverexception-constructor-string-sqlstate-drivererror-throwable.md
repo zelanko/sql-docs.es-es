@@ -13,13 +13,13 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc7608582a5ed146b656d41714853ba4c3b21b00
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+manager: jroth
+ms.openlocfilehash: 726cbd2c1a2106168532b34bd64db269a2031ac4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47679983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66800909"
 ---
 # <a name="sqlserverexception-constructor-javalangstring-sqlstate-drivererror-javalangthrowable"></a>Constructor SQLServerException (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +53,7 @@ public SQLServerException(java.lang.String errText,
   
  Un objeto puede producir que contiene la causa de la excepción.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Constructores SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)   
  [Miembros SQLServerException](../../../connect/jdbc/reference/sqlserverexception-members.md)   
  [Clase SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

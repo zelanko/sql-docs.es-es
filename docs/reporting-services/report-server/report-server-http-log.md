@@ -1,6 +1,6 @@
 ---
 title: Registro HTTP del servidor de informes | Microsoft Docs
-ms.date: 03/02/2018
+ms.date: 06/12/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 6cc433b7-165c-4b16-9034-79256dd6735f
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2d290d32cbe05a0e378486cad72c5f39a2bc6e58
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.openlocfilehash: 7fb733325b09c189221729a3edc0dd12cf33b283
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65581400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140461"
 ---
 # <a name="report-server-http-log"></a>Registro HTTP del servidor de informes
   El archivo de registro HTTP del servidor de informes guarda un registro de cada solicitud y respuesta HTTP administradas por el servidor de informes. Dado que los errores de desbordamiento y de tiempo de espera de la solicitud no alcanzan el servidor de informes, no se graban en el archivo de registro.  
@@ -28,11 +28,11 @@ ms.locfileid: "65581400"
 |||  
 |-|-|  
 |Nombre de archivo|De forma predeterminada, el nombre del archivo es ReportServerService_HTTP_\<marcaDeTiempo>.log. Puede personalizar el prefijo del nombre de archivo si modifica el atributo HttpTraceFileName en el archivo ReportingServicesService.exe.config. La marca de tiempo se basa en la hora universal coordinada (UTC).|  
-|Ubicación del archivo|El archivo se encuentra en \Microsoft SQL Server\\*\<Instancia de SQL Server>* \Reporting Services\LogFiles.|  
+|Ubicación del archivo|El archivo se encuentra en \Microsoft SQL Server\\ *\<Instancia de SQL Server>* \Reporting Services\LogFiles.|  
 |Formato de archivo|El archivo está en formato EN-US. Es un archivo de texto ASCII.|  
-|Creación y retención de archivos|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el Administrador de informes) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
+|Creación y retención de archivos|El registro HTTP se crea tras habilitarlo en el archivo de configuración, de reiniciar el servicio y de que el servidor de informes procese una solicitud HTTP. Si configura los valores pero no ve el archivo de registro, abra un informe o inicie una aplicación de servidor de informes (como el portal web) para generar una solicitud HTTP y crear el archivo.<br /><br /> Se creará una nueva instancia del archivo de registro después de cada reinicio del servicio y de la solicitud HTTP subsiguiente al servidor de informes.<br /><br /> De manera predeterminada, los registros de seguimiento están limitados a 32 megabytes y se eliminan transcurridos 14 días.|  
   
-## <a name="configuration-settings-for-report-server-http-log"></a>Parámetros de configuración para el registro HTTP del servidor de informes  
+## <a name="configuration-settings-for-report-server-http-log"></a>Opciones de configuración para el registro HTTP del servidor de informes  
  Para configurar el registro HTTP del servidor de informes, utilice el Bloc de notas para modificar el archivo ReportingServicesService.exe.config. El archivo de configuración se encuentra en la carpeta \Archivos de programa\Microsoft SQL Server\MSSQL.n\Reporting Services\ReportServer\Bin.  
   
  Para habilitar el servidor HTTP, debe agregar **http:4** a la sección RStrace del archivo ReportingServicesService.exe.config. Las restantes entradas del archivo de registro HTTP son opcionales. El ejemplo siguiente incluye todos los valores para que pueda pegar la sección entera sobre la sección RStrace y, a continuación, eliminar los valores que no sean necesarios.
@@ -76,9 +76,8 @@ ms.locfileid: "65581400"
 |CookieSent|Contenido de la cookie enviada por el servidor.|No|  
 |Referrer|Sitio anterior visitado por el cliente.|No|  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Registro de seguimiento del servicio del servidor de informes](../../reporting-services/report-server/report-server-service-trace-log.md)   
  [Archivos de registro y orígenes de Reporting Services](../../reporting-services/report-server/reporting-services-log-files-and-sources.md)   
  [Referencia de errores y eventos &#40;Reporting Services&#41;](../../reporting-services/troubleshooting/errors-and-events-reference-reporting-services.md)  
-  
   

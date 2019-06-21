@@ -11,10 +11,10 @@ ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
 ms.openlocfilehash: 8592d3dfc16f0dd9d13a6445f0d8290f9ad507e4
-ms.sourcegitcommit: 1800fc15075bb17b50d0c18b089d8a64d87ae726
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/04/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66499619"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>Parámetros de informe (Generador de informes y Diseñador de informes)
@@ -168,7 +168,7 @@ Cree un parámetro manualmente desde el panel Datos de informe. Puede configurar
   
 -   En las consultas de [!INCLUDE[tsql](../../includes/tsql-md.md)] , cada origen de datos es compatible con una sintaxis para parámetros diferente. La compatibilidad varía para los parámetros que se identifican en la consulta por su posición o los que se identifican por su nombre. Para más información, vea los temas relacionados con los tipos de orígenes de datos externos específicos en [Conjuntos de datos de informe &#40;SSRS&#41;](../../reporting-services/report-data/report-datasets-ssrs.md). En el diseñador de consultas relacional, debe seleccionar la opción de parámetro de un filtro para crear una consulta parametrizada. Para obtener más información, vea [Interfaz de usuario del Diseñador de consultas relacionales &#40;Generador de informes&#41;](../../reporting-services/report-data/relational-query-designer-user-interface-report-builder.md).  
   
--   En las consultas basadas en un origen de datos multidimensionales, como Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, podrá especificar si desea crear un parámetro en función del filtro que haya especificado en el diseñador de consultas. Para más información, vea el tema sobre el Diseñador de consultas en [Diseñadores de consultas &#40;Generador de informes&#41;](../report-data/query-design-tools-ssrs.md) que se corresponda con la extensión de datos.  
+-   En las consultas basadas en un origen de datos multidimensionales, como Microsoft SQL Server Analysis Services, SAP NetWeaver BI o Hyperion Essbase, podrá especificar si desea crear un parámetro en función del filtro que haya especificado en el diseñador de consultas. Para más información, vea el tema sobre el diseñador de consultas en [Herramientas de diseño de consulta &#40;SSRS&#41;](../report-data/query-design-tools-ssrs.md) que se corresponda con la extensión de datos.  
   
 ##  <a name="bkmk_Manage_Parameters"></a> Administración de parámetros para un informe publicado  
  Cuando diseñe un informe, los parámetros de informe se guardarán en la definición de informe. Cuando diseñe un informe, los parámetros de informe se guardarán y administrarán por separado, no con la definición de informe.  

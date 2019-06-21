@@ -1,5 +1,5 @@
 ---
-title: SQLServerNClob Members | Microsoft Docs
+title: Miembros SQLServerNClob | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -12,10 +12,10 @@ author: MightyPen
 ms.author: genemi
 manager: jroth
 ms.openlocfilehash: 8386d896391405777648ee3ec27b188b313c737c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
+ms.lasthandoff: 06/15/2019
 ms.locfileid: "66788955"
 ---
 # <a name="sqlservernclob-members"></a>Miembros SQLServerNClob
@@ -41,7 +41,7 @@ ms.locfileid: "66788955"
 |[getCharacterStream](../../../connect/jdbc/reference/getcharacterstream-method-sqlservernclob.md)|Recupera el **NCLOB** valor designado por el **java.sql.NClob** objeto.|  
 |[getSubString](../../../connect/jdbc/reference/getsubstring-method-sqlservernclob.md)|Recupera una copia de la subcadena especificada en el **NCLOB** valor designado por el **java.sql.NClob** objeto.|  
 |[length](../../../connect/jdbc/reference/length-method-sqlservernclob.md)|Recupera el número de caracteres en el **NCLOB** valor designado por el **java.sql.NClob** objeto.|  
-|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Recupera la posición de caracteres del objeto **NClob** especificado o subcadena en **NClob** según la posición de inicio especificada.|  
+|[position](../../../connect/jdbc/reference/position-method-sqlservernclob.md)|Recupera la posición de caracteres del objeto **java.sql.NClob** especificado o subcadena en **java.sql.NClob** según la posición de inicio especificada.|  
 |[setAsciiStream](../../../connect/jdbc/reference/setasciistream-method-sqlservernclob.md)|Recupera un flujo que se va a utilizar para escribir caracteres ASCII para el valor **NCLOB** que representa este objeto **java.sql.NClob**, a partir de la posición especificada.|  
 |[setCharacterStream](../../../connect/jdbc/reference/setcharacterstream-method-sqlservernclob.md)|Recupera un flujo que se va a utilizar para escribir un flujo de Unicode para el valor **NCLOB** que representa este objeto **Java.sql.NClob**, a partir de la posición especificada.|  
 |[setString](../../../connect/jdbc/reference/setstring-method-sqlservernclob.md)|Escribe el determinado **cadena** a la **NCLOB** empezando en la posición especificada.|  

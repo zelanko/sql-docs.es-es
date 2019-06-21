@@ -7,13 +7,13 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.date: 03/14/2017
-ms.openlocfilehash: 50703b76ddd67ca4d41cc42625eb6cd0e5ac993b
-ms.sourcegitcommit: dda9a1a7682ade466b8d4f0ca56f3a9ecc1ef44e
+ms.date: 06/06/2019
+ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/14/2019
-ms.locfileid: "65580373"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "66826909"
 ---
 # <a name="configure-report-builder-access"></a>Configurar el acceso al Generador de informes
 El Generador de informes es una herramienta de notificación ad hoc que se instala con un servidor de informes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configurado para modo nativo o para modo de integración con SharePoint.  
@@ -28,29 +28,29 @@ El acceso al Generador de informes depende de los factores siguientes:
 
 ## <a name="prerequisites"></a>Prerequisites
 
-El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2017](~/sql-server/editions-and-components-of-sql-server-2017.md).  
+El Generador de informes no está disponible en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
 
-El equipo cliente debe tener instalado [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 2.0. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
+El equipo cliente debe tener la [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 o 4.6.1 instalado para SSRS 2016 y 2017, respectivamente. [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] proporciona la infraestructura para ejecutar aplicaciones [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] .  
 
-Debe utilizar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 6.0 o posterior.  
+Debe usar [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Explorer 11 o posterior, u otro explorador moderno.  
 
 El Generador de informes siempre se ejecuta con confianza total; no se puede configurar para ejecutarse con confianza parcial. En las versiones anteriores, era posible que el Generador de informes se ejecutara con confianza parcial, pero esa opción no se admite en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y en versiones posteriores.  
 
 ## <a name="enabling-and-disabling-report-builder"></a>Habilitar y deshabilitar el Generador de informes  
 
-El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **EnableReportDesignClientDownload** del servidor de informes en **false**. De esta manera, se deshabilitan las descargas del Generador de informes para ese servidor de informes.  
+El Generador de informes está habilitado de manera predeterminada. Los administradores del servidor de informes tienen la posibilidad de deshabilitar la característica Generador de informes; para ello, deben establecer la propiedad del sistema **ShowDownloadMenu** del servidor de informes en **false**. Al establecer esta propiedad, se deshabilitará al generador de informes, publicador de informes móviles y descarga de Power BI Mobile para ese servidor de informes.  
 
-Para establecer las propiedades del sistema del servidor de informes, puede usar Management Studio o script:  
+ Para establecer las propiedades del sistema del servidor de informes, puede usar Management Studio o script:   
 
-- Para utilizar Management Studio, conéctese al servidor de informes y utilice la página Avanzadas de Propiedades del servidor con el fin de establecer **EnableReportDesignClientDownload** en **false**. Para más información sobre cómo abrir esta página, vea [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).  
+ - Para utilizar Management Studio, conéctese al servidor de informes y utilice la página Avanzadas de Propiedades del servidor con el fin de establecer **ShowDownloadMenu**en **false**. Para más información sobre cómo abrir esta página, vea [Establecer las propiedades del servidor de informes &#40;Management Studio&#41;](../../reporting-services/tools/set-report-server-properties-management-studio.md).      
 
-- Para ver un script de ejemplo donde se configura una propiedad del servidor de informes, consulte [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
+ - Para ver un script de ejemplo donde se configura una propiedad del servidor de informes, consulte [Script para tareas administrativas y de implementación](../../reporting-services/tools/script-deployment-and-administrative-tasks.md).  
 
 ## <a name="role-assignments-granting-report-builder-access-on-a-native-mode-report-server"></a>Asignaciones de roles que conceden acceso al Generador de informes en un servidor de informes en modo nativo  
 
 En un servidor de informes en modo nativo, cree asignaciones de roles de usuario que incluyan las tareas para utilizar el Generador de informes. Debe ser administrador de contenido y administrador del sistema para crear o modificar definiciones y asignaciones de roles en los elementos y en el nivel de sitio.  
 
-En las instrucciones siguientes se supone que se utilizan roles predefinidos. Si ha modificado las definiciones de roles o ha realizado la actualización a partir de SQL Server 2000, compruebe si los roles contienen las tareas necesarias. Para más información sobre cómo crear asignaciones de roles, vea [Conceder a un usuario acceso a un servidor de informes &#40;Administrador de informes&#41;](../../reporting-services/security/grant-user-access-to-a-report-server-report-manager.md).  
+En las instrucciones siguientes se supone que se utilizan roles predefinidos. Si ha modificado las definiciones de roles o ha realizado la actualización a partir de SQL Server 2000, compruebe si los roles contienen las tareas necesarias. Para más información sobre cómo crear asignaciones de roles, vea [Conceder a un usuario acceso a un servidor de informes](../../reporting-services/security/grant-user-access-to-a-report-server.md).
 
 Después de crear las asignaciones de roles, los usuarios tendrán permiso para hacer lo siguiente:  
 
@@ -100,7 +100,7 @@ Después de crear las asignaciones de roles, los usuarios tendrán permiso para 
 
     3. En Nombre, escriba **Generador de informes**.  
 
-    4. En Descripción, escriba la descripción del rol de modo que los usuarios del Administrador de informes sepan para qué sirve.  
+    4. En Descripción, escriba la descripción del rol de modo que los usuarios del portal web sepan para qué sirve.  
 
     5. Agregue las tareas siguientes: **Usar informes**, **Ver informes**, **Ver modelos**, **Ver recursos**, **Ver carpetas**y **Administrar suscripciones individuales**.  
 
@@ -108,9 +108,10 @@ Después de crear las asignaciones de roles, los usuarios tendrán permiso para 
 
 #### <a name="to-create-role-assignments-that-grant-access-to-report-builder"></a>Para crear asignaciones de roles que concedan acceso al Generador de informes  
 
-1. Inicie el Administrador de informes.  
+1. Inicie el portal web.  
 
-2. Haga clic en **Configuración del sitio**.  
+2. Haga clic en el icono de engranaje en la parte superior derecha de la página principal del portal web y seleccione **configuración del sitio** en el menú desplegable.  
+![el icono de engranaje portal web y un menú](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. Haga clic en **Seguridad**.  
 
@@ -150,5 +151,6 @@ En la tabla siguiente se describen los tipos de autenticación que admite el ser
 - [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md)
 - [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md)
 - [Inicio del Generador de informes](../../reporting-services/report-builder/start-report-builder.md)
-- [Administrador de informes &#40;Modo nativo SSRS&#41;](https://msdn.microsoft.com/library/80949f9d-58f5-48e3-9342-9e9bf4e57896)- [Conexión a un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
+- [El portal web de un servidor de informes (modo nativo de SSRS)](../web-portal-ssrs-native-mode.md)
+- [Conexión con un servidor de informes en Management Studio](../../reporting-services/tools/connect-to-a-report-server-in-management-studio.md)
 - [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md)

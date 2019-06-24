@@ -28,12 +28,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f3ca28e379188c13c266871c4b2afdeecca773bf
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: d14ee4d8bef4e9b7ada7ee558ca2524538775148
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361655"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166382"
 ---
 # <a name="deny-transact-sql"></a>DENY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,8 @@ DENY
  Indica que el permiso se deniega para la entidad de seguridad especificada y para el resto de entidades de seguridad a las que ésta concedió el permiso. Es obligatorio cuando la entidad de seguridad tiene el permiso con GRANT OPTION.  
   
  AS *principal*  
-  Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el denegador del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que el usuario María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. María ejecuta `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora bien, la tabla sys.database_permissions indicará que grantor_principal_id de la instrucción DENY fue 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (María).
+ Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.
+Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el denegador del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que el usuario María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. María ejecuta `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora bien, la tabla sys.database_permissions indicará que grantor_principal_id de la instrucción DENY fue 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (María).
   
 El uso de AS en esta instrucción no implica la capacidad de suplantar a otro usuario.  
   

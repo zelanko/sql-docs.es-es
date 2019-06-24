@@ -15,12 +15,12 @@ ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 47a14ad3baf1660b2b60cd6b96f2ef51f1e5d727
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a557d3dfddf5989c580b0ba78f9b5d930c548617
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66060091"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316665"
 ---
 # <a name="custom-messages-for-logging"></a>Mensajes personalizados para registro
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] proporciona a un amplio conjunto de eventos personalizados para escribir entradas del registro para paquetes y muchas tareas. Puede utilizar estas entradas para guardar información detallada sobre el progreso, resultados y problemas de ejecución al registrar eventos predefinidos o mensajes definidos por el usuario para su análisis posterior. Por ejemplo, puede registrar cuando se inicia y finaliza la inserción masiva para identificar los problemas de rendimiento en la ejecución del paquete.  
@@ -258,12 +258,8 @@ ms.locfileid: "66060091"
   
 |Entrada del registro|Descripción|  
 |---------------|-----------------|  
-|`XMLOperation`|Proporciona información sobre la operación que la tarea realiza.|  
-  
-## <a name="related-content"></a>Contenido relacionado  
- Entrada de blog sobre [el registro de eventos personalizados para tareas de Integration Services](https://go.microsoft.com/fwlink/?LinkId=150580), en dougbert.com.  
+|`XMLOperation`|Proporciona información sobre la operación que la tarea realiza.|   
   
 ## <a name="see-also"></a>Vea también  
  [Registro de Integration Services &#40;SSIS&#41;](performance/integration-services-ssis-logging.md)  
-  
   

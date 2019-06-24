@@ -23,12 +23,12 @@ ms.assetid: d2bade70-07cf-4d94-b5d2-88aecb538ed1
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: bf2776df77af8f4ba5fec9595d6ba9cddf927f7a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7756482734dac8d4d5982b0ab6d5d58942065697
+ms.sourcegitcommit: a6949111461eda0cc9a71689f86b517de3c5d4c1
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65620515"
+ms.lasthandoff: 06/19/2019
+ms.locfileid: "67263531"
 ---
 # <a name="tutorials-for-sql-server-management-studio-ssms"></a>Tutoriales de SQL Server Management Studio (SSMS)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +52,7 @@ A continuación se muestran los temas que se tratan en los tutoriales:
 
     En este tutorial aprenderá a crear scripts de distintos objetos en SSMS, incluidas las bases de datos y las consultas. 
 
-- [Tutorial: Uso de plantillas en SSMS](templates-ssms.md)
+- [Tutorial: Uso de plantillas en SSMS](../template/templates-ssms.md)
    
     En este tutorial aprenderá a trabajar con las plantillas predefinidas en SSMS. Las plantillas, una característica poco conocida, almacenan fragmentos de código Transact-SQL para diferentes tareas de administración de bases de datos. 
 

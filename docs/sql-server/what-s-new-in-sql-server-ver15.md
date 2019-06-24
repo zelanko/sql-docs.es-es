@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 018a9ddb9a51b9962486d8a9e6d2c6b1945e5885
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
+ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836299"
+ms.lasthandoff: 06/20/2019
+ms.locfileid: "67298226"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -233,7 +233,6 @@ Además, se han incorporado o mejorado las características siguientes de [!INCL
 |La vista de administración dinámica `sys.dm_exec_requests`, columna `command`, muestra `SELECT (STATMAN)` si un `SELECT` está esperando a que finalice una operación de actualización de estadísticas sincrónica para proseguir con la ejecución de la consulta. | [`sys.dm_exec_requests`](../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) |
 |Además, el nuevo tipo de espera `WAIT_ON_SYNC_STATISTICS_REFRESH` aparece en la vista de administración dinámica `sys.dm_os_wait_stats`. Muestra el tiempo de nivel de instancia acumulado empleado en las operaciones de actualización de estadísticas sincrónicas.|[`sys.dm_os_wait_stats`](../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) |
 |El grupo de búferes híbrido es una característica nueva del motor de base de datos de Microsoft SQL Server donde se accederá directamente a las páginas de base de datos ubicadas en archivos de base de datos presentes en un dispositivo de memoria persistente (PMEM) cuando sea necesario.|[Grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
-|[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] presenta el enmascaramiento de datos estáticos. Puede usar el enmascaramiento de datos estático para sanear los datos confidenciales en las copias de bases de datos de SQL Server.|[Enmascaramiento estático de datos](../relational-databases/security/static-data-masking.md) |
 |Uso de alias de vista o tabla derivada en una consulta de coincidencia del grafo. |[Restricciones perimetrales del grafo](../relational-databases/tables/graph-edge-constraints.md) |
 | &nbsp; | &nbsp; |
 

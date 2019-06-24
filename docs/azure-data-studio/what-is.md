@@ -11,18 +11,18 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1484d0bf2598cc3db8314c088b081ccd9327f5fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18fbf279a4d32121f552fda345d8024d1d408e31
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801918"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313970"
 ---
 # <a name="what-is-azure-data-studio"></a>¿Qué es Azure Data Studio?
 
 Azure Data Studio es una multiplataforma herramienta de la base de datos para profesionales de datos con la familia de Microsoft de un entorno local y en la nube de plataformas de datos en Windows, MacOS y Linux.
 
-Anteriormente se publicó en el nombre de vista previa de SQL Operations Studio, Azure Data Studio ofrece una experiencia de editor moderna con Intellisense, fragmentos de código, integración de control de código fuente y un terminal integrado. Se integra con el usuario de la plataforma de datos en mente, integrado en los gráficos de conjuntos de resultados de consulta y los paneles personalizables.
+Anteriormente se publicó en el nombre de vista previa de SQL Operations Studio, Azure Data Studio ofrece una experiencia de editor moderna con IntelliSense, fragmentos de código, integración de control de código fuente y un terminal integrado. Se integra con el usuario de la plataforma de datos en mente, integrado en los gráficos de conjuntos de resultados de consulta y los paneles personalizables.
 
 **[Descargue e instale [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

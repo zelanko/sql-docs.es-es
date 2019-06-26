@@ -6,17 +6,17 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 12/06/2018
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: a71c4fb8902bb016de0d5ee607f955db61d94901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d57fbeee578d2889d330ba19401477a43ab95e60
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783066"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387939"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
 
@@ -34,7 +34,7 @@ Existen tres puntos de entrada para el clúster de macrodatos
 
 * Puerta de enlace de Spark o HDFS (Knox): se trata de un punto de conexión basada en HTTPS. Otros puntos de conexión son procesadas por el proxy a través de este. Puerta de enlace de Spark o HDFS se usa para tener acceso a servicios como webHDFS y Livy. Siempre que vea referencias a Knox, esto es el punto de conexión.
 
-* Punto de conexión de controlador - servicio de administración de clúster de macrodatos que expone las API de REST de administración del clúster. Algunas herramientas, como el portal de administración, también son accesibles a través de este punto de conexión.
+* Punto de conexión de controlador - servicio de administración de clúster de macrodatos que expone las API de REST de administración del clúster. Algunas herramientas también son accesibles a través de este punto de conexión.
 
 * Instancia principal: extremo de TDS para herramientas de base de datos y aplicaciones para conectarse a la instancia de SQL Server Master en el clúster.
 

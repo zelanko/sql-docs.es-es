@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo actualizar clústeres de macrodato
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3af688d607e8ec2d9dad7efe0d2275840c48cba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bde0037933f420147d0467f83f1bcb6428cf526
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782243"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388737"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>Cómo actualizar clústeres de macrodatos de SQL Server
 
@@ -31,7 +31,7 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
 1. Eliminar el clúster antiguo con el `mssqlctl delete cluster` comando.
 
    ```bash
-    mssqlctl cluster delete --name <old-cluster-name>
+    mssqlctl bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
@@ -39,30 +39,24 @@ Actualmente, la única manera de actualizar un clúster de macrodatos a una nuev
 
 1. Si tiene cualquier versión anterior de **mssqlctl** instalado, es importante que desinstale **mssqlctl** primero antes de instalar la versión más reciente.
 
-   Si está desinstalando **mssqlctl** correspondiente a CTP 2.2 o ejecución inferior:
+   Para CTP 2.3 o posterior, ejecute el siguiente comando. Reemplace `ctp3.0` en el comando con la versión de **mssqlctl** que va a desinstalar. Si la versión es anterior a la 3.0, agregue un guión antes del número de versión (por ejemplo, `ctp-2.5`).
 
    ```powershell
-   pip3 uninstall mssqlctl
+   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
    ```
 
-   Para CTP 2.3 o posterior, ejecute el siguiente comando. Reemplace `ctp-2.5` en el comando con la versión de **mssqlctl** que va a desinstalar:
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp-2.5/mssqlctl/requirements.txt
-   ```
-
-1. Instale la versión más reciente de **mssqlctl**. El siguiente comando instala **mssqlctl** para CTP 3.0:
+1. Instale la versión más reciente de **mssqlctl**. El siguiente comando instala **mssqlctl** para CTP 3.1:
 
    **Windows:**
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
    **Linux:**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt --user
+   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
    ```
 
    > [!IMPORTANT]

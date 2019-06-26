@@ -5,16 +5,16 @@ description: Obtenga información sobre cómo realizar una implementación sin c
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: fd6a1e1e6f2ad661c8a2316c434854095c7f6da5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f3bfcfba0cfb972c7d02042bc98aa461eb110bb
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797886"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388814"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>Realizar una implementación sin conexión de un clúster de macrodatos de SQL Server
 
@@ -42,7 +42,7 @@ Los pasos siguientes describen cómo incorporar el clúster de macrodatos de im�
    > [!TIP]
    > Estos comandos usan PowerShell como ejemplo, pero puede ejecutar desde cualquier shell de comandos que se puede ejecutar docker, bash o cmd. En Linux, agregar `sudo` a cada comando.
 
-1. Extraiga imágenes de contenedor para el clúster de macrodatos, repita el comando siguiente. Reemplace `<SOURCE_IMAGE_NAME>` con cada [nombre de la imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` con la etiqueta para los datos de gran tamaño de clúster versión, como **ctp3.0**.  
+1. Extraiga imágenes de contenedor para el clúster de macrodatos, repita el comando siguiente. Reemplace `<SOURCE_IMAGE_NAME>` con cada [nombre de la imagen](#images). Reemplace `<SOURCE_DOCKER_TAG>` con la etiqueta para los datos de gran tamaño de clúster versión, como **ctp3.1**.  
 
    ```PowerShell
    docker pull private-repo.microsoft.com/mssql-private-preview/<SOURCE_IMAGE_NAME>:<SOURCE_DOCKER_TAG>
@@ -84,7 +84,6 @@ Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias 
  - **mssql-mlserver-r-runtime**
  - **mssql-mlserver-py-runtime**
  - **mssql-controller**
- - **mssql-portal**
  - **mssql-server-controller**
  - **mssql-monitor-grafana**
  - **mssql-monitor-kibana**
@@ -92,6 +91,8 @@ Las siguientes imágenes de contenedor de clúster de macrodatos son necesarias 
  - **mssql-app-service-proxy**
  - **mssql-ssis-app-runtime**
  - **mssql-monitor-telegraf**
+ - **mssql-mleap-serving-runtime**
+  
 
 ## <a id="automated"></a> Script automatizado
 
@@ -179,9 +180,9 @@ Para instalar **kubectl** a un equipo sin conexión, siga estos pasos.
 Para implementar desde el repositorio privado, siga los pasos descritos en la [Guía de implementación](deployment-guidance.md), pero usar un archivo de configuración de implementación personalizado que especifica la información del repositorio de Docker privada. La siguiente **mssqlctl** comandos muestran cómo cambiar la configuración de Docker en un archivo de configuración de implementación personalizado denominado **custom.json**:
 
 ```bash
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
-mssqlctl cluster config section set -c custom.json -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.repository=<your-docker-repository>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.registry=<your-docker-registry>"
+mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.docker.imageTag=<your-docker-image-tag>"
 ```
 
 La implementación le pide el nombre de usuario de docker y la contraseña, o puede especificarlos en el **DOCKER_USERNAME** y **DOCKER_PASSWORD** variables de entorno.

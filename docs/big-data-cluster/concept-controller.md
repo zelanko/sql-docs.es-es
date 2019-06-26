@@ -6,17 +6,17 @@ author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 115809307b430a9e5079de4db71180cca4766dac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0623a920b060e4d5d1e7724f39e2eadb0bd2475
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66783173"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387945"
 ---
 # <a name="what-is-the-controller-on-a-sql-server-big-data-cluster"></a>¿Qué es el controlador en un clúster de macrodatos de SQL Server?
 
@@ -44,17 +44,13 @@ El flujo de trabajo buildout preparará sobre Kubernetes un clúster de macrodat
 
 ## <a name="managing-the-cluster-through-the-controller-service"></a>Administración del clúster a través del servicio de controlador
 
-Puede administrar el clúster exclusivamente a través del servicio de controlador mediante `mssqlctl` API o el portal de administración de clúster que se hospeda dentro del clúster. Si implementa objetos adicionales de Kubernetes como pods en el mismo espacio de nombres, no están administrados ni supervisados por el servicio del controlador.
+Puede administrar el clúster a través del servicio de controlador mediante **mssqlctl** comandos. Si implementa objetos adicionales de Kubernetes como pods en el mismo espacio de nombres, no están administrados ni supervisados por el servicio del controlador. También puede usar **kubectl** comandos para administrar el clúster en el nivel de Kubernetes. Para obtener más información, consulte [supervisión y solución de problemas de clústeres de SQL Server macrodatos](cluster-troubleshooting-commands.md).
 
-El controlador y los objetos de Kubernetes (conjuntos con estado, pods, secretos, etc.) creados para un clúster de macrodatos residen en un espacio de nombres de Kubernetes dedicado. El servicio del controlador se concederá permiso por el Administrador de clústeres de Kubernetes para administrar todos los recursos dentro de ese espacio de nombres.  La directiva de RBAC para este escenario se configura automáticamente como parte de la implementación de clúster inicial con `mssqlctl`. 
+El controlador y los objetos de Kubernetes (conjuntos con estado, pods, secretos, etc.) creados para un clúster de macrodatos residen en un espacio de nombres de Kubernetes dedicado. El servicio del controlador se concederá permiso por el Administrador de clústeres de Kubernetes para administrar todos los recursos dentro de ese espacio de nombres.  La directiva de RBAC para este escenario se configura automáticamente como parte de la implementación de clúster inicial con **mssqlctl**.
 
 ### <a name="mssqlctl"></a>mssqlctl
 
-`mssqlctl` es una utilidad de línea de comandos escrita en Python que permite a los administradores de clúster arrancar y administrar clústeres de macrodatos a través de las API de REST expuestas por el servicio del controlador.
-
-### <a name="cluster-administration-portal"></a>Portal de administración de clúster
-
-Una vez que el servicio de controlador está en funcionamiento, puede usar el Administrador de clústeres el [Portal de administración de clúster](cluster-admin-portal.md) para supervisar el progreso de la implementación, detectar y solucionar problemas con los servicios dentro del clúster.
+**mssqlctl** es una utilidad de línea de comandos escrita en Python que habilita los administradores para arrancar y administrar clústeres de macrodatos a través de las API de REST expuestas por el servicio del controlador de clúster.
 
 ## <a name="controller-service-security"></a>Seguridad de servicio de controlador
 

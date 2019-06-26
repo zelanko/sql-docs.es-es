@@ -6,16 +6,16 @@ author: nelgson
 ms.author: negust
 ms.reviewer: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f126620c4da759a4c56abad05bf2e989d7d1bc3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b31c47039c79e0b8303f560694e67276dd192b6f
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782069"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388769"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo S3 de montaje para los niveles en un clúster de macrodatos HDFS
 
@@ -60,10 +60,10 @@ Ahora que ha preparado un archivo de credenciales con las teclas de acceso, pued
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
 
-1. Montar el almacenamiento HDFS remoto en Azure mediante **mssqlctl montaje del bloque de almacenamiento de clúster crear**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
+1. Montar el almacenamiento HDFS remoto en Azure mediante **crear montaje de bloque de almacenamiento de bdc mssqlctl**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
 
    ```bash
-   mssqlctl cluster storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name> --credential-file <path-to-s3-credentials>/file.creds
    ```
 
    > [!NOTE]
@@ -76,21 +76,21 @@ Si ha montado correctamente, podrá consultar los datos HDFS y ejecutar trabajos
 Para mostrar el estado de todos los montajes en el clúster de macrodatos, utilice el siguiente comando:
 
 ```bash
-mssqlctl cluster storage-pool mount status
+mssqlctl bdc storage-pool mount status
 ```
 
 Para mostrar el estado de un montaje en una ruta específica en HDFS, use el siguiente comando:
 
 ```bash
-mssqlctl cluster storage-pool mount status --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a id="delete"></a> Eliminar el montaje
 
-Para eliminar el montaje, use el **mssqlctl clúster grupo de almacenamiento montaje delete** comando y especifique la ruta de acceso de montaje en HDFS:
+Para eliminar el montaje, use el **delete de montaje de bloque de almacenamiento de bdc mssqlctl** comando y especifique la ruta de acceso de montaje en HDFS:
 
 ```bash
-mssqlctl cluster storage-pool mount delete --mount-path <mount-path-in-hdfs>
+mssqlctl bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>Pasos siguientes

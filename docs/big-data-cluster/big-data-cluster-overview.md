@@ -5,17 +5,17 @@ description: Obtenga información acerca de los clústeres de macrodatos de 2019
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 12/07/2018
+ms.date: 06/26/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: fed82f9bda8f72d92157de726eb6ae3c6ed1c0c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667c7a76bfc0b74ab8ee642ccb558a774a1e0e2c
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801893"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388730"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>¿Qué son los clústeres de macrodatos de SQL Server?
 
@@ -57,9 +57,7 @@ Clústeres de macrodatos de SQL Server permiten la inteligencia artificial y tar
 
 ### <a name="management-and-monitoring"></a>Administración y supervisión
 
-Administración y supervisión se proporcionan a través de una combinación de vistas de administración dinámica, un portal de administración, API y herramientas de línea de comandos.
-
-El [portal de administración de clúster](cluster-admin-portal.md) es una interfaz web que muestra el estado y el estado de los pods del clúster. También proporciona vínculos a otros paneles de log analytics y paneles de supervisión.
+Administración y supervisión se proporcionan a través de una combinación de herramientas de línea de comandos, API, portales y vistas de administración dinámica.
 
 Puede usar Azure Data Studio para realizar diversas tareas en el clúster de macrodatos. Esta opción está habilitada por el nuevo **2019 extensión (versión preliminar) de SQL Server**. Esta extensión ofrece:
 

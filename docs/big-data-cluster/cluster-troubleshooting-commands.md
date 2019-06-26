@@ -5,17 +5,17 @@ description: Este artículo proporciona comandos útiles para la supervisión y 
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 04/23/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 232c39e6a98f7f55fa3a653735f39c9607fbcbf4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d217e206ff9b41b0b61fa2d0407f530ef31eadf7
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800738"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388722"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>Supervisión y solución de problemas de clústeres de macrodatos de SQL Server
 
@@ -116,12 +116,11 @@ Los siguientes servicios admiten conexiones externas al clúster de macrodatos:
 |---|---|
 | **master-svc-external** | Proporciona acceso a la instancia maestra.<br/>(**EXTERNAL-IP, 31433** y **SA** usuario) |
 | **controller-svc-external** | Es compatible con las herramientas y los clientes que administran el clúster. |
-| **mgmtproxy-svc-external** | Proporciona acceso a la [Portal de administración de clúster](cluster-admin-portal.md).<br/>(https://**EXTERNAL-IP**:30777/portal) |
 | **gateway-svc-external** | Proporciona acceso a la puerta de enlace de Spark o HDFS.<br/>(**EXTERNAL-IP** y **raíz** usuario) |
 | **appproxy-svc-external** | Admite escenarios de implementación de la aplicación. |
 
 > [!TIP]
-> Se trata de una manera de ver los servicios con **kubectl**, pero también es posible usar `mssqlctl cluster endpoint list` comando para ver estos puntos de conexión. Para obtener más información, consulte [obtener puntos de conexión de clúster de macrodatos](deployment-guidance.md#endpoints).
+> Se trata de una manera de ver los servicios con **kubectl**, pero también es posible usar `mssqlctl bdc endpoint list` comando para ver estos puntos de conexión. Para obtener más información, consulte [obtener puntos de conexión de clúster de macrodatos](deployment-guidance.md#endpoints).
 
 ## <a name="get-service-details"></a>Obtener detalles de servicio
 
@@ -224,10 +223,6 @@ En el ejemplo siguiente se obtiene la dirección IP del nodo que la `master-0` p
 ```bash
 kubectl get pods master-0 -o yaml -n mssql-cluster | grep hostIP
 ```
-
-## <a name="cluster-administration-portal"></a>Portal de administración de clústeres
-
-Use la [portal de administración de clúster](cluster-admin-portal.md) para supervisar el estado del clúster de macrodatos. Por ejemplo, durante las implementaciones, puede usar el **implementación** ficha. Tendrá que esperar el **mgmtproxy-svc-external** que se inicie antes de acceder a este portal, por lo que no estará disponible al principio de una implementación de servicio.
 
 ## <a name="kubernetes-dashboard"></a>Panel de Kubernetes
 

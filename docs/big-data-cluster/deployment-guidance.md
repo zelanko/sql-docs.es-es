@@ -5,17 +5,17 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 15cd412de1dda9d1245859c27d35a7c7f9f52710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bd6d260d58b837e2df0d216c28149b6e9a3fa51
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66782253"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388781"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -82,14 +82,14 @@ Las opciones se definen en archivos de configuración JSON de implementación de
 
 | Perfil de implementación | Entorno de Kubernetes |
 |---|---|
-| **aks-dev-test.json** | Azure Kubernetes Service (AKS) |
-| **kubeadm-dev-test.json** | Varias máquinas (kubeadm) |
-| **minikube-dev-test.json** | minikube |
+| **aks-dev-test** | Azure Kubernetes Service (AKS) |
+| **kubeadm-dev-test** | Varias máquinas (kubeadm) |
+| **minikube-dev-test** | minikube |
 
-Puede implementar un clúster de macrodatos mediante la ejecución de **de creación del clúster mssqlctl**. Esto le pedirá que elija una de las configuraciones predeterminadas y, a continuación, le guía a través de la implementación.
+Puede implementar un clúster de macrodatos mediante la ejecución de **mssqlctl bdc crear**. Esto le pedirá que elija una de las configuraciones predeterminadas y, a continuación, le guía a través de la implementación.
 
 ```bash
-mssqlctl cluster create
+mssqlctl bdc create
 ```
 
 En este escenario, se solicitará cualquier configuración que no forma parte de la configuración predeterminada, como contraseñas. Tenga en cuenta que la información de Docker se proporciona a usted por Microsoft como parte de la SQL Server de 2019 [programa de adopción temprana](https://aka.ms/eapsignup).
@@ -99,35 +99,38 @@ En este escenario, se solicitará cualquier configuración que no forma parte de
 
 ## <a id="customconfig"></a> Configuraciones personalizadas
 
-También es posible personalizar su propio archivo de configuración de implementación. Puede hacerlo con los pasos siguientes:
+También es posible personalizar su propio perfil de configuración de implementación. Puede hacerlo con los pasos siguientes:
 
-1. Comience con uno de los perfiles de implementación estándar que coinciden con el entorno de Kubernetes. Puede usar el **lista de configuración de clúster mssqlctl** comando para enumerarlas:
+1. Comience con uno de los perfiles de implementación estándar que coinciden con el entorno de Kubernetes. Puede usar el **mssqlctl bdc config lista** comando para enumerarlas:
 
    ```bash
-   mssqlctl cluster config list
+   mssqlctl bdc config list
    ```
 
-1. Para personalizar la implementación, crear una copia del perfil de implementación con el **mssqlctl cluster config init** comando. Por ejemplo, el siguiente comando crea una copia de la **aks-dev-test.json** archivo de configuración de implementación en el directorio actual:
+1. Para personalizar la implementación, crear una copia del perfil de implementación con el **mssqlctl bdc config init** comando. Por ejemplo, el siguiente comando crea una copia de la **aks-dev-test** archivo de configuración de implementación en un directorio de destino denominado `custom`:
 
    ```bash
-   mssqlctl cluster config init --src aks-dev-test.json --target custom.json
-   ```
-
-1. Para personalizar la configuración en el archivo de configuración de implementación, puede editar en una herramienta que sirve para editar documentos json como VS Code. Para la automatización con secuencias de comandos, puede editar el archivo de configuración personalizada mediante **conjunto de sección de configuración de clúster mssqlctl** comando. Por ejemplo, el comando siguiente modifica un archivo de configuración personalizado para cambiar el nombre del clúster implementado desde el valor predeterminado (**mssql-cluster**) a **test-cluster**:  
-
-   ```bash
-   mssqlctl cluster config section set --config-file custom.json --json-values "metadata.name=test-cluster"
+   mssqlctl bdc config init --source aks-dev-test --target custom
    ```
 
    > [!TIP]
-   > Es una herramienta útil para buscar las rutas de acceso JSON el [JSONPath en línea evaluador](https://jsonpath.com/).
+   > El `--target` especifica un directorio que contiene el archivo de configuración según la `--source` parámetro.
+
+1. Para personalizar la configuración en el perfil de configuración de implementación, puede editar el archivo de configuración de implementación en una herramienta que sirve para editar archivos JSON, por ejemplo, VS Code. Para la automatización con secuencias de comandos, también puede editar el perfil de implementación personalizado mediante **mssqlctl bdc config sección conjunto** comando. Por ejemplo, el comando siguiente modifica un perfil de implementación personalizado para cambiar el nombre del clúster implementado desde el valor predeterminado (**mssql-cluster**) a **test-cluster**:  
+
+   ```bash
+   mssqlctl bdc config section set --config-profile custom --json-values "metadata.name=test-cluster"
+   ```
+
+   > [!TIP]
+   > El `--config-profile` especifica un nombre de directorio para el perfil de implementación personalizado, pero las modificaciones reales ocurrir en el archivo JSON de configuración de implementación dentro de ese directorio. Es una herramienta útil para buscar las rutas de acceso JSON el [JSONPath en línea evaluador](https://jsonpath.com/).
 
    Además de pasar pares de clave y valor, también puede proporcionar valores JSON de en línea o pasar archivos de revisión de JSON. Para obtener más información, consulte [configurar opciones de implementación para los clústeres de macrodatos](deployment-custom-configuration.md).
 
-1. A continuación, pase el archivo de configuración personalizada a **de creación del clúster mssqlctl**. Tenga en cuenta que debe establecer los [variables de entorno](#env), en caso contrario, se le pedirá los valores:
+1. A continuación, pase el archivo de configuración personalizada a **mssqlctl bdc crear**. Tenga en cuenta que debe establecer los [variables de entorno](#env), en caso contrario, se le pedirá los valores:
 
    ```bash
-   mssqlctl cluster create --config-file custom.json --accept-eula yes
+   mssqlctl bdc create --config-profile custom --accept-eula yes
    ```
 
 > [!TIP]
@@ -146,7 +149,7 @@ Las siguientes variables de entorno se usan para la configuración de seguridad 
 | **KNOX_PASSWORD** | La contraseña de usuario de Knox. |
 | **MSSQL_SA_PASSWORD** | La contraseña del usuario SA para la instancia principal de SQL. |
 
-Estas variables de entorno se deben establecer antes de llamar a **de creación del clúster mssqlctl**. Si no se establece cualquier variable, se le pedirá para él.
+Estas variables de entorno se deben establecer antes de llamar a **mssqlctl bdc crear**. Si no se establece cualquier variable, se le pedirá para él.
 
 El ejemplo siguiente muestra cómo establecer las variables de entorno para Linux (bash) y Windows (PowerShell):
 
@@ -168,10 +171,10 @@ SET DOCKER_USERNAME=<docker-username>
 SET DOCKER_PASSWORD=<docker-password>
 ```
 
-Tras establecer las variables de entorno, debe ejecutar `mssqlctl cluster create` para desencadenar la implementación. En este ejemplo se usa el archivo de configuración de clúster que creó anteriormente:
+Después de establecer las variables de entorno, debe ejecutar `mssqlctl bdc create` para desencadenar la implementación. Este ejemplo usa el perfil de configuración de clúster que creó anteriormente:
 
 ```
-mssqlctl cluster create --config-file custom.json --accept-eula yes
+mssqlctl bdc create --config-profile custom --accept-eula yes
 ```
 
 Tenga en cuenta las siguientes directrices:
@@ -182,7 +185,7 @@ Tenga en cuenta las siguientes directrices:
 
 ## <a id="unattended"></a> Instalación desatendida
 
-Para una implementación desatendida, debe establecer todas las variables de entorno necesarias, el uso de un archivo de configuración y llamada `mssqlctl cluster create` comando con el `--accept-eula yes` parámetro. Los ejemplos de la sección anterior muestran la sintaxis para una instalación desatendida.
+Para una implementación desatendida, debe establecer todas las variables de entorno necesarias, el uso de un archivo de configuración y llamada `mssqlctl bdc create` comando con el `--accept-eula yes` parámetro. Los ejemplos de la sección anterior muestran la sintaxis para una instalación desatendida.
 
 ## <a id="monitor"></a> Supervisar la implementación
 
@@ -195,7 +198,7 @@ Durante el arranque del clúster, la ventana de comandos de cliente dará como r
 En menos de 15 a 30 minutos, se debería notificar que se está ejecutando el pod del controlador:
 
 ```output
-2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Checkthe mssqlctl.log file for more details.
+2019-04-12 15:01:10.0809 UTC | INFO | Waiting for controller pod to be up. Check the mssqlctl.log file for more details.
 2019-04-12 15:01:40.0861 UTC | INFO | Controller pod is running.
 2019-04-12 15:01:40.0884 UTC | INFO | Controller Endpoint: https://<ip-address>:30080
 ```
@@ -206,11 +209,8 @@ En menos de 15 a 30 minutos, se debería notificar que se está ejecutando el po
 Cuando finalice la implementación, la salida le notifica de éxito:
 
 ```output
-2019-04-12 15:37:18.0271 UTC | INFO | Monitor and track your cluster at the Portal Endpoint: https://<ip-address>:30777/portal/
 2019-04-12 15:37:18.0271 UTC | INFO | Cluster deployed successfully.
 ```
-
-Tenga en cuenta la dirección URL de la **punto de conexión del Portal** en la salida anterior para su uso en la sección siguiente.
 
 > [!TIP]
 > Es el nombre predeterminado para el clúster implementado macrodatos `mssql-cluster` a menos que se modifica una configuración personalizada.
@@ -236,10 +236,10 @@ Después de que el script de implementación se ha completado correctamente, pue
 
    Especifique el nombre de usuario y contraseña que ha configurado para el controlador (CONTROLLER_USERNAME y CONTROLLER_PASSWORD) durante la implementación.
 
-1. Ejecute **lista de puntos de conexión de clúster mssqlctl** para obtener una lista con una descripción de cada punto de conexión y sus correspondientes valores de puerto y la dirección IP. 
+1. Ejecute **lista de puntos de conexión de bdc mssqlctl** para obtener una lista con una descripción de cada punto de conexión y sus correspondientes valores de puerto y la dirección IP. 
 
    ```bash
-   mssqlctl cluster endpoint list
+   mssqlctl bdc endpoint list
    ```
 
    En la lista siguiente se muestra la salida de este comando:
@@ -252,7 +252,6 @@ Después de que el script de implementación se ha completado correctamente, pue
    yarn-ui            Spark Diagnostics and Monitoring Dashboard              https://11.111.111.111:30443/gateway/default/yarn          11.111.111.111  30443   https
    app-proxy          Application Proxy                                       https://11.111.111.111:30778                               11.111.111.111  30778   https
    management-proxy   Management Proxy                                        https://11.111.111.111:30777                               11.111.111.111  30777   https
-   portal             Management Portal                                       https://11.111.111.111:30777/portal                        11.111.111.111  30777   https
    log-search-ui      Log Search Dashboard                                    https://11.111.111.111:30777/kibana                        11.111.111.111  30777   https
    metrics-ui         Metrics Dashboard                                       https://11.111.111.111:30777/grafana                       11.111.111.111  30777   https
    controller         Cluster Management Service                              https://11.111.111.111:30080                               11.111.111.111  30080   https

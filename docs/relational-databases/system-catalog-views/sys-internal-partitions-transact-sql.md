@@ -1,7 +1,7 @@
 ---
-title: Sys.internal_partitions (Transact-SQL) | Microsoft Docs
+title: sys.internal_partitions (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/10/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,14 +14,14 @@ author: ronortloff
 ms.author: rortloff
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a86c559adeeca787ac0e278eed5fb832b8c00bfd
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 5795ec9feaef483dd3ee9b5f3e31dbb619a89331
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537905"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388340"
 ---
-# <a name="sysinternalpartitions-transact-sql"></a>Sys.internal_partitions (Transact-SQL)
+# <a name="sysinternalpartitions-transact-sql"></a>sys.internal_partitions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada conjunto de filas que realiza un seguimiento de los datos internos para los índices de almacén de columnas en las tablas basadas en disco. Estos conjuntos de filas son internas a los índices de almacén de columnas y pista eliminar filas, las asignaciones de grupo de filas y delta almacenan grupos de filas. Realizan el seguimiento de datos para cada uno para cada partición de tabla; cada tabla tiene al menos una partición. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] vuelve a crear los conjuntos de filas cada vez que vuelve a generar el índice de almacén de columnas.   
@@ -39,6 +39,7 @@ ms.locfileid: "52537905"
 |rows|**bigint**|Número aproximado de filas de esta partición.|  
 |data_compression|**tinyint**|El estado de compresión para el conjunto de filas:<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE|  
 |data_compression_desc|**nvarchar(60)**|El estado de compresión para cada partición. Los valores posibles para las tablas de almacén de filas son NONE, ROW y PAGE. Los valores posibles para tablas de almacén de columnas son COLUMNSTORE y COLUMNSTORE_ARCHIVE.|  
+|optimize_for_sequential_key|**bit**|1 = partición ha habilitado la optimización de inserción de la última página.<br><br>0 = el valor predeterminado. Partición ha deshabilitado la optimización de inserción de la última página.|
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** . Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

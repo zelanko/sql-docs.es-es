@@ -5,26 +5,37 @@ description: Obtenga información sobre cómo usar el conector de Spark MSSQL en
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: faa9d90cf78df5d73f125c7660b79d39e2bd5622
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d8172bc1d2b831d0cbeaab72bead283853b22cc
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770934"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388631"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
 
 Un patrón de uso de datos de gran tamaño de clave es el procesamiento de datos de gran volumen en Spark, seguido de escribir los datos en SQL Server para tener acceso a aplicaciones de línea de negocio. Estos patrones de uso de beneficiarán de un conector que utiliza la claves optimizaciones de SQL y proporciona un mecanismo eficaz de escritura.
 
-Clústeres grandes de datos proporciona un nuevo conector de Spark MSSQL que usa SQL Server masiva escribir las API para un rendimiento de Spark a la escritura SQL. En este artículo se proporciona un ejemplo de cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL. En este ejemplo, los datos se leen de HDFS en un clúster de macrodatos, procesados por Spark y, a continuación, se escriben en la instancia principal de SQL Server en el clúster con el nuevo conector de Spark MSSQL.
+En este artículo se proporciona un ejemplo de cómo usar el conector de Spark de MSSQL para leer y escribir en las siguientes ubicaciones dentro de un clúster de macrodatos:
+
+1. La instancia principal de SQL Server
+1. El grupo de datos de SQL Server
+
+   ![Diagrama de conector de Spark MSSQL](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+
+El ejemplo realiza las siguientes tareas:
+
+- Leer un archivo de HDFS y realizan un procesamiento básico.
+- Escribir la trama de datos en una instancia de SQL Server maestra como una tabla SQL y, a continuación, leer la tabla a una trama de datos.
+- Escribir la trama de datos a un grupo de datos de SQL Server como una tabla externa de SQL y, a continuación, leer la tabla externa a una trama de datos.
 
 ## <a name="mssql-spark-connector-interface"></a>Interfaz del conector de Spark MSSQL
 
-Conector de Spark MSSQL se basa en el origen de datos de Spark API y proporciona una interfaz conocida de conector de Spark JDBC. Para los parámetros de la interfaz, consulte [documentación de Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). El nombre al que hace referencia el conector de Spark MSSQL **com.microsoft.sqlserver.jdbc.spark**.
+Vista previa de SQL Server 2019 proporciona el **conector de Spark MSSQL** para big data clústeres que se usa de forma masiva de SQL Server escribir las API de Spark para operaciones de escritura SQL. Conector de Spark MSSQL se basa en el origen de datos de Spark API y proporciona una interfaz conocida de conector de Spark JDBC. Para los parámetros de la interfaz, consulte [documentación de Apache Spark](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). El nombre al que hace referencia el conector de Spark MSSQL **com.microsoft.sqlserver.jdbc.spark**.
 
 En la tabla siguiente se describe los parámetros de la interfaz que han cambiado o son nuevos:
 
@@ -55,7 +66,9 @@ El conector utiliza SQL Server masiva escribe las API. Cualquier escritura masiv
 
 1. Descargar [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) en el equipo local.
 
-1. En Azure Data Studio, haga doble clic en la carpeta HDFS en el clúster de macrodatos y seleccione **nuevo directorio**. Nombre del directorio **spark_data**.
+1. Inicie Azure Data Studio, y [conectarse a su clúster de macrodatos](connect-to-big-data-cluster.md).
+
+1. Haga doble clic en la carpeta HDFS en el clúster de macrodatos y seleccione **nuevo directorio**. Nombre del directorio **spark_data**.
 
 1. Haga clic con el botón derecho en el **spark_data** directorio y, a continuación, seleccione **cargar archivos**. Cargar el **AdultCensusIncome.csv** archivo.
 

@@ -5,17 +5,17 @@ description: Este tutorial muestra cómo introducir datos en el grupo de datos d
 author: rothja
 ms.author: jroth
 manager: jroth
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 44ef1a05dfe0437420b8b3a1036ed356122dcfca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86aca5e5e9ccbddfebcdeb3dade057b7fb138c4d
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770931"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388612"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -63,7 +63,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlDataPool')
      CREATE EXTERNAL DATA SOURCE SqlDataPool
-     WITH (LOCATION = 'sqldatapool://controller-svc:8080/datapools/default');
+     WITH (LOCATION = 'sqldatapool://controller-svc/default');
    ```
 
 1. Crear una tabla externa denominada **web_clickstream_clicks_data_pool** en el grupo de datos.
@@ -79,7 +79,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
       );
    ```
   
-1. En CTP 3.0, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
+1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
 
 ## <a name="load-data"></a>Cargar datos
 

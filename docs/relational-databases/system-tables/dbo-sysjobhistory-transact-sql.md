@@ -1,7 +1,7 @@
 ---
 title: dbo.sysjobhistory (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2016
+ms.date: 06/24/2019
 ms.prod: sql
 ms.prod_service: database-engine
 ms.reviewer: ''
@@ -20,19 +20,22 @@ ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 1797fb6183863bb0249bd0cda6024d0e95914e82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 809e8c80ec1734c24f6930b4042b5e1a84356597
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470853"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400104"
 ---
 # <a name="dbosysjobhistory-transact-sql"></a>dbo.sysjobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Esta tabla se almacena en el **msdb** base de datos.  
+Contiene información acerca de la ejecución de los trabajos programados por el Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
-> **NOTA:** Datos se actualizan solo una vez se complete el paso de trabajo.  
+> [!NOTE]
+> En la mayoría de los casos, los datos se actualizan solo después de que se complete el paso de trabajo y la tabla normalmente no contiene ningún registro de pasos de trabajo que están actualmente en curso, pero en algunos casos de procesos subyacentes *hacer* proporcionan información acerca de pasos de trabajo de progreso.
+
+Esta tabla se almacena en el **msdb** base de datos.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +46,7 @@ ms.locfileid: "62470853"
 |**sql_message_id**|**int**|Id. de los mensajes de error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devueltos si el trabajo genera algún error.|  
 |**sql_severity**|**int**|Gravedad de cualquier error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**message**|**nvarchar(4000)**|Texto de un error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si existe.|  
-|**run_status**|**int**|Estado de la ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **4** = en curso|  
+|**run_status**|**int**|Estado de la ejecución del trabajo:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br />**4** = en curso|  
 |**run_date**|**int**|Fecha en que se empezó a ejecutar el trabajo o paso. En el caso de un historial En curso, es la fecha y hora en que fue escrito.|  
 |**run_time**|**int**|Hora a la que comenzó el trabajo o paso.|  
 |**run_duration**|**int**|Tiempo transcurrido en la ejecución del trabajo o paso en **HHMMSS** formato.|  

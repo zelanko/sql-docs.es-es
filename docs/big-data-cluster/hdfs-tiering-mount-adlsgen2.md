@@ -10,12 +10,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 16b336113f869733b8f6ba93e3dbfe3dde5a52c1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ea4f04a2618bc1da6348f68675373704b46770a0
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388789"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400017"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>Cómo Gen2 de ADLS de montaje para los niveles en un clúster de macrodatos HDFS
 
@@ -64,17 +64,15 @@ Para poder usar las credenciales de OAuth para montar, deberá seguir los pasos 
 
 Espere entre 5 y 10 minutos antes de usar las credenciales para el montaje
 
-### <a name="create-credential-file"></a>Crear archivo de credenciales
+### <a name="set-environment-variable-for-oauth-credentials"></a>Establezca la variable de entorno para las credenciales de OAuth
 
-Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos.
-
-Cree un archivo local denominado **filename.creds** que contiene sus credenciales de cuenta de Azure Data Lake Storage Gen2 con el formato siguiente:
+Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos. Establezca una variable de entorno con el formato siguiente: Lista separada por tenga en cuenta que las credenciales deben estar en una coma. El comando 'set' se usa en Windows. Si usa Linux, use 'export' en su lugar.
 
    ```text
-    fs.azure.account.auth.type=OAuth
-    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above]
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above]
+    set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
+    fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
+    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
+    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
     fs.azure.account.oauth2.client.secret=[<key> from step5 above]
    ```
 
@@ -85,20 +83,20 @@ También puede montar mediante claves de acceso que se pueden obtener con su cue
  > [!TIP]
    > Para obtener más información sobre cómo buscar la clave de acceso (`<storage-account-access-key>`) para la cuenta de almacenamiento, consulte [ver y copiar las claves de acceso](https://docs.microsoft.com/azure/storage/common/storage-account-manage?#view-and-copy-access-keys).
 
-### <a name="create-credential-file"></a>Crear archivo de credenciales
+### <a name="set-environment-variable-for-access-key-credentials"></a>Establezca la variable de entorno para las credenciales de clave de acceso
 
 1. Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos.
 
-1. Cree un archivo local denominado **filename.creds** que contiene sus credenciales de cuenta de Azure Data Lake Storage Gen2 con el formato siguiente:
+1. Abra un símbolo en un equipo cliente que puede tener acceso al clúster de macrodatos. Establezca una variable de entorno con el formato siguiente. Lista separada por tenga en cuenta que las credenciales deben estar en una coma. El comando 'set' se usa en Windows. Si usa Linux, use 'export' en su lugar.
 
    ```text
-   fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net
+   set MOUNT_CREDENTIALS=fs.azure.abfs.account.name=<your-storage-account-name>.dfs.core.windows.net,
    fs.azure.account.key.<your-storage-account-name>.dfs.core.windows.net=<storage-account-access-key>
    ```
 
 ## <a id="mount"></a> Montar el almacenamiento HDFS remoto
 
-Ahora que ha preparado un archivo de credenciales con las claves de acceso o uso de OAuth, puede iniciar el montaje. Los pasos siguientes montar el almacenamiento HDFS remoto en Azure Data Lake en el almacenamiento HDFS local de su clúster de macrodatos.
+Ahora que ha establecido la variable de entorno MOUNT_CREDENTIALS para las claves de acceso o uso de OAuth, puede iniciar el montaje. Los pasos siguientes montar el almacenamiento HDFS remoto en Azure Data Lake en el almacenamiento HDFS local de su clúster de macrodatos.
 
 1. Use **kubectl** para buscar la dirección IP para el punto de conexión **controlador-svc-external** servicio en el clúster de macrodatos. Busque el **External-IP**.
 
@@ -111,11 +109,12 @@ Ahora que ha preparado un archivo de credenciales con las claves de acceso o uso
    ```bash
    mssqlctl login -e https://<IP-of-controller-svc-external>:30080/
    ```
+1. Establecer variable de entorno MOUNT_CREDENTIALS (desplácese para obtener instrucciones)
 
 1. Montar el almacenamiento HDFS remoto en Azure mediante **crear montaje de bloque de almacenamiento de bdc mssqlctl**. Reemplace los valores de marcador de posición antes de ejecutar el comando siguiente:
 
    ```bash
-   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name> --credential-file <path-to-adls-credentials>/file.creds
+   mssqlctl bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]

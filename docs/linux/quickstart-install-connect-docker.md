@@ -14,12 +14,12 @@ ms.prod_service: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
 zone_pivot_groups: cs1-command-shell
-ms.openlocfilehash: 55061de57903d33c5f31c532f680fcf0c66684f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 667103945781e5c7814879456027a81b77cf7338
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506561"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399927"
 ---
 # <a name="quickstart-run-sql-server-container-images-with-docker"></a>Inicio rápido: Ejecutar imágenes de contenedor de SQL Server con Docker
 
@@ -184,19 +184,19 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+   docker pull mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -215,7 +215,7 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
    ```bash
    sudo docker run -e 'ACCEPT_EULA=Y' -e 'SA_PASSWORD=<YourStrong!Passw0rd>' \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -223,7 +223,7 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -231,7 +231,7 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu
+      -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
    ```
    ::: zone-end
 
@@ -249,7 +249,7 @@ Antes de comenzar los pasos siguientes, asegúrese de que ha seleccionado el she
    | **-e "contraseña_sa =\<YourStrong! Passw0rd\>'** | Especifique una contraseña segura propia con al menos 8 caracteres y que cumpla los [requisitos de contraseña de SQL Server](../relational-databases/security/password-policy.md). Configuración requerida para la imagen de SQL Server. |
    | **-p 1433:1433** | Asigne un puerto TCP en el entorno de host (el primer valor) a un puerto TCP en el contenedor (el segundo valor). En este ejemplo, SQL Server está escuchando en TCP 1433 en el contenedor y se expone al puerto 1433 en el host. |
    | **--name sql1** | Especifique un nombre personalizado para el contenedor en lugar de uno generado aleatoriamente. Si ejecuta más de un contenedor, no podrá usar el mismo nombre. |
-   | **mcr.microsoft.com/mssql/server:2019-CTP3.0-ubuntu** | La imagen de contenedor de SQL Server de 2019 CTP3.0 Linux. |
+   | **mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu** | La imagen de contenedor de SQL Server de 2019 CTP3.1 Linux. |
 
 3. Para ver los contenedores de Docker, use el comando `docker ps`.
 

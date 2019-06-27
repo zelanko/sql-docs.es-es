@@ -14,12 +14,12 @@ ms.assetid: d47a9ab5-f2cc-42a8-8be9-a33895ce44f0
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 49bffb24c5ddc45c1c6b88fb424ab419445819fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3851e196da2e6497285559192d90cbb0e74fd217
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025481"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400129"
 ---
 # <a name="spgetredirectedpublisher-transact-sql"></a>sp_get_redirected_publisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ sp_get_redirected_publisher
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @original_publisher = ] 'original_publisher'` El nombre de la base de datos que se está publicando. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @original_publisher = ] 'original_publisher'` El nombre de la instancia de SQL Server que se haya publicado originalmente la base de datos. *original_publisher* es **sysname**, no tiene ningún valor predeterminado.
   
 `[ @publisher_db = ] 'publisher_db'` El nombre de la base de datos que se está publicando. *publisher_db* es **sysname**, no tiene ningún valor predeterminado.  
   

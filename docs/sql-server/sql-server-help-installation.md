@@ -10,53 +10,43 @@ ms.assetid: 51f8a08c-51d0-41d8-8bc5-1cb4d42622fb
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 41b14322d3c895e687add2236c2447d93df62586
-ms.sourcegitcommit: 1510d9fce125e5b13e181f8e32d6f6fbe6e7c7fe
+ms.openlocfilehash: 727186e4c32291a02140c50780986c8b2f60e08a
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55771341"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140783"
 ---
 # <a name="sql-server-offline-help-and-help-viewer"></a>Visor de Ayuda y ayuda sin conexión de SQL Server
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Puede usar la aplicación Visor de Ayuda de Microsoft para descargar e instalar los paquetes de ayuda de SQL Server desde el disco o desde orígenes en línea y verlos sin conexión. Visor de Ayuda se instala con SQL Server Management Studio (SSMS) o Visual Studio (VS). En este artículo, se describen las herramientas que instalan esta aplicación, cómo instalar el contenido de la ayuda sin conexión y cómo ver la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)], SQL Server 2016 y SQL Server 2017.
+Puede usar la aplicación Visor de Ayuda de Microsoft para descargar e instalar los paquetes de ayuda de SQL Server desde el disco o desde orígenes en línea. Después, puede ver el contenido sin conexión. El Visor de ayuda se instala con varias herramientas. En este artículo se describen las herramientas para instalar el Visor de Ayuda, cómo instalar contenido de ayuda sin conexión y cómo ver la ayuda.
 
 Se necesita acceso a Internet para descargar el contenido de Visor de Ayuda. Después, podrá migrar el contenido a un equipo que no tenga acceso a Internet.
 
-> [!NOTE]
-> Las ayudas de SQL Server 2016 y 2017 están combinadas, aunque algunos temas solo se aplican a una versión. Esto se indica en dichos temas. La mayoría de los temas se aplican a ambas versiones.
+>[!NOTE]
+> Para obtener el contenido local para las versiones actuales de SQL Server, instale la versión actual de SQL Server Management Studio [SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 
-## <a name="install-the-help-viewer"></a>Instalar el Visor de Ayuda
+## <a name="what-tools-install-the-help-viewer-versions"></a>¿Qué herramientas instalan las versiones del Visor de ayuda?
 
-Hay dos versiones de Visor de Ayuda.  Cada versión admite distintas versiones del contenido de SQL Server.  El formato de los libros sin conexión ha cambiado con el paso del tiempo y las versiones anteriores de Visor de Ayuda no son compatibles con las versiones más recientes de los libros:
-- v2.x admite la ayuda de SQL Server 2016 y SQL Server 2017. 
-- v1.x admite la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)]. Visor de Ayuda no admite la configuración de proxy ni el formato ISO.
+Hay dos versiones principales del Visor de Ayuda de Microsoft.  Las versiones 1.x y 2.x. Cada versión admite distintas versiones del contenido de SQL Server.  El formato de los libros sin conexión ha cambiado con el paso del tiempo y las versiones anteriores de Visor de Ayuda no son compatibles con las versiones más recientes de los libros.
 
+|**Conjunto de contenido**|**Herramientas que instalan el Visor de Ayuda**|**Versión de Visor de Ayuda**|
+|-|-|-|
+|Versión preliminar de SQL Server 2019 <br> SQL Server 2017<br>SQL Server 2016|[Visual Studio 2019 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2019)<br>[Visual Studio 2017 (1)](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017)<br>[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)<br>[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/release-notes-ssms?view=sql-server-2017#download-ssms-1791)<br>[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)<br>Visual Studio 2015 | v2.3<br>V2.2|
+|SQL Server 2014<br>SQL Server 2012|Programa de instalación de SQL Server 2016 (2)<br>SQL Server 2014 Management Studio<br>Programa de instalación de SQL Server 2014 (2)<br>SQL Server Management Studio 2012<br>Programa de instalación de SQL Server 2012 (2)| v1.x|
+| | | |
 
-|**Herramienta**|**Instalar la versión de Visor de Ayuda**|
-|---------|---------|
-|[Visual Studio 2017*](https://docs.microsoft.com/visualstudio/install/install-visual-studio?view=vs-2017) | v2.3|
-|[SQL Server Management Studio 18.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Management Studio 17.x](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) | v2.2|
-|[SQL Server Data Tools para Visual Studio 2015](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt) | v2.2|
-|Visual Studio 2015 | v2.2|
-|SQL Server 2016 | v1.x|
-|SQL Server 2014 Management Studio | v1.x|
-|Versiones anteriores de Visual Studio | v1.x|
-| | |
+(1) Para instalar el Visor de Ayuda con Visual Studio 2019 o 2017, en la pestaña Componentes individuales del instalador de Visual Studio, seleccione **Visor de Ayuda** en Herramientas de código y haga clic en **Instalar**.
 
-\* Para instalar el Visor de Ayuda con Visual Studio 2017, en la pestaña Componentes individuales del instalador de Visual Studio, seleccione **Visor de Ayuda** en Herramientas de código y haga clic en **Instalar**.
+(2) Indica la opción "Componentes de documentación" en el programa de instalación de SQL Server.
 
 >[!NOTE]
-> - SQL Server 2016 instala el Visor de Ayuda 1.1, que no admite la ayuda de SQL Server 2016. 
-> - Si instala SQL Server 2017, no se instalará Visor de Ayuda. Visor de Ayuda ya no se incluye en la instalación de SQL Server.
-> - El Visor de Ayuda v2.x también puede ser compatible con la ayuda de [!INCLUDE[ssSQL14_md](../includes/sssql14-md.md)] si instala el contenido desde un disco.
+> - SQL Server 2016 instala el Visor de Ayuda 1.1, que no admite el contenido de ayuda de SQL Server 2016. Para obtener más información, vea las [Notas de la versión de SQL Server 2016](sql-server-2016-release-notes.md).  Para ver el contenido de SQL Server 2016, necesita la versión v2.x de Visor de ayuda. 
+> - A partir de SQL Server 2017, el Visor de ayuda no se puede instalar desde el programa de instalación de SQL Server.
 
 ## <a name="use-help-viewer-v2x"></a>Uso del Visor de Ayuda v2.x
-
-SSMS 17.x y VS 2015 y 2017 usan Visor de Ayuda 2.x, que es compatible con la ayuda de SQL Server 2016 y SQL Server 2017. 
 
 **Para descargar e instalar contenido de ayuda sin conexión con el Visor de Ayuda v2.x**
 
@@ -74,7 +64,7 @@ SSMS 17.x y VS 2015 y 2017 usan Visor de Ayuda 2.x, que es compatible con la ayu
    > Para instalar contenido desde el disco (ayuda de SQL Server 2014), seleccione **Disco** en Origen de la instalación y especifique la ubicación del disco.
    
    En "Ruta de acceso del almacén local" de la pestaña "Administrar contenido", se muestra dónde se instalará el contenido en el equipo local. Para cambiar la ubicación, haga clic en **Mover**, especifique otra ruta de carpeta en el campo **A** y, después, haga clic en **Aceptar**.
-   Si se produce un error de instalación de ayuda después de cambiar la ruta de acceso del almacén local, cierre y vuelva a abrir el Visor de Ayuda, asegúrese de que se muestra la nueva ubicación en Ruta de acceso del almacén local y vuelva a intentar realizar la instalación.
+   Si se produce un error en la instalación de la Ayuda después de cambiar la ruta de acceso del almacén local, cierre y vuelva a abrir el Visor de ayuda. Compruebe que la nueva ubicación aparece en la ruta de acceso del almacén local y vuelva a intentar realizar la instalación.
 
 3. Haga clic en **Agregar** al lado de cada paquete de contenido (libro) que quiera instalar. 
    Para instalar todo el contenido de ayuda de SQL Server, agregue los 13 libros de SQL Server. 
@@ -87,7 +77,7 @@ SSMS 17.x y VS 2015 y 2017 usan Visor de Ayuda 2.x, que es compatible con la ayu
 > [!NOTE]
 > No todos los títulos de nodos superiores de la tabla de contenido de SQL Server coinciden exactamente con los nombres de los libros de ayuda descargables correspondientes. Los títulos de la TDC están relacionados con los nombres de libros de la siguiente forma:
 
-(*) indica contenido de la primera versión de disponibilidad general del contenido de SQL Server 2017, así como contenido de 2016 anterior. Estos libros se quitarán, ya que los libros completos y separados de SQL Server 2016 y 2017 contienen ediciones de contenido realizadas en enero de 2019.  
+(*) Contenido de la primera versión de disponibilidad general del contenido de SQL Server 2017, así como contenido de 2016 anterior. Estos libros se quitarán, ya que los libros completos y separados de SQL Server 2016 y 2017 contienen ediciones de contenido realizadas en enero de 2019.  
 
 | | Panel de contenido | Libro de SQL Server |
 |-----|-----|-----|
@@ -116,7 +106,7 @@ Para ver la ayuda instalada en SSMS, presione Ctrl+Alt+F1 o seleccione **Agregar
 
    ![Agregar y quitar contenido de HelpViewer2](../sql-server/media/sql-server-help-installation/addremovecontent.png)  
 
-Este se abrirá en la pestaña Administrar contenido, con la tabla de contenido de ayuda instalada en el panel izquierdo. Haga clic en los temas de la tabla de contenido para que se muestren en el panel derecho. 
+Este se abrirá en la pestaña Administrar contenido, con la tabla de contenido de ayuda instalada en el panel izquierdo. Haga clic en los artículos de la tabla de contenido para que se muestren en el panel de la derecha.
 > [!TIP]
 > Si el panel de contenido no está visible, haga clic en Contenido en el margen izquierdo. Haga clic en el icono de chincheta para mantener el panel de contenido abierto.  
 
@@ -133,12 +123,11 @@ Para ver la ayuda instalada en Visual Studio:
 
    ![Ver Ayuda](../sql-server/media/sql-server-help-installation/viewhelp.png)
 
-   La tabla de contenido de ayuda se muestra en la parte izquierda y el tema de ayuda seleccionado en la parte derecha. 
-
+   La tabla de contenido de ayuda se muestra en la parte izquierda y el artículo de ayuda seleccionado en la parte derecha.
   
 ## <a name="use-help-viewer-v1x"></a>Uso del Visor de Ayuda v1.x
 
-Las versiones anteriores de SSMS y VS usan el Visor de Ayuda 1.x, que es compatible con la ayuda de SQL Server 2014. 
+Las versiones anteriores de SSMS y VS usan el Visor de Ayuda 1.x, que es compatible con el contenido de la ayuda de SQL Server 2012 y 2014. 
 
 **Para descargar e instalar contenido de ayuda sin conexión con el Visor de Ayuda v1.x**
 
@@ -203,16 +192,16 @@ La ayuda en línea siempre mostrará el contenido más actualizado.
    
    ![HelpLibraryManager_ChooseOnlineORLocalHelp_OnlineHelpSelected_dialog](../sql-server/media/sql-server-help-installation/helplibrarymanager-chooseonlineorlocalhelp-onlinehelpselected-dialog.png)
 
-4. Abra el Visor de Ayuda para ver el contenido al hacer clic en **Ver Ayuda** en el menú **Ayuda**. 
+4. Abra el Visor de Ayuda para ver el contenido al hacer clic en **Ver Ayuda** en el menú **Ayuda**.
 
 ## <a name="view-f1-help"></a>Ver la Ayuda de F1
 
-Al presionar F1 o al hacer clic en **Ayuda** o en el icono **?** de un cuadro de diálogo en SSMS o VS, aparecerá un tema de ayuda en línea contextual en el explorador o en el Visor de Ayuda. 
+Al presionar F1 o al hacer clic en **Ayuda** o en el icono **?** de un cuadro de diálogo en SSMS o VS, aparecerá un artículo de ayuda en línea contextual en el explorador o en el Visor de Ayuda.
 
 **Para ver la ayuda de F1**
 
-1. Seleccione **Establecer preferencias de la Ayuda** en el menú Ayuda y seleccione **Iniciar en el explorador** o **Iniciar en el Visor de Ayuda**.
-2. Presione F1, o bien haga clic en **Ayuda** o en **?**. en los cuadros de diálogo en los que estén disponibles para ver temas en línea contextuales en el entorno elegido.
+1. En el menú Ayuda, haga clic en **Establecer preferencias de la Ayuda** y seleccione **Iniciar en el explorador** o **Iniciar en el Visor de Ayuda**.
+2. Presione F1, o bien haga clic en **Ayuda** o en **?** . en los cuadros de diálogo en los que estén disponibles para ver artículos en línea contextuales en el entorno elegido.
 
 > [!NOTE]
 > La ayuda de F1 solo funciona cuando está conectado a Internet. No hay ningún origen sin conexión para la ayuda de F1.

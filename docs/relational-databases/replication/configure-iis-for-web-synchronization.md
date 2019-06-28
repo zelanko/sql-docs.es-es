@@ -16,26 +16,26 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51665744"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62668921"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   Los procedimientos descritos en este tema son el segundo paso para configurar la sincronización web para la replicación de mezcla. Este paso se lleva a cabo después de habilitar una publicación para la sincronización web. Para obtener información general sobre el proceso de configuración, vea [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md). Una vez terminados los procedimientos de este tema, siga con el tercer paso: configurar una suscripción para usar la sincronización web. El tercer paso se describe en los siguientes temas:  
   
--   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo configurar una suscripción para usar la sincronización web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
+-   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [Cómo: Configurar una suscripción para usar la sincronización web \(SQL Server Management Studio\)](https://msdn.microsoft.com/library/ms345214.aspx)  
   
--   Programación de la replicación con [!INCLUDE[tsql](../../includes/tsql-md.md)] : [Cómo configurar una suscripción para usar la sincronización web (programación de la replicación con Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
+-   Programación [!INCLUDE[tsql](../../includes/tsql-md.md)] de la replicación: [Cómo: Configurar una suscripción para usar la sincronización web (programación de la replicación con Transact-SQL)](https://msdn.microsoft.com/library/ms345206.aspx)  
   
--   RMO: [Cómo configurar una suscripción para usar la sincronización web (programación con RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
+-   RMO: [Cómo: Configurar una suscripción para usar la sincronización web (programación con RMO)](https://msdn.microsoft.com/library/ms345207.aspx)  
   
  La sincronización web utiliza un equipo en el que se ejecuta [!INCLUDE[msCoName](../../includes/msconame-md.md)] Internet Information Services (IIS) para sincronizar las suscripciones de extracción con las publicaciones de combinación. Las versiones 5.0, 6.0 y 7.0 de IIS son compatibles. El Asistente para configurar la sincronización web no se admite en la versión 7.0 de IIS.  
   
 > [!IMPORTANT]  
->  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre estos errores se incluyen los siguientes: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  
+>  Asegúrese de que la aplicación solo utilice [!INCLUDE[dnprdnlong](../../includes/dnprdnlong-md.md)] o versiones posteriores, y de que no haya versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] instaladas en el servidor IIS. Las versiones anteriores de [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] pueden producir errores. Entre ellas, figuran: "El formato de un mensaje durante la sincronización web no es válido. Asegúrese de que los componentes de replicación se han configurado correctamente en el servidor web".  
   
 > [!CAUTION]  
 >  No use WebSync y las ubicaciones alternativas de carpeta de instantáneas a la vez.  
@@ -66,7 +66,7 @@ ms.locfileid: "51665744"
   
 1.  Inicie sesión como administrador en el equipo en el que se ejecuta IIS.  
   
-2.  Inicie el **Administrador de Internet Information Services (IIS)**:  
+2.  Inicie el **Administrador de Internet Information Services (IIS)** :  
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
@@ -74,7 +74,7 @@ ms.locfileid: "51665744"
   
 3.  Ejecute el Asistente para certificados IIS:  
   
-    1.  En el **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, la carpeta **Sitios web** .  
+    1.  En el **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, la carpeta **Sitios web** .  
   
     2.  Haga clic con el botón secundario en **Sitio web predeterminado**y, después, en **Propiedades**.  
   
@@ -171,7 +171,7 @@ ms.locfileid: "51665744"
   
 8.  En la página **Acceso a directorio** :  
   
-    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en la página **Información del servidor web** del Asistente para nueva suscripción o como el valor del parámetro [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)*@internet_login* .  
+    1.  Haga clic en **Agregar**y, a continuación, en el cuadro de diálogo **Seleccionar usuarios o grupos** , agregue las cuentas con las que los suscriptores se conectarán a IIS. Estas son las cuentas que especificará en la página **Información del servidor web** del Asistente para nueva suscripción o como el valor del parámetro [sp_addmergepullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) *@internet_login* .  
   
 9. En la página **Acceso a recurso compartido de instantáneas** , escriba el recurso compartido de instantáneas: en este recurso compartido se establecen los permisos adecuados para que los suscriptores puedan obtener acceso a los archivos de instantáneas. Para obtener más información sobre los permisos del recurso compartido, vea [Proteger la carpeta de instantáneas](../../relational-databases/replication/security/secure-the-snapshot-folder.md).  
   
@@ -274,13 +274,13 @@ ms.locfileid: "51665744"
   
     7.  Haga clic en **Aceptar**.  
   
-4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)**:  
+4.  Cree un grupo de aplicaciones en **Administrador de Internet Information Services (IIS)** :  
   
     1.  Haga clic en **Inicio**y, a continuación, haga clic en **Ejecutar**.  
   
     2.  En el cuadro **Abrir** , escriba **inetmgr**y, después, haga clic en **Aceptar**.  
   
-    3.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** .  
+    3.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** .  
   
     4.  Haga clic con el botón secundario en **Grupos de aplicaciones**, seleccione **Nuevo** y, a continuación, haga clic en **Grupo de aplicaciones**.  
   
@@ -288,7 +288,7 @@ ms.locfileid: "51665744"
   
 5.  Asocie la cuenta al grupo de aplicaciones:  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, expanda **Grupos de aplicaciones**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, expanda **Grupos de aplicaciones**.  
   
     2.  Haga clic con el botón secundario en el grupo de aplicaciones que ha creado y, a continuación, haga clic en **Propiedades**.  
   
@@ -300,11 +300,11 @@ ms.locfileid: "51665744"
   
 6.  Asocie el grupo de aplicaciones al directorio virtual que se utiliza para la sincronización web:  
   
-    1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo **equipo local** y, a continuación, expanda **Sitios web**.  
+    1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo **equipo local** y, a continuación, expanda **Sitios web**.  
   
     2.  Expanda el sitio web que está utilizando para la sincronización web, haga clic con el botón secundario en el directorio virtual que creó para la sincronización web y, a continuación, haga clic en **Propiedades**.  
   
-    3.  En la pestaña **Directorio virtual** del cuadro de diálogo **\<Propiedades de <nombreDeDirectorioVirtual>**, en la lista desplegable **Grupo de aplicaciones**, seleccione el grupo de aplicaciones creado en el paso 5.  
+    3.  En la pestaña **Directorio virtual** del cuadro de diálogo **\<Propiedades de <nombreDeDirectorioVirtual>** , en la lista desplegable **Grupo de aplicaciones**, seleccione el grupo de aplicaciones creado en el paso 5.  
   
     4.  Haga clic en **Aceptar**.  
   
@@ -349,7 +349,7 @@ ms.locfileid: "51665744"
     > [!NOTE]  
     >  Los certificados los instalan los usuarios. Este proceso lo deben realizar todos los usuarios que vayan a realizar sincronizaciones con IIS.  
   
-4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>**, especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
+4.  En el cuadro de diálogo **Conectarse a \<nombreDeServidor>** , especifique el nombre de usuario y la contraseña que el Agente de mezcla usará para conectarse a IIS. Estas credenciales también se especificarán en el Asistente para nueva suscripción.  
   
 5.  En la ventana de Internet Explorer con **información de diagnóstico sobre la sincronización web de SQL**, compruebe que el valor de todas las columnas de **estado** de la página sea **SUCCESS**.  
   
@@ -359,7 +359,7 @@ ms.locfileid: "51665744"
   
     2.  Conéctese al servidor en modo de diagnóstico. Si el certificado se ha instalado correctamente, no aparecerá el cuadro de diálogo **Alerta de seguridad** . Si se muestra este cuadro de diálogo, se producirá un error en el Agente de mezcla cuando intente conectarse al equipo en el que se ejecuta IIS. Debe asegurarse de que el certificado del servidor al que está obteniendo acceso se ha agregado al almacén de certificados del suscriptor como certificado de confianza. Para obtener más información acerca de la exportación de certificados, vea la documentación de IIS.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar sincronización web](../../relational-databases/replication/configure-web-synchronization.md)  
   
   

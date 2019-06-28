@@ -26,11 +26,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 11e155be4678c2cb57b9b551b412570e4578eb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516659"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62715861"
 ---
 # <a name="create-a-database-user"></a>Crear un usuario de base de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "52516659"
   
  Como entidad de seguridad, se pueden conceder permisos a los usuarios. El ámbito de un usuario es la base de datos. Para establecer conexión con una base de datos concreta de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], un inicio de sesión debe estar asignado a un usuario de la base de datos. Los permisos dentro de la base de datos se conceden y deniegan al usuario de la base de datos, no al inicio de sesión.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Debe tener el permiso **ALTER ANY USER** para la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Crear un usuario con SSMS  
@@ -74,7 +74,7 @@ ms.locfileid: "52516659"
   
 2.  Expanda la base de datos en la que se va a crear el usuario de la misma.  
   
-3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...**.  
+3.  Haga clic con el botón derecho en la carpeta **Seguridad**, seleccione **Nuevo** y después **Usuario...** .  
   
 4.  En el cuadro de diálogo **Usuario de base de datos - Nuevo**, en la página **General**, seleccione uno de los tipos de usuario siguientes de la lista **Tipo de usuario**:  
   
@@ -162,7 +162,7 @@ ms.locfileid: "52516659"
   
  Para obtener más información, vea [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md) que contiene muchos más ejemplos de [!INCLUDE[tsql](../../../includes/tsql-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Entidades de seguridad &#40;motor de base de datos&#41;](../../../relational-databases/security/authentication-access/principals-database-engine.md)   
  [Crear un inicio de sesión](../../../relational-databases/security/authentication-access/create-a-login.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../../t-sql/statements/create-login-transact-sql.md)  

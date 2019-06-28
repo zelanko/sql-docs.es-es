@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 5dc7979ea9778ad6f580bb4c7c4af517dc3d515f
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579522"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62706735"
 ---
 # <a name="sql-server-data-files-in-microsoft-azure"></a>Archivos de datos de SQL Server en Microsoft Azure
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +34,13 @@ ms.locfileid: "57579522"
   
 ## <a name="why-use-sql-server-data-files-in-microsoft-azure"></a>¿Por qué usar archivos de datos de SQL Server en Microsoft Azure? 
   
--   **Ventajas de una migración rápida y sencilla:** Esta característica simplifica el proceso de migración, para lo cual mueve sin cambios en la aplicación una base de datos de cada vez entre equipos locales así como entre entornos locales y entornos en la nube. Por tanto, admite una migración incremental a la vez que conserva la infraestructura local existente. Además, tener acceso a un almacenamiento de datos centralizado simplifica la lógica de la aplicación en los casos en los que una aplicación deba ejecutarse en varias ubicaciones en un entorno local. En algunos casos, es posible que necesite configurar rápidamente centros informáticos en ubicaciones geográficamente dispersas, que recopilen datos de muchas fuentes diferentes. Con esta nueva mejora, en lugar de mover datos de una ubicación a otra, puede almacenar muchas bases de datos como blobs de Microsoft Azure y después ejecutar scripts Transact-SQL para crear bases de datos en equipos locales o máquinas virtuales.  
+-   **Ventajas de una migración rápida y sencilla:** Esta característica simplifica el proceso de migración, para lo que mueve una base de datos cada vez entre equipos locales así como entre entornos locales y en la nube sin cambios en la aplicación. Por tanto, admite una migración incremental a la vez que conserva la infraestructura local existente. Además, tener acceso a un almacenamiento de datos centralizado simplifica la lógica de la aplicación en los casos en los que una aplicación deba ejecutarse en varias ubicaciones en un entorno local. En algunos casos, es posible que necesite configurar rápidamente centros informáticos en ubicaciones geográficamente dispersas, que recopilen datos de muchas fuentes diferentes. Con esta nueva mejora, en lugar de mover datos de una ubicación a otra, puede almacenar muchas bases de datos como blobs de Microsoft Azure y después ejecutar scripts Transact-SQL para crear bases de datos en equipos locales o máquinas virtuales.  
   
 -   **Ventajas económicas y de espacio de almacenamiento ilimitado:** esta característica le permite disponer de almacenamiento externo ilimitado en Microsoft Azure mientras aprovecha los recursos informáticos locales. Si usa Microsoft Azure como ubicación de almacenamiento, puede centrarse tranquilamente en la lógica de la aplicación sin la sobrecarga de administración de hardware. Si pierde un nodo de proceso local, puede configurar uno nuevo sin tener que mover datos.  
   
 -   **Ventajas de la alta disponibilidad y recuperación ante desastres:** si usa la característica de archivos de datos de SQL Server en Microsoft Azure, puede simplificar las soluciones de alta disponibilidad y recuperación ante desastres. Por ejemplo, si se bloquea una máquina virtual en Microsoft Azure o una instancia de SQL Server, puede volver a crear las bases de datos en una instancia nueva de SQL Server simplemente restableciendo vínculos a los blobs de Microsoft Azure.  
   
--   **Ventajas de seguridad:** esta nueva mejora le permite separar una instancia de proceso de una instancia de almacenamiento. Puede tener una base de datos completamente cifrada donde el descifrado solo se produce en una instancia de proceso, pero no en una instancia de almacenamiento. Es decir, con esta nueva mejora, puede cifrar todos los datos de la nube pública mediante certificados de cifrado de datos transparente (TDE), que están separados físicamente de los datos. Las claves TDE se pueden almacenar en la base de datos maestra, la cual se almacena localmente en el equipo local protegido físicamente y con copia de seguridad local. Puede usar estas claves locales para cifrar los datos que se encuentran en Almacenamiento de Microsoft Azure. Si roban las credenciales de la cuenta de almacenamiento en la nube, los datos seguirán estando protegidos ya que los certificados TDE siempre se encuentran en el entorno local.  
+-   **Ventajas de seguridad:** esta nueva mejora permite separar una instancia de proceso de una instancia de almacenamiento. Puede tener una base de datos completamente cifrada donde el descifrado solo se produce en una instancia de proceso, pero no en una instancia de almacenamiento. Es decir, con esta nueva mejora, puede cifrar todos los datos de la nube pública mediante certificados de cifrado de datos transparente (TDE), que están separados físicamente de los datos. Las claves TDE se pueden almacenar en la base de datos maestra, la cual se almacena localmente en el equipo local protegido físicamente y con copia de seguridad local. Puede usar estas claves locales para cifrar los datos que se encuentran en Almacenamiento de Microsoft Azure. Si roban las credenciales de la cuenta de almacenamiento en la nube, los datos seguirán estando protegidos ya que los certificados TDE siempre se encuentran en el entorno local.  
   
 -   **Copia de seguridad de instantáneas:**  esta característica le permite usar las instantáneas de Azure para proporcionar copias de seguridad prácticamente instantáneas y restauraciones más rápidas de los archivos de base de datos almacenados mediante el servicio Azure Blob Storage. Esta función permite simplificar las directivas de copia de seguridad y restauración. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md).  
   
@@ -79,7 +79,7 @@ ON
     FILENAME =  'https://testdb.blob.core.windows.net/data/TestLog.ldf')  
 ```  
   
- **Nota importante:** Si hay referencias activas a archivos de datos de un contenedor, cualquier intento de eliminar la credencial correspondiente de SQL Server generará un error.  
+ **Nota importante:** Si hay referencias activas a archivos de datos en un contenedor, cualquier intento de eliminar la credencial correspondiente de SQL Server generará un error.  
   
 ### <a name="security"></a>Seguridad  
  A continuación se describen las consideraciones y los requisitos relativos a la seguridad cuando se almacenan archivos de datos de SQL Server en Azure Storage.  
@@ -102,7 +102,7 @@ ON
   
 -   En la versión actual de esta característica, no se admite almacenar datos **FileStream** en Azure Storage. Puede almacenar datos de **FileStream** en una base de datos que también contenga archivos de datos almacenados en Azure Storage, pero todos los archivos de datos de FileStream se deben almacenar en el almacenamiento local.  Puesto que los datos de FileStream deben residir en el almacenamiento local, no se pueden mover entre máquinas con Azure Storage; por lo tanto, se recomienda usar las [técnicas tradicionales](../../relational-databases/blob/move-a-filestream-enabled-database.md) para mover los datos asociados con FileStream entre las distintas máquinas.  
   
--   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código **5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"**.  
+-   Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código **5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"** .  
   
 -   Solo los archivos .mdf, .ldf y .ndf se pueden almacenar en Azure Storage con la característica Archivos de datos de SQL Server en Azure.  
   
@@ -147,13 +147,13 @@ ON
   
  **Errores de autenticación**  
   
--   *No se puede quitar la credencial '%.\*ls' porque la usa un archivo de base de datos activo.*   
+-   *No se puede quitar la credencial '%.\*ls' porque la usa un archivo de base de datos activo.*    
     Solución: puede ver este error si intenta quitar una credencial que aún se use con un archivo de base de datos activo en Azure Storage. Para quitar la credencial, en primer lugar, debe eliminar el blob asociado que tiene este archivo de base de datos. Para eliminar un blob que tiene una concesión activa, debe interrumpir primero la concesión.  
   
--   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*   
+-   *No se ha creado correctamente la firma de acceso compartido en el contenedor.*    
      Solución: asegúrese de haber creado correctamente una firma de acceso compartido en el contenedor. Consulte las instrucciones de la lección 2 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md).  
   
--   *La credencial de SQL Server no se ha creado correctamente.*   
+-   *La credencial de SQL Server no se ha creado correctamente.*    
     Solución: asegúrese de que ha usado "Firma de acceso compartido" en el campo **Identidad** y que ha creado un secreto correctamente. Consulte las instrucciones de la lección 3 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../lesson-3-database-backup-to-url.md).  
   
  **Errores de concesión de blobs:**  
@@ -168,8 +168,8 @@ ON
 2.  *Errores al ejecutar la instrucción Alter*   
     Solución: asegúrese de ejecutar la instrucción ALTER DATABASE cuando la base de datos esté en línea. Cuando copie archivos de datos en Azure Storage, cree siempre un blob en páginas y no un blob en bloques. De lo contrario, ALTER DATABASE no se ejecutará correctamente. Consulte las instrucciones de la lección 7 del [Tutorial: Uso del servicio Microsoft Azure Blob Storage con bases de datos de SQL Server 2016](../tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).  
   
-3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*   
-    Solución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*.  
+3.  *Código de error 5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"*    
+    Solución: Actualmente, esta nueva mejora no admite que más de una instancia de SQL Server tenga acceso a los mismos archivos de base de datos de Azure Storage al mismo tiempo. Si el ServidorA está en línea con un archivo de base de datos activo y el ServidorB se inicia accidentalmente y tiene también una base de datos que apunta al mismo archivo de datos, el segundo servidor no podrá iniciar la base de datos y se generará un error con un código *5120 No se puede abrir el archivo físico "%.\*ls". Error del sistema operativo %d: "%ls"* .  
   
      Para resolver este problema, determine en primer lugar si necesita que el Servidor A obtenga acceso al archivo de base de datos de Azure Storage o no. Si no es así, basta con quitar las conexiones entre el Servidor A y los archivos de base de datos de Azure Storage. Para ello, siga estos pasos:  
   

@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 3bd467691d8b96a823013fa3f9f45655b0857cf0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51658084"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62751629"
 ---
 # <a name="system-versioned-temporal-tables-with-memory-optimized-tables"></a>Tablas temporales con control de versiones del sistema con tablas con optimización para memoria
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -57,11 +57,11 @@ ms.locfileid: "51658084"
 ## <a name="the-internal-memory-optimized-staging-table"></a>Tabla de almacenamiento provisional interna con optimización para memoria  
  La tabla de almacenamiento provisional interna optimizada para memoria es un objeto interno que crea el sistema con la finalidad de optimizar las operaciones DML.  
   
--   El nombre de la tabla se genera con el siguiente formato: **Memory_Optimized_History_Table_<object_id>**, donde *<object_id>* es el identificador de la tabla temporal actual.  
+-   El nombre de tabla se genera en el formato siguiente: **Memory_Optimized_History_Table_<object_id>** , donde *<object_id>* es el identificador de la tabla temporal actual.  
   
 -   La tabla replica el esquema de la tabla temporal actual, más una columna BIGINT. Esta columna adicional garantiza la exclusividad de las filas trasladadas al búfer interno de historial.  
   
--   La columna adicional tiene el siguiente formato de nombre: **Change_ID[_< sufijo>]**, donde *_\<sufijo>* se agrega de manera opcional en el caso de que la tabla ya cuente con una columna *Change_ID*.  
+-   La columna adicional tiene el formato de nombre siguiente: **Change_ID[_< sufijo>]** , donde *_\<sufijo>* se agrega de manera opcional en el caso de que la tabla ya cuente con una columna *Change_ID*.  
   
 -   El tamaño máximo de fila de una tabla con control de versiones del sistema y optimizada para memoria se reduce en 8 bytes debido a la columna BIGINT adicional de la tabla de almacenamiento provisional. Ahora, el nuevo máximo es 8052 bytes.  
   
@@ -77,9 +77,9 @@ ms.locfileid: "51658084"
  El vaciado de datos elimina todos los registros del búfer interno en memoria que sean posteriores a la transacción más antigua en ejecución en ese momento para mover dichos registros a la tabla de historial basada en disco.  
   
  Puede forzar un vaciado de datos invocando [sp_xtp_flush_temporal_history](../../relational-databases/system-stored-procedures/temporal-table-sp-xtp-flush-temporal-history.md) y especificando el nombre de esquema y tabla:   
-**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name**. Con este comando ejecutado por el usuario, se invoca el mismo proceso de movimiento de datos que cuando el sistema invoca la tarea de vaciado de datos según la programación interna.  
+**sys.sp_xtp_flush_temporal_history  @schema_name, @object_name** . Con este comando ejecutado por el usuario, se invoca el mismo proceso de movimiento de datos que cuando el sistema invoca la tarea de vaciado de datos según la programación interna.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Escenarios de uso de tablas temporales](../../relational-databases/tables/temporal-table-usage-scenarios.md)   

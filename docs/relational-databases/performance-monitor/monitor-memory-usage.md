@@ -25,11 +25,11 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 ms.openlocfilehash: 84f05928f5033895e0d6b25a6461231e5a350267
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53379076"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62737979"
 ---
 # <a name="monitor-memory-usage"></a>Supervisar el uso de la memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +43,9 @@ ms.locfileid: "53379076"
   
  El contador **Bytes disponibles** indica en bytes la memoria disponible actualmente para procesos. El contador **Páginas/s** indica el número de páginas que se han recuperado del disco debido a errores de página no recuperables o que se han escrito en disco para liberar espacio en el espacio de trabajo debido a errores de página.  
   
- Un valor bajo en el contador **Bytes disponibles** puede indicar una escasez general de memoria en el equipo o que un programa no está liberando memoria. Un valor alto en el contador **Páginas/s** puede indicar una paginación excesiva. Supervisar la **memoria: Errores de página/s** para asegurarse de que la actividad del disco no está causada por la paginación.  
+ Un valor bajo en el contador **Bytes disponibles** puede indicar una escasez general de memoria en el equipo o que un programa no está liberando memoria. Un valor alto en el contador **Páginas/s** puede indicar una paginación excesiva. Supervise la **Memoria: Errores de página/s** para asegurarse de que la actividad del disco no está causada por la paginación.  
   
- Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso son la causa de una paginación excesiva, supervise el **proceso: Errores de página/s** para la instancia del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Una tasa baja de paginación (y por tanto, de errores de página) es normal, incluso si el equipo tiene mucha memoria disponible. El Administrador de memoria virtual (VMM) de Microsoft Windows sustrae páginas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y otros procesos a medida que recorta los tamaños del espacio de trabajo para estos procesos, lo que suele provocar errores de página. Para determinar si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u otro proceso son la causa de una paginación excesiva, supervise el contador **Proceso: Errores de página/s** para la instancia del proceso de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Para obtener más información acerca de cómo solucionar la paginación excesiva, vea la documentación del sistema operativo Windows.  
   
@@ -56,11 +56,11 @@ ms.locfileid: "53379076"
   
 -   **Proceso: espacio de trabajo**  
   
--   **SQL Server: administrador de búfer: frecuencia de aciertos de caché del búfer**  
+-   **SQL Server: Administrador de búfer: frecuencia de aciertos de caché del búfer**  
   
--   **SQL Server: administrador de búfer: páginas de base de datos**  
+-   **SQL Server: Administrador de búfer: páginas de base de datos**  
   
--   **SQL Server: administrador de memoria: memoria total del servidor (KB)**  
+-   **SQL Server: Administrador de memoria: memoria total del servidor (KB)**  
   
  El contador **Espacio de trabajo** muestra la cantidad de memoria que usa un proceso. Si este número es constantemente inferior a la cantidad de memoria establecida en las opciones del servidor **min server memory** y **max server memory** , [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado para utilizar más memoria de la que necesita.  
   

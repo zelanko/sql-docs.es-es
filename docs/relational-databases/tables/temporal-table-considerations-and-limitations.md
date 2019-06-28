@@ -13,11 +13,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: f88363967571c2f6401be42659b5b00ec3811b07
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63034986"
 ---
 # <a name="temporal-table-considerations-and-limitations"></a>Limitaciones y consideraciones de las tablas temporales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52410092"
   
 -   Las tablas temporales y de historial no pueden ser **FILETABLE** y pueden contener columnas de cualquier tipo de datos compatible que no sea **FILESTREAM** , ya que **FILETABLE** y **FILESTREAM** permiten que se puedan manipular datos fuera de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ; por tanto, no se puede garantizar el control de versiones del sistema.  
   
--   Aunque las tablas temporales son compatibles con los tipos de datos BLOB, como **(n)varchar(max)**, **varbinary(max)**, **(n)text** e **image**, acarrearán importantes costos de almacenamiento y afectarán al rendimiento debido a su tamaño. Por lo tanto, al diseñar el sistema, debe tener cuidado al usar estos tipos de datos.  
+-   Aunque las tablas temporales son compatibles con los tipos de datos BLOB, como **(n)varchar(max)** , **varbinary(max)** , **(n)text** e **image**, acarrearán importantes costos de almacenamiento y afectarán al rendimiento debido a su tamaño. Por lo tanto, al diseñar el sistema, debe tener cuidado al usar estos tipos de datos.  
   
 -   La tabla de historial debe crearse en la misma base de datos que donde reside la actual. No se admiten las consultas temporales en **Linked Server** .  
   
@@ -56,20 +56,20 @@ ms.locfileid: "52410092"
   
 -   **ON DELETE CASCADE** y **ON UPDATE CASCADE** no se permiten en la tabla actual. Es decir, cuando la tabla temporal hace referencia a la tabla de la relación de clave externa (correspondiente a *parent_object_id* en sys.foreign_keys), no se permiten las opciones CASCADE. Para abordar esta limitación, use la lógica de aplicación o los desencadenadores AFTER para mantener la coherencia de eliminación en la tabla de clave principal (correspondiente a  *referenced_object_id* en sys.foreign_keys). Si la tabla de clave principal es temporal y la de referencia no lo es, significa que no hay ninguna limitación de este tipo. 
 
-    **Nota:** Esta limitación solo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión CTP 2.0 de SQL Server 2017.  
+    **NOTA:** Esta limitación solo se aplica a SQL Server 2016. Se admiten opciones CASCADE en [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] y a partir de la versión CTP 2.0 de SQL Server 2017.  
   
 -   Los desencadenadores**INSTEAD OF** no se permiten en la tabla actual o de historial para evitar que se invalide la lógica DML. Los desencadenadores**AFTER** solo se permiten en la tabla actual. Se bloquean en la tabla de historial para evitar que se invalide la lógica DML.  
   
 -   El uso de tecnologías de replicación está limitado.  
   
-    -   **Always On** : totalmente compatible.  
+    -   **Always On:** totalmente compatible  
   
-    -   **Captura de datos y seguimiento de datos modificados** : solo es compatible con la tabla actual.  
+    -   **Captura de datos modificados y seguimiento de cambios:** solo se admite en la tabla actual  
   
-    -   **Replicación transaccional y de instantáneas**: solo es compatible con un publicador único sin la función de temporalidad habilitada, y con un suscriptor que tenga dicha función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF").    
+    -   **Replicación transaccional y de instantáneas**: solo se admite para un publicador único sin la función de temporalidad habilitada, y un suscriptor que tenga esa función habilitada. En este caso, el publicador se usa para una carga de trabajo OLTP, mientras que el suscriptor sirve para la descarga de informes (incluidas las consultas "AS OF").    
         No se admite el uso de varios suscriptores, puesto que este escenario puede provocar que los datos temporales sean incoherentes (cada uno de ellos dependería del reloj del sistema local).  
   
-    -   **Replicación de mezcla:** no es compatible con las tablas temporales.  
+    -   **Replicación de mezcla:** no es compatible con las tablas temporales  
   
 -   Las consultas normales solo afectan a los datos de la tabla actual. Para consultar los datos en la tabla de historial, debe usar consultas temporales. Este asunto se explica más adelante en este documento, en la sección titulada "Consulta de datos temporales".  
   
@@ -98,7 +98,7 @@ ms.locfileid: "52410092"
 -   Una tabla de historial no puede configurarse como actual en una cadena de tablas de historial.  
   
 
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Tablas temporales](../../relational-databases/tables/temporal-tables.md)   
  [Introducción a las tablas temporales con versión del sistema](../../relational-databases/tables/getting-started-with-system-versioned-temporal-tables.md)   
  [Comprobaciones de coherencia del sistema de la tabla temporal](../../relational-databases/tables/temporal-table-system-consistency-checks.md)   

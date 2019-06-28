@@ -21,18 +21,18 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: cb09b9028f2ef994d57f8a52ad21f6c80be63293
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537623"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62865921"
 ---
 # <a name="securables"></a>Elementos protegibles
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-  Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
+  Los elementos protegibles son los recursos cuyo acceso es regulado por el sistema de autorización del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] . Por ejemplo, una tabla es un elemento protegible. Algunos elementos protegibles pueden estar incluidos en otros, con lo que se crean jerarquías anidadas denominadas "ámbitos" que a su vez se pueden proteger. Los ámbitos protegibles son **servidor**, **base de datos**y **esquema**.  
   
-## <a name="securable-scope-server"></a>Ámbito protegible: servidor  
+## <a name="securable-scope-server"></a>Ámbito protegible: Servidor  
  El ámbito protegible **servidor** contiene los siguientes valores que puede proteger:  
   
 -   grupo de disponibilidad  
@@ -45,7 +45,7 @@ ms.locfileid: "52537623"
   
 -   Base de datos  
   
-## <a name="securable-scope-database"></a>Ámbito protegible: base de datos  
+## <a name="securable-scope-database"></a>Ámbito protegible: Base de datos  
  El ámbito protegible **base de datos** contiene los siguientes valores que puede proteger:  
   
 -   Rol de aplicación  

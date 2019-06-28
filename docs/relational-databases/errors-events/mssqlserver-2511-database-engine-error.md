@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 26a6a753942bfb111a5e2b5c6b821577d660cc12
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656753"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045692"
 ---
 # <a name="mssqlserver2511"></a>MSSQLSERVER_2511
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47656753"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_KEYS_OUT_OF_ORDER|  
-|Texto del mensaje|Error de tabla: id. de objeto %d, id. de índice %d, id. de partición %I64d, id. de unidad de asignación %I64d (tipo %.*ls). Las claves no están ordenadas en la página %S_PGID, zonas %d y %d.|  
+|Texto del mensaje|Error de tabla: id. de objeto%d, id. de índice %d, id. de partición %I64d, id. de unidad de asignación %I64d (tipo %.*ls). Las claves no están ordenadas en la página %S_PGID, zonas %d y %d.|  
   
 ## <a name="explanation"></a>Explicación  
 Se detectaron claves desordenadas en el índice especificado. La página en la que están las claves puede estar dañada.  

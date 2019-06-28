@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0fd55a9b0b6dd98a00ce7d826611845e8597170c
-ms.sourcegitcommit: eddf8cede905d2adb3468d00220a347acd31ae8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/24/2018
-ms.locfileid: "49960779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051582"
 ---
 # <a name="collation-precedence"></a>Prioridad de intercalación
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -72,15 +72,15 @@ La etiqueta de intercalación del resultado final de una expresión compleja que
   
 -   La combinación de dos expresiones Implicit que tienen intercalaciones distintas genera el resultado No-collation:  
   
-     Implicit X + Implicit Y = No-collation   
+     Implicit X + Implicit Y = No-collation  
   
 -   La combinación de una expresión con la etiqueta No-collation y una expresión con cualquier etiqueta excepto Explicit (vea la regla siguiente), genera un resultado con la etiqueta No-collation:  
   
-     No-collation + cualquier etiqueta = No-collation   
+     No-collation + cualquier etiqueta = No-collation  
   
 -   La combinación de una expresión con la etiqueta No-collation y una expresión con intercalación Explicit genera una expresión con una etiqueta Explicit:  
   
-     No-collation + Explicit X = Explicit   
+     No-collation + Explicit X = Explicit  
   
 En la tabla siguiente se resumen las reglas.  
   
@@ -146,7 +146,7 @@ Msg 448, Level 16, State 9, Line 2
 Cannot resolve collation conflict between 'Latin1_General_CS_AS' and 'Greek_CI_AS' in equal to operation.  
 ```  
   
-#### <a name="explicit-label-vs-implicit-label"></a>Etiqueta Explicit y etiqueta Implicit  
+#### <a name="explicit-label-vs-implicit-label"></a>Diferencias entre las etiquetas Explicit e Implicit  
  El predicado de la siguiente consulta se evalúa en la intercalación `greek_ci_as` porque la expresión de la derecha tiene la etiqueta Explicit. Ésta tiene prioridad sobre la etiqueta Implicit de la expresión de la izquierda.  
   
 ```sql  
@@ -239,7 +239,7 @@ Las funciones CAST, CONVERT y COLLATE distinguen la intercalación para los tipo
 |LOWER|SUBSTRING|  
 |PATINDEX|UPPER|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   
  [Conversión de tipos de datos &#40;motor de base de datos&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)   
  [Operadores &#40;Transact-SQL&#41;](../../t-sql/language-elements/operators-transact-sql.md)   

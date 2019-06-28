@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 97b13091d9b43a371a629d4f3d929e66ffffd368
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026646"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62927746"
 ---
 # <a name="exist-method-xml-data-type"></a>exist() (método del tipo de datos xml)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ exist (XQuery)
 ## <a name="remarks"></a>Notas  
   
 > [!NOTE]  
->  El método **exist()** devuelve 1 para la expresión XQuery que devuelve un resultado no vacío. Si se especifican las funciones **true()** o **false()** dentro del método **exist()**, el método **exist()** devolverá 1, porque las funciones **true()** y **false()** devuelven los valores booleanos True y False respectivamente. En otras palabras, devuelven un resultado no vacío. Por tanto, **exist()** devolverá 1 (True), como se muestra en el siguiente ejemplo:  
+>  El método **exist()** devuelve 1 para la expresión XQuery que devuelve un resultado no vacío. Si se especifican las funciones **true()** o **false()** dentro del método **exist()** , el método **exist()** devolverá 1, porque las funciones **true()** y **false()** devuelven los valores booleanos True y False respectivamente. En otras palabras, devuelven un resultado no vacío. Por tanto, **exist()** devolverá 1 (True), como se muestra en el siguiente ejemplo:  
   
 ```  
 declare @x xml;  
@@ -56,10 +56,10 @@ select @x.exist('true()');
 ```  
   
 ## <a name="examples"></a>Ejemplos  
- En los ejemplos siguientes se muestra cómo especificar el método **exist()**.  
+ En los ejemplos siguientes se muestra cómo especificar el método **exist()** .  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-variable"></a>Ejemplo: especificar el método exist() con una variable de tipo xml  
- En el siguiente ejemplo, @x es una variable de tipo **xml** (xml sin tipo) y @f es una variable de tipo entero que almacena el valor devuelto por el método **exist()**. El método **exist()** devuelve True (1) si el valor de fecha almacenado en la instancia XML es `2002-01-01`.  
+ En el siguiente ejemplo, @x es una variable de tipo **xml** (xml sin tipo) y @f es una variable de tipo entero que almacena el valor devuelto por el método **exist()** . El método **exist()** devuelve True (1) si el valor de fecha almacenado en la instancia XML es `2002-01-01`.  
   
 ```  
 declare @x xml;  
@@ -69,13 +69,13 @@ set @f = @x.exist('/root[(@Somedate cast as xs:date?) eq xs:date("2002-01-01Z")]
 select @f;  
 ```  
   
- Al comparar las fechas del método **exist()**, tenga en cuenta lo siguiente:  
+ Al comparar las fechas del método **exist()** , tenga en cuenta lo siguiente:  
   
 -   El código `cast as xs:date?` se usa para convertir el valor al tipo **xs:date** con fines comparativos.  
   
 -   El valor del atributo **@Somedate** no tiene tipo. Al comparar este valor, se convierte implícitamente al tipo de la derecha de la comparación, el tipo **xs:date**.  
   
--   En lugar de **cast as xs:date()**, puede usar la función constructora **xs:date()**. Para más información, vea [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md) (Funciones de constructor [XQuery]).  
+-   En lugar de **cast as xs:date()** , puede usar la función constructora **xs:date()** . Para más información, vea [Constructor Functions &#40;XQuery&#41;](../../xquery/constructor-functions-xquery.md) (Funciones de constructor [XQuery]).  
   
  El ejemplo siguiente es similar al anterior, con la diferencia de que tiene un elemento <`Somedate`>.  
   
@@ -112,7 +112,7 @@ SELECT @f;
 ```  
   
 ### <a name="example-specifying-the-exist-method-against-an-xml-type-column"></a>Ejemplo: especificar el método exist() con una columna de tipo xml  
- La consulta siguiente recupera los Id. de modelo de producto cuyas descripciones de catálogo no incluyen las especificaciones, elemento <`Specifications`>:  
+ La consulta siguiente recupera los identificadores de modelo de producto cuyas descripciones de catálogo no incluyen las especificaciones, elemento <`Specifications`>:  
   
 ```  
 SELECT ProductModelID, CatalogDescription.query('  

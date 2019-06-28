@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 453c1a2aad80b9aa607a9d948660a78b5195c314
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47720913"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045231"
 ---
 # <a name="mssqlserver2574"></a>MSSQLSERVER_2574
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47720913"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC_EMPTY_INDEX_TREE_LEVEL_PAGE|  
-|Texto del mensaje|Error de tabla: la página P_ID está vacía en Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE). Esto no se permite en el nivel LEVEL del árbol b.|  
+|Texto del mensaje|Error de tabla: la página P_ID está vacía en el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE). Esto no se permite en el nivel LEVEL del árbol b.|  
   
 ## <a name="explanation"></a>Explicación  
 Una página de árbol B por encima del nivel hoja del índice especificado está vacía, es decir, no tiene ninguna fila. Este comportamiento es posible para las páginas de nivel de hoja de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)], pero nunca ha sido posible en los niveles de árbol.  

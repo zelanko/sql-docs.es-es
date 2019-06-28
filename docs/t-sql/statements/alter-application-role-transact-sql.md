@@ -22,11 +22,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: b272b3b5df01931cfabf1f19945bba477cc680bc
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326716"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62993866"
 ---
 # <a name="alter-application-role-transact-sql"></a>ALTER APPLICATION ROLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ALTER APPLICATION ROLE weekly_receipts
 GO  
 ```  
   
-### <a name="b-changing-the-password-of-application-role"></a>b. Cambiar la contraseña de un rol de aplicación  
+### <a name="b-changing-the-password-of-application-role"></a>B. Cambiar la contraseña de un rol de aplicación  
  En el ejemplo siguiente, se cambia la contraseña del rol de aplicación `receipts_ledger`.  
   
 ```  

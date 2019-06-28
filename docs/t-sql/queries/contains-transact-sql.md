@@ -36,11 +36,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 4afc59a5901497fc3112cff3a06bbe20dd3ce04d
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62467001"
 ---
 # <a name="contains-transact-sql"></a>CONTAINS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -143,7 +143,7 @@ CONTAINS (
   
 ## <a name="arguments"></a>Argumentos  
  *column_name*  
- Es el nombre de una columna indizada de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)**.  
+ Es el nombre de una columna indizada de texto completo de la tabla especificada en la cláusula FROM. Las columnas pueden ser de tipo **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary** o **varbinary(max)** .  
   
  *lista_de_columnas*  
  Especifica dos o más columnas, separadas por comas. *column_list* debe ir entre paréntesis. A menos que se especifique *language_term*, el idioma de todas las columnas de *column_list* debe ser el mismo.  
@@ -211,7 +211,7 @@ WHERE CONTAINS(Description, @SearchWord);
 >  Algunos idiomas, como los de algunas partes de Asia, pueden tener frases que contengan una o varias palabras sin espacios entre ellas.  
   
 \<simple_term>  
-Especifica una coincidencia para una palabra o frase exactas. Ejemplos de términos simples válidos son "blue berry", blueberry y "Microsoft SQL Server". Las frases tienen que ir entre comillas dobles (""). Las palabras de una frase tienen que aparecer en la columna de la base de datos en el mismo orden que el especificado en *\<contains_search_condition>*. La búsqueda de caracteres en la palabra o la frase no distingue mayúsculas de minúsculas. Las [palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (como un, y, el o la) de las columnas indizadas de texto completo no se almacenan en el índice de texto completo. Si se utiliza una palabra irrelevante en la búsqueda de una sola palabra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que la consulta contiene solo palabras irrelevantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una lista estándar de palabras irrelevantes en el directorio \Mssql\Binn\FTERef de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+Especifica una coincidencia para una palabra o frase exactas. Ejemplos de términos simples válidos son "blue berry", blueberry y "Microsoft SQL Server". Las frases tienen que ir entre comillas dobles (""). Las palabras de una frase tienen que aparecer en la columna de la base de datos en el mismo orden que el especificado en *\<contains_search_condition>* . La búsqueda de caracteres en la palabra o la frase no distingue mayúsculas de minúsculas. Las [palabras irrelevantes](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) (como un, y, el o la) de las columnas indizadas de texto completo no se almacenan en el índice de texto completo. Si se utiliza una palabra irrelevante en la búsqueda de una sola palabra, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] devuelve un mensaje de error que indica que la consulta contiene solo palabras irrelevantes. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] incluye una lista estándar de palabras irrelevantes en el directorio \Mssql\Binn\FTERef de cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Los signos de puntuación se omiten. Por lo tanto, `CONTAINS(testing, "computer failure")` coincide con una fila que contiene el valor "Where is my computer? Failure to find it would be expensive". Para más información sobre el comportamiento de los separadores de palabras, vea [Configurar y administrar separadores de palabras y lematizadores para la búsqueda](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md).  
   
@@ -229,7 +229,7 @@ Especifica una coincidencia para una palabra o frase exactas. Ejemplos de térmi
  Un *\<simple_term>* determinado dentro de un *\<generation_term>* no coincidirá con nombres y verbos.  
   
  THESAURUS  
- Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones más largos de *\<simple_term>* se hacen coincidir con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra ninguna coincidencia para todo o parte de *\<simple_term>*, la parte no coincidente se trata como un *simple_term*. Para más información sobre los sinónimos de búsqueda de texto completo, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
+ Especifica que se utiliza el diccionario de sinónimos correspondiente al idioma de texto completo de la columna o el idioma especificado en la consulta. El patrón o patrones más largos de *\<simple_term>* se hacen coincidir con el diccionario de sinónimos y se generan términos adicionales para expandir o reemplazar el patrón original. Si no se encuentra ninguna coincidencia para todo o parte de *\<simple_term>* , la parte no coincidente se trata como un *simple_term*. Para más información sobre los sinónimos de búsqueda de texto completo, vea [Configurar y administrar archivos de sinónimos para búsquedas de texto completo](../../relational-databases/search/configure-and-manage-thesaurus-files-for-full-text-search.md).  
   
  \<generic_proximity_term>  
  Especifica una coincidencia de palabras o frases que deben estar en el documento en el que se busca.  
@@ -313,7 +313,7 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Especifica que las filas coincidentes (devueltas por la consulta) coinciden con una lista de palabras y frases a las que se asigna opcionalmente un valor ponderado.  
   
  ISABOUT  
- Especifica la palabra clave *\<weighted_term>*.  
+ Especifica la palabra clave *\<weighted_term>* .  
   
  WEIGHT(*weight_value*)  
  Especifica el valor de ponderación como un número entre 0,0 y 1,0. Cada componente de *\<weighted_term>* puede incluir un *weight_value*. *weight_value* es una forma de modificar cómo varias partes de una consulta afectan al valor de rango asignado a cada fila que coincide con la consulta. WEIGHT no influye en los resultados de las consultas CONTAINS, pero sí en el rango de las consultas [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md).  
@@ -321,14 +321,14 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
 > [!NOTE]  
 >  El separador decimal siempre es un punto, independientemente de la configuración regional del sistema operativo.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }   
+ { AND | & } | { AND NOT | &! } | { OR | | }  
  Especifica una operación lógica entre dos condiciones de búsqueda.  
   
  { AND | & }  
- Indica que en ambos casos se incluyen condiciones de búsqueda que se deben cumplir para encontrar coincidencias. Se puede utilizar el símbolo de "y" comercial (&) en lugar de la palabra clave AND para representar el operador AND.  
+ Indica que en ambos casos se incluyen condiciones de búsqueda que se deben cumplir para encontrar coincidencias. Se puede usar el símbolo de "y" comercial (&) en lugar de la palabra clave AND para representar el operador AND.  
   
  { AND NOT | &! }  
- Indica que la segunda condición de búsqueda no puede estar presente para encontrar coincidencias. Se puede utilizar el símbolo de "y" comercial seguido del signo de admiración (&!) en lugar de la palabra clave AND NOT para representar el operador AND NOT.  
+ Indica que la segunda condición de búsqueda no puede estar presente para encontrar coincidencias. Se puede usar el símbolo de "y" comercial seguido del signo de admiración (&!) en lugar de la palabra clave AND NOT para representar el operador AND NOT.  
   
  { OR | | }  
  Indica que en uno de los dos casos se incluyen condiciones de búsqueda que se deben cumplir para encontrar coincidencias. Se puede utilizar el símbolo de barra (|) en lugar de la palabra clave OR para representar el operador OR.  
@@ -385,7 +385,7 @@ WHERE ListPrice = 80.99
 GO  
 ```  
   
-### <a name="b-using-contains-and-phrase-with-simpleterm"></a>b. Usar CONTAINS y una frase con \<simple_term>  
+### <a name="b-using-contains-and-phrase-with-simpleterm"></a>B. Usar CONTAINS y una frase con \<simple_term>  
  En el siguiente ejemplo se obtienen todos los productos que contienen la palabra `Mountain` o `Road`.  
   
 ```sql  

@@ -29,11 +29,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 9262ca6e0f2dce018ae925b05e306cc43753a0b7
-ms.sourcegitcommit: 5ef24b3229b4659ede891b0af2125ef22bd94b96
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/06/2019
-ms.locfileid: "55759978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62638315"
 ---
 # <a name="set-dateformat-transact-sql"></a>SET DATEFORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -51,7 +51,7 @@ SET DATEFORMAT { format | @format_var }
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *format* | **@**_format_var_  
+ *format* |  **@** _format_var_  
  Es el orden de las partes de la fecha. Los parámetros válidos son **mdy**, **dmy**, **ymd**, **ydm**, **myd** y **dym**. Puede ser Unicode o juegos de caracteres de doble byte (DBCS) convertidos a Unicode. El valor predeterminado para inglés de EE. UU. es **mdy**. Para más información sobre el DATEFORMAT predeterminado de todos los lenguajes admitidos, vea [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
 ## <a name="remarks"></a>Notas  

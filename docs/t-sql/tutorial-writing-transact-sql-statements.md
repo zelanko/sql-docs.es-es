@@ -1,5 +1,5 @@
 ---
-title: 'Tutorial: Escribir instrucciones Transact-SQL | Microsoft Docs'
+title: 'Tutorial: Escritura de instrucciones Transact-SQL | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/03/2016
 ms.prod: sql
@@ -16,17 +16,17 @@ ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 75c372af16b9a982fb5924fbc1ef4fd7668d0c0d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759655"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62935353"
 ---
-# <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Escribir instrucciones Transact-SQL
+# <a name="tutorial-writing-transact-sql-statements"></a>Tutorial: Escritura de instrucciones Transact-SQL
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Éste es el tutorial Escribir instrucciones [!INCLUDE[tsql](../includes/tsql-md.md)] . Este tutorial está pensado para usuarios que no tienen experiencia en escribir instrucciones SQL. Ayudará a los nuevos usuarios a empezar revisando algunas instrucciones básicas para crear tablas e insertar datos. Este tutorial usa [!INCLUDE[tsql](../includes/tsql-md.md)], la implementación de [!INCLUDE[msCoName](../includes/msconame-md.md)] del estándar SQL. Este tutorial está pensado como una breve introducción al lenguaje [!INCLUDE[tsql](../includes/tsql-md.md)] y no como una sustitución de una clase de [!INCLUDE[tsql](../includes/tsql-md.md)] . Las instrucciones de este tutorial son sencillas de forma intencionada y no pretenden representar la complejidad que se encuentra en una base de datos de producción típica.  
   
->**Nota:** Si es un principiante, le resultará más fácil usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en lugar de escribir instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] .  
+>**NOTA:** Si es un principiante, le resultará más fácil usar [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] en lugar de escribir instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)].  
   
 ## <a name="finding-more-information"></a>Buscar más información  
 Para obtener más información sobre una instrucción determinada, busque la instrucción por su nombre en los Libros en pantalla de SQL Server o use el Contenido para examinar los 1800 elementos de lenguaje enumerados alfabéticamente en [Referencia de Transact-SQL &#40;motor de base de datos&#41;](../t-sql/transact-sql-reference-database-engine.md). Otra buena estrategia para encontrar información es buscar palabras clave relacionadas con el contenido que le interesa. Por ejemplo, si quiere conocer cómo se devuelve una parte de una fecha (como el mes), busque en el índice de **fechas [SQL Server]** y, después, seleccione **dateparts**. Esto le llevará al tema [DATEPART &#40;Transact-SQL&#41;](../t-sql/functions/datepart-transact-sql.md). Otro ejemplo sería averiguar cómo trabajar con cadenas, en cuyo caso deberá buscar **funciones de cadena**. Esto le llevará al tema [Funciones de cadena &#40;Transact-SQL&#41;](../t-sql/functions/string-functions-transact-sql.md).  
@@ -36,13 +36,13 @@ Este tutorial muestra cómo crear una base de datos, crear una tabla en la base 
   
 El tutorial está compuesto por tres lecciones:  
   
-[Lección 1: Crear objetos de base de datos](../t-sql/lesson-1-creating-database-objects.md)  
+[Lección 1: Creación de objetos de base de datos](../t-sql/lesson-1-creating-database-objects.md)  
 En esta lección, debe crear una base de datos, crear una tabla en la base de datos, insertar datos en la tabla, cambiar los datos y, a continuación, leer los datos.  
   
-[Lección 2: Configurar permisos en objetos de base de datos](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
+[Lección 2: Configuración de permisos en objetos de base de datos](../t-sql/lesson-2-configuring-permissions-on-database-objects.md)  
 En esta lección, debe crear un inicio de sesión y un usuario. También creará una vista y un procedimiento almacenado y, a continuación, concederá permiso al usuario para el procedimiento almacenado.  
   
-[Lección 3: Eliminar objetos de base de datos](../t-sql/lesson-3-deleting-database-objects.md)  
+[Lección 3: Eliminación de objetos de base de datos](../t-sql/lesson-3-deleting-database-objects.md)  
 En esta lección, debe quitar el acceso a datos, eliminar datos de una tabla, eliminar la tabla y, por último, eliminar la base de datos.  
   
 ## <a name="requirements"></a>Requisitos  

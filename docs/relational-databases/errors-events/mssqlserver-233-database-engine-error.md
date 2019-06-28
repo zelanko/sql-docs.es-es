@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 02a8806494a016e1aca0fd442968857b0428a21b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676713"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63045849"
 ---
 # <a name="mssqlserver233"></a>MSSQLSERVER_233
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47676713"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Se ha establecido una conexión correctamente con el servidor, pero se ha producido un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida, error: 0 - No hay ningún proceso en el otro extremo de la canalización.) (Microsoft SQL Server, Error: 233)|  
+|Texto del mensaje|Se ha establecido una conexión correctamente con el servidor, pero se ha producido un error durante el proceso de inicio de sesión. (proveedor: Proveedor de memoria compartida; error: 0 - No hay ningún proceso en el otro extremo de la canalización). (Microsoft SQL Server, Error: 233)|  
   
 ## <a name="explanation"></a>Explicación  
 El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar al servidor. Este error se puede producir porque el servidor no está configurado para aceptar conexiones remotas.  
@@ -41,7 +41,7 @@ El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pu
 ## <a name="user-action"></a>Acción del usuario  
 Use la herramienta Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] acepte conexiones remotas.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Protocolos de red y bibliotecas de red](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configuración de red de cliente](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configurar protocolos de cliente](~/database-engine/configure-windows/configure-client-protocols.md)  

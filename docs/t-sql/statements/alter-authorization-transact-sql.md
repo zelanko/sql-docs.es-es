@@ -28,11 +28,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 4960dae2aad32a75f612b1b07e4aacdeb6a3d4d9
-ms.sourcegitcommit: 97340deee7e17288b5eec2fa275b01128f28e1b8
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/30/2019
-ms.locfileid: "55421232"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63026114"
 ---
 # <a name="alter-authorization-transact-sql"></a>ALTER AUTHORIZATION (Transact-SQL)
 
@@ -195,7 +195,7 @@ ALTER AUTHORIZATION ON
 ## <a name="AlterDB"></a> ALTER AUTHORIZATION para bases de datos  
 **SE APLICA A**: [!INCLUDE[ssSQL15](../../includes/sscurrent-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
 ### <a name="for-sql-server"></a>En SQL Server:  
-**Requisitos del nuevo propietario:**   
+**Requisitos del nuevo propietario:**    
 La nueva entidad propietaria debe ser una de las siguientes:  
 
 -   Un inicio de sesión para la autenticación de SQL Server.  
@@ -206,7 +206,7 @@ La nueva entidad propietaria debe ser una de las siguientes:
 Si no es un miembro del rol fijo de servidor **sysadmin**, debe tener al menos el permiso TAKE OWNERSHIP en la base de datos y el permiso IMPERSONATE en el nuevo inicio de sesión de propietario.   
 
 ### <a name="for-azure-sql-database"></a>En Azure SQL Database:  
-**Requisitos del nuevo propietario:**   
+**Requisitos del nuevo propietario:**    
 La nueva entidad propietaria debe ser una de las siguientes:  
 
 -   Un inicio de sesión para la autenticación de SQL Server.  
@@ -310,7 +310,7 @@ ALTER AUTHORIZATION ON Sprockets TO MichikoOsada;
 ALTER AUTHORIZATION ON OBJECT::Sprockets TO MichikoOsada;    
 ```    
     
-### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>b. Transferir la propiedad de una vista al propietario del esquema    
+### <a name="b-transfer-ownership-of-a-view-to-the-schema-owner"></a>B. Transferir la propiedad de una vista al propietario del esquema    
  En el siguiente ejemplo se transfiere la propiedad de la vista `ProductionView06` al propietario del esquema que la contiene. La vista se encuentra dentro del esquema `Production`.    
     
 ```    

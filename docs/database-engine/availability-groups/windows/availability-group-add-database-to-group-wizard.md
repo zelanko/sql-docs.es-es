@@ -16,12 +16,12 @@ ms.assetid: 81e5e36d-735d-4731-8017-2654673abb88
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 80c63fa27f1ba85882b18f47910f38c06dd09f51
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: db9c48686a6292f4a2fcd6ef85501fb1b715241d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800143"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140648"
 ---
 # <a name="add-a-database-to-an-always-on-availability-group-with-the-availability-group-wizard"></a>Adición de una base de datos a un grupo de disponibilidad Always On con el "Asistente para grupo de disponibilidad"
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,6 +66,10 @@ ms.locfileid: "66800143"
      Si la base de datos contiene una clave maestra de base de datos, escriba la contraseña para dicha clave en la columna **Contraseña** .  
   
 5.  En la página **Seleccionar sincronización de datos iniciales** , elija cómo desea que las nuevas bases de datos secundarias se creen y se unan al grupo de disponibilidad. Elija una de las opciones siguientes:  
+
+    - **Propagación automática**
+      
+      Seleccione esta opción para usar la propagación automática. La propagación automática emplea el transporte de secuencia de registro para transmitir la copia de seguridad con VDI a la réplica secundaria de cada base de datos del grupo de disponibilidad que use los puntos de conexión configurados. Esto restaura la copia de seguridad de la base de datos en la réplica secundaria sin tener que hacerlo manualmente. Para más información sobre la propagación automática, vea [Propagación automática](automatic-seeding-secondary-replicas.md).
   
     -   **Completa**  
   

@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 390a406196b0de0ca49940a53ef819c19b0120d1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685983"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672564"
 ---
 # <a name="load-the-smo-assemblies-in-windows-powershell"></a>Cargar ensamblados SMO en Windows PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ Hay dos casos en los que puede que tenga que cargar los ensamblados de SMO direc
   
 -   Se desea pasar código de SMO desde otro lenguaje, como C# o Visual Basic, que no usa el proveedor ni cmdlets.  
   
-## <a name="example-loading-the-sql-server-management-objects"></a>Ejemplo: Cargar objetos de Administración de SQL Server  
+## <a name="example-loading-the-sql-server-management-objects"></a>Ejemplo: Carga de los objetos de administración de SQL Server  
  El código siguiente carga los ensamblados de SMO:  
   
 ```  
@@ -92,7 +92,7 @@ update-FormatData -prependpath SQLProvider.Format.ps1xml
 Pop-Location  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server PowerShell](sql-server-powershell.md)  
   
   

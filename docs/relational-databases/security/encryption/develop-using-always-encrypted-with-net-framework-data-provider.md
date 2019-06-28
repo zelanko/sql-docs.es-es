@@ -13,11 +13,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: db78cdc744ec73e0f2fb8b465187eaac84a2fae2
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526525"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62661132"
 ---
 # <a name="develop-using-always-encrypted-with-net-framework-data-provider"></a>Desarrollar con Always Encrypted con el proveedor de datos .NET Framework
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Always Encrypted permite a las aplicaciones cliente cifrar la información confi
 ## <a name="prerequisites"></a>Prerequisites
 
 - Configure Always Encrypted en su base de datos. Esto implica el aprovisionamiento de las claves Always Encrypted y la configuración del cifrado para las columnas de las bases de datos seleccionadas. Si todavía no tiene una base de datos configurada con Always Encrypted, siga las instrucciones de [Introducción a Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx#Anchor_5).
-- Asegúrese de que la versión 4.6 o posterior de .NET Framework esté instalada en su equipo de desarrollo. Para obtener más información, vea [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). También necesita asegurarse de que la versión 4.6 o posterior de .NET Framework esté configurada como la versión de .NET Framework de destino en su equipo de desarrollo. Si está usando Visual Studio, consulte [Cómo: Usar como destino una versión de .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
+- Asegúrese de que la versión 4.6 o posterior de .NET Framework esté instalada en su equipo de desarrollo. Para obtener más información, vea [.NET Framework 4.6](https://msdn.microsoft.com/library/w0x726c2(v=vs.110).aspx). También necesita asegurarse de que la versión 4.6 o posterior de .NET Framework esté configurada como la versión de .NET Framework de destino en su equipo de desarrollo. Si usa Visual Studio, vea [Cómo: Usar como destino una versión de .NET Framework](https://msdn.microsoft.com/library/bb398202.aspx). 
 
 > [!NOTE]
 > El nivel de compatibilidad con Always Encrypted en determinadas versiones de .NET Framework varía. Vea la siguiente sección de referencia de la API de Always Encrypted para obtener más información. 
@@ -282,7 +282,7 @@ El proveedor de datos .NET Framework para SQL Server incluye los siguientes prov
 | Clase | Descripción | Nombre del proveedor (búsqueda) |
 |:---|:---|:---|
 |Clase SqlColumnEncryptionCertificateStoreProvider| Un proveedor para el Almacén de certificados de Windows. | MSSQL_CERTIFICATE_STORE |
-|[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** Este proveedor está disponible en la versión 4.6.1 y posteriores de .NET Framework. |Un proveedor de un almacén de claves que es compatible con [Microsoft Cryptography API: Next Generation (CNG) API (Cryptography API: Next Generation (CNG) de Microsoft)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico).  | MSSQL_CNG_STORE|
+|[Clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx) <br><br>**Nota:** Este proveedor está disponible en la versión 4.6.1 y posteriores de .NET Framework. |Un proveedor de un almacén de claves que es compatible con [Microsoft Cryptography API: API Next Generation (CNG)](https://msdn.microsoft.com/library/windows/desktop/aa376210.aspx). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico).  | MSSQL_CNG_STORE|
 | [Clase SqlColumnEncryptionCspProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncspprovider.aspx)<br><br>**Nota:** Este proveedor está disponible en la versión 4.6.1 o posteriores de .NET Framework.| Un proveedor de un almacén de claves que es compatible con [Microsoft Cryptography API (CAPI)](https://msdn.microsoft.com/library/aa266944.aspx). Normalmente, un almacén de este tipo es un módulo de seguridad de hardware (un dispositivo físico que protege y administra las claves digitales y proporciona un procesamiento criptográfico).| MSSQL_CSP_PROVIDER |
   
 No necesita realizar ningún cambio de código en la aplicación para usar estos proveedores pero tenga en cuenta lo siguiente:
@@ -378,7 +378,7 @@ De forma predeterminada, si Always Encrypted está habilitado para una conexión
 
 En .NET Framework 4.6.2 y versiones posteriores, el proveedor de datos NET Framework Data Provider para SQL Server almacena en caché los resultados de **sys.sp_describe_parameter_encryption** para cada instrucción de consulta. Por lo tanto, si la misma instrucción de consulta se ejecuta varias veces, el controlador llama a **sys.sp_describe_parameter_encryption** solo una vez. El almacenamiento en caché de metadatos de cifrado para instrucciones de consulta disminuye notablemente el costo que tiene en el rendimiento capturar metadatos desde la base de datos. El almacenamiento en caché está habilitado de manera predeterminada. Puede deshabilitar el almacenamiento en caché de metadatos de parámetros si establece la  [propiedad SqlConnection.ColumnEncryptionQueryMetadataCacheEnabled](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.columnencryptionquerymetadatacacheenabled.aspx) en false, pero esta opción no se recomienda salvo en algunos casos muy puntuales, como el que se describe a continuación:
 
-Considere una base de datos con dos esquemas distintos: s1 y s2. Cada esquema contiene una tabla con el mismo nombre: t. Las definiciones de las tablas s1.t y s2.t son idénticas, excepto en lo que se refiere a las propiedades relacionadas con el cifrado: una columna, denominada c, no está cifrada en s1.t, pero sí lo está en s2.t. La base de datos tiene dos usuarios: u1 y u2. El esquema predeterminado del usuario u1 es s1. El esquema predeterminado del usuario u2 es s2. Una aplicación .NET abre dos conexiones con la base de datos, suplantando al usuario u1 en una conexión y al usuario u2 en la otra. La aplicación envía una consulta con un parámetro que tiene como destino la columna c a través de la conexión para el usuario u1 (la consulta no especifica el esquema, por lo que se supone que se trata del esquema predeterminado del usuario). A continuación, la aplicación envía la misma consulta a través de la conexión para el usuario u2. Si el almacenamiento en caché de metadatos de consulta está habilitado, después de la primera consulta, la memoria caché se rellenará con metadatos, lo que indica que la columna c, es decir, los destinos de parámetro de consulta, no está cifrada. Como la segunda consulta tiene exactamente la misma instrucción de consulta, se usará la información almacenada en caché. Como resultado, el controlador enviará la consulta sin cifrar el parámetro (lo que no es correcto, porque la columna de destino, s2.t.c, está cifrada), con lo que el valor del texto no cifrado del parámetro se filtra al servidor. El servidor detectará la incompatibilidad y forzará al controlador a actualizar la memoria caché, para que la aplicación reenvíe la consulta con el valor de parámetro cifrado correctamente. En tal caso, el almacenamiento en caché debe estar deshabilitado para evitar que los valores confidenciales se filtren al servidor. 
+Considere una base de datos con dos esquemas distintos: s1 y s2. Cada esquema contiene una tabla con el mismo nombre: t. Las definiciones de las tablas s1.t y s2.t son idénticas, salvo las propiedades relacionadas con el cifrado: una columna denominada c, no se cifra en s1.t y está cifrada en s2.t. La base de datos tiene dos usuarios: u1 y u2. El esquema predeterminado del usuario u1 es s1. El esquema predeterminado del usuario u2 es s2. Una aplicación .NET abre dos conexiones con la base de datos, suplantando al usuario u1 en una conexión y al usuario u2 en la otra. La aplicación envía una consulta con un parámetro que tiene como destino la columna c a través de la conexión para el usuario u1 (la consulta no especifica el esquema, por lo que se supone que se trata del esquema predeterminado del usuario). A continuación, la aplicación envía la misma consulta a través de la conexión para el usuario u2. Si el almacenamiento en caché de metadatos de consulta está habilitado, después de la primera consulta, la memoria caché se rellenará con metadatos, lo que indica que la columna c, es decir, los destinos de parámetro de consulta, no está cifrada. Como la segunda consulta tiene exactamente la misma instrucción de consulta, se usará la información almacenada en caché. Como resultado, el controlador enviará la consulta sin cifrar el parámetro (lo que no es correcto, porque la columna de destino, s2.t.c, está cifrada), con lo que el valor del texto no cifrado del parámetro se filtra al servidor. El servidor detectará la incompatibilidad y forzará al controlador a actualizar la memoria caché, para que la aplicación reenvíe la consulta con el valor de parámetro cifrado correctamente. En tal caso, el almacenamiento en caché debe estar deshabilitado para evitar que los valores confidenciales se filtren al servidor. 
 
 
 
@@ -511,7 +511,7 @@ Con SqlBulkCopy, puede copiar datos que ya están cifrados y almacenados en una 
 
 - Asegúrese de que la configuración de cifrado de la tabla de destino es idéntica a la configuración de la tabla de origen. En particular, ambas tablas debe tener las mismas columnas cifradas y estas deben cifrarse mediante los mismos tipos de cifrado y las mismas claves de cifrado. Nota: Si alguna de las columnas de destino se cifra de una manera diferente a la de su columna de origen correspondiente, no podrá descifrar los datos de la tabla de destino después de la operación de copia. Los datos estarán dañados.
 - Configure ambas conexiones de base de datos, a la tabla de origen y a la tabla de destino, sin tener habilitado Always Encrypted. 
-- Establezca la opción AllowEncryptedValueModifications (vea [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Nota: Tenga cuidado al especificar AllowEncryptedValueModifications ya que puede provocar daños en la base de datos ya que el proveedor de datos .NET Framework para SQL Server no comprueba si los datos están realmente cifrados, o si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino.
+- Establezca la opción AllowEncryptedValueModifications (vea [SqlBulkCopyOptions](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopyoptions.aspx)). Nota: Tenga cuidado al especificar AllowEncryptedValueModifications ya que puede provocar daños en la base de datos porque el proveedor de datos .NET Framework para SQL Server no comprueba si los datos están realmente cifrados, o bien si se han cifrado correctamente mediante la misma clave, algoritmo y tipo de cifrado que la columna de destino.
 
 Tenga en cuenta que la opción AllowEncryptedValueModifications está disponible en .NET Framework 4.6.1 y en versiones posteriores.
 
@@ -567,11 +567,11 @@ static public void CopyTablesUsingBulk(string sourceTable, string targetTable)
 |Nueva palabra clave de [cadena de conexión](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectionstring.aspx) : `Column Encryption Setting=enabled`|Habilita o deshabilita la funcionalidad de Always Encrypted para la conexión.| 4.6 
   
 
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 - [Always Encrypted (motor de base de datos)](../../../relational-databases/security/encryption/always-encrypted-database-engine.md)
 - [Blog de Always Encrypted](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
-- [Always Encrypted: protección de la información confidencial en Base de datos SQL con cifrado de base de datos y almacenamiento de las claves de cifrado en el almacén de certificados de Windows](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
+- [Tutorial de SQL Database: Protección de datos confidenciales con Always Encrypted](https://azure.microsoft.com/documentation/articles/sql-database-always-encrypted/)
 
 
 

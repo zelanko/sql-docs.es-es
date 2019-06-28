@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 8c59f9b04ad4552280c586941e43e91aa25fd935
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558282"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686878"
 ---
 # <a name="modified-features-contained-database"></a>Características modificadas (base de datos contenida)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +47,12 @@ ms.locfileid: "51558282"
  Las tablas temporales no pueden hacer referencia a tipos definidos por el usuario, colecciones de esquemas XML ni funciones definidas por el usuario.  
   
 ## <a name="collation"></a>Intercalación  
- En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: intercalación de base de datos, intercalación de instancia e intercalación de tempdb. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
+ En el modelo de base de datos dependiente, hay tres tipos distintos de intercalación: intercalación de base de datos, intercalación de instancia e intercalación de TempDB. Las bases de datos contenidas solo usan dos intercalaciones, la intercalación de base de datos y la nueva intercalación de catálogo. Vea [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md) para obtener más información sobre la intercalación de base de datos contenida.  
   
 ## <a name="user-options"></a>Opciones de usuario  
  Al habilitar bases de datos independientes, la opción [user options](../../database-engine/configure-windows/configure-the-user-options-server-configuration-option.md) se debe establecer en 0 para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Contained Database Collations](../../relational-databases/databases/contained-database-collations.md)   
  [Contained Databases](../../relational-databases/databases/contained-databases.md)  
   

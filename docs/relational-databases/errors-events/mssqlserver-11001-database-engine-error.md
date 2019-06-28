@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5468b81930e1fd54602b0b91f9147b7c3b09c109
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47769033"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048339"
 ---
 # <a name="mssqlserver11001"></a>MSSQLSERVER_11001
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47769033"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor de TCP, error: 0 - Este host es desconocido.) (Proveedor de datos SqlClient de .Net)|  
+|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor TCP, error: 0: Este host es desconocido). (Proveedor de datos SqlClient de .NET)|  
   
 ## <a name="explanation"></a>Explicación  
 El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se puede conectar al servidor. Este error se puede producir porque el cliente no puede resolver el nombre del servidor o porque el nombre del servidor no es correcto.  
@@ -41,7 +41,7 @@ El cliente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no se pu
 ## <a name="user-action"></a>Acción del usuario  
 Asegúrese de haber escrito correctamente el nombre del servidor en el cliente y que puede resolver el nombre del servidor desde el cliente. Para comprobar la resolución de nombres de TCP/IP, puede usar el comando **ping** en el sistema operativo Windows.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Protocolos de red y bibliotecas de red](~/sql-server/install/network-protocols-and-network-libraries.md)  
 [Configuración de red de cliente](~/database-engine/configure-windows/client-network-configuration.md)  
 [Configurar protocolos de cliente](~/database-engine/configure-windows/configure-client-protocols.md)  

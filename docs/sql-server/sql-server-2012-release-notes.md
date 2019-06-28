@@ -14,11 +14,11 @@ ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
 ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63002380"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -70,10 +70,10 @@ o Administrador de configuración de
 <pre>The following error has occurred:  
 SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
   
-**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no puede instalarse. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [Ver y leer los archivos de registro de instalación de SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+**Solución alternativa:** esto puede ocurrir cuando el Motor de SQL Server o Analysis Services no se puede instalar. Para corregir este problema, consulte los registros del programa de instalación de SQL Server y solucione los errores del Motor de SQL Server y de Analysis Services. Para obtener más información, vea Ver y leer los archivos de registro de instalación de SQL Server. Para obtener más información, vea [Ver y leer los archivos de registro de instalación de SQL Server](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
 ### <a name="14-sql-server-2008-2008-r2-analysis-services-failover-cluster-upgrade-to-sql-server-2012-might-fail-after-renaming-the-network-name"></a>1.4 Se puede producir un error en la actualización del clúster de conmutación por error de SQL Server 2008 y 2008 R2 Analysis Services a SQL Server 2012 después de cambiar el nombre de red  
-**Problema:** después de cambiar el nombre de red de una instancia de clúster de conmutación por error de Microsoft SQL Server 2008 o 2008 R2 Analysis Services mediante la herramienta Administrador de clústeres de Windows, se puede producir un error en la operación de actualización.  
+**Problema:** después de cambiar el nombre de red de una instancia de clúster de conmutación por error de Microsoft SQL Server 2008 o 2008 R2 Analysis Services mediante la herramienta Administrador de clústeres de Windows, es posible que se produzca un error en la operación de actualización.  
   
 **Solución alternativa:** para resolver este problema, actualice la entrada del Registro ClusterName siguiendo las instrucciones incluidas en la sección Resolución de [este artículo de KB](https://support.microsoft.com/kb/955784).  
   
@@ -93,9 +93,9 @@ Puede instalar SQL Server en Windows Server 2008 R2 Server Core SP1 con las limi
 ### <a name="16-semantic-search-requires-you-to-install-an-additional-dependency"></a>1.6 La búsqueda semántica requiere que instale una dependencia adicional  
 **Problema:** la búsqueda estadística semántica tiene un requisito previo adicional, la base de datos de estadísticas semánticas de idioma, que no instala el programa de instalación de SQL Server.  
   
-**Solución alternativa:** para configurar la base de datos de estadísticas de lenguaje semántico como requisito previo para la indización semántica, realice las tareas siguientes:  
+**Solución alternativa:** para configurar la base de datos de estadísticas de lenguaje semántico como requisito previo para la indexación semántica, realice las tareas siguientes:  
   
-1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582)) y, después, ejecute el paquete de Windows Installer.  
+1.  Busque y ejecute el paquete de Windows Installer denominado SemanticLanguageDatabase.msi en el disco de instalación de SQL Server para extraer la base de datos. Para SQL Server 2012 Express, descargue la base de datos de estadísticas de lenguaje semántico del [Centro de descarga de Microsoft](https://www.microsoft.com/download/details.aspx?id=35582) (https://www.microsoft.com/download/details.aspx?id=35582) ) y, después, ejecute el paquete de Windows Installer.  
   
 2.  Mueva la base de datos a una carpeta de datos apropiada. Si deja la base de datos en la ubicación predeterminada, debe cambiar los permisos para poderla adjuntar correctamente.  
   
@@ -121,7 +121,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         **Use uno de los métodos siguientes para habilitar .NET Framework 3.5 SP1 en Windows Server 2008 R2 SP1:**  
   
-        Método 1: Use el Administrador de servidores  
+        Método 1: uso de Administrador del servidor  
   
         1.  En el Administrador del servidor, haga clic en **Agregar características** para que se muestre una lista de las características posibles.  
   
@@ -133,7 +133,7 @@ A continuación se describe el comportamiento de la instalación de requisitos p
   
         5.  Deje que el proceso de instalación se complete y haga clic en **Cerrar**.  
   
-        Método 2: Use Windows PowerShell  
+        Método 2: Uso de Windows PowerShell  
   
         1.  Haga clic en **Inicio** | **Todos los programas** | **Accesorios**.  
   
@@ -203,7 +203,7 @@ SQL Server 2012 se admite en los sistemas operativos Windows Vista SP2, Windows 
 **Solución alternativa:** descargue la versión adecuada de Sync Framework de [esta página del Centro de descarga de Microsoft](https://www.microsoft.com/download/en/details.aspx?displaylang=en&id=23217).  
   
 ### <a name="110-if-visual-studio-2010-service-pack-1-is-uninstalled-the-sql-server-2012-instance-must-be-repaired-to-restore-certain-components"></a>1.10 Si se desinstala Visual Studio 2010 Service Pack 1, se debe reparar la instancia de SQL Server 2012 para restaurar determinados componentes  
-**Problema:**[!INCLUDE[ssSQL11](../includes/sssql11-md.md)] la instalación depende de algunos componentes de Visual Studio 2010 Service Pack 1. Si desinstala el Service Pack 1, algunos de los componentes compartidos se degradan a sus versiones originales y otros se quitan por completo del equipo.  
+**Problema:** [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] la instalación depende de algunos componentes de Visual Studio 2010 Service Pack 1. Si desinstala el Service Pack 1, algunos de los componentes compartidos se degradan a sus versiones originales y otros se quitan por completo del equipo.  
   
 **Solución alternativa:** repare la instancia de [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] desde el disco de instalación de origen original o la ubicación de instalación de red.  
   
@@ -233,7 +233,7 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
 **Solución**: repare la instalación de .NET Framework 4 después de actualizar el sistema operativo. Para obtener más información, vea [Reparar una instalación existente de .NET Framework](https://support.microsoft.com/kb/306160).  
   
 ### <a name="112-sql-server-edition-upgrade-requires-a-restart"></a>1.12 La actualización de SQL Server Edition necesita un reinicio  
-**Problema:** cuando la edición actualiza una instancia de SQL Server 2012, algunas de las funcionalidades asociadas con la nueva edición pueden no activarse inmediatamente.  
+**Problema:** cuando la edición actualiza una instancia de SQL Server 2012, es posible que algunas de las funcionalidades asociadas con la nueva edición no se activen inmediatamente.  
   
 **Solución**: reinicie el equipo tras la actualización de edición de una instancia de SQL Server 2012. Para obtener más información sobre actualizaciones admitidas en SQL Server 2012, vea [Actualizaciones de versión y edición admitidas](../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md).  
   
@@ -245,14 +245,14 @@ Para obtener más información acerca de cómo reparar una instancia de SQL Serv
 ### <a name="114-reinstalling-an-instance-of-sql-server-failover-custer-fails-if-you-use-the-same-ip-address"></a>1.14 Reinstalar una instancia de clúster de conmutación por error de SQL Server produce un error si utiliza la misma dirección IP  
 **Problema:** Si especifica una dirección IP incorrecta durante la instalación de una instancia de clúster de conmutación por error de SQL Server, la instalación produce errores. Después de desinstalar la instancia con errores, y si intenta reinstalar la instancia de clúster de conmutación por error de SQL Server con el mismo nombre de instancia, y la dirección IP correcta, la instalación produce errores. El error se debe al grupo de recursos duplicados que deja atrás la instalación anterior.  
   
-**Solución alternativa:** Para resolver este problema, utilice un nombre de instancia diferente durante la reinstalación, o elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+**Solución alternativa:** para resolver este problema, use otro nombre de instancia durante la reinstalación, o bien elimine manualmente el grupo de recursos antes de reinstalar. Para obtener más información, vea [Agregar o quitar nodos en un clúster de conmutación por error de SQL Server](failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ![barra_horizontal](media/horizontal-bar.png "barra_horizontal")  
   
 ## <a name="AS"></a>2.0 Analysis Services  
   
 ### <a name="21-sql-editor-and-as-editor-cannot-connect-to-their-respective-server-instances-in-the-same-ssms-instance"></a>2.1 El editor SQL y el editor de AS no pueden conectar con sus instancias de servidor respectivas en la misma instancia de SSMS  
-**Problema:** no puede conectar con un servidor de Analysis Services usando el editor MDX/DMX cuando el editor SQL ya está conectado.  
+**Problema:** no puede conectar con un servidor de Analysis Services con el editor MDX/DMX cuando el editor SQL ya está conectado.  
   
 Cuando se usa SQL Server Management Studio 2012 (SSMS), si hay un archivo .sql abierto en el editor y está conectado a una instancia de SQL Server, cuando se abre un archivo DMX o DMX en la misma instancia de SSMS no se puede conectar con una instancia del servidor de AS. Asimismo, si ya hay un archivo MDX o DMX abierto en el editor en SSMS y está conectado a una instancia de servidor de AS, cuando se abre un archivo .sql en la misma instancia de SSMS no se puede conectar con una instancia de SQL Server.  
   
@@ -263,7 +263,7 @@ Cuando se usa SQL Server Management Studio 2012 (SSMS), si hay un archivo .sql a
 -   Desconecte el editor SQL y, después, conecte el editor MDX/DMX con un servidor de AS.  
   
 ### <a name="22-cannot-create-or-open-tabular-projects-when-builtinadministrators-group-name-cannot-be-resolved"></a>2.2 No se pueden crear o abrir proyectos tabulares cuando el nombre del grupo BUILTIN\Administrators no se puede resolver  
-**Problema:** Para poder crear o abrir proyectos tabulares, debe ser administrador de un servidor de base de datos de área de trabajo. Se puede agregar un usuario al grupo administradores de servidor agregando el nombre de usuario o de grupo. Si es miembro del grupo BUILTIN\Administrator, no puede crear o modificar los archivos BIM a menos que el servidor de base de datos de área de trabajo se una al dominio desde el que se aprovisionó originalmente. Si abre o crea el archivo BIM, se producirá un error y se mostrará el siguiente mensaje de error:  
+**Problema:** para poder crear o abrir proyectos tabulares, debe ser administrador de un servidor de base de datos de área de trabajo. Se puede agregar un usuario al grupo administradores de servidor agregando el nombre de usuario o de grupo. Si es miembro del grupo BUILTIN\Administrator, no puede crear o modificar los archivos BIM a menos que el servidor de base de datos de área de trabajo se una al dominio desde el que se aprovisionó originalmente. Si abre o crea el archivo BIM, se producirá un error y se mostrará el siguiente mensaje de error:  
   
 `"The BIM file cannot be opened. The server connected to is not valid. Reason: You are not an administrator of server [server name]."`  
   
@@ -276,21 +276,21 @@ Cuando se usa SQL Server Management Studio 2012 (SSMS), si hay un archivo .sql a
 ### <a name="23-ssis-components-for-as-tabular-models-do-not-work-as-expected"></a>2.3 Los componentes SSIS para modelos tabulares AS no funcionan como se esperaba  
 Los componentes de SQL Server Integration Services (SSIS) para Analysis Services (AS) no funcionan de la manera esperada con los modelos tabulares. A continuación se indican problemas conocidos que pueden producirse al intentar escribir un paquete SSIS para que funcione con modelos tabulares.  
   
-**Problema:** El Administrador de conexiones AS no puede usar un modelo tabular en la misma solución que un origen de datos.  
+**Problema:** el Administrador de conexiones AS no puede usar un modelo tabular en la misma solución que un origen de datos.  
   
 **Solución alternativa:** debe conectarse de modo explícito al servidor de AS antes de continuar la Tarea de procesamiento de AS o la tarea Ejecutar DDL de AS.  
   
 Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con modelos tabulares:  
   
-**Problema:** En lugar de bases de datos, tablas y particiones, ve cubos, grupos de medida y dimensiones. Se trata de una limitación de la tarea.  
+**Problema:** en lugar de bases de datos, tablas y particiones, ve cubos, grupos de medida y dimensiones. Se trata de una limitación de la tarea.  
   
-**Solución alternativa:** aún puede procesar el modelo tabular usando la estructura de cubo, grupo de medida y dimensión.  
+**Solución alternativa:** aún puede procesar el modelo tabular mediante la estructura de cubo, grupo de medida y dimensión.  
   
 **Problema:** algunas opciones de procesamiento admitidas por AS en modo tabular no se exponen en la Tarea de procesamiento de AS, como Procesar desfragmentación.  
   
 **Solución alternativa:** use la tarea Ejecutar DDL de Analysis Services en lugar de ejecutar un script XMLA que contenga el comando ProcessDefrag.  
   
-**Problema:** Algunas opciones de configuración de la herramienta no son aplicables. Por ejemplo,"Procesar objetos relacionados" no se debe usar al procesar particiones y la opción de configuración "Procesamiento paralelo" contiene un mensaje de error no válido que indica que el procesamiento paralelo no se admite en la SKU Standard.  
+**Problema:** algunas opciones de configuración de la herramienta no son aplicables. Por ejemplo,"Procesar objetos relacionados" no se debe usar al procesar particiones y la opción de configuración "Procesamiento paralelo" contiene un mensaje de error no válido que indica que el procesamiento paralelo no se admite en la SKU Standard.  
   
 **Solución alternativa:** None  
   
@@ -299,14 +299,14 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 ## <a name="BOL"></a>3.0 Libros en pantalla  
   
 ### <a name="31-help-viewer-for-sql-server-crashes-in-environments-configured-to-run-only-ipv6"></a>3.1 El Visor de Ayuda para SQL Server se bloquea en entornos configurados para ejecutar solo IPv6  
-**Problema:** si su entorno está configurado para ejecutar IPv6 únicamente, el Visor de la Ayuda para SQL Server 2012 se bloqueará y aparecerá el mensaje de error siguiente:  
+**Problema:** si el entorno está configurado para ejecutar IPv6 únicamente, el Visor de la Ayuda para SQL Server 2012 se bloqueará y aparecerá el mensaje de error siguiente:  
   
 `HelpLibAgent.exe has stopped working.`  
   
 > [!IMPORTANT]  
 > Se aplica a todos los entornos que se ejecuten solo con IPv6 habilitado. Los entornos habilitados para IPv4 (e IPv4 con IPv6) no están afectados.  
   
-**Solución**: Para evitar este problema, habilite IPv4 o siga estos pasos para agregar una entrada del Registro y cree una ACL para habilitar el Visor de la Ayuda para IPv6:  
+**Solución**: para evitar este problema, habilite IPv4 o siga estos pasos para agregar una entrada del Registro y cree una ACL para habilitar el Visor de la Ayuda para IPv6:  
   
 1.  Cree una clave del Registro con el nombre "IPv6" y el valor "1 (DWORD (32 bits))" en HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v1.0.  
   
@@ -323,7 +323,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 ### <a name="41-dqs-not-supported-in-a-cluster"></a>4.1 DQS no se admite en un clúster  
 **Problema:** DQS no se admite en una instalación de clúster de SQL Server. Si va a instalar una instancia de clúster de SQL Server, no debe activar las casillas **Data Quality Services** y **Data Quality Client** en la página **Selección de características** . Si estas casillas están activadas durante la instalación de la instancia del clúster (y completa la instalación de Data Quality Server ejecutando el archivo DQSInstaller.exe), DQS se instalará en este nodo, pero no estará disponible en otros nodos adicionales cuando se agreguen más nodos al clúster, por lo que no funcionará en nodos adicionales.  
   
-**Solución alternativa:** instale Actualización acumulativa 1 de SQL Server 2012 para resolver este problema. Para obtener instrucciones, vea [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
+**Solución alternativa:** instale la Actualización acumulativa 1 de SQL Server 2012 para resolver este problema. Para obtener instrucciones, vea [https://support.microsoft.com/kb/2674817](https://support.microsoft.com/kb/2674817).  
   
 ### <a name="42-to-reinstall-data-quality-server-delete-the-dqs-objects-after-uninstalling-data-quality-server"></a>4.2 Para volver a instalar Data Quality Server, elimine los objetos de DQS después de desinstalar Data Quality Server  
 **Problema:** si desinstala Data Quality Server, los objetos de DQS (bases de datos de DQS, inicios de sesión de DQS y un procedimiento almacenado de DQS) no se eliminan de la instancia de SQL Server.  
@@ -331,7 +331,7 @@ Se producen problemas con la Tarea de procesamiento de AS cuando se trabaja con 
 **Solución alternativa:** para volver a instalar Data Quality Server en el mismo equipo y en la misma instancia de SQL Server, debe eliminar manualmente los objetos de DQS de la instancia de SQL Server. Además, debe eliminar también del equipo los archivos de las bases de datos de DQS (DQS_MAIN, DQS_PROJECTS y DQS_STAGING_DATA) de la carpeta C:\Archivos de programa\Microsoft SQL Server\MSSQL11.<Instancia_SQL_Server>\MSSQL\DATA antes de volver a instalar Data Quality Server. De lo contrario, se producirá un error en la instalación de Data Quality Server. Mueva los archivos de base de datos en lugar de eliminarlos si desea conservar los datos, por ejemplo las bases de conocimiento o los proyectos de calidad de datos. Para obtener más información acerca de cómo quitar los objetos de DQS una vez completado el proceso de desinstalación, vea [Quitar objetos de Data Quality Server](https://msdn.microsoft.com/library/hh231667.aspx).  
   
 ### <a name="43-indication-of-a-terminated-knowledge-discovery-or-interactive-cleansing-activity-is-delayed"></a>4.3 Indicación de que una actividad de limpieza interactiva o de detección de conocimiento terminada se ha retrasado  
-**Problema:** si un administrador termina una actividad en la pantalla Supervisión de actividad, un usuario interactivo que ejecute la detección del conocimiento, la administración del dominio o la actividad de borrado interactivo no recibirá ninguna indicación de que su actividad se terminó hasta que realice la siguiente operación.  
+**Problema:** si un administrador termina una actividad en la pantalla Supervisión de actividad, un usuario interactivo que ejecute la detección del conocimiento, la administración del dominio o la actividad de borrado interactivo no recibirá ninguna indicación de que su actividad ha terminado hasta que realice la siguiente operación.  
   
 **Solución alternativa:** None  
   
@@ -385,7 +385,7 @@ En un proyecto de calidad de datos de limpieza, si ha asignado un campo en los d
 **Solución alternativa:** puede ver los valores de campos sin asignar en el panel inferior derecho de la página **Administrar y ver resultados** de la actividad de limpieza y en la página **Coincidencia** en la actividad de coincidencia.  
   
 ### <a name="415-cannot-import-domain-values-from-an-excel-file-xls-containing-more-than-255-columns-of-data"></a>4.15 No se pueden importar valores de dominio de un archivo de Excel (.xls) que contiene más de 255 columnas de datos  
-**Problema:** si importa valores en un dominio desde un archivo de Excel 97-2003 (.xls) que contenga más de 255 columnas de datos, aparece un mensaje de excepción y la importación da error.  
+**Problema:** si importa valores en un dominio desde un archivo de Excel 97-2003 (.xls) que contenga más de 255 columnas de datos, aparece un mensaje de excepción y se produce un error en la importación.  
   
 **Solución alternativa:** para corregir este problema, puede elegir alguna de las opciones siguientes:  
   
@@ -453,7 +453,7 @@ Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usua
 **Solución**: instale de nuevo Visual Studio 2010 SP1 y reinicie Management Studio.  
   
 ### <a name="53-x64-operating-systems-require-64-bit-powershell-20"></a>5.3 Los sistemas operativos x64 requieren PowerShell 2.0 de 64 bits  
-**Problema:** las instalaciones de 32 bits de Extensiones de Windows PowerShell para SQL Server no se admiten para instancias de SQL Server 2012 en sistemas operativos de 64 bits.  
+**Problema:** las instalaciones de 32 bits de Extensiones de PowerShell para SQL Server de Windows no se admiten para instancias de SQL Server 2012 en sistemas operativos de 64 bits.  
   
 **Soluciones alternativas:**  
   
@@ -472,7 +472,7 @@ El nombre del objeto 'sys.federations' no es válido. (Microsoft SQL Server, Err
 **Solución alternativa:** cierre y vuelva a abrir el Asistente para generar scripts.  
   
 ### <a name="55-new-maintenance-plan-layout-not-compatible-with-earlier-sql-server-tools"></a>5.5 Nuevo diseño para planes de mantenimiento no compatible con herramientas anteriores de SQL Server  
-**Problema:** cuando se usan herramientas de administración de SQL Server 2012 para modificar un plan de mantenimiento existente creado en una versión anterior de las herramientas de administración de SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), el plan de mantenimiento se guarda en un nuevo formato. Las versiones anteriores de las herramientas de administración de SQL Server no admiten este nuevo formato.  
+**Problema:** cuando se usan herramientas de administración de SQL Server 2012 para modificar un plan de mantenimiento existente creado en una versión anterior de las herramientas de administración de SQL Server (SQL Server 2008 R2, SQL Server 2008 o SQL Server 2005), el plan de mantenimiento se guarda en un formato nuevo. Las versiones anteriores de las herramientas de administración de SQL Server no admiten este nuevo formato.  
   
 **Solución**: None  
   
@@ -499,11 +499,11 @@ En esta sección se describe la compatibilidad con controladores de los grupos d
   
 En la tabla siguiente se resume la compatibilidad de controlador para Grupos de disponibilidad AlwaysOn:  
   
-|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de varias subredes: Conmutación por error más rápida del extremo de una sola subred|Conmutación por error de varias subredes: Resolución de instancias con nombre para las instancias en clúster SQL |  
+|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de varias subredes: Conmutación por error más rápida del punto de conexión de una sola subred|Conmutación por error de varias subredes: Resolución de instancias con nombre para las instancias en clúster SQL|  
 |----------|--------------------------|----------------------|----------------------|------------------------------------------------------------------|---------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sí|Sí|Sí|Sí|Sí|  
 |SQL Native Client 11.0 OLEDB|No|Sí|Sí|No|No|  
-|ADO.NET con .NET Framework 4.0 con revisión de conectividad**\&#42;**|Sí|Sí|Sí|Sí|Sí|  
+|ADO.NET con .NET Framework 4.0 con revisión de conectividad **\&#42;**|Sí|Sí|Sí|Sí|Sí|  
 |ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **\&#42;\&#42;**|Sí|Sí|Sí|Sí|Sí|  
 |Controlador JDBC 4.0 de Microsoft para SQL Server|Sí|Sí|Sí|Sí|Sí|  
   
@@ -529,21 +529,21 @@ MultiSubnetFailover es una nueva palabra clave de la cadena de conexión que se 
   
 **MultiSubnetFailover=True no se admite en .NET Framework 3.5 u OLEDB**  
   
-**Problema:** Si la instancia del clúster de conmutación por error o el grupo de disponibilidad tiene un nombre de escucha (denominado nombre de red o punto de acceso cliente en el Administrador de clústeres de WSFC) que depende de varias direcciones IP de subredes diferentes y usa ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client 11.0 OLEDB, puede que se agote el tiempo de espera de conexión en el 50% de las solicitudes de conexión de cliente al agente de escucha del grupo de disponibilidad.  
+**Problema:** si la instancia del clúster de conmutación por error o el grupo de disponibilidad tiene un nombre de escucha (denominado nombre de red o punto de acceso cliente en el Administrador de clústeres de WSFC) que depende de varias direcciones IP de subredes diferentes y usa ADO.NET con .NET Framework 3.5 SP1 o SQL Native Client 11.0 OLEDB, puede que se agote el tiempo de espera de conexión en el 50 % de las solicitudes de conexión de cliente al agente de escucha del grupo de disponibilidad.  
   
-**Soluciones alternativas:** le recomendamos que realice una de las siguientes tareas.  
+**Soluciones alternativas:** le recomendamos que realice una de las tareas siguientes.  
   
 -   Si no tiene permiso para manipular recursos de clúster, cambie el tiempo de espera de la conexión a 30 segundos (este valor produce un tiempo de espera de TCP de 20 segundos además de un búfer de 10 segundos).  
   
     **Ventajas**: Si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente es breve.  
   
-    **Inconvenientes**: La mitad de las conexiones cliente llevarán más de 20 segundos  
+    **Inconvenientes**: La mitad de las conexiones cliente tardarán más de 20 segundos  
   
 -   Si tiene el permiso para manipular recursos de clúster, el enfoque más recomendado consiste en establecer el nombre de red del agente de escucha del grupo de disponibilidad en **RegisterAllProvidersIP**=0. Para obtener más información, vea "Script de PowerShell de ejemplo para deshabilitar RegisterAllProvidersIP y reducir TTL", más adelante en esta sección.  
   
-    **Ventajas:** no hace falta que aumente el valor del tiempo de espera de la conexión de cliente.  
+    **Ventajas:** No es necesario aumentar el valor del tiempo de espera de la conexión de cliente.  
   
-    **Inconvenientes:** si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según la configuración de HostRecordTTL y la configuración de la programación de replicación DNS/AD entre sitios.  
+    **Inconvenientes:** Si se produce una conmutación por error entre subredes, el tiempo de recuperación del cliente podría ser de 15 minutos o más, según la configuración de HostRecordTTL y la configuración de la programación de replicación DNS/AD entre sitios.  
   
 **Script de PowerShell de ejemplo para deshabilitar RegisterAllProvidersIP y reducir TTL**  
   
@@ -565,9 +565,9 @@ Esto se debe a una limitación de la compilación CTP3. Las compilaciones futura
 Esto se debe a una limitación de la compilación CTP3. Las compilaciones futuras no tendrán esta restricción. Para actualizar las instancias del clúster de conmutación por error desde CTP3, asegúrese de actualizar todas las instancias de un nodo al mismo tiempo.  
   
 #### <a name="575--timeouts-may-occur-when-using-multi-ips-in-the-same-subnet-with-alwayson"></a>5.7.5 Se puede agotar el tiempo de espera cuando se usan varias IP en la misma subred con AlwaysOn  
-**Problema:** cuando se usan varias IP en la misma subred con AlwaysOn, se puede agotar el tiempo de espera. Esto ocurre si la dirección IP que aparece en primer lugar en la lista es errónea.  
+**Problema:** cuando se usan varias IP en la misma subred con Always On, se puede agotar el tiempo de espera. Esto ocurre si la dirección IP que aparece en primer lugar en la lista es errónea.  
   
-**Solución alternativa:** use 'multisubnetfailover = true' en la cadena de conexión.  
+**Solución alternativa:** use "multisubnetfailover = true" en la cadena de conexión.  
   
 #### <a name="576-failure-to-create-new-availability-group-listeners-because-of-active-directory-quotas"></a>5.7.6 Error al crear nuevos agentes de escucha del grupo de disponibilidad debido a las cuotas de Active Directory  
 **Problema:** La creación de un nuevo agente de escucha del grupo de disponibilidad puede producir un error en la creación porque se ha alcanzado una cuota de Active Directory para la cuenta de equipo del nodo de clúster que participa. Para obtener más información, vea [Cómo solucionar problemas de la cuenta del Servicio de Clúster Server cuando modifica objetos de equipo](https://support.microsoft.com/kb/307532) y [Cuotas de Active Directory](https://technet.microsoft.com/library/cc904295(WS.10).aspx).  
@@ -588,7 +588,7 @@ El servicio CDC para Oracle es un servicio de Windows que examina los registros 
 **Solución alternativa:** para instalar el servicio CDC para Oracle, ejecute manualmente AttunityOracleCdcService.msi desde el disco de instalación de SQL Server. Para instalar la Consola del diseñador CDC, ejecute manualmente AttunityOracleCdcDesigner.msi desde el disco de instalación de SQL Server.  Los paquetes de instalación para las versiones x86 y x64 se encuentran en .\Tools\AttunityCDCOracle\ en el disco de instalación de SQL Server.  
   
 #### <a name="612-f1-help-functionality-points-to-incorrect-documentation-files"></a>6.1.2 La funcionalidad de Ayuda de F1 apunta a archivos de documentación incorrectos  
-**Problema:** no puede tener acceso a la documentación de Ayuda correcta mediante la lista desplegable Ayuda de F1 ni haciendo clic en "?" en la consola de Attunity. Estos métodos apuntan a archivos chm incorrectos.  
+**Problema:** no puede acceder a la documentación de Ayuda correcta mediante la lista desplegable Ayuda de F1 ni haciendo clic en "?" en la consola de Attunity. Estos métodos apuntan a archivos chm incorrectos.  
   
 **Solución alternativa:** los archivos chm correctos se instalan cuando se instalan el servicio CDC para Oracle y el diseñador CDC para Oracle. Para ver el contenido de Ayuda correcto, inicie los archivos chm directamente desde esta ubicación: `%Program Files%\Change Data Capture for Oracle by Attunity\*.chm`.  
   
@@ -599,7 +599,7 @@ El servicio CDC para Oracle es un servicio de Windows que examina los registros 
 ### <a name="71-fixing-an-mds-installation-in-a-cluster"></a>7.1 Corrección de una instalación de MDS en un clúster  
 **Problema:** si instala una instancia en clúster de la versión RTM de SQL Server 2012 con la casilla **Master Data Services** activada, MDS se instalará en un solo nodo, pero no estará disponible y no funcionará en los nodos adicionales que agregue al clúster.  
   
-**Solución**: para resolver este problema, debe instalar la Versión acumulativa 1 (CU1) de SQL Server 2012 y realizar los siguientes pasos:  
+**Solución**: para resolver este problema, debe instalar la Versión acumulativa 1 (CU1) de SQL Server 2012 y realizar los pasos siguientes:  
   
 1.  Asegúrese de que no hay ninguna instalación existente de SQL/MDS.  
   
@@ -629,7 +629,7 @@ SQL Server 2012 incluye StreamInsight 2.0. StreamInsight 2.0 necesita una licenc
 ## <a name="UA"></a>10.0 Asesor de actualizaciones  
   
 ### <a name="101-link-to-install-upgrade-advisor-is-not-enabled-on-chinese-hk-operating-systems"></a>10.1 El vínculo para instalar el Asesor de actualizaciones no está habilitado en los sistemas operativos en chino (HK)  
-Problema Al intentar instalar el Asesor de actualizaciones en alguna versión admitida de Windows en el sistema operativo (OS) en chino (Hong Kong), podría encontrar que el vínculo para instalar el asesor no está habilitado.  
+Problema al intentar instalar el Asesor de actualizaciones en alguna versión admitida de Windows en sistemas operativos en chino (Hong Kong), es posible que descubra que el vínculo para instalar el asesor no está habilitado.  
   
 **Solución**: busque los archivos **SQLUA.msi** en el disco de SQL Server 2012 en `\1028_CHT_LP\x64\redist\Upgrade Advisor` o en `\1028_CHT_LP\x86\redist\Upgrade Advisor`, en función de la arquitectura del sistema operativo.  
   

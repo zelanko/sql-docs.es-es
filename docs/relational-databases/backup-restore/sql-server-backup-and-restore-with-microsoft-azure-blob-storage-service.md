@@ -12,11 +12,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 625eccb976c500dcacaa5612ca41bac8b638fbed
-ms.sourcegitcommit: d765563ccd03f299544bac233bc35f9b1df3fd47
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58434449"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62516246"
 ---
 # <a name="sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service"></a>Copia de seguridad y restauración de SQL Server con el servicio Microsoft Azure Blob Storage.
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "58434449"
   
 -   **Copias de seguridad de instantánea de archivos para archivos de base de datos en el Almacenamiento de blobs de Azure** Mediante el uso de instantáneas de Azure, las copias de seguridad de instantánea de archivo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ofrecen copias de seguridad y restauraciones casi instantáneas de archivos de base de datos almacenados mediante el servicio de Almacenamiento de blobs de Azure. Esta función permite simplificar las directivas de copia de seguridad y restauración y admite la restauración a un momento dado. Para obtener más información, vea [Copias de seguridad de instantánea de archivos para archivos de base de datos de Azure](../../relational-databases/backup-restore/file-snapshot-backups-for-database-files-in-azure.md). Esta característica está disponible en SQL Server 2016 o posterior.  
   
--   **Permitir que SQL Server administre las copias de seguridad en Microsoft Azure:** Configure SQL Server para administrar la estrategia de copia de seguridad y programar las copias de seguridad de una sola base de datos, o de varias, o establecer los valores predeterminados en el nivel de instancia. Esta característica se conoce como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]**. Para obtener más información, vea [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esta característica está disponible en SQL Server 2014 o posterior.  
+-   **Permitir que SQL Server administre las copias de seguridad en Microsoft Azure:** Configure SQL Server para administrar la estrategia de copia de seguridad y programar las copias de seguridad de una o varias bases de datos, o bien establezca valores predeterminados en el nivel de instancia. Esta característica se conoce como **[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]** . Para obtener más información, vea [Copia de seguridad administrada de SQL Server en Microsoft Azure](../../relational-databases/backup-restore/sql-server-managed-backup-to-microsoft-azure.md). Esta característica está disponible en SQL Server 2014 o posterior.  
   
 ## <a name="benefits-of-using-the-microsoft-azure-blob-service-for-includessnoversionincludesssnoversion-mdmd-backups"></a>Ventajas de usar el servicio BLOB de Microsoft Azure para las copias de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   

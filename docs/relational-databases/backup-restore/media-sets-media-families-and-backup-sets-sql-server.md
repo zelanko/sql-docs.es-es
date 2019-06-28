@@ -25,11 +25,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: a8023d72b28ec3ff9e9bafe2423b26620a5046ac
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534116"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62672459"
 ---
 # <a name="media-sets-media-families-and-backup-sets-sql-server"></a>Conjuntos de medios, familias de medios y conjuntos de copias de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52534116"
 ##  <a name="OvMediaSetsFamiliesBackupSets"></a> Información general de los conjuntos de medios, las familias de medios y los conjuntos de copias de seguridad  
  Las copias de seguridad de uno o varios medios de copia de seguridad constituyen un conjunto de medios. Un *conjunto de medios* es una colección ordenada de *medios de copia de seguridad*, cintas o archivos de disco, o blobs de Azure en la que se han escrito una o más operaciones de copia de seguridad mediante un tipo y número fijos de dispositivos de copia de seguridad. Un conjunto de medios dado usa unidades de cinta, unidades de disco o blobs de Azure, pero no una combinación de dos o más. 
  
-**Ejemplo:** los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1`y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
+**Ejemplo:** los dispositivos de copia de seguridad asociados con un conjunto de medios pueden ser tres unidades de cinta denominadas `\\.\TAPE0`, `\\.\TAPE1` y `\\.\TAPE2`. Este conjunto de medios está formado solamente por cintas, empezando con un mínimo de tres (una por unidad). El tipo y número de los dispositivos de copia de seguridad se establece cuando se crea un conjunto de medios y ya no se pueden cambiar. Sin embargo, si es necesario, entre las operaciones de las copias de seguridad y restauración un dispositivo determinado puede sustituirse por un dispositivo del mismo tipo.  
   
  Un conjunto de medios se crea en el medio de copia de seguridad durante una operación de copia de seguridad al dar formato a un medio de copia de seguridad. Para obtener más información, vea [Crear un conjunto de medios](#CreatingMediaSet), más adelante en este tema. Después de dar formato, cada archivo o cinta contiene un encabezado de medios para el conjunto de medios y está listo para recibir el contenido de la copia de seguridad. Con el encabezado adecuado, la operación de copia de seguridad empieza a realizar la copia de seguridad de los datos especificados en los medios de copia de seguridad en todos los dispositivos de copia de seguridad especificados para la operación.  
   
@@ -140,7 +140,7 @@ WITH
   
  ![El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios](../../relational-databases/backup-restore/media/bnr-mediaset-appendedto.gif "El segundo conjunto de copia de seguridad se distribuye entre 3 cintas del conjunto de medios")  
   
- Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=**_backup_set_file_number_ al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
+ Al restaurar las copias de seguridad, puede usar la opción FILE para especificar las copias de seguridad que desea usar. En el siguiente ejemplo se muestra el uso de la cláusula FILE **=** _backup_set_file_number_ al restaurar una copia de seguridad completa de la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] seguida de una copia de seguridad diferencial de la base de datos en el mismo conjunto de medios. El conjunto de medios utiliza tres cintas de copia de seguridad, que se encuentran en las unidades de cinta `\\.\tape0`, `tape1`y `tape2`.  
   
 ```  
 RESTORE DATABASE AdventureWorks2012 FROM TAPE = '\\.\tape0', TAPE = '\\.\tape1', TAPE = '\\.\tape2'  

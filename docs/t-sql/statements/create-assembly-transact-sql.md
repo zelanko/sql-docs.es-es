@@ -25,11 +25,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
 ms.openlocfilehash: 31eda87e2a1934c5f18d73540a502880590445e8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207664"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63051509"
 ---
 # <a name="create-assembly-transact-sql"></a>CREATE ASSEMBLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -168,7 +168,7 @@ Los siguientes permisos son necesarios para crear un ensamblado CLR cuando la op
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: Creación de un ensamblado desde un archivo dll  
+### <a name="example-a-creating-an-assembly-from-a-dll"></a>Ejemplo A: Creación de un ensamblado desde un archivo DLL  
   
 **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

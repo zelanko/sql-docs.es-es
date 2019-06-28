@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: e22a2555f3a7b2e062b370085710e4ba21e74078
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47669453"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62694590"
 ---
 # <a name="mssqlserver7910"></a>MSSQLSERVER_7910
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47669453"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_PAGE_ALLOCATED|  
-|Texto del mensaje|Reparación: se ha asignado la página P_ID al Id. de objeto O_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE).|  
+|Texto del mensaje|Reparación: se ha asignado la página P_ID al id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE).|  
   
 ## <a name="explanation"></a>Explicación  
 Se trata de un mensaje informativo de REPAIR que indica que se ha asignado una página a la matriz de espacios asignados en una página IAM (Mapa de asignación de índices).  

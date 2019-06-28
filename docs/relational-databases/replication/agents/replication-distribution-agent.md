@@ -16,12 +16,12 @@ ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b1b43a2c739de3ae0f23871c7bc023b3f215b4ce
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 4c436c6c9b0c20d99e5de168aa375f66f2e76999
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54126647"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62665512"
 ---
 # <a name="replication-distribution-agent"></a>Agente de distribución de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,14 +92,14 @@ distrib [-?]
  **-?**  
  Imprime todos los parámetros disponibles.  
   
- **-Publisher** _server_name_[**\\**_instance_name_]  
- Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Publisher** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del publicador. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-PublisherDB** _publisher_database_  
  Es el nombre de la base de datos del publicador.  
   
- **-Subscriber** _server_name_[**\\**_instance_name_]  
- Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_**\\**_instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
+ **-Subscriber** _server_name_[ **\\** _instance_name_]  
+ Es el nombre del suscriptor. Especifique *server_name* para conectarse a la instancia predeterminada del [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor. Especifique _server_name_ **\\** _instance_name_ para una instancia con nombre de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en ese servidor.  
   
  **-SubscriberDB** _subscriber_database_  
  Es el nombre de la base de datos del suscriptor.  
@@ -111,10 +111,10 @@ distrib [-?]
  Es el número de filas para enviar en una operación de copia masiva. Al realizar una operación **bcp in** , el tamaño del lote es el número de filas para enviar al servidor como una transacción y también el número de filas que se deben enviar antes de que el Agente de distribución registre un mensaje de progreso de **bcp** . Al realizar una operación **bcp out** , se usa un tamaño de lote fijo de **1000** .  
   
  **-CommitBatchSize** _commit_batch_size_  
- Es el número de transacciones que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 100.  
+ Es el número de transacciones que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 100 y el valor máximo es 10000.
   
  **-CommitBatchThreshold**  _commit_batch_threshold_  
- Es el número de comandos de replicación que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 1000.  
+ Es el número de comandos de replicación que se va a emitir al Suscriptor antes de que se emita una instrucción COMMIT. El valor predeterminado es 1000 y el valor máximo es 10000. 
   
  **-Continuous**  
  Especifica si el agente intenta sondear las transacciones replicadas continuamente. Si se especifica, el agente sondea las transacciones replicadas del origen en intervalos de sondeo, aunque no haya ninguna transacción pendiente.  
@@ -233,7 +233,7 @@ distrib [-?]
  **-QuotedIdentifier** _quoted_identifier_  
  Especifica el carácter del identificador entrecomillado que se utilizará. El primer carácter del valor indica el valor que utiliza el agente de distribución. Si **QuotedIdentifier** se utiliza sin ningún valor, el agente de distribución utiliza un espacio. Si no se utiliza **QuotedIdentifier** , el agente de distribución utiliza cualquier identificador entrecomillado que admita el suscriptor.  
   
- **-SkipErrors** _native_error_id_ [**:**_...n_]  
+ **-SkipErrors** _native_error_id_ [ **:** _...n_]  
  Es una lista separada por dos puntos que especifica los números de error que este agente omitirá.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  

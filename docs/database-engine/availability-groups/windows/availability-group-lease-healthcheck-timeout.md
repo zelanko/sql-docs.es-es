@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 08794856151267477753b1b756a63b6eb897b7f7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761838"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67140608"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -46,7 +46,7 @@ A diferencia de otros mecanismos de conmutación por error, la instancia de SQL 
 
 El mecanismo de concesión exige la sincronización entre SQL Server y el clúster de conmutación por error de Windows Server. Cuando se emite un comando de conmutación por error, el servicio de clúster realiza una llamada sin conexión a la DLL de recursos de la réplica principal actual. La DLL de recursos primero intenta tomar el grupo de disponibilidad sin conexión mediante un procedimiento almacenado. Si este procedimiento almacenado produce un error o agota el tiempo de espera, el error se notifica al servicio de clúster, que luego emite un comando de finalización. La finalización intenta volver a ejecutar el mismo procedimiento almacenado, pero esta vez el clúster no espera a que la DLL de recursos notifique el estado correcto o de error antes de poner el grupo de disponibilidad en línea en una nueva réplica. Si se produce un error en esta segunda llamada de procedimiento, el host de recursos tendrá que confiar en este mecanismo de concesión para poner la instancia sin conexión. Cuando se llama a la DLL de recursos para poner el grupo de disponibilidad sin conexión, la DLL de recursos señala el evento de detención de concesión y reactiva el subproceso de trabajo de concesión de SQL Server para poner el grupo de disponibilidad sin conexión. Incluso si no se señala a este evento de detención, la concesión expirará y la réplica cambiará al estado de resolución. 
 
-La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, elevado uso de CPU, condiciones de memoria insuficiente (poca memoria virtual, paginación de procesos), falta de respuesta de los procesos de SQL al generar un volcado de memoria, bloqueo de todo el sistema, desconexión del clúster (WSFC) debido, por ejemplo, a la pérdida de cuórum, que pueden impedir la renovación de la concesión de la instancia de SQL y provocar una conmutación por error. 
+La concesión es principalmente un mecanismo de sincronización entre la instancia principal y el clúster, pero también puede crear condiciones de error donde no había ninguna necesidad de conmutación por error. Por ejemplo, elevado uso de CPU, condiciones de memoria insuficiente (poca memoria virtual, paginación de procesos), falta de respuesta de los procesos de SQL al generar un volcado de memoria, bloqueo de todo el sistema, desconexión del clúster (WSFC) debido, por ejemplo, a la pérdida de cuórum, que pueden impedir la renovación de la concesión de la instancia de SQL y provocar un reinicio o una conmutación por error. 
 
 ## <a name="guidelines-for-cluster-timeout-values"></a>Directrices para valores de tiempo de espera del clúster 
 
@@ -156,7 +156,7 @@ ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT =60000);
   
  | Configuración de tiempo de espera | Finalidad | Entre | Usos | IsAlive y LooksAlive | Causas | Resultado 
  | :-------------- | :------ | :------ | :--- | :------------------- | :----- | :------ |
- | Tiempo de espera de concesión </br> **Valor predeterminado: 20000** | Evitar cerebro dividido (split-brain) | Principal a clúster </br> (HADR) | [Objetos de eventos de Windows](/windows/desktop/Sync/event-objects)| Usado en ambas | Falta de respuesta del sistema operativo, memoria virtual baja, generación de volcado de memoria, CPU fijado, WSFC caído (pérdida de cuórum) | Recurso de grupo de disponibilidad sin conexión-en línea, conmutación por error |  
+ | Tiempo de espera de concesión </br> **Valor predeterminado: 20000** | Evitar cerebro dividido (split-brain) | Principal a clúster </br> (HADR) | [Objetos de eventos de Windows](/windows/desktop/Sync/event-objects)| Usado en ambas | Falta de respuesta del sistema operativo, memoria virtual baja, paginación del espacio de trabajo, generación de volcado de memoria, CPU fijado, WSFC caído (pérdida de cuórum) | Recurso de grupo de disponibilidad sin conexión-en línea, conmutación por error |  
  | Tiempo de espera de sesión </br> **Valor predeterminado: 10 000** | Informar de problema de comunicación entre réplica principal y secundaria | Secundaria a principal </br> (HADR) | [Sockets de TCP (mensajes enviados a través del extremo DBM)](/windows/desktop/WinSock/windows-sockets-start-page-2) | No se usa en ninguna | Comunicación de red, </br> problemas en la réplica secundaria - caída, falta de respuesta del SO, contención de recursos | Secundaria - DESCONECTADA | 
  |Tiempo de espera de HealthCheck  </br> **Valor predeterminado: 30000** | Indicar el tiempo de espera al intentar determinar el estado de la réplica principal | Clúster a principal </br> (FCI & HADR) | T-SQL [sp_server_diagnostics](../../../relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql.md) | Usado en ambas | Cumple las condiciones de error, falta de respuesta del sistema operativo, memoria virtual baja, reducción de espacio de trabajo, generación de volcado de memoria, WSFC (pérdida de cuórum), problemas del programador (programadores bloqueados)| Recursos de grupo de disponibilidad sin conexión-en línea o conmutación por error, reinicio o conmutación por error de FCI |  
   | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp;| &nbsp; | &nbsp; | &nbsp; |

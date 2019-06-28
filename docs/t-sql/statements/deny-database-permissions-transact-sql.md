@@ -20,11 +20,11 @@ ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: c18ceba0be4237cc6b4a0ae824af9021631861c1
-ms.sourcegitcommit: 8664c2452a650e1ce572651afeece2a4ab7ca4ca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56828465"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62643747"
 ---
 # <a name="deny-database-permissions-transact-sql"></a>DENY (permisos de base de datos de Transact-SQL)
 
@@ -59,7 +59,7 @@ DENY <permission> [ ,...n ]
 
 *permission* Especifica un permiso que puede denegarse en una base de datos. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.
 
-ALL Esta opción no deniega todos los permisos posibles. Al denegar ALL se deniegan los permisos siguientes: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE y CREATE VIEW.
+ALL Esta opción no deniega todos los permisos posibles. Denegar ALL es equivalente a denegar los permisos siguientes: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE y CREATE VIEW.
 
 PRIVILEGES Incluido por compatibilidad con ISO. No cambia el comportamiento de ALL.
 
@@ -188,7 +188,7 @@ DENY CREATE CERTIFICATE TO MelanieK;
 GO
 ```
 
-### <a name="b-denying-references-permission-to-an-application-role"></a>b. Denegar el permiso REFERENCES para un rol de aplicación
+### <a name="b-denying-references-permission-to-an-application-role"></a>B. Denegar el permiso REFERENCES para un rol de aplicación
 
 En el siguiente ejemplo se deniega el permiso `REFERENCES` para la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] al rol de aplicación `AuditMonitor`.
 

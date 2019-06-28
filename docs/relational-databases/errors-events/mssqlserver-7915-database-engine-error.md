@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 653deb1710937d37a11688d41eb378c0650e0a20
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47803483"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62796943"
 ---
 # <a name="mssqlserver7915"></a>MSSQLSERVER_7915
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47803483"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC2_REPAIR_IAM_CHAIN_REBUILT|  
-|Texto del mensaje|Reparación: la cadena de IAM para el Id. de objeto P_ID, Id. de índice I_ID, Id. de partición PN_ID, Id. de unidad de asignación ID A_ID (tipo TYPE), se ha truncado antes de la página P_ID y se volverá a generar.|  
+|Texto del mensaje|Reparación: la cadena de IAM para el id. de objeto O_ID, id. de índice I_ID, id. de partición PN_ID, id. de unidad de asignación A_ID (tipo TYPE), se ha truncado antes de la página P_ID y se volverá a generar.|  
   
 ## <a name="explanation"></a>Explicación  
 Se trata de un mensaje informativo enviado por REPAIR que indica que la cadena IAM (Mapa de asignación de índices) especificada se revisó para que pudiera volver a generarse. Esta revisión puede haber necesitado de la asignación de un nuevo encabezado de la cadena IAM o de la eliminación de las páginas erróneas de la cadena.  

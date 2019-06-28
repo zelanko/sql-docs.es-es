@@ -28,11 +28,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 0aa6dbd766f842b4c923d98702fd2780fc2652fb
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58306233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62644378"
 ---
 # <a name="delete-transact-sql"></a>DELETE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -95,7 +95,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
   
  Las expresiones de tabla comunes también se pueden utilizar con las instrucciones SELECT, INSERT, UPDATE y CREATE VIEW. Para más información, vea [WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md).  
   
- TOP **(**_expression_**)** [ PERCENT ]  
+ TOP **(** _expression_ **)** [ PERCENT ]  
  Especifica el número o el porcentaje de filas aleatorias que se van a eliminar. *expression* puede ser un número o un porcentaje de las filas. Las filas a las que se hace referencia en la expresión TOP utilizada con INSERT, UPDATE o DELETE no se ordenan. Para más información, vea [TOP &#40;Transact-SQL&#41;](../../t-sql/queries/top-transact-sql.md).  
   
  FROM  
@@ -164,7 +164,7 @@ DELETE FROM [database_name . [ schema ] . | schema. ] table_name
  *cursor_variable_name*  
  Nombre de una variable de cursor. La variable de cursor debe hacer referencia a un cursor que permita realizar actualizaciones.  
   
- OPTION **(** \<query_hint> [ **,**... *n*] **)**  
+ OPTION **(** \<query_hint> [ **,** ... *n*] **)**  
  Palabras clave que indican que se utilizan sugerencias del optimizador para personalizar el procesamiento de la instrucción por parte del [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Para obtener más información, vea [Sugerencias de consulta &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   
 ## <a name="best-practices"></a>Procedimientos recomendados  
@@ -240,7 +240,7 @@ GO
 ###  <a name="LimitRows"></a> Limitar las filas eliminadas  
  En los ejemplos de esta sección se muestra cómo se limita el número de filas que se van a eliminar.  
   
-#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>b. Usar la cláusula WHERE para eliminar un conjunto de filas  
+#### <a name="b-using-the-where-clause-to-delete-a-set-of-rows"></a>B. Usar la cláusula WHERE para eliminar un conjunto de filas  
  En el ejemplo siguiente se eliminan todas las filas de la tabla `ProductCostHistory` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] en las que el valor de la columna `StandardCost` es superior a `1000.00`.  
   
 ```sql
@@ -403,7 +403,7 @@ WHERE ShoppingCartID = 20621;
 GO  
 ```  
   
-#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Utilizar OUTPUT con <from_table_name> en una instrucción DELETE  
+#### <a name="j-using-output-with-fromtablename-in-a-delete-statement"></a>J. Usar OUTPUT con <from_table_name> en una instrucción DELETE  
  En el ejemplo siguiente se eliminan las filas de la tabla `ProductProductPhoto` de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] según los criterios de búsqueda definidos en la cláusula `FROM` de la instrucción `DELETE`. La cláusula `OUTPUT` devuelve columnas de la tabla que se elimina ( `DELETED.ProductID`, `DELETED.ProductPhotoID`) y de la tabla `Product` . Esta información se utiliza en la cláusula `FROM` para especificar las filas que se deben eliminar.  
   
 ```sql

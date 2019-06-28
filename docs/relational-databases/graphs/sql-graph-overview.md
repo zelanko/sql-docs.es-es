@@ -1,7 +1,7 @@
 ---
 title: Gráfico de procesamiento con SQL Server y Azure SQL Database | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: dcabc19d3c83cd1ed4c9ee7b8047759e2550863e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 010d985245052949451a0b519ee4d7b312a97f4a
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502511"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413077"
 ---
 # <a name="graph-processing-with-sql-server-and-azure-sql-database"></a>Gráfico de procesamiento con SQL Server y Azure SQL Database
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -84,6 +84,9 @@ Para obtener información acerca de cómo crear y usar las restricciones perimet
 El [mezcla](../../t-sql/statements/merge-transact-sql.md) instrucción lleva a cabo Insertar, actualizar o eliminar operaciones en una tabla de destino basándose en los resultados de una combinación con una tabla de origen. Por ejemplo, puede sincronizar dos tablas insertando, actualizando o eliminando las filas de una tabla de destino basándose en las diferencias entre la tabla de destino y la tabla de origen. Ahora se admite el uso de predicados de coincidencia en una instrucción MERGE en Azure SQL Database y SQL Server vNext. Es decir, ahora es posible combinar los datos de gráfico actual (tablas de nodo o perimetral) con nuevos datos mediante los predicados de coincidencia para especificar relaciones de gráfico en una sola instrucción, en lugar de instrucciones INSERT, UPDATE o DELETE independientes.
 
 Para obtener información acerca de cómo se puede usar la coincidencia de mezcla DML, consulte [instrucción MERGE](../../t-sql/statements/merge-transact-sql.md)
+
+## <a name="shortest-path"></a>Ruta de acceso más corta
+El [SHORTEST_PATH](./sql-graph-shortest-path.md) función busca la ruta más corta entre 2 nodos en un gráfico o a partir de un nodo determinado a todos los nodos en el gráfico. También puede utilizarse para buscar un cierre transitivo ruta más corta o para los recorridos de longitud arbitraria en el gráfico. 
 
  ## <a name="next-steps"></a>Pasos siguientes  
 Leer el [gráfico SQL Database: arquitectura](./sql-graph-architecture.md)

@@ -1,5 +1,5 @@
 ---
-title: Sys.sequences (Transact-SQL) | Documentos de Microsoft
+title: sys.sequences (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e33dfa78117b68d1cb67baed2aea6bd7f5487e5b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 64532403f495a65cd61fbf6a8bc95369a0a4add3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398128"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413089"
 ---
 # <a name="syssequences-transact-sql"></a>sys.sequences (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,9 +47,10 @@ ms.locfileid: "52398128"
 |**system_type_id**|**tinyint no NULL**|Id. del tipo de sistema para el tipo de datos del objeto de secuencia.|  
 |**user_type_id**|**int no NULL**|Identificador del tipo de datos para el objeto de secuencia definido por el usuario.|  
 |**precisión**|**tinyint no NULL**|Precisión máxima del tipo de datos.|  
-|**escala**|**tinyint no NULL**|Escala máxima del tipo de datos. Se devuelve la escala con la precisión para proporcionar a los usuarios los metadatos completos. La escala siempre es 0 para los objetos de secuencia porque solo se permiten tipos enteros.|  
-|**Current_value**|**sql_variant no NULL**|El último valor obligado. Es decir, el valor devuelto de la ejecución más reciente de la función NEXT VALUE FOR o el último valor de ejecución de la **sp_sequence_get_range** procedimiento. Devuelve el valor START WITH si nunca se ha usado la secuencia.|  
+|**scale**|**tinyint no NULL**|Escala máxima del tipo de datos. Se devuelve la escala con la precisión para proporcionar a los usuarios los metadatos completos. La escala siempre es 0 para los objetos de secuencia porque solo se permiten tipos enteros.|  
+|**current_value**|**sql_variant no NULL**|El último valor obligado. Es decir, el valor devuelto de la ejecución más reciente de la función NEXT VALUE FOR o el último valor de ejecución de la **sp_sequence_get_range** procedimiento. Devuelve el valor START WITH si nunca se ha usado la secuencia.|  
 |**is_exhausted**|**bit NOT NULL**|0 indica que se pueden generar más valores desde la secuencia. 1 indica que el objeto de secuencia ha alcanzado el parámetro MAXVALUE y la secuencia no se ha establecido en CYCLE. La función NEXT VALUE FOR devuelve un error hasta que la secuencia la reinicie ALTER SEQUENCE.|  
+|**last_used_value**|**sql_variant NULL**|Devuelve el último valor generado por el [Next Value For](../../t-sql/functions/next-value-for-transact-sql.md) función. Se aplica a SQL Server 2017 y versiones posteriores.|  
   
 ## <a name="permissions"></a>Permisos  
  En [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] y versiones posteriores, la visibilidad de los metadatos se limita a los elementos protegibles que son propiedad de un usuario o sobre los que el usuario tiene algún permiso. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -2,10 +2,10 @@
 title: sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
-ms.prod: ''
+ms.prod: sql
+ms.technology: system-objects
 ms.prod_service: sql-database
 ms.reviewer: ''
-ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
 - sys.resource_governance
@@ -21,12 +21,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: bb4c43fa4193d9254d7f06f24bd903f974739e87
-ms.sourcegitcommit: a9a03f9a7ec4dad507d2dfd5ca33571580114826
+ms.openlocfilehash: d25c4d3cfe8628c01b44a99c6e26a96adf453050
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/28/2019
-ms.locfileid: "58567641"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413063"
 ---
 # <a name="sysdmuserdbresourcegovernance-transact-sql"></a>sys.dm_user_db_resource_governance (Transact-SQL)
 
@@ -68,7 +68,7 @@ Devuelve valores de configuración y la capacidad para una base de datos de Azur
 |**max_transaction_size**|BIGINT|Espacio de registro máximo utilizado por cualquier transacción, en KB.|
 |**checkpoint_rate_mbps**|INT|Ancho de banda de punto de control, en Mbps.|
 |**checkpoint_rate_io**|INT|Tasa de E/S de punto de comprobación en IOs por segundo.|
-|**last_updated_date_utc**|DATETIME|Fecha y hora del último cambio de configuración o reconfiguración.|
+|**last_updated_date_utc**|datetime|Fecha y hora del último cambio de configuración o reconfiguración.|
 |**primary_group_id**|INT|Id. de grupo de cargas de trabajo de usuario principal.|
 |**primary_group_max_workers**|INT|Límite de trabajadores en nivel de grupo de cargas de trabajo de usuario principal.|
 |**primary_min_log_rate**|BIGINT|Tasa de registro mínimo (bytes por segundo) en el nivel de grupo de cargas de trabajo de usuario principal.|

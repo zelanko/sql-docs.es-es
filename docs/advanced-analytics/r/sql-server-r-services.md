@@ -8,12 +8,13 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 14be74e19219fee834a4ab82e74c004a4e426483
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: =sql-server-2016||=sqlallproducts-allversions
+ms.openlocfilehash: bc506d245878d459a3c4639ff4e5a6c2f2a9f8f6
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642324"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469112"
 ---
 # <a name="r-services-in-sql-server-2016"></a>R Services en SQL Server 2016
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +26,7 @@ R Services incluye una distribución de base de R, que se superpone con paquetes
 Las bibliotecas de R incluyen [ **RevoScaleR**](ref-r-revoscaler.md), [ **MicrosoftML (R)** ](ref-r-microsoftml.md)y otros. Puesto que R Services está integrado con el motor de base de datos, puede mantener análisis cerca de los datos y eliminar los costos y riesgos de seguridad asociados con el movimiento de datos.
 
 > [!Note]
-> Se cambió el nombre de R Services en SQL Server 2017 que [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), que refleja la adición de Python.
+> R Services se ha cambiado el nombre de SQL Server 2017 y versiones posteriores para [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md), que refleja la adición de Python.
 
 ## <a name="components"></a>Componentes
 

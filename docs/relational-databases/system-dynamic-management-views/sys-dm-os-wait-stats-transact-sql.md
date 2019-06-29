@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4f4d66846be52a1f42a87f6dd11a584ace4e3ac4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499678"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469140"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -346,6 +346,7 @@ Este comando restablece todos los contadores en 0.
 |HADR_TDS_LISTENER_SYNC |El sistema AlwaysOn interno o el clúster de WSFC solicitará que los agentes de escucha se inician o se ha detenido. El proceso de esta solicitud siempre es asíncrono y hay un mecanismo para quitar las solicitudes redundantes. También hay momentos en que este proceso se suspende debido a los cambios en la configuración. Todas las esperas relacionadas con este mecanismo de sincronización del agente de escucha usan este tipo de espera. Solo para uso interno., <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Se usa al final de una instrucción siempre en Transact-SQL que requiera inicio y/o la detención de un agente de escucha del grupo de disponibilidad. Puesto que la operación de inicio y detención se realiza de forma asincrónica, el subproceso de usuario se bloqueará con este tipo de espera hasta que se conoce la situación del agente de escucha., <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Se produce cuando una base de datos secundaria con replicación geográfica se configura con el menor tamaño (SLO inferior) que el principal de proceso. Una base de datos principal está limitada debido a un consumo registro retrasado el secundario. Esto se debe a la base de datos secundaria con capacidad de proceso suficiente para mantener de velocidad la base de datos principal de cambio. <br /> **Se aplica a**: Se aplica a: Base de datos SQL de Azure| 
 |HADR_THROTTLE_LOG_RATE_LOG_SIZE |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEEDING |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HADR_THROTTLE_LOG_RATE_SEND_RECV_QUEUE_SIZE |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

@@ -3,7 +3,7 @@ title: Cómo usar cuadernos de SQL en Azure Data Studio
 titleSuffix: Azure Data Studio
 description: Obtenga información sobre cómo usar cuadernos de SQL en Azure Data Studio
 ms.custom: seodec18
-ms.date: 03/17/2019
+ms.date: 06/28/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: achatter; alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 6ac15dcd6b440a8c3bcca0c468a79548469fe059
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798036"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469079"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
@@ -163,14 +163,13 @@ import <package-name>
 
 Al ejecutar este comando, `Module not found` se devuelve. Si el paquete no existe, no obtendrá el error.
 
-Si devuelve un `Module not Found` error y, a continuación, haga clic en **administrar paquetes** para iniciar el terminal. Ahora puede instalar los paquetes localmente. Use los siguientes comandos para instalar los paquetes:
+Si devuelve un `Module not Found` error y, a continuación, haga clic en **administrar paquetes** para iniciar la experiencia de asistente. 
 
-```bash
-./pip install <package-name>
-```
+![Image17](media/sql-notebooks/manage-packages.png)
 
-   > [!Tip]
-   > Siga las instrucciones que aparecen en la ventana de Terminal para instalar paquetes en Mac. 
+En este asistente podrá ver el **instalado** paquetes. Puede buscar a través de la lista y la versión asociada de cada uno de estos paquetes. Si necesita **desinstalar** cualquiera de estos paquetes, a continuación, puede hacer clic en uno de los paquetes y, a continuación, haga clic en el **desinstalar los paquetes seleccionados** opción.
+
+También podrá hacer clic en **Agregar nuevo** paquetes a **búsqueda** para un paquete determinado, elija la versión relacionada y haga clic en **instalar**. De forma predeterminada, se selecciona la versión más reciente del paquete de búsqueda. 
 
 Después de instalar el paquete, debe ir en la celda del Bloc de notas y escriba en el siguiente comando:
 
@@ -178,11 +177,7 @@ Después de instalar el paquete, debe ir en la celda del Bloc de notas y escriba
 import <package-name>
 ```
 
-Para desinstalar un paquete, use el siguiente comando desde el terminal:
-
-```bash
-./pip uninstall <package-name>
-```
+Si necesita **desinstalar** cualquiera de estos paquetes, a continuación, puede hacer clic en uno o varios paquetes y, a continuación, haga clic en el **desinstalar los paquetes seleccionados** opción.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

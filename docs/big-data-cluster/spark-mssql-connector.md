@@ -9,12 +9,12 @@ ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d4fde2e13efdebd0cdaad4a4f1c7e528c46ea136
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 878e08426fc58d6ad5a921eff4ac33dca18aa03c
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412874"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469118"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL
 
@@ -81,7 +81,7 @@ Para demostrar el uso del conector de Spark MSSQL con estos datos, puede descarg
 1. Desde una línea de comandos de PowerShell o bash, ejecute el comando siguiente para descargar el **mssql_spark_connector.ipynb** Bloc de notas de ejemplo:
 
    ```PowerShell
-   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/spark_to_sql/mssql_spark_connector.ipynb"
+   curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
 1. En Azure Data Studio, abra el archivo de Bloc de notas de ejemplo. Compruebe que está conectado a la puerta de enlace de Spark o HDFS para el clúster de macrodatos.

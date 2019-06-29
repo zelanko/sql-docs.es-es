@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ed931a8b1918961b69cc0600f94aff6e4d68b9e1
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413992"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463541"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -39,12 +39,12 @@ La función SHORTEST_PATH permite buscar:
 * Rutas de acceso más corta de origen único.
 * Ruta de acceso más corta de varios nodos de origen a varios nodos de destino.
 
-Toma un modelo de longitud arbitraria como entrada y devuelve una ruta de acceso más corta que existe entre dos nodos. Esta función sólo puede utilizarse dentro de MATCH. Acepta un patrón de longitud arbitraria y busca una ruta de acceso más corta en el gráfico, que coincide con ese patrón. La función devuelve solo una ruta más corta entre dos nodos determinados. Si existe, dos o más rutas más cortas de la misma longitud entre cualquier par de nodos de origen y destino, la función devolverá solo una ruta de acceso que se ha encontrado la primera durante el recorrido. Tenga en cuenta que, solo se puede especificar un patrón de longitud arbitraria dentro de una función SHORTEST_PATH. 
+Toma un modelo de longitud arbitraria como entrada y devuelve una ruta de acceso más corta que existe entre dos nodos. Esta función sólo puede utilizarse dentro de MATCH. La función devuelve solo una ruta más corta entre dos nodos determinados. Si existe, dos o más rutas de acceso más corta de la misma longitud entre cualquier par de nodos de origen y destino, la función devuelve solo una ruta de acceso que se ha encontrado la primera durante el recorrido. Tenga en cuenta que, solo se puede especificar un patrón de longitud arbitraria dentro de una función SHORTEST_PATH. 
 
 Hacer referencia a la [coincidencia (gráfico SQL)](../../t-sql/queries/match-sql-graph.md) para conocer la sintaxis. 
 
 ## <a name="for-path"></a>PARA LA RUTA DE ACCESO
-PARA la ruta de acceso debe usarse con cualquier nombre de tabla de nodo o perimetral en la cláusula FROM, que se va a participar en un patrón de longitud arbitraria. PARA la ruta de acceso indica al motor que la tabla de nodo o perimetral devolverá una colección ordenada que representa la lista de nodos o bordes recorridos a lo largo de la ruta de acceso desde el nodo inicial al nodo final. Los atributos de dichas tablas no se puede proyectar directamente en la cláusula SELECT. Debe usarse al proyecto los atributos de estas tablas, funciones de agregado de la ruta de acceso del gráfico.  
+PARA la ruta de acceso debe usarse con cualquier nombre de tabla de nodo o perimetral en la cláusula FROM, que se va a participar en un patrón de longitud arbitraria. PARA la ruta de acceso indica al motor que la tabla de nodo o perimetral devolverá una colección ordenada que representa la lista de nodos o bordes a lo largo del camino recorrido. Los atributos de dichas tablas no se puede proyectar directamente en la cláusula SELECT. Debe usarse al proyecto los atributos de estas tablas, funciones de agregado de la ruta de acceso del gráfico.  
 
 ## <a name="arbitrary-length-pattern"></a>Patrón de longitud arbitraria
 Este patrón incluye los nodos y bordes que se deben recorrer repetidamente hasta que se alcance el nodo deseado o hasta que el número máximo de iteraciones que se especifica en el patrón se cumple. Cada vez que se ejecuta la consulta, el resultado de ejecutar este patrón será una colección ordenada de los nodos y bordes recorridos a lo largo de la ruta de acceso desde el nodo inicial al nodo final. Se trata de un modelo de sintaxis de estilo de expresión regular y se admiten los cuantificadores dos patrón siguiente:

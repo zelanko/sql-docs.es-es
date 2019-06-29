@@ -33,24 +33,24 @@ ms.assetid: d686cdf0-d11d-4dba-9ec8-de1a5f189f25
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: fc6b593694feda96032cb0af45d9b3bdb4cc2a8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ebb9b4e3db7cf8f7a19fd582dceb0b19f5c47d0
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62779882"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463470"
 ---
 # <a name="discontinued-database-engine-functionality-in-sql-server-2014"></a>Funcionalidad del motor de base de datos no incluida en SQL Server 2014
   En este tema se describen las características del [!INCLUDE[ssDE](../includes/ssde-md.md)] que ya no están disponibles en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
   
-## <a name="discontinued-features-in-includesssql14includessssql14-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
+## <a name="SQL14"></a> Características no incluidas en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL14](../includes/sssql14-md.md)].  
   
 |Category|Característica no incluida|Sustituta|  
 |--------------|--------------------------|-----------------|  
 |Nivel de compatibilidad|Nivel de compatibilidad 90|Las bases de datos se deben establecer en el nivel de compatibilidad 100 como mínimo. Cuando se actualiza una base de datos con un nivel de compatibilidad inferior a 100 a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], el nivel de compatibilidad de la base de datos se establece en 100 durante la operación de actualización.|  
   
-## <a name="discontinued-features-in-includesssql11includessssql11-mdmd"></a>Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
+## <a name="Denali"></a> Características no incluidas en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]  
  En la tabla siguiente se enumeran las características que se quitaron en [!INCLUDE[ssSQL11](../includes/sssql11-md.md)].  
   
 |Category|Característica no incluida|Sustituta|  
@@ -93,6 +93,6 @@ ms.locfileid: "62779882"
 -   Campos agregados: target_kb, pages_kb  
   
 ## <a name="see-also"></a>Vea también  
- [Características desusadas del motor de base de datos de SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)  
+ [Características desusadas del motor de base de datos de SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)  
   
   

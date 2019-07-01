@@ -13,12 +13,12 @@ author: craigg-msft
 ms.author: craigg
 manager: jhubbard
 monikerRange: = sql-server-2014 || = sqlallproducts-allversions
-ms.openlocfilehash: 063c344e36ed4cb4404e2f78ae97a4e118322bb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad92bfee285b8a64b704e0636ce2421a80da4fed
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63002380"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351552"
 ---
 # <a name="sql-server-2012-release-notes"></a>Notas de la versión de SQL Server 2012
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -464,10 +464,12 @@ Vamos a ilustrarlo con un ejemplo. Imagine un usuario, Dominio\usuario1. El usua
 ### <a name="54-an-error-might-occur-when-navigating-in-the-generate-script-wizard"></a>5.4 Se podría producir un error al navegar por el Asistente para generar scripts  
 **Problema:** después de generar un script en el Asistente para generar scripts al hacer clic en **Guardar o publicar scripts**, navegar haciendo clic en **Elegir opciones** o **Establecer opciones de scripting** y haciendo clic en **Guardar o publicar scripts** de nuevo se podría producir el siguiente error:  
   
-<a name="prean-exception-occurred-while-executing-a-transact-sql-statement-or-batch-microsoftsqlserverconnectioninfo"></a><pre>An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
+<pre>
+An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
-INFORMACIÓN ADICIONAL:  
-El nombre del objeto 'sys.federations' no es válido. (Microsoft SQL Server, Error: 208)</pre>  
+ADDITIONAL INFORMATION:  
+Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
+</pre>  
   
 **Solución alternativa:** cierre y vuelva a abrir el Asistente para generar scripts.  
   

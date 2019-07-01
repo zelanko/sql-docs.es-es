@@ -9,12 +9,12 @@ ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
 manager: craigg
-ms.openlocfilehash: 1204b3a4aabf4a170901154c656b5f84d05fda82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd837276436de158f58fd2f66ed864930fe6032
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269920"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67400044"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -602,4 +602,10 @@ Las acciones del script **SqlPackage.exe** crean un script de actualización inc
 |**/p:**|UnmodifiableObjectWarnings = (booleano ' True')|Especifica si generar advertencias cuando se encuentren diferencias en los objetos que no se puedan modificar, por ejemplo, si el tamaño de archivo o las rutas de acceso a los archivos son diferentes para un archivo.|
 |**/p:**|VerifyCollationCompatibility = (booleano ' True')|Especifica si se comprobó la compatibilidad de intercalación.
 |**/p:**|VerifyDeployment = (booleano ' True')|Especifica si realizar comprobaciones antes de la publicación que detengan la acción de publicación si hay problemas que pudieran impedir que la publicación se realizara correctamente. Por ejemplo, la acción de publicación podría detenerse si tiene claves externas en la base de datos de destino que no existan en el proyecto de base de datos, y eso provoca errores al publicar.|
-  
+
+## <a name="exit-codes"></a>Códigos de salida
+
+Comandos que devuelven los siguientes códigos de salida:
+
+- 0 = success
+- distinto de cero = error

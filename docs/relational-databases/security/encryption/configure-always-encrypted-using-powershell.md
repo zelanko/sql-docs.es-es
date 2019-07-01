@@ -1,7 +1,7 @@
 ---
 title: Configurar Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 529aaf3e6de3d748ee998b4b345bf90e84a885f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a65a662ad178eaf5e6ae620c7b66a64fd63e75ae
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521689"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387970"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -25,7 +25,7 @@ En el módulo SqlServer PowerShell se proporcionan cmdlets para configurar [Alwa
 
 Los cmdlets de Always Encrypted del módulo SqlServer funcionan con claves o información confidencial, por lo que es importante que ejecute los cmdlets en un equipo seguro. Cuando administre Always Encrypted, ejecute los cmdlets en un equipo diferente del que hospeda la instancia de SQL Server.
 
-Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial cifrada, incluso si el sistema de base de datos está en peligro, la ejecución de un script de PowerShell que procese las claves o la información confidencial en el equipo con SQL Server puede reducir o anular las ventajas de la característica. Para obtener más recomendaciones relacionadas con la seguridad, vea [Security Considerations for Key Management](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement)(Consideraciones de seguridad para la administración de claves).
+Dado que el objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial cifrada, incluso si el sistema de base de datos está en peligro, la ejecución de un script de PowerShell que procese las claves o la información confidencial en el equipo con SQL Server puede reducir o anular las ventajas de la característica. Para obtener más recomendaciones relacionadas con la seguridad, vea [Security Considerations for Key Management](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management)(Consideraciones de seguridad para la administración de claves).
 
 Los vínculos a los artículos de cmdlet están al [final de esta página](#aecmdletreference).
 

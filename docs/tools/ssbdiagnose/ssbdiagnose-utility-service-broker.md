@@ -26,12 +26,12 @@ ms.assetid: 0c1636e8-a3db-438e-be4c-1ea40d1f4877
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 07e4f9c8f694f68e1ee0df02ec6110847fde4e0f
-ms.sourcegitcommit: 113fa84148d6d475c7c1475666ea08ac6965e71c
+ms.openlocfilehash: 34d549a433bebe20beaae287362537a851b2ae6b
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/11/2019
-ms.locfileid: "66836319"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469146"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -185,14 +185,14 @@ WHERE database_id = DB_ID();
  *conversation_handle*  
  Un identificador único que identifica un extremo de conversación en una aplicación. Los identificadores de conversación son únicos para cada extremo de la conversación; los extremos de destino e iniciador tienen identificadores de conversación independientes.  
   
- El parámetro *@dialog_handle* de la instrucción **BEGIN DIALOG** y la columna **conversation_handle** del conjunto de resultados de una instrucción **RECEIVE** son los encargados de devolver los identificadores de conversación a las aplicaciones.  
+ El parámetro *\@dialog_handle* de la instrucción **BEGIN DIALOG** y la columna **conversation_handle** del conjunto de resultados de una instrucción **RECEIVE** son los encargados de devolver los identificadores de conversación a las aplicaciones.  
   
  Los identificadores de conversación se presentan en la columna **conversation_handle** de las vistas de catálogo **sys.transmission_queue** y **sys.conversation_endpoints** .  
   
  *conversation_group_id*  
  El identificador único que identifica un grupo de conversación.  
   
- El parámetro *@conversation_group_id* de la instrucción **GET CONVERSATION GROUP** y la columna **conversation_group_id** del conjunto de resultados de una instrucción **RECEIVE** son los encargados de devolver los identificadores de conversación a las aplicaciones.  
+ El parámetro *\@conversation_group_id* de la instrucción **GET CONVERSATION GROUP** y la columna **conversation_group_id** del conjunto de resultados de una instrucción **RECEIVE** son los encargados de devolver los identificadores de grupo de conversación a las aplicaciones.  
   
  Los identificadores de grupo de conversación se presentan en la columna **conversation_group_id** de las vistas de catálogo **sys.conversation_groups** y **sys.conversation_endpoints** .  
   

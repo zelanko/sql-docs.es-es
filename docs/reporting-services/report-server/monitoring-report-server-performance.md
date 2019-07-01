@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: c1bc13d4-8297-4daf-bb19-4c1e5ba292a6
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 36837445c13d5a0aa0c2bf0f93008d93e87d77d8
-ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
-ms.translationtype: HT
+ms.openlocfilehash: 5d277089fded73524e55d05bbc21078d5df426e3
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67314012"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412654"
 ---
 # <a name="monitoring-report-server-performance"></a>Supervisar el rendimiento del servidor de informes
   Utilice las herramientas de supervisión del rendimiento para supervisar el rendimiento del servidor de informes a fin de evaluar la actividad del servidor, observar tendencias, diagnosticar cuellos de botella del sistema y recopilar datos que pueden ayudar a determinar si la configuración actual del sistema es suficiente. Para optimizar el rendimiento del servidor, puede especificar la frecuencia con que se recicla el dominio de aplicación del servidor de informes. Para obtener más información, vea [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md).  
@@ -53,6 +53,8 @@ ms.locfileid: "67314012"
 -   Comprobar que las actualizaciones de hardware producen el efecto deseado en el rendimiento.  
   
 -   Validar que los cambios realizados en la configuración del sistema producen el efecto deseado en el rendimiento.  
+
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
   
 ## <a name="reporting-services-performance-objects"></a>Objetos de rendimiento en Reporting Services  
 SQL Server 2016 Reporting Services o posterior (SSRS) incluye los siguientes objetos de rendimiento:  
@@ -85,9 +87,8 @@ SQL Server 2016 Reporting Services o posterior (SSRS) incluye los siguientes obj
   
  [Contadores de rendimiento de los objetos ReportServer:Service y ReportServerSharePoint:Service](../../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md)  
  Describe los contadores de rendimiento de eventos relacionados con HTTP y la administración de memoria en [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
-  
- Eventos para un servidor de informes en modo integrado de SharePoint  
- Describe los útiles eventos de diagnóstico que se registran cuando se ejecuta un entorno de informes con un producto de SharePoint.  
+
+::: moniker-end
   
 ## <a name="see-also"></a>Vea también  
  [Configurar la memoria disponible para las aplicaciones del servidor de informes](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)   

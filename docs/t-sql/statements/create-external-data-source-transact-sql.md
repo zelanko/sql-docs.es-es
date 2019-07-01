@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/27/2019
+ms.date: 05/28/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: a6a8832f60ae4552b825dd5d0845b15592dc58b7
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67419057"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314060"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -458,6 +458,8 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
 
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
+
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
 Configure este argumento cuando `TYPE` se haya establecido en `RDBMS` o `SHARD_MAP_MANAGER`.
@@ -676,7 +678,7 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
 
-Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#a-create-external-data-source-to-reference-azure-blob-storage).
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Permisos
 
@@ -895,7 +897,7 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
 
-Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -922,7 +924,7 @@ Para obtener una lista completa de las versiones de Hadoop compatibles, vea [Con
 > [!IMPORTANT]  
 > El valor RESOURCE_MANAGER_LOCATION no se valida cuando se crea el origen de datos externo. Escribir un valor incorrecto puede provocar un error de consulta en tiempo de ejecución cada vez que se intente la inserción, ya que el valor proporcionado no podrá realizar la resolución.
 
-En [Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) se proporciona un ejemplo concreto y más instrucciones.
+En [Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) se proporciona un ejemplo concreto y más instrucciones.
 
 ## <a name="permissions"></a>Permisos
 

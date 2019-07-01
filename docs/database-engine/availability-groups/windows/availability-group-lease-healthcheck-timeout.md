@@ -11,12 +11,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: 63d16dd3856fc680ab580451f769bd29aeabeef4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4093a3629278f6bd733abdd3d14a006d2b73a75
+ms.sourcegitcommit: 0343cdf903ca968c6722d09f017df4a2a4c7fd6b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140608"
+ms.lasthandoff: 06/17/2019
+ms.locfileid: "67166396"
 ---
 # <a name="mechanics-and-guidelines-of-lease-cluster-and-health-check-timeouts-for-always-on-availability-groups"></a>Instrucciones y mecanismos de los tiempos de espera de comprobación de estado, clúster y concesión para grupos de disponibilidad Always On 
 
@@ -56,7 +56,7 @@ La configuración predeterminada se optimiza para reaccionar rápidamente a los 
 
 ### <a name="relationship-between-cluster-timeout-and-lease-timeout"></a>Relación entre el tiempo de espera del clúster y el tiempo de espera de concesión 
 
-La función principal del mecanismo de concesión es tomar el recurso de SQL Server en el caso de que el servicio de clúster no pueda comunicarse con la instancia mientras se realiza una conmutación por error en otro nodo. Cuando el clúster realiza la operación sin conexión en el recurso del clúster del grupo de compatibilidad, el servicio de clúster realiza una llamada RPC a rhs.exe para poner el recurso sin conexión. La DLL de recursos usa procedimientos almacenados para indicar a SQL Server que ponga el grupo de compatibilidad sin conexión, pero podría producirse un error o un tiempo de espera en este procedimiento almacenado. El host de recursos también detiene su propio subproceso de renovación de concesión durante la llamada sin conexión. En el peor de los casos, SQL Server hará que la concesión caduque en ½\*LeaseTimeout y cambiará la instancia a un estado de resolución. Las conmutaciones por error pueden iniciarlas varias entidades diferentes, pero es sumamente importante que la vista del estado del clúster sea coherente en todo el clúster y en todas las instancias de SQL Server. Por ejemplo, imagine un caso en el que la instancia principal pierde la conexión con el resto del clúster. Cada nodo de clúster determinará un error en momentos parecidos debido a los valores de tiempo de espera del clúster, pero solo el nodo principal puede interactuar con la instancia principal de SQL Server para obligarlo a abandonar el rol principal. 
+La función principal del mecanismo de concesión es desconectar el recurso de SQL Server en caso de que el servicio de clúster no pueda comunicarse con la instancia mientras se realiza una conmutación por error en otro nodo. Cuando el clúster realiza la operación sin conexión en el recurso del clúster del grupo de compatibilidad, el servicio de clúster realiza una llamada RPC a rhs.exe para poner el recurso sin conexión. La DLL de recursos usa procedimientos almacenados para indicar a SQL Server que ponga el grupo de compatibilidad sin conexión, pero podría producirse un error o un tiempo de espera en este procedimiento almacenado. El host de recursos también detiene su propio subproceso de renovación de concesión durante la llamada sin conexión. En el peor de los casos, SQL Server hará que la concesión caduque en ½\*LeaseTimeout y cambiará la instancia a un estado de resolución. Las conmutaciones por error pueden iniciarlas varias entidades diferentes, pero es sumamente importante que la vista del estado del clúster sea coherente en todo el clúster y en todas las instancias de SQL Server. Por ejemplo, imagine un caso en el que la instancia principal pierde la conexión con el resto del clúster. Cada nodo de clúster determinará un error en momentos parecidos debido a los valores de tiempo de espera del clúster, pero solo el nodo principal puede interactuar con la instancia principal de SQL Server para obligarlo a abandonar el rol principal. 
 
 Desde la perspectiva del nodo principal, el servicio de clúster habrá perdido el quórum y el propio servicio empezará el proceso de finalización. El servicio de clúster emitirá una llamada RPC al host de recursos para finalizar el proceso. Esta llamada de finalización se encarga de poner el grupo de disponibilidad sin conexión en la instancia de SQL Server. Esta llamada sin conexión se realiza a través de T-SQL, pero no es posible garantizar que se establecerá correctamente la conexión entre SQL y la DLL de recursos. 
 

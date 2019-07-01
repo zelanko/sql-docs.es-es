@@ -6,13 +6,13 @@ ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.date: 11/01/2018
-ms.openlocfilehash: b536d94f5dcfb332f39733f8e3a116294a7d40c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 06/20/2019
+ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936548"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343878"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>Características de SQL Server Reporting Services admitidas en sus ediciones
 
@@ -53,7 +53,7 @@ Para conocer las características admitidas en las ediciones Evaluation y Develo
 |Biblioteca de componentes compartidos|Sí|Sí|||Sí|  
 |Suscripciones y programación de recursos compartidos de archivo y correo electrónico|Sí|Sí|||Sí|  
 |Historial de informes, instantáneas de ejecución y almacenamiento en caché|Sí|Sí|||Sí|  
-|integración de SharePoint|Sí|Sí|||Sí|  
+|Integración de SharePoint<sup>2</sup>|Sí|Sí|||Sí|  
 |Compatibilidad con orígenes de datos remotos y ajenos a SQL<sup>1</sup>|Sí|Sí|||Sí|  
 |Extensibilidad de orígenes de datos, entrega, representación y RDCE|Sí|Sí|||Sí|  
 |Marca personalizada|Sí||||Sí|  

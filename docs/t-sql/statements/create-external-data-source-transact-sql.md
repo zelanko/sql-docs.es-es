@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/28/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -20,12 +20,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0e2bf0ddde51d69567393a77b18a1f72478101b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4aa152883c8d6571f446bee5c783e96b88cbba64
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67145494"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419057"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -52,7 +52,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 Crea un origen de datos externo para consultas de PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten estos casos de uso principales:
 
-- Virtualización de datos y carga de datos utilizando [PolyBase][intro_pb]
+- Virtualización y carga de datos mediante [PolyBase][intro_pb]
 - Operaciones de carga masiva con `BULK INSERT` o `OPENROWSET`
 
 **SE APLICA A**: SQL Server 2016 (o posterior)
@@ -148,7 +148,7 @@ Para crear una credencial con ámbito de base de datos, vea [CREATE DATABASE SCO
 Especifica el tipo de origen de datos externo que se está configurando. Este parámetro no siempre es necesario.
 
 - Use HADOOP cuando el origen de datos externo sea Cloudera, Hortonworks o Azure Blob Storage.
-- Use BLOB_STORAGE al ejecutar operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
+- Use BLOB_STORAGE al ejecutar operaciones masivas con [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset] con [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
@@ -226,7 +226,7 @@ WITH
 ;
 ```
 
-Para obtener ejemplos adicionales para otros orígenes de datos, como MongoDB, vea [Configuración de PolyBase para tener acceso a datos externos en MongoDB][mongodb_pb]
+Para ver más ejemplos de otros orígenes de datos, como MongoDB, vea [Configurar PolyBase para acceder a datos externos en MongoDB][mongodb_pb].
 
 ### <a name="b-create-external-data-source-to-reference-hadoop"></a>B. Creación de un origen de datos externo para hacer referencia a Hadoop
 
@@ -318,7 +318,7 @@ WITH
 ### <a name="f-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>F. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage
 
 **Se aplica a:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
-Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
+Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -356,7 +356,7 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 [create_dsc]: https://docs.microsoft.com/sql/t-sql/statements/create-database-scoped-credential-transact-sql
 [create_eff]: https://docs.microsoft.com/sql/t-sql/statements/create-external-file-format-transact-sql
-[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-data-source
+[create_etb]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-transact-sql
 [create_etb_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-external-table-as-select-transact-sql?view=azure-sqldw-latest
 [create_tbl_as_sel]: https://docs.microsoft.com/sql/t-sql/statements/create-table-as-select-azure-sql-data-warehouse?view=azure-sqldw-latest
 
@@ -453,12 +453,10 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 
 - Use RDBMS para consultas entre bases de datos mediante una consulta elástica de SQL Database.  
 - Use SHARD_MAP_MANAGER al crear un origen de datos externo al conectarse a una base de datos SQL Database particionada.
-- Use BLOB_STORAGE al ejecutar operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset].
+- Use BLOB_STORAGE al ejecutar operaciones masivas con [BULK INSERT][bulk_insert], or [OPENROWSET][openrowset].
 
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
-
-Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="databasename--databasename"></a>DATABASE_NAME = *database_name*
 
@@ -512,7 +510,7 @@ WITH
 ;
 ```
 
-Para obtener un tutorial paso a paso, vea [Introducción a las consultas elásticas para particionamiento (creación de particiones horizontales)][sharded_eq_tutorial].
+Para obtener un tutorial paso a paso, vea [Getting started with elastic queries for sharding (horizontal partitioning)][sharded_eq_tutorial] [Introducción a las consultas elásticas para particionamiento (creación de particiones horizontales)].
 
 ### <a name="b-create-an-rdbms-external-data-source"></a>B. Creación de un origen de datos externo de RDBMS
 
@@ -547,7 +545,7 @@ Para obtener un tutorial paso a paso sobre RDBMS, vea [Introducción a las consu
 
 ### <a name="c-create-an-external-data-source-for-bulk-operations-retrieving-data-from-azure-blob-storage"></a>C. Creación de un origen de datos externo para operaciones masivas de recuperación de datos desde Azure Blob Storage
 
-Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] o con [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
+Use el origen de datos siguiente para las operaciones masivas con [BULK INSERT][bulk_insert] or [OPENROWSET][openrowset]. La credencial debe establecer `SHARED ACCESS SIGNATURE` como identidad, no debe tener al inicio `?` en el token de SAS, debe tener al menos permiso de lectura en el archivo que se debe cargar (por ejemplo `srt=o&sp=r`), y el período de expiración debe ser válido (todas las fechas se expresan en hora UTC). Para más información sobre las firmas de acceso compartido, vea [Uso de Firmas de acceso compartido (SAS)][sas_token].
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL AccessAzureInvoices
@@ -614,10 +612,10 @@ Para ver este ejemplo en uso, vea [BULK INSERT][bulk_insert_example].
 
 ## <a name="overview-azure-sql-data-warehouse"></a>Introducción: Almacenamiento de datos SQL de Azure
 
-Crea un origen de datos externo para PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten el siguiente caso de uso principal: Virtualización de datos y carga de datos utilizando [PolyBase][intro_pb]
+Crea un origen de datos externo para PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten el siguiente caso de uso principal: Virtualización y carga de datos mediante [PolyBase][intro_pb]
 
 > [!IMPORTANT]  
-> Para crear un origen de datos de externo para consultar instancias remotas de SQL Data Warehouse mediante SQL Database con [consulta elástica][remote_eq], vea [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
+> Para crear un origen de datos de externo y consultar instancias de SQL Data Warehouse mediante SQL Database con [consulta elástica][remote_eq], vea [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current).
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -678,7 +676,7 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
 
-Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#a-create-external-data-source-to-reference-azure-blob-storage).
 
 ## <a name="permissions"></a>Permisos
 
@@ -835,7 +833,7 @@ WITH
 
 ## <a name="overview-analytics-platform-system"></a>Introducción: Sistema de la plataforma de análisis
 
-Crea un origen de datos externo para consultas de PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten el siguiente caso de uso: Virtualización de datos y carga de datos utilizando [PolyBase][intro_pb]
+Crea un origen de datos externo para consultas de PolyBase. Los orígenes de datos externos se usan para establecer la conectividad y admiten el siguiente caso de uso: Virtualización y carga de datos mediante [PolyBase][intro_pb]
 
 ## <a name="syntax"></a>Sintaxis
 
@@ -897,7 +895,7 @@ Especifica el tipo de origen de datos externo que se está configurando. Este pa
 > [!IMPORTANT]
 > No establezca `TYPE` si usa cualquier otro origen de datos externo.
 
-Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#e-create-external-data-source-to-reference-azure-blob-storage).
+Para obtener un ejemplo del uso de `TYPE` = `HADOOP` para cargar datos desde Azure Blob Storage, vea [Creación de un origen de datos externo para hacer referencia a Azure Blob Storage](#d-create-external-data-source-to-reference-azure-blob-storage).
 
 ### <a name="resourcemanagerlocation--resourcemanageruriport"></a>RESOURCE_MANAGER_LOCATION = *'ResourceManager_URI[:port]'*
 
@@ -924,7 +922,7 @@ Para obtener una lista completa de las versiones de Hadoop compatibles, vea [Con
 > [!IMPORTANT]  
 > El valor RESOURCE_MANAGER_LOCATION no se valida cuando se crea el origen de datos externo. Escribir un valor incorrecto puede provocar un error de consulta en tiempo de ejecución cada vez que se intente la inserción, ya que el valor proporcionado no podrá realizar la resolución.
 
-En [Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada](#c-create-external-data-source-to-reference-hadoop-with-push-down-enabled) se proporciona un ejemplo concreto y más instrucciones.
+En [Creación de un origen de datos externo para hacer referencia a Hadoop con la inserción habilitada](#b-create-external-data-source-to-reference-hadoop-with-push-down-enabled) se proporciona un ejemplo concreto y más instrucciones.
 
 ## <a name="permissions"></a>Permisos
 

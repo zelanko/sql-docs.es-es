@@ -1,7 +1,7 @@
 ---
 title: Agregar una instantánea al historial de informes (Administrador de informes) | Microsoft Docs
-ms.prod: reporting-services-2014
-ms.technology: reporting-services-native
+ms.prod: reporting-services
+ms.technology: reporting-services
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
@@ -9,12 +9,12 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 04/26/2019
-ms.openlocfilehash: ba994e3fe63bfabeb9949f6dc96dc4b4536f0f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1b211684bc267671ea86571f4214c32c013f674
+ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64568547"
+ms.lasthandoff: 06/28/2019
+ms.locfileid: "67463430"
 ---
 # <a name="add-a-snapshot-to-report-history-report-manager"></a>Agregar una instantánea al historial de informes (Administrador de informes)
 
@@ -24,7 +24,7 @@ Las instantáneas de informe no se guardan con un formato de representación con
   
 ## <a name="to-manually-add-snapshots-to-report-history"></a>Para agregar manualmente instantáneas a un historial de informe
   
-::: moniker range="<=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 1. En el Administrador de informes, vaya a la página **Contenido** , desplace el puntero sobre el elemento del que quiere ver el historial y haga clic en la flecha de lista desplegable.
   

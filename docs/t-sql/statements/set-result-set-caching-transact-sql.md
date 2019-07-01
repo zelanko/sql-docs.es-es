@@ -15,18 +15,20 @@ author: XiaoyuL-Preview
 ms.author: xiaoyul
 manager: craigg
 monikerRange: =azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 561e92512ded10b06926f5b23f0f5d40540e3d2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9750cdc2dea7049bde77d31c275789691abf1b0
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826866"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313814"
 ---
-# <a name="set-result-set-caching-transact-sql-applies-to-azure-sql-data-warehouse-gen2-only-preview"></a>SET RESULT SET CACHING (Transact-SQL) solo se aplica a Azure SQL Data Warehouse Gen2 (versión preliminar)
+# <a name="set-result-set-caching-transact-sql"></a>SET RESULT SET CACHING (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Hace que Azure SQL Data Warehouse almacene en caché los conjuntos de resultados de las consultas.
+Controla el comportamiento de almacenamiento en caché para la sesión de cliente actual del conjunto de resultados.  
+
+Se aplica a Azure SQL Data Warehouse, versión preliminar 
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,98 +40,15 @@ SET RESULT_SET_CACHING { ON | OFF };
   
 ## <a name="remarks"></a>Notas  
 
-> [!Note]
-> Aunque esta característica se está implantando en todas las regiones, compruebe la versión implementada en su instancia y las [notas de la versión de Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) más recientes para conocer la disponibilidad de las características.
-  
-Este comando debe ejecutarse mientras se está conectado a la base de datos maestra.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. Se ha incorporado una nueva columna denominada is_result_set_caching_on en [sys.databases](/sql/relational-databases/system-catalog-views/sys-databases-transact-sql?view=azure-sqldw-latest) para mostrar la configuración de almacenamiento en caché de resultados para una base de datos.  
+**ON**   
+Habilita el almacenamiento en caché del conjunto de resultados para la sesión de cliente actual.  El almacenamiento en caché del conjunto de resultados no se puede activar en una sesión si está desactivado en el nivel de base de datos.
 
-**ON** especifica que los conjuntos de resultados de consultas devueltos de esta base de datos se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
+**OFF**   
+Deshabilita el almacenamiento en caché del conjunto de resultados para la sesión de cliente actual.
 
-**OFF** especifica que los conjuntos de resultados de consultas devueltos de esta base de datos no se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
-
-Los usuarios pueden ver si una consulta se ejecutó con un acierto o un fallo de caché de resultados realizando una consulta a [sys.pdw_request_steps](/sql/relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql?view=azure-sqldw-latest) con un valor de request_id específico. Si hay un acierto de caché, el resultado de la consulta tendrá un único paso con los siguientes detalles:
-
-|**Nombre de columna**|**Operador**|**Value**|
-|----|----|----|
-|operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-|comando|Like|%DWResultCacheDb%|
-||||
-  
 ## <a name="permissions"></a>Permisos
 
-Se requieren estos permisos:
-
-- Inicio de sesión principal en el nivel de servidor (creado por el proceso de aprovisionamiento) o
-- Miembro del rol de base de datos dbmanager.
-
-El propietario de la base de datos no puede modificarla a menos que sea miembro del rol dbmanager.
-  
-## <a name="examples"></a>Ejemplos
-
-### <a name="enable-result-set-caching-for-a-database"></a>Habilitación del almacenamiento en caché de conjuntos de resultados para una base de datos
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING ON;
-```
-
-### <a name="disable-result-set-caching-for-a-database"></a>Deshabilitación del almacenamiento en caché de conjuntos de resultados para una base de datos
-
-```sql
-ALTER DATABASE myTestDW  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="check-result-set-caching-setting-for-a-database"></a>Comprobación de la configuración de almacenamiento en caché de conjuntos de resultados para una base de datos
-
-```sql
-SELECT name, is_result_set_caching_on  
-FROM sys.databases
-```
-
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>Comprobación del número de consultas con acierto de caché y fallo de caché de conjuntos de resultados
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses,
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A
-```
-
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>Comprobación del acierto de caché y fallo de caché de conjunto de resultados para una consulta
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286'
-      and operation_type = 'ReturnOperation'
-      and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>Comprobación de todas las consultas con aciertos de caché de conjunto de resultados
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0
-```
+Debe pertenecer al rol público.
 
 ## <a name="see-also"></a>Vea también
 

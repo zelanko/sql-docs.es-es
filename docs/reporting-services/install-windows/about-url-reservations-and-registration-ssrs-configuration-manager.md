@@ -1,6 +1,6 @@
 ---
 title: Acerca de las reservas y el registro de direcciones URL (Administrador de configuración de SSRS) | Microsoft Docs
-ms.date: 05/18/2016
+ms.date: 06/20/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
@@ -11,24 +11,24 @@ helpviewer_keywords:
 ms.assetid: c2c460c3-e749-4efd-aa02-0f8a98ddbc76
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 640407e68b146e399dc478b17a91c351b23fe306
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dba8913c5aa5fa0aa8d93dd1c4dd639f85ac3081
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454504"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67314036"
 ---
 # <a name="about-url-reservations-and-registration--ssrs-configuration-manager"></a>Acerca de las reservas y el registro de resrvas de URL (Administrador de configuración de SSRS)
-  Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el Administrador de informes al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
+  Las direcciones URL de las aplicaciones de Reporting Services se definen como reservas de direcciones URL en HTTP.SYS. Una reserva de direcciones URL define la sintaxis de un extremo de dirección URL para una aplicación web. Las reservas de direcciones URL se definen tanto para el servicio web del servidor de informes como para el portal web al configurar las aplicaciones en el servidor de informes. Las reservas de direcciones URL se crean automáticamente al configurar direcciones URL a través del programa de instalación o de la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] :  
   
--   El programa de instalación creará las reservas de direcciones URL utilizando los valores predeterminados. Si el programa instala la configuración predeterminada, reservará dos direcciones URL: una del servicio web del servidor de informes y otra para el Administrador de informes. Puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para agregar más direcciones URL o modificar las predeterminados que el programa de instalación crea.  
+-   El programa de instalación creará las reservas de direcciones URL utilizando los valores predeterminados. Si el programa instala la configuración predeterminada, reservará dos direcciones URL: una para el servicio web del servidor de informes y otra para el portal web. Puede utilizar la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para agregar más direcciones URL o modificar las predeterminados que el programa de instalación crea.  
   
 -   La herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] creará una reserva de direcciones URL según la dirección URL que especifique en las páginas **Dirección URL del servicio web** o **Dirección URL del Administrador de informes** de la herramienta.  
   
  Tanto el programa de instalación como la herramienta también asignarán permisos en la dirección URL al servicio del servidor de informes, comprobarán si hay instancias duplicadas y agregarán la reserva de direcciones URL a HTTP.SYS. No cree ni modifique nunca una reserva de direcciones URL de Reporting Services directamente mediante HttpCfg.exe u otra herramienta. Si omite un paso o establece un valor no válido, encontrará problemas que podrían ser difíciles de diagnosticar o corregir.  
   
 > [!NOTE]  
->  HTTP.SYS es un componente del sistema operativo que escucha las solicitudes de red y las enruta a una cola de solicitudes. En esta versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establece y mantiene la cola de solicitudes para el servicio web del servidor de informes y el Administrador de informes. Internet Information Services (IIS) ya no se utiliza para hospedar o tener acceso a aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para obtener más información acerca de la funcionalidad de HTTP.SYS, vea [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652) en MSDN.  
+> HTTP.SYS es un componente del sistema operativo que escucha las solicitudes de red y las enruta a una cola de solicitudes. En esta versión de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], HTTP.SYS establece y mantiene la cola de solicitudes para el servicio web del servidor de informes y el portal web. Internet Information Services (IIS) ya no se utiliza para hospedar o tener acceso a aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Para más información sobre la funcionalidad de HTTP.SYS, vea [HTTP Server API](https://go.microsoft.com/fwlink/?LinkId=92652).  
   
 ##  <a name="ReportingServicesURLs"></a> Direcciones URL en Reporting Services  
  En una instalación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] , puede tener acceso a las herramientas, aplicaciones y elementos siguientes a través de direcciones URL:  
@@ -42,10 +42,10 @@ ms.locfileid: "66454504"
  No se debería tener acceso a otros elementos publicados con direcciones URL (por ejemplo, a orígenes de datos compartidos) a través de direcciones URL como elementos independientes. El servidor de informes no muestra esos elementos en un formato significativo cuando se ven en una ventana del explorador.  
   
 > [!NOTE]  
->  En este tema no se describe el acceso con direcciones URL a informes específicos que se almacenan en el servidor de informes. Para obtener más información sobre el acceso con direcciones URL a estos elementos, vea [Acceder a elementos del servidor de informes mediante el acceso URL](../../reporting-services/access-report-server-items-using-url-access.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+> En este artículo no se describe el acceso con direcciones URL a informes específicos que se almacenan en el servidor de informes. Para más información sobre el acceso con direcciones URL a estos elementos, vea [Acceder a elementos del servidor de informes mediante el acceso URL](../../reporting-services/access-report-server-items-using-url-access.md).  
   
 ##  <a name="URLreservation"></a> Reserva y registro de direcciones URL  
- Una reserva de direcciones URL define las direcciones URL que se pueden usar para tener acceso a una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará una o más direcciones URL para el servicio web del servidor de informes y para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] en HTTP.SYS, y las registrará cuando se inicie el servicio. Si anexa parámetros a la dirección URL, puede abrir los informes a través del servicio web. HTTP.SYS proporciona las reservas y permite el registro. Para obtener más información, vea [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653) en MSDN.  
+ Una reserva de direcciones URL define las direcciones URL que se pueden usar para tener acceso a una aplicación de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] reservará una o más direcciones URL para el servicio web del servidor de informes y para el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)] en HTTP.SYS, y las registrará cuando se inicie el servicio. Si anexa parámetros a la dirección URL, puede abrir los informes a través del servicio web. HTTP.SYS proporciona las reservas y permite el registro. Para más información, vea [Namespace Reservations, Registration, and Routing](https://go.microsoft.com/fwlink/?LinkId=92653).  
   
  La*reserva de direcciones URL* es el proceso por el que se crea un extremo de dirección URL para una aplicación web y se almacena en HTTP.SYS. HTTP.SYS es el repositorio común de todas las reservas de direcciones URL que se definen en un equipo y define un conjunto de reglas comunes que garantizan que las reservas sean únicas.  
   
@@ -64,7 +64,7 @@ ms.locfileid: "66454504"
  Si instala [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] en la configuración predeterminada, el programa de instalación reservará direcciones URL para el servicio web del servidor de informes y el [!INCLUDE[ssRSWebPortal](../../includes/ssrswebportal.md)]. También puede aceptar estos valores predeterminados al definir las reservas de direcciones URL en la herramienta Configuración de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] . Las direcciones URL predeterminadas incluirán un nombre de instancia si instala [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] o [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] como una instancia con nombre.  
   
 > [!IMPORTANT]  
->  El carácter de la instancia es el carácter de subrayado ( **_** ).  
+> El carácter de la instancia es el carácter de subrayado ( **_** ).  
   
  Las reservas de direcciones URL incluyen un número de puerto. Los sistemas operativos siguientes permitirán que varias aplicaciones web compartan un puerto.  
   
@@ -93,7 +93,7 @@ ms.locfileid: "66454504"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Las reservas de direcciones URL muestran la cuenta de la reserva. La cuenta del servicio virtual se utiliza para todas las direcciones URL que se crean para las aplicaciones de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] que se ejecutan en la misma instancia.
   
  
- El acceso anónimo está deshabilitado porque la seguridad predeterminada es **RSWindowsNegotiate**. Para el acceso en una intranet, las direcciones URL del servidor de informes usan nombres de equipo de red. Si desea configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para las conexiones a Internet, debe utilizar valores diferentes. Para obtener más información sobre la autenticación, vea [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md) en Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+ El acceso anónimo está deshabilitado porque la seguridad predeterminada es **RSWindowsNegotiate**. Para el acceso en una intranet, las direcciones URL del servidor de informes usan nombres de equipo de red. Si desea configurar [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para las conexiones a Internet, debe utilizar valores diferentes. Para más información sobre la autenticación, vea [Autenticación con el servidor de informes](../../reporting-services/security/authentication-with-the-report-server.md).  
   
 ##  <a name="URLlocalAdmin"></a> Direcciones URL para administración local  
  Puede usar `https://localhost/reportserver` o `https://localhost/reports` si ha especificado un carácter comodín fuerte o débil para la reserva de direcciones URL.  
@@ -102,8 +102,7 @@ ms.locfileid: "66454504"
   
  [!INCLUDE[wiprlhlong](../../includes/wiprlhlong-md.md)], [!INCLUDE[nextref_longhorn](../../includes/nextref-longhorn-md.md)] y versiones posteriores incluyen nuevas características de seguridad para reducir el riesgo de ejecutar accidentalmente programas con privilegios elevados. Se necesitan pasos adicionales para habilitar la administración local en estos sistemas operativos. Para más información, vea [Configurar un servidor de informes en modo nativo para la administración local &#40;SSRS&#41;](../../reporting-services/report-server/configure-a-native-mode-report-server-for-local-administration-ssrs.md).  
   
-## <a name="see-also"></a>Consulte también  
+## <a name="see-also"></a>Vea también  
  [Configurar una dirección URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)   
  [Sintaxis de reserva de direcciones URL &#40;Administrador de configuración de SSRS&#41;](../../reporting-services/install-windows/url-reservation-syntax-ssrs-configuration-manager.md)  
-  
   

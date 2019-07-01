@@ -2,7 +2,7 @@
 title: Tarea de Azure Data Lake Analytics | Microsoft Docs
 description: Puede enviar trabajos de U-SQL al servicio Azure Data Lake Analytics con la tarea de Data Lake Analytics.
 ms.custom: ''
-ms.date: 05/18/2018
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: maghan
@@ -14,12 +14,12 @@ f1_keywords:
 author: yanancai
 ms.author: yanacai
 manager: craigg
-ms.openlocfilehash: f68a57063f0619458d6961308bbaeeee9c22c323
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28c9ed815825dbebd0d7f96b983ee34f1176b48c
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66014914"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419153"
 ---
 # <a name="azure-data-lake-analytics-task"></a>Tarea de Azure Data Lake Analytics
 
@@ -37,7 +37,7 @@ Para agregar una tarea de Data Lake Analytics a un paquete, arrástrela desde el
 
 ## <a name="general-page-configuration"></a>Configuración de la página General
 
-Use la página **General** para configurar la tarea y proporcione el script U-SQL que la tarea envía. Para más información sobre el lenguaje U-SQL, consulte el artículo sobre la [referencia del lenguaje U-SQL](https://msdn.microsoft.com/azure/data-lake-analytics/u-sql/u-sql-language-reference).
+Use la página **General** para configurar la tarea y proporcione el script U-SQL que la tarea envía. Para más información sobre el lenguaje U-SQL, consulte el artículo sobre la [referencia del lenguaje U-SQL](/u-sql/).
 
 ### <a name="basic-configuration"></a>Configuración básica
 

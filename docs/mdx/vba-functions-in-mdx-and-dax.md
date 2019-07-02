@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 327a801ce725987d68236efcfddbf8a4e7231ea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251544"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500048"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 
@@ -53,10 +53,10 @@ ms.locfileid: "63251544"
 |CVErr|No compatible||  
 |date|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; la función DATE (Year, Month, Day), utilizada para generar un valor de tipo de fecha de los argumentos proporcionados|  
 |DateAdd|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; el DATEADD (\<fechas >, < number_of_intervals >,\<intervalo >) función, utilizada para desplazar las fechas proporcionadas por un número de intervalos especificado|  
-|DateDiff]|Solo MDX||  
+|DateDiff|Solo MDX||  
 |DatePart|Solo MDX||  
 |DateSerial|Solo MDX||  
-|DateValue]|DAX, MDX||  
+|DateValue|DAX, MDX||  
 |Day|DAX, MDX||  
 |DDB|Solo MDX||  
 |Dir|No compatible||  
@@ -118,7 +118,7 @@ ms.locfileid: "63251544"
 |MonthName|No compatible||  
 |MsgBox|No compatible||  
 |Ahora|DAX, MDX||  
-|NPer]|Solo MDX||  
+|NPer|Solo MDX||  
 |NPV|Solo MDX||  
 |Oct|Solo MDX||  
 |Partición|Solo MDX||  
@@ -146,7 +146,7 @@ ms.locfileid: "63251544"
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
-|String]|Solo MDX||  
+|String|Solo MDX||  
 |StrReverse|No compatible||  
 |Modificador|Solo MDX||  
 |SYD|Solo MDX||  
@@ -156,7 +156,7 @@ ms.locfileid: "63251544"
 |Timer|Solo MDX||  
 |TimeSerial|Solo MDX||  
 |TimeValue|DAX, MDX||  
-|Recorte]|DAX, MDX||  
+|Trim|DAX, MDX||  
 |TypeName|Solo MDX||  
 |UBound|No compatible||  
 |UCase|Solo MDX||  

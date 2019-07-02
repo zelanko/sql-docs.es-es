@@ -284,10 +284,8 @@
     - name: Administración de contenido del servidor de informes (Modo nativo de SSRS)
       href: ../reporting-services/report-server/report-server-content-management-ssrs-native-mode.md
       items:
-        - name: 'Crear, eliminar o modificar una carpeta (portal web)'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: 'Crear, eliminar o modificar una carpeta'
-          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-report-manager.md
+          href: ../reporting-services/report-server/create-delete-or-modify-a-folder-web-portal.md
         - name: Mover o eliminar un elemento
           href: ../reporting-services/report-server/move-or-delete-an-item-report-manager.md
         - name: Cargar archivos a una carpeta
@@ -974,8 +972,6 @@
       href: ../reporting-services/reports/configure-execution-properties-for-a-report-report-manager.md
     - name: Limitar el historial de informe
       href: ../reporting-services/reports/limit-report-history-report-manager.md
-    - name: Abrir y cerrar un informe
-      href: ../reporting-services/reports/open-and-close-a-report-report-manager.md
     - name: Cargar un archivo o un informe
       href: ../reporting-services/reports/upload-a-file-or-report-report-manager.md
     - name: Crear un informe vinculado

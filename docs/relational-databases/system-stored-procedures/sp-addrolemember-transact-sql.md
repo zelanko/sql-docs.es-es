@@ -19,12 +19,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6d7b47670d56ab916a8c2f263f9ddee3dc85c0a6
-ms.sourcegitcommit: c4870cb5bebf9556cdb4d8b35ffcca265fb07862
+ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/02/2019
-ms.locfileid: "55652544"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492744"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +58,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
   
  Un rol no puede incluirse como un miembro. Este tipo de definiciones "circulares" no es válido, incluso cuando la pertenencia solo esté implícita indirectamente en uno o varios miembros intermedios.  
   
- sp_addrolemember no se puede agregar un rol fijo de base de datos, rol fijo de servidor o dbo a un rol. sp_addrolemember no puede ejecutarse en una transacción definida por el usuario.  
+ sp_addrolemember no se puede agregar un rol fijo de base de datos, rol fijo de servidor o dbo a un rol.
   
  Utilice sp_addrolemember únicamente para agregar un miembro a un rol de base de datos. Para agregar un miembro a un rol de servidor, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   

@@ -21,12 +21,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e85d3d1257b4cd873ddb1686a78d746cf92021c3
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469140"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492765"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -114,11 +114,11 @@ Este comando restablece todos los contadores en 0.
 |BACKUPTHREAD |Tiene lugar cuando una tarea está esperando que finalice una tarea de copia de seguridad. Los tiempos de espera pueden ser largos, desde unos minutos a varias horas. Si la tarea que se está esperando está en un proceso de E/S, este tipo no indica ningún problema.| 
 |BAD_PAGE_PROCESS |Tiene lugar cuando el registrador de páginas sospechosas en segundo plano intenta impedir la ejecución más veces que cada cinco segundos. Un exceso de páginas sospechosas provoca la ejecución frecuente del registrador.| 
 |BLOB_METADATA |Exclusivamente para uso interno. <br />**Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPALLOCATION |Exclusivamente para uso interno. <br />**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPBUILD |Exclusivamente para uso interno. <br />**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPARTITION |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BMPREPLICATION |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|BPSORT |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPALLOCATION |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br />**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPBUILD |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br />**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPARTITION |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BMPREPLICATION |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|BPSORT |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_CONNECTION_RECEIVE_TASK |Tiene lugar cuando se espera el acceso para recibir un mensaje en el extremo de una conexión. El acceso de recepción al extremo está serializado.| 
 |BROKER_DISPATCHER |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |BROKER_ENDPOINT_STATE_MUTEX |Se produce cuando hay contención para acceder al estado de un punto de conexión de Service Broker. El acceso al estado de los cambios está serializado.| 
@@ -361,11 +361,11 @@ Este comando restablece todos los contadores en 0.
 |HK_RESTORE_FILEMAP |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_MIGRATION |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HKCS_PARALLEL_RECOVERY |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTBUILD |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTDELETE |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTMEMO |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREINIT |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
-|HTREPARTITION |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTBUILD |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTDELETE |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTMEMO |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREINIT |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
+|HTREPARTITION |Se produce durante la sincronización de subprocesos que escribir las fases de procesamiento diferentes dentro de un operador de modo por lotes. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 
 |HTTP_ENUMERATION |Tiene lugar en el inicio para enumerar los extremos HTTP al iniciar HTTP.| 
 |HTTP_START |Tiene lugar cuando una conexión espera hasta que HTTP complete la inicialización.| 
 |HTTP_STORAGE_CONNECTION |Exclusivamente para uso interno. <br /> **Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].| 

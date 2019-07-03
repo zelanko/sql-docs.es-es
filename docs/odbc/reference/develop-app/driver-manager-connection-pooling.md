@@ -16,12 +16,12 @@ ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: efcd4c4b3dabc82b30d5b0e903dd8937ad3a7ce3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280419"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533826"
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación usar una conexión de un grupo de conexiones que no es necesario volver a establecerse para cada usuario. Una vez creada y colocada en un grupo de una conexión, una aplicación puede reutilizar esa conexión sin necesidad de realizar el proceso de conexión completa.  
@@ -31,7 +31,7 @@ Agrupación de conexiones permite a una aplicación usar una conexión de un gru
  Además de mejoras de rendimiento, la arquitectura de agrupación de conexiones permite un entorno y sus conexiones asociadas para ser utilizada por varios componentes en un único proceso. Esto significa que pueden interactuar entre sí los componentes independientes en el mismo proceso sin conocer entre sí. Una conexión en un grupo de conexiones puede utilizarse varias veces por varios componentes.  
   
 > [!NOTE]
->  Agrupación de conexiones puede utilizarse por una aplicación ODBC ODBC 2. *x* comportamiento, siempre y cuando la aplicación puede llamar a *SQLSetEnvAttr*. Cuando se usa la agrupación de conexiones, la aplicación no debe ejecutar instrucciones SQL que cambiar la base de datos o en el contexto de la base de datos, como cambiar la \< *base de datos ** nombre*>, que cambia el catálogo utilizado por un origen de datos.  
+>  Agrupación de conexiones puede utilizarse por una aplicación ODBC ODBC 2. *x* comportamiento, siempre y cuando la aplicación puede llamar a *SQLSetEnvAttr*. Cuando se usa la agrupación de conexiones, la aplicación no debe ejecutar instrucciones SQL que cambiar la base de datos o en el contexto de la base de datos, como cambiar la \< *nombre de base de datos*>, que cambia el catálogo de datos código fuente.  
 
 
  Un controlador ODBC debe estar completamente segura para subprocesos y conexiones no deben tener afinidad de subprocesos para admitir la agrupación de conexiones. Esto significa que el controlador es capaz de controlar una llamada en cualquier subproceso en cualquier momento y puede conectarse en un subproceso, para usar la conexión en otro subproceso y desconectar en un tercer subproceso.  

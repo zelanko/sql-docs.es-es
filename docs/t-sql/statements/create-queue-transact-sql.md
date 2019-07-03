@@ -26,12 +26,12 @@ ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: ab7873152b9ae372c3d61d2906d3b52a055d4130
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f7c970293a68e1ecf4df19ac70bb0e7e1ba303a
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503243"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232555"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -163,32 +163,32 @@ CREATE QUEUE <object>
 |message_id|**uniqueidentifier**|Identificador único para el mensaje.|  
   
 ## <a name="permissions"></a>Permisos  
- Tienen permiso para crear una cola los miembros de los roles fijos de base de datos  db_ddladmin o db_owner y el rol fijo de servidor sysadmin.  
+ Tienen permiso para crear una cola los miembros de los roles fijos de base de datos `db_ddladmin` o `db_owner` o el rol fijo de servidor `sysadmin`.  
   
- De forma predeterminada, tienen permiso REFERENCES en una cola el propietario de ésta, los miembros los roles fijos de base de datos db_ddladmin o db_owner y los miembros del rol fijo de servidor sysadmin.  
+ De forma predeterminada, se concede permiso `REFERENCES` para una cola al propietario de la cola, a los miembros de los roles fijos de base de datos `db_ddladmin` o `db_owner` o a los miembros del rol fijo de servidor `sysadmin`.  
   
- De forma predeterminada, tienen permiso RECEIVE en una cola el propietario de ésta, los miembros del rol fijo de base de datos db_owner y los miembros del rol fijo de servidor sysadmin.  
+ De forma predeterminada, se concede el permiso `RECEIVE` para una cola al propietario de la cola, a los miembros del rol fijo de base de datos `db_owner` o a los miembros del rol fijo de servidor `sysadmin`.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-queue-with-no-parameters"></a>A. Crear una cola sin parámetros  
  En el siguiente ejemplo se crea una cola que está disponible para recibir mensajes. No se especifica ningún procedimiento almacenado de activación para la cola.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue ;  
 ```  
   
 ### <a name="b-creating-an-unavailable-queue"></a>B. Crear una cola no disponible  
  En el siguiente ejemplo se crea una cola que no está disponible para recibir mensajes. No se especifica ningún procedimiento almacenado de activación para la cola.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue WITH STATUS=OFF ;  
 ```  
   
 ### <a name="c-creating-a-queue-and-specify-internal-activation-information"></a>C. Crear una cola y especificar información de activación interna  
  En el siguiente ejemplo se crea una cola que está disponible para recibir mensajes. La cola inicia el procedimiento almacenado `expense_procedure` cuando un mensaje entra en la cola. El procedimiento almacenado se ejecuta como el usuario `ExpenseUser`. La cola inicia un máximo de `5` instancias del procedimiento almacenado.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS=ON,  
     ACTIVATION (  
@@ -200,7 +200,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="d-creating-a-queue-on-a-specific-filegroup"></a>D. Crear una cola en un grupo de archivos específico  
  En el siguiente ejemplo se crea una cola en el grupo de archivos `ExpenseWorkFileGroup`.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     ON ExpenseWorkFileGroup ;  
 ```  
@@ -208,7 +208,7 @@ CREATE QUEUE ExpenseQueue
 ### <a name="e-creating-a-queue-with-multiple-parameters"></a>E. Crear una cola con varios parámetros  
  En el siguiente ejemplo se crea una cola en el grupo de archivos `DEFAULT`. La cola no está disponible. Los mensajes se retienen en la cola hasta que finaliza la conversación a la que pertenecen. Cuando la cola pasa a estar disponible mediante ALTER QUEUE, la cola inicia el procedimiento almacenado `2008R2.dbo.expense_procedure` para procesar los mensajes. El procedimiento almacenado se ejecuta como el usuario que ejecutó la instrucción `CREATE QUEUE`. La cola inicia un máximo de `10` instancias del procedimiento almacenado.  
   
-```  
+```sql  
 CREATE QUEUE ExpenseQueue  
     WITH STATUS = OFF,  
       RETENTION = ON,  

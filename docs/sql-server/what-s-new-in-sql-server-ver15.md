@@ -1,6 +1,6 @@
 ---
 title: Novedades de SQL Server 2019 | Microsoft Docs
-ms.date: 05/28/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4e36454809519b6470c353b9dd77364491a87f8
-ms.sourcegitcommit: 3870a41f49906108136396c4ed8c130691c46b18
+ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
+ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/20/2019
-ms.locfileid: "67298226"
+ms.lasthandoff: 06/29/2019
+ms.locfileid: "67469100"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -28,15 +28,46 @@ Para obtener más información y problemas conocidos, vea [Notas de la versión 
 
 **Use las [herramientas más recientes](#tools) para obtener la mejor experiencia con [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].**
 
-## <a name="ctp-30-may-2019"></a>CTP 3.0, mayo de 2019
+## <a name="ctp-31-june-2019"></a>CTP 3.1, junio de 2019
 
-Community Technology Preview (CTP) 3.0 es la versión pública más reciente de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esta versión incluye mejoras respecto a versiones anteriores de CTP para corregir errores, mejorar la seguridad y optimizar el rendimiento.
+Community Technology Preview (CTP) 3.1 es la versión pública más reciente de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. Esta versión incluye mejoras respecto a versiones anteriores de CTP para corregir errores, mejorar la seguridad y optimizar el rendimiento.
 
 [!INCLUDE[ctp-support-exclusion](../includes/ctp-support-exclusion.md)]
 
 Para consultar las características específicas que se excluyen del soporte técnico, vea las [notas de la versión](sql-server-ver15-release-notes.md).
 
-Además, se han incorporado o mejorado las características siguientes de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] en CTP 3.0.
+Además, se han incorporado o mejorado las características siguientes de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 3.1.
+
+### <a name="big-data-clusters"></a>Clústeres de macrodatos
+
+| Nueva característica o actualización | Detalles |
+|:---|:---|
+| Cambios del comando `mssqlctl` | Los comandos `mssqlctl cluster` se llaman ahora `mssqlctl bdc`. Para más información, consulte la referencia de [`mssqlctl`](../big-data-cluster/reference-mssqlctl.md). |
+|Nuevos comandos de estado para `mssqlsctl`|`mssqlctl` agrega nuevos comandos para complementar los comandos de supervisión ya existentes. Estos reemplazan al portal de administración del clúster, que se elimina en esta versión.|
+| Grupos de procesos de Spark | Cree nodos adicionales para aumentar la capacidad de proceso de Spark sin tener que escalar verticalmente el almacenamiento. Además, puede iniciar los nodos del grupo de almacenamiento que no se usan con Spark. Spark y el almacenamiento están desacoplados. Para más información, consulte [Configurar el almacenamiento sin spark](../big-data-cluster/deployment-custom-configuration.md#sparkstorage). |
+| Conector de Spark MSSQL | Compatibilidad con operaciones de lectura y escritura en tablas externas del grupo de datos. Las versiones anteriores solo admitían operaciones de lectura y escritura en tablas de instancias maestras. Para más información, consulte [Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL](../big-data-cluster/spark-mssql-connector.md). |
+| Machine Learning con MLeap | [Entrenar un modelo de aprendizaje automático MLeap en Spark y puntuarlo en SQL Server con la extensión del lenguaje Java](../big-data-cluster/spark-create-machine-learning-model.md). |
+| &nbsp; | &nbsp; |
+
+### <a name="database-engine"></a>Motor de base de datos
+
+| Nueva característica o actualización | Detalles |
+|:---|:---|
+|Indexación de columnas cifradas|Cree índices en columnas cifradas mediante cifrado aleatorio y claves habilitadas para enclave, a fin de mejorar el rendimiento de consultas enriquecidas (con `LIKE` y operadores de comparación). [Always Encrypted con enclaves seguros](../relational-databases/security/encryption/always-encrypted-enclaves.md).
+|Establecer los valores de memoria del servidor `MIN` y `MAX` en la instalación |Durante la instalación, puede establecer los valores de memoria del servidor. Use los valores predeterminados (los valores calculados recomendados) o especifique manualmente sus propios valores una vez que haya elegido la opción **recomendada**[Opciones de configuración del servidor de memoria](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually).
+|Nueva función de grafo: `SHORTEST_PATH` | Use `SHORTEST_PATH` dentro de `MATCH` para encontrar la ruta más corta entre dos nodos en un grafo o para realizar recorridos de longitud arbitraria.|
+|Tablas de particiones e índices para bases de datos de grafos|Los datos de tablas e índices con particiones se dividen en unidades que pueden propagarse por más de un grupo de archivos de una base de datos de grafos. |
+|Nueva opción para los índices: `OPTIMIZE_FOR_SEQUENTIAL_KEY`|Activa una optimización en el motor de base de datos que ayuda a mejorar el rendimiento de las inserciones de alta simultaneidad en el índice. Esta opción está diseñada para los índices que son propensos a la contención de inserción de la última página, que suele darse con índices que tienen una clave secuencial, como una columna de identidad, de secuencia o de fecha y hora. Para más información, consulte [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys).|
+| &nbsp; | &nbsp; |
+
+### <a name="sql-server-on-linux"></a>SQL Server en Linux
+
+| Nueva característica o actualización | Detalles |
+|:-----|:-----|
+| Mejoras de tempdb | De forma predeterminada, una nueva instalación de SQL Server en Linux crea varios archivos de datos tempdb en función del número de núcleos lógicos (con un máximo de 8 archivos de datos). Esto no es aplicable a actualizaciones de versión principal o secundaria en contexto. Cada archivo tempdb es de 8 MB con un crecimiento automático de 64 MB. Este comportamiento es similar a la instalación de SQL Server predeterminada en Windows. |
+| &nbsp; | &nbsp; |
+
+## <a name="ctp-30-may-2019"></a>CTP 3.0, mayo de 2019
 
 ### <a name="big-data-clusters"></a>Clústeres de macrodatos
 
@@ -82,6 +113,7 @@ Además, se han incorporado o mejorado las características siguientes de [!INCL
 |:---|:---|
 |Compatibilidad de la consulta MDX para los modelos tabulares con grupos de cálculo. |Esta versión quita una limitación que anteriormente se aplicaba a los [grupos de cálculo](#calc-ctp24). |
 |Formato dinámico de medidas con grupos de cálculo. |Esta característica le permite cambiar condicionalmente las cadenas de formato para las medidas con [grupos de cálculo](#calc-ctp24). Por ejemplo, con la conversión de moneda, se puede mostrar una medida con divisas en diferentes formatos.|
+| &nbsp; | &nbsp; |
 
 ## <a name="ctp-25-april-2019"></a>CTP 2.5, abril de 2019
 

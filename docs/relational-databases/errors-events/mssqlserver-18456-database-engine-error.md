@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 627af74608a462cd336c6bb3775511bd5920eb11
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673594"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63028908"
 ---
 # <a name="mssqlserver18456"></a>MSSQLSERVER_18456
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51673594"
 |Texto del mensaje|Error de inicio de sesión del usuario '%.*ls'.%.\*ls|  
   
 ## <a name="explanation"></a>Explicación  
-Si se rechaza un intento de conexión como consecuencia de un error de autenticación porque el nombre de usuario o la contraseña no son válidos, el cliente recibe el siguiente mensaje de error: "Error de inicio de sesión del usuario '<nombreDeUsuario>'. (Microsoft SQL Server, error: 18456)".  
+Si se rechaza un intento de conexión como consecuencia de un error de autenticación porque el nombre de usuario o la contraseña no son válidos, el cliente recibe el siguiente mensaje de error:  "Error de inicio de sesión del usuario '<nombreDeUsuario>'. (Microsoft SQL Server, Error: 18456)".  
   
 El cliente recibe la siguiente información adicional:  
   
@@ -96,11 +96,11 @@ En este ejemplo, el estado de error de autenticación es 8. Esto indica que la c
   
 |date|Source|de mensaje|  
 |--------|----------|-----------|  
-|2007-12-05 20:12:56.34|Inicio de sesión|"Error: 18456, gravedad: 14, estado: 8."|  
+|2007-12-05 20:12:56.34|Inicio de sesión|Error: 18456, Gravedad: 14, Estado: 8.|  
 |2007-12-05 20:12:56.34|Inicio de sesión|Error de inicio de sesión del usuario '<nombreDeUsuario>' [CLIENT: <ip address>]|  
   
 > [!NOTE]  
-> Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto origina el estado de error 7: "Error de inicio de sesión del usuario 'sa'." Para habilitar el inicio de sesión **sa**, vea [Cambiar el modo de autenticación del servidor](~/database-engine/configure-windows/change-server-authentication-mode.md).  
+> Cuando se instala [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el modo de autenticación de Windows y posteriormente se cambia al modo de autenticación de Windows y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el inicio de sesión **sa** está deshabilitado inicialmente. Esto provoca el estado de error 7: "Error de inicio de sesión del usuario 'sa'". Para habilitar el inicio de sesión **sa**, vea [Cambiar el modo de autenticación del servidor](~/database-engine/configure-windows/change-server-authentication-mode.md).  
   
 ## <a name="user-action"></a>Acción del usuario  
 Si intenta establecer conexión usando la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], compruebe que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] está configurado en modo de autenticación mixto.  
@@ -115,5 +115,5 @@ Si intenta conectarse con sus credenciales de administrador, inicie la aplicaci�
   
 Si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite bases de datos independientes, confirme que el inicio de sesión no se eliminó tras la migración a un usuario de base de datos independiente.  
   
-Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, vea [Utilizar la cuenta de servicio de red para obtener acceso a los recursos de ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx).  
+Al conectarse a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] de forma local, las conexiones de los servicios que se ejecutan en **NT AUTHORITY\NETWORK SERVICE** deben autenticarse con el nombre de dominio completo del equipo. Para obtener más información, consulte: [Procedimientos: Usar la cuenta de servicio de red para obtener acceso a recursos en ASP.NET](https://msdn.microsoft.com/library/ff647402.aspx)  
   

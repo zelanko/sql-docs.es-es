@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 8b369aafc68c7bf06ca56e325c036ffa0c7e4341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52515140"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62639356"
 ---
 # <a name="set-datefirst-transact-sql"></a>SET DATEFIRST (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +57,7 @@ SET DATEFIRST 7 ;
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *number* | **@**_number_var_  
+ *number* |  **@** _number_var_  
  Es un entero que indica el primer día de la semana. Puede ser uno de los siguientes valores.  
   
 |Valor|Primer día de la semana:|  
@@ -68,7 +68,7 @@ SET DATEFIRST 7 ;
 |**4**|Jueves|  
 |**5**|Viernes|  
 |**6**|Sábado|  
-|**7** (predeterminado, inglés de EE.UU.)|Domingo|  
+|**7** (predeterminado, Inglés (EE. UU.))|Domingo|  
   
 ## <a name="remarks"></a>Notas  
  Para ver el valor actual de SET DATEFIRST, use la función [@@DATEFIRST](../../t-sql/functions/datefirst-transact-sql.md).  
@@ -103,7 +103,7 @@ SELECT CAST('1999-1-1' AS datetime2) AS SelectDate
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   
   

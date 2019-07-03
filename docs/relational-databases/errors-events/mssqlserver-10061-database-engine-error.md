@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 40293fa341856cd03e4b827bcf78e91282025be3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63048589"
 ---
 # <a name="mssqlserver10061"></a>MSSQLSERVER_10061
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47766089"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
-|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: proveedor TCP, error: 0 - No se pudo establecer conexión porque el equipo de destino rechazó.) (Microsoft SQL Server, Error: 10061)|  
+|Texto del mensaje|Error al establecer una conexión al servidor.  La causa del problema en la conexión a SQL Server puede deberse a que SQL Server no permite conexiones remotas en su configuración predeterminada. (proveedor: Proveedor TCP, error: 0 - No se estableció ninguna conexión porque el equipo de destino la rechazó). (Microsoft SQL Server, Error: 10061)|  
   
 ## <a name="explanation"></a>Explicación  
 El servidor no respondió a la solicitud del cliente. Este error puede producirse porque el servidor no se ha iniciado.  
@@ -41,7 +41,7 @@ El servidor no respondió a la solicitud del cliente. Este error puede producirs
 ## <a name="user-action"></a>Acción del usuario  
 Asegúrese de que el servidor se haya iniciado.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar el servicio del motor de base de datos](~/database-engine/configure-windows/manage-the-database-engine-services.md)  
 [Configurar protocolos de cliente](~/database-engine/configure-windows/configure-client-protocols.md)  
 [Protocolos de red y bibliotecas de red](~/sql-server/install/network-protocols-and-network-libraries.md)  

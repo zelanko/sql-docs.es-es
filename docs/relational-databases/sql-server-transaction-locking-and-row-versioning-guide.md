@@ -18,11 +18,11 @@ ms.author: jroth
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: 6dd3633cfe8b51cebceac01c0a9b0e2f17ee999a
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980561"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62663351"
 ---
 # <a name="transaction-locking-and-row-versioning-guide"></a>Guía de versiones de fila y bloqueo de transacciones
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -453,7 +453,7 @@ GO
   
  El bloqueo de intervalos con clave impide las lecturas fantasma. La protección de los intervalos de claves entre filas también impide las inserciones fantasma en un conjunto de registros a los que tiene acceso una transacción.  
   
- El bloqueo de intervalos con clave se incluye en un índice, especificando los valores de clave inicial y final. Este bloqueo impide la inserción, actualización o eliminación de filas con un valor de clave incluido en el intervalo, ya que estas operaciones deben obtener en primer lugar un bloqueo en el índice. Por ejemplo, una transacción serializable podría emitir una instrucción SELECT que lee todas las filas cuyos valores clave se encuentran entre **'** AAA **'** y **'** CZZ **'**. El bloqueo de intervalos con clave en los valores de clave del intervalo **'** AAA **'** a **'** CZZ **'** impide que otras transacciones inserten filas con valores de clave situados en dicho intervalo, como **'** ADG **'**, **'** BBD **'** o **'** CAL **'**.  
+ El bloqueo de intervalos con clave se incluye en un índice, especificando los valores de clave inicial y final. Este bloqueo impide la inserción, actualización o eliminación de filas con un valor de clave incluido en el intervalo, ya que estas operaciones deben obtener en primer lugar un bloqueo en el índice. Por ejemplo, una transacción serializable podría emitir una instrucción SELECT que lee todas las filas cuyos valores clave se encuentran entre **'** AAA **'** y **'** CZZ **'** . El bloqueo de intervalos con clave en los valores de clave del intervalo **'** AAA **'** a **'** CZZ **'** impide que otras transacciones inserten filas con valores de clave situados en dicho intervalo, como **'** ADG **'** , **'** BBD **'** o **'** CAL **'** .  
   
 #### <a name="key_range_modes"></a> Modos de bloqueo de intervalos con clave  
  Los bloqueos de intervalos con clave incluyen dos componentes, una fila y un intervalo, especificados con el formato intervalo-fila:  
@@ -462,7 +462,7 @@ GO
 -   La fila representa el modo de bloqueo que protege la entrada de índice.  
 -   El modo representa el modo de bloqueo combinado que se utiliza. Los modos de bloqueo del intervalo de claves constan de dos partes. La primera representa el tipo de bloqueo que se utiliza para bloquear el intervalo del índice (Range*T*) y la segunda representa el tipo de bloqueo que se utiliza para bloquear una clave específica (*K*). Ambas partes se conectan con un guion (-), como Range*T*-*K*.  
   
-    |Intervalo|Fila|Mode|Descripción|  
+    |Intervalo|Row|Mode|Descripción|  
     |-----------|---------|----------|-----------------|  
     |RangeS|S|RangeS-S|Intervalo compartido, bloqueo de recurso compartido; recorrido de intervalo serializable.|  
     |RangeS|U|RangeS-U|Intervalo compartido, bloqueo de recurso de actualización; recorrido de actualización serializable.|  
@@ -509,7 +509,7 @@ GO
  Para que el bloqueo de intervalos con clave se produzca, es necesario que se cumplan las condiciones siguientes:  
   
 -   El nivel de aislamiento de las transacciones se debe establecer en SERIALIZABLE.  
--   El procesador de consultas debe utilizar un índice para implementar el predicado del filtro de intervalo. Por ejemplo, la cláusula WHERE de una instrucción SELECT puede establecer una condición de intervalo con este predicado: ColumnX BETWEEN N **"** AAA **"** AND N **"** CZZ **"**. El bloqueo de intervalos con clave solo se puede adquirir si una clave de índice abarca **ColumnX**.  
+-   El procesador de consultas debe utilizar un índice para implementar el predicado del filtro de intervalo. Por ejemplo, la cláusula WHERE de una instrucción SELECT puede establecer una condición de intervalo con este predicado: ColumnX BETWEEN N **"** AAA **"** AND N **"** CZZ **"** . El bloqueo de intervalos con clave solo se puede adquirir si una clave de índice abarca **ColumnX**.  
   
 #### <a name="examples"></a>Ejemplos  
  La tabla y el índice siguientes se utilizan como base para los ejemplos de bloqueo de intervalos con clave que se muestran a continuación.  
@@ -585,7 +585,7 @@ INSERT mytable VALUES ('Dan');
 -   La transacción A ahora solicita un bloqueo exclusivo de la fila 2 y se bloquea hasta que la transacción B finalice y libere el bloqueo compartido que tiene de la fila 2.  
 -   La transacción B ahora solicita un bloqueo exclusivo de la fila 1 y se bloquea hasta que la transacción A finalice y libere el bloqueo compartido que tiene de la fila 1.  
   
- La transacción A no se puede completar hasta que complete la transacción B, pero la transacción B está bloqueada por transacción A. Esta condición también se denomina una dependencia cíclica: La transacción A tiene una dependencia de la transacción B y la transacción B cierra el círculo con una dependencia en la transacción A.  
+ La transacción A no se puede completar hasta que se complete la transacción B, pero la transacción B está bloqueada por la transacción A. Esta condición también se denomina una dependencia cíclica: La transacción A tiene una dependencia de la transacción B y la transacción B cierra el círculo con una dependencia en la transacción A.  
   
  Ambas transacciones con un interbloqueo esperarán para siempre, a no ser que un proceso externo rompa el interbloqueo. La supervisión de interbloqueos del [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] comprueba periódicamente si hay tareas con un interbloqueo. Si el monitor detecta una dependencia cíclica, elige una de las tareas como el sujeto y finaliza su transacción con un error. Esto permite a la otra tarea completar su transacción. La aplicación con la transacción que terminó con un error puede reintentar la transacción, que suele completarse después de que la otra transacción interbloqueada haya finalizado.  
   
@@ -623,7 +623,7 @@ INSERT mytable VALUES ('Dan');
   
 -   **Recursos relacionados con la ejecución de consultas en paralelo**. Los subprocesos de coordinador, productor o consumidor asociados a un puerto de intercambio pueden bloquearse entre sí y provocar un interbloqueo si incluyen al menos otro proceso que no forma parte de la consulta en paralelo. Además, cuando se inicia la ejecución de una consulta en paralelo, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] determina el grado de paralelismo, o el número de subprocesos de trabajo, en función de la carga de trabajo actual. Si la carga de trabajo del sistema cambia de forma inesperada, por ejemplo, si se empiezan a ejecutar nuevas consultas en el servidor o el sistema se queda sin subprocesos de trabajo, se puede producir un interbloqueo.  
   
--   **Conjuntos de resultados activos múltiples (MARS)**. Estos recursos se utilizan para controlar la intercalación de varias solicitudes activas en MARS. Para obtener más información, vea [Utilizar conjuntos de resultados activos múltiples (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
+-   **Conjuntos de resultados activos múltiples (MARS)** . Estos recursos se utilizan para controlar la intercalación de varias solicitudes activas en MARS. Para obtener más información, vea [Utilizar conjuntos de resultados activos múltiples (MARS)](../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md).  
   
     -   **Recurso de usuario**. Cuando un subproceso espera un recurso que potencialmente está controlado por una aplicación de usuario, se considera que el recurso es externo o de usuario y se trata como un bloqueo.  
   
@@ -1236,7 +1236,7 @@ BEGIN TRANSACTION
 ##### <a name="performance-counters"></a>Performance Counters  
  Los contadores de rendimiento de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporcionan información sobre el rendimiento del sistema afectado por los procesos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Los siguientes contadores de rendimiento supervisan tempdb y el almacén de versiones, así como las transacciones que utilizan versiones de fila. Los contadores de rendimiento se encuentran en el objeto de rendimiento SQLServer:Transactions.  
   
- **Espacio disponible en tempdb (KB)**. Supervisa la cantidad, en kilobytes (KB), de espacio libre en la base de datos tempdb. Debe haber suficiente espacio libre en tempdb para controlar el almacén de versiones que admite aislamiento de instantánea.  
+ **Espacio disponible en tempdb (KB)** . Supervisa la cantidad, en kilobytes (KB), de espacio libre en la base de datos tempdb. Debe haber suficiente espacio libre en tempdb para controlar el almacén de versiones que admite aislamiento de instantánea.  
   
  La fórmula siguiente ofrece una estimación aproximada del tamaño del almacén de versiones. En el caso de transacciones de larga duración, puede que sea conveniente supervisar la velocidad de generación y limpieza para estimar el tamaño máximo del almacén de versiones.  
   
@@ -1244,11 +1244,11 @@ BEGIN TRANSACTION
   
  El mayor tiempo de ejecución de transacciones no debe incluir generaciones de índices en línea. Dado que estas operaciones pueden llevar mucho tiempo en tablas muy grandes, las generaciones de índices en línea utilizan un almacén de versiones independiente. El tamaño aproximado del almacén de versiones de generaciones de índices en línea equivale a la cantidad de datos modificados en la tabla, incluidos todos los índices, mientras la generación de índices en línea esté activa.  
   
- **Tamaño de almacén de versiones (KB)**. Supervisa el tamaño en KB de todos los almacenes de versiones. Esta información ayuda a determinar el espacio necesario para el almacén de versiones en la base de datos tempdb. La supervisión de este contador durante cierto tiempo proporciona una estimación útil del espacio adicional necesario para tempdb.  
+ **Tamaño de almacén de versiones (KB)** . Supervisa el tamaño en KB de todos los almacenes de versiones. Esta información ayuda a determinar el espacio necesario para el almacén de versiones en la base de datos tempdb. La supervisión de este contador durante cierto tiempo proporciona una estimación útil del espacio adicional necesario para tempdb.  
   
- `Version Generation rate (KB/s)`. Supervisa la velocidad de generación de versión en KB por segundo en todos los almacenes de versiones.  
+ Columnas en la tabla de origen capturadas`Version Generation rate (KB/s)` Supervisa la velocidad de generación de versión en KB por segundo en todos los almacenes de versiones.  
   
- `Version Cleanup rate (KB/s)`. Supervisa la velocidad de limpieza de versión en KB por segundo en todos los almacenes de versiones.  
+ Columnas en la tabla de origen capturadas`Version Cleanup rate (KB/s)` Supervisa la velocidad de limpieza de versión en KB por segundo en todos los almacenes de versiones.  
   
 > [!NOTE]  
 > La información procedente de Velocidad de generación de versión (KB/seg.) y Velocidad de limpieza de versión (KB/seg.) se puede utilizar para predecir los requisitos de espacio de tempdb.  
@@ -1265,11 +1265,11 @@ BEGIN TRANSACTION
   
  **Transacciones**. Supervisa el número total de transacciones activas. No incluye las transacciones del sistema.  
   
- `Snapshot Transactions`. Supervisa el número total de transacciones de instantáneas activas.  
+ Columnas en la tabla de origen capturadas`Snapshot Transactions` Supervisa el número total de transacciones de instantáneas activas.  
   
- `Update Snapshot Transactions`. Supervisa el número total de transacciones de instantáneas activas que realizan operaciones de actualización.  
+ Columnas en la tabla de origen capturadas`Update Snapshot Transactions` Supervisa el número total de transacciones de instantáneas activas que realizan operaciones de actualización.  
   
- `NonSnapshot Version Transactions`. Supervisa el número total de transacciones que no son instantáneas activas que generan registros de versión.  
+ Columnas en la tabla de origen capturadas`NonSnapshot Version Transactions` Supervisa el número total de transacciones que no son instantáneas activas que generan registros de versión.  
   
 > [!NOTE]  
 > La suma de Transacciones de instantáneas de actualización y Transacciones de versión que no son instantáneas representa el número total de transacciones que participan en la generación de versiones. La diferencia entre Transacciones de instantáneas y Transacciones de instantáneas de actualización notifica el número de transacciones de instantáneas de solo lectura.  
@@ -1373,7 +1373,7 @@ ROLLBACK TRANSACTION
 GO  
 ```  
   
-#### <a name="b-working-with-read-committed-using-row-versioning"></a>b. Trabajar con transacciones de lectura confirmada utilizando las versiones de fila  
+#### <a name="b-working-with-read-committed-using-row-versioning"></a>B. Trabajar con transacciones de lectura confirmada utilizando las versiones de fila  
  En este ejemplo, una transacción de lectura confirmada que utiliza las versiones de fila se ejecuta simultáneamente con otra transacción. La transacción de lectura confirmada se comporta de diferente manera que una transacción de instantáneas. Al igual que una transacción de instantáneas, la transacción de lectura confirmada lee filas con versiones incluso después de que la otra transacción haya modificado los datos. Sin embargo, a diferencia de una transacción de instantáneas, la transacción de lectura confirmada:  
   
 -   Leerá los datos modificados después de que la otra transacción confirme los cambios en los datos.  

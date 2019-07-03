@@ -14,11 +14,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1a3642d349fd9d6df39651e38b8b1789dd935c49
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840383"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62761214"
 ---
 # <a name="select-backup-destination"></a>Seleccionar destino de la copia de seguridad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ ms.locfileid: "47840383"
 |**Unidad de cinta**|Elija esta opción para seleccionar una unidad de cinta como destino de la copia de seguridad en la lista de unidades de cinta, conectadas físicamente al equipo en el que se ejecuta la instancia del servidor.<br /><br /> Nota: Los dispositivos de copia de seguridad en cinta de equipos remotos no son destinos de copia de seguridad válidos.|  
 |**Dispositivo de copia de seguridad**|Elija esta opción para seleccionar un dispositivo lógico de copia de seguridad existente. Estos dispositivos lógicos de copia de seguridad corresponden a unidades de cinta que están físicamente conectadas al equipo en el que se ejecuta la instancia del servidor.<br /><br /> Nota: Para obtener más información sobre cómo crear un dispositivo de copia de seguridad de cinta, vea [Definir un dispositivo lógico de copia de seguridad en una unidad de cinta&#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-tape-drive-sql-server.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [Conjuntos de medios, familias de medios y conjuntos de copias de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)  
   

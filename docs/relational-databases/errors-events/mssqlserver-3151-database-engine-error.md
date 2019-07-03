@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 29a3d8e90d96636b0bab53fe303602c84b1eb554
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47713053"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62943111"
 ---
 # <a name="mssqlserver3151"></a>MSSQLSERVER_3151
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,5 +37,5 @@ ms.locfileid: "47713053"
 Se trata de un mensaje de error general que indica diversos problemas con la base de datos **maestra**.  
   
 ## <a name="user-action"></a>Acción del usuario  
-Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Cómo instalar SQL Server desde el símbolo del sistema" en los Libros en pantalla de SQL Server.  
+Consulte los registros de errores para obtener más información. Para crear una base de datos **maestra** utilizable, ejecute Setup.exe con la opción REBUILDDATABASE. Para obtener más información, vea "Procedimientos: Instalar SQL Server desde el símbolo del sistema" en los Libros en pantalla de SQL Server.  
   

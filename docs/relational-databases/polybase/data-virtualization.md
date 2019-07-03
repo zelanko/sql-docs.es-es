@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 45cde8d0e42c2e85238bf3d42fc8835584083d27
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a64e02ecdb3f8a8321e0a625a3788228df0890fc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510982"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "64775191"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>Uso del Asistente para tablas externas con orígenes de datos relacionales
 
@@ -23,7 +23,7 @@ Uno de los escenarios clave de SQL Server 2019 CTP 2.0 es la posibilidad de virt
 
 ## <a name="start-the-external-table-wizard"></a>Iniciar el Asistente para tablas externas
 
-Conéctese a la instancia maestra mediante la dirección IP o el número de puerto (31433) obtenidos al final del script de implementación. Expanda el nodo **Bases de datos** en el Explorador de objetos. Luego seleccione una de las bases de datos donde quiere virtualizar los datos de una instancia existente de SQL Server. Haga clic con el botón derecho en la base de datos y seleccione **Create External Table** (Crear tabla externa) para iniciar el asistente para virtualizar datos. También puede iniciar al asistente para virtualizar datos desde la paleta de comandos. Use Ctrl + Mayús + P en Windows o Cmd + Mayús + P en un equipo Mac.
+Conéctese a la instancia maestra mediante el número de puerto o la dirección IP del punto de conexión **sql-server-master** obtenido mediante el comando [**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints). Expanda el nodo **Bases de datos** en el Explorador de objetos. Luego seleccione una de las bases de datos donde quiere virtualizar los datos de una instancia existente de SQL Server. Haga clic con el botón derecho en la base de datos y seleccione **Create External Table** (Crear tabla externa) para iniciar el asistente para virtualizar datos. También puede iniciar al asistente para virtualizar datos desde la paleta de comandos. Use Ctrl + Mayús + P en Windows o Cmd + Mayús + P en un equipo Mac.
 
 ![Asistente para virtualizar datos](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>Selección de un origen de datos

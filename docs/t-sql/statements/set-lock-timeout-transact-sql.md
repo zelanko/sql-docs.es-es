@@ -27,11 +27,11 @@ ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: df2683d7a0c580624dd56aa8d35e183ab7ac6bbf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47630153"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62942814"
 ---
 # <a name="set-locktimeout-transact-sql"></a>SET LOCK_TIMEOUT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +66,7 @@ SET LOCK_TIMEOUT timeout_period
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Establecer el tiempo de espera de bloqueo en 1800 milisegundos  
+### <a name="a-set-the-lock-timeout-to-1800-milliseconds"></a>A. Establecer el tiempo de expiración de bloqueo en 1800 milisegundos  
  En el ejemplo siguiente se establece el período de tiempo de espera de bloqueo en `1800` milisegundos.  
   
 ```sql  
@@ -89,7 +89,7 @@ SET LOCK_TIMEOUT -1;
 SET LOCK_TIMEOUT 1800;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [@@LOCK_TIMEOUT &#40;Transact-SQL&#41;](../../t-sql/functions/lock-timeout-transact-sql.md)   
  [Instrucciones SET &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)  
   

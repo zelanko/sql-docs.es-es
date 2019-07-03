@@ -13,11 +13,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 5fd64c8324c4ceff60c85864a74deb9c804f53a6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755163"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62628304"
 ---
 # <a name="mssqlserver5250"></a>MSSQLSERVER_5250
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "47755163"
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico|DBCC4_CRITICAL_DATABASE_PAGE_CORRUPT|  
-|Texto del mensaje|Error de base de datos: PAGE_TYPE página P_ID de la base de datos 'NAME' (Id. de base de datos DB_ID) no válido. Este error no se puede reparar. Debe restaurar una copia de seguridad.|  
+|Texto del mensaje|Error de base de datos: PAGE_TYPE página P_ID de la base de datos 'NAME' (id. de base de datos DB_ID) no válido. Este error no se puede reparar. Debe restaurar una copia de seguridad.|  
   
 ## <a name="explanation"></a>Explicación  
 Hay una página de encabezado de archivo o página de arranque dañada en la base de datos especificada.  

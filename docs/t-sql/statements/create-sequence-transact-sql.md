@@ -23,12 +23,12 @@ ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: a44c62bfa8c85999112887dcacd54bfd176dfaa1
-ms.sourcegitcommit: dc3543e81e32451568133e9b1b560f7ee76d7fb5
+ms.openlocfilehash: 783b2249a36b69bc53e147699e50dcab86fd89b5
+ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/31/2019
-ms.locfileid: "55428652"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67316681"
 ---
 # <a name="create-sequence-transact-sql"></a>CREATE SEQUENCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ Por ejemplo, si se elige un tamaño de caché de 50, [!INCLUDE[ssNoVersion](../.
 Cuando se crean con la opción **CACHE**, un apagado inesperado (como un corte de suministro eléctrico) puede provocar la pérdida de los números de secuencia que permanecen en la memoria caché.  
   
 ## <a name="general-remarks"></a>Notas generales  
- Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte.  
+ Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte. La validación de duplicados solo se produce una vez que un registro está totalmente relleno. Esto puede dar lugar a casos en que se use el mismo número para más de un registro durante la creación, pero luego se identifica como un duplicado. Si ocurre esto y se han aplicado otros valores autonuméricos a registros posteriores, esto puede dar lugar a una discrepancia entre los valores autonuméricos y su comportamiento esperado.
   
 ### <a name="cache-management"></a>Administración de la memoria caché  
  Para mejorar el rendimiento, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] asigna con antelación el número de números de secuencia especificados por el argumento **CACHE**.  
@@ -196,7 +196,7 @@ CREATE SEQUENCE Test.CountBy1
 GO  
 ```  
   
-### <a name="b-creating-a-sequence-that-decreases-by-1"></a>b. Crear una secuencia que se disminuya en 1  
+### <a name="b-creating-a-sequence-that-decreases-by-1"></a>B. Crear una secuencia que se disminuya en 1  
  El ejemplo siguiente comienza en 0 y resta uno cada vez que se utiliza.  
   
 ```sql  

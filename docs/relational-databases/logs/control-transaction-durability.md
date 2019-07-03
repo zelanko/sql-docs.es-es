@@ -16,11 +16,11 @@ ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: ac96a7ea691a02c61aa132ea0efcdf5bc2d68ab1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513748"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62707125"
 ---
 # <a name="control-transaction-durability"></a>Controlar la durabilidad de las transacciones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52513748"
     
  He aquí algunos casos en los que puede ser beneficioso usar la durabilidad diferida de transacciones:    
     
- **Puede tolerar alguna pérdida de datos.**    
+ **Puede tolerar alguna pérdida de datos.**     
  Si puede tolerar cierta pérdida de datos, por ejemplo cuando los registros individuales no son críticos siempre y cuando tenga la mayoría de los datos, puede resultar útil usar la durabilidad diferida. Si no puede tolerar la pérdida de datos, no utilice la durabilidad diferida de transacciones.    
     
- **Experimenta cuellos de botella en la escritura de registros de transacciones.**    
+ **Experimenta cuellos de botella en la escritura de registros de transacciones.**     
  Si los problemas de rendimiento se deben a la latencia en la escritura de registros de transacciones, seguramente la aplicación se beneficiará de utilizar la durabilidad diferida de transacciones.    
     
- **Las cargas de trabajo conllevan un alto índice de contención.**    
+ **Las cargas de trabajo conllevan un alto índice de contención.**     
  Si el sistema tiene cargas de trabajo con un alto índice de contención, se perderá mucho tiempo esperando a que se liberen los bloqueos. La durabilidad diferida de transacciones reduce el tiempo de confirmación y, por tanto, libera los bloqueos con mayor rapidez, lo que redunda en un mayor rendimiento.    
     
  ### <a name="delayed-transaction-durability-guarantees"></a>Garantías de la durabilidad diferida de transacciones   
@@ -135,7 +135,7 @@ AS BEGIN ATOMIC WITH
 END    
 ```    
     
-### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: durabilidad de bloques ATOMIC    
+### <a name="table-1-durability-in-atomic-blocks"></a>Tabla 1: Durabilidad en bloques ATOMIC    
     
 |Opción de durabilidad de bloque ATOMIC|Ninguna transacción existente|Transacción en proceso (totalmente durable o durable diferida)|    
 |------------------------------------|-----------------------------|---------------------------------------------------------|    
@@ -204,10 +204,10 @@ COMMIT [ { TRAN | TRANSACTION } ] [ transaction_name | @tran_name_variable ] ] [
 ### <a name="catastrophic-events"></a>Catástrofes    
  En caso de catástrofe, como un bloqueo del servidor, perderá los datos de todas las transacciones confirmadas que no se hayan guardado en el disco. Las transacciones de durabilidad diferida se guardan en el disco siempre que se ejecute una transacción totalmente durable respecto a una tabla (optimizada para memoria durable o basada en disco) en la base de datos o cuando se llama a `sp_flush_log` . Si está usando transacciones de durabilidad diferida, conviene crear una tabla pequeña en la base de datos que podrá actualizar regularmente o llamar de forma periódica a `sp_flush_log` para guardar todas las transacciones confirmadas pendientes. El registro de transacciones también se vacía cada vez que se llena, pero es difícil de predecir e imposible de controlar.    
     
-### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Cierre y reinicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]     
+### <a name="includessnoversionincludesssnoversion-mdmd-shutdown-and-restart"></a>Cierre y reinicio de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]    
  En lo que respecta a la durabilidad diferida, no hay ninguna diferencia entre el cierre inesperado y el cierre/reinicio planeado de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Al igual que en las catástrofes, debe prever una pérdida de datos. En un cierre/reinicio planeado, algunas transacciones que no se han escrito en el disco podrían, en primer lugar, guardarse en el disco, pero no debería contar con ello. Tenga previsto sin embargo que en un cierre/reinicio, bien se haya planeado o no, se pierden datos al igual que en las catástrofes.    
     
-## <a name="see-also"></a>Ver también    
+## <a name="see-also"></a>Consulte también    
  [Transacciones con tablas con optimización para memoria](../../relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables.md)    
     
   

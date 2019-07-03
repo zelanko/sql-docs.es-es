@@ -14,11 +14,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ff79f1ad81a492452404324d20e92c2251b2d4f8
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63007801"
 ---
 # <a name="evaluate-policies-dialog-box-evaluation-results-page"></a>Cuadro de diálogo Evaluar directivas, página Resultados de la evaluación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "51512142"
  **Detalles del destino: Mensaje**  
  Vínculo a información si se produce un error.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)   
  [Cuadro de diálogo Evaluar directivas, página Selección de directiva](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md)   
  [Cuadro de diálogo Vista detallada de resultados](../../relational-databases/policy-based-management/results-detailed-view-dialog-box.md)  

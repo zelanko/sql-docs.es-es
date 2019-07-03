@@ -17,12 +17,12 @@ ms.assetid: 5a641a46-7cfb-4d7b-a90d-6e4625719d74
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 562119dd258c996b070cdd2c16fd60ca27ffc424
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e4375d7b0ce19c5bb0f44a0be3b55e7b105b5a4e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66794109"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145416"
 ---
 # <a name="sql-server-express-localdb"></a>SQL Server Express LocalDB
 
@@ -127,7 +127,7 @@ REM Gather information about the instance of LocalDB
 
 ### <a name="connect-to-a-shared-instance-of-localdb"></a>Conexión a una instancia compartida de LocalDB
 
-Para conectarse a una instancia compartida de LocalDB, agregue `.\` (punto + barra diagonal inversa) a la cadena de conexión para hacer referencia al espacio de nombres reservado para las instancias compartidas. Por ejemplo, para conectarse a una instancia compartida de LocalDB denominada `AppData`, use una cadena de conexión, como `(localdb).AppData`, como parte de la cadena de conexión. Un usuario que se conecta a una instancia compartida de LocalDB de la que no es propietario debe tener un inicio de sesión con autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+Para conectarse a una instancia compartida de LocalDB, agregue `\.\` (barra diagonal inversa + punto + barra diagonal inversa) a la cadena de conexión para hacer referencia al espacio de nombres reservado para las instancias compartidas. Por ejemplo, para conectarse a una instancia compartida de LocalDB denominada `AppData`, use una cadena de conexión, como `(localdb)\.\AppData`, como parte de la cadena de conexión. Un usuario que se conecta a una instancia compartida de LocalDB de la que no es propietario debe tener un inicio de sesión con autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## <a name="troubleshooting"></a>Solucionar problemas
 

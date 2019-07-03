@@ -22,12 +22,12 @@ ms.assetid: fb804fa2-48eb-4878-a12f-4e0d5f4bc9e3
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: fcd52d1f45b1f1b29777cae26e65660887302e92
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: d7344df7b16bdef8bb6d49ac5ee313916a1c0a49
+ms.sourcegitcommit: 1bbbbb8686745a520543ac26c4d4f6abe1b167ea
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131925"
+ms.lasthandoff: 06/18/2019
+ms.locfileid: "67232505"
 ---
 # <a name="create-service-transact-sql"></a>CREATE SERVICE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "54131925"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 CREATE SERVICE service_name  
    [ AUTHORIZATION owner_name ]  
    ON QUEUE [ schema_name. ]queue_name  
@@ -52,12 +51,12 @@ CREATE SERVICE service_name
  Es el nombre del servicio que se va a crear. El servicio nuevo se crea en la base de datos actual, la cual pertenece a la entidad de seguridad especificada en la cláusula AUTHORIZATION. No se pueden especificar nombres de servidor, base de datos o esquema. *service_name* debe ser un **sysname** válido.  
   
 > [!NOTE]  
->  No cree un servicio que use la palabra clave ANY para *service_name*. Cuando especifica ANY para un nombre de servicio en CREATE BROKER PRIORITY, la prioridad se considera para todos los servicios. No se limita a un servicio cuyo nombre sea ANY.  
+> No cree un servicio que use la palabra clave ANY para *service_name*. Cuando especifica `ANY` para un nombre de servicio en `CREATE BROKER PRIORITY`, la prioridad se considera para todos los servicios. No se limita a un servicio cuyo nombre sea ANY.  
   
  AUTHORIZATION *owner_name*  
  Establece el propietario del servicio en el usuario o el rol de base de datos especificado. Cuando el usuario actual es **dbo** o **sa**, *owner_name* puede ser el nombre de cualquier usuario o rol válidos. En caso contrario, *owner_name* debe ser el nombre del usuario actual, el nombre de un usuario para el que el usuario actual tiene permisos IMPERSONATE o el nombre de un rol al que pertenece el usuario actual.  
   
- ON QUEUE [ _schema_name_**.** ] *queue_name*  
+ ON QUEUE [ _schema_name_ **.** ] *queue_name*  
  Especifica la cola que recibe mensajes para el servicio. La cola debe existir en la misma base de datos que el servicio. Si no se proporciona *schema_name*, el valor es el esquema predeterminado del usuario que ejecuta la instrucción.  
   
  *contract_name*  
@@ -67,16 +66,16 @@ CREATE SERVICE service_name
  Especifica que el servicio puede ser un destino para conversaciones que sigan el contrato DEFAULT. En el contexto de esta cláusula, DEFAULT no es una palabra clave y debe delimitarse como un identificador. El contrato DEFAULT permite que los dos extremos de la conversación envíen mensajes del tipo DEFAULT. El tipo de mensajes DEFAULT utiliza la validación NONE.  
   
 ## <a name="remarks"></a>Notas  
- Un servicio muestra la funcionalidad proporcionada por los contratos a los que está asociado, de modo que puedan usarlos otros servicios. Este servicio es destino de los contratos que se especifican en la instrucción CREATE SERVICE. Un servicio solo puede ser destino de conversaciones que utilizan los contratos especificados por el servicio. Un servicio que no especifica ningún contrato no muestra ninguna funcionalidad para otros servicios.  
+ Un servicio muestra la funcionalidad proporcionada por los contratos a los que está asociado, de modo que puedan usarlos otros servicios. Este servicio es destino de los contratos que se especifican en la instrucción `CREATE SERVICE`. Un servicio solo puede ser destino de conversaciones que utilizan los contratos especificados por el servicio. Un servicio que no especifica ningún contrato no muestra ninguna funcionalidad para otros servicios.  
   
  Las conversaciones iniciadas desde este servicio pueden utilizar cualquier contrato. Puede crear un servicio sin especificar contratos solo si el servicio inicia conversaciones.  
   
  Cuando [!INCLUDE[ssSB](../../includes/sssb-md.md)] acepta una nueva conversación de un servicio remoto, el nombre del servicio de destino determina la cola en la que el agente colocará los mensajes de la conversación.  
   
 ## <a name="permissions"></a>Permisos  
- El permiso para crear un servicio pertenece de forma predeterminada a los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y al rol fijo de servidor **sysadmin**. El usuario que ejecuta la instrucción CREATE SERVICE debe tener permisos REFERENCES en la cola y en todos los contratos especificados.  
+ Tienen permiso para crear un servicio los miembros de los roles fijos de base de datos `db_ddladmin` o `db_owner` o el rol fijo de servidor `sysadmin`. El usuario que ejecuta la instrucción `CREATE SERVICE` debe tener permiso `REFERENCES` en la cola y en todos los contratos especificados.  
   
- El permiso REFERENCES en un servicio pertenece de forma predeterminada al propietario del servicio, a los miembros de los roles fijos de base de datos **db_ddladmin** o **db_owner** y a los miembros del rol fijo de servidor **sysadmin**. Los permisos SEND en un servicio pertenecen de forma predeterminada al propietario del servicio, a los miembros del rol fijo de base de datos **db_owner** y a los miembros del rol fijo de servidor **sysadmin**.  
+ De forma predeterminada, el permiso `REFERENCES` para un servicio corresponde al propietario del servicio, a los miembros de los roles fijos de base de datos `db_ddladmin` o `db_owner` o a los miembros del rol fijo de servidor `sysadmin`. De forma predeterminada, los permisos `SEND` para un servicio corresponden al propietario del servicio, a los miembros del rol fijo de base de datos `db_owner` o a los miembros del rol fijo de servidor `sysadmin`.  
   
  Un servicio no puede ser un objeto temporal. Los servicios que empiezan por **#** están permitidos, pero son objetos permanentes.  
   
@@ -85,16 +84,16 @@ CREATE SERVICE service_name
 ### <a name="a-creating-a-service-with-one-contract"></a>A. Crear un servicio con un contrato  
  En el ejemplo siguiente se crea el servicio `//Adventure-Works.com/Expenses` en la cola `ExpenseQueue` del esquema `dbo`. Los diálogos destinados a este servicio deben seguir el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission`.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses]  
     ON QUEUE [dbo].[ExpenseQueue]  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission]) ;  
 ```  
   
-### <a name="b-creating-a-service-with-multiple-contracts"></a>b. Crear un servicio con varios contratos  
+### <a name="b-creating-a-service-with-multiple-contracts"></a>B. Crear un servicio con varios contratos  
  En el ejemplo siguiente se crea el servicio `//Adventure-Works.com/Expenses` en la cola `ExpenseQueue`. Los diálogos destinados a este servicio deben seguir el contrato `//Adventure-Works.com/Expenses/ExpenseSubmission` o el contrato `//Adventure-Works.com/Expenses/ExpenseProcessing`.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue  
     ([//Adventure-Works.com/Expenses/ExpenseSubmission],  
      [//Adventure-Works.com/Expenses/ExpenseProcessing]) ;  
@@ -103,7 +102,7 @@ CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue
 ### <a name="c-creating-a-service-with-no-contracts"></a>C. Crear un servicio sin contratos  
  En el siguiente ejemplo se crea la cola del servicio `//Adventure-Works.com/Expenses on the ExpenseQueue`. Este servicio no tiene información de contrato. Por lo tanto, el servicio solo puede ser el iniciador de un diálogo.  
   
-```  
+```sql  
 CREATE SERVICE [//Adventure-Works.com/Expenses] ON QUEUE ExpenseQueue ;  
 ```  
   

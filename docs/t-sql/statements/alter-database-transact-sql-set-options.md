@@ -31,12 +31,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: e3b0e53dfbbe03fd723edb4d4c941e3395a0b1e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10b29bcce89adb35b4650b5501fea9a460f18d50
+ms.sourcegitcommit: 3f2936e727cf8e63f38e5f77b33442993ee99890
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826925"
+ms.lasthandoff: 06/21/2019
+ms.locfileid: "67313990"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>Opciones de ALTER DATABASE SET (Transact-SQL)
 
@@ -2897,49 +2897,45 @@ SET QUERY_STORE = ON
 
 ## <a name="azure-sql-data-warehouse"></a>Almacenamiento de datos SQL de Azure
 
-> [!NOTE]
-> Es posible configurar muchas opciones SET de la base de datos para la sesión actual mediante [Instrucciones SET](../../t-sql/statements/set-statements-transact-sql.md), aunque generalmente las configuran las aplicaciones al realizar la conexión. Las opciones SET de nivel de sesión reemplazan a los valores **ALTER DATABASE SET** . Las opciones de base de datos descritas a continuación son valores que se pueden establecer en las sesiones que no proporcionan explícitamente otros valores de opciones SET.
-
 ## <a name="syntax"></a>Sintaxis
 
 ```
-ALTER DATABASE { database_name | Current }
+ALTER DATABASE { database_name }
 SET
 {
     <optionspec> [ ,...n ]
 }
 ;
 
-<auto_option> ::=
-{}
-RESULT_SET_CACHING { ON | OFF}
+<option_spec>::=
+{
+<RESULT_SET_CACHING>
 }
+;
+
+<RESULT_SET_CACHING>::=
+{
+RESULT_SET_CACHING {ON | OFF}
+}
+
 ```
 
 ## <a name="arguments"></a>Argumentos
 
-*database_name* Es el nombre de la base de datos que se va a modificar.
+*database_name*
 
-**\<auto_option> ::=**
+Es el nombre de la base de datos que se va a modificar.
 
-Controla las opciones automáticas.
+<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
+Se aplica a Azure SQL Data Warehouse (versión preliminar)
 
-**Permisos** requiere estos permisos:
+Este comando debe ejecutarse mientras se está conectado a la base de datos `master`.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. Se ha incorporado una nueva columna, is_result_set_caching_on, en `sys.databases` para mostrar la configuración de almacenamiento en caché de resultados de una base de datos.  
 
-- Inicio de sesión principal en el nivel de servidor (creado por el proceso de aprovisionamiento), o
-- Miembro del rol de base de datos `dbmanager`.
+ON   
+especifica que los conjuntos de resultados de consultas devueltos de esta base de datos se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
 
-El propietario de la base de datos no puede modificarla a menos que sea miembro del rol dbmanager.
-
-> [!Note]
-> Aunque esta característica se está implantando en todas las regiones, compruebe la versión implementada en su instancia y las [notas de la versión de Azure SQL DW](/azure/sql-data-warehouse/release-notes-10-0-10106-0) más recientes para conocer la disponibilidad de las características.
-
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF } Se aplica únicamente a Azure SQL Data Warehouse Gen2 (versión preliminar). Este comando debe ejecutarse mientras está conectado a la base de datos maestra.  Los cambios realizados a esta configuración de base de datos se aplicarán inmediatamente.  Los costos de almacenamiento se aplican mediante el almacenamiento en caché de conjuntos de resultados de consultas. Después de deshabilitar el almacenamiento en caché de resultados para una base de datos, la caché de resultados que persistía anteriormente se eliminará inmediatamente del almacenamiento de Azure SQL Data Warehouse. Se ha incorporado una nueva columna denominada is_result_set_caching_on en sys.databases para mostrar la configuración de almacenamiento en caché de resultados para una base de datos.  
-
-ON especifica que los conjuntos de resultados de consultas devueltos de esta base de datos se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
-
-OFF especifica que los conjuntos de resultados de consultas devueltos de esta base de datos no se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse.
-Los usuarios pueden ver si una consulta se ejecutó con un acierto o un fallo de caché de resultados realizando una consulta a sys.pdw_request_steps con un valor de request_id específico.   Si hay un acierto de caché, el resultado de la consulta tendrá un único paso con los siguientes detalles:
+OFF   
+especifica que los conjuntos de resultados de consultas devueltos de esta base de datos no se almacenarán en caché en el almacenamiento de Azure SQL Data Warehouse. Los usuarios pueden ver si una consulta se ejecutó con un acierto o un fallo de caché de resultados realizando una consulta a sys.pdw_request_steps con un valor de request_id específico.   Si hay un acierto de caché, el resultado de la consulta tendrá un único paso con los siguientes detalles:
 
 |**Nombre de columna** |**Operador** |**Value** |
 |----|----|----|
@@ -2948,6 +2944,25 @@ Los usuarios pueden ver si una consulta se ejecutó con un acierto o un fallo de
 |location_type|=|Control|
 comando|Like|%DWResultCacheDb%|
 | | |
+
+## <a name="remarks"></a>Notas
+
+Si se cumplen todos los requisitos siguientes, el conjunto de resultados almacenado en caché se vuelve a usar para una consulta:
+
+1. El usuario que ejecuta la consulta tiene acceso a todas las tablas a las que se hace referencia en la consulta.
+1. Hay una coincidencia exacta entre la nueva consulta y la anterior que ha generado el almacenamiento en caché del conjunto de resultados.
+1. No hay cambios de datos ni esquema en las tablas a partir de las que se ha generado el conjunto de resultados almacenado.  
+
+Una vez activado el almacenamiento en caché del conjunto de resultados de una base de datos, se almacenan en caché los resultados de todas las consultas hasta que la caché está llena, excepto las consultas con funciones no deterministas como DateTime.Now().   Las consultas con grandes conjuntos de resultados (por ejemplo, > 1 millón de filas) pueden experimentar un rendimiento más lento durante la primera ejecución mientras se crea la caché de resultados.
+
+## <a name="permissions"></a>Permisos
+
+Se requieren estos permisos:
+
+- Inicio de sesión principal en el nivel de servidor (creado por el proceso de aprovisionamiento), o
+- Miembro del rol de base de datos `dbmanager`.
+
+El propietario de la base de datos no puede modificarla a menos que sea miembro del rol dbmanager.
 
 ## <a name="examples"></a>Ejemplos
 

@@ -1,5 +1,5 @@
 ---
-title: 'Demostración: mejora de rendimiento de OLTP en memoria | Microsoft Docs'
+title: 'Demostración: Demostración: mejora de rendimiento de OLTP en memoria | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/19/2016
 ms.prod: sql
@@ -13,13 +13,13 @@ ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 2b2087165cc406971a6452298b672554a7c7994f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677554"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "63047889"
 ---
-# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: mejora de rendimiento de OLTP en memoria
+# <a name="demonstration-performance-improvement-of-in-memory-oltp"></a>Demostración: Mejora de rendimiento de OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   En el ejemplo de código de este tema se muestra el rápido funcionamiento de las tablas optimizadas para memoria. La mejora del rendimiento es evidente cuando el acceso a los datos de una tabla optimizada para memoria se realiza desde [!INCLUDE[tsql](../../includes/tsql-md.md)]tradicional interpretado. Esta mejora del rendimiento es incluso mayor cuando el acceso a los datos de una tabla optimizada para memoria se realiza a través de un procedimiento almacenado compilado de forma nativa (NCSProc).  
@@ -38,7 +38,7 @@ Para una demostración más completa de las posibles mejoras de rendimiento de O
   
 1.  Use SQL Server Management Studio (SSMS.exe) para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Cualquier herramienta similar a SSMS.exe también está bien.  
   
-2.  Cree manualmente un directorio denominado **C:\data\\**. El código de ejemplo de Transact-SQL espera que el directorio ya exista.  
+2.  Cree manualmente un directorio denominado **C:\data\\** . El código de ejemplo de Transact-SQL espera que el directorio ya exista.  
   
 3.  Ejecute el T-SQL corto para crear la base de datos y su grupo de archivos optimizados para memoria.  
   
@@ -68,7 +68,7 @@ go
   
  Si desea obtener instrucciones para usar el portal de Azure para esto, consulte [Get Started with Azure SQL Database (Introducción a Base de datos SQL de Azure)](https://azure.microsoft.com/documentation/articles/sql-database-get-started).  
   
-### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas con optimización para memoria y un NCSProc.  
+### <a name="step-2-create-memory-optimized-tables-and-ncsproc"></a>Paso 2: crear tablas optimizadas para memoria y un NCSProc  
  En este paso se crean tablas optimizadas para memoria y un procedimiento almacenado compilado de forma nativa (NCSProc). Realice lo siguiente:  
   
 1.  Use SSMS.exe para conectarse a la nueva base de datos.  
@@ -196,7 +196,7 @@ go
 3937 ms , C: memory-optimized table with hash index and native SP.  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)  
   
   

@@ -15,12 +15,12 @@ ms.assetid: 7267fe1b-2e34-4213-8bbf-1c953822446c
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 1c80985d6c69cc1f62e82ae26cbf4bc841501e9d
-ms.sourcegitcommit: 71913f80be0cb6f8d3af00c644ee53e3aafdcc44
+ms.openlocfilehash: 4aa32fb8859df9fdc7c6d85cb43e93425dfa895b
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/21/2019
-ms.locfileid: "56590390"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "67145469"
 ---
 # <a name="nodes-method-xml-data-type"></a>nodes() (método del tipo de datos XML)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -31,7 +31,7 @@ Cada instancia de tipo de datos **xml** tiene un nodo de contexto proporcionado 
   
 El resultado del método **nodes()** es un conjunto de datos que contiene copias lógicas de las instancias XML originales. En estas copias lógicas, el nodo de contexto de cada instancia de fila se establece en uno de los nodos que se identifica con la expresión de consulta. De este modo, las consultas posteriores pueden desplazarse en relación con estos nodos de contexto.  
   
-Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar el método **value()** al conjunto de filas devuelto por **nodes()** y recuperar varios valores de la instancia XML original. El método **value()**, cuando se aplica a la instancia XML, devuelve solo un valor.  
+Puede recuperar varios valores del conjunto de filas. Por ejemplo, puede aplicar el método **value()** al conjunto de filas devuelto por **nodes()** y recuperar varios valores de la instancia XML original. El método **value()** , cuando se aplica a la instancia XML, devuelve solo un valor.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -78,15 +78,15 @@ Una invocación del método `nodes()` con la expresión de consulta `/root/Locat
 Product  
 ModelID      Instructions  
 ----------------------------------  
-1       <root>  
+1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
-  
+             <Location LocationID="20" ... />  
              <Location LocationID="30" .../></root>  
 1      <root><Location LocationID="10" ... />  
              <Location LocationID="20" ... />  
-             </root>  
+             <Location LocationID="30" .../></root>  
 ```  
   
 Tras ello, puede consultar este conjunto de filas usando métodos del tipo de datos **xml**. La siguiente consulta extrae el subárbol del elemento de contexto de cada fila generada:  
@@ -107,7 +107,7 @@ ProductModelID  Instructions
 1        <Location LocationID="30" .../>  
 ```  
   
-El conjunto de filas devuelto ha mantenido la información de tipo. Puede aplicar métodos del tipo de datos **xml** como **query()**, **value()**, **exist()** y **nodes()** al resultado de un método **nodes()**. En cambio, no puede aplicar el método **modify()** para modificar la instancia XML.  
+El conjunto de filas devuelto ha mantenido la información de tipo. Puede aplicar métodos del tipo de datos **xml** como **query()** , **value()** , **exist()** y **nodes()** al resultado de un método **nodes()** . En cambio, no puede aplicar el método **modify()** para modificar la instancia XML.  
   
 Asimismo, el nodo de contexto del conjunto de filas no se puede materializar. Es decir, no puede utilizarlo en una instrucción SELECT. Sin embargo, puede utilizarlo en IS NULL y COUNT(*).  
   
@@ -147,7 +147,7 @@ GO
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="using-nodes-method-against-a-variable-of-xml-type"></a>Usar el método nodes() con una variable de tipo xml  
-En el siguiente ejemplo, hay un documento XML que incluye un elemento <`Root`> de nivel superior y tres elementos secundarios <`row`>. La consulta utiliza el método `nodes()` para establecer nodos de contexto independientes, uno para cada elemento <`row`>. El método `nodes()` devuelve un conjunto de tres filas. Cada fila tiene una copia lógica del documento original, donde cada nodo de contexto identifica un elemento <`row`> distinto del documento original.  
+En el siguiente ejemplo, hay un documento XML que incluye un elemento <`Root`> de nivel superior y tres elementos secundarios <`row`>. La consulta usa el método `nodes()` para establecer nodos de contexto independientes, uno para cada elemento <`row`>. El método `nodes()` devuelve un conjunto de tres filas. Cada fila tiene una copia lógica del XML original, donde cada nodo de contexto identifica un elemento <`row`> distinto del documento original.  
   
 La consulta devuelve después el nodo de contexto de cada fila:  
   
@@ -204,11 +204,11 @@ En este ejemplo se usan las instrucciones de fabricación de bicicletas y se alm
   
 En el siguiente ejemplo, el método `nodes()` se especifica para la columna `Instructions` de tipo **xml** de la tabla `ProductModel`.  
   
-El método `nodes()` establece los elementos <`Location`> como nodos de contexto especificando la ruta de acceso `/MI:root/MI:Location`. El conjunto de filas resultante incluye copias lógicas del documento original, una para cada nodo <`Location`> del documento, con el nodo de contexto establecido en el elemento <`Location`>. Por tanto, la función `nodes()` ofrece un conjunto de nodos de contexto <`Location`>.  
+El método `nodes()` establece los elementos <`Location`> como nodos de contexto al especificar la ruta de acceso `/MI:root/MI:Location`. El conjunto de filas resultante incluye copias lógicas del documento original, una para cada nodo <`Location`> del documento, con el nodo de contexto establecido en el elemento <`Location`>. Por tanto, la función `nodes()` ofrece un conjunto de nodos de contexto <`Location`>.  
   
 El método `query()` sobre este conjunto de resultados solicita `self::node` y, por lo tanto, devuelve el elemento `<Location>` en cada fila.  
   
-En este ejemplo, la consulta establece cada elemento <`Location`> como un nodo de contexto en el documento de instrucciones de fabricación del modelo de producto específico. Puede usar estos nodos de contexto para recuperar valores como los siguientes:  
+En este ejemplo, la consulta establece cada elemento <`Location`> como un nodo de contexto en el documento de instrucciones de fabricación de un modelo de producto específico. Puede usar estos nodos de contexto para recuperar valores como los siguientes:  
   
 - Encontrar los identificadores de ubicación de cada <`Location`>  
   

@@ -14,11 +14,11 @@ ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
 ms.openlocfilehash: 569b085d28a0339927049fca0d758286dd1b6e8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47737253"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "62686097"
 ---
 # <a name="cpu-threshold-exceeded-event-class"></a>Clase de eventos Umbral de la CPU superado
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,14 +32,14 @@ ms.locfileid: "47737253"
 |Nombre de columna de datos|Tipo de datos|Descripción|Identificador de columna|Filtrable|  
 |----------------------|---------------|-----------------|---------------|----------------|  
 |CPU|**int**|Uso de la CPU en milisegundos.|18|Sí|  
-|EventClass|**int**|214|27|no|  
+|EventClass|**int**|214|27|No|  
 |EventSubClass|**int**|Infracción del límite de la CPU.|21|Sí|  
 |GroupID|**int**|Id. del grupo donde se produjo la infracción.|66|Sí|  
 |OwnerID|**int**|SPID del proceso que produjo la infracción.|58|Sí|  
 |SPID|**int**|Id. del proceso de servidor que dispara este evento.<br /><br /> Nota: Este puede ser diferente al SPID del usuario actual si un subproceso del sistema valida el uso de la CPU como una tarea en segundo plano.|12|Sí|  
 |StartTime|**datetime**|El momento en el que se desencadenó este evento.|14|Sí|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)  
   
   

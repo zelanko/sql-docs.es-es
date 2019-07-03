@@ -1,7 +1,7 @@
 - name: Machine Learning Services en SQL Server
   href: ../advanced-analytics/sql-server-machine-learning-services.md
 - name: Le damos la bienvenida a SQL Server >>
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc/toc.json
+  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: Información general
   items:
     - name: 'Machine Learning Services (R, Python)'

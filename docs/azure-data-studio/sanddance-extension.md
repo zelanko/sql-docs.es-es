@@ -3,7 +3,7 @@ title: SandDance para datos de Azure Studio
 titleSuffix: Azure Data Studio
 description: Uso de SandDance en Azure Data Studio
 ms.custom: seodec18
-ms.date: 04/18/2019
+ms.date: 07/03/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 683aea4066c0b27db295cc07db31ecd07fb33245
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798075"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563990"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance para datos de Azure Studio (versión preliminar)
 Azure Data Studio ahora ofrece una manera para crear visualizaciones rápidas para los archivos CSV y TSV que está trabajando. Esto incluye archivos locales o archivos en HDFS en el clúster grande de datos de SQL Server 2019. Esta extensión es útil al tratar de tener una rápida mirar los datos y comprender lo que está ocurriendo. Se usa una tecnología denominada SandDance desde Microsoft Research, que puede generar visualizaciones en lugar de los datos.
@@ -36,9 +36,9 @@ Haga doble clic en un archivo .csv o .tsv en HDFS si te conectas a clúster gran
 
 ## <a name="known-issues"></a>Problemas conocidos
 
-Actualmente los datos deben tener la primera columna como un identificador único.
+Actualmente, los datos deben tener la primera columna como un identificador único.
 
-Actualmente no se limitar el número de filas que se visualiza. Sin embargo, el consumo de memoria aumenta proporcionalmente al número de filas, por lo que recomendamos que el conjunto de datos o la vista se limita a alrededor de 100 filas k.
+Actualmente, no se limitar el número de filas que se visualiza. Sin embargo, el consumo de memoria aumenta proporcionalmente al número de filas, por lo que recomendamos que el conjunto de datos o la vista se limita a alrededor de 100 filas k.
 
 Consulte [problemas conocidos](https://microsoft.github.io/SandDance/#known-issues)
 

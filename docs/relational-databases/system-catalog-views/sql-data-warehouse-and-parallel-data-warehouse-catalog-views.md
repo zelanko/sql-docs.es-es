@@ -12,12 +12,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: jroth
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a0e2138938d8b982521110bd74a2e5cf1706b4a9
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 1b8cb01e4f2c892bf9c59e47e35d4ce1e7175496
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463492"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67564149"
 ---
 # <a name="sql-data-warehouse-and-parallel-data-warehouse-catalog-views"></a>SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo
 
@@ -68,8 +68,17 @@ ms.locfileid: "67463492"
 
 > [!Note]
 > La clasificación de la carga de trabajo está disponible para versión preliminar en SQL Data Warehouse Gen2. La versión preliminar de clasificación e importancia de la administración de la carga de trabajo es para las compilaciones con una fecha de lanzamiento del 9 de abril de 2019 o posterior.  Los usuarios deben evitar usar compilaciones anteriores a esta fecha para pruebas de administración de la carga de trabajo.  Para determinar si la compilación es compatible con la administración de la carga de trabajo, ejecute @@version cuando se conecte a la instancia de SQL Data Warehouse.
- 
-## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Vistas de catálogo  
+
+## <a name="includesssdwincludessssdw-mdmd-catalog-views"></a>[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] Vistas de catálogo
+
+ Las vistas de catálogo siguientes se aplican a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] solo:
+
+[sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_distribution_properties](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)
+[sys.pdw_materialized_view_mappings](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest)
+
+## <a name="includesspdwincludessspdw-mdmd-catalog-views"></a>[!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Vistas de catálogo
+
  Las vistas de catálogo siguientes se aplican a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] solo:
 
  [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  

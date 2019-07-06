@@ -1,5 +1,5 @@
 ---
-title: Sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
+title: sys.sp_cdc_cleanup_change_table (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -21,12 +21,12 @@ ms.assetid: 02295794-397d-4445-a3e3-971b25e7068d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 19fb2cb2fc3b70bb8389a85d661992a5f7a7cb4e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7bbcc576ab0ff38adde9042a713e0dfd0c7d54be
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47700709"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583293"
 ---
 # <a name="sysspcdccleanupchangetable-transact-sql"></a>sys.sp_cdc_cleanup_change_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ sys.sp_cdc_cleanup_change_table
  *capture_instance* debe asignar nombre a una instancia de captura que exista en la base de datos actual.  
   
  [ @low_water_mark =] *low_water_mark*  
- Es un número de secuencia de registro (LSN) que se utiliza como el nuevo límite inferior para el *instancia de captura*. *low_water_mark* es **binary (10)**, no tiene ningún valor predeterminado.  
+ Es un número de secuencia de registro (LSN) que se utiliza como el nuevo límite inferior para el *instancia de captura*. *low_water_mark* es **binary (10)** , no tiene ningún valor predeterminado.  
   
  Si el valor no es null, debe aparecer como el valor start_lsn de una entrada actual en el [cdc.lsn_time_mapping](../../relational-databases/system-tables/cdc-lsn-time-mapping-transact-sql.md) tabla. Si otras entradas de cdc.lsn_time_mapping comparten la misma la hora de confirmación que la entrada identificada por el nuevo límite inferior, el LSN más pequeño asociado a dicho grupo de entradas se elige como límite inferior.  
   
@@ -76,7 +76,9 @@ sys.sp_cdc_cleanup_change_table
     >  El nuevo límite mínimo puede no ser el límite mínimo que se especifica en la llamada al procedimiento almacenado. Si otras entradas de la tabla cdc.lsn_time_mapping tienen la misma hora de confirmación, se selecciona el valor start_lsn menor representado en el grupo de entradas como el límite mínimo ajustado. Si el @low_water_mark parámetro es NULL o el límite mínimo actual es mayor que el nuevo límite mínimo, el valor start_lsn de la instancia de captura permanece sin cambios.  
   
 2.  A continuación, se eliminan las entradas de la tabla de cambios con valores de __$start_lsn menores que el límite mínimo. El umbral de eliminación se utiliza para limitar el número de filas eliminadas en una sola transacción. Si no se pueden eliminar correctamente las entradas, se notifica, pero esto no afecta a ningún cambio en el límite mínimo de la instancia de captura que se haya realizado con la llamada.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Utilice sys.sp_cdc_cleanup_change_table en las circunstancias siguientes:  
   
 -   El agente de limpieza notifica errores de eliminación.  

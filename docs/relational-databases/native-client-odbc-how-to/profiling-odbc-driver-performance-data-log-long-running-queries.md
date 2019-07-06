@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e3605365fcee0a351d7638fb20f3633f03b976a3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c2d90f9ec9a396333715f6285ed300bc2436eed2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656624"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580969"
 ---
 # <a name="profiling-odbc-driver-performance-data---log-long-running-queries"></a>Generar perfiles de datos de rendimiento del controlador ODBC: registrar las consultas de larga ejecución
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "51656624"
   
 ### <a name="to-log-long-running-queries-using-odbc-administrator"></a>Para registrar las consultas de ejecución prolongada mediante el Administrador de ODBC  
   
-1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
+1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . (Como alternativa, puede ejecutar odbcad32.exe desde el símbolo del sistema).  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   
@@ -45,7 +45,9 @@ ms.locfileid: "51656624"
 6.  Seleccione **guardar consultas de larga ejecución en el archivo de registro**. En el cuadro, coloque el nombre del archivo donde se deben registrar las consultas de ejecución prolongada. Si lo desea, haga clic en **examinar** para examinar el sistema de archivos para el registro de consultas.  
   
 7.  Establezca un intervalo de tiempo de espera de consulta, en milisegundos, en el **tiempo máximo de consulta (milisegundos)** cuadro.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-log-long-running-queries-data-programmatically"></a>Para registrar los datos de las consultas de ejecución prolongada mediante programación  
   
 1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_QUERY_LOG y la ruta de acceso y el nombre completo del archivo de registro de consultas de larga ejecución. Por ejemplo:  

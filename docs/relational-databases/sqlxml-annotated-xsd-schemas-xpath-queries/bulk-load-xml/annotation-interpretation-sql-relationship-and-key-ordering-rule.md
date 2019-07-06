@@ -16,12 +16,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16bbc20d98a313be039f207556b963ac43fa541
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 43f213ca1abcbb9b8fae1e20e338b773907a0b38
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035726"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581888"
 ---
 # <a name="annotation-interpretation---sqlrelationship-and-key-ordering-rule"></a>Interpretación de anotaciones: sql:relationship y regla de ordenación de claves
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "56035726"
 </xsd:schema>  
 ```  
   
- Como el  **\<cliente >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que la carga masiva XML lee  **\</Customer >**. En el procesamiento de la  **\<orden >** nodo de elemento, carga masiva XML usa  **\<SQL: Relationship >** para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder desde el  **\<cliente >** primaria elemento, porque el  **\<orden >** elemento no especifica la **CustomerID** atributo. Esto significa que la definición en el  **\<cliente >** elemento, debe especificar el **CustomerID** atributo en el esquema antes de especificar  **\<sql: relación >**. En caso contrario, cuando un  **\<orden >** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder, y cuando el XML de forma masiva carga alcanza el  **\</Order >** finalizar la etiqueta, envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin el valor de columna de clave externa CustomerID.  
+ Como el  **\<cliente >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro de cliente. Este registro permanece hasta que la carga masiva XML lee  **\</Customer >** . En el procesamiento de la  **\<orden >** nodo de elemento, carga masiva XML usa  **\<SQL: Relationship >** para obtener el valor de la columna de clave externa CustomerID de la tabla CustOrder desde el  **\<cliente >** primaria elemento, porque el  **\<orden >** elemento no especifica la **CustomerID** atributo. Esto significa que la definición en el  **\<cliente >** elemento, debe especificar el **CustomerID** atributo en el esquema antes de especificar  **\<sql: relación >** . En caso contrario, cuando un  **\<orden >** elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder, y cuando el XML de forma masiva carga alcanza el  **\</Order >** finalizar la etiqueta, envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sin el valor de columna de clave externa CustomerID.  
   
  Guarde el esquema que se proporciona en este ejemplo como SampleSchema.xml.  
   
@@ -107,7 +107,9 @@ ms.locfileid: "56035726"
     ```  
   
 3.  Para ejecutar la carga masiva XML, guarde y ejecute el siguiente ejemplo de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic Scripting Edition (VBScript) como MySample.vbs:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```  
     set objBL = CreateObject("SQLXMLBulkLoad.SQLXMLBulkload.4.0")  
     objBL.ConnectionString = "provider=SQLOLEDB;data source=localhost;database=tempdb;integrated security=SSPI"  
@@ -118,7 +120,7 @@ ms.locfileid: "56035726"
     set objBL=Nothing  
     ```  
   
-     Como resultado, la carga masiva XML inserta un valor NULL en la columna de clave externa CustomerID de la tabla CustOrder. Si revisa los datos de ejemplo XML para que la  **\<CustomerID >** elemento secundario aparezca delante el  **\<orden >** elemento secundario, obtendrá el resultado esperado: Carga masiva XML inserta el valor de clave externa especificado en la columna.  
+     The result is that XML Bulk Load inserts a NULL value in the CustomerID foreign key column of the CustOrder table. If you revise the XML sample data so that the **\<CustomerID>** child element appears before the **\<Order>** child element, you get the expected result: XML Bulk Load inserts the specified foreign key value into the column.  
   
  Éste es el esquema XDR equivalente:  
   

@@ -13,12 +13,12 @@ ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 62d13bdc9d1a0fc030dc33bf982f6561b454c4ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232293"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597541"
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla que tiene los campos especificados.  
@@ -121,7 +121,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  Una tabla puede tener varios índices candidatos.  
   
  CLAVE externa *eExpression4*etiqueta *TagName4*[NODUP]  
- Crea un índice (no principal) externo y establece una relación a una tabla primaria. *eExpression4* especifica la expresión de clave externa de índice, y *TagName4* especifica el nombre de la etiqueta de clave externa de índice que se crea *.* Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Incluir NODUP para crear un índice externa del candidato.  
+ Crea un índice (no principal) externo y establece una relación a una tabla primaria. *eExpression4* especifica la expresión de clave externa de índice, y *TagName4* especifica el nombre de la etiqueta de clave externa de índice que se crea. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. Incluir NODUP para crear un índice externa del candidato.  
   
  Puede crear varios índices externos para la tabla, pero las expresiones de índice externo deben especificar los distintos campos en la tabla.  
   

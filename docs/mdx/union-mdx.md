@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: e51749416c0668ccc4760132bb860121ebae6e3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe80d94be42a9ea953a5829de43bcab3cb30955f
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653465"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597379"
 ---
 # <a name="union--mdx"></a>Union (MDX)
 
@@ -43,7 +43,7 @@ Alternate syntax 2
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
 ## <a name="remarks"></a>Comentarios  
- Esta función devuelve la unión de dos o más conjuntos especificados *.* Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, mediante el **todas** marca conserva los duplicados del conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
+ Esta función devuelve la unión de dos o más conjuntos especificados. Con la sintaxis estándar y con la sintaxis alternativa 1, los duplicados se eliminan de forma predeterminada. Con la sintaxis estándar, mediante el **todas** marca conserva los duplicados del conjunto combinado. Se eliminan los duplicados de la cola del conjunto. Con la sintaxis alternativa 2, siempre se conservan los duplicados.  
   
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes muestran el comportamiento de la **unión** funcione con cada sintaxis.  

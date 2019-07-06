@@ -15,12 +15,12 @@ ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 3b32590b47a5fd686b02dfc0a1cd1cd323fc9a70
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663054"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585684"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51663054"
 2.  Resuelva todos los errores y advertencias de generación antes de implementar el ensamblado en el servidor de prueba.  
   
 3.  Seleccione **implementar** desde el **compilar** menú. El ensamblado se registrará en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y la base de datos especificada cuando el proyecto de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se creó por primera vez en Visual Studio.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-deploy-the-assembly-using-transact-sql"></a>Para implementar el ensamblado mediante Transact-SQL  
   
 1.  Compile el ensamblado del archivo de código fuente utilizando los compiladores de línea de comandos que se incluyen con .NET Framework.  

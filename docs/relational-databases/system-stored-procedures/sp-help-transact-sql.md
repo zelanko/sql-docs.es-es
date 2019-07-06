@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f5e514307e1427cea0ea1bb4d75e7bf0806fd516
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017757"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586244"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -74,7 +74,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
   
 3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados establecido y también adicionales, según el tipo del objeto especificado.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     |Nombre de columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
     |**Name**|**nvarchar(** 128 **)**|Nombre de la tabla|  
@@ -82,9 +84,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Tipo**|**nvarchar(** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas creado|  
   
-     Según el objeto de base de datos especificado, **sp_help** devuelve conjuntos de resultados adicionales.  
+     Depending on the database object specified, **sp_help** returns additional result sets.  
   
-     Si *nombre* es una tabla del sistema, la tabla de usuario o la vista, **sp_help** devuelve los siguientes conjuntos de resultados. No obstante, el conjunto de resultados que describe la ubicación del archivo de datos en un grupo de archivos no se devuelve para una vista.  
+     If *name* is a system table, user table, or view, **sp_help** returns the following result sets. However, the result set that describes where the data file is located on a file group is not returned for a view.  
   
     -   Conjunto de resultados adicional devuelto en los objetos de columna:  
   

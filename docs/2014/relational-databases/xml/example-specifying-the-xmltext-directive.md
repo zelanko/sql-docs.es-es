@@ -12,12 +12,12 @@ ms.assetid: e78008ec-51e8-4fd1-b86f-1058a781de17
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 75f04b8dfb6cfec70c6fc141178dfb56c9ffd94c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56ccb1e8a25b7d9f138c2900422d301919fef039
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63205099"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597552"
 ---
 # <a name="example-specifying-the-xmltext-directive"></a>Ejemplo: Especificación de la directiva XMLTEXT
   En este ejemplo se muestra cómo se tratan los datos de la columna de desbordamiento mediante la directiva `XMLTEXT` en una instrucción `SELECT` con el modo EXPLICIT.  
@@ -100,7 +100,7 @@ FOR XML EXPLICIT;
   
  Si se especifica *AttributeName* con la directiva `xmltext`, se agregan los atributos del elemento <`overflow`> como atributos de los subelementos del elemento <`Parent`> que los incluye. El nombre especificado para *AttributeName* se convierte en el nombre del subelemento.  
   
- En esta consulta, se especifica *AttributeName*, <`overflow`>, junto con la directiva `xmltext` *:*  
+ En esta consulta, *AttributeName*, <`overflow`>, se especifica junto con el `xmltext` directiva:  
   
 ```  
 SELECT 1 as Tag, NULL as parent,  

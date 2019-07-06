@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 222479dd03263f61a603e30202f2abf54307b0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224879"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597443"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -46,9 +46,9 @@ Generate( Set_Expression1 ,  String_Expression [ ,Delimiter ]  )
  Delimitador válido expresado como expresión de cadena.  
   
 ## <a name="remarks"></a>Comentarios  
- Si se especifica un segundo conjunto, la **generar** función devuelve un conjunto generado al aplicar las tuplas del segundo conjunto a cada tupla del primer conjunto *,* y, a continuación, combinar los conjuntos resultantes mediante unión. Si **todas** se especifica, la función conserva los duplicados en el conjunto resultante.  
+ Si se especifica un segundo conjunto, la **generar** función devuelve un conjunto generado al aplicar las tuplas del segundo conjunto a cada tupla del primer conjunto y, a continuación, combinar los conjuntos resultantes mediante unión. Si **todas** se especifica, la función conserva los duplicados en el conjunto resultante.  
   
- Si se especifica una expresión de cadena, el **generar** función devuelve una cadena generada al evaluar la expresión de cadena especificada con cada tupla del primer conjunto *,* y, a continuación, concatenar el resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
+ Si se especifica una expresión de cadena, el **generar** función devuelve una cadena generada al evaluar la expresión de cadena especificada con cada tupla del primer conjunto y, a continuación, concatenar los resultados. De forma opcional, la cadena se puede delimitar al separar cada resultado de la cadena concatenada resultante.  
   
 ## <a name="examples"></a>Ejemplos  
   

@@ -15,15 +15,15 @@ ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: c67a58b1299a002428c3a72b9df23892c76cd81c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702659"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597496"
 ---
 # <a name="absolute-and-relative-urls"></a>Direcciones URL absolutas y relativas
-Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o de red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente *.*  
+Una dirección URL especifica la ubicación de un destino almacenado en un equipo local o de red. El destino puede ser un archivo, directorio, página HTML, imagen, programa y así sucesivamente.  
   
  Un *dirección URL absoluta* contiene toda la información necesaria para localizar un recurso.  
   
@@ -53,7 +53,7 @@ Una dirección URL especifica la ubicación de un destino almacenado en un equip
   
  Con ADO 2.7 o posterior, una dirección URL absoluta también puede definir un contexto. Por ejemplo, cuando un [registro](../../../ado/reference/ado-api/record-object-ado.md) se abre el objeto con una dirección URL absoluta, un **conexión** objeto se crea implícitamente para representar el recurso especificado por la dirección URL.  
   
- Se puede especificar una dirección URL absoluta que define un contexto en el *ActiveConnection* parámetro de la **registro** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. También se puede especificar una dirección URL absoluta como valor de la "dirección URL **=** " palabra clave en el **conexión** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método  *ConnectionString* parámetro y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parámetro.  
+ Se puede especificar una dirección URL absoluta que define un contexto en el *ActiveConnection* parámetro de la **registro** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-record.md) método. También se puede especificar una dirección URL absoluta como valor de la "URL =" palabra clave en el **conexión** objeto [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método *ConnectionString* parámetro y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método *ActiveConnection* parámetro.  
   
  También se puede definir el contexto abriendo un **registro** o **Recordset** objeto que representa un directorio, porque estos objetos ya tienen un implícita o explícitamente declarado **conexión**  objeto que especifica el contexto.  
   

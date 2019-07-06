@@ -17,12 +17,12 @@ ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c9b69fa2c6ed790a33da50c0002b17a7e4461d0e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8d9c14a534dc46f320ddacbf518c2df766292de6
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656764"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584044"
 ---
 # <a name="creating-an-assembly"></a>Crear un ensamblado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   El ensamblado al que se llama o se hace referencia se creó en la misma base de datos.  
   
 ## <a name="specifying-security-when-creating-assemblies"></a>Especificar la seguridad al crear ensamblados  
- Al crear un ensamblado en una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , puede especificar uno de los tres niveles distintos de seguridad en los que puede ejecutarse el código: **SAFE**, **EXTERNAL_ACCESS**o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
+ Al crear un ensamblado en un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base de datos, puede especificar uno de tres niveles distintos de seguridad en el que se puede ejecutar el código: **SEGURO**, **EXTERNAL_ACCESS**, o **UNSAFE**. Cuando se ejecuta la instrucción **CREATE ASSEMBLY** , se realizan determinadas comprobaciones en el ensamblado de código que pueden provocar que el ensamblado no se registre en el servidor. Para obtener más información, vea el ejemplo de suplantación en [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  **SAFE** es el conjunto de permisos predeterminado y funciona en la mayoría de los escenarios. Para especificar un nivel de seguridad determinado, debe modificar la sintaxis de la instrucción CREATE ASSEMBLY tal y como se indica a continuación:  
   
@@ -80,7 +80,9 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 1.  El ensamblado está firmado con un nombre seguro o firmado mediante Authenticode con un certificado. Este nombre seguro (o certificado) se crea dentro de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] como una clave asimétrica (o certificado) y dispone de un inicio de sesión correspondiente con permiso **EXTERNAL ACCESS ASSEMBLY** (para ensamblados de acceso externo) o permiso **UNSAFE ASSEMBLY** (para ensamblados no seguros).  
   
 2.  El propietario de la base de datos (DBO) dispone de permiso **EXTERNAL ACCESS ASSEMBLY** (para los ensamblados **EXTERNAL ACCESS** ) o **UNSAFE ASSEMBLY** (para los ensamblados **UNSAFE** ), y la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) de base de datos está establecida en **ON**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Las dos condiciones indicadas anteriormente también se comprueban en el momento de carga del ensamblado (que incluye la ejecución). Para cargar el ensamblado debe cumplirse al menos una de las condiciones.  
   
  Se recomienda que la [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md) de una base de datos no se establezca en **ON** solo para ejecutar el código de Common Language Runtime (CLR) en el proceso de servidor. En lugar de ello, es aconsejable crear una clave asimétrica a partir del archivo de ensamblado de la base de datos maestra. A continuación debe crearse un inicio de sesión asignado a esta clave asimétrica y debe concederse el permiso **EXTERNAL ACCESS ASSEMBLY** o **UNSAFE ASSEMBLY** al inicio de sesión.  

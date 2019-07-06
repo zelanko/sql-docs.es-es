@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0a73e1cc51cade93183af1fe4e98e59c3c65d474
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba7ff25e8f80fbdda0994b8855a30d47e4532c93
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738266"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580228"
 ---
 # <a name="setting-large-data"></a>Definir datos grandes
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +57,9 @@ ms.locfileid: "62738266"
 5.  Llame a **GetNextRows** para capturar las filas siguientes en el conjunto de filas. Llame a **GetData** para leer los datos del conjunto de filas.  
   
 6.  Cree un objeto de almacenamiento que contenga los datos (y también el indicador de longitud) y después llame a **IRowsetChange::SetData** (o **IRowsetChange::InsertRow**) con el descriptor de acceso que enlaza la columna BLOB para establecer los datos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo establecer datos BLOB. El ejemplo crea una tabla, agrega un registro de ejemplo, captura este registro en el conjunto de filas y, después, establece el valor del campo BLOB:  
   

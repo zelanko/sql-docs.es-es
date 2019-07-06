@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 79b84888a788c34b9f103e1ae55b2f38d6d87f60
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1541309fa19bbbf9ca4ee234c5b4831ee616ceea
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210504"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580961"
 ---
 # <a name="running-stored-procedures---process-return-codes-and-output-parameters"></a>Ejecutar procedimientos almacenados: procesar códigos de retorno y parámetros de salida
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +42,9 @@ ms.locfileid: "53210504"
 3.  Ejecute la instrucción con **SQLExecDirect**.  
   
 4.  Si los conjuntos de resultados se procesan hasta **SQLFetch** o **SQLFetchScroll** se devuelve SQL_NO_DATA, mientras que si se procesa el último conjunto de resultados o hasta **SQLMoreResults** se devuelve SQL_NO_DATA. En este momento, las variables enlazadas al código de retorno o a los parámetros de salida se rellenan con los valores de datos devueltos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se procesan un código de retorno y un parámetro de salida. Este ejemplo no es compatible con IA64. Este ejemplo se desarrolló para la versión 3.0 o posterior de ODBC.  
   

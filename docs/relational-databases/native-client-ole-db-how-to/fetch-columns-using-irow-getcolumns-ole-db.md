@@ -14,12 +14,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14d152adb1d2b24b70e64a0924935416cdcf09af
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 00edc71fdec53ac7606f11d913a2c1089ecf0216
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51675114"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586223"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>Capturar columnas mediante IRow::GetColumns (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "51675114"
   
 -   Cómo capturar un grupo de columnas (en secuencia).  
   
--   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**-**>GetColumns()** devuelve solo la longitud de columna real. En este caso, se puede volver a llamar a **IRow->GetColumns()** en la misma columna para recuperar los datos reales.  
+-   Cómo tener acceso dos veces a una columna. La primera vez se obtiene el ancho de columna real y después se tiene acceso a los datos reales. En la estructura DBCOLUMNACCESS, si **pData** es NULL y **cbMaxLen** es 0, la llamada a **IRow**- **>GetColumns()** devuelve solo la longitud de columna real. En este caso, se puede volver a llamar a **IRow->GetColumns()** en la misma columna para recuperar los datos reales.  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  
@@ -45,7 +45,9 @@ ms.locfileid: "51675114"
 3.  Ejecute IRow::GetColumns () para capturar una o más columnas de la fila resultante. Si desea buscar el tamaño de columna real antes de capturar los datos, establezca pData de DBCOLUMNACCESS en NULL. La llamada a IRow::GetColumns() solo devuelve el ancho de columna. Otra llamada a IRow::GetColumns() capturará los datos.  
   
 4.  Ejecute IRow::GetColumns() hasta obtener acceso a todas las columnas que necesita. Se debe tener acceso a las columnas en secuencia.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="example"></a>Ejemplo  
  En este ejemplo se muestra cómo se utiliza la interfaz IRow para permitir el acceso directo a las columnas de una sola fila del conjunto de resultados. Este ejemplo muestra:  
   

@@ -10,12 +10,12 @@ ms.assetid: a8410ed2-bb98-4d51-a9eb-b239be1201c2
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: b32ffb832baf12a72df6e32b07386f24448b3c35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456aec6c6b9d0d1a5d0ee1d9949507a37577130c
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63285689"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597526"
 ---
 # <a name="creating-predictions-basic-data-mining-tutorial"></a>Crear predicciones (Tutorial básico de minería de datos)
   Después de haber probado la precisión de los modelos de minería de datos y esté satisfecho con los resultados, a continuación, puede generar predicciones con el generador de consultas de predicción en el **predicción de modelo de minería de datos** ficha en la minería de datos Diseñador.  
@@ -96,7 +96,7 @@ ms.locfileid: "63285689"
   
      De esta forma, se especificará la columna de destino para la función `PredictProbability`. Para obtener más información acerca de las funciones, vea [extensiones de minería de datos &#40;DMX&#41; referencia de funciones](/sql/dmx/data-mining-extensions-dmx-function-reference).  
   
-5.  Haga clic en la siguiente fila vacía en el **origen** columna y el modelo de minería de datos, a continuación, seleccione TM_Decision_Tree **.**  
+5.  Haga clic en la siguiente fila vacía en el **origen** columna y, a continuación, seleccione **TM_Decision_Tree** modelo de minería de datos.  
   
 6.  En el `TM_Decision_Tree` de fila, en el **campo** columna, seleccione `Bike Buyer`.  
   

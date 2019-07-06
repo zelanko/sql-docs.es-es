@@ -20,12 +20,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57a95705e24d2437a2a8f2695a68e97c129fd619
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 578aeaeaa73cab0aff58b66c031e108b92f8658c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131072"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586386"
 ---
 # <a name="stored-procedures---calling"></a>Procedimientos almacenados: llamada
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,9 @@ ms.locfileid: "54131072"
     -   El identificador de descriptor de acceso creado en el paso 3.  
   
 5.  Ejecute el comando mediante **ICommand::Execute**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="methods-of-calling-a-stored-procedure"></a>Métodos para llamar a un procedimiento almacenado  
  Al ejecutar un procedimiento almacenado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client admite el:  
   
@@ -87,7 +89,7 @@ ms.locfileid: "54131072"
   
 -   Secuencia de escape RPC (llamada a procedimiento remoto).  
   
--   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.   
+-   [!INCLUDE[tsql](../../../includes/tsql-md.md)] Instrucción EXECUTE.  
   
 ### <a name="odbc-call-escape-sequence"></a>Secuencia de escape ODBC CALL  
  Si conoce la información de parámetros, llame al método **ICommandWithParameters::SetParameterInfo** para describir los parámetros al proveedor. De lo contrario, cuando se utiliza la sintaxis ODBC CALL para llamar a un procedimiento almacenado, el proveedor llama a una función del asistente para buscar la información de parámetros del procedimiento almacenado.  
@@ -96,7 +98,7 @@ ms.locfileid: "54131072"
   
  La sintaxis general para llamar a un procedimiento utilizando la secuencia de escape ODBC CALL es la siguiente:  
   
- {[**? =**]**llamar**_nombre_procedimiento_[**(**[*parámetro*] [**,**[*parámetro*]]... **)**]}  
+ {[ **?=** ]**call**_procedure_name_[ **(** [*parameter*][ **,** [*parameter*]]... **)** ]}  
   
  Por ejemplo:  
   

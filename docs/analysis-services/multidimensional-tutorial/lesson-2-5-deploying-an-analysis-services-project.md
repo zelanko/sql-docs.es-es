@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 3d6fe74ecf361392da9000286427679194e15de9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e73a5b2d7924d67f7c8bc2e41414e158aa0ff6b
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65404047"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597513"
 ---
 # <a name="lesson-2-5---deploying-an-analysis-services-project"></a>Lección 2-5: implementar un proyecto de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ En la tarea siguiente, revisará las propiedades de implementación del proyecto
     Revise las propiedades de implementación del proyecto. De forma predeterminada, la plantilla del proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] configura un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para implementar de forma incremental todos los proyectos en la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el equipo local, crear una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] con el mismo nombre que el proyecto y procesar los objetos después de la implementación utilizando la opción de procesamiento predeterminada. Para obtener más información, consulte [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../multidimensional-models/configure-analysis-services-project-properties-ssdt.md).  
   
     > [!NOTE]  
-    > Si desea implementar el proyecto en una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el equipo local, o a una instancia en un servidor remoto, cambiar el **Server** nombre de propiedad a la instancia adecuada, como \<  *ServerName **>\\<** nombreDeInstancia ** >* .  
+    > Si desea implementar el proyecto en una instancia con nombre de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en el equipo local, o a una instancia en un servidor remoto, cambiar el **Server** nombre de propiedad a la instancia adecuada, como \<  **ServerName**>\\\<**nombreDeInstancia**>.  
   
 3.  Haga clic en **Aceptar**.  
   

@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d08831c8699acb7ef938e8d977801109704943d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 739c664e9e6c4085f55e68aa7222a3b47f556026
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719697"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580869"
 ---
 # <a name="executing-sql-queries-sqlxml-managed-classes"></a>Ejecutar consultas SQL (clases administradas de SQLXML)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -99,7 +99,9 @@ public static int Main(String[] args)
      Esto crea una aplicación ejecutable (DocSample.exe).  
   
 3.  En el símbolo del sistema, ejecute DocSample.exe.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para probar este ejemplo, debe tener instalado [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework en el equipo.  
   
  En lugar de especificar consultas SQL como texto de comando, puede especificar una plantilla (como se muestra en el siguiente fragmento de código) que ejecute un diagrama de actualización (que también es una plantilla) para insertar un registro del cliente. Puede especificar plantillas y diagramas de actualización en archivos y ejecutar los archivos. Para obtener más información, consulte [ejecutar archivos de plantilla con la propiedad CommandText](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/net-framework-classes/executing-template-files-by-using-the-commandtext-property.md).  

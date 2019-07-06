@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2bc775f7f857bffb5a7840d99de00fc546e71d03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e67f69a6e1ce5ce18eb265fdc86eba8e8fcd0bc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62943031"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585088"
 ---
 # <a name="how-to-create-a-visual-c-smo-project-in-visual-studio-net"></a>Cómo crear un proyecto de Visual C# SMO en Visual Studio .NET
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "62943031"
   
 2. En el **archivo** menú, haga clic en **New** y, a continuación, **proyecto**.  Aparecerá el cuadro de diálogo **Nuevo proyecto** .   
   
-3. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** panel, vaya a **plantillas**\\**Visual C#**\\**Windows** y seleccione **aplicación de consola**.  
+3. En el [!INCLUDE[vsprvs](../../includes/vsprvs-md.md)] **instalado** panel, vaya a **plantillas**\\**Visual C#** \\**Windows** y seleccione **aplicación de consola**.  
   
 4. (Opcional) En el **nombre** texto, escriba el nombre de la nueva aplicación.  
 
@@ -54,5 +54,6 @@ ms.locfileid: "62943031"
 15. SMO cuenta con varios espacios de nombres bajo Microsoft.SqlServer.Management.Smo, como Microsoft.SqlServer.Management.Smo.Agent. Agregue los espacios de nombres que sean necesarios.  
   
 16. Ahora puede agregar su código SMO.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

@@ -33,12 +33,12 @@ ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: f82da51a519525451078a7f65548a91a532a0c86
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537307"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584060"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "52537307"
 4.  Escriba código para implementar el UDT.  
   
 5.  Desde el **compilar** menú, seleccione **implementar**. De este modo, se registrará el ensamblado y se creará el tipo en la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-transact-sql-to-deploy-udts"></a>Usar Transact-SQL para implementar tipos UDT  
  La sintaxis de la instrucción CREATE ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)] se usa para registrar el ensamblado en la base de datos en la que se desea usar el UDT. Se almacena internamente en las tablas del sistema de la base de datos, no externamente en el sistema de archivos. Si el UDT depende de ensamblados externos, éstos también deben cargarse en la base de datos. La instrucción CREATE TYPE se usa para crear el UDT en la base de datos en la que va a utilizarse. Para obtener más información, consulte [CREATE ASSEMBLY &#40;Transact-SQL&#41; ](../../t-sql/statements/create-assembly-transact-sql.md) y [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md).  
   
@@ -178,7 +180,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **file_id**  
  Número que identifica cada objeto, con el primer objeto asociado a un determinado **assembly_id** que se le asigna el valor de 1. Si hay varios objetos asociados con el mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.  
   
- **Contenido**  
+ **content**  
  Representación hexadecimal del ensamblado o archivo.  
   
  Puede usar la función CAST o CONVERT para convertir el contenido de la **contenido** columna en texto legible. La consulta siguiente convierte el contenido del archivo Point.cs en texto legible, utilizando el nombre de la cláusula WHERE para restringir el conjunto de resultados a una única fila.  

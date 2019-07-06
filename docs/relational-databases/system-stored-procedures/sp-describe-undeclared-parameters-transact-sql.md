@@ -19,12 +19,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 38428e0a95dcce39589310ee91be2a7d396c2f1e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65088505"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584608"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -236,7 +236,9 @@ SELECT * FROM t1 WHERE @p1 = dbo.tbl(c1, @p2, @p3)
 3.  Si dos tipos de datos similares cumplen la regla 1, por ejemplo **varchar (8000)** y **varchar (max)** , menor será el tipo de datos (**varchar (8000)** ) se elige. El mismo principio se aplica a **nvarchar** y **varbinary** tipos de datos.  
   
 4.  Para los fines de la regla 1, el algoritmo de deducción de tipo prefiere ciertas conversiones sobre otras. Las conversiones, en orden de mejor a peor, son:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Conversión entre el mismo tipo de datos básico de longitud diferente.  
   
     2.  Conversión entre la versión de longitud fija y variable de longitud de los mismos tipos de datos (por ejemplo, **char** a **varchar**).  

@@ -18,12 +18,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4c80ec6b02af9e639c04eb1e30b730bcd22b6f78
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: a5c20129498eb439a80d4768feb9bf00da41e05c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028876"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582835"
 ---
 # <a name="using-ado-to-execute-sqlxml-40-queries"></a>Utilizar ADO para ejecutar consultas SQLXML 4.0
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,9 @@ ms.locfileid: "56028876"
 4.  Compruebe que ha creado los archivos adicionales, como esquemas o plantillas XML que forman parte del ejemplo que intenta volver a crear localmente en el equipo. Estos archivos deben estar incluidos en el mismo directorio donde se ha guardado el archivo de script de prueba (Sqlxml4test.vbs).  
   
 5.  Siga las instrucciones de la sección siguiente sobre cómo utilizar el script de prueba de SQLXML 4.0.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="using-the-sqlxml-40-test-script"></a>Utilizar el script de prueba de SQLXML 4.0  
  El procedimiento siguiente describe cómo utilizar los archivos Sqlxml4test.vbs probar las consultas de ejemplo incluidas en esta documentación.  
   

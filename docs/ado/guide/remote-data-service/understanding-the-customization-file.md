@@ -13,12 +13,12 @@ ms.assetid: 136f74bf-8d86-4a41-be66-c86cbcf81548
 author: MightyPen
 ms.author: genemi
 manager: jroth
-ms.openlocfilehash: 581065868f408eca28f15ffe9fb703d53e16ae66
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d58edcfae92c94cfc635d3539f81faf834e382c7
+ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704139"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67597570"
 ---
 # <a name="understanding-the-customization-file"></a>Descripción del archivo de personalización
 Cada encabezado de sección en el archivo de personalización consta de los corchetes ( **[]** ) que contiene un tipo y un parámetro. Los cuatro tipos de sección se indican mediante las cadenas literales **conectar**, **sql**, **userlist**, o **registros**. El parámetro es la cadena literal, el valor predeterminado, un identificador especificado por el usuario o nada.  
@@ -55,7 +55,7 @@ identifier
   
  Una sección concreta se usa en las siguientes circunstancias:  
   
--   Un **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos =** _valor_", coincide con un **conectar** identificador de la sección *.*  
+-   Un **conectar** sección se usa si la parte del valor del cliente conecta la palabra clave de cadena, "**origen de datos =** _valor_", coincide con un **conectar** identificador de la sección. 
   
 -   Un **sql** sección se usa si la cadena de comandos de cliente contiene una cadena que coincide con un **sql** identificador de la sección.  
   

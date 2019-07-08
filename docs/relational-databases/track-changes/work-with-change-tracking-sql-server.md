@@ -22,12 +22,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e2f41329c10544686194524327ddb7fd560cb57d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 333e4f7eb3177529f55a9be18aa1e042b10737c8
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514153"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584678"
 ---
 # <a name="work-with-change-tracking-sql-server"></a>Trabajar con el seguimiento de cambios (SQL Server)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -207,7 +207,9 @@ ON
 3.  Obtenga los cambios de la tabla Sales mediante CHANGETABLE(CHANGES ...).  
   
 4.  Obtenga los cambios de la tabla SalesOrders mediante CHANGETABLE(CHANGES ...).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Se están produciendo dos procesos en la base de datos que pueden afectar a los resultados que devuelven los pasos anteriores:  
   
 -   El proceso de limpieza se ejecuta en segundo plano y quita la información de seguimiento de cambios cuya antigüedad supere el período de retención especificado.  
@@ -434,7 +436,7 @@ COMMIT TRAN
   
 -   Cuando un cliente consulte cambios, registre el último número de versión de sincronización para cada cliente en el servidor. Si hay un problema con los datos, los números de última versión sincronizada no coincidirán. Esto indica que se requiere una reinicialización.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Seguimiento de cambios de datos &#40;SQL Server&#41;](../../relational-databases/track-changes/track-data-changes-sql-server.md)   
  [Acerca del seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-tracking-sql-server.md)   
  [Administrar el seguimiento de cambios &#40;SQL Server&#41;](../../relational-databases/track-changes/manage-change-tracking-sql-server.md)   

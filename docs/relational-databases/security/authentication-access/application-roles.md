@@ -22,12 +22,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8346c4f7a5b324c8fb05a46e74aae3bbdd5dab49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 233f794901dd73fd8a6d49a000ebdcccd2e92184
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62715822"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581088"
 ---
 # <a name="application-roles"></a>Roles de aplicación
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "62715822"
 4.  Si el nombre y la contraseña del rol de aplicación son válidos, el rol de aplicación se habilita.  
   
 5.  En este momento, la conexión pierde los permisos del usuario y asume los permisos del rol de aplicación.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Los permisos adquiridos durante el rol de aplicación se mantienen mientras dura la conexión.  
   
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la única forma de que un usuario vuelva a adquirir su contexto de seguridad original después de iniciar un rol de aplicación consiste en desconectarse y volver a conectarse a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], **sp_setapprole** tiene una opción que crea una cookie. La cookie contiene información sobre el contexto anterior al momento en que se habilita el rol de aplicación. **sp_unsetapprole** puede usar la cookie para revertir la sesión a su contexto original. Para obtener más información sobre esta nueva opción y obtener un ejemplo, vea [sp_setapprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-setapprole-transact-sql.md).  

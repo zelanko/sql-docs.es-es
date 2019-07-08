@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b0544c995039c2dda6f20ea86b5893e2938708d
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d0023f2646cadac8b189992f06b695c1779c491d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51559922"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583407"
 ---
 # <a name="view-or-change-the-compatibility-level-of-a-database"></a>Ver o cambiar el nivel de compatibilidad de una base de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "51559922"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-or-change-the-compatibility-level-of-a-database"></a>Para ver o cambiar el nivel de compatibilidad de una base de datos  
   
@@ -62,8 +62,10 @@ ms.locfileid: "51559922"
   
      El nivel de compatibilidad actual se muestra en el cuadro de lista **Nivel de compatibilidad** .  
   
-5.  Para cambiar el nivel de compatibilidad, seleccione una opción diferente de la lista. Las opciones son **SQL Server 2008 (100)**, **SQL Server 2012 (110)**, **SQL Server 2014 (120)**, **SQL Server 2016 (130)** y **SQL Server 2017 (140)**.  
-  
+5.  Para cambiar el nivel de compatibilidad, seleccione una opción diferente de la lista. Las opciones son **SQL Server 2008 (100)** , **SQL Server 2012 (110)** , **SQL Server 2014 (120)** , **SQL Server 2016 (130)** y **SQL Server 2017 (140)** .  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-compatibility-level-of-a-database"></a>Para ver el nivel de compatibilidad de una base de datos  
@@ -96,5 +98,5 @@ SET COMPATIBILITY_LEVEL = 120;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
  [ALTER DATABASE &#40;Transact-SQL&#41; nivel de compatibilidad](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)

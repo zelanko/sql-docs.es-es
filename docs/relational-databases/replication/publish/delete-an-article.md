@@ -20,12 +20,12 @@ ms.assetid: 185b58fc-38c0-4abe-822e-6ec20066c863
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 40a543a8b95853cacfb00f284e916ca216cd57b3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f45e0cd36dd858105f1eb6dd01ed57c0b8ae77d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47759230"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580039"
 ---
 # <a name="delete-an-article"></a>Eliminar un artículo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +44,15 @@ ms.locfileid: "47759230"
   
 #### <a name="to-delete-an-article-from-a-snapshot-or-transactional-publication"></a>Para eliminar un artículo de una publicación de instantáneas o transaccional  
   
-1.  Ejecute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) para eliminar un artículo, especificado por **@article**, de una publicación, especificado por **@publication**. Especifique un valor de **1** para **@force_invalidate_snapshot**.  
+1.  Ejecute [sp_droparticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md) para eliminar un artículo, especificado por **@article** , de una publicación, especificado por **@publication** . Especifique un valor de **1** para **@force_invalidate_snapshot** .  
   
 2.  (Opcional) Para quitar completamente el objeto publicado de la base de datos, ejecute el comando `DROP <objectname>` en el publicador de la base de datos de publicación.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-delete-an-article-from-a-merge-publication"></a>Para eliminar un artículo de una publicación de combinación  
   
-1.  Ejecute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) para eliminar un artículo, especificado por **@article**, de una publicación, especificado por **@publication**. Si es necesario, especifique un valor de **1** para **@force_invalidate_snapshot** y un valor de **1** para **@force_reinit_subscription**.  
+1.  Ejecute [sp_dropmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) para eliminar un artículo, especificado por **@article** , de una publicación, especificado por **@publication** . Si es necesario, especifique un valor de **1** para **@force_invalidate_snapshot** y un valor de **1** para **@force_reinit_subscription** .  
   
 2.  (Opcional) Para quitar completamente el objeto publicado de la base de datos, ejecute el comando `DROP <objectname>` en el publicador de la base de datos de publicación.  
   
@@ -95,7 +97,7 @@ EXEC sp_dropmergearticle
 GO  
 ```  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
  Puede eliminar artículos mediante programación utilizando Replication Management Objects (RMO). Las clases RMO que usa para eliminar un artículo dependen del tipo de publicación al que pertenece el artículo.  
   
 #### <a name="to-delete-an-article-that-belongs-to-a-snapshot-or-transactional-publication"></a>Para eliminar un artículo que pertenece a una publicación transaccional o de instantáneas  
@@ -130,7 +132,7 @@ GO
   
 7.  Cierre todas las conexiones.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)   
  [Conceptos de procedimientos almacenados del sistema de replicación](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)  
   

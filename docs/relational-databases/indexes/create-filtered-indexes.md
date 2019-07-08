@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa37094aa6e41da48de776e7bb73b98096cae503
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 15be60fe093bfc28d29e5d9b8883f3928936883b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523487"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583194"
 ---
 # <a name="create-filtered-indexes"></a>Crear índices filtrados
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -100,10 +100,10 @@ ms.locfileid: "52523487"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** . Para modificar la expresión de índice filtrado, utilice CREATE INDEX WITH DROP_EXISTING.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-filtered-index"></a>Para crear un índice filtrado  
   
@@ -113,11 +113,11 @@ ms.locfileid: "52523487"
   
 3.  Haga clic en el signo más para expandir la tabla en la que desea crear un índice filtrado.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+6.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice único.  
   
@@ -126,7 +126,9 @@ ms.locfileid: "52523487"
 9. En la página **Filtro**, debajo de **Expresión de filtro**, escriba la expresión SQL que usará para crear el índice filtrado.  
   
 10. Haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-filtered-index"></a>Para crear un índice filtrado  

@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c0e8c720660c17c262f66e5a14841dff490c008b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 9a7986803518b9227d873a303b87358829cde3cd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52412102"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581462"
 ---
 # <a name="delete-user-defined-functions"></a>Eliminar funciones definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,10 +47,10 @@ ms.locfileid: "52412102"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en el esquema al que pertenece la función o el permiso CONTROL en la función.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-a-user-defined-function"></a>Para eliminar un perfil definido por la función  
   
@@ -69,9 +69,11 @@ ms.locfileid: "52412102"
 4.  Haga clic con el botón derecho en la función que quiera eliminar y seleccione **Eliminar**.  
   
 5.  En el cuadro de diálogo **Eliminar objeto** , haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!IMPORTANT]  
-    >  Haga clic en **Mostrar dependencias** en el cuadro de diálogo **Eliminar objeto** para abrir el cuadro de diálogo **Dependencias** de _nombre\_función_. De este modo, mostrará todos los objetos que dependen de la función y todos los objetos de los que la función depende.  
+    >  Click **Show Dependencies** in the **Delete Object** dialog box to open the _function\_name_**Dependencies** dialog box. This will show all of the objects that depend on the function and all of the objects on which the function depends.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

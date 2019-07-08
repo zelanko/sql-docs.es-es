@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: bb65ec8874d6fc006f3c765ba91667233bb5571c
-ms.sourcegitcommit: 99847f34e949a5c3c58565d76be3abf5b80f9632
+ms.openlocfilehash: 7709a7d43d99daae1eaec74472b1332c2bf5fa4d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/05/2019
-ms.locfileid: "55742095"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585055"
 ---
 # <a name="copy-columns-from-one-table-to-another-database-engine"></a>Copiar columnas de una tabla a otra (motor de base de datos)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -48,10 +48,10 @@ ms.locfileid: "55742095"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-copy-column-definitions-from-one-table-to-another"></a>Para copiar definiciones de columna de una tabla a otra  
   
@@ -64,7 +64,9 @@ ms.locfileid: "55742095"
 4.  Haga clic en la pestaña de la tabla en la que desea copiar las columnas.  
   
 5.  Seleccione la columna que desea que siga a las columnas insertadas y en el menú **Edición** , haga clic en **Pegar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-copy-data-from-one-table-to-another"></a>Para copiar columnas de datos de una tabla a otra  
   
 1.  Siga las instrucciones para copiar las definiciones de columna mencionadas anteriormente.  

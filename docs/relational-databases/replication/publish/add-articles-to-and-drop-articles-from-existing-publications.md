@@ -20,12 +20,12 @@ ms.assetid: b148e907-e1f2-483b-bdb2-59ea596efceb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3da927ec00fe6402a9c7612beae90453e30c4e26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f980157f057f8e7916eb7b87dd2cedb2ec5fd14d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62661371"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582447"
 ---
 # <a name="add-articles-to-and-drop-articles-from-existing-publications"></a>Agregar y quitar artículos de publicaciones existentes
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "62661371"
     -   Para crear una instantánea para una publicación de mezcla con filtros con parámetros, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
 3.  Una vez creada la instantánea, sincronice la suscripción para copiar el esquema y los datos para el nuevo artículo.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Para sincronizar una suscripción de inserción, consulte [Sincronizar una suscripción de inserción](../../../relational-databases/replication/synchronize-a-push-subscription.md).  
   
     -   Para sincronizar una suscripción de extracción, consulte [Sincronizar una suscripción de extracción](../../../relational-databases/replication/synchronize-a-pull-subscription.md).  

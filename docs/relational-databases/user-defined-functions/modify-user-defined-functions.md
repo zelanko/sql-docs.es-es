@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b3b558913488a6e8ded7b4e7df38c97af377331b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 0705e18841fe4d7e67199e9a7d7e885712a53077
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535581"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581447"
 ---
 # <a name="modify-user-defined-functions"></a>Modificar funciones definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "52535581"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER para la función o para el esquema. Si la función especifica un tipo definido por el usuario, requiere el permiso EXECUTE para ese tipo.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  
   
@@ -74,7 +74,9 @@ ms.locfileid: "52535581"
 5.  En la ventana de consulta, realice los cambios necesarios en la instrucción ALTER FUNCTION.  
   
 6.  En el menú **Archivo** , haga clic en **Guardar**_nombre_de_función_.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-modify-a-user-defined-function"></a>Para modificar una función definida por el usuario  

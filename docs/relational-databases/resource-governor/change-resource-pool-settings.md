@@ -13,12 +13,12 @@ ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 1fcf2b3c6f6b516d34f2d1c8658acd61549650b6
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 2780556c86203cd89e6804cf9a108bdf37ecd019
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689868"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582426"
 ---
 # <a name="change-resource-pool-settings"></a>Cambiar la configuración del grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "55689868"
   
  Las sumas de los porcentajes mínimos de uso de la CPU y los porcentajes mínimos de uso de memoria de todos los grupos de recursos de servidor no deben superar el 100 por cien.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Para cambiar la configuración del grupo de recursos de servidor se requiere el permiso CONTROL SERVER.  
   
 ##  <a name="ChgRPProp"></a> Cambiar la configuración del grupo de recursos de servidor mediante SQL Server Management Studio  
@@ -51,7 +51,9 @@ ms.locfileid: "55689868"
 4.  Haga clic o doble clic en las celdas de la fila que va a cambiar y especifique los nuevos valores.  
   
 5.  Haga clic en **Aceptar**para guardar los cambios.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="ChgRPTSQL"></a> Cambiar la configuración del grupo de recursos de servidor mediante Transact-SQL  
  **Para cambiar la configuración del grupo de recursos de servidor utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

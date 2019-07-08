@@ -11,12 +11,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: dcc749166f7c86575a84f41e12b452275ff3649c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4127d0dce2f693a89bec5ef79e83884f1181d0d1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66402985"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586089"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>Inicio rápido: Copia de seguridad y restauración de SQL Server en el servicio Azure Blob Storage
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,9 @@ Para crear un contenedor, siga estos pasos:
 
 1. Abra Azure Portal. 
 1. Navegue a la cuenta de almacenamiento. 
+
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
    1. Seleccione la cuenta de almacenamiento y baje hasta **Blob Services** (Servicios de blob).
    1. Seleccione **Blobs** y después +**Contenedor** para agregar un nuevo contenedor. 
    1. Escriba el nombre del contenedor y tome nota del nombre de contenedor especificado. Esta información se usa en la dirección URL (ruta de acceso al archivo de copia de seguridad) en las instrucciones T-SQL más adelante en este inicio rápido. 

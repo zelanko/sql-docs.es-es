@@ -20,12 +20,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5a6f4b6283c6e1a29f273eae5c607478166535af
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 1197244abd63560bf6fa9d76401c0836b833c6a5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256030"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581423"
 ---
 # <a name="view-user-defined-functions"></a>Ver funciones definidas por el usuario
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "54256030"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  El uso de **sys.sql_expression_dependencies** para buscar todas las dependencias de una función necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. Las definiciones de objetos del sistema, como las que se devuelven en OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-show-a-user-defined-functions-properties"></a>Para mostrar las propiedades de una función definida por el usuario  
   
@@ -70,47 +70,49 @@ ms.locfileid: "54256030"
     -   Función de agregado  
   
 4.  Haga clic con el botón derecho en la función cuyas propiedades quiere ver y seleccione **Propiedades**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties appear in the **Function Properties -** _function_name_ dialog box.  
   
-     Las propiedades siguientes aparecen en el cuadro de diálogo **Propiedades de la función:** _nombre_función_.  
-  
-     **Base de datos**  
-     Nombre de la base de datos que contiene esta función.  
+     **Database**  
+     The name of the database containing this function.  
   
      **Server**  
-     Nombre de la instancia de servidor actual.  
+     The name of the current server instance.  
   
-     **Usuario**  
-     Nombre del usuario de esta conexión.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Fecha de creación**  
-     Muestra la fecha de creación de la función.  
+     **Created date**  
+     Displays the date the function was created.  
   
-     **Ejecutar como**  
-     Contexto de ejecución para la función.  
+     **Execute As**  
+     Execution context for the function.  
   
-     **Nombre**  
-     Nombre de la función actual.  
+     **Name**  
+     The name of the current function.  
   
-     **Esquema**  
-     Muestra el esquema al que pertenece la función.  
+     **Schema**  
+     Displays the schema that owns the function.  
   
-     **Objeto de sistema**  
-     Indica si la función es un objeto de sistema. Los valores son True y False.  
+     **System object**  
+     Indicates whether the function is a system object. Values are True and False.  
   
-     **Valores NULL ANSI**  
-     Indica si el objeto se ha creado con la opción Valores NULL ANSI.  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Cifrado**  
-     Indica si la función está cifrada. Los valores son True y False.  
+     **Encrypted**  
+     Indicates whether the function is encrypted. Values are True and False.  
   
-     **Tipo de función**  
-     Tipo de la función definida por el usuario.  
+     **Function Type**  
+     The type of user defined function.  
   
-     **Identificador entre comillas**  
-     Indica si el objeto se ha creado con la opción Identificador entre comillas.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Enlazada a un esquema**  
-     Indica si la función está enlazada a un esquema. Los valores son True y False. Para obtener más información sobre las funciones enlazadas a esquema, vea la sección SCHEMABINDING de [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the function is schema-bound. Values are True and False. For information about schema-bound functions, see the SCHEMABINDING section of [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

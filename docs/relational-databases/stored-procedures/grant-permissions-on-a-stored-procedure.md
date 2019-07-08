@@ -13,12 +13,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 09194b8d9e38fe7eaa42487c6e810749d19d056e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cac03be8a275f3918d509f028c56feaaa8b0518
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47617773"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580519"
 ---
 # <a name="grant-permissions-on-a-stored-procedure"></a>Conceder permisos para un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "47617773"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -46,10 +46,10 @@ ms.locfileid: "47617773"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  El otorgante del permiso (o la entidad de seguridad especificada con la opción AS) debe tener el permiso con GRANT OPTION, o un permiso superior que implique el permiso que se va a conceder. Requiere el permiso ALTER en el esquema al que pertenece el procedimiento o el permiso CONTROL en el procedimiento. Para obtener más información, vea [Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-grant-permissions-on-a-stored-procedure"></a>Para conceder permisos para un procedimiento almacenado  
   
@@ -68,7 +68,9 @@ ms.locfileid: "47617773"
 7.  Haga clic en **Examinar** para mostrar la lista de usuarios o de roles. Seleccione los usuarios o los roles a los que deben concederse los permisos.  
   
 8.  En la cuadrícula **Permisos explícitos** , seleccione los permisos que desea conceder al rol o al usuario especificados. Para obtener una descripción de los permisos, vea [Permisos &#40;motor de base de datos&#41;](../../relational-databases/security/permissions-database-engine.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Al seleccionar **Conceder** , se indica que se concederá el permiso especificado al receptor. Al seleccionar **Grant With** , se indica que el receptor también podrá conceder el permiso especificado a otras entidades de seguridad.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -88,7 +90,7 @@ GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [sys.fn_builtin_permissions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-builtin-permissions-transact-sql.md)   
  [Permisos de objeto GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-object-permissions-transact-sql.md)   
  [Crear un procedimiento almacenado](../../relational-databases/stored-procedures/create-a-stored-procedure.md)   

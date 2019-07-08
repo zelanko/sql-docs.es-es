@@ -12,12 +12,12 @@ ms.assetid: 16897cc5-db8f-43bb-a38e-6855c82647cf
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 4e0e8afe9c46d6d1f4c5382152de8a0f66ac6e9e
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 4dd095f8d4a9254b88680b13bffcf319960336f3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997527"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585613"
 ---
 # <a name="restore-a-database-master-key"></a>Restaurar una clave maestra de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ Necesita el permiso CONTROL en la base de datos.
 3. En la barra de Estándar, haga clic en **Nueva consulta**.  
   
 4. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql
     -- Restores the database master key of the AdventureWorks2012 database.  
     USE AdventureWorks2012;  
@@ -64,6 +66,6 @@ Necesita el permiso CONTROL en la base de datos.
     ```  
   
     > [!NOTE]  
-    > La ruta de acceso de archivo a la clave y la contraseña de la clave (si existe) serán distintas de las que se indica más arriba. Asegúrese de que ambas son específicas para la instalación del servidor y de la clave.  
+    > The file path to the key and the key's password (if it exists) will be different than what is indicated above. Please make sure that both are specific to your server and key set-up.  
   
  Para obtener más información, vea [RESTORE MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/restore-master-key-transact-sql.md)  

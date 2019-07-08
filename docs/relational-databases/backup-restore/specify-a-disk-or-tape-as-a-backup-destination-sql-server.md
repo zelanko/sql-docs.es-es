@@ -21,12 +21,12 @@ ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 94b361c5bcc12f2ceb532de0338cceeb6659fc52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d3673c4057b9fe6c22916ef158d309348cdf71
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62761235"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582776"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>Especificar un disco o una cinta como destino de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,8 +68,10 @@ ms.locfileid: "62761235"
 3.  Haga clic con el botón derecho en la base de datos, seleccione **Tareas**y haga clic en **Copia de seguridad**. Aparece el cuadro de diálogo **Copia de seguridad de base de datos** .  
   
 4.  En la sección **Destino** de la página **General** , haga clic en **Disco** o **Cinta**. Para seleccionar las rutas de acceso de hasta 64 unidades de disco o cinta que contienen un solo conjunto de medios, haga clic en **Agregar**.  
-  
-     Para eliminar un destino de copia de seguridad, selecciónelo y haga clic en **Quitar**. Para ver el contenido de un destino de copia de seguridad, selecciónelo y haga clic en **Contenido**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 4d7b86e88d576d44869dd3a54ddfd6af05770971
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 647630106046345dbe2b3008df020fa1d790d2aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369297"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582548"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>Ver y trabajar con la salida del Asistente para la optimización de motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "53369297"
 5.  Desactive **Mostrar objetos existentes** en la parte inferior de la página con pestañas **Recomendaciones** . La cuadrícula muestra solo los objetos de la base de datos a los que se hace referencia en la recomendación. Use la barra de desplazamiento inferior para ver la columna más a la derecha de la cuadrícula de recomendaciones y haga clic en un elemento de la columna **Definición** para ver o copiar el script [!INCLUDE[tsql](../../includes/tsql-md.md)] que crea ese objeto en la base de datos.  
   
 6.  Si desea guardar en un archivo de scripts todos los scripts [!INCLUDE[tsql](../../includes/tsql-md.md)] que crean o quitan objetos de base de datos de esta recomendación, haga clic en **Guardar recomendaciones** en el menú **Acciones** .  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>Para ver resúmenes e informes de optimización con la GUI del Asistente para la optimización de motor de base de datos  
   
 1.  Optimice una base de datos con la GUI del Asistente para la optimización de motor de base de datos o mediante la utilidad de línea de comandos **dta** . Para más información, consulte [Iniciar y utilizar el Asistente para la optimización de motor de base de datos](../../relational-databases/performance/start-and-use-the-database-engine-tuning-advisor.md). Si desea usar una sesión de optimización existente, omita este paso y vaya al paso 2.  

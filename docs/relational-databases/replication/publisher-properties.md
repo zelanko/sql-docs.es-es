@@ -16,12 +16,12 @@ ms.assetid: 98df1aea-0406-40bf-a917-4bd80464125c
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1ba43fc3f35c1fd3cacd3bdda6d4192cf7dc75af
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: def9df7e03f596cf519eebebd7b2ca83a912fe98
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129845"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580022"
 ---
 # <a name="sql-server-replication-publisher-properties-dialog-box"></a>Cuadro de diálogo Propiedades del publicador de Replicación de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ En este tema se describen las distintas opciones del cuadro de diálogo Propieda
   
 1.  Deshabilite la publicación en el publicador. Para obtener más información, vea [Deshabilitar la publicación y distribución](../../relational-databases/replication/disable-publishing-and-distribution.md).    
 2.  Vuelva a configurar la publicación y la distribución. Para obtener más información, consulte [Configure Publishing and Distribution](../../relational-databases/replication/configure-publishing-and-distribution.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="distributor"></a>Distribuidor 
 El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modificar las propiedades asociadas a la relación entre el publicador y el distribuidor.  
   
@@ -70,7 +72,7 @@ El cuadro de diálogo **Propiedades del publicador** le permitirá ver y modific
   
 ### <a name="options"></a>Opciones  
  **Suscriptores**  
- La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades (**...**) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
+ La cuadrícula de propiedades de **Suscriptores** muestra los suscriptores que están habilitados para recibir datos de las publicaciones de este publicador. Haga clic en el botón de propiedades ( **...** ) que se encuentra junto a un suscriptor para ver y establecer propiedades adicionales.  
   
  **Agregar**  
  Haga clic en **Agregar** para agregar un suscriptor, y luego haga clic en **Agregar suscriptor de SQL Server** o en **Agregar suscriptor que no sea de SQL Server**.  

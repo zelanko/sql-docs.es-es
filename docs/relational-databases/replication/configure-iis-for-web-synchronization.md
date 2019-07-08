@@ -15,12 +15,12 @@ ms.assetid: d651186e-c9ca-4864-a444-2cd6943b8e35
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7dae619283acc6259a488ae868c853c193a2f2f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78fc4eff34dd98552924435c3132c1fafb96c746
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668921"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585798"
 ---
 # <a name="configure-iis-for-web-synchronization"></a>Configurar IIS para la sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,9 @@ ms.locfileid: "62668921"
 4.  Seleccione los permisos adecuados para la Escucha de replicación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
 5.  Ejecute la sincronización web en modo de diagnóstico para probar la conexión con el equipo en el que se ejecuta IIS y para asegurarse de que el certificado SSL está instalado correctamente.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="configuring-secure-sockets-layer"></a>Configurar la Capa de sockets seguros (SSL)  
  Para configurar SSL, especifique un certificado para que lo utilice el equipo en el que se ejecuta IIS. La sincronización web para la replicación de mezcla es compatible con el uso de certificados de servidor, pero no de certificados de cliente. Para configurar IIS para implementación, primero debe obtener un certificado por parte de una entidad de certificación (CA). Una entidad de certificación es una entidad responsable de establecer y dar fe de la autenticidad de las claves de cifrado públicas de usuarios, equipos y otras entidades de certificación. Para obtener más información acerca de los certificados, vea la documentación de IIS. Cuando el certificado esté instalado, debe asociarlo al sitio web que utiliza la sincronización web.  
   

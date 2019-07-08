@@ -14,12 +14,12 @@ ms.assetid: 8f74dd31-c9ca-4537-8760-0c7648f0787d
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 7d04286e2b8703e7d06a9913b421f69a94234b25
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: b0b31cb616e5e7d8c2b5c83386f247729a115cbe
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591059"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583551"
 ---
 # <a name="revert-a-database-to-a-database-snapshot"></a>Revertir una base de datos a una instantánea de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "53591059"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Cualquier usuario que tenga permisos de RESTORE DATABASE en la base de datos de origen puede revertirla a su estado cuando se creó una instantánea de base de datos.  
   
 ##  <a name="TsqlProcedure"></a> Revertir una base de datos a una instantánea de base de datos (utilizando Transact-SQL)  
@@ -101,7 +101,7 @@ ms.locfileid: "53591059"
   
      Para realizar una operación de reversión es necesario disponer de permisos RESTORE DATABASE en la base de datos de origen. Para revertir la base de datos, use la siguiente instrucción Transact-SQL:  
   
-     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=**_nombre_base_de_datos_de_instantánea_  
+     RESTORE DATABASE *nombre_base_de_datos* FROM DATABASE_SNAPSHOT **=** _nombre_base_de_datos_de_instantánea_  
   
      Donde *nombre_base_de_datos* es la base de datos de origen y *nombre_base_de_datos_de_instantánea* equivale al nombre de la instantánea a la que quiere revertir la base de datos. Tenga en cuenta que en esta instrucción debe especificar un nombre de instantánea y no un dispositivo de copia de seguridad.  
   
@@ -118,13 +118,15 @@ ms.locfileid: "53591059"
 5.  Inicie la base de datos.  
   
 6.  De manera opcional, realice una copia de seguridad de la base de datos revertida, especialmente si utiliza el modelo de recuperación completa (o por medio de registros de operaciones masivas). Para realizar una copia de seguridad de una base de datos, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
  Esta sección contiene los siguientes ejemplos de reversión de una base de datos a una instantánea de base de datos:  
   
 -   A. [Revertir una instantánea en la base de datos AdventureWorks](#Reverting_AW)  
   
--   b. [Revertir una instantánea en la base de datos Sales](#Reverting_Sales)  
+-   B. [Revertir una instantánea en la base de datos Sales](#Reverting_Sales)  
   
 ####  <a name="Reverting_AW"></a> A. Revertir una instantánea en la base de datos AdventureWorks  
  En este ejemplo se considera que solo existe una instantánea en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Para ver el ejemplo que crea la instantánea a la que se revierte la base de datos, vea [Crear una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/create-a-database-snapshot-transact-sql.md).  

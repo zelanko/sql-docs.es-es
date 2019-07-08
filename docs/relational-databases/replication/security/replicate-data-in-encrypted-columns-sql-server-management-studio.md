@@ -15,12 +15,12 @@ ms.assetid: d1f8f586-e5a3-4a71-9391-11198d42bfa3
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 7a692cb2d5862699abb68d5a0814b948a25158fa
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02aefc777283f98964c54e6845452bdbc739a489
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129555"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581248"
 ---
 # <a name="replicate-data-in-encrypted-columns-sql-server-management-studio"></a>Replicar datos en columnas cifradas (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +41,9 @@ ms.locfileid: "54129555"
 6.  Vuelva a crear la clave simétrica en el suscriptor con los mismos valores para ALGORITHM, KEY_SOURCE e IDENTITY_VALUE que en el paso 1.  
   
 7.  Obtenga acceso a los datos de columna cifrados.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  Debe usar una clave simétrica para cifrar los datos de columna. La propia clave simétrica puede protegerse mediante distintos métodos en el publicador y el suscriptor.  
   
@@ -58,11 +60,11 @@ ms.locfileid: "54129555"
   
 4.  Ejecute [CLOSE SYMMETRIC KEY](../../../t-sql/statements/close-symmetric-key-transact-sql.md) para cerrar la clave.  
   
-5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, consulte [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md).  
+5.  Publique la tabla que contiene la columna cifrada. Para obtener más información, vea [Crear una suscripción](../../../relational-databases/replication/publish/create-a-publication.md).  
   
 6.  Suscríbase a la publicación. Para obtener más información, vea [Crear una suscripción de extracción](../../../relational-databases/replication/create-a-pull-subscription.md) o [Crear una suscripción de inserción](../../../relational-databases/replication/create-a-push-subscription.md).  
   
-7.  Inicialice la suscripción. Para obtener más información, consulte [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
+7.  Inicialice la suscripción. Para más información, consulte [Crear y aplicar la instantánea inicial](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 8.  En el suscriptor, ejecute [CREATE SYMMETRIC KEY](../../../t-sql/statements/create-symmetric-key-transact-sql.md) con los mismos valores para ALGORITHM, KEY_SOURCE e IDENTITY_VALUE que en el paso 1. Puede especificar un valor distinto para ENCRYPTION BY.  
   

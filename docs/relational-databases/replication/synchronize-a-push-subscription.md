@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0ae64c33cc55d45ff28257b9d0b6b6c4c972e370
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 7603fca90995053da7aef12283e5666efaa85d85
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205684"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586406"
 ---
 # <a name="synchronize-a-push-subscription"></a>Sincronizar una suscripción de inserción
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53205684"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  El Agente de distribución (para las instantáneas y la replicación transaccional) o el Agente de mezcla (para la replicación de mezcla) sincronizan las suscripciones. Los agentes pueden ejecutarse continuamente, a petición o según una programación. Para más información sobre la configuración de las programaciones de sincronización, vea [Especificar programaciones de sincronización](../../relational-databases/replication/specify-synchronization-schedules.md).  
   
  Sincronice una suscripción a petición en las carpetas **Publicaciones locales** y **Suscripciones locales** en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] y the **Todas las suscripciones** del Monitor de replicación. Las suscripciones a publicaciones de Oracle no se pueden sincronizar a petición desde el suscriptor. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
@@ -52,10 +52,12 @@ ms.locfileid: "53205684"
   
 4.  Haga clic con el botón derecho en la suscripción que desea sincronizar y, a continuación, haga clic en **Ver estado de sincronización**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
   
 6.  Haga clic en **Cerrar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-synchronize-a-push-subscription-on-demand-in-management-studio-at-the-subscriber"></a>Para sincronizar una suscripción de inserción a petición en Management Studio (en el suscriptor)  
   
 1.  Conéctese al suscriptor en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]y expanda el nodo de servidor.  
@@ -66,7 +68,7 @@ ms.locfileid: "53205684"
   
 4.  Se muestra un mensaje acerca del establecimiento de una conexión con el distribuidor. Haga clic en **Aceptar**.  
   
-5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>**, haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
+5.  En el cuadro de diálogo **Ver estado de sincronización: \<suscriptor>:\<baseDeDatosDeSuscripción>** , haga clic en **Iniciar**. Cuando se completa la sincronización, se muestra el mensaje **Sincronización completada** .  
   
 6.  Haga clic en **Cerrar**.  
   

@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 5f05022b-d557-43e0-b50a-f5e2a1846b83
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 045689c0aa7f5b4bbc8a365ad2d15d77f3b67ce4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5b2e193f4ebbcca98fd27657618ef2e1a7f7ef92
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65577758"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500198"
 ---
 # <a name="enable-remote-errors-reporting-services"></a>Habilitar los errores remotos (Reporting Services)
   Es posible establecer propiedades de servidor en un servidor de informes de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] para devolver información adicional sobre condiciones de error que se produzcan en servidores remotos. Si un mensaje de error incluye el texto "Para obtener más información acerca de este error, navegue hasta el servidor de informes en el equipo del servidor local o habilite los errores remotos", puede establecer la propiedad **EnableRemoteErrors** para obtener información adicional que pueda ayudarle a solucionar el problema. Para obtener más información, vea [Propiedades del sistema del servidor de informes](../../reporting-services/report-server-web-service/net-framework/reporting-services-properties-report-server-system-properties.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
@@ -68,7 +68,7 @@ ms.locfileid: "65577758"
   
 3.  Haga clic en **Avanzadas** para abrir la página de propiedades. Para más información, vea [Propiedades del servidor &#40;página Avanzadas&#41;](../../reporting-services/tools/server-properties-advanced-page-reporting-services.md) en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-4.  En **EnableRemoteErrors**, seleccione **True**.  
+4.  En el **seguridad** sección **EnableRemoteErrors**, seleccione **True**.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

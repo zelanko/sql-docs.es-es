@@ -13,12 +13,12 @@ ms.assetid: 0b3214bd-d0ab-45ab-9281-3d95507abe54
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 29db8b510faecc2b9006cba0bfec995ec78d8beb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aa2b796c505ed6f623681791d316d21bcccc3af
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63010180"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584941"
 ---
 # <a name="evaluate-a-policy-based-management-policy-from-that-policy"></a>Evaluar una directiva de administración basada en directivas desde dicha directiva
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,5 +58,6 @@ ms.locfileid: "63010180"
 6.  En el cuadro de diálogo **Evaluar resultados**  se muestran los resultados de la evaluación de la directiva. En los destinos que no cumplen la directiva y que tienen propiedades que pueden estar reconfiguradas por la administración basada en directivas, puede exigir el cumplimiento de la directiva haciendo clic en **Aplicar**. Para obtener más información acerca de las opciones disponibles en el cuadro de diálogo **Evaluar directivas** , vea [Evaluate Policies Dialog Box, Policy Selection Page](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-policy-selection-page.md) y [Evaluate Policies Dialog Box, Evaluation Results Page](../../relational-databases/policy-based-management/evaluate-policies-dialog-box-evaluation-results-page.md).  
   
 7.  Cuando termine, haga clic en **Cerrar**.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

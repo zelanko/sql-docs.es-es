@@ -11,12 +11,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b529ce2337fa92a5c5ae6fe3ed2810a8b6c7ec11
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: bd863e5869e820d07e67baf6094fe00a5b9b4a56
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414150"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580790"
 ---
 # <a name="modify-a-partition-function"></a>Modificar una función de partición
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "53414150"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se pueden utilizar cualquiera de los siguientes permisos para ejecutar ALTER PARTITION FUNCTION:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -71,7 +71,7 @@ ms.locfileid: "53414150"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se ha creado la función de partición.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para modificar una función de partición:**  
   
  Esta acción específica no se puede realizar mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para modificar una función de partición, primero debe eliminar la función y después crear una nueva con las propiedades deseadas mediante el Asistente para la creación de particiones. Para obtener más información, vea  
@@ -85,7 +85,9 @@ ms.locfileid: "53414150"
 3.  Haga clic con el botón derecho en la función de partición que quiera eliminar y seleccione **Eliminar**.  
   
 4.  En el cuadro de diálogo **Eliminar objeto** , asegúrese de que está seleccionada la función de partición correcta y después haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-split-a-single-partition-into-two-partitions"></a>Para dividir una única partición en dos particiones  

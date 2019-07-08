@@ -12,19 +12,19 @@ helpviewer_keywords:
 ms.assetid: 6b46db51-7c30-467d-a251-50f50647fe21
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: edb599f3ae735ddc07755f73499a3e71d0c20746
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18ac0bfb10914b8e0afb1aca363e53f9dff3af91
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270241"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500188"
 ---
 # <a name="role-definitions---predefined-roles"></a>Definiciones de roles: roles predefinidos
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] se instala junto con roles predefinidos que puede usar para conceder acceso a operaciones del servidor de informes. Cada rol predefinido describe una recopilación de tareas relacionadas. Puede asignar grupos y cuentas de usuario a los roles predefinidos para proporcionar acceso inmediato a las operaciones del servidor de informes.  
   
 ## <a name="how-to-use-predefined-roles"></a>Uso de los roles predefinidos  
   
-1. Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos.  
+1. Revise los roles predefinidos para determinar si puede utilizarlos tal y como están. Si necesita ajustar las tareas o definir roles adicionales, conviene que lo haga antes de empezar a asignar usuarios a roles específicos. Para crear o modificar roles personalizados utilice SQL Server Management Studio. Para más información, consulte [Crear, eliminar o modificar un rol &#40;Management Studio&#41;](../../reporting-services/security/role-definitions-create-delete-or-modify.md).
   
 2. Identifique qué usuarios y grupos requieren acceso al servidor de informes y en qué nivel. A la mayoría de los usuarios se les debería asignar el rol **Explorador** o el rol **Generador de informes** . A un pequeño número de usuarios se les debería asignar el rol **Publicador** . A el rol **Administrador de contenido**conviene asignar muy pocos usuarios.  
 

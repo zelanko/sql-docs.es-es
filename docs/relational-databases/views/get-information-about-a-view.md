@@ -23,12 +23,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d22570e6be56297a3428b5c9a89c04829379aa39
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: e2f413d9f82d128dbff31a8aea02bc2e31022234
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505733"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585003"
 ---
 # <a name="get-information-about-a-view"></a>Obtener información acerca de una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,51 +53,53 @@ ms.locfileid: "52505733"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La utilización de `sp_helptext` para devolver la definición de una vista requiere la pertenencia al rol **público** . La utilización de `sys.sql_expression_dependencies` para buscar todas las dependencias de una vista requiere el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en `sys.sql_expression_dependencies` para la base de datos. Las definiciones de objeto del sistema, como las que se devuelven en SELECT OBJECT_DEFINITION, son visibles de forma pública.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="get-view-properties-by-using-object-explorer"></a>Obtener las propiedades de la vista mediante el Explorador de objetos  
   
 1.  En el **Explorador de objetos**, haga clic en el signo más situado junto a la base de datos que contiene la vista cuyas propiedades desea ver y haga clic en el signo más para expandir la carpeta **Vistas** .  
   
 2.  Haga clic con el botón derecho en la vista cuyas propiedades quiere ver y seleccione **Propiedades**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following properties show in the **View Properties** dialog box.  
   
-     Las propiedades siguientes se muestran en el cuadro de diálogo **Propiedades de la vista** .  
-  
-     **Base de datos**  
-     Nombre de la base de datos que contiene esta vista.  
+     **Database**  
+     The name of the database containing this view.  
   
      **Server**  
-     Nombre de la instancia de servidor actual.  
+     The name of the current server instance.  
   
-     **Usuario**  
-     Nombre del usuario de esta conexión.  
+     **User**  
+     The name of the user of this connection.  
   
-     **Fecha de creación**  
-     Muestra la fecha en la que se creó la vista.  
+     **Created date**  
+     Displays the date the view was created.  
   
-     **Nombre**  
-     Nombre de la vista actual.  
+     **Name**  
+     The name of the current view.  
   
-     **Esquema**  
-     Muestra el esquema al que pertenece la vista.  
+     **Schema**  
+     Displays the schema that owns the view.  
   
-     **Objeto de sistema**  
-     Indica si la vista es un objeto de sistema. Los valores son True y False.  
+     **System object**  
+     Indicates whether the view is a system object. Values are True and False.  
   
-     **Valores NULL ANSI**  
-     Indica si el objeto se ha creado con la opción Valores NULL ANSI.  
+     **ANSI NULLs**  
+     Indicates if the object was created with the ANSI NULLs option.  
   
-     **Cifrado**  
-     Indica si la vista está cifrada. Los valores son True y False.  
+     **Encrypted**  
+     Indicates whether the view is encrypted. Values are True and False.  
   
-     **Identificador entre comillas**  
-     Indica si el objeto se ha creado con la opción Identificador entre comillas.  
+     **Quoted identifier**  
+     Indicates if the object was created with the quoted identifier option.  
   
-     **Enlazada a un esquema**  
-     Indica si la vista está enlazada a un esquema. Los valores son True y False. Para obtener más información sobre las vistas enlazadas a esquemas, vea la sección SCHEMABINDING de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
+     **Schema bound**  
+     Indicates whether the view is schema-bound. Values are True and False. For information about schema-bound views, see the SCHEMABINDING portion of [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
 #### <a name="getting-view-properties-by-using-the-view-designer-tool"></a>Obtener propiedades de la vista con la herramienta Diseñador de vistas  
   

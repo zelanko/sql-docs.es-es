@@ -20,12 +20,12 @@ ms.assetid: 24b3311d-5ce0-4581-9a05-5c7c726c7b21
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a97bee55c0f23a82470091c1c9ea7b44463221e0
-ms.sourcegitcommit: cb9c54054449c586360c9cb634e33f505939a1c9
+ms.openlocfilehash: 81ab0d79b985ee6814de82d1c9c18499ed99761c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/15/2019
-ms.locfileid: "54317815"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580387"
 ---
 # <a name="restore-a-database-backup-using-ssms"></a>Restore a Database Backup Using SSMS
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,9 +66,9 @@ Para obtener más información sobre la restauración de SQL Server en el servic
     
     -   **Dispositivo**    
     
-         Haga clic en el botón Examinar (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . 
+         Haga clic en el botón Examinar ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . 
          
-        -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**   
+        -   Cuadro de diálogo**Seleccionar dispositivos de copia de seguridad**  
         
             **Tipo de medio de copia de seguridad**  
          Seleccione un tipo de medio en la lista desplegable **Tipo de medio de copia de seguridad** .  Nota: La opción **Cinta** solo aparece si se ha montado una unidad de cinta en el sistema; la opción **Dispositivo de copia de seguridad** aparece únicamente si existe al menos un dispositivo de copia de seguridad.
@@ -108,7 +108,9 @@ Para obtener más información sobre la restauración de SQL Server en el servic
 7.  Si lo desea, haga clic en **Archivos** en el recuadro **Seleccionar una página** para obtener acceso al cuadro de diálogo **Archivos** . A partir de aquí, puede restaurar la base de datos a una nueva ubicación si especifica un nuevo destino de restauración para cada archivo de la cuadrícula **Restaurar los archivos de base de datos como** . Para obtener más información sobre esta cuadrícula, vea [Restaurar base de datos &#40;página Archivos&#41;](../../relational-databases/backup-restore/restore-database-files-page.md).    
     
 8. Para ver o seleccionar las opciones avanzadas, en la página **Opciones** , en el panel **Opciones de restauración** , puede seleccionar cualquiera de las opciones siguientes si son apropiadas para su situación:    
-    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     1.  Opciones**WITH** (no necesarias):    
     
         -   **Sobrescribir la base de datos existente (WITH REPLACE)**    
@@ -139,10 +141,10 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  Haga clic en **Opciones** en el panel **Seleccionar una página** .
-7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)**.
+7.  En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)** .
 
     > [!NOTE]
     > Si no activa esta opción, puede aparecer el mensaje de error siguiente: "System.Data.SqlClient.SqlError: El conjunto de copia de seguridad contiene una copia de una base de datos distinta de la existente "`Sales`". (Microsoft.SqlServer.SmoExtended)"
@@ -167,7 +169,7 @@ En el ejemplo siguiente se restaura una copia de seguridad de disco anterior de 
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad. Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  En la sección **Destino** , el cuadro **Base de datos** se rellena automáticamente con el nombre de la base de datos que se va a restaurar. Para cambiar el nombre de la base de datos, especifique el nuevo nombre en el cuadro **Base de datos** .
 7.  Haga clic en **Opciones** en el panel **Seleccionar una página** .
@@ -189,7 +191,7 @@ En el ejemplo siguiente se restaura una base de datos al estado en que se encont
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y expándala.  
 2.  Haga clic con el botón derecho en **Bases de datos** y seleccione **Restaurar base de datos...**  
 3.  En la página **General** , seleccione **Dispositivo** en la sección **Origen** .
-4.  Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
+4.  Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . Haga clic en **Agregar** y vaya a la copia de seguridad completa y a todas las copias de seguridad del registro de transacciones pertinentes.  Haga clic en **Aceptar** después de seleccionar los archivos de la copia de seguridad de disco.
 5.  Haga clic en **Aceptar** para volver a la página **General** .
 6.  En la sección **Destino** , haga clic en **Escala de tiempo** para tener acceso al cuadro de diálogo **Escala de tiempo de la copia de seguridad** para seleccionar manualmente un momento a fin de que se detenga la acción de recuperación.
 7.  Seleccione **Fecha y hora específicas**.  
@@ -220,7 +222,7 @@ Se ha creado una directiva de acceso almacenada con derechos de lectura, escritu
 12. Haga clic en **Aceptar**.
 13. Haga clic en **Aceptar** para volver a la página **General** .
 14. Haga clic en **Opciones** en el panel **Seleccionar una página** .
-15. En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)**.
+15. En la sección **Opciones de restauración** , active **Sobrescribir la base de datos existente (WITH REPLACE)** .
 16. En la sección **Copia del final del registro** , desactive **Realizar copia del final del registro de la cola antes de la restauración**.
 17. En la sección **Conexiones de servidor** , active **Cerrar las conexiones existentes con la base de datos de destino**.
 18. Haga clic en **Aceptar**.
@@ -247,7 +249,7 @@ La base de datos `Sales` se restaurará en el contenedor de almacenamiento de Mi
 8.  Haga clic en **Aceptar** para volver a la página **General** .
 9.  Haga clic en **Archivos** en el panel **Seleccionar una página** .
 10. Active la casilla **Reubicar todos los archivos en la carpeta**.
-11. Especifique el contenedor, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, en los cuadros de texto para **Carpeta de archivos de datos:** y **Carpeta de archivos de registro:**.
+11. Especifique el contenedor, `https://mystorageaccount.blob.core.windows.net/myfirstcontainer`, en los cuadros de texto para **Carpeta de archivos de datos:** y **Carpeta de archivos de registro:** .
 12. Haga clic en **Aceptar**.
 
 ## <a name="see-also"></a>Consulte también    

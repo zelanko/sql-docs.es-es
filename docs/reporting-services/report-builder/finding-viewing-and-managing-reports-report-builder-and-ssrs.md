@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 5599300d-6bcd-4704-aba5-fa98e01c78a9
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 7a93f71f886484d38996a867bebbc6ef32c33c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2e379d463734b751770a8b9a844ea92b1f328b6
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175629"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492865"
 ---
 # <a name="finding-viewing-and-managing-reports-report-builder-and-ssrs-"></a>Buscar, ver y administrar informes (Generador de informes y SSRS)
   En el Generador de informes, puede examinar las carpetas en un servidor de informes o un sitio de SharePoint para buscar informes, orígenes de datos compartidos, modelos y otros elementos de informe relacionados, y examinar su equipo para buscar informes locales. Para que buscar informes sea más fácil, el Generador de informes cuenta con una lista de servidores y sitios utilizados recientemente, y proporciona acceso directo a las carpetas Escritorio, Mis documentos y Mi PC del sistema de archivos del equipo.  
@@ -75,7 +75,7 @@ Normalmente, el portal web contiene carpetas, informes y orígenes de datos, ade
   
 Después de ejecutar un informe, puede exportarlo a otro formato, como [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel o PDF. También puede exportar el informe mediante una extensión de representación de datos, como CSV (valores separados por comas), y utilizar después el archivo de datos CSV como entrada para otra aplicación. Para más información sobre la exportación de informes, vea [Exportación de informes &#40;Generador de informes y SSRS&#41;](../../reporting-services/report-builder/export-reports-report-builder-and-ssrs.md).
   
- La forma más sencilla de seleccionar y ejecutar un informe consiste en abrir el portal web y buscar el informe que se desea ver, o desplazarse hasta el mismo. Para obtener instrucciones paso a paso sobre cómo abrir informes, vea [Abrir y cerrar un informe](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
+ La forma más sencilla de seleccionar y ejecutar un informe consiste en abrir el portal web y buscar el informe que se desea ver, o desplazarse hasta el mismo.  
   
  Después de ejecutar un informe, puede actualizarlo para ver los nuevos datos.  
   

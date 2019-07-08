@@ -19,12 +19,12 @@ ms.assetid: 27d72ea4-bcb6-48f2-b4aa-eb1410da7efc
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 25808ffd9a65a62d1f2849f54ca5fcb3ed5015b6
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e11c0b6a3f7ef8ebeeb0c8059e26e37494ab345e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133585"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585505"
 ---
 # <a name="view-and-modify-publication-properties"></a>Ver y modificar propiedades de publicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,8 @@ ms.locfileid: "54133585"
   
 -   Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para más información, vea [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md) (Agregar y quitar artículos de publicaciones existentes).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Vea y modifique propiedades de publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, que está disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
+ Vea y modifique propiedades de publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , que está disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../../../relational-databases/replication/monitor/start-the-replication-monitor.md).  
   
  En el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** se incluyen las páginas siguientes:  
   
@@ -90,7 +90,9 @@ ms.locfileid: "54133585"
 3.  Haga clic con el botón secundario en una publicación y, a continuación, haga clic en **Propiedades**.  
   
 4.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-and-modify-publication-properties-in-replication-monitor"></a>Para ver y modificar propiedades de una publicación en el Monitor de replicación  
   
 1.  Expanda un grupo de publicador en el panel izquierdo del Monitor de replicación y, a continuación, expanda un publicador.  
@@ -111,7 +113,7 @@ ms.locfileid: "54133585"
 1.  Ejecute [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md), especificando la propiedad de publicación que quiere cambiar en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio va a requerir que se genere una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot**y si el cambio va a requerir que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio va a requerir que se genere una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot** y si el cambio va a requerir que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Para ver las propiedades de una publicación de combinación  
   
@@ -122,7 +124,7 @@ ms.locfileid: "54133585"
 1.  Ejecute [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md), especificando la propiedad de publicación que se está cambiando en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio va a requerir que se genere una nueva instantánea, también se debe especificar el valor **1** para **@force_invalidate_snapshot**, y si el cambio va a requerir que se reinicialicen suscriptores, se debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, requieren una nueva instantánea o reinicialización, vea [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio va a requerir que se genere una nueva instantánea, también se debe especificar el valor **1** para **@force_invalidate_snapshot** , y si el cambio va a requerir que se reinicialicen suscriptores, se debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, requieren una nueva instantánea o reinicialización, vea [Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Para ver las propiedades de una instantánea  
   
@@ -160,7 +162,7 @@ ms.locfileid: "54133585"
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve **false**, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una o más de las propiedades que se pueden establecer. Use el operador lógico AND (**&** en Microsoft Visual C# y **And** en Microsoft Visual Basic) para determinar si un valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes> determinado está establecido para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . (Opcional) Use el operador lógico OR inclusivo (**|** en Visual C# y **Or** en Visual Basic) y el operador lógico OR exclusivo (**^** en Visual C# y **Xor** en Visual Basic) para cambiar los valores <xref:Microsoft.SqlServer.Replication.PublicationAttributes> para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
+4.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una o más de las propiedades que se pueden establecer. Use el operador lógico AND ( **&** en Microsoft Visual C# y **And** en Microsoft Visual Basic) para determinar si un valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes> determinado está establecido para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . (Opcional) Use el operador lógico OR inclusivo ( **|** en Visual C# y **Or** en Visual Basic) y el operador lógico OR exclusivo ( **^** en Visual C# y **Xor** en Visual Basic) para cambiar los valores <xref:Microsoft.SqlServer.Replication.PublicationAttributes> para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
 5.  (Opcional) Si especificara un valor de **true** para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor **false** para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   
@@ -172,7 +174,7 @@ ms.locfileid: "54133585"
   
 3.  Llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> para obtener las propiedades del objeto. Si este método devuelve **false**, significa que las propiedades de publicación del paso 2 se definieron incorrectamente, o bien que la publicación no existe.  
   
-4.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una o más de las propiedades que se pueden establecer. Use el operador lógico AND (**&** en Visual C# y **And** en Visual Basic) para determinar si un valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes> determinado está establecido para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . (Opcional) Use el operador lógico OR inclusivo (**|** en Visual C# y **Or** en Visual Basic) y el operador lógico OR exclusivo (**^** en Visual C# y **Xor** en Visual Basic) para cambiar los valores <xref:Microsoft.SqlServer.Replication.PublicationAttributes> para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
+4.  (Opcional) Para cambiar las propiedades, establezca un nuevo valor para una o más de las propiedades que se pueden establecer. Use el operador lógico AND ( **&** en Visual C# y **And** en Visual Basic) para determinar si un valor <xref:Microsoft.SqlServer.Replication.PublicationAttributes> determinado está establecido para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> . (Opcional) Use el operador lógico OR inclusivo ( **|** en Visual C# y **Or** en Visual Basic) y el operador lógico OR exclusivo ( **^** en Visual C# y **Xor** en Visual Basic) para cambiar los valores <xref:Microsoft.SqlServer.Replication.PublicationAttributes> para la propiedad <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> .  
   
 5.  (Opcional) Si especificara un valor de **true** para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A>, llame al método <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> para confirmar los cambios en el servidor. Si especificó el valor **false** para <xref:Microsoft.SqlServer.Replication.ReplicationObject.CachePropertyChanges%2A> (predeterminado), los cambios se envían inmediatamente al servidor.  
   

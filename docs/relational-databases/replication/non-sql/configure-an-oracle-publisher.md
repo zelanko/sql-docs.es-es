@@ -13,12 +13,12 @@ ms.assetid: 240c8416-c8e5-4346-8433-07e0f779099f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2b91e4f912de3eff2d64e7cbbf35aad56cbccbcd
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 19043cd42f89c16dbbab88264bf5710c50d14067
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "58072229"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586444"
 ---
 # <a name="configure-an-oracle-publisher"></a>Configurar un publicador de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ ms.locfileid: "58072229"
 3.  Instale el software de cliente de Oracle y el proveedor OLE DB en el distribuidor de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, reinicie la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Si el distribuidor se ejecuta en una plataforma de 64 bits, debe usar la versión de 64 bits del proveedor OLE DB de Oracle.  
   
 4.  Configure la base de datos de Oracle como un publicador en el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] .  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] admite los siguientes escenarios heterogéneos para la replicación de instantáneas y transaccional:  
   
@@ -57,7 +59,7 @@ ms.locfileid: "58072229"
 > [!NOTE]  
 >  Al quitar el sinónimo público **MSSQLSERVERDISTRIBUTOR** y el usuario de replicación de Oracle configurado con la opción **CASCADE** se quitan todos los objetos de replicación del publicador de Oracle.  
   
- Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidad>*:\\\Archivos de programa\Microsoft SQL Server\\*\<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
+ Se proporciona un script de ejemplo para ayudar a la configuración del esquema de usuario de replicación de Oracle. El script está disponible en el directorio siguiente después de la instalación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]: *\<unidad>* :\\\Archivos de programa\Microsoft SQL Server\\ *\<nombreDeInstancia>* \MSSQL\Install\oracleadmin.sql. También está incluido en el tema [Script to Grant Oracle Permissions](../../../relational-databases/replication/non-sql/script-to-grant-oracle-permissions.md).  
   
  Conéctese a la base de datos de Oracle utilizando una cuenta con privilegios DBA y ejecute el script. Este script solicita el nombre usuario y la contraseña del esquema de usuario administrativo de replicación y también el espacio de tablas predeterminado donde crear los objetos (el espacio de tablas debe existir en la base de datos de Oracle). Para información sobre cómo especificar otros espacios de tablas para objetos, vea [Administrar espacios de tabla de Oracle](../../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md). Elija un nombre de usuario y una contraseña segura, pero anótelos porque deberá proporcionar esta información más tarde al configurar la base de datos de Oracle como un publicador. Se recomienda utilizar el esquema solo para los objetos requeridos por la replicación; no cree tablas para publicarlas en este esquema.  
   

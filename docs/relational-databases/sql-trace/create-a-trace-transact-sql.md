@@ -14,12 +14,12 @@ ms.assetid: 79dd4254-e3c6-467a-bb6f-f99e51757e99
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 37c5c0d4793087e4cbdfd5f0a6e38197582068ef
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 1f95a488ea33f344842da73da7b978c4e68e3ae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128465"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585711"
 ---
 # <a name="create-a-trace-transact-sql"></a>Crear un seguimiento (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +32,13 @@ ms.locfileid: "54128465"
 2.  Ejecute **sp_trace_setevent** con los parámetros necesarios para seleccionar los eventos y las columnas de las que va a realizar un seguimiento.  
   
 3.  Opcionalmente, ejecute **sp_trace_setfilter** para establecer un filtro o una combinación de filtros.  
-  
-     **sp_trace_setevent** y **sp_trace_setfilter** solo se pueden ejecutar en seguimientos existentes que estén detenidos.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     **sp_trace_setevent** and **sp_trace_setfilter** can be executed only on existing traces that are stopped.  
   
     > [!IMPORTANT]  
-    >  A diferencia de los procedimientos almacenados normales, los parámetros de todos los procedimientos almacenados de SQL Server Profiler (<strong>sp_trace_*xx*</strong>) tienen establecimiento inflexible de tipos y no admiten la conversión de tipos de datos automática. Si no se llama a estos parámetros con los tipos de datos de parámetros de entrada correctos, según se especifica en la descripción del argumento, el procedimiento almacenado devuelve un error.  
+    >  Unlike regular stored procedures, parameters of all SQL Server Profiler stored procedures (<strong>sp_trace_*xx*</strong>) are strictly typed and do not support automatic data type conversion. If these parameters are not called with the correct input parameter data types, as specified in the argument description, the stored procedure returns an error.  
   
 ## <a name="example"></a>Ejemplo  
  En el ejemplo de código siguiente se muestra la forma de crear un seguimiento con [!INCLUDE[tsql](../../includes/tsql-md.md)]. Se divide en tres secciones: crear el seguimiento, rellenar el archivo de seguimiento y detener el seguimiento. Personalice el seguimiento agregando los eventos que desee seguir. Para obtener la lista de eventos y columnas, vea [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  

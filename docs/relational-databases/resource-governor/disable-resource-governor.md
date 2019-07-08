@@ -12,12 +12,12 @@ ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 86298faa86bf439c7efcaddcce35033eeb2e63cc
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 283c1c2022cad1926771620db508b0457a70351d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689758"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581799"
 ---
 # <a name="disable-resource-governor"></a>Deshabilitar el regulador de recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "55689758"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No puede utilizar la instrucción **ALTER RESOURCE GOVERNOR** para deshabilitar el regulador de recursos durante una transacción del usuario.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Deshabilitar el regulador de recursos requiere el permiso CONTROL SERVER.  
   
 ##  <a name="RGOffObjEx"></a> Deshabilitar el regulador de recursos mediante el Explorador de objetos  
@@ -56,7 +56,9 @@ ms.locfileid: "55689758"
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], abra el Explorador de objetos y expanda de forma recursiva el nodo **Administración** hasta el nodo **Regulador de recursos**.  
   
 2.  Haga clic con el botón derecho en **Regulador de recursos**y, luego, haga clic en **Deshabilitar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGOffProp"></a> Deshabilitar el regulador de recursos mediante Propiedades del regulador de recursos  
  **Para deshabilitar el regulador de recursos mediante la página Propiedades del regulador de recursos**  
   

@@ -16,12 +16,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fafc1fc122576bd8432ba76a34dbee001989421d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05e8ed3093230979e78b8623de9001f630579a8b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515741"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580650"
 ---
 # <a name="disable-foreign-key-constraints-for-replication"></a>Deshabilitar una restricción FOREIGN KEY para la replicación
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -61,7 +61,9 @@ ms.locfileid: "62515741"
 3.  En el cuadro de diálogo **Relaciones de clave externa** , seleccione el valor **No** para **Exigir para replicación**.  
   
 4.  Haga clic en **Cerrar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-disable-a-foreign-key-constraint-for-replication"></a>Para deshabilitar una restricción FOREIGN KEY para la replicación  

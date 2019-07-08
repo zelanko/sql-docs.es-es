@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a2e095dafe61a2745f6401f7596e7dffcdeb05a0
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 3f1c47068d35da60877f9523a905c539cfac9e17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974134"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579810"
 ---
 # <a name="manage-and-monitor-full-text-search-for-a-server-instance"></a>Administrar y supervisar la búsqueda de texto completo para una instancia de servidor
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "57974134"
 1.  En el Explorador de objetos, haga clic con el botón derecho en un servidor y luego haga clic en **Propiedades**.  
   
 2.  En el cuadro de diálogo **Propiedades del servidor** , haga clic en la página **Avanzadas** para ver información del servidor sobre la búsqueda de texto completo. Las propiedades de texto completo son las siguientes:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   **Idioma de texto completo predeterminado**  
   
          Especifica un idioma predeterminado para las columnas indizadas de texto completo. El análisis lingüístico de los datos de texto completo indizados depende del idioma de los datos. El valor predeterminado de esta opción es el idioma del servidor. Para saber qué idioma corresponde al valor mostrado, vea [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  

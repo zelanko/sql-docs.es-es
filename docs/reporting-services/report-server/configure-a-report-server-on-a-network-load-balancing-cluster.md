@@ -7,13 +7,13 @@ ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-server
 ms.topic: conceptual
-ms.date: 10/03/2018
-ms.openlocfilehash: a6c04be1bf56577d0a6d40ccba9f627d319535ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.date: 07/03/2019
+ms.openlocfilehash: cc9e35829be7ea287cebaa99d7f96d10bb0d92d1
+ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65937242"
+ms.lasthandoff: 07/04/2019
+ms.locfileid: "67563997"
 ---
 # <a name="configure-a-report-server-on-a-network-load-balancing-cluster"></a>Configurar un servidor de informes en un clúster con equilibrio de carga de red
 
@@ -62,16 +62,16 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
     En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos.  
   
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>  
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>  
     ```  
   
-2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`machineKey`> que ha generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
+2. Abra el archivo Web.config para el servidor de informes y, en la sección <`system.web`>, pegue el elemento <`MachineKey`> que ha generado. De forma predeterminada, el archivo Web.config del Administrador de informes se encuentra en \Archivos de programa\Microsoft SQL Server\MSRS13.MSSQLSERVER\Reporting Services\Reportserver\Web.config.  
   
 3. Guarde el archivo.  
   
 4. Repita el paso anterior en cada servidor de informes de la implementación escalada.  
   
-5. Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Reportserver contienen elementos <`machineKey`> idénticos en la sección <`system.web`>.  
+5. Compruebe que todos los archivos Web.Config de las carpetas \Reporting Services\Reportserver contienen elementos <`MachineKey`> idénticos en la sección <`system.web`>.  
 
 ::: moniker-end
 
@@ -82,7 +82,7 @@ Para ejecutar una implementación escalada en un clúster NLB, debe configurar l
     En el ejemplo siguiente se ilustra el valor que se debe obtener. No copie el ejemplo en sus archivos de configuración; los valores de las claves no son válidos. El servidor de informes requiere el uso correcto de mayúsculas y minúsculas.
 
     ```xml
-    <machineKey validationKey="123455555" decryptionKey="678999999" validation="SHA1" decryption="AES"/>
+    <MachineKey ValidationKey="123455555" DecryptionKey="678999999" Validation="SHA1" Decryption="AES"/>
     ```
 
 2. Guarde el archivo.

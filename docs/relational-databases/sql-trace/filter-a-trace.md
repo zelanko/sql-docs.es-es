@@ -17,12 +17,12 @@ ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1dae7b73c02ce1c9ced01104754dc881bf25893f
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 20cebbb314e2830272e677da2d26bf53668798ab
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571235"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579840"
 ---
 # <a name="filter-a-trace"></a>Filtrar un seguimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "51571235"
 2.  Identifique los datos y las columnas de datos que contienen la información necesaria.  
   
 3.  Identifique un subconjunto de los datos que necesita y defina filtros basándose en ese subconjunto de datos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Por ejemplo, puede que solo le interesen los eventos que tardan más de un tiempo determinado. Puede crear un seguimiento que incluya los eventos en los que el valor de la columna de datos **Duration** supere los 300 milisegundos. El seguimiento no incluirá los eventos que finalicen en menos de 300 milisegundos.  
   
  Puede crear filtros mediante procedimientos almacenados de SQL Server Profiler o Transact-SQL.  

@@ -12,12 +12,12 @@ ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 0053db2d88c63a4ea7d5a49dc88048b218a6c517
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 23b539444f2de609053d530df85edafcc58ba1f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689748"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582419"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>Configurar el regulador de recursos utilizando una plantilla
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "55689748"
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
  Siga los pasos que se detallan a continuación para abrir y modificar una plantilla que crea un grupo de recursos de servidor y un grupo de cargas de trabajo para el grupo de recursos. Además, esta plantilla le permite crear una función clasificadora definida por el usuario que enruta las nuevas conexiones al grupo predeterminado o al grupo de cargas de trabajo que está creando.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] del regulador de recursos de la plantilla requieren el permiso CONTROL SERVER.  
   
 ##  <a name="ConfRGTemplate"></a> Configurar el regulador de recursos utilizando una plantilla  
@@ -47,7 +47,9 @@ ms.locfileid: "55689748"
 5.  Para guardar los cambios que realice en la plantilla, haga clic en **Aceptar**.  
   
 6.  Para ejecutar la consulta, haga clic en **Ejecutar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>Consulte también  
  [Regulador de recursos](../../relational-databases/resource-governor/resource-governor.md)   
  [Habilitar el regulador de recursos](../../relational-databases/resource-governor/enable-resource-governor.md)   

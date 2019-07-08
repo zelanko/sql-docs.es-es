@@ -19,12 +19,12 @@ ms.assetid: 0db4018c-ce2c-4ba1-bb29-1e4f3791c925
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 08abccdf7f10b2ffea795ba53a6db6fbf51a788e
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: e3c456dfafae92bec2cd34de1e5b9e33857d3c8e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51558383"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580573"
 ---
 # <a name="delete-data-or-log-files-from-a-database"></a>Eliminar archivos de datos o de registro de una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "51558383"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Para eliminar archivos de datos o de registro de una base de datos  
   
@@ -68,7 +68,9 @@ ms.locfileid: "51558383"
 4.  En la cuadrícula **Archivos de base de datos** , seleccione el archivo que desee eliminar y haga clic en **Quitar**.  
   
 5.  Haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-delete-data-or-log-files-from-a-database"></a>Para eliminar archivos de datos o de registro de una base de datos  
@@ -83,7 +85,7 @@ ms.locfileid: "51558383"
   
  Para obtener más ejemplos, vea [Opciones File y Filegroup de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-file-and-filegroup-options.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Reducir una base de datos](../../relational-databases/databases/shrink-a-database.md)   
  [Agregar archivos de datos o de registro a una base de datos](../../relational-databases/databases/add-data-or-log-files-to-a-database.md)  
   

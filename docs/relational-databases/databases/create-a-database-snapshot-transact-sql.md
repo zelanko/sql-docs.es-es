@@ -13,12 +13,12 @@ ms.assetid: 187fbba3-c555-4030-9bdf-0f01994c5230
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 6e09eae93b2b6a2f7c50dfc2d65370a23dc8d55d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddb53c690023a0d0abdb95a9ca054f611990a4ee
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025470"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584311"
 ---
 # <a name="create-a-database-snapshot-transact-sql"></a>Crear una instantánea de base de datos (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -99,27 +99,29 @@ AdventureWorks_snapshot_evening
 1.  Basándose en el tamaño actual de la base de datos de origen, asegúrese de que tiene suficiente espacio en disco para incluir la instantánea de base de datos. El tamaño máximo de una instantánea de base de datos es el tamaño de la base de datos de origen en el momento de la creación de la instantánea. Para obtener más información, vea [Ver el tamaño del archivo disperso de una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/view-the-size-of-the-sparse-file-of-a-database-snapshot-transact-sql.md).  
   
 2.  Emita una instrucción CREATE DATABASE en los archivos que usen la cláusula AS SNAPSHOT OF. Para crear una instantánea, se debe especificar el nombre lógico de cada archivo de la base de datos de origen. La sintaxis es la siguiente:  
-  
-     CREATE DATABASE *nombre_de_instantánea_de_base_de_datos*  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     CREATE DATABASE *database_snapshot_name*  
   
      ON  
   
      (  
   
-     NAME =*nombre_de_archivo_lógico*,  
+     NAME =*logical_file_name*,  
   
-     FILENAME ='*nombre_de_archivo_de_sistema_operativo*'  
+     FILENAME ='*os_file_name*'  
   
      ) [ ,...*n* ]  
   
-     AS SNAPSHOT OF *nombre_de_base_de_datos_de_origen*  
+     AS SNAPSHOT OF *source_database_name*  
   
      [;]  
   
-     Donde *nombre_base_de_datos**_origen* es la base de datos de origen, *nombre_de_archivo_lógico* es el nombre lógico que se usa en SQL Server cuando se hace referencia al archivo, *nombre_de_archivo_de_sistema_operativo* es la ruta de acceso y el nombre de archivo que usa el sistema operativo cuando se crea el archivo y *nombre_de_instantánea_de_base_de_datos* es el nombre de la instantánea a la que quiere revertir la base de datos. Para obtener una descripción completa de esta sintaxis, vea [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
+     Where *source_**database_name* is the source database, *logical_file_name i*s the logical name used in SQL Server when referencing the file, *os_file_name* is the path and file name used by the operating system when you create the file, and *database_snapshot_name* is the name of the snapshot to which you want to revert the database. For a full description of this syntax, see [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md).  
   
     > [!NOTE]  
-    >  Cuando se crea una instantánea de base de datos, no se permite la presencia de archivos de registro, archivos sin conexión, archivos de restauración e inactivos en la instrucción CREATE DATABASE.  
+    >  When you create a database snapshot, log files, offline files, restoring files, and defunct files are not allowed in the CREATE DATABASE statement.  
   
 ###  <a name="TsqlExample"></a> Ejemplos (Transact-SQL)  
   

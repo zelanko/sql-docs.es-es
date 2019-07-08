@@ -15,12 +15,12 @@ ms.assetid: 3a5daefd-08a8-4565-b54f-28ad01a47d32
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: b858639e60419d955a32981ceeac56d8acc42110
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: e455c56de9231bfd9f750a45eb96eeb10945c8aa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54133185"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580318"
 ---
 # <a name="restore-a-sql-server-database-to-a-point-in-time-full-recovery-model"></a>Restaurar una base de datos de SQL Server a un momento dado (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,12 +52,12 @@ ms.locfileid: "54133185"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos (para la opción FROM DATABASE_SNAPSHOT, la base de datos siempre existe).  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para restaurar una base de datos a un momento dado**  
   
 1.  En el Explorador de objetos, conéctese a la instancia adecuada de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]y expanda el árbol de servidores.  
@@ -77,7 +77,7 @@ ms.locfileid: "54133185"
   
     -   **Dispositivo**  
   
-         Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -125,7 +125,9 @@ ms.locfileid: "54133185"
 13. Puede haber errores en las operaciones de restauración si hay conexiones activas con la base de datos. Active la opción **Cerrar conexiones existentes** para asegurarse de que se cierren todas las conexiones activas entre [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] y la base de datos. Esta casilla establece la base de datos en modo de usuario único antes de realizar las operaciones de restauración, y establece la base de datos en modo multiusuario una vez completadas.  
   
 14. Seleccione **Preguntar antes de restaurar cada copia de seguridad** si desea que se le pregunte en cada operación de restauración. No suele ser necesario a menos que la base de datos sea grande y desee supervisar el estado de la operación de restauración.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Before you begin**  
   
@@ -135,7 +137,7 @@ ms.locfileid: "54133185"
   
  **Sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   
- RESTORE LOG *nombre_de_base_de_datos* FROM <dispositivo_de_copia_de_seguridad> WITH STOPAT **=**_hora_**,** RECOVERY...  
+ RESTORE LOG *nombre_de_base_de_datos* FROM <dispositivo_de_copia_de_seguridad> WITH STOPAT **=** _hora_ **,** RECOVERY...  
   
  El punto de recuperación es la última confirmación de transacción que se ha producido durante o antes del valor **datetime** que se especifique en *hora*.  
   
@@ -155,7 +157,7 @@ ms.locfileid: "54133185"
   
 3.  Restaure la última copia de seguridad de base de datos diferencial, si la hubiera, sin recuperar la base de datos (RESTORE DATABASE *database_name* FROM *backup_device* WITH NORECOVERY).  
   
-4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *database_name* FROM <dispositivo_copia_seguridad> WITH STOPAT**=**_time_**,** RECOVERY).  
+4.  Aplique cada copia de seguridad del registro de transacciones en la misma secuencia en que fueron creadas, especificando la hora a la que tiene previsto detener la restauración del registro (RESTORE DATABASE *database_name* FROM <dispositivo_copia_seguridad> WITH STOPAT **=** _time_ **,** RECOVERY).  
   
     > [!NOTE]  
     >  Las opciones RECOVERY y STOPAT. Si la copia de seguridad de registros de transacciones no contiene la hora solicitada (por ejemplo, si la hora especificada está fuera de los límites del intervalo cubierto por el registro de transacciones), se genera una advertencia y no se recupera la base de datos.  

@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2cb94b594be62bf19ad90c00ffaef6145eb90fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcb4c7385c509e132da589149c4da9f2db5c0d5f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047796"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582231"
 ---
 # <a name="determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp"></a>Determinar si una tabla o un procedimiento almacenado se debe pasar a OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -123,7 +123,9 @@ Las estadísticas de contención del informe de detalles de la tabla se recopila
 3.  Haga clic en **Siguiente** y confirme que la lista de tareas coincide con la configuración de la página **Configure Checklist Generation Options** (Configurar opciones de generación de lista de comprobación).  
   
 4.  Haga clic en **Finalizar**y, después, confirme que se han generado los informes de lista de comprobación de migración solo para los objetos seleccionados.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Puede comprobar la precisión de los informes comparándolos con los generados mediante la herramienta Asesor de optimización de memoria y el Asistente para compilación nativa. Para obtener más información, consulte [Memory Optimization Advisor](../../relational-databases/in-memory-oltp/memory-optimization-advisor.md) y [Native Compilation Advisor](../../relational-databases/in-memory-oltp/native-compilation-advisor.md).  
   
 **Pasos para generar una lista de comprobación de migración mediante SQL Server PowerShell**  

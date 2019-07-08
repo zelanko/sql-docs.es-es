@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3d1d5699a32b62de823846e64757a1842a9337ad
-ms.sourcegitcommit: 31800ba0bb0af09476e38f6b4d155b136764c06c
+ms.openlocfilehash: 38d58dc9156488e9c80e199ba2074b96015df7f7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/15/2019
-ms.locfileid: "56294453"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583166"
 ---
 # <a name="get-started-with-columnstore-for-real-time-operational-analytics"></a>Introducción al almacén de columnas para análisis operativos en tiempo real
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,9 @@ ms.locfileid: "56294453"
     ```  
   
 3.  Esto es todo lo que hay que hacer.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Ya está listo para ejecutar análisis operativos en tiempo real, sin haber realizado ningún cambio en la aplicación.  Las consultas de análisis se ejecutarán en el índice de almacén de columnas y las operaciones OLTP seguirán ejecutándose en los índices de árbol b de OLTP. Las cargas de trabajo OLTP seguirán produciéndose, si bien con una ligera sobrecarga adicional para mantener el índice de almacén de columnas. Vea las optimizaciones de rendimiento en la siguiente sección.  
   
 ## <a name="blog-posts"></a>Entradas de blog  

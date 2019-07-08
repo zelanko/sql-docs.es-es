@@ -18,12 +18,12 @@ ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1bd62b9ac8b00eff554556f09c56437a31c664a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d1543794a616a26949abe3eef939de97e6f7b00
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47664853"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582601"
 ---
 # <a name="view-the-data-and-log-files-in-a-backup-set-sql-server"></a>Ver los archivos de datos y de registro en un conjunto de copia de seguridad (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +42,15 @@ ms.locfileid: "47664853"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
  Para obtener más información sobre seguridad, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, la obtención de información sobre un conjunto de copia de seguridad o un dispositivo de copia de seguridad requiere el permiso CREATE DATABASE. Para obtener más información, vea [GRANT &#40;permisos de base de datos de Transact-SQL&#41;](../../t-sql/statements/grant-database-permissions-transact-sql.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>Para ver los archivos de datos y de registro en un conjunto de copia de seguridad  
   
@@ -63,7 +63,9 @@ ms.locfileid: "47664853"
 4.  En el panel **Seleccionar una página** , haga clic en **Archivos**.  
   
 5.  En la cuadrícula **Archivos de la base de datos** , busque una lista de los archivos de datos y de registro, y sus propiedades.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-data-and-log-files-in-a-backup-set"></a>Para ver los archivos de datos y de registro en un conjunto de copia de seguridad  
@@ -81,7 +83,7 @@ RESTORE FILELISTONLY FROM AdventureWorksBackups
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [backupfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfilegroup-transact-sql.md)   
  [backupfile &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupfile-transact-sql.md)   
  [backupset &#40;Transact-SQL&#41;](../../relational-databases/system-tables/backupset-transact-sql.md)   

@@ -13,12 +13,12 @@ ms.assetid: 3bdd348b-6582-4ffa-80ef-d49e50596ce5
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 94a559d7486263d1edf50383e3a8af39fe93689d
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: c389ed72d7aa6f49c320585ee8f23e35eaec1bc7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689808"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581816"
 ---
 # <a name="delete-a-resource-pool"></a>Eliminar un grupo de recursos de servidor
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "55689808"
 ###  <a name="LimitationsRestrictions"></a> Limitaciones y restricciones  
  No se pueden eliminar los grupos de recursos de servidor predeterminados o internos del regulador de recursos. No se puede eliminar un grupo de recursos de servidor si contiene grupos de cargas de trabajo. Para obtener más información, consulte [Delete a Workload Group](../../relational-databases/resource-governor/delete-a-workload-group.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Para eliminar un grupo de recursos de servidor se requiere un permiso CONTROL SERVER.  
   
 ##  <a name="DelRPSSMS"></a> Eliminar un grupo de recursos de servidor mediante el Explorador de objetos  
@@ -46,9 +46,11 @@ ms.locfileid: "55689808"
 2.  Haga clic con el botón derecho en el grupo de recursos que va a eliminar y luego haga clic en **Eliminar**.  
   
 3.  En la ventana **Eliminar objeto** aparece el grupo de recursos de servidor en la lista **Objeto que se va a eliminar** . Para eliminar el grupo de recursos de servidor, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     > [!NOTE]  
-    >  Si el grupo de recursos de servidor que intenta eliminar contiene un grupo de cargas de trabajo, esta acción provocará un error.  
+    >  If the resource pool that you are trying to delete contains a workload group, this action will fail.  
   
 ##  <a name="DelRPTSQL"></a> Eliminar un grupo de recursos de servidor mediante Transact-SQL  
  **Para eliminar un grupo de recursos de servidor mediante Transact-SQL**  

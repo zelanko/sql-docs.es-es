@@ -11,14 +11,14 @@ ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b9414215e82a6828152e1ab84265a5b70b6a2171
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: a7f95a4ebc0227a4bb16f256073a3408ae15a1c2
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801689"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517773"
 ---
-# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: conectarse al motor de base de datos
+# <a name="lesson-1-connecting-to-the-database-engine"></a>Lección 1: Conexión al Motor de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Al instalar [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], las herramientas instaladas dependen de la edición y de las opciones que seleccione al realizar la instalación. En esta lección se revisan las herramientas principales y se muestra cómo conectarse y realizar una función básica (autorizar a más usuarios).  
@@ -60,6 +60,8 @@ Las bases de datos de ejemplo y los ejemplos no están incluidos en [!INCLUDE[ss
 3.  Si Servidores registrados no aparece, en el menú **Ver** , haga clic en **Servidores registrados**.
 4.  Con **Motor de base de datos** seleccionado en la barra de herramientas Servidores registrados, expanda **Motor de base de datos**, haga clic con el botón derecho en **Grupos de servidores locales**, seleccione **Tareas**y, después, haga clic en **Registrar servidores locales**. Se muestran todas las instancias de [!INCLUDE[ssDE](../includes/ssde-md.md)] instaladas en el equipo. La instancia predeterminada no tiene nombre y aparece como el nombre del equipo. Una instancia con nombre aparece como el nombre del equipo seguido de una barra inversa (\\) y del nombre de la instancia. En [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], la instancia se denomina *<nombre_equipo>* \sqlexpress, a no ser que se haya cambiado el nombre durante la instalación.  
 
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##### <a name="to-verify-that-the-database-engine-is-running"></a>Para comprobar que el motor de base de datos está en ejecución
 
 1.  En Servidores registrados, si el nombre de la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tiene un punto verde con una flecha blanca junto al nombre, [!INCLUDE[ssDE](../includes/ssde-md.md)] está en ejecución y no es necesario realizar ninguna otra acción.  
@@ -77,7 +79,7 @@ Se ha seleccionado al menos una cuenta de administrador al instalar [!INCLUDE[ss
 
 ![object-explorer](../relational-databases/media/object-explorer.png)
 
-3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<nombre_equipo\>_**\\**_\<nombre_instancia\>_, como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
+3.  En el cuadro **Nombre del servidor** , escriba el nombre de la instancia de [!INCLUDE[ssDE](../includes/ssde-md.md)]. Para la instancia predeterminada de SQL Server, el nombre de servidor es el nombre del equipo. Para una instancia con nombre de SQL Server, el nombre del servidor es _\<nombre_equipo\>_ **\\** _\<nombre_instancia\>_ , como **ACCTG_SRVR\SQLEXPRESS**. En la siguiente captura de pantalla se muestra la conexión a la instancia predeterminada (sin nombre) de [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)] en un equipo denominado "PracticeComputer". El usuario que ha iniciado sesión en Windows es Mary del dominio Contoso. Al usar la autenticación de Windows, no puede cambiar el nombre de usuario. 
 
 ![connect-to-server](../relational-databases/media/connect-to-server.png)
 
@@ -110,5 +112,5 @@ Ahora que se ha conectado a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md
 > Esta información es básica para empezar. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] proporciona un completo entorno de seguridad y, obviamente, la seguridad es un aspecto importante de las operaciones de base de datos.  
 
 ## <a name="next-lesson"></a>Lección siguiente  
-[Lección 2: Conexión desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)    
+[Lección 2: Conexión desde otro equipo](../relational-databases/lesson-2-connecting-from-another-computer.md)    
   

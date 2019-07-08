@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0aa09ddef11c733abda1a5e706c1b788c3745c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: be0398f868eaac63ca13aaf8989ad8316ae06476
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511883"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584286"
 ---
 # <a name="create-a-user-defined-data-type-alias"></a>Crear un alias de tipo de datos definido por el usuario
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "52511883"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso CREATE TYPE en la base de datos actual y el permiso ALTER en *schema_name*. Si no se especifica *schema_name* , se aplican las reglas de resolución de nombres predeterminadas para determinar el esquema del usuario actual.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-user-defined-data-type"></a>Para crear un tipo de datos definido por el usuario  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52511883"
      **Longitud/Precisión**  
      Muestra la longitud o la precisión del tipo de datos, según proceda. **Longitud** se aplica a los tipos de datos definidos por el usuario basados en personajes; **Precisión** solo se aplica a los tipos de datos numéricos definidos por el usuario. La etiqueta cambia en función del tipo de datos seleccionado con anterioridad. Este cuadro no puede modificarse si el tipo de datos seleccionado tiene una longitud o precisión fija.  
   
-     No se muestra la longitud de los tipos de datos **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
+     No se muestra la longitud de los tipos de datos **nvarchar(max)** , **varchar(max)** o **varbinary(max)** .  
   
      **Nombre**  
      Si va a crear un nuevo alias de tipo de datos definido por el usuario, escriba un nombre único que se usará en la base de datos para representar el tipo de datos definido por el usuario. El número máximo de caracteres debe coincidir con el del tipo de datos **sysname** del sistema. El nombre de un alias existente de tipo de datos definido por el usuario no puede modificarse.  
@@ -97,7 +97,7 @@ ms.locfileid: "52511883"
   
      Para los tipos de datos **nchar** y **nvarchar** , el valor de almacenamiento siempre es el doble del valor de **Longitud**.  
   
-     No se muestra el almacenamiento para los tipos de datos **nvarchar(max)**, **varchar(max)** o **varbinary(max)** .  
+     No se muestra el almacenamiento para los tipos de datos **nvarchar(max)** , **varchar(max)** o **varbinary(max)** .  
   
 2.  En el cuadro de diálogo **Nuevo tipo de datos definido por el usuario** , en el cuadro **Esquema** , escriba el esquema al que pertenecerá el alias de tipo de datos o use el botón Examinar para seleccionar el esquema.  
   
@@ -110,7 +110,9 @@ ms.locfileid: "52511883"
 6.  Active la casilla **Permitir valores NULL** si el nuevo alias de tipo de datos puede permitir valores NULL.  
   
 7.  En el área **Enlace** , rellene los cuadros **Predeterminado** o **Regla** si desea enlazar un valor predeterminado o una regla al nuevo alias de tipo de datos. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]no pueden crearse valores predeterminados ni reglas. Utilice [!INCLUDE[tsql](../../includes/tsql-md.md)]. El Explorador de plantillas incluye códigos de ejemplo para crear valores predeterminados y reglas.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-create-a-user-defined-data-type-alias"></a>Para crear un alias de tipo de datos definido por el usuario  
@@ -126,7 +128,7 @@ CREATE TYPE ssn
 FROM varchar(11) NOT NULL ;  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Identificadores de base de datos](../../relational-databases/databases/database-identifiers.md)   
  [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md)  
   

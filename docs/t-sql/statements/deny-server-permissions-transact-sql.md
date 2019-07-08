@@ -18,12 +18,12 @@ ms.assetid: 68d6b2a9-c36f-465a-9cd2-01d43a667e99
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 9f480a406983fa0e4bdce4c100b4ccb4d44c5c3a
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: df064e5ebe9a5a6fabbd1eda16cf29bfa3f58d0e
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361595"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556916"
 ---
 # <a name="deny-server-permissions-transact-sql"></a>DENY (permisos de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,13 +60,16 @@ DENY permission [ ,...n ]
  Especifica un permiso que se puede denegar en un servidor. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  CASCADE  
- Indica que el permiso que se va a denegar también se denegará a otras entidades de seguridad a las que esta entidad de seguridad ha concedido permisos.  
+ Indica que el permiso se deniega para la entidad de seguridad especificada y para el resto de entidades de seguridad a las que ésta concedió el permiso. Es obligatorio cuando la entidad de seguridad tiene el permiso con GRANT OPTION. 
   
  TO \<server_principal>  
  Especifica la entidad de seguridad de la que se va a denegar el permiso.  
   
  AS \<grantor_principal>  
- Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.  
+ Especifica la entidad de seguridad de la que la entidad de seguridad que ejecuta esta consulta deriva su derecho de denegar el permiso.
+Use la cláusula AS de la entidad de seguridad para indicar que la entidad de seguridad registrada como el denegador del permiso debe ser una entidad de seguridad distinta de la persona que ejecuta la instrucción. Por ejemplo, suponga que el usuario María tiene el principal_id 12 y el usuario Raúl tiene el principal_id 15. María ejecuta `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;`. Ahora bien, la tabla sys.database_permissions indicará que grantor_principal_id de la instrucción DENY fue 15 (Raul), aunque la instrucción realmente la ejecutó el usuario 13 (María).
+  
+El uso de AS en esta instrucción no implica la capacidad de suplantar a otro usuario.    
   
  *SQL_Server_login*  
  Especifica un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -156,7 +159,7 @@ DENY CONNECT SQL TO Annika CASCADE;
 GO  
 ```  
   
-### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>b. Denegar el permiso CREATE ENDPOINT a un inicio de sesión de SQL Server utilizando la opción AS  
+### <a name="b-denying-create-endpoint-permission-to-a-sql-server-login-using-the-as-option"></a>B. Denegar el permiso CREATE ENDPOINT a un inicio de sesión de SQL Server utilizando la opción AS  
  En el siguiente ejemplo se deniega el permiso `CREATE ENDPOINT` al usuario `ArifS`. En el ejemplo se utiliza la opción `AS` para especificar `MandarP` como la entidad de seguridad desde la que la entidad de seguridad que ejecuta la consulta deriva la autoridad para hacerlo.  
   
 ```  

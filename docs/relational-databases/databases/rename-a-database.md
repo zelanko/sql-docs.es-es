@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0e3d57094a6863bb5b6bebd96f05ed57a1fcc25f
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 1be87a50ad6e8815a9446ca22c2734a6e82b4745
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58872025"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583539"
 ---
 # <a name="rename-a-database"></a>Cambiar el nombre de una base de datos
 
@@ -72,7 +72,9 @@ Siga estos pasos para cambiar el nombre de una base de datos de SQL Server o Azu
 3. En el Explorador de objetos, expanda **Bases de datos**, haga clic con el botón derecho en la base de datos cuyo nombre quiere cambiar y luego haga clic en **Cambiar nombre**.  
   
 4. Escriba el nuevo nombre de la base de datos y haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="rename-a-database-using-transact-sql"></a>Cambiar el nombre de una base de datos mediante Transact-SQL  
   
 ### <a name="to-rename-a-sql-server-database-by-placing-it-in-single-user-mode"></a>Para cambiar el nombre de una base de datos de SQL Server cambiándola al modo de usuario único

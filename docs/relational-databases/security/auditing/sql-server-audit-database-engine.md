@@ -17,12 +17,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: eebc9f2cdc059bb8d90c290981da0560a15ab5dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bba79c497f9999f263de90622b5c306d035ec823
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716091"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581994"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,7 +110,9 @@ ms.locfileid: "62716091"
 3.  Habilite la auditoría.  
   
 4.  Lea los eventos de auditoría mediante el **Visor de eventos**de Windows, el **Visor del archivo de registros**o la función fn_get_audit_file.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para obtener más información, consulte [Crear una auditoría de servidor y una especificación de auditoría de servidor](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) y [Crear una especificación de auditoría de servidor y de auditoría de base de datos](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md).  
   
 ## <a name="considerations"></a>Consideraciones  

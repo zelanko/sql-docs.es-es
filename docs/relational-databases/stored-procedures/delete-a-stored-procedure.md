@@ -15,12 +15,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7d5dc099d335c0a77efc3cbcf864940d0c16f27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0871c813a70b93b1e263dcfb3b50345d57e526af
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960132"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585019"
 ---
 # <a name="delete-a-stored-procedure"></a>Eliminar un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +62,9 @@ ms.locfileid: "62960132"
 5.  Confirme que haya seleccionado el procedimiento correcto y haga clic en **Aceptar**.  
   
 6.  Quite las referencias al procedimiento de cualquier objeto y script dependientes.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para eliminar un procedimiento en el Editor de consultas**  
   

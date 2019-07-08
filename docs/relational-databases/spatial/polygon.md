@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9bbed0ab919c2eb4258c22bee4545ec8d49a1462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 192b068c8ece6bcfda9aee2899793d7d901dd90a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66761451"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581702"
 ---
 # <a name="polygon"></a>Polygon
 
@@ -43,7 +43,9 @@ Como se muestra en la ilustración:
 2.  La figura 2 es una instancia de **Polygon** cuyo límite está definido mediante un anillo exterior y dos anillos interiores. El área situada dentro de los anillos interiores forma parte del exterior de la instancia de **Polygon** .  
   
 3.  La figura 3 es una instancia de **Polygon** válida porque la intersección de sus anillos interiores se realiza en un solo punto tangente.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="accepted-instances"></a>Instancias aceptadas  
  Las instancias aceptadas de **Polygon** son las instancias que pueden almacenarse en una variable de tipo **geometry** o **geography** sin generar una excepción. Se aceptan las siguientes instancias de **Polygon** :  
   

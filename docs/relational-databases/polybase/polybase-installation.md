@@ -12,12 +12,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: b3e6a0fc14137ca13e3539a7046edf576b4719ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb0f511f5b8a470e4f7784d6dff9ce4e46650543
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775046"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581240"
 ---
 # <a name="install-polybase-on-windows"></a>Instalación de PolyBase en Windows
 
@@ -91,6 +91,8 @@ Después de instalar PolyBase de forma independiente o en un grupo de escalado h
      Esta opción también habilita las conexiones de firewall de Microsoft DTC (Coordinador de transacciones distribuidas) y modifica la configuración del registro de Microsoft DTC.  
    
 6. En la página Configuración de PolyBase, especifique un intervalo de puertos con al menos seis puertos. El programa de instalación de SQL Server asigna los seis primeros puertos disponibles del intervalo.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    >[!IMPORTANT]
    > Después de la instalación, debe [habilitar la característica PolyBase](#enable).

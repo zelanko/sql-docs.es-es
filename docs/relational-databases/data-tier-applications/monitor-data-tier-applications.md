@@ -13,12 +13,12 @@ ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: df8cd54cdf13941044ae4f72f8781e4532fc5c51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0bea639ebb7ec36cc1784db829fc98db8d2c0ba
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714333"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580196"
 ---
 # <a name="monitor-data-tier-applications"></a>Supervisar aplicaciones de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,7 +45,9 @@ ms.locfileid: "62714333"
 3.  Seleccione el menú **Ver/Detalles del Explorador de la utilidad** .  
   
 4.  Seleccione el nodo **Aplicaciones de capa de datos implementadas** en el **Explorador de la utilidad**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  La información de la página de detalles **Aplicaciones de capa de datos implementadas** procede de los datas del almacén de administración de datos que, de forma predeterminada, recopila los datos cada 15 minutos. El intervalo también se puede personalizar usando la página de detalles **Administración de la utilidad** .  
   
 ## <a name="using-object-explorer"></a>Usar el Explorador de objetos  

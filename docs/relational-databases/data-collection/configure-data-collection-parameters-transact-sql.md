@@ -12,12 +12,12 @@ ms.assetid: 850905b6-35d2-4ed1-ab51-de64daa832b2
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98a599a60acd29ad99a515020da88c78faf21062
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8468f63f73980c3f5004593ee52d3420142125ea
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721693"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586056"
 ---
 # <a name="configure-data-collection-parameters-transact-sql"></a>Configurar parámetros para la recopilación de datos (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +31,9 @@ ms.locfileid: "47721693"
 1.  En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], conéctese a la base de datos donde desea crear un conjunto de recopilación personalizado.  
   
 2.  En el Editor de consultas, emita las instrucciones siguientes.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE msdb;  
     EXEC sp_syscollector_set_warehouse_instance_name N'INSTANCE_NAME';-- where instance name is the name of the SQL Server instance  
@@ -39,7 +41,7 @@ ms.locfileid: "47721693"
     EXEC sp_syscollector_set_cache_directory N'D:\tempdata';  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Recopilación de datos](../../relational-databases/data-collection/data-collection.md)   
  [Procedimientos almacenados del recopilador de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)  
   

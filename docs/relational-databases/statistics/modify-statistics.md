@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78ae465604c6f1b368cb0d1b8483025feef9d343
-ms.sourcegitcommit: 0c1d552b3256e1bd995e3c49e0561589c52c21bf
+ms.openlocfilehash: 7a8078302624e280fa23de0401302106e867e5e0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53380396"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583020"
 ---
 # <a name="modify-statistics"></a>Modificar estadísticas
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -41,14 +41,14 @@ ms.locfileid: "53380396"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere que:  
   
 -   El usuario tiene el permiso ALTER en la tabla o la vista.  
   
 -   El usuario debe ser el propietario de la tabla o vista indexada o un miembro de uno de los roles siguientes: rol fijo de servidor **sysadmin** , rol fijo de base de datos **db_owner** o rol fijo de base de datos **db_ddladmin** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-statistics"></a>Para modificar las estadísticas  
   
@@ -65,7 +65,9 @@ ms.locfileid: "53380396"
 6.  En el cuadro de diálogo **Propiedades de estadísticas:** *nombre_estadísticas*, en la página **General**, haga clic en **Agregar**, **Quitar**, **Subir**o **Bajar**o cualquier combinación, para alterar las propiedades de las estadísticas. Recuerde que la ubicación de una columna dentro de la cuadrícula **Columnas de estadísticas** puede afectar considerablemente a la utilidad de las estadísticas.  
   
 7.  Haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para modificar las estadísticas**  
   

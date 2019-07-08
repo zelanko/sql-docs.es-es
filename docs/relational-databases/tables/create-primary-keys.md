@@ -14,12 +14,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27d6c9f9545c9c0459af83e574f3a010dcf6c488
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: cacf73ffedbd33327eb33610ebc0d553258fb41f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400036"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583878"
 ---
 # <a name="create-primary-keys"></a>Crear claves principales
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "67400036"
 2.  En el **Diseñador de tablas**, haga clic en el selector de filas de la columna de base de datos que desea definir como clave principal. Si desea seleccionar varias columnas, mantenga presionada la tecla CTRL mientras hace clic en los selectores de fila de las otras columnas.  
   
 3.  Haga clic con el botón derecho en el selector de fila para la columna y seleccione **Establecer clave principal**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!CAUTION]  
 >  Si desea volver a definir la clave principal, debe eliminar las relaciones establecidas con la clave principal existente antes de crear una nueva. Un mensaje le advertirá de que las relaciones existentes se eliminarán automáticamente durante este proceso.  
   

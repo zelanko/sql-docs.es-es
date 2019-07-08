@@ -18,12 +18,12 @@ ms.author: sstein
 manager: craigg
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 86c030eabfe3b18f544ca43f3e493bcd90f5e5ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12c6ae385b4fa527251da266f2d0711eb2b9e9c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994234"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583439"
 ---
 # <a name="tempdb-database"></a>Base de datos tempdb
 
@@ -244,6 +244,8 @@ Esta implementación presenta algunas limitaciones que cabe tener en cuenta:
     ```
 3. Las consultas en tablas optimizadas para memoria no admiten las sugerencias de bloqueo y aislamiento, por lo que las consultas en vistas de catálogo tempdb optimizadas para memoria no respetarán dichas sugerencias. Como sucede con otras vistas de catálogo del sistema en SQL Server, todas las transacciones realizadas en vistas del sistema estarán en aislamiento READ COMMITTED (o, en este caso, READ COMMITTED SNAPSHOT).
 4. Cuando los metadatos tempdb optimizados para memoria estén habilitados, pueden producirse algunos problemas con los índices de almacén de columnas en las tablas temporales. Para esta versión preliminar, es mejor evitar los índices de almacén de columnas en las tablas temporales cuando se usen metadatos tempdb optimizados para memoria.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE] 
 > Estas limitaciones solo se aplican al hacer referencia a vistas del sistema tempdb. Si lo desea, puede crear una tabla temporal en la misma transacción al acceder a una tabla optimizada para memoria en una base de datos de usuario.

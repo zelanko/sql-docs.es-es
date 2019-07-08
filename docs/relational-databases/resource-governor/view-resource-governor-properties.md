@@ -14,12 +14,12 @@ ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: ed9959bf001855e869262c9f91f2821bf7c59744
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: 95c7b2a185786c37687a28978fc4786c45a99958
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689908"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586192"
 ---
 # <a name="view-resource-governor-properties"></a>Ver las propiedades del regulador de recursos
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "55689908"
   
  Es posible determinar si existe una configuración pendiente consultando la vista de administración dinámica [sys.dm_resource_governor_configuration](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md) para obtener el estado actual de is_configuration_pending.  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Para ver las propiedades del regulador de recursos se requiere el permiso VIEW SERVER STATER. Las tareas de configuración del regulador de recursos requieren el permiso CONTROL SERVER.  
   
 ##  <a name="ViewRGProp"></a> Página Propiedades del regulador de recursos  
@@ -62,7 +62,9 @@ ms.locfileid: "55689908"
 3.  Para las obtener descripciones de los campos de la página, vea [Propiedades del regulador de recursos](#RGProp).  
   
 4.  Para guardar los cambios, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Nombre de la función de clasificador**  
  Especifique la función clasificadora seleccionándola en la lista.  
@@ -71,7 +73,7 @@ ms.locfileid: "55689908"
  Habilite o deshabilite el regulador de recursos seleccionando o desactivando la casilla.  
   
  **Grupos de recursos de servidor**  
- Cree o cambie la configuración del grupo de recursos y del grupo de recursos externos con la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de recursos, haga clic en la fila que viene precedida por un asterisco (**&#42;**).  
+ Cree o cambie la configuración del grupo de recursos y del grupo de recursos externos con la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de recursos, haga clic en la fila que viene precedida por un asterisco ( **&#42;** ).  
   
  **Nombre**  
  Especifique el nombre del grupo de recursos de servidor.  
@@ -91,7 +93,7 @@ ms.locfileid: "55689908"
  Para obtener más información, vea [CREATE RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-resource-pool-transact-sql.md) y [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md).  
   
  **Grupos de cargas de trabajo de grupo de recursos de servidor**  
- Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco (**&#42;**).  
+ Cree o cambie la configuración del grupo de cargas de trabajo utilizando la cuadrícula que se proporciona. Esta cuadrícula se rellena con información acerca de los grupos internos y predeterminados predefinidos. Seleccione un grupo con el que trabajar haciendo clic en la primera columna de la fila para el grupo de recursos. Para crear un grupo de cargas de trabajo, haga clic en la fila que viene precedida por un asterisco ( **&#42;** ).  
   
  **Nombre**  
  Especifique el nombre del grupo de cargas de trabajo  

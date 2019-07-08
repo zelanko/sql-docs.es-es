@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 464ad33fd322226d68c79b364a72bd55de0d62b2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ea144a638bd64446e61b5bcbfed8397d5784d6a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62521556"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585428"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>Crear y almacenar claves maestras de columna (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -109,6 +109,8 @@ Para conceder al usuario el permiso de *lectura* para un certificado almacenado 
 7.  En el cuadro de diálogo **Agregar o quitar complemento**, haga clic en **Aceptar**.
 8.  En el complemento **Certificados**, busque el certificado en la carpeta **Certificados > Personal**, haga clic con el botón derecho en el certificado, seleccione **Todas las tareas** y, después, haga clic en **Administrar claves privadas**.
 9.  En el cuadro de diálogo **Seguridad**, agregue el permiso de lectura para una cuenta de usuario si fuera necesario.
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Crear claves maestras de columna en el Almacén de claves de Azure
 

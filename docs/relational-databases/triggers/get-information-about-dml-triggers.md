@@ -18,12 +18,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b4006814233152c487823fbe1936431368af5f5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5d2e2f82379ad32b5de25778a60f123221114ae9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47703163"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584321"
 ---
 # <a name="get-information-about-dml-triggers"></a>Obtener información acerca de los desencadenadores DML
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,21 +41,21 @@ ms.locfileid: "47703163"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  **sys.sql.modules**, **sys.object**, **sys.triggers**, **sys.events**, **sys.trigger_events**  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
  OBJECT_DEFINITION, OBJECTPROPERTY, **sp_helptext**  
- Debe pertenecer al rol **public** . La definición de los objetos de usuario está visible para el propietario del objeto o los receptores de los permisos siguientes: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
+ Debe pertenecer al rol **public** . La definición de objetos de usuario está visible para el propietario del objeto o para los receptores que dispongan de uno de los siguientes permisos: ALTER, CONTROL, TAKE OWNERSHIP o VIEW DEFINITION. Estos permisos corresponden implícitamente a los miembros de los roles fijos de base de datos **db_owner**, **db_ddladmin**y **db_securityadmin** .  
   
  **sys.sql_expression_dependencies**  
  Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en **sys.sql_expression_dependencies** para la base de datos. De forma predeterminada, solo se concede el permiso SELECT a los miembros del rol fijo de base de datos **db_owner** . Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-view-the-definition-of-a-dml-trigger"></a>Para ver la definición de un desencadenador DML  
   
@@ -64,7 +64,9 @@ ms.locfileid: "47703163"
 2.  Expanda la base de datos que desee, expanda **Tablas**y, a continuación, expanda la tabla que contiene el desencadenador cuya definición desea ver.  
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiera y, luego, haga clic en **Modificar**. La definición del desencadenador DML aparecerá en la ventana de consulta.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>Para ver las dependencias de un desencadenador DML  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  
@@ -73,9 +75,9 @@ ms.locfileid: "47703163"
   
 3.  Expanda **Desencadenadores**, haga clic con el botón derecho en el desencadenador que quiere y, luego, haga clic en **Ver dependencias**.  
   
-4.  En la ventana **Dependencias del objeto**, para ver los objetos que dependen del desencadenador DML, seleccione **Objetos que dependen de \<nombre del desencadenador DML>**. Los objetos aparecerán en el área **Dependencias** .  
+4.  En la ventana **Dependencias del objeto**, para ver los objetos que dependen del desencadenador DML, seleccione **Objetos que dependen de \<nombre del desencadenador DML>** . Los objetos aparecerán en el área **Dependencias** .  
   
-     Para ver los objetos de los que depende el DML, seleccione **Objetos de los que depende \<nombre del desencadenador DML>**. Los objetos aparecerán en el área **Dependencias** . Expanda cada nodo para ver todos los objetos.  
+     Para ver los objetos de los que depende el DML, seleccione **Objetos de los que depende \<nombre del desencadenador DML>** . Los objetos aparecerán en el área **Dependencias** . Expanda cada nodo para ver todos los objetos.  
   
 5.  Para obtener información sobre un objeto que aparece en el área **Dependencias** , haga clic en el objeto. En el campo **Objeto seleccionado** , la información se proporciona en los cuadros **Nombre**, **Tipo**y **Tipo de dependencia** .  
   
@@ -204,7 +206,7 @@ WHERE object_id = OBJECT_ID('Person.iuPerson');
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [DROP TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/drop-trigger-transact-sql.md)   
  [ENABLE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/enable-trigger-transact-sql.md)   

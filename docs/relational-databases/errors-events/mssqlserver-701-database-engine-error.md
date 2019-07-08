@@ -12,12 +12,12 @@ ms.assetid: 3b975000-63a1-43c2-a40f-89d0a8a36bef
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e8083e23a59c66185e9c289dc18cdbec1f4e5495
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8224e9daa4bf4a875248668118e8cbacca5fe6b4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694794"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582099"
 ---
 # <a name="mssqlserver701"></a>MSSQLSERVER_701
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,9 @@ En la siguiente lista se describen los pasos generales que ayudarán a resolver 
 4.  Observe la salida de DBCC MEMORYSTATUS y la forma en que cambia cuando aparecen estos mensajes de error.  
   
 5.  Compruebe la carga de trabajo (por ejemplo, el número de sesiones simultáneas y las consultas que se están ejecutando actualmente).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Las siguientes acciones pueden hacer que haya más memoria disponible para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
 -   Si otras aplicaciones además de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] están consumiendo recursos, intente detener su ejecución o plantéese ejecutarlas en otro servidor. Esto quitará presión externa de la memoria.  

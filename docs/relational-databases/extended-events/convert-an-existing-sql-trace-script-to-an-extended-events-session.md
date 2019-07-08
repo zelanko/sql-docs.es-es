@@ -15,12 +15,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c95169a1be08b04be9b7cdb1b90fea243e99cf10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 206749c851423dd7a3b0ea06e1f443732d86b8bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669298"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583846"
 ---
 # <a name="convert-an-existing-sql-trace-script-to-an-extended-events-session"></a>Convertir un script de seguimiento de SQL existente en una sesión de eventos extendidos.
 
@@ -37,7 +37,9 @@ ms.locfileid: "62669298"
 3.  Use la función fn_trace_getfilterinfo para enumerar los filtros y las acciones equivalentes de eventos extendidos que vaya a usar.  
   
 4.  Cree manualmente una sesión de eventos extendidos utilizando los eventos, acciones, y predicados (filtros) equivalentes de eventos extendidos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="to-obtain-the-trace-id"></a>Para obtener el identificador de seguimiento  
   
 1.  Abra el script de Seguimiento de SQL en el Editor de consultas y, a continuación, ejecute el script para crear la sesión de seguimiento. Tenga en cuenta que no es necesario que la sesión de seguimiento esté ejecutándose para completar este procedimiento.  

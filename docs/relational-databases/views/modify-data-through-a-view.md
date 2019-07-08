@@ -16,29 +16,29 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 62a9120013d1a654460553bcba7a378560cef9ff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2677dbe1bc4a1cc45f609d98abcd0b42896231d3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749086"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582360"
 ---
 # <a name="modify-data-through-a-view"></a>Modificar datos mediante una vista
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
   Puede modificar los datos de una tabla base subyacente en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
 -   Vea la sección ''Vistas actualizables'' de [CREATE VIEW &#40;Transact-SQL&#41;](../../t-sql/statements/create-view-transact-sql.md).  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Requiere los permisos UPDATE, INSERT o DELETE en la tabla de destino, en función de la acción que se realizará.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-table-data-through-a-view"></a>Para modificar los datos de la tabla mediante una vista  
   
@@ -53,8 +53,10 @@ ms.locfileid: "47749086"
     > **IMPORTANTE:** No se puede eliminar una fila si la vista hace referencia a más de una tabla base. Solo pueden actualizarse las columnas que pertenecen a una única tabla base.  
   
 5.  Para insertar una fila, desplácese hasta el final de las filas e inserte los nuevos valores.  
-  
-    > **IMPORTANTE:** No se puede insertar una fila si la vista hace referencia a más de una tabla base.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **IMPORTANT!** You cannot insert a row if the view references more than one base table.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   

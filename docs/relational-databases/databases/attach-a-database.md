@@ -16,12 +16,12 @@ ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 292c180b70143826ebdb8ea75b015dcbe6a2011f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c7b7588801419f57d04996d6bd2cad335a9eede
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52523931"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583228"
 ---
 # <a name="attach-a-database"></a>Adjuntar una base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +46,10 @@ Los permisos de acceso a archivos se establecen durante una serie de operaciones
   
 Se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos. Para obtener más información sobre cómo adjuntar bases de datos y sobre los cambios que se realizan en los metadatos al adjuntar una base de datos, vea [Adjuntar y separar bases de datos (SQL Server)](../../relational-databases/databases/database-detach-and-attach-sql-server.md).  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
 Requiere el permiso `CREATE DATABASE`, `CREATE ANY DATABASE` o `ALTER ANY DATABASE`.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
 
 ### <a name="to-attach-a-database"></a>Para adjuntar una base de datos  
   
@@ -58,32 +58,34 @@ Requiere el permiso `CREATE DATABASE`, `CREATE ANY DATABASE` o `ALTER ANY DATABA
 2.  Haga clic con el botón derecho en **Bases de datos** y haga clic en **Adjuntar**.  
   
 3.  En el cuadro de diálogo **Adjuntar bases de datos** , haga clic en **Agregar**para especificar la base de datos que se va a adjuntar y en el cuadro de diálogo **Buscar archivos de base de datos** , seleccione la unidad de disco en la que se halla la base de datos y expanda el árbol de directorios para buscar y seleccionar el archivo .mdf de la base de datos; por ejemplo:  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Si intenta seleccionar una base de datos que ya ha sido adjuntada se producirá un error.  
+    > Trying to select a database that is already attached generates an error.  
   
-     **Bases de datos que se van a adjuntar**  
-     Muestra información sobre las bases de datos seleccionadas.  
+     **Databases to attach**  
+     Displays information about the selected databases.  
   
      \<no column header>  
-     Muestra un icono que indica el estado de la operación de adjuntar. Los iconos posibles se indican en la descripción de **Estado** , que encontrará más adelante.  
+     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
   
-     **Ubicación del archivo MDF**  
-     Muestra la ruta de acceso y el nombre del archivo MDF seleccionado.  
+     **MDF File Location**  
+     Displays the path and file name of the selected MDF file.  
   
      **Database Name**  
-     Muestra el nombre de la base de datos.  
+     Displays the name of the database.  
   
-     **Adjuntar como**  
-     Opcionalmente, especifica un nombre distinto con el que se debe adjuntar la base de datos.  
+     **Attach As**  
+     Optionally, specifies a different name for the database to attach as.  
   
-     **Propietario**  
-     Ofrece una lista desplegable de los posibles propietarios de base de datos desde los que opcionalmente puede seleccionarse otro propietario.  
+     **Owner**  
+     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
   
-     **Estado**  
-     Muestra el estado de la base de datos de acuerdo con la tabla siguiente.  
+     **Status**  
+     Displays the status of the database according to the following table.  
   
     |Icono|Texto de estado|Descripción|  
     |----------|-----------------|-----------------|  
@@ -94,32 +96,32 @@ Requiere el permiso `CREATE DATABASE`, `CREATE ANY DATABASE` o `ALTER ANY DATABA
     |Círculo con dos cuadrantes negros (a la izquierda y la derecha) y dos cuadrantes blancos (en la parte superior e inferior)|Detenido|La operación de adjuntar no ha finalizado correctamente porque el usuario la ha detenido.|  
     |Círculo con una flecha curvada que apunta hacia la izquierda|Revertido|La operación de adjuntar se ha ejecutado correctamente, pero se ha revertido debido a un error al adjuntar otro objeto.|  
   
-     **de mensaje**  
-     Muestra un mensaje en blanco o un hipervínculo que indica "Archivo no encontrado".  
+     **Message**  
+     Displays either a blank message or a "File not found" hyperlink.  
   
-     **Agregar**  
-     Busca los archivos de base de datos principales necesarios. Si el usuario selecciona un archivo .mdf, la información pertinente se llena automáticamente en los respectivos campos de la cuadrícula **Bases de datos que se van a adjuntar** .  
+     **Add**  
+     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
   
-     **Quitar**  
-     Quita el archivo seleccionado de la cuadrícula **Bases de datos que se van a adjuntar** .  
+     **Remove**  
+     Removes the selected file from the **Databases to attach** grid.  
   
-     **"** *<database_name>* **" detalles de la base de datos**  
-     Muestra los nombres de los archivos que se van a adjuntar. Para comprobar o cambiar el nombre de la ruta de acceso de un archivo, haga clic en el botón **Examinar** (**...**).  
+     **"** *<database_name>* **" database details**  
+     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
   
     > [!NOTE]  
-    > Si un archivo no existe, la columna **Mensaje** muestra "No se encontró". Si un archivo de registro no se encuentra, indica que se halla en otro directorio o que se ha eliminado. En tal caso, debe actualizar la ruta de acceso del archivo en la cuadrícula **Detalles de la base de datos** para que señale la ubicación correcta o eliminar el archivo de registro de la cuadrícula. Si un archivo de datos .ndf no se encuentra, debe actualizar su ruta de acceso en la cuadrícula para que señale la ubicación correcta.  
+    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
   
-     **Nombre del archivo original**  
-     Muestra el nombre del archivo adjunto que pertenece a la base de datos.  
+     **Original File Name**  
+     Displays the name of the attached file belonging to the database.  
   
-     **Tipo de archivo**  
-     Indica el tipo de archivo, que puede ser de **datos** o de **registro**.  
+     **File Type**  
+     Indicates the type of file, **Data** or **Log**.  
   
-     **Ruta de acceso del archivo actual**  
-     Muestra la ruta de acceso del archivo de base de datos seleccionado. La ruta de acceso puede modificarse manualmente.  
+     **Current File Path**  
+     Displays the path to the selected database file. The path can be edited manually.  
   
-     **de mensaje**  
-     Muestra un mensaje en blanco o un hipervínculo que indica "**Archivo no encontrado**".  
+     **Message**  
+     Displays either a blank message or a "**File not found**" hyperlink.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
@@ -156,7 +158,7 @@ USE <database name>
 EXEC sys.sp_cdc_vupgrade  
 ``` 
  
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) 
  <br>[Administración de los metadatos cuando una base de datos pasa a estar disponible en otro servidor](manage-metadata-when-making-a-database-available-on-another-server.md)  
  [Separar una base de datos](../../relational-databases/databases/detach-a-database.md)  

@@ -19,12 +19,12 @@ ms.assetid: f394d4bc-1518-4e61-97fc-bf184d972e2b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d1081ea3a972dea318e7ad7952f313a95f407223
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 053ea3fdc7ad56ef6b6c9c9992506cf07623cb5e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621553"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584018"
 ---
 # <a name="manage-the-suspectpages-table-sql-server"></a>Administrar la tabla suspect_pages (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ ms.locfileid: "47621553"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Recommendations"></a> Recomendaciones  
   
@@ -68,7 +68,7 @@ ms.locfileid: "47621553"
   
      La tabla **suspect_pages** contiene una fila por cada página que causó un error 824, hasta un límite de 1000 filas. En la siguiente tabla se muestran los errores registrados en la columna **event_type** de la tabla **suspect_pages** .  
   
-    |Descripción del error|Valor**event_type** |  
+    |Descripción del error|Valor**event_type**|  
     |-----------------------|---------------------------|  
     |Error 823 producido por un error de CRC del sistema operativo, o error 824 que no sea una suma de comprobación no válida o una página rasgada (por ejemplo, un Id. de página no válido)|1|  
     |Suma de comprobación errónea|2|  
@@ -119,10 +119,10 @@ ms.locfileid: "47621553"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Cualquier persona con acceso a **msdb** puede leer los datos de la tabla **suspect_pages** . Cualquier persona con el permiso UPDATE en la tabla suspect_pages puede actualizar sus registros. Los miembros del rol fijo de base de datos **db_owner** de **msdb** o el rol fijo de servidor **sysadmin** pueden insertar, actualizar y eliminar registros.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
   
@@ -133,7 +133,9 @@ ms.locfileid: "47621553"
 3.  Expanda **dbo.suspect_pages** y haga clic con el botón derecho en **Editar las 200 primeras filas**.  
   
 4.  En la ventana de consulta, edite, actualice o elimine las filas que desee.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-manage-the-suspectpages-table"></a>Para administrar la tabla suspect_pages  
@@ -162,7 +164,7 @@ GO
   
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [DROP DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-database-transact-sql.md)   
  [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   

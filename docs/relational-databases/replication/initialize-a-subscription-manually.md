@@ -16,12 +16,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fa294214b85e84f03f6867e50bc1fdba80731f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aec4d6268d2cd94e3dc5bf429ce7a6745a9b538a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66265435"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583050"
 ---
 # <a name="initialize-a-subscription-manually"></a>Inicializar una suscripción manualmente
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,7 +44,9 @@ ms.locfileid: "66265435"
 1.  Asegúrese de que el esquema y los datos están copiados en la base de datos de suscripciones.  
   
 2.  Desactive la casilla **Inicializar** en la página **Inicializar suscripciones** del Asistente para nuevas suscripciones. Haga esto con cada suscripción que requiera solo copiar metadatos y objetos de replicación.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Las suscripciones se pueden inicializar manualmente con los procedimientos almacenados de replicación.  
   

@@ -13,12 +13,12 @@ ms.assetid: e9582244-7d00-45f4-be16-020a65c76a5e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 59271c303494cf4e1e3dbb52be204c76ce767271
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: b4d29d3f616a9545aead55937012cffed74bee5d
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129055"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582679"
 ---
 # <a name="refresh-data-in-replication-monitor"></a>Actualizar datos en el Monitor de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,9 @@ ms.locfileid: "54129055"
 2.  En el cuadro de diálogo **Configuración del publicador** , establezca las opciones **Actualizar automáticamente** y **Frecuencia de actualización** . El valor establecido en **Actualizar automáticamente** afecta a la ventana principal del Monitor de replicación. El valor establecido en **Frecuencia de actualización** también afecta a las ventanas de detalles cuya configuración se haya establecido de modo que se actualicen automáticamente (los cambios en la configuración solo afectan a las ventanas de detalles abiertas después del cambio).  
   
 3.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-specify-that-a-detail-window-should-automatically-refresh"></a>Para especificar que una ventana de detalles se actualice automáticamente  
   
 1.  Abra una ventana de detalles en el Monitor de replicación. Por ejemplo:  
@@ -44,7 +46,7 @@ ms.locfileid: "54129055"
   
     3.  Haga clic con el botón secundario en una suscripción y, a continuación, haga clic en **Ver detalles**.  
   
-2.  En la ventana de detalles **Suscripción \<<nombreDeSuscripción>**, haga clic en **Acción** y, a continuación, en **Actualizar automáticamente**. La frecuencia de actualización es establece con el valor que se especifique en **Frecuencia de actualización** en el cuadro de diálogo **Configuración del publicador** .  
+2.  En la ventana de detalles **Suscripción \<<nombreDeSuscripción>** , haga clic en **Acción** y, a continuación, en **Actualizar automáticamente**. La frecuencia de actualización es establece con el valor que se especifique en **Frecuencia de actualización** en el cuadro de diálogo **Configuración del publicador** .  
   
 ## <a name="see-also"></a>Consulte también  
  [Supervisar la replicación](../../../relational-databases/replication/monitor/monitoring-replication.md)  

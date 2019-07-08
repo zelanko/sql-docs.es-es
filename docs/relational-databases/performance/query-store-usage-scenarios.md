@@ -14,12 +14,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 455530c12d498f62b367ecb7ce30d0eb34aa6c5d
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 6169d09cd048c9883836c3d34ff8912e9101ba07
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542045"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586318"
 ---
 # <a name="query-store-usage-scenarios"></a>Escenarios de uso del Almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -67,7 +67,9 @@ Cuando identifique una consulta con un rendimiento deficiente, la acción depend
 4.  Asegúrese de que los índices usados por la consulta están desfragmentados.  
   
 5.  Considere si merece la pena volver a escribir una consulta costosa. Por ejemplo, puede aprovechar las ventajas de la parametrización de consultas y reducir el uso de SQL dinámico. Implemente una lógica óptima al leer los datos (aplique el filtrado de datos en la base de datos, no en la aplicación).  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ab-testing"></a>Realizar pruebas A/B  
  Use el Almacén de consultas para comparar el rendimiento de una carga de trabajo antes y después del cambio de aplicación que tiene previsto realizar. La siguiente lista contiene ejemplos en los que se puede usar el Almacén de consultas para evaluar el impacto del cambio de entorno o aplicación en el rendimiento de la carga de trabajo:  
   

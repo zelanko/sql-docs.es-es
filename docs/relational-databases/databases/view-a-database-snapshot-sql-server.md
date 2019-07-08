@@ -15,12 +15,12 @@ ms.assetid: 123f19b2-0850-4033-8507-59ebdfb368ee
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 388c7c40afcf370b181378259c97fd399781e983
-ms.sourcegitcommit: 1a5448747ccb2e13e8f3d9f04012ba5ae04bb0a3
+ms.openlocfilehash: d7b8389317ea7239533b98d46562fdcf9bfa6212
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51560362"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583415"
 ---
 # <a name="view-a-database-snapshot-sql-server"></a>Ver una instantánea de base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "51560362"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para ver una instantánea de base de datos**  
   
 1.  En el Explorador de objetos, conéctese a la instancia del [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] y, a continuación, expándala.  
@@ -45,7 +45,9 @@ ms.locfileid: "51560362"
 2.  Expanda **Bases de datos**.  
   
 3.  Expanda **Instantáneas de base de datos**y, a continuación, seleccione la instantánea que desee ver.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para ver una instantánea de base de datos**  
   
@@ -63,7 +65,7 @@ ms.locfileid: "51560362"
   
 -   [Eliminar una instantánea de base de datos &#40;Transact-SQL&#41;](../../relational-databases/databases/drop-a-database-snapshot-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Instantáneas de bases de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)  
   
   

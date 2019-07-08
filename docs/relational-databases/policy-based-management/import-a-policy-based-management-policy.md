@@ -13,12 +13,12 @@ ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 486669acdea63950c0d7b6f3d8d57a389831b4d0
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: 5c3a8ee9af1451d275f4168c86e5067fc26c06bd
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512380"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584904"
 ---
 # <a name="import-a-policy-based-management-policy"></a>Importar una directiva de administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,10 +43,10 @@ ms.locfileid: "51512380"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol PolicyAdministratorRole en la base de datos msdb.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-import-a-policy-instance"></a>Para importar una instancia de directiva  
   
@@ -58,8 +58,9 @@ ms.locfileid: "51512380"
   
 4.  Haga clic con el botón derecho en la carpeta **Directivas** y seleccione **Importar directiva**.  
   
-5.  En el cuadro de diálogo **Importar** , escriba la ruta de acceso y el nombre del archivo, o use el botón Examinar (**...**) para buscar el archivo XML que contiene la directiva y, después, seleccione el archivo. Para obtener más información acerca de las opciones disponibles en el cuadro de diálogo **Importar** , vea [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
+5.  En el cuadro de diálogo **Importar** , escriba la ruta de acceso y el nombre del archivo, o use el botón Examinar ( **...** ) para buscar el archivo XML que contiene la directiva y, después, seleccione el archivo. Para obtener más información acerca de las opciones disponibles en el cuadro de diálogo **Importar** , vea [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
   
 6.  Cuando termine, haga clic en **Aceptar**.  
-  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+

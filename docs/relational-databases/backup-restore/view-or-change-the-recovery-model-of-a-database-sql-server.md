@@ -19,12 +19,12 @@ ms.assetid: 94918d1d-7c10-4be7-bf9f-27e00b003a0f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 033c14d1e144811f350f8f29ae18c052cd2ea380
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dae91654a04921340b043518d6d5cf3363ad6a1b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65560072"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581775"
 ---
 # <a name="view-or-change-the-recovery-model-of-a-database-sql-server"></a>Ver o cambiar el modelo de recuperación de una base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +71,9 @@ ms.locfileid: "65560072"
 6.  Si lo desea, también puede seleccionar otra lista de modelos para cambiar el modelo de recuperación. Las opciones son **Completa**, **Registro masivo**o **Simple**.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-view-the-recovery-model"></a>Para ver el modelo de recuperación  

@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 84c23f7518850b25e1216a7e380871fc6cb99888
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0ca9273e02d32951960930f7f869aa888b78b8b
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744135"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579700"
 ---
 # <a name="advanced-viewing-of-target-data-from-extended-events-in-sql-server"></a>Advanced Viewing of Target Data from Extended Events in SQL Server (Visualización avanzada de datos de destino de eventos extendidos en SQL Server)
 
@@ -181,6 +181,9 @@ Una vez que tenemos los datos de destino en SSMS, se pueden exportar a diversos 
 
 
 1. Mantenga el foco en la presentación de datos.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     - De repente, aparecerán una nueva barra de herramientas y un nuevo elemento de menú para eventos extendidos.
 
     ![Exportación de datos en pantalla: Eventos extendidos > Exportar a > (.csv, .xel o a una tabla)](../../relational-databases/extended-events/media/xevents-ssms-ui75-menuextevent-exportto-xel.png)

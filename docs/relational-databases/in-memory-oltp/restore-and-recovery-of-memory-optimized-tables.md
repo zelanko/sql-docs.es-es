@@ -11,12 +11,12 @@ ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 8dbf17ab9e9340b793b4310427169be3bcdfe120
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 074802ff3717b8935015071fdf37e43923d752c1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671324"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582975"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>Restauración y recuperación de tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ Cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se reinicia, ca
     Cuando las operaciones anteriores en las tablas optimizadas para memoria y las basadas en disco se completan, la base de datos está disponible para su acceso.  
   
 3.  **Deshacer**. En esta fase, las transacciones no confirmadas se revierten.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="process-for-improving-load-time"></a>Proceso para reducir el tiempo de carga
 Cargar en memoria las tablas optimizadas para memoria puede afectar el rendimiento del objetivo de tiempo de recuperación (RTO). Para mejorar el tiempo de carga de los datos optimizados para memoria de los archivos delta y de datos, el motor de OLTP en memoria carga los archivos delta y de datos en paralelo como se indica a continuación:  
   

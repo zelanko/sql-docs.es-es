@@ -10,12 +10,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: ab93c4a4ea1a09fa9af8adea765b342d7ac9f340
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fc4c6ef8a84ff670feb43fafbdd239e9e9862f1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774720"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581632"
 ---
 # <a name="improve-polybase-scale-out-groups-on-windows"></a>Mejora de los grupos de escalado horizontal de PolyBase en Windows
 
@@ -42,6 +42,8 @@ Los pasos siguientes resumen el proceso de creación de un grupo de escalado hor
 4. Supervise los nodos en el grupo con [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).
 
 5. Opcional. Quite un nodo de ejecución con [sp_polybase_leave_group &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/polybase-stored-procedures-sp-polybase-leave-group.md).
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="example-walk-through"></a>Tutorial de ejemplo
 

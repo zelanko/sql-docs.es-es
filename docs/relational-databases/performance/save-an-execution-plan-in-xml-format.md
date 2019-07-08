@@ -18,12 +18,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2aa0eb5794abca24ff3bea6c4242799bf9f8e802
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4e6d654dd50890ee00c19dbc7be57966ad11a0d5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53349632"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586281"
 ---
 # <a name="save-an-execution-plan-in-xml-format"></a>Guardar un plan de ejecución en formato XML
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -69,10 +69,12 @@ ms.locfileid: "53349632"
   
 4.  En el panel **Resultados** , haga clic con el botón derecho en el **Plan de presentación XML de Microsoft SQL Server** que contiene el plan de consulta y, después, haga clic en **Guardar resultados como**.  
   
-5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)**.  
+5.  En el cuadro de diálogo **Guardar** **resultados** \<de la cuadrícula o texto>, en el cuadro **Guardar como tipo**, haga clic en **Todos los archivos (\*.\*)** .  
   
 6.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-save-an-execution-plan-by-using-sql-server-management-studio-options"></a>Para guardar un plan de ejecución mediante las opciones de SQL Server Management Studio  
   
 1.  Genere un plan de ejecución estimado o uno real mediante [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener más información, consulte [Mostrar el plan de ejecución estimado](../../relational-databases/performance/display-the-estimated-execution-plan.md) y [Mostrar el plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).  
@@ -81,7 +83,7 @@ ms.locfileid: "53349632"
   
      Como alternativa, también puede elegir **Guardar plan de ejecución como** en el menú **Archivo** .  
   
-3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)**.  
+3.  En el cuadro de diálogo **Guardar como**, asegúrese de que **Guardar como tipo** está establecido en **Archivos de plan de ejecución (\*.sqlplan)** .  
   
 4.  En el cuadro **Nombre de archivo**, proporcione un nombre con el formato \<nombre **>.sqlplan** y haga clic en **Guardar**.  
   

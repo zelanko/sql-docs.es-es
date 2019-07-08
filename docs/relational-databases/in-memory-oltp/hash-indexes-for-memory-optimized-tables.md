@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ab8ab5fc572648840e2b4b5919ae0c3417a2a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 486f361ab7915c0a7be0076a7f90b2359887cabc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047672"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581857"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>Solución de problemas de índices de hash para tablas optimizadas para memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -117,7 +117,9 @@ El siguiente bloque de código de T-SQL constituye un sencillo método de compro
     A. Se usa un operador de módulo para configurar la tasa de valores duplicados en la columna StatusCode.  
     B. El bucle inserta 262,144 filas aproximadamente en un minuto.  
 3. PRINT imprime un mensaje pidiéndole que ejecute la instrucción SELECT anterior en **sys.dm_db_xtp_hash_index_stats**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  
 go  

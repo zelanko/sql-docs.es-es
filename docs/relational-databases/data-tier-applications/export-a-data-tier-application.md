@@ -24,24 +24,26 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6fb94ddf437439fe2dcb414fb69f3049d1a4dbd9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 6ebee4a462cd865ef606d38ecf205bf41065a0d2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513816"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580283"
 ---
 # <a name="export-a-data-tier-application"></a>Exportar una aplicación de capa de datos
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   Al exportar una aplicación de capa de datos (DAC) o base de datos implementada se crea un archivo de exportación que incluye las definiciones de los objetos de la base de datos y todos los datos contenidos en las tablas. El archivo de exportación se podrá importar a otra instancia de [!INCLUDE[ssDE](../../includes/ssde-md.md)]o a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. Las operaciones de exportación-importación se pueden combinar para migrar una DAC de una instancia a otra, crear un archivo o crear una copia local de una base de datos implementada en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
-## <a name="before-you-begin"></a>Antes de comenzar  
+## <a name="before-you-begin"></a>Antes de empezar  
  El proceso de exportación compila un archivo de exportación DAC en dos fases.  
   
 1.  La exportación genera una definición de DAC en el archivo de exportación (archivo BACPAC) de la misma forma que una extracción de DAC genera una definición de DAC en un archivo de paquete DAC. La definición de DAC exportada incluye todos los objetos de la base de datos actual. Si el proceso de exportación se ejecuta en una base de datos que se implementó originalmente a partir de una DAC y se realizaron cambios directamente en la base de datos tras la implementación, la definición exportada coincide con el objeto establecido en la base de datos, no con lo definido en la DAC original.  
   
 2.  La exportación masiva copia los datos de todas las tablas de la base de datos y los incorpora en el archivo de exportación.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  El proceso de exportación establece la versión de DAC en 1.0.0.0 y la descripción de DAC en el archivo de exportación en una cadena vacía. Si la base de datos se implementó a partir de una DAC, la definición de DAC del archivo de exportación contiene el nombre asignado a DAC original; de lo contrario, el nombre de la DAC se establece el nombre de la base de datos.  
   
 
@@ -50,7 +52,7 @@ ms.locfileid: "52513816"
   
  No puede exportar una base de datos que tenga objetos que no se admiten en una DAC, o usuarios contenidos. Para obtener más información acerca de los objetos admitidos por una DAC, vea [DAC Support For SQL Server Objects and Versions](../../relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md).  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  La exportación de una DAC requiere al menos permisos ALTER ANY LOGIN y VIEW DEFINITION en el ámbito de la base de datos, así como permisos SELECT en **sys.sql_expression_dependencies**. La exportación de una DAC la pueden realizar los miembros del rol fijo de servidor securityadmin que sean también miembros del rol fijo de base de datos database_owner en la base de datos de la que se exporta la DAC. Los miembros del rol fijo de servidor sysadmin o de la cuenta de administrador del sistema de SQL Server integrada denominada **sa** también pueden exportar una DAC.
  
 En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEFINITION y SELECT en todas las tablas o en tablas específicas.
@@ -65,7 +67,7 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
   
 3.  Haga clic con el botón secundario en el nombre de la base de datos.  
   
-4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...**.  
+4.  Haga clic en **Tareas** y después seleccione **Exportar aplicación de capa de datos...** .  
   
 5.  Complete los cuadros de diálogo del asistente:  
   
@@ -128,7 +130,7 @@ En Azure SQL DB deberá conceder **en cada base de datos** los permisos VIEW DEF
   
 3.  Use el método de **Export** de tipo **Microsoft.SqlServer.Management.Dac.DacStore** para exportar la DAC. Especifique el nombre de la DAC que se exportará y la ruta de acceso a la carpeta donde se va a guardar el archivo de exportación.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Aplicaciones de capa de datos](../../relational-databases/data-tier-applications/data-tier-applications.md)   
  [Extraer una DAC de una base de datos](../../relational-databases/data-tier-applications/extract-a-dac-from-a-database.md)  
   

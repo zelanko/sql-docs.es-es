@@ -15,12 +15,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3ea42c8ca9025880f28f273248682e5b8fa88f3b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b30a29f7aa2cd0e64c645d2e62f60a10c74063ac
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66743903"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586261"
 ---
 # <a name="format-query-results-as-json-with-for-json-sql-server"></a>Dar formato JSON a los resultados de consulta con FOR JSON (SQL Server)
 
@@ -195,7 +195,9 @@ La salida de la cláusula **FOR JSON** tiene las características siguientes:
     -   Cada columna de los resultados de la instrucción SELECT (antes de aplicar la cláusula FOR JSON) se convierte en una propiedad del objeto JSON.  
   
 3.  Tanto los nombres de las columnas como sus valores van acompañados de un carácter de escape, como reza la sintaxis de JSON. Para obtener más información, vea [Cómo FOR JSON inserta caracteres de escape en los caracteres especiales y caracteres de control &#40;SQL Server&#41;](../../relational-databases/json/how-for-json-escapes-special-characters-and-control-characters-sql-server.md).
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="example"></a>Ejemplo
 Este es un ejemplo que muestra cómo la cláusula **FOR JSON** da formato al resultado JSON.  
   

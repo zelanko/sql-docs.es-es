@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b0b63123e9d48ca7f89d888dca82b6b988942893
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef2848efb4a66ccf2d8d1b2271bd70c455b27fd9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62466805"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582628"
 ---
 # <a name="manage-retention-of-historical-data-in-system-versioned-temporal-tables"></a>Administración de la retención de datos históricos en las tablas temporales con versiones del sistema
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -88,7 +88,9 @@ ms.locfileid: "62466805"
      ![Página Seleccionar dirección IP del asistente para Stretch Database](../../relational-databases/tables/media/stretch-wizard-7.png "Página Seleccionar dirección IP del asistente para Stretch Database")  
   
 6.  Cuando se complete el asistente, compruebe que se haya habilitado el ajuste correctamente para la base de datos. Vea los iconos del Explorador de objetos que indican que se ha ajustado la base de datos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **NOTA:** Si se produce un error en Habilitar base de datos para Stretch, revise el registro de errores. Un error común consiste en configurar incorrectamente la regla de firewall.  
   
  Vea también:  

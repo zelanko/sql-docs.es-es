@@ -15,12 +15,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 170104d07302b7921dd06b30f91b386238fe6d55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c617d46174b44bb43add44314c5d3192bc6cd94
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64946393"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579599"
 ---
 # <a name="use-native-format-to-import-or-export-data-sql-server"></a>Usar el formato nativo para importar o exportar datos (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +34,9 @@ El formato nativo mantiene los tipos de datos nativos de una base de datos. Est�
 1.  Exportación masiva de datos de una tabla de origen a un archivo de datos  
   
 2.  Importación masiva de datos de un archivo de datos a una tabla de destino  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 El uso del formato nativo entre tablas idénticas evita la conversión innecesaria de tipos de datos a y desde el formato de caracteres, lo que ahorra tiempo y espacio. No obstante, para obtener la velocidad de transferencia óptima, se realizan algunas comprobaciones relativas al formato de los datos. Para evitar problemas con los datos cargados, vea la siguiente lista de restricciones.  
 
 |En este tema:|
@@ -67,14 +69,14 @@ Para importar datos con formato nativo correctamente, asegúrese de lo siguiente
   
      La [utilidad bcp](../../tools/bcp-utility.md) usa el formato de datos binario interno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para escribir datos que no son caracteres de una tabla a un archivo de datos.  
   
--   Datos[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)   
+-   Datos[char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)  
   
      Al principio de cada campo [char](../../t-sql/data-types/char-and-varchar-transact-sql.md) o [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md) , [bcp](../../tools/bcp-utility.md) agrega la longitud de prefijo.  
   
     > [!IMPORTANT]
     >  Cuando se usa el modo nativo, de forma predeterminada, la [utilidad bcp](../../tools/bcp-utility.md) convierte los caracteres de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en caracteres OEM antes de copiarlos en un archivo de datos. La [utilidad bcp](../../tools/bcp-utility.md) convierte los caracteres de un archivo de datos en caracteres ANSI antes de importarlos masivamente a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Durante estas conversiones, se pueden perder datos que tengan caracteres extendidos. Para caracteres extendidos, utilice el formato nativo Unicode o especifique una página de códigos.
   
--   Datos[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)   
+-   Datos[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)  
   
      Si se almacenan datos [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) como SQLVARIANT en un archivo de datos con formato nativo, los datos mantienen todas sus características. Los metadatos que registran el tipo de datos de cada valor de datos se almacenan junto con el valor de los datos. Estos metadatos se usan para volver a crear el valor de los datos con el mismo tipo de datos en una columna [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md) de destino.  
   
@@ -94,7 +96,7 @@ El formato nativo admite las siguientes opciones de comando:
 |OPENROWSET|N/D|Debe usar un archivo de formato|
 
   
- \**Para cargar datos nativos (**-n**) en un formato compatible con versiones anteriores de clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use el modificador **-V** . Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
+ \**Para cargar datos nativos ( **-n**) en un formato compatible con versiones anteriores de clientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , use el modificador **-V** . Para obtener más información, vea [Importar datos con formato nativo y de caracteres de versiones anteriores de SQL Server](../../relational-databases/import-export/import-native-and-character-format-data-from-earlier-versions-of-sql-server.md).  
   
 > [!NOTE]
 >  Otra posibilidad es especificar el formato por campo en un archivo de formato. Para obtener más información, vea [Archivos de formato para importar o exportar datos &#40;SQL Server&#41;](../../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md).

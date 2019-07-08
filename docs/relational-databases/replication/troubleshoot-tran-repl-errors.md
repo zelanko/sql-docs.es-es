@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e25498f1d9d3b1ec3c24b7c2f34031fab9e4341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7547ce03478e810eac4725b8b543afd9862f9ca2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057527"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581346"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>Solucionador de problemas: Búsqueda de errores con la replicación transaccional de SQL Server 
 La solución de problemas de errores de replicación puede resultar frustrante sin un conocimiento básico de cómo funciona la replicación transaccional. El primer paso para crear una publicación es hacer que el Agente de instantáneas cree la instantánea y la guarde en la carpeta de instantáneas. Después, el Agente de distribución aplica la instantánea al suscriptor. 
@@ -25,6 +25,8 @@ Este proceso crea la publicación y la coloca en el estado de *sincronización*.
 1. Las transacciones se producen en los objetos que se replican y se marcan como "para replicación" en el registro de transacciones. 
 2. El Agente de registro del LOG examina el registro de transacciones y busca las transacciones marcadas "para replicación". Después, estas transacciones se guardan en la base de datos de distribución. 
 3. El Agente de distribución examina la base de datos de distribución mediante el subproceso de lectura. Después, con el subproceso de escritura, este agente se conecta al suscriptor para aplicar los cambios en él.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 En cualquier paso de este proceso se pueden producir errores. La búsqueda de esos errores puede ser el aspecto más complejo de la solución de problemas de sincronización. Afortunadamente, el uso del Monitor de replicación facilita este proceso. 
 

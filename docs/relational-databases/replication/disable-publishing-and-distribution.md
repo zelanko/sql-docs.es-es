@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e5504030fb8d5759056ce8c5c938f81fcab207b1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 08813aa3faad6738bb023a0c04c92f331bf5a457
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47656683"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581161"
 ---
 # <a name="disable-publishing-and-distribution"></a>Deshabilitar la publicación y la distribución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "47656683"
   
      [Replication Management Objects (RMO)](#RMOProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Prerequisites"></a> Requisitos previos  
   
 -   Para deshabilitar la publicación y la distribución, todas las bases de datos de distribución y de publicaciones deben estar en línea. Si existe alguna *instantánea de base de datos* para las bases de datos de distribución o de publicaciones, deben quitarse antes de deshabilitar la publicación y distribución. Una instantánea de base de datos es una copia de solo lectura sin conexión de una base de datos y no está relacionada con una instantánea de replicación. Para más información, vea [Instantáneas de base de datos &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md).  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Deshabilite la publicación y la distribución con el Asistente para deshabilitar la publicación y distribución.  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
@@ -68,7 +68,9 @@ ms.locfileid: "47656683"
 2.  Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, haga clic en **Deshabilitar publicación y distribución**.  
   
 3.  Siga todos los pasos del Asistente para deshabilitar la publicación y distribución.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Puede deshabilitarse la publicación y la distribución mediante programación con los procedimientos almacenados de la replicación.  
   
@@ -100,7 +102,7 @@ ms.locfileid: "47656683"
   
  [!code-sql[HowTo#sp_DropDistPub](../../relational-databases/replication/codesnippet/tsql/disable-publishing-and-d_2.sql)]  
   
-##  <a name="RMOProcedure"></a> Usar Replication Management Objects (RMO)  
+##  <a name="RMOProcedure"></a> Uso de Replication Management Objects (RMO)  
   
 #### <a name="to-disable-publishing-and-distribution"></a>Para deshabilitar la publicación y la distribución  
   
@@ -133,7 +135,7 @@ ms.locfileid: "47656683"
   
  [!code-vb[HowTo#rmo_vb_DropDistPubForce](../../relational-databases/replication/codesnippet/visualbasic/rmohowtovb/rmotestenv.vb#rmo_vb_dropdistpubforce)]  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md) (Conceptos sobre los procedimientos almacenados del sistema de replicación)  
   

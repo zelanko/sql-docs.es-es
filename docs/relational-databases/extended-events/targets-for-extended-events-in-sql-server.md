@@ -12,12 +12,12 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a34c835fe87edb3acf8e6bb64f262a090cc92806
-ms.sourcegitcommit: 715683b5fc7a8e28a86be8949a194226b72ac915
+ms.openlocfilehash: 6d9a5221f3386bd96a728bab27db93eca9373054
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/26/2019
-ms.locfileid: "58478140"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583388"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>Destinos para eventos extendidos en SQL Server
 
@@ -521,6 +521,7 @@ Para probar la sesión de eventos, impedimos expresamente la liberación de bloq
 3. No emita expresamente una instrucción COMMIT TRANSACTION hasta que hayamos examinado los destinos.
 4. Más adelante, después de las pruebas, emitimos una instrucción COMMIT TRANSACTION.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 El destino **event_counter** sencillo proporcionó las siguientes filas de salida. Como 52-50=2, el resultado nos indica que deberíamos ver dos eventos lock_acquired desemparejados al examinarse este desde el destino de coincidencia de pares.
 

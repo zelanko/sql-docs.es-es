@@ -21,12 +21,12 @@ ms.assetid: 50a73574-1a69-448e-83dd-9abcc7cb7e1a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: d90c284494fe3f351d66932c019dbc3140aac433
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c025b791559fb63ba82826f112e04b6da837be1
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698043"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581769"
 ---
 # <a name="use-marked-transactions-to-recover-related-databases-consistently"></a>Usar transacciones marcadas para recuperar bases de datos relacionadas sistemáticamente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +63,9 @@ ms.locfileid: "47698043"
 4.  Restaurar las copias de seguridad de las bases de datos con WITH NORECOVERY.  
   
 5.  Restaurar los registros con WITH STOPATMARK.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="considerations-for-using-marked-transactions"></a>Consideraciones para el uso de transacciones marcadas  
  Antes de insertar marcas con nombre en el registro de transacciones, tenga en cuenta lo siguiente:  
   
@@ -176,7 +178,7 @@ GO
 ## <a name="recovering-to-a-marked-transaction"></a>Recuperar a una transacción marcada  
  Para obtener información sobre cómo recuperar una base de datos con transacciones marcadas a una marca concreta o inmediatamente antes, vea [Recuperación de bases de datos relacionadas que contienen transacciones marcadas](../../relational-databases/backup-restore/recovery-of-related-databases-that-contain-marked-transaction.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-distributed-transaction-transact-sql.md)   
  [Realizar copias de seguridad y restaurar bases de datos del sistema &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)   
  [BEGIN TRANSACTION &#40;Transact-SQL&#41;](../../t-sql/language-elements/begin-transaction-transact-sql.md)   

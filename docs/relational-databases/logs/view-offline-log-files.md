@@ -14,12 +14,12 @@ ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b29e94e129cf674beee7d9ca2b784203c753c79
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b08178a89f8678b8ad0ac9f9f2f848860bb786c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47826403"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584200"
 ---
 # <a name="view-offline-log-files"></a>Ver sin conexión archivos de registro
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -87,7 +87,9 @@ ms.locfileid: "47826403"
 6.  Haga clic en **Seguridad**.  
   
 7.  Asegúrese de que la cuenta que se va a utilizar tiene el permiso **Habilitar cuenta** . Este permiso permite el acceso de lectura a los objetos WMI.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="view-log-files"></a>Ver archivos de registro  
  El siguiente procedimiento indica cómo ver los archivos de registro sin conexión a través de servidores registrados. En el procedimiento se supone que:  
   
@@ -120,7 +122,7 @@ ms.locfileid: "47826403"
     > [!NOTE]  
     >  Si los archivos de registro tardan demasiado en cargarse, puede hacer clic en **Detener** en la barra de herramientas del Visor del archivo de registros.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Visor de archivos de registro](../../relational-databases/logs/log-file-viewer.md)  
   
   

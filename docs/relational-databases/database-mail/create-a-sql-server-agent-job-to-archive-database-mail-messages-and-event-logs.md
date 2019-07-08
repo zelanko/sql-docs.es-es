@@ -16,12 +16,12 @@ ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dd24314a8948e5893e4e4625c695485c7611c5bb
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 6f9168c32115d3d44c59f8b1292529ad2eb23bfa
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130285"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585277"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>Crear un trabajo del Agente SQL Server para archivar mensajes y registros de eventos del Correo electrónico de base de datos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "54130285"
  En su entorno de producción, puede agregar otros procedimientos de comprobación de errores y enviar un mensaje de correo electrónico a los operadores si el trabajo provoca un error.  
   
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Debe ser miembro del rol fijo de servidor **sysadmin** para ejecutar los procedimientos almacenados que se describen en este tema.  
   
   
@@ -48,11 +48,11 @@ ms.locfileid: "54130285"
   
 -   En el primer procedimiento se crea con cuatro pasos un trabajo denominado Archivar mensajes del Correo electrónico de base de datos.  
   
-    1.  Copiar todos los mensajes de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_**_<año_mes>_.  
+    1.  Copiar todos los mensajes de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_** _<año_mes>_ .  
   
-    2.  Copiar todos los datos adjuntos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Attachments_**_<año_mes>_.  
+    2.  Copiar todos los datos adjuntos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Attachments_** _<año_mes>_ .  
   
-    3.  Copiar todos los eventos del registro de eventos del Correo electrónico de base de datos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Log_**_<año_mes>_.  
+    3.  Copiar todos los eventos del registro de eventos del Correo electrónico de base de datos relacionados con los mensajes copiados en el primer paso, de las tablas del Correo electrónico de base de datos en una nueva tabla con el nombre del mes anterior en el formato **DBMailArchive_Log_** _<año_mes>_ .  
   
     4.  Eliminar los registros de los elementos de correo transferidos de las tablas del Correo electrónico de base de datos.  
   
@@ -72,7 +72,9 @@ ms.locfileid: "54130285"
 4.  En el cuadro **Categoría** , haga clic en **Mantenimiento de bases de datos**.  
   
 5.  En el cuadro **Descripción** , escriba **Archivar mensajes del Correo electrónico de base de datos**y, a continuación, haga clic en **Pasos**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  [Información general](#Process_Overview)  
   
 ## <a name="to-create-a-step-to-archive-the-database-mail-messages"></a>Crear un paso para archivar los mensajes del Correo electrónico de base de datos  
@@ -81,7 +83,7 @@ ms.locfileid: "54130285"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar elementos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -107,7 +109,7 @@ ms.locfileid: "54130285"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar datos adjuntos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -134,7 +136,7 @@ ms.locfileid: "54130285"
   
 2.  En el cuadro **Nombre del paso** , escriba **Copiar el registro del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -161,7 +163,7 @@ ms.locfileid: "54130285"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
   
 4.  En el cuadro **Base de datos** , seleccione **msdb**.  
   
@@ -183,7 +185,7 @@ ms.locfileid: "54130285"
   
 2.  En el cuadro **Nombre del paso** , escriba **Eliminar filas del registro de eventos del Correo electrónico de base de datos**.  
   
-3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)**.  
+3.  En el cuadro **Tipo** , seleccione **Script Transact-SQL (T-SQL)** .  
   
 4.  En el cuadro **Comando** , escriba la instrucción siguiente para quitar las filas anteriores al mes actual del registro de eventos del Correo electrónico de base de datos:  
   
@@ -209,7 +211,7 @@ ms.locfileid: "54130285"
   
 5.  En el área **Frecuencia** , seleccione las opciones para ejecutar el trabajo periódicamente, por ejemplo una vez al mes.  
   
-6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>**.  
+6.  En el área **Frecuencia diaria**, seleccione **Sucede una vez a las \<hora>** .  
   
 7.  Compruebe que las demás opciones están configuradas tal como desea y, a continuación, haga clic en **Aceptar** para guardar la programación.  
   

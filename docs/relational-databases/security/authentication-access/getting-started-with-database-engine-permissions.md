@@ -14,12 +14,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 14e32081c9cbe03d7336f4ee973b02737f1cda1d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6239c7854a5a63165672dc3a66d5b6ce26dfb3ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454591"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579895"
 ---
 # <a name="getting-started-with-database-engine-permissions"></a>Introducción a los permisos de los motores de bases de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,29 +29,29 @@ ms.locfileid: "66454591"
 ## <a name="security-principals"></a>Entidades de seguridad  
  "Entidad de seguridad" es el nombre oficial de las identidades que utilizan [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y a las que se pueden conceder permisos para realizar acciones. Suelen ser personas o grupos de personas, pero pueden ser otras entidades que finjan ser personas. Las entidades de seguridad se pueden crear y administrar mediante el [!INCLUDE[tsql](../../../includes/tsql-md.md)] indicado o mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
- Inicios de sesión  
+##### <a name="logins"></a>Inicios de sesión  
  Los inicios de sesión son cuentas de usuario individuales para iniciar sesión en [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] admiten inicios de sesión basados en la autenticación de Windows e inicios de sesión basados en la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información acerca de los dos tipos de inicio de sesión, consulte [Choose an Authentication Mode](../../../relational-databases/security/choose-an-authentication-mode.md).  
   
- Roles fijos de servidor  
+##### <a name="fixed-server-roles"></a>Roles fijos de servidor  
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], los roles fijos de servidor son un conjunto de roles preconfigurados que proporcionan un grupo práctico de permisos de nivel de servidor. Se pueden agregar inicios de sesión a los roles mediante la instrucción `ALTER SERVER ROLE ... ADD MEMBER` . Para obtener más información, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no admite los roles fijos de servidor, pero tiene dos roles en la base de datos maestra (`dbmanager` y `loginmanager`) que actúan como roles de servidor.  
   
- Roles de servidor definidos por el usuario  
+##### <a name="user-defined-server-roles"></a>Roles de servidor definidos por el usuario  
  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], puede crear sus propios roles de servidor y asignarles permisos de nivel de servidor. Se pueden agregar inicios de sesión al servidor mediante la instrucción `ALTER SERVER ROLE ... ADD MEMBER` . Para obtener más información, consulte [ALTER SERVER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-server-role-transact-sql.md). [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] no admite los roles de servidor definidos por el usuario.  
   
- Usuarios de bases de datos  
+##### <a name="database-users"></a>Usuarios de bases de datos  
  Para conceder acceso a una base de datos a los inicios de sesión, se crea un usuario de base de datos en una base de datos y se asigna ese usuario de base de datos al inicio de sesión. Normalmente, el nombre de usuario de base de datos es el mismo que el nombre de inicio de sesión, aunque no tiene por qué ser así en todos los casos. Cada usuario de base de datos se asigna a un inicio de sesión único. Un inicio de sesión se puede asignar a un único usuario en una base de datos, pero se puede asignar como usuario de base de datos en distintas bases de datos.  
   
  También se pueden crear usuarios de base de datos que no tengan el correspondiente inicio de sesión. Estos usuarios se denominan *usuarios de base de datos independiente*. [!INCLUDE[msCoName](../../../includes/msconame-md.md)] recomienda el uso de los usuarios de base de datos independiente porque facilita el traslado de la base de datos a otro servidor. Igual que un inicio de sesión, un usuario de base de datos independiente puede utilizar tanto la autenticación de Windows como la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
  Hay 12 tipos de usuarios con ligeras diferencias en cuanto a cómo se autentican y a quién representan. Para ver una lista de usuarios, consulte [CREATE USER &#40;Transact-SQL&#41;](../../../t-sql/statements/create-user-transact-sql.md).  
   
- Roles fijos de base de datos  
+##### <a name="fixed-database-roles"></a>Roles fijos de base de datos  
  Los roles fijos de base de datos son un conjunto de roles preconfigurados que proporcionan un práctico grupo de permisos de nivel de base de datos. Se pueden agregar usuarios de base de datos y roles de base de datos definidos por el usuario a los roles fijos de base de datos mediante la instrucción `ALTER ROLE ... ADD MEMBER`. Para obtener más información, vea [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Roles de base de datos definidos por el usuario  
+##### <a name="user-defined-database-roles"></a>Roles de base de datos definidos por el usuario  
  Los usuarios con el permiso `CREATE ROLE` pueden crear nuevos roles de base de datos definidos por el usuario para representar grupos de usuarios con permisos comunes. Normalmente, los permisos se conceden o deniegan a todo el rol, lo que simplifica la administración y supervisión de permisos. Se pueden agregar usuarios de base de datos a los roles de base de datos mediante la instrucción `ALTER ROLE ... ADD MEMBER` . Para obtener más información, vea [ALTER ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-role-transact-sql.md).  
   
- Otras entidades de seguridad  
+##### <a name="other-principals"></a>Otras entidades de seguridad  
  Otras entidades de seguridad que no se tratan aquí son los roles de aplicación y los inicios de sesión y usuarios basados en certificados o claves asimétricas.  
   
  Para ver un gráfico que muestra las relaciones entre usuarios de Windows, grupos de Windows, inicios de sesión y usuarios de base de datos, consulte [Create a Database User](../../../relational-databases/security/authentication-access/create-a-database-user.md).  
@@ -66,7 +66,9 @@ ms.locfileid: "66454591"
 2.  Cree grupos de Windows que representen las unidades y las funciones de trabajo.  
   
 3.  Agregue los usuarios de Windows a los grupos de Windows.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="if-the-person-connecting-will-be-connecting-to-many-databases"></a>Si la persona que se conecta lo va a hacer a diversas bases de datos  
   
 1.  Cree un inicio de sesión para los grupos de Windows. (Si usa la autenticación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , omita los pasos de Active Directory y cree los inicios de sesión de la autenticación [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] aquí).  

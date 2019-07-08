@@ -11,14 +11,14 @@ ms.assetid: fd4ddeb8-0cb6-441b-9704-03575c07020f
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d08fe92b865076a330f0272f8b3fde81f17a8854
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 740a5e5843966a6f4891f195453ffd01ec6ea048
+ms.sourcegitcommit: c8f9e5577465148ffe94eec784848f5a956b1086
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53589239"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67517849"
 ---
-# <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conectarse desde otro equipo
+# <a name="lesson-2-connecting-from-another-computer"></a>Lección 2: Conexión desde otro equipo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Para mejorar la seguridad, no se puede obtener acceso a [!INCLUDE[ssDE](../includes/ssde-md.md)] de las ediciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express y Evaluation desde otro equipo cuando se instala inicialmente. En esta lección se muestra cómo habilitar los protocolos, configurar los puertos y configurar el Firewall de Windows para conectarse desde otros equipos.  
   
@@ -56,7 +56,7 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**y, después, haga clic en **Protocolos de** _<InstanceName>_.  
+2.  En **Administrador de configuración de SQL Server**, expanda **Configuración de red de SQL Server**y, después, haga clic en **Protocolos de** _<InstanceName>_ .  
   
     La instancia predeterminada (una instancia sin nombre) aparece como **MSSQLSERVER**. Si ha instalado una instancia con nombre, el nombre proporcionado aparece en la lista. [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] se instala como **SQLEXPRESS**, a menos que se haya cambiado el nombre durante la instalación.  
   
@@ -64,7 +64,9 @@ Si tiene previsto conectarse a [!INCLUDE[ssDE](../includes/ssde-md.md)] desde ot
   
     > [!NOTE]  
     > Debe reiniciar el servicio [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] después de realizar los cambios en los protocolos de red; sin embargo, esto se completa en la siguiente tarea.  
-  
+
+[!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="port"></a>Configurar un puerto fijo  
 Para mejorar la seguridad, Windows Server 2008, [!INCLUDE[wiprlhlong](../includes/wiprlhlong-md.md)]y Windows 7 activan el Firewall de Windows. Si desea conectarse a esta instancia desde otro equipo, debe abrir un puerto de comunicaciones en el firewall. La instancia predeterminada de [!INCLUDE[ssDE](../includes/ssde-md.md)] escucha en el puerto 1433; por tanto, no tiene que configurar un puerto fijo. No obstante, las instancias con nombre incluidas las de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] escuchan en puertos dinámicos. Para poder abrir un puerto en el firewall, debe configurar primero [!INCLUDE[ssDE](../includes/ssde-md.md)] para que escuche en un puerto específico conocido como puerto fijo o estático; de lo contrario, es posible que [!INCLUDE[ssDE](../includes/ssde-md.md)] escuche en un puerto distinto cada vez que se inicie. Para obtener más información sobre firewalls, la configuración predeterminada de Firewall de Windows y una descripción de los puertos TCP que afectan al motor de base de datos, Analysis Services, Reporting Services e Integration Services, consulte [Configurar Firewall de Windows para permitir el acceso a SQL Server](../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md).  
   
@@ -124,7 +126,7 @@ Cuando el servicio Explorador de [!INCLUDE[ssNoVersion](../includes/ssnoversion-
   
 2.  En el cuadro de diálogo **Conectar al servidor** , confirme **Motor de base de datos** en el cuadro **Tipo de servidor** .  
   
-3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:**_<nombre_equipo>_. En nuestro ejemplo de una instancia con nombre, escriba **tcp:**_<nombre_equipo>_**,49172**.  
+3.  En el cuadro **Nombre del servidor** , escriba **tcp:** para especificar el protocolo, seguido del nombre del equipo, una coma y el número de puerto. Para conectarse a la instancia predeterminada, el puerto 1433 está implícito y se puede omitir, por lo que deberá escribir **tcp:** _<nombre_equipo>_ . En nuestro ejemplo de una instancia con nombre, escriba **tcp:** _<nombre_equipo>_ **,49172**.  
   
     > [!NOTE]  
     > Si omite **tcp:** en el cuadro **Nombre del servidor**, el cliente probará todos los protocolos habilitados en el orden especificado en la configuración del cliente.  

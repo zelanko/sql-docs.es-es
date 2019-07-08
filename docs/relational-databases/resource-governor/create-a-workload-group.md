@@ -13,12 +13,12 @@ ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 665e88f2b86276beb16acb043dd270d0a8cf6da5
-ms.sourcegitcommit: cebfa2610ea36e3c5ad510c214590035ecb499c2
+ms.openlocfilehash: f09c3fecff6dd64934a456fafc0eabfcb134c30f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/04/2019
-ms.locfileid: "55689838"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581829"
 ---
 # <a name="create-a-workload-group"></a>Crear un grupo de cargas de trabajo
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "55689838"
   
  Se permite la creación de índices para usar más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y el grupo de recursos de servidor.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Crear un grupo de cargas de trabajo requiere un permiso CONTROL SERVER.  
   
 ##  <a name="CreRPProp"></a> Crear un grupo de cargas de trabajo mediante SQL Server Management Studio  
@@ -57,7 +57,9 @@ ms.locfileid: "55689838"
 6.  Haga clic o doble clic en cualquier otra celda de la fila cuya configuración predeterminada desee cambiar, y especifique los nuevos valores.  
   
 7.  Haga clic en **Aceptar**para guardar los cambios.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="CreRPTSQL"></a> Crear un grupo de cargas de trabajo mediante Transact-SQL  
  **Para crear un grupo de cargas de trabajo utilizando [!INCLUDE[tsql](../../includes/tsql-md.md)]**  
   

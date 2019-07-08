@@ -14,12 +14,12 @@ ms.assetid: 33320a7a-36e8-401c-876d-5b82c49abd85
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 964d087387c5feb9011c7e5ae3a72d311cb8060d
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 625f3e2de7bc417383a8830a42067408316a97c0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375427"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579854"
 ---
 # <a name="save-showplan-xml-events-separately-sql-server-profiler"></a>Guardar eventos Showplan XML por separado (SQL Server Profiler)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "53375427"
   
 4. Realice una de las siguientes operaciones:  
   
-    -   Active la casilla **Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)**. 
+    -   Active la casilla **Guardar en archivo** para capturar el seguimiento en un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)** . 
     
         Opcionalmente, active las casillas **Habilitar sustitución incremental de archivos** y **El servidor procesa los datos de seguimiento** .  
   
@@ -63,7 +63,9 @@ ms.locfileid: "53375427"
 10. Seleccione **Todos los lotes de plan de presentación en un solo archivo** para guardar todos los eventos **Showplan XML** en un solo archivo XML. O bien seleccione **Cada lote de plan de presentación en un archivo independiente** para crear un nuevo archivo XML para cada evento **Showplan XML**.  
   
 11. Para ver el archivo del evento **Showplan XML** en SQL Server Management Studio, en el menú **Archivo**, seleccione **Abrir**y, a continuación, **Archivo**. Navegue al directorio donde ha guardado el archivo o archivos de evento **Showplan XML** para seleccionar uno y abrirlo. Los archivos de evento**Showplan XML** tienen la extensión de archivo .SQLPlan.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="see-also"></a>Vea también  
  [Analyze queries with Showplan results in SQL Server Profiler](../../tools/sql-server-profiler/analyze-queries-with-showplan-results-in-sql-server-profiler.md) (Analizar consultas con resultados de plan de presentación en SQL Server Profiler)  
   

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 8556807e-f2e2-4a7b-bb1b-ac5ea1872e51
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: e92e16db5eb7ac6edf03a07c3091edac2c26d144
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f0dae8999d22773a1a76440c439d4682785f684
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581196"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492847"
 ---
 # <a name="finding-and-viewing-reports-in-the-web-portal-report-builder-and-ssrs"></a>Buscar y visualizar informes en el portal web (Generador de informes y SSRS)
   El Administrador de informes es una herramienta basada en Web que incluye características para la visualización y administración de informes. Forma parte de la instalación del servidor de informes. Para abrir el Administrador de informes, escriba su dirección URL en una ventana del explorador. Para obtener información sobre los requisitos del explorador, vea [Compatibilidad del explorador de Reporting Services y Power View](../../reporting-services/browser-support-for-reporting-services-and-power-view.md). Para obtener más información sobre cómo se podría configurar en su servidor de informes una dirección URL del Administrador de informes URL, póngase en contacto con el administrador del sistema. Para obtener más información, vea [Configurar el Administrador de informes &#40;modo nativo&#41;](../../reporting-services/report-server/configure-report-manager-native-mode.md).  
@@ -40,8 +40,8 @@ Cinta de opciones del Administrador de informes
 ## <a name="opening-a-report"></a>Abrir un informe  
  Cuando encuentre el informe que desea, haga clic en su nombre para abrirlo. El informe se representa en HTML y aparece en la página Contenido del Administrador de informes. La sesión de explorador se encarga de almacenar los informes en la memoria caché. De este modo, cuando abra un informe, podrá volver a él si hace clic en el botón **Atrás** . El método funciona incluso si el sistema le solicita un nombre de usuario y una contraseña para ejecutar el informe. Los informes representados no se cierran por completo hasta que se cierra el explorador.  
   
- No se tiene acceso inmediato a todos los informes visibles en la jerarquía de carpetas. Algunos pueden solicitarle un nombre de usuario y una contraseña para determinar si tiene derechos de acceso al origen de datos del informe. Para más información sobre cómo abrir informes en el Administrador de informes, vea [Abrir y cerrar un informe &#40;Administrador de informes&#41;](../../reporting-services/reports/open-and-close-a-report-report-manager.md).  
-  
+ No se tiene acceso inmediato a todos los informes visibles en la jerarquía de carpetas. Algunos pueden solicitarle un nombre de usuario y una contraseña para determinar si tiene derechos de acceso al origen de datos del informe. 
+
  Puede ir a un informe y abrirlo directamente desde el servidor de informes en el Generador de informes. 
   
 ## <a name="to-search-for-items"></a>Para buscar elementos  

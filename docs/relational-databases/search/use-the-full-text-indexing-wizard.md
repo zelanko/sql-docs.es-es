@@ -24,12 +24,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 250334bceefa2a3cac6226d32792a8be5ef89206
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd312800fd20ae3e2d57c09df20aa9a14181af8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62716102"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582040"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>Usar el Asistente para indización de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,6 +47,9 @@ ms.locfileid: "62716102"
 4. **Idioma del separador de palabras.** Seleccione un idioma en la lista desplegable. Esta opción se usará para identificar los separadores de palabras correctos para el índice. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] usa separadores de palabras para identificar límites de palabras en los datos indexados de texto completo.  
   
 5.  **Columna Tipo.** Seleccione el nombre de la columna que incluye el tipo de documento de la columna que se va a incluir en el índice de texto completo.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > **NOTA:** La **columna Tipo** solo se habilita si la mencionada en la columna **Columnas disponibles** es del tipo **varbinary(max)** o **image**.  
   
 6. **Semántica estadística.** Seleccione si desea habilitar la indización semántica para la columna seleccionada. Para obtener más información, vea [Búsqueda semántica &#40;SQL Server&#41;](../../relational-databases/search/semantic-search-sql-server.md).  

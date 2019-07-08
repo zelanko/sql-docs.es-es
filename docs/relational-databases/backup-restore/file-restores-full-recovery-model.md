@@ -20,12 +20,12 @@ ms.assetid: d2236a2a-4cf1-4c3f-b542-f73f6096e15c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 85cd45abfbc434ce02d5000d48ed5dacd48ad208
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 0d063f60a959c047385b50b150359c063bfa668c
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242126"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579423"
 ---
 # <a name="file-restores-full-recovery-model"></a>Restauraciones de archivos (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +76,9 @@ ms.locfileid: "54242126"
      Debe hacer que la base de datos sea coherente; para ello, restaure las copias de seguridad del registro de transacciones creadas después de las copias de seguridad de archivos. Las copias de seguridad del registro de transacciones se pueden poner al día rápidamente, porque solo se aplican los cambios correspondientes a los archivos restaurados. La restauración de archivos individuales puede ser mejor que la restauración de toda la base de datos, dado que los archivos dañados no se copian y, posteriormente, ponen al día. Sin embargo, aún debe leerse toda la cadena de copias de seguridad de registros.  
   
 5.  Recupere la base de datos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
 >  Las copias de seguridad de archivos se pueden utilizar para restaurar la base de datos a un momento anterior. Para ello, debe restaurar un conjunto completo de copias de seguridad de archivos y, a continuación, restaurar las copias de seguridad del registro de transacciones en orden hasta llegar al momento específico establecido, que es después del final de la copia de seguridad de archivos restaurada más reciente. Para obtener más información sobre la recuperación a un momento dado, vea [Restaurar una base de datos de SQL Server a un momento dado &#40;modelo de recuperación completa&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  
   

@@ -11,12 +11,12 @@ ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 2d0b215dbc61be9d7a710300301ec63f8796a915
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f2b2a7a957bd964b52f4dcda847de84cdef3cbc0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129515"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581269"
 ---
 # <a name="replication-to-memory-optimized-table-subscribers"></a>Replicación en suscriptores de tablas con optimización para memoria
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,9 @@ ms.locfileid: "54129515"
 4.  Inicie el trabajo del Agente de instantáneas para generar la instantánea inicial de esta publicación. Para más información, consulte [Crear y aplicar la instantánea inicial](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
 5.  Ahora cree una nueva suscripción. En el **Asistente para nueva suscripción** , establezca **Suscripción optimizada para memoria** en **true**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Las tablas con optimización para memoria deben empezar ahora a recibir actualizaciones del publicador.  
   
 #### <a name="reconfigure-an-existing-transaction-replication"></a>Reconfiguración de una replicación de transacción existente  

@@ -14,12 +14,12 @@ ms.assetid: 7982a687-980a-4eb8-8e9f-6894148e7d8c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: d4c91fff761b25e1a8fa1efea65d08121d5cf03c
-ms.sourcegitcommit: 202ef5b24ed6765c7aaada9c2f4443372064bd60
+ms.openlocfilehash: 06fb23f63b65d06be6e05569ecd31387830522ae
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/12/2019
-ms.locfileid: "54242208"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581069"
 ---
 # <a name="online-restore-sql-server"></a>Restauración en línea (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "54242208"
 1.  Restaure los datos.  
   
 2.  Restaure el registro utilizando WITH RECOVERY para la última restauración del registro. Así, se ponen en línea los datos restaurados.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  A veces, una transacción sin confirmar no se puede revertir porque los datos necesarios para la operación de reversión están sin conexión durante el inicio. En ese caso, la transacción se difiere. Para obtener más información, vea [Transacciones diferidas &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md).  
   
 > [!NOTE]  

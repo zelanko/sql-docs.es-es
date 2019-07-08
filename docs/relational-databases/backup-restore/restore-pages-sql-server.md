@@ -20,12 +20,12 @@ ms.assetid: 07e40950-384e-4d84-9ac5-84da6dd27a91
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8d2e5e0cad34fdd9364868e5f9c2e4a02d460dba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d16a118ccdf5714e0f4b5493c1c0d3266a1d33
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506375"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583741"
 ---
 # <a name="restore-pages-sql-server"></a>Restaurar páginas (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,7 +165,9 @@ ms.locfileid: "62506375"
      **Páginas**  
   
 7.  Para restaurar las páginas incluidas en la cuadrícula de páginas, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Para especificar una página en una instrucción RESTORE DATABASE, necesita el identificador de archivo del archivo que contiene la página y el identificador de la página. La sintaxis necesaria es la siguiente:  
   

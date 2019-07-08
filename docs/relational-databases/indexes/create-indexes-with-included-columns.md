@@ -22,12 +22,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c32b38b0327c8c418929514c7f82e26a3a41584
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: b515cbf3da95ffdab82ad609937b7a1738684678
+ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539722"
+ms.lasthandoff: 07/01/2019
+ms.locfileid: "67492874"
 ---
 # <a name="create-indexes-with-included-columns"></a>Crear índices con columnas incluidas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -35,7 +35,6 @@ ms.locfileid: "52539722"
   En este tema se describe cómo agregar columnas incluidas (o sin clave) para ampliar la funcionalidad de índices no clúster en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Al incluir columnas sin clave, puede crear índices no clúster que abarcan más consultas. Esto se debe a que las columnas sin clave tienen las siguientes ventajas:  
   
 -   Pueden ser tipos de datos que no están permitidos como columnas de clave de índice.  
-  
 -   El [!INCLUDE[ssDE](../../includes/ssde-md.md)] no las tiene en cuenta cuando calcula el número de columnas de clave de índice o el tamaño de las claves de índice.  
   
  Un índice con columnas sin clave puede mejorar significativamente el rendimiento de una consulta cuando todas las columnas de la consulta se incluyen como columnas de clave o columnas sin clave. Las mejoras en el rendimiento se consiguen porque el optimizador de consultas puede localizar todos los valores de las columnas del índice, sin tener acceso a los datos de la tabla o del índice clúster, lo que da como resultado menos operaciones de E/S de disco.  
@@ -71,10 +70,10 @@ ms.locfileid: "52539722"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-an-index-with-nonkey-columns"></a>Para crear un índice con columnas sin clave  
   
@@ -84,17 +83,17 @@ ms.locfileid: "52539722"
   
 3.  Haga clic en el signo más para expandir la tabla en la que desea crear un índice con columnas sin clave.  
   
-4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+4.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 5.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-6.  En la pestaña **Columnas de clave de índice**, haga clic en **Agregar...**.  
+6.  En la pestaña **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 7.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice.  
   
 8.  Haga clic en **Aceptar**.  
   
-9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...**.  
+9. En la pestaña **Columnas incluidas**, haga clic en **Agregar...** .  
   
 10. En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active las casillas de las columnas de tabla que se van a agregar al índice como columnas sin clave.  
   

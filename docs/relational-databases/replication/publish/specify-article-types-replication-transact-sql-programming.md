@@ -18,12 +18,12 @@ ms.assetid: d7effbac-c45b-423f-97ae-fd426b1050ba
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4b72f1f7b6779819de87bc3aa37f8c9fc06e71fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a5a33cc382fabf5a77c97b0b4d68a34f83cb907
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47807693"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582651"
 ---
 # <a name="specify-article-types-replication-transact-sql-programming"></a>Especificar tipos de artículo (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,18 +38,20 @@ ms.locfileid: "47807693"
   
     -   **logbased** - artículo de tabla basado en registro, que es el valor predeterminado para la replicación transaccional y de instantáneas. La replicación genera automáticamente el procedimiento almacenado usado para el filtrado horizontal y la vista que define un artículo filtrado verticalmente.  
   
-    -   **logbased manualfilter** - artículo basado en registro y filtrado horizontalmente. El usuario crea y define manualmente el procedimiento almacenado usado para el filtrado horizontal, que se especifica para **@filter**. Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   **logbased manualfilter** - artículo basado en registro y filtrado horizontalmente. El usuario crea y define manualmente el procedimiento almacenado usado para el filtrado horizontal, que se especifica para **@filter** . Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **logbased manualview** - artículo basado en registro y filtrado verticalmente. El usuario crea y define la vista que define el artículo filtrado verticalmente, que se especifica para **@sync_object**. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualview** - artículo basado en registro y filtrado verticalmente. El usuario crea y define la vista que define el artículo filtrado verticalmente, que se especifica para **@sync_object** . Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **logbased manualboth** - artículo basado en registro y filtrado horizontal y verticalmente. El usuario crea y define el procedimiento almacenado usado para el filtrado horizontal y la vista que define el artículo filtrado verticalmente; éstos se especifican para **@filter** y **@sync_object**, respectivamente. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **logbased manualboth** - artículo basado en registro y filtrado horizontal y verticalmente. El usuario crea y define el procedimiento almacenado usado para el filtrado horizontal y la vista que define el artículo filtrado verticalmente; éstos se especifican para **@filter** y **@sync_object** , respectivamente. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Esto define un nuevo artículo para la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
 2.  Para los artículos **logbased manualboth** y **logbased manualfilter** , ejecute [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) a fin de generar el procedimiento almacenado de filtrado para un artículo filtrado horizontalmente. Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
-  
+3.  Para los artículos **logbased manualboth**, **logbased manualview**y **logbased manualfilter** , ejecute [sp_articleview](../../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) a fin de generar la vista que define el artículo filtrado verticalmente. Para más información, consulte [definir y modificar un filtro de columna](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-publish-a-view-or-indexed-view-article-in-a-transactional-or-snapshot-publication"></a>Para publicar una vista o un artículo de vista indizada en una publicación transaccional o de instantáneas  
   
 1.  En la base de datos de publicación del publicador, ejecute [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md). Especifique uno de los valores siguientes para **@type** a fin de definir el tipo de artículo:  
@@ -60,11 +62,11 @@ ms.locfileid: "47807693"
   
     -   **indexed view schema only** - artículo de vista indizada solo de esquema. La tabla base debe replicarse también.  
   
-    -   **indexed view logbased manualfilter** - artículo de vista indizada basado en registro y filtrado horizontalmente. El usuario crea y define manualmente el procedimiento almacenado usado para el filtrado horizontal, que se especifica para **@filter**. Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
+    -   **indexed view logbased manualfilter** - artículo de vista indizada basado en registro y filtrado horizontalmente. El usuario crea y define manualmente el procedimiento almacenado usado para el filtrado horizontal, que se especifica para **@filter** . Para más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md).  
   
-    -   **indexed view logbased manualview** - artículo de vista indizada basado en registro y filtrado. El usuario crea y define la vista que define el artículo filtrado verticalmente, que se especifica para **@sync_object**. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualview** - artículo de vista indizada basado en registro y filtrado. El usuario crea y define la vista que define el artículo filtrado verticalmente, que se especifica para **@sync_object** . Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
-    -   **indexed view logbased manualboth** - artículo de vista indizada basado en registro y filtrado. El usuario crea y define el procedimiento almacenado usado para el filtrado horizontal y la vista que define un artículo filtrado verticalmente; éstos se especifican para **@filter** y **@sync_object**, respectivamente. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
+    -   **indexed view logbased manualboth** - artículo de vista indizada basado en registro y filtrado. El usuario crea y define el procedimiento almacenado usado para el filtrado horizontal y la vista que define un artículo filtrado verticalmente; éstos se especifican para **@filter** y **@sync_object** , respectivamente. Para obtener más información, consulte [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md) y [Define and Modify a Column Filter](../../../relational-databases/replication/publish/define-and-modify-a-column-filter.md).  
   
      Esto define un nuevo artículo para la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -108,7 +110,7 @@ ms.locfileid: "47807693"
   
      Esto define un nuevo artículo para la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Replication System Stored Procedures Concepts](../../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)   
  [Publicar datos y objetos de base de datos](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)  
   

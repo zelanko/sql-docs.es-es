@@ -17,12 +17,12 @@ ms.assetid: 66f36e1d-0287-4fac-8a51-71f9f0d7ad5b
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 68512f8c70e27849b8517ba20967bb7719ecd312
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 96e7e096e9c2b59dbe5736b285d851e8b3d415e9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707873"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583631"
 ---
 # <a name="define-a-logical-backup-device-for-a-tape-drive-sql-server"></a>Definir un dispositivo lógico de copia de seguridad en una unidad de cinta (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "47707873"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -55,12 +55,12 @@ ms.locfileid: "47707873"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Debe pertenecer al rol fijo de servidor **diskadmin** .  
   
  Requiere permiso para escribir en el disco.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-define-a-logical-backup-device-for-a-tape-drive"></a>Para definir un dispositivo lógico de copia de seguridad en una unidad de cinta  
   
@@ -75,7 +75,9 @@ ms.locfileid: "47707873"
 5.  Para el destino, haga clic en **Cinta** y seleccione una unidad de cinta que aún no esté asociada a otro dispositivo de copia de seguridad. Si no hay ninguna disponible, la opción **Cinta** está inactiva.  
   
 6.  Para definir el nuevo dispositivo, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para realizar una copia de seguridad en este nuevo dispositivo, agréguelo en el campo **Copia de seguridad en:** del cuadro de diálogo **Copia de seguridad de base de datos** (**General**). Para obtener más información, vea [Crear una copia de seguridad completa de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-full-database-backup-sql-server.md).  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
@@ -95,7 +97,7 @@ EXEC sp_addumpdevice 'tape', 'tapedump1', '\\.\tape0' ;
 GO  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [sys.backup_devices &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)   
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   

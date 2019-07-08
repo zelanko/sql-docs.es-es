@@ -14,12 +14,12 @@ ms.assetid: 23bda497-67b2-4e7b-8e4d-f1f9a2236685
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 807f347bb176f6d8b3191f9f10c8f30448ce9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45fd2a7f8281a2b65097c7c0e493cc0a6f60eddc
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099968"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584361"
 ---
 # <a name="administer-and-monitor-change-data-capture-sql-server"></a>Administrar y supervisar la captura de datos modificados (SQL Server)
 
@@ -175,7 +175,9 @@ El recopilador de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.
 3. En [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], expanda **Administración**y, a continuación, expanda **Recopilación de datos**. Haga clic con el botón derecho en **Recopilador de datos de rendimiento de CDC** y, después, haga clic en **Iniciar conjunto de recopilación de datos**.  
   
 4. En el almacenamiento de datos que configuró en el paso 1, busque la tabla custom_snapshots.cdc_log_scan_data. En esta tabla se proporciona una instantánea histórica de los datos de las sesiones de examen del registro. Estos datos se pueden utilizar para analizar la latencia, el rendimiento y otras medidas de rendimiento a lo largo del tiempo.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="ScriptUpgrade"></a> Modo de actualización de script
 
 Cuando se aplican Service Pack o actualizaciones acumulativas a una instancia, durante el reinicio, la instancia puede entrar en modo de actualización de script. En este modo, SQL Server puede ejecutar un paso para analizar y actualizar las tablas de CDC internas, lo cual puede dar lugar a que se vuelvan a crear objetos, como los índices de las tablas de captura. Según la cantidad de datos implicados, este paso puede ser lento o generar un uso elevado del registro de transacciones para las bases de datos CDC habilitadas.

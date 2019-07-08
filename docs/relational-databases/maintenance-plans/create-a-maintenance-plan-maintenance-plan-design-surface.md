@@ -13,12 +13,12 @@ ms.assetid: 2ef803ee-a9f8-454a-ad63-fedcbe6838d1
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 436dfee205c5e200d469741075ac2e61b1e7d875
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 78f09611e71c39902e81580d752d302fee604be9
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52514388"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584140"
 ---
 # <a name="create-a-maintenance-plan-maintenance-plan-design-surface"></a>Crear un plan de mantenimiento (superficie de diseño del plan de mantenimiento)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52514388"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Para crear o administrar planes de mantenimiento, debe ser miembro del rol fijo de servidor **sysadmin** . El Explorador de objetos solo muestra el nodo **Planes de mantenimiento** para los usuarios que son miembros del rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar la Superficie de diseño del plan de mantenimiento  
@@ -109,7 +109,7 @@ ms.locfileid: "52514388"
      **Programación**  
      Indica en qué programación se ejecutó el subplán. Haga clic en **Programación del subplán** para abrir el cuadro de diálogo **Nueva programación de trabajo** . Haga clic en **Quitar programación** para eliminar la programación del subplán.  
   
-     Lista de**Ejecutar como**   
+     Lista de**Ejecutar como**  
      Seleccione la cuenta que se utilizará para ejecutar esta subtarea.  
   
 6.  Haga clic en **Programación del subplán** para escribir detalles de programación en el cuadro de diálogo **Nueva programación del trabajo** .  
@@ -146,7 +146,7 @@ ms.locfileid: "52514388"
   
     2.  Seleccione las herramientas que desee que aparezcan en el **Cuadro de herramientas**y, a continuación, haga clic en **Aceptar**.  
   
-     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)**.  
+     Agregar tareas del plan de mantenimiento al **Cuadro de herramientas** también hace que estén disponibles en el **Asistente para planes de mantenimiento**. Para obtener más información sobre las tareas individuales anteriores, vea [Using Maintenance Plan Wizard (Usar el Asistente para planes de mantenimiento)](../../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md#SSMSProcedure) en **Start the Maintenance Plan Wizard (Iniciar el Asistente para planes de mantenimiento)** .  
   
 8.  Para definir un flujo de trabajo entre tareas:  
   
@@ -161,11 +161,11 @@ ms.locfileid: "52514388"
          **Opción de restricción**  
          Define cómo funciona una restricción entre dos tareas.  
   
-         Lista**Operación de evaluación**    
-         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción**, y **Expresión o restricción**.  
+         Lista**Operación de evaluación**  
+         Permite especificar la operación de evaluación que utiliza la restricción de precedencia. Las operaciones son: **Restricción**, **Expresión**, **Expresión y restricción** y **Expresión o restricción**.  
   
-         Lista**Valor**   
-         Permite especificar el valor de restricción: **Correcto**, **Error**o **Conclusión**. **Correcto** es el valor predeterminado.  
+         Lista**Valor**  
+         Especifique el valor de restricción: **Correcto**, **Error** o **Finalización**. **Correcto** es el valor predeterminado.  
   
         > [!NOTE]  
         >  La línea de restricción de precedencia es verde para **Correcto**, roja para **Error**y azul para **Conclusión**.  
@@ -217,7 +217,7 @@ ms.locfileid: "52514388"
   
         1.  Si selecciona **Generar un informe de archivo de texto**, seleccione **Crear un nuevo archivo** o **Anexar a archivo**.  
   
-        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta -** _nombre\_servidor_ o **Buscar archivos de base de datos -**_nombre\_servidor_.  
+        2.  Según la selección anterior, escriba el nombre y la ruta de acceso completa del nuevo archivo o del archivo que se va a anexar especificando la información en los cuadros **Carpeta** o **Nombre de archivo** . Como alternativa, haga clic en los puntos suspensivos **(...)** y seleccione la ruta de acceso a la carpeta o el nombre de archivo en los cuadros de diálogo **Buscar carpeta -** _nombre\_servidor_ o **Buscar archivos de base de datos -** _nombre\_servidor_.  
   
         3.  Si selecciona **Enviar informe a un destinatario de correo electrónico**, en la lista de **Operador del agente** , seleccione el destinatario del informe enviado por correo electrónico.  
   
@@ -231,49 +231,51 @@ ms.locfileid: "52514388"
     5.  En el cuadro de diálogo **Informes y registro** , haga clic en **Aceptar**.  
   
 12. Para ver los resultados en el visor del archivo de registro, en el **Explorador de objetos**, haga clic con el botón derecho en la carpeta **Planes de mantenimiento** o en el plan de mantenimiento específico y, luego, selecciones **Ver historial**.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The following options are available on the **Log File Viewer -**_server\_name_ dialog box.  
   
-     Las opciones siguientes están disponibles en el cuadro de diálogo **Visor de archivos de registro -**_nombre\_servidor_.  
+     **Load Log**  
+     Open a dialog box where you can specify a log file to load.  
   
-     **Cargar registro**  
-     Abre un cuadro de diálogo donde puede especificar un archivo de registro para cargar.  
+     **Export**  
+     Open a dialog box that lets you export the information that is shown in the **Log file summary** grid to a text file.  
   
-     **Exportar**  
-     Abre un cuadro de diálogo que permite exportar la información que se muestra en la cuadrícula **Resumen de archivos de registro** a un archivo de texto.  
+     **Refresh**  
+     Refresh the view of the selected logs. The **Refresh** button rereads the selected logs from the target server while applying any filter settings.  
   
-     **Actualizar**  
-     Actualice la vista de los registros seleccionados. El botón **Actualizar** hace que se vuelvan a leer los registros seleccionados del servidor de destino al tiempo que se aplica una configuración de filtro.  
+     **Filter**  
+     Open a dialog box that lets you specify settings that are used to filter the log file, such as **Connection**, **Date**, or other **General** filter criteria.  
   
-     **Filtro**  
-     Abre un cuadro de diálogo que permite especificar la configuración que se usa para filtrar el archivo de registro, como **Conexión**, **Fecha**u otros criterios de filtro de **General** .  
+     **Search**  
+     Search the log file for specific text. Searching with wildcard characters is not supported.  
   
-     **Buscar**  
-     Permite buscar texto específico en el archivo de registro. No se admite la búsqueda con caracteres comodín.  
+     **Stop**  
+     Stops loading the log file entries. For example, you can use this option if a remote or offline log file takes a long time to load, and you only want to view the most recent entries.  
   
-     **Detener**  
-     Detiene la carga de las entradas del archivo de registro. Por ejemplo, puede utilizar esta opción si la carga de un archivo de registro remoto o sin conexión tarda mucho tiempo y solo desea ver las entradas más recientes.  
-  
-     **Resumen de archivos de registro**  
-     Este panel de información muestra un resumen del filtro del archivo de registro. Si no se ha filtrado el archivo, se mostrará el siguiente texto: **No se aplicó ningún filtro**. Si se aplica un filtro al registro, se mostrará el texto **Filtrar entradas del registro en:** \<criteriosDeFiltro>.  
+     **Log file summary**  
+     This information panel displays a summary of the log file filtering. If the file is not filtered, you will see the following text, **No filter applied**. If a filter is applied to the log, you will see the following text, **Filter log entries where:** \<filter criteria>.  
   
      **Date**  
-     Muestra la fecha del evento.  
+     Displays the date of the event.  
   
      **Source**  
-     Muestra la característica de origen desde la que se crea el evento, como el nombre del servicio (MSSQLSERVER, por ejemplo). No aparece para todos los tipos de registro.  
+     Displays the source feature from which the event is created, such as the name of the service (MSSQLSERVER, for example). This does not appear for all log types.  
   
-     **de mensaje**  
-     Muestra todos los mensajes asociados al evento.  
+     **Message**  
+     Displays any messages associated with the event.  
   
-     **Tipo de registro**  
-     Muestra el tipo de registro al que pertenece el evento. Todos los registros seleccionados aparecen en la ventana de resumen del archivo de registro.  
+     **Log Type**  
+     Displays the type of log to which the event belongs. All selected logs appear in the log file summary window.  
   
-     **Origen del registro**  
-     Muestra una descripción del registro de origen en el que se captura el evento.  
+     **Log Source**  
+     Displays a description of the source log in which the event is captured.  
   
-     **Detalles de las filas seleccionadas**  
-     Seleccione una fila para mostrar detalles adicionales sobre la fila de evento seleccionada en la parte inferior de la página. Puede ordenar de nuevo las columnas arrastrándolas a nuevas ubicaciones de la cuadrícula. Puede modificar el tamaño de las columnas arrastrando las barras de separación de las columnas del encabezado de la cuadrícula hacia la izquierda o hacia la derecha. Haga doble clic en las barras de separación de las columnas del encabezado de la cuadrícula para ajustar automáticamente el tamaño de la columna al ancho del contenido.  
+     **Selected row details**  
+     Select a row to display additional details about the selected event row at the bottom of the page. The columns can be reordered by dragging them to new locations in the grid. The columns can be resized by dragging the column separator bars in the grid header to the left or right. Double-click the column separator bars in the grid header to automatically size the column to the content width.  
   
-     **Instancia**  
-     Nombre de la instancia en que se produjo el evento. Esto se muestra como *nombre de equipo*\\*nombre de instancia*.  
+     **Instance**  
+     The name of the instance on which the event occurred. This is displayed as *computer name*\\*instance name*.  
   
   

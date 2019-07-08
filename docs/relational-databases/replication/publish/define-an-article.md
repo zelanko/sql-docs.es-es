@@ -19,12 +19,12 @@ ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: c719c6897edfa956c70b7863811ccea98bee68b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ee2fcc90061bbd003081f747fb7f4a50b6755f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507682"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585832"
 ---
 # <a name="define-an-article"></a>Definir un artículo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -67,7 +67,9 @@ ms.locfileid: "62507682"
 3.  Haga clic en **Nueva publicación**.  
   
 4.  Siga las indicaciones de las páginas del Asistente para nueva publicación para:  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   Especificar un distribuidor si la distribución no se ha configurado en el servidor. Para obtener más información sobre cómo configurar la distribución, vea [Configurar la publicación y la distribución](../../../relational-databases/replication/configure-publishing-and-distribution.md).  
   
          Si en la página **Distribuidor** especifica que el servidor del publicador actúe como su propio distribuidor (un distribuidor local) y el servidor no está configurado como tal, el Asistente para nueva publicación configurará el servidor. Especifique una carpeta de instantáneas predeterminada para el distribuidor en la página **Carpeta de instantáneas** . La carpeta de instantáneas es simplemente un directorio designado como recurso compartido; los agentes que leen y escriben en esta carpeta deben tener permisos de acceso suficientes a ella. Para obtener más información sobre cómo proteger la carpeta adecuadamente, vea [Proteger la carpeta de instantáneas](../../../relational-databases/replication/security/secure-the-snapshot-folder.md).  

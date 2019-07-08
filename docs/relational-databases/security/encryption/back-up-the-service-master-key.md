@@ -12,12 +12,12 @@ ms.assetid: f60b917c-6408-48be-b911-f93b05796904
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 8ad7bbe4ff7ab1ccf72e84c51d91c1732face24a
-ms.sourcegitcommit: fa2f85b6deeceadc0f32aa7f5f4e2b6e4d99541c
+ms.openlocfilehash: 6e0d1da7b4910e4d3d6268be23c36fb69b16dc62
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/03/2019
-ms.locfileid: "53997487"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583667"
 ---
 # <a name="back-up-the-service-master-key"></a>Hacer una copia de seguridad de la clave maestra de servicio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,5 +69,7 @@ Necesita el permiso CONTROL en la base de datos.
 8. Copie el archivo en el medio de copia de seguridad y compruebe que la copia es correcta.  
   
 9. Guarde la copia de seguridad en una ubicación segura fuera de las instalaciones.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
  Para obtener más información, vea [OPEN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/open-master-key-transact-sql.md) y [BACKUP MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/backup-master-key-transact-sql.md).  

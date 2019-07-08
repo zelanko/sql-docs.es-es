@@ -14,12 +14,12 @@ author: MladjoA
 ms.author: mlandzic
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a66491bb68469ecaa8f9cde47f77566e6c31236a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806c91beb14d2a50988b95e0ab09ee7f678dc3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65936428"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584698"
 ---
 # <a name="multipolygon"></a>MultiPolígono
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -65,7 +65,9 @@ La segunda instancia en MultiPolygon es una instancia LineString y no una instan
 1.  Todas las instancias que comprenden la instancia **MultiPolygon** son instancias **Polygon** válidas. Para las instancias **Polygon** válidas, vea [Polygon](../../relational-databases/spatial/polygon.md).  
   
 2.  Ninguna de las instancias **Polygon** que comprenden la instancia **MultiPolygon** se superponen.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 En el siguiente ejemplo se muestran dos instancias **MultiPolygon** válidas y una instancia **MultiPolygon** no válida.  
   
 ```sql  

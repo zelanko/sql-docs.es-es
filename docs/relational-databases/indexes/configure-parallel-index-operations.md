@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 27b81b026c2ab0683ef28fe9284e61d7096e49c1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d39a59e69b238d36aa2c07cfd9dfe94f0c977b44
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47773293"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583192"
 ---
 # <a name="configure-parallel-index-operations"></a>Configurar operaciones de índice en paralelo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "47773293"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
+##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
 ###  <a name="Restrictions"></a> Limitaciones y restricciones  
   
@@ -79,10 +79,10 @@ ms.locfileid: "47773293"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-index"></a>Para establecer el grado máximo de paralelismo en un índice  
   
@@ -101,7 +101,9 @@ ms.locfileid: "47773293"
 7.  Seleccione **Grado máximo de paralelismo**y, a continuación, escriba un valor entre 1 y 64.  
   
 8.  Haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-set-max-degree-of-parallelism-on-an-existing-index"></a>Para establecer el grado máximo de paralelismo en un índice existente  

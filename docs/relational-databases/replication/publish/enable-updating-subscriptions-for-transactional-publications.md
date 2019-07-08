@@ -15,12 +15,12 @@ ms.assetid: 539d5bb0-b808-4d8c-baf4-cb6d32d2c595
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 9bb2b72da5f90cf2ff91c386e2a34fed1001de73
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: bc7c7d8e3ef52d5fc057a626e2e9394193fec4ae
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130105"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579996"
 ---
 # <a name="enable-updating-subscriptions-for-transactional-publications"></a>Habilitar suscripciones actualizables para publicaciones transaccionales
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "54130105"
 ###  <a name="Security"></a> Seguridad  
  Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Habilite suscripciones de actualización para publicaciones transaccionales en la página **Tipo de publicación** del Asistente para nueva publicación.  
   
  Para utilizar suscripciones de actualización, debe configurar también opciones en el Asistente para nuevas suscripciones.  
@@ -44,8 +44,10 @@ ms.locfileid: "54130105"
 1.  En la página **Tipo de publicación** del Asistente para nueva publicación, seleccione **Publicación transaccional con suscripciones actualizables**.  
   
 2.  En la página **Seguridad del agente** , especifique la configuración de seguridad para el Agente de lectura de cola, el Agente de instantáneas y el Agente de registro del LOG. Para obtener más información acerca de los permisos necesarios para la cuenta con la que se ejecuta el Agente de lectura de cola, vea [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md).  
-  
-    > **NOTA:** El Agente de lectura de cola se configura aunque solamente se utilicen suscripciones de actualización inmediata.  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+    > **NOTE:** The Queue Reader Agent is configured even if you use only immediate updating subscriptions.  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Al crear una publicación transaccional mediante programación con procedimientos almacenados de replicación, puede habilitar las suscripciones de actualización inmediatas o en cola.  
@@ -58,11 +60,11 @@ ms.locfileid: "54130105"
   
     -   Si no está seguro de que exista un Agente de registro del LOG para una base de datos publicada, ejecute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) en la base de datos de publicación del publicador. Si el conjunto de resultados está vacío, es necesario crear un trabajo del Agente de registro del LOG.  
   
-    -   En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] con las que se ejecuta el agente para **@job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**.  
+    -   En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] con las que se ejecuta el agente para **@job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** .  
   
-2.  Ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) y especifique un valor de **true** para el parámetro **@allow_sync_tran**.  
+2.  Ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) y especifique un valor de **true** para el parámetro **@allow_sync_tran** .  
   
-3.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 2 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
+3.  En el publicador, ejecute [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 2 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
 4.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -76,7 +78,7 @@ ms.locfileid: "54130105"
   
     -   Si no está seguro de que exista un Agente de registro del LOG para una base de datos publicada, ejecute [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) en la base de datos de publicación del publicador. Si el conjunto de resultados está vacío, es necesario crear un trabajo de Agente de registro del LOG.  
   
-    -   En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**.  
+    -   En el publicador, ejecute [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** .  
   
 2.  Si es necesario, cree un trabajo del Agente de lectura de cola para el Distribuidor.  
   
@@ -84,11 +86,11 @@ ms.locfileid: "54130105"
   
     -   Si no está seguro de si existe un trabajo del Agente de lectura de cola para la base de datos de distribución, ejecute [sp_helpqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md) en el distribuidor de la base de datos de distribución. Si el conjunto de resultados está vacío, se debe crear un trabajo del Agente de lectura de cola.  
   
-    -   En el distribuidor, ejecute [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_name** y **@password**. Se usan estas credenciales cuando el Agente de lectura de cola conecta con el Publicador y el Suscriptor. Para más información, consulte [Modelo de seguridad del agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md).  
+    -   En el distribuidor, ejecute [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md). Especifique las credenciales de Windows con las que se ejecuta el agente para **@job_name** y **@password** . Se usan estas credenciales cuando el Agente de lectura de cola conecta con el Publicador y el Suscriptor. Para más información, consulte [Modelo de seguridad del agente de replicación](../../../relational-databases/replication/security/replication-agent-security-model.md).  
   
-3.  Ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) y especifique un valor de **true** para el parámetro **@allow_queued_tran** y un valor de **pub wins**, **sub reinit** o **sub wins** para **@conflict_policy**.  
+3.  Ejecute [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) y especifique un valor de **true** para el parámetro **@allow_queued_tran** y un valor de **pub wins**, **sub reinit** o **sub wins** para **@conflict_policy** .  
   
-4.  En el publicador, ejecute [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 3 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password**. Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password**. Esto crea un trabajo de Agente de instantáneas para la publicación.  
+4.  En el publicador, ejecute [sp_addpublication_snapshot (Transact-SQL)](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md). Especifique el nombre de publicación usado en el paso 3 para **@publication** y las credenciales de Windows con las que se ejecuta el Agente de instantáneas para **@snapshot_job_name** y **@password** . Si el agente va a usar la autenticación de SQL Server al conectarse al publicador, también debe especificar un valor de **0** para **@publisher_security_mode** y la información de inicio de sesión de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para **@publisher_login** y **@publisher_password** . Esto crea un trabajo de Agente de instantáneas para la publicación.  
   
 5.  Agregue artículos a la publicación. Para más información, consulte [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).  
   
@@ -96,7 +98,7 @@ ms.locfileid: "54130105"
   
 #### <a name="to-change-the-conflict-policy-for-a-publication-that-allows-queued-updating-subscriptions"></a>Para cambiar la directiva de conflicto para una publicación que permita las suscripciones de actualización en cola  
   
-1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique un valor de **conflict_policy** para **@property** y el modo de directiva de conflicto deseado de **pub wins**, **sub reinit**o **sub wins** para **@value**.  
+1.  En la base de datos de publicación del publicador, ejecute [sp_changepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md). Especifique un valor de **conflict_policy** para **@property** y el modo de directiva de conflicto deseado de **pub wins**, **sub reinit**o **sub wins** para **@value** .  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo crea una publicación que admitía las suscripciones de extracción de actualizaciones inmediatas y en cola.  

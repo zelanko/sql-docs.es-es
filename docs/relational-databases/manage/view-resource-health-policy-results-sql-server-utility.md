@@ -11,12 +11,12 @@ ms.assetid: 80cb14fb-f4c6-4be2-ba17-eb4e4cddd35f
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: a241a5619f4a95420c5e0f401560008630f1cea4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 932b9e095f6f5893bba985e49881ff8c758bd499
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676394"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580816"
 ---
 # <a name="view-resource-health-policy-results-sql-server-utility"></a>Ver los resultados de la directiva de mantenimiento de recursos (Utilidad de SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +35,10 @@ ms.locfileid: "51676394"
 4.  Haga clic en el nodo **Instancias administradas** para ver los datos de la vista de lista para las instancias administradas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (haga clic con el botón secundario para actualizar). Los datos de la vista de lista se muestran en el panel de contenido.  
   
 5.  Haga clic en el nodo **Aplicaciones de capa de datos implementadas** para ver la vista de lista para las aplicaciones de capa de datos (haga clic con el botón derecho para actualizar). Los datos de la vista de lista se muestran en el panel de contenido.  
-  
-## <a name="see-also"></a>Ver también  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+## <a name="see-also"></a>Consulte también  
  [Características y tareas de la utilidad de SQL Server](../../relational-databases/manage/sql-server-utility-features-and-tasks.md)   
  [Reducir el ruido en las directivas de uso de la CPU &#40;Utilidad de SQL Server&#41;](../../relational-databases/manage/reduce-noise-in-cpu-utilization-policies-sql-server-utility.md)   
  [Detalles de la aplicación de capa de datos implementada &#40;Utilidad de SQL Server&#41;](https://msdn.microsoft.com/library/79c41dd9-abcb-434e-9326-00a341d5c867)   

@@ -15,12 +15,12 @@ ms.assetid: 3cfc8966-833e-42fa-80cb-09175d1feed7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 5ab0b82002024a819ef1e6794b6c99bb238fa18e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ec133a404b7485edff3e63e3c8c495ef2bc4a542
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135895"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586237"
 ---
 # <a name="configure-publishing-and-distribution"></a>Configurar la publicación y la distribución
 [!INCLUDE[appliesto-ss-asdbmi-asdbmi-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +31,8 @@ ms.locfileid: "54135895"
 ###  <a name="Security"></a> Seguridad 
 Para más información, vea [Ver y modificar la configuración de seguridad de la replicación](../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).
 
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio 
-Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>**. Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos `db_owner` puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio 
+Configure la distribución con el Asistente para nueva publicación o el Asistente para configurar la distribución. Después de configurar el distribuidor, vea y modifique las propiedades en el cuadro de diálogo **Propiedades del distribuidor - \<distribuidor>** . Utilice el Asistente para configurar la distribución si desea configurar un distribuidor para que los miembros de los roles fijos de base de datos `db_owner` puedan crear publicaciones o si desea configurar un distribuidor remoto que no sea un publicador.
 
 #### <a name="to-configure-distribution"></a>Para configurar la distribución 
 
@@ -41,6 +41,8 @@ Configure la distribución con el Asistente para nueva publicación o el Asisten
 2. Haga clic con el botón secundario en la carpeta **Replicación** y, a continuación, en **Configurar distribución**.
 
 3. Siga las indicaciones del Asistente para configurar la distribución: 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   - Seleccione un distribuidor. Para usar un distribuidor local, seleccione **ServerName, que actuará como su propio distribuidor. SQL Server creará una base de datos y un registro de distribución**. Para utilizar un distribuidor remoto, seleccione **Utilizar el siguiente servidor como distribuidor**y, a continuación, seleccione un servidor. El servidor ya debe estar configurado como distribuidor y el publicador debe estar habilitado para usar el distribuidor. Para más información, vea [Habilitar un publicador remoto en un distribuidor &#40;SQL Server Management Studio&#41;](../../relational-databases/replication/enable-a-remote-publisher-at-a-distributor-sql-server-management-studio.md).
 

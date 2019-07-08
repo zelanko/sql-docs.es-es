@@ -13,12 +13,12 @@ ms.author: alayu
 ms.reviewer: maghan
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9ebb00b758aa3291c453d6c48d548f2047c72530
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f577b3f7f739f2642af239c3396a545dfd6332fb
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66836393"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585887"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>Importación de archivos planos mediante el asistente de SQL
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -44,6 +44,8 @@ Para acceder al Asistente para importación de archivos planos, siga estos pasos
 1. Abra **SQL Server Management Studio**.
 2. Conéctese a una instancia de Motor de base de datos de SQL Server o el localhost.
 3. Expanda **Bases de datos**, haga clic con el botón derecho en una base de datos (vea el ejemplo siguiente), apunte a **Tareas** y haga clic en **Importar archivo plano**, encima de Importar datos.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![Menú del asistente](media/import-flat-file-wizard/importffmenu.png)
 

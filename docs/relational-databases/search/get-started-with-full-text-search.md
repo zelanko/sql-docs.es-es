@@ -16,12 +16,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0d87ebe37c4dcf669243262c97422337b1669be6
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6043372a62776b4f7417b3a666417be9a811bfce
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973715"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585495"
 ---
 # <a name="get-started-with-full-text-search"></a>Introducción a la búsqueda de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,6 +31,8 @@ Las bases de datos de SQL Server están habilitadas para texto completo de maner
 Existen dos pasos básicos para configurar una búsqueda de texto completo:  
 1.  Crear un catálogo de texto completo  
 2.  Cree un índice de texto completo en las tablas o en la vista indizada en la que desea realizar una búsqueda. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Cada índice de texto completo debe pertenecer a un catálogo de texto completo. Puede crear un catálogo de texto independiente para cada índice de texto completo o puede asociar varios índices de texto completo a un catálogo determinado. Un catálogo de texto completo es un objeto virtual y no pertenece a ningún grupo de archivos. El catálogo completo es un concepto lógico que hace referencia a un grupo de índices de texto completo.
 

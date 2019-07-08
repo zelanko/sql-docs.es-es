@@ -14,12 +14,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0959480c6c9b90f1a212d77ce3b4684b2e72e05b
-ms.sourcegitcommit: 7d4a3fc0f2622cbc6930d792be4a9b3fcac4c4b6
+ms.openlocfilehash: 2bc6e0c8a517ce78a36c776f692a16d406e7aae5
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/21/2019
-ms.locfileid: "58305503"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586126"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>Crear y administrar catálogos de texto completo
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,7 +52,9 @@ GO
     >  Los identificadores de los catálogos de texto completo comienzan por 00005 y se incrementan en uno con cada nuevo catálogo que se crea.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="props"></a> Obtener las propiedades de un catálogo de texto completo  
 Use la función de [!INCLUDE[tsql](../../includes/tsql-md.md)] **FULLTEXTCATALOGPROPERTY** para obtener el valor de diversas propiedades relacionadas con los catálogos de texto completo. Para obtener más información, consulte [FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md).
 
@@ -89,7 +91,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 3.  Haga clic con el botón derecho en el nombre del catálogo de texto completo que quiere volver a generar y seleccione **Volver a generar**.  
   
-4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?**, haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar el catálogo de texto completo y volver a generarlo?** , haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar el catálogo de texto completo** , haga clic en **Cerrar**.  
    
@@ -101,7 +103,7 @@ Ejecute la instrucción de Transact-SQL [ALTER FULLTEXT CATALOG... REBUILD](
   
 3.  Seleccione **Volver a generar todo**.  
   
-4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?**, haga clic en **Aceptar**.  
+4.  Ante la pregunta **¿Quiere eliminar todos los catálogos de texto completo y volver a generarlos?** , haga clic en **Aceptar**.  
   
 5.  En el cuadro de diálogo **Volver a generar todos los catálogos de texto completo** , haga clic en **Cerrar**.  
   

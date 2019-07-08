@@ -15,12 +15,12 @@ ms.assetid: 0a84892d-2f7a-4e77-b2d0-d68b95595210
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3bf9130dadbc0b7a851856d70d78403b6f0008e1
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: caae503d57460d88d2396842f565125ff32c9378
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59581850"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579442"
 ---
 # <a name="example-piecemeal-restore-of-database-full-recovery-model"></a>Ejemplo: Restauración por etapas de la base de datos (modelo de recuperación completa)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -75,14 +75,16 @@ BACKUP LOG adb TO tailLogBackup WITH NORECOVERY, NO_TRUNCATE
      En este momento, los grupos de archivos principal, `A` y `C` están en línea. Los archivos del grupo `B` permanecen pendientes de recuperación, con el grupo de archivos sin conexión. Las transacciones diferidas se han resuelto y se trunca el registro.  
   
 3.  Restauración con conexión del grupo de archivos `B`.  
-  
-     En la tercera secuencia de restauración, el administrador de la base de datos restaura el grupo de archivos `B`. La copia de seguridad del grupo de archivos `B` se realizó después de cambiar el grupo a solo lectura, por lo que no es necesario ponerlo al día durante la recuperación.  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     In the third restore sequence, the database administrator restores filegroup `B`. The backup of filegroup `B` was taken after the filegroup became read-only; therefore, it does not have to be rolled forward during recovery.  
   
     ```  
     RESTORE DATABASE adb FILEGROUP='B' FROM backup2b WITH RECOVERY  
     ```  
   
-     Todos los grupos de archivos están ahora en línea.  
+     All filegroups are now online.  
   
 ## <a name="additional-examples"></a>Otros ejemplos  
   

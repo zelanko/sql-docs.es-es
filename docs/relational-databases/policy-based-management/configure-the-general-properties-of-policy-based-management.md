@@ -15,12 +15,12 @@ ms.assetid: 6d1e0e37-29ea-408a-a055-384984d884be
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: afd93dd5543d515c6dc77548f5a9f70542af9ea1
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: edd786253bb39d947671757f82b240f6d7c5022f
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512480"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582528"
 ---
 # <a name="configure-the-general-properties-of-policy-based-management"></a>Configurar las propiedades generales de la administración basada en directivas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,10 @@ ms.locfileid: "51512480"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol fijo de base de datos PolicyAdministratorRole.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-configure-policy-based-management"></a>Para configurar la administración basada en directivas  
   
@@ -71,7 +71,9 @@ ms.locfileid: "51512480"
     -   Cuando este valor es true, se registran tanto las evaluaciones de directivas correctas como las que tienen errores.  
   
 4.  Cuando termine, haga clic en **Aceptar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
 #### <a name="to-configure-policy-based-management"></a>Para configurar la administración basada en directivas  

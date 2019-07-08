@@ -15,12 +15,12 @@ ms.assetid: b00ab550-5308-4cb8-8330-483cd1d25654
 author: julieMSFT
 ms.author: jrasnick
 manager: craigg
-ms.openlocfilehash: 3e102f509d289c4bc0e3a4a4100ec7c091636acd
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 0aef47aa00c52bd5adb0069baf0a1d06a6848d43
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143415"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580769"
 ---
 # <a name="enable-or-disable-a-plan-guide"></a>Habilitar o deshabilitar una guía de plan
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -50,10 +50,10 @@ ms.locfileid: "54143415"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La deshabilitación o habilitación de una guía de plan OBJECT requiere el permiso ALTER en el objeto (por ejemplo: función, procedimiento almacenado) al que hace referencia la guía de plan. Todas las demás guías de plan requieren el permiso ALTER DATABASE.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-disable-or-enable-a-plan-guide"></a>Para deshabilitar o habilitar una guía de plan  
   
@@ -64,7 +64,9 @@ ms.locfileid: "54143415"
 3.  Haga clic con el botón derecho en la guía de plan que quiera deshabilitar o habilitar y seleccione **Deshabilitar** o **Habilitar**.  
   
 4.  En el cuadro de diálogo **Deshabilitar guía de plan** o **Habilitar guía de plan** , compruebe que la acción elegida se ha realizado correctamente y haga clic en **Cerrar**.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 #### <a name="to-disable-or-enable-all-plan-guides-in-a-database"></a>Para habilitar o deshabilitar todas las guías de plan de una base de datos  
   
 1.  Haga clic en el signo más para expandir la base de datos en que desea deshabilitar o habilitar una guía de plan y, a continuación, haga clic en el signo más para expandir la carpeta **Programación** .  

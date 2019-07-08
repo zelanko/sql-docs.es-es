@@ -17,12 +17,12 @@ ms.assetid: 7626d575-9994-47be-b772-5b6f1b7ef7ca
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 98507fe8e98cf8c12abb7423d995a2e3be34f201
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 97831aaa655baf2d13c27c1e7e08233ff6c61cd2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47846813"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581521"
 ---
 # <a name="quiesce-a-replication-topology-replication-transact-sql-programming"></a>Poner en modo inactivo una topología de replicación (programación de la replicación con Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.locfileid: "47846813"
 3.  En la base de datos de publicación del publicador, ejecute [sp_helptracertokenhistory](../../../relational-databases/system-stored-procedures/sp-helptracertokenhistory-transact-sql.md).  
   
 4.  Asegúrese de que cada suscriptor ha recibido el token de seguimiento.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ### <a name="to-quiesce-a-transactional-replication-topology-with-updatable-subscriptions"></a>Para detener una topología de replicación transaccional con suscripciones actualizables  
   
 1.  Detenga la actividad en todas las tablas en el publicador y todos los suscriptores.  
@@ -81,7 +83,7 @@ ms.locfileid: "47846813"
     > [!NOTE]  
     >  Si se producen conflictos durante la sincronización, es posible que los cambios requeridos por la resolución de conflictos no se propaguen a todos los nodos después de ejecutar el Agente de mezcla dos veces.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar una topología punto a punto &#40;programación de la replicación con Transact-SQL&#41;](../../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
  [Medir la latencia y validar las conexiones de la replicación transaccional](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

@@ -11,12 +11,12 @@ ms.assetid: 13a8f879-274f-4934-a722-b4677fc9a782
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 14a4ff6a2af3182e8e62a019993d39a6470caf37
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1c027019e3232391b4d94381b550a39a078dd38a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53205123"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67586362"
 ---
 # <a name="delete-backup-blob-files-with-active-leases"></a>Eliminar archivos de blob de copia de seguridad con concesiones activas
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,9 @@ ms.locfileid: "53205123"
     >  SQL Server emite un identificador de concesión para establecer acceso exclusivo durante la operación de restauración. El identificador de concesión de restauración es BAC2BAC2BAC2BAC2BAC2BAC2BAC2BAC2.  
   
 3.  **Eliminar el blob:** para eliminar un blob con una concesión activa, primero debe interrumpir la concesión.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="Code_Example"></a> Ejemplo de script de PowerShell  
   
 > [!IMPORTANT]

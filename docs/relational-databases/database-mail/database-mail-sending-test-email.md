@@ -14,12 +14,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8cf3921cae772b278b66a39fa8241895d2e582c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95e4e365ed1ec89050ceb8c3765e6a217f819cd3
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66506933"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585270"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>Envío de un correo electrónico de prueba con el Correo electrónico de base de datos  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,6 +49,8 @@ Debe ser miembro del rol fijo de servidor sysadmin para utilizar el cuadro de di
     En la columna sent_status se indica si se ha enviado el mensaje de correo electrónico de prueba.
 
 1. Si se produce un error, ejecute la siguiente instrucción para ver el mensaje correspondiente:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```sql
     SELECT * FROM msdb.dbo.sysmail_event_log 

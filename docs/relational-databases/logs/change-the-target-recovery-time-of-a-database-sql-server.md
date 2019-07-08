@@ -11,12 +11,12 @@ ms.assetid: e466419a-d8a4-48f7-8d97-13a903ad6b15
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f47d33179fb382472def9950a928be137e1f6583
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9563f7ad61b33b4248ce22c58974d4967db6d55e
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354380"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584215"
 ---
 # <a name="change-the-target-recovery-time-of-a-database-sql-server"></a>Cambiar el tiempo de recuperación de destino de una base de datos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +51,9 @@ ms.locfileid: "66354380"
 3.  En el cuadro de diálogo **Propiedades de la base de datos** , haga clic en la página **Opciones** .  
   
 4.  En el panel **Recuperación**, en el campo **Tiempo de recuperación de destino (segundos)** , especifique el número de segundos que quiera como límite superior para el tiempo de recuperación de esta base de datos.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  **Para cambiar el tiempo de recuperación de destino**  
   

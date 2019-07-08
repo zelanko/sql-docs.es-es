@@ -21,18 +21,37 @@ ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
 manager: craigg
-ms.openlocfilehash: 31bfc7ef9761ac40b56af9b733a29fbb12bc586e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e366d686bc71d9b4ee391013fedb25e93494c45
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822968"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67413155"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON: marcas de seguimiento (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
 Las marcas de seguimiento se usan para establecer características específicas del servidor o para modificar un comportamiento determinado. Por ejemplo, 3226 es una marca de seguimiento de inicio que se usa con frecuencia y que suprime los mensajes de copia de seguridad correctos en el registro de errores. Las marcas de seguimiento se usan con frecuencia para diagnosticar problemas de rendimiento o para depurar procedimientos almacenados o sistemas informáticos complejos, pero Soporte técnico de Microsoft también las puede recomendar para solucionar los comportamientos que afecten negativamente a una carga de trabajo específica.  Todas las marcas de seguimiento documentadas y las recomendadas por Soporte técnico de Microsoft son totalmente compatibles en un entorno de producción cuando se usan como se indica.  Tenga en cuenta que las marcas de seguimiento de esta lista pueden tener consideraciones adicionales sobre su uso en particular, por lo que es aconsejable que lea detenidamente todas las recomendaciones proporcionadas aquí o por su ingeniero de soporte técnico. Además, como sucede con cualquier cambio de configuración de SQL Server, siempre es mejor probar exhaustivamente la marca en un entorno que no sea de producción antes de la implementación.
+
+## <a name="remarks"></a>Notas  
+ En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay tres tipos de marcas de seguimiento: consulta, sesión y global. Las marcas de seguimiento de consulta se activan para el contexto de una consulta específica. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor. Algunas marcas solo pueden habilitarse como globales y algunas pueden habilitarse con un ámbito global o de sesión.  
+  
+ Se aplican las reglas siguientes:  
+-   Una marca de seguimiento global debe habilitarse a nivel global. De lo contrario, no surtirá efecto. Se recomienda habilitar las marcas de seguimiento globales en el inicio mediante la opción de línea de comandos **-T**. Esto garantiza que la marca de seguimiento permanezca activa después del reinicio de un servidor. Reinicie SQL Server para que la marca de seguimiento surta efecto. 
+-   Si una marca de seguimiento tiene ámbito global, de sesión o de consulta, puede habilitarse con el ámbito apropiado. Una marca de seguimiento habilitada en el nivel de sesión nunca afecta a otra sesión y su efecto se pierde cuando el SPID que inició la sesión la cierra.  
+  
+Las marcas de seguimiento se activan o se desactivan mediante uno de los siguientes métodos:
+-   Mediante los comandos DBCC TRACEON y DBCC TRACEOFF.  
+     Por ejemplo, para habilitar la marca de seguimiento 2528 de forma global, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con el argumento -1: `DBCC TRACEON (2528, -1)`. El efecto de habilitar una marca de seguimiento global con DBCC TRACEON se pierde al reiniciar el servidor. Para desactivar una marca de seguimiento global, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con el argumento -1.  
+-   Use la opción de inicio **-T** para especificar que la marca de seguimiento se active durante el inicio.  
+     La opción de inicio **-T** habilita una marca de seguimiento globalmente. No puede habilitar una marca de seguimiento de nivel de sesión mediante una opción de inicio. Esto garantiza que la marca de seguimiento permanezca activa después del reinicio de un servidor. Para obtener más información sobre las opciones de inicio del servicio, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).
+-   En el nivel de consulta, mediante la [sugerencia de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON. La opción QUERYTRACEON solo se admite en las marcas de seguimiento del optimizador de consultas incluidas en la tabla anterior.
+  
+Use el comando `DBCC TRACESTATUS` para determinar qué marcas de seguimiento están activas actualmente.
+
+## <a name="trace-flags"></a>Marcas de seguimiento
+
   
 En la siguiente tabla se enumeran y se describen las marcas de seguimiento disponibles en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
  
@@ -156,21 +175,7 @@ En la siguiente tabla se enumeran y se describen las marcas de seguimiento dispo
 |**11023**|Deshabilita el uso de la última frecuencia de muestreo almacenada para todas las actualizaciones de estadísticas posteriores, cuando no se especifica explícitamente una frecuencia de muestreo como parte de la instrucción [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md). Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4039284).<br /><br />**Ámbito**: global o sesión|    
 |**11024**|Permite activar la actualización automática de estadísticas cuando el recuento de modificación de cualquier partición supera el [umbral](../../relational-databases/statistics/statistics.md#AutoUpdateStats) local. Para más información, vea este [artículo de Soporte técnico de Microsoft](https://support.microsoft.com/kb/4041811).<br /><br />**Nota:** Esta marca de seguimiento se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2, [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 y compilaciones posteriores.<br /><br />**Ámbito**: global o sesión| 
   
-## <a name="remarks"></a>Notas  
- En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay tres tipos de marcas de seguimiento: consulta, sesión y global. Las marcas de seguimiento de consulta se activan para el contexto de una consulta específica. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor. Algunas marcas solo pueden habilitarse como globales y algunas pueden habilitarse con un ámbito global o de sesión.  
-  
- Se aplican las reglas siguientes:  
--   Una marca de seguimiento global debe habilitarse a nivel global. De lo contrario, no surtirá efecto. Se recomienda habilitar las marcas de seguimiento globales en el inicio mediante la opción de línea de comandos **-T**. Esto garantiza que la marca de seguimiento permanezca activa después del reinicio de un servidor.  
--   Si una marca de seguimiento tiene ámbito global, de sesión o de consulta, puede habilitarse con el ámbito apropiado. Una marca de seguimiento habilitada en el nivel de sesión nunca afecta a otra sesión y su efecto se pierde cuando el SPID que inició la sesión la cierra.  
-  
-Las marcas de seguimiento se activan o se desactivan mediante uno de los siguientes métodos:
--   Mediante los comandos DBCC TRACEON y DBCC TRACEOFF.  
-     Por ejemplo, para habilitar la marca de seguimiento 2528 de forma global, use [DBCC TRACEON](../../t-sql/database-console-commands/dbcc-traceon-transact-sql.md) con el argumento -1: `DBCC TRACEON (2528, -1)`. El efecto de habilitar una marca de seguimiento global con DBCC TRACEON se pierde al reiniciar el servidor. Para desactivar una marca de seguimiento global, use [DBCC TRACEOFF](../../t-sql/database-console-commands/dbcc-traceoff-transact-sql.md) con el argumento -1.  
--   Use la opción de inicio **-T** para especificar que la marca de seguimiento se active durante el inicio.  
-     La opción de inicio **-T** habilita una marca de seguimiento globalmente. No puede habilitar una marca de seguimiento de nivel de sesión mediante una opción de inicio. Esto garantiza que la marca de seguimiento permanezca activa después del reinicio de un servidor. Para obtener más información sobre las opciones de inicio del servicio, vea [Opciones de inicio del servicio de motor de base de datos](../../database-engine/configure-windows/database-engine-service-startup-options.md).
--   En el nivel de consulta, mediante la [sugerencia de consulta](https://support.microsoft.com/kb/2801413) QUERYTRACEON. La opción QUERYTRACEON solo se admite en las marcas de seguimiento del optimizador de consultas incluidas en la tabla anterior.
-  
-Use el comando `DBCC TRACESTATUS` para determinar qué marcas de seguimiento están activas actualmente.
+
   
 ## <a name="examples"></a>Ejemplos  
  En el ejemplo siguiente se establece la marca de seguimiento 3205 para todas las sesiones en el nivel de servidor mediante el uso de DBCC TRACEON.  

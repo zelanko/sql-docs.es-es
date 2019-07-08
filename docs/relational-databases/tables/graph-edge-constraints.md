@@ -1,7 +1,7 @@
 ---
 title: Restricciones perimetrales de grafos | Microsoft Docs
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 06/21/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,31 +13,22 @@ helpviewer_keywords:
 - edge constraints [Azure SQL Database]
 - graph edge constraints
 - SQL Graph
-ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
-monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86544dee5262a1d04c1ff1d8e59f8ddac5e9b5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
+ms.openlocfilehash: aa73858e6df29c814821ee9e24923cbfc0fbd4a2
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64774646"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343892"
 ---
 # <a name="edge-constraints"></a>Restricciones perimetrales
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-  Las restricciones perimetrales se pueden usar para aplicar la integridad de datos y una semántica específica en las tablas perimetrales de una base de datos de gráficos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
-  
-Este artículo contiene las secciones siguientes.  
-  
-[Restricciones perimetrales](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-[Restricciones perimetrales](../../relational-databases/tables/graph-edge-constraints.md#Connection)  
-  
-[Tareas relacionadas](../../relational-databases/tables/graph-edge-constraints.md#Tasks)  
-  
+Las restricciones perimetrales se pueden usar para aplicar la integridad de datos y una semántica específica en las tablas perimetrales de una base de datos de grafos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+
 ##  <a name="Connection"></a> Restricciones perimetrales
  En la primera versión de las características de los gráficos, las tablas perimetrales no aplicaban nada para los puntos de conexión del perímetro. Es decir, los perímetros de una base de datos de gráficos no podían conectar ningún nodo con ninguno otro, independientemente del tipo. 
 
@@ -66,3 +57,5 @@ Este artículo contiene las secciones siguientes.
 |Describe cómo eliminar una restricción perimetral.|[Eliminar una restricción perimetral](../../relational-databases/tables/delete-edge-constraint.md)|  
 |Describe cómo modificar una restricción perimetral.|[Modificar una restricción perimetral](../../relational-databases/tables/modify-edge-constraint.md)|  
 |Describe cómo ver las propiedades de las restricciones perimetrales.|[Ver propiedades de restricción perimetral](../../relational-databases/tables/view-edge-constraint-properties.md)|  
+| Información general sobre la tecnología de grafos en SQL Server | [Gráfico de procesamiento con SQL Server y Azure SQL Database](../graphs/sql-graph-overview.md) |
+| &nbsp; | &nbsp; |

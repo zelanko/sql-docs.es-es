@@ -4,7 +4,7 @@ Description: Solución de problemas de un bloqueo de SSMS mediante la recopilaci
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
-ms.topic: how-to
+ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
@@ -12,12 +12,12 @@ manager: craigg
 ms.reviewer: dineth, sstein
 ms.custom: ''
 ms.date: 05/17/2019
-ms.openlocfilehash: 2fbd0f4680c7a63a5390d93589f44b708f6c2629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af7f9222a5de8c0e899d22d32e53d7638a4158cb
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983127"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412891"
 ---
 # <a name="get-full-memory-dump"></a>Obtención de un volcado de memoria completo
 
@@ -31,9 +31,9 @@ Para capturar información de diagnóstico para solucionar problemas, siga estos
 
 2. Descomprima la descarga en una carpeta.
 
-3. Abra el símbolo del sistema y ejecute el siguiente comando:
+3. Abra una ventana de símbolo del sistema (como `cmd.exe`) y ejecute el siguiente comando:
 
-    ```cmd
+    ```
     <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 

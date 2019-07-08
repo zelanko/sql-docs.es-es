@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: dphansen
 ms.technology: t-sql
@@ -10,20 +10,20 @@ author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 223388d4a3c61dfb90ac9fa5434e9149bc25fae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2185c40562e6ad7102ebde10cacb34c56d36f714
+ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994983"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67399969"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Registra las extensiones de lenguaje externo en la base de datos desde la secuencia de bytes o la ruta de acceso de archivo especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda registrar las extensiones del lenguaje externo nuevo en cualquier plataforma de sistema operativo compatible con SQL Server.
+Registra las extensiones de lenguaje externo en la base de datos desde la secuencia de bytes o la ruta de acceso de archivo especificada. Esta instrucción actúa como un mecanismo genérico para que el administrador de base de datos pueda registrar las extensiones del lenguaje externo nuevo en cualquier plataforma de sistema operativo compatible con SQL Server. Para obtener más información, consulte las [extensiones de lenguaje](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 
 > [!NOTE]
-> **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres.
+> Actualmente, solo se admite **Java** como lenguaje externo. **R** y **Python** son nombres reservados y no se puede crear ningún lenguaje externo con esos nombres. Para obtener más información sobre cómo usar **R** y **Python**, consulte [SQL Server Machine Learning Services](https://docs.microsoft.com/sql/advanced-analytics/sql-server-machine-learning-services).
 
 ## <a name="syntax"></a>Sintaxis
 

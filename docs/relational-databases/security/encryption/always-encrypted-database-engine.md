@@ -17,12 +17,12 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2ac5ce3e74713da1b1560d4fd0e1cb86bb4593be
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.openlocfilehash: 0fefd22e080ac0ed4e0646dde1805ce5923b8e3a
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185031"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419156"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -181,11 +181,11 @@ Las cláusulas siguientes no se pueden usar en las columnas cifradas:
 Las características siguientes no funcionan en las columnas cifradas:
 
 - Replicación transaccional o de mezcla
-- Consultas distribuidas (servidores vinculados)
+- Consultas distribuidas (servidores vinculados, OPENROWSET(T-SQL), OPENDATASOURCE(T-SQL))
 
 Requisitos de la herramienta
 
-- SQL Server Management Studio puede descifrar los resultados recuperados de columnas cifradas si se conecta con *column encryption setting=enabled* en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** . Requiere al menos SQL Server Management Studio versión 17 para insertar, actualizar o filtrar columnas cifradas.
+- SQL Server Management Studio puede descifrar los resultados recuperados de columnas cifradas si se conecta con *column encryption setting=enabled* en la pestaña **Propiedades adicionales** del cuadro de diálogo **Conectar con el servidor** . Requiere al menos SQL Server Management Studio versión 17 para insertar, actualizar o filtrar columnas cifradas. Si las cadenas de conexión se van a usar en aplicaciones cliente, consulte [Always Encrypted (desarrollo de cliente)](../../../relational-databases/security/encryption/always-encrypted-client-development.md).
 
 - Las conexiones cifradas de `sqlcmd` requieren al menos la versión 13.1, que está disponible en el [Centro de descarga](https://go.microsoft.com/fwlink/?LinkID=825643).
 

@@ -1,7 +1,7 @@
 ---
 title: INDEXPROPERTY (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 03/06/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 813b88f56d6017a9e20d8bce72925f9ee7ab552b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3d0cf76dfc6225b23551ccb2ee4e55d09fb88c4
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944468"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388353"
 ---
 # <a name="indexproperty-transact-sql"></a>INDEXPROPERTY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -69,7 +69,8 @@ INDEXPROPERTY ( object_ID , index_or_statistics_name , property )
 |**IsRowLockDisallowed**|El valor de bloqueo de fila establecido por la opción ALLOW_ROW_LOCKS de ALTER INDEX.|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = No se permite el bloqueo de fila.<br /><br /> 0 = Se permite el bloqueo de fila.<br /><br /> NULL = La entrada no es válida.|  
 |**IsStatistics**|*index_or_statistics_name* son estadísticas creadas por la instrucción CREATE STATISTICS o por la opción AUTO_CREATE_STATISTICS de ALTER DATABASE.|1 = True<br /><br /> 0 = Falso o índice XML.|  
 |**IsUnique**|El índice es exclusivo.|1 = True<br /><br /> 0 = Falso o índice XML.|  
-|**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False|  
+|**IsColumnstore**|El índice es un índice de almacén de columnas optimizado de memoria xVelocity.|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> 1 = True<br /><br /> 0 = False| 
+|**IsOptimizedForSequentialKey**|El índice tiene habilitada la optimización para inserciones de la última página.|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br>1 = True<br><br>0 = False| 
   
 ## <a name="return-types"></a>Tipos devueltos  
  **int**  

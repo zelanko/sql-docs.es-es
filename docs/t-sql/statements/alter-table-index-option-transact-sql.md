@@ -1,7 +1,7 @@
 ---
-title: index_option (Transact-SQL) | Microsoft Docs
+title: " | Microsoft Docs"
 ms.custom: ''
-ms.date: 09/08/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: 8a14f12d-2fbf-4036-b8b2-8db3354e0eb7
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 176ab35da4eacd55062fcfb1e452e19c6b733649
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 01ecbe3af3aea9453306deea9408541012fe254b
+ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591299"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67412814"
 ---
 # <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,8 @@ ms.locfileid: "53591299"
   | IGNORE_DUP_KEY = { ON | OFF }  
   | STATISTICS_NORECOMPUTE = { ON | OFF }  
   | ALLOW_ROW_LOCKS = { ON | OFF }  
-  | ALLOW_PAGE_LOCKS = { ON | OFF }  
+  | ALLOW_PAGE_LOCKS = { ON | OFF } 
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF } 
   | SORT_IN_TEMPDB = { ON | OFF }   
   | ONLINE = { ON | OFF }  
   | MAXDOP = max_degree_of_parallelism  
@@ -78,7 +79,7 @@ ms.locfileid: "53591299"
  No se especifica OFF ni *fillfactor*.  
  Las páginas de nivel intermedio se llenan casi al máximo de su capacidad, dejando espacio suficiente para al menos una fila del tamaño máximo que admite el índice, en función del conjunto de claves de las páginas intermedias.  
   
- FILLFACTOR **=**_fillfactor_  
+ FILLFACTOR **=** _fillfactor_  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o modificación de los índices. El valor especificado debe ser un entero de 1 a 100. El valor predeterminado es 0.  
@@ -131,7 +132,13 @@ ms.locfileid: "53591299"
   
  OFF  
  No se utilizan bloqueos de página.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+
+Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](./create-index-transact-sql.md#sequential-keys) de la página CREATE INDEX para obtener más información.
+ 
  SORT_IN_TEMPDB **=** { ON | **OFF** }  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -165,7 +172,7 @@ ms.locfileid: "53591299"
 > [!NOTE]
 >  Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
- MAXDOP **=**_max_degree_of_parallelism_  
+ MAXDOP **=** _max_degree_of_parallelism_  
  **Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
@@ -207,7 +214,7 @@ ms.locfileid: "53591299"
   
  Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,**...*n* ] **)** **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...*n* ] **)** **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
  Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si la tabla no tiene particiones, el argumento ON PARTITIONS genera un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de una tabla con particiones.  
   

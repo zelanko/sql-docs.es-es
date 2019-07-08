@@ -1,7 +1,7 @@
 ---
 title: Rotar claves Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 95718cff851a9ec13cda4cfa5d192bd366d7edcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b74fd823b513114e84c5ac22c5d8f8404d352e68
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413477"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387919"
 ---
 # <a name="rotate-always-encrypted-keys-using-powershell"></a>Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -31,9 +31,9 @@ Always Encrypted emplea dos tipos de claves, por lo que hay dos flujos de trabaj
 * **Rotación de claves de cifrado de columna** : implica descifrar los datos cifrados con la clave actual y volver a cifrarlos con la nueva clave de cifrado de columna. Como la rotación de una clave de cifrado de columna exige el acceso a las claves y a la base de datos, la rotación de claves de cifrado de columna solo se puede realizar sin separación de roles.
 * **Rotación de claves maestras de columna** : implica descifrar las claves de cifrado de columna que están protegidas con la clave maestra de columna actual, volver a cifrarlas con la nueva clave maestra de columna y actualizar los metadatos de ambos tipos de claves. La rotación de claves maestras de columna se puede realizar con o sin separación de roles (cuando se usa el módulo SqlServer PowerShell).
 
-
 ## <a name="column-master-key-rotation-without-role-separation"></a>Rotación de claves maestras de columna sin separación de roles
-El método de rotación de una clave maestra de columna que se describe en esta sección no admite la separación de roles entre un Administrador de seguridad y un DBA. Algunos de los pasos siguientes combinan operaciones en las claves físicas con operaciones en los metadatos de las claves, así que este flujo de trabajo está recomendado para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es evitar que los administradores de la nube (pero no los DBA locales) accedan a información confidencial. No se recomienda si los posibles adversarios incluyen DBA o si los DBA simplemente no deben tener acceso a información confidencial.  
+
+El método de rotación de una clave maestra de columna que se describe en esta sección no admite la separación de roles entre un administrador de seguridad y un administrador de base de datos. Algunos de los pasos siguientes combinan operaciones en las claves físicas con operaciones en los metadatos de las claves, así que este flujo de trabajo está recomendado para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es evitar que los administradores de la nube (pero no los DBA locales) accedan a información confidencial. No se recomienda si los posibles adversarios incluyen administradores de base de datos o si estos no deben tener acceso a información confidencial.  
 
 
 | Tarea | Artículo | Accede a claves de texto no cifrado o a almacén de claves| Accede a base de datos
@@ -96,8 +96,7 @@ Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 El flujo de trabajo de rotación de claves maestras de columna que se describe en esta sección garantiza la separación entre un Administrador de seguridad y un DBA.
 
 > [!IMPORTANT]
-> Antes de ejecutar cualquiera de los pasos donde *Accede a claves de texto no cifrado o a almacén de claves*=**Sí** en la tabla siguiente (pasos que acceden a claves de texto no cifrado o a almacén de claves), asegúrese de que el entorno de PowerShell se ejecuta en un equipo seguro distinto al que hospeda la base de datos. Para obtener más información, vea [Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
-
+> Antes de ejecutar cualquiera de los pasos donde *Accede a claves de texto no cifrado o a almacén de claves*=**Sí** en la tabla siguiente (pasos que acceden a claves de texto no cifrado o a almacén de claves), asegúrese de que el entorno de PowerShell se ejecuta en un equipo seguro distinto al que hospeda la base de datos. Para obtener más información, vea [Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 ### <a name="part-1-dba"></a>Parte 1: DBA
 
@@ -129,7 +128,6 @@ El Administrador de seguridad genera una nueva clave maestra de columna, vuelve 
 
 > [!NOTE]
 > Es muy recomendable no eliminar permanentemente la antigua clave maestra de columna después de la rotación. Debería conservarla en su almacén de claves actual o archivarla en otra ubicación segura. Si restaura la base de datos desde un archivo de copia de seguridad a un punto en el tiempo *anterior* a la configuración de la nueva clave maestra de columna, necesitará la clave antigua para acceder a los datos.
-
 
 ### <a name="part-3-dba"></a>Parte 3: DBA
 
@@ -296,10 +294,9 @@ Complete-SqlColumnMasterKeyRotation -SourceColumnMasterKeyName $oldCmkName  -Inp
 Remove-SqlColumnMasterKey -Name $oldCmkName -InputObject $database
 ```
 
-
 ## <a name="rotating-a-column-encryption-key"></a>Rotación de una clave de cifrado de columna
 
-La rotación de una clave de cifrado de columna implica descifrar los datos de todas las columnas cifrados con la clave que se va a rotar y volver a cifrarlos con la nueva clave de cifrado de columna. Este flujo de trabajo de rotación exige acceso a las claves y a la base de datos y, por tanto, no se puede realizar con separación de roles. Tenga en cuenta que la rotación de una clave de cifrado de columna puede tardar mucho tiempo si las tablas que contienen columnas cifradas con la clave que se va a rotar son grandes. Por lo tanto, la organización tiene que planear muy cuidadosamente cualquier rotación de claves de cifrado de columnas.
+La rotación de una clave de cifrado de columna implica descifrar los datos de todas las columnas cifrados con la clave que se va a rotar y volver a cifrarlos con la nueva clave de cifrado de columna. Este flujo de trabajo de rotación exige acceso a las claves y a la base de datos y, por tanto, no se puede realizar con separación de roles. La rotación de una clave de cifrado de columna puede tardar mucho tiempo si las tablas que contienen columnas cifradas con la clave que se va a rotar son grandes. Por lo tanto, la organización tiene que planear cuidadosamente cualquier rotación de claves de cifrado de columna.
 
 Puede girar una clave de cifrado de columna con un enfoque sin conexión o un enfoque en línea. El primer método probablemente sea más rápido, pero las aplicaciones no pueden escribir en las tablas afectadas. El último enfoque probablemente demore más, pero puede limitar el intervalo de tiempo durante el cual las tablas afectadas no estarán disponibles para las aplicaciones. Consulte [Configurar el cifrado de columna con PowerShell](../../../relational-databases/security/encryption/configure-column-encryption-using-powershell.md) y [Set-SqlColumnEncryption](/powershell/module/sqlserver/set-sqlcolumnencryption/) para más detalles.
 
@@ -311,12 +308,12 @@ Puede girar una clave de cifrado de columna con un enfoque sin conexión o un en
 |Paso 4. Genere una nueva clave de cifrado de columna, cífrela con la clave maestra de columna y cree los metadatos de clave de cifrado de columna en la base de datos.  | [New-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionkey)<br><br>**Nota:** Use una variación del cmdlet que genera y cifra internamente una clave de cifrado de columna.<br>En segundo plano, este cmdlet emite la instrucción [CREATE COLUMN ENCRYPTION KEY (Transact-SQL)](../../../t-sql/statements/create-column-encryption-key-transact-sql.md) para crear los metadatos de clave. | Sí | Sí
 |Paso 5. Busque todas las columnas cifradas con la clave de cifrado de columna anterior. | [Guía de programación para objetos de administración de SQL Server (SMO)](../../../relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide.md) | No | Sí
 |Paso 6. Cree un objeto *SqlColumnEncryptionSettings* para cada columna afectada.  SqlColumnMasterKeySettings es un objeto que existe en memoria (en PowerShell). Especifica el esquema de cifrado de destino de una columna. En este caso, el objeto debe especificar que la columna afectada debe cifrarse con la nueva clave de cifrado de columna. | [New-SqlColumnEncryptionSettings](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/new-sqlcolumnencryptionsettings) | No | No
-|Paso 7. Vuelva a cifrar las columnas identificadas en el paso 5 con la nueva clave de cifrado de columna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Es posible que las aplicaciones no puedan tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
+|Paso 7. Vuelva a cifrar las columnas identificadas en el paso 5 con la nueva clave de cifrado de columna. | [Set-SqlColumnEncryption](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/set-sqlcolumnencryption)<br><br>**Nota:** Este paso puede llevar mucho tiempo. Las aplicaciones no podrán tener acceso a las tablas durante toda la operación o parte de esta, dependiendo del enfoque (en línea o sin conexión) que seleccione. | Sí | Sí
 |Paso 8. Quite los metadatos de la clave de cifrado de columna anterior. | [Remove-SqlColumnEncryptionKey](https://docs.microsoft.com/powershell/sqlserver/sqlserver/vlatest/remove-sqlcolumnencryptionkey) | No | Sí
 
 ### <a name="example---rotating-a-column-encryption-key"></a>Ejemplo: rotación de una clave de cifrado de columna
 
-El siguiente script muestra la rotación de una clave de cifrado de columna.  El script da por hecho que la base de datos de destino contiene algunas columnas cifradas con una clave de cifrado de columna denominada CEK1 (que se va a rotar), que está protegida con una clave maestra de columna denominada CMK1 (la clave maestra de columna no se almacena en el Almacén de claves de Azure).
+El siguiente script muestra la rotación de una clave de cifrado de columna.  El script da por hecho que la base de datos de destino contiene algunas columnas cifradas con una clave de cifrado de columna denominada CEK1 (que se va a rotar), que está protegida con una clave maestra de columna denominada CMK1 (la clave maestra de columna no se almacena en Azure Key Vault).
 
 
 ```

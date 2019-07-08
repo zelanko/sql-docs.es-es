@@ -38,12 +38,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 95aa89336e4dcd6decc4434d4afaf77073dd45e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04339f2553d2eb6787fec1b83d61b71623159308
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66428964"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351690"
 ---
 # <a name="create-database"></a>CREATE DATABASE
 
@@ -61,7 +61,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 |||||
 |-|-|-|-|
-|** _\* SQL Server \*_ ** &nbsp;| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current) | [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+|** _\* SQL Server \*_** &nbsp;| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current) | [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 |||||
 
 &nbsp;
@@ -865,7 +865,7 @@ GO
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_ ** | [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| ** _\*Grupo de bases de datos elásticas o base de datos única de<br />SQL Database\*_** | [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current) | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -949,8 +949,6 @@ EDITION
 Especifica el nivel de servicio de la base de datos.
 
 Bases de datos únicas y agrupadas en un grupo elástico o una base de datos única. Los valores disponibles son: "basic", "standard", "premium", "GeneralPurpose", "BusinessCritical" e "Hyperscale".
-
-Si se especifica EDITION, pero no MAXSIZE, este último se establece en el tamaño más restrictivo que admite la edición.
 
 MAXSIZE     
 Especifica el tamaño máximo de la base de datos. El valor de MAXSIZE debe ser válido para el valor de EDITION (nivel de servicio) especificado A continuación se indican los valores de MAXSIZE admitidos y los valores predeterminados (D) de los niveles de servicio.
@@ -1038,12 +1036,12 @@ El valor MAXSIZE para el modelo basado en DTU, si se especifica, tiene que ser u
 |:----- | -------: |--------: |--------: |--------: |--------: |---------:|--------: |
 |Tamaño máximo de datos (GB)|3072|3072|3072|4096|4096|4096|4096|
 
-Si no hay ningún valor `MAXSIZE` establecido al utilizar el modelo de núcleo virtual, el valor predeterminado es 32 GB. Para más información sobre las limitaciones de recursos para el modelo basado en núcleo virtual, vea [Límites del modelo de compra basado en núcleos virtuales de Azure SQL Database para una base de datos única](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
+Si no se establece ningún valor de `MAXSIZE` al utilizar el modelo de núcleo virtual, el valor predeterminado es 32 GB. Para más información sobre las limitaciones de recursos para el modelo basado en núcleo virtual, vea [Límites del modelo de compra basado en núcleos virtuales de Azure SQL Database para una base de datos única](https://docs.microsoft.com/azure/sql-database/sql-database-dtu-resource-limits).
 
 Las reglas siguientes se aplican a los argumentos MAXSIZE y EDITION:
 
-- Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y MAXSIZE no se especifica, el valor de MAXSIZE se establece automáticamente en 250 MB.
-- Si no se especifican los valores de MAXSIZE ni EDITION, este último se establece en Standard (S0) y MAXSIZE en 250 GB.
+- Si se especifica EDITION pero no se especifica MAXSIZE, se usa el valor predeterminado de la edición. Por ejemplo, si EDITION está establecido en Standard y el valor de MAXSIZE no se especifica, este último se establece automáticamente en 250 MB.
+- Si no se especifica MAXSIZE ni EDITION, este último se establece en De uso general y MAXSIZE se establece en 32 GB.
 
 SERVICE_OBJECTIVE     
 - **Solo bases de datos únicas y agrupadas**
@@ -1122,7 +1120,7 @@ CREATE DATABASE TestDB1;
 ```
 
 ### <a name="simple-example-with-edition"></a>Ejemplo sencillo con Edition
-Un ejemplo sencillo para crear una base de datos estándar.
+Un ejemplo sencillo para crear una base de datos de uso general.
 
 ```sql
 CREATE DATABASE TestDB2
@@ -1194,7 +1192,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Instancia administrada de <br />SQL Database \*_ ** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| ** _\* Instancia administrada de <br />SQL Database \*_** | [SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1261,7 +1259,7 @@ Consulte [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-curr
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_ **| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)| ** _\* SQL Data<br />Warehouse \*_**| [Analytics Platform<br />System (PDW)](create-database-transact-sql.md?view=aps-pdw-2016) |
 
 &nbsp;
 
@@ -1373,7 +1371,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
 
 > |||||
 > |-|-|-|-|
-> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_ ** |
+> |[SQL Server](create-database-transact-sql.md?view=sql-server-2017)| [Grupo de bases de datos elásticas o base de datos única de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-current)| [Instancia administrada de<br />SQL Database](create-database-transact-sql.md?view=azuresqldb-mi-current)|[SQL Data<br />Warehouse](create-database-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics Platform<br />System (PDW) \*_** |
 
 &nbsp;
 

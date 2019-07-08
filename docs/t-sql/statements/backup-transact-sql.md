@@ -1,7 +1,7 @@
 ---
 title: BACKUP (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 06/27/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 04dc8f227a64e4c21c8104d679086ebe9de57f6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a22f789aa967f7a6dcb9582083bf22c5698e99e7
+ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175304"
+ms.lasthandoff: 06/27/2019
+ms.locfileid: "67419062"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -70,7 +70,7 @@ En la siguiente fila, haga clic en cualquier nombre de producto que le interese.
 
 ||||
 |---|---|---|
-|** _\* SQL Server \*_ ** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+|** _\* SQL Server \*_** &nbsp;|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 ||||
 
 &nbsp;
@@ -931,7 +931,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instancia administrada de <br />SQL Database \*_ **&nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|** _\* Instancia administrada de <br />SQL Database \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
 
 &nbsp;
 
@@ -980,7 +980,7 @@ DATABASE Especifica una copia de seguridad completa de la base de datos. Durante
 > [!IMPORTANT]
 > Una copia de seguridad de base de datos creada en una instancia administrada solo se puede restaurar en otra instancia administrada. No se puede restaurar en una instancia local de SQL Server (de la misma forma que no se puede restaurar una copia de seguridad de una base de datos de SQL Server 2016 en una instancia de SQL Server 2012).
 
-Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar desde copias de seguridad automáticas de una instancia administrada de Azure SQL Database, vea [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-restore) (Restaurar SQL Database).
+Al restaurar una copia de seguridad creada por BACKUP DATABASE (una *copia de seguridad de datos*), se restaura la copia de seguridad completa. Para restaurar a partir de copias de seguridad automáticas de instancias administradas de Azure SQL Database, vea [Restauración de una base de datos en una instancia administrada](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* |  **@** _database\_name\_var_ } Es la base de datos para la que se realiza la copia de seguridad de la base de datos completa. Si se proporciona como una variable ( **@** _database\_name\_var_), este nombre se puede especificar como una constante de cadena ( **@** _database\_name\_var_ **=** _database name_) o como una variable de tipo de datos de cadena de caracteres, excepto los tipos de datos **ntext** o **text**.
 
@@ -1116,7 +1116,7 @@ WITH STATS = 5, COPY_ONLY;
 
 > ||||
 > |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_ ** &nbsp;|
+> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[Instancia administrada de<br />SQL Database](backup-transact-sql.md?view=azuresqldb-mi-current)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
 
 &nbsp;
 

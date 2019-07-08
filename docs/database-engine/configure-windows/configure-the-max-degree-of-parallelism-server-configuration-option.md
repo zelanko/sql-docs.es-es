@@ -17,12 +17,12 @@ ms.assetid: 86b65bf1-a6a1-4670-afc0-cdfad1558032
 author: MikeRayMSFT
 ms.author: mikeray
 manager: jroth
-ms.openlocfilehash: 0e8faaeb6a809caf5bd8c42ceee94cbbb0702979
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ef7132e61a646cd0c622a3f15a647cf2430d95c
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794141"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351685"
 ---
 # <a name="configure-the-max-degree-of-parallelism-server-configuration-option"></a>Establecer la opción de configuración del servidor Grado máximo de paralelismo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +60,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use las siguiente
 |Servidor con varios nodos NUMA|Más de 16 procesadores lógicos por nodo NUMA|Mantener MAXDOP a la mitad del número de procesadores lógicos por nodo de NUMA con un valor máximo de 16|
   
 > [!NOTE]
-> El nodo NUMA en la tabla anterior hace referencia a nodos soft-NUMA creados automáticamente por [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores.   
+> El nodo NUMA de la tabla anterior hace referencia a los nodos NUMA de software creados automáticamente mediante [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores, o a los nodos NUMA basados en hardware en caso de que el nodo NUMA de software esté deshabilitado.   
 >  Utilice estas mismas instrucciones al establecer la opción de grado máximo de paralelismo de los grupos de cargas de trabajo de Resource Governor. Para obtener más información, vea [CREATE WORKLOAD GROUP (Transact-SQL)](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 De [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] a [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use las siguientes directrices al configurar el valor de configuración del servidor de **grado máximo de paralelismo**:

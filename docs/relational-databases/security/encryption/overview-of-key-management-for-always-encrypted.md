@@ -1,7 +1,7 @@
 ---
 title: Información general de administración de claves de Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 07/20/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: security, sql-database"
 ms.reviewer: vanto
@@ -12,12 +12,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9250b8e8ceb392973c5799d8cf473d8b94a267b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 27387a217ccd6c4a48921dae88b56d6ba1832240
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52535387"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388757"
 ---
 # <a name="overview-of-key-management-for-always-encrypted"></a>Overview of Key Management for Always Encrypted (Información general de administración de claves de Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Cuando se habla de las claves de Always Encrypted y la administración de claves
 
 - Las***claves maestras de columna*** protegen las claves usadas para cifrar las claves de cifrado de columnas. Las claves maestras de columna deben almacenarse en un almacén de claves de confianza, como el Almacén de certificados de Windows, el Almacén de claves de Azure o un módulo de seguridad de hardware. La base de datos solo contiene metadatos sobre las claves maestras de columna (el tipo de almacén de claves y la ubicación). Los metadatos de clave maestra de columna se almacenan en la vista de catálogo [sys.column_master_keys (Transact-SQL)](../../../relational-databases/system-catalog-views/sys-column-master-keys-transact-sql.md) .  
 
-Es importante tener en cuenta que los metadatos de clave del sistema de base de datos no contienen claves maestras de columna de texto no cifrado ni claves de cifrado de columnas de texto no cifrado. La base de datos solo contiene información sobre el tipo y la ubicación de las claves maestras de columna y valores cifrados de las claves de cifrado de columnas. Esto significa que nunca se exponen claves de texto no cifrado al sistema de base de datos, lo que garantiza la seguridad de los datos protegidos mediante Always Encrypted, incluso si el sistema de base de datos está en peligro. Para asegurarse de que el sistema de base de datos no pueda obtener acceso a las claves de texto no cifrado, asegúrese de ejecutar las herramientas de administración de claves en una máquina distinta de la que hospeda la base de datos. Revise a continuación la sección [Consideraciones de seguridad para la administración de claves](#SecurityForKeyManagement) para obtener más información.
+Es importante tener en cuenta que los metadatos de clave del sistema de base de datos no contienen claves maestras de columna de texto no cifrado ni claves de cifrado de columnas de texto no cifrado. La base de datos solo contiene información sobre el tipo y la ubicación de las claves maestras de columna y valores cifrados de las claves de cifrado de columnas. Esto significa que nunca se exponen claves de texto no cifrado al sistema de base de datos, lo que garantiza la seguridad de los datos protegidos mediante Always Encrypted, incluso si el sistema de base de datos está en peligro. Para asegurarse de que el sistema de base de datos no pueda obtener acceso a las claves de texto no cifrado, asegúrese de ejecutar las herramientas de administración de claves en una máquina distinta de la que hospeda la base de datos. Revise a continuación la sección [Consideraciones de seguridad para la administración de claves](#security-considerations-for-key-management) para obtener más información.
 
 Dado que la base de datos solo contiene datos cifrados (en columnas protegidas con Always Encrypted) y no puede obtener acceso a las claves de texto no cifrado, no puede descifrar los datos. Esto significa que la consulta de columnas Always Encrypted solo devolverá valores cifrados, por lo que las aplicaciones cliente que necesitan cifrar o descifrar datos protegidos deben tener acceso a la clave maestra de columna y a las correspondientes claves de cifrado de columnas. Para obtener más información, vea [Always Encrypted (client development)](../../../relational-databases/security/encryption/always-encrypted-client-development.md)(Always Encrypted (desarrollo de clientes)).
 
@@ -59,7 +59,7 @@ Teniendo en cuenta los roles anteriores, hay dos maneras de realizar tareas de a
 ## <a name="managing-keys-with-role-separation"></a>Administración de claves con separación de roles
 Cuando las claves de Always Encrypted se administran con separación de roles, los roles de administrador de seguridad y DBA están asignados a personas diferentes de una organización. Un proceso de administración de claves con separación de roles garantiza que los DBA no tengan acceso a las claves o a los almacenes de claves que contienen las claves reales y que los administradores de seguridad no tengan acceso a la base de datos que contiene información confidencial. Se recomienda que use la administración de claves con separación de roles si su objetivo es asegurarse de que los DBA de la organización no tengan acceso a información confidencial. 
 
-**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en equipos que hospeden un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
+**Nota:** Los administradores de seguridad generan y usan claves de texto no cifrado, de modo que nunca deben realizar sus tareas en los mismos equipos que hospedan un sistema de base de datos ni en equipos a los que puedan tener acceso los DBA o posibles adversarios. 
 
 ## <a name="managing-keys-without-role-separation"></a>Administración de claves sin separación de roles
 Cuando las claves de Always Encrypted se administran sin separación de roles, una misma persona puede asumir los roles de administrador de seguridad y DBA, lo que implica que dicha persona debe tener acceso a las claves, los almacenes de claves y los metadatos de clave y debe poder administrarlos. La administración de claves sin separación de roles está recomendada para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es impedir que los administradores de la nube (pero no los DBA locales) accedan a información confidencial.
@@ -70,7 +70,7 @@ Cuando las claves de Always Encrypted se administran sin separación de roles, u
 
 Las claves de Always Encrypted se pueden administrar mediante [SQL Server Management Studio (SSMS)](https://msdn.microsoft.com/library/ms174173.aspx) y [PowerShell](../../scripting/sql-server-powershell.md):
 
-- **SQL Server Management Studio (SSMS)**: proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
+- **SQL Server Management Studio (SSMS)** : proporciona cuadros de diálogo y asistentes que combinan tareas relacionadas con el acceso al almacén de claves y a la base de datos, por lo que SSMS no admite la separación de roles, pero facilita la configuración de las claves. Para obtener más información sobre la administración de claves con SSMS, vea:
     - [Aprovisionamiento de claves maestras de columna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncmk)
     - [Aprovisionamiento de claves de cifrado de columnas](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#provisioncek)
     - [Rotación de claves maestras de columna](../../../relational-databases/security/encryption/configure-always-encrypted-using-sql-server-management-studio.md#rotatecmk)
@@ -79,10 +79,10 @@ Las claves de Always Encrypted se pueden administrar mediante [SQL Server Manage
 
 - **SQL Server PowerShell**: incluye cmdlets para administrar las claves de Always Encrypted con y sin separación de roles. Para obtener más información, vea:
     - [Configure Always Encrypted Keys using PowerShell (Configurar claves de Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/configure-always-encrypted-keys-using-powershell.md)
-    - [Rotate Always Encrypted Keys using PowerShell (Rotar claves Always Encrypted con PowerShell)](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
+    - [Rotar claves de Always Encrypted con PowerShell](../../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md)
 
 
-## <a name="SecurityForKeyManagement"></a> Consideraciones de seguridad para la administración de claves
+## <a name="security-considerations-for-key-management"></a>Consideraciones de seguridad para la administración de claves
 
 El objetivo principal de Always Encrypted es garantizar la seguridad de la información confidencial almacenada en una base de datos, incluso si el sistema de base de datos o su entorno de hospedaje están en peligro. A continuación se incluyen algunos ejemplos de ataques de seguridad en los que Always Encrypted puede ayudar a impedir pérdidas de información confidencial:
 

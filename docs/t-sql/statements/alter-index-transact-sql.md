@@ -1,7 +1,7 @@
 ---
 title: ALTER INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/03/2018
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -47,12 +47,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: abffa2d7bebfcf6defab15cf058c4fdf50b359c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 758c6524e124557083fc61af234283b567633a7b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66413646"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388853"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -127,6 +127,7 @@ ALTER INDEX { index_name | ALL } ON <object>
 {  
       ALLOW_ROW_LOCKS = { ON | OFF }  
     | ALLOW_PAGE_LOCKS = { ON | OFF }  
+    | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
     | IGNORE_DUP_KEY = { ON | OFF }  
     | STATISTICS_NORECOMPUTE = { ON | OFF }  
     | COMPRESSION_DELAY= {0 | delay [Minutes]}  
@@ -209,7 +210,7 @@ ALTER INDEX { index_name | ALL }
   
  [!INCLUDE[ssSDS](../../includes/sssds-md.md)] admite el formato de nombre de tres partes database_name.[schema_name].table_or_view_name, donde database_name es la base de datos actual o database_name es tempdb y table_or_view_name empieza por #.  
   
- REBUILD [ WITH **(**\<rebuild_index_option> [ **,**... *n*]**)** ]  
+ REBUILD [ WITH **(** \<rebuild_index_option> [ **,** ... *n*] **)** ]  
  Especifica que el índice se volverá a generar con unas columnas, un tipo de índice, un atributo de unicidad y un criterio de ordenación idénticos. Esta cláusula es equivalente a [DBCC DBREINDEX](../../t-sql/database-console-commands/dbcc-dbreindex-transact-sql.md). REBUILD habilita un índice deshabilitado. Cuando se regenera un índice clúster, no se vuelven a generar los índices no clúster asociados, a menos que se especifique la palabra clave ALL. Si no se especifican las opciones de índice, se aplican los valores de las opciones de índice existentes que hay almacenados en [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md). Para las opciones de índice cuyos valores no estén almacenados en **sys.indexes**, se aplica el valor predeterminado indicado en la definición del argumento de la opción.  
   
  Si se especifica ALL y la tabla base es un montón, la operación de regeneración no tiene ningún efecto sobre la tabla. Se regeneran los índices no clúster asociados a la tabla.  
@@ -248,7 +249,7 @@ PARTITION
   
  Es el número de partición de un índice con particiones que se va a volver a generar o a reorganizar. *partition_number* es una expresión constante que puede hacer referencia a variables. Estas incluyen variables o funciones de tipo definido por el usuario y funciones definidas por el usuario, pero no pueden hacer referencia a una instrucción de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *partition_number* debe existir; de lo contrario, se producirá un error en la instrucción.  
   
- WITH **(**\<single_partition_rebuild_index_option>**)**  
+ WITH **(** \<single_partition_rebuild_index_option> **)**  
    
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   
@@ -309,7 +310,7 @@ COMPRESS_ALL_ROW_GROUPS ofrece una manera de forzar a los grupos de filas delta 
   
 -   OFF fuerza todos los grupos de filas con el estado CLOSED hacia el almacén de columnas.  
   
-SET **(** \<set_index option> [ **,**... *n*] **)**  
+SET **(** \<set_index option> [ **,** ... *n*] **)**  
  Especifica las opciones del índice sin volver a generar ni organizar el índice. No es posible especificar SET para un índice deshabilitado.  
   
 PAD_INDEX = { ON | OFF }  
@@ -423,7 +424,7 @@ FILLFACTOR = *fillfactor*
   
 -   Un subconjunto de un índice con particiones (un índice entero con particiones se puede regenerar en línea).  
 
--  Las versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anteriores a V12 y de SQL Server anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no permiten la opción `ONLINE` para operaciones de regeneración o generación de índices agrupados cuando la tabla base contiene columnas **varchar(max)** o **varbinary(max)**.
+-  Las versiones de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] anteriores a V12 y de SQL Server anteriores a [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no permiten la opción `ONLINE` para operaciones de regeneración o generación de índices agrupados cuando la tabla base contiene columnas **varchar(max)** o **varbinary(max)** .
 
 RESUMABLE **=** { ON | **OFF**}
 
@@ -467,7 +468,13 @@ ALLOW_PAGE_LOCKS **=** { **ON** | OFF }
   
 > [!NOTE]
 >  No es posible reorganizar un índice cuando ALLOW_PAGE_LOCKS está establecido en OFF.  
-  
+
+ OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }
+
+**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+
+Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](./create-index-transact-sql.md#sequential-keys) de la página CREATE INDEX para obtener más información.
+
  MAXDOP **=** max_degree_of_parallelism  
  
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
@@ -529,7 +536,7 @@ El valor predeterminado es 0 minutos.
   
  Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).  
   
- ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [**,**...n] **)**  
+ ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ...n] **)**  
     
 **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)]) y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. 
   
@@ -686,7 +693,7 @@ Si una tabla se encuentra en una publicación de replicación transaccional, no 
 Utilice la instrucción ALTER INDEX REBUILD o CREATE INDEX WITH DROP_EXISTING para habilitar el índice. No es posible volver a generar un índice clúster deshabilitado si la opción ONLINE está establecida en ON. Para obtener más información, vea [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).  
   
 ## <a name="setting-options"></a>Configurar opciones  
-Es posible establecer las opciones ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE de un índice especificado sin volver a generar u organizar ese índice. Los valores modificados se aplican inmediatamente al índice. Para ver estos valores, use **sys.indexes**. Para obtener más información, consulte [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md).  
+Es posible establecer las opciones ALLOW_ROW_LOCKS, ALLOW_PAGE_LOCKS, OPTIMIZE_FOR_SEQUENTIAL_KEY, IGNORE_DUP_KEY y STATISTICS_NORECOMPUTE de un índice especificado sin volver a generar u organizar ese índice. Los valores modificados se aplican inmediatamente al índice. Para ver estos valores, use **sys.indexes**. Para obtener más información, consulte [Establecer opciones de índice](../../relational-databases/indexes/set-index-options.md).  
   
 ### <a name="row-and-page-locks-options"></a>Opciones de bloqueo de fila y página  
 Si ALLOW_ROW_LOCKS = ON y ALLOW_PAGE_LOCK = ON, se permiten los bloqueos de nivel de fila, página y tabla cuando se obtiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.  

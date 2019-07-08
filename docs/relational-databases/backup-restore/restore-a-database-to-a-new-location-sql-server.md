@@ -20,12 +20,12 @@ ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 69099375a0c56dadef71f999e34db45b0bc64374
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d05f6a469649d959e6ba68e6413ee772025a1d45
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590849"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67580331"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>Restaurar una base de datos a una nueva ubicación (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53590849"
 ###  <a name="Security"></a> Seguridad  
  Por razones de seguridad, se recomienda no adjuntar ni restaurar bases de datos de orígenes desconocidos o que no sean de confianza. Es posible que dichas bases de datos contengan código malintencionado que podría ejecutar código [!INCLUDE[tsql](../../includes/tsql-md.md)] no deseado o provocar errores al modificar el esquema o la estructura de la base de datos física. Para usar una base de datos desde un origen desconocido o que no sea de confianza, ejecute [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) en la base de datos de un servidor que no sea de producción y examine también el código, como procedimientos almacenados u otro código definido por el usuario, en la base de datos.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Si la base de datos que se va a restaurar no existe, el usuario debe tener permisos CREATE DATABASE para poder ejecutar RESTORE. Si la base de datos existe, los permisos RESTORE corresponden de forma predeterminada a los miembros de los roles fijos de servidor **sysadmin** y **dbcreator** , y al propietario (**dbo**) de la base de datos.  
   
  Los permisos RESTORE se conceden a los roles en los que la información acerca de la pertenencia está siempre disponible para el servidor. Debido a que la pertenencia a un rol fijo de base de datos solo se puede comprobar cuando la base de datos es accesible y no está dañada, lo que no siempre ocurre cuando se ejecuta RESTORE, los miembros del rol fijo de base de datos **db_owner** no tienen permisos RESTORE.  
@@ -75,7 +75,7 @@ ms.locfileid: "53590849"
   
     1.  **Dispositivo**  
   
-         Haga clic en el botón de exploración (**...**) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
+         Haga clic en el botón de exploración ( **...** ) para abrir el cuadro de diálogo **Seleccionar dispositivos de copia de seguridad** . En el cuadro **Tipo de medio de copia de seguridad** , seleccione uno de los tipos de dispositivo. Para seleccionar uno o varios dispositivos del cuadro **Medio de copia de seguridad** , haga clic en **Agregar**.  
   
          Después de agregar los dispositivos que desee al cuadro de lista **Medio de copia de seguridad** , haga clic en **Aceptar** para volver a la página **General** .  
   
@@ -107,8 +107,10 @@ ms.locfileid: "53590849"
      Esta instrucción también admite varias opciones WITH. Para obtener más información, vea [RESTORE FILELISTONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md).  
   
 2.  Use la instrucción [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) para restaurar la copia de seguridad completa de la base de datos. De manera predeterminada, los archivos de datos y de registro se restauran en sus ubicaciones originales. Para cambiar la ubicación de una base de datos, use la opción MOVE para mover cada uno de los archivos de la base de datos y evitar conflictos con los archivos existentes.  
-  
-     A continuación se muestra la sintaxis básica de [!INCLUDE[tsql](../../includes/tsql-md.md)] para restaurar la base de datos en una ubicación nueva y con un nombre nuevo:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     The basic [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax for restoring the database to a new location and a new name is:  
   
      RESTORE DATABASE *new_database_name*  
   
@@ -128,36 +130,36 @@ ms.locfileid: "53590849"
   
      ;  
   
-    > **NOTA:** Cuando prepare la reubicación de una base de datos en un disco diferente, compruebe si hay espacio suficiente e identifique cualquier posible conflicto con los archivos existentes. Para ello, se usa una instrucción [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) que especifica los mismos parámetros MOVE que tiene previsto usar en la instrucción RESTORE DATABASE.  
+    > **NOTE!** When preparing to relocate a database on a different disk, you should verify that sufficient space is available and identify any potential collisions with existing files. This involves using a [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) statement that specifies the same MOVE parameters that you plan to use in your RESTORE DATABASE statement.  
   
-     En la tabla siguiente se describen los argumentos de esta instrucción RESTORE para restaurar una base de datos en una nueva ubicación. Para obtener más información sobre estos argumentos, vea [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
+     The following table describes arguments of this RESTORE statement in terms of restoring a database to a new location. For more information about these arguments, see [RESTORE &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-transact-sql.md).  
   
      *new_database_name*  
-     El nuevo nombre para la base de datos.  
+     The new name for the database.  
   
-    >**NOTA:** Si va a restaurar la base de datos en otra instancia de servidor, puede usar el nombre original de la base de datos en lugar de uno nuevo.  
+    >**NOTE:** If you are restoring the database to a different server instance, you can use the original database name instead of a new name.  
   
      *backup_device* [ **,**...*n* ]  
-     Especifica una lista que contiene entre 1 y 64 dispositivos de copia de seguridad (separados por comas) desde los que se restaurará la copia de seguridad de la base de datos. Puede especificar un dispositivo físico de copia de seguridad o puede especificar el dispositivo de copia de seguridad lógico correspondiente, si se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:  
+     Specifies a comma-separated list of from 1 to 64 backup devices from which the database backup is to be restored. You can specify a physical backup device, or you can specify a corresponding logical backup device, if defined. To specify a physical backup device, use the DISK or TAPE option:  
   
      { DISK | TAPE } **=**_physical_backup_device_name_  
   
-     Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
+     For more information, see [Backup Devices &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).  
   
      { **RECOVERY** | NORECOVERY }  
-     Si la base de datos usa el modelo de recuperación completa, es posible que deba aplicar copias de seguridad de registros de transacciones después de restaurar la base de datos. En este caso, especifique la opción NORECOVERY.  
+     If the database uses the full recovery model, you might need to apply transaction log backups after you restore the database. In this case, specify the NORECOVERY option.  
   
-     En caso contrario, use la opción RECOVERY, que es la predeterminada.  
+     Otherwise, use the RECOVERY option, which is the default.  
   
      FILE = { *backup_set_file_number* | @*backup_set_file_number* }  
-     Identifica el conjunto de copia de seguridad que se va a restaurar. Por ejemplo, si *backup_set_file_number* es **1** , indica el primer conjunto de copia de seguridad del medio de copia, y si *backup_set_file_number* es **2** , indica el segundo conjunto de copia de seguridad. Puede obtener el valor *backup_set_file_number* de un conjunto de copia de seguridad mediante la instrucción [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) .  
+     Identifies the backup set to be restored. For example, a *backup_set_file_number* of **1** indicates the first backup set on the backup medium and a *backup_set_file_number* of **2** indicates the second backup set. You can obtain the *backup_set_file_number* of a backup set by using the [RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) statement.  
   
-     Cuando no se especifica esta opción, el comportamiento predeterminado es usar el primer conjunto de copia de seguridad del dispositivo de copia de seguridad.  
+     When this option is not specified, the default is to use the first backup set on the backup device.  
   
-     Para obtener más información, vea "Especificar un conjunto de copia de seguridad" en [RESTORE &#40;argumentos, Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
+     For more information, see "Specifying a Backup Set," in [RESTORE Arguments &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md).  
   
      MOVE **'**_logical_file_name_in_backup_**'** TO **'**_operating_system_file_name_**'** [ **,**...*n* ]  
-     Especifica que el archivo de datos o de registro especificado por *logical_file_name_in_backup* debe restaurarse en la ubicación especificada por *operating_system_file_name*. Especifique una instrucción MOVE para cada archivo lógico del conjunto de copia de seguridad que desee restaurar en otra ubicación.  
+     Specifies that the data or log file specified by *logical_file_name_in_backup* is to be restored to the location specified by *operating_system_file_name*. Specify a MOVE statement for every logical file you want to restore from the backup set to a new location.  
   
     |Opción|Descripción|  
     |------------|-----------------|  

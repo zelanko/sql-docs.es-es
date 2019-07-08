@@ -12,12 +12,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: erikre
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 81fd6e4a9be7b27190491c6a36ef536e3c1ba669
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1d9b9d9ac9c5b1a0eeb7d40640db83ce688ae7e5
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53212494"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67396524"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services con grupos de disponibilidad AlwaysOn
 
@@ -27,24 +27,12 @@ ms.locfileid: "53212494"
   
  El procesamiento y la consulta son cargas de trabajo de solo lectura. Puede mejorar el rendimiento descargando estas cargas de trabajo en una réplica secundaria legible. Se requiere una configuración adicional para este escenario. Utilice la lista de comprobación de este tema para asegurarse de que sigue todos los pasos.  
   
- [Requisitos previos](#bkmk_prereq)  
-  
- [Checklist: uso de una réplica secundaria para las operaciones de solo lectura](#bkmk_UseSecondary)  
-  
- [Crear un origen de datos de Analysis Services con la base de datos de disponibilidad AlwaysOn](#bkmk_ssasAODB)  
-  
- [Probar la configuración](#bkmk_test)  
-  
- [Qué ocurre después de una conmutación por error](#bkmk_whathappens)  
-  
- [Reescritura al usar una base de datos de disponibilidad AlwaysOn](#bkmk_writeback)  
-  
 ##  <a name="bkmk_prereq"></a> Requisitos previos  
  Debe tener un inicio de sesión de SQL Server en todas las réplicas. Debe ser **sysadmin** para configurar los grupos de disponibilidad, los agentes de escucha y las bases de datos, pero los usuarios solo necesitan permisos **db_datareader** para tener acceso a la base de datos de un cliente de Analysis Services.  
   
  Use un proveedor de datos que admita la versión (TDS) 7.4 del protocolo de flujo de datos tabular u otra más reciente, como SQL Server Native Client 11.0 o el Proveedor de datos de SQL Server de .NET Framework 4.02.  
   
- **(Para cargas de trabajo de solo lectura)**. El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
+ **(Para cargas de trabajo de solo lectura)** . El rol de réplica secundaria se debe configurar para las conexiones de solo lectura, el grupo de disponibilidad debe tener una lista de distribución y la conexión del origen de datos de Analysis Services debe especificar el agente de escucha del grupo de disponibilidad. En este tema se proporcionan instrucciones al respecto.  
   
 ##  <a name="bkmk_UseSecondary"></a> Lista de comprobación: uso de una réplica secundaria para las operaciones de solo lectura  
  A menos que la solución de Analysis Services incluya reescritura, puede configurar una conexión a un origen de datos para utilizar una réplica secundaria legible. Si tiene una conexión de red rápida, la replicación secundaria tiene una latencia de datos muy baja, proporcionando datos casi idénticos a los de la réplica primaria. Con la réplica secundaria para las operaciones de Analysis Services, puede reducir la contención de lectura/escritura de la replicación primaria y conseguir una mejor utilización de las réplicas secundarias en el grupo de disponibilidad.  
@@ -215,7 +203,7 @@ ms.locfileid: "53212494"
 ##  <a name="bkmk_whathappens"></a> Qué ocurre después de una conmutación por error  
  Durante una conmutación por error, una réplica secundaria realiza la transición al rol principal y la réplica principal anterior realiza la transición al rol secundario. Todas las conexiones de cliente se terminan, la propiedad del agente de grupo de disponibilidad pasa con el rol de réplica principal a una nueva instancia de SQL Server y el punto de conexión del agente de escucha se enlaza a los puertos TCP y las direcciones IP virtuales de la nueva instancia. Para obtener más información, vea [Acerca del acceso de conexión de cliente a réplicas de disponibilidad &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/about-client-connection-access-to-availability-replicas-sql-server.md).  
   
- Si la conmutación por error se produce durante el procesamiento, se produce el error siguiente en Analysis Services en el archivo de registro o la ventana de salida: "Error de OLE DB: Error de OLE DB u ODBC. Error en el vínculo de comunicación; 08S01; Proveedor TPC: El host remoto forzó el cierre de la conexión existente. ; 08S01".  
+ Si la conmutación por error se produce durante el procesamiento, se produce el error siguiente en Analysis Services en el archivo de registro o la ventana de salida: "Error de OLE DB: Error de OLE DB u ODBC: Error en el vínculo de comunicación; 08S01; Proveedor TPC: El host remoto forzó el cierre de la conexión existente. ; 08S01".  
   
  Este error se debe resolver si espera un minuto y vuelve a intentarlo. Si el grupo de disponibilidad se configura correctamente para la réplica secundaria legible, el procesamiento se reanudará en la nueva réplica secundaria cuando se reintente el procesamiento.  
   

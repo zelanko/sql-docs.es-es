@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dddb1ee5aaeab9a741cfe0a09bea2a93b786c57e
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255296"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343917"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
 
@@ -90,7 +90,7 @@ ms.locfileid: "54255296"
 ### <a name="batch-mode-execution"></a>Ejecución del modo por lotes    
  La ejecución del modo por lotes hace referencia al procesamiento de un conjunto de filas, normalmente hasta 900 filas juntas para obtener la eficacia de la ejecución. Por ejemplo, la consulta `SELECT SUM (Sales) FROM SalesData` agrega las ventas totales de la tabla SalesData. En la ejecución del modo por lotes, el motor de ejecución de consultas calcula el agregado en el grupo de 900 valores. Esto incluye metadatos, los costos de acceso y otros tipos de sobrecarga sobre todas las filas de un lote, en lugar de pagar el costo para cada fila. Por lo tanto, se reduce significativamente la ruta de acceso del código. El procesamiento de modo por lotes funciona en los datos comprimidos cuando sea posible y elimina algunos de los operadores de intercambio utilizados por el procesamiento del modo de fila. Esto acelera la ejecución de las consultas de análisis por órdenes de magnitud.    
     
- No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], no existe un esfuerzo sostenido de expansión de los operadores que puedan ejecutarse en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
+ No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], hay un esfuerzo sostenido para expandir los operadores que se pueden ejecutar en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
     
 |Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Comentarios|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    

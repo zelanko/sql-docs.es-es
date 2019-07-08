@@ -2,22 +2,22 @@
 title: Clasificación y detección de datos de SQL | Microsoft Docs
 description: Clasificación y detección de datos de SQL
 documentationcenter: ''
-ms.reviewer: carlrab
+ms.reviewer: vanto
 ms.assetid: 89c2a155-c2fb-4b67-bc19-9b4e03c6d3bc
 ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 02/13/2018
-ms.author: giladm
-author: giladm
-manager: shaik
-ms.openlocfilehash: e3df41240791d01beb1214f3f5b150bdba618420
-ms.sourcegitcommit: 757cda42bce65721a6079fe403add874f9afb31e
+ms.date: 06/25/2019
+ms.author: mibar
+author: barmichal
+manager: craigg
+ms.openlocfilehash: b45f3a081b7be55642e662ed195cfc1377e3659b
+ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/21/2019
-ms.locfileid: "67316685"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67351733"
 ---
 # <a name="sql-data-discovery-and-classification"></a>Clasificación y detección de datos de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ La detección y clasificación de la información más confidencial (empresarial
 * Controlar el acceso a bases de datos o columnas que contienen datos altamente confidenciales y aumentar su seguridad.
 
 > [!NOTE]
-> La clasificación y detección de datos es **compatible con SQL Server 2008 y versiones posteriores**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
+> La clasificación y detección de datos se **admite para SQL Server 2008 y versiones posteriores, y se puede usar con SSMS 17.5 o posterior**. Para Azure SQL Database, vea [Clasificación y detección de datos de Azure SQL Database](https://go.microsoft.com/fwlink/?linkid=866265).
 
 ## <a id="subheading-1"></a>Información general
 La clasificación y detección de datos incluye un conjunto de servicios avanzados que forman un nuevo paradigma de Information Protection de SQL destinado a proteger los datos, no solo la base de datos:

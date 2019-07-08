@@ -16,12 +16,12 @@ ms.assetid: cd909612-99cc-4962-a8fb-e9a5b918e221
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: faa34ef2e1b38fe13f487574ba95d0ad015b08a4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: b3ebbbcefcd3477af997cea4680ba5ce51621555
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516591"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388032"
 ---
 # <a name="sql-server-multi-subnet-clustering-sql-server"></a>Agrupación en clústeres de varias subredes de SQL Server (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +50,9 @@ ms.locfileid: "59516591"
 ##  <a name="ComponentsAndConcepts"></a> Consideraciones de recursos de dirección IP  
  En una configuración de clúster de conmutación por error de múltiples subredes, no todos los nodos clúster de conmutación por error poseen las direcciones IP y puede que no todos estén con conexión durante el inicio de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A partir de [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se puede establecer la dependencia de recurso de dirección IP en **OR**. Esto permite que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] esté con conexión cuando hay al menos una dirección IP válida a la que se puede enlazar.  
   
-> **NOTA:** En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se utilizaba una tecnología de V-LAN elástica en las configuraciones de clúster de varios sitios para exponer una sola dirección IP para la conmutación por error entre sitios. Con la nueva capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agrupar los nodos de clúster entre diferentes subredes, ahora se pueden configurar los clústeres de conmutación por error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre varios sitios sin necesidad de implementar la tecnología de V-LAN elástica.  
+  > [!NOTE] 
+  > - En las versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], se utilizaba una tecnología de V-LAN elástica en las configuraciones de clúster de varios sitios para exponer una sola dirección IP para la conmutación por error entre sitios. Con la nueva capacidad de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] para agrupar los nodos de clúster entre diferentes subredes, ahora se pueden configurar los clústeres de conmutación por error [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] entre varios sitios sin necesidad de implementar la tecnología de V-LAN elástica.  
+
   
 ### <a name="ip-address-resource-or-dependency-considerations"></a>Consideraciones acerca de la dependencia OR del recurso de dirección IP  
  Es conveniente considerar el siguiente comportamiento de la conmutación por error si se establece en **OR**la dependencia de recurso de dirección IP:  
@@ -68,6 +70,9 @@ ms.locfileid: "59516591"
  Con las bibliotecas de cliente heredadas o con proveedores de datos de terceros, no puede utilizar el parámetro **MultiSubnetFailover** en la cadena de conexión. Para asegurarse de que la aplicación cliente funcione de manera óptima con instancias de conmutación por error de múltiples subredes en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)], intente ajustar el tiempo de espera de conexión en la cadena de conexión de cliente en 21 segundos para cada dirección IP adicional. Esto garantiza que el intento de reconexión del cliente no supere el tiempo de espera antes de poder recorrer todas las direcciones IP en la instancia de conmutación por error de múltiples subredes.  
   
  El período de tiempo de espera predeterminado de la conexión de cliente para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Studio y **sqlcmd** es de 15 segundos.  
+ 
+ > [!NOTE]
+ > - Si está usando varias subredes y tiene un DNS estático, deberá tener un proceso establecido para actualizar el registro DNS asociado con el cliente de escucha antes de realizar una conmutación por error ya que, en caso contrario, el nombre de red no se conectará.
   
    
 ##  <a name="RelatedContent"></a> Contenido relacionado  

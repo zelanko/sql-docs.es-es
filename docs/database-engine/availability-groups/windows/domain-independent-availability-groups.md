@@ -13,12 +13,12 @@ ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
 manager: jroth
-ms.openlocfilehash: ad844d0b08ba0323f9930970a3056e592e44c25e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19e64c2fa9f1006e07f6da72d8fdfc146c9faf8b
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765720"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388108"
 ---
 # <a name="create-a-domain-independent-availability-group"></a>Creación de un grupo de disponibilidad independiente del dominio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -71,8 +71,10 @@ Se necesita un sufijo DNS común para un clúster de grupo de trabajo de un grup
 10. Se le pedirá que reinicie el equipo. Si no quiere reiniciar inmediatamente, haga clic en Reiniciar más tarde; si no, haga clic en Reiniciar ahora.
 11. Tras reiniciar el servidor, vaya de nuevo a Sistema para confirmar que el sufijo DNS común está configurado.
 
-
 ![Configuración correcta del sufijo DNS][4]
+
+  > [!NOTE]
+  > Si está usando varias subredes y tiene un DNS estático, deberá tener un proceso establecido para actualizar el registro DNS asociado con el cliente de escucha antes de realizar una conmutación por error ya que, en caso contrario, el nombre de red no se conectará.
 
 ## <a name="create-a-domain-independent-availability-group"></a>Crear un grupo de disponibilidad independiente del dominio
 

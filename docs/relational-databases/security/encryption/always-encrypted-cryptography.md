@@ -1,7 +1,7 @@
 ---
 title: Criptografía de Always Encrypted | Microsoft Docs
 ms.custom: ''
-ms.date: 02/29/2016
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,26 +13,26 @@ author: aliceku
 ms.author: aliceku
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cd361a27a07c7b7750046d9664d77fd6d3fdc04
-ms.sourcegitcommit: 0f452eca5cf0be621ded80fb105ba7e8df7ac528
+ms.openlocfilehash: 6e0ec7ce1a9c3a171ea44b23c5fa4a5897ad7de8
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/28/2019
-ms.locfileid: "57007588"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388365"
 ---
 # <a name="always-encrypted-cryptography"></a>Criptografía de Always Encrypted
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   En este documento se describen los mecanismos y algoritmos de cifrado de los que extraer el material criptográfico que se usa en la característica [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDSFull](../../../includes/sssdsfull-md.md)].  
   
-## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Claves, almacenes de claves y algoritmos de cifrado de claves  
+## <a name="keys-key-stores-and-key-encryption-algorithms"></a>Claves, almacenes de claves y algoritmos de cifrado de claves
  En Always Encrypted se usan dos tipos de claves: claves maestras de columna y claves de cifrado de columna.  
   
- Una clave maestra de columna (CMK) es una clave de cifrado de claves (es decir, se usa para cifrar otras claves) que se encuentra siempre bajo el control del cliente y se almacena en un almacén de claves externo. Un controlador de cliente habilitado para Always Encrypted interactúa con el almacén de claves a través de un proveedor de almacén de CMK, que puede formar parte de la biblioteca de controladores (un proveedor del sistema o de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) o de la aplicación de cliente (un proveedor personalizado). Actualmente, las bibliotecas de controladores cliente incluyen proveedores de almacén de claves de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para el [almacén de certificados de Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) y módulos de seguridad de hardware (HSM).  Para obtener la lista actual de proveedores, vea [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Un desarrollador de aplicaciones puede proporcionar un proveedor personalizado para un almacén arbitrario.  
+ Una clave maestra de columna (CMK) es una clave de cifrado de claves (por ejemplo, una clave que se usa para cifrar otras claves) que se encuentra siempre bajo el control del cliente y se almacena en un almacén de claves externo. Un controlador de cliente habilitado para Always Encrypted interactúa con el almacén de claves a través de un proveedor de almacén de CMK, que puede formar parte de la biblioteca de controladores (un proveedor del sistema o de [!INCLUDE[msCoName](../../../includes/msconame-md.md)]) o de la aplicación de cliente (un proveedor personalizado). Actualmente, las bibliotecas de controladores cliente incluyen proveedores de almacén de claves de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] para el [almacén de certificados de Windows Certificate Store](/windows/desktop/SecCrypto/using-certificate-stores) y módulos de seguridad de hardware (HSM).  Para obtener la lista actual de proveedores, vea [CREATE COLUMN MASTER KEY &#40;Transact-SQL&#41;](../../../t-sql/statements/create-column-master-key-transact-sql.md). Un desarrollador de aplicaciones puede proporcionar un proveedor personalizado para un almacén arbitrario.  
   
- Una clave de cifrado de columna (CEK) es una clave de cifrado de contenido (es decir, se utiliza para proteger los datos) que está protegida por una CMK.  
+ Una clave de cifrado de columna (CEK) es una clave de cifrado de contenido (por ejemplo, una clave que se utiliza para proteger los datos) que está protegida por una CMK.  
   
- Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP) con los parámetros predeterminados especificados por RFC 8017 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1.  
+ Todos los proveedores de almacenes CMK de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] cifran las CEK por medio de RSA con relleno óptimo de cifrado asimétrico (RSA OAEP). El proveedor de almacén de claves que admite Microsoft Cryptography API: Next Generation (CNG) en .NET Framework ([clase SqlColumnEncryptionCngProvider](https://msdn.microsoft.com/library/system.data.sqlclient.sqlcolumnencryptioncngprovider.aspx)) usa los parámetros predeterminados especificados por RFC 8017 en la sección A.2.1. Estos parámetros predeterminados utilizan una función hash de SHA-1 y una función de generación de máscara de MGF1 con SHA-1. Todos los demás proveedores de almacenes de claves usan SHA-256. 
   
 ## <a name="data-encryption-algorithm"></a>Algoritmo de cifrado de datos  
  Always Encrypted usa el algoritmo **AEAD_AES_256_CBC_HMAC_SHA_256** para cifrar los datos de la base de datos.  
@@ -68,7 +68,7 @@ When using deterministic encryption: IV = HMAC-SHA-256( iv_key, cell_data ) trun
 iv_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell IV key" + algorithm + CEK_length)  
 ```  
   
- Se realiza el truncamiento del valor HMAC para ajustar un bloque de datos según se necesite para el IV.    
+ Se realiza el truncamiento del valor HMAC para ajustar un bloque de datos según se necesite para el IV.
 Como resultado, el cifrado determinista siempre genera el mismo texto cifrado para un valor de texto no cifrado concreto, lo que permite deducir si dos valores de texto no cifrado son iguales al comparar sus correspondientes valores de texto cifrado. Esta divulgación de información limitada permite al sistema de base de datos admitir la comparación de igualdad en valores de columna cifrados.  
   
  El cifrado determinista resulta más eficaz para ocultar los patrones, en comparación con las alternativas (como el uso de un valor de IV predefinido).  
@@ -96,12 +96,12 @@ MAC = HMAC-SHA-256(mac_key, versionbyte + IV + Ciphertext + versionbyte_length)
  Donde:  
   
 ```  
-versionbyte = 0x01 and versionbyte_length = 1   
+versionbyte = 0x01 and versionbyte_length = 1
 mac_key = HMAC-SHA-256(CEK, "Microsoft SQL Server cell MAC key" + algorithm + CEK_length)  
 ```  
   
 ### <a name="step-4-concatenation"></a>Paso 4: Concatenation  
- Por último, el valor cifrado se genera con solo concatenar el byte de la versión del algoritmo, la dirección MAC, el IV y el texto de cifrado AES_256_CBC:  
+ Por último, el valor cifrado se genera mediante la concatenación del byte de la versión del algoritmo, la dirección MAC, el IV y el texto de cifrado AES_256_CBC:  
   
 ```  
 aead_aes_256_cbc_hmac_sha_256 = versionbyte + MAC + IV + aes_256_cbc_ciphertext  

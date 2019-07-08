@@ -18,12 +18,12 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6f5665e97e09d8bdaad57a328aae31113f42f15b
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: b5198b8919fb41c754d5d94ac45c895dda852e2e
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571144"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343848"
 ---
 # <a name="sequence-numbers"></a>Números de secuencia
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -58,6 +58,8 @@ ms.locfileid: "51571144"
  El objeto de secuencia genera los números según su definición, pero el objeto de secuencia no controla cómo se utilizan los números. Los números de secuencia insertados en una tabla pueden tener lagunas cuando se revierte una transacción, cuando varias tablas comparten un objeto de secuencia o cuando los números de secuencia se asignan sin utilizarlos en tablas. Cuando se crea con la opción CACHE, un cierre inesperado, como un error de alimentación, puede perder los números de secuencia de la memoria caché.  
   
  Si hay varias instancias de la función **NEXT VALUE FOR** que especifica el mismo generador de secuencias dentro de una única instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] , todas esas instancias devuelven el mismo valor para una fila determinada procesada por esa instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este comportamiento es coherente con el estándar ANSI.  
+ 
+ Los números de secuencia se generan fuera del ámbito de la transacción actual. Se utilizan tanto si la transacción que usa el número de secuencia se confirma como si se revierte. La validación de duplicados solo se produce una vez que un registro está totalmente relleno. Esto puede dar lugar a casos en que se use el mismo número para más de un registro durante la creación, pero luego se identifique como un duplicado. Si ocurre esto y se han aplicado otros valores autonuméricos a sucesivos registros, esta situación puede dar lugar a una discrepancia entre los valores autonuméricos.
   
 ## <a name="typical-use"></a>Uso típico  
  Para crear un número de secuencia entero que se incremente en 1 de -2.147.483.648 a 2.147.483.647, utilice la siguiente instrucción.  

@@ -1,7 +1,7 @@
 ---
 title: Configurar claves Always Encrypted con PowerShell | Microsoft Docs
 ms.custom: ''
-ms.date: 05/17/2017
+ms.date: 06/26/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -11,12 +11,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 889df15caaba289e5f0fed43727d9358bab3a2e1
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 5e8f0eb293390e88f0c7d8f982c0525b5a62f871
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54327476"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67387999"
 ---
 # <a name="configure-always-encrypted-keys-using-powershell"></a>Configure Always Encrypted Keys using PowerShell (Configurar claves Always Encrypted con PowerShell)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ Para obtener información sobre el uso del módulo SqlServer PowerShell para Alw
 
 ## <a name="KeyProvisionWithoutRoles"></a> Aprovisionamiento de claves sin separación de roles
 
-El método de aprovisionamiento de claves descrito en esta sección no admite la separación de roles entre Administradores de seguridad y DBA. Algunos de los pasos siguientes combinan operaciones en las claves físicas con operaciones en los metadatos de las claves. Por tanto, este método de aprovisionamiento de claves está recomendado para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es evitar que los administradores de la nube (pero no los DBA locales) accedan a información confidencial. No se recomienda si los posibles adversarios incluyen DBA o si los DBA simplemente no deben tener acceso a información confidencial.
+El método de aprovisionamiento de claves descrito en esta sección no admite la separación de roles entre Administradores de seguridad y DBA. Algunos de los pasos siguientes combinan operaciones en las claves físicas con operaciones en los metadatos de las claves. Por tanto, este método de aprovisionamiento de claves está recomendado para organizaciones que usen el modelo DevOps, o si la base de datos está hospedada en la nube y el objetivo principal es evitar que los administradores de la nube (pero no los DBA locales) accedan a información confidencial. No se recomienda si los posibles adversarios incluyen administradores de base de datos o si estos no deben tener acceso a información confidencial.
 
 Antes de ejecutar cualquiera de los pasos que impliquen el acceso a las claves de texto no cifrado o al almacén de claves (identificados en la columna **Accede a claves de texto no cifrado o a almacén de claves** en la tabla siguiente), asegúrese de que el entorno de PowerShell se ejecuta en un equipo seguro distinto al que hospeda la base de datos. Para obtener más información, vea ***Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)***.
 
@@ -132,7 +132,7 @@ New-SqlColumnEncryptionKey -Name $cekName -InputObject $database -ColumnMasterKe
 
 El script siguiente es un ejemplo completo para generar una clave maestra de columna en un almacén de claves que implemente la API Cryptography Next Generation (CNG), generar y cifrar una clave de cifrado de columna y crear los metadatos de clave en una base de datos de SQL Server.
 
-En el ejemplo se aprovecha el almacén de claves que usa el proveedor de almacenamiento de claves de software de Microsoft. Puede modificar el ejemplo para usar otro almacén, por ejemplo, el módulo de seguridad de hardware. Para ello, debe asegurarse de que el proveedor de almacenamiento de claves (KSP) que implementa CNG para el dispositivo esté instalado correctamente en el equipo. Debe reemplazar "Proveedor de almacenamiento de claves de software de Microsoft" por el nombre del KSP del dispositivo.
+En el ejemplo se aprovecha el almacén de claves que usa el proveedor de almacenamiento de claves de software de Microsoft. Puede modificar el ejemplo para usar otro almacén, por ejemplo, el módulo de seguridad de hardware. Para ello, debe asegurarse de que el proveedor de almacén de claves (KSP) que implementa CNG para el dispositivo esté instalado correctamente en la máquina. Deberá reemplazar "Proveedor de almacenamiento de claves de software de Microsoft" por el nombre del KSP del dispositivo.
 
 
 ```
@@ -186,7 +186,7 @@ Antes de ejecutar cualquier paso que implique el acceso a las claves de texto no
 1.  El entorno de PowerShell se ejecuta en un equipo seguro distinto al equipo que hospeda la base de datos.
 2.  Los DBA de la organización no tienen acceso al equipo (eso iría contra el fin de la separación de roles).
 
-Para obtener más información, vea [Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)](../../../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md#SecurityForKeyManagement).
+Para obtener más información, vea [Security Considerations for Key Management (Consideraciones de seguridad para la administración de claves)](overview-of-key-management-for-always-encrypted.md#security-considerations-for-key-management).
 
 
 Tarea  |Artículo  |Accede a claves de texto no cifrado o a almacén de claves  |Accede a base de datos  

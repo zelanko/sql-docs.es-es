@@ -1,7 +1,7 @@
 ---
 title: CREATE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 825fedb3bfc3262abf4e432075e03f6e0a370eac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626699"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388362"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -134,6 +134,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
   | MAX_DURATION = <time> [MINUTES]
   | ALLOW_ROW_LOCKS = { ON | OFF }
   | ALLOW_PAGE_LOCKS = { ON | OFF }
+  | OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | OFF}
   | MAXDOP = max_degree_of_parallelism
   | DATA_COMPRESSION = { NONE | ROW | PAGE}
      [ ON PARTITIONS ( { <partition_number_expression> | <range> }
@@ -476,6 +477,11 @@ ON Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[s
 
 OFF No se utilizan bloqueos de página.
 
+
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Válido para**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+
+Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](#sequential-keys) para obtener más información.
+
 MAXDOP = _max_degree_of_parallelism_
 **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -732,6 +738,13 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de crea
 Si ALLOW_ROW_LOCKS = ON y ALLOW_PAGE_LOCK = ON, se permiten los bloqueos de nivel de fila, página y tabla cuando se tiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.
 
 Si ALLOW_ROW_LOCKS = OFF y ALLOW_PAGE_LOCK = OFF, solo se permiten los bloqueos de nivel de tabla cuando se tiene acceso al índice.
+
+## <a name="sequential-keys"></a>Claves secuenciales
+**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+
+La contención de inserción de la última página es un problema común de rendimiento que se produce cuando un gran número de subprocesos simultáneos intentan insertar filas en un índice con una clave secuencial. Un índice se considera secuencial cuando la columna de clave inicial contiene valores que siempre aumentan (o disminuyen), como una columna de identidad o una fecha que toma como valor predeterminado la fecha y hora actuales. Dado que las claves que se insertan son secuenciales, todas las nuevas filas se insertarán al final de la estructura del índice, es decir, en la misma página. Esta situación conduce a la contención de la página en memoria que se puede observar cuando varios subprocesos están a la espera de PAGELATCH_EX para la página en cuestión.
+
+Al activar la opción de índice OPTIMIZE_FOR_SEQUENTIAL_KEY es posible una optimización en el motor de base de datos que ayuda a mejora el rendimiento de las inserciones de alta simultaneidad en el índice. Está concebida para los índices que tienen una clave secuencial y, por tanto, son propensos a la contención de inserción de la última página, pero también puede ayudar con índices que tienen zonas activas en otras áreas de la estructura del índice de árbol B.
 
 ## <a name="viewing-index-information"></a>Ver información de índice
 

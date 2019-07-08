@@ -32,12 +32,12 @@ author: juliemsft
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1e26632a80efce073df66f3d4fd564d513e4b28e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0987f9efdf3e19f3a79d9d39c0ce2661a97fdbe
+ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62758704"
+ms.lasthandoff: 06/24/2019
+ms.locfileid: "67343964"
 ---
 # <a name="like-transact-sql"></a>LIKE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -119,20 +119,20 @@ GO
 EXEC FindEmployee @EmpLName = 'Barb';  
 ```  
   
- [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+[!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
+
+```
+FirstName      LastName            City
+----------     -------------------- --------------- 
+Angela         Barbariol            Snohomish
+David          Barber               Snohomish
+(2 row(s) affected)  
+```
+
+## <a name="pattern-matching-by-using-like"></a>Coincidencias de patrón con LIKE  
+ LIKE admite operaciones de coincidencia de patrones ASCII y Unicode. Cuando todos los argumentos (*match_expression*, *pattern* y *escape_character*, si están presentes) son tipos de datos de caracteres ASCII, se realiza la coincidencia de patrones ASCII. Si alguno de los argumentos es del tipo de datos Unicode, todos los argumentos se convierten a Unicode y se realiza la coincidencia de patrones de Unicode. Cuando se usan datos Unicode (tipos de datos **nchar** o **nvarchar**) con LIKE, los espacios en blanco al final son significativos; pero para los datos que no son Unicode, no lo son. El uso que se hace de LIKE con Unicode es compatible con el estándar ISO. El uso que se hace de LIKE con ASCII es compatible con versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- ```
- FirstName      LastName            City
- ----------     -------------------- --------------- 
- Angela         Barbariol            Snohomish
- David          Barber               Snohomish
- (2 row(s) affected)  
- ``` 
- 
-## Pattern Matching by Using LIKE  
- LIKE supports ASCII pattern matching and Unicode pattern matching. When all arguments (*match_expression*, *pattern*, and *escape_character*, if present) are ASCII character data types, ASCII pattern matching is performed. If any one of the arguments are of Unicode data type, all arguments are converted to Unicode and Unicode pattern matching is performed. When you use Unicode data (**nchar** or **nvarchar** data types) with LIKE, trailing blanks are significant; however, for non-Unicode data, trailing blanks aren't significant. Unicode LIKE is compatible with the ISO standard. ASCII LIKE is compatible with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- The following is a series of examples that show the differences in rows returned between ASCII and Unicode LIKE pattern matching.  
+ A continuación se ofrece una serie de ejemplos donde se muestran las diferencias entre las filas devueltas tras la coincidencia de patrones con LIKE para ASCII y Unicode.  
   
 ```sql  
 -- ASCII pattern matching with char column  
@@ -155,7 +155,7 @@ INSERT INTO t VALUES ('Robert King');
 SELECT *   
 FROM t   
 WHERE RTRIM(col1) LIKE '% King';   -- returns 1 row  
-```  
+```
   
 > [!NOTE]  
 >  La intercalación influye en las comparaciones con LIKE. Para obtener más información, vea [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md).  
@@ -197,7 +197,7 @@ GO
   
  Si no hay ningún carácter después de un carácter de escape en el patrón de LIKE, el patrón no es válido y LIKE devuelve FALSE. Si el carácter posterior a un carácter de escape no es un carácter comodín, el carácter de escape se descarta y el carácter que sigue al escape se trata como un carácter normal del patrón. Estos caracteres afectan a los caracteres comodín del signo de porcentaje (%), carácter de subrayado (_) y corchete de apertura ([) cuando se encuentran entre corchetes dobles ([ ]). Los caracteres de escape pueden usarse dentro de corchetes dobles ([ ]), y se pueden aplicar caracteres de escape al símbolo de intercalación (^), guión (-) y corchete de cierre (]).  
   
- 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en LIKE.  
+ 0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en LIKE.  
   
 ## <a name="examples"></a>Ejemplos  
   

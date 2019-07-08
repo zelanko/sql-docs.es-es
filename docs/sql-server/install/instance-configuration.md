@@ -16,442 +16,453 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 robots: noindex,nofollow
-ms.openlocfilehash: 06a8b0b4a3e692ca1eaef89e8e7114b41bf650a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1f888355eaa27212a032e4cdd04766797c183b6f
+ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65993798"
+ms.lasthandoff: 06/25/2019
+ms.locfileid: "67388322"
 ---
 # <a name="installation-wizard-help"></a>Ayuda del Asistente para instalación
+
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-En este artículo se describen algunas de las páginas de configuración del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+En este artículo se describen algunas de las páginas de configuración del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-## <a name="instance-configuration"></a>Configuración de instancia
-Use la página **Configuración de instancia** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar si quiere crear una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aún no hay instalada ninguna instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se creará una predeterminada, a menos que especifique una instancia con nombre.  
+## <a name="instance-configuration-page"></a>Página Configuración de instancia
+
+Use la página **Configuración de instancia** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar si quiere crear una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aún no hay instalada ninguna instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se crea una predeterminada, a menos que especifique una instancia con nombre.  
   
 Cada instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consta de un conjunto de servicios distinto con una configuración específica para intercalaciones y otras opciones. La estructura de directorios, la estructura del Registro y los nombres de los servicios reflejan todos el nombre de instancia y un identificador de instancia específico que se crearon durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- La instancia puede ser una instancia predeterminada o una instancia con nombre. El nombre de instancia predeterminado es MSSQLSERVER. Para realizar una conexión, no es necesario que un cliente especifique el nombre de la instancia. La instancia con nombre queda determinada por el usuario durante la instalación. Puede instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia con nombre sin instalar primero la instancia predeterminada. Al mismo tiempo, solo una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de la versión, puede ser la instancia predeterminada.  
+La instancia puede ser una instancia predeterminada o una instancia con nombre. El nombre de instancia predeterminado es MSSQLSERVER. Para realizar una conexión, no es necesario que un cliente especifique el nombre de la instancia. La instancia con nombre queda determinada por el usuario durante la instalación. Puede instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como una instancia con nombre sin instalar primero la instancia predeterminada. Solo una instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], independientemente de la versión, puede ser la instancia predeterminada.  
   
 > [!NOTE]  
-> Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, puede especificar el nombre de instancia cuando complete una instancia preparada en la página **Configuración de instancia**. Puede optar por configurar la instancia preparada que está completando como una instancia predeterminada si no existe una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo.  
+> Con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep, puede especificar el nombre de instancia cuando complete una instancia preparada en la página **Configuración de instancia**. Puede configurar la instancia preparada que está completando como una instancia predeterminada si no existe una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la máquina.  
   
-### <a name="multiple-instances"></a>Varias instancias  
+### <a name="multiple-instances"></a>Varias instancias
+  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] admite varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un solo servidor o procesador, pero solo una puede ser la predeterminada. Todas las demás deben ser instancias con nombre. Un equipo puede ejecutar varias instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] simultáneamente y cada instancia se ejecuta independientemente de las otras instancias.  
   
- Para obtener más información, consulte [Maximum Capacity Specifications for SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
+ Para obtener más información, consulte [Especificaciones de capacidad máxima para SQL Server](../maximum-capacity-specifications-for-sql-server.md).  
   
-### <a name="options"></a>Opciones  
- Solo instancias de clústeres de conmutación por error: especifique el nombre de red en clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este nombre identifica la instancia en clúster de conmutación por error en la red.  
+### <a name="options"></a>Opciones
+
+**Solo instancias de clúster de conmutación por error**: Especifique el nombre de red del clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Este nombre identifica la instancia en clúster de conmutación por error en la red.  
   
- Instancia predeterminada o con nombre: tenga presente la información siguiente a la hora de decidir entre instalar una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+**Decidir entre un valor predeterminado o una instancia con nombre**: Tenga presente la información siguiente a la hora de decidir entre instalar una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
   
--   Si piensa instalar una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor de base de datos, debe ser una instancia predeterminada.  
+* Si piensa instalar una única instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un servidor de base de datos, debe ser una instancia predeterminada.  
   
--   Use una instancia con nombre para aquellas situaciones en las que piensa tener varias instancias en el mismo equipo. Un servidor solo puede alojar una instancia predeterminada.  
+* Use una instancia con nombre para aquellas situaciones en las que piensa tener varias instancias en el mismo equipo. Un servidor solo puede alojar una instancia predeterminada.  
+* Cualquier aplicación que instale [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] debe instalarla como instancia con nombre. Esta práctica reduce los conflictos en situaciones en las que se instalan varias aplicaciones en el mismo equipo.
   
--   Cualquier aplicación que instale [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] debe instalarla como instancia con nombre. Con ello se reducen los conflictos en situaciones en las que se instalan varias aplicaciones en el mismo equipo.  
+**Instancia predeterminada**: Seleccione esta opción para instalar una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un equipo solo puede hospedar una instancia predeterminada; todas las demás instancias deben ser instancias con nombre. No obstante, si tiene instalada una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podrá agregar una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al mismo equipo.  
   
- **Instancia predeterminada**  
- Seleccione esta opción para instalar una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Un equipo solo puede hospedar una instancia predeterminada; todas las demás instancias deben ser instancias con nombre. No obstante, si tiene instalada una instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], podrá agregar una instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] al mismo equipo.  
+**Instancia con nombre**: Seleccione esta opción para crear una instancia con nombre nueva. Cuando asigne un nombre a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenga en cuenta la siguiente información:  
   
- **Instancia con nombre**  
- Seleccione esta opción para crear una instancia con nombre nueva. Cuando asigne un nombre a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], tenga en cuenta lo siguiente:  
+* Los nombres de instancia no distinguen mayúsculas de minúsculas.  
   
--   En los nombres de instancia no se distinguen mayúsculas y minúsculas.  
+* Los nombres de instancia no pueden comenzar ni terminar con un guion bajo (_).  
   
--   Los nombres no pueden comenzar ni terminar por un guión bajo (_).  
+* Los nombres de instancia no pueden contener el término "Default" ni otras palabras clave reservadas. Si se utiliza una palabra clave reservada en un nombre de instancia, se producirá un error en el programa de instalación. Para obtener más información, consulte [Palabras clave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
   
--   Los nombres de instancia no pueden contener el término "Default" ni otras palabras clave reservadas. Si se utiliza una palabra clave reservada en un nombre de instancia, se producirá un error en el programa de instalación. Para obtener más información, vea [Palabras clave reservadas &#40;Transact-SQL&#41;](../../t-sql/language-elements/reserved-keywords-transact-sql.md).  
+* Si especifica MSSQLSERVER como nombre de instancia, se crea una instancia predeterminada.  
   
--   Si especifica MSSQLServer como nombre de instancia, se creará una instancia predeterminada.  
+* Una instalación de [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] siempre se instala como una instancia con nombre de "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]". No puede especificar un nombre de instancia diferente para este rol de característica.  
   
--   Una instalación de [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] siempre se instala como una instancia con nombre de "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]". No puede especificar un nombre de instancia diferente para este rol de característica.  
+* Los nombres de instancias están limitados a 16 caracteres.  
   
--   Los nombres de instancias están limitados a 16 caracteres.  
+* El primer carácter del nombre de la instancia debe ser una letra. Las letras aceptables son las que define el estándar Unicode 2.0. Estas letras incluyen los caracteres latinos, a-z, A-Z y los caracteres alfabéticos de otros idiomas.  
   
--   El primer carácter del nombre de la instancia debe ser una letra. Las letras aceptables son las que define el estándar Unicode 2.0. Se incluyen los caracteres latinos, a-z, A-Z y los caracteres alfabéticos de otros idiomas.  
+* Los siguientes caracteres pueden ser letras definidas por el estándar Unicode 2.0, números decimales del alfabeto Latín básico y de otros alfabetos nacionales, el signo de dólar ($) o un carácter de subrayado (_).  
   
--   Los siguientes caracteres pueden ser letras definidas por el estándar Unicode 2.0, números decimales del alfabeto Latín básico y de otros alfabetos nacionales, el signo de dólar ($) o un carácter de subrayado (_).  
+* No se permiten espacios insertados ni otros caracteres especiales en los nombres de instancia. Tampoco se permiten los caracteres de barra diagonal inversa (\\), coma (,), dos puntos (:), punto y coma (;), comillas sencillas ('), y comercial (&), guion (-) y la arroba (@).  
   
--   En los nombres de instancia no se permiten espacios insertados ni otros caracteres especiales. Tampoco se permiten la barra diagonal inversa (\\), la coma (,), los dos puntos (:), el punto y coma (;), la comilla simple ('), el símbolo Y comercial (&), el guion (-) ni la arroba (@).  
+  En los nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se pueden usar caracteres que figuren como válidos en la página actual de códigos de Windows. Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.  
   
-     En los nombres de instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo se pueden usar caracteres que figuren como válidos en la página actual de códigos de Windows. Si se utiliza un carácter Unicode no admitido, se producirá un error en el programa de instalación.  
+**Instancias y características detectadas**: Vea una lista de las instancias y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- **Instancias y características detectadas**  
- Vea una lista de las instancias y los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instalados en el equipo en el que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- **Id. de instancia** : de manera predeterminada, el nombre de instancia se usa como identificador de la instancia. Se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Es así en las instancias predeterminadas y en las instancias con nombre. Con una instancia predeterminada, el nombre y el identificador serían MSSQLSERVER. Para usar un identificador de instancia no predeterminado, especifíquelo en el campo **Id. de instancia** .  
+**Id. de instancia**: de forma predeterminada, el nombre de instancia se usa como identificador de la instancia. Este identificador se usa para identificar los directorios de instalación y las claves del Registro para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El mismo comportamiento se produce para las instancias predeterminadas y las instancias con nombre. Para las instancias predeterminadas, el nombre y el identificador son MSSQLSERVER. Para usar un identificador de instancia no predeterminado, especifíquelo en el campo **Id. de instancia**.  
   
 > [!IMPORTANT]  
->  Con SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de instancia que se muestra en esta página es el identificador de instancia especificado durante el paso de preparación de la imagen en el proceso SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No podrá especificar un identificador de instancia diferente durante el paso para completar la imagen.  
+>  Con SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de instancia que se muestra en la página **Configuración de instancia** es el identificador de instancia especificado durante el paso de preparación de la imagen del proceso SysPrep de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No podrá especificar un identificador de instancia diferente durante el paso para completar la imagen.
+
+> [!NOTE]  
+>  No se admiten identificadores de instancia que comiencen con un guion bajo (_) o que contengan el signo de almohadilla (#) o el signo de dólar ($).  
+  
+Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, consulte [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
+  
+Todos los componentes de una instancia determinada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se administran como una unidad. Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplican a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+Todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que comparten el mismo nombre de instancia deben cumplir los siguientes criterios:  
+  
+* La misma versión
+* La misma edición
+* La misma configuración de idioma
+* El mismo estado de clúster
+* El mismo sistema operativo  
   
 > [!NOTE]  
->  No se admiten identificadores de instancia que comiencen por un guión bajo (_) o que contengan el signo de almohadilla (#) o el signo de dólar ($).  
-  
- Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-  
- Todos los componentes de una instancia determinada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se administran como una unidad. Todos los Service Pack y actualizaciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se aplicarán a cada componente de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Todos los componentes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que comparten el mismo nombre de instancia deben cumplir los siguientes criterios:  
-  
--   **Misma versión**   
--   **Misma edición**    
--   **Misma configuración de idioma**    
--   **Mismo estado de clúster**    
--   **Mismo sistema operativo**  
-  
-  
-    > [!NOTE]  
-    > [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no detecta los clústeres.  
+> [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] no detecta los clústeres.  
 
+## <a name="analysis-services-configuration---account-provisioning-page"></a>Página Configuración de Analysis Services - Aprovisionamiento de cuentas
+  
+Use esta página para establecer el modo de servidor y para conceder permisos administrativos a los usuarios o servicios que requieran acceso sin restricciones a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. El programa de instalación no agrega automáticamente el grupo Windows local BUILTIN\Administrators al rol de administrador del servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la instancia que está instalando. Si desea agregar el grupo local de administradores al rol de administrador del servidor, debe especificar ese grupo explícitamente.  
+  
+Si está instalando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], asegúrese de conceder permisos administrativos a los administradores de la granja de SharePoint o a los administradores de servicios que sean responsables de una implementación del servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
+  
+### <a name="options"></a>Opciones
 
-## <a name="analysis-services-configuration---account-provisioning"></a>Configuración de Analysis Services - Aprovisionamiento de cuentas
-  Use esta página para establecer el modo de servidor y para conceder permisos administrativos a los usuarios o servicios que requieran acceso sin restricciones a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. La instalación no agrega automáticamente el grupo Windows local BUILTIN\Administrators al rol de administrador del servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de la instancia que está instalando. Si desea agregar el grupo local de administradores al rol de administrador del servidor, debe especificar ese grupo explícitamente.  
+**Modo de servidor**: el modo de servidor especifica el tipo de bases de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se pueden implementar en el servidor. Los modos de servidor se determinan durante la instalación y no se pueden modificar posteriormente. Cada modo es mutuamente exclusivo, lo que significa que se necesitarán dos instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], cada una configurada para un modo diferente, para admitir soluciones de modelo de procesamiento analítico en línea (OLAP) clásico y tabular.  
   
- Si está instalando [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)], asegúrese de conceder permisos administrativos a los administradores de la granja de SharePoint o a los administradores de servicios que sean responsables de una implementación del servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en una granja de [!INCLUDE[SPS2010](../../includes/sps2010-md.md)].  
-  
-### <a name="options"></a>Opciones  
- **Modo de servidor** : permite especificar el tipo de bases de datos de Analysis Services que se pueden implementar en el servidor. Los modos de servidor se determinan durante la instalación y no se pueden modificar posteriormente. Cada modo es mutuamente exclusivo, lo que significa que se necesitarán dos instancias de Analysis Services, cada una configurada para un modo diferente, para admitir soluciones de modelo OLAP clásicas y tabulares.  
-  
- **Especificar administradores** Debe especificar al menos un administrador de servidor para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios o grupos que especifique serán miembros del rol de administrador del servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está instalando. Debe haber cuentas de usuario de dominio de Windows en el mismo dominio que el del equipo en el que se instala el software.  
+**Especificar administradores**: debe especificar al menos un administrador de servidor para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios o grupos que especifique serán miembros del rol de administrador del servidor de la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que está instalando. Estos miembros deben tener cuentas de usuario de dominio de Windows en el mismo dominio que el del equipo en el que se instala el software.  
   
 > [!NOTE]  
->  Control de cuentas de usuario (UAC) es una característica de seguridad de Windows que requiere que un administrador apruebe específicamente acciones administrativas o aplicaciones antes de que se puedan ejecutar. Dado que UAC está activado de forma predeterminada, se le solicitará que permita las operaciones concretas que requieren privilegios elevados. Puede configurar UAC para cambiar el comportamiento predeterminado o personalizar UAC para programas concretos. Para más información sobre UAC y la configuración de UAC, consulte [Guía paso a paso de Control de cuentas de usuario](https://go.microsoft.com/fwlink/?linkid=196350) y el tema sobre [control de cuentas de usuario (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
+> Control de cuentas de usuario (UAC) es una característica de seguridad de Windows que requiere que un administrador apruebe específicamente acciones administrativas o aplicaciones antes de que se puedan ejecutar. Dado que UAC está activado de forma predeterminada, se le solicitará que permita las operaciones concretas que requieren privilegios elevados. Puede configurar UAC para cambiar el comportamiento predeterminado o personalizarlo para programas concretos. Para más información sobre UAC y la configuración de UAC, consulte [Guía paso a paso de Control de cuentas de usuario](https://go.microsoft.com/fwlink/?linkid=196350) y el tema sobre [control de cuentas de usuario (Wikipedia)](https://go.microsoft.com/fwlink/?linkid=196351).  
   
-### <a name="see-also"></a>Consulte también  
- [Configurar cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md) [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
+### <a name="see-also"></a>Vea también
+  
+* [Configurar las cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [Configuración de permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
- ## <a name="analysis-services-configuration---data-directories"></a>Configuración de Analysis Services - Directorios de datos
-  Los directorios predeterminados de la tabla siguiente los puede configurar el usuario durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los permisos para obtener acceso a estos archivos se conceden a los administradores locales y a los miembros del grupo de seguridad SQLServerMSASUser$\<instancia> que se crea y aprovisiona durante la instalación.  
+## <a name="analysis-services-configuration---data-directories-page"></a>Página Configuración de Analysis Services - Directorios de datos
+
+Los directorios predeterminados de la tabla siguiente los puede configurar el usuario durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los permisos para obtener acceso a estos archivos se conceden a los administradores locales y a los miembros del grupo de seguridad SQLServerMSASUser$\<instancia> que se crea y aprovisiona durante la instalación.  
   
 ### <a name="uielement-list"></a>Lista de UIElement  
   
 |Descripción|Directorio predeterminado|Recomendaciones|  
 |-----------------|-----------------------|---------------------|  
-|Directorio raíz de datos|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Data |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
-|Directorio de archivos de registro|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Log |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
-|Directorio temporal|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Temp |Coloque el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
-|Directorio de copia de seguridad|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Backup |Este es el directorio para los archivos de copia de seguridad predeterminados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En las instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, es también donde los Servicios del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenan en caché los archivos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del servicio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
+|**Directorio raíz de datos**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data\ |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento de más alto rendimiento asociado al sistema. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
+|**Directorio de archivos de registro**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log\ |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
+|**Directorio temporal**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp\ |Coloque el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
+|**Directorio de copia de seguridad**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup\ |Este directorio es para los archivos de copia de seguridad predeterminados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En las instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, este directorio es también donde los Servicios del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenan en caché los archivos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
   
-### <a name="notes"></a>Notas  
+### <a name="considerations"></a>Consideraciones  
   
--   Las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se implementan en una granja de SharePoint almacenan archivos de aplicación, archivos de datos y propiedades de bases de datos de contenido y de aplicación de servicio.  
+* Cuando se implementan instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una granja de SharePoint, almacenan archivos de aplicación, archivos de datos y propiedades de bases de datos de contenido y de aplicación de servicio.  
   
--   Cuando agregue características a una instalación existente, no podrá cambiar la ubicación de una característica instalada anteriormente, ni especificar dicha ubicación para una característica nueva.  
+* Cuando agregue características a una instalación existente, no podrá cambiar la ubicación de una característica instalada anteriormente, ni especificar dicha ubicación para una característica nueva.  
 
--   Es posible que necesite configurar el software de detección, como aplicaciones antivirus y antispyware, para excluir las carpetas y los tipos de archivo de SQL Server. Revise este artículo de soporte técnico para obtener más información: [Elegir software antivirus para equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422).
+* Es posible que necesite configurar el software de detección, como aplicaciones antivirus y antispyware, para excluir las carpetas y los tipos de archivo de SQL Server. Revise este artículo de soporte técnico para obtener más información: [Elegir software antivirus para equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422).
   
--   Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.  
+* Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No comparta directorios en este cuadro de diálogo con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Instale también los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en directorios independientes.  
   
--   Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
+* Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
   
-    -   En una unidad de disco extraíble  
+  * En una unidad de disco extraíble  
+  * En un sistema de archivos que usa compresión  
+  * En un directorio que contiene archivos del sistema  
   
-    -   En un sistema de archivos que usa compresión  
-  
-    -   En un directorio que contiene archivos del sistema  
-  
-### <a name="see-also"></a>Consulte también  
- Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-  
+### <a name="see-also"></a>Vea también
 
-### <a name="analysis-services-configuration---data-directories"></a>Configuración de Analysis Services - Directorios de datos
-  Los directorios predeterminados de la tabla siguiente los puede configurar el usuario durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los permisos para obtener acceso a estos archivos se conceden a los administradores locales y a los miembros del grupo de seguridad SQLServerMSASUser$\<instancia> que se crea y aprovisiona durante la instalación.  
+Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, consulte [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
   
-#### <a name="uielement-list"></a>Lista de UIElement  
+### <a name="analysis-services-configuration---data-directories-page"></a>Página Configuración de Analysis Services - Directorios de datos
+
+Los directorios predeterminados de la tabla siguiente los puede configurar el usuario durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los permisos para obtener acceso a estos archivos se conceden a los administradores locales y a los miembros del grupo de seguridad SQLServerMSASUser$\<instancia> que se crea y aprovisiona durante la instalación.  
+  
+#### <a name="uielement-list"></a>Lista de UIElement
   
 |Descripción|Directorio predeterminado|Recomendaciones|  
 |-----------------|-----------------------|---------------------|  
-|Directorio raíz de datos |C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Data |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento asociado al sistema cuyo rendimiento sea máximo. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
-|Directorio de archivos de registro|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Log |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
-|Directorio temporal|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Temp |Coloque el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
-|Directorio de copia de seguridad|C:\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<IdDeInstancia>\OLAP\Backup |Este es el directorio para los archivos de copia de seguridad predeterminados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En las instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, es también donde los Servicios del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenan en caché los archivos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del servicio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
+|**Directorio raíz de datos** |\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Data |Asegúrese de que la carpeta \Archivos de programa\Microsoft SQL Server\ está protegida con permisos limitados. El rendimiento de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] depende, en muchas configuraciones, del rendimiento del espacio de almacenamiento en el que se ubica el directorio de datos. Coloque este directorio en el almacenamiento de más alto rendimiento asociado al sistema. En las instalaciones del clúster de conmutación por error, asegúrese de que los directorios de datos están ubicados en el disco compartido.|  
+|**Directorio de archivos de registro**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Log |Este es el directorio para los archivos de registro de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye el registro FlightRecorder. Si incrementa la duración de la Caja negra SQL, asegúrese de que el directorio del registro tenga espacio suficiente.|  
+|**Directorio temporal**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Temp |Coloque el directorio Temp en el subsistema de almacenamiento de alto rendimiento.|  
+|**Directorio de copia de seguridad**|\<Unidad:>\Archivos de programa\Microsoft SQL Server\MSAS*nn*.\<InstanceID>\OLAP\Backup |Este directorio es para los archivos de copia de seguridad predeterminados de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. En las instalaciones de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, es también donde los Servicios del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] almacenan en caché los archivos de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)].<br /><br /> Asegúrese de que se han establecido los permisos adecuados para evitar la pérdida de datos y de que el grupo de usuarios del servicio [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tiene los permisos apropiados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
   
-#### <a name="notes"></a>Notas  
+#### <a name="considerations"></a>Consideraciones
   
--   Las instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que se implementan en una granja de SharePoint almacenan archivos de aplicación, archivos de datos y propiedades de bases de datos de contenido y de aplicación de servicio.  
+* Cuando se implementan instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una granja de SharePoint, almacenan archivos de aplicación, archivos de datos y propiedades de bases de datos de contenido y de aplicación de servicio.  
   
--   Cuando agregue características a una instalación existente, no podrá cambiar la ubicación de una característica instalada anteriormente, ni especificar dicha ubicación para una característica nueva.  
+* Cuando agregue características a una instalación existente, no podrá cambiar la ubicación de una característica instalada anteriormente, ni especificar dicha ubicación para una característica nueva.  
 
--   Es posible que necesite configurar el software de detección, como aplicaciones antivirus y antispyware, para excluir las carpetas y los tipos de archivo de SQL Server. Revise este artículo de soporte técnico para obtener más información: [Elegir software antivirus para equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422).
+* Es posible que necesite configurar el software de detección, como aplicaciones antivirus y antispyware, para excluir las carpetas y los tipos de archivo de SQL Server. Para obtener más información, consulte [Software antivirus en equipos que ejecutan SQL Server](https://support.microsoft.com/kb/309422).
   
--   Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.  
+* Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No comparta ninguno de los directorios de este cuadro de diálogo con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Instale también los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en directorios independientes.  
   
--   Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
+* Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
   
-    -   En una unidad de disco extraíble  
+  * En una unidad de disco extraíble  
+  * En un sistema de archivos que usa compresión  
+  * En un directorio que contiene archivos del sistema  
   
-    -   En un sistema de archivos que usa compresión  
-  
-    -   En un directorio que contiene archivos del sistema  
-  
-#### <a name="see-also"></a>Consulte también  
- Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, vea [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
-  
-    
- [Permisos NTFS y de uso compartido en un servidor de archivos](https://go.microsoft.com/fwlink/?LinkID=206571) 
+#### <a name="see-also"></a>Vea también
 
+* Para obtener más información sobre los directorios, las ubicaciones de archivos y los nombres de identificador de instancia, consulte [Ubicaciones de archivos para las instancias predeterminadas y con nombre de SQL Server](file-locations-for-default-and-named-instances-of-sql-server.md).  
+* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions) (Permisos NTFS y de uso compartido en un servidor de archivos)
+
+## <a name="serverconfig"></a> Página Configuración del Motor de base de datos - Configuración del servidor
+
+Use esta página para establecer el modo de seguridad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y para agregar grupos o usuarios de Windows como administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   
-## <a name="serverconfig"></a> Configuración del motor de base de datos: configuración del servidor
-  Use esta página para establecer el modo de seguridad en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , así como para agregar grupos o usuarios de Windows como administradores de [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
+### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+
+En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se aprovisionaba el grupo BUILTIN\Administrators como inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los miembros del grupo local Administradores podían iniciar sesión con sus credenciales de administrador. Sin embargo, el uso de permisos elevados no es un procedimiento recomendado.
+
+En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el grupo BUILTIN\Administrators no se aprovisiona como inicio de sesión. Asegúrese de crear un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada usuario administrativo y agregarlo al rol fijo de servidor **sysadmin** durante la instalación de una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Haga lo mismo en el caso de cuentas de Windows que ejecuten trabajos de agente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluidos los trabajos del agente de replicación.  
   
-### <a name="considerations-for-running-includesscurrentincludessscurrent-mdmd"></a>Consideraciones para ejecutar [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
- En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se aprovisionaba el grupo **BUILTIN\Administrators** como posibilidad en el inicio de sesión de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y los miembros del grupo local Administradores podían iniciar sesión con sus credenciales de administrador. El uso de permisos elevados no es una práctica recomendada. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] , el grupo **BUILTIN\Administrators** no se aprovisiona como inicio de sesión. En consecuencia, debería crear un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para cada usuario administrativo y agregarlo al rol fijo de servidor sysadmin durante la instalación de una nueva instancia de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. También debe hacer esto para las cuentas de Windows que se utilizan para ejecutar trabajos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . También se incluyen las cuentas utilizadas para ejecutar trabajos del Agente de replicación.  
+### <a name="options"></a>Opciones
+
+**Modo de seguridad**: seleccione **Autenticación de Windows** o **Autenticación de modo mixto** para la instalación.  
   
-### <a name="options"></a>Opciones  
- **Modo de seguridad** : seleccione la autenticación de Windows o la autenticación de modo mixto para la instalación.  
-  
- **Aprovisionamiento de entidad de seguridad de Windows** : en las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el grupo local Windows Builtin\Administrator estaba ubicado en el rol de servidor sysadmin de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , con lo que se concedía a los administradores de Windows acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el grupo Builtin\Administrator no se proporciona en el rol de servidor sysadmin. En su lugar, debería aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación.  
-  
-> [!IMPORTANT]  
->  Debe aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación. El programa de instalación no le permitirá continuar hasta que complete este paso.  
-  
- **Especificar administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : debe especificar por lo menos una entidad de seguridad de Windows para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el botón **Usuario actual** . Para agregar o quitar cuentas de la lista de administradores del sistema, haga clic en **Agregar** o en **Quitar**y, a continuación, edite la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
- Cuando termine de modificar la lista, haga clic en **Aceptar**y, a continuación, compruebe la lista de administradores en el cuadro de diálogo de configuración. Cuando la lista esté completa, haga clic en **Siguiente**.  
-  
- Si selecciona la autenticación de modo mixto, debe proporcionar las credenciales de inicio de sesión para la cuenta de administrador de sistema (SA) de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] builtin.  
+**Aprovisionamiento de entidad de seguridad de Windows**: En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el grupo local BUILTIN\Administrators de Windows estaba ubicado en el rol de servidor **sysadmin** de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], con lo que se concedía a los administradores de Windows acceso a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], el grupo BUILTIN\Administrators o se aprovisiona en el rol de servidor **sysadmin**. En su lugar, debería aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+> Debe aprovisionar explícitamente administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para las nuevas instalaciones durante la instalación. El programa de instalación no le permitirá continuar hasta que complete este paso.
   
- **Modo de autenticación de Windows**  
- Cuando un usuario se conecta a través de una cuenta de usuario de Microsoft Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida el nombre de cuenta y la contraseña con el token de la entidad de seguridad de Windows del sistema operativo. Éste es el modo de autenticación predeterminado, y es mucho más seguro que el modo mixto. La autenticación de Windows utiliza el protocolo de seguridad Kerberos, cumple la directiva de contraseñas en lo que respecta a la validación de la complejidad de las contraseñas seguras, y permite el bloqueo de las cuentas y la expiración de las contraseñas.  
+**Especificar los administradores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** : debe especificar al menos una entidad de seguridad de Windows para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para agregar la cuenta en la que se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], seleccione el botón **Agregar usuario actual**. Para agregar o quitar cuentas de la lista de administradores del sistema, seleccione **Agregar** o **Quitar** y, luego, modifique la lista de usuarios, grupos o equipos que tendrán privilegios de administrador para la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+Cuando termine de modificar la lista, haga clic en **Aceptar** y, luego, compruebe la lista de administradores en el cuadro de diálogo de configuración. Si la lista esté completa, seleccione **Siguiente**.  
+  
+Si selecciona **Autenticación de modo mixto**, debe proporcionar credenciales de inicio de sesión para la cuenta de administrador del sistema (**sa**) integrada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
+  
+**Modo de autenticación de Windows**: cuando un usuario se conecta mediante una cuenta de usuario de Windows, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] valida el nombre de cuenta y la contraseña con el token de la entidad de seguridad de Windows del sistema operativo. La autenticación de Windows es el modo de autenticación predeterminado y es mucho más seguro que la autenticación de modo mixto. La autenticación de Windows utiliza el protocolo de seguridad Kerberos, cumple la directiva de contraseñas en lo que respecta a la validación de la complejidad de las contraseñas seguras, y permite el bloqueo de las cuentas y la expiración de las contraseñas.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] No establezca nunca una contraseña en blanco o no segura.  
+> [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+
+> [!IMPORTANT]  
+> [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)] No establezca nunca una contraseña de **sa** en blanco o no segura.  
   
- **Modo mixto (autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])**  
- Permite a los usuarios conectarse con la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los usuarios que se conectan mediante una cuenta de usuario de Windows pueden usar conexiones de confianza validadas por Windows.  
+**Modo mixto (autenticación de Windows o autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)])** : Permite a los usuarios conectarse con la autenticación de Windows o la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los usuarios que se conectan mediante una cuenta de usuario de Windows pueden usar conexiones de confianza validadas por Windows.  
   
- Si tiene que elegir el modo de autenticación mixto y necesita utilizar inicios de sesión de SQL para incluir aplicaciones heredadas, debe establecer contraseñas seguras para todas las cuentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
+Si tiene que elegir el modo de autenticación mixto y necesita utilizar inicios de sesión de SQL para incluir aplicaciones heredadas, debe establecer contraseñas seguras para todas las cuentas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!NOTE]  
->  La autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona únicamente por motivos de compatibilidad con versiones anteriores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
+> La autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se proporciona únicamente por motivos de compatibilidad con versiones anteriores. [!INCLUDE[ssNoteWinAuthentication](../../includes/ssnotewinauthentication-md.md)]  
   
- **Escribir contraseña**  
- Escriba y confirme el inicio de sesión del administrador del sistema (sa). Las contraseñas son la primera línea de defensa contra los intrusos, por lo que establecer contraseñas seguras es esencial para la seguridad del sistema. No establezca nunca una contraseña en blanco o no segura.  
+**Escribir contraseña**: Escriba y confirme el inicio de sesión del administrador del sistema (**sa**). Las contraseñas son la primera línea de defensa contra los intrusos, por lo que establecer contraseñas seguras es esencial para la seguridad del sistema. No establezca nunca una contraseña de **sa** en blanco o no segura.  
   
 > [!NOTE]  
->  Las contraseñas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener de 1 a 128 caracteres, incluida cualquier combinación de letras, símbolos y números. Si elige la autenticación de modo mixto, debe escribir una contraseña de sa segura antes de continuar con la siguiente página del Asistente para la instalación.  
+> Las contraseñas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pueden contener de 1 a 128 caracteres, incluida cualquier combinación de letras, símbolos y números. Si elige la autenticación de modo mixto, debe escribir una contraseña de **sa** segura antes de continuar con la siguiente página del Asistente para la instalación.  
   
- **Directrices para contraseñas seguras**  
- Las contraseñas seguras no pueden ser adivinadas con facilidad y tampoco son fácilmente vulnerables en caso de utilizar un programa informático. Las contraseñas seguras no pueden utilizar los siguientes términos o condiciones prohibidos:  
+#### <a name="strong-password-guidelines"></a>Directrices para contraseñas seguras
   
--   Una condición en blanco o NULL    
--   "Password"    
--   "Admin"    
--   "Administrator"    
--   "sa"    
--   "sysadmin"  
--   
- Una contraseña segura no puede ser ninguno de los siguientes términos asociados al equipo de instalación:  
+Las contraseñas seguras no pueden ser adivinadas con facilidad y tampoco son fácilmente vulnerables en caso de utilizar un programa informático. Las contraseñas seguras no pueden utilizar los siguientes términos o condiciones prohibidos:  
   
--   El nombre del usuario que haya iniciado actualmente la sesión en el equipo.    
--   El nombre del equipo.  
-  
- Una contraseña segura debe tener más de 8 caracteres de longitud y satisfacer al menos tres de los siguientes criterios:  
-  
--   Debe contener letras mayúsculas.   
--   Debe contener letras minúsculas.  
--   Debe contener números.    
--   Debe contener caracteres no alfanuméricos; por ejemplo, #, %, o ^.  
-  
- Las contraseñas que se escriben en esta página deben cumplir los requisitos de las directivas de contraseñas seguras. Si tiene alguna automatización que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , asegúrese de que la contraseña cumple los requisitos de las directivas de contraseñas seguras.  
-  
-### <a name="related-content"></a>Contenido relacionado  
- Para más información sobre elegir la autenticación de Windows en lugar de la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
- 
- 
- Para obtener más información sobre cómo elegir una cuenta para ejecutar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], vea el tema [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
- 
-## <a name ="datadir"></a> Configuración del motor de base de datos: directorios de datos
-  Use esta página para especificar la ubicación de instalación de los archivos de programa y datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Según el tipo de instalación, es posible que el almacenamiento compatible incluya un disco local, almacenamiento compartido o un servidor de archivos SMB.  
-  
- Para especificar un recurso compartido de archivos SMB como directorio, deberá escribir manualmente la ruta UNC admitida. No se admite el desplazamiento a un recurso compartido de archivos SMB. Este es un formato de ruta de acceso UNC admitida para un recurso compartido de archivos SMB: \\\NombreServidor\NombreRecursoCompartido\\...  
-  
-### <a name="stand-alone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-### <a name="uielement-list"></a>Lista de UIElement  
-  
-|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|Directorio raíz de datos|Disco local, servidor de archivos SMB, almacenamiento compartido* |C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.|  
-|Directorio de base de datos de usuario|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data |Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
-|Directorio de registro de base de datos de usuario|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
-|Directorio de copia de seguridad|Disco local, servidor de archivos SMB, almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Backup|Establezca los permisos adecuados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
-  
- *Aunque se admite el uso de discos compartidos, no se recomienda esta práctica para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|Directorio raíz de datos|Almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.|  
-|Directorio de base de datos de usuario|Almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
-|Directorio de registro de base de datos de usuario|Almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
-|Directorio de copia de seguridad|Disco local, almacenamiento compartido, servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Backup<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Establezca los permisos apropiados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio de SQL Server tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
-  
-### <a name="security-considerations"></a>Consideraciones relativas a la seguridad  
- El programa de instalación configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.  
-  
- Al servidor de archivos SMB se aplican las recomendaciones siguientes:  
-  
--   Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio.  
-  
--   La cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe los tener permisos NTFS de CONTROL TOTAL en las carpetas de recurso compartido de archivos SMB que se usan como directorio de datos.  
-  
--   Al a cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le debe conceder los privilegios SeSecurityPrivilege en el servidor de archivos SMB. Para ello, use la consola Directiva de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la directiva **Administrar registro de seguridad y auditoría**. Esta opción está disponible en la sección **Asignaciones de derechos de usuario** bajo **Directivas locales** de la consola **Directiva de seguridad local** .  
-  
-### <a name="notes"></a>Notas  
-  
--   Cuando agregue características a una instalación existente, no podrá cambiar la ubicación de una característica instalada anteriormente ni especificar dicha ubicación para una característica nueva.  
-  
--   Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.  
-  
--   Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
-  
-    -   En una unidad de disco extraíble    
-    -   En un sistema de archivos que usa compresión   
-    -   En un directorio que contiene archivos del sistema    
-    -   En una unidad de red asignada en una instancia de clúster de conmutación por error  
-  
- 
-## <a name="a-nametempdba-database-engine-configuration---tempdb"></a><a name="tempdb"><a/> Configuración del motor de base de datos: TempDB
-  Use esta página para especificar la ubicación de los archivos de registro y datos de **tempdb**, su tamaño, su configuración de crecimiento y su número de archivos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)]. Según el tipo de instalación, es posible que el almacenamiento compatible incluya un disco local, almacenamiento compartido o un servidor de archivos SMB.  
-  
- Para especificar un recurso compartido de archivos SMB como directorio, deberá escribir manualmente la ruta UNC admitida. No se admite el desplazamiento a un recurso compartido de archivos SMB. Este es un formato de ruta de acceso UNC admitida para un recurso compartido de archivos SMB: \\\NombreServidor\NombreRecursoCompartido\\...  
-  
-### <a name="data-and-log-directories-for--a-stand-alone-instance-of--includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que puede configurar durante la instalación.  
-  
-|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|**Directorios de datos**|Disco local, servidor de archivos SMB y almacenamiento compartido* |C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.<br /><br /> Las prácticas recomendadas para los directorios **tempdb** dependen de los requisitos de carga de trabajo y rendimiento. Especifique varias carpetas y unidades para distribuir los archivos de datos entre diversos volúmenes.|  
-|**Directorio de registro**|Disco local, servidor de archivos SMB y almacenamiento compartido*|C:\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
-  
- *Aunque se admite el uso de discos compartidos, no se recomienda esta práctica para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y registro para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- En la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que el usuario puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
-  
-|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
-|-----------------|----------------------------|-----------------------|---------------------|  
-|Directorio de datos de**tempdb**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\Data<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.<br /><br /> Asegúrese de que el directorio o los directorios (en caso de indicarse varios archivos) especificados son válidos para todos los nodos de clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.|  
-|Directorio del registro de**tempdb**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<IdDeInstancia>\MSSQL\Data<br /><br /> Sugerencia: Si se ha seleccionado un disco compartido en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realizó ninguna selección en la página **Selección de disco de clúster** .|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.<br /><br /> Asegúrese de que el directorio especificado sea válido para todos los nodos de clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.<br /><br /> Asegúrese de que el directorio de registro tenga espacio suficiente.|  
-  
-### <a name="uielement-list"></a>Lista de UIElement  
- Configure las opciones de **tempdb** según sus requisitos y la carga de trabajo. Las siguientes opciones se aplican a los archivos de datos de **tempdb** :  
-  
--   El valor de**Número de archivos** equivale a la cantidad total de archivos de datos de **tempdb**. El valor predeterminado es el mínimo de los siguientes: bien 8, bien el número de núcleos lógicos detectados por el programa de instalación. Como regla general, si el número de procesadores lógicos es inferior o igual a 8, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a 8, utilice 8 archivos de datos y, después, si se mantiene la contención, aumente el número de archivos de datos en múltiplos de 4 (con el número de procesadores lógicos como máximo) hasta que la contención se reduzca a niveles aceptables, o bien modifique el código o la carga de trabajo. 
-  
--   **Tamaño inicial (MB)** equivale al tamaño inicial en MB para cada archivo de datos de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite [Inicialización instantánea de archivos de la base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
-  
--   **Tamaño inicial total (MB)** es el tamaño acumulado de todos los archivos de datos de **tempdb** .  
-  
--   **Crecimiento automático (MB)** es la cantidad de espacio en megabytes en la que cada archivo de datos de **tempdb** aumentará automáticamente cuando se quede sin espacio. En [!INCLUDE[sssql15](../../includes/sssql15-md.md)] y versiones posteriores, todos los archivos de datos aumentarán su tamaño al mismo tiempo en la cantidad especificada en esta configuración.  
-  
--   **Crecimiento automático total (MB)** es el tamaño acumulado de cada evento de crecimiento automático.  
-  
--   **Directorios de datos** muestra todos los directorios que contienen archivos de datos de **tempdb** . Cuando hay varios directorios, los archivos de datos se colocan en ellos mediante un mecanismo round robin. Por ejemplo, si crea 3 directorios y especifica 8 archivos de datos, los archivos de datos 1, 4 y 7 se crearán en el primer directorio. En el segundo, se crearán los archivos de datos 2, 5 y 8. Por su parte, el 3 y el 6 se generarán en el tercer directorio.  
-  
--   Para agregar directorios, haga clic en **Agregar**.  
-  
--   Para quitar un directorio, seleccione el que desee y haga clic en **Quitar**.  
-  
- **TempDB log file** (Archivo de registro de TempDB) es el nombre del archivo de registro. Se crea automáticamente. Las siguientes opciones se aplican únicamente a los archivos de registro de **tempdb** :  
-  
--   **Tamaño inicial (MB)** es el tamaño inicial del archivo de registro de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de la base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
-  
--   **Nota: Tempdb** usa unos registros mínimos. No se puede realizar una copia de seguridad del registro de **tempdb** . Se crea de nuevo cada vez que SQL Server se inicia o una instancia de clúster efectúa una conmutación por error.  
-  
--   **Crecimiento automático (MB)** equivale al valor en megabytes en el que aumentará el tamaño del registro de **tempdb** .  Con el valor predeterminado de 64 MB, se crea el número óptimo de archivos de registro virtuales durante la inicialización.  
-  
--   **Nota: Los archivos de registro de Tempdb** no usan la inicialización instantánea de archivos.  
-  
--   **Directorio de registro** es el directorio en el que se crean los archivos de registro de **tempdb** . Solo hay un directorio de registro de **tempdb** .  
-  
-### <a name="security-considerations"></a>Consideraciones relativas a la seguridad  
- El programa de instalación configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.  
+* Una condición en blanco o NULL
+* "Password"
+* "Admin"
+* "Administrator"
+* "sa"
+* "sysadmin"
 
- Al servidor de archivos SMB se aplican las recomendaciones siguientes:  
+Una contraseña segura no puede ser ninguno de los siguientes términos asociados al equipo de instalación:  
   
--   Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio.  
+* El nombre del usuario que haya iniciado actualmente la sesión en la máquina.
+* Nombre del equipo  
   
--   La cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe los tener permisos NTFS de CONTROL TOTAL en las carpetas de recurso compartido de archivos SMB que se usan como directorio de datos.  
+Una contraseña segura debe tener más de 8 caracteres de longitud y satisfacer al menos tres de los siguientes criterios:  
   
--   Al a cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le debe conceder los privilegios SeSecurityPrivilege en el servidor de archivos SMB. Para ello, use la consola Directiva de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la directiva **Administrar registro de seguridad y auditoría**. Esta opción está disponible en la sección **Asignaciones de derechos de usuario** bajo **Directivas locales** de la consola **Directiva de seguridad local** .  
+* Debe contener letras mayúsculas.
+* Debe contener letras minúsculas.  
+* Debe contener números.
+* Debe contener caracteres no alfanuméricos; por ejemplo, #, %, o ^.  
   
-### <a name="notes"></a>Notas  
+Las contraseñas que se escriben en esta página deben cumplir los requisitos de las directivas de contraseñas seguras. Si tiene alguna automatización que use la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], asegúrese de que la contraseña cumpla los requisitos de las directivas de contraseñas seguras.  
   
--   Si especifica los directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.  
+### <a name="see-also"></a>Vea también
+
+Para obtener más información sobre elegir la autenticación de Windows en lugar de la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea el tema [Elegir un modo de autenticación](../../relational-databases/security/choose-an-authentication-mode.md).  
+
+Para obtener más información sobre cómo elegir una cuenta para ejecutar [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], consulte el tema [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
+
+## <a name ="datadir"></a> Configuración del Motor de base de datos - Directorios de datos
+
+Use esta página para especificar la ubicación de instalación de los archivos de programa y datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Según el tipo de instalación, es posible que el almacenamiento compatible incluya un disco local, almacenamiento compartido o un servidor de archivos SMB.  
   
-### <a name="see-also"></a>Vea también  
- [Configurar los permisos y las cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)   
- [Permisos NTFS y de uso compartido en un servidor de archivos](https://go.microsoft.com/fwlink/?LinkID=206571)  
+Para especificar un recurso compartido de archivos SMB como directorio, deberá escribir manualmente la ruta UNC admitida. No se admite el desplazamiento a un recurso compartido de archivos de SMB. En el ejemplo siguiente se muestra el formato de la ruta de acceso UNC admitida de un recurso compartido de archivos de SMB:
+
+`\\<ServerName>\<ShareName>\...`
+
+### <a name="standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+  
+Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se enumeran los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:  
+  
+### <a name="uielement-list"></a>Lista de UIElement
+  
+|Descripción|Tipos de almacenamiento compatibles|Directorio predeterminado|Recomendaciones|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|**Directorio raíz de datos**|Disco local, servidor de archivos SMB y almacenamiento compartido* |\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\ |El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura listas de control de acceso (ACL) para directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.|  
+|**Directorio de base de datos de usuario**|Disco local, servidor de archivos SMB y almacenamiento compartido*|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data |Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
+|**Directorio de registro de base de datos de usuario**|Disco local, servidor de archivos SMB y almacenamiento compartido*|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
+|**Directorio de copia de seguridad**|Disco local, servidor de archivos SMB y almacenamiento compartido*|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup|Establezca los permisos adecuados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
+  
+\* Aunque se admiten discos compartidos, no se recomienda su uso con una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+### <a name="failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Para instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Descripción|Tipos de almacenamiento compatibles|Directorio predeterminado|Recomendaciones|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|**Directorio raíz de datos**|Almacenamiento compartido, servidor de archivos de SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\\<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.|  
+|**Directorio de base de datos de usuario**|Almacenamiento compartido, servidor de archivos de SMB|\<Unidad:>Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.|  
+|**Directorio de registro de base de datos de usuario**|Almacenamiento compartido, servidor de archivos de SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
+|**Directorio de copia de seguridad**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Backup<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Establezca los permisos apropiados para evitar la pérdida de datos y asegúrese de que la cuenta de usuario para el servicio de SQL Server tenga los permisos adecuados para escribir en el directorio de copia de seguridad. No se permite usar una unidad asignada para los directorios de copia de seguridad.|  
+  
+### <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+  
+El programa de instalación configurará las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y anulará la herencia como parte de la configuración.  
+  
+Las siguientes recomendaciones se aplican a los servidores de archivos de SMB:  
+  
+* Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio.  
+  
+* La cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe los tener permisos NTFS de control total en la carpeta de recurso compartido de archivos de SMB que se usa como directorio de datos.  
+  
+* Al a cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le debe conceder los privilegios SeSecurityPrivilege en el servidor de archivos SMB. Para ello, use la consola Directiva de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la directiva **Administrar registro de seguridad y auditoría**. Esta opción está disponible en la sección **Asignaciones de derechos de usuario** en **Directivas locales** de la consola Directiva de seguridad local.
+
+### <a name="considerations"></a>Consideraciones
+  
+* Cuando agregue características a una instalación existente, no puede cambiar la ubicación de una característica instalada anteriormente ni especificar dicha ubicación para una característica nueva.  
+  
+* Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No comparta ninguno de los directorios de este cuadro de diálogo con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Instale también los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] de una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en directorios independientes.  
+  
+* Los archivos de programa y los archivos de datos no se pueden instalar en las situaciones siguientes:  
+  
+  * En una unidad de disco extraíble
+  * En un sistema de archivos que usa compresión
+  * En un directorio que contiene archivos del sistema
+  * En una unidad de red asignada en una instancia de clúster de conmutación por error  
+  
+## <a name="a-nametempdba-database-engine-configuration---tempdb-page"></a><a name="tempdb"><a/> Página Configuración del Motor de base de datos - TempDB
+
+Use esta página para especificar la ubicación de los archivos de registro y datos de **tempdb**, su tamaño, su configuración de crecimiento y su número de archivos para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Según el tipo de instalación, es posible que el almacenamiento compatible incluya un disco local, almacenamiento compartido o un servidor de archivos SMB.  
+  
+Para especificar un recurso compartido de archivos SMB como directorio, deberá escribir manualmente la ruta UNC admitida. No se admite el desplazamiento a un recurso compartido de archivos de SMB. En el ejemplo siguiente se muestra el formato de la ruta de acceso UNC admitida de un recurso compartido de archivos de SMB:
+
+`\\<ServerName>\<ShareName>\....`
+  
+### <a name="data-and-log-directories-for-a-standalone-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y de registro para una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Para instancias independientes de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación.  
+  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|**Directorios de datos**|Disco local, servidor de archivos SMB y almacenamiento compartido* |\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.<br /><br /> Los procedimientos recomendados para los directorios **tempdb** dependen de los requisitos de carga de trabajo y rendimiento. Para distribuir los archivos de datos entre varios volúmenes, especifique varias carpetas o unidades.|  
+|**Directorio de registro**|Disco local, servidor de archivos SMB y almacenamiento compartido*|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data|Asegúrese de que el directorio de registro tenga espacio suficiente.|  
+  
+\* Aunque se admiten discos compartidos, no se recomienda su uso con una instancia independiente de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+### <a name="data-and-log-directories-for-a-failover-cluster-instance-of-includessnoversionincludesssnoversion-mdmd"></a>Directorios de datos y registro para una instancia de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+Para instancias de clúster de conmutación por error de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], en la tabla siguiente se indican los tipos de almacenamiento admitidos y los directorios predeterminados que puede configurar durante la instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+  
+|Descripción|Tipo de almacenamiento compatible|Directorio predeterminado|Recomendaciones|  
+|-----------------|----------------------------|-----------------------|---------------------|  
+|**Directorio de datos de tempdb**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|El programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] configura las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.<br /><br /> Asegúrese de que el directorio o los directorios (en caso de indicarse varios archivos) especificados son válidos para todos los nodos del clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.|  
+|**Directorio del registro de tempdb**|Disco local, almacenamiento compartido y servidor de archivos SMB|\<Unidad:>\Archivos de programa\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Sugerencia**: Si selecciona un **disco compartido** en la página **Selección de disco de clúster**, el valor predeterminado será el primer disco compartido. El valor predeterminado de este campo será en blanco si no se realiza ninguna selección en la página **Selección de disco de clúster**.|Las prácticas recomendadas para los directorios de datos del usuario dependen de los requisitos de carga de trabajo y rendimiento.<br /><br /> Asegúrese de que el directorio especificado sea válido para todos los nodos de clúster. Durante la conmutación por error, si los directorios **tempdb** no están disponibles en el nodo de destino de la conmutación por error, el recurso de SQL Server no podrá ponerse en línea.<br /><br /> Asegúrese de que el directorio de registro tenga espacio suficiente.|  
+  
+### <a name="uielement-list"></a>Lista de UIElement
+
+Configure las opciones de **tempdb** según sus requisitos y la carga de trabajo. Las siguientes opciones se aplican a los archivos de datos de **tempdb** :  
+  
+* El valor de**Número de archivos** equivale a la cantidad total de archivos de datos de **tempdb**. El valor predeterminado es por debajo de 8 o el número de núcleos lógicos detectados durante la instalación. Como regla general, si el número de procesadores lógicos es inferior o igual a 8, use el mismo número de archivos de datos que procesadores lógicos. Si el número de procesadores lógicos es superior a 8, utilice 8 archivos de datos. Si se produce la contención, aumente el número de archivos de datos en múltiplos de 4 (hasta el número de procesadores lógicos) hasta que la contención se encuentre dentro de niveles aceptables, o realice cambios en la carga de trabajo o el código.
+  
+* El **tamaño inicial (MB)** equivale al tamaño inicial en megabytes para cada archivo de datos de **tempdb**. El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Todos los archivos de datos de **tempdb** tienen el mismo tamaño inicial. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
+  
+* El **tamaño inicial total (MB)** es el tamaño acumulado de todos los archivos de datos de **tempdb**.  
+  
+* **Crecimiento automático (MB)** es la cantidad de espacio en megabytes en la que cada archivo de datos de **tempdb** aumentará automáticamente cuando se quede sin espacio. En [!INCLUDE[sssql15](../../includes/sssql15-md.md)] y versiones posteriores, todos los archivos de datos aumentarán su tamaño al mismo tiempo en la cantidad especificada en esta configuración.  
+  
+* **Crecimiento automático total (MB)** es el tamaño acumulado de cada evento de crecimiento automático.  
+* **Directorios de datos** muestra todos los directorios que contienen archivos de datos de **tempdb**. Cuando hay varios directorios, los archivos de datos se colocan en ellos mediante un mecanismo round robin. Por ejemplo, si crea 3 directorios y especifica 8 archivos de datos, los archivos de datos 1, 4 y 7 se crean en el primer directorio. En el segundo se crean los archivos de datos 2, 5 y 8. Los archivos de datos 3 y 6 están en el tercer directorio.  
+  
+* Para agregar directorios, seleccione **Agregar...** .  
+  
+* Para quitar un directorio, seleccione el que desee y haga clic en **Quitar**.  
+  
+**TempDB log file** (Archivo de registro de TempDB) es el nombre del archivo de registro. Este archivo se crea automáticamente. Las siguientes opciones se aplican únicamente a los archivos de registro de **tempdb** :  
+  
+* **Tamaño inicial (MB)** es el tamaño inicial del archivo de registro de **tempdb** . El valor predeterminado es de 8 MB (o 4 MB para [!INCLUDE[ssexpress](../../includes/ssexpress_md.md)]). [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] presenta un tamaño máximo de archivo inicial de 262 144 MB (256 GB). [!INCLUDE[sssql15](../../includes/sssql15-md.md)] tenía un tamaño máximo de archivo inicial de 1024 MB. Como **tempdb** se vuelve a crear cada vez que SQL Server se inicia o conmuta por error, debe especificar un valor parecido al tamaño requerido por la carga de trabajo para ofrecer un funcionamiento normal. Para optimizar aún más la creación de **tempdb** durante el inicio, habilite la [inicialización instantánea de archivos de base de datos](../../relational-databases/databases/database-instant-file-initialization.md).  
+  
+  > [!NOTE]
+  > **Tempdb** usa el registro mínimo. No se puede hacer una copia de seguridad del archivo de registro de **tempdb**. Se vuelve a crear cada vez que SQL Server se inicia o cuando una instancia del clúster conmuta por error.
+
+* **Crecimiento automático (MB)** equivale al valor en megabytes en el que aumentará el tamaño del registro de **tempdb** .  Con el valor predeterminado de 64 MB, se crea el número óptimo de archivos de registro virtuales durante la inicialización.  
+
+  > [!NOTE]
+  > Los archivos de registro de **Tempdb** no usan la inicialización instantánea de archivos de base de datos.
+  
+* **Directorio de registro** es el directorio en el que se crean los archivos de registro de **tempdb** . Solo hay un directorio de registro de **tempdb**.  
+  
+### <a name="security-considerations"></a>Consideraciones relativas a la seguridad
+  
+El programa de instalación configura las ACL para los directorios de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] e interrumpe la herencia como parte de la configuración.  
+
+Al servidor de archivos SMB se aplican las recomendaciones siguientes:  
+  
+* Si se usa un servidor de archivos SMB, la cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe ser una cuenta de dominio.  
+  
+* La cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe los tener permisos NTFS de control total en la carpeta de recurso compartido de archivos de SMB que se usa como directorio de datos.  
+  
+* Al a cuenta que se usa para instalar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se le debe conceder los privilegios SeSecurityPrivilege en el servidor de archivos SMB. Para ello, use la consola Directiva de seguridad local del servidor de archivos para agregar la cuenta de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] a la directiva **Administrar registro de seguridad y auditoría**. Esta opción está disponible en la sección **Asignaciones de derechos de usuario** en **Directivas locales** de la consola Directiva de seguridad local.  
+  
+> [!NOTE]
+> Si especifica directorios de instalación no predeterminados, asegúrese de que las carpetas de instalación sean únicas para esta instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ninguno de los directorios de este cuadro de diálogo se debe compartir con los de otras instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los componentes de [!INCLUDE[ssDE](../../includes/ssde-md.md)] y [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también deben instalarse en directorios independientes.
+  
+### <a name="see-also"></a>Vea también
+
+* [Configuración de permisos y cuentas de servicio de Windows](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)
+* [Share and NTFS permissions on a file server](https://docs.microsoft.com/iis/web-hosting/configuring-servers-in-the-windows-web-platform/configuring-share-and-ntfs-permissions) (Permisos NTFS y de uso compartido en un servidor de archivos)  
 
 <!--
-The MaxDOP setting only applies to SQL Server 2019 and greater
+The MaxDOP setting applies only to SQL Server 2019 and later.
 -->
 
 ::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
-## <a name="database-engine-configuration---maxdop"></a>Configuración del motor de base de datos: MaxDOP
-El grado máximo de paralelismo (maxDOP) determina el número máximo de procesadores que puede usar una sola instrucción. SQL Server 2019 incluye por primera vez la configuración de esta opción durante la instalación y detecta automáticamente la configuración recomendada de MaxDOP para el servidor según el número de núcleos. El valor máximo predeterminado es 8.  
 
-Puede configurar estas opciones aquí y puede modificarlas tras la instalación. Para obtener más información, vea [Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+## <a name="database-engine-configuration---maxdop-page"></a>Página Configuración del Motor de base de datos - MaxDOP
+
+El **grado máximo de paralelismo (MaxDOP)** determina el número máximo de procesadores que puede usar una sola instrucción. SQL Server 2019 introduce la posibilidad de configurar esta opción durante la instalación. SQL Server 2019 detecta también automáticamente la configuración de MaxDOP recomendada para el servidor en función del número de núcleos. El valor máximo predeterminado es 8.  
+
+Puede configurar esta opción en esta página, y puede modificarla tras la instalación. Para obtener más información, vea [Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md).
+
 ::: moniker-end
 
+## <a name="database-engine-configuration---filestream-page"></a>Página Configuración del Motor de base de datos - FILESTREAM
 
-## <a name="database-engine-configuration---filestream"></a>Configuración del motor de base de datos - Secuencia de archivo
-  Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un sistema de archivos NTFS almacenando datos de objetos binarios grandes (BLOB) **varbinary(max)** como archivos en el sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos de Win32 proporcionan el acceso de la transmisión por secuencias a los datos.  
+Utilice esta página para habilitar FILESTREAM para esta instalación de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integra [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] con un sistema de archivos NTFS mediante el almacenamiento de los datos de objetos binarios grandes (BLOB) **varbinary(max)** como archivos del sistema de archivos. [!INCLUDE[tsql](../../includes/tsql-md.md)] pueden insertar, actualizar, consultar, buscar y realizar copias de seguridad de los datos FILESTREAM. Las interfaces del sistema de archivos Win32 de Microsoft proporcionan acceso en streaming a los datos. 
   
-### <a name="uielement-list"></a>Lista de UIElement  
- **Habilitar FILESTREAM para acceso Transact-SQL**  
- Seleccione esta opción para habilitar FILESTREAM para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . Este control debe comprobarse para que las otras opciones de control estén disponibles.  
+### <a name="uielement-list"></a>Lista de UIElement
   
- **Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos**  
- Seleccione esta opción para habilitar el acceso de transmisión por secuencias de Win32 para FILESTREAM.  
+**Habilitar FILESTREAM para acceso Transact-SQL**: Seleccione esta opción para habilitar FILESTREAM para el acceso a [!INCLUDE[tsql](../../includes/tsql-md.md)] . Debe activar esta casilla para que las demás opciones estén disponibles.  
   
- **Nombre de recurso compartido de Windows**  
- Utilice este control para escribir el nombre del recurso compartido de Windows en el que los datos de FILESTREAM se almacenarán.  
+**Habilitar FILESTREAM para el acceso de transmisión por secuencias de E/S de archivos**: Seleccione esta opción para habilitar el acceso de transmisión por secuencias de Win32 para FILESTREAM.  
   
- **Permitir que los clientes remotos tengan acceso de transmisión por secuencias a los datos de FILESTREAM**  
- Seleccione este control para permitir que los clientes remotos tengan acceso a estos datos de FILESTREAM en este servidor.  
+**Nombre de recurso compartido de Windows**: especifique el nombre del recurso compartido de Windows en el que se almacenarán los datos de FILESTREAM.  
   
-### <a name="see-also"></a>Vea también  
- [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)   
- [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
+**Permitir que los clientes remotos tengan acceso de transmisión por secuencias a los datos de FILESTREAM**: active esta casilla para permitir que los clientes remotos tengan acceso a los datos de FILESTREAM en este servidor.  
+  
+### <a name="see-also"></a>Vea también
 
+* [Habilitar y configurar FILESTREAM](../../relational-databases/blob/enable-and-configure-filestream.md)
+* [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)  
 
-## <a name="database-engine-configuration---user-instance"></a>Configuración del motor de base de datos - Instancia de usuario
-Utilice la página **Instancia de usuario** para generar una instancia independiente de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usuarios sin permisos de administrador, y para agregar usuarios al rol Administrador.  
+## <a name="database-engine-configuration---user-instance-page"></a>Página Configuración del Motor de base de datos - Instancia de usuario
+
+Use la página **Instancia de usuario** para:
+
+* Generar una instancia independiente de [!INCLUDE[ssDE](../../includes/ssde-md.md)] para usuarios sin permisos de administrador
+* Agregar usuarios al rol de administrador  
   
-### <a name="option"></a>Opción  
- Habilitar instancias de usuario  
- La opción predeterminada es activado. Para deshabilitar la funcionalidad de habilitar instancias de usuario, desactive la casilla.  
+### <a name="options"></a>Opciones
   
- La instancia de usuario, también denominada instancia secundaria o cliente, es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generada por la instancia primaria (la instancia principal que se ejecuta como servicio, como [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) en nombre de un usuario. La instancia de usuario se ejecuta como un proceso de usuario en el contexto de seguridad de dicho usuario. La instancia de usuario está aislada de la instancia primaria y de las demás instancias de usuario que se ejecutan en el equipo. La característica de instancias de usuario también se denomina "Ejecutar como usuario normal" (RANU).  
+**Habilitar instancias de usuario**: el valor predeterminado es activado. Para desactivar la capacidad de habilitar instancias de usuario, desactive la casilla.  
+  
+La instancia de usuario, también denominada instancia secundaria o cliente, es una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generada por la instancia primaria (la instancia principal que se ejecuta como servicio, como [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]) en nombre de un usuario. La instancia de usuario se ejecuta como un proceso de usuario en el contexto de seguridad de dicho usuario. La instancia de usuario está aislada de la instancia principal y de las demás instancias de usuario que se ejecutan en el equipo. La característica de instancias de usuario también se denomina "Ejecutar como usuario normal" (RANU).  
   
 > [!NOTE]  
->  Los inicios de sesión suministrados como miembros del rol fijo de servidor **sysadmin** durante la instalación se suministran como administradores en la base de datos de plantilla. Son miembros del rol fijo de servidor **sysadmin** en la instancia de usuario a menos que se quiten.  
+> Los inicios de sesión aprovisionados como miembros del rol fijo de servidor **sysadmin** durante la instalación se aprovisionan como administradores en la base de datos de plantilla. Son miembros del rol fijo de servidor **sysadmin** en la instancia de usuario a menos que se quiten.  
   
- Agregar usuario al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
- De forma predeterminada, esta casilla está desactivada. Para agregar el usuario del programa de instalación actual al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , active la casilla.  
+**Agregar usuario al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** :  El valor predeterminado es desactivado. Para agregar el usuario del programa de instalación actual al rol Administrador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], active la casilla.  
   
- Los usuarios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que sean miembros de BUILTIN\Administradores no se agregan automáticamente al rol fijo de servidor sysadmin al conectarse a [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)]. Solo los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que se hayan agregado de forma explícita a un rol Administrador de servidor pueden administrar [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Cualquier miembro del grupo BUILTIN\Users se puede conectar a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] , pero tendrá permisos limitados para realizar tareas de base de datos. Por este motivo, a los usuarios que hereden los privilegios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] de los grupos BUILTIN\Administrators y BUILTIN\Users de versiones anteriores de Windows se les debe conceder de forma explícita privilegios administrativos a las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que se ejecuten en [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
+Los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que sean miembros de BUILTIN\Administrators no se agregan automáticamente al rol fijo de servidor **sysadmin** al conectarse a [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Solo los usuarios de [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)] que se hayan agregado de forma explícita a un rol Administrador de servidor pueden administrar [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]. Los miembros del grupo Built-In\Users pueden conectarse a la instancia de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)], pero tendrán permisos limitados para hacer tareas de base de datos. Por este motivo, a los usuarios que hereden los privilegios de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] de los grupos BUILTIN\Administrators y Built-In\Users de versiones anteriores de Windows se les debe conceder de forma explícita privilegios administrativos a las instancias de [!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] que se ejecuten en [!INCLUDE[wiprlhext](../../includes/wiprlhext-md.md)].  
   
- Para realizar cambios en los roles de usuario una vez finalizado este programa de instalación, utilice la Herramienta de configuración de área expuesta (SQLSAC.exe) de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] . Para actualizar la lista de usuarios del rol Administrador del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , haga clic en el vínculo **Agregar nuevo administrador** .  
-  
- Asegúrese de que en el campo **Usuario para aprovisionar** aparezca el nombreDeDominio\nombreDeUsuario del usuario cuyos permisos se deben actualizar. Seleccione el rol que se debe actualizar en la lista de instancias de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del panel **Privilegios disponibles** y, a continuación, haga clic en la flecha que señala a la derecha. Para agregar el usuario a todos los roles disponibles para todas las instancias disponibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y todos los roles disponibles, haga clic en la flecha doble que señala a la derecha.  
-  
- Para implementar los cambios cuando han finalizado las selecciones [!INCLUDE[clickOK](../../includes/clickok-md.md)] Para cerrar la herramienta sin realizar cambios, haga clic en **Cancelar**.  
-  
-  
+Para realizar cambios en los roles de usuario después de que finalice el programa de instalación, use [SQL Server Management Studio](../../relational-databases/security/authentication-access/join-a-role.md) o [Transact-SQL](../../t-sql/statements/alter-role-transact-sql.md).

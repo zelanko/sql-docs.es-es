@@ -9,12 +9,12 @@ ms.reviewer: maggies
 author: casualoak
 ms.author: rhys
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: cd2f9dec39075b332b2ae38c622f3970faf8d331
-ms.sourcegitcommit: c40f663d4486e574fd749f2c8e84c98d41970352
+ms.openlocfilehash: 8767640e2ad0a7b71bb7977ab6eb997892845403
+ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/12/2019
-ms.locfileid: "67037854"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67533829"
 ---
 # <a name="release-notes-for-sql-server-reporting-services-ssrs-2017-and-later"></a>Notas de la versión de SQL Server Reporting Services (SSRS) 2017 y versiones posteriores
 
@@ -50,6 +50,23 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
+
+## <a name="1406001274-20190701"></a>14.0.600.1274, 2019/07/01
+
+| Se corrigió un problema | Detalles |
+| :---------- | :------ |
+| Actualizaciones de seguridad | &nbsp; |
+| No se puede seleccionar los días laborables al crear una programación semanal | &nbsp; |
+| Informe no muestra retornos de carro correctamente en formato de Word | &nbsp; |
+| No funciona más con la reciente SSRS 2017 actualiza a System Center Operations Manager(SCOM) 2019 | &nbsp; |
+| Se produjo un error al invocar la extensión de la autorización para el conjunto de datos compartido | &nbsp; |
+| Lógica que puede cambiado en el procedimiento almacenado GetAllProperties en SSRS 2017 y PBIRS, lo que hace que el extremo del servicio Web ReportingService2010.GetProperties método no se puede obtener todos los datos de informe vinculado | &nbsp; |
+| Encabezado de fila de cuadrícula sencillo en el informe móvil desaparece cuando se hace clic en un elemento dentro de la cuadrícula | &nbsp; |
+| No se puede usar el campo de fecha en el parámetro de la suscripción controlada por datos | &nbsp; |
+| Muestra un tablix anidado fuente pequeña o parcial en SSRS 2016 y versiones posteriores | &nbsp; |
+| Suscripciones con error de parámetro de fecha y hora después de que el usuario con cambios de configuración regional diferentes la suscripción | &nbsp; |
+| Crear una suscripción controlada por datos con la extensión de entrega Null se producen errores con "se ha producido un error de entrega" | &nbsp; |
+| Codificación de dirección URL es incorrecta al establecer el valor en formato Excel\Word | &nbsp; |
 
 ## <a name="1406001109-20190212"></a>14.0.600.1109, 2019/02/12
 

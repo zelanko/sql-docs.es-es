@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3d5e7b1be70692f29b81f06725adfa326ba77d65
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388362"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500232"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -193,7 +193,6 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 ### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Sintaxis para Azure SQL Data Warehouse y Almacenamiento de datos paralelos
 
 ```
-  
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
         ( { column [ ASC | DESC ] } [ ,...n ] )
@@ -203,24 +202,27 @@ CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ## <a name="arguments"></a>Argumentos
 
-UNIQUE Crea un índice único en una tabla o una vista. Un índice único es aquel en el que no se permite que dos filas tengan el mismo valor de clave del índice. El índice clúster de una vista debe ser único.
+UNIQUE      
+Crea un índice único en una tabla o una vista. Un índice único es aquel en el que no se permite que dos filas tengan el mismo valor de clave del índice. El índice clúster de una vista debe ser único.
 
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] no admite la creación de un índice único sobre columnas que ya contengan valores duplicados, independientemente de si se ha establecido o no IGNORE_DUP_KEY en ON. Si se intenta, [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra un mensaje de error. Se deben quitar los valores duplicados para poder crear un índice único en la columna o columnas. Las columnas que se utilizan en un índice único se deben establecer en NOT NULL, dado que varios valores NULL se consideran duplicados cuando se crea un índice único.
 
-CLUSTERED Crea un índice en el que el orden lógico de los valores de clave determina el orden físico de las filas correspondientes de la tabla. El nivel inferior, u hoja, de un índice clúster contiene las filas de datos reales de la tabla. Una tabla o vista permite un índice clúster al mismo tiempo.
+CLUSTERED      
+Crea un índice en el que el orden lógico de los valores de clave determina el orden físico de las filas correspondientes de la tabla. El nivel inferior, u hoja, de un índice clúster contiene las filas de datos reales de la tabla. Una tabla o vista permite un índice clúster al mismo tiempo.
 
 Una vista con un índice clúster único se denomina vista indizada. La creación de un índice clúster único en una vista materializa físicamente la vista. Es necesario crear un índice clúster único en una vista para poder definir otros índices en la misma vista. Para obtener más información, vea [Crear vistas indexadas](../../relational-databases/views/create-indexed-views.md).
 
 Cree el índice clúster antes de crear los índices no clúster. Los índices no clúster existentes en las tablas se vuelven a generar al crear un índice clúster.
 
-Si no se especifica CLUSTERED, se crea un índice no clúster.
+Si no se especifica `CLUSTERED`, se crea un índice no agrupado.
 
 > [!NOTE]
 > Debido a que el nivel hoja de un índice clúster y sus páginas de datos son, por definición, lo mismo, la creación de un índice clúster y la utilización de la cláusula ON *partition_scheme_name* u ON *filegroup_name* mueven una tabla desde el grupo de archivos en el que se creó la tabla al nuevo grupo de archivos o esquema de partición. Antes de crear tablas o índices en grupos de archivos específicos, compruebe cuáles están disponibles y que esos grupos de archivos tengan suficiente espacio disponible para el índice.
 
 En algunos casos, al crear un índice clúster se pueden habilitar previamente los índices deshabilitados. Para obtener más información, consulte [Habilitar índices y restricciones](../../relational-databases/indexes/enable-indexes-and-constraints.md) y [Deshabilitar índices y restricciones](../../relational-databases/indexes/disable-indexes-and-constraints.md).
 
-NONCLUSTERED Crea un índice que especifica la ordenación lógica de una tabla. Con un índice no clúster, el orden físico de las filas de datos es independiente del orden indizado.
+NONCLUSTERED      
+Crea un índice que especifica la ordenación lógica de una tabla. Con un índice no clúster, el orden físico de las filas de datos es independiente del orden indizado.
 
 Cada tabla puede tener hasta 999 índices no clúster, independientemente de cómo se crean: de forma implícita con las restricciones PRIMARY KEY y UNIQUE, o explícita con CREATE INDEX.
 
@@ -228,9 +230,11 @@ Para las vistas indizadas, solo se pueden crear índices no clúster en una vist
 
 Si no se especifica, el tipo de índice predeterminado es NONCLUSTERED.
 
-*index_name* Es el nombre del índice. Los nombres de índice deben ser únicos en una tabla o vista, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).
+*index_name*      
+ Es el nombre del índice. Los nombres de índice deben ser únicos en una tabla o vista, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).
 
-*column* Es la columna o columnas en las que se basa el índice. Especifique dos o más nombres de columna para crear un índice compuesto sobre los valores combinados de las columnas especificadas. Enumere las columnas que desee incluir en el índice compuesto (en orden de prioridad) entre paréntesis después de *table_or_view_name*.
+*column*      
+ Es la columna o columnas en las que se basa el índice. Especifique dos o más nombres de columna para crear un índice compuesto sobre los valores combinados de las columnas especificadas. Enumere las columnas que desee incluir en el índice compuesto (en orden de prioridad) entre paréntesis después de *table_or_view_name*.
 
 Se pueden combinar hasta 32 columnas en la clave de un único índice compuesto. Todas las columnas de una clave del índice compuesto deben encontrarse en la misma tabla o vista. El tamaño máximo permitido de los valores de índice combinados es de 900 bytes para un índice agrupado o de 1700 para un índice no agrupado. Los límites son 16 columnas y 900 bytes para las versiones anteriores a [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].
 
@@ -238,9 +242,11 @@ Las columnas de los tipos de datos de objetos grandes (LOB) **ntext**, **text**,
 
 Puede crear índices en columnas de tipo definido por el usuario CLR si el tipo admite el orden binario. También puede crear índices en columnas calculadas que están definidas como invocaciones de método de una columna de tipo definido por el usuario, siempre que los métodos estén marcados como deterministas y no realicen operaciones de acceso a datos. Para obtener más información sobre la indización de columnas de tipo definido por el usuario CLR, vea [Tipos definidos por el usuario de CLR](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md).
 
-[ **ASC** | DESC ] Determina la dirección ascendente o descendente del orden de la columna de índice determinada. El valor predeterminado es ASC.
+[ **ASC** | DESC ]      
+Determina la dirección ascendente o descendente del orden de la columna de índice determinada. El valor predeterminado es ASC.
 
-INCLUDE **(** _column_ [ **,** ... *n* ] **)** Especifica las columnas que no son de clave que se agregarán en el nivel hoja del índice no agrupado. El índice no clúster puede ser único o no único.
+INCLUDE **(** _column_ [ **,** ... *n* ] **)**       
+Especifica las columnas que no son de clave que se agregarán en el nivel hoja del índice no clúster. El índice no clúster puede ser único o no único.
 
 Los nombres de columna no se pueden repetir en la lista INCLUDE y no se pueden utilizar simultáneamente como columnas de clave y que no son de clave. Los índices no clúster siempre contienen las columnas de índice clúster si se define un índice clúster en la tabla. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
 
@@ -250,7 +256,8 @@ Las columnas calculadas que son deterministas, y precisas o imprecisas, pueden s
 
 Para obtener información sobre cómo crear un índice XML, vea [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md).
 
-WHERE \<filter_predicate> Crea un índice filtrado especificando qué filas se van a incluir en el índice. El índice filtrado debe ser un índice no clúster en una tabla. Crea las estadísticas filtradas para las filas de datos en el índice filtrado.
+WHERE \<filter_predicate>      
+Crea un índice filtrado especificando qué filas se van a incluir en el índice. El índice filtrado debe ser un índice no clúster en una tabla. Crea las estadísticas filtradas para las filas de datos en el índice filtrado.
 
 El predicado de filtro utiliza la lógica de comparación simple y no puede hacer referencia a una columna calculada, a una columna UDT, a una columna de tipo de datos espacial o a una columna de tipo de datos hierarchyID. Las comparaciones que utilizan literales NULL no se admiten con los operadores de comparación. En su lugar, use los operadores IS NULL e IS NOT NULL.
 
@@ -266,8 +273,8 @@ WHERE StartDate IN ('20000404', '20000905') AND EndDate IS NOT NULL
 
 Los índices filtrados no se aplican a los índices XML ni a los índices de texto completo. Para los índices UNIQUE, solo las filas seleccionadas deben tener valores de índice únicos. Los índices filtrados no admiten la opción IGNORE_DUP_KEY.
 
-ON *partition_scheme_name* **( _column_name_ )** 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ON *partition_scheme_name* **( _column_name_ )**       
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica el esquema de partición que define los grupos de archivos a los que se asignarán las particiones de un índice con particiones. El esquema de partición debe existir dentro de la base de datos mediante la ejecución de [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) o [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md). *column_name* especifica la columna en la que se van a crear las particiones de un índice con particiones. Esta columna debe coincidir con el tipo de datos, la longitud y la precisión del argumento de la función de partición que *partition_scheme_name* emplea. *column_name* no está limitado a las columnas de la definición de índice. Se puede especificar cualquier columna de la tabla base, excepto en el caso de partición de un índice UNIQUE, en el que se debe elegir *column_name* entre las columnas usadas como clave única. Esta restricción permite que [!INCLUDE[ssDE](../../includes/ssde-md.md)] compruebe la unicidad de los valores de clave en una única partición solamente.
 
@@ -281,13 +288,13 @@ Si no se especificó _partition_scheme_name_ o _filegroup_ y se crearon particio
 
 Para más información sobre los índices con particiones, vea [Tablas e índices con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
 
-ON _filegroup_name_
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+ON _filegroup_name_      
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Crea el índice especificado en el grupo de archivos especificado. Si no se ha especificado una ubicación y la tabla o vista no tiene particiones, el índice utiliza el mismo grupo de archivos que la tabla o vista subyacente. El grupo de archivos debe existir previamente.
 
-ON **"** default **"** 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssCurrent](../../includes/sssdsfull-md.md)].
+ON **"** default **"**       
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Crea el índice especificado en el mismo grupo de archivos o esquema de partición que la tabla o la vista.
 
@@ -296,7 +303,8 @@ El término predeterminado (default), en este contexto, no es una palabra clave.
 > [!NOTE]
 > "default" no indica el grupo de archivos de base de datos predeterminado en el contexto de CREATE INDEX. Esto difiere de CREATE TABLE, donde "default" busca la tabla en el grupo de archivos predeterminado de la base de datos.
 
-[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ] **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
+[ FILESTREAM_ON { *filestream_filegroup_name* | *partition_scheme_name* | "NULL" } ]      
+**Se aplica a:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 Especifica la posición de datos FILESTREAM para la tabla cuando se crea un índice clúster. La cláusula FILESTREAM_ON permite mover los datos FILESTREAM a otro esquema de partición o a otro grupo de archivos FILESTREAM.
 
@@ -306,19 +314,22 @@ Si se crean particiones de la tabla, la cláusula FILESTREAM_ON deberá incluirs
 
 Si la tabla no tiene particiones, no se pueden crear particiones en la columna FILESTREAM. Los datos FILESTREAM para la tabla deben estar almacenados en un grupo de archivos único que se especifica en la cláusula FILESTREAM_ON.
 
-NULL de FILESTREAM_ON se puede especificar en una instrucción CREATE INDEX si se va a crear un índice clúster y la tabla no contiene una columna FILESTREAM.
+`FILESTREAM_ON NULL` se puede especificar en una instrucción CREATE INDEX si se va a crear un índice clúster y la tabla no contiene una columna FILESTREAM.
 
 Para obtener más información, vea [FILESTREAM &#40;SQL Server&#41;](../../relational-databases/blob/filestream-sql-server.md).
 
-**\<object>::=**
+**\<object>::=**      
 
 Es el objeto completo o no que se indizará.
 
-_database_name_ Es el nombre de la base de datos.
+_database_name_      
+Es el nombre de la base de datos.
 
-*schema_name* Es el nombre del esquema al que pertenece la tabla o la vista.
+*schema_name*      
+Es el nombre del esquema al que pertenece la tabla o la vista.
 
-*table_or_view_name* Es el nombre de la tabla o la vista que se va a indizar.
+*table_or_view_name*      
+Es el nombre de la tabla o la vista que se va a indizar.
 
 La vista debe definirse con SCHEMABINDING para crear un índice en ella. Es necesario crear un índice clúster único en una vista antes de crear los índices no clúster. Para obtener más información acerca de las vistas indizadas, vea la sección Comentarios.
 
@@ -326,24 +337,26 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el objeto puede s
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes _database_name_.[_schema_name_]._object_name_ cuando *database_name* es la base de datos actual o _database_name_ es `tempdb` y _object_name_ comienza por #.
 
-**\<relational_index_option\>::=**
-
+**\<relational_index_option\>::=**       
 Especifica las opciones que se van a utilizar en la creación del índice.
 
-PAD_INDEX = { ON | **OFF** } **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+PAD_INDEX = { ON | **OFF** }      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica el relleno del índice. El valor predeterminado es OFF.
 
-ON El porcentaje de espacio disponible especificado por *fillfactor* se aplica a páginas de nivel intermedio del índice.
+ON      
+El porcentaje de espacio disponible especificado por *fillfactor* se aplica a páginas de nivel intermedio del índice.
 
-OFF o _fillfactor_ no se especifica Las páginas de nivel intermedio se rellenan casi al máximo de su capacidad dejando espacio suficiente para al menos una fila del tamaño máximo que el índice puede contener teniendo en cuenta el conjunto de claves de las páginas intermedias.
+No se especifica OFF ni _fillfactor_.      
+Las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.
 
 La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de _fillfactor_.
 
 En la sintaxis compatible con versiones anteriores, WITH PAD_INDEX es equivalente a WITH PAD_INDEX = ON.
 
-FILLFACTOR **=** _fillfactor_
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+FILLFACTOR **=** _fillfactor_      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. Si *fillfactor* es 100, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.
 
@@ -354,23 +367,29 @@ La configuración de FILLFACTOR solo se aplica cuando se crea o se vuelve a gene
 
 Para obtener más información, vea [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).
 
-SORT_IN_TEMPDB = { ON | **OFF** } **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+SORT_IN_TEMPDB = { ON | **OFF** }      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Indica si deben almacenarse resultados temporales de orden en **tempdb**. El valor predeterminado es OFF.
 
-ON Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.
+ON      
+Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en **tempdb**. Esto puede reducir el tiempo necesario para crear un índice si **tempdb** y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.
 
-OFF Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.
+OFF      
+Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.
 
 Además del espacio necesario en la base de datos del usuario para crear el índice, **tempdb** debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).
 
 En la sintaxis compatible con versiones anteriores, WITH SORT_IN_TEMPDB es equivalente a WITH SORT_IN_TEMPDB = ON.
 
-IGNORE_DUP_KEY = { ON | **OFF** } Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene efecto cuando se ejecutan [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.
+IGNORE_DUP_KEY = { ON | **OFF** }      
+Especifica la respuesta de error cuando una operación de inserción intenta insertar valores de clave duplicados en un índice único. La opción IGNORE_DUP_KEY se aplica solamente a operaciones de inserción realizadas tras crear o volver a generar el índice. La opción no tiene efecto cuando se ejecutan [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md), [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md). El valor predeterminado es OFF.
 
-ON Se producirá un mensaje de advertencia cuando se inserten valores de clave duplicados en un índice único. Solo las filas que infrinjan la restricción de unicidad darán error.
+ON      
+Se producirá un mensaje de advertencia cuando se inserten valores de clave duplicados en un índice único. Solo las filas que infrinjan la restricción de unicidad darán error.
 
-OFF Se producirá un mensaje de error cuando se inserten valores de clave duplicados en un índice único. Toda la operación INSERT se revertirá.
+OFF      
+Se producirá un mensaje de error cuando se inserten valores de clave duplicados en un índice único. Toda la operación INSERT se revertirá.
 
 IGNORE_DUP_KEY no se puede establecer en ON para los índices creados en una vista, los índices que no sean únicos, los índices XML, los índices espaciales y los índices filtrados.
 
@@ -378,11 +397,14 @@ Para ver IGNORE_DUP_KEY, use [sys.indexes](../../relational-databases/system-cat
 
 En la sintaxis compatible con versiones anteriores, WITH IGNORE_DUP_KEY es equivalente a WITH IGNORE_DUP_KEY = ON.
 
-STATISTICS_NORECOMPUTE = { ON | **OFF**} Especifica si se vuelven a calcular las estadísticas de distribución. El valor predeterminado es OFF.
+STATISTICS_NORECOMPUTE = { ON | **OFF**}      
+Especifica si se vuelven a calcular las estadísticas de distribución. El valor predeterminado es OFF.
 
-ON Las estadísticas obsoletas no se vuelven a calcular automáticamente.
+ON      
+Las estadísticas obsoletas no se vuelven a calcular automáticamente.
 
-OFF Se habilita la actualización automática de las estadísticas.
+OFF      
+Se habilita la actualización automática de las estadísticas.
 
 Para restaurar la actualización automática de estadísticas, establezca STATISTICS_NORECOMPUTE en OFF o ejecute UPDATE STATISTICS sin la cláusula NORECOMPUTE.
 
@@ -391,7 +413,8 @@ Para restaurar la actualización automática de estadísticas, establezca STATIS
 
 En la sintaxis compatible con versiones anteriores, WITH STATISTICS_NORECOMPUTE es equivalente a WITH STATISTICS_NORECOMPUTE = ON.
 
-STATISTICS_INCREMENTAL = { ON | **OFF** } Cuando es **ON**, se generan estadísticas por partición. Cuando se establece en **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es **OFF**.
+STATISTICS_INCREMENTAL = { ON | **OFF** }      
+Cuando se establece en **ON**, se crean estadísticas por cada partición. Cuando se establece en **OFF**, se quita el árbol de estadísticas y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] recalcula las estadísticas. El valor predeterminado es **OFF**.
 
 Si no se admiten las estadísticas por partición, la opción se omite y se genera una advertencia. Las estadísticas incrementales no se admiten para los siguientes tipos de estadísticas:
 
@@ -403,11 +426,14 @@ Si no se admiten las estadísticas por partición, la opción se omite y se gene
 - Estadísticas creadas sobre tablas internas.
 - Estadísticas creadas con índices espaciales o índices XML.
 
-DROP_EXISTING = { ON | **OFF** } Es una opción para quitar y volver a generar el índice agrupado o no agrupado existente con las especificaciones de la columna modificada y mantener el mismo nombre para el índice. El valor predeterminado es OFF.
+DROP_EXISTING = { ON | **OFF** }      
+Es una opción para quitar y volver a generar el índice agrupado o no agrupado existente con las especificaciones de la columna modificada y mantener el mismo nombre para el índice. El valor predeterminado es OFF.
 
-ON Especifica que se debe quitar y volver a generar el índice existente, que debe tener el mismo nombre que el parámetro *index_name*.
+ON      
+Especifica que se debe quitar y volver a generar el índice existente, que debe tener el mismo nombre que el parámetro *index_name*.
 
-OFF Especifica que no se debe quitar y volver a generar el índice existente. SQL Server muestra un error si ya existe el nombre de índice especificado.
+OFF      
+Especifica que no se debe quitar y volver a generar el índice existente. SQL Server muestra un error si ya existe el nombre de índice especificado.
 
 Con DROP_EXISTING, puede cambiar:
 
@@ -420,35 +446,40 @@ Con DROP_EXISTING, no puede cambiar:
 
 En la sintaxis compatible con versiones anteriores, WITH DROP_EXISTING es equivalente a WITH DROP_EXISTING = ON.
 
-ONLINE = { ON | **OFF** } Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.
+ONLINE = { ON | **OFF** }      
+Especifica si las tablas subyacentes y los índices asociados están disponibles para realizar consultas y modificar datos durante la operación de índice. El valor predeterminado es OFF.
 
 > [!NOTE]
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).
 
-ON Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Esto habilita las consultas o actualizaciones en la tabla subyacente y en los índices. Al inicio de la operación, se mantiene un bloqueo compartido (S) en el objeto de origen durante un período de tiempo muy corto. Al final de la operación, se adquiere un bloqueo S (compartido) sobre el origen durante un corto período, si se está creando un índice no clúster; o bien, se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea, y cuando se vuelve a crear un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.
+ON      
+Los bloqueos de tabla de larga duración no se mantienen durante la operación de indización. Durante la fase principal de la operación de índice, solo se mantiene un bloqueo preventivo en la tabla de origen. Esto habilita las consultas o actualizaciones en la tabla subyacente y en los índices. Al inicio de la operación, se mantiene un bloqueo compartido (S) en el objeto de origen durante un período de tiempo muy corto. Al final de la operación, se adquiere un bloqueo S (compartido) sobre el origen durante un corto período, si se está creando un índice no clúster; o bien, se adquiere un bloqueo SCH-M (modificación del esquema) cuando se crea o se quita un índice clúster en línea, y cuando se vuelve a crear un índice clúster o no clúster. ONLINE no se puede establecer en ON cuando se crea un índice en una tabla temporal local.
 
-OFF Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT.
+OFF      
+Los bloqueos de tabla se aplican durante la operación de índice. Una operación de índice sin conexión para crear, volver a crear o quitar un índice clúster, o para volver a crear o quitar un índice no clúster, adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación. Una operación de índice sin conexión que crea un índice no clúster adquiere un bloqueo compartido (S) en la tabla. Esto evita que se realicen actualizaciones en la tabla subyacente, pero permite la realización de operaciones de lectura, como instrucciones SELECT.
 
 Para más información, vea [Cómo funcionan las operaciones de índice en línea](../../relational-databases/indexes/how-online-index-operations-work.md).
 
-RESUMABLE **=** { ON | **OFF**}
+RESUMABLE **=** { ON | **OFF**}      
 
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
 
  Especifica si una operación de índice en línea se puede reanudar.
 
- ON: la operación de índice se puede reanudar.
+ ON      
+la operación de índice se puede reanudar.
 
- OFF: la operación de índice no se puede reanudar.
+ OFF      
+la operación de índice no se puede reanudar.
 
-MAX_DURATION **=** *time* [**MINUTES**] used with **RESUMABLE = ON** (requires **ONLINE = ON**).
+MAX_DURATION **=** *time* [**MINUTES**] se usa con **RESUMABLE = ON** (requiere **ONLINE = ON**)      
 
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] como una característica en vista previa pública
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
 
 Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecuta una operación de índice en línea reanudable antes de ponerse en pausa.
 
 > [!WARNING]
->Para saber más sobre las operaciones de índices que pueden realizarse en línea, vea [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
+> Para saber más sobre las operaciones de índices que pueden realizarse en línea, vea [Directrices para operaciones de índices en línea](../../relational-databases/indexes/guidelines-for-online-index-operations.md).
 
  Los índices, incluidos los índices de las tablas temp globales, se pueden crear en línea, con las excepciones siguientes:
 
@@ -461,57 +492,71 @@ Indica el tiempo (valor entero especificado en minutos) durante el cual se ejecu
 
 Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
-ALLOW_ROW_LOCKS = { ON | **OFF** } **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ALLOW_ROW_LOCKS = { **ON** | OFF }      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.
 
-ON Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.
+ON      
+Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.
 
-OFF No se usan los bloqueos de fila.
+OFF      
+No se usan los bloqueos de fila.
 
-ALLOW_PAGE_LOCKS = { ON | **OFF** } **Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ALLOW_PAGE_LOCKS = { **ON** | OFF }      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica si se permiten bloqueos de página. El valor predeterminado es ON.
 
-ON Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.
+ON      
+Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.
 
-OFF No se utilizan bloqueos de página.
+OFF      
+No se utilizan bloqueos de página.
 
 
-OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** } **Válido para**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+OPTIMIZE_FOR_SEQUENTIAL_KEY = { ON | **OFF** }      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 Especifica si se deben optimizar la contención de inserción de la última página. El valor predeterminado es OFF. Consulte la sección [Claves secuenciales](#sequential-keys) para obtener más información.
 
-MAXDOP = _max_degree_of_parallelism_
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+MAXDOP = _max_degree_of_parallelism_      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Reemplaza la opción de configuración de **max_degree_of_parallelism** mientras dure la operación de índice. Para obtener más información, vea [Establecer la opción de configuración del servidor Grado máximo de paralelismo](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md). Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.
 
 _max_degree_of_parallelism_ puede tener estos valores:
 
-1 Suprime la generación de planes paralelos.
+1      
+Suprime la generación de planes paralelos.
 
-\>1 Restringe el número máximo de procesadores utilizados en una operación de índice paralelo al número especificado o a un número inferior, en función de la actual carga de trabajo del sistema.
+\>1      
+Restringe el número máximo de procesadores utilizados en una operación de índice paralelo al número especificado o a un número inferior, en función de la actual carga de trabajo del sistema.
 
-0 (valor predeterminado) Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.
+0 (predeterminado)      
+Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.
 
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 > [!NOTE]
 > Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Ediciones y características admitidas de SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md) y [Ediciones y características admitidas de SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).
 
-DATA_COMPRESSION Especifica la opción de compresión de datos para el índice, número de partición o intervalo de particiones especificado. Las opciones son las siguientes:
+DATA_COMPRESSION      
+Especifica la opción de compresión de datos para el índice, número de partición o intervalo de particiones especificado. Las opciones son las siguientes:
 
-NONE No se comprimen el índice ni las particiones especificadas.
+Ninguno      
+No se comprimen el índice ni las particiones especificadas.
 
-ROW El índice o las particiones especificadas se comprimen mediante la compresión de fila.
+ROW      
+El índice o las particiones especificadas se comprimen mediante la compresión de fila.
 
-PAGE El índice o las particiones especificadas se comprimen mediante la compresión de página.
+PAGE      
+El índice o las particiones especificadas se comprimen mediante la compresión de página.
 
 Para más información sobre la compresión, vea [Compresión de datos](../../relational-databases/data-compression/data-compression.md).
 
-ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)** 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+ON PARTITIONS **(** { \<partition_number_expression> | \<range> } [ **,** ..._n_ ] **)**       
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el índice no tiene particiones, el argumento ON PARTITIONS generará un error. Si no se proporciona la cláusula ON PARTITIONS, la opción DATA_COMPRESSION se aplica a todas las particiones de un índice con particiones.
 
@@ -521,7 +566,7 @@ Especifica las particiones a las que se aplica el valor DATA_COMPRESSION. Si el 
 - Proporcionar los números de partición para varias particiones individuales separadas por comas, por ejemplo: EN PARTICIONES (1,5).
 - Proporcione ambos rangos y las particiones individuales, por ejemplo: EN PARTICIONES (2, 4, 6 A 8).
 
-\<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: EN PARTICIONES (6 A 8).
+\<range> se puede especificar como números de partición separados por la palabra TO, por ejemplo: `ON PARTITIONS (6 TO 8)`.
 
  Para establecer diferentes tipos de compresión de datos para distintas particiones, especifique la opción DATA_COMPRESSION más de una vez, por ejemplo:
 
@@ -535,33 +580,30 @@ DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 ```
 
 ## <a name="remarks"></a>Notas
-
 La instrucción CREATE INDEX se optimiza como cualquier otra consulta. Para guardar en operaciones de E/S, el procesador de consultas puede elegir examinar otro índice en lugar de realizar un recorrido de tabla. La operación de orden se puede eliminar en algunos casos. En equipos con varios procesadores, CREATE INDEX puede utilizar más procesadores para realizar las operaciones de examen y orden asociadas a la creación del índice, al igual que hacen otras consultas. Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).
 
 La operación de creación de índices se registra al mínimo si el modelo de recuperación de base de datos se establece en Registro masivo o Sencillo.
 
 Los índices se pueden crear en una tabla temporal. Cuando se quita la tabla o finaliza la sesión, se quitan los índices.
 
+Se puede crear un índice agrupado en una variable de tabla cuando se crea una clave principal. Cuando se completa la consulta o se termina la sesión, se quita el índice.
+
 Los índices admiten propiedades extendidas.
 
 ## <a name="clustered-indexes"></a>Índices clúster
-
-La creación de un índice clúster en una tabla (montón) o la eliminación y nueva creación de un índice clúster existente requiere área de espacio adicional disponible en la base de datos para acomodar la ordenación de datos y una copia temporal de la tabla original o datos del índice clúster existente. Para obtener más información sobre los índices agrupados, consulte [Crear índices clúster](../../relational-databases/indexes/create-clustered-indexes.md).
+La creación de un índice clúster en una tabla (montón) o la eliminación y nueva creación de un índice clúster existente requiere área de espacio adicional disponible en la base de datos para acomodar la ordenación de datos y una copia temporal de la tabla original o datos del índice clúster existente. Para obtener más información sobre los índices agrupados, vea [Creación de índices agrupados](../../relational-databases/indexes/create-clustered-indexes.md) y la [Guía de diseño y de arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="nonclustered-indexes"></a>Índices no agrupados
-
 A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y en [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], puede crear un índice no agrupado en una tabla almacenada como un índice de almacén de columnas agrupado. Si primero crea un índice no agrupado en una tabla almacenada como un índice agrupado o montón, el índice se conservará si más adelante convierte la tabla a un índice de almacén de columnas agrupado. Además, no es necesario quitar el índice no agrupado al volver a generar el índice de almacén de columnas agrupado.
 
 Limitaciones y restricciones:
 
-- La opción FILESTREAM_ON no es válida para crear un índice no agrupado en una tabla almacenada como un índice de almacén de columnas agrupado.
+- La opción `FILESTREAM_ON` no es válida para crear un índice no agrupado en una tabla almacenada como un índice de almacén de columnas agrupado.
 
 ## <a name="unique-indexes"></a>Índices únicos
-
 Cuando existe un índice único, [!INCLUDE[ssDE](../../includes/ssde-md.md)] comprueba si hay valores duplicados cada vez que se agregan datos con una operación de inserción. Las operaciones de inserción que generarían valores de clave duplicados se revierten y el [!INCLUDE[ssDE](../../includes/ssde-md.md)] muestra un mensaje de error. Esto se cumple incluso si la operación de inserción cambia muchas filas pero crea un único duplicado. Si se intenta indicar datos donde existe un índice único y se ha especificado la cláusula IGNORE_DUP_KEY en ON, solo causarán un error las filas que infrinjan el índice UNIQUE.
 
 ## <a name="partitioned-indexes"></a>Índices con particiones
-
 La creación y el mantenimiento de los índices con particiones son similares a los de las tablas con particiones pero, al igual que en índices ordinarios, éstos son tratados como objetos de base de datos independientes. Puede tener un índice con particiones en una tabla que carezca de particiones, y puede tener un índice sin particiones en una tabla que tenga particiones.
 
 Si crea un índice en una tabla con particiones y no especifica un grupo de archivos en el que desea ubicar el índice, se crean particiones en el índice de la misma manera que en la tabla subyacente. Esto se debe a que, de manera predeterminada, los índices se ubican en los mismos grupos de archivos que sus tablas subyacentes, y en una tabla con particiones del mismo esquema de partición que usa las mismas columnas de partición. Cuando el índice usa el mismo esquema y columna de partición que la tabla, el índice está *alineado* con la tabla.
@@ -571,12 +613,11 @@ Si crea un índice en una tabla con particiones y no especifica un grupo de arch
 
 Cuando se crean particiones en un índice clúster no único, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] agrega de forma predeterminada las columnas de partición a la lista de claves del índice clúster, en caso de que no se hubieran especificado aún.
 
-Se pueden crear vistas indizadas en tablas con particiones de la misma manera que se hace con índices en tablas. Para obtener más información acerca de los índices con particiones, vea [Partitioned Tables and Indexes](../../relational-databases/partitions/partitioned-tables-and-indexes.md).
+Se pueden crear vistas indizadas en tablas con particiones de la misma manera que se hace con índices en tablas. Para obtener más información acerca de los índices con particiones, vea [Índices y tablas con particiones](../../relational-databases/partitions/partitioned-tables-and-indexes.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
-En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las estadísticas no se crean examinando todas las filas de la tabla cuando se crea o se vuelve a generar un índice con particiones. En su lugar, el optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estadísticas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use CREATE STATISTICS o UPDATE STATISTICS con la cláusula FULLSCAN.
+En [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], las estadísticas no se crean examinando todas las filas de la tabla cuando se crea o se vuelve a generar un índice con particiones. En su lugar, el optimizador de consultas usa el algoritmo de muestreo predeterminado para generar estadísticas. Para obtener estadísticas sobre índices con particiones examinando todas las filas de la tabla, use `CREATE STATISTICS` o `UPDATE STATISTICS` con la cláusula `FULLSCAN`.
 
 ## <a name="filtered-indexes"></a>Índices filtrados
-
 Un índice filtrado es un índice no clúster optimizado, adecuado para las consultas que seleccionan un porcentaje pequeño de las filas de una tabla. Utiliza un predicado de filtro para indizar una parte de los datos de la tabla. Un índice filtrado bien diseñado puede mejorar el rendimiento de las consultas, reducir los costos de almacenamiento y de mantenimiento.
 
 ### <a name="required-set-options-for-filtered-indexes"></a>Opciones SET requeridas para los índices filtrados
@@ -597,7 +638,7 @@ Las opciones SET de la columna de valor requerido son necesarias siempre que se 
     |NUMERIC_ROUNDABORT|OFF|OFF|OFF|OFF|
     |QUOTED_IDENTIFIER|ON|ON|ON|OFF|
   
-     *Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.
+     * Al establecer ANSI_WARNINGS en ON, ARITHABORT se establece de forma implícita en ON cuando el nivel de compatibilidad de base de datos está establecido en 90 o un valor superior. Si el nivel de compatibilidad de la base de datos está establecido en 80 o en un nivel inferior, debe configurarse explícitamente la opción ARITHABORT en ON.
 
 Si las opciones SET son incorrectas, se pueden producir las condiciones siguientes:
 
@@ -605,27 +646,23 @@ Si las opciones SET son incorrectas, se pueden producir las condiciones siguient
 - El [!INCLUDE[ssDE](../../includes/ssde-md.md)] genera un error y revierte cualquier instrucción INSERT, UPDATE, DELETE o MERGE que cambia los datos del índice.
 - El optimizador de consultas no tiene en cuenta el índice en el plan de ejecución de ninguna instrucción Transact-SQL.
 
- Para obtener más información sobre los índices filtrados, vea [Crear índices filtrados](../../relational-databases/indexes/create-filtered-indexes.md).
+ Para obtener más información acerca de los índices con filtros, vea [Creación de índices con filtros](../../relational-databases/indexes/create-filtered-indexes.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="spatial-indexes"></a>Índices espaciales
-
 Para obtener información sobre los índices espaciales, vea [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md) e [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).
 
 ## <a name="xml-indexes"></a>Índices XML
-
 Para obtener información sobre los índices XML, vea [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md) e [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md).
 
 ## <a name="index-key-size"></a>Tamaño de clave de índice
-
 El tamaño máximo de una clave de índice es de 900 bytes para un índice agrupado y de 1700 bytes para un índice no agrupado. (Antes de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], el límite era siempre de 900 bytes). Se pueden crear índices en las columnas **varchar** cuyo tamaño sea superior al límite de bytes si los datos que contienen no superan ese tamaño al crearse el índice. Sin embargo, se producirá un error en las acciones de inserción o actualización posteriores en las columnas que hagan que el tamaño total sea mayor que el límite. La clave de índice de un índice agrupado no puede contener columnas **varchar** con datos existentes en la unidad de asignación ROW_OVERFLOW_DATA. Si se crea un índice agrupado en una columna **varchar** y los datos existentes están en la unidad de asignación IN_ROW_DATA, no se realizarán correctamente las siguientes acciones de inserción o actualización en la columna que intenten insertar los datos de manera no consecutiva.
 
-Los índices no clúster pueden incluir columnas que no son de clave en el nivel de hoja del índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta estas columnas al calcular el tamaño de clave de índice. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
+Los índices no clúster pueden incluir columnas que no son de clave en el nivel de hoja del índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] no tiene en cuenta estas columnas al calcular el tamaño de clave de índice. Para obtener más información vea [Creación de índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 > [!NOTE]
 > Cuando se dividen las tablas, si las columnas de clave de la partición no están aún presentes en un índice clúster no único, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] las agrega al índice. El tamaño combinado de las columnas indizadas (sin contar las columnas incluidas) más cualquier columna de partición agregada no puede exceder 1800 bytes en un índice clúster no único.
 
 ## <a name="computed-columns"></a>Columnas calculadas
-
 Los índices se pueden crear en columnas calculadas. Además, las columnas calculadas pueden tener la propiedad PERSISTED. Esto significa que [!INCLUDE[ssDE](../../includes/ssde-md.md)] almacena los valores calculados en la tabla y los actualiza cuando se actualiza cualquier otra columna de la que depende la columna calculada. [!INCLUDE[ssDE](../../includes/ssde-md.md)] utiliza estos valores persistentes cuando crea un índice en la columna y cuando se hace referencia al índice en una consulta.
 
 Para indizar una columna calculada, ésta debe ser determinista y precisa. No obstante, si se usa la propiedad PERSISTED, se amplía el tipo de columnas calculadas indizables para incluir:
@@ -657,11 +694,9 @@ INSERT INTO t1 VALUES (1, 0);
 Para obtener más información, vea [Indexes on Computed Columns](../../relational-databases/indexes/indexes-on-computed-columns.md).
 
 ## <a name="included-columns-in-indexes"></a>Columnas incluidas en índices
-
-Las columnas que no son de clave, denominadas columnas incluidas, se pueden agregar en el nivel hoja de un índice no clúster para mejorar el rendimiento de las consultas al cubrir la consulta. Es decir, todas las columnas a las que se hace referencia en la consulta se incluyen en el índice como columnas de clave o que no son de clave. De este modo, el optimizador de consultas puede ubicar toda la información requerida con un examen del índice; no se tiene acceso a los datos de la tabla o del índice clúster. Para más información, consulte [Create Indexes with Included Columns](../../relational-databases/indexes/create-indexes-with-included-columns.md).
+Las columnas que no son de clave, denominadas columnas incluidas, se pueden agregar en el nivel hoja de un índice no clúster para mejorar el rendimiento de las consultas al cubrir la consulta. Es decir, todas las columnas a las que se hace referencia en la consulta se incluyen en el índice como columnas de clave o que no son de clave. De este modo, el optimizador de consultas puede ubicar toda la información requerida con un examen del índice; no se tiene acceso a los datos de la tabla o del índice clúster. Para obtener más información vea [Creación de índices con columnas incluidas](../../relational-databases/indexes/create-indexes-with-included-columns.md) y [Guía de diseño y arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md).
 
 ## <a name="specifying-index-options"></a>Especificar opciones de índice
-
 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] incluye opciones de índice nuevas y también modifica el modo en que se especifican las opciones. En la sintaxis compatible con versiones anteriores, WITH *option_name* es equivalente a WITH **(** \<option_name> **= ON )** . Al establecer opciones de índice, se aplican las siguientes reglas:
 
 - Las nuevas opciones de índice solo se pueden especificar mediante WITH ( **_option\_name_ = ON | OFF**).
@@ -669,7 +704,6 @@ Las columnas que no son de clave, denominadas columnas incluidas, se pueden agre
 - Cuando se crea un índice XML, las opciones se deben especificar mediante WITH ( **_option_name_= ON | OFF**).
 
 ## <a name="dropexisting-clause"></a>Cláusula DROP_EXISTING
-
 Puede utilizar la cláusula DROP_EXISTING para volver a generar el índice, agregar o quitar columnas, modificar opciones, modificar el criterio de ordenación de las columnas o cambiar el grupo de archivos o el esquema de partición.
 
 Si el índice exige una restricción PRIMARY KEY o UNIQUE, y la definición de índice no se ha modificado en absoluto, se quita el índice y se vuelve a crear conservando la restricción existente. Sin embargo, si se ha modificado la definición de índice, se genera un error en la instrucción. Para cambiar la definición de una restricción PRIMARY KEY o UNIQUE, quite la restricción y agregue una restricción con la nueva definición.
@@ -680,10 +714,10 @@ Independientemente de si se vuelven a generar o no los índices no clúster, és
 
 La cláusula DROP_EXISTING no volverá a ordenar los datos si se utilizan las mismas columnas de clave de índice en el mismo orden y con la misma disposición ascendente o descendente, a menos que la instrucción del índice especifique un índice no clúster y la opción ONLINE se establezca en OFF. Si se deshabilita el índice clúster, se debe establecer ONLINE en OFF para la operación CREATE INDEX WITH DROP_EXISTING. Si se deshabilita un índice no clúster y no se asocia con un índice clúster deshabilitado, se puede establecer ONLINE en OFF u ON para la operación CREATE INDEX WITH DROP_EXISTING.
 
-Cuando se quitan o se vuelven a generar índices con 128 o más extensiones, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] aplaza las cancelaciones de asignación de página reales y los bloqueos asociados, hasta después de que se confirme la transacción.
+> [!NOTE]
+> Cuando se quitan o se vuelven a generar índices con 128 o más extensiones, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] aplaza las cancelaciones de asignación de página reales y los bloqueos asociados, hasta después de que se confirme la transacción.
 
 ## <a name="online-option"></a>Opción ONLINE
-
 Las directrices siguientes se aplican para el desarrollo de operaciones de índice en línea:
 
 - La tabla subyacente no se podrá alterar, truncar ni quitar mientras haya una operación de índice en línea en curso.
@@ -693,19 +727,18 @@ Las directrices siguientes se aplican para el desarrollo de operaciones de índi
 Para más información, consulte [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md).
 
 ### <a name="resumable-indexes"></a> Operaciones de índice reanudable
-
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
 
 Se aplican las directrices siguientes para las operaciones de índice reanudable:
 
-- Creación de índices en línea se especifica como reanudable mediante la opción REANUDABLE = ON.
-- La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula RESUMABLE = ON debe especificarse explícitamente para habilitar la capacidad de reanudación.
-- La opción MAX_DURATION solo se admite para la opción RESUMABLE = ON.
+- ONLINE INDEX CREATE se especifica como RESUMABLE con la opción `RESUMABLE = ON`.
+- La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula `RESUMABLE = ON` debe especificarse explícitamente para habilitar la capacidad de reanudación.
+- La opción MAX_DURATION solo se admite para la opción `RESUMABLE = ON`.
 - MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para compilar un índice. Una vez pasado este tiempo, la operación de compilación de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una compilación de un índice en pausa. El valor de **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos y menor o igual que una semana (7 * 24 * 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error.
-- Para pausar inmediatamente la operación de índice, puede detener (Ctrl+C) el comando en curso, ejecutar el comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o ejecutar el comando KILL `<session_id>`. Una vez que el comando está en pausa, se puede reanudar mediante el comando [ALTER INDEX](alter-index-transact-sql.md).
+- Para pausar inmediatamente la operación de índice, puede detener (Ctrl+C) el comando en curso, ejecutar el comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o ejecutar el comando `KILL <session_id>`. Una vez que el comando está en pausa, se puede reanudar mediante el comando [ALTER INDEX](alter-index-transact-sql.md).
 - Al volver a ejecutar la instrucción CREATE INDEX para el índice reanudable, se reanuda automáticamente una operación de creación de índice en pausa.
-- La opción SORT_IN_TEMPDB=ON no es compatible con el índice reanudable.
-- El comando DDL con RESUMABLE=ON no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin TRAN ... COMMIT).
+- La opción `SORT_IN_TEMPDB = ON` no es compatible con el índice reanudable.
+- El comando DDL con `RESUMABLE = ON` no se puede ejecutar dentro de una transacción explícita (no puede formar parte del bloque begin TRAN ... COMMIT).
 - Para reanudar o anular una creación o recompilación de índice, use la sintaxis de T-SQL [ALTER INDEX](alter-index-transact-sql.md)
 
 > [!NOTE]
@@ -714,7 +747,6 @@ Se aplican las directrices siguientes para las operaciones de índice reanudable
 Para indicar que la creación de un índice se ejecuta como una operación reanudable y para comprobar su estado de ejecución actual, consulte [sys.index_resumable_operations](../../relational-databases/system-catalog-views/sys-index-resumable-operations.md).
 
 #### <a name="resources"></a>Recursos
-
 Los recursos siguientes son necesarios para la operación de creación de índice en línea:
 
 - el espacio adicional necesario para mantener el índice que se está generando, incluida la hora en que se pausó el índice;
@@ -723,7 +755,6 @@ Los recursos siguientes son necesarios para la operación de creación de índic
 - La limpieza de registros fantasma se bloquea en el índice de la compilación durante la operación, tanto en pausa como cuando la operación está en ejecución.
 
 #### <a name="current-functional-limitations"></a>Limitaciones funcionales actuales
-
 Abajo se detallan las funciones que se deshabilitan para las operaciones de creación de índices reanudables:
 
 - Después de poner en pausa una operación de creación de índice reanudable en línea, no es posible modificar el valor inicial de MAXDOP
@@ -734,24 +765,21 @@ Abajo se detallan las funciones que se deshabilitan para las operaciones de crea
   - Índice filtrado
 
 ## <a name="row-and-page-locks-options"></a>Opciones de bloqueo de fila y página
+Si `ALLOW_ROW_LOCKS = ON` y `ALLOW_PAGE_LOCK = ON`, se permiten los bloqueos de nivel de fila, página y tabla al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.
 
-Si ALLOW_ROW_LOCKS = ON y ALLOW_PAGE_LOCK = ON, se permiten los bloqueos de nivel de fila, página y tabla cuando se tiene acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] elige el bloqueo apropiado y puede cambiar de escala el bloqueo: de un bloqueo de fila o página a un bloqueo de tabla.
-
-Si ALLOW_ROW_LOCKS = OFF y ALLOW_PAGE_LOCK = OFF, solo se permiten los bloqueos de nivel de tabla cuando se tiene acceso al índice.
+Si `ALLOW_ROW_LOCKS = OFF` y `ALLOW_PAGE_LOCK = OFF`, solo se permite un bloqueo de nivel de tabla al obtener acceso al índice.
 
 ## <a name="sequential-keys"></a>Claves secuenciales
-**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
 
 La contención de inserción de la última página es un problema común de rendimiento que se produce cuando un gran número de subprocesos simultáneos intentan insertar filas en un índice con una clave secuencial. Un índice se considera secuencial cuando la columna de clave inicial contiene valores que siempre aumentan (o disminuyen), como una columna de identidad o una fecha que toma como valor predeterminado la fecha y hora actuales. Dado que las claves que se insertan son secuenciales, todas las nuevas filas se insertarán al final de la estructura del índice, es decir, en la misma página. Esta situación conduce a la contención de la página en memoria que se puede observar cuando varios subprocesos están a la espera de PAGELATCH_EX para la página en cuestión.
 
 Al activar la opción de índice OPTIMIZE_FOR_SEQUENTIAL_KEY es posible una optimización en el motor de base de datos que ayuda a mejora el rendimiento de las inserciones de alta simultaneidad en el índice. Está concebida para los índices que tienen una clave secuencial y, por tanto, son propensos a la contención de inserción de la última página, pero también puede ayudar con índices que tienen zonas activas en otras áreas de la estructura del índice de árbol B.
 
 ## <a name="viewing-index-information"></a>Ver información de índice
-
 Para devolver información sobre índices, puede utilizar vistas de catálogo, funciones del sistema y procedimientos almacenados del sistema.
 
 ## <a name="data-compression"></a>Data Compression
-
 La compresión de datos se describe en el tema [Compresión de datos](../../relational-databases/data-compression/data-compression.md). A continuación se muestran los puntos clave que se deben tener en cuenta:
 
 - La compresión puede permitir que se almacenen más filas en una página, pero no cambia el tamaño máximo de la fila.
@@ -768,18 +796,15 @@ Las restricciones siguientes se aplican a los índices con particiones:
 Para evaluar cómo afecta el cambio del estado de compresión a una tabla, índice o partición, use el procedimiento almacenado [sp_estimate_data_compression_savings](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) .
 
 ## <a name="permissions"></a>Permisos
-
-Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .
+Debe tener un permiso de `ALTER` sobre la tabla o vista. El usuario debe ser miembro del role fijo de servidor `sysadmin` o los roles fijos de base de datos `db_ddladmin` y `db_owner`.
 
 ## <a name="limitations-and-restrictions"></a>Limitaciones y restricciones
-
-En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], no puede crear:
+En [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], no puede crear lo siguiente:
 
 - Un índice de almacén de filas agrupado o no agrupado en una tabla de almacén de datos cuando ya existe un índice de almacén de columnas. Este comportamiento es diferente de SMP [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], que permite que los índices de almacén de filas y columnas coexistan en la misma tabla.
 - No puede crear un índice en una vista.
 
 ## <a name="metadata"></a>Metadatos
-
 Para ver información sobre los índices existentes, puede consultar la vista de catálogo [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md).
 
 ## <a name="version-notes"></a>Notas de la versión
@@ -789,7 +814,6 @@ Para ver información sobre los índices existentes, puede consultar la vista de
 ## <a name="examples-all-versions-uses-the-adventureworks-database"></a>Ejemplos: Todas las versiones. Utiliza la base de datos AdventureWorks
 
 ### <a name="a-create-a-simple-nonclustered-rowstore-index"></a>A. Crear un índice no clúster de almacén de filas simple
-
 El ejemplo siguiente crea un índice no agrupado en la columna `VendorID` de la tabla `Purchasing.ProductVendor`.
 
 ```sql
@@ -799,7 +823,6 @@ CREATE INDEX IX_VendorID ON Purchasing..ProductVendor (VendorID);
 ```
 
 ### <a name="b-create-a-simple-nonclustered-rowstore-composite-index"></a>B. Crear un índice compuesto de almacén de filas no agrupado
-
 En el ejemplo siguiente se crea un índice compuesto no agrupado en las columnas `SalesQuota` y `SalesYTD` de la tabla `Sales.SalesPerson`.
 
 ```sql
@@ -807,7 +830,6 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. Crear un índice en una tabla de otra base de datos
-
 En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor` en la base de datos `Purchasing`.
 
 ```sql
@@ -815,7 +837,6 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (V
 ```
 
 ### <a name="d-add-a-column-to-an-index"></a>D. Agregar una columna a un índice
-
 En el ejemplo siguiente se crea el índice IX_FF con dos columnas de la tabla dbo.FactFinance. La instrucción siguiente vuelve a generar el índice con una columna más y mantiene el nombre existente.
 
 ```sql
@@ -829,7 +850,6 @@ WITH ( DROP_EXISTING = ON );
 ## <a name="examples-sql-server-azure-sql-database"></a>Ejemplos: SQL Server, Azure SQL Database
 
 ### <a name="e-create-a-unique-nonclustered-index"></a>E. Crear un índice no agrupado único
-
 En el ejemplo siguiente se crea un índice no clúster único en la columna `Name` de la tabla `Production.UnitMeasure` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. El índice exigirá unicidad en los datos insertados en la columna `Name`.
 
 ```sql
@@ -855,7 +875,6 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 ```
 
 ### <a name="f-use-the-ignoredupkey-option"></a>F. Usar la opción IGNORE_DUP_KEY
-
 El ejemplo siguiente muestra el efecto de la opción `IGNORE_DUP_KEY` al insertar varias filas en una tabla temporal primero con la opción establecida en `ON` y luego con la opción establecida en `OFF`. Se inserta una única fila en la tabla `#Test` que intencionadamente proporcionará un valor duplicado cuando se ejecuta la segunda instrucción `INSERT` de varias filas. Un recuento de las filas de la tabla devuelve el número de filas insertadas.
 
 ```sql
@@ -917,7 +936,6 @@ Number of rows
 Observe que ninguna de las filas de la tabla `Production.UnitMeasure` se insertó en la tabla aunque solo una fila de la tabla infringió la restricción de índice `UNIQUE`.
 
 ### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. Usar DROP_EXISTING para quitar y volver a crear un índice
-
 En el ejemplo siguiente se quita y se vuelve a crear un índice existente en la columna `ProductID` de la tabla `Production.WorkOrder` en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] utilizando la opción `DROP_EXISTING`. También se establecen las opciones `FILLFACTOR` y `PAD_INDEX` .
 
 ```sql
@@ -930,7 +948,6 @@ GO
 ```
 
 ### <a name="h-create-an-index-on-a-view"></a>H. Crear un índice en una vista
-
 Este ejemplo siguiente crea una vista y un índice en esa vista. Se incluyen dos consultas que utilizan la vista indizada.
 
 ```sql
@@ -979,7 +996,6 @@ GO
 ```
 
 ### <a name="i-create-an-index-with-included-non-key-columns"></a>I. Crear un índice con columnas incluidas (sin clave)
-
 El ejemplo siguiente crea un índice no clúster con una columna de clave (`PostalCode`) y cuatro columnas que no son de clave (`AddressLine1`, `AddressLine2`, `City`, `StateProvinceID`). A continuación se presenta una consulta cubierta por el índice. Para mostrar el índice seleccionado con el optimizador de consultas, en el menú **Consulta** de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], seleccione **Mostrar plan de ejecución estimado** antes de ejecutar la consulta.
 
 ```sql
@@ -994,10 +1010,9 @@ GO
 ```
 
 ### <a name="j-create-a-partitioned-index"></a>J. Crear un índice con particiones
-
 En el ejemplo siguiente se crea un índice no clúster con particiones en `TransactionsPS1`, un esquema de partición existente en la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. En este ejemplo se supone que se ha instalado el ejemplo de índice con particiones.
 
-**Se aplica a**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 ```sql
 CREATE NONCLUSTERED INDEX IX_TransactionHistory_ReferenceOrderID
@@ -1007,7 +1022,6 @@ GO
 ```
 
 ### <a name="k-creating-a-filtered-index"></a>K. Crear un índice filtrado
-
 En el ejemplo siguiente se crea un índice filtrado en la tabla Production.BillOfMaterials de la base de datos [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. El predicado de filtro puede incluir columnas que no son columnas de clave en el índice filtrado. El predicado de este ejemplo selecciona solo las filas en que EndDate no es NULL.
 
 ```sql
@@ -1017,7 +1031,6 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ```
 
 ### <a name="l-create-a-compressed-index"></a>L. Crear un índice comprimido
-
 En el ejemplo siguiente se crea un índice en una tabla sin particiones utilizando la compresión de fila.
 
 ```sql
@@ -1047,8 +1060,7 @@ GO
 ```
 
 ### <a name="m-create-resume-pause-and-abort-resumable-index-operations"></a>M. Crear, reanudar, pausar y anular operaciones de índices reanudables
-
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1075,10 +1087,9 @@ ALTER INDEX test_idx2 on test_table ABORT
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>Ejemplos: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] y [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 ### <a name="n-basic-syntax"></a>N. Sintaxis básica
+Crear, reanudar, pausar y anular operaciones de índices reanudables       
 
-Crear, reanudar, pausar y anular operaciones de índices reanudables
-
-**Se aplica a**: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (versión preliminar pública)
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (versión preliminar pública)
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
@@ -1100,7 +1111,6 @@ ALTER INDEX test_idx on test_table ABORT
 ```
 
 ### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. Crear un índice no agrupado en una tabla en la base de datos actual
-
 En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor`.
 
 ```sql
@@ -1109,7 +1119,6 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. Crear un índice agrupado en una tabla de otra base de datos
-
 En el ejemplo siguiente se crea un índice no agrupado en la columna `VendorID` de la tabla `ProductVendor` en la base de datos `Purchasing`.
 
 ```sql
@@ -1118,21 +1127,20 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
 ```
 
 ## <a name="see-also"></a>Consulte también
-
-- [Guía de diseño de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)
-- [Índices y ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)
-- [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
-- [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
-- [CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)
-- [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)
-- [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)
-- [CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)
-- [Tipos de datos](../../t-sql/data-types/data-types-transact-sql.md)
-- [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
-- [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
-- [Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)
-- [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
-- [sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
-- [sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)
-- [EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+[Guía de diseño y de arquitectura de índices de SQL Server](../../relational-databases/sql-server-index-design-guide.md)     
+[Índices y ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md#indexes-and-alter-table)     
+[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)     
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)     
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)     
+[CREATE SPATIAL INDEX](../../t-sql/statements/create-spatial-index-transact-sql.md)      
+[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)     
+[CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md)    
+[CREATE XML INDEX](../../t-sql/statements/create-xml-index-transact-sql.md)     
+[Tipos de datos](../../t-sql/data-types/data-types-transact-sql.md)    
+[DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)    
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
+[Índices XML &#40;SQL Server&#41;](../../relational-databases/xml/xml-indexes-sql-server.md)     
+[sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)     
+[sys.index_columns](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)    
+[sys.xml_indexes](../../relational-databases/system-catalog-views/sys-xml-indexes-transact-sql.md)     
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)     

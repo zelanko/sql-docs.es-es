@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ff3494a9983104c958dbd1f3e0ac7b74598f2dcb
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343917"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583219"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
 
@@ -57,7 +57,7 @@ ms.locfileid: "67343917"
     
 -   Los índices de almacén de columnas leen los datos comprimidos del disco, lo que significa que deben leerse menos bytes de datos en la memoria.    
     
--   Los índices de almacén de columnas almacenan datos en un formato comprimido en la memoria, lo que reduce la E/S con la disminución del número de veces que se leen los mismos datos en memoria. Por ejemplo, con la compresión 10 veces mayor, los índices de almacén de columnas pueden mantener 10 veces más datos en memoria en comparación con el almacenamiento de datos en formato sin comprimir. Con más datos en memoria, es más probable que el índice de almacén de columnas busque los datos que necesita en la memoria, lo que genera lecturas adicionales del disco.    
+-   Los índices de almacén de columnas almacenan datos en un formato comprimido en la memoria, lo que reduce la E/S con la disminución del número de veces que se leen los mismos datos en memoria. Por ejemplo, con la compresión 10 veces mayor, los índices de almacén de columnas pueden mantener 10 veces más datos en memoria en comparación con el almacenamiento de datos en formato sin comprimir. Con más datos en memoria, es más probable que el índice de almacén de columnas busque los datos que necesita en la memoria sin generar lecturas adicionales del disco.    
     
 -   Los índices de almacén de columnas comprimen los datos por columnas en lugar de por filas, lo que genera altas tasas de compresión y reduce el tamaño de los datos almacenados en disco. Se comprime y almacena cada columna de forma independiente.  Los datos de una columna siempre tienen el mismo tipo y suelen tener valores similares. Las técnicas de compresión de datos son muy buenas para lograr las mayores índices de compresión cuando los valores son similares.    
     
@@ -92,7 +92,7 @@ ms.locfileid: "67343917"
     
  No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], hay un esfuerzo sostenido para expandir los operadores que se pueden ejecutar en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
     
-|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]¹|Comentarios|    
+|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|¿[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Comentarios|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Operaciones de DML (insert, delete, update y merge)||no|no|no|DML no es una operación de modo por lotes porque no es paralela. Incluso cuando se habilita el procesamiento por lotes del modo serie, no vemos importantes mejoras si se permite que DML se procese en el modo por lotes.|    
 |Exploración de índice de almacén de columnas|SCAN|N/D|sí|sí|Para los índices de almacén de columnas, podemos insertar el predicado en el nodo SCAN.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67343917"
 |Top Sort||no|no|sí||    
 |Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ¹ Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a los niveles Premium, estándar, S3 y superiores de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
+ ? Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a los niveles Premium, estándar, S3 y superiores de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
     
 ### <a name="aggregate-pushdown"></a>Aplicación de agregados    
  Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes. Aunque esto proporciona un buen rendimiento, con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes: 
@@ -146,7 +146,7 @@ Cuando se diseña un esquema de almacenamiento de datos, el modelado del esquema
     
 Por ejemplo, un hecho puede ser un registro que representa una venta de un producto determinado en una región específica, mientras que la dimensión representa un conjunto de regiones, productos y así sucesivamente. Las tablas de hechos y dimensiones están conectadas a través de la relación de clave principal o externa. Las consultas de análisis de uso más frecuente unen una o varias tablas de dimensiones con la tabla de hechos.    
     
-Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos.    
+Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos. ? ?
     
 El índice de almacén de columnas ejecuta las consultas de análisis con combinaciones y predicados que implican claves basadas en enteros o números de forma muy eficiente. Pero en muchas cargas de trabajo de cliente, encontramos que el uso de las columnas basadas en cadenas que se vinculan con tablas de dimensiones/hechos, lo que, como resultado, genera un rendimiento de la consulta del índice del almacén de columna diferente del esperado. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] mejora el rendimiento de las consultas de análisis con las columnas basadas en cadenas notablemente mediante la aplicación de los predicados con las columnas de cadena en el nodo SCAN.    
     
@@ -155,6 +155,9 @@ La aplicación del predicado de cadena aprovecha el diccionario principal y secu
 Con la aplicación del predicado de la cadena, la ejecución de la consulta computa el predicado con los valores del diccionario, y si son aptos, todas las cadenas referentes al valor del diccionario se aceptan automáticamente. Esto mejora el rendimiento de dos maneras:
 1.  Solo se devuelve la fila apta, lo que reduce el número de filas que fluye fuera del nodo SCAN. 
 2.  Se reduce considerablemente el número de comparaciones de cadenas. En este ejemplo, se requieren solo 100 comparaciones de cadena en 1 millón de comparaciones. Existen algunas limitaciones, como se describe a continuación:    
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     -   No aplicación del predicado de la cadena para grupos de filas delta. No hay ningún diccionario para las columnas en grupos de filas delta.    
     -   No aplicación del predicado de la cadena si el diccionario supera las 64 KB de entradas.    
     -   No se admiten valores NULL de la evaluación de expresión.    

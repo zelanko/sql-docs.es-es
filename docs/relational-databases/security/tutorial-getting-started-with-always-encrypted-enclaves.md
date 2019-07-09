@@ -13,12 +13,12 @@ author: jaszymas
 ms.author: jaszymas
 manager: craigg
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 9ab1678831e67fa2504f9abb64a7dcc95f9f8e64
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: dde30ce48bf559bc72b3cdf3a4544039328f53e7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388129"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67585101"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>Tutorial: Introducción a Always Encrypted con enclaves seguros con SSMS
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -88,6 +88,8 @@ En este paso, configurará el equipo HGS para ejecutar la atestación de la clav
    ```
 
 4. Ejecute el comando siguiente para obtener la dirección IP del equipo HGS. Guarde esta dirección IP para los pasos posteriores.
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
    ```powershell
    Get-NetIPAddress  
@@ -167,7 +169,7 @@ En este paso, deberá habilitar la funcionalidad de Always Encrypted usando encl
     1. Inicie SSMS.
     1. En el cuadro de diálogo **Conectar a servidor**, especifique el nombre del servidor, seleccione un método de autenticación e indique sus credenciales.
     1. Haga clic en **Opciones >>** y seleccione la pestaña **Always Encrypted**.
-    1. Asegúrese de que la casilla **Habilitar Always Encrypted (cifrado de columna)****no** esté activada.
+    1. Asegúrese de que la casilla **Habilitar Always Encrypted (cifrado de columna)** **no** esté activada.
     1. Seleccione **Conectar**.
 
 2. Abra una nueva ventana de consulta y ejecute la siguiente instrucción para establecer el tipo de enclave seguro en la seguridad basada en la virtualización (VBS).
@@ -261,7 +263,7 @@ En este paso, creará una clave de columna maestra y una clave de cifrado de col
 
 1. Con la instancia de SSMS del paso anterior, en el **Explorador de objetos**, expanda la base de datos y vaya a **Seguridad** > **Claves de Always Encrypted**.
 1. Aprovisione una nueva clave maestra de columna habilitada para el enclave:
-    1. Haga clic con el botón derecho en **Claves de Always Encrypted** y seleccione **Nueva clave maestra de columna…**.
+    1. Haga clic con el botón derecho en **Claves de Always Encrypted** y seleccione **Nueva clave maestra de columna…** .
     2. Seleccione el nombre de clave maestra de columna: **CMK1**.
     3. Seleccione **Almacén de certificados de Windows (usuario actual o equipo local)** o **Azure Key Vault**.
     4. Seleccione **Permitir cálculos de enclave**.
@@ -326,7 +328,7 @@ Ahora puede ejecutar consultas completas sobre columnas cifradas. Se realizará 
 
 1. En la instancia de SSMS **con** Always Encrypted habilitado, asegúrese de que también está habilitada la parametrización para Always Encrypted.
     1. Seleccione **Herramientas** en el menú principal de SSMS.
-    2. Seleccione **Opciones...**.
+    2. Seleccione **Opciones...** .
     3. Vaya a **Ejecución de consulta** > **SQL Server** > **Avanzadas**.
     4. Asegúrese de que la opción **Habilitar parametrización para Always Encrypted** esté activada.
     5. Seleccione **Aceptar**.

@@ -27,12 +27,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: b05cca816684cbb95c625232883d06706edfe7f6
-ms.sourcegitcommit: 20d24654e056561fc33cadc25eca8b4e7f214b1b
+ms.openlocfilehash: 26db878bee2a786dc52f6046afea617bf7c69c0f
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67351722"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500151"
 ---
 # <a name="alter-database-transact-sql"></a>ALTER DATABASE (Transact-SQL)
 
@@ -566,10 +566,7 @@ Se pueden utilizar vistas de catálogo, funciones del sistema y procedimientos a
 
 ## <a name="permissions"></a>Permisos
 
-Solo el inicio de sesión principal de nivel de servidor (creado por el proceso de aprovisionamiento) o los miembros del rol de base de datos `dbmanager` pueden modificar una base de datos.
-
-> [!IMPORTANT]
-> El propietario de la base de datos no puede modificarla a menos que sea miembro del rol `dbmanager`.
+Para modificar una base de datos, un inicio de sesión debe ser ya sea el inicio de sesión de la entidad de seguridad a nivel de servidor (creado por el proceso de aprovisionamiento), un miembro del rol de base de datos `dbmanager` en la rama maestra, un miembro del rol de base de datos `db_owner` en la base de datos actual, o `dbo` de la base de datos.
 
 ## <a name="examples"></a>Ejemplos
 

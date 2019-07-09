@@ -15,12 +15,12 @@ ms.assetid: e66349f3-b1b8-4763-89b7-7803541a4d62
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 15ef45a4f3bfb0b74de2472a5b2f0d8e483edab1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14153d38d53a87729231b60b2b2846dc12401fc1
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856935"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624353"
 ---
 # <a name="excel-source"></a>Origen de Excel
   El origen de Excel extrae datos de hojas de cálculo o de rangos de libros de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel.  
@@ -118,6 +118,6 @@ ms.locfileid: "62856935"
   
 -   Entrada de blog, [Excel en Integration Services, parte 3 de 3: Problemas y alternativas](https://go.microsoft.com/fwlink/?LinkId=217676), en dougbert.com.  
   
--   Entrada de blog, [conectarse a Excel (XLSX) de SSIS ](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
+-   Entrada de blog, [conectarse a Excel (XLSX) de SSIS](https://microsoft-ssis.blogspot.com/2014/02/connecting-to-excel-xlsx-in-ssis.html).  
   
   

@@ -19,12 +19,12 @@ author: shkale-msft
 ms.author: shkale
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ef8f38acbf621a9c73a0d85bca579c8b7c87aa13
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463541"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652846"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,8 +49,8 @@ PARA la ruta de acceso debe usarse con cualquier nombre de tabla de nodo o perim
 ## <a name="arbitrary-length-pattern"></a>Patrón de longitud arbitraria
 Este patrón incluye los nodos y bordes que se deben recorrer repetidamente hasta que se alcance el nodo deseado o hasta que el número máximo de iteraciones que se especifica en el patrón se cumple. Cada vez que se ejecuta la consulta, el resultado de ejecutar este patrón será una colección ordenada de los nodos y bordes recorridos a lo largo de la ruta de acceso desde el nodo inicial al nodo final. Se trata de un modelo de sintaxis de estilo de expresión regular y se admiten los cuantificadores dos patrón siguiente:
 
-* **‘+’** : Repita el patrón 1 o más veces. Finalizar tan pronto como se encuentra una ruta de acceso más corta.
-* **{1,n}** : Repita el patrón 1 para "n" veces. Finalizar tan pronto como se encuentra una más corta.
+* **‘+’** : repite el patrón una o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
+* **{1,n}** : repite el patrón de 1 a "n" veces. Finalizar tan pronto como se encuentra una más corta.
 
 ## <a name="lastnode"></a>LAST_NODE
 Función LAST_NODE() permite el encadenamiento de dos patrones de recorrido de longitud arbitraria. Se puede usar en escenarios donde:    
@@ -94,7 +94,7 @@ Mientras que el último nodo es el último nodo n en la ruta de acceso del gráf
 Esta función devuelve la suma de los valores de atributo de nodo o perimetral proporcionado o una expresión que aparece en la ruta de acceso recorrido.
 
 ### <a name="count"></a>COUNT
-Esta función devuelve el número de valores distintos de null del atributo de nodo o borde deseado en la ruta de acceso. La función COUNT es compatible con el ' *' operador con un alias de tabla de nodo o perimetral. Sin el alias de tabla de nodo o perimetral, el uso de * es ambiguo y se producirá un error.
+Esta función devuelve el número de valores distintos de null del atributo de nodo o borde deseado en la ruta de acceso. La función COUNT es compatible con el '\*' operador con un alias de tabla de nodo o perimetral. Sin el alias de tabla de nodo o perimetral, el uso de \* es ambiguo y se producirá un error.
 
     {  COUNT( <expression> | <node_or_edge_alias>.* )  <order_clause>  }
 

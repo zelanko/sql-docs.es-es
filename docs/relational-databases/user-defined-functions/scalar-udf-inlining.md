@@ -16,12 +16,12 @@ author: s-r-k
 ms.author: karam
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: dd767690533365dc51f1ef3e1fb27bcf3659eeb4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dba65eb4ca0aa97ca747567a6337e68fb7c2f29
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775142"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581432"
 ---
 # <a name="scalar-udf-inlining"></a>Inserción de UDF escalares
 
@@ -136,6 +136,8 @@ Como se ha mencionado antes, el plan de consulta ya no tiene un operador de func
 2. SQL Server también ha inferido la cláusula `GROUP BY O_CUSTKEY on ORDERS` implícita y ha usado IndexSpool y StreamAggregate para implementarla.
 3. Ahora SQL Server usa el paralelismo de todos los operadores.
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 Según la complejidad de la lógica de la UDF, es posible que el plan de consulta resultante también aumente de tamaño y complejidad. Como se puede ver, las operaciones dentro de la UDF ahora ya no son una caja negra y, por tanto, el optimizador de consultas es capaz de calcular los costos de esas operaciones y optimizarlas. Además, como la UDF ya no está en el plan, la invocación iterativa de UDF se sustituye por un plan que evita totalmente la sobrecarga de la llamada de función.
 
 ## <a name="inlineable-scalar-udfs-requirements"></a>Requisitos de las UDF escalares que se pueden insertar
@@ -182,7 +184,7 @@ Si se cumplen todas las condiciones previas y SQL Server decide realizar la inse
 
 ## <a name="enabling-scalar-udf-inlining"></a>Habilitación de la inserción de UDF escalar
 
-Puede hacer que las cargas de trabajo sean aptas automáticamente para la inserción de UDF escalar si habilita el nivel de compatibilidad 150 para la base de datos.  Puede establecerlo con Transact-SQL. Por ejemplo:  
+Puede hacer que las cargas de trabajo sean aptas automáticamente para la inserción de UDF escalar si habilita el nivel de compatibilidad 150 para la base de datos.? Puede establecerlo con Transact-SQL.?Por ejemplo:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;

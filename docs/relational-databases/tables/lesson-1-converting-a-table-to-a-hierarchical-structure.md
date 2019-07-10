@@ -1,5 +1,5 @@
 ---
-title: 'Lección 1: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
+title: 'Lección 1: Conversión de una tabla en una estructura jerárquica | Microsoft Docs'
 ms.custom: ''
 ms.date: 08/22/2018
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.assetid: 5ee6f19a-6dd7-4730-a91c-bbed1bd77e0b
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6e95be3958bf3b5ab77e3da43e31b91b75c918d4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 83871be7e8de5976eee684788d7a1a852aaa7c8a
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661163"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582148"
 ---
-# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Convertir una tabla en una estructura jerárquica
+# <a name="lesson-1-converting-a-table-to-a-hierarchical-structure"></a>Lección 1: Conversión de una tabla en una estructura jerárquica
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 Los clientes que tienen tablas que utilizan autocombinaciones para expresar las relaciones jerárquicas pueden convertir sus tablas en una estructura jerárquica usando esta lección como guía. Es relativamente fácil migrar de esta representación a una que use **hierarchyid**. Después de la migración, los usuarios tendrán una representación jerárquica compacta y fácil de entender, que se puede indizar de varias maneras para conseguir consultas eficaces.  
   
@@ -42,7 +42,9 @@ La base de datos de ejemplo Adventureworks2017 (o posterior) contiene una tabla 
 ### <a name="copy-the-employee-table"></a>Copia de la tabla Employee  
   
 1.  En una ventana del editor de consultas, ejecute el código siguiente para copiar la estructura y los datos de la tabla **Employee** en una nueva tabla denominada **EmployeeDemo**. Dado que la tabla original ya usa hierarchyid, esta consulta básicamente acopla la jerarquía para recuperar el administrador del empleado. En las siguientes partes de esta lección reconstruiremos esta jerarquía.
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
     ```sql  
     USE AdventureWorks2017;  
     GO  
@@ -273,7 +275,7 @@ La columna **hierarchyid** (**OrgNode**) es la clave principal de la tabla **New
   
     [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-    Índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
+    El índice con prioridad a la profundidad: los registros del empleado se almacenan junto a su administrador.  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID
@@ -290,7 +292,7 @@ La columna **hierarchyid** (**OrgNode**) es la clave principal de la tabla **New
     /1/1/5/ 0x5AE3  3   11  adventure-works\ovidiu0
     ```
 
-    El índice con prioridad a **EmployeeID**: las filas se almacenan en secuencia de **EmployeeID**.  
+    El índice con prioridad a **EmployeeID**: las filas se almacenan en secuencia de **EmployeeID** .  
 
     ```
     LogicalNode OrgNode H_Level EmployeeID  LoginID

@@ -34,12 +34,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 660b9d8ea0d0ebd0f0ef1ea83c225cd74f71080b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7e831a6c0e5a1d45c8e7ac2c921be3ef120a41f
+ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66744172"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67556951"
 ---
 # <a name="editions-and-supported-features-of-sql-server-2017"></a>Ediciones y características admitidas de SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -167,7 +167,7 @@ La edición Developer sigue siendo compatible con solo un cliente de [SQL Server
 |Asistente para la recuperación de base de datos|Sí|Sí|Sí|Sí|Sí|
 |Copia de seguridad cifrada|Sí|Sí|No|No|No|
 |Copia de seguridad híbrida en Windows Azure (copia de seguridad en dirección URL)|Sí|Sí|No|No|No|
-|Grupo de disponibilidad sin clúster|Sí|Sí|No|No|No|No|
+|Grupo de disponibilidad de escalado de lectura|Sí|Sí|No|No|No|No|
 |Grupo de disponibilidad de confirmación de réplica mínima|Sí|Sí|Sí|No|No|No|
   
 

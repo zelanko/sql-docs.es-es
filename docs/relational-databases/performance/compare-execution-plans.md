@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: b1bd2ab7d1ab17ef9d0bc4671054f02808ed230f
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.openlocfilehash: 7703ad7ce46c9dda59dacbc86ebbd9646b1015cf
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439847"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584488"
 ---
 # <a name="compare-execution-plans"></a>Comparación de los planes de ejecución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -69,11 +69,13 @@ Cuando se comparan dos planes de ejecución, las regiones del plan que **hacen b
      > [!TIP]
      > Todas las opciones de zoom y desplazamiento disponibles para los planes de ejecución funcionan en modo de comparación de plan. Para obtener más información, vea [Mostrar un plan de ejecución real](../../relational-databases/performance/display-an-actual-execution-plan.md).
 
-5.  También se abre una ventana de propiedades dual en el lado derecho, en el ámbito de la selección predeterminada. Las propiedades que existen en ambos operadores comparados pero tienen diferencias estarán precedidas por el signo *no igual* (≠) para facilitar la identificación.
+5.  También se abre una ventana de propiedades dual en el lado derecho, en el ámbito de la selección predeterminada. Las propiedades que existen en ambos operadores comparados pero tienen diferencias estarán precedidas por el signo *no igual* (?) para facilitar la identificación.
 
     ![Ventana Dual properties (Propiedades duales)](../../relational-databases/performance/media/plancomparison-properties.png "Dual properties window")  
 
 6.  La ventana de navegación de comparación **Análisis del plan de presentación** también se abre en la parte inferior. Hay tres pestañas disponibles:
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  En la pestaña **Opciones de la instrucción**, la selección predeterminada es *Resaltar operaciones similares* y el mismo nodo u operador resaltado en los planes comparados comparte el mismo patrón de color y línea. Navegue entre las áreas similares en planes comparados haciendo clic en un patrón lima. También puede resaltar las diferencias en los planes en lugar de las similitudes si selecciona *Highlight operations not matching similar segments* (Resaltar las operaciones que no coinciden con segmentos similares). 
     

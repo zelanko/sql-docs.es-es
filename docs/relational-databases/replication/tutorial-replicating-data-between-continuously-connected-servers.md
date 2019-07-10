@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: cc911c9a5a3d02e097945ebfe4a74b8ddd9ee285
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128355"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67581326"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -102,11 +102,11 @@ En esta sección, se crea una publicación transaccional mediante [!INCLUDE[ssMa
   
 10. En la página **Seguridad del agente**, desactive la casilla **Use the security settings from the Snapshot Agent** (Usar la configuración de seguridad del Agente de instantáneas).   
   
-    Seleccione **Configuración de seguridad** para el Agente de instantáneas. Escriba <*Nombre_De_Equipo_Publicador>*>**\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**.  
+    Seleccione **Configuración de seguridad** para el Agente de instantáneas. Escriba <*Nombre_De_Equipo_Publicador>* > **\repl_snapshot** en el cuadro **Cuenta de proceso**, escriba la contraseña de la cuenta y, luego, seleccione **Aceptar**.  
 
     ![Página "Seguridad del agente" y cuadro de diálogo "Seguridad del Agente de instantáneas"](media/tutorial-replicating-data-between-continuously-connected-servers/snapshotagentsecurity.png)
   
-12. Repita el paso anterior para establecer <*Nombre_De_Equipo_Publicador*>**\repl_logreader** como la cuenta de proceso para el Agente de registro del LOG. Después, seleccione **Aceptar**.  
+12. Repita el paso anterior para establecer <*Nombre_De_Equipo_Publicador*> **\repl_logreader** como la cuenta de proceso para el Agente de registro del LOG. Después, seleccione **Aceptar**.  
 
     ![Cuadro de diálogo "Seguridad del Agente de registro del LOG" y página "Seguridad del agente"](media/tutorial-replicating-data-between-continuously-connected-servers/logreaderagentsecurity.png)   
 
@@ -116,6 +116,8 @@ En esta sección, se crea una publicación transaccional mediante [!INCLUDE[ssMa
     ![Página "Complete the Wizard" (Finalización del asistente) con el nombre de la publicación](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. Una vez se haya creado la publicación, seleccione **Cerrar** para finalizar el asistente. 
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 Podría producirse el siguiente error si el Agente SQL Server no se está ejecutando cuando intenta crear la publicación. Este error indica que la publicación se creó correctamente, pero no se pudo iniciar el Agente de instantáneas. Si esto ocurre, debe iniciar al Agente SQL Server y, después, iniciar manualmente el Agente de instantáneas. En la siguiente sección se proporcionan instrucciones. 
 
@@ -146,7 +148,7 @@ Si ve un error aquí, vea [Troubleshooting Snapshot Agent errors](troubleshoot-t
 2. En la carpeta **Publicaciones locales**, haga clic con el botón derecho en **AdvWorksProductTrans** y luego seleccione **Propiedades**.  Aparece el cuadro de diálogo **Propiedades de la publicación**.    
   
    A. Seleccione la página **Lista de acceso a la publicación** y seleccione **Agregar**.  
-   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>*>**\repl_distribution** y seleccione **Aceptar**.
+   B. En el cuadro de diálogo **Agregar acceso de publicación**, seleccione <*Nombre_De_Equipo_Publicador>* > **\repl_distribution** y seleccione **Aceptar**.
    
    ![Selecciones para agregar un inicio de sesión a la lista de acceso a la publicación (PAL).](media/tutorial-replicating-data-between-continuously-connected-servers/tranreplproperties.png)
 
@@ -182,7 +184,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
   
    ![Escribir un nombre para la base de datos de suscripción](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. En la página **Seguridad del Agente de distribución**, seleccione el botón de puntos suspensivos (**...**). Escriba <*Nombre_De_Equipo_Publicador>*>**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
+8. En la página **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos ( **?** ). Escriba <*Nombre_De_Equipo_Publicador>* >**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
 
    ![Especifique una cuenta y una contraseña en el cuadro de diálogo "Seguridad del Agente de distribución".](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   
@@ -192,7 +194,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
   
 1. Conéctese al suscriptor en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Expanda **Seguridad**, haga clic con el botón derecho en **Inicios de sesión** y, después, seleccione **Nuevo inicio de sesión**.     
   
-   A. En la página **General**, en **Nombre de inicio de sesión**, seleccione **Buscar** y agregue el inicio de sesión para <*Nombre_De_Equipo_Suscriptor>*>**\repl_distribution**.
+   A. En la página **General**, en **Nombre de inicio de sesión**, seleccione **Buscar** y agregue el inicio de sesión para <*Nombre_De_Equipo_Suscriptor>* > **\repl_distribution**.
 
    B. En la página **Asignaciones de usuario**, otorgue el inicio de sesión al miembro **db_owner** para la base de datos **ProductReplica**. 
 

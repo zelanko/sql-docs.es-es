@@ -17,12 +17,12 @@ author: julieMSFT
 ms.author: jrasnick
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c9c0d51046b7ac30cbf1f2a608c51c34974b75d9
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 07d8b7936051b202c73b7457c87e7533e1d46192
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579395"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500224"
 ---
 # <a name="subqueries-sql-server"></a>Subconsultas (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -81,14 +81,14 @@ Una subconsulta puede anidarse en la cláusula `WHERE` o `HAVING` de una instruc
 
 Si una tabla solo aparece en una subconsulta y no en la consulta externa, las columnas de esa tabla no se podrán incluir en la salida (la lista de selección de la consulta externa).   
 
-Las instrucciones que incluyen una subconsulta normalmente tienen uno de estos formatos:     
+Las instrucciones que incluyen una subconsulta normalmente tienen uno de estos formatos:   
 -   Expresión WHERE \[NOT] IN (subconsulta)
 -   Expresión WHERE comparison_operator \[ANY | ALL] (subconsulta)
 -   WHERE \[NOT] EXISTS (subconsulta)   
 
 En algunas instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)], la subconsulta se puede evaluar como si fuera una consulta independiente. Conceptualmente, los resultados de la subconsulta se sustituyen en la consulta externa, aunque en realidad esta no es la forma en la que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] procesa las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] con subconsultas.    
 
-Hay tres tipos básicos de subconsultas, que son las siguientes:   
+Hay tres tipos básicos de subconsultas, que son las siguientes: 
 -   Las que operan en listas especificadas con `IN` o modificadas por un operador de comparación mediante `ANY` o `ALL`.
 -   Las que se especifican con un operador de comparación sin modificar y deben devolver un solo valor.
 -   Las que son pruebas de existencia especificadas con `EXISTS`.
@@ -106,7 +106,7 @@ Las subconsultas están sujetas a las restricciones siguientes:
 -   La lista de selección de una subconsulta especificada con `EXISTS`, por convención, tiene un asterisco (\*) en lugar de un solo nombre de columna. Las reglas de una subconsulta especificada con `EXISTS` son idénticas a las de una lista de selección estándar, porque una subconsulta introducida por `EXISTS` crea una prueba de existencia y devuelve TRUE o FALSE en lugar de datos.   
 
 ## <a name="qualifying"></a> Calificar nombres de columna en subconsultas
-En el siguiente ejemplo, la columna *CustomerID* de la cláusula `WHERE` de la consulta externa está calificada implícitamente por el nombre de tabla de la cláusula `FROM` de la consulta externa (*Sales.Store*). La referencia a *CustomerID* en la lista de selección de la subconsulta está calificada por la cláusula `FROM` de la subconsulta, es decir, por la tabla *Sales.Customer*.
+En el siguiente ejemplo, la columna *BusinessEntityID* de la cláusula `WHERE` de la consulta externa está calificada implícitamente por el nombre de tabla de la cláusula `FROM` de la consulta externa (*Sales.Store*). La referencia a *CustomerID* en la lista de selección de la subconsulta está calificada por la cláusula `FROM` de la subconsulta, es decir, por la tabla *Sales.Customer*.
 
 ```sql
 USE AdventureWorks2016;

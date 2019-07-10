@@ -1,5 +1,5 @@
 ---
-title: 'Lección 2: Creación y aplicación de una directiva de normas de denominación | Microsoft Docs'
+title: 'Lección 2: Creación y aplicación de una directiva de normas de denominación | Microsoft Docs'
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -11,14 +11,14 @@ ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 688a61aeecfb729eeee877e0f8d3e463eaff06c8
-ms.sourcegitcommit: ca038f1ef180e4e1b27910bbc5d87822cd1ed176
+ms.openlocfilehash: c00b9b2156848e45ce4f73429c8cf397f7d34fc2
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52159043"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67584896"
 ---
-# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Crear y aplicar una directiva de normas de denominación
+# <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>Lección 2: Creación y aplicación de una directiva de normas de denominación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 Algunos tipos de directivas de administración basada en directivas pueden crear desencadenadores para exigir el cumplimiento futuro con la directiva. En esta lección, va a crear una directiva que exige una denominación estándar para tablas. A continuación, va a probar la directiva intentando crear una tabla que infrinja dicha directiva.  
 
@@ -40,6 +40,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
   
 2.  En el Explorador de objetos, haga clic en **Bases de datos**y, a continuación, presione F5 para actualizar la lista de bases de datos.  
 
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="create-the-finance-tables-condition"></a>Creación de la condición Finance Tables 
 
@@ -49,7 +50,7 @@ Para llevar a cabo este tutorial necesita tener SQL Server Management Studio y a
   
 2.  En el cuadro de diálogo **Crear nueva condición** , en el cuadro **Nombre** , escriba **Finance Tables**.  
     1. En la lista **Faceta** , seleccione **Nombre de varias partes**. 
-    1. En el cuadro de diálogo **Expresión**, en el cuadro **Campo**, seleccione **@Name**; en el cuadro **Operador**, seleccione **Like**; y en el cuadro **Valor**, escriba ```'fintbl%'``` para hacer que todos los nombres de tabla comiencen con las letras **fintbl**.
+    1. En el cuadro de diálogo **Expresión**, en el cuadro **Campo**, seleccione **@Name** ; en el cuadro **Operador**, seleccione **Like**; y en el cuadro **Valor**, escriba ```'fintbl%'``` para hacer que todos los nombres de tabla comiencen con las letras **fintbl**.
     1. En la página **Descripción** , escriba **Los nombres de tablas de finanzas deben comenzar con fintbl**y, a continuación, haga clic en **Aceptar** para crear la condición.  
 
     ![Condición Finance Tables](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -160,5 +161,5 @@ Este tutorial ha finalizado. Para volver al inicio, visite [Tutorial: Administra
   
 Para obtener una lista de tutoriales, vea [Tutoriales para SQL Server 2016](../../sql-server/tutorials-for-sql-server-2016.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [Administrar servidores mediante administración basada en directivas](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md)  

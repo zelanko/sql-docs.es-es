@@ -14,12 +14,12 @@ ms.assetid: be94f1c1-816b-4b1d-83f6-2fd6f5807ab7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: e12b5746d99635b773e3b61a6db10485f2e60765
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c4259070befa31239ca68ce93106ec990b131e4
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47667843"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582206"
 ---
 # <a name="troubleshooting-oracle-publishers"></a>Solucionar problemas de los publicadores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -70,7 +70,7 @@ ms.locfileid: "47667843"
   
 -   "La instancia del servidor de Oracle "\<*NombrePublicadorOracle*>" se ha configurado previamente para usar "\<*NombreDistribuidorSQLServer*>" como distribuidor. Para empezar a usar "\<*NewSQLServerDistributorName*>" como distribuidor, debe quitar la configuración de replicación actual de la instancia del servidor de Oracle, lo que eliminará todas las publicaciones existentes en esa instancia del servidor".  
   
--   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>.*\<NombreBaseDatosDistribución>*". Quite el publicador o el sinónimo público "*\<NombreSinónimo>*" para volver a crearlo".  
+-   "Ya se ha definido el servidor Oracle "\<*NombreServidorOracle*>" como publicador "\<*NombrePublicadorOracle*>" en el distribuidor "\<*NombreDistribuidorSQLServer*>. *\<NombreBaseDatosDistribución>* ". Quite el publicador o el sinónimo público " *\<NombreSinónimo>* " para volver a crearlo".  
   
  Al quitar un publicador de Oracle, los objetos de replicación de la base de datos de Oracle se limpian automáticamente. Sin embargo, en algunos casos es necesario limpiar manualmente los objetos de replicación de Oracle. Para limpiar manualmente los objetos de replicación de Oracle creados por la replicación:  
   
@@ -79,7 +79,9 @@ ms.locfileid: "47667843"
 2.  Emita el comando SQL `DROP PUBLIC SYNONYM MSSQLSERVERDISTRIBUTOR;`.  
   
 3.  Emita el comando SQL `DROP USER <replication_administrative_user_schema>``CASCADE;`.  
-  
+
+[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="sql-server-error-21663-is-raised-regarding-the-lack-of-a-primary-key"></a>Aparece el error 21663 de SQL Server referente a la falta de una clave principal  
  Los artículos de las publicaciones transaccionales deben tener una clave principal válida. Si no tienen una clave principal válida, aparecerá el siguiente mensaje de error cuando intente agregar un artículo:  
   
@@ -90,7 +92,7 @@ ms.locfileid: "47667843"
 ## <a name="sql-server-error-21642-is-raised-regarding-a-duplicate-linked-server-login"></a>Aparece el error 21642 de SQL Server referente a un inicio de sesión duplicado en el servidor vinculado  
  Al configurar inicialmente el publicador de Oracle, se crea una entrada de servidor vinculado para la conexión entre el publicador y el distribuidor. El servidor vinculado tiene el mismo nombre que el servicio TNS de Oracle. Si intenta crear un servidor vinculado con el mismo nombre, aparecerá el siguiente mensaje de error:  
   
- "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre "*\<NombreServidorVinculado>*". Quítelo o elija otro nombre de publicador."  
+ "Los publicadores heterogéneos requieren un servidor vinculado. Ya existe un servidor vinculado con el nombre " *\<NombreServidorVinculado>* ". Quítelo o elija otro nombre de publicador."  
   
  Este error puede aparecer si intenta crear el servidor vinculado directamente o si quitó anteriormente la relación entre el publicador de Oracle y el distribuidor de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , y está intentando volver a configurarla. Si recibe este error al intentar volver a configurar el publicador, quite el servidor vinculado con [sp_dropserver &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md).  
   
@@ -157,7 +159,7 @@ ms.locfileid: "47667843"
   
 2.  En el cuadro de diálogo **Ejecutar** , escriba **regedit**y, a continuación, haga clic en **Aceptar**.  
   
-3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\*\<nombreInstancia>* \Providers.  
+3.  Navegue hasta HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\ *\<nombreInstancia>* \Providers.  
   
      Se debe incluir en Proveedores una carpeta denominada OraOLEDB.Oracle. En esta carpeta debe encontrarse el nombre de valor DWORD **AllowInProcess**, con un valor de **1**.  
   
@@ -247,7 +249,7 @@ ms.locfileid: "47667843"
   
 -   Ejecute **sp_dropdistpublisher**. Para más información, vea [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Configurar un publicador de Oracle](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
  [Información general de la publicación de Oracle](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md)  
   

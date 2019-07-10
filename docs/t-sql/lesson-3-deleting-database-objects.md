@@ -13,14 +13,14 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fc4bd0a0d3c70b31f398c791c4e75dbd7ab1403e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2b155862bd9983bc8b93b6088bfa6d5df254ffe7
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47621153"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67579375"
 ---
-# <a name="lesson-3-delete-database-objects"></a>Lección 3: Eliminar objetos de base de datos
+# <a name="lesson-3-delete-database-objects"></a>Lección 3: Eliminación de objetos de base de datos
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../includes/tsql-appliesto-ss2008-all-md.md)]
 Esta breve lección quita los objetos que ha creado en las lecciones 1 y 2 y, a continuación, quita la base de datos.  
   
@@ -44,33 +44,32 @@ Use la instrucción `REVOKE` para quitar el permiso de ejecución para `Mary` en
 
 1. Use la instrucción `DROP` para quitar el permiso de `Mary` para tener acceso a la base de datos `TestData` :
   
-  ```sql  
-  DROP USER Mary;  
-  GO  
-  ```  
+   ```sql  
+   DROP USER Mary;  
+   GO  
+   ```  
 
 
 2. Use la instrucción `DROP` para quitar el permiso de `Mary` para tener acceso a esta instancia de [!INCLUDE[ssVersion2005](../includes/ssversion2005-md.md)]:
   
-  ```sql  
-    DROP LOGIN [<computer_name>\Mary];  
-    GO   
-  ```  
+   ```sql  
+   DROP LOGIN [<computer_name>\Mary];  
+   GO   
+   ```  
   
-3.   Use la instrucción `DROP` para quitar el procedimiento almacenado `pr_Names`:  
+3. Use la instrucción `DROP` para quitar el procedimiento almacenado `pr_Names`:  
   
-    ```sql  
-    DROP PROC pr_Names;  
-    GO  
-    ```  
+   ```sql  
+   DROP PROC pr_Names;  
+   GO   
+   ```  
   
-6.  Use la instrucción `DROP` para quitar la vista `vw_Names`:  
+4. Use la instrucción `DROP` para quitar la vista `vw_Names`:  
   
-    ```sql  
-    DROP VIEW vw_Names;  
-    GO  
-  
-    ```  
+   ```sql  
+   DROP VIEW vw_Names;  
+   GO  
+   ```  
 
 ## <a name="delete-table"></a>Eliminación de tablas
   

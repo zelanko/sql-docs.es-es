@@ -11,12 +11,12 @@ ms.assetid: f855e931-7502-44bd-8a8b-b8543645c7f4
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: dfd06b590ba54efc935bab1bbe8c898101e827ae
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 38ac1dae8a3d679a09ccebaa2aca06b681ac48ff
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518607"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582752"
 ---
 # <a name="resolve-out-of-memory-issues"></a>Resolver problemas de memoria insuficiente
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,13 +27,13 @@ ms.locfileid: "52518607"
   
 |Tema|Información general|  
 |-----------|--------------|  
-|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos de servidor "*\<nombreDeGrupoDeRecursos>*"".|  
+|[Resolver errores de restauración de bases de datos debidos a memoria insuficiente](#bkmk_resolveRecoveryFailures)|Se indica lo que debe hacer si aparece el mensaje de error "Error en la operación de restauración para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos de servidor " *\<nombreDeGrupoDeRecursos>* "".|  
 |[Resolver el impacto de las condiciones de memoria insuficiente u OOM en la carga de trabajo](#bkmk_recoverFromOOM)|Se describe lo que hay que hacer si percibe que las condiciones de memoria insuficiente están afectando negativamente al rendimiento.|  
-|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos "*\<nombreDeBaseDeDatos>*" debido a memoria insuficiente en el grupo de recursos "*\<nombreDeGrupoDeRecursos>*". ..." cuando hay suficiente memoria disponible para la operación.|
+|[Resolver los errores de asignación de páginas debidos a memoria insuficiente cuando hay suficiente memoria disponible](#bkmk_PageAllocFailure)|Se indica lo que debe hacer si aparece el mensaje de error "No se permiten asignaciones de páginas para la base de datos " *\<nombreDeBaseDeDatos>* " debido a memoria insuficiente en el grupo de recursos " *\<nombreDeGrupoDeRecursos>* ". ..." cuando hay suficiente memoria disponible para la operación.|
 |[Prácticas recomendadas: usar OLTP en memoria en un entorno de máquinas virtuales](#bkmk_VMs)|Qué debe tener en cuenta al usar OLTP en memoria en un entorno virtualizado.|
   
 ##  <a name="bkmk_resolveRecoveryFailures"></a> Resolver errores de restauración de bases de datos debidos a memoria insuficiente  
- Cuando intente restaurar una base de datos, es posible que obtenga el mensaje de error: "Error en la operación de restauración para la base de datos "*\<NombreBasedeDatos>*" debido a que la memoria es insuficiente en el grupo de recursos "*\<NombreGrupoRecursos>*"". Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
+ Cuando intenta restaurar una base de datos, es posible que obtenga el mensaje de error "No se pudo realizar la operación de restauración para la base de datos ' *\<nombreDeBaseDeDatos>* ' debido a que la memoria es insuficiente en el grupo de recursos ' *\<nombreDeGrupoDeRecursos>* '." Esto indica que el servidor no tiene suficiente memoria disponible para restaurar la base de datos. 
    
 El servidor en el que restaura una base de datos debe tener suficiente memoria disponible para las tablas optimizadas para memoria en la copia de seguridad de la base de datos; de lo contrario, la base de datos no se conectará y se marcará como sospechosa.  
   
@@ -77,7 +77,9 @@ Si el servidor tiene suficiente memoria física, pero todavía aparece este erro
 1.  [Abrir una DAC (conexión de administrador dedicada)](#bkmk_openDAC)  
   
 2.  [Tomar una acción correctora](#bkmk_takeCorrectiveAction)  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ###  <a name="bkmk_openDAC"></a> Abrir una DAC (conexión de administrador dedicada)  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona una conexión de administrador dedicada (DAC). La DAC permite a los administradores acceder a una instancia en ejecución del motor de base de datos de SQL Server para solucionar problemas en el servidor, aunque el servidor no responda a otras conexiones de cliente. DAC está disponible a través de la utilidad `sqlcmd` y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -158,7 +160,7 @@ Si sigue los procedimientos anteriores para una base de datos con tablas optimiz
 ### <a name="resolution"></a>Solución
 Para mitigar este problema, asigne previamente memoria suficiente a la base de datos para recuperar o reiniciar la base de datos; no especifique un valor mínimo confiando en que la memoria dinámica proporcionará memoria adicional cuando sea necesario.
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Administrar memoria para OLTP en memoria](https://msdn.microsoft.com/library/d82f21fa-6be1-4723-a72e-f2526fafd1b6)   
  [Supervisar y solucionar problemas del uso de la memoria](../../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)   
  [Enlazar una base de datos con tablas con optimización para memoria a un grupo de recursos de servidor](../../relational-databases/in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md)   

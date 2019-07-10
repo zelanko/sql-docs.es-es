@@ -23,12 +23,12 @@ ms.assetid: ee6b9116-a7ff-463a-a9f0-b360804d8678
 author: CarlRabeler
 ms.author: carlrab
 manager: craigg
-ms.openlocfilehash: 9d7e9938c8132489bb18538aec6b8256dd2115fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a1b2725d65f9eea468ac70ce2d99285c0a85252
+ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65503224"
+ms.lasthandoff: 07/02/2019
+ms.locfileid: "67500035"
 ---
 # <a name="create-spatial-index-transact-sql"></a>CREATE SPATIAL INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "65503224"
   
 ## <a name="syntax"></a>Sintaxis  
   
-```sql
+```
 CREATE SPATIAL INDEX index_name
   ON <object> ( spatial_column_name )  
     {  
@@ -146,20 +146,19 @@ CREATE SPATIAL INDEX index_name
   | MAXDOP = max_degree_of_parallelism  
     | DATA_COMPRESSION = { NONE | ROW | PAGE }  
 }  
-  
 ```  
   
 ## <a name="arguments"></a>Argumentos  
 
- *index_name*  
+ *index_name*     
  Es el nombre del índice. Los nombres de índice deben ser únicos en una tabla, pero no es necesario que sean únicos en una base de datos. Los nombres de índice deben seguir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
- ON \<object> ( *spatial_column_name* )  
+ ON \<object> ( *spatial_column_name* )     
  Especifica el objeto (base de datos, esquema o tabla) en el que va a crearse el índice y el nombre de columna espacial.  
   
  *spatial_column_name* especifica la columna espacial en la que se basa el índice. Solamente puede especificarse una columna espacial en una definición de índice espacial único; pero pueden crearse varios índices espaciales en una columna de tipo **geometry** o **geography**.  
   
- USING  
+ USING      
  Indica el esquema de teselación del índice espacial. Este parámetro usa el valor específico del tipo, tal y como aparece en la siguiente tabla:  
   
 |Tipo de datos de la columna|Esquema de teselación|  
@@ -173,78 +172,77 @@ CREATE SPATIAL INDEX index_name
   
  Para conocer mejor el modo en que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] implementa la teselación, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- ON *filegroup_name*  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ ON *filegroup_name*      
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Crea el índice especificado en el grupo de archivos especificado. Si no se especifica ninguna ubicación y la tabla no tiene particiones, el índice utiliza el mismo grupo de archivos que la tabla subyacente. El grupo de archivos debe existir previamente.  
   
- ON "default"  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ ON "default"     
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Crea el índice especificado en el grupo de archivos predeterminado.  
   
  El término predeterminado (default), en este contexto, no es una palabra clave. Es un identificador para el grupo de archivos predeterminado y debe delimitarse, como en ON"default" o en ON [default]. Si se especifica "default", la opción QUOTED_IDENTIFIER debe tener el valor ON para la sesión actual. Esta es la configuración predeterminada. Para obtener más información, vea [SET QUOTED_IDENTIFIER &#40;Transact-SQL&#41;](../../t-sql/statements/set-quoted-identifier-transact-sql.md).  
   
- **\<object>::=**
-  
+ **\<object>::=**     
  Es el objeto completo o no completo que va a indizarse.  
   
- *database_name*  
+ *database_name*      
  Es el nombre de la base de datos.  
   
- *schema_name*  
+ *schema_name*     
  Es el nombre del esquema al que pertenece la tabla.  
   
- *table_name*  
+ *table_name*      
  Es el nombre de la tabla que va a indizarse.  
   
- SQL Database de Microsoft Azure admite el formato de nombre de tres partes nombre_basededatos.[nombre_esquema].nombre_objeto cuando nombre_basededatos es la base de datos actual o tempdb y nombre_objeto comienza con #.  
+[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] admite el formato de nombre de tres partes database_name.[schema_name].object_name cuando database_name es la base de datos actual o database_name es tempdb y object_name comienza por #.  
   
 ### <a name="using-options"></a>Opciones de USING
 
- GEOMETRY_GRID  
+ GEOMETRY_GRID      
  Especifica el esquema de teselación de cuadrícula de **geometry** que se está usando. GEOMETRY_GRID puede especificarse solamente en una columna del tipo de datos **geometry**.  GEOMETRY_GRID permite que se ajuste manualmente el esquema de teselación.  
   
- GEOMETRY_AUTO_GRID  
- **Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ GEOMETRY_AUTO_GRID      
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Puede especificarse solamente en una columna del tipo de datos . Se trata del valor predeterminado para este tipo de datos y no es necesario especificarlo.  
   
- GEOGRAPHY_GRID  
+ GEOGRAPHY_GRID      
  Especifica el esquema de teselación de cuadrícula de geografía. GRAPHY_GRID puede especificarse solamente en una columna del tipo de datos **geography**.  
   
- GEOGRAPHY_AUTO_GRID  
- **Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ GEOGRAPHY_AUTO_GRID      
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Solamente puede especificarse en una columna del tipo de datos Geography.  Se trata del valor predeterminado para este tipo de datos y no es necesario especificarlo.  
   
 ### <a name="with-options"></a>Opciones de WITH
 
-BOUNDING_BOX  
+BOUNDING_BOX      
 Especifica una tupla numérica de cuatro elementos que define las cuatro coordenadas del cuadro de límite: las coordenadas X mínima e Y mínima de la esquina inferior izquierda y las coordenadas X máxima e Y máxima de la esquina superior derecha.  
   
- *xmin*  
+ *xmin*      
  Especifica la coordenada X de la esquina inferior izquierda del cuadro de límite.  
   
- *ymin*  
+ *ymin*      
  Especifica la coordenada Y de la esquina inferior izquierda del cuadro de límite.  
   
- *xmax*  
+ *xmax*     
  Especifica la coordenada X de la esquina superior derecha del cuadro de límite.  
   
- *ymax*  
+ *ymax*     
  Especifica la coordenada Y de la esquina superior derecha del cuadro de límite.  
   
- XMIN = *xmin*  
+ XMIN = *xmin*     
  Especifica el nombre y el valor de la propiedad para la coordenada X de la esquina inferior izquierda del cuadro de límite.  
   
- YMIN =*ymin*  
+ YMIN =*ymin*      
  Especifica el nombre y el valor de la propiedad para la coordenada Y de la esquina inferior izquierda del cuadro de límite.  
   
- XMAX =*xmax*  
+ XMAX =*xmax*      
  Especifica el nombre y el valor de la propiedad para la coordenada X de la esquina superior derecha del cuadro de límite.  
   
- YMAX =*ymax*  
+ YMAX =*ymax*     
  Especifica el nombre y el valor de la propiedad para la coordenada Y de la esquina superior derecha del cuadro de límite.  
   
  > [!NOTE]
@@ -262,32 +260,32 @@ Especifica una tupla numérica de cuatro elementos que define las cuatro coorden
   
 - BOUNDING_BOX =( XMIN =*xmin*, XMAX =*xmax*, YMIN =*ymin*, YMAX =*ymax*)  
   
-GRIDS  
+GRIDS      
 Define la densidad de la cuadrícula en cada nivel del esquema de teselación. Cuando GEOMETRY_AUTO_GRID y GEOGRAPHY_AUTO_GRID están seleccionados, esta opción está deshabilitada.  
   
  Para más información sobre la teselación, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
  GRIDS admite los parámetros siguientes:  
   
- LEVEL_1  
+ LEVEL_1     
  Especifica la cuadrícula del primer nivel (superior).  
   
- LEVEL_2  
+ LEVEL_2    
  Especifica la cuadrícula del segundo nivel.  
   
- LEVEL_3  
+ LEVEL_3    
  Especifica la cuadrícula del tercer nivel.  
   
- LEVEL_4  
+ LEVEL_4    
  Especifica la cuadrícula del cuarto nivel.  
   
- LOW  
+ LOW    
  Especifica la mínima densidad posible de la cuadrícula en un nivel determinado. LOW equivale a 16 celdas (una cuadrícula de 4x4).  
   
- **MEDIUM**  
+ **MEDIUM**     
  Especifica la densidad media de la cuadrícula en un nivel determinado. MEDIUM equivale a 64 celdas (una cuadrícula de 8x8).  
   
- HIGH  
+ HIGH     
  Especifica la máxima densidad posible de la cuadrícula en un nivel determinado. HIGH equivale a 256 celdas (una cuadrícula de 16x16).  
   
 > [!NOTE]
@@ -296,7 +294,7 @@ Define la densidad de la cuadrícula en cada nivel del esquema de teselación. C
 > [!WARNING]
 > Si se especifica una densidad no válida, se produce un error.  
   
-CELLS_PER_OBJECT =*n*  
+CELLS_PER_OBJECT =*n*     
 Especifica el número de celdas por objeto de teselación que el proceso de teselación puede usar para un único objeto espacial en el índice. *n* puede ser cualquier número entero comprendido entre 1 y 8192, ambos incluidos. Si se pasa un número que no es válido o si el número supera el máximo de celdas para la teselación especificada, se produce un error.  
   
  CELLS_PER_OBJECT tiene los siguientes valores predeterminados:  
@@ -308,25 +306,25 @@ Especifica el número de celdas por objeto de teselación que el proceso de tese
 |GEOGRAPHY_GRID|**16**|  
 |GEOGRAPHY_AUTO_GRID|**12**|  
   
- En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad.  
+En el nivel superior, si un objeto abarca más celdas de las especificadas mediante *n*, la indexación usa tantas celdas como sean necesarias para proporcionar una teselación de nivel superior completa. En tales casos, un objeto podría recibir más celdas de las especificadas. En este caso, el número máximo es la cantidad de celdas generadas por la cuadrícula de nivel superior, que depende de la densidad.  
   
- La regla de teselación de celdas por objeto utiliza el valor CELLS_PER_OBJECT. Para más información sobre las reglas de teselación, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
+La regla de teselación de celdas por objeto utiliza el valor CELLS_PER_OBJECT. Para más información sobre las reglas de teselación, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
-PAD_INDEX = { ON | **OFF** }  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+PAD_INDEX = { ON | **OFF** }     
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
- Especifica el relleno del índice. El valor predeterminado es OFF.  
+Especifica el relleno del índice. El valor predeterminado es OFF.  
   
- ON  
- Indica que el porcentaje de espacio disponible especificado por *fillfactor* se aplica a las páginas de nivel intermedio del índice.  
+ON     
+Indica que el porcentaje de espacio disponible especificado por *fillfactor* se aplica a las páginas de nivel intermedio del índice.  
   
- No se especifica OFF ni *fillfactor*.  
- Indica que las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.  
+No se especifica OFF ni *fillfactor*.     
+Indica que las páginas de nivel intermedio se llenan casi al máximo de su capacidad y dejan espacio suficiente para al menos una fila del tamaño máximo que puede tener el índice, considerando el conjunto de claves incluidas en las páginas de nivel intermedio.  
   
- La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de *fillfactor*.  
+La opción PAD_INDEX solamente resulta útil si también se especifica FILLFACTOR, porque PAD_INDEX utiliza el mismo porcentaje especificado por FILLFACTOR. Si el porcentaje especificado para FILLFACTOR no es lo suficientemente grande como para admitir una fila, [!INCLUDE[ssDE](../../includes/ssde-md.md)] invalida internamente el porcentaje para permitir el valor mínimo. El número de filas de una página de nivel intermedio del índice no es nunca inferior a dos, independientemente de lo bajo que sea el valor de *fillfactor*.  
   
-FILLFACTOR =*fillfactor*  
- **Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+FILLFACTOR =*fillfactor*     
+ **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica un porcentaje que indica cuánto debe llenar el [!INCLUDE[ssDE](../../includes/ssde-md.md)] el nivel hoja de cada página de índice durante la creación o nueva generación de los índices. *fillfactor* debe ser un valor entero comprendido entre 1 y 100. El valor predeterminado es 0. Si *fillfactor* es 100 o 0, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] crea índices con las páginas hoja llenas al máximo de su capacidad.  
   
@@ -340,29 +338,29 @@ FILLFACTOR =*fillfactor*
   
  Para obtener más información, vea [Especificar el factor de relleno para un índice](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
   
-SORT_IN_TEMPDB = { ON | **OFF** }  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+SORT_IN_TEMPDB = { ON | **OFF** }       
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Indica si los resultados de ordenación temporales deben almacenarse en tempdb. El valor predeterminado es OFF.  
   
- ON  
+ ON     
  Los resultados de ordenación intermedios utilizados para generar el índice se almacenan en tempdb. Esto puede reducir el tiempo necesario para crear un índice si tempdb y la base de datos de usuarios están en conjuntos de discos distintos. Sin embargo, esto aumenta la cantidad de espacio en disco utilizado durante la generación del índice.  
   
- OFF  
+ OFF     
  Los resultados de orden intermedios se almacenan en la misma base de datos que el índice.  
   
  Además del espacio necesario en la base de datos del usuario para crear el índice, tempdb debe tener la misma cantidad de espacio adicional para almacenar los resultados de orden intermedio. Para más información, vea [Opción SORT_IN_TEMPDB para índices](../../relational-databases/indexes/sort-in-tempdb-option-for-indexes.md).  
   
-IGNORE_DUP_KEY =**OFF**  
+IGNORE_DUP_KEY =**OFF**     
 No tiene ningún efecto sobre los índices espaciales porque el tipo de índice nunca es único. No establezca esta opción en ON porque, de lo contrario, se producirá un error.  
   
-STATISTICS_NORECOMPUTE = { ON | **OFF**}  
+STATISTICS_NORECOMPUTE = { ON | **OFF**}     
 Especifica si se vuelven a calcular las estadísticas de distribución. El valor predeterminado es OFF.  
   
- ON  
+ ON    
  Las estadísticas obsoletas no se vuelven a calcular automáticamente.  
   
- OFF  
+ OFF    
  Se habilita la actualización automática de las estadísticas.  
   
  Para restaurar la actualización automática de estadísticas, establezca STATISTICS_NORECOMPUTE en OFF o ejecute UPDATE STATISTICS sin la cláusula NORECOMPUTE.  
@@ -370,20 +368,20 @@ Especifica si se vuelven a calcular las estadísticas de distribución. El valor
 > [!IMPORTANT]  
 > Deshabilitar el cálculo automático de estadísticas de distribución puede impedir que el optimizador de consultas elija los planes de ejecución óptimos de las consultas relativas a la tabla.  
   
-DROP_EXISTING = { ON | **OFF** }  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DROP_EXISTING = { ON | **OFF** }     
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Especifica que se quite y se vuelva a generar el índice espacial con nombre preexistente. El valor predeterminado es OFF.  
   
- ON  
+ ON     
  El índice existente se quita y se vuelve a generar. El nombre de índice especificado debe ser el mismo que el de un índice actualmente existente; sin embargo, la definición se puede modificar. Por ejemplo, puede especificar columnas, criterio de ordenación, esquema de particionamiento u opciones de índice diferentes.  
   
- OFF  
+ OFF     
  Se muestra un error si ya existe el nombre de índice especificado.  
   
  El tipo de índice no puede cambiarse utilizando DROP_EXISTING.  
   
-ONLINE =**OFF**  
+ONLINE =**OFF**      
 Especifica que las tablas subyacentes y los índices asociados no están disponibles para la realización de consultas y modificaciones de datos durante la operación del índice. En esta versión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], no se admiten generaciones de índices en línea para los índices espaciales. Si esta opción se establece en ON para un índice espacial, se produce un error. Omita la opción ONLINE o establezca ONLINE en OFF.  
   
  Una operación de índice sin conexión para crear, volver a crear o quitar un índice espacial adquiere un bloqueo de modificación del esquema (Sch-M) de la tabla. Esto evita que todos los usuarios tengan acceso a la tabla subyacente durante la operación.  
@@ -391,30 +389,30 @@ Especifica que las tablas subyacentes y los índices asociados no están disponi
 > [!NOTE]  
 > Las operaciones de índices en línea no están disponibles en todas las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-ALLOW_ROW_LOCKS = { **ON** | OFF }  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_ROW_LOCKS = { **ON** | OFF }     
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   
  Especifica si se permiten los bloqueos de fila. El valor predeterminado es ON.  
   
- ON  
+ ON     
  Los bloqueos de fila se admiten al obtener acceso al índice. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina cuándo se usan los bloqueos de fila.  
   
- OFF  
+ OFF     
  No se usan los bloqueos de fila.  
   
-ALLOW_PAGE_LOCKS = { **ON** | OFF }  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+ALLOW_PAGE_LOCKS = { **ON** | OFF }     
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. 
   
  Especifica si se permiten bloqueos de página. El valor predeterminado es ON.  
   
- ON  
+ ON    
  Los bloqueos de página se permiten al obtener acceso al índice. [!INCLUDE[ssDE](../../includes/ssde-md.md)] determina el momento en que se usan los bloqueos de página.  
   
- OFF  
+ OFF     
  No se utilizan bloqueos de página.  
   
-MAXDOP =*max_degree_of_parallelism*  
-**Se aplica a**: de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+MAXDOP =*max_degree_of_parallelism*      
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Invalida la opción de configuración `max degree of parallelism` mientras se prolongue la operación del índice. Utilice MAXDOP para establecer un límite para el número de procesadores utilizados en la ejecución de un plan paralelo. El máximo es 64 procesadores.  
   
@@ -423,13 +421,13 @@ MAXDOP =*max_degree_of_parallelism*
   
  *max_degree_of_parallelism* puede tener estos valores:  
   
- 1  
+ 1     
  Suprime la generación de planes paralelos.  
   
- \>1  
+ \>1    
  Restringe el número máximo de procesadores utilizados en una operación de índice paralelo al número especificado o a un número inferior, en función de la actual carga de trabajo del sistema.  
   
- 0 (predeterminado)  
+ 0 (predeterminado)    
  Usa el número real de procesadores o menos, según la carga de trabajo actual del sistema.  
   
  Para obtener más información, vea [Configurar operaciones de índice en paralelo](../../relational-databases/indexes/configure-parallel-index-operations.md).  
@@ -437,48 +435,43 @@ MAXDOP =*max_degree_of_parallelism*
 > [!NOTE]
 > Las operaciones de índices en paralelo no están disponibles en todas las ediciones de [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de las características admitidas por las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea [Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
-DATA_COMPRESSION = {NONE | ROW | PAGE}  
-**Se aplica a**: de [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+DATA_COMPRESSION = {NONE | ROW | PAGE}     
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
   
  Determina el nivel de compresión de datos usado por el índice.  
   
- Ninguno  
+ Ninguno     
  El índice no usa ninguna compresión de los datos.  
   
- ROW  
+ ROW    
  El índice no usa compresión de filas.  
   
- PAGE  
+ PAGE    
  El índice no usa compresión de páginas.  
   
 ## <a name="remarks"></a>Notas
-
- Cada opción solamente puede especificarse una vez para cada instrucción CREATE SPATIAL INDEX. Si se especifica dos veces cualquier opción, se produce un error.  
+Cada opción solamente puede especificarse una vez para cada instrucción CREATE SPATIAL INDEX. Si se especifica dos veces cualquier opción, se produce un error.  
   
- Puede crear un máximo de 249 índices espaciales en cada columna espacial de una tabla. Crear más de un índice espacial en una columna espacial concreta puede resultar útil, por ejemplo, para indizar parámetros de teselación diferentes en una única columna.  
+Puede crear un máximo de 249 índices espaciales en cada columna espacial de una tabla. Crear más de un índice espacial en una columna espacial concreta puede resultar útil, por ejemplo, para indizar parámetros de teselación diferentes en una única columna.  
   
 > [!IMPORTANT]  
 > Existen otras restricciones para la creación de índices espaciales. Para más información, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
- Una generación de índices no puede usar el paralelismo de procesos disponible.  
+Una generación de índices no puede usar el paralelismo de procesos disponible.  
   
 ## <a name="methods-supported-on-spatial-indexes"></a>Métodos que se admiten en los índices espaciales
-
- Bajo ciertas condiciones, los índices espaciales admiten determinados métodos de geometría orientados a conjuntos. Para más información, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
+Bajo ciertas condiciones, los índices espaciales admiten determinados métodos de geometría orientados a conjuntos. Para más información, vea [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md).  
   
 ## <a name="spatial-indexes-and-partitioning"></a>Los índices espaciales y la creación de particiones
-
- De forma predeterminada, si se crea un índice espacial en una tabla con particiones, el índice se particiona según el esquema de partición de la tabla. Esto garantiza que los datos del índice y la fila relacionada se almacenen en la misma partición.  
+De forma predeterminada, si se crea un índice espacial en una tabla con particiones, el índice se particiona según el esquema de partición de la tabla. Esto garantiza que los datos del índice y la fila relacionada se almacenen en la misma partición.  
   
- En este caso, para modificar el esquema de partición de la tabla base, habría que quitar el índice espacial antes de volver a particionar la tabla base. Para evitar esta restricción, puede especificar la opción "ON filegroup" durante la creación de un índice espacial. Para obtener más información, vea "Los índices espaciales y los grupos de archivos", más adelante en este tema.  
+En este caso, para modificar el esquema de partición de la tabla base, habría que quitar el índice espacial antes de volver a particionar la tabla base. Para evitar esta restricción, puede especificar la opción "ON filegroup" durante la creación de un índice espacial. Para obtener más información, vea "Los índices espaciales y los grupos de archivos", más adelante en este tema.  
   
 ## <a name="spatial-indexes-and-filegroups"></a>Los índices espaciales y los grupos de archivos
-
- De forma predeterminada los índices espaciales se particionan en los mismos grupos de archivos que la tabla en la que se especifica el índice. Esto puede invalidarse utilizando la especificación del grupo de archivos:  
+De forma predeterminada los índices espaciales se particionan en los mismos grupos de archivos que la tabla en la que se especifica el índice. Esto puede invalidarse utilizando la especificación del grupo de archivos:  
   
- [ ON { *filegroup_name* | "default" } ]  
-  
- Si especifica un grupo de archivos para un índice espacial, el índice se sitúa en ese grupo de archivos, independientemente del esquema de partición de la tabla.  
+[ ON { *filegroup_name* | "default" } ]     
+Si especifica un grupo de archivos para un índice espacial, el índice se sitúa en ese grupo de archivos, independientemente del esquema de partición de la tabla.  
   
 ## <a name="catalog-views-for-spatial-indexes"></a>Vistas de catálogo para los índices espaciales
 
@@ -495,14 +488,12 @@ DATA_COMPRESSION = {NONE | ROW | PAGE}
  Para más información sobre la creación de índices, vea la sección "Comentarios" de [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
 ## <a name="permissions"></a>Permisos
-
- El usuario debe tener el permiso ALTER en la tabla o vista, o ser un miembro del rol fijo de servidor sysadmin o de los roles fijos de base de datos db_owner y db_ddladmin.  
+El usuario debe disponer del permiso `ALTER` en la tabla o vista o bien ser miembro del rol de servidor fijo sysadmin o de los roles fijos de bases de datos `db_ddladmin` y `db_owner`.  
   
 ## <a name="examples"></a>Ejemplos  
   
 ### <a name="a-creating-a-spatial-index-on-a-geometry-column"></a>A. Crear un índice espacial en una columna de geometría
-
- En este ejemplo se crea una tabla denominada `SpatialTable` que contiene una columna de tipo **geometry**, denominada `geometry_col`. A continuación, se crea un índice espacial, `SIndx_SpatialTable_geometry_col1`, en la columna `geometry_col`. El ejemplo utiliza el esquema de teselación predeterminado y especifica el cuadro de límite.  
+En este ejemplo se crea una tabla denominada `SpatialTable` que contiene una columna de tipo **geometry**, denominada `geometry_col`. A continuación, se crea un índice espacial, `SIndx_SpatialTable_geometry_col1`, en la columna `geometry_col`. El ejemplo utiliza el esquema de teselación predeterminado y especifica el cuadro de límite.  
   
 ```sql  
 CREATE TABLE SpatialTable(id int primary key, geometry_col geometry);  
@@ -512,8 +503,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col1
 ```  
   
 ### <a name="b-creating-a-spatial-index-on-a-geometry-column"></a>B. Crear un índice espacial en una columna de geometría
-
- En el ejemplo siguiente se crea un segundo índice espacial, `SIndx_SpatialTable_geometry_col2`, en la columna `geometry_col` de la tabla `SpatialTable`. En el ejemplo se especifica `GEOMETRY_GRID` como esquema de teselación. También especifica el cuadro de límite, densidades diferentes para los distintos niveles de la cuadrícula y 64 celdas por objeto. También establece el relleno del índice en `ON`.  
+En el ejemplo siguiente se crea un segundo índice espacial, `SIndx_SpatialTable_geometry_col2`, en la columna `geometry_col` de la tabla `SpatialTable`. En el ejemplo se especifica `GEOMETRY_GRID` como esquema de teselación. También especifica el cuadro de límite, densidades diferentes para los distintos niveles de la cuadrícula y 64 celdas por objeto. También establece el relleno del índice en `ON`.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2  
@@ -527,8 +517,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col2
 ```  
   
 ### <a name="c-creating-a-spatial-index-on-a-geometry-column"></a>C. Crear un índice espacial en una columna de geometría
-
- El ejemplo siguiente crea un tercer índice espacial, `SIndx_SpatialTable_geometry_col3`, en la columna `geometry_col` de la tabla `SpatialTable`. El ejemplo utiliza el esquema de teselación predeterminado. También especifica el cuadro de límite y utiliza densidades de celda diferentes en los niveles tercero y cuarto, y utiliza el número predeterminado de celdas por objeto.  
+El ejemplo siguiente crea un tercer índice espacial, `SIndx_SpatialTable_geometry_col3`, en la columna `geometry_col` de la tabla `SpatialTable`. El ejemplo utiliza el esquema de teselación predeterminado. También especifica el cuadro de límite y utiliza densidades de celda diferentes en los niveles tercero y cuarto, y utiliza el número predeterminado de celdas por objeto.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3  
@@ -539,8 +528,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geometry_col3
 ```  
   
 ### <a name="d-changing-an-option-that-is-specific-to-spatial-indexes"></a>D. Cambiar una opción específica de los índices espaciales
-
- El ejemplo siguiente vuelve a generar el índice espacial creado en el ejemplo anterior, `SIndx_SpatialTable_geography_col3`, especificando una nueva densidad `LEVEL_3` con DROP_EXISTING = ON.  
+El ejemplo siguiente vuelve a generar el índice espacial creado en el ejemplo anterior, `SIndx_SpatialTable_geography_col3`, especificando una nueva densidad `LEVEL_3` con DROP_EXISTING = ON.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
@@ -551,8 +539,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ### <a name="e-creating-a-spatial-index-on-a-geography-column"></a>E. Crear un índice espacial en una columna de geografía
-
- En este ejemplo se crea una tabla denominada `SpatialTable2` que contiene una columna de tipo **geography**, denominada `geography_col`. A continuación, se crea un índice espacial, `SIndx_SpatialTable_geography_col1`, en la columna `geography_col`. En el ejemplo se usan los valores predeterminados de los parámetros del esquema de teselación GEOGRAPHY_AUTO_GRID.  
+En este ejemplo se crea una tabla denominada `SpatialTable2` que contiene una columna de tipo **geography**, denominada `geography_col`. A continuación, se crea un índice espacial, `SIndx_SpatialTable_geography_col1`, en la columna `geography_col`. En el ejemplo se usan los valores predeterminados de los parámetros del esquema de teselación GEOGRAPHY_AUTO_GRID.  
   
 ```sql  
 CREATE TABLE SpatialTable2(id int primary key, object GEOGRAPHY);  
@@ -564,8 +551,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col1
 > No es posible especificar un cuadro de límite para los índices de cuadrícula de geografía.
   
 ### <a name="f-creating-a-spatial-index-on-a-geography-column"></a>F. Crear un índice espacial en una columna de geografía
-
- En el ejemplo siguiente se crea un segundo índice espacial, `SIndx_SpatialTable_geography_col2`, en la columna `geography_col` de la tabla `SpatialTable2`. En el ejemplo se especifica `GEOGRAPHY_GRID` como esquema de teselación. También especifica densidades de la cuadrícula diferentes para los distintos niveles y 64 celdas por objeto. También establece el relleno del índice en `ON`.  
+En el ejemplo siguiente se crea un segundo índice espacial, `SIndx_SpatialTable_geography_col2`, en la columna `geography_col` de la tabla `SpatialTable2`. En el ejemplo se especifica `GEOGRAPHY_GRID` como esquema de teselación. También especifica densidades de la cuadrícula diferentes para los distintos niveles y 64 celdas por objeto. También establece el relleno del índice en `ON`.  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2  
@@ -578,8 +564,7 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col2
 ```  
   
 ### <a name="g-creating-a-spatial-index-on-a-geography-column"></a>G. Crear un índice espacial en una columna de geografía
-
- A continuación, el ejemplo crea un tercer índice espacial, `SIndx_SpatialTable_geography_col3`, en la columna `geography_col` de la tabla `SpatialTable2`. Utiliza el esquema de teselación predeterminado, GEOGRAPHY_GRID, y el valor predeterminado de CELLS_PER_OBJECT (16).  
+A continuación, el ejemplo crea un tercer índice espacial, `SIndx_SpatialTable_geography_col3`, en la columna `geography_col` de la tabla `SpatialTable2`. Utiliza el esquema de teselación predeterminado, GEOGRAPHY_GRID, y el valor predeterminado de CELLS_PER_OBJECT (16).  
   
 ```sql  
 CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3  
@@ -588,19 +573,18 @@ CREATE SPATIAL INDEX SIndx_SpatialTable_geography_col3
 ```  
   
 ## <a name="see-also"></a>Vea también
-
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
-- [CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)
-- [CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)
-- [CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)
-- [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)
-- [Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
-- [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)
-- [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)
-- [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
-- [sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)
-- [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)
-- [sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)
-- [sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)
-- [Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)  
+[ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)       
+[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)       
+[CREATE PARTITION FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-function-transact-sql.md)       
+[CREATE PARTITION SCHEME &#40;Transact-SQL&#41;](../../t-sql/statements/create-partition-scheme-transact-sql.md)       
+[CREATE STATISTICS &#40;Transact-SQL&#41;](../../t-sql/statements/create-statistics-transact-sql.md)       
+[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)       
+[Tipos de datos &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)       
+[DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)       
+[DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)       
+[EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)       
+[sys.index_columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-index-columns-transact-sql.md)       
+[sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)       
+[sys.spatial_index_tessellations &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-index-tessellations-transact-sql.md)       
+[sys.spatial_indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md)       
+[Información general sobre los índices espaciales](../../relational-databases/spatial/spatial-indexes-overview.md)       

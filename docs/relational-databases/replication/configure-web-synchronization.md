@@ -33,12 +33,12 @@ ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 144323deee0c84ac1be404869a0ca71197ffcd32
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 674a785d0e5d3dd6b847c8f26701ad0ce48e2d20
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135585"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67582516"
 ---
 # <a name="configure-web-synchronization"></a>Configurar sincronización web
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -52,9 +52,11 @@ ms.locfileid: "54135585"
 3.  Configure una publicación de combinación para que permita la sincronización web.  
   
 4.  Configure una o más suscripciones para utilizar la sincronización web.  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 > [!NOTE]  
->  Si piensa replicar grandes volúmenes de datos o utilizar tipos de datos de gran tamaño como **varchar(max)**, lea la sección "Replicar grandes volúmenes de datos" de este tema.  
+>  Si piensa replicar grandes volúmenes de datos o utilizar tipos de datos de gran tamaño como **varchar(max)** , lea la sección "Replicar grandes volúmenes de datos" de este tema.  
   
  Para preparar la sincronización web correctamente, debe decidir cómo configurará la seguridad para cumplir sus requisitos y directivas especiales. Es aconsejable tomar estas decisiones y crear las cuentas necesarias antes de intentar configurar IIS, la publicación y las suscripciones.  
   
@@ -100,7 +102,7 @@ ms.locfileid: "54135585"
   
 #### <a name="to-increase-maximum-worker-processes-in-iis-7"></a>Para aumentar el máximo de procesos de trabajo en IIS 7  
   
-1.  En **Administrador de Internet Information Services (IIS)**, expanda el nodo del servidor y, después, haga clic en el nodo **Grupos de aplicaciones** .  
+1.  En **Administrador de Internet Information Services (IIS)** , expanda el nodo del servidor y, después, haga clic en el nodo **Grupos de aplicaciones** .  
   
 2.  Seleccione el grupo de aplicaciones asociado al sitio de sincronización web y, a continuación, haga clic en **Configuración avanzada** en el panel **Acciones** .  
   
@@ -132,11 +134,11 @@ ms.locfileid: "54135585"
   
  El tamaño máximo para el archivo XML es 4 GB, pero la replicación sincroniza los cambios de ese archivo en lotes. El tamaño máximo del lote de datos y metadatos es de 25 MB. Debe asegurarse de que los datos de cada lote no superan aproximadamente los 20 MB, lo que concede un margen suficiente para los metadatos y cualquier otra sobrecarga. Este límite tiene las implicaciones siguientes:  
   
--   No se puede replicar ninguna columna que haga que los datos y los metadatos superen los 25 MB. Este podría constituir un problema si se replican filas que contienen tipos de datos de gran tamaño, como **varchar(max)**.  
+-   No se puede replicar ninguna columna que haga que los datos y los metadatos superen los 25 MB. Este podría constituir un problema si se replican filas que contienen tipos de datos de gran tamaño, como **varchar(max)** .  
   
 -   Si se replican grandes volúmenes de datos, podría ser necesario ajustar el tamaño del lote del Agente de mezcla.  
   
- El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica utilizando los parámetros **DownloadGenerationsPerBatch** y–**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
+ El tamaño del lote para la replicación de mezcla se mide en *generaciones*, que son conjuntos de cambios por artículo. El número de generaciones de un lote se especifica con los parámetros ?**DownloadGenerationsPerBatch** y ?**UploadGenerationsPerBatch** del Agente de mezcla. Para más información, consulte [Replication Merge Agent](../../relational-databases/replication/agents/replication-merge-agent.md).  
   
  Para grandes volúmenes de datos, especifique un número pequeño para cada uno de los parámetros de procesamiento por lotes. Se recomienda comenzar con un valor de 10 y optimizarlo después de acuerdo con las necesidades y el rendimiento de la aplicación. Normalmente, estos parámetros se especifican en un perfil de agente. Para obtener más información acerca de los perfiles, vea [Replication Agent Profiles](../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

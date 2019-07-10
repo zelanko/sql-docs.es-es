@@ -18,12 +18,12 @@ ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 9c7abfc8f9ae7837ad1a89214c2e956ed5ff63a7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 9bc4038e2f0b683668530298eb7a9a0418831cd0
+ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52520920"
+ms.lasthandoff: 07/05/2019
+ms.locfileid: "67583107"
 ---
 # <a name="index-disk-space-example"></a>Ejemplo de espacio en disco del índice
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,29 +51,31 @@ ms.locfileid: "52520920"
   
 1.  Determine el tamaño de las estructuras de origen.  
   
-     Montón: 1 millón * 200 bytes ~ 200 MB  
+     Montón: 1 millón * 200 bytes ~ 200 MB  
   
-     Índice no clúster A: 1 millón * 50 bytes / 80% ~ 63 MB  
+     Índice no agrupado A: 1 millón * 50 bytes / 80 % ~ 63 MB  
   
-     Índice no clúster B: 1 millón * 80 bytes / 80% ~ 100 MB  
+     Índice no agrupado B: 1 millón * 80 bytes / 80 % ~ 100 MB  
   
-     Tamaño total de las estructuras existentes: 363 MB  
+     Tamaño total de las estructuras existentes: 363 MB  
   
 2.  Determine el tamaño de las estructuras de índice de destino. Supongamos que la clave del nuevo índice agrupado tiene una longitud de 24 bytes, incluido un valor de unicidad. El indicador de filas (8 bytes de longitud) en ambos índices no clúster se reemplazará con esta clave de agrupación en clústeres.  
   
-     Índice clúster: 1 millón * 200 bytes / 80% ~ 250 MB  
+     Índice agrupado: 1 millón * 200 bytes / 80 % ~ 250 MB  
   
-     Índice no agrupado A: 1 millón * (50 - 8 + 24) bytes / 80 % ~ 83 MB  
+     Índice no agrupado A: 1 millón * (50 - 8 + 24) bytes / 80 % ~ 83 MB  
   
-     Índice no agrupado B: 1 millón * (80 - 8 + 24) bytes / 80 % ~ 120 MB  
+     Índice no agrupado B: 1 millón * (80 - 8 + 24) bytes / 80 % ~ 120 MB  
   
-     Tamaño total de las nuevas estructuras: 453 MB  
+     Tamaño total de las nuevas estructuras: 453 MB  
   
      El espacio en disco necesario para las estructuras de origen y destino en toda la operación del índice es de 816 MB (363 + 453). Cuando se confirma la operación de índice, se cancela la asignación del espacio asignado a las estructuras de origen.  
   
 3.  Determine el espacio en disco temporal adicional para la ordenación.  
-  
-     Se muestran los requisitos de espacio para ordenar en **tempdb** (con la opción SORT_IN_TEMPDB establecida en ON) y en la ubicación de destino (con la opción SORT_IN_TEMPDB establecida en OFF).  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
   
     1.  Si SORT_IN_TEMPDB se ha establecido en ON, **tempdb** debe disponer de espacio en disco suficiente para incluir el índice más grande (1 millón * 200 bytes ~ 200 MB). El factor de relleno no se tiene en cuenta en la operación de ordenación.  
   
@@ -111,10 +113,10 @@ ms.locfileid: "52520920"
   
 |Operación de índice|Requisitos de espacio en disco para las ubicaciones de las siguientes estructuras|  
 |---------------------|---------------------------------------------------------------------------|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB<br /><br /> - Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (incluye índice de asignación): 242 MB*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
-|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB<br /><br /> - Tabla e índices existentes: 363 MB*<br /><br /> - Índice de asignación temporal: 40 MB\*<br /><br /> - Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1018 MB<br /><br /> \- Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb**: 202 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice sin conexión con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 816 MB<br /><br /> \- Tabla e índices existentes: 363 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = ON|Espacio total durante la operación: 1058 MB<br /><br /> \- Tabla e índices existentes: 363 MB\*<br /><br /> -<br />                    **tempdb** (incluye índice de asignación): 242 MB*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
+|Operación de índice en línea con SORT_IN_TEMPDB = OFF|Espacio total durante la operación: 856 MB<br /><br /> \- Tabla e índices existentes: 363 MB*<br /><br /> \- Índice de asignación temporal: 40 MB\*<br /><br /> \- Nuevos índices: 453 MB<br /><br /> Espacio total necesario después de la operación: 453 MB|  
   
  *La asignación de este espacio se cancela cuando se confirma la operación de índice.  
   

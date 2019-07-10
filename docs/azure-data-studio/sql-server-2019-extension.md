@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 manager: jroth
-ms.openlocfilehash: 0b8f31d55ae9dcc7042fff051c37a4beaa72a47e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: bc865b36dc8b8036fa9a6a1a9c58c6890acadf47
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399994"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681604"
 ---
 # <a name="sql-server-2019-extension-preview"></a>Extensión de SQL Server 2019 (versión preliminar)
 
@@ -51,7 +51,7 @@ Para instalar la extensión de SQL Server 2019 (versión preliminar), descargue 
 
 * El **clúster de SQL Server macrodatos** tipo de conexión se ha quitado en esta versión. Toda la funcionalidad disponible anteriormente desde la conexión del clúster de macrodatos de SQL Server ahora está disponible en la conexión de SQL Server.
 * Exploración de HDFS se puede encontrar en el **Data Services** carpeta
-* Para equipos portátiles el el PySpark y kernels macrodatos funcionan cuando se conecta a la instancia principal de SQL Server en el clúster de macrodatos de SQL Server.
+* Para equipos portátiles el PySpark y kernels macrodatos funcionan cuando se conecta a la instancia principal de SQL Server en el clúster de macrodatos de SQL Server.
 * Crear a Asistente para la tabla externa:
   * Compatibilidad para crear la tabla externa mediante el origen de datos externo existente.
   * Mejoras de rendimiento en el asistente.

@@ -11,12 +11,12 @@ manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 06/06/2019
-ms.openlocfilehash: 453c00715e68a648e9cdfc2010810ce701358cf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798098"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681614"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
@@ -367,7 +367,7 @@ El *versión preliminar pública de julio* se centra en los siguientes elementos
 ### <a name="github-issues-fixes-june-2018"></a>Corrige los problemas de GitHub, junio de 2018
 
 - Solicitud de característica ([emitir 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Asegúrese de ancho de columna ajusta automáticamente la cuadrícula los resultados a los datos y recuerde los cambios manuales si la misma consulta se vuelve a ejecutar.
-- Corregir [emitir 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Debe mostrar Agregar mensaje y botón Agregar cuenta cuenta cuando la cuenta vinculada está vacía.
+- Corregir [emitir 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Debe mostrar Agregar mensaje y botón Agregar cuenta cuando la cuenta vinculada está vacía.
 - Corregir [emitir 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Ficha cuenta vinculada se interrumpe cuando se contrae la vista.
 - Corregir [emitir 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): Herramientas de servicio de SQL se bloquea al abrir el archivo .sql desde el disco.
 - Corregir [emitir 1372](https://github.com/Microsoft/azuredatastudio/issues/1372): Falta la palabra clave SQL "BETWEEN".

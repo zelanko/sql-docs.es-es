@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: 1f2d7f5a1d4a966edbce3c4ad96a7b31bd604b48
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469132"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681550"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -33,11 +33,11 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 
 | Nueva característica o actualización | Detalles |
 |:---|:---|
-| `mssqlctl` cambios en los comandos | `mssqlctl cluster` los comandos se han cambiado a `mssqlctl bdc`. Para obtener más información, consulte el [ `mssqlctl` referencia](reference-mssqlctl.md). |
+| Cambios del comando `mssqlctl` | Los comandos `mssqlctl cluster` se llaman ahora `mssqlctl bdc`. Para más información, consulte la referencia de [`mssqlctl`](reference-mssqlctl.md). |
 | Nuevo `mssqlctl` comandos de estado y la eliminación del Portal de administración del clúster. | El Portal de administración de clúster se ha quitado de esta versión. Se han agregado nuevos comandos de estado para `mssqlctl` existentes complemento comandos de supervisión. |
-| Grupos de proceso de Spark | Cree nodos adicionales para aumentar la capacidad de proceso de Spark sin tener que aumentar el almacenamiento. Además, puede iniciar los nodos de grupo de almacenamiento que no se utilizan para Spark. Se desvinculan Spark y el almacenamiento. Para obtener más información, consulte [configurar el almacenamiento sin spark](deployment-custom-configuration.md#sparkstorage). |
-| Conector de Spark MSSQL | Compatibilidad con lectura/escritura en tablas externas de grupo de datos. Anterior las versiones compatibles con lectura/escritura al patrón de la instancia solo tablas. Para obtener más información, consulte [cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL](spark-mssql-connector.md). |
-| Machine Learning con MLeap | [Entrenar un modelo de aprendizaje automático MLeap en Spark y la puntuación de SQL Server con la extensión del lenguaje Java](spark-create-machine-learning-model.md). |
+| Grupos de procesos de Spark | Cree nodos adicionales para aumentar la capacidad de proceso de Spark sin tener que escalar verticalmente el almacenamiento. Además, puede iniciar los nodos del grupo de almacenamiento que no se usan con Spark. Spark y el almacenamiento están desacoplados. Para más información, consulte [Configurar el almacenamiento sin spark](deployment-custom-configuration.md#sparkstorage). |
+| Conector de Spark MSSQL | Compatibilidad con operaciones de lectura y escritura en tablas externas del grupo de datos. Las versiones anteriores solo admitían operaciones de lectura y escritura en tablas de instancias maestras. Para más información, consulte [Cómo leer y escribir en SQL Server de Spark mediante el conector de Spark MSSQL](spark-mssql-connector.md). |
+| Machine Learning con MLeap | [Entrenar un modelo de aprendizaje automático MLeap en Spark y puntuarlo en SQL Server con la extensión del lenguaje Java](spark-create-machine-learning-model.md). |
 
 ### <a name="known-issues"></a>Problemas conocidos
 
@@ -125,7 +125,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 | **mssqlctl** updates | Varias [actualizaciones de comandos y parámetros](../big-data-cluster/reference-mssqlctl.md) de **mssqlctl**. Esto incluye una actualización del comando **mssqlctl login**, que ahora se dirige al punto de conexión y al nombre de usuario del controlador. |
 | Mejoras en el almacenamiento | Compatibilidad con distintas configuraciones de almacenamiento para registros y datos. Además, se ha reducido el número de notificaciones de volumen persistentes para un clúster de macrodatos. |
 | Varias instancias de grupos de procesos | Compatibilidad con varias instancias de grupos de procesos. |
-| Nuevas características y nuevo comportamiento del grupo | Ahora, el grupo de procesos se utiliza de forma predeterminada para las operaciones de grupo de almacenamiento y grupo de datos solo en distribución **ROUND_ROBIN**. Ahora, el grupo de datos puede utilizar un nuevo tipo de distribución, **REPLICATED**, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
+| Nuevas características y nuevo comportamiento del grupo | Ahora, el grupo de procesos se utiliza de forma predeterminada para las operaciones de grupo de almacenamiento y grupo de datos solo en distribución **ROUND_ROBIN**. El grupo de datos ahora puede usar un nuevo **REPLICADO** tipo de distribución, lo que significa que los mismos datos están presentes en todas las instancias del grupo de datos. |
 | Mejoras en la tabla externa | Las tablas externas de tipo origen de datos HADOOP ahora admiten la lectura de filas de hasta 1 MB. Ahora, las tablas externas (ODBC, bloque de almacenamiento, grupo de datos) admiten filas tan anchas como las tablas de SQL Server. |
 
 ### <a name="known-issues"></a>Problemas conocidos

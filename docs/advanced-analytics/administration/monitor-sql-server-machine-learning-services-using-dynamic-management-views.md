@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-ms.openlocfilehash: 0d07288bccc641f67644a37cd027e093fc3967c8
-ms.sourcegitcommit: ee76332b6119ef89549ee9d641d002b9cabf20d2
+ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/20/2018
-ms.locfileid: "53645554"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681620"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar el uso de vistas de administración dinámica (DMV) de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -196,7 +196,7 @@ La consulta devuelve las columnas siguientes:
 |--------|-------------|
 | physical_memory_kb | La cantidad total de memoria física en el equipo. |
 | committed_kb | La memoria asignada en kilobytes (KB) en el Administrador de memoria. No incluye la memoria reservada del administrador de memoria. |
-| external_pool_peak_memory_kb | La suma de la la cantidad máxima de memoria utilizada, en kilobytes, para todos los grupos de recursos externos. |
+| external_pool_peak_memory_kb | La suma de la cantidad máxima de memoria utilizada, en kilobytes, para todos los grupos de recursos externos. |
 
 ## <a name="memory-configuration"></a>Configuración de la memoria
 
@@ -305,7 +305,7 @@ Las columnas devueltas son:
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
 | Versión | Versión del paquete. |
-| Ubicación | Directorio donde puede encontrar el paquete. |
+| Location | Directorio donde puede encontrar el paquete. |
 
 ## <a name="next-steps"></a>Pasos siguientes
 

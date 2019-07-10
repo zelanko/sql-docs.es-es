@@ -11,12 +11,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.custom: seodec18
-ms.openlocfilehash: d7a61c97d3e1636cd6a11173e281c192d1533d93
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388750"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67681587"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
 
@@ -107,7 +107,7 @@ El comando siguiente muestra un ejemplo del aspecto que podría tener este coman
 mssqlctl app create --spec ./addpy
 ```
 
-Esto supone que tiene la aplicación que se almacenan en el `addpy` carpeta. Esta carpeta también debe contener un archivo de especificación de la aplicación, llamada llamado `spec.yaml`. Consulte [la página de implementación de aplicaciones](concept-application-deployment.md) para obtener más información sobre la `spec.yaml` archivo.
+Esto supone que tiene la aplicación que se almacenan en el `addpy` carpeta. Esta carpeta también debe contener un archivo de especificación de la aplicación, denominada `spec.yaml`. Consulte [la página de implementación de aplicaciones](concept-application-deployment.md) para obtener más información sobre la `spec.yaml` archivo.
 
 Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes archivos en un directorio llamado `addpy`:
 

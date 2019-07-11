@@ -1336,7 +1336,7 @@
       items:
         - name: Montones (tablas sin índices clúster)
           href: relational-databases/indexes/heaps-tables-without-clustered-indexes.md
-        - name: Índices agrupados y no agrupados descritos
+        - name: Índices agrupados y no agrupados
           href: relational-databases/indexes/clustered-and-nonclustered-indexes-described.md
           items:
             - name: Crear

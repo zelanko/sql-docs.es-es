@@ -2,20 +2,20 @@
 title: Notas de la versión
 titleSuffix: SQL Server big data clusters
 description: En este artículo se describe las últimas actualizaciones y problemas conocidos de clústeres de macrodatos de 2019 de SQL Server (versión preliminar).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 389a521d256becb431b23ec073cadcde7c116952
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681550"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794087"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>Notas de la versión para los clústeres de datos de gran tamaño en SQL Server
 
@@ -113,6 +113,11 @@ Las secciones siguientes describen los problemas conocidos y limitaciones con es
 - El contraseña_sa forma parte del entorno y reconocibles (por ejemplo, en un archivo de volcado de cable). Debe restablecer el contraseña_sa en la instancia principal después de la implementación. Esto no es un error, pero un paso de seguridad. Para obtener más información sobre cómo cambiar el contraseña_sa en un contenedor de Linux, consulte [cambiar la contraseña de SA](../linux/quickstart-install-connect-docker.md#sapassword).
 
 - Los registros AKS pueden contener la contraseña de SA para las implementaciones de clústeres de datos de gran tamaño.
+
+#### <a name="kibana-logs-dashboards"></a>Paneles de registros de Kibana
+
+- Entre Aris CTP 3.0 y 3.1, la versión de Kibana se actualizó desde 6.3.1 a 7.0.1.  Esto ha hecho que el explorador Edge incompatible con Kibana. Los usuarios verán una página en blanco al cargar la versión actual de los paneles de Kibana en Edge. Consulte [aquí]( https://www.elastic.co/support/matrix#matrix_browse) para exploradores compatibles con Kibana.rs 
+
 
 ## <a id="ctp30"></a> CTP 3.0 (mayo)
 
@@ -312,7 +317,7 @@ Las secciones siguientes describen las nuevas características y problemas conoc
 | Orientación sobre la compatibilidad de GPU para la ejecución de aprendizaje profundo con TensorFlow en Spark. | [Implementa un clúster de macrodatos con compatibilidad con GPU y ejecuta TensorFlow](spark-gpu-tensorflow.md). |
 | Los orígenes de datos **SqlDataPool** y **SqlStoragePool** ya no se crean de forma predeterminada. | Puede crearlos manualmente según sea necesario. Consulte los [problemas conocidos](#externaltablesctp24). |
 | Compatibilidad de `INSERT INTO SELECT` con el grupo de datos. | Para obtener un ejemplo, vea [Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL](tutorial-data-pool-ingest-sql.md). |
-| Opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION`. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo, `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
+| Opción `FORCE SCALEOUTEXECUTION` y `DISABLE SCALEOUTEXECUTION`. | Fuerza o deshabilita el uso de la agrupación de proceso para las consultas en las tablas externas. Por ejemplo: `SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)`. |
 | Recomendaciones actualizadas para implementar AKS. | Al evaluar los clústeres de macrodatos en AKS, ahora se recomienda utilizar un único nodo del tamaño **Standard_L8s**. |
 | Actualización del entorno de ejecución de Spark a Spark 2.4. | |
 

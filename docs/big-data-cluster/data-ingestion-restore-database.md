@@ -2,20 +2,20 @@
 title: Restaurar una base de datos
 titleSuffix: SQL Server big data clusters
 description: En este artículo se muestra cómo restaurar una base de datos en la instancia principal de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9657e3659c711162a39b1f7dd34fe6d517c2822e
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: ba16d0c0fa04460199ece151509b8567bdd947f9
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388835"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728986"
 ---
 # <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>Restaurar una base de datos en la instancia maestra del clúster de SQL Server datos de gran tamaño
 

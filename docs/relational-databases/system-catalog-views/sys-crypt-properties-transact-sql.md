@@ -21,12 +21,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b006e2795a79f9a7cbaf3686113bb2f1c7ad8172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8aae950e39dd66bb08a2adbc6225358c75ad4d37
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049742"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730170"
 ---
 # <a name="syscryptproperties-transact-sql"></a>sys.crypt_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +39,9 @@ ms.locfileid: "63049742"
 |**class_desc**|**nvarchar(60)**|Descripción de la clase en que existe la propiedad.<br /><br /> OBJECT_OR_COLUMN<br /> ASSEMBLY|  
 |**major_id**|**int**|Id. del elemento en que la propiedad existe, interpretado según la clase.|  
 |**thumbprint**|**varbinary(32)**|Algoritmo hash SHA-1 del certificado o la clave asimétrica usada.|  
-|**crypt_type**|**char(4)**|Tipo de cifrado.<br /><br /> SPVC = Cifrado mediante clave privada de certificado<br /><br /> SPVC = Cifrado mediante clave privada asimétrica<br /><br /> SPVC = Contrafirma mediante clave privada de certificado<br /><br /> CPVA = Contrafirma mediante clave asimétrica|  
+|**crypt_type**|**char(4)**|Tipo de cifrado.<br /><br /> SPVC = firmado por la clave privada del certificado<br /><br /> SPVC = firmado por la clave privada asimétrica<br /><br /> SPVC = Contrafirma mediante clave privada de certificado<br /><br /> CPVA = Contrafirma mediante clave asimétrica|  
 |**crypt_type_desc**|**nvarchar(60)**|Descripción del tipo de cifrado.<br /><br /> SIGNATURE BY CERTIFICATE<br /><br /> SIGNATURE BY ASYMMETRIC KEY<br /><br /> COUNTER SIGNATURE BY CERTIFICATE<br /><br /> COUNTER SIGNATURE BY ASYMMETRIC KEY|  
-|**crypt_property**|**varbinary(max)**|Bits firmados o cifrados.|  
+|**crypt_property**|**varbinary(max)**|Bits firmados o cifrados. Para un módulo firmado, éstos son los bits de la firma del módulo.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -10,12 +10,12 @@ ms.assetid: 98fde3c5-297c-4d95-981e-95700bbf5ccd
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 2fb48665fafc9c79856279c7460918b85334bfb8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96443d7f46dee539fd7d39a91a168b3ed5a0d8c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66064303"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792933"
 ---
 # <a name="create-the-off-by-default-policy"></a>Crear la directiva Desactivado de forma predeterminada
   Esta tarea crea una condición denominada Correo desactivado que se basa en la faceta Configuración de área expuesta. A continuación, crea una directiva denominada Desactivado de forma predeterminada.  
@@ -28,7 +28,7 @@ ms.locfileid: "66064303"
   
 3.  En el cuadro **Faceta** , confirme que está seleccionada la faceta **Configuración de área expuesta** .  
   
-4.  En el cuadro de diálogo **Expresión** , en el cuadro **Campo** , seleccione **@DatabaseMailEnabled** , en el cuadro **Operador** seleccione **=** y en **Valor** seleccione **False**.  
+4.  En el **expresión** área, en el **campo** cuadro, seleccione  **\@DatabaseMailEnabled**, en el **operador** cuadro Seleccione **=** y en el **valor** seleccione **False**.  
   
 5.  En la página **Descripción** , escriba la descripción de la condición y luego haga clic en **Aceptar** para crear la condición.  
   

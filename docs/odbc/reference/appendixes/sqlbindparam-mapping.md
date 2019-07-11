@@ -14,15 +14,15 @@ ms.assetid: 375f8f24-36de-4946-916e-c75abc6f070d
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 57e0fe66d76f91c8cea35710e9d0245db7619628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15772c3bf74001084985d81d6560baf8accbaa3a
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199713"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793558"
 ---
 # <a name="sqlbindparam-mapping"></a>Asignación de SQLBindParam
-**SQLBindParam** no realmente se puede llamar en desuso porque no existe en ODBC; sin embargo, todavía representa funcionalidad duplicada: debe exportarlo porque ISO y abierto compatible con grupo de aplicaciones lo va a usar el Administrador de controladores. Dado que **SQLBindParameter** contiene toda la funcionalidad de **SQLBindParam**, **SQLBindParam** se asignará en la parte superior de **SQLBindParameter** (cuando el controlador subyacente es una aplicación ODBC 3 *.x* controlador). Una aplicación ODBC 3 *.x* no es necesario implementar controladores **SQLBindParam**.  
+**SQLBindParam** no realmente se puede llamar en desuso porque no existe en ODBC; sin embargo, todavía representa funcionalidad duplicada: debe exportarlo porque ISO y abierto compatible con grupo de aplicaciones lo va a usar el Administrador de controladores. Dado que **SQLBindParameter** contiene toda la funcionalidad de **SQLBindParam**, **SQLBindParam** se asignará en la parte superior de **SQLBindParameter** (cuando el controlador subyacente es un ODBC *3.x* controlador). Un ODBC *3.x* no es necesario implementar controladores **SQLBindParam**.  
   
 ## <a name="remarks"></a>Comentarios  
  Cuando la llamada siguiente a **SQLBindParam** se realiza:  

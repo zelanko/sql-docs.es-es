@@ -15,12 +15,12 @@ ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 623ac38791eebc6db84380dfadd499651af938af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280922"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794168"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo definido por el ODBC SQL y cómo asigna un controlador de tipos de DBMS SQL a su propio identificadores específicos del controlador de tipo SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL al describir los tipos de datos de columnas y parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -52,7 +52,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
 |SQL_DOUBLE|DOUBLE PRECISION|Valor con signo, aproximado, numeric con una precisión binaria de 53 (cero o valor absoluto 10 [-308] a 10[308]).|  
 |SQL_BIT|BIT|Datos binarios de bits única. [8]|  
 |SQL_TINYINT|TINYINT|Valor numérico exacto con precisión 3 y escala de 0 (firmado: -128 < = *n* < = 127; sin signo:  0 <= *n* <= 255)[3].|  
-|SQL_BIGINT|bigint|Exacto de un valor numérico con una precisión de 19 (si tiene signo) o 20 (si no tiene signo) y una escala de 0 (firmado: -2 [63] < = *n* < = 2 [63] - 1; sin signo: 0 <= *n* <= 2[64] - 1)[3],[9].|  
+|SQL_BIGINT|BIGINT|Exacto de un valor numérico con una precisión de 19 (si tiene signo) o 20 (si no tiene signo) y una escala de 0 (firmado: -2 [63] < = *n* < = 2 [63] - 1; sin signo: 0 <= *n* <= 2[64] - 1)[3],[9].|  
 |SQL_BINARY|BINARY(*n*)|Datos binarios de longitud fija *n*. [ 9]|  
 |SQL_VARBINARY|VARBINARY(*n*)|Datos binarios de longitud variable de longitud máxima *n*. El máximo se establece por el usuario. [9]|  
 |SQL_LONGVARBINARY|VARBINARY LARGO|Datos binarios de longitud variable. Longitud máxima es depende del origen de datos. [9]|  
@@ -86,7 +86,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
   
  [5] en función de la implementación, puede ser la precisión de SQL_FLOAT 24 o 53: si es 24, el tipo de datos SQL_FLOAT es el mismo que SQL_REAL; Si es 53, el tipo de datos SQL_FLOAT es igual a SQL_DOUBLE.  
   
- [6] en ODBC 3 *.x*, los tipos de datos de fecha, hora y marca de tiempo SQL son SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP, respectivamente; en ODBC 2. *x*, los tipos de datos son SQL_DATE, SQL_TIME y SQL_TIMESTAMP.  
+ [6] en ODBC *3.x*, los tipos de datos de fecha, hora y marca de tiempo SQL son SQL_TYPE_DATE, SQL_TYPE_TIME y SQL_TYPE_TIMESTAMP, respectivamente; en ODBC *2.x*, los tipos de datos son SQL_DATE, SQL_TIME y SQL_ MARCA DE TIEMPO.  
   
  [7] para obtener más información acerca de los tipos de datos SQL de intervalo, vea el [tipos de datos Interval](../../../odbc/reference/appendixes/interval-data-types.md) sección más adelante en este apéndice.  
   

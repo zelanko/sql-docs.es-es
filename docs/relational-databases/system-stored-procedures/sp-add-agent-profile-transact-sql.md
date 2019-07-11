@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_add_agent_profile
 ms.assetid: 5c246a33-2c21-4a77-9c2a-a2c9f0c5dda1
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: ab2d928770a8e10c04e03aa2ccb5f36374fe1227
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2afaf37cc82ccfee3c5a85c2945a7998457a979d
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493608"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716627"
 ---
 # <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ sp_add_agent_profile [ [ @profile_id= ] profile_id OUTPUT ]
   
  **0** indica un perfil del sistema. **1** indica un perfil personalizado. Se pueden crear perfiles personalizados solo mediante este procedimiento almacenado; por lo tanto, el único valor válido es **1**. Solo [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] crea perfiles del sistema.  
   
-`[ @description = ] 'description'` Es una descripción del perfil. *descripción* es **nvarchar (3000)**, no tiene ningún valor predeterminado.  
+`[ @description = ] 'description'` Es una descripción del perfil. *descripción* es **nvarchar (3000)** , no tiene ningún valor predeterminado.  
   
 `[ @default = ] default` Indica si el perfil es el valor predeterminado para *agent_type **.* *valor predeterminado* es **bit**, su valor predeterminado es **0**. **1** indica que el perfil que se va a agregar se convertirá en el nuevo perfil predeterminado para el agente especificado por *agent_type*.  
   

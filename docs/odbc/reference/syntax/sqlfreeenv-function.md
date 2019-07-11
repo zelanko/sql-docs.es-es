@@ -20,22 +20,22 @@ ms.assetid: 32000150-e120-445e-b269-43200f813b2a
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 979e34f89128a27a416f0af9305b1f97c6d0d385
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c55f0bb6fd2140fbce868360130f91cf9acbb0d
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62982264"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792461"
 ---
 # <a name="sqlfreeenv-function"></a>Función SQLFreeEnv
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
- En ODBC 3 *.x*, la función ODBC 2.0 **SQLFreeEnv** ha sido reemplazado por **SQLFreeHandle**. Para obtener más información, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
+ En ODBC *3.x*, la función ODBC 2.0 **SQLFreeEnv** ha sido reemplazado por **SQLFreeHandle**. Para obtener más información, consulte [SQLFreeHandle](../../../odbc/reference/syntax/sqlfreehandle-function.md).  
   
 > [!NOTE]
->  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando un ODBC 2 *.x* aplicación funciona con una aplicación ODBC 3 *.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en el apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando un ODBC *2.x* aplicación funciona con un ODBC *3.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en el apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md)   

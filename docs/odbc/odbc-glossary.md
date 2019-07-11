@@ -14,12 +14,12 @@ ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 33116adaf74ed2d3fc52fec460859a7672ce2d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057790"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794165"
 ---
 # <a name="odbc-glossary"></a>Glosario de ODBC
 ## <a name="a"></a>A  
@@ -53,9 +53,9 @@ ms.locfileid: "63057790"
  **modo de confirmación automática**  
  Modo de confirmación de transacción en el que las transacciones se confirman inmediatamente después de que se ejecutan.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  **cambio de comportamiento**  
- Un cambio en cierta funcionalidad de ODBC 3 *.x* comportamiento de ODBC 2. *x* comportamiento, o viceversa. Se produjo al cambiar el atributo de entorno SQL_ATTR_ODBC_VERSION.  
+ Un cambio en cierta funcionalidad de ODBC *3.x* comportamiento a ODBC *2.x* comportamiento, o viceversa. Se produjo al cambiar el atributo de entorno SQL_ATTR_ODBC_VERSION.  
   
  **Objeto binario grande (BLOB)**  
  Cualquier dato binario en un determinado número de bytes, como 255. Suele ser mucho mayor. Estos datos generalmente se envía al y recuperarse del origen de datos en partes. También se denomina *datos long*.  
@@ -103,7 +103,7 @@ ms.locfileid: "63057790"
  **nivel de cumplimiento**  
  Un conjunto discreto de funcionalidad admitida por un controlador u origen de datos. ODBC define los niveles de compatibilidad de API y los niveles de compatibilidad de SQL.  
   
- **connection**  
+ **conexión**  
  Una instancia determinada de un origen de datos y el controlador.  
   
  **exploración de la conexión**  

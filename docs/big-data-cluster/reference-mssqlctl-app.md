@@ -2,19 +2,20 @@
 title: referencia de aplicación mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de la aplicación de mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f1dc3830a2bdf9d8a3d4e2d65fcbb556af224d1c
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388238"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727539"
 ---
 # <a name="mssqlctl-app"></a>Aplicación mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388238"
 
 El siguiente artículo proporciona la referencia para la **aplicación** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [plantilla de aplicación mssqlctl](reference-mssqlctl-app-template.md) | plantillas.
@@ -64,7 +65,7 @@ mssqlctl app init --name reduce --template ssis
 #### `--spec -s`
 Generar simplemente una spec.yaml de aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 #### `--template -t`
@@ -75,15 +76,15 @@ Dónde colocar el esqueleto de la aplicación. Valor predeterminado: directorio 
 Especifique una ubicación de repositorio de plantillas diferentes. Valor predeterminado: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-create"></a>Crear aplicación mssqlctl
 Crear una aplicación.
 ```bash
@@ -100,15 +101,15 @@ mssqlctl app create --spec /path/to/dir/with/spec/yaml
 Ruta de acceso a un directorio con un archivo de YAML especificación que describe la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-update"></a>mssqlctl app update
 Actualización de una aplicación.
 ```bash
@@ -127,15 +128,15 @@ Ruta de acceso a un directorio con un archivo de YAML especificación que descri
 No solicita confirmación al actualizar una aplicación partir spec.yaml archivo del CWD.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-list"></a>lista de aplicaciones mssqlctl
 Una de las aplicaciones de la lista.,
 ```bash
@@ -157,20 +158,20 @@ mssqlctl app list
 ```
 ### <a name="optional-parameters"></a>Parámetros opcionales
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-delete"></a>eliminación de aplicación mssqlctl
 Eliminar una aplicación.
 ```bash
@@ -184,20 +185,20 @@ mssqlctl app delete --name reduce --version v1
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-run"></a>ejecución de la aplicación mssqlctl
 Ejecutar una aplicación.
 ```bash
@@ -220,7 +221,7 @@ mssqlctl app run --name reduce --version v1 --inputs x=10,y5.6
 ```
 ### <a name="required-parameters"></a>Parámetros necesarios
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="optional-parameters"></a>Parámetros opcionales
@@ -228,15 +229,15 @@ Versión de la aplicación.
 Aplicación de parámetros de entrada en un archivo CSV `name=value` formato.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-app-describe"></a>Describir la aplicación mssqlctl
 Descripción de una aplicación.
 ```bash
@@ -253,20 +254,20 @@ mssqlctl app describe --name reduce --version v1
 #### `--spec -s`
 Ruta de acceso a un directorio con un archivo de YAML especificación que describe la aplicación.
 #### `--name -n`
-Nombre de aplicación.
+Nombre de la aplicación.
 #### `--version -v`
 Versión de la aplicación.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -9,12 +9,12 @@ ms.assetid: 2b0b5ab7-4e08-431a-bd59-360177c4565c
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 64a1423295b8117640de555a7132a44af98b87c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6cc9530b636409864e7e1b72f7417619a0fc8af
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470106"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792466"
 ---
 # <a name="case-study-building-an-enterprise-ecosystem-with-microsoft-dynamics-erp-and-sql-server-2014-replication-for-scalability-and-performance"></a>Caso práctico: Creación de un ecosistema empresarial mediante la replicación de SQL Server 2014 y Microsoft Dynamics ERP para aumentar la escalabilidad y el rendimiento
 
@@ -30,9 +30,9 @@ Cómo entender los detalles relacionados con el uso de la replicación transacci
   
  **Revisores técnicos:** Prabhakaran Sethuraman (PRAB), Microsoft; Santosh Padhy Microsoft; Microsoft; Pavel Majstrov Karthik Sankaranarayanan Microsoft; Jon Acone Microsoft; David Stahlkopf Microsoft; Kent Oldenburger Microsoft; Mandi Ohlinger, Microsoft; Jason Roth, Microsoft  
   
- **Fecha de publicación:** octubre de 2015  
+ **Fecha de publicación:** Octubre de 2015  
   
- **Productos a los que se dirige el contenido:** SQL Server 2008, SQL Server 2012 y SQL Server 2014  
+ **Se aplica a:** SQL Server 2008, SQL Server 2012 y SQL Server 2014  
   
  Para revisar el documento, descargue el  
         [Caso práctico: Creación de un ecosistema empresarial utilizando Microsoft Dynamics ERP y replicación de SQL Server 2014 para conseguir escalabilidad y rendimiento](https://download.microsoft.com/download/D/2/0/D20E1C5F-72EA-4505-9F26-FEF9550EFD44/A%20Case%20Study%20Using%20Replication%20to%20Build%20an%20Enterprise%20Ecosystem%20in%20Microsoft%20Dynamics%20ERP%20for%20Scalability%20and%20Performance.docx) documento de Word.  

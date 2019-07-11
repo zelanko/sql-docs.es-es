@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Consumir una aplicación implementada en un clúster de macrodatos de 2019 de SQL Server mediante un servicio web RESTful (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: a3894ccbd8ffda7cfe00d61a7a47622f7f481c8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801900"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729296"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>Consumo de una aplicación implementada en el clúster de macrodatos de SQL Server mediante un servicio web RESTful
 

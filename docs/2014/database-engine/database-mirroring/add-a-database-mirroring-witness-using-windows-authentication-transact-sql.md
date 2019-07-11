@@ -14,12 +14,12 @@ ms.assetid: bf5e87df-91a4-49f9-ae88-2a6dcf644510
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0a03a530c83cdf492eb7c4c0fcc000a6343c9a97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c7020cacbb8466b1113e514162337befae358549
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62754923"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792611"
 ---
 # <a name="add-a-database-mirroring-witness-using-windows-authentication-transact-sql"></a>Agregar un testigo de creación de reflejo de la base de datos mediante la autenticación de Windows (Transact-SQL)
   Para configurar un testigo para la base de datos, el propietario de ésta debe asignar una instancia del Motor de base de datos al rol de servidor testigo. La instancia de servidor testigo puede ejecutarse en el mismo equipo que la instancia de servidor principal o reflejado, aunque de este modo se reduce la solidez de la conmutación automática por error.  
@@ -33,7 +33,7 @@ ms.locfileid: "62754923"
   
 ### <a name="to-establish-a-witness"></a>Para establecer un testigo  
   
-1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en las sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (ROLE **=** WITNESS). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
+1.  En la instancia de servidor testigo, asegúrese de que existe un extremo para la creación de reflejo de la base de datos. Independientemente del número de sesiones de creación de reflejo que deban admitirse, la instancia del servidor solo debe tener un extremo de creación de reflejo de la base de datos. Si tiene previsto usar esta instancia de servidor exclusivamente como testigo en sesiones de creación de reflejo de la base de datos, asigne el rol de testigo al punto de conexión (rol **=** TESTIGO). Si lo que quiere es utilizar la instancia de servidor como asociado en una o más sesiones de creación de reflejo de la base de datos, asigne el rol del extremo a ALL.  
   
      Para ejecutar una instrucción SET WITNESS, es preciso haber iniciado previamente la sesión de creación de reflejo de la base de datos (entre los asociados) y el valor STATE del extremo del testigo debe establecerse en STARTED.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "62754923"
   
 3.  Conéctese al servidor principal y emita la siguiente instrucción:  
   
-     ALTER DATABASE *<nombre_de_base_de_datos>* SET WITNESS **=** _<dirección_de_red_de_servidor>_  
+     ALTER DATABASE *< database_name >* SET WITNESS **=** _< dirección_de_red_de_servidor >_  
   
      donde *<nombre_de_base_de_datos>* es el nombre de la base de datos de la que se va a crear el reflejo (este nombre es el mismo para ambos asociados) y *<dirección_de_red_de_servidor>* es la dirección de red de servidor de la instancia del servidor testigo.  
   

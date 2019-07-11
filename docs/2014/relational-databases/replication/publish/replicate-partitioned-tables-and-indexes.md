@@ -16,12 +16,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6b38446a96f29006356f0ebf083a382fff4fb50f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2201be33df4346ab2afa812828ab9655b0ed2be
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266578"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793291"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>Replicar tablas e índices con particiones
   La creación de particiones facilita el uso de tablas o índices grandes, ya que permite administrar y tener acceso a subconjuntos de datos de forma rápida y eficaz, y mantener la integridad de una recopilación de datos al mismo tiempo. Para obtener más información, vea [Partitioned Tables and Indexes](../../partitions/partitioned-tables-and-indexes.md). La replicación es compatible con la creación de particiones al proporcionar un conjunto de propiedades que especifican cómo se deben tratar las tablas y los índices con particiones.  
@@ -70,9 +70,9 @@ ms.locfileid: "63266578"
 ### <a name="enabling-partition-switching"></a>Habilitar la modificación de particiones  
  Las propiedades siguientes de las publicaciones transaccionales permiten a los usuarios controlar el comportamiento de la modificación de particiones en un entorno replicado:  
   
--   **@allow_partition_switch** , si se establece en `true`, SWITCH PARTITION se puede ejecutar en la base de datos de publicación.  
+-   **\@allow_partition_switch**, cuando se establece en `true`, SWITCH PARTITION se puede ejecutar en la base de datos de publicación.  
   
--   **@replicate_partition_switch** determina si la instrucción SWITCH PARTITION de DDL se debe replicar en los suscriptores. Esta opción solo es válido cuando **@allow_partition_switch** está establecido en `true`.  
+-   **\@replicate_partition_switch** determina si la instrucción SWITCH PARTITION de DDL se debe replicar en suscriptores. Esta opción solo es válido cuando  **\@allow_partition_switch** está establecido en `true`.  
   
  Puede establecer estas propiedades utilizando [sp_addpublication](/sql/relational-databases/system-stored-procedures/sp-addpublication-transact-sql) cuando se crea la publicación, o usando [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql) después de crearla. Según se indicaba anteriormente, la replicación de mezcla no admite la modificación de particiones. Para ejecutar SWITCH PARTITION en una tabla en la que está habilitada la replicación de mezcla, quite la tabla de la publicación.  
   

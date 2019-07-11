@@ -14,12 +14,12 @@ ms.assetid: 9de15ca0-fe6a-4634-8709-a928d3c9cc73
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: a883377a17aa9e0c3426b4805263616375ea6215
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d58b5791fc3cd6418f5594828aff6c8419cc7e1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198395"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793414"
 ---
 # <a name="installation-components"></a>Componentes de instalación
 > [!NOTE]  
@@ -30,7 +30,7 @@ ms.locfileid: "63198395"
  ![Relación entre componentes de instalación](../../../odbc/reference/install/media/pr29.gif "pr29")  
   
 > [!IMPORTANT]
->  El archivo de ODBC se usó en ODBC 2. *x* para describir los archivos requeridos por cada ODBC el componente no se usa en ODBC 3 *.x*. Los controladores que se incluyen ODBC 3 *.x* no es necesario crear un archivo de ODBC los componentes. La eliminación de **SQLInstallDriver** y **SQLInstallODBC**y el desuso de **SQLInstallTranslator**, impiden que ODBC innecesarios. La información del controlador que solía haber en las secciones de la palabra clave Driver de ODBC ahora se proporciona en el *lpszDriver* argumento en **SQLInstallDriverEx**. La información de traductor que solía haber en el [ODBC traductor] y secciones de la especificación del traductor de ODBC ahora se proporciona en el *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Estos cambios permiten que el instalador de ODBC para que sea más portátil entre plataformas.  
+>  El archivo de ODBC se usó en ODBC *2.x* para describir los archivos requeridos por cada ODBC el componente no se usa en ODBC *3.x*. Los controladores que se incluyen ODBC *3.x* no es necesario crear un archivo de ODBC los componentes. La eliminación de **SQLInstallDriver** y **SQLInstallODBC**y el desuso de **SQLInstallTranslator**, impiden que ODBC innecesarios. La información del controlador que solía haber en las secciones de la palabra clave Driver de ODBC ahora se proporciona en el *lpszDriver* argumento en **SQLInstallDriverEx**. La información de traductor que solía haber en el [ODBC traductor] y secciones de la especificación del traductor de ODBC ahora se proporciona en el *lpszTranslator* argumento de **SQLInstallTranslatorEx**. Estos cambios permiten que el instalador de ODBC para que sea más portátil entre plataformas.  
   
  Para obtener más información acerca de estos componentes, vea los temas siguientes al final de esta sección.  
   

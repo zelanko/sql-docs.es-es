@@ -2,19 +2,20 @@
 title: referencia de sección de configuración de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia de comandos de sección de configuración de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2522aa41f860d7552df934ffc1751d2e7e8d43d1
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394407"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728693"
 ---
 # <a name="mssqlctl-bdc-config-section"></a>sección de configuración de bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394407"
 
 El siguiente artículo proporciona la referencia para la **sección de configuración de bdc** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [presentación de sección de configuración de bdc mssqlctl](#mssqlctl-bdc-config-section-show) | Obtiene una sección de un perfil de configuración.
@@ -56,15 +57,15 @@ Coloca la ruta de acceso de donde desea que el archivo de sección. Valor predet
 Forzar la sobrescritura del archivo de destino.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-bdc-config-section-set"></a>conjunto de sección de configuración de bdc mssqlctl
 Establece la sección especificada en el perfil de configuración seleccionado según la ruta de acceso json especificada.  Examplesbelow todas se proporcionan en Bash.  Si usa otra línea de comandos, ten en cuenta que es posible que deba escapequotations adecuadamente.  Como alternativa, puede usar la funcionalidad del archivo de revisión.
 ```bash
@@ -116,15 +117,15 @@ Una lista de pares clave-valor de rutas de acceso a los valores json: key1.subke
 Ruta de acceso a un archivo json de revisión que se basa en la biblioteca jsonpatch: http://jsonpatch.com/. Debe iniciar el archivo de revisión json con una clave denominada "revisión", cuyo valor es una matriz de las operaciones de revisiones que se va a hacer. La ruta de acceso de una operación de revisión, puede usar la notación de puntos, como key1.key2 para la mayoría de las operaciones. Si desea realizar una operación de reemplazo y va a reemplazar un valor en una matriz que requiere una instrucción condicional, use la notación de jsonpath mediante el comienzo de la ruta de acceso con un carácter $. Esto le permitirá hacer una instrucción condicional, como $. key1.key2 [? () @.key3== "someValue"] .key4. Consulte los ejemplos siguientes. Para obtener ayuda adicional, consulte: https://jsonpath.com/.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

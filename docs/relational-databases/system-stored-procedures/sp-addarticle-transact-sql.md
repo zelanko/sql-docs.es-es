@@ -13,15 +13,15 @@ f1_keywords:
 helpviewer_keywords:
 - sp_addarticle
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 6f24f7ca51f4836c8b1e446283eabb858eb8d387
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 045b1cb853603a2550110db18f5658453f19e6ce
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493897"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716756"
 ---
 # <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +79,7 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @destination_table = ] 'destination_table'` Es el nombre de la tabla de destino (suscripción), si es distinto de *source_table*o el procedimiento almacenado. *destination_table* es **sysname**, su valor predeterminado es null, lo que significa que *source_table* es igual a *destination_table **.*  
   
-`[ @vertical_partition = ] 'vertical_partition'` Habilita y deshabilita el filtrado de columnas en un artículo de tabla. *vertical_partition* es **nchar(5)**, su valor predeterminado es False.  
+`[ @vertical_partition = ] 'vertical_partition'` Habilita y deshabilita el filtrado de columnas en un artículo de tabla. *vertical_partition* es **nchar(5)** , su valor predeterminado es False.  
   
  **false** indica que no hay ningún filtrado vertical y publica todas las columnas.  
   
@@ -105,11 +105,11 @@ sp_addarticle [ @publication = ] 'publication'
 |**serializable proc exec**|Replica la ejecución del procedimiento almacenado solo si éste se ejecuta dentro del contexto de una transacción serializable. No es compatible con publicadores de Oracle.<br /><br /> El procedimiento también se debe ejecutar dentro de una transacción explícita para la ejecución del procedimiento se repliquen.|  
 |**solo esquema de vista**|Vista con solo esquema. No es compatible con publicadores de Oracle. Si se utiliza esta opción, también debe publicarse la tabla base.|  
   
-`[ @filter = ] 'filter'` Es el procedimiento almacenado (creado con FOR REPLICATION) que se usa para filtrar la tabla horizontalmente. *filtro* es **nvarchar (386)**, su valor predeterminado es null. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) y [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) se deben ejecutar manualmente para crear la vista y procedimiento almacenado de filtro. Si no es NULL, el procedimiento de filtro no se crea (se presupone que el procedimiento almacenado se crea manualmente).  
+`[ @filter = ] 'filter'` Es el procedimiento almacenado (creado con FOR REPLICATION) que se usa para filtrar la tabla horizontalmente. *filtro* es **nvarchar (386)** , su valor predeterminado es null. [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) y [sp_articlefilter](../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) se deben ejecutar manualmente para crear la vista y procedimiento almacenado de filtro. Si no es NULL, el procedimiento de filtro no se crea (se presupone que el procedimiento almacenado se crea manualmente).  
   
-`[ @sync_object = ] 'sync_object'` Es el nombre de la tabla o vista utilizada para generar el archivo de datos utilizado para representar la instantánea de este artículo. *sync_object* es **nvarchar (386)**, su valor predeterminado es null. Si es NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) se llama para crear automáticamente la vista utilizada para generar el archivo de salida. Esto se produce después de agregar columnas con [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Si no es NULL, no se crea la vista (se presupone que la vista se crea manualmente).  
+`[ @sync_object = ] 'sync_object'` Es el nombre de la tabla o vista utilizada para generar el archivo de datos utilizado para representar la instantánea de este artículo. *sync_object* es **nvarchar (386)** , su valor predeterminado es null. Si es NULL, [sp_articleview](../../relational-databases/system-stored-procedures/sp-articleview-transact-sql.md) se llama para crear automáticamente la vista utilizada para generar el archivo de salida. Esto se produce después de agregar columnas con [sp_articlecolumn](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md). Si no es NULL, no se crea la vista (se presupone que la vista se crea manualmente).  
   
-`[ @ins_cmd = ] 'ins_cmd'` Se usa el tipo de comando de replicación al replicar inserciones para este artículo. *ins_cmd* es **nvarchar (255)**, y puede tener uno de los siguientes valores.  
+`[ @ins_cmd = ] 'ins_cmd'` Se usa el tipo de comando de replicación al replicar inserciones para este artículo. *ins_cmd* es **nvarchar (255)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -119,7 +119,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @del_cmd = ] 'del_cmd'` Se usa el tipo de comando de replicación al replicar eliminaciones para este artículo. *del_cmd* es **nvarchar (255)**, y puede tener uno de los siguientes valores.  
+`[ @del_cmd = ] 'del_cmd'` Se usa el tipo de comando de replicación al replicar eliminaciones para este artículo. *del_cmd* es **nvarchar (255)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -130,7 +130,7 @@ sp_addarticle [ @publication = ] 'publication'
   
  Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @upd_cmd = ] 'upd_cmd'` Se usa el tipo de comando de replicación al replicar actualizaciones para este artículo. *upd_cmd* es **nvarchar (255)**, y puede tener uno de los siguientes valores.  
+`[ @upd_cmd = ] 'upd_cmd'` Se usa el tipo de comando de replicación al replicar actualizaciones para este artículo. *upd_cmd* es **nvarchar (255)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -144,11 +144,11 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  La sintaxis CALL, MCALL, SCALL y XCALL varía la cantidad de datos propagados al suscriptor. La sintaxis CALL pasa todos los valores de todas las columnas insertadas y eliminadas. La sintaxis SCALL solo pasa los valores de las columnas afectadas. La sintaxis XCALL pasa los valores de todas las columnas, tanto si han cambiado como si no, incluido el valor anterior de la columna. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).  
   
-`[ @creation_script = ] 'creation_script'` Es la ruta de acceso y el nombre de un script de esquema de artículo opcional utilizado para crear el artículo en la base de datos de suscripción. *creation_script* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @creation_script = ] 'creation_script'` Es la ruta de acceso y el nombre de un script de esquema de artículo opcional utilizado para crear el artículo en la base de datos de suscripción. *creation_script* es **nvarchar (255)** , su valor predeterminado es null.  
   
-`[ @description = ] 'description'` Es una entrada descriptiva del artículo. *descripción* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` Es una entrada descriptiva del artículo. *descripción* es **nvarchar (255)** , su valor predeterminado es null.  
   
-`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Especifica lo que debe hacer el sistema si detecta un objeto existente del mismo nombre en el suscriptor al aplicar la instantánea para este artículo. *pre_creation_cmd* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
+`[ @pre_creation_cmd = ] 'pre_creation_cmd'` Especifica lo que debe hacer el sistema si detecta un objeto existente del mismo nombre en el suscriptor al aplicar la instantánea para este artículo. *pre_creation_cmd* es **nvarchar (10)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -179,7 +179,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x200**|Replica las restricciones de clave externa. Si la tabla a la que se hace referencia no forma parte de una publicación, no se replica ninguna restricción de clave externa de una tabla publicada. *No se admite para publicadores de Oracle*.|  
 |**0x400**|Replica las restricciones CHECK. *No se admite para publicadores de Oracle*.|  
 |**0x800**|Replica los valores predeterminados. *No se admite para publicadores de Oracle*.|  
-|**0x1000**|Replica la intercalación de columna.<br /><br /> **Nota:** Esta opción debe establecerse en publicadores de Oracle para habilitar las comparaciones con distinción de mayúsculas y minúsculas.|  
+|**0x1000**|Replica la intercalación de columna.<br /><br /> **Nota:** Esta opción debe establecerse para que los publicadores de Oracle habilitar las comparaciones entre mayúsculas y minúsculas.|  
 |**0x2000**|Replica las propiedades extendidas asociadas con el objeto de origen del artículo publicado. *No se admite para publicadores de Oracle*.|  
 |**0x4000**|Replica las restricciones UNIQUE. También se replican los índices relacionados con la restricción, incluso si las opciones de **0 x 10** y **0 x 40** no están habilitadas.|  
 |**0x8000**|Esta opción no es válida para publicadores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)].|  
@@ -196,7 +196,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x4000000**|Replica índices en **xml** columnas.|  
 |**0x8000000**|Crea esquemas que aún no existen en el suscriptor.|  
 |**0x10000000**|Convierte **xml** columnas a **ntext** en el suscriptor.|  
-|**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)**, **varchar (max)**, y **varbinary (max)**) introducido en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que se admiten en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+|**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)** , **varchar (max)** , y **varbinary (max)** ) introducido en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que se admiten en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 |**0x40000000**|Replica permisos.|  
 |**0x80000000**|Intenta quitar dependencias a objetos que no forman parte de la publicación.|  
 |**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en **varbinary (max)** columnas. No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicación de tablas que incluyen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de cómo se establece esta opción de esquema.<br /><br /> Vea la opción relacionada **0 x 800000000**.|  
@@ -249,12 +249,12 @@ sp_addarticle [ @publication = ] 'publication'
   
 `[ @artid = ] _article_ID_ OUTPUT` Es el identificador de artículo del nuevo artículo. *article_ID* es **int** con un valor predeterminado es NULL y es un parámetro de salida.  
   
-`[ @auto_identity_range = ] 'auto_identity_range'` Habilita y deshabilita el intervalo automático de identidad de control en una publicación en el momento de crearlo. *auto_identity_range* es **nvarchar (5)**, y puede tener uno de los siguientes valores:  
+`[ @auto_identity_range = ] 'auto_identity_range'` Habilita y deshabilita el intervalo automático de identidad de control en una publicación en el momento de crearlo. *auto_identity_range* es **nvarchar (5)** , y puede tener uno de los siguientes valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**true**|Habilita la administración automática de intervalos de identidad|  
-|**False**|Deshabilita la administración automática de intervalos de identidad|  
+|**false**|Deshabilita la administración automática de intervalos de identidad|  
 |NULL(Default)|Administración de intervalos de identidad se establece de forma *identityrangemanagementoption*.|  
   
 > [!NOTE]  
@@ -283,7 +283,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  Este parámetro solo debe utilizarse en publicadores de Oracle. Establecer *use_default_datatypes* a **0** para un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador genera un error.  
   
-`[ @identityrangemanagementoption = ] identityrangemanagementoption` Especifica cómo se controla la administración de intervalos de identidad para el artículo. *valor de identityrangemanagementoption* es **nvarchar (10)**, y puede tener uno de los siguientes valores.  
+`[ @identityrangemanagementoption = ] identityrangemanagementoption` Especifica cómo se controla la administración de intervalos de identidad para el artículo. *valor de identityrangemanagementoption* es **nvarchar (10)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -301,7 +301,7 @@ sp_addarticle [ @publication = ] 'publication'
 > [!NOTE]  
 >  *publicador* no debe usarse cuando se agrega un artículo a una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
-`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` Es si replica los desencadenadores de usuario se ejecutan cuando se aplica la instantánea inicial. *fire_triggers_on_snapshot* es **nvarchar (5)**, su valor predeterminado es False. **True** significa que los desencadenadores de usuario en una tabla replicada se ejecutan cuando se aplica la instantánea. En el orden de los desencadenadores se deben replicar el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.  
+`[ @fire_triggers_on_snapshot = ] 'fire_triggers_on_snapshot'` Es si replica los desencadenadores de usuario se ejecutan cuando se aplica la instantánea inicial. *fire_triggers_on_snapshot* es **nvarchar (5)** , su valor predeterminado es False. **True** significa que los desencadenadores de usuario en una tabla replicada se ejecutan cuando se aplica la instantánea. En el orden de los desencadenadores se deben replicar el valor de máscara de bits de *schema_option* debe incluir el valor **0 x 100**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

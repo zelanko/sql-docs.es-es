@@ -17,12 +17,12 @@ ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b81acf6c60bd11e03a598e349e145dbf72e174b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026949"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793224"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo de datos C de marcador
 El tipo de datos C de marcador permite que una aplicación recuperar un marcador. Los tipos de marcador C sirven únicamente para recuperar los valores de marcador pueden ser variable de longitud; no se debe convertir en otros tipos de datos. Una aplicación recupera un marcador desde la columna 0 del resultado se establece con **SQLBulkOperations** (con una operación de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**. Para obtener más información, consulte [marcadores](../../../odbc/reference/develop-app/bookmarks-odbc.md).  
@@ -30,7 +30,7 @@ El tipo de datos C de marcador permite que una aplicación recuperar un marcador
  La tabla siguiente muestra el valor de *CType* para el tipo de datos C de marcador, el tipo de datos C de ODBC que implementa el tipo de datos C de marcador y la definición de datos de este tipo de SQL. H.  
   
 > [!NOTE]
->  El tipo de datos SQL_C_BOOKMARK ha quedado obsoleto. ODBC 3 *.x* las aplicaciones no deben usar SQL_C_BOOKMARK. ODBC 3 *.x* controladores deben admitir SQL_C_BOOKMARK solo si desean trabajar con ODBC 2. *x* las aplicaciones que lo usan. El Administrador de controladores asigna SQL_C_VARBOOKMARK a SQL_C_BOOKMARK cuando una aplicación trabaja con un ODBC 2. *x* controlador.  
+>  El tipo de datos SQL_C_BOOKMARK ha quedado obsoleto. ODBC *3.x* las aplicaciones no deben usar SQL_C_BOOKMARK. ODBC *3.x* controladores deben admitir SQL_C_BOOKMARK solo si desean trabajar con ODBC *2.x* las aplicaciones que lo usan. El Administrador de controladores asigna SQL_C_VARBOOKMARK a SQL_C_BOOKMARK cuando una aplicación trabaja con un ODBC *2.x* controlador.  
   
 |Identificador de tipo de C|Definición de tipo C de ODBC|Tipo de C|  
 |-----------------------|--------------------|------------|  

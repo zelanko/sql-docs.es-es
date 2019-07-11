@@ -2,20 +2,20 @@
 title: Ejecutar blocs de notas en Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Este artículo explica cómo ejecutar Jupyter Notebook en Azure Data Studio conectado a un clúster de macrodatos de SQL Server 2019.
-author: achatter
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: e4b24b70a427e7ac3e3f058b1db332b899729034
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802820"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728757"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
@@ -23,7 +23,7 @@ ms.locfileid: "66802820"
 
 En este artículo se describe cómo iniciar la experiencia del cuaderno en la versión más reciente de [**Azure Data Studio**](../azure-data-studio/download.md) y cómo empezar a crear sus propios cuadernos. También muestra cómo escribir utilizando diferentes kernels de cuadernos.
 
-## <a name="connect-to-sql-server"></a>Conectar a SQL Server
+## <a name="connect-to-sql-server"></a>Conexión con SQL Server
 
 Puede conectarse al tipo de conexión de Microsoft SQL Server en Azure Data Studio.
 En Azure Data Studio, también puede presionar F1 y haga clic en **nueva conexión** y conectarse a SQL Server.
@@ -144,7 +144,7 @@ Si desea borrar los resultados de todas las celdas ejecutadas en el Bloc de nota
 
 ![Text v markdownu](media/notebooks-guidance/clear-results.png)
 
-### <a name="save"></a>Guardar
+### <a name="save"></a>Save
 
 Para guardar el Bloc de notas realice una de las siguientes acciones.
 

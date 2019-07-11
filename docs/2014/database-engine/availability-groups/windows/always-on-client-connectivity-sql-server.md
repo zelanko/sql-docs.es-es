@@ -14,12 +14,12 @@ ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 1368d29801a414de866003b86c63fb4823c4a7b8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a1b81d60ef691e02d4b69cc71fa961bbaddf18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62790664"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793431"
 ---
 # <a name="always-on-client-connectivity-sql-server"></a>Conectividad de cliente de AlwaysOn (SQL Server)
   En este tema se describen las consideraciones para la conectividad de cliente a grupos de AlwaysOn, incluidos los requisitos previos, las restricciones y las recomendaciones para las configuraciones y los valores de cliente.  
@@ -33,12 +33,12 @@ ms.locfileid: "62790664"
   
  En la tabla siguiente se resume la compatibilidad de los controladores con [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de múltiples subredes: Más rápida una sola conmutación por error de punto de conexión de subred|Conmutación por error de múltiples subredes: Las instancias en clúster de resolución de instancias con nombre para SQL|  
+|Controlador|Conmutación por error de múltiples subredes|Intención de aplicaciones|Enrutamiento de solo lectura|Conmutación por error de varias subredes: Conmutación por error más rápida del punto de conexión de una sola subred|Conmutación por error de varias subredes: Resolución de instancias con nombre para las instancias en clúster SQL|  
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Sí|Sí|Sí|Sí|Sí|  
-|SQL Native Client 11.0 OLEDB|Sin|Sí|Sí|No|Sin|  
-|ADO.NET con .NET Framework 4.0 con revisión de conectividad **<sup>*</sup>**|Sí|Sí|Sí|Sí|Sí|  
-|ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **<sup>** </sup>**|Sí|Sí|Sí|Sí|Sí|  
+|SQL Native Client 11.0 OLEDB|No|Sí|Sí|Sin|Sin|  
+|ADO.NET con .NET Framework 4.0 con revisión de conectividad **<sup>*</sup>** |Sí|Sí|Sí|Sí|Sí|  
+|ADO.NET con .NET Framework 3.5 SP1 con revisión de conectividad **<sup>** </sup>** |Sí|Sí|Sí|Sí|Sí|  
 |Controlador JDBC 4.0 de Microsoft para SQL Server|Sí|Sí|Sí|Sí|Sí|  
   
  **<sup>*</sup>**  Descargar la revisión de conectividad para ADO .NET con .NET Framework 4.0: [ https://support.microsoft.com/kb/2600211 ](https://support.microsoft.com/kb/2600211).  

@@ -21,12 +21,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 03ca95fad4f6e88c22edb612441a9eb4ea986bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 961878494958f0f7ef5d1814c0836a98f5da5682
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462524"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716580"
 ---
 # <a name="sysdmexecrequests-transact-sql"></a>sys.dm_exec_requests (Transact-SQL)
 
@@ -89,8 +89,8 @@ Devuelve información acerca de cada solicitud que se está ejecutando en [!INCL
 |group_id|**int**|Identificador del grupo de cargas de trabajo al que pertenece esta consulta. No admite valores NULL.|  
 |query_hash|**binary(8)**|Valor hash binario que se calcula en la consulta y que se usa para identificar consultas con una lógica similar. Puede usar el hash de consulta para determinar el uso de recursos agregados para las consultas que solo se diferencian en los valores literales.|  
 |query_plan_hash|**binary(8)**|Valor hash binario que se calcula en el plan de ejecución de consulta y que se usa para identificar planes de ejecución de consulta similares. Puede usar el hash del plan de consulta para buscar el costo acumulativo de las consultas con planes de ejecución similares.|  
-|statement_sql_handle|**varbinary(64)**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador SQL de la consulta individual. |  
-|statement_context_id|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La clave externa opcional para sys.query_context_settings. |  
+|statement_sql_handle|**varbinary(64)**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Identificador SQL de la consulta individual.<br /><br />Esta columna es NULL si la consulta Store no está habilitada para la base de datos. |  
+|statement_context_id|**bigint**|**Se aplica a**: desde [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> La clave externa opcional para sys.query_context_settings.<br /><br />Esta columna es NULL si la consulta Store no está habilitada para la base de datos. |  
 |dop |**int** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El grado de paralelismo de la consulta. |  
 |parallel_worker_count |**int** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El número de trabajadores paralelos reservados si se trata de una consulta en paralelo.  |  
 |external_script_request_id |**uniqueidentifier** |**Se aplica a**: desde [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> El identificador de solicitud de script externo asociado con la solicitud actual. |  

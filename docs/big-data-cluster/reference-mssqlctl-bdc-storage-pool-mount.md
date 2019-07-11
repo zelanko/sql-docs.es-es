@@ -2,19 +2,20 @@
 title: mssqlctl bdc storage-pool mount reference
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de montaje de mssqlctl bdc bloque de almacenamiento.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cf6012b6c700afd6ee0eca763df0961f088a3be4
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394247"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727477"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>montaje de bloque de almacenamiento de bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394247"
 
 El siguiente artículo proporciona la referencia para la **montaje del bloque de almacenamiento de bdc** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [mssqlctl bdc storage-pool mount create](#mssqlctl-bdc-storage-pool-mount-create) | Crear montajes de almacenes remotos en HDFS.
@@ -52,15 +53,15 @@ URI del almacén remoto que se va a montado (origen de montaje).
 Ruta de acceso HDFS donde montaje se tiene que crearse (destino de montaje).
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc storage-pool mount delete
 Eliminar montajes de almacenes remotos en HDFS.
 ```bash
@@ -77,15 +78,15 @@ mssqlctl bdc storage-pool mount delete --mount-path /mounts/adlsv2/data
 La ruta de acceso HDFS correspondiente para el montaje en la que se va a eliminar.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>estado de montaje de bloque de almacenamiento de bdc mssqlctl
 Estado de mount(s).
 ```bash
@@ -106,15 +107,15 @@ mssqlctl bdc storage-pool mount status
 Ruta de acceso de montaje.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

@@ -4,19 +4,18 @@ titleSuffix: SQL Server big data clusters
 description: Implementar un script de Python o R como una aplicación en clúster de macrodatos de 2019 de SQL Server (versión preliminar).
 author: jeroenterheerdt
 ms.author: jterh
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 2ace3ee9cd17240890a9da901297c731ced4016c
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 2309fd7a318222ef337815ddf511359f5b305e26
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681587"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729290"
 ---
 # <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>Cómo implementar una aplicación en clúster de macrodatos de SQL Server (versión preliminar)
 
@@ -119,7 +118,7 @@ Para implementar esta aplicación de ejemplo de aplicación, cree los siguientes
         return result
     result=add(x,y)
    ```
-- `spec.yaml` Copie el código siguiente en este archivo:
+- `spec.yaml`. Copie el código siguiente en este archivo:
    ```yaml
    #spec.yaml
    name: add-app #name of your python script

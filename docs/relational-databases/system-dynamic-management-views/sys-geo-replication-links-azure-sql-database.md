@@ -14,16 +14,16 @@ helpviewer_keywords:
 - sys.dm_geo_replication_links dynamic management view
 - dm_geo_replication_links dynamic management view
 ms.assetid: 58911798-1d60-4f28-87ab-2def2bfc3de7
-author: CarlRabeler
-ms.author: carlrab
+author: mashamsft
+ms.author: mathoma
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 94ed170ea4aa99d861bea2e087310260982af4d3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cd552d357284ce6fefd85df43baa38ad52ebb310
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031776"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716637"
 ---
 # <a name="sysgeoreplicationlinks-azure-sql-database"></a>sys.geo_replication_links (Azure SQL Database)
 
@@ -41,10 +41,10 @@ ms.locfileid: "56031776"
 |partner_database|**sysname**|Nombre de la base de datos con replicación geográfica en el servidor vinculado de SQL Database.|  
 |replication_state|**tinyint**|El estado de replicación geográfica para esta base de datos, uno de:.<br /><br /> 0 = pendiente. Creación de la base de datos secundaria activa está programada pero los pasos de preparación necesarios aún no están completos.<br /><br /> 1 = la inicialización. Se está propagando el destino de replicación geográfica pero las dos bases de datos no se ha sincronizado. Hasta que se complete la propagación, no se puede conectar a la base de datos secundaria. Quitar la base de datos secundaria de la réplica principal se cancelará la operación de propagación.<br /><br /> 2 = puesta al día. La base de datos secundaria está en un estado transaccionalmente coherente y se está sincronizando constantemente con la base de datos principal.|  
 |replication_state_desc|**nvarchar(256)**|PENDING<br /><br /> SEEDING<br /><br /> CATCH_UP|  
-|rol|**tinyint**|Rol de replicación geográfica, uno de:<br /><br /> 0 = primary. El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.<br /><br /> 1 = la base de datos secundaria.  El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.|  
+|role|**tinyint**|Rol de replicación geográfica, uno de:<br /><br /> 0 = primary. El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.<br /><br /> 1 = la base de datos secundaria.  El database_id hace referencia a la base de datos principal de la asociación de replicación geográfica.|  
 |role_desc|**nvarchar(256)**|PRIMARY<br /><br /> SECONDARY|  
 |secondary_allow_connections|**tinyint**|El tipo secundario, uno de:<br /><br /> 0 = No. La base de datos secundaria no es accesible hasta que la conmutación por error.<br /><br /> 1 = solo lectura. La base de datos secundaria solo es accesible para las conexiones de cliente con ApplicationIntent = ReadOnly.<br /><br /> 2 = Todas. La base de datos secundaria es accesible para cualquier conexión de cliente.|  
-|secondary_allow_connections _desc|**nvarchar(256)**|No<br /><br /> All<br /><br /> Solo lectura|  
+|secondary_allow_connections _desc|**nvarchar(256)**|Sin<br /><br /> Todo<br /><br /> Solo lectura|  
   
 ## <a name="permissions"></a>Permisos
 

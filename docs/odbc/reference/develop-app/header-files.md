@@ -13,19 +13,19 @@ ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 8e6d0806a7c3eabd1c6f4cd1836308eba99a6d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724370"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792557"
 ---
 # <a name="header-files"></a>Archivos de encabezado
 El archivo de encabezado Sql.h contiene prototipos para las funciones y características en el nivel de conformidad de interfaz de ODBC Core. El archivo de encabezado Sqlext.h contiene prototipos para las funciones y características en el nivel 1 y niveles de compatibilidad de API de nivel 2. El archivo de encabezado Sqltypes.h contiene las definiciones de tipo e indicadores para los tipos de datos SQL.  
   
  Los archivos de encabezado que contienen un **#define**, ODBCVER, que puede establecer una aplicación o un controlador para compilarse para diferentes versiones de ODBC.  
   
- Para alinearse con la CLI de ISO y abra CLI de grupo, los archivos de encabezado contienen un alias para los tipos de información que se usa en llamadas a **SQLGetInfo**. En la tabla siguiente, la columna "Nombre de ODBC" indica el nombre ODBC para el tipo de información en [referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La columna "Alias en el archivo de encabezado" indica el nombre que se usa en la CLI de ISO y la CLI de grupo abierto. El valor numérico real de estos nombres de manifiesto es el mismo en ODBC y la CLI estándar. Estos alias habilitar una aplicación compatible con los estándares o un controlador para compilar con ODBC 3 *.x* archivos de encabezado.  
+ Para alinearse con la CLI de ISO y abra CLI de grupo, los archivos de encabezado contienen un alias para los tipos de información que se usa en llamadas a **SQLGetInfo**. En la tabla siguiente, la columna "Nombre de ODBC" indica el nombre ODBC para el tipo de información en [referencia de la API de ODBC](../../../odbc/reference/syntax/odbc-api-reference.md). La columna "Alias en el archivo de encabezado" indica el nombre que se usa en la CLI de ISO y la CLI de grupo abierto. El valor numérico real de estos nombres de manifiesto es el mismo en ODBC y la CLI estándar. Estos alias habilitar una aplicación compatible con los estándares o controlador de compilación con ODBC *3.x* archivos de encabezado.  
   
  Estos alias incluyen las expansiones de abreviaturas en los nombres de ODBC para que los nombres sean más comprensibles. "MAX" se expande a "Máximo", "Largo" a "LENGTH", "MULT" a "Varios", "DO" a "OUTER_JOIN" y "Transacción" a "Transacción".  
   

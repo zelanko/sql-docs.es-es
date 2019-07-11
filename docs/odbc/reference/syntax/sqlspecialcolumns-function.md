@@ -20,12 +20,12 @@ ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: c49e7fd827cfd48df07e5e5a01367977504f4511
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536259"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793740"
 ---
 # <a name="sqlspecialcolumns-function"></a>Función SQLSpecialColumns
 **Conformidad**  
@@ -109,7 +109,7 @@ SQLRETURN SQLSpecialColumns(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLSpecialColumns** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLSpecialColumns** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
@@ -151,9 +151,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** devuelve los resultados como un conjunto de resultados estándar, ordenado por ámbito.  
   
- Las columnas siguientes se han cambiado para ODBC 3 *.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque el enlace de aplicaciones por número de columna.  
+ Las columnas siguientes se han cambiado para ODBC *3.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque el enlace de aplicaciones por número de columna.  
   
-|Columna de ODBC 2.0|ODBC 3 *.x* columna|  
+|Columna de ODBC 2.0|ODBC *3.x* columna|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  
@@ -169,8 +169,8 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_NAME (ODBC 1.0)|2|Varchar no es NULL|Nombre de columna. El controlador devuelve una cadena vacía para una columna que no tiene un nombre.|  
 |DATA_TYPE (ODBC 1.0)|3|Smallint no NULL|Tipo de datos SQL. Esto puede ser un tipo de datos SQL de ODBC o un tipo de datos SQL específicas del controlador. Para obtener una lista de tipos de datos ODBC SQL válidos, vea [tipos de datos SQL](../../../odbc/reference/appendixes/sql-data-types.md). Para obtener información acerca de los tipos de datos SQL específicas del controlador, consulte la documentación del controlador.|  
 |TYPE_NAME (ODBC 1.0)|4|Varchar no es NULL|Nombre de tipo de datos dependiente del origen de datos; "Por ejemplo,"CHAR", VARCHAR", "MONEY", "LONG VARBINARY" o "CHAR () para datos de bits".|  
-|COLUMN_SIZE (ODBC 1.0)|5|Integer|El tamaño de la columna del origen de datos. Para obtener más información sobre el tamaño de la columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|BUFFER_LENGTH (ODBC 1.0)|6|Integer|La longitud en bytes de datos transferidos en un **SQLGetData** o **SQLFetch** operación si se especifica SQL_C_DEFAULT. Para los datos numéricos, este tamaño puede ser diferente que el tamaño de los datos almacenados en el origen de datos. Este valor es igual que la columna COLUMN_SIZE para caracteres o datos binarios. Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|COLUMN_SIZE (ODBC 1.0)|5|Entero|El tamaño de la columna del origen de datos. Para obtener más información sobre el tamaño de la columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
+|BUFFER_LENGTH (ODBC 1.0)|6|Entero|La longitud en bytes de datos transferidos en un **SQLGetData** o **SQLFetch** operación si se especifica SQL_C_DEFAULT. Para los datos numéricos, este tamaño puede ser diferente que el tamaño de los datos almacenados en el origen de datos. Este valor es igual que la columna COLUMN_SIZE para caracteres o datos binarios. Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Los dígitos decimales de la columna del origen de datos. Se devuelve NULL para los tipos de datos que no son aplicables los dígitos decimales. Para obtener más información relativa a los dígitos decimales, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica si la columna es una pseudocolumna, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Note:**  Para obtener la máxima interoperatividad, pseudocolumnas no deben ir entrecomillados con el carácter de comilla de identificador devuelto por **SQLGetInfo**.|  
   

@@ -14,15 +14,15 @@ ms.assetid: a0fa4510-8891-4a61-a867-b2555bc35f05
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 5520554b509b0c25d62e4a191e16ad3524a02652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5153980cae143feeb1917c89da640723716c8ef1
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297458"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793014"
 ---
 # <a name="sqlsetscrolloptions-mapping"></a>Asignación de SQLSetScrollOptions
-Cuando una aplicación llama **SQLSetScrollOptions** a través de una aplicación ODBC 3 *.x* controlador y el controlador no admite **SQLSetScrollOptions**, la llamada a  
+Cuando una aplicación llama **SQLSetScrollOptions** a través de un ODBC *3.x* controlador y el controlador no admite **SQLSetScrollOptions**, la llamada a  
   
 ```  
 SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)  
@@ -100,4 +100,4 @@ SQLSetScrollOptions(StatementHandle, Concurrency, KeysetSize, RowsetSize)
      con  *\*ValuePtr* establecido en el *RowsetSize* argumento en **SQLSetScrollOptions**.  
   
     > [!NOTE]  
-    >  Cuando se asigna el Administrador de controladores **SQLSetScrollOptions** para una aplicación que funciona con una aplicación ODBC 3 *.x* controlador que no es compatible con **SQLSetScrollOptions**, el controlador El administrador establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE, a la *RowsetSize* argumento en **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede usar una aplicación al recuperar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Puede usarse solo cuando al capturar varias filas mediante una llamada a **SQLExtendedFetch**.
+    >  Cuando se asigna el Administrador de controladores **SQLSetScrollOptions** para una aplicación trabajar con un ODBC *3.x* controlador que no es compatible con **SQLSetScrollOptions**, el controlador El administrador establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE, a la *RowsetSize* argumento en **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede usar una aplicación al recuperar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Puede usarse solo cuando al capturar varias filas mediante una llamada a **SQLExtendedFetch**.

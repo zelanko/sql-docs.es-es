@@ -2,20 +2,20 @@
 title: Introducir datos en un grupo de datos de SQL Server
 titleSuffix: SQL Server big data clusters
 description: Este tutorial muestra cómo introducir datos en el grupo de datos de un clúster de macrodatos de 2019 de SQL Server (versión preliminar).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 86aca5e5e9ccbddfebcdeb3dade057b7fb138c4d
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 52881f5102125cc008c1a35278b9bf46bef289f4
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388612"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728358"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>Tutorial: Introducir datos en un grupo de datos de SQL Server con Transact-SQL
 
@@ -23,7 +23,7 @@ ms.locfileid: "67388612"
 
 Este tutorial muestra cómo utilizar Transact-SQL para cargar datos en el [grupo datos](concept-data-pool.md) de un clúster de macrodatos de 2019 de SQL Server (versión preliminar). Con los clústeres de macrodatos de SQL Server, pueden ingeridos datos desde una variedad de orígenes y distribuirse entre las instancias del grupo de datos.
 
-En este tutorial, obtendrá información sobre cómo:
+En este tutorial, aprenderá a:
 
 > [!div class="checklist"]
 > * Crear una tabla externa en el grupo de datos.
@@ -81,7 +81,7 @@ Los pasos siguientes crean una tabla externa en el grupo de datos llamado **web_
   
 1. En CTP 3.1, la creación del grupo de datos es asincrónica, pero no hay ninguna manera de determinar si aún termina. Espere dos minutos para asegurarse de que se crea el grupo de datos antes de continuar.
 
-## <a name="load-data"></a>Cargar datos
+## <a name="load-data"></a>Carga de datos
 
 Los pasos siguientes ingieren datos de secuencia de clics de web de ejemplo en el grupo de datos utilizando la tabla externa creada en los pasos anteriores.
 
@@ -127,7 +127,7 @@ INNER JOIN (SELECT DISTINCT i_category_id, i_category FROM item) as i
 GROUP BY w.wcs_user_sk;
 ```
 
-## <a name="clean-up"></a>Limpiar
+## <a name="clean-up"></a>Limpieza
 
 Use el siguiente comando para quitar los objetos de base de datos creados en este tutorial.
 

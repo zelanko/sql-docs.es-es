@@ -16,21 +16,21 @@ helpviewer_keywords:
 - sys.resource_stats
 - resource_stats
 ms.assetid: 02379a1b-3622-4578-8c59-a1b8f1a17914
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: c12b995a52f633c4fbd7829f090f2a95d631751e
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 6918c712e5440aa79bef045f2d64b2578eb42a69
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041446"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716318"
 ---
 # <a name="sysresourcestats-azure-sql-database"></a>sys.resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve los datos de almacenamiento y uso de CPU para Azure SQL Database. Los datos se recopilan y se agregan en intervalos de cinco minutos. Para cada base de datos de usuario, hay una fila por cada ventana de informes de cinco minutos en el que hay un cambio en el consumo de recursos. Los datos devueltos incluyen uso de CPU, el cambio de tamaño de almacenamiento y modificación de la SKU de la base de datos. Las bases de datos inactivas sin cambios no pueden tener filas por cada intervalo de cinco minutos. Los datos históricos se conservan durante 14 días aproximadamente.  
+  Devuelve datos de almacenamiento y uso de CPU para una base de datos de Azure SQL. Los datos se recopilan y agregan en intervalos de cinco minutos. Para cada base de datos de usuario, hay una fila por cada ventana de informes de cinco minutos en el que hay un cambio en el consumo de recursos. Los datos devueltos incluyen uso de CPU, el cambio de tamaño de almacenamiento y modificación de la SKU de la base de datos. Las bases de datos inactivas sin cambios no pueden tener filas por cada intervalo de cinco minutos. Los datos históricos se conservan durante 14 días aproximadamente.  
   
  El **sys.resource_stats** vista tiene definiciones diferentes dependiendo de la versión del servidor de base de datos de SQL de Azure que está asociada la base de datos. Tenga en cuenta estas diferencias y cualquier modificación que requiera la aplicación al actualizar a una nueva versión de servidor.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "56041446"
 |start_time|**datetime**|Hora de UTC que indica el inicio del intervalo de informes de cinco minutos.|  
 |end_time|**datetime**|Hora de UTC que indica el final del intervalo de informes de cinco minutos.|  
 |database_name|**varchar**|Nombre de la base de datos del usuario.|  
-|sku|**varchar**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básico<br /><br /> Estándar<br /><br /> Premium<br /><br />Uso general<br /><br />Crucial para la empresa|  
+|sku|**varchar**|Nivel de servicio de la base de datos. Los posibles valores son los siguientes:<br /><br /> Básica<br /><br /> Estándar<br /><br /> Premium<br /><br />Uso general<br /><br />Crítico para la empresa|  
 |storage_in_megabytes|**float**|Tamaño de almacenamiento máximo en megabytes para el período de tiempo, incluida la base de datos, índices, procedimientos almacenados y los metadatos.|  
 |avg_cpu_percent|**numeric**|Uso de proceso promedio como porcentaje del límite del nivel de servicio.|  
 |avg_data_io_percent|**numeric**|Uso de E/S promedio como porcentaje según el límite del nivel de servicio.|  

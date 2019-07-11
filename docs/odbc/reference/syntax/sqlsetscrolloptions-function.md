@@ -20,25 +20,25 @@ ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: dbdd2038bc217a7ca2a2efe08940c03c5da5d8f0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0c2a9c367df9cd71d68d73ff676c8df915237b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62985240"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793884"
 ---
 # <a name="sqlsetscrolloptions-function"></a>Función SQLSetScrollOptions
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
- En ODBC 3 *.x*, la función ODBC 2.0 **SQLSetScrollOptions** ha sido reemplazado por las llamadas a **SQLGetInfo** y **SQLSetStmtAttr**.  
+ En ODBC *3.x*, la función ODBC 2.0 **SQLSetScrollOptions** ha sido reemplazado por las llamadas a **SQLGetInfo** y **SQLSetStmtAttr**.  
   
 > [!NOTE]
->  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando un ODBC 2 *.x* aplicación funciona con una aplicación ODBC 3 *.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en el apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
+>  Para obtener más información sobre lo que el Administrador de controladores se asigna esta función cuando un ODBC *2.x* aplicación funciona con un ODBC *3.x* controladores, consulte [asignación de funciones en desuso](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)en el apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  
 > 
 > [!NOTE]
->  Cuando se asigna el Administrador de controladores **SQLSetScrollOptions** para una aplicación que funciona con una aplicación ODBC 3 *.x* controlador que no es compatible con **SQLSetScrollOptions**, el controlador El administrador establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE, a la *RowsetSize* argumento en **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede usar una aplicación al recuperar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Puede usarse solo cuando al capturar varias filas mediante una llamada a **SQLExtendedFetch**.  
+>  Cuando se asigna el Administrador de controladores **SQLSetScrollOptions** para una aplicación trabajar con un ODBC *3.x* controlador que no es compatible con **SQLSetScrollOptions**, el controlador El administrador establece la opción de instrucción SQL_ROWSET_SIZE, no el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE, a la *RowsetSize* argumento en **SQLSetScrollOption**. Como resultado, **SQLSetScrollOptions** no se puede usar una aplicación al recuperar varias filas mediante una llamada a **SQLFetch** o **SQLFetchScroll**. Puede usarse solo cuando al capturar varias filas mediante una llamada a **SQLExtendedFetch**.  
   
 ## <a name="remarks"></a>Comentarios  
  Si la aplicación se ejecutará en un sistema operativo de 64 bits, consulte [información ODBC 64-Bit](../../../odbc/reference/odbc-64-bit-information.md).  

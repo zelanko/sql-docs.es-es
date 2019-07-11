@@ -19,22 +19,22 @@ ms.assetid: 0690b463-15a1-48fa-9d0b-9cc9e5bf7fc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b1d0fc510c7c45dab8fbc79cc8e74001ff1855b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e948b1e2fa5bb0877597e3fc3429f306afe991f2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026569"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793762"
 ---
 # <a name="compatibility-matrix"></a>Matriz de compatibilidad
 En la tabla siguiente describe la compatibilidad de los tipos de aplicaciones y controladores definidos anteriormente en esta sección.  
   
-|Tipo de aplicación<br /><br /> y la versión|ODBC de 32 bits<br /><br /> 2.*x* controlador|ODBC 3.*x*<br /><br /> controlador|Controlador de ODBC 3.8|Controlador de ISO y abierto compatible con grupo|  
+|Tipo de aplicación<br /><br /> y la versión|ODBC de 32 bits<br /><br /> *2.x* controlador|ODBC *3.x*<br /><br /> controlador|Controlador de ODBC 3.8|Controlador de ISO y abierto compatible con grupo|  
 |--------------------------------------|-----------------------------------|---------------------------|---------------------|-----------------------------------------|  
 |aplicación de 16 bits, cualquier versión|Compatible|Compatible|Compatible|Compatible|  
-|2 puro. *x* aplicación|Compatible|Compatible|Compatible|No compatible con [3]|  
-|2 puro. *x* vuelve a compilar la aplicación|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
-|2 puro. *x* aplicación Unicode|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
+|Puro *2.x* aplicación|Compatible|Compatible|Compatible|No compatible con [3]|  
+|Puro *2.x* vuelve a compilar la aplicación|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
+|Puro *2.x* aplicación Unicode|Compatible|Compatible [1]|Compatible [1]|No compatible con [3]|  
 |Aplicación pura Open Group y compatible con ISO|No es compatible|Compatible [2]|Compatible [2]|Compatible [2]|  
 |Aplicación 3.0 puro|No es compatible|Compatible|Compatible|No compatible con [4]|  
 |Aplicaciones de 3,5 puro|No es compatible|Compatible|Compatible|No compatible con [4]|  
@@ -45,9 +45,9 @@ En la tabla siguiente describe la compatibilidad de los tipos de aplicaciones y 
   
  [2] en la aplicación debe compilar con encabezados de ODBC 3.5 (o superiores) y vincular con el Administrador de controladores ODBC. También se debe establecer la marca de encabezado ODBC_STD.  
   
- [3] esta configuración potencialmente puede no funcionar porque hay funciones de ODBC 2. *x* que no están en los estándares, como marcadores.  
+ [3] esta configuración puede producir errores trabajar porque hay características en ODBC *2.x* que no están en los estándares, como marcadores.  
   
- [4] esta configuración puede producir errores trabajar porque hay características en ODBC 3 *.x* que no están en los estándares, como marcadores.  
+ [4] potencialmente puede no funcionan porque hay funciones de ODBC esta configuración *3.x* que no están en los estándares, como marcadores.  
   
  [5] esta configuración puede producir errores porque no hay características de ODBC 3.8 que no están en los controladores ODBC de 2.x o 3.x, como específicos del controlador [tipos de datos C en ODBC](../../../odbc/reference/develop-app/c-data-types-in-odbc.md).  
   

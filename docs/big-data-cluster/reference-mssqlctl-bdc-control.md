@@ -2,19 +2,20 @@
 title: referencia de control de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de control de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4ce2adb0f6e95a54a927efc319fd982517294963
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 87b8b095ee990e0b20e86c839e1cd6d2a1ca85bf
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394377"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728585"
 ---
 # <a name="mssqlctl-bdc-control"></a>control de bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394377"
 
 El siguiente artículo proporciona la referencia para la **control bdc** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [estado del control de bdc mssqlctl](reference-mssqlctl-bdc-control-status.md) | Comandos de control de estado.

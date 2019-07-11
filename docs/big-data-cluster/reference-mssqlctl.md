@@ -2,19 +2,20 @@
 title: Referencia de mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2601d526710e6cf51de089f7879f0f5517bf86aa
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388674"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728534"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67388674"
 
 El siguiente artículo proporciona la referencia para la **mssqlctl** herramienta para [clústeres de macrodatos de 2019 de SQL Server (versión preliminar)](big-data-cluster-overview.md). Para obtener más información sobre cómo instalar el **mssqlctl** herramienta, consulte [instalar mssqlctl para administrar clústeres de SQL Server 2019 macrodatos](deploy-install-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 |[aplicación mssqlctl](reference-mssqlctl-app.md) | Crear, eliminar, ejecutar y administrar aplicaciones. |
@@ -63,15 +64,15 @@ Punto de conexión del controlador de clúster "https://host:port". Si no desea 
 ¿Acepta los términos de licencia? [yes/no]. Si no desea utilizar este argumento, puede establecer la variable de entorno ACCEPT_EULA en 'Sí'
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 ## <a name="mssqlctl-logout"></a>Cierre de sesión mssqlctl
 Cerrar la sesión de clúster.
 ```bash
@@ -84,15 +85,15 @@ mssqlctl logout
 ```
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

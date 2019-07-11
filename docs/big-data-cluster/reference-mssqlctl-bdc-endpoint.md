@@ -2,19 +2,20 @@
 title: referencia de punto de conexión de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de punto de conexión de bdc mssqlctl.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bdca9bb137fdaccbfa5e24deca1b22492678c1c9
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67394327"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727457"
 ---
 # <a name="mssqlctl-bdc-endpoint"></a>punto de conexión de bdc mssqlctl
 
@@ -22,7 +23,7 @@ ms.locfileid: "67394327"
 
 El siguiente artículo proporciona la referencia para la **punto de conexión de bdc** comandos en el **mssqlctl** herramienta. Para obtener más información acerca de otros **mssqlctl** comandos, consulte [mssqlctl referencia](reference-mssqlctl.md).
 
-## <a name="commands"></a>Comandos
+## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
 [mssqlctl bdc endpoint list](#mssqlctl-bdc-endpoint-list) | Enumera los puntos de conexión para el clúster grande de datos.
@@ -37,15 +38,15 @@ mssqlctl bdc endpoint list [--endpoint-name -e]
 Nombre del punto de conexión BDC.
 ### <a name="global-arguments"></a>Argumentos globales
 #### `--debug`
-Aumentar el nivel de detalle de registro para mostrar que todos los registros de depuración.
+Aumenta el nivel de detalle de registro para mostrar todos los registros de depuración.
 #### `--help -h`
-Mostrar este mensaje de ayuda y salir.
+Muestra este mensaje de ayuda y sale.
 #### `--output -o`
 Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterminado: json.
 #### `--query -q`
-Cadena de consulta JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
+Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
-Aumentar el nivel de detalle de registro. Use--debug para registros de depuración completos.
+Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

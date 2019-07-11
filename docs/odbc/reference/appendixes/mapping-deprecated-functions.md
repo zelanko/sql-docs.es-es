@@ -18,21 +18,21 @@ ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b59d2604dd9d4b7c3166027c1917dea096b331d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181316"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793180"
 ---
 # <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso
-Esta sección describen las funciones en desuso de cómo se asignan por el ODBC 3 *.x* Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC 3 *.x* controladores que se usan con ODBC 2. *x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada uno de ODBC 2. *x* funciones en la lista siguiente se asigna a la correspondiente ODBC 3 *.x* funcionar cuando se llama en una aplicación ODBC 3 *.x* controlador, el 3 de ODBC *.x*controlador no tiene que implementar el 2 de ODBC. *x* funciones.  
+Esta sección describen las funciones en desuso de cómo se asignan por ODBC *3.x* Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC *3.x* controladores que se usan con ODBC *2.x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada uno de ODBC *2.x* funciones en la lista siguiente se asigna a ODBC correspondiente *3.x* funcionar cuando se llama en un ODBC *3.x* controlador ODBC *3.x* controlador no tiene que implementar ODBC *2.x* funciones.  
   
- La asignación en la lista se desencadena cuando el controlador es una aplicación ODBC 3 *.x* controlador y el controlador no admite la función que se está asignando.  
+ La asignación en la lista se desencadena cuando el controlador es un ODBC *3.x* controlador y el controlador no admite la función que se está asignando.  
   
- En la tabla siguiente se enumera todos los duplicados funcionalidad que se introdujo en ODBC 3 *.x*.  
+ En la tabla siguiente se enumera todos los duplicados funcionalidad que se introdujo en ODBC *3.x*.  
   
-|ODBC 2. *x* (función)|ODBC 3 *.x* (función)|  
+|ODBC *2.x* (función)|ODBC *3.x* (función)|  
 |-------------------------|-------------------------|  
 |**SQLAllocConnect**|**SQLAllocHandle**|  
 |**SQLAllocEnv**|**SQLAllocHandle**|  
@@ -52,7 +52,7 @@ Esta sección describen las funciones en desuso de cómo se asignan por el ODBC 
 |**SQLSetStmtOption**|**SQLSetStmtAttr**|  
 |**SQLTransact**|**SQLEndTran**|  
   
- [1], aunque esta función no existía en ODBC 2 *.x*, se encuentra en los estándares de Open Group e ISO.  
+ [1], aunque esta función no existía en ODBC *2.x*, se encuentra en los estándares de Open Group e ISO.  
   
  [2] se trata de una función ODBC 1.0.  
   

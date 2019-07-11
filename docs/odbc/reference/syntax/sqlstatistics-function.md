@@ -20,12 +20,12 @@ ms.assetid: 45210682-cfea-4e5d-9951-bcf1cbe10f41
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: f4277c6606392c91ffb3de40ace658cd68461f01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc0c1d981180c61452f97a01bc0aba6fdc2d81e3
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536268"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793732"
 ---
 # <a name="sqlstatistics-function"></a>Función SQLStatistics
 **Conformidad**  
@@ -86,12 +86,12 @@ SQLRETURN SQLStatistics(
   
  SQL_ENSURE solicita que el controlador incondicionalmente recuperar las estadísticas. (Los controladores que solo cumplen el estándar Open Group y no admiten extensiones de ODBC no será capaz de admitir SQL_ENSURE.)  
   
- SQL_QUICK solicita que el controlador de recuperar la CARDINALIDAD y las páginas solo si están disponibles desde el servidor. En este caso, el controlador no garantiza que los valores sean actuales. (Las aplicaciones que se escriben en el estándar Open Group siempre obtendrá el comportamiento SQL_QUICK de ODBC 3 *.x*-controladores compatibles.)  
+ SQL_QUICK solicita que el controlador de recuperar la CARDINALIDAD y las páginas solo si están disponibles desde el servidor. En este caso, el controlador no garantiza que los valores sean actuales. (Las aplicaciones que se escriben en el estándar Open Group siempre obtendrá el comportamiento SQL_QUICK de ODBC *3.x*-controladores compatibles.)  
   
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLStatistics** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_ HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLStatistics** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
@@ -126,9 +126,9 @@ SQLRETURN SQLStatistics(
 > [!NOTE]  
 >  Para obtener más información sobre el uso general, los argumentos y los datos devueltos de funciones de catálogo ODBC, vea [funciones de catálogo](../../../odbc/reference/develop-app/catalog-functions.md).  
   
- Las columnas siguientes se han cambiado para ODBC 3 *.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque el enlace de aplicaciones por número de columna.  
+ Las columnas siguientes se han cambiado para ODBC *3.x*. Los cambios de nombre de columna no afectan a la compatibilidad con versiones anteriores porque el enlace de aplicaciones por número de columna.  
   
-|Columna de ODBC 2.0|ODBC 3 *.x* columna|  
+|Columna de ODBC 2.0|ODBC *3.x* columna|  
 |---------------------|-----------------------|  
 |TABLE_QUALIFIER|TABLE_CAT|  
 |TABLE_OWNER|TABLE_SCHEM|  
@@ -148,9 +148,9 @@ SQLRETURN SQLStatistics(
 |TIPO DE (ODBC 1.0)|7|Smallint no NULL|Tipo de información que se devuelve:<br /><br /> SQL_TABLE_STAT indica una estadística para la tabla (en la columna de CARDINALIDAD o páginas).<br /><br /> SQL_INDEX_BTREE indica un índice de árbol B.<br /><br /> SQL_INDEX_CLUSTERED indica un índice agrupado.<br /><br /> SQL_INDEX_CONTENT indica un índice de contenido.<br /><br /> SQL_INDEX_HASHED indica un índice hash.<br /><br /> SQL_INDEX_OTHER indica de otro tipo de índice.|  
 |ORDINAL_POSITION (ODBC 1.0)|8|Smallint|Número de secuencia de la columna de índice (empezando por 1); Se devuelve NULL si el tipo es SQL_TABLE_STAT.|  
 |COLUMN_NAME (ODBC 1.0)|9|Varchar|Nombre de columna. Si la columna se basa en una expresión, como el salario + ventajas, se devuelve la expresión; Si la expresión no puede determinarse, se devuelve una cadena vacía. Se devuelve NULL si el tipo es SQL_TABLE_STAT.|  
-|ASC_OR_DESC (ODBC 1.0)|10|Char (1)|Secuencia de ordenación para la columna: "A" ascendente; "D" para descendente; Se devuelve NULL si la secuencia de ordenación de columnas no es compatible con el origen de datos o si el tipo es SQL_TABLE_STAT.|  
-|CARDINALIDAD (ODBC 1.0)|11|Integer|Cardinalidad de tabla o índice; número de filas de tabla si el tipo es SQL_TABLE_STAT; número de valores únicos del índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos.|  
-|PÁGINAS DE (ODBC 1.0)|12|Integer|Número de páginas utilizadas para almacenar el índice o tabla. número de páginas de la tabla si el tipo es SQL_TABLE_STAT; número de páginas de índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos o si no es aplicable al origen de datos.|  
+|ASC_OR_DESC (ODBC 1.0)|10|Char(1)|Secuencia de ordenación para la columna: "A" ascendente; "D" para descendente; Se devuelve NULL si la secuencia de ordenación de columnas no es compatible con el origen de datos o si el tipo es SQL_TABLE_STAT.|  
+|CARDINALIDAD (ODBC 1.0)|11|Entero|Cardinalidad de tabla o índice; número de filas de tabla si el tipo es SQL_TABLE_STAT; número de valores únicos del índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos.|  
+|PÁGINAS DE (ODBC 1.0)|12|Entero|Número de páginas utilizadas para almacenar el índice o tabla. número de páginas de la tabla si el tipo es SQL_TABLE_STAT; número de páginas de índice si el tipo no es SQL_TABLE_STAT; Se devuelve NULL si el valor no está disponible desde el origen de datos o si no es aplicable al origen de datos.|  
 |FILTER_CONDITION (ODBC 2.0)|13|Varchar|Si el índice es un índice filtrado, se trata de la condición de filtro, como el salario > 30000; Si no se puede determinar la condición de filtro, esto es una cadena vacía.<br /><br /> NULL si el índice no es un índice filtrado, no se puede determinar si el índice es un índice filtrado o el tipo es SQL_TABLE_STAT.|  
   
  Si la fila del conjunto de resultados que se corresponde a una tabla, el controlador establece el tipo a SQL_TABLE_STAT y NON_UNIQUE, INDEX_QUALIFIER, INDEX_NAME, ORDINAL_POSITION, COLUMN_NAME y ASC_OR_DESC establece en NULL. Si la CARDINALIDAD o páginas no están disponibles en el origen de datos, el controlador los establece en NULL.  

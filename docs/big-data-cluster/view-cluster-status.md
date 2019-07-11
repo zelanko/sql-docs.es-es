@@ -1,20 +1,21 @@
 ---
-title: Ver el estado de clúster
+title: Vista del estado del clúster
 titleSuffix: SQL Server big data clusters
 description: En este artículo se explica cómo ver el estado de un clúster de macrodatos con Azure Data Studio, blocs de notas y mssqlctl comandos.
 author: yualan
 ms.author: alayu
+ms.reviewer: mikeray
 manager: jroth
 ms.date: 06/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2edd49c37655d420cf8022677c0d0287028a0b93
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: b3cc78e36fe427966c7730533104c63aa3ed9332
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413972"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727325"
 ---
 # <a name="how-to-view-the-status-of-a-big-data-cluster"></a>Cómo ver el estado de un clúster de macrodatos
 
@@ -135,7 +136,7 @@ Puede obtener las direcciones IP de los puntos de conexión externos para el cl�
    Proxy for running Spark statements, jobs, applications  https://11.111.111.111:30443/gateway/default/livy/v1       11.111.111.111  livy               30443   https
    ```
 
-### <a name="view-cluster-status"></a>Ver el estado de clúster
+### <a name="view-cluster-status"></a>Vista del estado del clúster
 
 Puede ver el estado del clúster con el [Mostrar estado de mssqlctl bdc](reference-mssqlctl-bdc-status.md) comando.
 
@@ -164,7 +165,7 @@ Storage  default        Ready
 Puede ver el estado de grupos dentro del clúster con el [show de estado de grupo de bdc mssqlctl](reference-mssqlctl-bdc-pool-status.md) comando. Para usar este comando, especifique el tipo de grupo con el `--kind` parámetro. Los tipos de grupo son:
 
 - Proceso
-- datos
+- data
 - maestra
 - Spark
 - Almacenamiento de información

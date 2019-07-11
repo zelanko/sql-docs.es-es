@@ -21,19 +21,19 @@ ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 553596f474cd8e7c4f4c91911b0167d5b1bc0b4a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224482"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793202"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
 Cuando una aplicación llama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador recupera para el tipo de datos especificado por el *TargetType* argumento en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación señalada por el *TargetValuePtr* argumento en **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR de la descartar).  
   
  La siguiente tabla muestra las conversiones compatibles de SQL de ODBC a tipos de datos ODBC C los tipos de datos. Un círculo relleno indica la conversión predeterminada para un tipo de datos SQL (el tipo de datos C a la que los datos se convertirá cuando el valor de *TargetType* es SQL_C_DEFAULT). Un círculo hueco indica una conversión compatible.  
   
- Para una aplicación ODBC 3 *.x* la aplicación funciona con un ODBC 2. *x* controlador, conversión de datos específicos del controlador podrían no admitir tipos.  
+ Para un ODBC *3.x* la aplicación funciona con un ODBC *2.x* controlador, conversión de datos específicos del controlador podrían no admitir tipos.  
   
  El formato de los datos convertidos no se ve afectado por la configuración de país Windows®.  
   

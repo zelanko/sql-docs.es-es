@@ -1,6 +1,6 @@
 ---
-title: Características compatibles con las ediciones de SQL Server Analysis Services | Microsoft Docs
-ms.date: 06/25/2019
+title: Características de Analysis Services compatibles con las ediciones de SQL Server | Microsoft Docs
+ms.date: 07/10/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,14 +9,15 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9947b10e01864f66bf26d6599e43814ab37dadc6
-ms.sourcegitcommit: ce5770d8b91c18ba5ad031e1a96a657bde4cae55
+ms.openlocfilehash: 6d4f0cc16638963dbbbb091bc19cade36e45fe3b
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/25/2019
-ms.locfileid: "67388206"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792549"
 ---
 # <a name="analysis-services-features-supported-by-sql-server-edition"></a>Características de Analysis Services compatibles con la edición de SQL Server
+
 [!INCLUDE[ssas-appliesto-sql2016-later](../includes/ssas-appliesto-sql2016-later.md)]
 
 En este artículo se describe las características admitidas por las diferentes ediciones de SQL Server 2016, 2017, 2019 Analysis Services. Edición de evaluación es compatible con las características de Enterprise edition.
@@ -37,7 +38,7 @@ En este artículo se describe las características admitidas por las diferentes 
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|perspectivas|Sí||||||Sí|  
+|Perspectivas|Sí||||||Sí|  
 |Translations|Sí|Sí|||||Sí|  
 |Cálculos de DAX, consultas de DAX, consultas MDX|Sí|Sí|||||Sí|  
 |Seguridad de nivel de fila|Sí|Sí|||||Sí|  
@@ -50,21 +51,21 @@ En este artículo se describe las características admitidas por las diferentes 
   
 |Característica|Enterprise|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
 |-------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  
-|Medidas de suma parcial|Sí|No <sup>1</sup>|||||Sí|  
+|Medidas de suma parcial|Sí|No <sup>[1](#sameas)</sup>|||||Sí|  
 |Jerarquías|Sí|Sí|||||Sí|  
 |KPI|Sí|Sí|||||Sí|  
-|perspectivas|Sí||||||Sí|  
+|Perspectivas|Sí||||||Sí|  
 |Acciones|Sí|Sí|||||Sí|  
 |Inteligencia de cuentas|Sí|Sí|||||Sí|  
 |Inteligencia de tiempo|Sí|Sí|||||Sí|  
 |Resúmenes personalizados|Sí|Sí|||||Sí|  
 |Reescritura de cubos|Sí|Sí|||||Sí|  
-|Reescritura de dimensiones|Sí||||||Sí|  
+|Reescritura de dimensiones|Sí <sup>[2](#wb)</sup>||||||Sí <sup>[2](#wb)</sup>|  
 |Reescritura de celdas|Sí|Sí|||||Sí|  
 |Obtención de detalles|Sí|Sí|||||Sí|  
 |Tipos de jerarquías avanzadas (jerarquías primarios-secundarios y jerarquías desiguales)|Sí|Sí|||||Sí|  
 |Dimensiones avanzadas (dimensiones de referencia, dimensiones de varios a varios)|Sí|Sí|||||Sí|  
-|Medidas y dimensiones vinculadas|Sí|Sí  <sup>2</sup> |||||Sí|  
+|Medidas y dimensiones vinculadas|Sí|Sí <sup> [3](#linkmd)</sup> |||||Sí|  
 |Translations|Sí|Sí|||||Sí|  
 |Agregaciones|Sí|Sí|||||Sí|  
 |Varias particiones|Sí|Sí, hasta 3|||||Sí|  
@@ -80,8 +81,12 @@ En este artículo se describe las características admitidas por las diferentes 
 |Procesamiento de modo de inserción|Sí||||||Sí|  
 |Expresiones de medida|Sí||||||Sí|  
   
- <sup>1</sup> La medida de suma parcial LastChild se admite en una edición estándar, a diferencia de otras medidas de suma parcial, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren y ByAccount. En todas las ediciones se admiten medidas de suma, como Sum, Count, Min y Max, y medidas de no suma (DistinctCount).  
-  <sup>2</sup> La edición estándar admite la vinculación de medidas y dimensiones dentro de la misma base de datos, pero no de otras bases de datos o instancias.
+<a name="sameas">[1] </a> Medida de suma parcial LastChild the se admite en Standard edition, pero no lo son otras medidas de suma parcial, como None, FirstChild, FirstNonEmpty, LastNonEmpty, AverageOfChildren y ByAccount. En todas las ediciones se admiten medidas de suma, como Sum, Count, Min y Max, y medidas de no suma (DistinctCount). 
+
+<a name="wb">[2] </a> Reescritura de dimensiones no se pueden utilizar en SQL Server Analysis Services 2019 y versiones posteriores.
+ 
+<a name="linkmd">[3] </a> Standard edition admite la vinculación de medidas y dimensiones dentro de la misma base de datos, pero no de otras bases de datos o instancias.
+  
   
 ## <a name="power-pivot-for-sharepoint"></a>PowerPivot para SharePoint  
   
@@ -95,6 +100,9 @@ En este artículo se describe las características admitidas por las diferentes 
 |Fuentes de distribución de datos de PowerPivot|Sí||||||Sí|  
   
 ## <a name="data-mining"></a>Minería de datos  
+
+> [!NOTE]
+> Minería de datos es [en desuso](analysis-services-backward-compatibility-sql2017.md#deprecated-features) en SQL Server Analysis Services 2017.
   
 |Nombre de la característica|Enterprise|Estándar|Web|Express con Advanced Services|Express con herramientas|Express|Desarrollador|  
 |------------------|----------------|--------------|---------|------------------------------------|------------------------|-------------|---------------|  

@@ -10,17 +10,37 @@ ms.author: maghan
 manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 06/06/2019
-ms.openlocfilehash: 2b06e8476e10abc3a96ab6c6f2304ef81f225f02
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.date: 07/10/2019
+ms.openlocfilehash: 5e3aa3f0472b775f1dfbd13634228226e4e7e0c2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681614"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67794069"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 
 **[Descargue e instale la versión más reciente.](download.md)**
+
+## <a name="july-2019"></a>Julio de 2019
+
+10 de julio de 2019 &nbsp;  /  &nbsp; versión: 1.9.0 
+
+&nbsp;
+
+| Cambiar | Detalles |
+| :----- | :------ |
+| Versión de extensión de explorador del Plan de SentryOne | Nuestro socio de Microsoft con valores, SentryOne, enviará sus [extensión SentryOne planear el Explorador de Azure Data Studio](https://www.sentryone.com/products/sentryone-plan-explorer-extension-azure-data-studio). <br> Se trata de una extensión gratuita, que proporciona diagramas plan mejorado para las consultas se ejecutan en Azure Data Studio, con algoritmos de diseño optimizado y codificación en colores intuitivo para ayudar a identificar rápidamente los operadores más caros que afectan al rendimiento de las consultas. Para obtener más información acerca de la extensión, compruebe la entrada de blog de SentryOne [aquí](https://sqlperformance.com/2019/07/sentryone/plan-explorer-extension-azure-data-studio). |
+| Nuevas características que trae la comparación de esquemas | &bull; &nbsp; Compatibilidad con archivos de comparación de esquema (. SCMP) <br/>&bull; &nbsp; Cancelar la compatibilidad de comparación de esquemas <br/>&bull; &nbsp; Pueden encontrar cambios completados [aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed+)|
+| Mejoras de Bloc de notas | &bull; &nbsp; Compatibilidad con Python plotly <br/>&bull; &nbsp; Abrir Bloc de notas desde el explorador <br/> &bull; &nbsp; Cuadro de diálogo Administración de paquetes de Python <br/> &bull; &nbsp; Mejoras de rendimiento y Markdown <br/> &bull; &nbsp; Actualización de los métodos abreviados de teclado <br/>  &bull; &nbsp; Correcciones de errores y características secundarias pueden encontrarse [aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+milestone%3A%22July+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22+) |
+| Compatibilidad con SQL Server de 2019 |  Esta versión incluye compatibilidad con características adicionales de clúster grande de datos de SQL Server de 2019 incluidos: <br/> &bull; &nbsp; Tabla de puntos de conexión de servicio en el panel de administración que se enumeran todos los servicios claves en el clúster. <br/> &bull; &nbsp; Cuaderno de estado del clúster se muestra cómo puede consultar y solucionar problemas de estado del clúster en todos los servicios y los pods.| 
+| Paquetes de idioma actualizado disponible| Ahora hay 10 paquetes de idioma disponibles en el Administrador de extensiones de marketplace. Simplemente, busque el idioma específico con el marketplace de extensiones e instale. Una vez que instale el idioma seleccionado, Azure Data Studio le solicitará que reinicie con el nuevo lenguaje. |
+| Actualización SQL Server Profiler | La extensión de perfil de SQL Server se ha actualizado para incluir nuevas características incluidas: <br/> &bull; &nbsp; Filtrar por nombre de la base de datos <br/> &bull; &nbsp; Copie y pegue el soporte técnico <br/> &bull; &nbsp; Guardar/cargar filtro <br/>Encontrará una lista completa de mejoras para la extensión de SQL Server Profiler [aquí](https://github.com/microsoft/azuredatastudio/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aclosed+milestone%3A%22July+2019+Release%22+label%3A%22Area%3A+SQL+Profiler%22+).  |
+| La versión de Visual Studio Code mayo mezcla 1.35 | Las mejoras más recientes pueden encontrarse [aquí](https://code.visualstudio.com/updates/v1_35). |
+| Problemas y errores resueltos | En versiones anteriores de Azure Data Studio, si se ha seleccionado una base de datos de usuario al conectarse desde el cuadro de diálogo de conexión, la entrada del explorador de objetos resultante estuviera limitada por completo a esa base de datos único. A partir de esta versión, que se está cambiando comportamiento para que las propiedades de nivel de servidor también se muestran en el Explorador de objetos. <br/> Para obtener una lista completa de revisiones consulte [errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/35?closed=1). |
+| &nbsp; | &nbsp; |
+
+
 
 ## <a name="june-2019"></a>Junio de 2019
 
@@ -34,7 +54,7 @@ ms.locfileid: "67681614"
 | Versión de extensiones de herramientas de administración de base de datos para Windows | Esta extensión inicia dos de las experiencias más usadas en SQL Server Management Studio desde Azure Data Studio. Los usuarios pueden haga clic con el botón derecho en muchos objetos diferentes (por ejemplo, las bases de datos, tablas, columnas, vistas etc.) y seleccione Propiedades para ver el cuadro de diálogo de propiedades de SSMS para ese objeto. Además, los usuarios pueden haga clic con el botón derecho en una base de datos y seleccione Generar secuencias de comandos para iniciar al conocido SSMS Asistente generar Scripts. 
 | Mejoras de comparación de esquemas | &bull; &nbsp; Opciones incluir/excluir agregados <br/>&bull; &nbsp; Generar script de secuencia de comandos se abre después de que se está generando <br/>&bull; &nbsp; Quitar las barras de desplazamiento dobles  <br/>&bull; &nbsp; Mejoras de formato y diseño <br/>&bull; &nbsp; Pueden encontrar cambios completados [aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Sección de mensajes ha movido a la propia pestaña | Cuando los usuarios ejecutaron consultas SQL, los resultados y los mensajes se eran en paneles apilados. Ahora están en pestañas independientes en un panel, como en SSMS. |
-| Mejoras del Bloc de notas SQL | &bull; &nbsp; Los usuarios ahora pueden elegir utilizar sus propias instalaciones de Python 3 o Anaconda en blocs de notas <br/>&bull; &nbsp; Varios estabilidad + fit/finalizar correcciones &bull; &nbsp; ver la lista completa de las mejoras [aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
+| Mejoras del Bloc de notas SQL | &bull; &nbsp; Los usuarios ahora pueden elegir utilizar sus propias instalaciones de Python 3 o Anaconda en blocs de notas <br/>&bull; &nbsp; Varios estabilidad + fit/finalizar correcciones <br/> &bull; &nbsp; Ver la lista completa de las mejoras [aquí](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+is%3Aclosed+label%3A%22Area%3A+Notebooks%22)|
 | La versión de Visual Studio Code mayo mezcla 1.34 | Las mejoras más recientes pueden encontrarse [aquí](https://code.visualstudio.com/updates/v1_34) |
 | Resolver errores y problemas. | Consulte [errores y problemas en GitHub](https://github.com/microsoft/azuredatastudio/milestone/32?closed=1). |
 | &nbsp; | &nbsp; |
@@ -403,7 +423,7 @@ El *versión preliminar pública puede* se centra en la estabilización y correc
 - Corregir [emitir 1215](https://github.com/Microsoft/azuredatastudio/issues/1215): Extensión del Agente SQL y la barra de estado
 - Corregir [emitir 1316](https://github.com/Microsoft/azuredatastudio/issues/1316): Cambio de tamaño no de agente SQL después de cambiar el tamaño de windows
 
-## <a name="april-2018"></a>Abril de 2018
+## <a name="april-2018"></a>2018 de abril de 2018
 
 25 de abril de 2018 &nbsp;  /  &nbsp; versión: 0.28.6 &nbsp;  /  &nbsp; versión preliminar pública
 

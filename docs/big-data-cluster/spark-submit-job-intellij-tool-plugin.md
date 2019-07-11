@@ -4,17 +4,17 @@ titleSuffix: SQL Server big data clusters
 description: Envío de trabajos de Spark en clústeres de macrodatos de SQL Server en el Kit de herramientas de Azure para IntelliJ.
 author: jejiang
 ms.author: jejiang
-ms.reviewer: jroth
+ms.reviewer: mikeray
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e48aebbb15b9bd684b2ed3f5d4d314191a55ba42
-ms.sourcegitcommit: 8d6fb6bbe3491925909b83103c409effa006df88
+ms.openlocfilehash: 5d2bb4b55b578530a29490a0a1a284f338686c38
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/22/2019
-ms.locfileid: "59932302"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728371"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>Enviar trabajos de Spark en clústeres de macrodatos de SQL Server en IntelliJ
 
@@ -51,7 +51,7 @@ Uno de los escenarios claves para los clústeres de macrodatos de SQL Server es 
 
 1. Inicie IntelliJ IDEA y, a continuación, cree un proyecto. En el **nuevo proyecto** cuadro de diálogo, siga estos pasos: 
 
-   a. Seleccione **Azure Spark/HDInsight** > **despierte el proyecto con ejemplos (Scala)**.
+   a. Seleccione **Azure Spark/HDInsight** > **despierte el proyecto con ejemplos (Scala)** .
 
    b. En el **herramienta de compilación** lista, seleccione cualquiera de las siguientes, según sus necesidades:
 
@@ -60,7 +60,7 @@ Uno de los escenarios claves para los clústeres de macrodatos de SQL Server es 
 
     ![El cuadro de diálogo nuevo proyecto](./media/spark-submit-job-intellij-tool-plugin/create-hdi-scala-app.png)
 
-2. Seleccione **Siguiente**.
+2. Seleccione **Next** (Siguiente).
 
 3. El Asistente para crear un proyecto de Scala detecta automáticamente si ha instalado el complemento Scala. Seleccione **Instalar**.
 
@@ -78,7 +78,7 @@ Uno de los escenarios claves para los clústeres de macrodatos de SQL Server es 
 
    b. En el **SDK de proyecto** lista desplegable, seleccione **Java 1.8** para el clúster Spark 2.x, o bien **Java 1.7** para el clúster Spark 1.x.
 
-   c. En el **versión Spark** lista desplegable, el Asistente para crear un proyecto Scala integra la versión correcta de SDK de Spark y el SDK de Scala. Si la versión del clúster de Spark es anterior a 2.0, seleccione **Spark 1.x**. En caso contrario, seleccione **Spark2.x**. Este ejemplo se utiliza **Spark 2.0.2 (Scala 2.11.8)**.
+   c. En el **versión Spark** lista desplegable, el Asistente para crear un proyecto Scala integra la versión correcta de SDK de Spark y el SDK de Scala. Si la versión del clúster de Spark es anterior a 2.0, seleccione **Spark 1.x**. En caso contrario, seleccione **Spark2.x**. Este ejemplo se utiliza **Spark 2.0.2 (Scala 2.11.8)** .
 
 6. Seleccione **Finalizar**.
 
@@ -86,7 +86,7 @@ Uno de los escenarios claves para los clústeres de macrodatos de SQL Server es 
 
    a. En el **archivo** menú, seleccione **estructura del proyecto**.
 
-   b. En el **estructura del proyecto** cuadro de diálogo, seleccione **artefactos** para ver el artefacto predeterminado que se crea. También puede crear su propio artefacto seleccionando el signo más (**+**).
+   b. En el **estructura del proyecto** cuadro de diálogo, seleccione **artefactos** para ver el artefacto predeterminado que se crea. También puede crear su propio artefacto seleccionando el signo más ( **+** ).
 
       ![Información de artefacto en el cuadro de diálogo](./media/spark-submit-job-intellij-tool-plugin/default-artifact.png)
       
@@ -104,7 +104,7 @@ Después de vincular un clúster de macrodatos de SQL Server, puede enviar la ap
 
     * Seleccione un artefacto del proyecto IntelliJ o seleccione uno en la unidad de disco duro.
 
-    * **Nombre de la clase principal** campo: El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos (**...** ) y elija otra clase.   
+    * **Nombre de la clase principal** campo: El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos ( **...** ) y elija otra clase.   
 
     * **Las configuraciones de trabajo** campo:  Los valores predeterminados se establecen como imagen mostrado anteriormente. Puede cambiar el valor o agregar nuevos pares clave-valor para el envío de trabajos. Para obtener más información: [Livy API de REST de Apache](http://livy.incubator.apache.org./docs/latest/rest-api.html)
 
@@ -133,7 +133,7 @@ Asegúrese de que haber satisfecho el WINUTILS. Requisito previo EXE.
 
 1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
 
-2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]**.
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]** .
 
 3. En la ventana principal, seleccione el **ejecutar localmente** ficha.
 
@@ -141,7 +141,7 @@ Asegúrese de que haber satisfecho el WINUTILS. Requisito previo EXE.
 
     |Property |Valor |
     |----|----|
-    |Clase principal del trabajo|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos (**...** ) y elija otra clase.|
+    |Clase principal del trabajo|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos ( **...** ) y elija otra clase.|
     |Variables de entorno|Asegúrese de que el valor de HADOOP_HOME es correcto.|
     |Ubicación de WINUTILS.exe|Asegúrese de que la ruta de acceso es correcta.|
 
@@ -149,7 +149,7 @@ Asegúrese de que haber satisfecho el WINUTILS. Requisito previo EXE.
 
 5. En el proyecto, vaya a **myApp** > **src** > **principal** > **scala**  >  **myApp**.  
 
-6. En la barra de menús, vaya a **herramientas** > **Spark consola** > **ejecutar Spark Local Console(Scala)**.
+6. En la barra de menús, vaya a **herramientas** > **Spark consola** > **ejecutar Spark Local Console(Scala)** .
 
 7. A continuación, pueden aparecer dos cuadros de diálogo para preguntar si desea auto corregir las dependencias. Si es así, seleccione **Autocorregir**.
 
@@ -167,7 +167,7 @@ Solo se admite la Console(Scala) de sesión de Spark interactiva de Livy en Inte
 
 1. En la barra de menús, vaya a **ejecutar** > **editar configuraciones...** .
 
-2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]**.
+2. Desde el **ejecutar/depurar configuraciones** ventana, en el panel izquierdo, vaya a **Apache Spark en el clúster de SQL Server macrodatos** > **myApp [Spark en SQL]** .
 
 3. En la ventana principal, seleccione el **ejecutar de forma remota en clúster** ficha.
 
@@ -176,7 +176,7 @@ Solo se admite la Console(Scala) de sesión de Spark interactiva de Livy en Inte
     |Property |Valor |
     |----|----|
     |Clústeres de Spark (solo Linux)|Seleccione el clúster de SQL Server Big Data en el que desea ejecutar la aplicación.|
-    |Nombre de la clase principal|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos (**...** ) y elija otra clase.|
+    |Nombre de la clase principal|El valor predeterminado es la clase principal del archivo seleccionado. Puede cambiar la clase seleccionando el botón de puntos suspensivos ( **...** ) y elija otra clase.|
 
     ![Configuración de la consola interactiva](./media/spark-submit-job-intellij-tool-plugin/interactive-console-configuration.png)
 

@@ -16,16 +16,16 @@ helpviewer_keywords:
 - sys.bandwidth_usage
 - bandwidth_usage
 ms.assetid: 43ed8435-f059-4907-b5c0-193a258b394a
-author: CarlRabeler
-ms.author: carlrab
+author: julieMSFT
+ms.author: jrasnick
 manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: e3432bbf535b329f539b9404cb0f5b5b87d38542
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 4b7534a806a856dee922ead1055da6a7567a4d8c
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035716"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716594"
 ---
 # <a name="sysbandwidthusage-azure-sql-database"></a>sys.bandwidth_usage (Azure SQL Database)
 
@@ -44,7 +44,7 @@ ms.locfileid: "56035716"
 |-----------------|-----------------|  
 |**time**|La hora a la que se utilizó el ancho de banda. Las filas de esta vista ofrecen información por horas. Por ejemplo, 2009-09-19 02:00:00.000 significa que el ancho de banda se consumió el 19 de septiembre de 2009 entre las 2:00 a. m. y las 3:00 a. m.|  
 |**database_name**|El nombre de la base de datos que utilizó ancho de banda.|  
-|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven a la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**direction**|El tipo de ancho banda utilizado, que puede ser:<br /><br /> Entrada: Datos que se mueven hacia la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].<br /><br /> Salida: Datos que se mueven fuera de la [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**class**|La clase de ancho banda utilizada, que puede ser:<br />Interno: Datos que se mueven dentro de la plataforma Azure.<br />External: Datos que se mueven fuera de la plataforma Azure.<br /><br /> Se devuelve esta clase solamente si la base de datos está ocupada en una relación continua de copias entre las regiones ([!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)]). Si una base de datos no participa en una relación de copia continua, no se devuelven filas "Interlink". Para obtener más información, vea la sección “Comentarios” más adelante en este tema.|  
 |**time_period**|El período de tiempo cuando se produjo el uso es pico o programarla. El valor Peak va en función de la región en la que se creó el servidor. Por ejemplo, si se creó un servidor en la región "US_Northwest”, las horas pico se definen como una hora comprendida entre las 10:00 a. m. y a las 06:00:00 p. m. PST.|  
 |**Cantidad**|La cantidad de ancho banda consumido, en kilobytes (KB).|  
@@ -62,7 +62,7 @@ ms.locfileid: "56035716"
 |time|database_name|direction|class|time_period|quantity|  
 |----------|--------------------|---------------|-----------|------------------|--------------|  
 |2012-04-21 17:00:00|Db1|Ingress|External|Peak|66|  
-|2012-04-21 17:00:00|Db1|Egress|External|Peak|741|  
+|2012-04-21 17:00:00|Db1|Egress|Externo|Peak|741|  
 |2012-04-21 17:00:00|Db1|Ingress|Internal|Peak|1052|  
 |2012-04-21 17:00:00|Db1|Egress|Interno|Peak|3525|  
   

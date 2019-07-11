@@ -10,12 +10,12 @@ ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: ec01dd697e04b5d4b5d8d943a855a62adac48f60
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a4484f9ccb76ea31c95a5392570e18df2c4b0ff5
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090618"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792914"
 ---
 # <a name="create-the-finance-name-policy"></a>Crear la directiva Finance Name
   En esta tarea, creará una base de datos denominada Finance y después una condición que requiera que los nombres de todas las tablas comiencen con las letras **fintbl**. A continuación, creará una directiva y una categoría de directivas para exigir una denominación estándar para las tablas de la base de datos Finance.  
@@ -39,7 +39,7 @@ ms.locfileid: "66090618"
   
 3.  En la lista **Faceta** , seleccione **Nombre de varias partes**.  
   
-4.  En el cuadro de diálogo **Expresión** , en el cuadro **Campo** , seleccione **@Name** ; en el cuadro **Operador** , seleccione **Like**; y en el cuadro **Valor** , escriba **'fintbl%'** para hacer que todos los nombres de tabla comiencen con las letras **fintbl**.  
+4.  En el **expresión** área, en el **campo** cuadro, seleccione  **\@nombre**; en el **operador** cuadro, seleccione  **Al igual que**; y en el **valor** , escriba **'fintbl %'** para forzar que todos los nombres de tabla comiencen con las letras **fintbl**.  
   
 5.  En la página **Descripción** , escriba **Los nombres de tablas de finanzas deben comenzar con fintbl**y, a continuación, haga clic en **Aceptar** para crear la condición.  
   
@@ -57,7 +57,7 @@ ms.locfileid: "66090618"
   
 6.  En el cuadro de diálogo **Crear nueva condición** , en el cuadro **Nombre** , escriba **Finance Database**.  
   
-7.  En el cuadro **Expresión**, complete la expresión para incluir **@Name = 'Finance'** y, después, haga clic en **Aceptar** para cerrar la página de la condición.  
+7.  En el **expresión** cuadro, complete la expresión para incluir  **\@nombre = 'Finance'** y, a continuación, haga clic en **Aceptar** para cerrar la página de la condición.  
   
     > [!NOTE]  
     >  Es posible que tenga que salir del cuadro **Valor** para habilitar el botón **Aceptar** .  

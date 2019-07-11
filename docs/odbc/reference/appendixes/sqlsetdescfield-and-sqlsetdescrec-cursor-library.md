@@ -14,12 +14,12 @@ ms.assetid: 4ccff067-85cd-4bfa-a6cd-7f28051fb5b9
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: b390df48e676290696ae8080c8f671fd0e37bad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb723e7325454e6ff60e05d28a6321fd4d167e2
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298267"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67792831"
 ---
 # <a name="sqlsetdescfield-and-sqlsetdescrec-cursor-library"></a>SQLSetDescField y SQLSetDescRec (biblioteca de cursores)
 > [!IMPORTANT]  
@@ -55,7 +55,7 @@ ms.locfileid: "63298267"
   
  La biblioteca de cursores ejecuta las llamadas a **SQLSetDescRec** para una columna de marcador.  
   
- Cuando se trabaja con un ODBC 2. *x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) cuando **SQLSetDescField** o **SQLSetDescRec** se llama para establecer el SQL_DESC_OCTET_ Campo de longitud para el registro de marcador de un descartar a un valor no es igual a 4. Cuando se trabaja con una aplicación ODBC 3 *.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.  
+ Cuando se trabaja con un ODBC *2.x* controlador, la biblioteca de cursores devuelve SQLSTATE HY090 (longitud de búfer o cadena no válida) cuando **SQLSetDescField** o **SQLSetDescRec** se denomina Para establecer el campo SQL_DESC_OCTET_LENGTH para el registro de marcador de un descartar a un valor no es igual a 4. Cuando se trabaja con un ODBC *3.x* controlador, la biblioteca de cursores permite que el búfer de cualquier tamaño.  
   
  La biblioteca de cursores ejecuta **SQLSetDescField** cuando se llama para devolver el valor del campo SQL_DESC_BIND_OFFSET_PTR, SQL_DESC_BIND_TYPE, SQL_DESC_ROW_ARRAY_SIZE o SQL_DESC_ROW_STATUS_PTR. Estos campos se pueden devolver para cualquier fila, no solo la fila del marcador.  
   

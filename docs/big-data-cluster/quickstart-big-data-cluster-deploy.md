@@ -1,23 +1,23 @@
 ---
-title: Guía de inicio rápido de implementación
+title: Script de implementación
 titleSuffix: SQL Server big data clusters
 description: Tutorial de una implementación de clústeres de macrodatos de 2019 de SQL Server (versión preliminar) en Azure Kubernetes Service (AKS).
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 05/22/2019
-ms.topic: quickstart
+ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: d1b8c595512d3268e0e04482d464f6c19ee01234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798739"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728774"
 ---
-# <a name="quickstart-deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Inicio rápido: Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
+# <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,7 +26,7 @@ En este tutorial, usará un script de implementación de ejemplo para implementa
 > [!TIP]
 > AKS es sólo una opción para hospedar Kubernetes para el clúster de macrodatos. Para obtener información sobre otras opciones de implementación, así como la forma para personalizar la implementación de opciones, consulte [de clústeres de cómo implementar grandes de datos de SQL Server en Kubernetes](deployment-guidance.md).
 
-La implementación del clúster de macrodatos predeterminado usada aquí consta de una instancia de SQL Master, proceso de una instancia del grupo, dos instancias de grupo de datos y dos instancias del grupo de almacenamiento. Datos se guardan con volúmenes persistentes de Kubernetes que usan las clases de almacenamiento predeterminada AKS. La configuración predeterminada utilizada en este inicio rápido es adecuada para entornos de desarrollo y pruebas.
+La implementación del clúster de macrodatos predeterminado usada aquí consta de una instancia de SQL Master, proceso de una instancia del grupo, dos instancias de grupo de datos y dos instancias del grupo de almacenamiento. Datos se guardan con volúmenes persistentes de Kubernetes que usan las clases de almacenamiento predeterminada AKS. La configuración predeterminada utilizada en este tutorial es adecuada para entornos de desarrollo y pruebas.
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -38,7 +38,7 @@ La implementación del clúster de macrodatos predeterminado usada aquí consta 
    - **kubectl**
    - **Azure Data Studio**
    - **Extensión de SQL Server 2019**
-   - **Azure CLI**
+   - **CLI de Azure**
 
 ## <a name="log-in-to-your-azure-account"></a>Inicie sesión en su cuenta de Azure
 
@@ -50,7 +50,7 @@ az login
 
 ## <a name="download-the-deployment-script"></a>Descargar el script de implementación
 
-En este tutorial rápido se automatiza la creación del clúster de macrodatos en AKS mediante un script de python **implementar-sql-big-data-aks.py**. Si ya ha instalado python para **mssqlctl**, debería poder ejecutar correctamente el script en este inicio rápido. 
+En este tutorial se automatiza la creación del clúster de macrodatos en AKS mediante un script de python **implementar-sql-big-data-aks.py**. Si ya ha instalado python para **mssqlctl**, debería poder ejecutar correctamente el script en este tutorial. 
 
 En una solicitud de bash Windows PowerShell o Linux, ejecute el siguiente comando para descargar el script de implementación desde GitHub.
 
@@ -165,7 +165,7 @@ Cuando finalice el script de implementación, la salida le informa de éxito:
 
 Ahora se implementa el clúster de macrodatos de SQL Server en AKS. Ahora puede usar Azure Data Studio para conectarse al clúster. Para obtener más información, consulte [conectar a SQL Server del clúster macrodatos con Azure Data Studio](connect-to-big-data-cluster.md).
 
-## <a name="clean-up"></a>Limpiar
+## <a name="clean-up"></a>Limpieza
 
 Si va a probar los clústeres grandes de datos de SQL Server en Azure, debe eliminar el clúster de AKS cuando termine para evitar cargos inesperados. No quite el clúster si piensa seguir usándola.
 

@@ -14,12 +14,12 @@ ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: e3caa5feb387a7acdfa682f048bf77f2d999b560
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305796"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793748"
 ---
 # <a name="unicode-function-arguments"></a>Argumentos de función de Unicode
 El Administrador de controladores ODBC 3.5 (o superior) es compatible con versiones ANSI y Unicode de todas las funciones que aceptan los punteros a cadenas de caracteres o SQLPOINTER en sus argumentos. Las funciones Unicode se implementan como funciones (con un sufijo de *W*), no como macros. Las funciones de ANSI (que se puede llamar con o sin un sufijo de *A*) son idénticas a las funciones de API de ODBC actuales.  
@@ -66,7 +66,7 @@ El Administrador de controladores ODBC 3.5 (o superior) es compatible con versio
 |**SQLInstallDriver**||  
   
 > [!NOTE]
->  Funciones en desuso tienen compatibilidad con la asignación de Unicode a ANSI porque el ODBC 3 *.x* Administrador de controladores admite recompilación de ODBC 2. *x* aplicaciones con UNICODE **#define**.  
+>  Funciones en desuso tienen compatibilidad con la asignación de Unicode a ANSI porque ODBC *3.x* volver a compilar ODBC admite el Administrador de controladores *2.x* aplicaciones con UNICODE **#define**.  
   
  Esta sección contiene los temas siguientes.  
   

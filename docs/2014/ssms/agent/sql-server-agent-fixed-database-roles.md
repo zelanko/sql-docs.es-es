@@ -19,12 +19,12 @@ ms.assetid: 719ce56b-d6b2-414a-88a8-f43b725ebc79
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: dcb939b8eb04fafce163a395b05eb0e272977283
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a8067aaa2133648c1a1ea4fff81db08c139d5278
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245991"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793404"
 ---
 # <a name="sql-server-agent-fixed-database-roles"></a>Roles fijos de base de datos del Agente SQL Server
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tiene los siguientes roles fijos de base de datos de la base de datos **msdb** , que proporcionan a los administradores un control más preciso a la hora de obtener acceso al Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Los roles enumerados de menor a mayor privilegio de acceso son:  
@@ -48,12 +48,12 @@ ms.locfileid: "63245991"
   
  En la siguiente tabla encontrará un resumen de los permisos del rol **SQLAgentUserRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Acción|Operadores|Trabajos locales<br /><br /> (solo trabajos que les pertenecen)|Programación de trabajos<br /><br /> (solo programaciones que les pertenecen)|Servidores proxy|  
+|.|Operadores|Trabajos locales<br /><br /> (solo trabajos que les pertenecen)|Programaciones del trabajo<br /><br /> (solo programaciones que les pertenecen)|Servidores proxy|  
 |------------|---------------|----------------------------------------|------------------------------------------------|-------------|  
-|Crear, modificar o eliminar|No|Sí <sup>1</sup>|Sí|Sin|  
+|Crear, modificar o eliminar|Sin|Sí <sup>1</sup>|Sí|Sin|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí <sup>3</sup>|  
-|Habilitar o deshabilitar|No|Sí|Sí|No aplicable|  
-|Ver propiedades|Sin|Sí|Sí|Sin|  
+|Habilitar o deshabilitar|Sin|Sí|Sí|No aplicable|  
+|Ver propiedades|Sin|Sí|Sí|No|  
 |Ejecutar, detener o iniciar|No aplicable|Sí|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|No aplicable|No aplicable|  
 |Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|No aplicable|No aplicable|  
@@ -75,13 +75,13 @@ ms.locfileid: "63245991"
   
  En la tabla siguiente encontrará un resumen de los permisos de **SQLAgentReaderRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Acción|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
+|.|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|Sin|Sí <sup>1</sup> (propiedad de sólo los trabajos)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
+|Crear, modificar o eliminar|Sin|Sí <sup>1</sup> (propiedad de sólo los trabajos)|Sin|Sí (solo programaciones que les pertenecen)|No|  
 |Ver lista (enumerar)|Sí <sup>2</sup>|Sí|Sí|Sí|Sí <sup>3</sup>|  
-|Habilitar o deshabilitar|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|No aplicable|  
-|Ver propiedades|Sin|Sí|Sí|Sí|No|  
-|Modificar propiedades|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|No|  
+|Habilitar o deshabilitar|Sin|Sí (solo trabajos que les pertenecen)|No|Sí (solo programaciones que les pertenecen)|No aplicable|  
+|Ver propiedades|Sin|Sí|Sí|Sí|Sin|  
+|Modificar propiedades|No|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
 |Ejecutar, detener o iniciar|No aplicable|Sí (solo trabajos que les pertenecen)|Sin|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|Sí|Sí|No aplicable|No aplicable|  
 |Eliminar historial de trabajos|No aplicable|No <sup>4</sup>|Sin|No aplicable|No aplicable|  
@@ -98,7 +98,7 @@ ms.locfileid: "63245991"
 ### <a name="sqlagentoperatorrole-permissions"></a>Permisos de SQLAgentOperatorRole  
  **SQLAgentOperatorRole** es el rol con más privilegios de todos los roles fijos de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Incluye todos los permisos de los roles **SQLAgentUserRole** y **SQLAgentReaderRole**. Los miembros de este rol también pueden ver las propiedades de operadores y servidores proxy, así como enumerar los servidores proxy y alertas disponibles en el servidor.  
   
- Los miembros del rol**SQLAgentOperatorRole** tienen permisos adicionales en las programaciones y los trabajos locales. Pueden ejecutar, detener o iniciar todos los trabajos locales, y pueden eliminar el historial de trabajos de cualquier trabajo local del servidor. También pueden habilitar o deshabilitar todos los trabajos locales y programaciones del servidor. Para habilitar o deshabilitar programaciones o trabajos locales, los miembros de este rol deben usar los procedimientos almacenados **sp_update_job** y **sp_update_schedule**. Los miembros del rol **@enabled** solo pueden especificar los parámetros que especifican el nombre o el identificador del trabajo o la programación y el parámetro **SQLAgentOperatorRole**. Si especifican cualquier otro parámetro, se producirá un error en la ejecución de estos procedimientos almacenados. Los miembros de**SQLAgentOperatorRole** no pueden cambiar la propiedad de un trabajo para obtener acceso a trabajos que ya no les pertenecen.  
+ Los miembros del rol**SQLAgentOperatorRole** tienen permisos adicionales en las programaciones y los trabajos locales. Pueden ejecutar, detener o iniciar todos los trabajos locales, y pueden eliminar el historial de trabajos de cualquier trabajo local del servidor. También pueden habilitar o deshabilitar todos los trabajos locales y programaciones del servidor. Para habilitar o deshabilitar programaciones o trabajos locales, los miembros de este rol deben usar los procedimientos almacenados **sp_update_job** y **sp_update_schedule**. Solo los parámetros que especifican el nombre del trabajo o la programación o el identificador y el  **\@habilitado** parámetro se puede especificar los miembros de **SQLAgentOperatorRole**. Si especifican cualquier otro parámetro, se producirá un error en la ejecución de estos procedimientos almacenados. Los miembros de**SQLAgentOperatorRole** no pueden cambiar la propiedad de un trabajo para obtener acceso a trabajos que ya no les pertenecen.  
   
  Para los miembros del rol **SQLAgentOperatorRole**, están visibles los nodos **Trabajos**, **Alertas**, **Operadores** y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Servidores proxy **del Explorador de objetos de**. El único nodo que no está visible para los miembros de este rol es el nodo **Registros de errores** .  
   
@@ -107,25 +107,25 @@ ms.locfileid: "63245991"
   
  En la siguiente tabla encontrará un resumen de los permisos de **SQLAgentOperatorRole** para los objetos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Acción|Trabajos|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
+|.|Trabajos|Operadores|Trabajos locales|Trabajos multiservidor|Programación de trabajos|Servidores proxy|  
 |------------|------------|---------------|----------------|----------------------|-------------------|-------------|  
-|Crear, modificar o eliminar|No|Sin|Sí <sup>2</sup> (propiedad de sólo los trabajos)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
+|Crear, modificar o eliminar|No|Sin|Sí <sup>2</sup> (propiedad de sólo los trabajos)|No|Sí (solo programaciones que les pertenecen)|No|  
 |Ver lista (enumerar)|Sí|Sí <sup>1</sup>|Sí|Sí|Sí|Sí|  
-|Habilitar o deshabilitar|No|Sin|Sí <sup>3</sup>|No|Sí <sup>4</sup>|No aplicable|  
+|Habilitar o deshabilitar|No|No|Sí <sup>3</sup>|No|Sí <sup>4</sup>|No aplicable|  
 |Ver propiedades|Sí|Sí|Sí|Sí|Sí|Sí|  
-|Modificar propiedades|Sin|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|Sin|  
+|Modificar propiedades|Sin|Sin|Sí (solo trabajos que les pertenecen)|Sin|Sí (solo programaciones que les pertenecen)|No|  
 |Ejecutar, detener o iniciar|No aplicable|No aplicable|Sí|Sin|No aplicable|No aplicable|  
 |Ver historial de trabajos|No aplicable|No aplicable|Sí|Sí|No aplicable|No aplicable|  
-|Eliminar historial de trabajos|No aplicable|No aplicable|Sí|No|No aplicable|No aplicable|  
+|Eliminar historial de trabajos|No aplicable|No aplicable|Sí|Sin|No aplicable|No aplicable|  
 |Adjuntar o separar|No aplicable|No aplicable|No aplicable|No aplicable|Sí (solo programaciones que les pertenecen)|No aplicable|  
   
  <sup>1</sup> puede obtener la lista de operadores disponibles para su uso en **sp_notify_operator** y **propiedades del trabajo** cuadro de diálogo de Management Studio.  
   
  <sup>2</sup> no se puede cambiar la propiedad de un trabajo.  
   
- <sup>3</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar trabajos locales que no les pertenecen utilizando el procedimiento almacenado **sp_update_job** y especificando valores para el **@enabled** y **@job_id** (o **@job_name** ) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
+ <sup>3</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar trabajos locales que no les pertenecen utilizando el procedimiento almacenado **sp_update_job** y especificando valores para el  **\@habilitado** y  **\@job_id** (o  **\@job_name**) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
   
- <sup>4</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar programaciones que no les pertenecen utilizando el procedimiento almacenado **sp_update_schedule** y especificando valores para el **@enabled** y **@schedule_id** (o **@name** ) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
+ <sup>4</sup> **SQLAgentOperatorRole** pueden habilitar o deshabilitar programaciones que no les pertenecen utilizando el procedimiento almacenado **sp_update_schedule** y especificando valores para el  **\@habilitado** y  **\@schedule_id** (o  **\@nombre**) parámetros. Si un miembro de este rol especifica cualquier otro parámetro para este procedimiento almacenado, la ejecución del procedimiento producirá un error.  
   
 ## <a name="assigning-users-multiple-roles"></a>Asignar a los usuarios varios roles  
  Los miembros del rol fijo de servidor **sysadmin** tienen acceso a toda la funcionalidad del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Si un usuario no es miembro del rol **sysadmin** , pero sí lo es de más de un rol fijo de base de datos del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , es importante recordar el modelo de permisos concéntricos de estos roles. Debido a que los roles con más privilegios siempre contienen todos los permisos de los roles con menos privilegios, un usuario que sea miembro de más de un rol automáticamente tendrá los permisos asociados con el rol con más privilegios del que sea miembro.  

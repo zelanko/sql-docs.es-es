@@ -2,20 +2,20 @@
 title: Administración de blocs de notas en Azure Data Studio
 titleSuffix: SQL Server big data clusters
 description: Obtenga información sobre cómo administrar los cuadernos en Azure Data Studio. Esto incluye la apertura de blocs de notas, guardarlos y cambiar la conexión de clúster de macrodatos.
-author: rothja
-ms.author: jroth
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: mihaelab
 manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.custom: seodec18
-ms.openlocfilehash: 9173c630514465914a31bb5b4c2999145884c78a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf0041ee2beecb0864f196c4d13c7be309b40d17
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790049"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727570"
 ---
 # <a name="how-to-manage-notebooks-in-azure-data-studio"></a>Administración de blocs de notas en Azure Data Studio
 
@@ -43,7 +43,7 @@ Seleccione **abrir archivo** en el menú archivo CTRL+o (en Windows) y Cmd + O (
 
 ![Abrir el cuadro de diálogo Abrir archivo, seleccione Abrir archivo](./media/notebooks-how-to-manage/open-file-1.png) 
 
-### <a name="dashboard"></a>Panel
+### <a name="dashboard"></a>panel
 
 Haga clic en **Abrir Bloc de notas** en el panel para abrir el cuadro de diálogo Abrir archivo.
 

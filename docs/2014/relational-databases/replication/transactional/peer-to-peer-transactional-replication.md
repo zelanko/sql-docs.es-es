@@ -16,12 +16,12 @@ ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 133d44d233abdcffe7893ce29be5b462f4b16524
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944d18abf073ffc5cb958e7139616e745504ce23
+ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63274382"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67793924"
 ---
 # <a name="peer-to-peer-transactional-replication"></a>Peer-to-Peer Transactional Replication
   La replicación punto a punto proporciona una solución escalada y de alta disponibilidad manteniendo copias de datos en varias instancias de servidor, también denominadas *nodos*. Generada en la base de replicación transaccional, la replicación punto a punto propaga transaccionalmente los cambios coherentes en tiempo casi real. Esto permite a las aplicaciones que requieran una escalada de las operaciones de lectura distribuir las lecturas de los clientes en varios nodos. Dado que los datos se mantienen en los nodos en tiempo casi real, la replicación punto a punto proporciona redundancia de datos, lo que aumenta la disponibilidad de los mismos.  
@@ -137,19 +137,19 @@ ms.locfileid: "63274382"
   
 -   El parámetro **-SubscriptionStreams** del Agente de distribución y el parámetro **-MaxCmdsInTran**del Agente de registro del LOG.  
   
--   Las propiedades de artículo **@destination_owner** y **@destination_table** .  
+-   Las propiedades del artículo  **\@destination_owner** y  **\@destination_table**.  
 
 -   La replicación transaccional punto a punto no admite la creación de una suscripción transaccional unidireccional para una publicación punto a punto.
   
  Las siguientes propiedades requieren consideraciones especiales:  
   
--   La propiedad de publicación **@allow_initialize_from_backup** requiere un valor de `true`.  
+-   La propiedad de publicación  **\@allow_initialize_from_backup** requiere un valor de `true`.  
   
--   La propiedad de artículo **@replicate_ddl** requiere un valor de `true`; **@identityrangemanagementoption** requiere un valor de `manual`; y **@status** requiere que la opción **24** está establecido.  
+-   La propiedad de artículo  **\@replicate_ddl** requiere un valor de `true`;  **\@identityrangemanagementoption** requiere un valor de `manual`; y  **\@estado** requiere que la opción **24** se establece.  
   
--   El valor de las propiedades de artículo **@ins_cmd** , **@del_cmd** , y **@upd_cmd** no puede establecerse en `SQL`.  
+-   El valor de las propiedades de artículo  **\@ins_cmd**,  **\@del_cmd**, y  **\@upd_cmd** no puede establecerse en `SQL`.  
   
--   La propiedad de suscripción **@sync_type** requiere un valor de `none` o `automatic`.  
+-   La propiedad de suscripción  **\@sync_type** requiere un valor de `none` o `automatic`.  
   
 ### <a name="maintenance-considerations"></a>Consideraciones de mantenimiento  
  Las acciones siguientes exigen que se detenga el sistema. Esto significa que hay que detener la actividad de las tablas publicadas en todos los nodos y asegurarse de que cada nodo haya recibido todos los cambios de los demás nodos.  

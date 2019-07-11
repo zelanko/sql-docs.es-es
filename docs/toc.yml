@@ -915,7 +915,7 @@
                   items:
                     - name: Configurar
                       href: database-engine/database-mirroring/setting-up-database-mirroring-sql-server.md
-                    - name: Preparar una base de datos
+                    - name: Preparación de una base de datos
                       href: database-engine/database-mirroring/prepare-a-mirror-database-for-mirroring-sql-server.md
                     - name: Configurar el cifrado
                       href: database-engine/database-mirroring/set-up-an-encrypted-mirror-database.md
@@ -9056,7 +9056,7 @@
               items:
                 - name: Obtención de un volcado de memoria completo
                   href: ssms/troubleshoot/get-full-memory-dump.md
-                - name: Bloqueos y falta de respuesta
+                - name: Obtención de datos de diagnóstico
                   href: ssms/troubleshoot/ssms-troubleshoot.md
             - name: Agente SQL Server
               items:

@@ -1,20 +1,20 @@
 ---
 title: Desarrollar e implementar SQL Server las bases de datos para Linux | Microsoft Docs
 description: ''
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: fafec68510e2c9214ed77294314b2ff06e456ff2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3981071bb6f175a130444dabc588d1dba18112f7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713290"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833813"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Use Visual Studio para crear bases de datos de SQL Server en Linux
 
@@ -50,7 +50,7 @@ SQL Server en Linux es compatible con SSDT 17.0 RC o posterior de la versión.
 
     <img src="./media/sql-server-linux-develop-use-ssdt/git-repository.png" alt="local repository" style="width: 300px;"/>
 
-3. Haga clic en **Crear**. Una vez creado el repositorio de Git local, haga doble clic en **SSDTRepo**.
+3. Haga clic en **Create**(Crear). Una vez creado el repositorio de Git local, haga doble clic en **SSDTRepo**.
 
 4. Haga clic en **New** en el **soluciones** sección. Seleccione **SQL Server** en **otros lenguajes** nodo en el **nuevo proyecto** cuadro de diálogo.
 

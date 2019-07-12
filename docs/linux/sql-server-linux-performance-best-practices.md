@@ -1,19 +1,20 @@
 ---
-title: Procedimientos recomendados para SQL Server en Linux | Microsoft Docs
+title: Procedimientos recomendados para SQL Server en Linux
 description: En este artículo se proporcionan instrucciones y procedimientos recomendados para ejecutar SQL Server en Linux.
 author: rgward
 ms.author: bobward
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 8dc3cafb54fe91709bd3ee078dfeeb1dc5e3d649
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705170"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834844"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados e instrucciones de configuración de SQL Server en Linux
 

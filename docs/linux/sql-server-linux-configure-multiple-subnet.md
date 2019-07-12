@@ -1,19 +1,20 @@
 ---
-title: Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error en Linux | Microsoft Docs
+title: Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error en Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 12/01/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4c8116462266386457270b16ebcdb684252f5dcf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37f4349a2d8888e0c5df7783d7f9e54460094980
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713258"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834033"
 ---
 # <a name="configure-multiple-subnet-always-on-availability-groups-and-failover-cluster-instances"></a>Configurar varias subredes grupos de disponibilidad AlwaysOn y las instancias de clúster de conmutación por error
 

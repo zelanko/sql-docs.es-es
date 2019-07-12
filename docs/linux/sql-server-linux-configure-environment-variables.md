@@ -1,20 +1,20 @@
 ---
-title: Configurar la configuración de SQL Server con las variables de entorno | Microsoft Docs
+title: Configurar la configuración de SQL Server con las variables de entorno
 description: En este artículo se describe cómo usar variables de entorno para configurar valores específicos de SQL Server 2017 en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 2b32c965dfed3647484a1de54539c79af3777ce4
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67400080"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834050"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar la configuración de SQL Server con las variables de entorno en Linux
 
@@ -48,7 +48,7 @@ Puede utilizar varias variables de entorno diferentes para configurar la versió
 |-----|-----|
 | **ACCEPT_EULA** | Acepte el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configurar la contraseña del usuario SA. |
-| **MSSQL_PID** | Establezca la clave de producto o la edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es un número o una letra.|
+| **MSSQL_PID** | Establezca la clave de producto o la edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es un número o una letra.|
 | **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada de SQL Server. Esto invalida la asignación predeterminada de Id. de idioma (LCID) a la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada es el 80% de la memoria física total. |
@@ -72,7 +72,7 @@ Puede utilizar varias variables de entorno diferentes para configurar la versió
 |-----|-----|
 | **ACCEPT_EULA** | Acepte el contrato de licencia de SQL Server cuando se establece en cualquier valor (por ejemplo, ' Y'). |
 | **MSSQL_SA_PASSWORD** | Configurar la contraseña del usuario SA. |
-| **MSSQL_PID** | Establezca la clave de producto o la edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Standard**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es un número o una letra.|
+| **MSSQL_PID** | Establezca la clave de producto o la edición de SQL Server. Los valores posibles incluyen: </br></br>**Evaluation**</br>**Desarrollador**</br>**Express**</br>**Web**</br>**Estándar**</br>**Enterprise**</br>**Una clave de producto**</br></br>Si especifica una clave de producto, debe ser en forma de ###-###-###-###-###, donde '#' es un número o una letra.|
 | **MSSQL_LCID** | Establece el identificador de idioma que se usará para SQL Server. Por ejemplo, 1036 es francés. |
 | **MSSQL_COLLATION** | Establece la intercalación predeterminada de SQL Server. Esto invalida la asignación predeterminada de Id. de idioma (LCID) a la intercalación. |
 | **MSSQL_MEMORY_LIMIT_MB** | Establece la cantidad máxima de memoria (en MB) que puede usar SQL Server. De forma predeterminada es el 80% de la memoria física total. |

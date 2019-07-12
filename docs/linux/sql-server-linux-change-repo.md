@@ -1,20 +1,20 @@
 ---
-title: Configurar repositorios de Linux para SQL Server 2017 y 2019 | Microsoft Docs
+title: Configurar repositorios de Linux para SQL Server 2017 y 2019
 description: Compruebe y configure los repositorios de código fuente para 2019 de SQL Server y SQL Server 2017 en Linux. El repositorio de origen afecta a la versión de SQL Server que se aplica durante la instalación y actualización.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/11/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 zone_pivot_groups: ld2-linux-distribution
-ms.openlocfilehash: 5e21110eb8a24c736b08833d10b509b5494adc48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05299a2efd374dc7d58b5e32fcdea918b12fc1d3
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713336"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834085"
 ---
 # <a name="configure-repositories-for-installing-and-upgrading-sql-server-on-linux"></a>Configurar repositorios de instalación y actualización de SQL Server en Linux
 
@@ -171,7 +171,7 @@ Si es necesario, quite el repositorio antiguo. Utilice uno de los siguientes com
 ::: zone pivot="ld2-rhel"
 Configure el repositorio nuevo que se usará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-| Repositorio | Versión | Comando |
+| Repositorio | `Version` | Comando |
 |---|---|---|
 | **Preview (2019)** | 2019 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo curl -o /etc/yum.repos.d/mssql-server.repo https://packages.microsoft.com/config/rhel/7/mssql-server-2017.repo` |
@@ -183,7 +183,7 @@ Configure el repositorio nuevo que se usará para las actualizaciones y las inst
 ::: zone pivot="ld2-sles"
 Configure el repositorio nuevo que se usará para las actualizaciones y las instalaciones de SQL Server. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-| Repositorio | Versión | Comando |
+| Repositorio | `Version` | Comando |
 |---|---|---|
 | **Preview (2019)** | 2019 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-preview.repo` |
 | **CU** | 2017 | `sudo zypper addrepo -fc https://packages.microsoft.com/config/sles/12/mssql-server-2017.repo` |
@@ -203,7 +203,7 @@ Configure el repositorio nuevo que se usará para las actualizaciones y las inst
 
 2. Utilice uno de los comandos siguientes para configurar el repositorio de su elección.
 
-   | Repositorio | Versión | Comando |
+   | Repositorio | `Version` | Comando |
    |---|---|---|
    | **Preview (2019)** | 2019 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"` |
    | **CU** | 2017 | `sudo add-apt-repository "$(curl https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-2017.list)"` |

@@ -1,20 +1,21 @@
 ---
-title: Instalar extensiones de lenguaje (Java) de SQL Server en Linux | Microsoft Docs
+title: Instalar extensiones de lenguaje (Java) de SQL Server en Linux
 description: Obtenga información sobre cómo instalar extensiones de lenguaje (Java) de SQL Server en Red Hat, Ubuntu y SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9231828263020c352700fda6a4a0a9953dd70760
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 25aa15f66827aeee7e86e7052febde9c31c7e15a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399939"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834700"
 ---
 # <a name="install-sql-server-2019-language-extensions-java-on-linux"></a>Instalar extensiones de lenguaje SQL Server de 2019 (Java) en Linux
 
@@ -290,7 +291,7 @@ Extensibilidad de extensiones de lenguaje y Java en Linux está todavía en desa
 + Autenticación implícita no está disponible en Linux en este momento, lo que significa que no se puede conectar al servidor de Java en curso para obtener acceso a datos u otros recursos.
 
 
-### <a name="resource-governance"></a>Regulación de recursos
+### <a name="resource-governance"></a>Gobernanza de recursos
 
 Hay paridad entre Linux y Windows para [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) para grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. Las unidades se alinearán en una próxima versión de CTP.
  

@@ -22,12 +22,12 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6158df674c90f14a1f77f5e12c18adcb6f8fbc4f
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652861"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833575"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -68,8 +68,11 @@ En primer lugar, si el plan contiene las siguientes construcciones:
 * Referencia a una tabla externa
 * Consulta distribuida u operaciones de texto completo
 * Uso de consultas globales 
-* Cursores keyset o dinámico (forzar el plan se admite para los cursores estáticos y de avance rápido)
+* Cursores keyset o dinámico 
 * Especificación de combinación en estrella no válida 
+
+> [!NOTE]
+> Azure SQL Database y SQL Server 2019 (versión preliminar) admiten el forzado de plan para los cursores estáticos y de avance rápido.
 
 En segundo lugar, si los objetos en los que se basa el plan ya no están disponibles:
 * Base de datos (si la base de datos donde se originó el plan ya no existe)

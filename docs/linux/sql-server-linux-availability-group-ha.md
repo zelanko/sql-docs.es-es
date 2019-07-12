@@ -1,20 +1,20 @@
 ---
-title: SQL Server Always On patrones de implementación del grupo de disponibilidad | Microsoft Docs
+title: SQL Server Always On patrones de implementación del grupo de disponibilidad
 ms.date: 04/17/2019
 ms.prod: sql
-ms.reviewer: ''
 ms.technology: linux
 ms.topic: conceptual
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 35897b388e9bd026b643acbc6fbccda6c944c559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.reviewer: vanto
+manager: jroth
+ms.openlocfilehash: 69cc0c84d06c1be4065c7419b3eb35c6c30e0592
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705587"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834235"
 ---
 # <a name="high-availability-and-data-protection-for-availability-group-configurations"></a>Alta disponibilidad y protección de datos para las configuraciones de grupo de disponibilidad
 
@@ -58,7 +58,7 @@ Esta configuración consta de tres réplicas sincrónicas. De forma predetermina
 
 Escalado de lectura, alta disponibilidad y protección de datos, puede proporcionar un grupo de disponibilidad con tres réplicas sincrónicas. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de los datos|
+| |escalado de lectura|Alta disponibilidad & </br> protección de datos | Protección de datos|
 |:---|---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 |1<sup>\*</sup>|2|
 |Interrupción principal |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal es R / w. |Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une. |
@@ -76,7 +76,7 @@ Esta configuración habilita la protección de datos. Al igual que las demás co
 
 Un grupo de disponibilidad con dos réplicas sincrónicas proporciona protección de datos y escalado de lectura. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |escalado de lectura |Protección de los datos|
+| |escalado de lectura |Protección de datos|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error manual. Es posible que haya pérdida de datos. La nueva réplica principal es R / w.| Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario hasta que el objeto principal anterior se recupera y grupo de disponibilidad como la secundaria une.|
@@ -102,7 +102,7 @@ En el diagrama del grupo de disponibilidad, una réplica principal envía datos 
 
 El valor predeterminado de `REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT` es 0. En la tabla siguiente se describe el comportamiento de disponibilidad. 
 
-| |Alta disponibilidad & </br> protección de datos | Protección de los datos|
+| |Alta disponibilidad & </br> protección de datos | Protección de datos|
 |:---|---|---|
 |`REQUIRED_SYNCHRONIZED_SECONDARIES_TO_COMMIT=`|0 <sup>\*</sup>|1|
 |Interrupción principal | Conmutación por error automática. La nueva réplica principal es R / w. | Conmutación por error automática. La nueva réplica principal no está disponible para las transacciones de usuario. |

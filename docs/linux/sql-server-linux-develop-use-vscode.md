@@ -2,20 +2,20 @@
 title: Usar la extensión mssql de código de Visual Studio para SQL Server
 titleSuffix: SQL Server
 description: Use la extensión mssql para Visual Studio Code para editar y ejecutar scripts de Transact-SQL para SQL Server en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 12/18/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
-ms.openlocfilehash: b4d29739748b477adbef79bd1d6cf266aa16d2c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcda7a310e7a9dc77ea9464dd82dbed7260b0b39
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705534"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833787"
 ---
 # <a name="use-visual-studio-code-to-create-and-run-transact-sql-scripts"></a>Use Visual Studio Code para crear y ejecutar scripts de Transact-SQL
 
@@ -65,7 +65,7 @@ La extensión mssql permite comandos mssql y T-SQL IntelliSense del editor de c�
 
 Si abre un archivo existente que tiene un *.sql* extensión de archivo, se establece automáticamente el modo de lenguaje en SQL.  
 
-## <a name="connect-to-sql-server"></a>Conectar a SQL Server
+## <a name="connect-to-sql-server"></a>Conexión con SQL Server
 
 Siga estos pasos para crear un perfil de conexión y conectarse a un servidor SQL Server.
 
@@ -195,7 +195,7 @@ Como alternativa a los pasos anteriores, también puede crear y editar perfiles 
 
 1. Presione **Ctrl**+**MAYÚS**+**E** para ejecutar los comandos. Dar lugar a los dos conjuntos de presentación en el **resultados** ventana. 
 
-   ![Resultado](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)
+   ![Resultados](./media/sql-server-linux-develop-use-vscode/vscode-result-grid.png)
 
 ## <a name="view-and-save-the-result"></a>Ver y guardar el resultado
 

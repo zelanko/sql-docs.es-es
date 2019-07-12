@@ -1,20 +1,20 @@
 ---
-title: Introducción a las características de rendimiento de SQL Server en Linux | Microsoft Docs
+title: Introducción a las características de rendimiento de SQL Server en Linux
 description: En este artículo se proporciona una introducción de las características de rendimiento de SQL Server para los usuarios de Linux que están familiarizados con SQL Server. Muchos de estos ejemplos funcionan en todas las plataformas, pero el contexto de este artículo es Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: a340b3b8ded0824947cc242538ad19159b4abb4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713324"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834832"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Tutorial para conocer las características de rendimiento de SQL Server en Linux
 
@@ -158,11 +158,11 @@ SQL Server admite procedimientos almacenados compilados de forma nativa que tien
 ### <a name="learn-more-about-in-memory-oltp"></a>Más información sobre OLTP en memoria
 Para obtener más información sobre OLTP en memoria, vea los temas siguientes:
 
-- [Inicio rápido 1: Tecnologías OLTP en memoria para acelerar el rendimiento de Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
+- [Inicio rápido 1: Tecnologías de OLTP en memoria para acelerar el rendimiento de Transact-SQL](../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)
 - [Migrar a OLTP en memoria](../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)
 - [Tabla temporal y variable de tabla más rápidas con optimización para memoria](../relational-databases/in-memory-oltp/faster-temp-table-and-table-variable-by-using-memory-optimization.md)
 - [Supervisar y solucionar problemas de uso de memoria](../relational-databases/in-memory-oltp/monitor-and-troubleshoot-memory-usage.md)
-- [OLTP en memoria (optimización en memoria)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
+- [In-Memory OLTP (optimización In-Memory)](../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md)
 
 ## <a name="use-query-store"></a>Utilice Query Store
 Query Store recopila información de rendimiento detallados acerca de las consultas, planes de ejecución y estadísticas en tiempo de ejecución.

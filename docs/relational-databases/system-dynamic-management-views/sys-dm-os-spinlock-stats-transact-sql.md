@@ -5,11 +5,8 @@ ms.date: 06/03/2019
 ms.prod: sql-non-specified
 ms.prod_service: database-engine
 ms.service: ''
-ms.component: dmv's
-ms.reviewer: ''
 ms.suite: sql
-ms.technology:
-- database-engine
+ms.technology: database-engine
 ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
@@ -21,20 +18,19 @@ dev_langs:
 - TSQL
 helpviewer_keywords:
 - sys.dm_os_spinlock_stats dynamic management view
-ms.assetid: ''
-caps.latest.revision: ''
 author: bluefooted
 ms.author: pamela
+ms.reviewer: maghan
 manager: amitban
-ms.workload: Inactive
-ms.openlocfilehash: d26369b657848bf1ff092bc69fba1a6aa5850102
-ms.sourcegitcommit: ab867100949e932f29d25a3c41171f01156e923d
+ms.openlocfilehash: e302eadaa559674482911904678cc8aa4cbd2577
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67420857"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826610"
 ---
 # <a name="sysdmosspinlockstats-transact-sql"></a>sys.dm_os_spinlock_stats (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 Devuelve información acerca de todas las esperas de bloqueo por bucle organizados por tipo.  
@@ -42,7 +38,7 @@ Devuelve información acerca de todas las esperas de bloqueo por bucle organizad
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|Nombre del tipo de bloqueo por subproceso.|  
+|name|**nvarchar(256)**|Nombre del tipo de bloqueo por subproceso.|  
 |colisiones|**bigint**|El número de veces que un subproceso intenta adquirir el bloqueo por subproceso y se bloquea porque otro subproceso actualmente posee el bloqueo por subproceso.|  
 |gira.|**bigint**|El número de veces que un subproceso ejecuta un bucle al intentar adquirir el bloqueo por subproceso.|  
 |spins_per_collision|**real**|Proporción de giros por colisión.|  
@@ -191,7 +187,7 @@ GO
 |LANG_RES_LOAD|Exclusivamente para uso interno.|
 |LIVE_TARGET_TVF|Exclusivamente para uso interno.|
 |LOCK_FREE_LIST|Exclusivamente para uso interno.|
-|LOCK_HASH|Protege el acceso a la tabla hash de administrador de bloqueos que almacena información sobre los bloqueos mantenidos en una base de datos. Consulte [en este artículo](https://support.microsoft.comkb/2926217) para obtener más información.|
+|LOCK_HASH|Protege el acceso a la tabla hash de administrador de bloqueos que almacena información sobre los bloqueos mantenidos en una base de datos. Consulte [en este artículo](https://support.microsoft.com/kb/2926217) para obtener más información.|
 |LOCK_NOTIFICATION|Exclusivamente para uso interno.|
 |LOCK_RESOURCE_ID|Exclusivamente para uso interno.|
 |LOCK_RW_ABTX_HASH_SET|Exclusivamente para uso interno.|

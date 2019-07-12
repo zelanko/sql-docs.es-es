@@ -1,20 +1,21 @@
 ---
-title: Especificación de copia de seguridad de VDI, SQL Server en Linux | Microsoft Docs
+title: Especificación de copia de seguridad de VDI, SQL Server en Linux
 description: Especificación de interfaz de dispositivo Virtual de copia de seguridad de SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: b3917f086361128ee0c3e0a73f44f2c7cc4049b6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c684170ae6ca6420b6b5ebef91baae208ab0808
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66713471"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834188"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server en la especificación de SDK de cliente de Linux VDI
 
@@ -81,7 +82,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **Nombre** | Esto identifica el conjunto de dispositivos virtuales. Se deben seguir las reglas de los nombres utilizados por CreateFileMapping(). Cualquier carácter excepto con barra diagonal inversa (\) puede utilizarse. Se trata de una cadena de caracteres. Se recomienda un prefijo de la cadena con el nombre de producto o compañía y el nombre de base de datos. |
+| | **name** | Esto identifica el conjunto de dispositivos virtuales. Se deben seguir las reglas de los nombres utilizados por CreateFileMapping(). Cualquier carácter excepto con barra diagonal inversa (\) puede utilizarse. Se trata de una cadena de caracteres. Se recomienda un prefijo de la cadena con el nombre de producto o compañía y el nombre de base de datos. |
 | |**cfg** | Esta es la configuración para el conjunto de dispositivos virtuales. Para obtener más información, consulte "Configuración" más adelante en este documento.
 
 | Valores devueltos | Argumento | Explicación
@@ -129,7 +130,7 @@ Este capítulo contiene descripciones de cada una de las funciones de cliente. L
 
 | Parámetros | Argumento | Explicación
 | ----- | ----- | ------ |
-| | **Nombre** |Esto identifica el conjunto de dispositivos virtuales.
+| | **name** |Esto identifica el conjunto de dispositivos virtuales.
 | | **ppVirtualDevice** |Cuando la función se realiza correctamente, se devuelve un puntero al dispositivo virtual. Este dispositivo se usa para GetCommand y CompleteCommand.
 
 | Valores devueltos | Argumento | Explicación

@@ -1,20 +1,20 @@
 ---
-title: Introducción a la seguridad de SQL Server en Linux | Microsoft Docs
+title: Introducción a la seguridad de SQL Server en Linux
 description: En este artículo describe las acciones de seguridad típica.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 655aebb0c07c812a7aa6c81e7c7033d85e8b7ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705208"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834740"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Tutorial para conocer las características de seguridad de SQL Server en Linux
 

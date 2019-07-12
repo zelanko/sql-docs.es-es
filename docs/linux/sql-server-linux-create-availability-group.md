@@ -1,19 +1,20 @@
 ---
-title: Crear y configurar un grupo de disponibilidad para SQL Server en Linux | Microsoft Docs
+title: Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 description: Este tutorial muestra cómo crear y configurar grupos de disponibilidad para SQL Server en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 06/28/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 1841b7e38e47ffa1192b19564e1c6596ea9804a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bd6f1259989c1cb0286fca546ea9e0410e0837f
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719390"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833900"
 ---
 # <a name="create-and-configure-an-availability-group-for-sql-server-on-linux"></a>Crear y configurar un grupo de disponibilidad para SQL Server en Linux
 
@@ -324,11 +325,11 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
 2.  En el cuadro de diálogo Introducción, haga clic en **siguiente**.
 
-3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNAL o NONE en la lista desplegable. Externo debe usarse cuando Pacemaker se va a implementar. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. Al seleccionar la opción para la detección de estado del nivel de base de datos es opcional. Para obtener más información sobre esta opción, consulte [opción conmutación por error de detección de estado del nivel de base de datos de disponibilidad grupo](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Siguiente**.
+3.  En el cuadro de diálogo Especificar opciones de grupo de disponibilidad, escriba un nombre para el grupo de disponibilidad y seleccione un tipo de clúster EXTERNAL o NONE en la lista desplegable. Externo debe usarse cuando Pacemaker se va a implementar. Ninguno es para escenarios especializados, como el escalado horizontal de lectura. Al seleccionar la opción para la detección de estado del nivel de base de datos es opcional. Para obtener más información sobre esta opción, consulte [opción conmutación por error de detección de estado del nivel de base de datos de disponibilidad grupo](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Haga clic en **Next**.
 
     ![](./media/sql-server-linux-create-availability-group/image3.png)
 
-4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que participarán en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa antes de se puede agregar a un grupo de disponibilidad. Haga clic en **Siguiente**.
+4.  En el cuadro de diálogo Seleccionar bases de datos, seleccione las bases de datos que participarán en el grupo de disponibilidad. Cada base de datos debe tener una copia de seguridad completa antes de se puede agregar a un grupo de disponibilidad. Haga clic en **Next**.
 
 5.  En el cuadro de diálogo Especificar réplicas, haga clic en **Agregar réplica**.
 
@@ -360,11 +361,11 @@ En esta sección se muestra cómo crear un grupo de disponibilidad con un tipo d
 
     c.  Seleccione cada dirección URL y en la parte inferior, seleccione las réplicas legibles. Realizar una selección múltiple, mantenga presionada la tecla MAYÚS o haga clic y arrastre.
 
-12. Haga clic en **Siguiente**.
+12. Haga clic en **Next**.
 
-13. Elija cómo se inicializará las réplicas secundarias. El valor predeterminado es usar [la propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), lo que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede tener el Asistente para hacer una copia de seguridad, copia y restauración (la segunda opción;) tiene unirse si tiene manualmente una copia de seguridad, copiar y restaurar la base de datos en las réplicas (tercera opción;) o agregar más adelante de la base de datos (la última opción). Al igual que con los certificados, si las copias de seguridad y copiarlos manualmente, los permisos en los archivos de copia debe establecerse en las otras réplicas. Haga clic en **Siguiente**.
+13. Elija cómo se inicializará las réplicas secundarias. El valor predeterminado es usar [la propagación automática](../database-engine/availability-groups/windows/automatically-initialize-always-on-availability-group.md), lo que requiere la misma ruta de acceso en todos los servidores que participan en el grupo de disponibilidad. También puede tener el Asistente para hacer una copia de seguridad, copia y restauración (la segunda opción;) tiene unirse si tiene manualmente una copia de seguridad, copiar y restaurar la base de datos en las réplicas (tercera opción;) o agregar más adelante de la base de datos (la última opción). Al igual que con los certificados, si las copias de seguridad y copiarlos manualmente, los permisos en los archivos de copia debe establecerse en las otras réplicas. Haga clic en **Next**.
 
-14. En el cuadro de diálogo de validación, si todo lo que no envíe como correcto, investigue. Algunas advertencias son aceptables y no grave, por ejemplo, si no crea un agente de escucha. Haga clic en **Siguiente**.
+14. En el cuadro de diálogo de validación, si todo lo que no envíe como correcto, investigue. Algunas advertencias son aceptables y no grave, por ejemplo, si no crea un agente de escucha. Haga clic en **Next**.
 
 15. En el cuadro de diálogo de resumen, haga clic en **finalizar**. Ahora se iniciará el proceso para crear el grupo de disponibilidad.
 

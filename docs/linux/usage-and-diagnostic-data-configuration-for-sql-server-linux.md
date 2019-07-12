@@ -1,19 +1,19 @@
 ---
-title: Configurar el uso y recopilación de datos de diagnóstico para SQL Server en Linux | Microsoft Docs
+title: Configurar el uso y recopilación de datos de diagnóstico para SQL Server en Linux
 description: Describe cómo el uso del cliente de SQL Server y datos de diagnóstico se recopilan y configurado en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: bf15eb58412bda764b710f48bd90be849748000e
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: ab0b00013c09c5328ad711307558e67adc784d05
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399986"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834541"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Configurar el uso y recopilación de datos de diagnóstico para SQL Server en Linux
 

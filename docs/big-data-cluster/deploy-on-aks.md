@@ -6,16 +6,16 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
 manager: jroth
-ms.date: 02/28/2019
+ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c5860e4c26008cf94b9ec168bb6a705f15ae7cd1
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728921"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826528"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>Configuración de Azure Kubernetes Service para las implementaciones de clústeres de macrodatos de SQL Server
 
@@ -76,9 +76,39 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
    az group create --name sqlbdcgroup --location westus2
    ```
 
+## <a name="verify-available-kubernetes-versions"></a>Compruebe que las versiones disponibles de Kubernetes
+
+Utilice la última versión disponible de Kubernetes. La última versión disponible depende de la ubicación donde va a implementar el clúster. El siguiente comando devuelve las versiones de Kubernetes disponibles en una ubicación específica.
+
+Antes de ejecutar el comando, actualice el script. Reemplace `<Azure data center>` con la ubicación del clúster.
+
+   **bash**
+
+   ```bash
+   az aks get-versions \
+   --location <Azure data center> \
+   --query orchestrators \
+   --o table
+   ```
+
+   **PowerShell**
+
+   ```powershell
+   az aks get-versions `
+   --location <Azure data center> `
+   --query orchestrators `
+   --o table
+   ```
+
+Elija la última versión disponible para el clúster. Registre el número de versión. Se usará en el paso siguiente.
+
 ## <a name="create-a-kubernetes-cluster"></a>Crear un clúster de Kubernetes
 
-1. Crear un clúster de Kubernetes en AKS con la [crear az aks](https://docs.microsoft.com/cli/azure/aks) comando. En el ejemplo siguiente se crea un clúster de Kubernetes denominado *kubcluster* con un nodo de agente de Linux de tamaño **Standard_L8s**. Asegúrese de que crear el clúster de AKS en el mismo grupo de recursos que usó en las secciones anteriores.
+1. Crear un clúster de Kubernetes en AKS con la [crear az aks](https://docs.microsoft.com/cli/azure/aks) comando. En el ejemplo siguiente se crea un clúster de Kubernetes denominado *kubcluster* con un nodo de agente de Linux de tamaño **Standard_L8s**.
+
+   Antes de ejecutar el script, reemplace `<version number>` con el número de versión que identificó en el paso anterior.
+
+   Asegúrese de que crear el clúster de AKS en el mismo grupo de recursos que usó en las secciones anteriores.
 
    **bash:**
 
@@ -88,7 +118,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
    --generate-ssh-keys \
    --node-vm-size Standard_L8s \
    --node-count 1 \
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    **PowerShell:**
@@ -99,7 +129,7 @@ Un grupo de recursos de Azure es un grupo lógico de Azure que se implementan y 
    --generate-ssh-keys `
    --node-vm-size Standard_L8s `
    --node-count 1 `
-   --kubernetes-version 1.12.8
+   --kubernetes-version <version number>
    ```
 
    Puede aumentar o disminuir el número de nodos de agente de Kubernetes cambiando el `--node-count <n>` donde `<n>` es el número de nodos de agente que desea usar. Esto no incluye el nodo maestro de Kubernetes, que se administra en segundo plano mediante AKS. El ejemplo anterior utiliza sólo un único nodo para fines de evaluación.

@@ -1,20 +1,20 @@
 ---
-title: Administrar SQL Server en Linux con PowerShell | Microsoft Docs
+title: Administrar SQL Server en Linux con PowerShell
 description: En este artículo se proporciona información general del uso de PowerShell en Windows con SQL Server en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
-ms.openlocfilehash: 8398db9e03aabf6863bd770f8be6657b58be1591
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21ce61a823281c5e6688bcfb8aee96d296cb671d
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718075"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834927"
 ---
 # <a name="use-powershell-on-windows-to-manage-sql-server-on-linux"></a>Usar PowerShell de Windows para administrar SQL Server en Linux
 
@@ -26,7 +26,7 @@ Este artículo se presentan [SQL Server PowerShell](../powershell/sql-server-pow
 
 [SQL PowerShell](../powershell/download-sql-server-ps-module.md) en Windows se mantiene en la Galería de PowerShell. Cuando se trabaja con SQL Server, debe usar siempre la versión más reciente del módulo SqlServer PowerShell.
 
-## <a name="before-you-begin"></a>Antes de comenzar
+## <a name="before-you-begin"></a>Antes de empezar
 
 Leer el [problemas conocidos](sql-server-linux-release-notes.md) para SQL Server en Linux.
 

@@ -1,20 +1,21 @@
 ---
-title: Instalar SQL Server Machine Learning Services (R, Python) en Linux | Microsoft Docs
+title: Instalar SQL Server Machine Learning Services (R, Python) en Linux
 description: Obtenga información sobre cómo instalar SQL Server Machine Learning Services (R, Python) en Red Hat, Ubuntu y SUSE.
 author: dphansen
 ms.author: davidph
+ms.reviewer: vanto
 manager: cgronlun
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a36ae06f28cb68395fd24b64921575567757a7f
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: 5e64f19c7495a58c02852d9c1207b047de669758
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399948"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834679"
 ---
 # <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Instalar SQL Server 2019 Machine Learning Services (R, Python) en Linux
 
@@ -160,7 +161,7 @@ En un dispositivo conectado a internet, los paquetes se descargan e instalan ind
 
 | Nombre del paquete | Se aplica a | Descripción |
 |--------------|----------|-------------|
-|mssql-server-extensibility  | All | Marco de extensibilidad que se usa para ejecutar código R y Python. |
+|mssql-server-extensibility  | Todo | Marco de extensibilidad que se usa para ejecutar código R y Python. |
 | microsoft-openmpi  | Python, R | Interfaz utilizada por las bibliotecas Revo * para la paralelización en Linux que pasan mensajes. |
 | mssql-mlservices-python | Python | Distribución de código abierto de Anaconda y Python. |
 |mssql-mlservices-mlm-py  | Python | *Instalación completa*. Proporciona modelos para el análisis de opinión de las características y el texto de imagen de revoscalepy, microsoftml, previamente entrenados.| 
@@ -511,7 +512,7 @@ Integración de R y Python en Linux está todavía en desarrollo activo. Las sig
 
 + Autenticación implícita no está disponible en Machine Learning Services en Linux en este momento, lo que significa que no se puede conectar al servidor desde un script de R o Python en curso para obtener acceso a datos u otros recursos. 
 
-### <a name="resource-governance"></a>Regulación de recursos
+### <a name="resource-governance"></a>Gobernanza de recursos
 
 Hay paridad entre Linux y Windows para [regulación de recursos](../t-sql/statements/create-external-resource-pool-transact-sql.md) para grupos de recursos externos, pero las estadísticas de [sys.dm_resource_governor_external_resource_pools](../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) tienen actualmente unidades diferentes en Linux. Las unidades se alinearán en una próxima versión de CTP.
  

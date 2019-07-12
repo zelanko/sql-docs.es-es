@@ -10,12 +10,12 @@ ms.assetid: 6d751477-6bf1-48b4-8833-5a631bbe7650
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1374179c5bdac27bc7fda98d8a4675eab4ca9a18
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfceb6b2314f9e57d6d383312d9f9373f7df1621
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66080233"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832922"
 ---
 # <a name="configure-analysis-services-for-kerberos-constrained-delegation"></a>Configurar Analysis Services para la delegación restringida de Kerberos
   Al configurar Analysis Services para la autenticación Kerberos, lo más probable es que le interese conseguir uno de los resultados siguientes o ambos: hacer que Analysis Services suplante una identidad de usuario al consultar datos o hacer que Analysis Services delegue una identidad de usuario a un servicio de nivel inferior. Cada escenario necesita requisitos de configuración ligeramente diferentes. En ambos escenarios es necesario asegurarse de que la configuración se ha realizado correctamente.  
@@ -109,7 +109,7 @@ ms.locfileid: "66080233"
   
  Para realizar una prueba completa será necesario usar herramientas de supervisión de red que puedan capturar las solicitudes y respuestas de Kerberos en la red. Para esta tarea se puede emplear la utilidad Monitor de red (netmon.exe), filtrada para Kerberos. Para obtener más información sobre cómo usar Netmon 3.4 y otras herramientas para probar la autenticación Kerberos, vea [configurar la autenticación Kerberos: Configuración básica (SharePoint Server 2010)](https://technet.microsoft.com/library/gg502602\(v=office.14\).aspx).  
   
- Vea también [El cuadro de diálogo más confuso de Active Directory](http://windowsitpro.com/windows/most-confusing-dialog-box-active-directory) para obtener una descripción detallada de cada opción de la pestaña Delegación del cuadro de diálogo de la propiedad del objeto Active Directory. Este artículo también explica cómo utilizar el LDP para comprobar e interpretar los resultados de la prueba.  
+ Vea también [El cuadro de diálogo más confuso de Active Directory](https://www.itprotoday.com/active-directory/most-confusing-dialog-box-active-directory) para obtener una descripción detallada de cada opción de la pestaña Delegación del cuadro de diálogo de la propiedad del objeto Active Directory. Este artículo también explica cómo utilizar el LDP para comprobar e interpretar los resultados de la prueba.  
   
 ## <a name="see-also"></a>Vea también  
  [Autenticación y delegación de identidades de Microsoft BI](https://go.microsoft.com/fwlink/?LinkID=286576)   

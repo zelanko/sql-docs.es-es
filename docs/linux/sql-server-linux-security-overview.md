@@ -1,20 +1,20 @@
 ---
-title: Limitaciones de seguridad para SQL Server en Linux | Microsoft Docs
+title: Limitaciones de seguridad para SQL Server en Linux
 description: Este artículo describe SQL Server en Linux restricciones.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 01/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
-ms.openlocfilehash: 71aa2424a7fddb7abeb9d68e59f6b94693b0cb5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 033390cb2776988179fc40b2f3a2d9e65b98a05a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705072"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834725"
 ---
 # <a name="security-limitations-for-sql-server-on-linux"></a>Limitaciones de seguridad para SQL Server en Linux
 

@@ -1,20 +1,20 @@
 ---
-title: Notas de versión preliminar de SQL Server 2019 en Linux | Microsoft Docs
+title: Notas de la versión de vista previa de 2019 de SQL Server en Linux
 description: En este artículo contiene las notas de la versión y las características admitidas para la versión preliminar de 2019 de SQL Server que se ejecutan en Linux. Notas de la versión se incluyen para la versión más reciente y varias versiones anteriores.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f172cf3b4ab72fe413cbc639c3e880edef311e9e
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533844"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834824"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de la versión de vista previa de 2019 de SQL Server en Linux
 
@@ -45,7 +45,7 @@ La mayoría herramientas de cliente existentes que tienen como destino de SQL Se
 
 La tabla siguiente muestra el historial de versión de vista previa de SQL Server 2019 que versiones de CTP.
 
-| Versión               | Versión       | Fecha de la versión |
+| Release               | `Version`       | Fecha de la versión |
 |-----------------------|---------------|--------------|
 | [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
 | [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |

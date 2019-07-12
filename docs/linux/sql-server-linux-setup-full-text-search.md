@@ -1,20 +1,20 @@
 ---
-title: Instalar la búsqueda de texto completo SQL Server en Linux | Microsoft Docs
+title: Instalar la búsqueda de texto completo SQL Server en Linux
 description: En este artículo se describe cómo instalar la búsqueda de texto completo de SQL Server en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 40b2e50932994644ce5e49237adbef08b825b513
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80d058fba56f091af7be92b908454f71fc8552e8
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705045"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834710"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Instalar la búsqueda de texto completo SQL Server en Linux
 
@@ -106,7 +106,7 @@ Búsqueda de texto completo usa [separadores de palabras](../relational-database
 | Neerlandés | 1043 |
 | Inglés | 3082 |
 | Francés | 1036 |
-| German | 1031 |
+| Alemán | 1031 |
 | Greek | 1032 |
 | Gujarati | 1095 |
 | Hebreo | 1037 |
@@ -149,7 +149,7 @@ Búsqueda de texto completo también funciona con texto almacenado en archivos b
 
 Puede ver una lista de filtros instalados mediante una llamada a **sp_help_fulltext_system_components 'filter'** . Para SQL Server, se instalan los siguientes filtros:
 
-| Nombre de componente | Id. de clase | Versión |
+| Nombre de componente | Id. de clase | `Version` |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ANS | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

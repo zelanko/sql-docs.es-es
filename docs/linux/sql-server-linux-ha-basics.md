@@ -1,19 +1,20 @@
 ---
-title: Aspectos básicos de la disponibilidad de SQL Server para las implementaciones de Linux | Microsoft Docs
+title: Aspectos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 description: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 4e42088227e22f6368426b9c4e8dc8134dbb49d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 203fad6aa3c39d57446738b9c74631fe114c609e
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719373"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833562"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Aspectos básicos de la disponibilidad de SQL Server para las implementaciones de Linux
 
@@ -83,7 +84,7 @@ Por último, el uso de un recurso compartido de red archivos system (NFS) es una
 ### <a name="configure-the-firewall"></a>Configuración del firewall
 Al igual que Windows, las distribuciones de Linux tienen un firewall integrado. Si su empresa usa un firewall externo a los servidores, la deshabilitación de los firewalls en Linux puede ser aceptable. Sin embargo, independientemente de que el firewall está habilitado, los puertos deben abrirse. En la tabla siguiente se documenta los puertos comunes necesarios para alta disponibilidad [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] implementaciones en Linux.
 
-| Número de puerto | Tipo     | Descripción                                                                                                                 |
+| Número de puerto | Type     | Descripción                                                                                                                 |
 |-------------|----------|-----------------------------------------------------------------------------------------------------------------------------|
 | 111         | TCP/UDP  | NFS - `rpcbind/sunrpc`                                                                                                    |
 | 135         | TCP      | Samba (si se usa) - asignador de puntos finales                                                                                          |

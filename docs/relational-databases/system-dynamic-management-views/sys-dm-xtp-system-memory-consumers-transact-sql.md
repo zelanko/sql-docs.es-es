@@ -1,5 +1,5 @@
 ---
-title: Sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
+title: sys.dm_xtp_system_memory_consumers (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,17 +19,17 @@ ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: fbab6be30b0d268c7632180caaf939a54e672fbf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
+ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544033"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67826303"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-  Notifica a los consumidores de memoria de nivel de sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria para estos consumidores procede del grupo predeterminado (cuando la asignación se produce en el contexto de un subproceso de usuario) o del grupo interno (si la asignación está en el contexto de un subproceso del sistema).  
+  Notifica a los consumidores de memoria de nivel de sistema para [!INCLUDE[hek_2](../../includes/hek-2-md.md)]. La memoria para estos consumidores procede del grupo predeterminado (cuando la asignación está en el contexto de un subproceso de usuario) o del grupo interno (si la asignación está en el contexto de un subproceso del sistema).  
   
 ```  
 -- system memory consumers @ instance  
@@ -38,12 +38,12 @@ select * from sys.dm_xtp_system_memory_consumers
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|Identificador interno del consumidor de memoria.|  
-|memory_consumer_type|**int**|Un entero que representa el tipo de consumidor de memoria con uno de los siguientes valores:<br /><br /> 0 - no debe mostrarse. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1 - LISTA DE DIRECCIONES: Hace un seguimiento del consumo de memoria para una lista de direcciones del sistema.<br /><br /> 2 - VARHEAP: Hace un seguimiento del consumo de memoria para un montón de longitud variable.<br /><br /> 4 - bloque paginado de E/S de: Hace un seguimiento del consumo de memoria para un grupo de páginas del sistema que se usa para operaciones de E/S.|  
+|memory_consumer_type|**int**|Un entero que representa el tipo de consumidor de memoria con uno de los siguientes valores:<br /><br /> 0 - no debe mostrarse. Agrega el uso de memoria de dos o varios consumidores.<br /><br /> 1 - LISTA DE DIRECCIONES: Realiza un seguimiento del consumo de memoria para una lista de direcciones del sistema.<br /><br /> 2 - VARHEAP: Realiza un seguimiento del consumo de memoria para un montón de longitud variable.<br /><br /> 4 - bloque paginado de E/S de: Realiza un seguimiento del consumo de memoria para un grupo de páginas del sistema utilizado para operaciones de E/S.|  
 |memory_consumer_type_desc|**nvarchar(16)**|Descripción del tipo de consumidor de memoria:<br /><br /> 0 - no debe mostrarse.<br /><br /> 1 - LISTA DE DIRECCIONES<br /><br /> 2: VARHEAP<br /><br /> 4: PGPOOL|  
-|memory_consumer_desc|**Nvarchar (64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-O bien-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para los grupos del sistema de E/S hay tres tamaños diferentes: grupo de páginas del sistema de 4 kB, grupo de páginas del sistema de 64 kB y grupo de páginas del sistema de 256 kB.|  
+|memory_consumer_desc|**nvarchar(64)**|Descripción de la instancia del consumidor de memoria:<br /><br /> VARHEAP: <br />Montón del sistema. Uso general. Actualmente solo se usa para asignar elementos de trabajo de la recolección de elementos no utilizados.<br />-O bien-<br />Montón de lista de direcciones. Lo usan las listas de direcciones cuando el número de elementos contenidos en la lista alcanza un extremo predeterminado (normalmente alrededor de 5.000 elementos).<br /><br /> PGPOOL: Para el sistema de E/S hay grupos son tres tamaños diferentes: Grupo de páginas del sistema de 4K, bloque paginado de 64 K de sistema y sistema 256 K página grupo.|  
 |lookaside_id|**bigint**|El identificador del proveedor de memoria de direcciones local del subproceso.|  
 |pagepool_id|**bigint**|El identificador del subproceso local, proveedor de memoria del grupo de páginas.|  
 |allocated_bytes|**bigint**|Número de bytes reservados para el consumidor.|  

@@ -1,20 +1,20 @@
 ---
-title: Configuración de SQL Server en Linux | Microsoft Docs
+title: Configuración de SQL Server en Linux
 description: En este artículo se describe cómo usar la herramienta mssql-conf para configurar la configuración de SQL Server en Linux.
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT
+ms.author: vanto
+manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 9fd4e35a9fbdd7e0cd3c77fb05ef2f7fdde53c02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719401"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834007"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -394,7 +394,7 @@ La primera captura de fase se controla mediante el **coredump.coredumptype** con
 
     En la tabla siguiente se enumera los posibles **coredump.coredumptype** valores.
 
-    | Tipo | Descripción |
+    | Type | Descripción |
     |-----|-----|
     | **mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. La información del sistema Linux usa para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene solo los módulos y las pilas de subprocesos del entorno de host. No tiene referencias de memoria indirecta o variables globales. |
     | **miniplus** | Es similar a mini miniPlus, pero incluye memoria adicional. Comprende los aspectos internos de SQLPAL y el entorno de host, agregar las siguientes regiones de memoria para el volcado de memoria:</br></br> -Globals varios</br> -Toda la memoria por encima de 64TB</br> -Denominado regiones se encuentra en   **/proc / pid de $/ asignaciones**</br> -Memoria indirecta de subprocesos y las pilas</br> : La información de subproceso</br> -Asociada del Teb y del Peb</br> : Información de módulo</br> -VMM y VAD árbol |
@@ -663,7 +663,7 @@ Para anular cualquier configuración realizada con `mssql-conf set`, llame a **m
    sudo /opt/mssql/bin/mssql-conf unset network.tcpport
    ```
 
-1. Reinicie el servicio SQL Server.
+1. Reinicie el servicio de SQL Server.
 
    ```bash
    sudo systemctl restart mssql-server

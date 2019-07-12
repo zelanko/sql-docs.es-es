@@ -1,20 +1,20 @@
 ---
-title: Programar paquetes SSIS en Linux con cron | Microsoft Docs
+title: Programar paquetes SSIS en Linux con cron
 description: Este artículo describe cómo programar los paquetes de SQL Server Integration Services (SSIS) en Linux con el servicio de cron.
 author: lrtoyou1223
 ms.author: lle
 ms.reviewer: maghan
-manager: craigg
+manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 6d78190f5c6acf1f5dc8bfaccbf072a290faa908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b171f3e3ba24474afcea09498d69574d69b3c33
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705317"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834727"
 ---
 # <a name="schedule-sql-server-integration-services-package-execution-on-linux-with-cron"></a>Ejecución en Linux con cron de paquetes de programación de SQL Server Integration Services
 

@@ -1,20 +1,21 @@
 ---
-title: Configurar recursos compartidos de instantáneas carpeta replicación de SQL Server en Linux | Microsoft Docs
+title: Configurar recursos compartidos de instantáneas carpeta replicación de SQL Server en Linux
 description: En este artículo se describe cómo configurar la replicación de SQL Server de los recursos compartidos de carpeta de instantáneas en Linux.
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4fd7c819af4c700af17a4b85fad2a4cc75e3e820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 456163bfec2324394455a5d098ef01c22d994696
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705136"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834801"
 ---
 # <a name="configure-replication-with-non-default-ports"></a>Configurar la replicación con puertos no predeterminados
 

@@ -1,22 +1,22 @@
 ---
-title: Cifrar conexiones a SQL Server en Linux | Microsoft Docs
+title: Cifrar conexiones a SQL Server en Linux
 description: Este artículo describe cifrar conexiones a SQL Server en Linux.
-author: vin-yu
 ms.date: 01/30/2018
+author: vin-yu
 ms.author: vinsonyu
-manager: craigg
+ms.reviewer: vanto
+manager: jroth
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.assetid: ''
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 97714d09839c873c96684579e70e3269f96b0e31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca1a6b7a3530041def66ec74be9de547c6d98ea
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705671"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833769"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>Cifrar conexiones a SQL Server en Linux
 
@@ -134,5 +134,5 @@ TLS se utiliza para cifrar las conexiones desde una aplicación cliente [!INCLUD
 |--- |--- |
 |La cadena de certificado fue emitida por una entidad que no sea de confianza.  |Este error se produce cuando los clientes no pueden comprobar la firma en el certificado presentado por SQL Server durante el protocolo de enlace TLS. Asegúrese de que el cliente confía ya sea el [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] directamente el certificado o la entidad de certificación que firmó el certificado de SQL Server. |
 |El nombre principal de destino es incorrecto.  |Asegúrese de que el campo de nombre común en el certificado del servidor SQL coincide con el nombre del servidor especificado en la cadena de conexión del cliente. |  
-|El host remoto forzó el cierre de la conexión existente. |Este error puede producirse cuando el cliente no es compatible con la versión del protocolo TLS requerida SQL Server. Por ejemplo, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para requerir TLS 1.2, asegúrese de que los clientes también admiten el protocolo TLS 1.2. |
+|El host remoto cerró a la fuerza una conexión ya existente. |Este error puede producirse cuando el cliente no es compatible con la versión del protocolo TLS requerida SQL Server. Por ejemplo, si [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está configurado para requerir TLS 1.2, asegúrese de que los clientes también admiten el protocolo TLS 1.2. |
 | | |   

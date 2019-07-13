@@ -18,12 +18,12 @@ ms.assetid: 4a13b804-45f2-4f82-987f-42d9a57dd6db
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: b7ddacb0951b25469404b96d41ec81d2eaaba9cc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5faad4f4e0de6f9c56115bff59933360f551ab55
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530587"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866271"
 ---
 # <a name="sphelpjobstep-transact-sql"></a>sp_help_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ sp_help_jobstep { [ @job_id = ] 'job_id' | [ @job_name = ] 'job_name' }
 |**os_run_priority**|**int**|Reservado.|  
 |**output_file_name**|**nvarchar(200)**|En el comando que se debe escribir la salida de archivo ([!INCLUDE[tsql](../../includes/tsql-md.md)], **CmdExec**, y **PowerShell** solo para los pasos).|  
 |**last_run_outcome**|**int**|Resultado del paso la última vez que se ejecutó:<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
-|**last_run_duration**|**int**|Duración (en segundos) del paso la última vez que se ejecutó.|  
+|**last_run_duration**|**int**|Duración (hhmmss) del paso la última vez que se ejecutó.|  
 |**last_run_retries**|**int**|Número de veces que se ha intentado el comando desde que se ejecutó el paso por última vez.|  
 |**last_run_date**|**int**|Fecha en que se inició la ejecución del paso por última vez.|  
 |**last_run_time**|**int**|Hora en que se inició la ejecución del paso por última vez.|  

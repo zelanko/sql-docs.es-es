@@ -13,12 +13,12 @@ ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
 manager: craigg
-ms.openlocfilehash: d13809c3fa5b100a29df4434da5aec354de0c7c2
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 1ba2746e91c33c49c943a9c100e9ea3bd6d3d9e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581230"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860499"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>Guía de optimización y validación posterior a la migración
 
@@ -53,7 +53,7 @@ Para obtener más información sobre este tema, consulte [Mantener la estabilida
 **Se aplica a:** plataforma externa (por ejemplo, Oracle, DB2, MySQL y Sybase) para la migración de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 > [!NOTE]
-> Para las migraciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si existía este problema en el servidor [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de origen, la migración a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]? tal cual no se contempla en este escenario. 
+> Para migraciones de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], si este problema existía en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de origen, migrar a una versión más reciente de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tal cual no se contempla en este escenario. 
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compila planes de consulta en procedimientos almacenados mediante el examen de parámetros de entrada en la primera compilación, generando un plan con parámetros y reutilizable, optimizado para esa distribución de datos de entrada. Incluso si no hay procedimientos almacenados, la mayoría de instrucciones que generan planes triviales se parametrizarán. Después de que un plan se almacene en caché por primera vez, cualquier ejecución futura se asigna a un plan previamente almacenado en caché.
 Surge un posible problema si esa primera compilación puede que no haya usado los conjuntos de parámetros más comunes para la carga de trabajo habitual. Para parámetros diferentes, el mismo plan de ejecución es ineficaz. Para obtener más información sobre este tema, consulte [Examen de parámetros](../relational-databases/query-processing-architecture-guide.md#ParamSniffing).

@@ -12,15 +12,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], Showplan results
 - SQL Server Profiler, Showplan results
 ms.assetid: 6a2f7727-141c-4f59-8613-2e452bc78467
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: ca9bef932db98bc4bcfef6d0b9a8ca58249abd6c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: af9fce4b6b1667c05ff9308e76b3c6569e6f7b49
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798543"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731545"
 ---
 # <a name="analyze-queries-with-showplan-results-in-sql-server-profiler"></a>Analizar consultas con resultados de SHOWPLAN en SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "47798543"
 |**Showplan XML For Query Compile**|Muestra el plan de consulta al compilar la consulta. Para más información, consulte [Showplan XML for Query Compile Event Class](../../relational-databases/event-classes/showplan-xml-for-query-compile-event-class.md).|  
 |**Showplan XML Statistics Profile**|Muestra el plan de consulta con detalles completos acerca del tiempo de ejecución en formato XML. Por ejemplo, esta clase de evento captura el número de filas que pasan por cada operador de la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se está ejecutando. Para más información, consulte [Showplan XML Statistics Profile Event Class](../../relational-databases/event-classes/showplan-xml-statistics-profile-event-class.md).|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Rendimiento (categoría de eventos)](../../relational-databases/event-classes/performance-event-category.md)  
   
   

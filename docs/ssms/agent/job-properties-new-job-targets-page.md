@@ -12,14 +12,14 @@ f1_keywords:
 ms.assetid: 7e7ba084-af0e-4356-bb43-4d1c232129e4
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: d3a2cddd6e77d388076fba0129cfb332297f0fbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea39512f078bea065ce10c76a05321db958ce902
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095823"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686819"
 ---
 # <a name="job-properties---new-job-targets-page"></a>Propiedades del trabajo - Nuevo trabajo (página Destinos)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]

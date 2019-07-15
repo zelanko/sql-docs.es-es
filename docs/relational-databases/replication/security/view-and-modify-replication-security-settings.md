@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 873604d3a27d4f3f01eb501f76a39fd008248cdd
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: aa4ed7aa2eaf3d10ec2b69860b71b8b612cc9ff8
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584810"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860619"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>Ver y modificar la configuración de seguridad de la replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -146,9 +146,9 @@ ms.locfileid: "67584810"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, después, haga clic en el botón de propiedades ( **?** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y, después, haga clic en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **?** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
@@ -158,11 +158,11 @@ ms.locfileid: "67584810"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **?** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
+    -   Para cambiar la cuenta con la que el Agente de distribución se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de distribución** .  
   
          Si utiliza suscripciones de actualización en cola, el Agente de lectura de cola utiliza también el contexto especificado aquí para las conexiones al suscriptor.  
   
-    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y después en el botón de propiedades ( **?** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de distribución se conecta al distribuidor, haga clic en la fila **Conexión del distribuidor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -170,9 +170,9 @@ ms.locfileid: "67584810"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del publicador, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **?** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al publicador y al distribuidor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **?** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al suscriptor, haga clic en la fila **Conexión de suscriptor** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
@@ -180,15 +180,15 @@ ms.locfileid: "67584810"
   
 1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, puede realizar los siguientes cambios:  
   
-    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **?** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
+    -   Para cambiar la cuenta con la que el Agente de mezcla se ejecuta y realiza conexiones al suscriptor, haga clic en la fila **Cuenta de proceso del agente** y después en el botón de propiedades ( **...** ) de la fila. Especifique una cuenta y una contraseña en el cuadro de diálogo **Seguridad del Agente de mezcla** .  
   
-    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades ( **?** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
+    -   Para cambiar el contexto en el que el Agente de mezcla se conecta al publicador y al suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades ( **...** ) de la fila. Especifique el contexto en el cuadro de diálogo **Escribir información de conexión** .  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 #### <a name="to-change-the-account-under-which-the-queue-reader-agent-runs"></a>Para cambiar la cuenta con la que se ejecuta el Agente de lectura de cola  
   
-1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , haga clic en el botón de propiedades ( **?** ) situado junto a la base de datos de distribución.  
+1.  En la página **General** del cuadro de diálogo **Propiedades del distribuidor: \<Distribuidor>** , haga clic en el botón de propiedades ( **...** ) situado junto a la base de datos de distribución.  
   
 2.  En el cuadro de diálogo **Propiedades de base de datos de distribución: \<Base de datos>** , haga clic en el botón **Configuración de seguridad** situado junto al cuadro de texto **Cuenta de proceso del agente**.  
   
@@ -220,7 +220,7 @@ ms.locfileid: "67584810"
   
 #### <a name="to-change-security-settings-for-an-immediate-updating-pull-subscription"></a>Para cambiar la configuración de seguridad para una suscripción de extracción de actualización inmediata  
   
-1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y después en el botón de propiedades ( **?** ) de la fila.  
+1.  En el cuadro de diálogo **Propiedades de suscripción: \<Suscripción>** del suscriptor, haga clic en la fila **Conexión de publicador** y, después, haga clic en el botón de propiedades ( **…** ) de la fila.  
   
 2.  En el cuadro de diálogo **Escribir información de conexión** , seleccione una de las siguientes opciones:  
   

@@ -8,15 +8,15 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 7e2e586d-947d-4fe2-86c5-f06200ebf139
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 7aef54c119c9941b245068186cc93f66f4e5f135
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b4fab6179453ccd21623a2da5ea0157d235eea40
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677754"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732117"
 ---
 # <a name="distributed-replay-security"></a>Seguridad de reproducción distribuida
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "51677754"
 |Cuenta|Permisos de carpeta|  
 |-------------|------------------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Controller|`<Controller_Installation_Path>\DReplayController` (lectura, escritura, eliminación)<br /><br /> `DReplayServer.xml` archivo (lectura, escritura)|  
-|Cuenta de servicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (lectura, escritura, eliminación)<br /><br /> `DReplayClient.xml` archivo (lectura, escritura)<br /><br /> Los directorios de trabajo y resultado, como se especifica en el archivo de configuración del cliente mediante los elementos `WorkingDirectory` y `ResultDirectory` , respectivamente. (Lectura, escritura)|  
+|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Distributed Replay Client|`<Client_Installation_Path>\DReplayClient` (lectura, escritura, eliminación)<br /><br /> `DReplayClient.xml` archivo (lectura, escritura)<br /><br /> Los directorios de trabajo y resultado, como se especifica en el archivo de configuración del cliente mediante los elementos `WorkingDirectory` y `ResultDirectory` , respectivamente. (Lectura, escritura)|  
   
 ## <a name="dcom-permissions"></a>Permisos DCOM  
  DCOM se usa para la comunicación de llamada a procedimiento remoto (RPC) entre el controlador y la herramienta de administración, y entre el controlador y todos los clientes. Cuando se hayan instalado las características de Distributed Replay, debe configurar los permisos DCOM específicos de la aplicación y de todos los equipos del controlador.  
@@ -130,7 +130,7 @@ ms.locfileid: "51677754"
   
 -   Elimine cualquier archivo de seguimiento, intermedio, de distribución y de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que se haya utilizado para realizar pruebas. Los archivos intermedios y de distribución se almacenan en el directorio de trabajo del controlador y el cliente, respectivamente.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Distributed Replay](../../tools/distributed-replay/sql-server-distributed-replay.md)   
  [Install Distributed Replay - Overview (Instalar Distributed Replay: información general)](../../tools/distributed-replay/install-distributed-replay-overview.md)  
   

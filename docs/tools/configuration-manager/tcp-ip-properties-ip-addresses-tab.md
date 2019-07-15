@@ -11,15 +11,15 @@ helpviewer_keywords:
 - ports [SQL Server], listening on
 - listening [SQL Server], on ports
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 97cbd6c44c9d06381cbb91f860c3be75550bb4de
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2e26ff7e902d1b3f7607dd7199822b7e4ddab1d
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47780093"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731847"
 ---
 # <a name="tcpip-properties-ip-addresses-tab"></a>Propiedades de TCP/IP (pestaña Direcciones IP)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "47780093"
 ## <a name="additional-topics-in-books-online"></a>Temas adicionales en los libros en pantalla  
  En MSDN puede encontrar temas como **Configurar un servidor para que escuche en un puerto TCP específico (Administrador de configuración de SQL Server)** y **Configurar el motor de base de datos para escuchar en varios puertos TCP**.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Elegir un protocolo de red](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
  [Crear una cadena de conexión válida con TCP/IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [Servicio SQL Server Browser](sql-server-browser-service.md)  

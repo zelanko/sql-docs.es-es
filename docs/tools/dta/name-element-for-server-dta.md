@@ -12,15 +12,15 @@ dev_langs:
 helpviewer_keywords:
 - Name element
 ms.assetid: 4c94754d-6d62-4357-8ce7-f107ebf90c71
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: b4029b80f14937f01a1de2449a8798802072a126
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 4fd95ca01f3b48bcb4acbbdda8b96988f7594045
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291741"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733528"
 ---
 # <a name="name-element-for-server-dta"></a>Name (DTA, elemento de Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "51291741"
 ## <a name="example"></a>Ejemplo  
  Para obtener un ejemplo de cómo se usa el elemento **Name** , vea [Elemento Server &#40;DTA&#41;](../../tools/dta/server-element-dta.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Referencia del archivo de entrada XML &#40;Asistente para la optimización de motor de base de datos&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)  
   
   

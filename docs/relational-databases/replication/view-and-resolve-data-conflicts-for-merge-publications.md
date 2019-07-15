@@ -15,12 +15,12 @@ ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 8a5aced367f3b046473887999ff8e72b24ff8156
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3669107fb439baee685939e9ed3846a5a788376f
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580460"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860600"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>Resolución de conflictos para la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "67580460"
   
     -   Seleccionar una o más filas en la cuadrícula superior y hacer clic en **Quitar**, lo que equivale a hacer clic en el botón **Enviar ganador** (sin realizar cambios en los datos).  
   
-    -   Haga clic en el botón de propiedades ( **?** ) para ver más información sobre la columna involucrada en el conflicto.  
+    -   Hacer clic en el botón de propiedades ( **...** ) para ver más información sobre la columna involucrada en el conflicto.  
   
     -   Editar datos en la columna **Ganador del conflicto** o **Perdedor del conflicto** antes de enviar los datos (los datos son de solo lectura si la columna está en color gris).  
   

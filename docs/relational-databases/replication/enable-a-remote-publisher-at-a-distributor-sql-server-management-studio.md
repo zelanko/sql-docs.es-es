@@ -14,12 +14,12 @@ ms.assetid: 6f8e2831-5c45-4e39-8e51-d37e2813cf3d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 57175bc18d82971e6707a9791953bd760d517e10
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 25a92152f7fc32fefd38569ecf9cf20945a76b5d
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581137"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860730"
 ---
 # <a name="enable-a-remote-publisher-at-a-distributor-sql-server-management-studio"></a>Habilitar un publicador remoto en un distribuidor (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67581137"
   
 4.  En la página **Contraseña del distribuidor** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades ( **?** ).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
 
@@ -51,7 +51,7 @@ ms.locfileid: "67581137"
   
 4.  En la página **Publicadores** , en los cuadros de texto **Contraseña** y **Confirmar contraseña** , especifique una contraseña segura para la cuenta **distributor_admin** , que la replicación utiliza para conectar del publicador al distribuidor y realizar las tareas administrativas.  
   
-5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades ( **?** ).  
+5.  Para ver y modificar la configuración de un publicador, haga clic en el botón de propiedades ( **...** ).  
   
 6.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

@@ -9,14 +9,14 @@ ms.topic: conceptual
 ms.assetid: e7f2d6f4-bb94-4cf5-a096-c34397e679af
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c93fcf0c19f41f1dfbb3f2e44a95b623836ebca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6b6e518d7100dfcfaf42ac54dac0bd08c95debd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821858"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679662"
 ---
 # <a name="status-bar-database-engine-query-editor"></a>Barra de estado (Editor de consultas del motor de base de datos)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "65821858"
 ##  <a name="SetOEServerColor"></a> Establecer el color de estado de un servidor en el Explorador de objetos  
  **Para establecer el color de estado del servidor en el Explorador de objetos**  
   
-1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y después seleccione **Motor de base de datos...**.  
+1.  En el **Explorador de objetos**, haga clic en el botón **Conectar** y después seleccione **Motor de base de datos...** .  
   
-2.  En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>**.  
+2.  En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>** .  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
@@ -51,13 +51,13 @@ ms.locfileid: "65821858"
 ##  <a name="SetRegServerColor"></a> Establecer el color de estado en un servidor registrado  
  **Para establecer el color de estado en un servidor registrado**  
   
-1.  En **Servidores registrados**, haga clic con el botón derecho en el nodo de servidor y después haga clic en **Propiedades...**.  
+1.  En **Servidores registrados**, haga clic con el botón derecho en el nodo de servidor y después haga clic en **Propiedades...** .  
   
 2.  En el cuadro de diálogo **Editar propiedades de registro de servidor** , seleccione la pestaña **Propiedades de conexión** .  
   
 3.  Active la casilla **Usar color personalizado** .  
   
-4.  Para elegir el color, haga clic en el botón **Seleccionar…**.  
+4.  Para elegir el color, haga clic en el botón **Seleccionar…** .  
   
 5.  Seleccione un color básico o personalizado y haga clic en Aceptar.  
   
@@ -77,11 +77,11 @@ ms.locfileid: "65821858"
   
 -   Abra el menú **Archivo** , seleccione **Nuevo**y, a continuación, seleccione **Consulta de motor de base de datos**.  
   
--   En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>**.  
+-   En el cuadro de diálogo **Conectar con el servidor**, seleccione **Options >>** .  
   
 -   Active la casilla **Usar color personalizado** .  
   
--   Para elegir el color, haga clic en el botón **Seleccionar…**.  
+-   Para elegir el color, haga clic en el botón **Seleccionar…** .  
   
 -   Seleccione un color básico o personalizado y haga clic en Aceptar.  
   

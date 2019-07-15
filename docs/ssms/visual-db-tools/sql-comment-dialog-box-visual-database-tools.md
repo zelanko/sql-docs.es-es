@@ -12,17 +12,17 @@ f1_keywords:
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 946434a3d49881fc631499656e7462664eb33d5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: e866e52cbd74d18065435bc4ddfcf3cb065faff6
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65105650"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67689797"
 ---
 # <a name="sql-comment-dialog-box-visual-database-tools"></a>Comentario de SQL (cuadro de diálogo, Visual Database Tools)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Este cuadro de diálogo proporciona un área modificable en la que se puede escribir una descripción detallada de la consulta. Para acceder a este cuadro de diálogo, abra la consulta o la vista en el Diseñador de consultas y vistas y, en la ventana **Propiedades**, seleccione **Comentario SQL**y haga clic en los puntos suspensivos (**...**) situados a la derecha del campo de propiedad.  
+Este cuadro de diálogo proporciona un área modificable en la que se puede escribir una descripción detallada de la consulta. Para acceder a este cuadro de diálogo, abra la consulta o la vista en el Diseñador de consultas y vistas y, en la ventana **Propiedades**, seleccione **Comentario SQL**y haga clic en los puntos suspensivos ( **...** ) situados a la derecha del campo de propiedad.  
   
 ## <a name="see-also"></a>Consulte también  
 [Mostrar propiedades de la consulta &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/show-query-properties-visual-database-tools.md)  

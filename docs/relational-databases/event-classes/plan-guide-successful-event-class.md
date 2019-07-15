@@ -13,15 +13,16 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ae1ba2efb9fc15e031e3f569f6ee0464f880f1fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4692d2715ec5e2e1203c4aada6f5d1b42775ac58
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694332"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67833012"
 ---
 # <a name="plan-guide-successful-event-class"></a>Clase de evento Guía de plan correcta
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
   La clase de eventos Guía de plan correcta indica que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pudo generar correctamente un plan de ejecución para una consulta o lote que contenía una guía de plan. El evento se disparará cuando se cumplan las siguientes condiciones:  
   
 -   El lote o módulo de la definición de la guía de plan coincide con el lote o módulo que se está ejecutando.  

@@ -11,16 +11,16 @@ helpviewer_keywords:
 - sqlps utility
 - PowerShell [SQL Server], sqlps utility
 ms.assetid: 4b2515a6-12c3-44fb-b263-1c567681cd2b
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: f507e21cb04a479f6aa5e6905bd89b93f837d677
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 1d5d24c9a1fa4527ca199d649318c0c927a9c821
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657899"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732056"
 ---
 # <a name="sqlps-utility"></a>sqlps, utilidad
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -72,9 +72,9 @@ sqlps
  Especifica un bloque de comandos de PowerShell que se han de ejecutar; el bloque debe incluirse entre llaves: {}. *Script_block* solo se puede especificar cuando se llama a la utilidad **sqlps** desde **PowerShell** o desde otra sesión de la utilidad **sqlps** . *argument_array* es una matriz de variables de PowerShell que contiene los argumentos de los comandos de PowerShell en *script_block*.  
   
  *string* [ *command_parameters* ]  
- Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"&{**_command_**}"**. Las comillas indican una cadena y el operador de invocación (&) hace que la utilidad **sqlps** ejecute el comando.  
+ Especifica una cadena que contiene los comandos de PowerShell que se han de ejecutar. Use el formato **"&{** _command_ **}"** . Las comillas indican una cadena y el operador de invocación (&) hace que la utilidad **sqlps** ejecute el comando.  
   
- [ **-?** | **-Help** ]  
+ [ **-?** |  **-Help** ]  
  Muestra el resumen de la sintaxis de las opciones de la utilidad **sqlps** .  
   
 ## <a name="remarks"></a>Notas  

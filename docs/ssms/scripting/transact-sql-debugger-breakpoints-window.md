@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: bad88d10-fdd5-4d3d-b5ea-a4f063847485
 author: markingmyname
 ms.author: maghan
-manager: craigg
+manager: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af1a6dcbd241daa2d7edf0bb14f17e84d32bf2d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d83cfe9e409d9634f9853bfc02b4ff8dc7d9e70a
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65821754"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67679574"
 ---
 # <a name="transact-sql-debugger---breakpoints-window"></a>Depurador de Transact-SQL: ventana Puntos de interrupción
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "65821754"
  Muestra el nombre del punto de interrupción. El depurador proporciona los nombres para los puntos de interrupción. Este nombre incluye el de la ventana Editor de consultas del motor de base de datos que contiene el punto de interrupción y el número de línea del Editor de consultas en el que está establecido.  
   
  **Condición**  
- Muestra **(sin condición)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
+ Muestra **(sin condición)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer las condiciones de punto de interrupción.  
   
  **Número de llamadas**  
  Muestra**interrumpir siempre**.  
@@ -44,7 +44,7 @@ ms.locfileid: "65821754"
  Puede agregar y quitar las columnas siguientes seleccionándolos en la lista **Columnas** .  
   
  **Filter**  
- Muestra **(ninguno)**. El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
+ Muestra **(ninguno)** . El depurador de [!INCLUDE[tsql](../../includes/tsql-md.md)] no permite establecer los filtros de punto de interrupción.  
   
  **Al visitar**  
  Muestra **Interrumpir**.  

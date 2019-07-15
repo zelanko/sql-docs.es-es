@@ -27,15 +27,15 @@ helpviewer_keywords:
 - automatic diagnostic collection
 - clusters [SQL Server], diagnostic collection
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 05336c1b9a7f6830b3dd2c6e6f0b794984bda061
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 7c46fbea6a02a089b07ad359bc3c53bc5022f3e3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100950"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728104"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag , utilidad
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -125,7 +125,7 @@ sqldiag
   
  1 = utiliza la compresión NTFS  
   
- **/B** [**+**]*start_time*  
+ **/B** [ **+** ]*start_time*  
  Especifica la fecha y la hora en que se empiezan a recopilar los datos de diagnóstico en el siguiente formato:  
   
  AAAAMMDD_HH:MM:SS  
@@ -140,7 +140,7 @@ sqldiag
   
  Tenga en cuenta que **SQLdiag** usa la hora local del equipo en el que se ejecuta la utilidad.  
   
- **/E** [**+**]*stop_time*  
+ **/E** [ **+** ]*stop_time*  
  Especifica la fecha y la hora en que se dejan de recopilar los datos de diagnóstico en el siguiente formato:  
   
  AAAAMMDD_HH:MM:SS  
@@ -310,7 +310,7 @@ sqldiag /B +01:00:00 /E +03:00:00
 sqldiag /B +01:00:00 /E 08:30:00  
 ```  
   
- Si la hora actual es 08:00, la hora de finalización termina antes de que empiece la recopilación de diagnóstico. Dado que **SQLDiag** ajusta automáticamente las fechas de inicio y de finalización al día siguiente cuando corresponden al pasado, en este ejemplo, la recopilación de diagnósticos se inicia a las 09:00 de hoy (se ha especificado una hora de inicio relativa con **+**) y continúa hasta las 08:30 del día siguiente.  
+ Si la hora actual es 08:00, la hora de finalización termina antes de que empiece la recopilación de diagnóstico. Dado que **SQLDiag** ajusta automáticamente las fechas de inicio y de finalización al día siguiente cuando corresponden al pasado, en este ejemplo, la recopilación de diagnósticos se inicia a las 09:00 de hoy (se ha especificado una hora de inicio relativa con **+** ) y continúa hasta las 08:30 del día siguiente.  
   
 ### <a name="stopping-and-restarting-sqldiag-to-collect-daily-diagnostics"></a>Detener y reiniciar SQLdiag para que recopile diagnósticos diariamente  
  Para recopilar diariamente un conjunto de diagnósticos especificado sin tener que iniciar y detener manualmente **SQLdiag**, use el argumento **/L** . El argumento **/L** hace que **SQLdiag** se ejecute de forma continua al reiniciarse automáticamente después de un cierre programado. Cuando se especifica **/L** y **SQLdiag** se detiene porque ha llegado la hora de finalización especificada con el argumento **/E** , o se detiene porque se está ejecutando en el modo de instantánea con el argumento **/X** , **SQLdiag** se reinicia en vez de cerrarse.  

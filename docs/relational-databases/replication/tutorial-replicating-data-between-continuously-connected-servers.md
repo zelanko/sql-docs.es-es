@@ -15,12 +15,12 @@ ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: f7d40e49816ccec8c84486056a3f5b3bdee759de
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 23169fd3625c2501e295645201da89667731f0b6
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581326"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860679"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>Tutorial: Configuración de la replicación entre dos servidores conectados completamente (transaccional)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -184,7 +184,7 @@ En esta sección se agrega un suscriptor a la publicación que creada anteriorme
   
    ![Escribir un nombre para la base de datos de suscripción](media/tutorial-replicating-data-between-continuously-connected-servers/productreplica.png)
   
-8. En la página **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos ( **?** ). Escriba <*Nombre_De_Equipo_Publicador>* >**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
+8. En la página **Seguridad del Agente de distribución**, haga clic en el botón de puntos suspensivos ( **...** ). Escriba <*Nombre_De_Equipo_Publicador>* >**rpl_distribution** el cuadro **Cuenta de proceso**, escriba la contraseña para esta cuenta, seleccione **Aceptar** y, a luego, **Siguiente**.
 
    ![Especifique una cuenta y una contraseña en el cuadro de diálogo "Seguridad del Agente de distribución".](media/tutorial-replicating-data-between-continuously-connected-servers/adddistaccount.png)
   

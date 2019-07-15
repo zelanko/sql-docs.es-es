@@ -11,15 +11,15 @@ helpviewer_keywords:
 - Profiler [SQL Server Profiler], about SQL Server Profiler
 - SQL Server Profiler, about SQL Server Profiler
 ms.assetid: 6d00378a-5d74-463b-9ed6-a2685306a9d2
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 47778dc7faf65628484dd30f8905b16646e91063
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6973c0cd200cd53190e12fec7cf4d1a54a228268
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47704213"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67729758"
 ---
 # <a name="sql-server-profiler-templates-and-permissions"></a>Plantillas y permisos de SQL Server Profiler
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "47704213"
 |[Filtrar seguimientos con SQL Server Profiler](../../tools/sql-server-profiler/filter-traces-with-sql-server-profiler.md)|Contiene información acerca del establecimiento de filtros en columnas de datos para filtrar la salida del seguimiento mediante el [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].|  
 |[Reproducir seguimientos](../../tools/sql-server-profiler/replay-traces.md)|Contiene información que explica lo que significa la reproducción de un seguimiento y qué es necesario para reproducir un seguimiento.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [Iniciar SQL Server Profiler](../../tools/sql-server-profiler/start-sql-server-profiler.md)  
   

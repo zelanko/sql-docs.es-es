@@ -16,16 +16,16 @@ helpviewer_keywords:
 - Browser Service
 - SQL Server Browser service
 ms.assetid: 3cc00d3a-487c-4cd9-a155-655f02485fa0
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: 19e51d05d8716a43d30bb52849c20a4139a18b60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 24117e3b99c9a0ca7c371be44d65c44a93d2c6a3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47702003"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67733220"
 ---
 # <a name="sql-server-browser-service"></a>servicio SQL Server Browser
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -123,7 +123,7 @@ ms.locfileid: "47702003"
   
 -   Cualquier cuenta **de dominio o local**  
   
--   Cuenta de **servicio local**   
+-   Cuenta de **servicio local**  
   
 -   La cuenta de **sistema local** (no recomendada, ya que tiene privilegios innecesarios)  
   
@@ -133,7 +133,7 @@ ms.locfileid: "47702003"
 ### <a name="using-a-firewall"></a>Utilizar un firewall  
  Para comunicarse con el servicio [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser en un servidor protegido por un firewall, abra el puerto UDP 1434 y el puerto TCP utilizado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (p. ej., 1433). Para obtener información sobre cómo trabajar con un firewall, consulte "Cómo configurar un firewall para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Access" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Protocolos de red y bibliotecas de red](../../sql-server/install/network-protocols-and-network-libraries.md)  
   
   

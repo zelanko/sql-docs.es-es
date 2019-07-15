@@ -11,12 +11,12 @@ ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 1ffaaae5e6849db094c4c7ea176118b68a040ad7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 73faafc9f9aca28ec6c334722a1cb9ce0a51d5ca
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582761"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860694"
 ---
 # <a name="sql-server-backup-to-url"></a>Copia de seguridad en URL de SQL Server
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
 |RESTORE HEADERONLY|S||Requiere que se defina una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que se especifique el argumento WITH CREDENTIAL si la credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define utilizando la clave de la cuenta de almacenamiento como el secreto.|  
 |RESTORE LABELONLY|S||Requiere que se defina una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que se especifique el argumento WITH CREDENTIAL si la credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define utilizando la clave de la cuenta de almacenamiento como el secreto.|  
 |RESTORE VERIFYONLY|S||Requiere que se defina una credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y que se especifique el argumento WITH CREDENTIAL si la credencial de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se define utilizando la clave de la cuenta de almacenamiento como el secreto.|  
-|RESTORE REWINDONLY|?|||  
+|RESTORE REWINDONLY|-|||  
   
  Para conocer la sintaxis y obtener información general sobre las instrucciones de copia de seguridad, vea [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).  
   
@@ -151,9 +151,9 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
 |COMPRESSION&#124;NO_COMPRESSION|S|No compatible con la copia de seguridad de instantánea de archivos||  
 |DESCRIPTION|S|||  
 |NAME|S|||  
-|EXPIREDATE &#124; RETAINDAYS|?|||  
-|NOINIT &#124; INIT|?||No es posible anexar a blobs. Para sobrescribir una copia de seguridad, use el argumento **WITH FORMAT** . Pero cuando se usan copias de seguridad de instantánea de archivos (con el argumento **WITH FILE_SNAPSHOT** ), no se permite usar el argumento **WITH FORMAT** para evitar que queden huérfanas las instantáneas de archivos creadas con la copia de seguridad original.|  
-|NOSKIP &#124; SKIP|?|||  
+|EXPIREDATE &#124; RETAINDAYS|-|||  
+|NOINIT &#124; INIT|-||No es posible anexar a blobs. Para sobrescribir una copia de seguridad, use el argumento **WITH FORMAT** . Pero cuando se usan copias de seguridad de instantánea de archivos (con el argumento **WITH FILE_SNAPSHOT** ), no se permite usar el argumento **WITH FORMAT** para evitar que queden huérfanas las instantáneas de archivos creadas con la copia de seguridad original.|  
+|NOSKIP &#124; SKIP|-|||  
 |NOFORMAT &#124; FORMAT|S||Una copia de seguridad realizada en un blob existente producirá un error a menos que se especifique **WITH FORMAT** . El blob existente se sobrescribe si se especifica **WITH FORMAT** . Pero cuando se usan copias de seguridad de instantánea de archivos (con el argumento **WITH FILE_SNAPSHOT** ), no se permite usar el argumento FORMAT para evitar que queden huérfanas las instantáneas de archivos creadas con la copia de seguridad de instantánea de archivos original. Pero cuando se usan copias de seguridad de instantánea de archivos (con el argumento **WITH FILE_SNAPSHOT** ), no se permite usar el argumento **WITH FORMAT** para evitar que queden huérfanas las instantáneas de archivos creadas con la copia de seguridad original.|  
 |MEDIADESCRIPTION|S|||  
 |MEDIANAME|S|||  
@@ -163,8 +163,8 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
 |NO_CHECKSUM &#124; CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |NORECOVERY &#124; STANDBY|S|||  
 |NO_TRUNCATE|S|||  
   
@@ -186,19 +186,19 @@ Cuando hace una copia de seguridad en blob en bloques, el tamaño máximo de blo
 |REPLACE|S|||  
 |RESTART|S|||  
 |RESTRICTED_USER|S|||  
-|FILE|?|||  
+|FILE|-|||  
 |PASSWORD|S|||  
 |MEDIANAME|S|||  
 |MEDIAPASSWORD|S|||  
 |BLOCKSIZE|S|||  
-|BUFFERCOUNT|?|||  
-|MAXTRANSFERSIZE|?|||  
+|BUFFERCOUNT|-|||  
+|MAXTRANSFERSIZE|-|||  
 |CHECKSUM &#124; NO_CHECKSUM|S|||  
 |STOP_ON_ERROR &#124; CONTINUE_AFTER_ERROR|S|||  
 |FILESTREAM|S|No compatible con la copia de seguridad de instantánea||  
 |STATS|S|||  
-|REWIND &#124; NOREWIND|?|||  
-|UNLOAD &#124; NOUNLOAD|?|||  
+|REWIND &#124; NOREWIND|-|||  
+|UNLOAD &#124; NOUNLOAD|-|||  
 |KEEP_REPLICATION|S|||  
 |KEEP_CDC|S|||  
 |ENABLE_BROKER &#124; ERROR_BROKER_CONVERSATIONS &#124; NEW_BROKER|S|||  
@@ -219,9 +219,6 @@ Puede realizar una copia de seguridad de una base de datos en una dirección URL
 2.  Expanda **Bases de datos**, haga clic con el botón derecho en la base de datos que quiera, seleccione **Tareas**y haga clic en **Copia de seguridad...**
   
 3.  En la página **General** de la sección **Destino** , la opción **Dirección URL** está disponible en la lista desplegable **Copia de seguridad en:** .  La opción **Dirección URL** se usa para crear una copia de seguridad para el almacenamiento de Microsoft Azure. Haga clic en **Agregar** y se abrirá el cuadro de diálogo **Seleccionar destino de la copia de seguridad** :
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     1.  **Contenedor de almacenamiento de Azure:** El nombre del contenedor de almacenamiento de Microsoft Azure para almacenar los archivos de copia de seguridad.  Seleccione un contenedor existente en la lista desplegable o especifique manualmente el contenedor. 
   
     2.  **Directiva de acceso compartido:** Especifique la firma de acceso compartido para un contenedor especificado manualmente.  Este campo no está disponible si se ha elegido un contenedor existente. 
@@ -229,11 +226,13 @@ Puede realizar una copia de seguridad de una base de datos en una dirección URL
     3.  **Archivo de copia de seguridad:** Nombre del archivo de copia de seguridad.
     
     4.  **Nuevo contenedor:** Se usa para registrar un contenedor existente para el que no tiene una firma de acceso compartido.  Vea [Connect to a Microsoft Azure Subscription (Conectarse a una suscripción de Microsoft Azure)](../../relational-databases/backup-restore/connect-to-a-microsoft-azure-subscription.md).
-  
+
 > [!NOTE] 
 >  **Agregar** admite varios contenedores de almacenamiento y archivos de copia de seguridad para un conjunto de medios.
-  
- Al seleccionar **Dirección URL** como destino, ciertas opciones de la página **Opciones multimedia** están deshabilitadas.  Los temas siguientes tienen más información acerca del cuadro de diálogo Copia de seguridad de la base de datos:  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
+Al seleccionar **Dirección URL** como destino, ciertas opciones de la página **Opciones multimedia** están deshabilitadas.  Los temas siguientes tienen más información acerca del cuadro de diálogo Copia de seguridad de la base de datos:  
   
  [Copia de seguridad de base de datos &#40;página General&#41;](../../relational-databases/backup-restore/back-up-database-general-page.md)  
   

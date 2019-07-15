@@ -21,16 +21,16 @@ helpviewer_keywords:
 - command prompt utilities [SQL Server], osql
 - CTRL+C command
 ms.assetid: cf530d9e-0609-4528-8975-ab8e08e40b9a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 88e309d5a7d2f0b1464298ebd1ded5ae31139e78
-ms.sourcegitcommit: 20de089b6e23107c88fb38b9af9d22ab0c800038
+ms.openlocfilehash: 736375fb0877dbe8eac497e269ef8620a871917b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58356468"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731631"
 ---
 # <a name="osql-utility"></a>osql (utilidad)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -97,7 +97,7 @@ C:\>osql
  Utiliza una conexión de confianza en lugar de solicitar una contraseña.  
   
  **-S** _server\_nombre_[ **\\** _instancia\_nombre_]  
- Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique _nombre\_servidor_**\\**_nombre\_instancia_ para conectar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
+ Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Especifique *server_name* para conectar con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Especifique _nombre\_servidor_ **\\** _nombre\_instancia_ para conectar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en ese servidor. Si no se especifica ningún servidor, **osql** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta **osql** desde un equipo remoto conectado a la red.  
   
  **-H** _wksta_name_  
  Es el nombre de una estación de trabajo. El nombre de la estación de trabajo se almacena en **sysprocesses.hostname** y se muestra mediante **sp_who**. Si no se especifica esta opción, se supone el nombre actual del equipo.  
@@ -112,7 +112,7 @@ C:\>osql
  Especifica el número de segundos que tienen que transcurrir antes de que un comando exceda el tiempo de espera. Si no se especifica ningún valor para *time_out* , los comandos no tienen tiempo de espera.  
   
  **-h** _headers_  
- Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si usa -1, no debe dejar espacio entre el parámetro y el valor (**-h-1**, no **-h -1**).  
+ Especifica el número de filas que se van a imprimir entre los encabezados de las columnas. La opción predeterminada es imprimir los encabezados una vez para cada conjunto de resultados de la consulta. Utilice -1 para especificar que no desea imprimir los encabezados. Si usa -1, no debe dejar espacio entre el parámetro y el valor ( **-h-1**, no **-h -1**).  
   
  **-s** _col_separator_  
  Especifica el carácter separador de columnas que, de forma predeterminada, es un espacio en blanco. Para utilizar caracteres con un significado especial para el sistema operativo (por ejemplo, | ; & < >), escríbalos entre comillas dobles (").  
@@ -155,16 +155,16 @@ osql -E -q "select name, object_id from %table%"
  Quita la numeración y el símbolo del sistema (>) de las líneas de entrada.  
   
  **-m** _error_level_  
- Personaliza la presentación de los mensajes de error. Se muestra el nivel de error, estado y número de mensaje en errores con el nivel de gravedad especificado o superior. No se mostrarán errores que tengan un nivel de gravedad inferior al nivel especificado. Use **-1** para especificar que se devuelvan todos los encabezados con los mensajes, incluso con los mensajes informativos. Si usa **-1**, no debe dejar espacio entre el parámetro y los valores (**-m-1**, no **-m -1**).  
+ Personaliza la presentación de los mensajes de error. Se muestra el nivel de error, estado y número de mensaje en errores con el nivel de gravedad especificado o superior. No se mostrarán errores que tengan un nivel de gravedad inferior al nivel especificado. Use **-1** para especificar que se devuelvan todos los encabezados con los mensajes, incluso con los mensajes informativos. Si usa **-1**, no debe dejar espacio entre el parámetro y los valores ( **-m-1**, no **-m -1**).  
   
  **-r** { **0**| **1**}  
  Redirige la salida del mensaje a la pantalla (**stderr**). Si no especifica ningún parámetro, o si especifica **0**, solo se redirigirán los mensajes con nivel de gravedad 11 o superior. Si especifica **1**, toda salida de mensaje (incluida "print") se redirigirá.  
   
  **-i** _input_file_  
- Identifica el archivo que contiene un lote de instrucciones SQL o procedimientos almacenados. Se puede usar el operador de comparación menor que (**\<**) en lugar de **-i**.  
+ Identifica el archivo que contiene un lote de instrucciones SQL o procedimientos almacenados. Se puede usar el operador de comparación menor que ( **\<** ) en lugar de **-i**.  
   
  **-o** _output_file_  
- Identifica el archivo que recibe la salida de **osql**. Se puede usar el operador de comparación mayor que (**>**) en lugar de **-o**.  
+ Identifica el archivo que recibe la salida de **osql**. Se puede usar el operador de comparación mayor que ( **>** ) en lugar de **-o**.  
   
  Si *input_file* no está en formato Unicode y no se especifica **-u** , *output_file* se almacena en formato OEM. Si *input_file* está en formato Unicode o se especifica **-u** , *output_file* se almacena en formato Unicode.  
   
@@ -197,7 +197,7 @@ osql -E -q "select name, object_id from %table%"
 ## <a name="remarks"></a>Notas  
  La utilidad **osql** se inicia directamente desde el sistema operativo con las opciones en mayúsculas o en minúsculas, tal como se muestran aquí. Después de iniciar **osql**acepta instrucciones SQL y las envía a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] de forma interactiva. Se da formato a los resultados y se muestran en la pantalla (**stdout**). Utilice QUIT o EXIT para salir de **osql**.  
   
- Si no especifica un nombre de usuario cuando inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las usa, por ejemplo, **osqluser=(**_user_**)** u **osqlserver=(**_server_**)**. Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
+ Si no especifica un nombre de usuario cuando inicia **osql**, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] comprueba las variables de entorno y las usa, por ejemplo, **osqluser=(** _user_ **)** u **osqlserver=(** _server_ **)** . Si no se establecen variables de entorno, se utilizará el nombre de usuario de la estación de trabajo. Si no especifica un servidor, se utilizará el nombre de la estación de trabajo.  
   
  Si no se usan las opciones **-U** ni **-P** , [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] intenta conectarse usando el modo de autenticación de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows. La autenticación se basa en la cuenta de [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows del usuario que ejecuta **osql**.  
   
@@ -297,7 +297,7 @@ osql -E -Q "EXIT(SELECT COUNT(*) FROM '%1')"
 > [!NOTE]  
 >  Ejecuta el lote y, a continuación, sale sin devolver ningún valor.  
   
--   EXIT **(**_query_**)**  
+-   EXIT **(** _query_ **)**  
   
 > [!NOTE]  
 >  Ejecuta el lote, incluida la consulta, y, a continuación, sale tras devolver el resultado de la consulta.  

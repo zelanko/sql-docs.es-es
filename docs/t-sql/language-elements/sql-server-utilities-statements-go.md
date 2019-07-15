@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981666"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832964"
 ---
 # <a name="sql-server-utilities-statements---go"></a>Instrucciones de utilidades de SQL Server: GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981666"
 ## <a name="syntax"></a>Sintaxis  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  Las aplicaciones basadas en las API de ODBC u OLE DB reciben un error de sintaxis al intentar ejecutar un comando GO. Las utilidades de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] nunca envían un comando GO al servidor.  
   
- No use un punto y coma como terminador de instrucción después de GO.  
-  
-## <a name="permissions"></a>Permisos  
- GO es un comando de utilidad que no requiere permisos. Cualquier usuario puede ejecutarlo.  
-  
-```  
+ No use un punto y coma como terminador de instrucción después de GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>Permisos  
+ GO es un comando de utilidad que no requiere permisos. Cualquier usuario puede ejecutarlo.    
   
 ## <a name="examples"></a>Ejemplos  
  En el siguiente ejemplo se crean dos lotes. El primer lote solo contiene una instrucción `USE AdventureWorks2012` para establecer el contexto de base de datos. Las instrucciones restantes utilizan una variable local. Por lo tanto, es necesario agrupar todas las declaraciones de variable locales en un único lote. Esto se logra al no usar el comando `GO` hasta después de la última instrucción que hace referencia a la variable.  

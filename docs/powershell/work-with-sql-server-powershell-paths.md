@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: scripting
 ms.topic: conceptual
 ms.assetid: f31d8e2c-8d59-4fee-ac2a-324668e54262
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 605e7a5b532e03d55b9d15964697597b06793174
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 7da71a2ba80325c768abc10435ff9816ce539b0b
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52502461"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730478"
 ---
 # <a name="work-with-sql-server-powershell-paths"></a>Trabajar con rutas acceso de SQL Server PowerShell
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -98,7 +98,7 @@ $MyDBVar.Create()
 $MyDBVar.State  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Proveedor de PowerShell de SQL Server](sql-server-powershell-provider.md)   
  [Navegar por las rutas de acceso de SQL Server PowerShell](navigate-sql-server-powershell-paths.md)   
  [Convertir URN en rutas de acceso del proveedor de SQL Server](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)   

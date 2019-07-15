@@ -17,12 +17,12 @@ ms.assetid: 41d1886d-59c9-41fc-9bd6-a59b40e0af6e
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: a710dd9b9cb67d8b0f56407ea3c8d8838a51b35b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: cec08c2709fc07bc912e399e1cdceb464868c194
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67582510"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860745"
 ---
 # <a name="create-a-pull-subscription"></a>Crear una suscripción de extracción
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -121,9 +121,9 @@ ms.locfileid: "67582510"
   
 2.  En el suscriptor, ejecute [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md). Especifique **@publisher** , **@publisher_db** , **@publication** y los parámetros siguientes:  
   
-    -   **@subscriber_type** ? Especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
+    -   **@subscriber_type** – especifique **local** para una suscripción de cliente y **global** para una suscripción de servidor.  
   
-    -   **@subscription_priority** ? Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
+    -   **@subscription_priority** – Especifique una prioridad para la suscripción (**0,00** a **99,99**). Solo es necesario para las suscripciones de servidor.  
   
          Para más información, consulte [Detección y resolución de conflictos de replicación de mezcla avanzada](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md).  
   

@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801738"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680081"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>Uso de Always Encrypted con ODBC Driver for SQL Server
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Tenga en cuenta que habilitar Always Encrypted no es suficiente para que el cifr
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>Recuperar y modificar los datos de las columnas cifradas
 
-Una vez que habilite Always Encrypted en una conexión, puede usar las API de ODBC estándar (vea el [código de ejemplo de ODBC](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953) o la [referencia para programadores de ODBC](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)) para recuperar o modificar datos en columnas de la base de datos cifrada. Suponiendo que la aplicación tiene los permisos de base de datos necesarios y puede acceder a la clave maestra de columna, el controlador cifrará todos los parámetros de consulta destinados a las columnas cifradas y descifrará los datos recuperados de las columnas cifradas, con un comportamiento transparente en la aplicación, como si las columnas no estuvieran cifradas.
+Una vez que habilite Always Encrypted en una conexión, puede usar las API de ODBC estándar. Las API de ODBC puede recuperar o modificar datos en columnas de la base de datos cifrada. Los siguientes elementos de la documentación pueden ayudarle con esto:
+
+- [Código de ejemplo ODBC](cpp-code-example-app-connect-access-sql-db.md)
+- [Referencia del programador de ODBC](../../odbc/reference/odbc-programmer-s-reference.md)
+
+La aplicación debe tener los permisos de base de datos necesaria y debe ser capaz de obtener acceso a la clave maestra de columna. A continuación, el controlador cifra los parámetros de consulta que tienen como destino las columnas cifradas. El controlador también descifra los datos recuperados de columnas cifradas. El controlador realiza todo este cifrar y descifrar sin ayuda del código fuente. En el programa, es como si las columnas no están cifradas.
 
 Si Always Encrypted no está habilitado, se producirá un error en las consultas con parámetros que tengan como destino las columnas cifradas. Las datos todavía se pueden recuperar de las columnas cifradas, siempre y cuando la consulta no tenga parámetros que tengan como destino las columnas cifradas. Sin embargo, el controlador no intentará descifrar nada, y la aplicación recibirá los datos binarios cifrados (como matrices de bytes).
 

@@ -17,12 +17,12 @@ ms.assetid: 591c0313-82ce-4689-9fc1-73752ff122cf
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3c24ad02eb34e06d23ec30f91b3c547f6fbd737e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: c61134ff7824d4cbcca72bb6fbac0dfb2be85e34
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585876"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860604"
 ---
 # <a name="oracle-subscribers"></a>Suscriptores de Oracle
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "67585876"
   
     -   Asegúrese de que las cadenas vacías no se insertan como valores de columna en la tabla publicada.  
   
-    -   Use el parámetro **?SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle ( **-SkipErrors1400**).  
+    -   Use el parámetro **-SkipErrors** para el Agente de distribución si es aceptable recibir una notificación de errores en el registro de historial del Agente de distribución y continuar el procesamiento. Especifique el código de error 1400 de Oracle ( **-SkipErrors1400**).  
   
     -   Modifique el script de la tabla generada, quitando el atributo NOT NULL de cualquier columna de caracteres a la que puedan haberse asociado cadenas vacías y suministre el script modificado como script personalizado para el artículo mediante el parámetro @creation_script de [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c505d36e-1e72-47b2-a9e5-e4926b408468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1635538f69b313a73a24ab1531f8793c7d98741e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 46bb00fb01ed3fee8098420794af089f2d8b981e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054084"
 ---
 # <a name="sqlconfigdatasource-text-file-driver"></a>SQLConfigDataSource (controlador de archivo de texto)
 > [!NOTE]  
@@ -31,7 +30,7 @@ ms.locfileid: "62665261"
 |-------------|-----------------|  
 |CHARACTERSET|Para el controlador de texto, OEM o ANSI.|  
 |COLNAMEHEADER|Para el controlador de texto, indica si el primer registro de datos se especifican los nombres de columna. TRUE o FALSE.|  
-|DEFAULTDIR|La especificación de ruta de acceso al directorio.|  
+|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
 |DRIVERID|Un identificador entero para el controlador. 27 (texto)|  

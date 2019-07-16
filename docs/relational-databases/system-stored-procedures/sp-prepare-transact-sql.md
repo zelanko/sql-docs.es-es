@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9b52f71577bed8a0433c8d516cdc9cbd877066e4
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: acadb311dac786d9f1c5dbcc86fac9b2609fb959
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085806"
 ---
 # <a name="spprepare-transact-sql"></a>sp_prepare (Transact SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ sp_prepare handle OUTPUT, params, stmt, options
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *identificador*  
+ *handle*  
  Es un generado por SQL Server *identificador preparado* identificador. *controlar* es un parámetro necesario con un **int** valor devuelto.  
   
  *params*  

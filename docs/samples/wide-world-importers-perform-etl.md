@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067623"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>Flujo de trabajo de ETL WideWorldImportersDW
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 76399d74-1121-4c63-92ee-7d2984ac74af
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff6498fc11cb13d9aef818275f636b7267952f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63c5dd6cd20f30281e9cf83c920b85e4f024ad35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003443"
 ---
 # <a name="sqlgetcursorname-desktop-database-drivers"></a>SQLGetCursorName (controladores de escritorio de la base de datos)
 **SQLGetCursorName** se admite, pero solo se puede usar cuando se utiliza la biblioteca de cursores, porque no se admiten operaciones por posición en el controlador.

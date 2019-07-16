@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a8b6104-e0e4-4d07-a2c3-f4243ee0d6fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 509dd27a784fd14b5aefc811065b265f37c3f6c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6c2929062451d139cc3452b6bd272dd85bac951
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054991"
 ---
 # <a name="sphelpjob-transact-sql"></a>sp_help_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -110,7 +109,7 @@ sp_help_job { [ @job_id = ] job_id
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
-|**Nombre**|**sysname**|Nombre del trabajo.|  
+|**name**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
 |**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
@@ -139,7 +138,7 @@ sp_help_job { [ @job_id = ] job_id
 |**has_step**|**int**|Número de pasos que tiene el trabajo.|  
 |**has_schedule**|**int**|Número de programaciones que tiene el trabajo.|  
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
-|**Tipo**|**int**|Tipo de trabajo.<br /><br /> 1 = Trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
+|**type**|**int**|Tipo de trabajo.<br /><br /> 1 = Trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
   
  Si *job_id* o *job_name* se especifica, **sp_help_job** devuelve estos conjuntos de resultados adicionales para los pasos de trabajo, las programaciones de trabajo y servidores de destino del trabajo.  
   

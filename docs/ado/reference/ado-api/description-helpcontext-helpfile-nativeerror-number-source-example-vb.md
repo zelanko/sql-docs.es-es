@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 5c728458-d85c-497c-afcf-2cfa36c3342a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 87aee91ea6a293afe95ceb9fd22237d689e1200f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90673f82643ae24d242879fb19b748d5d1e3cc43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919040"
 ---
 # <a name="description-helpcontext-helpfile-nativeerror-number-source-and-sqlstate-properties-example-vb"></a>Descripción, HelpContext, HelpFile, NativeError, número, origen y ejemplo de las propiedades SQLState (VB)
 En este ejemplo desencadena un error, se captura y se muestra el [descripción](../../../ado/reference/ado-api/description-property.md), [HelpContext](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [HelpFile](../../../ado/reference/ado-api/helpcontext-helpfile-properties.md), [NativeError](../../../ado/reference/ado-api/nativeerror-property-ado.md), [ Número](../../../ado/reference/ado-api/number-property-ado.md), [origen](../../../ado/reference/ado-api/source-property-ado-error.md), y [SQLState](../../../ado/reference/ado-api/sqlstate-property.md) propiedades del resultante [Error](../../../ado/reference/ado-api/error-object.md) objeto.  

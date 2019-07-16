@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6f139965c4235b84c66c460767d5c6d1695b68ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67d791820e9dd22b035f98eb76e27723ebfb8fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927175"
 ---
 # <a name="ado-glossary-terms"></a>Términos del glosario de ADO
 En este tema se define términos relacionados con ADO.
@@ -38,7 +37,7 @@ En este tema se define términos relacionados con ADO.
 
  operación asincrónica una operación que devuelva el control al programa que realiza la llamada sin esperar a que se complete la operación. Antes de la operación se complete, continúa la ejecución de código. Vea también *operación sincrónica*.
 
-## <a name="b"></a>B
+## <a name="b"></a>b
  asignación de una entrada de enlace entre un campo en una tabla y una variable. En las extensiones ADO de Visual C++, **Recordset** campos se asignan a variables de C o C++.
 
  valor numérico de máscara de bits A destinado a una comparación de valores de bit a bit con otros valores numéricos, normalmente a las opciones de marcador de parámetro o valores devueltos. Normalmente, esta comparación se realiza con operadores lógicos bit a bit, como **y** y **o** en Visual Basic, **&** y **&#124;** en C++.

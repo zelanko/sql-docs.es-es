@@ -19,32 +19,31 @@ helpviewer_keywords:
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b59b0bdfb2852c20c2f13641682a1adff3547662
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 95e173cd20bd04c3b5a5a6cd7ad7299ef13971d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52540780"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026851"
 ---
 # <a name="sysdmdbxtpgccyclestats-transact-sql"></a>sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   Genera el estado actual de las transacciones confirmadas que han eliminado una o varias filas. El subproceso principal de recolección de elementos no utilizados se reactiva cada minuto o cuando el número de transacciones DML confirmadas supera un umbral interno desde el último ciclo de recolección de elementos no utilizados. Como parte del ciclo de recolección de elementos no utilizados, mueve las transacciones que se han confirmado a una o varias colas asociadas con las generaciones. Las transacciones que han generado versiones obsoletas se agrupan en una unidad de 16 transacciones en 16 generaciones de la manera siguiente:  
   
--   Generación 0: almacena todas las transacciones que se confirmaron antes que la transacción activa más antigua. Las versiones de fila generadas por estas transacciones están disponibles inmediatamente para la recolección de elementos no utilizados.  
+-   Generación 0: Almacena todas las transacciones que se confirmaron antes que la transacción activa más antigua. Las versiones de fila generadas por estas transacciones están disponibles inmediatamente para la recolección de elementos no utilizados.  
   
--   Generaciones 1-14: almacena las transacciones cuya marca de tiempo es mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
+-   Generaciones 1-14: Almacena las transacciones cuya marca de tiempo mayor que la transacción activa más antigua. No se pueden recolectar las versiones de fila no utilizadas. Cada generación puede contener hasta 16 transacciones. En estas generaciones pueden existir un total de 224 (14 * 16) transacciones.  
   
--   Generación 15: las transacciones restantes cuya marca de tiempo es mayor que la transacción activa más antigua van a la generación 15. Al igual que ocurre con la generación 0, no hay ningún límite en cuanto al número de transacciones de la generación 15.  
+-   Generación 15: Las transacciones restantes cuya marca de tiempo mayor que la transacción activa más antigua que se van a la generación 15. Al igual que ocurre con la generación 0, no hay ningún límite en cuanto al número de transacciones de la generación 15.  
   
  Cuando hay presión de memoria, el subproceso de recolección de elementos no utilizados actualiza la sugerencia de la transacción activa más antigua de forma absoluta, lo que fuerza la recolección de elementos no utilizados.  
   
  Para obtener más información, vea [OLTP en memoria &#40;optimización en memoria&#41;](../../relational-databases/in-memory-oltp/in-memory-oltp-in-memory-optimization.md).  
   
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |cycle_id|**bigint**|Identificador único del ciclo de recolección de elementos no utilizados.|  
 |ticks_at_cycle_start|**bigint**|Tics en el momento en el que se inició el ciclo.|  

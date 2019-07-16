@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d6220f9f-c738-4f9c-bcf8-419994e86c81
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d50f940b191ee057febb81a59b90d6c842cf821
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 1b01a48e15c06f021b41b3bded35a0cd2739313c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006918"
 ---
 # <a name="sprepladdcolumn-transact-sql"></a>sp_repladdcolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,16 +53,16 @@ sp_repladdcolumn [ @source_object = ] 'source_object', [ @column = ] 'column' ]
  Es el nombre de la columna de la tabla que se va a agregar para replicación. *columna* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ @typetext =] '*typetext*'  
- Es la definición de la columna que se va a agregar. *TypeText* es **nvarchar (3000)**, no tiene ningún valor predeterminado. Por ejemplo, si se va a agregar la columna order_filled y es un único carácter campo no es NULL y tiene un valor predeterminado de **N**, order_filled sería el *columna* parámetro, mientras que la definición de la columna, **char (1) NOT NULL CONSTRAINT constraint_name DEFAULT ' n '** sería el *typetext* el valor del parámetro.  
+ Es la definición de la columna que se va a agregar. *TypeText* es **nvarchar (3000)** , no tiene ningún valor predeterminado. Por ejemplo, si se va a agregar la columna order_filled y es un único carácter campo no es NULL y tiene un valor predeterminado de **N**, order_filled sería el *columna* parámetro, mientras que la definición de la columna, **char (1) NOT NULL CONSTRAINT constraint_name DEFAULT ' n '** sería el *typetext* el valor del parámetro.  
   
  [ @publication_to_add =] '*publication_to_add*'  
- Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es **nvarchar (4000)**, su valor predeterminado es **todas**. Si **todas**, a continuación, se ven afectadas todas las publicaciones que contiene esta tabla. Si *publication_to_add* se especifica, entonces solo esta publicación tiene la nueva columna agregada.  
+ Es el nombre de la publicación a la que se agrega la nueva columna. *publication_to_add* es **nvarchar (4000)** , su valor predeterminado es **todas**. Si **todas**, a continuación, se ven afectadas todas las publicaciones que contiene esta tabla. Si *publication_to_add* se especifica, entonces solo esta publicación tiene la nueva columna agregada.  
   
  [ @from_agent =] *from_agent*  
  Si un agente de replicación está ejecutando el procedimiento almacenado. *from_agent* es **int**, su valor predeterminado es **0**; el valor de **1** se utiliza cuando se ejecuta este procedimiento almacenado por un agente de replicación y, en cada otro caso, el valor predeterminado de **0**debe usarse.  
   
  [ @schema_change_script =] '*el argumento schema_change_script*'  
- Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *el argumento schema_change_script* es **nvarchar (4000)**, su valor predeterminado es null. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *el argumento schema_change_script* se ejecuta después de un cambio de esquema se realiza en un artículo de tabla replicado mediante sp_repladdcolumn y puede utilizarse para realizar uno de los siguientes:  
+ Especifica el nombre y la ruta de acceso de un script de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilizado para modificar los procedimientos almacenados personalizados generados por el sistema. *el argumento schema_change_script* es **nvarchar (4000)** , su valor predeterminado es null. La replicación permite que los procedimientos almacenados personalizados definidos por el usuario sustituyan a uno o más de los procedimientos predeterminados utilizados en la replicación transaccional. *el argumento schema_change_script* se ejecuta después de un cambio de esquema se realiza en un artículo de tabla replicado mediante sp_repladdcolumn y puede utilizarse para realizar uno de los siguientes:  
   
 -   Si los procedimientos almacenados personalizados se generan automáticamente, *el argumento schema_change_script* puede usarse para quitar estos procedimientos almacenados personalizados y reemplazarlos con definido por el usuario los procedimientos almacenados personalizados que admite el nuevo esquema.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bdbbf325-14f6-460e-a35a-d3861d3c961e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9ae478cb2efc557acfd86e174d59a160fb8920c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3476ba45f7f563524cdfd9855e80f9c5dd96524
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054452"
 ---
 # <a name="managing-clr-integration-assemblies"></a>Administrar ensamblados de integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "47686543"
 |columna|Descripción|  
 |------------|-----------------|  
 |assembly_id|Identificador definido para el ensamblado. Este número se asigna a todos los objetos relacionados con el mismo ensamblado.|  
-|NAME|Nombre del objeto.|  
+|name|Nombre del objeto.|  
 |file_id|Número que identifica cada objeto, con el primer objeto asociado a un determinado **assembly_id** que se le asigna el valor de 1. Si varios objetos están asociados con el mismo **assembly_id**, a continuación, cada **file_id** valor se incrementa en 1.|  
-|content|Representación hexadecimal del ensamblado o archivo.|  
+|contenido|Representación hexadecimal del ensamblado o archivo.|  
   
 ## <a name="in-this-section"></a>En esta sección  
  [Crear un ensamblado](../../../relational-databases/clr-integration/assemblies/creating-an-assembly.md)  

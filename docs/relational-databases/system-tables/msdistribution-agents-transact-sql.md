@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 357d0cf774d3e95d700c840f88bb0165bdb9a12f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c138f2e97bf80f00f77c519bb4b9467c715f95b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907413"
 ---
 # <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,17 +32,17 @@ ms.locfileid: "62817168"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del Agente de distribución.|  
-|**Nombre**|**nvarchar(100)**|Nombre del Agente de distribución.|  
+|**name**|**nvarchar(100)**|Nombre del Agente de distribución.|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
 |**publisher_id**|**smallint**|El ID. del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
-|**publication**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**subscriber_id**|**smallint**|Id. del suscriptor, que solo utilizan los agentes conocidos. En el caso de los agentes anónimos, esta columna está reservada.|  
 |**subscriber_db**|**sysname**|El nombre de la base de datos de suscripción.|  
 |**subscription_type**|**int**|El tipo de suscripción:<br /><br /> **0** = inserción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónima.|  
 |**local_job**|**bit**|Indica si hay un trabajo del Agente SQL Server en el distribuidor local.|  
-|**job_id**|**binary(16)**|El número de identificación del trabajo.|  
-|**subscription_guid**|**binary(16)**|Id. de las suscripciones de este agente.|  
+|**job_id**|**binary (16)**|El número de identificación del trabajo.|  
+|**subscription_guid**|**binary (16)**|Id. de las suscripciones de este agente.|  
 |**profile_id**|**int**|El identificador de configuración de la [MSagent_profiles &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msagent-profiles-transact-sql.md) tabla.|  
 |**anonymous_subid**|**uniqueidentifier**|Id. de un agente anónimo.|  
 |**subscriber_name**|**sysname**|Nombre del suscriptor, que solo utilizan los agentes anónimos.|  
@@ -64,7 +63,7 @@ ms.locfileid: "62817168"
 |**subscriber_password**|**nvarchar(524)**|Es el valor cifrado de la contraseña utilizada al conectarse al suscriptor.|  
 |**reset_partial_snapshot_progress**|**bit**|Indica si se descartará una instantánea descargada parcialmente para que todo el proceso de instantánea pueda empezar de nuevo.|  
 |**job_step_uid**|**uniqueidentifier**|El identificador único del trabajo del Agente SQL Server se encargan de que el agente se inicia.|  
-|**subscriptionstreams**|**tinyint**|Establece el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo en un suscriptor. Se admite un intervalo de valores de 1 a 64.|  
+|**flujos de suscripción**|**tinyint**|Establece el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo en un suscriptor. Se admite un intervalo de valores de 1 a 64.|  
 |**memory_optimized**|**bit**|1 indica que el suscriptor puede utilizarse para tablas optimizadas para memoria.|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  

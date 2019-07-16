@@ -7,13 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: dfae657f6ab7d8f0cefbdec729e6e836c4f7e4d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66604e44d714837ec9b974af5d0a29b56396cb45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962647"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>Cómo crear consultas MDX en R con olapR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -155,7 +154,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs)
 ```
 
-| Resultado  |
+| Resultados  |
 | ----|
 | _Analysis Services Tutorial_|
 |_Internet Sales_|
@@ -173,7 +172,7 @@ ocs \<- OlapConnection(cnnstr)
 explore(ocs, "Sales")
 ```
 
-| Resultado  |
+| Resultados  |
 | ----|
 | _Customer_|
 |_Date_|
@@ -190,7 +189,7 @@ ocs <- OlapConnection(cnnstr)
 explore(ocs, "Analysis Services Tutorial", "Product", "Product Categories", "Category")
 ```
 
-| Resultado  |
+| Resultados  |
 | ----|
 | _Accessories_|
 |_Bikes_|

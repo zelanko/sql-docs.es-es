@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9ee1ddb-dec7-4f78-b6e2-5ba34e7d6f59
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb41d658637258c6d60b5adb4e0d7abb9ae81d91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a3a4df236273b5afcaba78052ac236669bb133f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019370"
 ---
 # <a name="c-to-sql-day-time-intervals"></a>C a SQL: Intervalos de día y hora
 Los identificadores de los tipos de datos ODBC C de intervalo de día y hora son:  
@@ -50,10 +49,10 @@ Los identificadores de los tipos de datos ODBC C de intervalo de día y hora son
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Longitud de bytes de la columna > = longitud de bytes de caracteres<br /><br /> Longitud de bytes de la columna < [a] longitud de bytes de caracteres<br /><br /> Valor de datos no es un intervalo válido de literal|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_WCHAR[a]<br /><br /> SQL_WVARCHAR[a]<br /><br /> SQL_WLONGVARCHAR[a]|Longitud de caracteres de la columna > = longitud de caracteres de datos<br /><br /> Longitud de caracteres de la columna < caracteres de longitud de datos [a]<br /><br /> Valor de datos no es un intervalo válido de literal|n/d<br /><br /> 22001<br /><br /> 22015|  
-|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT[b] SQL_INTEGER[b]<br /><br /> SQL_BIGINT[b] SQL_NUMERIC[b]<br /><br /> SQL_DECIMAL[b]|Conversión de un intervalo de campo único no se ha producido un truncamiento de dígitos enteros<br /><br /> Conversión produjo un truncamiento de dígitos enteros|n/d<br /><br /> 22003|  
-|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Valor de datos se convirtió sin truncamiento de los campos<br /><br /> Uno o varios campos de valor de datos se puede truncar durante la conversión|n/d<br /><br /> 22015|  
+|SQL_CHAR[a]<br /><br /> SQL_VARCHAR[a]<br /><br /> SQL_LONGVARCHAR[a]|Longitud de bytes de la columna > = longitud de bytes de caracteres<br /><br /> Longitud de bytes de la columna < [a] longitud de bytes de caracteres<br /><br /> Valor de datos no es un intervalo válido de literal|N/D<br /><br /> 22001<br /><br /> 22015|  
+|SQL_WCHAR [a]<br /><br /> SQL_WVARCHAR [a]<br /><br /> SQL_WLONGVARCHAR[a]|Longitud de caracteres de la columna > = longitud de caracteres de datos<br /><br /> Longitud de caracteres de la columna < caracteres de longitud de datos [a]<br /><br /> Valor de datos no es un intervalo válido de literal|N/D<br /><br /> 22001<br /><br /> 22015|  
+|SQL_TINYINT[b]<br /><br /> SQL_SMALLINT SQL_INTEGER [b] [b]<br /><br /> SQL_BIGINT SQL_NUMERIC [b] [b]<br /><br /> SQL_DECIMAL [b]|Conversión de un intervalo de campo único no se ha producido un truncamiento de dígitos enteros<br /><br /> Conversión produjo un truncamiento de dígitos enteros|N/D<br /><br /> 22003|  
+|SQL_INTERVAL_DAY<br /><br /> SQL_INTERVAL_HOUR<br /><br /> SQL_INTERVAL_MINUTE<br /><br /> SQL_INTERVAL_SECOND<br /><br /> SQL_INTERVAL_DAY_TO_HOUR<br /><br /> SQL_INTERVAL_DAY_TO_MINUTE<br /><br /> SQL_INTERVAL_DAY_TO_SECOND<br /><br /> SQL_INTERVAL_HOUR_TO_MINUTE<br /><br /> SQL_INTERVAL_HOUR_TO_SECOND<br /><br /> SQL_INTERVAL_MINUTE_TO_SECOND|Valor de datos se convirtió sin truncamiento de los campos<br /><br /> Uno o varios campos de valor de datos se puede truncar durante la conversión|N/D<br /><br /> 22015|  
   
  [a] tipos de datos interval todas C se pueden convertir a un tipo de datos de caracteres.  
   

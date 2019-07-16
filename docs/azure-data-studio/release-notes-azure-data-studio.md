@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826513"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959382"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Notas de la versión para Azure Data Studio
 

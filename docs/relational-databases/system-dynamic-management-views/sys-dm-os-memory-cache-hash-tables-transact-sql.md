@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 68b94f35-8f80-4d2b-bcde-7a21934219af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4484f714bc9ebb5bb82378cd5f877e847f8d6001
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d053c47cbe51026e6c3ee71a523cadf176d6ff1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899959"
 ---
 # <a name="sysdmosmemorycachehashtables-transact-sql"></a>sys.dm_os_memory_cache_hash_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47749073"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**cache_address**|**varbinary (8)**|Dirección (clave principal) de la entrada de caché. No admite valores NULL.|  
-|**Nombre**|**nvarchar(256)**|Nombre de la caché. No admite valores NULL.|  
-|**Tipo**|**nvarchar(60)**|Tipo de caché. No admite valores NULL.|  
+|**cache_address**|**varbinary(8)**|Dirección (clave principal) de la entrada de caché. No admite valores NULL.|  
+|**name**|**nvarchar(256)**|Nombre de la caché. No admite valores NULL.|  
+|**type**|**nvarchar(60)**|Tipo de caché. No admite valores NULL.|  
 |**table_level**|**int**|Número de tabla de hash. Una caché concreta puede tener varias tablas hash que corresponden a diferentes funciones de hash. No admite valores NULL.|  
 |**buckets_count**|**int**|Número de depósitos en la tabla de hash. No admite valores NULL.|  
 |**buckets_in_use_count**|**int**|Número de depósitos que se utilizan actualmente. No admite valores NULL.|  
@@ -57,7 +56,7 @@ ms.locfileid: "47749073"
 ## <a name="permissions"></a>Permisos 
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="see-also"></a>Vea también  
  

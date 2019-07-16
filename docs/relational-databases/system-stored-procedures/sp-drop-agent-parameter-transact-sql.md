@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b99e65ff-9cca-4dce-a2ce-2968de23a76a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7abf2a3c2e9eebcd21a60beb72e650ad534cc80d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8356ee01b0c14a9cb87542d750a93ea537fac5cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016531"
 ---
 # <a name="spdropagentparameter-transact-sql"></a>sp_drop_agent_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_drop_agent_parameter [ @profile_id = ] profile_id
 ## <a name="arguments"></a>Argumentos  
 `[ @profile_id = ] profile_id` Es el identificador del perfil del que se va a quitar un parámetro. *profile_id* es **int**, no tiene ningún valor predeterminado.  
   
-`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro que se va a quitar. *parameter_name* es **sysname**, su valor predeterminado es **%**. Si **%**, se quitan todos los parámetros para el perfil especificado.  
+`[ @parameter_name = ] 'parameter_name'` Es el nombre del parámetro que se va a quitar. *parameter_name* es **sysname**, su valor predeterminado es **%** . Si **%** , se quitan todos los parámetros para el perfil especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -25,14 +25,13 @@ helpviewer_keywords:
 ms.assetid: 59bbb91f-a277-4a35-803e-dcb91e847a49
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 98cde3ea4c7150afd3eb2b547e73cf1b7f88e613
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9a2516d24b65e509ffc04c0f9979721ad6eefa22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792302"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082713"
 ---
 # <a name="sysfnlistextendedproperty-transact-sql"></a>sys.fn_listextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ fn_listextendedproperty (
  Es el nombre de la propiedad. *property_name* es **sysname**. Las entradas válidas son default, NULL o un nombre de propiedad.  
   
  {predeterminada | '*level0_object_type*' | NULL}  
- Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER y NULL.  
+ Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)** , su valor predeterminado es null. Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, TRIGGER, TYPE, USER y NULL.  
   
 > [!IMPORTANT]  
 >  USER y TYPE como tipos de nivel 0 se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan. En lugar de USER, use SCHEMA como tipo de nivel 0. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
@@ -92,8 +91,8 @@ fn_listextendedproperty (
 |-----------------|---------------|  
 |objtype|**sysname**|  
 |objname|**sysname**|  
-|NAME|**sysname**|  
-|value|**sql_variant**|  
+|name|**sysname**|  
+|valor|**sql_variant**|  
   
  Si la tabla devuelta está vacía, el objeto no tiene propiedades extendidas o el usuario no tiene permisos para mostrar las propiedades extendidas del objeto. Cuando se devuelven propiedades extendidas de la propia base de datos, el valor de las columnas objtype y objname será NULL.  
   
@@ -142,7 +141,7 @@ GO
   
  `(1 row(s) affected)`  
   
-### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>B. Mostrar las propiedades extendidas de todas las columnas de una tabla  
+### <a name="b-displaying-extended-properties-on-all-columns-in-a-table"></a>b. Mostrar las propiedades extendidas de todas las columnas de una tabla  
  En el ejemplo siguiente se enumeran las propiedades extendidas de las columnas de la `ScrapReason` tabla. que se incluye en el esquema `Production`.  
   
 ```  
@@ -180,7 +179,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [los procedimientos sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   

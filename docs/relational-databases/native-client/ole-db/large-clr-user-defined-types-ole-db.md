@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 4bf12058-0534-42ca-a5ba-b1c23b24d90f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c69c9ea5e3274b22748839e0eda4af60289fabc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 94442202816751022aca97755021bd5a54940269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416122"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913022"
 ---
 # <a name="large-clr-user-defined-types-ole-db"></a>Tipos definidos por el usuario de CLR grandes (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "52416122"
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de filas:  
   
-|Tipo de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
+|Tipos de datos de SQL Server|Tipo de datos de OLE DB|Diseño de memoria|Valor|  
 |--------------------------|----------------------|-------------------|-----------|  
 |UDT CLR|DBTYPE_UDT|BYTE[](matriz de bytes\)|132 (oledb.h)|  
   
@@ -49,7 +48,7 @@ ms.locfileid: "52416122"
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>Asignar tipo de datos en ITableDefinition::CreateTable  
  Cuando se necesitan columnas UDT, ITableDefinition::CreateTable usa esta información en estructuras **DBCOLUMNDESC**:  
   
-|Tipo de datos OLE DB (*wType*)|*pwszTypeName*|Tipo de datos de SQL Server|*rgPropertySets*|  
+|Tipo de datos OLE DB (*wType*)|*pwszTypeName*|Tipos de datos de SQL Server|*rgPropertySets*|  
 |----------------------------------|--------------------|--------------------------|----------------------|  
 |DBTYPE_UDT|Omitido|UDT|Debe incluir un conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.|  
   
@@ -59,7 +58,7 @@ ms.locfileid: "52416122"
 |Tipo de parámetro|*wType*|*ulParamSize*|*bPrecision*|*bScale*|*dwFlags* DBPARAMFLAGS_ISLONG|  
 |--------------------|-------------|-------------------|------------------|--------------|------------------------------------|  
 |DBTYPE_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|"DBTYPE_UDT"|*n*|no definido|no definido|clear|  
-|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|conjunto|  
+|DBTYPE_UDT<br /><br /> (longitud mayor que 8.000 bytes)|"DBTYPE_UDT"|~0|no definido|no definido|set|  
   
 ## <a name="icommandwithparameterssetparameterinfo"></a>ICommandWithParameters::SetParameterInfo  
  La información que se proporciona en la estructura DBPARAMBINDINFO debe cumplir lo siguiente:  
@@ -82,7 +81,7 @@ ms.locfileid: "52416122"
   
  También se definen las columnas siguientes para los UDT:  
   
-|Identificador de columna|Tipo|Descripción|  
+|Identificador de columna|Type|Descripción|  
 |-----------------------|----------|-----------------|  
 |DBCOLUMN_UDT_CATALOGNAME|DBTYPE_WSTR|Para las columnas UDT, nombre del catálogo donde se define el UDT.|  
 |DBCOLUMN_UDT_SCHEMANAME|DBTYPE_WSTR|Para las columnas UDT, nombre del esquema donde se define el UDT.|  
@@ -107,7 +106,7 @@ ms.locfileid: "52416122"
   
  También se definen las siguientes columnas adicionales para los UDT:  
   
-|Identificador de columna|Tipo|Descripción|  
+|Identificador de columna|Type|Descripción|  
 |-----------------------|----------|-----------------|  
 |SS_UDT_CATALOGNAME|DBTYPE_WSTR|Para las columnas UDT, nombre del catálogo donde se define el UDT.|  
 |SS_UDT_SCHEMANAME|DBTYPE_WSTR|Para las columnas UDT, nombre del esquema donde se define el UDT.|  

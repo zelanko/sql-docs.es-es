@@ -12,27 +12,26 @@ helpviewer_keywords:
 ms.assetid: 2a072f9c-8f11-4364-ab71-3990735a8d66
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46a4bad9a7eb57f45b210cea68f146a4340b8f1b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1eaec75e05dba6d6fd859c1537d7a528df16959c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47604150"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939039"
 ---
 # <a name="creating-altering-and-removing-stored-procedures"></a>Crear, modificar y eliminar los procedimientos almacenados
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  En [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Management Objects (SMO), procedimientos almacenados están representados por el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
+  En los objetos de administración de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] (SMO), el objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> representa los procedimientos almacenados.  
   
- Crear un <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto SMO requiere establecer el <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> propiedad a la [!INCLUDE[tsql](../../../includes/tsql-md.md)] script que define el procedimiento almacenado. Los parámetros requieren el \@ prefijo y se deben crear individualmente utilizando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos y agregar a la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> colección de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
+ Para crear un objeto <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> en SMO, se requiere establecer la propiedad <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.TextBody%2A> en el script [!INCLUDE[tsql](../../../includes/tsql-md.md)] que define el procedimiento almacenado. Los parámetros requieren el \@ prefijo y se deben crear individualmente utilizando <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> objetos y agregar a la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedureParameter> colección de la <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto.  
   
 ## <a name="example"></a>Ejemplo  
  Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-basic"></a>Crear, modificar y eliminar un procedimiento almacenado en Visual Basic  
- Este ejemplo de código muestra cómo crear un procedimiento almacenado para el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado. El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
+ En este ejemplo de código se muestra cómo crear un procedimiento almacenado para la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado. El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -70,7 +69,7 @@ sp.Drop()
 ``` 
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-visual-c"></a>Crear, modificar y eliminar un procedimiento almacenado en Visual C#  
- Este ejemplo de código muestra cómo crear un procedimiento almacenado para el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado (`BusinessEntityID`). El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
+ En este ejemplo de código se muestra cómo crear un procedimiento almacenado para la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado (`BusinessEntityID`). El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
   
 ```csharp  
 {  
@@ -110,7 +109,7 @@ sp.Drop()
 ```  
   
 ## <a name="creating-altering-and-removing-a-stored-procedure-in-powershell"></a>Crear, modificar y eliminar un procedimiento almacenado en PowerShell  
- Este ejemplo de código muestra cómo crear un procedimiento almacenado para el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos. El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado (`BusinessEntityID`). El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
+ En este ejemplo de código se muestra cómo crear un procedimiento almacenado para la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] . El ejemplo devuelve el apellido de un empleado cuando se proporciona el número de identificador del empleado (`BusinessEntityID`). El procedimiento almacenado requiere un parámetro de entrada que especifique el número de identificador del empleado y un parámetro de salida para devolver el apellido del empleado.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  

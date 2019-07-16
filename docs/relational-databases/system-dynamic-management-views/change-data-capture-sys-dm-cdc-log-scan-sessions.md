@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d337e9d0-78b1-4a07-8820-2027d0b9f87c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d789ec1dd936b7eb40ecae56226a5879754a2260
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 52abdd077d892982c7fb63a34cec8bbdbd973379
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47698593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017993"
 ---
 # <a name="change-data-capture---sysdmcdclogscansessions"></a>Captura de datos modificados - sys.dm_cdc_log_scan_sessions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47698593"
 |**start_time**|**datetime**|Hora que la sesión comenzó.<br /><br /> Cuando **session_id** = 0, la hora en que comenzó la recopilación de datos agregados.|  
 |**end_time**|**datetime**|Hora a la que finalizó la sesión<br /><br /> NULL = la sesión está activa.<br /><br /> Cuando **session_id** = 0, la hora en que finalizó la última sesión.|  
 |**duration**|**bigint**|Duración, en segundos, de la sesión<br /><br /> 0 = la sesión no contiene transacciones de captura de datos de cambio.<br /><br /> Cuando **session_id** = 0, la suma de la duración (en segundos) de todas las sesiones con transacciones de captura de datos de cambio.|  
-|**scan_phase**|**nvarchar(200)**|La fase actual de la sesión. Estos son los valores posibles y sus descripciones:<br /><br /> 1: configuración de lectura<br />2: primer examen, generar la tabla hash<br />3: análisis en segundo lugar<br />4: analizar en segundo lugar<br />5: análisis en segundo lugar<br />6: control de versiones de esquema<br />7: último examen<br />8: listo<br /><br /> Cuando **session_id** = 0, este valor siempre es "Aggregate".|  
+|**scan_phase**|**nvarchar(200)**|La fase actual de la sesión. Estos son los valores posibles y sus descripciones:<br /><br /> 1: Lectura de la configuración<br />2: Primer análisis, generar la tabla hash<br />3: Segundo recorrido<br />4: Segundo recorrido<br />5: Segundo recorrido<br />6: Versiones del esquema<br />7: Último examen<br />8: Listo<br /><br /> Cuando **session_id** = 0, este valor siempre es "Aggregate".|  
 |**error_count**|**int**|Número máximo de errores detectados<br /><br /> Cuando **session_id** = 0, el número total de errores en todas las sesiones.|  
 |**start_lsn**|**nvarchar(23)**|Iniciar LSN para la sesión.<br /><br /> Cuando **session_id** = 0, LSN inicial de la última sesión.|  
 |**current_lsn**|**nvarchar(23)**|LSN actual del que se realiza un recorrido.<br /><br /> Cuando **session_id** = 0, el LSN actual es 0.|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3003f8c2-8be6-41cc-8d9c-612e9bd0f3ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6fec2cea71ba818e955e0b6c2ce31c58f2c07357
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa340c64f6eb92d803d8918bc99ecf112b19f1e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043890"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083115"
 ---
 # <a name="connecting-using-file-data-sources"></a>Conectar con orígenes de datos de archivo
 La información de conexión para un origen de datos de archivo se almacena en un archivo DSN. Como resultado, la cadena de conexión se puede utilizar varias veces un único usuario o compartida entre varios usuarios si tienen instalado el controlador apropiado. El archivo contiene un nombre de controlador (u otro nombre de origen de datos en el caso de un origen de datos de archivo no se puede compartir) y si lo desea, una cadena de conexión que puede usarse por **SQLDriverConnect**. El Administrador de controladores se basa la cadena de conexión para la llamada a **SQLDriverConnect** en las palabras clave en el archivo DSN.  

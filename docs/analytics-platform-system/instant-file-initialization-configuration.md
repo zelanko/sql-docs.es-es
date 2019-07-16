@@ -2,19 +2,18 @@
 title: Configurar la inicialización instantánea de archivos - Analytics Platform System | Microsoft Docs
 description: Configure la inicialización instantánea de archivos en Analytics Platform System. Inicialización instantánea de archivos es una característica de SQL Server que permite que las operaciones de archivo de datos se ejecute más rápidamente.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 959d219565de6577e31d9548f5daea0fe0d2419e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f716b5fc3668b78fd7e5728dc4a2cd640c7940
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960735"
 ---
 # <a name="instant-file-initialization-configuration"></a>Configuración de la inicialización instantánea de archivos
 Inicialización instantánea de archivos es una característica de SQL Server que permite que las operaciones de archivo de datos se ejecute más rápidamente. Activando la casilla para activar la inicialización instantánea de archivos mejorará el rendimiento de SQL Server PDW. Sin embargo, si esto supone un riesgo de seguridad para usted empresariales, a continuación, deje la casilla desactivada.  

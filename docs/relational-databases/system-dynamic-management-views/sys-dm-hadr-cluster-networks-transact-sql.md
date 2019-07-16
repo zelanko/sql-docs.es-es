@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ece32b15-d63f-4f93-92b7-e2930333e97a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7b48507e59fa77cc0e6e47b4874cd1c010cd36cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0b2475a3881cb73d9dd82ee7fc311e7288aa4738
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47746213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900646"
 ---
 # <a name="sysdmhadrclusternetworks-transact-sql"></a>sys.dm_hadr_cluster_networks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47746213"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**MEMBER_NAME**|**nvarchar(128)**|Un nombre de equipo de un nodo del clúster de WSFC.|  
+|**member_name**|**nvarchar(128)**|Un nombre de equipo de un nodo del clúster de WSFC.|  
 |**network_subnet_ip**|**nvarchar(48)**|Dirección de IP de red de la subred a la que pertenece el equipo. Puede ser una dirección IPv4 o IPv6.|  
 |**network_subnet_ipv4_mask**|**nvarchar(45)**|Máscara de subred de red que especifica la subred a la que pertenece la dirección IP. **network_subnet_ipv4_mask** para especificar las opciones < network_subnet_option > de DHCP en una cláusula WITH DHCP de la [CREATE AVAILABILITY GROUP](../../t-sql/statements/create-availability-group-transact-sql.md) o [ALTER AVAILABILITY GROUP](../../t-sql/statements/alter-availability-group-transact-sql.md) [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción.<br /><br /> NULL = subred IPv6.|  
 ||||  

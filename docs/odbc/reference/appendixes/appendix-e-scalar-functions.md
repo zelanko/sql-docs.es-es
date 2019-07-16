@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996179"
 ---
 # <a name="appendix-e-scalar-functions"></a>Apéndice E: Funciones escalares
 ODBC especifica los siguientes tipos de funciones escalares, con información detallada sobre cada uno de estos tipos de función proporcionados en las secciones correspondientes de este apéndice. Las descripciones de la función incluir sintaxis asociada.  

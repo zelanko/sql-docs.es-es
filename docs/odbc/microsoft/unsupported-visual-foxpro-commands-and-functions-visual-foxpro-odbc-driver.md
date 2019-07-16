@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: afdb6b7e-738d-42ca-8053-67ae50873ca6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c6b69c8bf15b4d56872c4030725638e4b61571e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db6aff35944b8811e79627c6076ab61e838edf3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912323"
 ---
 # <a name="unsupported-visual-foxpro-commands-and-functions-visual-foxpro-odbc-driver"></a>No compatible de Visual FoxPro comandos y funciones (controlador ODBC de Visual FoxPro)
 En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatibles con el controlador ODBC de Visual FoxPro, pero son compatibles con Microsoft® Visual FoxPro.  
@@ -52,7 +51,7 @@ En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatib
 |Función AMEMBERS)|Función ANSITOOEM)|Función APRINTERS)|  
 |Función ASELOBJ)|Comando de ayuda||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -237,7 +236,7 @@ En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatib
 |Cambiar el nombre de comando de conexión|Cambiar el nombre de comando de tabla|RESTAURAR a partir de comando|  
 |Comando de informe|REQUERY () (función)|RESTAURAR ventana (comando)|  
 |RESTAURAR comandos de MACROS|RESTAURAR comandos de la pantalla|Función RGBSCHEME)|  
-|Comando RESUME|Función RGB)|EJECUTE &AMP;#124; ! Comando|  
+|Comando RESUME|Función RGB)|EJECUTE &#124; ! Comando|  
 |Comando RMDIR|Función de fila)||  
 |Comando RUNSCRIPT|Función RDLEVEL)||  
   
@@ -254,7 +253,7 @@ En la tabla siguiente se enumera FoxPro comandos y funciones que no son compatib
 |Comando CLEAR conjunto|CONJUNTO de comandos de RELOJ|ESTABLECER el COLOR del comando|  
 |ESTABLECER el COLOR del comando de esquema|Comando de conjunto de conjunto de COLOR|ESTABLECER el COLOR al comando|  
 |Comando de conjunto COMPATIBLE|Comando de confirmación de SET|CONJUNTO de comandos de consola|  
-|CONJUNTO CPCOMPILE|SET CPDIALOG|CONJUNTO de comandos de moneda|  
+|CONJUNTO CPCOMPILE|CONJUNTO CPDIALOG|CONJUNTO de comandos de moneda|  
 |SET CURSOR (comando)|Comando DATASESSION Set.|CONJUNTO de comandos de depuración|  
 |CONJUNTO de comandos de decimales|Comando de conjunto de DELIMITADORES|CONJUNTO de comandos de desarrollo|  
 |CONJUNTO de comandos de dispositivo|CONJUNTO de comandos de visualización|Comando DOHISTORY Set.|  

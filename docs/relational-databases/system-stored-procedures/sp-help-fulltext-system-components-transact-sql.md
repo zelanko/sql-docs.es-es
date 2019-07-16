@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ac1fc7a0-7f46-4a12-8c5c-8d378226a8ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b8090ea1080fa7528d3a8297e14760190e8aadfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 949d22b0acdd4cc6d1e9d865f4f65e847d87aa46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055054"
 ---
 # <a name="sphelpfulltextsystemcomponents-transact-sql"></a>sp_help_fulltext_system_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -69,7 +68,7 @@ sp_help_fulltext_system_components
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> filter<br /><br /> protocol handler<br /><br /> wordbreaker|  
-|**componentname**|**sysname**|Nombre del componente.|  
+|**nombre de componente**|**sysname**|Nombre del componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
 |**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  

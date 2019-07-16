@@ -1,5 +1,5 @@
 ---
-title: sys.extended_properties (Transact-SQL) | Microsoft Docs
+title: Sys.extended_properties (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/15/2017
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 439b7299-dce3-4d26-b1c7-61be5e0df82a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ffac91aef6e7b761705e477a9d5b433d6e3f2fe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0c7c212e97cfd65a7347696785ff613038acde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010740"
 ---
 # <a name="extended-properties-catalog-views---sysextendedproperties"></a>Extended vistas de catálogo de propiedades - sys.extended_properties
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "63008552"
 |class_desc|**nvarchar(60)**|Descripción de la clase en la que existe la propiedad extendida. Puede ser uno de los valores siguientes:<br /><br /> DATABASE<br /><br /> OBJECT_OR_COLUMN<br /><br /> Parámetro<br /><br /> SCHEMA<br /><br /> DATABASE_PRINCIPAL<br /><br /> ASSEMBLY<br /><br /> TYPE<br /><br /> INDEX<br /><br /> XML_SCHEMA_COLLECTION<br /><br /> MESSAGE_TYPE<br /><br /> SERVICE_CONTRACT<br /><br /> SERVICE<br /><br /> REMOTE_SERVICE_BINDING<br /><br /> ROUTE<br /><br /> DATASPACE<br /><br /> PARTITION_FUNCTION<br /><br /> DATABASE_FILE<br /><br /> PLAN_GUIDE|  
 |major_id|**int**|Identificador del elemento en el que existe la propiedad extendida, interpretado de acuerdo con su clase. Para la mayoría de los elementos, es el identificador aplicable a lo que la clase representa. La interpretación de los identificadores principales no estándar es la siguiente:<br /><br /> Si class es 0, major_id siempre es 0.<br /><br /> Si class es 1, 2 ó 7, major_id es object_id.|  
 |minor_id|**int**|Identificador secundario del elemento en el que existe la propiedad extendida, interpretado de acuerdo con su clase. Para la mayoría de los elementos es 0; en los demás casos, el identificador es el siguiente:<br /><br /> Si class = 1, minor_id es column_id si es una columna o 0 si es un objeto.<br /><br /> Si class = 2, minor_id es parameter_id.<br /><br /> Si class = 7, minor_id es index_id.|  
-|NAME|**sysname**|Nombre de la propiedad, único con class, major_id y minor_id.|  
-|value|**sql_variant**|Valor de la propiedad extendida.|  
+|name|**sysname**|Nombre de la propiedad, único con class, major_id y minor_id.|  
+|valor|**sql_variant**|Valor de la propiedad extendida.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 039e5a8970b2161bfe54b1836f3bd12b48477e1a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961818"
 ---
 # <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>Generar un modelo de R y guardar en SQL Server (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -204,7 +203,7 @@ Puede comprobar el contexto de cálculo es local mediante la ejecución de `rxGe
 
 Después de haber creado un modelo y comprobar que funciona correctamente, probablemente desee implementarla en un sitio donde los usuarios o las personas de su organización pueden hacer utilizar del modelo, o quizás volver a entrenar y vuelva a calibrar el modelo de forma periódica. Este proceso se denomina a veces *operacionalización* un modelo. En SQL Server, puesta en marcha se logra mediante la inserción de código de R en un procedimiento almacenado. Como código reside en el procedimiento, se puede llamar desde cualquier aplicación que puede conectarse a SQL Server.
 
-Antes de que el modelo se puede llamar desde una aplicación externa, debe guardar el modelo en la base de datos utilizada para la producción. Modelos entrenados se almacenan en formato binario, en una sola columna de tipo **varbinary (max)**.
+Antes de que el modelo se puede llamar desde una aplicación externa, debe guardar el modelo en la base de datos utilizada para la producción. Modelos entrenados se almacenan en formato binario, en una sola columna de tipo **varbinary (max)** .
 
 Un flujo de trabajo de implementación típico consta de los pasos siguientes:
 

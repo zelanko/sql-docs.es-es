@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9ae780dc-b33f-4861-a996-176bae9e7211
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 19e9abcf3af93ef85934d536de6ca726139afde0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 585243f46296808a5ed190c3e6d9448eec1c63da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908800"
 ---
 # <a name="menu-commands-and-other-shortcut-keys-mysqltosql"></a>Comandos de menú y otras teclas de acceso directo (MySQLToSQL)
 Las secciones siguientes describen los métodos abreviados de teclado para tener acceso a comandos de menú y otras teclas de método abreviado que se usa en varios cuadros de diálogo de SSMA para la aplicación de MySQL.  
@@ -29,7 +28,7 @@ Para obtener acceso a los menús archivo, usa el método abreviado de teclado es
 |Mostrar el cuadro de diálogo Abrir proyecto.|ALT + F + O|  
 |Cierre el proyecto actual.|ALT + F + C|  
 |Mostrar la operación de guardar cuadro de diálogo de proyecto.|ALT + F + S|  
-|Mostrar el conectar o volver a conectar con el cuadro de diálogo de MySQL.|ALT + F + T|  
+|Mostrar el conectar o volver a conectar con el cuadro de diálogo de MySQL.|ALT + F, T|  
 |Mostrar el conectar o volver a conectar con el cuadro de diálogo de SQL Server o SQL Azure.|ALT + F + Q|  
 |Proyectos recientes de acceso.|ALT + F + P|  
 |Salga de la aplicación de SSMA.|ALT + F + X|  

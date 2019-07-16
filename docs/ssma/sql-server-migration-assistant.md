@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d0233525-a83b-4279-813e-c554042abd0e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a5cc32ab3579555bff85e4e18052bd0126372517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6c0f5d54f8a6d3ac1dd35c7d02b05e1b5900278
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083558"
 ---
 # <a name="sql-server-migration-assistant"></a>SQL Server Migration Assistant
 Microsoft SQL Server Migration Assistant (SSMA) es una herramienta diseñada para automatizar la migración de base de datos a SQL Server desde Microsoft Access, DB2, MySQL, Oracle y SAP ASE.  

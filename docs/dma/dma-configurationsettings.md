@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: a360c86edc08916f1e28157a54503f64c152dec7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794389"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058871"
 ---
 # <a name="configure-settings-for-data-migration-assistant"></a>Configurar opciones para Data Migration Assistant
 
@@ -91,7 +90,7 @@ Durante la valoración, Data Migration Assistant extrae la aplicación de capa d
 
 - databaseLockTimeout
 
-   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Default=5000)
+   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 

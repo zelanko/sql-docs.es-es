@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4f1266c5-93d7-402d-94ed-43f69494c04b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 49f7c204dd5c8fd74c1e2fe1c1c57adb38e60d69
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 4fc30086978e26f53f7a4fdbab8a731ac2334181
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524070"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946113"
 ---
 # <a name="xqueries-involving-order"></a>Consultas XQuery basadas en el orden
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ WHERE ProductModelID=7
   
 -   **@\*** Recupera todos los atributos de la segunda ubicación de centro de trabajo.  
   
--   La iteración FLWOR (FOR ... RETURN) recupera todos los <`step`> elementos secundarios de la ubicación del segundo centro de trabajo.  
+-   La iteración FLWOR (para... RETURN) recupera todos los <`step`> ubicación del centro de los elementos secundarios del segundo trabajo.  
   
 -   El [función SQL:Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) incluye el valor relacional en el XML que se está construyendo.  
   
@@ -138,7 +137,7 @@ where ProductModelID=7
 ```  
   
 ### <a name="c-retrieve-the-first-two-product-feature-descriptions-from-the-product-catalog"></a>C. Recuperar las dos primeras descripciones de las características de un producto del catálogo de productos  
- Para un modelo de producto específico, la consulta recupera las dos primeras descripciones de características del elemento <`Features`> del catálogo de modelos de productos.  
+ Para un modelo de producto determinado, la consulta recupera las primeras descripciones de dos características de la <`Features`> elemento en el catálogo del modelo de producto.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -158,9 +157,9 @@ where ProductModelID=19
   
  Observe lo siguiente en la consulta anterior:  
   
- El cuerpo de la consulta genera XML que incluye el elemento <`ProductModel`> que tiene los atributos ProductModelID y ProductModelName.  
+ El cuerpo de la consulta genera XML que incluye el <`ProductModel`> elemento que tiene los atributos ProductModelID y ProductModelName.  
   
--   La consulta usa un FOR ... el bucle RETURN para recuperar las descripciones de las funciones del modelo del producto  El **position()** función se usa para recuperar las dos primeras características.  
+-   La consulta usa un FOR... El bucle RETURN para recuperar las descripciones de características del modelo de producto. El **position()** función se usa para recuperar las dos primeras características.  
   
  Éste es el resultado:  
   

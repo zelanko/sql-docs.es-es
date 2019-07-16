@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e0436cc-230f-44b0-b373-04a57e83ee76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17a88095611a5f551708f3950359063317368757
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 67eac22a630305f32f141ea18861e5638445f19b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094348"
 ---
 # <a name="sequence-of-status-records"></a>Secuencia de registros de estado
 Si se devuelven dos o más registros de estado, el Administrador de controladores y el controlador clasificarán según las reglas siguientes. El registro con la clasificación más alta es el primer registro. No se considera el origen de un registro (Administrador de controladores, controladores, puerta de enlace etc.) cuando los registros de categoría.  

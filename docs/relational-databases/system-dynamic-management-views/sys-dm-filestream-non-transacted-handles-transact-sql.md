@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2b25594feb96fe10f0a04ad0ab542fd582089759
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4dda607ace977be539dbed096a3d83ac5f220ea0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52411632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950980"
 ---
 # <a name="sysdmfilestreamnontransactedhandles-transact-sql"></a>sys.dm_filestream_non_transacted_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,19 +36,19 @@ ms.locfileid: "52411632"
   
 |**Columna**|**Tipo**|**Descripción**|  
 |----------------|--------------|---------------------|  
-|database_id|INT|Id. de la base de datos asociado al identificador.|  
-|object_id|INT|Id. de objeto del objeto FileTable al que está asociado el identificador.|  
-|handle_id|INT|Id. de contexto del identificador único. Utilizado por el [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) procedimiento almacenado para eliminar un identificador específico.|  
-|file_object_type|INT|Tipo del identificador. Esto indica el nivel de la jerarquía con que se abrió el identificador, es decir, base de datos o elemento.|  
+|database_id|int|Id. de la base de datos asociado al identificador.|  
+|object_id|int|Id. de objeto del objeto FileTable al que está asociado el identificador.|  
+|handle_id|int|Id. de contexto del identificador único. Utilizado por el [sp_kill_filestream_non_transacted_handles &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/filestream-and-filetable-sp-kill-filestream-non-transacted-handles.md) procedimiento almacenado para eliminar un identificador específico.|  
+|file_object_type|int|Tipo del identificador. Esto indica el nivel de la jerarquía con que se abrió el identificador, es decir, base de datos o elemento.|  
 |file_object_type_desc|nvarchar(120)|"SIN DEFINIR",<br />"SERVER_ROOT",<br />"DATABASE_ROOT",<br />"TABLE_ROOT",<br />"TABLE_ITEM"|  
 |correlation_process_id|varbinary (8)|Contiene un identificador único para el proceso que originó la solicitud.|  
 |correlation_thread_id|varbinary (8)|Contiene un identificador único para el subproceso que originó la solicitud.|  
 |file_context|varbinary (8)|Puntero al objeto de archivo utilizado por este identificador.|  
-|state|INT|Estado actual del identificador. Puede ser activo, cerrado o eliminado.|  
+|state|int|Estado actual del identificador. Puede ser activo, cerrado o eliminado.|  
 |state_desc|nvarchar(120)|"ACTIVO",<br />"CERRADA",<br />"ELIMINAR"|  
-|current_workitem_type|INT|Indica que este identificador se está procesando actualmente.|  
+|current_workitem_type|int|Indica que este identificador se está procesando actualmente.|  
 |current_workitem_type_desc|nvarchar(120)|"NoSetWorkItemType",<br />"FFtPreCreateWorkitem",<br />"FFtGetPhysicalFileNameWorkitem",<br />"FFtPostCreateWorkitem",<br />"FFtPreCleanupWorkitem",<br />"FFtPostCleanupWorkitem",<br />"FFtPreCloseWorkitem",<br />"FFtQueryDirectoryWorkItem",<br />"FFtQueryInfoWorkItem",<br />"FFtQueryVolumeInfoWorkItem",<br />"FFtSetInfoWorkitem",<br />"FFtWriteCompletionWorkitem"|  
-|fcb_id|BIGINT|Identificador del bloque de control de archivos de FileTable|  
+|fcb_id|bigint|Identificador del bloque de control de archivos de FileTable|  
 |item_id|varbinary(892)|El identificador de elemento de un archivo o un directorio. Puede ser NULL para los identificadores de raíz del servidor.|  
 |is_directory|bit|Esto es un directorio.|  
 |item_name|nvarchar(512)|Nombre del elemento.|  
@@ -57,9 +56,9 @@ ms.locfileid: "52411632"
 |database_directory_name|nvarchar(512)|Parte de opened_file_name que representa el nombre del directorio de la base de datos.|  
 |table_directory_name|nvarchar(512)|Parte de opened_file_name que representa el nombre del directorio de la tabla.|  
 |remaining_file_name|nvarchar(512)|Parte de opened_file_name que representa el nombre del directorio restante.|  
-|open_time|DATETIME|Hora en que se abrió el identificador.|  
-|flags|INT|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
-|login_id|INT|Id. de la entidad de seguridad que abrió el identificador.|  
+|open_time|datetime|Hora en que se abrió el identificador.|  
+|flags|int|ShareFlagsUpdatedToFcb = 0x1,<br />DeleteOnClose = 0x2,<br />NewFile = 0x4,<br />PostCreateDoneForNewFile = 0x8,<br />StreamFileOverwritten = 0x10,<br />RequestCancelled = 0x20,<br />NewFileCreationRolledBack = 0x40|  
+|login_id|int|Id. de la entidad de seguridad que abrió el identificador.|  
 |login_name|nvarchar(512)|Nombre de la entidad de seguridad que abrió el identificador.|  
 |login_sid|varbinary(85)|SID de la entidad de seguridad que abrió el identificador.|  
 |read_access|bit|Abierto para acceso de lectura.|  

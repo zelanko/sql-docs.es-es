@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b537348a-bea0-4bd6-84a4-52a75292957f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b99fd70e0119aa01d384066aaa2f3b91eed152b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ff069ef0602e419eda93df0ca5a72dbf7c8ef1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045162"
 ---
 # <a name="microsoft-access-data-types"></a>Tipos de datos de Microsoft Access
 En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos de datos utilizados para crear tablas y los tipos de datos SQL de ODBC.  
@@ -38,8 +37,8 @@ En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos d
 |FECHA Y HORA|DATETIME|SQL_TIMESTAMP|  
 |GUID|GUID|SQL_GUID|  
 |BINARIO LARGO|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXTO LARGO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
-|MEMORANDO|LONGTEXT|SQL_LONGVARCHAR[2] SQL_WLONGVARCHAR[3]|  
+|TEXTO LARGO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
+|MEMORANDO|LONGTEXT|SQL_WLONGVARCHAR SQL_LONGVARCHAR [2] [3]|  
 |NÚMERO (tamaño del campo = SOLTERO)|ÚNICO|SQL_REAL|  
 |NÚMERO (tamaño del campo = doble)|Double|SQL_DOUBLE|  
 |NÚMERO (tamaño del campo = BYTE)|BYTE SIN SIGNO|SQL_TINYINT|  
@@ -47,7 +46,7 @@ En la tabla siguiente se muestra los tipos de datos de Microsoft Access, tipos d
 |NÚMERO (tamaño del campo = entero largo)|LONG|SQL_INTEGER|  
 |NUMERIC|NUMERIC|SQL_NUMERIC|  
 |OLE|LONGBINARY|SQL_LONGVARBINARY|  
-|TEXT|VARCHAR|SQL_VARCHAR[1] SQL_WVARCHAR[2]|  
+|TEXT|VARCHAR|SQL_WVARCHAR SQL_VARCHAR [1] [2]|  
 |VARBINARY|VARBINARY|SQL_VARBINARY|  
   
  [1] aplicaciones de acceso 4.0. Longitud máxima de 4.000 bytes. Comportamiento es similar al LONGBINARY.  

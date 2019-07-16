@@ -9,19 +9,18 @@ ms.topic: language-reference
 ms.assetid: 7f353e2a-f8fc-4366-97e4-aa1c49eadaf4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 4210e2defa71368129af868a3516eb4730dc6108
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 60d26d76f4d158799fe52e28be9927744ca98745
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090419"
 ---
 # <a name="sysdmxedatabasesessiontargets-azure-sql-database"></a>sys.dm_xe_database_session_targets (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve información sobre los destinos de la sesión.  
+  Devuelve información acerca de los destinos de la sesión.  
   
 ||  
 |-|  
@@ -37,7 +36,7 @@ ms.locfileid: "56016506"
 |target_data|**nvarchar(max)**|Datos que mantiene el destino como, por ejemplo, información de agregación de eventos. Acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW DATABASE STATE.  
+ Necesita el permiso VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   

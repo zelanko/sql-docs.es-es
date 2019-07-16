@@ -7,14 +7,13 @@ ms.date: 08/28/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 911086beaaaeb28a036a764e066402d7ba6f1da7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f721a840b6fba4a840484fccb1cafb334b1ba438
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62747077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962854"
 ---
 # <a name="install-machine-learning-server-standalone-or-r-server-standalone-using-sql-server-setup"></a>Instalar R Server (independiente) mediante el programa de instalación de SQL Server o Machine Learning Server (independiente)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -149,7 +148,7 @@ Para el desarrollo de R y Python, es habitual tener varias versiones en el mismo
 
 En la tabla siguiente se enumera las rutas de acceso para las distribuciones de R y Python creadas por los instaladores de Microsoft. Por integridad, la tabla incluye las rutas de acceso generados por el programa de instalación de SQL Server, así como el instalador independiente de Microsoft Machine Learning Server.
 
-|Versión| Método de instalación | Carpeta predeterminada|
+|`Version`| Método de instalación | Carpeta predeterminada|
 |----|----|----|
 |Machine Learning Server (independiente) de SQL Server 2017 |  Asistente para la instalación de SQL Server 2017 |`C:\Program Files\Microsoft SQL Server\140\R_SERVER` <br/>`C:\Program Files\Microsoft SQL Server\140\PYTHON_SERVER`|
 |Microsoft Machine Learning Server (independiente) |  Instalador independiente de Windows |`C:\Program Files\Microsoft\ML Server\R_SERVER`<br/>`C:\Program Files\Microsoft\ML Server\PYTHON_SERVER`|

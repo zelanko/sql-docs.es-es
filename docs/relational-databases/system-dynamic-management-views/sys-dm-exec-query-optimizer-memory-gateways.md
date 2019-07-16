@@ -19,29 +19,28 @@ helpviewer_keywords:
 - sys.dm_exec_query_optimizer_memory_gateways dynamic management view
 author: josack
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6e5c54d116f4d4d8a71ba3660a31b324d9952970
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: cf134f630e4112f0cef87b7138b92fc83959e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097669"
 ---
 # <a name="sysdmexecqueryoptimizermemorygateways-transact-sql"></a>Sys.dm_exec_query_optimizer_memory_gateways (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
 Devuelve el estado actual de semáforos de recursos que se utiliza para acelerar la optimización de consultas simultáneas.
 
-|columna|Tipo|Descripción|  
+|columna|Type|Descripción|  
 |----------|---------------|-----------------|  
 |**pool_id**|**int**|Id. de grupo de recursos en el regulador de recursos|  
-|**Nombre**|**sysname**|Compilar nombre gate (puerta de enlace pequeña, mediana de puerta de enlace, la puerta de enlace grande)|
+|**name**|**sysname**|Compilar nombre gate (puerta de enlace pequeña, mediana de puerta de enlace, la puerta de enlace grande)|
 |**número máximo**|**int**|El recuento máximo configurado de compilaciones simultáneas|
 |**active_count**|**int**|El recuento de compilaciones en esta puerta activo actualmente|
 |**waiter_count**|**int**|El número de tareas en espera en esta puerta|
 |**threshold_factor**|**bigint**|Factor de umbral que define la parte de la memoria máxima utilizada por optimización de consultas.  Para la puerta de enlace pequeña threshold_factor indica el uso de memoria del optimizador máximo en bytes para una consulta antes de que sea necesario para obtener un acceso de la puerta de enlace pequeña.  Para la puerta de enlace mediana y grande, threshold_factor muestra la parte de la memoria total del servidor disponible para esta puerta. Se utiliza como un divisor al calcular el umbral de uso de memoria para la puerta.|
-|**umbral**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta es necesaria para obtener un acceso a esta puerta de enlace si su consumo de memoria alcanza este umbral.  "-1" si la consulta no es necesario para obtener un acceso a esta puerta de enlace.|
+|**threshold**|**bigint**|Memoria de umbral siguiente en bytes.  La consulta es necesaria para obtener un acceso a esta puerta de enlace si su consumo de memoria alcanza este umbral.  "-1" si la consulta no es necesario para obtener un acceso a esta puerta de enlace.|
 |**is_active**|**bit**|Si la consulta es necesario que pase la actual puerta o no.|
 
 

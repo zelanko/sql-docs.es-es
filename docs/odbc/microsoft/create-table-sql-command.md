@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: be2143ba-fc16-42c9-84f7-8985cd924860
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 195d226caed68da7131390eaf1985d4e05b2edf3
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 2f979ccb5a44ada8e86424e0f6134f39d28a021d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096603"
 ---
 # <a name="create-table---sql-command"></a>Crear tabla - comando SQL
 Crea una tabla que tiene los campos especificados.  
@@ -58,7 +57,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
  FREE  
  Especifica que la tabla no se agregarán a una base de datos abierta. GRATIS no es necesario si una base de datos no está abierto.  
   
- *(FieldName1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
+ *(Nombredecampo1 FieldType* [( *nFieldWidth* [, *nPrecision*])]  
  Especifica el nombre de campo, tipo de campo, ancho de campo y precisión del campo (número de posiciones decimales), respectivamente.  
   
  *FieldType* es una letra única que indica el campo [tipo de datos](../../odbc/microsoft/visual-foxpro-field-data-types.md). Algunos tipos de campo de datos requieren que se especifique *nFieldWidth* o *nPrecision* o ambos.  
@@ -73,7 +72,7 @@ CREATE TABLE | DBF TableName1 [NAME LongTableName] [FREE]
   
  Si omite NULL y NOT NULL, el valor actual de SET NULL determina si se permiten valores null en el campo. Sin embargo, si omite NULL y NOT NULL e incluye la clave principal o única cláusula, se omite el valor actual de SET NULL y el campo de valor predeterminado es NOT NULL.  
   
- CHECK *lExpression1*  
+ COMPROBAR *lExpression1*  
  Especifica una regla de validación para el campo. *lExpression1* puede ser una función definida por el usuario. Siempre que se anexa un registro en blanco, se comprueba la regla de validación. Se genera un error si la regla de validación no permite que un valor de campo en blanco en un registro anexado.  
   
  ERROR *cMessageText1*  
@@ -125,7 +124,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  Puede crear varios índices externos para la tabla, pero las expresiones de índice externo deben especificar los distintos campos en la tabla.  
   
- REFERENCES *TableName3*[TAG *TagName5*]  
+ REFERENCIAS *TableName3*[etiqueta *TagName5*]  
  Especifica la tabla primaria a la que se establece una relación persistente. Incluir etiqueta *TagName5* para establecer una relación basada en una etiqueta de índice para la tabla primaria. Los nombres de etiqueta de índice pueden contener hasta 10 caracteres. De forma predeterminada, si se omite la etiqueta *TagName5,* la relación se establece mediante la clave de índice principal de la tabla primaria.  
   
  COMPROBAR *eExpression2*[ERROR *cMessageText2*]  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
 |Sintaxis de ODBC|Sintaxis de Visual FoxPro|  
 |-----------------|--------------------------|  
-|CREATE TABLE *nombre de la tabla de base*<br /><br /> (*identificador de la columna tipo de datos*<br /><br /> [NO NULO]<br /><br /> [,*identificador de la columna tipo de datos*<br /><br /> [NO NULL]...)|Crear tabla *TableName1* [nombre *LongTableName*]<br /><br /> (*FieldName1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NO NULL)]|  
+|CREATE TABLE *nombre de la tabla de base*<br /><br /> (*identificador de la columna tipo de datos*<br /><br /> [NO NULO]<br /><br /> [,*identificador de la columna tipo de datos*<br /><br /> [NO NULL]...)|Crear tabla *TableName1* [nombre *LongTableName*]<br /><br /> (*Nombredecampo1* *FieldType*<br /><br /> [(*nFieldWidth* [, *nPrecision*])]<br /><br /> [NO NULL)]|  
   
  Cuando se crea una tabla con el controlador, el controlador de la tabla cierra inmediatamente después de crear para permitir el acceso a la tabla por otros usuarios. Esto difiere de Visual FoxPro, lo que deja abierto exclusivamente al crear la tabla. Sin embargo, si se ejecuta un procedimiento almacenado en el origen de datos que contiene una instrucción CREATE TABLE, la tabla está abierta.  
   

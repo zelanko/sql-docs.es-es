@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 05ff7bd4-e60b-4f48-a893-bc2346aa9a8a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: e9ccc7648be4915a68b798f314689d961113639a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50845a9bdf3c3185d7b69bb86a75b2a3d332ef6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074175"
 ---
 # <a name="mapping-db2-schemas-to-sql-server-schemas-db2tosql"></a>Asignación de esquemas de DB2 a esquemas de SQL Server (DB2ToSQL)
 En DB2, cada base de datos tiene uno o varios esquemas. De forma predeterminada, SSMA migra todos los objetos en un esquema de DB2 a un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] denominado para el esquema de base de datos. Sin embargo, puede personalizar la asignación entre esquemas de DB2 y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] bases de datos.  

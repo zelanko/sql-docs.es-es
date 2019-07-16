@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 7c755d8a-64dd-44b2-be5e-735d30758900
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ae0d84ba18a350adb47ca9a9aeeaf966a90af2a8
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a23f8eb64ae99b999cdf6b16f1c888383a88c147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067777"
 ---
 # <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
 |is_managed_backup_enabled|INT|Indica si [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada actualmente para esta base de datos. El valor 1 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está habilitada y el valor 0 indica que [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] está deshabilitada para esta base de datos.|  
 |storage_url|NVARCHAR (1024)|Dirección URL de la cuenta de almacenamiento.|  
 |Encryption_algorithm|NCHAR (20)|Devuelve el algoritmo de cifrado actual que usar cuando se cifra la copia de seguridad.|  
-|Encryptor_type|NCHAR(15)|Devuelve el valor del sistema de cifrado: certificado o clave asimétrica.|  
+|Encryptor_type|NCHAR(15)|Devuelve la configuración del sistema de cifrado: certificado o clave asimétrica.|  
 |Encryptor_name|NCHAR(long_max_de_cert/nombre_clave_asim)|Nombre del certificado o de la clave asimétrica.|  
   
 ## <a name="security"></a>Seguridad  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a80933b1a9845ec2676fba470ed39e06ee7f4ad8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b87fad1b9c568f4ebd5f65ef3705001b12d26693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251413"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038043"
 ---
 # <a name="using-scalar-expressions"></a>Usar expresiones escalares
 
@@ -70,6 +69,6 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

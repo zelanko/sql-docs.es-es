@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 322e3170-93f8-468a-a123-104ce7bd7fad
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 25f6c9bd1aa9cbebd9b445399442d47eff1abe72
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3818c2ff4689605ff03660d6ae66bf4d579cb443
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47758693"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037315"
 ---
 # <a name="spxtpflushtemporalhistory-transact-sql"></a>sp_xtp_flush_temporal_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_xtp_flush_temporal_history @schema_name, @object_name
  El nombre de la tabla temporal o actual  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- 0 (correcto) o >0 (error)  
+ 0 (correcto) o > 0 (error)  
   
 ## <a name="permissions"></a>Permisos  
  Se requieren permisos db_owner.  

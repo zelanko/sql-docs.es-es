@@ -2,19 +2,18 @@
 title: Tipo de datos de Dwloader reglas de conversión de - almacenamiento de datos paralelos | Microsoft Docs
 description: En este tema se describe los formatos de datos de entrada y las conversiones de tipos de datos implícitas dicho cuando carga datos en el almacenamiento de datos paralelos (PDW) admite el cargador de línea de comandos de dwloader."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 46d092ee5d3b981c60d7bd5bde49f9994dab4b08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a15e129ad1cbf52a3daab5459e9ca7d06d195b9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961035"
 ---
 # <a name="data-type-conversion-rules-for-dwloader---parallel-data-warehouse"></a>Tipo de datos de reglas de conversión de dwloader - almacenamiento de datos paralelos
 En este tema se describe los formatos de datos de entrada y las conversiones de tipos de datos implícitas que [del cargador de la línea de comandos de dwloader](dwloader.md) admite cuando carga datos en PDW. Las conversiones de datos implícitas se producen cuando los datos de entrada no coincide con el tipo de datos en la tabla de destino PDW de SQL Server. Utilice esta información al diseñar el proceso de carga para garantizar que los datos se cargará correctamente en PDW de SQL Server.  
@@ -35,10 +34,10 @@ La siguiente tabla define el formato predeterminado y las reglas para cargar los
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos datetime|  
 |-------------------|-----------------------|------------------------------------|  
-|Literal de cadena de **datetime** formato|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Ejemplo: '2007-05-08 12:35:29.123'|Los dígitos fraccionarios que faltan se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08 12:35 ' se inserta como ' 2007-05-08 12:35:00.000'.|  
-|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: '2007-05-08 12:35'|Segundos y dígitos fraccionarios restantes se establecen en 0 cuando se inserta el valor.|  
-|Literal de cadena de **fecha** formato|'yyyy-MM-dd'<br /><br />Ejemplo: '2007-05-08'|Cuando se inserta el valor, se establecen los valores de tiempo (horas, minutos, segundos y fracciones) en 12:00:00.000.|  
-|Literal de cadena de **datetime2** formato|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Ejemplo: '2007-05-08 12:35:29.1234567'|Los datos de origen no pueden superar los tres dígitos fraccionarios. Por ejemplo, el literal ' 2007-05-08 12:35:29.123' se van a insertar, pero el valor ' 2007-05-8 12:35:29.1234567' genera un error.|  
+|Literal de cadena de **datetime** formato|'aaaa-MM-dd hh: mm: [.fff]'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.123'|Los dígitos fraccionarios que faltan se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08 12:35 ' se inserta como ' 2007-05-08 12:35:00.000'.|  
+|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: ' 2007-05-08 12:35 '|Segundos y dígitos fraccionarios restantes se establecen en 0 cuando se inserta el valor.|  
+|Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'|Cuando se inserta el valor, se establecen los valores de tiempo (horas, minutos, segundos y fracciones) en 12:00:00.000.|  
+|Literal de cadena de **datetime2** formato|'aaaa-MM-dd fffffff'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.1234567'|Los datos de origen no pueden superar los tres dígitos fraccionarios. Por ejemplo, el literal ' 2007-05-08 12:35:29.123' se van a insertar, pero el valor ' 2007-05-8 12:35:29.1234567' genera un error.|  
   
 ### <a name="smalldatetime-data-type"></a>Tipo de datos smalldatetime  
 La siguiente tabla define el formato predeterminado y las reglas para cargar los valores literales en una columna de tipo **smalldatetime**. Una cadena vacía (") se convierte en el valor predeterminado ' 1900-01-01 12:00 '. Las cadenas que contienen solo espacios en blanco (' ') generará un error.  
@@ -46,14 +45,14 @@ La siguiente tabla define el formato predeterminado y las reglas para cargar los
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos smalldatetime|  
 |-------------------|-----------------------|-----------------------------------------|  
 |Literal de cadena de **smalldatetime** formato|'aaaa-MM-dd hh: mm' o 'aaaa-MM-dd hh: mm:'<br /><br />Ejemplo: "2007-05-08 12:00 ' o ' 2007-05-08:00-12:15"|Los datos de origen deben tener los valores de año, mes, fecha, hora y minuto. Segundos son opcionales y, si está presente, se deben establecer en el valor 00. Cualquier otro valor genera un error.<br /><br />Los segundos son opcionales. Cuando se cargan en una columna de smalldatetime, dwloader redondeará hacia arriba los segundos y fracciones de segundo. Por ejemplo, se cargará 20:10:35.123 1999-05-01 como 01-05 20:11.|  
-|Literal de cadena de **fecha** formato|'yyyy-MM-dd'<br /><br />Ejemplo: '2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor.|  
+|Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor.|  
   
 ### <a name="date-data-type"></a>Tipo de datos date  
 La siguiente tabla define el formato predeterminado y las reglas para cargar los valores literales en una columna de tipo **fecha**. Una cadena vacía (") se convierte en el valor predeterminado ' 1900-01-01'. Las cadenas que contienen solo espacios en blanco (' ') generará un error.  
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos de fecha|  
 |-------------------|-----------------------|--------------------------------|  
-|Literal de cadena de **fecha** formato|'yyyy-MM-dd'<br /><br />Ejemplo: '2007-05-08'||  
+|Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'||  
   
 ### <a name="time-data-type"></a>Tipo de datos Time  
 La siguiente tabla define el formato predeterminado y las reglas para cargar los valores literales en una columna de tipo **tiempo**. Una cadena vacía (") se convierte en el valor predeterminado '00:00:00.0000'. Las cadenas que contienen solo espacios en blanco (' ') generará un error.  
@@ -67,21 +66,21 @@ La siguiente tabla define el formato predeterminado y las reglas para cargar los
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos datetimeoffset|  
 |-------------------|-----------------------|------------------------------------------|  
-|Literal de cadena de **datetime** formato|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Ejemplo: '2007-05-08 12:35:29.123'|Los dígitos fraccionarios que faltan y valores de desplazamiento se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08 12:35:29.123' se inserta como ' 2007-05-08 12:35:29.1230000 + 00:00 '.|  
-|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: '2007-05-08 12:35'|Segundos, los dígitos fraccionarios restantes y valores de desplazamiento se establecen en 0 cuando se inserta el valor.|  
-|Literal de cadena de **fecha** formato|'yyyy-MM-dd'<br /><br />Ejemplo: '2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08' se inserta como ' 2007-05-08 00:00:00.0000000 + 00:00 '.|  
-|Literal de cadena de **datetime2** formato|'yyyy-MM-dd hh:mm:ss.fffffff'<br /><br />Ejemplo: '2007-05-08 12:35:29.1234567'|Los datos de origen no pueden superar el número especificado de segundos fraccionarios en la columna de datetimeoffset. Si el origen de datos tiene un número igual o menor de fracciones de segundo, los datos se rellenan a la derecha con ceros. Por ejemplo, si el tipo de datos es datetimeoffset (5), el valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' se inserta como ' 12:35:29.12300 + 12:15 '.|  
-|Literal de cadena de **datetimeoffset** formato|' aaaa-MM-dd fffffff {+&#124;-} hh: mm '<br /><br />Ejemplo: '2007-05-08 12:35:29.1234567 +12:15'|Los datos de origen no pueden superar el número especificado de segundos fraccionarios en la columna de datetimeoffset. Si el origen de datos tiene un número igual o menor de fracciones de segundo, los datos se rellenan a la derecha con ceros. Por ejemplo, si el tipo de datos es datetimeoffset (5), el valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' se inserta como ' 12:35:29.12300 + 12:15 '.|  
+|Literal de cadena de **datetime** formato|'aaaa-MM-dd hh: mm: [.fff]'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.123'|Los dígitos fraccionarios que faltan y valores de desplazamiento se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08 12:35:29.123' se inserta como ' 2007-05-08 12:35:29.1230000 + 00:00 '.|  
+|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: ' 2007-05-08 12:35 '|Segundos, los dígitos fraccionarios restantes y valores de desplazamiento se establecen en 0 cuando se inserta el valor.|  
+|Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08' se inserta como ' 2007-05-08 00:00:00.0000000 + 00:00 '.|  
+|Literal de cadena de **datetime2** formato|'aaaa-MM-dd fffffff'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.1234567'|Los datos de origen no pueden superar el número especificado de segundos fraccionarios en la columna de datetimeoffset. Si el origen de datos tiene un número igual o menor de fracciones de segundo, los datos se rellenan a la derecha con ceros. Por ejemplo, si el tipo de datos es datetimeoffset (5), el valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' se inserta como ' 12:35:29.12300 + 12:15 '.|  
+|Literal de cadena de **datetimeoffset** formato|' aaaa-MM-dd fffffff {+&#124;-} hh: mm '<br /><br />Ejemplo: ' 2007-05-08 12:35:29.1234567 + 12:15 '|Los datos de origen no pueden superar el número especificado de segundos fraccionarios en la columna de datetimeoffset. Si el origen de datos tiene un número igual o menor de fracciones de segundo, los datos se rellenan a la derecha con ceros. Por ejemplo, si el tipo de datos es datetimeoffset (5), el valor literal ' 2007-05-08 12:35:29.123 + 12:15 ' se inserta como ' 12:35:29.12300 + 12:15 '.|  
   
 ### <a name="datetime2-data-type"></a>Tipo de datos datetime2  
 La siguiente tabla define el formato predeterminado y las reglas para cargar los valores literales en una columna de tipo **datetime2** (*n*). El formato predeterminado es 'aaaa-MM-dd fffffff'. Una cadena vacía (") se convierte en el valor predeterminado ' 1900-01-01 12:00:00 '. Las cadenas que contienen solo espacios en blanco (' ') generará un error. El número de dígitos fraccionarios depende de la definición de columna. Por ejemplo, una columna definida como **datetime2** (2) tendrán dos dígitos fraccionarios.  
   
 |Tipo de datos de entrada|Ejemplos de datos de entrada|Conversión a tipo de datos datetime2|  
 |-------------------|-----------------------|-------------------------------------|  
-|Literal de cadena de **datetime** formato|'yyyy-MM-dd hh:mm:ss[.fff]'<br /><br />Ejemplo: '2007-05-08 12:35:29.123'|Fracciones de segundo son opcionales y se establecen en 0 cuando se inserta el valor.|  
-|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: '2007-05-08 12'|Segundos opcionales y dígitos fraccionarios restantes se establecen en 0 cuando se inserta el valor.|  
-|Literal de cadena de **fecha** formato|'yyyy-MM-dd'<br /><br />Ejemplo: '2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08' se inserta como ' 2007-05-08 12:00:00.0000000'.|  
-|Literal de cadena de **datetime2** formato|'aaaa-MM-dd hh:mm:ss:fffffff'<br /><br />Ejemplo: '2007-05-08 12:35:29.1234567'|Si el origen de datos contiene datos y la hora de los componentes que son menores o iguales al valor especificado en **datetime2**(*n*), se insertan los datos; en caso contrario, se genera un error.|  
+|Literal de cadena de **datetime** formato|'aaaa-MM-dd hh: mm: [.fff]'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.123'|Fracciones de segundo son opcionales y se establecen en 0 cuando se inserta el valor.|  
+|Literal de cadena de **smalldatetime** formato|"aaaa-MM-dd hh: mm"<br /><br />Ejemplo: ' 2007-05-08 12'|Segundos opcionales y dígitos fraccionarios restantes se establecen en 0 cuando se inserta el valor.|  
+|Literal de cadena de **fecha** formato|'aaaa-MM-dd'<br /><br />Ejemplo: ' 2007-05-08'|Los valores de tiempo (horas, minutos, segundos y fracciones) se establecen en 0 cuando se inserta el valor. Por ejemplo, el literal ' 2007-05-08' se inserta como ' 2007-05-08 12:00:00.0000000'.|  
+|Literal de cadena de **datetime2** formato|'aaaa-MM-dd hh:mm:ss:fffffff'<br /><br />Ejemplo: ' 2007-05-08 12:35:29.1234567'|Si el origen de datos contiene datos y la hora de los componentes que son menores o iguales al valor especificado en **datetime2**(*n*), se insertan los datos; en caso contrario, se genera un error.|  
   
 ### <a name="DateFormats"></a>Formatos de fecha y hora  
 Dwloader admite los siguientes formatos de datos para los datos de entrada que se está cargando en PDW de SQL Server. Después de la tabla, se muestran más detalles.  
@@ -174,7 +173,7 @@ La siguiente tabla define el formato predeterminado y las reglas para cargar los
 |Literal de cadena Unicode|Formato: Cadena N'character'<br /><br />Ejemplo: Abc '| N/D |  
 |Literal entero|Formato: ffffffffffn<br /><br />Ejemplo: 321312313123| N/D |  
 |Literal decimal|Formato: ffffff.fffffff<br /><br />Ejemplo: 12344.34455| N/D |  
-|Literal Money|Format: $ffffff.fffnn<br /><br />Ejemplo: $123456.99|El símbolo de moneda opcionales no se inserta con el valor. Para insertar el símbolo de moneda, insertar ese valor como un literal de cadena. Esto hará coincidir el formato del cargador, que trata todos los literales como un literal de cadena.<br /><br />No se permiten las comas.<br /><br />Si el número de dígitos después del punto decimal supera los 2, el valor se redondea al valor más cercano. Por ejemplo, se inserta el valor 123.946789 como 123.95.<br /><br />Se permite solo el estilo predeterminado de 0 (sin separadores de millar y 2 dígitos después del separador decimal) cuando se usa la función CONVERT para insertar literales de dinero.|  
+|Literal Money|Formato: $ffffff.fffnn<br /><br />Ejemplo: $123456.99|El símbolo de moneda opcionales no se inserta con el valor. Para insertar el símbolo de moneda, insertar ese valor como un literal de cadena. Esto hará coincidir el formato del cargador, que trata todos los literales como un literal de cadena.<br /><br />No se permiten las comas.<br /><br />Si el número de dígitos después del punto decimal supera los 2, el valor se redondea al valor más cercano. Por ejemplo, se inserta el valor 123.946789 como 123.95.<br /><br />Se permite solo el estilo predeterminado de 0 (sin separadores de millar y 2 dígitos después del separador decimal) cuando se usa la función CONVERT para insertar literales de dinero.|  
   
 ### <a name="general-remarks"></a>Notas generales  
 **dwloader** realiza las mismas conversiones implícitas que realiza SMP de SQL Server, pero no admite todas las conversiones implícitas que admite SQL Server de SMP.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: eb2cb75c-dc58-4a5b-b329-664e9fe20ce0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0ee0509469f7a9bddca066a6e05416a13685ad9e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27056917d828313eaa97ad204d0297cec0fb7995
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084672"
 ---
 # <a name="dbosyscategories-transact-sql"></a>dbo.syscategories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62470929"
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de la categoría.|  
 |**category_class**|**int**|Tipo de elemento en la categoría:<br /><br /> **1** = trabajo<br /><br /> **2** = alerta<br /><br /> **3** = (operador)|  
-|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = Local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
-|**Nombre**|**sysname**|Nombre de la categoría|  
+|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
+|**name**|**sysname**|Nombre de la categoría|  
   
   

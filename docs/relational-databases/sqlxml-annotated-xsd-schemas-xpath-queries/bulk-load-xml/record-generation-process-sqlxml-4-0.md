@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c89d3859ad7f9f8f32dfc1cddd1ed805aa466867
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 73b7a8b42832c2d0a6c8c6d9589f953a93f39ce8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005296"
 ---
 # <a name="record-generation-process-sqlxml-40"></a>Proceso de generación de registros (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ ms.locfileid: "56038426"
 >  En este modelo, dado que se inserta un registro cuando se alcanza la etiqueta final (o cuando el nodo sale del ámbito), deberá definir todos los datos asociados al registro dentro del ámbito del nodo.  
   
 ## <a name="record-subset-and-the-key-ordering-rule"></a>Subconjunto de registros y la clave de ordenación de la regla  
- Al especificar un esquema de asignación que usa  **\<SQL: Relationship >**, el término subconjunto hace referencia al conjunto de registros que se genera en el lado externo de la relación. En el ejemplo siguiente, los registros de CustOrder están en el lado externo,  **\<SQL: Relationship >**.  
+ Al especificar un esquema de asignación que usa  **\<SQL: Relationship >** , el término subconjunto hace referencia al conjunto de registros que se genera en el lado externo de la relación. En el ejemplo siguiente, los registros de CustOrder están en el lado externo,  **\<SQL: Relationship >** .  
   
  Por ejemplo, supongamos que una base de datos contiene las tablas siguientes:  
   
@@ -149,9 +148,9 @@ ms.locfileid: "56038426"
   
  Los datos XML de ejemplo y los pasos para crear un ejemplo funcional se proporcionan a continuación.  
   
--   Cuando un  **\<cliente >** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro para la tabla Cust. Carga masiva XML, a continuación, copia los valores de columna necesarios (CustomerID, CompanyName y City) de la  **\<CustomerID >**,  **\<CompanyName >** y el  **\<Ciudad >** elementos secundarios como estos elementos entran en el ámbito.  
+-   Cuando un  **\<cliente >** nodo de elemento en el archivo de datos XML entra en el ámbito, la carga masiva XML genera un registro para la tabla Cust. Carga masiva XML, a continuación, copia los valores de columna necesarios (CustomerID, CompanyName y City) de la  **\<CustomerID >** ,  **\<CompanyName >** y el  **\<Ciudad >** elementos secundarios como estos elementos entran en el ámbito.  
   
--   Cuando un  **\<orden >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. Carga masiva XML copia el valor de la **OrderID** atributo para este registro. El valor necesario para la columna CustomerID se obtiene de la  **\<CustomerID >** elemento secundario de la  **\<cliente >** elemento. Carga masiva XML utiliza la información que se especifica en  **\<SQL: Relationship >** para obtener el valor de clave externa CustomerID para este registro, a menos que el **CustomerID** atributo era se especifica en el  **\<orden >** elemento. La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externo, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario usando el **\<SQL: Relationship >**. Como esto  **\<orden >** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todas las subsiguientes  **\<orden >** nodos de elemento en la misma manera.  
+-   Cuando un  **\<orden >** nodo de elemento entra en el ámbito, la carga masiva XML genera un registro para la tabla CustOrder. Carga masiva XML copia el valor de la **OrderID** atributo para este registro. El valor necesario para la columna CustomerID se obtiene de la  **\<CustomerID >** elemento secundario de la  **\<cliente >** elemento. Carga masiva XML utiliza la información que se especifica en  **\<SQL: Relationship >** para obtener el valor de clave externa CustomerID para este registro, a menos que el **CustomerID** atributo era se especifica en el  **\<orden >** elemento. La regla general es que si el elemento secundario especifica explícitamente un valor para el atributo de clave externo, la carga masiva XML usa ese valor y no obtiene el valor del elemento primario usando el **\<SQL: Relationship >** . Como esto  **\<orden >** nodo de elemento sale del ámbito, la carga masiva XML envía el registro a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y, a continuación, procesa todas las subsiguientes  **\<orden >** nodos de elemento en la misma manera.  
   
 -   Por último, el  **\<cliente >** nodo de elemento sale del ámbito. En ese momento, la carga masiva XML envía el registro del cliente a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. La carga masiva XML sigue este proceso para todos los clientes subsiguientes del flujo de datos XML.  
   

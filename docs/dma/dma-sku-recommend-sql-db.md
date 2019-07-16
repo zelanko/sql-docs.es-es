@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054670"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>Identificar a la derecha de la SKU de instancia de base de datos administrada de SQL Azure para la base de datos local
 
@@ -30,7 +29,7 @@ En este artículo se centra en la característica de recomendaciones de SKU de A
 
 - Base de datos única
 - Grupos elásticos
-- instancia administrada
+- Instancia administrada
 
 Las recomendaciones de SKU de característica le permite identificar tanto las mínimas recomendadas único de Azure SQL database o SKU en función de los contadores de rendimiento recopilados de los equipos que aloja las bases de datos de instancia administrada. La característica proporciona recomendaciones relacionadas con los precios de nivel, el nivel de proceso y tamaño máximo de datos, así como el costo estimado por mes. También ofrece la capacidad para la masiva aprovisionar solo bases de datos y las instancias administradas de Azure para todas las bases de datos recomendados.
 
@@ -97,7 +96,7 @@ Además, seleccione uno de los argumentos siguientes:
   - **/SkuRecommendationPreventPriceRefresh**: Si se establece en True, evita que la actualización de precios que se producen y se da por supuesto los precios de forma predeterminada. Utilizar si está ejecutando en modo sin conexión. Si no usa este parámetro, debe especificar los parámetros siguientes para obtener los precios más recientes en función de una región especificada.
 - Obtener los precios más recientes
   - **/SkuRecommendationCurrencyCode**: La moneda en que se va a mostrar los precios (p. ej. "USD").
-  - **/SkuRecommendationOfferName**: Nombre de la oferta (p. ej. "MS-AZR-0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
+  - **/ SkuRecommendationOfferName**: Nombre de la oferta (p. ej. "MS-AZR - 0003P"). Para obtener más información, consulte el [detalles de la oferta de Microsoft Azure](https://azure.microsoft.com/support/legal/offer-details/) página.
     - **/SkuRecommendationRegionName**: El nombre de la región (por ejemplo, "WestUS").
     - **/SkuRecommendationSubscriptionId**: Identificador de la suscripción.
     - **/AzureAuthenticationTenantId**: El inquilino de autenticación.
@@ -148,7 +147,7 @@ A continuación se muestran algunos invocaciones de ejemplo:
 /AzureAuthenticationTenantId=<Your AzureAuthenticationTenantId>
 ```
 
-**Ejemplo 3: Obtención de recomendaciones para las bases de datos específicas (p. ej. “TPCDS1G,EDW_3G,TPCDS10G”).**
+**Ejemplo 3: Obtención de recomendaciones para las bases de datos específicas (p. ej. "TPCDS1G, EDW_3G, TPCDS10G").**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef3f22ffa0456c69b7e46f8c5aadfc89f95ccc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022465"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura. Cuando sea posible, pida a los usuarios que proporcionen credenciales de seguridad en tiempo de ejecución. Si debe almacenar las credenciales en un archivo de script, proteja el archivo para evitar el acceso no autorizado.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo del sistema opcional proporcionado al agente de distribución. Por ejemplo, **- DefinitionFile** C:\Distdef.txt o **- CommitBatchSize** 10. *optional_command_line* es **nvarchar (4000)**, su valor predeterminado es una cadena vacía.  
+`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo del sistema opcional proporcionado al agente de distribución. Por ejemplo, **- DefinitionFile** C:\Distdef.txt o **- CommitBatchSize** 10. *optional_command_line* es **nvarchar (4000)** , su valor predeterminado es una cadena vacía.  
   
 `[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa al agente de distribución. *frequency_type* es **int**, y puede tener uno de los siguientes valores.  
   
@@ -178,11 +177,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` Es la fecha en el agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es **0**.  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` Es el identificador del agente de distribución para este trabajo. *distribution_jobid* es **binary (16)**, su valor predeterminado es NULL y es un parámetro de salida.  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` Es el identificador del agente de distribución para este trabajo. *distribution_jobid* es **binary (16)** , su valor predeterminado es NULL y es un parámetro de salida.  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` Establecer *encrypted_distributor_password* ya no se admite. Al intentar establecer esto **bit** parámetro **1** se producirá un error.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] el Administrador de sincronización. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] el Administrador de sincronización. *enabled_for_syncmgr* es **nvarchar (5)** , su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Por compatibilidad con versiones anteriores.  
   
@@ -192,11 +191,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'` Por compatibilidad con versiones anteriores.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` Especifica la ubicación de la carpeta alternativa para la instantánea. *alternate_snapshot_folder* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` Especifica la ubicación de la carpeta alternativa para la instantánea. *alternate_snapshot_folder* es **nvarchar (255)** , su valor predeterminado es null.  
   
-`[ @working_directory = ] 'working_director'` Es el nombre del directorio de trabajo utilizado para almacenar archivos de datos y el esquema para la publicación. *working_directory* es **nvarchar (255)**, su valor predeterminado es null. El nombre se debe especificar en el formato UNC.  
+`[ @working_directory = ] 'working_director'` Es el nombre del directorio de trabajo utilizado para almacenar archivos de datos y el esquema para la publicación. *working_directory* es **nvarchar (255)** , su valor predeterminado es null. El nombre se debe especificar en el formato UNC.  
   
-`[ @use_ftp = ] 'use_ftp'` Especifica el uso de FTP en lugar del protocolo habitual para recuperar instantáneas. *use_ftp* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_ftp = ] 'use_ftp'` Especifica el uso de FTP en lugar del protocolo habitual para recuperar instantáneas. *use_ftp* es **nvarchar (5)** , su valor predeterminado es False.  
   
 `[ @publication_type = ] publication_type` Especifica el tipo de replicación de la publicación. *publication_type* es un **tinyint** con un valor predeterminado de **0**. Si **0**, publicación es un tipo de transacción. Si **1**, publicación es un tipo de instantánea. Si **2**, publicación es un tipo de combinación.  
   
@@ -207,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  Debe especificar una contraseña si *dts_package_name* se especifica.  
   
-`[ @dts_package_location = ] 'dts_package_location'` Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, su valor predeterminado es **suscriptor**. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
+`[ @dts_package_location = ] 'dts_package_location'` Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)** , su valor predeterminado es **suscriptor**. La ubicación del paquete puede ser **distribuidor** o **suscriptor**.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -221,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'` Es el nombre de un trabajo de agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente con el suscriptor.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)** , no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente con el suscriptor.  
   
 `[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
   

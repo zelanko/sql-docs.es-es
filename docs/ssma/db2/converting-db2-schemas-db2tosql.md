@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 7947efc3-ca86-4ec5-87ce-7603059c75a0
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: d509ad58491bca379e3ab86e07aee63e8a5d3946
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a16a28a163acece321cc2229e9988cf7ab01f9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989869"
 ---
 # <a name="converting-db2-schemas-db2tosql"></a>Conversión de esquemas de DB2 (DB2ToSQL)
 Después de haberse conectado a DB2, conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y establecer el proyecto y las opciones de asignación de datos, puede convertir los objetos de base de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de base de datos.  
@@ -67,7 +66,7 @@ La siguiente tabla muestra qué objetos de DB2 se convierten y resultante [!INCL
 |WHILE (instrucción)|Se ha asignado.|  
 |GET (instrucción) diagnósticos|**SSMA asigna obtener diagnósticos con las siguientes excepciones:**<br /><br />ROW_COUNT - se ha asignado.<br /><br />DB2_RETURN_STATUS - se ha asignado.<br /><br />MESSAGE_TEXT - se ha asignado.<br /><br />DB2_SQL_NESTING_LEVEL - no se asigna a la semántica de SQL Server<br /><br />DB2_TOKEN_STRING - no se asigna a la semántica de SQL Server|  
 |Cursores|**SSMA asigna los CURSORES con las siguientes excepciones:**<br /><br />Declaración de CURSOR ALLOCATE: no se asigna a la semántica de SQL Server<br /><br />Declaración de asociar los LOCALIZADORES: no se asigna a la semántica de SQL Server<br /><br />Instrucción DECLARE CURSOR - cláusula Returnability no está asignado a la semántica SQL server<br /><br />La instrucción FETCH - una asignación parcial. Solo se admiten variables como destino. DESCRIPTOR de SQLDA no está asignado a la semántica SQL server|  
-|Variables|Se asignan.|  
+|variables|Se asignan.|  
 |Excepciones, los controladores y condiciones|**SSMA asigna "excepciones" con las siguientes excepciones:**<br /><br />SALIR de controladores: se asignan.<br /><br />Deshacer controladores: se asignan.<br /><br />Controladores de continuar: no se asignan.<br /><br />Condiciones: no se asigna a la semántica SQL server.|  
 |SQL dinámico|No se ha asignado.|  
 |Alias|Se asignan.|  

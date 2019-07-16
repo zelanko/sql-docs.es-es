@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6ca8fe2c-7b1c-4b59-b4c7-e3b7485df274
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eb371603230c0c3b6fbee0012c89ce402711fb6e
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 34cd282331a2f7bd8c0146d954b0ff76b7f42109
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941748"
 ---
 # <a name="spaddjob-transact-sql"></a>sp_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,11 +54,11 @@ sp_add_job [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_name = ] 'job_name'` El nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje (**%**) caracteres. *job_name*es **nvarchar (128)**, no tiene ningún valor predeterminado.  
+`[ @job_name = ] 'job_name'` El nombre del trabajo. El nombre debe ser único y no puede contener el porcentaje ( **%** ) caracteres. *job_name*es **nvarchar (128)** , no tiene ningún valor predeterminado.  
   
 `[ @enabled = ] enabled` Indica el estado del trabajo agregado. *habilitado*es **tinyint**, su valor predeterminado es 1 (habilitado). Si **0**, el trabajo no está habilitado y no se ejecuta según la programación; sin embargo, se puede ejecutar manualmente.  
   
-`[ @description = ] 'description'` La descripción del trabajo. *descripción* es **nvarchar (512)**, su valor predeterminado es null. Si *descripción* es se omite, se utiliza "No hay descripción disponible".  
+`[ @description = ] 'description'` La descripción del trabajo. *descripción* es **nvarchar (512)** , su valor predeterminado es null. Si *descripción* es se omite, se utiliza "No hay descripción disponible".  
   
 `[ @start_step_id = ] step_id` El número de identificación del primer paso para ejecutar el trabajo. *step_id*es **int**, su valor predeterminado es 1.  
   
@@ -67,16 +66,16 @@ sp_add_job [ @job_name = ] 'job_name'
   
 `[ @category_id = ] category_id` Un mecanismo independiente del idioma para especificar una categoría de trabajo. *category_id*es **int**, su valor predeterminado es null.  
   
-`[ @owner_login_name = ] 'login'` El nombre del inicio de sesión que pertenece el trabajo. *inicio de sesión*es **sysname**, su valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name**. Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
+`[ @owner_login_name = ] 'login'` El nombre del inicio de sesión que pertenece el trabajo. *inicio de sesión*es **sysname**, su valor predeterminado es null, que se interpreta como el nombre de inicio de sesión actual. Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name** . Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name** , se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
   
 `[ @notify_level_eventlog = ] eventlog_level` Un valor que indica cuándo se debe incluir una entrada en el registro de aplicación de Microsoft Windows para este trabajo. *eventlog_level*es **int**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**0**|Never|  
+|**0**|Nunca|  
 |**1**|En caso de éxito|  
 |**2** (predeterminado)|En caso de error|  
-|**3**|Always|  
+|**3**|Siempre|  
   
 `[ @notify_level_email = ] email_level` Un valor que indica cuándo se debe enviar un correo electrónico tras finalizar este trabajo. *email_level*es **int**, su valor predeterminado es **0**, lo que no significa que nunca. *email_level*utiliza los mismos valores que *eventlog_level*.  
   
@@ -123,7 +122,7 @@ sp_add_job [ @job_name = ] 'job_name'
   
  Para obtener información sobre los permisos específicos que están asociados con cada una de ellas se ha corregido, roles de base de datos, vea [Roles de base de datos fijos de SQL Server Agent](../../ssms/agent/sql-server-agent-fixed-database-roles.md).  
   
- Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name**. Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name**, se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
+ Solo los miembros de la **sysadmin** rol fijo de servidor puede establecer o cambiar el valor de **@owner_login_name** . Si los usuarios que no son miembros de la **sysadmin** rol establecer o cambiar el valor de **@owner_login_name** , se produce un error en la ejecución de este procedimiento almacenado y devuelve un error.  
   
 ## <a name="examples"></a>Ejemplos  
   

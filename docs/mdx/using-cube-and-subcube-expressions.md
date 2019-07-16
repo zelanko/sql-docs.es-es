@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f13d92c114783646bbeab9451c3d212ff01b8f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097187"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>Usar expresiones de cubo y de subcubo
 
@@ -73,7 +72,7 @@ ms.locfileid: "63125431"
  [Consulta de MDX básica &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
  [Generar subcubos en MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
  [Instrucción CREATE SUBCUBE &#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [SCOPE &#40;Instrucción, MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

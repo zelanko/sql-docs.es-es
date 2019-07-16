@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 78aaa3d3-d081-4550-80e3-720c910d5996
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5f5f865c0b50ea75548bb3a409caef8acf64b51
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0b9d101395a3276f92f3ccf49e36effc65420f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281920"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093877"
 ---
 # <a name="registry-entries-for-data-sources"></a>Entradas del registro para los orígenes de datos
 > [!NOTE]  
@@ -36,7 +35,7 @@ ms.locfileid: "63281920"
   
  ODBC  
   
- Odbc.ini  
+ ODBC.ini  
   
  HKEY_CURRENT_USER  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63281920"
   
  ODBC  
   
- Odbc.ini  
+ ODBC.ini  
   
  Clave que se usa depende de si el origen de datos es un *origen de datos del sistema,* que está disponible para todos los usuarios, o un *origen de datos de usuario,* que solo está disponible para el usuario actual. Orígenes de datos del sistema se almacenan en el árbol HKEY_LOCAL_MACHINE y orígenes de datos de usuario se almacenan en el árbol de HKEY_CURRENT_USER. En todos los demás aspectos, los orígenes de datos del sistema y los orígenes de datos de usuario son idénticos.  
   

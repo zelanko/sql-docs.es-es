@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8c42eba1-c19f-4045-ac82-b97a5e994090
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 94dc9ca5d83530db97607bd21e9fee4a2dc3dbf8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6cce3b4f08fcb55530ffd7abf6da3011c325478f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47618023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055381"
 ---
 # <a name="systables-transact-sql"></a>sys.tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47618023"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |\<hereda columnas >||Para obtener una lista de columnas que hereda esta vista, consulte [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).|  
-|lob_data_space_id|**int**|Un valor diferente de cero es el identificador del espacio de datos (grupo de archivos o esquema de partición) que contiene los datos de objeto binario grande (LOB) para esta tabla. Ejemplos de tipos de datos LOB **varbinary (max)**, **varchar (max)**, **geography**, o **xml**.<br /><br /> 0 = La tabla no contiene datos LOB.|  
+|lob_data_space_id|**int**|Un valor diferente de cero es el identificador del espacio de datos (grupo de archivos o esquema de partición) que contiene los datos de objeto binario grande (LOB) para esta tabla. Ejemplos de tipos de datos LOB **varbinary (max)** , **varchar (max)** , **geography**, o **xml**.<br /><br /> 0 = La tabla no contiene datos LOB.|  
 |filestream_data_space_id|**int**|Es el identificador del espacio de datos para un grupo de archivos FILESTREAM o un esquema de partición compuesto por grupos de archivos FILESTREAM.<br /><br /> Para notificar el nombre de un grupo de archivos FILESTREAM, ejecute la consulta `SELECT FILEGROUP_NAME (filestream_data_space_id) FROM sys.tables`.<br /><br /> sys.tables se puede combinar con las vistas siguientes en filestream_data_space_id = data_space_id.<br /><br /> -sys.filegroups<br /><br /> -sys.partition_schemes<br /><br /> -sys.indexes<br /><br /> -sys.allocation_units<br /><br /> -sys.fulltext_catalogs<br /><br /> -sys.data_spaces<br /><br /> -sys.destination_data_spaces<br /><br /> -sys.master_files<br /><br /> -sys.database_files<br /><br /> -backupfilegroup (combinar en filegroup_id)|  
 |max_column_id_used|**int**|Identificador de columna máximo que se ha utilizado en esta tabla.|  
 |lock_on_bulk_load|**bit**|La tabla está bloqueada en una carga masiva. Para obtener más información, vea [sp_tableoption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md).|  
@@ -61,8 +60,8 @@ ms.locfileid: "47618023"
 |is_remote_data_archive_enabled|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]<br /><br /> Indica si la tabla está habilitada para Stretch.<br /><br /> 0 = la tabla no está habilitada para Stretch.<br /><br /> 1 = la tabla está habilitada para Stretch.<br /><br /> Para obtener más información, vea [Stretch Database](../../sql-server/stretch-database/stretch-database.md).|  
 |is_external|**bit**|**Se aplica a**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)], y [!INCLUDE[sssdwfull](../../includes/sssdwfull-md.md)].<br /><br /> Indica la tabla es una tabla externa.<br /><br /> 0 = la tabla no es una tabla externa.<br /><br /> 1 = la tabla es una tabla externa.| 
 |history_retention_period|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>El valor numérico que representa la duración del período de retención de historial temporal en unidades especificadas con history_retention_period_unit. |  
-|history_retention_period_unit|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>El valor numérico que representa el tipo de unidad del período de retención temporal de historial. <br /><br />-1: INFINITO <br /><br />3: DÍA <br /><br />4: SEMANA <br /><br />5: MES <br /><br />6: AÑO |  
-|history_retention_period_unit_desc|**nvarchar (10)**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>La descripción del tipo de unidad del período de retención temporal de historial. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
+|history_retention_period_unit|**int**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>El valor numérico que representa el tipo de unidad del período de retención temporal de historial. <br /><br />-1: INFINITO <br /><br />3: DAY <br /><br />4: WEEK <br /><br />5: MONTH <br /><br />6: YEAR |  
+|history_retention_period_unit_desc|**nvarchar(10)**|**Se aplica a**: [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>La descripción del tipo de unidad del período de retención temporal de historial. <br /><br />INFINITE <br /><br />DAY <br /><br />WEEK <br /><br />MONTH <br /><br />YEAR |  
 |is_node|**bit**|**Se aplica a**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = se trata de una tabla de nodo del gráfico. <br /><br />0 = esta no es una tabla de nodo de graph. |  
 |is_edge|**bit**|**Se aplica a**: [!INCLUDE[sssql17-md.md](../../includes/sssql17-md.md)] y [!INCLUDE[sssdsfull](../../includes/sssdsfull-md.md)]. <br/><br/>1 = se trata de una tabla de borde del gráfico. <br /><br />0 = esta no es una tabla de borde de gráfico. |  
 

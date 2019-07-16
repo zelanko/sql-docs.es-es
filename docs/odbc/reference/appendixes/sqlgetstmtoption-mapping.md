@@ -1,5 +1,5 @@
 ---
-title: SQLGetStmtOption Mapping | Microsoft Docs
+title: Asignación de SQLGetStmtOption | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fa599517-3f3e-4dad-a65a-b8596ae3f330
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 98bbdcf66ed9ee8f2d716d8953fde8f4a888fca0
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2973455ff4ee7e8dc51b2cd07a6423c9b1c36346
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073810"
 ---
 # <a name="sqlgetstmtoption-mapping"></a>Asignación de SQLGetStmtOption
 Cuando una aplicación llama **SQLGetStmtOption** a un ODBC *3.x* controlador que no lo admite, la llamada a  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3be75b75-4d36-4479-ab64-9a456869252a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d31b9ff3a60b746309224b0e0f9669cef229f234
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e391ad7c61bd6c303b0558892435af344a2768fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933497"
 ---
 # <a name="connectionstring-property-ado"></a>Propiedad ConnectionString (ADO)
 Indica la información utilizada para establecer una conexión a un origen de datos.  
@@ -39,7 +38,7 @@ Indica la información utilizada para establecer una conexión a un origen de da
 |*Provider=*|Especifica el nombre de un proveedor que se usará para la conexión.|  
 |*Nombre de archivo =*|Especifica el nombre de un archivo específico del proveedor (por ejemplo, un objeto de origen de datos almacenados) que contiene información de conexión predefinida.|  
 |*Proveedor remoto =*|Especifica el nombre de un proveedor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
-|*Remote Server=*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
+|*Servidor remoto =*|Especifica el nombre de ruta de acceso del servidor que se usará al abrir una conexión de cliente. (Solo servicio de datos remotos).|  
 |*URL=*|Especifica la cadena de conexión como una dirección URL absoluta que identifica un recurso, como un archivo o directorio.|  
   
  Después de establecer el **ConnectionString** propiedad y abra el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto, el proveedor puede alterar el contenido de la propiedad, por ejemplo, asignando los nombres de argumento definidos por ADO a sus equivalentes para el proveedor específico.  

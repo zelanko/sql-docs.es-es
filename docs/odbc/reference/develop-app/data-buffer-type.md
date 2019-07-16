@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 58bea3e9-d552-447f-b3ad-ce1dab213b72
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e02d42d6d63608ccb70dc984e05ae11578d3160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 615625ca396e5f2ae094962457cc9e746730ddcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067413"
 ---
 # <a name="data-buffer-type"></a>Tipo de búfer de datos
 El tipo de datos C de un búfer especificado por la aplicación. Con una única variable, esto ocurre cuando la aplicación asigna la variable. Con genéricos de memoria: es decir, memoria indicada por un puntero de tipo void: Esto ocurre cuando la aplicación convierte la memoria a un tipo determinado. El controlador detecta este tipo de dos maneras:  

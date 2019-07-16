@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19909902-054c-4e19-9c06-a212aace13fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63d1951cfe835cbfca23ab366db2216215aa92c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 569a83110d7d5a3cd25eed8f68753d13793f8b10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054100"
 ---
 # <a name="sqlconfigdatasource-dbase-driver"></a>SQLConfigDataSource (dBASE controlador)
 > [!NOTE]  
@@ -30,7 +29,7 @@ ms.locfileid: "62665357"
 |Palabra clave|Descripción|  
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La secuencia en la que se ordenan los campos.<br /><br /> La secuencia puede ser: ASCII (valor predeterminado) o internacional.<br /><br /> Esto establece la misma opción como **secuencia de intercalación** en el cuadro de diálogo programa de instalación.|  
-|DEFAULTDIR|La especificación de ruta de acceso al directorio.|  
+|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
 |DELETED|Para el controlador de dBASE, especifica si se pueden recuperar o colocadas en las filas que se han marcado como eliminado. Si se establece en 1, las filas eliminadas no se muestra. Si se establece en 0, filas eliminadas se trata igual que las filas no eliminados.<br /><br /> Esto establece la misma opción como **mostrar filas eliminadas** en el cuadro de diálogo programa de instalación.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  

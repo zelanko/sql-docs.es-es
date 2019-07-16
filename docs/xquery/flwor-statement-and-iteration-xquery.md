@@ -23,20 +23,19 @@ helpviewer_keywords:
 ms.assetid: d7cd0ec9-334a-4564-bda9-83487b6865cb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4c95d86b64c28bbf78b111f21de7afd58b44616f
-ms.sourcegitcommit: 1f10e9df1c523571a8ccaf3e3cb36a26ea59a232
+ms.openlocfilehash: 9deb87d506e167d3de3439e0a07cfbb8bc040fac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/17/2018
-ms.locfileid: "51858670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038904"
 ---
 # <a name="flwor-statement-and-iteration-xquery"></a>FLWOR (instrucción e iteración de XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   XQuery define la sintaxis de iteración FLWOR. FLWOR es el acrónimo de `for`, `let`, `where`, `order by` y `return`.  
   
- Una instrucción FLWOR está formada por cuatro partes:    
+ Una instrucción FLWOR está formada por cuatro partes:  
   
 -   Una o varias cláusulas FOR que enlazan una o varias variables de iteración a secuencias de entrada.  
   
@@ -52,7 +51,7 @@ ms.locfileid: "51858670"
   
 -   Una expresión `return`. La expresión de la cláusula `return` construye el resultado de la instrucción FLWOR.  
   
- Por ejemplo, la consulta siguiente se repite en los elementos <`Step`> de la primera ubicación de fabricación y devuelve el valor de cadena de los nodos <`Step`>:  
+ Por ejemplo, la consulta siguiente recorre en iteración el <`Step`> elementos en la primera ubicación de fabricación y devuelve el valor de cadena de la <`Step`> nodos:  
   
 ```sql
 declare @x xml  
@@ -80,7 +79,7 @@ SELECT @x.query('
 Manu step 1 at Loc 1 Manu step 2 at Loc 1 Manu step 3 at Loc 1  
 ```  
   
- La consulta siguiente es parecida a la anterior, a diferencia de que se especifica en la columna Instructions, una columna xml con tipo, de la tabla ProductModel. La consulta siguiente se repite en todos los pasos de fabricación, los elementos <`step`>, en la primera ubicación de centro de trabajo de un producto determinado.  
+ La consulta siguiente es parecida a la anterior, a diferencia de que se especifica en la columna Instructions, una columna xml con tipo, de la tabla ProductModel. La consulta recorre en iteración todos los pasos de fabricación, <`step`> elementos en la primera ubicación de centro de trabajo para un producto específico.  
   
 ```sql
 SELECT Instructions.query('  
@@ -97,11 +96,11 @@ where ProductModelID=7
   
 -   `$Step` es la variable de iteración.  
   
--   El [expresión de ruta de acceso](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, genera la secuencia de entrada. Se trata de la secuencia del nodo de elemento secundario <`step`> del primer nodo de elemento <`Location`>.  
+-   El [expresión de ruta de acceso](../xquery/path-expressions-xquery.md), `//AWMI:root/AWMI:Location[1]/AWMI:step`, genera la secuencia de entrada. Esta secuencia es la secuencia de la <`step`> elementos secundarios del nodo de elemento del primer <`Location`> nodo de elemento.  
   
 -   La cláusula de predicado opcional, `where`, no se utiliza.  
   
--   La expresión `return` devuelve un valor de cadena del elemento <`step`>.  
+-   El `return` expresión devuelve un valor de cadena desde el <`step`> elemento.  
   
  El [string (función de XQuery)](../xquery/data-accessor-functions-string-xquery.md) se usa para recuperar el valor de cadena de la <`step`> nodo.  
   
@@ -156,7 +155,7 @@ SELECT @x.query('
 ...  
 ```  
   
- La consulta siguiente construye un nuevo XML al que se devuelven los elementos <`Location`> con los atributos de ubicación de centro de trabajo como elementos secundarios:  
+ La consulta siguiente construye un nuevo XML que tiene el <`Location`> elementos con el trabajo del centro de los atributos de ubicación devueltos como elementos secundarios:  
   
 ```xml
 <Location>  
@@ -188,7 +187,7 @@ where ProductModelID=7
   
  Observe lo siguiente en la consulta anterior:  
   
--   La instrucción FLWOR recupera una secuencia de elementos <`Location`> para un producto determinado.  
+-   La instrucción FLWOR recupera una secuencia de <`Location`> elementos de un producto específico.  
   
 -   El [datos (función de XQuery)](../xquery/data-accessor-functions-data-xquery.md) se usa para extraer el valor de cada atributo, por lo que se agregarán al XML resultante como nodos de texto en lugar de como atributos.  
   
@@ -229,7 +228,7 @@ where ProductModelID=7
 ## <a name="using-the-where-clause"></a>Usar la cláusula where  
  Puede usar el `where` cláusula para filtrar los resultados de una iteración. Esto se muestra en el ejemplo siguiente.  
   
- El proceso de fabricación de una bicicleta incluye una serie de ubicaciones de centro de trabajo. Cada una define una secuencia de pasos de fabricación. La consulta siguiente recupera únicamente las ubicaciones de centro de trabajo que fabrican un modelo de bicicleta y tienen menos de tres pasos de fabricación. Es decir, tienen menos de tres elementos <`step`>.  
+ El proceso de fabricación de una bicicleta incluye una serie de ubicaciones de centro de trabajo. Cada una define una secuencia de pasos de fabricación. La consulta siguiente recupera únicamente las ubicaciones de centro de trabajo que fabrican un modelo de bicicleta y tienen menos de tres pasos de fabricación. Es decir, tienen menos de tres <`step`> elementos.  
   
 ```sql
 SELECT Instructions.query('  
@@ -257,7 +256,7 @@ where ProductModelID=7
 <Location LocationID="30"/>   
 ```  
   
- El resultado de la expresión de la cláusula `where` se convierte en un valor booleano mediante las reglas siguientes, en el orden especificado. Se trata de las mismas reglas que se aplican para los predicados en las expresiones de ruta de acceso, con la diferencia de que no se admiten los enteros:    
+ El resultado de la expresión de la cláusula `where` se convierte en un valor booleano mediante las reglas siguientes, en el orden especificado. Se trata de las mismas reglas que se aplican para los predicados en las expresiones de ruta de acceso, con la diferencia de que no se admiten los enteros:  
   
 1.  Si la expresión `where` devuelve una secuencia vacía, su valor booleano efectivo será False.  
   
@@ -268,7 +267,7 @@ where ProductModelID=7
 4.  De lo contrario, provocará un error estático.  
   
 ## <a name="multiple-variable-binding-in-flwor"></a>Enlace de diversas variables en FLWOR  
- Puede tener una sola expresión FLWOR que enlace diversas variables a secuencias de entrada. En el ejemplo siguiente, la consulta se especifica con una variable xml sin tipo. La expresión FLOWR devuelve el primer elemento secundario <`Step`> de cada elemento <`Location`>.  
+ Puede tener una sola expresión FLWOR que enlace diversas variables a secuencias de entrada. En el ejemplo siguiente, la consulta se especifica con una variable xml sin tipo. La expresión FLOWR devuelve el primer <`Step`> en cada elemento secundario del elemento <`Location`> elemento.  
   
 ```sql
 declare @x xml  
@@ -298,7 +297,7 @@ SELECT @x.query('
   
 -   Las expresiones `two`, `/ManuInstructions/Location` y `$FirstStep in $Loc/Step[1]`, están correlacionadas: los valores de `$FirstStep` dependen de los valores de `$Loc`.  
   
--   La expresión asociada con `$Loc` genera una secuencia de elementos <`Location`>. Por cada elemento <`Location`>, `$FirstStep` genera una secuencia de un elemento <`Step`>, un singleton.  
+-   La expresión asociada `$Loc` genera una secuencia de <`Location`> elementos. Para cada <`Location`> elemento, `$FirstStep` genera una secuencia de uno <`Step`> elemento, un singleton.  
   
 -   `$Loc` se especifica en la expresión asociada con la variable `$FirstStep`.  
   
@@ -407,7 +406,7 @@ FROM Person.Person
 WHERE BusinessEntityID=291;  
 ```  
   
- También puede ordenar por valor de atributo. Por ejemplo, la consulta siguiente recupera los elementos <`Location`> recién creados que tienen los atributos LocationID y LaborHours ordenados por el atributo LaborHours en orden descendente. Como resultado, se devolverán primero las ubicaciones de centro de trabajo que tengan el máximo de horas de trabajo (LaborHours).  
+ También puede ordenar por valor de atributo. Por ejemplo, la consulta siguiente recupera el recién creado <`Location`> elementos que tienen los atributos LocationID y LaborHours ordenados por el atributo LaborHours en orden descendente. Como resultado, se devolverán primero las ubicaciones de centro de trabajo que tengan el máximo de horas de trabajo (LaborHours).  
   
 ```sql
 SELECT Instructions.query('  
@@ -435,7 +434,7 @@ WHERE ProductModelID=7;
 <Location LocationID="45" LaborHours=".5"/>  
 ```  
   
- En la consulta siguiente, se ordenan los resultados por nombre de elemento. La consulta recupera las especificaciones de un producto determinado del catálogo de productos. Las especificaciones son los elementos secundarios del elemento <`Specifications`>.  
+ En la consulta siguiente, se ordenan los resultados por nombre de elemento. La consulta recupera las especificaciones de un producto determinado del catálogo de productos. Las especificaciones son los elementos secundarios de la <`Specifications`> elemento.  
   
 ```sql
 SELECT CatalogDescription.query('  
@@ -451,7 +450,7 @@ where ProductModelID=19;
   
  Observe lo siguiente en la consulta anterior:  
   
--   La expresión `/p1:ProductDescription/p1:Specifications/*` devuelve los elementos secundarios de <`Specifications`>.  
+-   El `/p1:ProductDescription/p1:Specifications/*` expresión devuelve los elementos secundarios del elemento <`Specifications`>.  
   
 -   La expresión `order by (local-name($a))` ordena la secuencia por la parte local del nombre del elemento.  
   
@@ -490,7 +489,7 @@ select @x.query('
 <Person Name="B" />  
 ```  
   
- Se pueden especificar varios criterios de ordenación, tal como se muestra en el ejemplo siguiente. La consulta de este ejemplo ordena los elementos <`Employee`> en primer lugar por título (Title) y luego por los valores del atributo de administrador (Administrator).  
+ Se pueden especificar varios criterios de ordenación, tal como se muestra en el ejemplo siguiente. La consulta en este ejemplo ordena <`Employee`> elementos en primer lugar por título y, a continuación, Administrador de los valores de atributo.  
   
 ```sql
 declare @x xml  

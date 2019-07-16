@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9da0da95-792e-48b4-9f60-47f0729c279c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80918c74613e0fb608a9d48c1e56ad2cf206b06e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 27a8f2ddee2e0ff0839317cf1652bcf353c0b66b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940299"
 ---
 # <a name="syscryptographicproviders-transact-sql"></a>sys.cryptographic_providers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,8 +35,8 @@ ms.locfileid: "47791243"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**provider_id**|**int**|Número de identificación del proveedor de servicios criptográficos.|  
-|**Nombre**|**sysname**|Nombre del proveedor criptográfico.|  
-|**GUID**|**uniqueidentifier**|Proveedor único GUID.|  
+|**name**|**sysname**|Nombre del proveedor criptográfico.|  
+|**guid**|**uniqueidentifier**|Proveedor único GUID.|  
 |**version**|**nvarchar(50)**|Versión del proveedor en el formato '*aa.bb.cccc.dd*'.|  
 |**dll_path**|**nvarchar(512)**|Ruta de acceso a DLL que implementa la interfaz de programación de aplicaciones (API) de la Administración extensible de claves (EKM).|  
 |**is_enabled**|**bit**|Si el proveedor está habilitado en el servidor o no.<br /><br /> 0 = no habilitado (predeterminado)<br /><br /> 1 = habilitado|  

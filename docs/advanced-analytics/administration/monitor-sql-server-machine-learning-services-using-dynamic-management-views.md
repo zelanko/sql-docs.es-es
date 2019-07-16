@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8d701d9e8595eee3a583e913baabc2148af214fe
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 4fd41ebb8f486b6117ba3e99c080566771bd4a63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67681620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963142"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>Supervisar el uso de vistas de administración dinámica (DMV) de SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,7 +39,7 @@ Para obtener información general sobre las DMV, vea [vistas de administración 
 
 Las siguientes vistas de administración dinámica pueden usarse para supervisar cargas de trabajo de machine learning en SQL Server. Para consultar las DMV, necesita `VIEW SERVER STATE` permiso en la instancia.
 
-| Vista de administración dinámica | Tipo | Descripción |
+| Vista de administración dinámica | Type | Descripción |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | Ejecución | Devuelve una fila para cada cuenta de trabajo activa que ejecuta un script externo. |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | Ejecución | Devuelve una fila por cada tipo de solicitud de script externo. |
@@ -223,7 +222,7 @@ La consulta devuelve las columnas siguientes:
 
 | columna | Descripción |
 |--------|-------------|
-| NAME | Nombre del grupo de recursos externos o SQL Server. |
+| name | Nombre del grupo de recursos externos o SQL Server. |
 | max_memory_percent | La memoria máxima que puede usar SQL Server o el grupo de recursos externos. |
 
 ## <a name="resource-pools"></a>Grupos de recursos de servidor
@@ -278,7 +277,7 @@ Las columnas devueltas son:
 | columna | Descripción |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
-| Versión | Versión del paquete. |
+| `Version` | Versión del paquete. |
 | Depende | Enumera los paquetes que depende el paquete instalado. |
 | Licencia | Licencia para el paquete instalado. |
 | LibPath | Directorio donde puede encontrar el paquete. |
@@ -304,7 +303,7 @@ Las columnas devueltas son:
 | columna | Descripción |
 |--------|-------------|
 | Paquete | Nombre del paquete instalado. |
-| Versión | Versión del paquete. |
+| `Version` | Versión del paquete. |
 | Location | Directorio donde puede encontrar el paquete. |
 
 ## <a name="next-steps"></a>Pasos siguientes

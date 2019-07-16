@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f2be7711a7e495608d2a35d42e617663e11bc3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3291edb34087e46739cf984d2412821fa66b7a07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63041170"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053220"
 ---
 # <a name="sysdmserverauditstatus-transact-sql"></a>sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +33,8 @@ ms.locfileid: "63041170"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**audit_id**|**int**|Identificador de la auditoría. Se asigna a la **audit_id** campo el **sys.audits** vista de catálogo.|  
-|**Nombre**|**sysname**|Nombre de la auditoría. Igual que el **nombre** campo el **sys.server_audits** vista de catálogo.|  
-|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Iniciado<br /><br /> 2 =<br />      Error en tiempo de ejecución<br /><br /> 3 = target crear por error<br /><br /> 4 = apagar|  
+|**name**|**sysname**|Nombre de la auditoría. Igual que el **nombre** campo el **sys.server_audits** vista de catálogo.|  
+|**status**|**smallint**|Estado numérico de la auditoría de servidor:<br /><br /> 0 = no iniciado<br /><br /> 1 =<br />        Started<br /><br /> 2 =<br />      Error en tiempo de ejecución<br /><br /> 3 = target crear por error<br /><br /> 4 = apagar|  
 |**status_desc**|**nvarchar(256)**|Cadena que muestra el estado de la auditoría de servidor:<br /><br /> NOT_STARTED<br /><br /> STARTED<br /><br /> RUNTIME_FAIL<br /><br /> TARGET_CREATION_FAILED<br /><br /> SHUTTING_DOWN|  
 |**status_time**|**datetime2**|Marca de tiempo en UTC del último cambio de estado de la auditoría.|  
 |**event_session_address**|**varbinary(8)**|Dirección de la sesión de Extended Events asociada a la auditoría. Relacionados con la **sys.db_xe_sessions.address** vista de catálogo.|  

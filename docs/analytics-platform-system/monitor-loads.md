@@ -2,19 +2,18 @@
 title: Supervisar las cargas de almacenamiento de datos paralelos | Microsoft Docs
 description: Supervisar las cargas activas y recientes mediante el uso de la consola de administración de Analytics Platform System (APS) o las vistas de sistema de (PDW) de almacenamiento de datos paralelo".
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960609"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>Supervisar las cargas de almacenamiento de datos paralelos
 Monitor activa y reciente [dwloader](dwloader.md) carga mediante la consola de administración de Analytics Platform System (APS) o el almacenamiento de datos paralelos (PDW) [vistas del sistema](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/). 

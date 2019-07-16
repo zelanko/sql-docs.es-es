@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b8cc9a35-97ab-4fe0-ab4b-c07f13d9793a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ef92aa3410ee12fd5edc4ea602e64a6fa06fdc9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9002f99435362e471467b6e8b24906dfd95e3ec8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477218"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017271"
 ---
 # <a name="web-configuration-reference-master-data-services"></a>Referencia de la configuración web (Master Data Services)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65477218"
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] usa un archivo Web.config para contener la configuración que permite a Internet Information Services (IIS) hospedar la aplicación web de [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] y el servicio web. Este archivo Web.config se encuentra en la carpeta WebApplication de la ruta de instalación de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] . Para obtener más información sobre la ruta y los permisos, consulte [Permisos de carpetas y archivos &#40;Master Data Services&#41;](../master-data-services/folder-and-file-permissions-master-data-services.md).  
   
 ## <a name="webconfig-elements"></a>Elementos de Web.Config  
- El archivo Web.config contiene un elemento personalizado de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], **\<masterDataServices>**, además de elementos de configuración de Windows Communication Foundation (WCF), IIS estándar, .NET Framework y ASP.NET. En la siguiente tabla se describen los elementos incluidos en el archivo Web.config.  
+ El archivo Web.config contiene un elemento personalizado de [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], **\<masterDataServices>** , además de elementos de configuración de Windows Communication Foundation (WCF), IIS estándar, .NET Framework y ASP.NET. En la siguiente tabla se describen los elementos incluidos en el archivo Web.config.  
   
 |Elemento de configuración|Descripción|  
 |---------------------------|-----------------|  

@@ -32,13 +32,12 @@ helpviewer_keywords:
 ms.assetid: f7da3e92-e407-4f0b-b3a3-f214e442b37d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cad827776e525c55b41517ae1de05d547d88dd2a
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 18a22d892398bde8251470a3e85dde0b56582d2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584060"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028255"
 ---
 # <a name="registering-user-defined-types-in-sql-server"></a>Registrar tipos definidos por el usuario en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -174,7 +173,7 @@ ADD FILE FROM '\\Projects\Point\Point.cs' AS PointSource;
  **assembly_id**  
  Identificador definido para el ensamblado. Este número se asigna a todos los objetos relacionados con el mismo ensamblado.  
   
- **Nombre**  
+ **name**  
  Nombre del objeto.  
   
  **file_id**  

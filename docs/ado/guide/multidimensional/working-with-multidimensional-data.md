@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: afe8ff8c788a740ca98eca385146ecc71b6e1e95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61f3e34af2a9331118b41657cf958021b972b04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923132"
 ---
 # <a name="working-with-multidimensional-data"></a>Trabajo con datos multidimensionales
 Un *cellset* es el resultado de una consulta de datos multidimensionales. Consta de una colección de ejes, normalmente no más de cuatro ejes y normalmente sólo dos o tres. Un *eje* es una colección de miembros de una o varias dimensiones, que se usa para buscar o filtrar valores específicos de un cubo.  

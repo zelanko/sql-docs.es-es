@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bb777a0de00596c99e22e514986cf3ec930ba0fd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 2cf3cf85b0efb024d65744f6eea0f5eea47ead83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37991066"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074852"
 ---
 # <a name="export-dmx"></a>EXPORT (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,10 +34,10 @@ EXPORT <object type> <object name>[, <object name>] [<object type> <object name>
  *nombre de objeto*  
  Opcional. Nombre del objeto que se va a exportar.  
   
- *nombre de archivo*  
+ *filename*  
  Nombre y ubicación del archivo que se va a exportar como cadena.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Si la instrucción especifica un modelo de minería de datos, el archivo resultante contendrá también una estructura de minería de datos asociada. Si la instrucción especifica **WITH DEPENDENCIES**, todos los objetos necesarios para procesar el objeto (por ejemplo, el origen de datos y la vista del origen de datos) se incluyen en el archivo abf.  
   
  Debe ser una base de datos o el administrador del servidor para exportar o importar objetos desde una [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] base de datos.  
@@ -61,7 +60,7 @@ EXPORT MINING MODEL [Association] TO 'C:\Association_NEW.abf' WITH DEPENDENCIES
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
- [IMPORTACIÓN &AMP;#40;DMX&AMP;#41;](../dmx/import-dmx.md)   
+ [IMPORTACIÓN &#40;DMX&#41;](../dmx/import-dmx.md)   
  [Exportar e importar objetos de minería de datos](../analysis-services/data-mining/export-and-import-data-mining-objects.md)  
   
   

@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c31c6c2071d276da9b3ab0e498a090659ba589a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 6fc303892fdefda350a2bb6513a71226264e50fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067671"
 ---
 # <a name="installation-and-configuration"></a>Instalación y configuración
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ En Azure SQL Database, la auditoría se configura mediante el [portal Azure](htt
 
 ### <a name="row-level-security"></a>Seguridad de nivel de fila
 
-Se aplica a: base de datos SQL Azure
+Se aplica a: Se aplica a: Base de datos SQL de Azure
 
 Seguridad de nivel de fila no está habilitada de forma predeterminada en la descarga de bacpac de WideWorldImporters. Para habilitar la seguridad de nivel de fila en la base de datos, ejecute el siguiente procedimiento almacenado:
 

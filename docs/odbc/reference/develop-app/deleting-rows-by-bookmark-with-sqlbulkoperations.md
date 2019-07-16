@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 46139ec9-7095-481a-bf45-20200a2fdc03
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5895a106c389afe2d1979cf8d9c16e92f570538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a34f96dd7f5c2f0e2ac4bbb3feae06ea4856a248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076815"
 ---
 # <a name="deleting-rows-by-bookmark-with-sqlbulkoperations"></a>Eliminar filas por marcador con SQLBulkOperations
 Cuando se elimina una fila por marcador, **SQLBulkOperations** hace que el origen de datos de eliminar una o varias filas seleccionadas de la tabla. Las filas se identifican mediante el marcador en una columna de marcador enlazado.  

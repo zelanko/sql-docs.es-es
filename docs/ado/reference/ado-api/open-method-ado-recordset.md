@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 3236749c-4b71-4235-89e2-ccdfaaa9319d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9aee9b4f6054b5cbfca41db35f34a27000a7ac01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16142f200e6fd6e7c141b4f1fe6d45fe8917bc28
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931903"
 ---
 # <a name="open-method-ado-recordset"></a>Open (método) (conjunto de registros ADO)
 Se abre un cursor en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -35,7 +34,7 @@ recordset.Open Source, ActiveConnection, CursorType, LockType, Options
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Source*  
+ *Origen*  
  Opcional. Un **Variant** que se evalúa como válido [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto, una instrucción SQL, un nombre de tabla, una llamada a procedimiento almacenado, una dirección URL o el nombre de un archivo o [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto que contiene un almacenar de manera permanente [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
   
  *ActiveConnection*  

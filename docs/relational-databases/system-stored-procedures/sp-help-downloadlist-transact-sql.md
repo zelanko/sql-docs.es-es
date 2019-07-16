@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055193"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,11 +60,11 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**DAR DE BAJA**|Operación del servidor que solicita el servidor de destino para dar de baja del servidor maestro **SQLServerAgent** service.|  
 |**DELETE**|Operación de trabajo que quita un trabajo completo.|  
 |**INSERT**|Operación de trabajo que inserta un trabajo completo o actualiza un trabajo existente. Esta operación incluye todos los pasos y programaciones del trabajo, si corresponde.|  
-|**RE-ENLIST**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también vuelve a descargar el **MSXOperator** detalles.|  
+|**VOLVER A DAR DE ALTA**|Operación del servidor que hace que el servidor de destino vuelva a enviar la información de alta, incluidos el intervalo de sondeo y la zona horaria del dominio multiservidor. El servidor de destino también vuelve a descargar el **MSXOperator** detalles.|  
 |**SET-POLL**|Operación del servidor que establece el intervalo, en segundos, con el que los servidores de destino sondean el dominio multiservidor. Si se especifica, *valor* se interpreta como el valor de intervalo necesario y puede ser un valor de **10** a **28.800**.|  
 |**START**|Operación de trabajo que solicita el inicio de la ejecución del trabajo.|  
 |**DETENER**|Operación de trabajo que solicita la detención de la ejecución del trabajo.|  
-|**SYNC-TIME**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
+|**HORA DE SINCRONIZACIÓN**|Operación de servidor que hace que el servidor de destino sincronice su reloj del sistema con el dominio multiservidor. Como ésta es una operación muy costosa, ejecútela de forma limitada, con poca frecuencia.|  
 |**UPDATE**|Operación de trabajo que sólo actualiza la **sysjobs** información para un trabajo, no los pasos de trabajo o programaciones. Se llama automáticamente **sp_update_job**.|  
   
 `[ @object_type = ] 'object_type'` El tipo de objeto para el trabajo especificado. *object_type* es **varchar(64)** , su valor predeterminado es null. *object_type* puede ser JOB o SERVER. Para obtener más información sobre válido *object_type*valores, vea [sp_add_category &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md).  

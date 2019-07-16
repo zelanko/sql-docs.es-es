@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 4869aafa-7401-4ce1-93ce-45406a60274f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 62fce79d6ee223ee5b039fe914685fdf3bd33c98
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80a373196f98a964bc3e522cc9329907a3392b95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923904"
 ---
 # <a name="the-ole-db-provider-for-internet-publishing"></a>El proveedor OLE DB para la publicación en Internet
 ADO [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos pueden utilizarse con el proveedor Microsoft OLE DB para la publicación en Internet (Internet Publishing Provider) para obtener acceso y manipular los recursos, como archivos o carpetas de Web proporcionados por Microsoft FrontPage. Con ADO, puede especificar el origen de un **registro**, **Stream**, o [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) sea una dirección URL. Puede, a continuación, cargar, descargar, mover, copiar y eliminar recursos o manipular directamente las propiedades de recursos.  

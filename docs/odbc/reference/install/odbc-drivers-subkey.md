@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: 8edbf68f-d05d-4d77-92f6-e9500008f520
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 43be1c5e75998903ff4e64fc5f4230818a873ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb54ba7becad42d8d9d2c2870c02db37a3c7d89f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63281132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093981"
 ---
 # <a name="odbc-drivers-subkey"></a>Subclave de controladores de ODBC
 Los valores bajo la subclave de controladores ODBC enumeran los controladores instalados. En la tabla siguiente se muestra el formato de estos valores.  
   
 |NOMBRE|Tipo de datos|Datos|  
 |----------|---------------|----------|  
-|*driver-description*|REG_SZ|**Installed**|  
+|*driver-description*|REG_SZ|**instalado**|  
   
  El *descripción del controlador* nombre se define mediante el programador del controlador. Suele ser el nombre del DBMS asociado al controlador.  
   

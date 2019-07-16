@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4c3d6a02-08e4-414b-90be-36b89a0e5a3a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 935b63a38cbef585c33d2241652f4951189b61b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa9e8d8105852c4b4d67acec965fd037a5c05ac4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097744"
 ---
 # <a name="sysdmexecfunctionstats-transact-sql"></a>sys.dm_exec_function_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66462550"
 |-----------------|---------------|-----------------|  
 |**database_id**|**int**|Id. de base de datos en el que reside la función.|  
 |**object_id**|**int**|Número de identificación de objeto de la función.|  
-|**Tipo**|**char(2)**|Tipo del objeto:   FN = funciones con valores escalares|  
+|**type**|**char(2)**|Tipo del objeto:   FN = funciones con valores escalares|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de objeto: SQL_SCALAR_FUNCTION|  
 |**sql_handle**|**varbinary(64)**|Esto puede usarse para poner en correlación con las consultas en **sys.dm_exec_query_stats** que se ejecutaron desde dentro de esta función.|  
 |**plan_handle**|**varbinary(64)**|Identificador del plan en memoria. Este identificador es transitorio y permanece constante solo mientras el plan permanece en la memoria caché. Este valor se puede usar con el **sys.dm_exec_cached_plans** vista de administración dinámica.<br /><br /> Siempre será 0 x 000 cuando una tabla de consultas optimizadas en memoria de la función compilada de forma nativa.|  
@@ -76,7 +75,7 @@ ms.locfileid: "66462550"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
   
 ## <a name="examples"></a>Ejemplos  
  El ejemplo siguiente devuelve información acerca de las funciones principales de diez identificado por promedio de tiempo transcurrido.  

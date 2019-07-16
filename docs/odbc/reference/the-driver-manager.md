@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 559e4de1-16c9-4998-94f5-6431122040cd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0c1ae3f098aea3886d5cb84a0bfcb7553a8181fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 659678451c368df0b6a213e54cf7edaedfc29bd1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039329"
 ---
 # <a name="the-driver-manager"></a>El Administrador de controladores
 El *Administrador de controladores* es una biblioteca que administra la comunicación entre aplicaciones y controladores. Por ejemplo, en las plataformas de Microsoft® Windows®, el Administrador de controladores es una biblioteca de vínculos dinámicos (DLL) que está escrita por Microsoft y puede distribuirse por los usuarios de MDAC 2.8 SP1 SDK redistribuible.  

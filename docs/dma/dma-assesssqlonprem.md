@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 575645d78e7046e607b891f0a6eadd6d9395a9a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463ada293202007eb92b6d3dfedc3c96c7d2f9f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060948"
 ---
 # <a name="perform-a-sql-server-migration-assessment-with-data-migration-assistant"></a>Realizar una evaluación de migración de SQL Server con Data Migration Assistant
 
@@ -34,7 +33,7 @@ Las siguientes instrucciones paso a paso para ayudarán a realizar la primera ev
 
     Si va a actualizar la instancia de SQL Server local a una instancia de SQL Server modernas de forma local o a SQL Server hospedado en una máquina virtual de Azure, establezca el tipo de servidor de origen y destino **SQL Server**. Si está migrando a Azure SQL Database, en su lugar, establezca el tipo de servidor de destino **Azure SQL Database**.
 
-3.  Haga clic en **Crear**.
+3.  Haga clic en **Create**(Crear).
 
     ![Crear una evaluación](../dma/media/NewAssessment.png)
 

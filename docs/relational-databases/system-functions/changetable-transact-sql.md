@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d405fb8d-3b02-4327-8d45-f643df7f501a
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a3a0ad02f508aea78faa8f3da80e68f8ea6b3c7b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 11295f953e2f3e4e237838dfdb158fd01c9fa645
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042903"
 ---
 # <a name="changetable-transact-sql"></a>CHANGETABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ CHANGETABLE (
  *last_sync_version* debe validarse para asegurarse de que no es demasiado antigua, ya que algunas o todas la información de cambios es posible que se han limpiado según el período de retención configurado para la base de datos. Para obtener más información, consulte [CHANGE_TRACKING_MIN_VALID_VERSION &#40;Transact-SQL&#41; ](../../relational-databases/system-functions/change-tracking-min-valid-version-transact-sql.md) y [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
  VERSIÓN *tabla*, {< primary_key_values >}  
- Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. <primary_key_values> identifica las columnas de clave principal y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
+ Devuelve la última información de seguimiento de cambios para una fila especificada. Los valores de clave principal deben identificar la fila. < primary_key_values > identifica las columnas de clave principales y especifica los valores. Los nombres de columna de clave principal se pueden especificar en cualquier orden.  
   
  *Table*  
  Es la tabla definida por el usuario de la que obtener la información de seguimiento de cambios. El seguimiento de cambios debe estar habilitado en la tabla. Puede utilizarse un nombre de tabla de uno, dos, tres o cuatro partes. El nombre de tabla puede ser un sinónimo de la tabla.  
@@ -75,7 +74,7 @@ CHANGETABLE (
  *column_name*  
  Especifica el nombre de la columna o columnas de clave principal. Se pueden especificar varios nombres de columna y en cualquier orden.  
   
- *Value*  
+ *Valor*  
  Es el valor de la clave principal. Si hay varias columnas de clave principales, deben especificarse los valores en el mismo orden que aparecen las columnas en el *column_name* lista.  
   
  [COMO] *table_alias* [(*column_alias* [,... *n* ])]  
@@ -99,7 +98,7 @@ CHANGETABLE (
 |-----------------|---------------|-----------------|  
 |SYS_CHANGE_VERSION|**bigint**|Valor de versión asociado al último cambio de la fila|  
 |SYS_CHANGE_CREATION_VERSION|**bigint**|Valores de versión asociados a la última operación de inserción.|  
-|SYS_CHANGE_OPERATION|**nchar (1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualizar<br /><br /> **Puedo** = inserción<br /><br /> **D.** = Delete|  
+|SYS_CHANGE_OPERATION|**nchar(1)**|Especifica el tipo de cambio:<br /><br /> **U** = actualizar<br /><br /> **Puedo** = inserción<br /><br /> **D.** = Delete|  
 |SYS_CHANGE_COLUMNS|**varbinary(4100)**|Enumera las columnas que han cambiado desde last_sync_version (la básica). Tenga en cuenta que las columnas calculadas nunca se presentan como cambiadas.<br /><br /> El valor es NULL si se cumple una cualquiera de las siguientes condiciones:<br /><br /> El seguimiento de cambios de columna no está habilitado.<br /><br /> Se trata de una operación de eliminación o de inserción.<br /><br /> Se actualizaron en una única operación todas las columnas de clave no principal. No debería interpretarse directamente este valor binario. En su lugar, para interpretarlo utilice [change_tracking_is_column_in_mask ()](../../relational-databases/system-functions/change-tracking-is-column-in-mask-transact-sql.md).|  
 |SYS_CHANGE_CONTEXT|**varbinary(128)**|Cambiar la información de contexto que puede especificar opcionalmente usando la [WITH](../../relational-databases/system-functions/with-change-tracking-context-transact-sql.md) cláusula como parte de una instrucción INSERT, UPDATE o DELETE.|  
 |\<valor de columna de clave principal >|Igual que las columnas de tabla de usuario|Los valores de clave principal de la tabla con seguimiento. Estos valores identifican de manera única cada fila en la tabla de usuario.|  
@@ -163,7 +162,7 @@ CROSS APPLY CHANGETABLE
     (VERSION Employees, ([Emp ID], SSN), (e.[Emp ID], e.SSN)) AS c;  
 ```  
   
-### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>B. Enumerar todos los cambios realizados desde una versión concreta  
+### <a name="b-listing-all-changes-that-were-made-since-a-specific-version"></a>b. Enumerar todos los cambios realizados desde una versión concreta  
  El siguiente ejemplo enumera todos los cambios realizados en una tabla desde una versión concreta (`@last_sync_version)`. [Emp ID] y SSN son las columnas de una clave principal compuesta.  
   
 ```sql  

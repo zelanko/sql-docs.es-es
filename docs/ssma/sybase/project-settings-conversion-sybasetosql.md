@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: eeb80fa5-f530-4f21-beee-25f5a4b8ace6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4d7f290459e1da736605acad941602399ec3ea53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d4936638fc9e283caafffc2f2a7cfdbed396920
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62664667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028763"
 ---
 # <a name="project-settings-conversion-sybasetosql"></a>Configuración del proyecto (conversión) (SybaseToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de Sybase Adaptive Server Enterprise (ASE) para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o sintaxis de SQL Azure.  
@@ -248,7 +247,7 @@ Esta configuración especifica si las definiciones de objetos temporales que apa
   
 **Modo predeterminado/optimista:** Sí  
   
-**Modo completo:** No  
+**Modo completo:** Sin  
   
 **Conversión de la tabla de proxy**  
 Especifica si las tablas de proxy de ASE se convierten en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]/ no convertir las tablas de SQL Azure, o son y el código está marcado con comentarios de error.  
@@ -446,5 +445,5 @@ Crea una nueva clave principal en la [!INCLUDE[ssNoVersion](../../includes/ssnov
 > Cuando se conecta a SQL Azure, es True de forma predeterminada.  
   
 ## <a name="see-also"></a>Vea también  
-[User Interface Reference &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
+[Referencia de la interfaz de usuario &#40;SybaseToSQL&#41;](../../ssma/sybase/user-interface-reference-sybasetosql.md)  
   

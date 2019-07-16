@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096330"
 ---
 # <a name="delete---sql-command"></a>ELIMINAR, comando SQL
 Marca los registros para su eliminación.  
@@ -39,7 +38,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *DatabaseName!* Especifica el nombre de una base de datos que contiene la tabla si la base de datos que lo contiene no es la base de datos especificado con el origen de datos. Debe incluir el nombre de una base de datos que contiene la tabla si la base de datos no es la base de datos especificado con el origen de datos. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
   
- WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
  Especifica que Visual FoxPro marcar determinados registros para su eliminación.  
   
  *FilterCondition* especifica los criterios que los registros deben cumplir para que se ha marcado para su eliminación. Puede incluir como muchas condiciones de filtro como desee, conectan con AND u operador OR. También puede usar el operador NOT para anular el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

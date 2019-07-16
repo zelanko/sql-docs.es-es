@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f86a0598-5097-471b-8318-d2c859d085f2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dea7ec95efc1f560a2279868b2116d02d7ad6fef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a81514fd12117a9f43e2c33bf0cda579fb363d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926662"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-indexing-service-overview"></a>Proveedor Microsoft OLE DB para Microsoft Introducción al servicio de indización
 El proveedor Microsoft OLE DB para servicios de Index Server de Microsoft proporciona acceso mediante programación de solo lectura para el sistema de archivos y datos Web indizados por servicios de Index Server de Microsoft. Las aplicaciones ADO pueden emitir consultas SQL para recuperar información de la propiedad de contenido y archivos.
@@ -73,11 +72,11 @@ MSIDXS
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|solo lectura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lectura/escritura|
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)*|lectura/escritura|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|
@@ -86,7 +85,7 @@ MSIDXS
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|solo lectura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|solo lectura|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|
+|[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|
 |[Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md)|solo lectura|
 
@@ -98,8 +97,8 @@ MSIDXS
 |------------|----------------|
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|
-|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sin|
+|[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sin|
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sin|
@@ -108,11 +107,11 @@ MSIDXS
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Sí|
+|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sin|
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sin|
 
  Para obtener detalles de implementación específicos y funcional información sobre el proveedor Microsoft OLE DB para servicios de Index Server de Microsoft, consulte el [Guía del programador de OLE DB](https://msdn.microsoft.com/library/windows/desktop/ms713643.aspx), o visite la página de servicios Web de la Web del servidor de Windows NT sitio.
 

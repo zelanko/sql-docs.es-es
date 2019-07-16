@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6953d8b7-bad8-4b64-bf7b-12fa4f10f65c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f60ce03d303941855b0b1eaa242b03966db1e79f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8aa762af8e08c72f7f00369219771c371ce39aac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946101"
 ---
 # <a name="xqueries-involving-hierarchy"></a>Consultas XQuery con jerarquía
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "51670844"
 ### <a name="a-from-the-manufacturing-instructions-documents-retrieve-work-center-locations-together-with-the-first-manufacturing-step-at-those-locations"></a>A. A partir de los documentos de instrucciones de fabricación, recupere ubicaciones de los centros de trabajo junto con el primer paso del proceso de fabricación en esas ubicaciones  
  Para el modelo de producto 7, la consulta genera XML que incluye el <`ManuInstr`> elemento, con **ProductModelID** y **ProductModelName** atributos y uno o varios <`Location`> elementos secundarios.  
   
- Cada elemento <`Location`> tiene su propio conjunto de atributos y un elemento secundario <`step`>. Este elemento secundario <`step`> es el primer paso del proceso de fabricación en la ubicación del centro de trabajo.  
+ Cada <`Location`> elemento tiene su propio conjunto de atributos y un <`step`> elemento secundario. Esto <`step`> elemento secundario es el primer paso de fabricación en la ubicación de centro de trabajo.  
   
 ```sql
 SELECT Instructions.query('  
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
 -   El **SQL:Column()** se usa para incluir un valor relacional en el XML que se está construyendo.  
   
--   Al construir el elemento <`Location`>, $wc/@* recupera todos los atributos de ubicación de centros de trabajo.  
+-   En la construcción de la <`Location`> elemento, $wc/@* recupera todos los atributos de ubicación de centro de trabajo.  
   
 -   El **string()** función devuelve el valor de cadena desde el <`step`> elemento.  
   
@@ -84,8 +83,8 @@ WHERE ProductModelID=7
 </ManuInstr>   
 ```  
   
-### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>B. Buscar todos los números de teléfono de la columna AdditionalContactInfo  
- La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando el elemento <`telephoneNumber`> en toda la jerarquía. Dado que el elemento <`telephoneNumber`> puede aparecer en cualquier lugar de la jerarquía, la consulta usa el operador descendant y self (//) en la búsqueda.  
+### <a name="b-find-all-telephone-numbers-in-the-additionalcontactinfo-column"></a>b. Buscar todos los números de teléfono de la columna AdditionalContactInfo  
+ La siguiente consulta recupera números de teléfono adicionales para un contacto de cliente específico buscando en toda la jerarquía para el <`telephoneNumber`> elemento. Dado que el <`telephoneNumber`> elemento puede aparecer en cualquier lugar en la jerarquía, la consulta utiliza el operador descendant y self (/ /) en la búsqueda.  
   
 ```sql
 SELECT AdditionalContactInfo.query('  
@@ -99,7 +98,7 @@ FROM  Person.Contact
 WHERE ContactID = 1  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```xml
 \<act:number   
@@ -112,9 +111,9 @@ WHERE ContactID = 1
 \</act:number>  
 ```  
   
- Para recuperar únicamente los números de teléfono de nivel superior, específicamente los elementos secundarios <`telephoneNumber`> de <`AdditionalContactInfo`>, la expresión FOR de la consulta cambia a  
+ Para recuperar únicamente los números de teléfono de nivel superior, específicamente el <`telephoneNumber`> elementos secundarios de <`AdditionalContactInfo`>, la expresión FOR de la consulta cambia a  
   
- `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`   
+ `for $ph in /ci:AdditionalContactInfo/act:telephoneNumber`.  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos básicos de XQuery](../xquery/xquery-basics.md)   

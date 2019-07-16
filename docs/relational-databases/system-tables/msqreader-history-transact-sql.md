@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a1d179cbef19e652472714b8010edcaeb12ebcc6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f21873e8db662bc77bd1acbb5d48c6af49aba404
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52779697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032527"
 ---
 # <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52779697"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de agent_id**|**int**|El identificador del Agente de lectura de cola.|  
+|**agent_id**|**int**|El identificador del Agente de lectura de cola.|  
 |**publication_id**|**int**|Id. de la publicación.|  
 |**runstatus**|**int**|Estado de ejecución del agente:<br /><br /> **1** = inicio.<br /><br /> **2** = se realice correctamente.<br /><br /> **3** = en curso.<br /><br /> **4** = inactivo.<br /><br /> **5** = reintento.<br /><br /> **6** = error.|  
 |**start_time**|**datetime**|Fecha y hora en que empezó la sesión del agente.|  

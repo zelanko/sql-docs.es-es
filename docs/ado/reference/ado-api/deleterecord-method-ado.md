@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2726498c-dbd8-4266-983b-ae7d62c39142
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f67f074596bfcf93eb7017a7afe273285f721aae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409c4e21395b7b903cf4ff03726fbd37a2a218d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919082"
 ---
 # <a name="deleterecord-method-ado"></a>DeleteRecord (método, ADO)
 Elimina una entidad representada por un [registro](../../../ado/reference/ado-api/record-object-ado.md).  
@@ -35,7 +34,7 @@ Record.DeleteRecord Source, Async
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Source*  
+ *Origen*  
  Opcional. Un **cadena** valor que contiene una dirección URL que identifica la entidad (por ejemplo, el archivo o directorio) va a eliminar. Si *origen* se omite o se especifica una cadena vacía, la entidad representada por el actual [registro](../../../ado/reference/ado-api/record-object-ado.md) se elimina. Si el registro es una colección ([RecordType](../../../ado/reference/ado-api/recordtype-property-ado.md) de **es adCollectionRecord**, por ejemplo, un directorio) también se eliminarán todos los elementos secundarios (por ejemplo, subdirectorios).  
   
  *Async*  

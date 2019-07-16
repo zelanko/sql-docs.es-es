@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 0cdd5788-5642-4280-8d53-b4ec461aafa1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5c4f0b21bba9e56cad076ae08f5a561cc972d2ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b4d14cc65b31a0641149ace931efe46c914ad1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088164"
 ---
 # <a name="using-32-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 32 bits con controladores de 32 bits
 Puede ejecutar aplicaciones de 32 bits con controladores de 32 bits. Las aplicaciones de 32 bits y los controladores de 32 bits usan la API Win32®.  
   
-## <a name="architecture"></a>Architecture  
+## <a name="architecture"></a>Arquitectura  
  La siguiente ilustración muestra las aplicaciones de 32 bits cómo comunicarse con los controladores de 32 bits. La aplicación llama el Administrador de controladores de 32 bits, que a su vez llama a los controladores de 32 bits.  
   
  ![Cómo 32&#45;las aplicaciones de bits se comunican con 32&#45;bit controladores](../../odbc/microsoft/media/sdka6.gif "sdka6")  

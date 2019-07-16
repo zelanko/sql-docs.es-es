@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 9ad4d1a23a05db35e0c4b55473903dbf7e4265da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: efeb55e9fb3a241978fd31944f662250b0f36d48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641947"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962442"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>Configuración de SQL Server para su uso con R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -110,7 +109,7 @@ SQL Server puede realizar tareas en paralelo con los núcleos disponibles en el 
 
 Dado que el servidor se usa normalmente por varios usuarios simultáneamente, el Administrador de base de datos debe determinar el número ideal de núcleos que se necesitan para admitir cálculos de carga de trabajo máxima.
 
-### <a name="resource-governance"></a>Regulación de recursos
+### <a name="resource-governance"></a>Gobernanza de recursos
 
 En las ediciones que admiten el regulador de recursos, puede usar los grupos de recursos para especificar que ciertas cargas de trabajo se asignan a un número de CPU. También puede administrar la cantidad de memoria asignada a cargas de trabajo específicas.
 

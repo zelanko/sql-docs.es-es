@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 18680069663b0979662b3288b5d02439fdf55297
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: c9e0d3152c6d60faff4c1c42410374287bd7d111
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030901"
 ---
 # <a name="spaddrolemember-transact-sql"></a>sp_addrolemember (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,10 +43,10 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 ```    
   
 ## <a name="arguments"></a>Argumentos  
- [ @rolename= ] '*role*'  
+ [ @rolename=] '*rol*'  
  Es el nombre del rol en la base de datos actual. *rol* es un **sysname**, no tiene ningún valor predeterminado.  
   
- [ @membername= ] '*security_account*'  
+ [ @membername=] '*security_account*'  
  Es la cuenta de seguridad que se va a agregar al rol. *security_account* es un **sysname**, no tiene ningún valor predeterminado. *security_account* puede ser un usuario de base de datos, rol de base de datos, el inicio de sesión de Windows o grupo de Windows.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4f622cf4-0603-47a1-a48b-944c4ef46364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c596f4924e9859b3ac61d38f68bacbc3ecd54a2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aab33f8805741083fd42e9fbcb25d67a416be319
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468702"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061622"
 ---
 # <a name="row-wise-binding"></a>El enlace
 Cuando se usa el enlace, una aplicación define una estructura que contiene uno o dos, o en algunos casos, tres, elementos para cada columna para el que se va a devolver datos. El primer elemento contiene el valor de datos, y el segundo elemento contiene el búfer de longitud/indicador. Valores de longitud y los indicadores pueden almacenarse en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si esto sucede, la estructura contiene un tercer elemento. La aplicación, a continuación, asigna una matriz de estas estructuras, que incluye tantos elementos como filas en el conjunto de filas.  

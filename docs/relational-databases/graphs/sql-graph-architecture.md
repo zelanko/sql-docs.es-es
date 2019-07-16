@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035979"
 ---
 # <a name="sql-graph-architecture"></a>Arquitectura SQL Graph  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ El `sys.columns` vista contiene columnas adicionales `graph_type` y `graph_type_
  
 |Nombre de la columna |Tipo de datos |Descripción |
 |--- |---|--- |
-|graph_type |INT |Columna interno con un conjunto de valores. Los valores están entre 1-8 para las columnas del gráfico y NULL para otros usuarios.  |
+|graph_type |int |Columna interno con un conjunto de valores. Los valores están entre 1-8 para las columnas del gráfico y NULL para otros usuarios.  |
 |graph_type_desc |nvarchar(60)  |columna interna con un conjunto de valores |
  
 La tabla siguiente enumeran los valores válidos para `graph_type` columna
@@ -101,20 +100,20 @@ Columnas implícitas de una tabla de nodo
 
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
+|graph_id_\<hex_string> |BIGINT |1  |interno `graph_id` columna  |
 |$node_id_\<hex_string> |NVARCHAR   |0  |Nodo externo `node_id` columna  |
 
 Columnas implícitas de una tabla irregular
 
 |Nombre de la columna    |Tipo de datos  |is_hidden  |Comentario  |
 |---  |---|---|---  |
-|graph_id_\<hex_string> |bigint |1  |interno `graph_id` columna  |
+|graph_id_\<hex_string> |BIGINT |1  |interno `graph_id` columna  |
 |$edge_id_\<hex_string> |NVARCHAR   |0  |externo `edge_id` columna  |
 |from_obj_id_\<hex_string>  |INT    |1  |interno del nodo `object_id`  |
-|from_id_\<hex_string>  |bigint |1  |interno del nodo `graph_id`  |
+|from_id_\<hex_string>  |BIGINT |1  |interno del nodo `graph_id`  |
 |$from_id_\<hex_string> |NVARCHAR   |0  |externo del nodo `node_id`  |
 |to_obj_id_\<hex_string>    |INT    |1  |interno de nodo `object_id`  |
-|to_id_\<hex_string>    |bigint |1  |interno de nodo `graph_id`  |
+|to_id_\<hex_string>    |BIGINT |1  |interno de nodo `graph_id`  |
 |$to_id_\<hex_string>   |NVARCHAR   |0  |externo al nodo `node_id`  |
  
 ### <a name="system-functions"></a>Funciones del sistema

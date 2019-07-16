@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950661"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,17 +41,17 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  Es la base de datos para la que se establece la opción de base de datos de replicación. *db_name* es **sysname**, no tiene ningún valor predeterminado.  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  Es la opción de base de datos de replicación que se puede habilitar o deshabilitar. *optname* es **sysname**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**publicación de mezcla**|Se puede utilizar la base de datos para publicaciones de combinación.|  
 |**publish**|Se puede utilizar la base de datos para otros tipos de publicaciones.|  
-|**subscribe**|La base de datos es una base de datos de suscripciones.|  
+|**suscribirse**|La base de datos es una base de datos de suscripciones.|  
 |**sincronizar con la copia de seguridad**|La base de datos está habilitada para una copia de seguridad coordinada. Para obtener más información, consulte [habilitar copias de seguridad coordinadas para la replicación transaccional &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md).|  
   
 `[ @value = ] 'value'` Es si desea habilitar o deshabilitar la opción de base de datos de replicación determinado. *valor* es **sysname**y puede ser **true** o **false**. Cuando este valor es **false** y *optname* es **publicación de mezcla**, también se quitan las suscripciones a la base de datos publicada de mezcla.  

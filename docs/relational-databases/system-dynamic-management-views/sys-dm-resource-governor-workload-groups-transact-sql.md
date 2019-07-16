@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f63c4914-1272-43ef-b135-fe1aabd953e0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dceda172caab5f93295eac9cf4cf86a07495fe3a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: df55c4e17640710b5ada50a0aa12edb046822821
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825011"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053238"
 ---
 # <a name="sysdmresourcegovernorworkloadgroups-transact-sql"></a>sys.dm_resource_governor_workload_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ ms.locfileid: "47825011"
 |queued_request_count|**int**|Recuento actual de solicitudes en cola. No admite valores NULL.|  
 |total_cpu_limit_violation_count|**bigint**|Recuento acumulado de solicitudes que superan el límite de CPU. No admite valores NULL.|  
 |total_cpu_usage_ms|**bigint**|Uso acumulado de la CPU en milisegundos de este grupo de cargas de trabajo. No admite valores NULL.|  
-|max_request_cpu_time_ms|**bigint**|Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.<br /><br /> **Nota:** es un valor medido, al contrario que request_max_cpu_time_sec, que es un valor configurable. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
+|max_request_cpu_time_ms|**bigint**|Uso máximo de CPU, en milisegundos, para una única solicitud. No admite valores NULL.<br /><br /> **Nota:** Esto es un valor medido, al contrario que request_max_cpu_time_sec, que es un valor configurable. Para obtener más información, vea [Clase de eventos Umbral de la CPU superado](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md).|  
 |blocked_task_count|**int**|Contador actual de tareas bloqueadas. No admite valores NULL.|  
 |total_lock_wait_count|**bigint**|Recuento acumulado de esperas del bloqueo producidas. No admite valores NULL.|  
 |total_lock_wait_time_ms|**bigint**|Suma acumulada de tiempo transcurrido, en milisegundos, que se mantiene un bloqueo. No admite valores NULL.|  
@@ -58,7 +57,7 @@ ms.locfileid: "47825011"
 |total_reduced_memgrant_count|**bigint**|Recuento acumulado de concesiones de memoria que alcanzaron el límite máximo de tamaño de consulta. No admite valores NULL.|  
 |max_request_grant_memory_kb|**bigint**|El tamaño máximo de la concesión de memoria, en kilobytes, de una única solicitud desde que se restablecieron las estadísticas. No admite valores NULL.|  
 |active_parallel_thread_count|**bigint**|Recuento actual de uso del subproceso paralelo. No admite valores NULL.|  
-|importance|**sysname**|Valor de la configuración actual de la importancia relativa de una solicitud en este grupo de cargas de trabajo. La importancia puede ser uno de los siguientes, siendo Medium el valor predeterminado: baja, Media o alta.<br /><br /> No admite valores NULL.|  
+|importance|**sysname**|Valor de la configuración actual de la importancia relativa de una solicitud en este grupo de cargas de trabajo. Importancia puede ser uno de los siguientes, siendo Medium el valor predeterminado: Bajo, medio o alto.<br /><br /> No admite valores NULL.|  
 |request_max_memory_grant_percent|**int**|Valor actual de la concesión máxima de memoria, en porcentaje, para una única solicitud. No admite valores NULL.|  
 |request_max_cpu_time_sec|**int**|Valor actual máximo de uso de CPU, en segundos, para una única solicitud. No admite valores NULL.|  
 |request_memory_grant_timeout_sec|**int**|Valor actual del tiempo de espera de concesiones de memoria, en segundos, para una única solicitud. No admite valores NULL.|  

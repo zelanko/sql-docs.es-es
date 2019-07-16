@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 6f0b9cea-5a24-4e42-8bbf-c4516b00da23
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 5d9bf2a94146739a743fc4c310ece1d9c4642d11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0070dbed0b683b37c0280b9948ff4b592fea9084
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028997"
 ---
 # <a name="global-settings-tester-sybasetosql"></a>Configuración global (evaluador) (SybaseToSQL)
 Use la página de la herramienta de comprobación de la **configuración Global** cuadro de diálogo para especificar la configuración de pruebas de SSMA.  
@@ -61,7 +60,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  Sin  
+2.  No  
   
 ## <a name="see-also"></a>Vea también  
 [Finalización de la preparación del caso de prueba &#40;SybaseToSQL&#41;](../../ssma/sybase/finishing-test-case-preparation-sybasetosql.md)  

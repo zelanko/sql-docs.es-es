@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4d68868e-2611-4b5c-9a89-7caa5f753151
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19fc6e61a10e1a92f0f674a23d00f1e1b06a596c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4636df1451ba946b9a7bfb62e3d6775c35b1d6f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924492"
 ---
 # <a name="records-and-streams"></a>Registros y secuencias
 ADO proporciona actualmente las [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto como medio principal para acceder a la información de orígenes de datos, como bases de datos relacionales. Sin embargo, algunos proveedores admiten la [registro](../../../ado/reference/ado-api/record-object-ado.md) y [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objetos como objetos alternativos o complementarios para manipular los datos de proveedores. Para obtener información específica sobre **registro** comportamiento, consulte la documentación del proveedor.  

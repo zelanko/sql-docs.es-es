@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c06214d23441782cbe5e14433b16928224d5d48c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d568ca20cca6c12a04c0f3d54a2c134d59a0d7fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930572"
 ---
 # <a name="ado-md-objects"></a>Objetos de ADO MD
 
@@ -27,7 +26,7 @@ ms.locfileid: "66709850"
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Representa una posición o el eje del filtro de un conjunto de celdas que contiene a los miembros seleccionados de uno o más dimensiones.|  
 |[Catálogo](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contiene información de esquema multidimensional (es decir, los cubos y dimensiones subyacentes, jerarquías, niveles y miembros) específico de un proveedor de datos multidimensionales (MDP).|  
-|[Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa los datos en la intersección de coordenadas del eje, contenidos en un conjunto de celdas.|  
+|[celda](../../../ado/reference/ado-md-api/cell-object-ado-md.md)|Representa los datos en la intersección de coordenadas del eje, contenidos en un conjunto de celdas.|  
 |[Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|Representa los resultados de una consulta multidimensional. Es una colección de celdas seleccionadas de cubos u otros conjuntos de celdas.|  
 |[CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Representa un cubo de un esquema multidimensional, que contiene un conjunto de dimensiones relacionadas.|  
 |[Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|Representa una de las dimensiones de un cubo multidimensional, que contiene una o más jerarquías de miembros.|  

@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 014fb8344a0b2cf93dc7f375fffc717663f53a46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9519356bcd4add6887cf5ff41c754583607d1c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962655"
 ---
 # <a name="create-a-stored-pprocedure-using-sqlrutils"></a>Crear un pProcedure almacenado mediante sqlrutils
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ Entre los parámetros de entrada puede haber como mucho una trama de datos.
 
 Los objetos de dentro de la trama de datos, así como todos los demás parámetros de entrada de la función, deben ser de los siguientes tipos de datos de R:
 - POSIXct
-- NUMERIC
+- numeric
 - character
 - integer
 - lógicos
@@ -42,7 +41,7 @@ Los objetos de dentro de la trama de datos, así como todos los demás parámetr
 
 Si un tipo de entrada no es uno de los tipos anteriores, tiene que serializarse y pasarse a la función como *raw*. En este caso, la función también debe incluir código para deserializar la entrada.
 
-### <a name="outputs"></a>Resultados
+### <a name="outputs"></a>Salidas
 
 La función puede generar uno de los siguientes:
 
@@ -65,7 +64,7 @@ Si la función toma las entradas, para cada entrada, llame a las funciones sigui
 
 Cuando se llamar a cada función, se crea un objeto de R que pasará posteriormente como argumento a `StoredProcedure`, para crear el procedimiento almacenado completo.
 
-### <a name="outputs"></a>Resultados
+### <a name="outputs"></a>Salidas
 
 **sqlrutils** proporciona varias funciones para convertir de R de objetos, como se enumeran en la trama de datos necesarios para SQL Server.
 Si la función genera una trama de datos directamente, sin ajustar primero en una lista, puede omitir este paso.
@@ -82,7 +81,7 @@ Cuando se llamar a cada función, se crea un objeto de R que pasará posteriorme
 
 Cuando todos los parámetros de entrada y salidos estén listos, realice una llamada a la `StoredProcedure` constructor.
 
-**Usage**
+**Uso**
 
 `StoredProcedure (func, spName, ..., filePath = NULL ,dbName = NULL, connectionString = NULL, batchSeparator = "GO")`
 

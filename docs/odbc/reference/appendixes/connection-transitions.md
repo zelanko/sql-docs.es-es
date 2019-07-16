@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 6b6e1a47-4a52-41c8-bb9e-7ddeae09913e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f808460a1421a9ab4cb3a76c2810d810b9636b11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00ebbe36f8668e83697ff3a0038fbeb38f23ffd2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019191"
 ---
 # <a name="connection-transitions"></a>Transiciones de conexión
 Las conexiones de ODBC tienen los siguientes estados.  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |C0|Entorno sin asignar, sin asignar la conexión|  
 |C1|Entorno asignado, sin asignar la conexión|  
@@ -39,7 +38,7 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlallochandle"></a>SQLAllocHandle  
   
-|C0<br /><br /> No hay Env.|C1 sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1 sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|--------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |C1[1]|--[5]|--[5]|--[5]|--[5]|--[5]|--[5]|  
 |(IH)[2]|C2|--[5]|--[5]|--[5]|--[5]|--[5]|  
@@ -58,13 +57,13 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlbrowseconnect"></a>SQLBrowseConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C3 [d] C4 [s]|-- [d] C2 [e] C4 [s]|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|C3 [d] C4 [s]|--C2 [d] [e] C4 [s]|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlclosecursor"></a>SQLCloseCursor  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--[1] C5[2]|  
   
@@ -72,9 +71,9 @@ Las conexiones de ODBC tienen los siguientes estados.
   
  [2] en la conexión estaba en modo de confirmación automática.  
   
-## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges, and SQLTables  
+## <a name="sqlcolumnprivileges-sqlcolumns-sqlforeignkeys-sqlgettypeinfo-sqlprimarykeys-sqlprocedurecolumns-sqlprocedures-sqlspecialcolumns-sqlstatistics-sqltableprivileges-and-sqltables"></a>SQLColumnPrivileges, SQLColumns, SQLForeignKeys, SQLGetTypeInfo, SQLPrimaryKeys, SQLProcedureColumns, SQLProcedures, SQLSpecialColumns, SQLStatistics, SQLTablePrivileges y SQLTables  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
@@ -84,13 +83,13 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlconnect"></a>SQLConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|C4|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlcopydesc-sqlgetdescfield-sqlgetdescrec-sqlsetdescfield-and-sqlsetdescrec"></a>SQLCopyDesc, SQLGetDescField, SQLGetDescRec, SQLSetDescField y SQLSetDescRec  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|--[1]|--|--|  
   
@@ -98,27 +97,27 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqldatasources-and-sqldrivers"></a>SQLDataSources y SQLDrivers  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|--|--|--|--|--|--|  
   
 ## <a name="sqldisconnect"></a>SQLDisconnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(08003)|C2|C2|C2|25000|  
   
 ## <a name="sqldriverconnect"></a>SQLDriverConnect  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)|(IH)|C4 s -- n[f]|(08002)|(08002)|(08002)|(08002)|  
+|(IH)|(IH)|S C4--n [f]|(08002)|(08002)|(08002)|(08002)|  
   
 ## <a name="sqlendtran"></a>SQLEndTran  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--[3]|--[3]|--[3]|--|--|: [4] o ([5], [6] y [8]) C4 [5] y [7] C5 [5], [6] y [9]|  
+|(IH) [1]|--[3]|--[3]|--[3]|--|--|: [4] o ([5], [6] y [8]) C4 [5] y [7] C5 [5], [6] y [9]|  
 |(IH)[2]|(IH)|(08003)|(08003)|--|--|C5|  
   
  [1] esta fila muestra las transiciones cuando *HandleType* era SQL_HANDLE_ENV.  
@@ -141,7 +140,7 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlexecdirect-and-sqlexecute"></a>SQLExecDirect y SQLExecute  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2] C6[3]|--|  
   
@@ -153,9 +152,9 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfreehandle"></a>SQLFreeHandle  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
+|(IH) [1]|C0|(HY010)|(HY010)|(HY010)|(HY010)|(HY010)|  
 |(IH)[2]|(IH)|(C1)|(HY010)|(HY010)|(HY010)|(HY010)|  
 |(IH)[3]|(IH)|(IH)|(IH)|(IH)|C4[5] --[6]|--C4 [7] [5] y [8] C5 [6] y [8]|  
 |(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
@@ -178,9 +177,9 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlfreestmt"></a>SQLFreeStmt  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
+|(IH) [1]|(IH)|(IH)|(IH)|(IH)|--|C5[3] --[4]|  
 |(IH)[2]|(IH)|(IH)|(IH)|(IH)|--|--|  
   
  [1] esta fila muestra las transacciones cuando la *opción* argumento es SQL_CLOSE.  
@@ -193,7 +192,7 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetconnectattr"></a>SQLGetConnectAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|--[1] 08003[2]|HY010|--|--|--|  
   
@@ -203,9 +202,9 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetdiagfield-and-sqlgetdiagrec"></a>SQLGetDiagField y SQLGetDiagRec  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|(IH)[1]|--|--|--|--|--|--|  
+|(IH) [1]|--|--|--|--|--|--|  
 |(IH)[2]|(IH)|--|--|--|--|--|  
 |(IH)[3]|(IH)|(IH)|(IH)|(IH)|--|--|  
 |(IH)[4]|(IH)|(IH)|(IH)|--|--|--|  
@@ -220,19 +219,19 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlgetenvattr"></a>SQLGetEnvAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|--|--|--|--|--|--|  
   
 ## <a name="sqlgetfunctions"></a>SQLGetFunctions  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|HY010|HY010|--|--|--|  
   
 ## <a name="sqlgetinfo"></a>SQLGetInfo  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |IH|IH|--[1] 08003[2]|08003|--|--|--|  
   
@@ -242,7 +241,7 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlmoreresults"></a>SQLMoreResults  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--[3] C5[1]|  
   
@@ -254,13 +253,13 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlnativesql"></a>SQLNativeSql  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(08003)|(08003)|--|--|--|  
   
 ## <a name="sqlprepare"></a>SQLPrepare  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--[1] C6[2]|--|  
   
@@ -270,9 +269,9 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlsetconnectattr"></a>SQLSetConnectAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
-|IH|IH|--[1] 08003[2]|HY010|--[3] 08002[4] HY011[5]|--[3] 08002[4] HY011[5]|: [3] y [6] C5 [8] 08002 HY011 [4] [5] o [7]|  
+|IH|IH|--[1] 08003[2]|HY010|--08002 [3] [4] HY011 [5]|--08002 [3] [4] HY011 [5]|: [3] y [6] C5 [8] 08002 HY011 [4] [5] o [7]|  
   
  [1] el *atributo* argumento no era SQL_ATTR_TRANSLATE_LIB o SQL_ATTR_TRANSLATE_OPTION.  
   
@@ -292,12 +291,12 @@ Las conexiones de ODBC tienen los siguientes estados.
   
 ## <a name="sqlsetenvattr"></a>SQLSetEnvAttr  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|--|--|(HY010)|--|--|--|  
   
 ## <a name="all-other-odbc-functions"></a>Todas las demás funciones ODBC  
   
-|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> .|C6<br /><br /> Transacción|  
+|C0<br /><br /> No hay Env.|C1<br /><br /> Sin asignar|C2<br /><br /> asignado|C3<br /><br /> Necesita los datos|C4<br /><br /> Conectado|C5<br /><br /> Instrucción|C6<br /><br /> Transacción|  
 |--------------------|------------------------|----------------------|----------------------|----------------------|----------------------|------------------------|  
 |(IH)|(IH)|(IH)|(IH)|(IH)|--|--|

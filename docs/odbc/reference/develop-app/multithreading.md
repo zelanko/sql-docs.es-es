@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdfebdf5-12ff-4e28-8055-41f49b77f664
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a16262d562ca2088f38cd863a6f44e537e65d40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eaa07ce22436bc8bfae215c0431480081ee0f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086351"
 ---
 # <a name="multithreading"></a>Subprocesamiento múltiple
 En sistemas operativos multiproceso, los controladores deben ser seguros para subprocesos. Es decir, debe ser posible las aplicaciones utilicen el mismo identificador en más de un subproceso. Forma de conseguirlo es específica del controlador, y es probable que los controladores serializarán cualquier intento de utilizar simultáneamente el mismo identificador en dos subprocesos diferentes.  

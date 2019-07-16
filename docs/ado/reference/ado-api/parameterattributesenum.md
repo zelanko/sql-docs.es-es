@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef6c728-5eda-4bde-8052-02d2db1d2cfe
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ade713272a4916a1ea316fe33724246d6e4248bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 95ba0d84d99d2f0cd51b363a42b8620b55459b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917753"
 ---
 # <a name="parameterattributesenum"></a>ParameterAttributesEnum
 Especifica los atributos de un [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  
@@ -33,7 +32,7 @@ Especifica los atributos de un [parámetro](../../../ado/reference/ado-api/param
 |**adParamLong**|128|Indica que el parámetro acepta datos binarios largos.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 782b4490-372b-4366-aad7-a486fb8a07c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9a3d63f0bf1923905c5281655aff2af294b8284
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5fe4081d0786ace40dd027606a830982798075e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044951"
 ---
 # <a name="data-type-support"></a>Compatibilidad con tipos de datos
 Controladores ODBC deben admitir al menos uno de SQL_VARCHAR y SQL_CHAR. Compatibilidad con otros tipos de datos viene determinada por el nivel de conformidad con del controlador u origen de datos SQL-92. Una aplicación debe llamar a **SQLGetTypeInfo** para determinar los tipos de datos compatibles con el controlador.  

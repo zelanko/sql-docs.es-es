@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997565"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es **sysname**, su valor predeterminado es **%**. Si **%**, a continuación, el conjunto de resultados contiene todas las bases de datos en el publicador, en caso contrario, solo en la base de datos especificado se devuelve información. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
+`[ @dbname = ] 'dbname'` Es el nombre de la base de datos. *dbname* es **sysname**, su valor predeterminado es **%** . Si **%** , a continuación, el conjunto de resultados contiene todas las bases de datos en el publicador, en caso contrario, solo en la base de datos especificado se devuelve información. No se devuelve ninguna información para las bases de datos en que el usuario no tiene los permisos correspondientes según se describe a continuación.  
   
 `[ @type = ] 'type'` Restringe el conjunto de resultados para contener solo las bases de datos en el que la opción de replicación especificado *tipo* se ha habilitado el valor. *tipo* es **sysname**, y puede tener uno de los siguientes valores.  
   
@@ -56,7 +55,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de la base de datos.|  
+|**name**|**sysname**|Nombre de la base de datos.|  
 |**id**|**int**|Identificador de la base de datos.|  
 |**transpublish**|**bit**|Si se ha habilitado la base de datos de instantánea o publicación transaccional; el valor **1** significa que la publicación transaccional o instantáneas está habilitada.|  
 |**mergepublish**|**bit**|Si se ha habilitado la base de datos para la combinación de publicación; el valor **1** significa que la publicación de combinación está habilitada.|  

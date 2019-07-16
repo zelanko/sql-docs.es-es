@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fead9d6f80c62995cf156adc092221113a9ff24c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6afb061e07b3d01395031b4ce00fe315364ef382
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045015"
 ---
 # <a name="microsoft-supplied-odbc-drivers"></a>Controladores ODBC proporcionados por Microsoft
 *Controladores* son bibliotecas que implementan las funciones de la API de ODBC. Cada controlador es específico para un sistema de administración concreto de la base de datos (DBMS). En la mayoría de los casos, los controladores de exponen las funcionalidades del DBMS subyacente; no se requieren para implementar funciones no admitidas por el DBMS. Los controladores realizan tareas específicas y se pueden clasificar en dos categorías: basados en archivos y basados en DBMS. Para obtener más información sobre la arquitectura de controlador y los controladores, consulte [controladores](../../odbc/reference/drivers.md).  

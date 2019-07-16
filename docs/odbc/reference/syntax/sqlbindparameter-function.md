@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 13f4c879f94118a2e2302a2032991e85551be0f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65f6145f0cbfbd59fffb71e030f6427ea1f551c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036207"
 ---
 # <a name="sqlbindparameter-function"></a>Función SQLBindParameter
 
@@ -96,7 +95,7 @@ SQLRETURN SQLBindParameter(
 
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos
+## <a name="diagnostics"></a>Diagnóstico
 
  Cuando **SQLBindParameter** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLBindParameter** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
 
@@ -243,7 +242,7 @@ SQLRETURN SQLBindParameter(
 > [!NOTE]  
 >  En **SQLSetParam**, la forma en que una aplicación especifica la longitud de la **ParameterValuePtr* almacenar en búfer para que el controlador puede devolver caracteres o datos binarios y la manera en que una aplicación envía una matriz de caracteres o valores de parámetro binario para el controlador, se definen por controlador.  
   
-## <a name="strlenorindptr-argument"></a>StrLen_or_IndPtr Argument
+## <a name="strlenorindptr-argument"></a>Argumento StrLen_or_IndPtr
 
  El *StrLen_or_IndPtr* argumento apunta a un búfer que, cuando **SQLExecute** o **SQLExecDirect** se denomina, contiene uno de los siguientes. (Este argumento establece los campos de registro SQL_DESC_OCTET_LENGTH_PTR y SQL_DESC_INDICATOR_PTR de los punteros de parámetro de la aplicación).  
   

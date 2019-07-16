@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: ca119958-ff72-42d4-b0ac-b1ca3212c705
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71ee58c89ba29e61e1a5e0db595f7b791a21fd46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c81d3643c677b201aff9a3a7742c01b99c63b5c9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036331"
 ---
 # <a name="sqlallocconnect-function"></a>Función SQLAllocConnect
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocConnect** ha sido reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  

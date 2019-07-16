@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 55b83f9c-da10-4e65-9846-f4ef3c0c0f36
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a020dc8b695bbebaef4bc5cc60c956b5a9e4e05
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9c9acae0a0d3f0b7c89296f795c8fd34929cf72f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47825163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090645"
 ---
 # <a name="sysdmtranactivesnapshotdatabasetransactions-transact-sql"></a>sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -75,7 +74,7 @@ sys.dm_tran_active_snapshot_database_transactions
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="remarks"></a>Comentarios  
  **Sys.dm_tran_active_snapshot_database_transactions** notifica las transacciones que tienen asignado un número de secuencia de transacción (XSN). Este XSN se asigna cuando la transacción tiene acceso por primera vez al almacén de versiones. En una base de datos habilitada para el aislamiento de instantáneas o el aislamiento de lectura confirmada que utiliza las versiones de fila, los ejemplos muestran cuándo se asigna un valor XSN a una transacción:  
@@ -148,11 +147,11 @@ elapsed_time_seconds
   
 -   XSN-57: Dado que esta transacción no se ejecuta con aislamiento de instantánea, la `is_snapshot` valor y `first_snapshot_sequence_num` son `0`. `transaction_sequence_num` muestra que se ha asignado un número de secuencia de la transacción a esta transacción, ya que una o ambas de las opciones de base de datos ALLOW_SNAPSHOT_ISOLATION o READ_COMMITTED_SNAPSHOT están establecidas en ON.  
   
--   XSN-58: esta transacción no se ejecuta con aislamiento de instantáneas y se aplica la misma información que en XSN-57.  
+-   XSN-58: Esta transacción no se ejecuta con aislamiento de instantánea y se aplica la misma información para XSN-57.  
   
--   XSN-59: ésta es la primera transacción activa que se ejecuta con aislamiento de instantáneas. Esta transacción lee datos confirmados antes de XSN-57, como se indica mediante `first_snapshot_sequence_num`. La salida de esta transacción también muestra que la cadena de versiones máxima que se recorre para una fila es `1` y que ha recorrido un promedio de `1` versión para cada fila a la que se tiene acceso. Esto significa que las transacciones XSN-57, XSN-58 y XSN-60 no han modificado filas ni realizado confirmaciones.  
+-   XSN-59: Se trata de la primera transacción activa que se ejecuta con aislamiento de instantánea. Esta transacción lee datos confirmados antes de XSN-57, como se indica mediante `first_snapshot_sequence_num`. La salida de esta transacción también muestra que la cadena de versiones máxima que se recorre para una fila es `1` y que ha recorrido un promedio de `1` versión para cada fila a la que se tiene acceso. Esto significa que las transacciones XSN-57, XSN-58 y XSN-60 no han modificado filas ni realizado confirmaciones.  
   
--   XSN-60: ésta es la segunda transacción que se ejecuta con aislamiento de instantáneas. La salida muestra la misma información que XSN-59.  
+-   XSN-60: Se trata de la segunda transacción que se ejecuta con aislamiento de instantánea. La salida muestra la misma información que XSN-59.  
   
 ## <a name="see-also"></a>Vea también  
  [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)   

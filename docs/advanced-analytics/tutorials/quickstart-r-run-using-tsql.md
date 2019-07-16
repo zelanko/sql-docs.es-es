@@ -7,13 +7,12 @@ ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1c3ee703bca46bf46dba8225e1d28da3174dc932
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59240173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961987"
 ---
 # <a name="quickstart-hello-world-r-script-in-sql-server"></a>Inicio rápido: Script de R "Hello world" en SQL Server 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -56,7 +55,7 @@ El siguiente ejercicio se centra en el primer modelo de interacción: cómo pasa
     0.5 2
     ```
 
-    Al obtener **stdout** mensajes es útil al probar el código, más a menudo es necesario devolver los resultados en formato tabular, para que pueda usarlo en una aplicación o escribirlo en una tabla. Consulte [inicio rápido: Identificador de entradas y salidas con R en SQL Server](rtsql-working-with-inputs-and-outputs.md) para obtener más información.
+    Al obtener **stdout** mensajes es útil al probar el código, más a menudo es necesario devolver los resultados en formato tabular, para que pueda usarlo en una aplicación o escribirlo en una tabla. Consulte [Quickstart: Identificador de entradas y salidas con R en SQL Server](rtsql-working-with-inputs-and-outputs.md) para obtener más información.
 
 Recuerde, todo dentro de la `@script` el argumento debe ser código R válido.
 
@@ -82,7 +81,7 @@ Entradas de este procedimiento almacenado se incluyen:
 
 **Resultado**
 
-| Hello World |
+| Hola mundo |
 |-------------|
 | 1 |
 

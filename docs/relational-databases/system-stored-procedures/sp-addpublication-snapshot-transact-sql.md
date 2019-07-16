@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 192b6214-df6e-44a3-bdd4-9d933a981619
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 35b18161e9d0022e0f7df29498a94c40646a5055
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4fbba559eceae58483419c0f1e3826b9db79bef5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061832"
 ---
 # <a name="spaddpublicationsnapshot-transact-sql"></a>sp_addpublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -78,9 +77,9 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 |------------------------------|-----------------------------------|  
 |**1**|*frequency_interval* no se utiliza.|  
 |**4** (valor predeterminado)|Cada *frequency_interval* días, con un valor predeterminado de diariamente.|  
-|**8**|*frequency_interval* es uno o varios de los siguientes (combinados con un [ &#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **4** = el martes&#124;<br /><br /> **8** = Wednesday &#124;<br /><br /> **16** = el jueves&#124;<br /><br /> **32** = Friday &#124;<br /><br /> **64** = el sábado|  
+|**8**|*frequency_interval* es uno o varios de los siguientes (combinados con un [ &#124; (OR bit a bit)](../../t-sql/language-elements/bitwise-or-transact-sql.md) operador lógico):<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **4** = el martes&#124;<br /><br /> **8** = el miércoles&#124;<br /><br /> **16** = el jueves&#124;<br /><br /> **32** = el viernes&#124;<br /><br /> **64** = el sábado|  
 |**16**|En el *frequency_interval* día del mes.|  
-|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **3** = el martes&#124;<br /><br /> **4** = Wednesday &#124;<br /><br /> **5** = el jueves&#124;<br /><br /> **6** = Friday &#124;<br /><br /> **7** = el sábado&#124;<br /><br /> **8** = día&#124;<br /><br /> **9** = día de la semana&#124;<br /><br /> **10** = día del fin de semana|  
+|**32**|*frequency_interval* es uno de los siguientes:<br /><br /> **1** = el domingo&#124;<br /><br /> **2** = el lunes&#124;<br /><br /> **3** = el martes&#124;<br /><br /> **4** = el miércoles&#124;<br /><br /> **5** = el jueves&#124;<br /><br /> **6** = el viernes&#124;<br /><br /> **7** = el sábado&#124;<br /><br /> **8** = día&#124;<br /><br /> **9** = día de la semana&#124;<br /><br /> **10** = día del fin de semana|  
 |**64**|*frequency_interval* no se utiliza.|  
 |**128**|*frequency_interval* no se utiliza.|  
   
@@ -118,7 +117,7 @@ sp_addpublication_snapshot [ @publication= ] 'publication'
 > [!IMPORTANT]  
 >  No almacene información de autenticación en archivos de script. Para ayudar a mejorar la seguridad, se recomienda proporcionar nombres de inicio de sesión y contraseñas en tiempo de ejecución.  
   
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *job_login* es **nvarchar (257)**, su valor predeterminado es null. Esta cuenta siempre se utiliza para las conexiones del agente al distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *job_login* es **nvarchar (257)** , su valor predeterminado es null. Esta cuenta siempre se utiliza para las conexiones del agente al distribuidor. Es preciso proporcionar este parámetro al crear un nuevo trabajo del Agente de instantáneas.  
   
 > [!NOTE]
 >  Para que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores, debe ser el mismo inicio de sesión especificado en [sp_adddistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md).  

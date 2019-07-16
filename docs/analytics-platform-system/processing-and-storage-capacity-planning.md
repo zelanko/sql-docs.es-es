@@ -2,19 +2,18 @@
 title: Capacidad de procesamiento y almacenamiento - Analytics Platform System | Microsoft Docs
 description: Sus requisitos empresariales determinan el número de unidades de escalado de datos y el tamaño de los discos del nodo de proceso que necesite en su aplicación Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960233"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Capacidad de procesamiento y almacenamiento en Analytics Platform System
 Sus requisitos empresariales determinan el número de unidades de escalado de datos y el tamaño de los discos del nodo de proceso que necesite en su aplicación Analytics Platform System (APS). Use estos cálculos de almacenamiento y procesamiento para guiar la capacidad de adquisición y planeación de decisiones.  

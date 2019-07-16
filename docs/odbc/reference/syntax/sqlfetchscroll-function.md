@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003036"
 ---
 # <a name="sqlfetchscroll-function"></a>Función SQLFetchScroll
 **Conformidad**  
@@ -79,7 +78,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLFetchScroll** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un HandleType de SQL_HANDLE_STMT y un identificador de StatementHandle. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLFetchScroll** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario. Si se produce un error en una sola columna, **SQLGetDiagField** se puede llamar con un DiagIdentifier de SQL_DIAG_COLUMN_NUMBER para determinar la columna que se produjo el error; y **SQLGetDiagField** se puede llamar a con un DiagIdentifier de SQL_DIAG_ROW_NUMBER para determinar la fila que contiene esa columna.  
   
  Para todas esas SQLSTATE que puede devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO, si se produce un error en uno o más, pero no todas las filas de una operación de varias filas, y se devuelve SQL_ERROR si se produce un error en un fila única operación.  
@@ -164,7 +163,7 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |*Antes de comenzar*|1|  
-|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
+|*CurrRowsetStart + RowsetSize*[1]  *\<= LastResultRow*|*CurrRowsetStart + RowsetSize*[1]|  
 |*CurrRowsetStart + RowsetSize*[1] *> LastResultRow*|*Después de finales*|  
 |*Después de finales*|*Después de finales*|  
   
@@ -177,10 +176,10 @@ SQLRETURN SQLFetchScroll(
 |---------------|-----------------------------|  
 |*Antes de comenzar*|*Antes de comenzar*|  
 |*CurrRowsetStart = 1*|*Antes de comenzar*|  
-|*1 < CurrRowsetStart <= RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
+|*1 < CurrRowsetStart < = RowsetSize* <sup>[2].</sup>|*1* <sup>[1]</sup>|  
 |*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
 |*Después de la finalización y LastResultRow < RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
-|*Después de finales LastResultRow y > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2]</sup>|  
+|*Después de finales LastResultRow y > = RowsetSize* <sup>[2]</sup>|*LastResultRow - RowsetSize + 1* <sup>[2].</sup>|  
   
  [1] **SQLFetchScroll** devuelve SQLSTATE 01S06 (intento de recuperación antes de que el conjunto de resultados devuelve el primer conjunto de filas) y SQL_SUCCESS_WITH_INFO.  
   
@@ -192,8 +191,8 @@ SQLRETURN SQLFetchScroll(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |*(Antes de iniciar y FetchOffset > 0) O (después de la finalización y FetchOffset < 0)*|*--* <sup>[1]</sup>|  
-|*BeforeStart AND FetchOffset <= 0*|*Antes de comenzar*|  
-|*CurrRowsetStart = 1 AND FetchOffset < 0*|*Antes de comenzar*|  
+|*BeforeStart y FetchOffset < = 0*|*Antes de comenzar*|  
+|*CurrRowsetStart = 1 FetchOffset AND < 0*|*Antes de comenzar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; > RowsetSize* <sup>[3]</sup>|*Antes de comenzar*|  
 |*CurrRowsetStart > 1 AND CurrRowsetStart + FetchOffset < 1 AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[3]</sup>|*1* <sup>[2]</sup>|  
 |*1 < = CurrRowsetStart + FetchOffset \<= LastResultRow*|*CurrRowsetStart + FetchOffset*|  
@@ -211,7 +210,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
-|*FetchOffset < 0 AND &#124; FetchOffset &#124; <= LastResultRow*|*LastResultRow + FetchOffset + 1*|  
+|*FetchOffset < 0 AND &#124; FetchOffset &#124; < = LastResultRow*|*LastResultRow + FetchOffset + 1*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; > RowsetSize* <sup>[2]</sup>|*Antes de comenzar*|  
 |*FetchOffset < 0 AND &#124; FetchOffset &#124; > LastResultRow AND &#124; FetchOffset &#124; < = RowsetSize* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*FetchOffset = 0*|*Antes de comenzar*|  
@@ -236,7 +235,7 @@ SQLRETURN SQLFetchScroll(
   
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
-|*RowsetSize* <sup>[1]</sup> <= LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
+|*RowsetSize* <sup>[1]</sup> < = LastResultRow|*LastResultRow - RowsetSize + 1* <sup>[1]</sup>|  
 |*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] Si ha cambiado el tamaño del conjunto de filas desde la llamada anterior a capturar filas, se trata el nuevo tamaño del conjunto de filas.  

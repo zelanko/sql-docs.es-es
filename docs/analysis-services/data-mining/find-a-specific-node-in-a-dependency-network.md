@@ -1,5 +1,5 @@
 ---
-title: Buscar un nodo específico en una red de dependencias | Documentos de Microsoft
+title: Buscar un nodo específico en una red de dependencias | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ad00f715533e5da24cbec9c61dc79a045fa035ef
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183249"
 ---
 # <a name="find-a-specific-node-in-a-dependency-network"></a>Buscar un nodo determinado en una red de dependencias
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,6 +33,6 @@ ms.locfileid: "34014472"
 3.  Seleccione el nodo correcto de la lista y haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)  
   
   

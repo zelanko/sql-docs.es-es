@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 5773641f442fe844657e6aabd6b9dcea24f4475b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c9cb9d84637d20f3f0e73f97fa6565d84d12fb4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58509912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961954"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>Ejecutar funciones personalizadas de R en SQL Server con rxExec
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]

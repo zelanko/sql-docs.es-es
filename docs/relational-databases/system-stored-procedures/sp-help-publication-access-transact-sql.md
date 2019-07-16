@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9408fa13-54a0-4cb1-8fb0-845e5536ef50
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb281923e5b6d48a23cb6aa3f60bf36bbe9764da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8af56ae768ca883e22d7c9e18150e75025086d63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085263"
 ---
 # <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 `[ @return_granted = ] 'return_granted'` Es el identificador de inicio de sesión. *return_granted* es **bit**, su valor predeterminado es 1. Si **0** se especifica y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se utiliza la autenticación, se devuelven los inicios de sesión disponibles que aparecen en el publicador pero no en el distribuidor. Si **0** se especifica y se utiliza la autenticación de Windows, los inicios de sesión que se han denegado específicamente no tengan acceso a cualquiera al publicador o distribuidor se devuelven.  
   
-`[ @login = ] 'login'` Es el identificador de inicio de sesión de seguridad estándar. *inicio de sesión* es **sysname**, su valor predeterminado es **%**.  
+`[ @login = ] 'login'` Es el identificador de inicio de sesión de seguridad estándar. *inicio de sesión* es **sysname**, su valor predeterminado es **%** .  
   
 `[ @initial_list = ] initial_list` Especifica si se deben devolver a todos los miembros con acceso de publicación o solo aquellos que disponían de acceso antes de que se han agregado nuevos miembros a la lista. *initial_list* es de tipo bit, su valor predeterminado es **0**.  
   
@@ -58,7 +57,7 @@ sp_help_publication_access [ @publication = ] 'publication'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**nvarchar(256)**|Nombre de inicio de sesión real.|  
-|**Isntname**|**int**|**0** = inicio de sesión no es un usuario de Windows.<br /><br /> **1** = inicio de sesión es un usuario de Windows.|  
+|**isntname**|**int**|**0** = inicio de sesión no es un usuario de Windows.<br /><br /> **1** = inicio de sesión es un usuario de Windows.|  
 |**Isntgroup**|**int**|**0** = inicio de sesión no es un grupo de Windows.<br /><br /> **1** = inicio de sesión es un grupo de Windows.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

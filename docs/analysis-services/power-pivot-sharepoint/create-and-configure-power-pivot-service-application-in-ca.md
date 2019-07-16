@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164049"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>Crear y configurar la aplicación de servicio PowerPivot en la entidad de certificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -55,9 +55,9 @@ ms.locfileid: "38982607"
   
 2.  En la cinta **Aplicaciones de servicio** , haga clic en **Nuevo**.  
   
-3.  Seleccione **Aplicación de servicio de SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Si no aparece en la lista, significa que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no se instaló o configuró correctamente.  
+3.  Seleccione **Aplicación de servicio de SQL Server [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Si no aparece en la lista, significa que [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint no se instaló o configuró correctamente.  
   
-4.  En la página **Crear nueva aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, escriba un nombre para la aplicación. El valor predeterminado es PowerPivotServiceApplication\<número >. Si va a crear varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
+4.  En la página **Crear nueva aplicación de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , escriba un nombre para la aplicación. El valor predeterminado es PowerPivotServiceApplication\<número >. Si va a crear varias aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , un nombre descriptivo ayudará a otros administradores a saber cómo se utiliza la aplicación.  
   
 5.  En Grupo de aplicaciones, cree un nuevo grupo de aplicaciones para la aplicación (recomendado). Seleccione o cree una cuenta administrada para el grupo de aplicaciones. No olvide especificar una cuenta de usuario de dominio. Una cuenta de usuario de dominio habilita el uso de la característica de cuentas administradas de SharePoint, que permite actualizar la información de cuentas y contraseñas en un solo lugar. Las cuentas de dominio también se necesitan si planea escalar la horizontalmente la implementación para incluir instancias de servicio adicionales que se ejecutarán bajo la misma identidad.  
   
@@ -106,7 +106,7 @@ ms.locfileid: "38982607"
   
 9. En Actualización de datos, en **Horario comercial**, puede especificar un intervalo de horas que defina un día laboral. Las programaciones de actualización de datos pueden ejecutarse al terminar un día laborable a fin de reunir los datos de las transacciones que se generaron durante las horas de trabajo normales.  
   
-10. En **Cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, puede especificar una aplicación de destino de Servicio de almacenamiento seguro predefinida que almacene una cuenta predefinida para ejecutar trabajos de actualización de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Asegúrese de especificar el nombre de la aplicación de destino y no el identificador. La aplicación de destino para la actualización de datos desatendida se crea automáticamente si utilizó la opción Nuevo servidor del programa de instalación de SQL Server con el objetivo de instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. De lo contrario, debe crear la aplicación de destino de forma manual. Para obtener instrucciones sobre cómo configurar la cuenta, vea [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
+10. En **Cuenta de actualización de datos desatendida de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , puede especificar una aplicación de destino de Servicio de almacenamiento seguro predefinida que almacene una cuenta predefinida para ejecutar trabajos de actualización de datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]. Asegúrese de especificar el nombre de la aplicación de destino y no el identificador. La aplicación de destino para la actualización de datos desatendida se crea automáticamente si utilizó la opción Nuevo servidor del programa de instalación de SQL Server con el objetivo de instalar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint. De lo contrario, debe crear la aplicación de destino de forma manual. Para obtener instrucciones sobre cómo configurar la cuenta, vea [Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493).  
   
 11. En **Permitir a los usuarios especificar credenciales de Windows personalizadas**, puede activar o desactivar la casilla para especificar si los propietarios de programaciones pueden escribir credenciales de Windows arbitrarias para ejecutar una programación de la actualización de datos. Si activa esta casilla, la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] creará y administrará una aplicación de destino para cada conjunto de credenciales almacenadas. Para más información, vea [Configurar las credenciales almacenadas para la actualización de datos de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/987eff0f-bcfe-4bbd-81e0-9aca993a2a75).  
   
@@ -137,9 +137,9 @@ ms.locfileid: "38982607"
   
 3.  Haga clic en **Conexiones de servicio**.  
   
-4.  En **Modificar el siguiente grupo de asociaciones**, seleccione **default** o **[custom]**.  
+4.  En **Modificar el siguiente grupo de asociaciones**, seleccione **default** o **[custom]** .  
   
-5.  En **[custom]**, active la casilla junto a las conexiones de aplicación de servicio que quiera usar. Si tiene varias aplicaciones de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicadas por el Tipo establecido en **Proxy de la aplicación de servicio PowerPivot**), elija solo una.  
+5.  En **[custom]** , active la casilla junto a las conexiones de aplicación de servicio que quiera usar. Si tiene varias aplicaciones de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicadas por el Tipo establecido en **Proxy de la aplicación de servicio PowerPivot**), elija solo una.  
   
 6.  Haga clic en **Aceptar**.  
   

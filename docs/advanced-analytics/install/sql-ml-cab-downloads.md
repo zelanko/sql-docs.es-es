@@ -7,13 +7,12 @@ ms.date: 05/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3c5c27186969db01cc90fa43a6cf4ec2774ab051
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12659f7ea5df9ab364be44d98a8037c54b3ba2cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403238"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962867"
 ---
 # <a name="cab-downloads-for-cumulative-updates-of-sql-server-in-database-analytics-instances"></a>Descargas de CAB para las actualizaciones acumulativas de análisis en bases de datos de SQL Server de instancias
 
@@ -34,7 +33,7 @@ También puede aplicar las actualizaciones acumulativas a un servidor independie
 
 Archivos CAB se enumeran en orden cronológico inverso. Al descargar los archivos CAB y transferirlos al equipo de destino, colocarlos en una carpeta adecuada como **descargas** o la carpeta del usuario del programa de instalación % temp %.
 
-|Versión  |Componente | Vínculo de descarga  | Problemas solucionados | 
+|Release  |Componente | Vínculo de descarga  | Problemas solucionados | 
 |---------|----------|----------------|------------------|
 |**[SQL Server 2017 CU14](https://support.microsoft.com/help/4484710/)-[CU15](https://support.microsoft.com/help/4498951/)** |  |  |  |
 | | Microsoft R Open     | [SRO_3.3.3.1400_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2073898&clcid=1033)| Ahora se firman los archivos binarios dentro del paquete. |
@@ -94,7 +93,7 @@ Archivos CAB se enumeran en orden cronológico inverso. Al descargar los archivo
 
 Para SQL Server 2016 R Services, las versiones de línea de base son la versión RTM o una versión del service pack.
 
-|Versión  |Vínculo de descarga  |
+|Release  |Vínculo de descarga  |
 |---------|---------------|
 |**SQL Server 2016 SP2 CU6**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|

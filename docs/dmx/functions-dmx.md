@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3f0fce34f57591d9c6c3f3a9c7382266d655f364
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 32cf59ea3ca8c7f153170881ac5eb970e50c90b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37985452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076402"
 ---
 # <a name="functions-dmx"></a>Funciones (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37985452"
   
  La mayoría de las funciones DMX devuelven un valor escalar, como el soporte de una predicción, pero algunas devuelven un resultado tabular. Por ejemplo, la función PredictHistogram devuelve una tabla que contiene la compatibilidad y probabilidad para cada estado de la columna predecible especificada. Los resultados se muestran como una nueva columna tabular.  
   
- **Para obtener más información:** [funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Para obtener más información:** [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
 ## <a name="visual-basic-for-applications-vba-and-excel-functions"></a>Funciones de Excel y Visual Basic para Aplicaciones (VBA)  
  Además de las funciones DMX, también puede llamar a diversas funciones de VBA y Excel desde las instrucciones DMX. Por ejemplo, puede usar la función lCase para modificar cómo se muestra la columna Attribute_Name en el contenido del modelo TM_Decision_Tree. Esto se muestra en el siguiente ejemplo de código.  
@@ -49,17 +48,17 @@ FROM [TM_Decision_Tree].CONTENT
 ## <a name="stored-procedures"></a>Procedimientos almacenados  
  Puede usar lenguajes de programación de Common Language Runtime para crear procedimientos almacenados que amplíen la funcionalidad de DMX. Por ejemplo, un modelo de minería de datos del árbol de regresión devuelve coeficientes, como A, B y así sucesivamente, que describen la ecuación de regresión, pero el modelo no devuelve la ecuación, como un + Bx = y. Sin embargo, puede escribir un procedimiento almacenado que use el objeto de modelo de minería de datos para navegar por el esquema de contenido y para devolver la ecuación de regresión como salida. Por lo tanto, una instrucción DMX puede devolver una lista de las ecuaciones de regresión como parte del resultado de la consulta.  
   
- **Para obtener más información:** [administración de los ensamblados de modelos multidimensionales](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
+ **Para obtener más información:** [Administración de ensamblados de modelos multidimensionales](../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   

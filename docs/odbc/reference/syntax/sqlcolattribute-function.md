@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e23b7dd9ce81f02a822bece3546bf1c604030df1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4577b97c827d527422fe2448656496d7c196c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118700"
 ---
 # <a name="sqlcolattribute-function"></a>Función SQLColAttribute
 **Conformidad**  
@@ -92,7 +91,7 @@ SQLRETURN SQLColAttribute (
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLColAttribute** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType*de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLColAttribute** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
@@ -154,11 +153,11 @@ SQLRETURN SQLColAttribute (
 |SQL_DESC_CASE_SENSITIVE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE si la columna se trata como distingue mayúsculas de minúsculas para intercalaciones y comparaciones.<br /><br /> SQL_FALSE si la columna no se trata como distingue mayúsculas de minúsculas para intercalaciones y comparaciones o que no son caracteres.|  
 |SQL_DESC_CATALOG_NAME (ODBC 2.0)|*CharacterAttributePtr*|El catálogo de la tabla que contiene la columna. El valor devuelto es la implementación define si la columna es una expresión o si la columna forma parte de una vista. Si el origen de datos no admite catálogos o no se puede determinar el nombre del catálogo, se devuelve una cadena vacía. Este campo de registro VARCHAR no está limitado a 128 caracteres.|  
 |SQL_DESC_CONCISE_TYPE (ODBC 1.0)|*NumericAttributePtr*|El tipo de datos concisa.<br /><br /> Para los tipos de datos datetime e interval, este campo devuelve el tipo de datos concisa; Por ejemplo, SQL_TYPE_TIME o SQL_INTERVAL_YEAR. (Para obtener más información, consulte [identificadores de tipo de datos y los descriptores de](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md) en el apéndice D: Tipos de datos).<br /><br /> Esta información se devuelve del campo de registro de IRD SQL_DESC_CONCISE_TYPE.|  
-|SQL_DESC_COUNT  (ODBC 1.0)|*NumericAttributePtr*|El número de columnas disponibles en el conjunto de resultados. Esto devuelve 0 si no hay ninguna columna del conjunto de resultados. El valor de la *ColumnNumber* argumento se omite.<br /><br /> Esta información se devuelve desde el campo de encabezado SQL_DESC_COUNT de IRD.|  
-|SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|Número máximo de caracteres necesarios para mostrar los datos de la columna. Para obtener más información sobre el tamaño de presentación, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y mostrar tamaño](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.|  
+|SQL_DESC_COUNT (ODBC 1.0)|*NumericAttributePtr*|El número de columnas disponibles en el conjunto de resultados. Esto devuelve 0 si no hay ninguna columna del conjunto de resultados. El valor de la *ColumnNumber* argumento se omite.<br /><br /> Esta información se devuelve desde el campo de encabezado SQL_DESC_COUNT de IRD.|  
+|COLUMNAS SQL_DESC_DISPLAY_SIZE (ODBC 1.0)|*NumericAttributePtr*|Número máximo de caracteres necesarios para mostrar los datos de la columna. Para obtener más información sobre el tamaño de presentación, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y mostrar tamaño](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.|  
 |SQL_DESC_FIXED_PREC_SCALE (ODBC 1.0)|*NumericAttributePtr*|SQL_TRUE si la columna tiene una precisión fija y una escala distinto de cero que son específicas del origen de datos.<br /><br /> SQL_FALSE si la columna no tiene una precisión fija y una escala distinto de cero que son específicas del origen de datos.|  
 |SQL_DESC_LABEL (ODBC 2.0)|*CharacterAttributePtr*|La etiqueta de columna o el título. Por ejemplo, una columna denominada EmpName podría etiquetarse como nombre de empleado o podría estar etiquetada con un alias.<br /><br /> Si una columna no tiene una etiqueta, se devuelve el nombre de columna. Si la columna es sin etiqueta y sin nombre, se devuelve una cadena vacía.|  
-|SQL_DESC_LENGTH  (ODBC 3.0)|*NumericAttributePtr*|Tipo de un valor numérico que es la longitud de caracteres máximo o real una cadena o binario de datos de caracteres. Es la longitud máxima de caracteres para un tipo de datos de longitud fija o la longitud real de caracteres para un tipo de datos de longitud variable. Su valor siempre excluye el byte de finalización en null que finaliza la cadena de caracteres.<br /><br /> Esta información se devuelve del campo de registro de IRD SQL_DESC_LENGTH.<br /><br /> Para obtener más información acerca de la longitud, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.|  
+|SQL_DESC_LENGTH (ODBC 3.0)|*NumericAttributePtr*|Tipo de un valor numérico que es la longitud de caracteres máximo o real una cadena o binario de datos de caracteres. Es la longitud máxima de caracteres para un tipo de datos de longitud fija o la longitud real de caracteres para un tipo de datos de longitud variable. Su valor siempre excluye el byte de finalización en null que finaliza la cadena de caracteres.<br /><br /> Esta información se devuelve del campo de registro de IRD SQL_DESC_LENGTH.<br /><br /> Para obtener más información acerca de la longitud, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md) en el apéndice D: Tipos de datos.|  
 |SQL_DESC_LITERAL_PREFIX (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro varchar (128) contiene el carácter o caracteres que el controlador reconoce como un prefijo para un literal de este tipo de datos. Este campo contiene una cadena vacía para un tipo de datos para el que un prefijo de literal no es aplicable. Para obtener más información, consulte [literales prefijos y sufijos](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md).|  
 |SQL_DESC_LITERAL_SUFFIX (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro varchar (128) contiene el carácter o caracteres que el controlador reconoce como un sufijo para un literal de este tipo de datos. Este campo contiene una cadena vacía para un tipo de datos para el que un sufijo literal no es aplicable. Para obtener más información, consulte [literales prefijos y sufijos](../../../odbc/reference/develop-app/literal-prefixes-and-suffixes.md).|  
 |SQL_DESC_LOCAL_TYPE_NAME (ODBC 3.0)|*CharacterAttributePtr*|Este campo de registro varchar (128) contiene cualquier nombre localizado (idioma nativo) para el tipo de datos que puede ser diferente del nombre del tipo de datos regular. Si no hay ningún nombre localizado, se devuelve una cadena vacía. Este campo es solo con fines de visualización. El juego de caracteres de la cadena depende de la configuración regional y suele ser el juego de caracteres predeterminado del servidor.|  

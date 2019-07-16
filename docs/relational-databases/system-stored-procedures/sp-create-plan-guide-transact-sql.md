@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108632"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  [ \@nombre =] N'*plan_guide_name*'  
  Es el nombre de la guía de plan. Los nombres de guía de plan se encuentran en el ámbito de la base de datos actual. *plan_guide_name* debe cumplir las reglas para [identificadores](../../relational-databases/databases/database-identifiers.md) y no puede comenzar con el signo de número (#). La longitud máxima de *plan_guide_name* es de 124 caracteres.  
   
- [ \@stmt = ] N'*statement_text*'  
+ [ \@stmt =] N'*statement_text*'  
  Es una instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)] que se va a utilizar en la creación de una guía de plan. Cuando el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consulta optimizador reconoce una consulta que coincida con *statement_text*, *plan_guide_name* surte efecto. Para la creación de una guía de plan se realice correctamente, *statement_text* debe aparecer en el contexto especificado por el \@tipo, \@module_or_batch, y \@params parámetros.  
   
  *statement_text* debe proporcionarse de forma que permita al optimizador de consultas hacerla coincidir con la instrucción correspondiente suministrada dentro del lote o módulo identificado por \@module_or_batch y \@params. Para obtener más información, vea la sección "Notas". El tamaño de *statement_text* solo está limitado por la memoria disponible del servidor.  
@@ -79,7 +78,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  [*schema_name*.] *object_name* especifica el nombre de un [!INCLUDE[tsql](../../includes/tsql-md.md)] almacenados procedimiento, función escalar, función con valores de tabla de múltiples instrucciones o [!INCLUDE[tsql](../../includes/tsql-md.md)] desencadenador DML que contiene *statement_text*. Si *schema_name* no se especifica, *schema_name* utiliza el esquema del usuario actual. Si se especifica NULL y \@tipo = 'SQL', el valor de \@module_or_batch se establece en el valor de \@stmt. Si \@tipo = ' plantilla **'** , \@module_or_batch debe ser NULL.  
   
- [ \@params = ]{ N' *\@parameter_name data_type* [ , *...n* ]' | NULL }  
+ [ \@params =] {N' *\@parameter_name data_type* [, *... n* ]' | NULL}  
  Especifica las definiciones de todos los parámetros que se incrustan en *statement_text*. \@params sólo aplica cuando una de las siguientes es true:  
   
 -   \@tipo = 'SQL' o 'TEMPLATE'. Si 'TEMPLATE', \@params no debe ser NULL.  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7a9844032ad24de1c81144ca742bfb185aecc36
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207492"
 ---
 # <a name="tables-and-columns"></a>Tablas y columnas 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53072162"
  **Metadatos de la tabla**  
  Las relaciones, las medidas, los roles, las perspectivas y los datos pegados son los metadatos que definen los objetos en el contexto de una tabla.  
   
- **Data**  
+ **Datos**  
  Los datos se rellenan en las columnas de las tablas la primera vez que se importan las tablas usando el Asistente para la importación de tablas o creando nuevos datos en columnas calculadas. Cuando los datos cambian en el origen, o cuando se quita un modelo de la memoria, es necesario ejecutar una operación de proceso para volver a rellenar los datos en las tablas.  
   
 ##  <a name="bkmk_working"></a> Trabajar con tablas y columnas  

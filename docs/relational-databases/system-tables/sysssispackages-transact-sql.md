@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 3e25d69b4ba7887d20ef86ff771a3f10864ddbd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21487ba46e53997ebb50403cc4eaf1ae54f0a103
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029642"
 ---
 # <a name="sysssispackages-transact-sql"></a>sysssispackages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "65489807"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Identificador único del paquete.|  
+|**name**|**sysname**|Identificador único del paquete.|  
 |**id**|**uniqueidentifier**|Identificador único global (GUID) del paquete.|  
 |**description**|**nvarchar**|Descripción opcional del paquete.|  
 |**createdate**|**datetime**|Fecha de creación del paquete.|  
@@ -43,7 +42,7 @@ ms.locfileid: "65489807"
 |**packageformat**|**int**|Formato con el que se guarda el paquete:<br /><br /> Un valor de 2 indica que el paquete se guarda en el [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] formato.<br /><br /> Un valor de 3 indica que el paquete se guarda en formato de [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]o una versión posterior.|  
 |**packagetype**|**int**|Cliente que creó el paquete. Los valores posibles son los siguientes:<br /><br /> 0 (valor predeterminado)<br /><br /> 1 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] importar y exportar asistente)<br /><br /> 3 ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replicación)<br /><br /> 5 ([!INCLUDE[ssIS](../../includes/ssis-md.md)] diseñador)<br /><br /> 6 (Asistente o Diseñador de planes de mantenimiento).<br /><br /> <br /><br /> Tenga en cuenta que los valores de esta columna se corresponden con los <xref:Microsoft.SqlServer.Dts.Runtime.DTSPackageType> enumeración.|  
 |**vermajor**|**int**|Última versión importante del paquete.|  
-|**verminor**|**int**|Última versión de menor importancia del paquete.|  
+|**VerMinor**|**int**|Última versión de menor importancia del paquete.|  
 |**verbuild**|**int**|Última versión de compilación del paquete.|  
 |**vercomments**|**nvarchar**|Comentarios acerca de la versión del paquete.|  
 |**verid**|**uniqueidentifier**|El GUID de la versión del paquete.|  

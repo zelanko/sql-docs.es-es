@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b2517735-dd19-449f-8cee-08e68ca89d3a
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8bfe338c128ce301e98346d17ce00b973912ffd4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a8cde296fd0a47c407752977f5e41269a05354e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020970"
 ---
 # <a name="save-metadata--sybasetosql"></a>Guardar metadatos (SybaseToSQL)
 El **guardar metadatos** cuadro de diálogo le pide que cargar los metadatos en su proyecto SSMA antes de guardarlo. Esto le permite tener un archivo de proyecto completo que se puede usar sin conexión y enviar a otras personas, como el personal de soporte técnico.  

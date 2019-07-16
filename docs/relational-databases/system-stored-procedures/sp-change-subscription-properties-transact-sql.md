@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cf8137f9-f346-4aa1-ae35-91a2d3c16f17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7f783b86757cbc54fe47671f75082228d8ddc1e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6152e7f1c1b64cfdeafffe7d5d9eb021bfd4c4a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045782"
 ---
 # <a name="spchangesubscriptionproperties-transact-sql"></a>sp_change_subscription_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Es la propiedad que se puede cambiar. *propiedad* es **sysname**.  
   
-`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Es el nuevo valor de la propiedad. *valor* es **nvarchar (1000)** , no tiene ningún valor predeterminado.  
   
 `[ @publication_type = ] publication_type` Especifica el tipo de replicación de la publicación. *publication_type* es **int**, y puede tener uno de estos valores.  
   
@@ -81,7 +80,7 @@ sp_change_subscription_properties [ @publisher = ] 'publisher'
 |**ftp_login**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_password**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
 |**ftp_port**||Se conserva únicamente por compatibilidad con versiones anteriores.|  
-|**hostname**||Nombre del host utilizado al conectarse al publicador.|  
+|**Nombre de host**||Nombre del host utilizado al conectarse al publicador.|  
 |**internet_login**||Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_password**||Contraseña que el Agente de mezcla utiliza cuando se conecta al servidor web que hospeda la sincronización web a través de la autenticación básica.|  
 |**internet_security_mode**|**1**|Se utiliza la autenticación de Windows integrada para la sincronización web. Se recomienda utilizar la autenticación básica con sincronización web. Para más información, consulte [Configure Web Synchronization](../../relational-databases/replication/configure-web-synchronization.md).|  

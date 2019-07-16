@@ -1,5 +1,5 @@
 ---
-title: Cubo de almacenamiento (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Cubo de almacenamiento (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 05ff45fa98b578fce295ab2113abf301bc3b78ed
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180998"
 ---
 # <a name="cube-storage-analysis-services---multidimensional-data"></a>Almacenamiento de cubos (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,12 +35,12 @@ ms.locfileid: "34027505"
   
  Las particiones se crean inicialmente con la misma configuración de almacenamiento que el grupo de medida en el que se han creado. La configuración de almacenamiento determina si los datos de agregación y detalle se almacenan en formato multidimensional en la instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en formato relacional en el servidor de origen o en una combinación de ambos. La configuración de almacenamiento también determina si se utiliza el almacenamiento en caché automático para procesar automáticamente los cambios de datos de origen en los datos multidimensionales almacenados en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
- Las particiones de un cubo no son visibles para el usuario. Sin embargo, puede que la elección de configuración de almacenamiento para distintas particiones afecte a la inmediatez de los datos, la cantidad de espacio en disco que se utiliza y el rendimiento de las consultas. Las particiones se pueden almacenar en varias instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Con ello se proporciona un método de agrupación en clústeres para el almacenamiento de los cubos y se distribuye la carga de trabajo entre varios servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, consulte [procesamiento y modos de almacenamiento de partición](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [las particiones remotas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md), y [particiones &#40;Analysis Services - datos multidimensionales&#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
+ Las particiones de un cubo no son visibles para el usuario. Sin embargo, puede que la elección de configuración de almacenamiento para distintas particiones afecte a la inmediatez de los datos, la cantidad de espacio en disco que se utiliza y el rendimiento de las consultas. Las particiones se pueden almacenar en varias instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Con ello se proporciona un método de agrupación en clústeres para el almacenamiento de los cubos y se distribuye la carga de trabajo entre varios servidores de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Para obtener más información, consulte [procesamiento y modos de almacenamiento de partición](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md), [particiones remotas](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-remote-partitions.md), y [particiones &#40;Analysis Services - datos multidimensionales&#41; ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-analysis-services-multidimensional-data.md).  
   
 ## <a name="linked-measure-groups"></a>Grupos de medida vinculados  
- Puede que se necesite gran cantidad de espacio en disco para almacenar varias copias de un cubo en distintas instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pero se puede reducir considerablemente el espacio necesario si se reemplazan las copias del grupo de medida por grupos de medida vinculados. Un grupo de medida vinculado se basa en un grupo de medida de un cubo de otra base se datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en la misma instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o en otra instancia. Un grupo de medida vinculado también se puede utilizar con dimensiones vinculadas del mismo cubo de origen. Las dimensiones y grupos de medida vinculados utilizan las agregaciones del cubo de origen o no tienen requisitos de almacenamiento de datos propios. Por lo tanto, al mantener las dimensiones y los grupos de medida de origen en una base de datos, y crear dimensiones y cubos vinculados en cubos de otras bases de datos, se puede ahorrar espacio en disco que de lo contrario se utilizaría para almacenamiento. Para obtener más información, consulte [grupos de medida vinculados](../../analysis-services/multidimensional-models/linked-measure-groups.md).  
+ Puede que se necesite gran cantidad de espacio en disco para almacenar varias copias de un cubo en distintas instancias de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], pero se puede reducir considerablemente el espacio necesario si se reemplazan las copias del grupo de medida por grupos de medida vinculados. Un grupo de medida vinculado se basa en un grupo de medida de un cubo de otra base se datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], en la misma instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] o en otra instancia. Un grupo de medida vinculado también se puede utilizar con dimensiones vinculadas del mismo cubo de origen. Las dimensiones y grupos de medida vinculados utilizan las agregaciones del cubo de origen o no tienen requisitos de almacenamiento de datos propios. Por lo tanto, al mantener las dimensiones y los grupos de medida de origen en una base de datos, y crear dimensiones y cubos vinculados en cubos de otras bases de datos, se puede ahorrar espacio en disco que de lo contrario se utilizaría para almacenamiento. Para obtener más información, consulte [Linked Measure Groups](../../analysis-services/multidimensional-models/linked-measure-groups.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Las agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+ [Agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

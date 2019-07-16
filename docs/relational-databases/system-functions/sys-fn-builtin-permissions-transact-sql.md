@@ -26,14 +26,13 @@ helpviewer_keywords:
 ms.assetid: 704b1ad3-3534-4cf3-aff4-9fb70064b6cc
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 460e620f9b91b3b616b487f6324e640dbaf4f83a
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 730508fca6b6f9d3e9515e9ec496971a4b758279
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046524"
 ---
 # <a name="sysfnbuiltinpermissions-transact-sql"></a>sys.fn_builtin_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,7 +67,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
  *empty_string*  
  Equivalente a DEFAULT.  
   
- **'**<securable_class>**'**  
+ **'** <securable_class> **'**  
  Cuando se llama con el nombre de una clase protegible, sys.fn_builtin_permissions devolverá todos los permisos que se aplican a la clase. < securable_class > es un literal de cadena que requiere comillas. **nvarchar(60)**  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
@@ -77,7 +76,7 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |-----------------|---------------|---------------|-----------------|  
 |class_desc|**nvarchar(60)**|Intercalación del servidor|Descripción de la clase protegible.|  
 |permission_name|**nvarchar(60)**|Intercalación del servidor|Nombre del permiso.|  
-|Tipo|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
+|type|**varchar(4)**|Intercalación del servidor|Código de tipo de permiso compacto. Vea la tabla siguiente.|  
 |covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en esta clase que implica los otros permisos en la clase.|  
 |parent_class_desc|**nvarchar(60)**|Intercalación del servidor|S no es NULL, es el nombre de la clase principal que contiene la clase actual.|  
 |parent_covering_permission_name|**nvarchar(60)**|Intercalación del servidor|Si no es NULL, es el nombre del permiso en la clase principal que implica los otros permisos en esa clase.|  
@@ -221,9 +220,9 @@ sys.fn_builtin_permissions ( [ DEFAULT | NULL ]
 |CRVW|CREATE VIEW|DATABASE|  
 |CRXS|CREATE XML SCHEMA COLLECTION|DATABASE|  
 |DABO|ADMINISTER DATABASE BULK OPERATIONS<br /> **Se aplica a**: [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].|DATABASE|  
-|DL|Delete|DATABASE|  
-|DL|Delete|OBJECT|  
-|DL|Delete|SCHEMA|  
+|DL|SUPRIMIR|DATABASE|  
+|DL|SUPRIMIR|OBJECT|  
+|DL|SUPRIMIR|SCHEMA|  
 |EAES|EXECUTE ANY EXTERNAL SCRIPT<br />**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).|DATABASE|  
 |EX|Ejecute|DATABASE|  
 |EX|Ejecute|OBJECT|  
@@ -344,7 +343,7 @@ SELECT * FROM sys.fn_builtin_permissions(DEFAULT);
 SELECT * FROM sys.fn_builtin_permissions('');  
 ```  
   
-### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>B. Mostrar los permisos que se pueden establecer en una clave simétrica   
+### <a name="b-listing-permissions-that-can-be-set-on-a-symmetric-key"></a>b. Mostrar los permisos que se pueden establecer en una clave simétrica   
 Especifique una clase para devolver todos los permisos posibles para esa clase.   
 ```sql  
 SELECT * FROM sys.fn_builtin_permissions(N'SYMMETRIC KEY');  

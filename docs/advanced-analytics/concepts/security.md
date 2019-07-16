@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1f19e3322b8aee78fdb5a76a29a719148cc6a0c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9f5552a106d0549aaf3b5e9ae291ebe3b534543
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963039"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>Información general de seguridad para el marco de extensibilidad en SQL Server Machine Learning Services
 
@@ -71,7 +70,7 @@ Por lo tanto, todos los scripts externos que se inician desde un cliente remoto 
 
 ## <a name="services-used-in-external-processing-launchpad"></a>Servicios que se usan en el procesamiento externo (Launchpad)
 
-El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**SQL Server Launchpad (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
+El marco de extensibilidad agrega un nuevo servicio de NT para el [lista de servicios](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md#Service_Details) en una instalación de SQL Server: [**Launchpad de SQL Server (MSSSQLSERVER)** ](extensibility-framework.md#launchpad).
 
 El motor de base de datos, usa el servicio Launchpad de SQL Server para crear instancias de una sesión de R o Python como un proceso independiente. El proceso se ejecuta bajo una cuenta con pocos privilegios; distinto de SQL Server, Launchpad propio y la identidad del usuario en la que se ejecutó la consulta de host o el procedimiento almacenada. Ejecutar script en un proceso independiente, bajo cuenta con pocos privilegios, es la base del modelo de seguridad y aislamiento para R y Python en SQL Server.
 

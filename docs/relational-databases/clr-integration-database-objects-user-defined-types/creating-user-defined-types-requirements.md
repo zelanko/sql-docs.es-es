@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028260"
 ---
 # <a name="creating-user-defined-types---requirements"></a>Crear tipos definidos por el usuario: requisitos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119753"
  Indica si todas las instancias de este UDT tienen la misma longitud.  
   
  **MaxByteSize**  
- Tamaño máximo de la instancia, expresado en bytes. Debe especificar **MaxByteSize** con el **UserDefined** formato de serialización. Para un UDT con serialización definida por el usuario especificado, **MaxByteSize** se refiere al tamaño total del UDT en su formato serializado, tal como se define por el usuario. El valor de **MaxByteSize** debe estar en el intervalo de 1 a 8000 o se establece en -1 para indicar que el UDT es superior a 8000 bytes (el tamaño total no puede superar el tamaño LOB máximo). Considere la posibilidad de un UDT con una propiedad de una cadena de 10 caracteres (**System.Char**). Cuando el UDT se serialice mediante BinaryWriter, el tamaño total de la cadena serializada será de 22 bytes: 2 bytes por carácter Unicode UTF-16, multiplicados por el número máximo de caracteres, más 2 bytes de control por la sobrecarga que se produce al serializar un flujo binario. Por lo tanto, al determinar el valor de **MaxByteSize**, el tamaño total del UDT serializado debe considerarse: el tamaño de los datos serializados en formato binario más la sobrecarga producida por la serialización.  
+ Tamaño máximo de la instancia, expresado en bytes. Debe especificar **MaxByteSize** con el **UserDefined** formato de serialización. Para un UDT con serialización definida por el usuario especificado, **MaxByteSize** se refiere al tamaño total del UDT en su formato serializado, tal como se define por el usuario. El valor de **MaxByteSize** debe estar en el intervalo de 1 a 8000 o se establece en -1 para indicar que el UDT es superior a 8000 bytes (el tamaño total no puede superar el tamaño LOB máximo). Considere la posibilidad de un UDT con una propiedad de una cadena de 10 caracteres (**System.Char**). Cuando el UDT se serialice mediante BinaryWriter, el tamaño total de la cadena serializada es 22 bytes: 2 bytes por carácter Unicode UTF-16, multiplicado por el número máximo de caracteres, además de control de 2 bytes de sobrecarga que se produce al serializar un flujo binario. Por lo tanto, al determinar el valor de **MaxByteSize**, el tamaño total del UDT serializado debe considerarse: el tamaño de los datos serializados en formato binario más la sobrecarga producida por la serialización.  
   
  **ValidationMethodName**  
  Nombre del método utilizado para validar las instancias del UDT.  
@@ -141,9 +140,9 @@ ms.locfileid: "49119753"
   
 -   Menor que (\<)  
   
--   Mayor o igual que (>=)  
+-   Mayor o igual que (> =)  
   
--   Menor o igual que (<=)  
+-   Menor o igual que (< =)  
   
 ### <a name="implementing-nullability"></a>Implementar la nulabilidad  
  Además de especificar correctamente los atributos de los ensamblados, la clase también debe admitir la nulabilidad. Los UDT cargados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son compatibles con null, pero para el UDT reconozca un valor null, la clase debe implementar la **INullable** interfaz. Para obtener más información y un ejemplo de cómo implementar la nulabilidad en un UDT, vea [codificación de tipos](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md).  

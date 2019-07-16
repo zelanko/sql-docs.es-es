@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505223"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181308"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>Actualizar libros y actualización de datos programada (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -41,8 +41,8 @@ ms.locfileid: "52505223"
 |Creado en|\<|Compatibilidad y comportamiento|>|  
 |----------------|--------|--------------------------|--------|  
 ||**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2010**|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2010**|**2012 SP1 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint 2013**|  
-|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2010**|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** Los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] servicio del sistema en la granja de SharePoint<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|**Experiencia:** los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** la actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos:** NO compatible. Es necesario actualizar el libro.|  
-|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel**|No compatible|Todas las características|**Experiencia:** los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización:** la actualización automática no se admite. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
+|**2008 R2 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2010**|Todas las características|**Experiencia:** Los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** Los libros se actualizarán automáticamente en la biblioteca de documentos si la actualización automática está habilitada para el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] servicio del sistema en la granja de SharePoint<br /><br /> **Programar la actualización de datos:** NO se admite. Es necesario actualizar el libro.|**Experiencia:** Los usuarios pueden interactuar con el libro y usarlo como origen de datos para otras soluciones.<br /><br /> **Actualización:** Actualización automática no está disponible. Los usuarios deben actualizar manualmente sus libros de 2008 R2 a la versión 2012 o a la versión de Office 2013.<br /><br /> **Programar la actualización de datos:** NO se admite. Es necesario actualizar el libro.|  
+|**2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel**|No compatible|Todas las características|**Experiencia:** Los usuarios pueden interactuar con el libro en el explorador y usarlo como origen de datos para otras soluciones. La programación de la actualización de datos está disponible.<br /><br /> **Actualización:** No se admite la actualización automática. Los usuarios pueden actualizar manualmente sus libros a la versión de Office 2013.<br /><br /> **Programar la actualización de datos** : se admite.|  
 |**Excel 2013**|No compatible|No compatible|Todas las características|  
   
 ##  <a name="bkmk_to_2012sp1_from_2008r2"></a> Actualizar libros de SQL Server 2008 R2 a libros de SQL Server 2012 Service Pack 1 (SP1)  
@@ -58,7 +58,7 @@ ms.locfileid: "52505223"
   
 -   SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel 2013.  
   
- **Cómo actualizar un libro:** la actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
+ **Cómo actualizar un libro:** La actualización de datos programada no funcionará hasta que actualice el libro a un libro de 2012. Para actualizar el libro y el modelo que contiene, complete una de las acciones siguientes:  
   
 -   Descargue y abra el libro en Microsoft Excel 2010 con el complemento SQL Server 2012 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para Excel instalado.  
   

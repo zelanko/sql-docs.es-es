@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 85e9bef7-2417-41a8-befa-fe75507d9bf2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0d4d19f7b32297401ff036e61806308b54e44c9
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9841e7815f31af26aeeb3ed0f4783d3a36d83030
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124081"
 ---
 # <a name="spgetquerytemplate-transact-sql"></a>sp_get_query_template (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_get_query_template
   
 ## <a name="arguments"></a>Argumentos  
  '*query_text*'  
- Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe ir entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Se trata del tipo **nvarchar (max)**.  
+ Es la consulta para la que se va a generar la versión con parámetros. '*query_text*' debe ir entre comillas simples y precedida por el especificador Unicode n. N'*query_text*' es el valor asignado a la @querytext parámetro. Se trata del tipo **nvarchar (max)** .  
   
  @templatetext  
- Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir la forma con parámetros de *query_text* como un literal de cadena.  
+ Es un parámetro de salida de tipo **nvarchar (max)** , suministrado como se indica, para recibir la forma con parámetros de *query_text* como un literal de cadena.  
   
  @parameters  
- Es un parámetro de salida de tipo **nvarchar (max)**, suministrado como se indica, para recibir un literal de cadena de los tipos de datos y los nombres de parámetro con parámetros en @templatetext.  
+ Es un parámetro de salida de tipo **nvarchar (max)** , suministrado como se indica, para recibir un literal de cadena de los tipos de datos y los nombres de parámetro con parámetros en @templatetext.  
   
 ## <a name="remarks"></a>Comentarios  
  sp_get_query_template devuelve un error cuando se produce lo siguiente:  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135538"
 ---
 # <a name="using-block-cursors"></a>Usar cursores de bloque
 Compatibilidad con cursores de bloque se integra en ODBC 3. *x*. **SQLFetch** puede usarse solo para las recuperaciones de varias filas cuando se llama en ODBC 3. *x*; si un ODBC 2. *x* aplicación llama a **SQLFetch**, abrirá un cursor sola fila y de solo avance. Cuando un ODBC 3. *x* aplicación llama a **SQLFetch** en un ODBC 2. *x* controlador, devuelve una sola fila a menos que el controlador admite **SQLExtendedFetch**. Para obtener más información, consulte [cursores de bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md) en Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores.  

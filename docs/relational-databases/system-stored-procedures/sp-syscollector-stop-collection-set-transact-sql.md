@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4668cfb7-462f-40d0-948c-8f740a792a4d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd5c396db88a8377a46bd965b664bc2a667d51de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e09efe938dabb031e1c57020f051cd5ab03e55a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63001531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010571"
 ---
 # <a name="spsyscollectorstopcollectionset-transact-sql"></a>sp_syscollector_stop_collection_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,13 +43,13 @@ sp_syscollector_stop_collection_set
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int** con un valor predeterminado es null. *collection_set_id* debe tener un valor si *nombre* es NULL.  
   
  [ @name =] '*nombre*'  
  Es el nombre del conjunto de recopilación. *nombre* es **sysname** con un valor predeterminado es null. *nombre* debe tener un valor si *collection_set_id* es NULL.  
   
- [ @stop_collection_job = ] *stop_collection_job*  
+ [ @stop_collection_job =] *stop_collection_job*  
  Especifica que el trabajo de recopilación del conjunto de recopilación debe detenerse si está en ejecución. *stop_collection_job* es **bit** con el valor predeterminado es 1.  
   
  *stop_collection_job* solo se aplica a conjuntos de recopilación con almacenamiento en caché de modo de recopilación. Para obtener más información, consulte [sp_syscollector_create_collection_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-syscollector-create-collection-set-transact-sql.md).  

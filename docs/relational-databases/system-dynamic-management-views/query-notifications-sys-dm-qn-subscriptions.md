@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0157288c21e7b4f9b5d0b06bbf698369a216bf07
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: e0d725d37470f28847feb296194abd98fce9ae4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061922"
 ---
 # <a name="query-notifications---sysdmqnsubscriptions"></a>Consultar las notificaciones - sys.dm_qn_subscriptions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,15 +34,15 @@ ms.locfileid: "51657254"
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. de una suscripción.|  
 |**database_id**|**int**|Id. de la base de datos en la que se ha ejecutado la notificación. Esta base de datos almacena información relacionada con esta suscripción.|  
-|**SID**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
+|**sid**|**varbinary(85)**|Id. de seguridad de la entidad de seguridad del servidor que creó y es propietaria de esta suscripción.|  
 |**object_id**|**int**|Id. de la tabla interna que almacena información acerca de los parámetros de suscripción.|  
-|**Creado**|**datetime**|Fecha y hora en que se creó la suscripción.|  
-|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. No obstante, si tiene lugar un cambio que invalida la suscripción después el tiempo de espera especificado, pero antes de que se active la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación tiene lugar en el momento en que se realiza el cambio.|  
+|**created**|**datetime**|Fecha y hora en que se creó la suscripción.|  
+|**timeout**|**int**|Tiempo de espera de la suscripción en segundos. La notificación se marcará para activarse después de transcurrido este tiempo.<br /><br /> Nota: El tiempo de activación real puede ser mayor que el tiempo de espera especificado. Sin embargo, si un cambio que invalida la suscripción se produce después del tiempo de espera especificado, pero antes de que se desencadena la suscripción, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] garantiza que la activación se produce en el momento en que se realizó el cambio.|  
 |**status**|**int**|Indica el estado de la suscripción. Vea la tabla bajo las notas para obtener la lista de códigos.|  
   
 ## <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   
-|De|En|Activado|Tipo|  
+|De|En|Activado|Type|  
 |----------|--------|--------|----------|  
 |**sys.dm_qn_subscriptions**|**sys.databases**|**database_id**|Varios a uno|  
 |**sys.dm_qn_subscriptions**|**sys.internal_tables**|**object_id**|Varios a uno|  
@@ -53,11 +52,11 @@ ms.locfileid: "51657254"
   
  Los siguientes códigos de estado indican que una suscripción se desencadenó debido a un cambio:  
   
-|código|Estado secundario|Información|  
+|Código|Estado secundario|Info|  
 |----------|------------------|----------|  
 |65798|La suscripción se desencadenó porque los datos cambiaron|La suscripción se activó al realizar la inserción|  
-|65799|La suscripción se desencadenó porque los datos cambiaron|DELETE|  
-|65800|La suscripción se desencadenó porque los datos cambiaron|Update|  
+|65799|La suscripción se desencadenó porque los datos cambiaron|Eliminar|  
+|65800|La suscripción se desencadenó porque los datos cambiaron|Actualizar|  
 |65801|La suscripción se desencadenó porque los datos cambiaron|Mezcla|  
 |65802|La suscripción se desencadenó porque los datos cambiaron|Truncar tabla|  
 |66048|La suscripción se desencadenó porque el tiempo de espera expiró|Modo de información indefinido|  
@@ -70,7 +69,7 @@ ms.locfileid: "51657254"
   
  Los siguientes códigos de estado indican que una suscripción no pudo crearse:  
   
-|código|Estado secundario|Información|  
+|Código|Estado secundario|Info|  
 |----------|------------------|----------|  
 |132609|Se produjo un error en la creación de la suscripción porque no se admite la instrucción|La consulta es demasiado compleja|  
 |132610|Se produjo un error en la creación de la suscripción porque no se admite la instrucción|Instrucción no válida para la suscripción|  
@@ -81,7 +80,7 @@ ms.locfileid: "51657254"
   
  Los siguientes códigos de estado se utilizan internamente y se clasifican como modos de iniciación y de comprobación de eliminación:  
   
-|código|Estado secundario|Información|  
+|Código|Estado secundario|Info|  
 |----------|------------------|----------|  
 |198656|Se utiliza internamente: modos de iniciación y de comprobación de eliminación|Modo de información indefinido|  
 |198928|La subscription se destruyó|La suscripción se desencadenó porque la base de datos se adjuntó|  
@@ -108,7 +107,7 @@ FROM sys.dm_qn_subscriptions;
 GO  
 ```  
   
-### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>B. Devolver las suscripciones de notificación de consultas activas del usuario especificado  
+### <a name="b-returning-active-query-notification-subscriptions-for-a-specified-user"></a>b. Devolver las suscripciones de notificación de consultas activas del usuario especificado  
  En el ejemplo siguiente se devuelven las suscripciones de notificación de consultas activas suscritas por el inicio de sesión `Ruth0`.  
   
 ```  

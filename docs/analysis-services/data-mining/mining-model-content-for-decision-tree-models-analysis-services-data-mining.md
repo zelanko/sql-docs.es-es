@@ -1,5 +1,5 @@
 ---
-title: Contenido para los modelos de árbol de decisión del modelo de minería de datos | Documentos de Microsoft
+title: Contenido del modelo para los modelos de árboles de decisión de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 493ee56380a3e4665b10cbe27ef1cd1ea764438b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182770"
 ---
 # <a name="mining-model-content-for-decision-tree-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de árboles de decisión (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "34019372"
  El algoritmo de árboles de decisión de Microsoft no admite tipos de datos continuos como entradas; por lo tanto, si alguna columna tiene un tipo de datos numérico continuo, los valores se discretizan. El algoritmo realiza su propia discretización en el punto de una división para todos los atributos continuos.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método de creación de depósitos de los atributos continuos. Sin embargo, puede controlar los valores de forma continuos de las entradas se discretizan estableciendo el tipo de contenido de la columna de estructura de minería de datos para **Discretized** y, a continuación, establecer el <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> propiedad.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] elige automáticamente un método para colocar en cubos los atributos continuos. Pero se puede controlar cómo se discretizan los valores continuos de las entradas estableciendo el tipo de contenido de la columna de estructura de minería de datos en **Discretized** y, después, configurando la propiedad <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationBucketCount%2A> o <xref:Microsoft.AnalysisServices.ScalarMiningStructureColumn.DiscretizationMethod%2A> .  
   
  [Top](#bkmk_Top)  
   
@@ -70,13 +70,13 @@ ms.locfileid: "34019372"
  NODE_TYPE  
  En los modelos de árboles de decisión, se crean los tipos de nodos siguientes:  
   
-|Tipo de nodo|Description|  
+|Tipo de nodo|Descripción|  
 |---------------|-----------------|  
 |1 (Modelo)|Nodo raíz para el modelo.|  
-|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"**.|  
+|2 (árbol)|Nodo primario para los árboles de clasificación del modelo. Se etiqueta como **"Todos"** .|  
 |3 (interior)|Encabezado de la bifurcación interior, que se encuentra dentro de un árbol de clasificación o de regresión.|  
 |4 (distribución)|Nodo hoja, que se encuentra dentro de un árbol de clasificación o de regresión.|  
-|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"**.|  
+|25 (árbol de regresión)|Nodo primario para el árbol de regresión dentro del modelo. Se etiqueta como **"Todos"** .|  
   
  NODE_CAPTION  
  Nombre descriptivo que se utiliza para la visualización.  
@@ -202,7 +202,7 @@ ms.locfileid: "34019372"
  El atributo representado por el fragmento XML puede ser simple o complejo. Un atributo simple contiene el nombre de la columna del modelo y el valor del atributo. Si la columna del modelo contiene una tabla anidada, el atributo de tabla anidada se representa como una concatenación del nombre de tabla, el valor de clave y el atributo.  
   
 > [!NOTE]  
->  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] admite la versión 2.0 del estándar PMML, con extensiones para admitir el uso de la tabla anidada. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
+>  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] es compatible con la versión 2.0 del estándar PMML, con extensiones para admitir el uso de tablas anidadas. Si los datos contienen tablas anidadas y genera una versión PMML del modelo, todos los elementos del modelo que incluyen los predicados se marcan como una extensión.  
   
  [Top](#bkmk_Top)  
   
@@ -231,7 +231,7 @@ ms.locfileid: "34019372"
 |Age < 30|40|Age < 30 y Gender = Male|30|30/40 = .75|30/100 = .30|  
 |||Age < 30 y Gender = Female|10|10/40 = .25|10/100 = .10|  
   
- Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. Para los atributos continuos, cada valor o intervalo de valores está representado como un estado (por ejemplo, Age \<30, Age = 30 y Age > 30) y las probabilidades se calculan como se indica a continuación: estado existe (valor = 1), existe otro estado (valor = 0), estado es  **Falta**. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
+ Se realiza un pequeño ajuste en todos los modelos para representar los posibles valores ausentes. Para los atributos continuos, cada valor o intervalo de valores está representado como un estado (por ejemplo, Age \<30, Age = 30 y Age > 30) y las probabilidades se calculan como se indica a continuación: estado existe (valor = 1), existe otro estado (valor = 0), el estado es  **Falta**. Para obtener más información sobre cómo se ajustan las probabilidades para representar valores ausentes, vea [Valores ausentes &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md).  
   
  Las probabilidades para cada nodo se calculan casi directamente a partir de la distribución, de la siguiente manera:  
   
@@ -251,7 +251,7 @@ ms.locfileid: "34019372"
   
  De los tipos incluidos en la enumeración <xref:Microsoft.AnalysisServices.AdomdClient.MiningValueType> , se usan los siguientes en los árboles de clasificación.  
   
-|Tipo de valor|Description|  
+|Tipo de valor|Descripción|  
 |----------------|-----------------|  
 |1 (ausente)|Indica un recuento, una probabilidad u otra estadística relacionada con valores ausentes.|  
 |4 (Discreto)|Indica un recuento, una probabilidad u otra estadística relacionada con un valor discreto o de datos discretos.|  
@@ -267,7 +267,7 @@ ms.locfileid: "34019372"
   
  Para el resto de los nodos del árbol (excepto los nodos hoja), la puntuación para cada nodo representa el mejor resultado de división para el nodo actual, menos el resultado de división para el nodo primario. Normalmente, el resultado de división para un nodo primario siempre debería ser mejor que el de cualquiera de sus nodos secundarios. Esto se debe a que, teóricamente, un modelo de árboles de decisión se divide primero en los atributos más importantes.  
   
- Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[Descripción de las redes Bayesianas: combinación de conocimiento y datos estadísticos](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)", en el sitio web de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Research.  
+ Hay muchas maneras de calcular una puntuación para una división, dependiendo del parámetro de algoritmo que se elija. La explicación de cómo se calculan las puntuaciones para cada uno de los métodos de puntuación queda fuera del ámbito de este tema. Para obtener más información, vea "[las redes bayesianas: La combinación de conocimiento y datos estadísticos](http://research.microsoft.com/en-us/um/people/heckerman/hgc94uai.pdf)", en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] sitio Web de investigación.  
   
 > [!NOTE]  
 >  Si crea un modelo de árboles de decisión que tenga atributos de predicción continuos y discretos, verá puntuaciones completamente diferentes en los nodos (Todos) que representan cada tipo de árbol. Cada modelo se debería considerar de forma individual, ya que los métodos usados para puntuar la regresión son completamente diferentes de los usados para puntuar la clasificación. Los valores de puntuación de nodo no se pueden comparar.  
@@ -290,7 +290,7 @@ ms.locfileid: "34019372"
  Para obtener más información sobre los nodos de regresión, vea [Contenido del modelo de minería de datos para los modelos de regresión lineal &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Visores de modelos de minería de datos](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [Consultas de minería de datos](../../analysis-services/data-mining/data-mining-queries.md)   
  [Algoritmo de árboles de decisión de Microsoft](../../analysis-services/data-mining/microsoft-decision-trees-algorithm.md)  

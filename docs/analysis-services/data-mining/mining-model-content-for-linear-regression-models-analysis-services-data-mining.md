@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120185"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182751"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de regresión lineal (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "49120185"
   
  ![Estructura del modelo de regresión lineal de](../../analysis-services/data-mining/media/modelcontentstructure-linreg.gif "estructura del modelo de regresión lineal")  
   
- Los modelos de regresión lineal usan el mismo algoritmo que los árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)], pero se utilizan parámetros diferentes para restringir el árbol y solo se aceptan como entradas los atributos continuos. Sin embargo, dado que los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , los modelos de regresión lineal se muestran utilizando el Visor de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árboles de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
+ Los modelos de regresión lineal usan el mismo algoritmo que los árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , pero se utilizan parámetros diferentes para restringir el árbol y solo se aceptan como entradas los atributos continuos. Sin embargo, dado que los modelos de regresión lineal se basan en el algoritmo de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] , los modelos de regresión lineal se muestran utilizando el Visor de árboles de decisión de [!INCLUDE[msCoName](../../includes/msconame-md.md)] . Para más información, vea [Examinar un modelo usando el Visor de árboles de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md).  
   
  En la sección siguiente se explica cómo interpretar la información del nodo de la fórmula de regresión. Esta información se aplica no solo a los modelos de regresión lineal, sino también a los modelos de árboles de decisión que contienen regresiones en una parte del árbol.  
   
@@ -41,9 +41,9 @@ ms.locfileid: "49120185"
  Nombre del modelo.  
   
  ATTRIBUTE_NAME  
- **Nodo raíz:** en blanco  
+ **Nodo raíz:** En blanco  
   
- **Nodo de regresión:** el nombre del atributo de predicción.  
+ **Nodo de regresión:** El nombre del atributo predecible.  
   
  NODE_NAME  
  Siempre lo mismo que NODE_UNIQUE_NAME.  
@@ -54,23 +54,23 @@ ms.locfileid: "49120185"
  NODE_TYPE  
  Un modelo de regresión lineal genera los tipos de nodos siguientes:  
   
-|Identificador del tipo de nodo|Tipo|Descripción|  
+|Identificador del tipo de nodo|Type|Descripción|  
 |------------------|----------|-----------------|  
 |25|Raíz del árbol de regresión|Contiene la fórmula que describe la relación entre la variable de entrada y la de salida.|  
   
  NODE_CAPTION  
  Etiqueta o título asociado al nodo. Esta propiedad se usa principalmente para la presentación.  
   
- **Nodo raíz:** en blanco  
+ **Nodo raíz:** En blanco  
   
- **Nodo de regresión:** todos.  
+ **Nodo de regresión:** Todos.  
   
  CHILDREN_CARDINALITY  
  Cálculo del número de elementos secundarios que tiene el nodo.  
   
- **Nodo raíz:** indica el número de nodos de regresión. Se crea un nodo de regresión para cada atributo de predicción del modelo.  
+ **Nodo raíz:** Indica el número de nodos de regresión. Se crea un nodo de regresión para cada atributo de predicción del modelo.  
   
- **Nodo de regresión:** siempre es 0.  
+ **Nodo de regresión:** Siempre es 0.  
   
  PARENT_UNIQUE_NAME  
  Nombre único del nodo primario del nodo. Se devuelve NULL para todos los nodos del nivel raíz.  
@@ -78,9 +78,9 @@ ms.locfileid: "49120185"
  NODE_DESCRIPTION  
  Descripción del nodo.  
   
- **Nodo raíz:** en blanco  
+ **Nodo raíz:** En blanco  
   
- **Nodo de regresión:** todos.  
+ **Nodo de regresión:** Todos.  
   
  NODE_RULE  
  No se utiliza para los modelos de regresión lineal.  
@@ -107,7 +107,7 @@ ms.locfileid: "49120185"
   
  **Nodo raíz:** 0  
   
- **Nodo de regresión:** tabla que contiene los elementos que se usan para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
+ **Nodo de regresión:** Una tabla que contiene los elementos utilizados para generar la fórmula de regresión. Un nodo de regresión contiene los tipos de valores siguientes:  
   
 |VALUETYPE|  
 |---------------|  
@@ -123,7 +123,7 @@ ms.locfileid: "49120185"
   
  **Nodo raíz:** 0  
   
- **Nodo de regresión:** recuento de casos de entrenamiento.  
+ **Nodo de regresión:** Recuento de casos de entrenamiento.  
   
  MSOLAP_MODEL_COLUMN  
  Nombre del atributo de predicción.  
@@ -144,7 +144,7 @@ ms.locfileid: "49120185"
 ##  <a name="NodeDist_Regression"></a> Distribución de nodos para los atributos continuos  
  La mayoría de la información importante en un nodo de regresión está incluida en la tabla NODE_DISTRIBUTION. En el ejemplo siguiente se muestra el diseño de la tabla NODE_DISTRIBUTION. En este ejemplo, la estructura de minería de datos de Targeted Mailing se ha utilizado para crear un modelo de regresión lineal que predice los ingresos de los clientes según su edad. La finalidad del modelo es únicamente ilustrativo, porque puede generarse con facilidad utilizando los datos y la estructura de minería de datos de ejemplo existentes de [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] .  
   
-|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|SUPPORT|PROBABILITY|VARIANCE|VALUETYPE|  
+|ATTRIBUTE_NAME|ATTRIBUTE_VALUE|Support|PROBABILITY|VARIANCE|VALUETYPE|  
 |---------------------|----------------------|-------------|-----------------|--------------|---------------|  
 |Yearly Income|Missing|0|0.000457142857142857|0|1|  
 |Yearly Income|57220.8876687257|17484|0.999542857142857|1041275619.52776|3|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048349"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,13 +42,13 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para este servidor.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación asociada. *publicación* es **sysname**, su valor predeterminado es **%** , que devuelve información de todas las suscripciones para este servidor.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para las publicaciones y suscriptores seleccionados. Si **todas**, se devuelve una sola entrada por cada suscripción completa en una publicación.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es **%** , que devuelve información de todas las suscripciones para las publicaciones y suscriptores seleccionados. Si **todas**, se devuelve una sola entrada por cada suscripción completa en una publicación.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se va a obtener la información de suscripción. *suscriptor* es **sysname**, su valor predeterminado es **%**, que devuelve información de todas las suscripciones para las publicaciones y artículos seleccionados.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor en el que se va a obtener la información de suscripción. *suscriptor* es **sysname**, su valor predeterminado es **%** , que devuelve información de todas las suscripciones para las publicaciones y artículos seleccionados.  
   
-`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%**.  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%** .  
   
 `[ @found = ] 'found'OUTPUT` Es una marca para indicar que devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es 23456.  
   
@@ -67,7 +66,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
-|**publication**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**article**|**sysname**|Nombre del artículo.|  
 |**base de datos de destino**|**sysname**|Nombre de la base de datos de destino a la que se envían los datos duplicados.|  
 |**estado de la suscripción**|**tinyint**|Estado de la suscripción:<br /><br /> **0** = inactivo<br /><br /> **1** = suscrito<br /><br /> **2** = activo|  
@@ -76,7 +75,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**suscripción completa**|**bit**|Indica si la suscripción es a todos los artículos de la publicación:<br /><br /> **0** = No<br /><br /> **1** = Sí|  
 |**nombre de la suscripción**|**nvarchar(255)**|Nombre de la suscripción.|  
 |**modo de actualización**|**int**|**0** = solo lectura<br /><br /> **1** = la suscripción de actualización inmediata|  
-|**Id. de trabajo de distribución**|**binary(16)**|Id. de trabajo del agente de distribución.|  
+|**Id. de trabajo de distribución**|**binary (16)**|Id. de trabajo del agente de distribución.|  
 |**loopback_detection**|**bit**|La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **0** = las envía.<br /><br /> **1** = no no volver a enviar.<br /><br /> Se utilizan con replicación transaccional bidireccional. Para más información, consulte [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md).|  
 |**offload_enabled**|**bit**|Especifica si se ha establecido que la descarga de un agente de duplicación se lleve a cabo en el suscriptor.<br /><br /> Si **0**, agente se ejecuta en el publicador.<br /><br /> Si **1**, se ejecuta el agente en el suscriptor.|  
 |**offload_server**|**sysname**|Nombre del servidor habilitado para la activación remota de agentes. Si es NULL, a continuación, el actual offload_server de [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) se utiliza la tabla.|  
@@ -84,9 +83,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|Ubicación del paquete DTS, si se asigna uno a la suscripción. Si hay un paquete, un valor de **0** especifica la ubicación del paquete en el **distribuidor**. Un valor de **1** especifica la **suscriptor**.|  
 |**subscriber_security_mode**|**smallint**|Es el modo de seguridad en el suscriptor, donde **1** significa autenticación de Windows y **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**subscriber_login**|**sysname**|Es el nombre de inicio de sesión del suscriptor.|  
-|**subscriber_password**||La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadena.|  
+|**subscriber_password**||La contraseña real del suscriptor no se devuelve nunca. El resultado se enmascara mediante una " **&#42;&#42;&#42;&#42;&#42;&#42;** " cadena.|  
 |**job_login**|**sysname**|Nombre de la cuenta de Windows en la que se ejecuta el Agente de distribución.|  
-|**job_password**||La contraseña real del trabajo no se devuelve nunca. El resultado se enmascara mediante una "**&#42;&#42;&#42;&#42;&#42;&#42;**" cadena.|  
+|**job_password**||La contraseña real del trabajo no se devuelve nunca. El resultado se enmascara mediante una " **&#42;&#42;&#42;&#42;&#42;&#42;** " cadena.|  
 |**distrib_agent_name**|**nvarchar(100)**|Nombre del trabajo del agente que sincroniza la suscripción.|  
 |**subscriber_type**|**tinyint**|Tipo de suscriptor, que puede ser uno de los siguientes:<br /><br /> **0** = suscriptor de SQL Server<br /><br /> **1** = servidor de origen de datos ODBC<br /><br /> **2** = base de datos Microsoft JET (desusado)<br /><br /> **3** = proveedor OLE DB|  
 |**subscriber_provider**|**sysname**|Identificador de programación único (PROGID) mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de SQL Server.|  

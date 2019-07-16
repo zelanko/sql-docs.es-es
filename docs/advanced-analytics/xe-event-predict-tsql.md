@@ -6,13 +6,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fa0d9d4ed647a6616c525533e696960784d09290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961625"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>Eventos extendidos para la supervisión de instrucciones PREDICT
 
@@ -34,7 +33,7 @@ Los siguientes eventos extendidos están disponibles en todas las versiones de S
 
 La instrucción T-SQL PREDECIR se introdujo en SQL Server 2017. 
 
-|NAME |object_type|description| 
+|name |object_type|description| 
 |----|----|----|
 |predict_function_completed |event  |Desglose de tiempo de ejecución de Builtin|
 |predict_model_cache_hit |event|Se produce cuando un modelo se recupera de la caché del modelo de función PREDICT. Use este evento junto con otros eventos predict_model_cache_ * para solucionar problemas causados por la caché del modelo de función PREDICT.|

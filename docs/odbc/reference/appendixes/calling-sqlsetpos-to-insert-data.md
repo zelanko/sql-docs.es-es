@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793212"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037708"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>Llamar a SQLSetPos para insertar datos
 Cuando un ODBC *2.x* la aplicación funciona con un ODBC *3.x* controlador llama a **SQLSetPos** con un *operación* argumento de SQL_ADD, el Administrador de controladores no se asigna esta llamada a **SQLBulkOperations**. Si un ODBC *3.x* controlador debería funcionar con una aplicación que llama a **SQLSetPos** con SQL_ADD, el controlador debe admitir esa operación.  

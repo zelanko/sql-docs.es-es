@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513779"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182656"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de serie temporal (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +47,7 @@ ms.locfileid: "52513779"
  Las siguientes secciones explican cómo se organizan los nodos dentro de cada uno de estos tipos de modelo.  
   
 ### <a name="structure-of-an-artxp-model"></a>Estructura de un modelo ARTXP  
- El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]**, se crearía una bifurcación independiente para cada combinación de atributo y región.  
+ El algoritmo ARTXP crea un modelo similar a un modelo de árboles de decisión. Agrupa atributos de predicción y los divide siempre que se encuentran diferencias significativas. Por consiguiente, cada modelo ARTXP contiene una bifurcación independiente para cada atributo de predicción. Por ejemplo, en el Tutorial básico de minería de datos se crea un modelo que predice la cantidad de ventas para varias regiones. En este caso, **[Amount]** es el atributo de predicción y se crea una bifurcación independiente para cada región. Si tuviera dos atributos de predicción, **[Amount]** y **[Quantity]** , se crearía una bifurcación independiente para cada combinación de atributo y región.  
   
  El nodo superior de la bifurcación ARTXP contiene la misma información que hay en el nodo raíz de un árbol de decisión. Esto incluye el número de elementos secundarios para ese nodo (CHILDREN_CARDINALITY), el número de casos que cumplen las condiciones de este nodo (NODE_SUPPORT), y diversas estadísticas descriptivas (NODE_DISTRIBUTION).  
   
@@ -59,7 +59,7 @@ ms.locfileid: "52513779"
 >  Si desea ver las fórmulas, encontrará la fórmula de regresión completa en el nivel del nodo de hoja, pero no en los nodos intermedios o raíz.  
   
 ### <a name="structure-of-an-arima-model"></a>Estructura de un modelo ARIMA  
- El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Región]**) y un atributo de predicción (como **[Sales Amount]**)-la ecuación que describe el cambio del atributo predecible con el tiempo.  
+ El algoritmo ARIMA crea un único fragmento de información para cada combinación de una serie de datos (como **[Región]** ) y un atributo de predicción (como **[Sales Amount]** )-la ecuación que describe el cambio del atributo predecible con el tiempo.  
   
  La ecuación para cada serie se deriva de varios componentes, uno para cada estructura periódica encontrada en los datos. Por ejemplo, si tiene datos de ventas que se recopilan mensualmente, el algoritmo podría detectar estructuras mensuales, trimestrales o anuales.  
   
@@ -90,7 +90,7 @@ ms.locfileid: "52513779"
  Atributo predecible para la serie de datos representada en el nodo. (El mismo valor que para MSOLAP_MODEL_COLUMN.)  
   
  NODE_NAME  
- Nombre del nodo.  
+ El nombre del nodo.  
   
  Actualmente, esta columna contiene el mismo valor que NODE_UNIQUE_NAME, aunque esto podría cambiar en versiones futuras.  
   
@@ -303,7 +303,7 @@ WHERE NODE_TYPE = 15
 ##  <a name="bkmk_ARIMA_1"></a> Descripción del árbol ARIMA  
  Cada estructura en un modelo ARIMA se corresponde con una *periodicidad* o *estructura periódica*. Una estructura periódica es un patrón de datos que se repite a lo largo de la serie de datos. Se permite alguna variación secundaria en el patrón, dentro de los límites estadísticos. La periodicidad se mide según las unidades de tiempo predeterminadas que se utilizaron en los datos de entrenamiento. Por ejemplo, si los datos de entrenamiento proporcionan datos de ventas para cada día, la unidad de tiempo predeterminada será un día, y todas las estructuras periódicas se definirán como un número concreto de días.  
   
- Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo crearía dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica con la notación {1}, y otro para las semanas, que se indica mediante {7}.  
+ Cada período que el algoritmo detecta obtiene su propio nodo de estructura. Por ejemplo, si se están analizando los datos de las ventas diarias, el modelo podría detectar estructuras periódicas que representen semanas. En este caso, el algoritmo creará dos estructuras periódicas en el modelo terminado: uno para el período diario predeterminado, que se indica como {1}, y otra para las semanas, indicado por {7}.  
   
  Por ejemplo, la siguiente consulta devuelve todas las estructuras ARIMA de un modelo de minería de datos.  
   
@@ -403,12 +403,12 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  **NODE_DISTRIBUTION:** Muestra los términos de la ecuación en una tabla anidada, que se puede consultar para obtener términos concretos. La tabla de distribución de nodos sigue la misma estructura jerárquica que las reglas XML. Es decir, el nodo raíz de la serie ARIMA (NODE_TYPE = 27) contiene el valor de intersección y las periodicidades de toda la ecuación, que puede incluir varias periodicidades; por su parte, los nodos secundarios contienen únicamente información específica de una estructura periódica determinada o de los nodos secundarios de esa estructura periódica.  
   
-|Tipo de nodo|Attribute|Tipo de valor|  
+|Tipo de nodo|Atributo|Tipo de valor|  
 |---------------|---------------|----------------|  
 |27 (Raíz ARIMA)|Interceptar<br /><br /> Periodicidad|11|  
 |28 (Estructura periódica ARIMA)|periodicidad<br /><br /> Orden de regresión automática<br /><br /> orden de diferencia<br /><br /> Orden de media móvil|12<br /><br /> 13<br /><br /> 15<br /><br /> 14|  
 |29 (Regresión automática ARIMA)|Coeficiente<br /><br /> (complemento de coeficiente)|7|  
-|30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> …<br /><br /> Valor en t-n|7|  
+|30 (Media móvil ARIMA)|Valor en t<br /><br /> Valor en t-1<br /><br /> ...<br /><br /> Valor en t-n|7|  
   
  El valor del *orden de media móvil* indica el número de medias móviles de una serie. En general, la media móvil se calcula `n-1` veces si hay `n` términos en una serie, pero esta cantidad se puede reducir para facilitar el cálculo.  
   

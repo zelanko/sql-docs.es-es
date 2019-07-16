@@ -2,19 +2,18 @@
 title: Establecer contraseña de Active Directory - Analytics Platform System | Microsoft Docs
 description: Establecer contraseña de inicio de sesión de administrador de Active Directory nodos en modo de restauración de servicios de directorio en Analytics Platform System (APS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3df6203a4d98bace5d23a92e70a596a34dedb60e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3e0b197a044f2f008b886d5f2ff39b603821fd29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960064"
 ---
 # <a name="set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode-dsrm---analytics-platform-system"></a>Establecer contraseña de administrador para iniciar sesión en los nodos de AD en Directory Services Restore modo (DSRM) - Analytics Platform System
 Modo de restauración de servicios de directorio (DSRM) es un modo de arranque para reparar o recuperar los servicios de dominio de Active Directory (AD DS). Se utiliza para iniciar sesión en los nodos de AD del dispositivo después de que ha producido un error en AD DS o cuando AD DS debe restaurarse. La contraseña de DSRM se inicializó durante la configuración del dispositivo en el sitio del proveedor de hardware y debe ser cambiada por el administrador del dispositivo. Analytics Platform System tiene dos AD DS (controladores de dominio);  **_appliance_domain_-AD01** y  **_appliance_domain_-AD02**. Para cada nodo de dispositivo AD, cambie la contraseña DSRM siguiendo estos pasos.  

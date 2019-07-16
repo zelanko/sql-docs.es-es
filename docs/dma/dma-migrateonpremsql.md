@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058822"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>Actualización local de SQL Server a SQL Server o SQL Server en máquinas virtuales de Azure mediante Data Migration Assistant
 
@@ -50,7 +49,7 @@ Este artículo proporciona instrucciones paso a paso para actualizar SQL Server 
 
 5. Se recomienda cifrar la conexión seleccionando **cifrar conexión** en el **las propiedades de conexión** sección.
 
-6. Haga clic en **Siguiente**.
+6. Haga clic en **Next**.
 
    ![Especificar la página de origen y destino](../dma/media/SourceTarget.png)
 
@@ -79,7 +78,7 @@ Este artículo proporciona instrucciones paso a paso para actualizar SQL Server 
 
    ![Opción para copiar las copias de seguridad de base de datos en otra ubicación](../dma/media/CopyDatabaseDifferentLocation.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 Data Migration Assistant realiza comprobaciones en las carpetas de copia de seguridad, datos y ubicaciones de archivos de registro. Si se produce un error de validación, corregir las opciones y, a continuación, seleccione **siguiente**.
 

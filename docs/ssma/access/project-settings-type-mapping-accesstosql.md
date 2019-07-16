@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b87b9683-abed-4677-8c50-18bdba704655
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 8a695217909641c737b7780fc4f8b80b2cb08152
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01154cf477435e9dc5335606d0c11a05aecc492b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68066659"
 ---
 # <a name="project-settings-type-mapping-accesstosql"></a>Configuración del proyecto (asignación de tipo) (AccessToSQL)
 La configuración del proyecto de asignación de tipos le permite establecer asignaciones de tipos predeterminadas para el proyecto SSMA. También puede especificar asignaciones de tipos para objetos de base de datos individual. Para obtener más información, consulte [tipos de datos de destino y origen de asignación](mapping-source-and-target-data-types-accesstosql.md).  
@@ -47,7 +46,7 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |**binario [\*... \*]**|**varbinary[\*]**|  
 |**boolean**|**bit**|  
 |**byte**|**tinyint**|  
-|**currency**|**money**|  
+|**Moneda**|**money**|  
 |**date**|**datetime**|  
 |**decimal**|**float**|  
 |**double**|**float**|  
@@ -58,8 +57,8 @@ En la tabla siguiente se muestra la asignación predeterminada entre los tipos d
 |**memo**|**nvarchar(max)**|  
 |**memorando** : para Access 97|**ntext**|  
 |**single**|**real**|  
-|**text[\*..\*]**|**nvarchar[\*]**|  
-|**texto [\*... \*]** : para Access 97|**varchar[\*]**|  
+|**texto [\*... \*]**|**nvarchar [\*]**|  
+|**texto [\*... \*]** : para Access 97|**varchar [\*]**|  
   
 **Agregar**  
 Haga clic para agregar un tipo de datos a la lista de asignación.  

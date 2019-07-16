@@ -24,11 +24,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: eb674ea7bd9540f7ae74bf9ad8737bdb83c237f7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538607"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195624"
 ---
 # <a name="openxml-sql-server"></a>OPENXML (SQL Server)
   OPENXML, palabra clave de [!INCLUDE[tsql](../../includes/tsql-md.md)] , proporciona un conjunto de filas en documentos XML en memoria que es similar a una tabla o una vista. OPENXML permite el acceso a los datos XML a pesar de ser un conjunto de filas relacional. Para ello, proporciona una vista de conjunto de filas de la representación interna de un documento XML. Los registros del conjunto de filas pueden almacenarse en tablas de base de datos.  
@@ -164,11 +164,11 @@ EXEC sp_xml_removedocument @docHandle;
   
  Las asignaciones se pueden especificar de las dos maneras siguientes:  
   
--   Mediante el uso del parámetro *flags*   
+-   Mediante el uso del parámetro *flags*  
   
      La asignación que se especifica con el parámetro *flags* da por supuesto la correspondencia de nombres, según la cual los nodos XML se asignan a las columnas del conjunto de filas con el mismo nombre.  
   
--   Mediante el uso del parámetro *ColPattern*   
+-   Mediante el uso del parámetro *ColPattern*  
   
      *ColPattern*, una expresión XPath, se especifica como parte de *SchemaDeclaration* en la cláusula WITH. La asignación especificada en *ColPattern* sobrescribe la asignación que especifica el parámetro *flags* .  
   

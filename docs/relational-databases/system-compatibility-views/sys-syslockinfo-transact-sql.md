@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 29446f34777682ff98ef6ec7c438c72db58e7167
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c56aa86c20867cfe2cf1da520922d1c74f9c01c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63033015"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053341"
 ---
 # <a name="syssyslockinfo-transact-sql"></a>sys.syslockinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,8 +41,8 @@ ms.locfileid: "63033015"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**rsc_text**|**nchar(32)**|Texto descriptivo de un recurso de bloqueo. Contiene una parte del nombre del recurso.|  
-|**rsc_bin**|**binary(16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para las herramientas que conoce el formato del recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
-|**rsc_valblk**|**binary(16)**|Bloque de valor de bloqueo. Algunos tipos de recursos pueden incluir datos adicionales en el recurso de bloqueo no distribuido por el administrador de bloqueos para determinar a quién pertenece el recurso. Por ejemplo, los bloqueos de página no son propiedad de un identificador de objeto determinado. Para la extensión de bloqueo y otros fines. Sin embargo, se puede colocar el Id. de objeto de un bloqueo de página en el bloque de valor de bloqueo.|  
+|**rsc_bin**|**binary (16)**|Recurso de bloqueo binario. Contiene el recurso de bloqueo efectivo contenido en el administrador de bloqueos. Esta columna se incluye para las herramientas que conoce el formato del recurso de bloqueo para generar su propio formato recurso de bloqueo, y para realizar autocombinaciones en **syslockinfo**.|  
+|**rsc_valblk**|**binary (16)**|Bloque de valor de bloqueo. Algunos tipos de recursos pueden incluir datos adicionales en el recurso de bloqueo no distribuido por el administrador de bloqueos para determinar a quién pertenece el recurso. Por ejemplo, los bloqueos de página no son propiedad de un identificador de objeto determinado. Para la extensión de bloqueo y otros fines. Sin embargo, se puede colocar el Id. de objeto de un bloqueo de página en el bloque de valor de bloqueo.|  
 |**rsc_dbid**|**smallint**|Id. de la base de datos asociada al recurso.|  
 |**rsc_indid**|**smallint**|Id. del índice asociado al recurso, si es el caso.|  
 |**rsc_objid**|**int**|Id. del objeto asociado al recurso, si es el caso.|  

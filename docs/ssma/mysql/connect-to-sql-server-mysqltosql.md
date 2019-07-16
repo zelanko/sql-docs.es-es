@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d73abd3a-80df-4293-b973-1723069db049
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3a6f3daadf8d26da15a5ef0d9a01cb7f491d974e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dc64c84a8d14ea86893d52044894e0af2b1a3bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103211"
 ---
 # <a name="connect-to-sql-server-mysqltosql"></a>Conexión a SQL Server (MySQLToSQL)
 Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que desea migrar a. Para tener acceso a la **conectar con SQL Server** cuadro de diálogo el **archivo** menú, haga clic en **conectar con SQL Server**.  
@@ -24,7 +23,7 @@ Use la **conectar con SQL Server** cuadro de diálogo para conectarse a la insta
 **Nombre del servidor**  
 Escriba o seleccione la instancia de SQL Server para conectarse a. De forma predeterminada, se muestra la instancia que se haya conectado más recientemente.  
   
--   Si se conecta a la instancia predeterminada en el equipo local, puede escribir cualquiera **localhost** o un punto (**.**).  
+-   Si se conecta a la instancia predeterminada en el equipo local, puede escribir cualquiera **localhost** o un punto ( **.** ).  
   
 -   Si se conecta a la instancia predeterminada en otro equipo, escriba el nombre del equipo.  
   

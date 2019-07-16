@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7645187e-7777-4c07-9686-0a80d5c5834d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c74a80bb38c406acb50e5e275f658a5f1d2b30d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93d23216db950ed861449061f3e35e5e88a637fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058794"
 ---
 # <a name="jet-40-uses-sql-92-reserved-words-list-when-extendedansisqlset"></a>Lista de palabras reservadas de Jet 4.0 utiliza SQL-92 cuando ExtendedAnsiSQL_Set
 Cuando se activa la marca ExtendedAnsiSQL, Jet 4.0 utiliza la lista de palabras reservadas de SQL-92. Palabra reservada en intentar usar un SQL-92, como un nombre de objeto sin comillas se producirá un error de sintaxis. Cuando se desactiva la marca ExtendedAnsiSQL, pueden utilizarse las nuevas palabras reservadas como nombres de objeto como antes.

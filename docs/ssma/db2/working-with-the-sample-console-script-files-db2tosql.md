@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 5c3080c3-d074-4f99-a5f5-219ebeddc474
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: dc7976fae322dddc24eda7cf6ef84ef20a7a9e61
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ca2a595eb57d01554aa8389b002fcd6f8422b9da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086173"
 ---
 # <a name="working-with-the-sample-console-script-files-db2tosql"></a>Trabajar con los archivos de secuencia de comandos de consola de ejemplo (DB2ToSQL)
 Se han proporcionado algunos archivos de ejemplo junto con el producto para la referencia de usuario y el uso. Esta sección describe la manera de personalizar fácilmente estos scripts para satisfacer las necesidades del usuario final.  
@@ -70,7 +69,7 @@ Los siguientes archivos de secuencia de comandos de consola de ejemplo que abarc
   
 5.  **ConversionAndDataMigrationSample.xml:** Este ejemplo permite al usuario realizar una migración de extremo a extremo de la conversión a la migración de datos. A continuación se enumera la lista de valores de atributo obligatorio que tendrán que cambiar:  
   
-    |Nombre de comando|Descripción|Attribute|  
+    |Nombre de comando|Descripción|Atributo|  
     |----------------|---------------|-------------|  
     |`map-schema`|Asignación de esquema de base de datos de origen al esquema de destino.|`source-schema:` Especifica la base de datos de origen que requiere que para se va a convertir.<br /><br />`sql-server-schema`: Especifica la base de datos de destino que se pueden migrar a|  
     |`convert-schema`|Realiza la conversión de esquema de origen al esquema de destino.<br /><br />Si el usuario tiene que evaluar varios objetos de bases de datos y puede especificar varios `metabase-object` nodos como se muestra en el `convert-schema` de ejemplo 4 del comando del archivo de script de la consola de ejemplo.|`object-name`: Especificar la base de datos de origen / objeto de nombre que requiere que para se va a convertir. Asegúrese de que el correspondiente `object-type` se cambia en función del tipo de objeto que se especifica en el `object-name`|  

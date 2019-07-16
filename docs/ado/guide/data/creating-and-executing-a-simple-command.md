@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0b81af6f-b9ae-4f7c-b59b-b5bdd775036f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6d0bba47aeb801688a1d9d55ee8f667153728162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ae9cc9066f66d10d94370336e8a46155f1a03c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925737"
 ---
 # <a name="creating-and-executing-a-simple-command"></a>Crear y ejecutar un comando Simple
 Un comando simple es uno que no tiene parámetros y no requiere ninguna persistencia. Hay tres maneras de crear y ejecutar un comando simple.  

@@ -5,17 +5,16 @@ description: Implementar un script de Python o R como una aplicación en clúste
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ba56ebb90d09866b7860c5f29dd2a26cf525fd9b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1e5ab6364437432c803a364abd50ef5b1af4f8f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958912"
 ---
 # <a name="how-to-use-vs-code-to-deploy-applications-to-sql-server-big-data-clusters"></a>Cómo utilizar VS Code para implementar aplicaciones en clústeres de macrodatos de SQL Server
 
@@ -132,7 +131,7 @@ Puede ver todas las aplicaciones que haya implementado en la barra lateral con l
 
 Si hace clic en `Links`, verá que puede tener acceso a la `swagger.json` de la aplicación implementada, por lo que puede escribir sus propios clientes que llaman a la aplicación:
 
-![Swagger](media/vs-extension/swagger.png)
+![swagger](media/vs-extension/swagger.png)
 
 Consulte [consumir las aplicaciones en clústeres de macrodatos](big-data-cluster-consume-apps.md) para obtener más información.
 
@@ -160,7 +159,7 @@ Puede especificar todas las entradas necesarias a través de un `.json`, es deci
 
 Al llamar a una aplicación implementada, si los parámetros de entrada son innata a la aplicación o usuario especificado y que dado el parámetro de entrada no es un tipo primitivo, como una matriz, vector, trama de datos, texto JSON, etc. especifica el tipo de parámetro directamente en línea cuando una llamada a la aplicación, es decir:
 
-- Vector
+- vector
     - `inputs:`
         - `x: [1, 2, 3]`
 - Matriz

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4b12a9de-51d0-416a-87f4-9bf84959cad9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44bf8de8ea4c33a20a6159c5702db0b7eaee9eed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a2897f882dc9dcd78ee8b919de01126d6be510c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735051"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070022"
 ---
 # <a name="transferring-data-in-its-binary-form"></a>Transferencia de datos en su forma binaria
 Una aplicación puede transferir con seguridad datos (en el formato interno utilizado por un DBMS especificado) entre dos orígenes de datos que usan el mismo DBMS y la plataforma de hardware. Para una parte determinada de datos, los tipos de datos SQL deben ser el mismo en los orígenes de datos de origen y de destino. El tipo de datos de C es SQL_C_BINARY.  

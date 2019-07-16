@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cbfdff7c22152acfd0deb97a6e278bd5fd3f553f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25d57116e1fa24658d62a0c9083e00a3e320d2a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933370"
 ---
 # <a name="copyto-method-ado"></a>CopyTo (método) (ADO)
 Copia el número especificado de caracteres o bytes (en función de [tipo](../../../ado/reference/ado-api/type-property-ado-stream.md)) en el [Stream](../../../ado/reference/ado-api/stream-object-ado.md) a otro **Stream** objeto.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7a0b3457-7265-4f24-a255-7f055d908f20
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bb939681cb97b80a7bd0498a2e0c1fa30202c404
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: de4970e82155454b3d05d6200bc7413baca97aef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939011"
 ---
 # <a name="mspublications-transact-sql"></a>MSpublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +43,8 @@ ms.locfileid: "52791547"
 |**allow_pull**|**bit**|Indica si es posible crear suscripciones de extracción para la publicación indicada.|  
 |**allow_anonymous**|**bit**|Indica si es posible crear suscripciones anónimas para la publicación indicada.|  
 |**description**|**nvarchar(255)**|Descripción de la publicación.|  
-|**$vendor_name**|**Nvarchar (100)**|Nombre del proveedor si el publicador no es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**retención**|**int**|Período de retención de la publicación, expresado en horas.|  
+|**$vendor_name**|**nvarchar(100)**|Nombre del proveedor si el publicador no es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
+|**retention**|**int**|Período de retención de la publicación, expresado en horas.|  
 |**sync_method**|**int**|Método de sincronización:<br /><br /> **0** = nativo (produce la salida de copia masiva en modo nativo de todas las tablas).<br /><br /> **1** = carácter (produce una salida de copia masiva en modo de carácter de todas las tablas).<br /><br /> **3** = simultáneo (produce salida de copia masiva en modo nativo de todas las tablas, pero no bloquea la tabla durante la instantánea).<br /><br /> **4** = Concurrent_c (produce una salida de copia masiva en modo de carácter de todas las tablas, pero no bloquea la tabla durante la instantánea)<br /><br /> Los valores **3** y **4** están disponibles para la replicación transaccional y replicación de mezcla, pero no para replicación de instantáneas.|  
 |**allow_subscription_copy**|**bit**|Habilita o deshabilita la funcionalidad de copia de las bases de datos de suscripciones suscritas a esta publicación. **0** significa que la copia está deshabilitada, y **1** significa que está habilitada.|  
 |**thirdparty_options**|**int**|Especifica si la presentación de una publicación en la carpeta de replicación de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] se suprime:<br /><br /> **0** = muestra una publicación heterogénea en la carpeta de replicación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].<br /><br /> **1** = suprime la presentación de una publicación heterogénea en la carpeta de replicación en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|  

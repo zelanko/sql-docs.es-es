@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5cecd58998e84b608c5bece462bf58d7f376e237
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819fb89d7f8c43e76ba9260a72fafa68084bf880
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933444"
 ---
 # <a name="connectoptionenum"></a>ConnectOptionEnum
 Especifica si el [abierto](../../../ado/reference/ado-api/open-method-ado-connection.md) método de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) debe devolver el objeto una vez establecida la conexión (sincrónicamente) o antes (asincrónicamente).  
@@ -32,7 +31,7 @@ Especifica si el [abierto](../../../ado/reference/ado-api/open-method-ado-connec
 |**adConnectUnspecified**|-1|Predeterminado: Abre la conexión de forma sincrónica.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

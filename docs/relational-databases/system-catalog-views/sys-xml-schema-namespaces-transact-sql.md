@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 60b30e74ab58e5fd6a7bb122ba7e1b247e21273b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec58d18c874f8b0060aadb753330976aad259b3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060437"
 ---
 # <a name="sysxmlschemanamespaces-transact-sql"></a>sys.xml_schema_namespaces (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "64945870"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**xml_collection_id**|**int**|Id. de la colección de esquemas XML que contiene este espacio de nombres.|  
-|**Nombre**|**nvarchar(4000)**|Nombre del espacio de nombres XML. En blanco **nombre** no indica ningún espacio de nombres de destino.|  
+|**name**|**nvarchar(4000)**|Nombre del espacio de nombres XML. En blanco **nombre** no indica ningún espacio de nombres de destino.|  
 |**xml_namespace_id**|**int**|Ordinal en base 1 que identifica de forma exclusiva el espacio de nombres XML en la base de datos.|  
   
 ## <a name="permissions"></a>Permisos  

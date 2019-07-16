@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9264cf8c-92ba-45ad-b2d6-15d26d805a16
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8aaa598f5f6477b13a932e8ec2849e36c97b21cc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b936f00f449bd57a7a00fa825910a809a1baf225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47639833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898365"
 ---
 # <a name="xpmsver-transact-sql"></a>xp_msver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ xp_msver [ optname ]
 |**Descripción**|Sistema operativo.|  
 |**Versión de archivo**|Versión del ejecutable de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**InternalName**|Nombre interno de [!INCLUDE[msCoName](../../includes/msconame-md.md)] para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, SQLSERVR.|  
-|**LegalCopyright**|Información legal acerca de los derechos de propiedad de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, Copyright© [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
+|**LegalCopyright**|Información legal de propiedad intelectual necesario para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, Copyright © [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corp. 1988-2005.|  
 |**LegalTrademarks**|Información legal de marca comercial requerida para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por ejemplo, [!INCLUDE[msCoName](../../includes/msconame-md.md)] es una marca registrada de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Corporation.|  
 |**OriginalFilename**|Nombre del archivo que se ejecuta para iniciar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]; por ejemplo, Sqlservr.exe.|  
 |**PrivateBuild**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  

@@ -18,23 +18,22 @@ helpviewer_keywords:
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4bdb60a6d174ab82df7529b6e26d8d5b2c031107
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc3686ac69d7afeeebec14939a42e073f796b1ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966842"
 ---
 # <a name="columns-collection-adox"></a>Colección de columnas (ADOX)
 Todos los contiene [columna](../../../ado/reference/adox-api/column-object-adox.md) objetos de una tabla, índice o clave.  
   
 ## <a name="remarks"></a>Comentarios  
- El [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) método para un **columnas** colección es único para ADOX. Puede hacer lo siguiente:  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-columns.md) método para un **columnas** colección es único para ADOX. Puede:  
   
 -   Agregar una nueva columna a la colección con el **Append** método.  
   
- Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede:  
   
 -   Acceso a una columna de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   

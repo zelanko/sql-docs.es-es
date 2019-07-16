@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0782a1c3-c5d1-499b-a8ba-134162db9990
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 448b0f5e34a6b7421c23a1267dd9cd68bd93ca6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5d8087e7672dd331d0b078cea4930be7582a026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093005"
 ---
 # <a name="sqlsetconnectinfo-function"></a>Función SQLSetConnectInfo
 **Conformidad**  
@@ -66,7 +65,7 @@ SQLRETURN  SQLSetConnectInfo(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Igual que [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md) para errores de validación de entrada, salvo que se va a usar el Administrador de controladores un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentarios  

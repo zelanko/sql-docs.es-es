@@ -9,19 +9,18 @@ ms.topic: language-reference
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: a4a1807adb4d04c3e38332ffd9fe71e874c82233
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 0e193f51aef6c01edeb0900956f152dae212434b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090403"
 ---
 # <a name="sysdmxedatabasesessionobjectcolumns-azure-sql-database"></a>sys.dm_xe_database_session_object_columns (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Muestra los valores de configuración de los objetos enlazados a una sesión.  
+  Muestra los valores de configuración para los objetos que están enlazados a una sesión.  
   
 ||  
 |-|  
@@ -38,7 +37,7 @@ ms.locfileid: "56035276"
 |object_package_guid|**uniqueidentifier**|GUID del paquete que contiene el objeto. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW DATABASE STATE.  
+ Necesita el permiso VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   

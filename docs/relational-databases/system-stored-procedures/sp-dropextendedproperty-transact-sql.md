@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4851865a-86ca-4823-991a-182dd1934075
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7e01b14407198ed88654527bd247a116c200fb1e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 560cecf8b6cc0aff5b503602c521e503e7cc7fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934012"
 ---
 # <a name="spdropextendedproperty-transact-sql"></a>sp_dropextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropextendedproperty
  Es el nombre de la propiedad que se va a quitar. *property_name* es **sysname** y no puede ser NULL.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Nombre del tipo de objeto de nivel 0 especificado. *level0_object_type* es **varchar (128)**, su valor predeterminado es null.  
+ Nombre del tipo de objeto de nivel 0 especificado. *level0_object_type* es **varchar (128)** , su valor predeterminado es null.  
   
  Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE y NULL.  
   
@@ -81,7 +80,7 @@ sp_dropextendedproperty
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Con el fin de especificar las propiedades extendidas, los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles: 0, 1y 2. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben completarse con los tipos y nombres de los objetos de nivel superior.  
+ Con el fin de especificar las propiedades extendidas, los objetos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos se clasifican en tres niveles: 0, 1 y 2. El nivel 0 es el nivel más elevado y se define como los objetos incluidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles. Las referencias a un objeto de un nivel deben completarse con los tipos y nombres de los objetos de nivel superior.  
   
  Dado un válido *property_name*, si todos los tipos de objetos y nombres son null y existe una propiedad en la base de datos actual, que se ha eliminado la propiedad. Vea el ejemplo B más adelante en este tema.  
   
@@ -121,7 +120,7 @@ DROP TABLE T1;
 GO  
 ```  
   
-### <a name="b-dropping-an-extended-property-on-a-database"></a>B. Quitar una propiedad extendida de una base de datos  
+### <a name="b-dropping-an-extended-property-on-a-database"></a>b. Quitar una propiedad extendida de una base de datos  
  En el ejemplo siguiente se quita la propiedad denominada `MS_Description` desde el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos de ejemplo. La propiedad se encuentra en la propia base de datos, por lo que no se especifican tipos ni nombres de objeto.  
   
 ```  
@@ -134,7 +133,7 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  

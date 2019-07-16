@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5cae5cfd4c047041437180ced7bf93c4a75cce00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaa53742d1f9b2dbc19396c02e1a28d7aef64a7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048345"
 ---
 # <a name="sphelpsubscriptionerrors-transact-sql"></a>sp_helpsubscriptionerrors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,7 +62,7 @@ sp_helpsubscriptionerrors [ @publisher = ] 'publisher'
 |**source_name**|**nvarchar(100)**|Nombre del origen del error.|  
 |**error_code**|**sysname**|Código de error.|  
 |**error_text**|**ntext**|mensaje de error.|  
-|**xact_seqno**|**varbinary(16)**|Número de secuencia del registro de transacciones de inicio del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
+|**xact_seqno**|**varbinary (16)**|Número de secuencia del registro de transacciones de inicio del lote de ejecución fallido. Solo lo utilizan los Agentes de distribución; se trata del número de secuencia del registro de transacciones de la primera transacción en el proceso por lotes de ejecución errónea.|  
 |**command_id**|**int**|Identificador de comando del lote de ejecución con errores. Solo lo utilizan los Agentes de distribución, y se trata del Id. del comando del primer comando del proceso por lotes de ejecución fallida.|  
 |**session_id**|**int**|Id. de la sesión del agente en el que se produjo el error.|  
   

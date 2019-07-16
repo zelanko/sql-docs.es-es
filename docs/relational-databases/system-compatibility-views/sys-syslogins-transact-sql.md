@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 4cb34f17-a4bb-469f-a218-71f074e6308f
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 54372511cab4cbcc3ecd7d2afe875325e105163d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5745d3f98741d4a414c7bb69d8f9865258d47e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62671934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020009"
 ---
 # <a name="syssyslogins-transact-sql"></a>sys.syslogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "62671934"
 |**spacelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**timelimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**resultlimit**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Nombre**|**sysname**|Nombre de inicio de sesión del usuario.|  
+|**name**|**sysname**|Nombre de inicio de sesión del usuario.|  
 |**dbname**|**sysname**|Nombre de la base de datos predeterminada del usuario al establecer una conexión.|  
 |**password**|**nvarchar(128)**|Devuelve NULL.|  
 |**language**|**sysname**|Idioma predeterminado del usuario.|  
@@ -67,7 +66,7 @@ ms.locfileid: "62671934"
 |**diskadmin**|**int**|1 = Inicio de sesión es miembro de la **diskadmin** rol fijo de servidor.|  
 |**dbcreator**|**int**|1 = Inicio de sesión es miembro de la **dbcreator** rol fijo de servidor.|  
 |**bulkadmin**|**int**|1 = Inicio de sesión es miembro de la **bulkadmin** rol fijo de servidor.|  
-|**loginname**|**nvarchar(128)**|Nombre de inicio de sesión del usuario. Se proporciona para mantener la compatibilidad con versiones anteriores.|  
+|**LoginName**|**nvarchar(128)**|Nombre de inicio de sesión del usuario. Se proporciona para mantener la compatibilidad con versiones anteriores.|  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

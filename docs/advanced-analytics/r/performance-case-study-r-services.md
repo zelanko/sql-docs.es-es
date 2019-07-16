@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 392a6da09827355e6bc9a901b0e4580e5eb72bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bb94efa8c8ffb1b0a3b0c52c29de74a2b966e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642669"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962558"
 ---
 # <a name="performance-for-r-services-results-and-resources"></a>Rendimiento de R Services: los resultados y los recursos
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -39,7 +38,7 @@ En este caso práctico por el equipo de desarrollo de SQL Server R Services prob
 3. Varias modificaciones se aplicaron a las copias de la tabla para probar las características de SQL Server como la compresión de página, la compresión row, indización, el almacén de datos en columnas, etcetera.
 4. Se midió el rendimiento antes y después de que se aplicó la optimización de cada.
 
-| Nombre de la tabla| Descripción|
+| Nombre de tabla| Descripción|
 |------|------|
 | *airline* | Datos convertidos desde el archivo xdf original con `rxDataStep`|                          |
 | *airlineWithIntCol*   | *DayOfWeek* convertido en entero en lugar de en cadena. También se agrega una columna *rowNum*.|
@@ -90,12 +89,12 @@ Esta sección se comparan antes y después los resultados para cada una de las p
 
 La primera prueba compara el uso de la compresión y una tabla en columnas para reducir el tamaño de los datos.
 
-| Nombre de la tabla            | Filas     | Reservado   | Datos       | index_size | No utilizado  | % Saving (reserved) |
+| Nombre de tabla            | Filas     | Reservado   | Datos       | index_size | No utilizado  | % Saving (reserved) |
 |-----------------------|----------|------------|------------|------------|---------|---------------------|
 | *airlineWithIndex*    | 10 000 000 | 2 978 816 KB | 2 972 160 KB | 6128 KB    | 528 KB  | 0                   |
 | *airlineWithPageComp* | 10 000 000 | 625 784 KB  | 623 744 KB  | 1352 KB    | 688 KB  | 79 %                 |
 | *airlineWithRowComp*  | 10 000 000 | 1 262 520 KB | 1 258 880 KB | 2552 KB    | 1088 KB | 58 %                 |
-| *airlineColumnar*     | 9 999 999  | 201 992 KB  | 201 624 KB  | n/d        | 368 KB  | 93 %                 |
+| *airlineColumnar*     | 9 999 999  | 201 992 KB  | 201 624 KB  | N/D        | 368 KB  | 93 %                 |
 
 **Conclusiones**
 
@@ -105,7 +104,7 @@ La mayor reducción de tamaño de los datos se logra aplicando un índice de alm
 
 Esta prueba compara las ventajas de la compresión de fila, compresión de página y no hay compresión. Un modelo se entrenó con `rxLinMod` en los datos de tres tablas de datos diferentes. Se usó la misma fórmula y la misma consulta en todas las tablas.
 
-| Nombre de la tabla            | Nombre de la prueba       | numTasks | Promedio de tiempo |
+| Nombre de tabla            | Nombre de la prueba       | numTasks | Promedio de tiempo |
 |-----------------------|-----------------|----------|--------------|
 | *airlineWithIndex*    | NoCompression   | 1        | 5,6775       |
 |                       | NoCompression - paralelo| 4        | 5,1775       |
@@ -178,7 +177,7 @@ Esta prueba evalúa el impacto de la modificación del código de R para evitar 
 
 + En ambos casos, se usó la misma fórmula: `ArrDelay ~ CRSDepTime + DayOfWeek`.
 
-| Nombre de la tabla          | Nombre de la prueba   | Promedio de tiempo |
+| Nombre de tabla          | Nombre de la prueba   | Promedio de tiempo |
 |---------------------|-------------|--------------|
 | *Compañía aérea*           | *FactorCol* | 10,72        |
 | *airlineWithIntCol* | *IntCol*    | 3,4475       |
@@ -212,7 +211,7 @@ Esta prueba evalúa las ventajas de rendimiento de usar un almacén de datos en 
 + En la primera ejecución, la tabla de datos utiliza un almacén de filas estándar.
 + En la segunda ejecución, se usó un almacén de columnas.
 
-| Nombre de la tabla         | Nombre de la prueba | Promedio de tiempo |
+| Nombre de tabla         | Nombre de la prueba | Promedio de tiempo |
 |--------------------|-----------|--------------|
 | *airlineWithIndex* | RowStore  | 4,67         |
 | *airlineColumnar*  | ColStore  | 4,555        |
@@ -264,7 +263,7 @@ El objetivo de esta prueba era determinar el impacto de rendimiento en la puntua
 
 Los resultados de pruebas muestran el tiempo para guardar el modelo y el tiempo necesario para cargar el modelo y predicción.
 
-| Nombre de la tabla | Nombre de la prueba | Promedio de tiempo (en entrenar el modelo) | Tiempo en guardar/cargar el modelo|
+| Nombre de tabla | Nombre de la prueba | Promedio de tiempo (en entrenar el modelo) | Tiempo en guardar/cargar el modelo|
 |------------|------------|------------|------------|
 | airline    | SaveModel| 21,59| 2,08|
 | airline    | LoadModelAndPredict | | 2,09 (tiempo de la predicción incluido) |
@@ -305,7 +304,7 @@ El siguiente proceso se usó para crear esta configuración:
 
 6. Actualice la configuración del regulador de recursos para usar la función para los grupos de cargas de trabajo adecuado.
 
-### <a name="results"></a>Resultado
+### <a name="results"></a>Resultados
 
 La configuración que tenía el mejor rendimiento en la coincidencia de reanudación de estudio fue el siguiente:
 
@@ -359,7 +358,7 @@ Los siguientes son vínculos a información, herramientas y scripts que se usan 
 
 + [Cómo SQL Server es compatible con NUMA](https://technet.microsoft.com/library/ms180954.aspx)
 
-+ [Soft NUMA](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
++ [NUMA de software](https://docs.microsoft.com/sql/database-engine/configure-windows/soft-numa-sql-server)
 
 ### <a name="learn-about-sql-server-optimizations"></a>Obtenga información sobre las optimizaciones de SQL Server
 

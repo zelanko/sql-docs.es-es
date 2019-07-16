@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912331"
 ---
 # <a name="update---sql-command"></a>Comando de SQL de actualización
 Actualiza los registros en una tabla con nuevos valores.  
@@ -41,10 +40,10 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* Especifica el nombre de una base de datos distinta de la base de datos especificado con el origen de datos que contiene la tabla. Debe incluir el nombre de la base de datos que contiene la tabla si la base de datos no es actual. Incluir el delimitador de signo de exclamación (!) después del nombre de la base de datos y antes del nombre de tabla.  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ ESTABLECER *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
  Especifica las columnas que se actualizan y sus valores nuevos. Si se omite la cláusula WHERE, se actualiza cada fila de la columna con el mismo valor.  
   
- WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ DONDE *FilterCondition1*[AND &#124; o *FilterCondition2*...]  
  Especifica los registros que se actualizan con nuevos valores.  
   
  *FilterCondition* especifica los criterios que los registros deben cumplir para que se actualice con nuevos valores. Puede incluir como muchas condiciones de filtro como desee, conectan con AND u operador OR. También puede usar el operador NOT para anular el valor de una expresión lógica, o puede usar **vacía**() para comprobar si un campo vacío.  

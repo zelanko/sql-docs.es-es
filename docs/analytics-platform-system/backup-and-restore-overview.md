@@ -2,19 +2,18 @@
 title: 'Copia de seguridad y restauración: almacenamiento de datos paralelos | Microsoft Docs'
 description: Describe cómo los datos de copia de seguridad y restauración para el almacenamiento de datos paralelos (PDW). Operaciones de copia de seguridad y restauración se utilizan para la recuperación ante desastres. También se pueden usar copias de seguridad y restauración para copiar una base de datos de un dispositivo a otro dispositivo.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 01/19/2019
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0b95d18eb38bbe0012235304747ca80b3dc19a79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d322eb27a92c644afa834371d5f38b3d9d7ad28b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200958"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961403"
 ---
 # <a name="backup-and-restore"></a>Copia de seguridad y restauración
 

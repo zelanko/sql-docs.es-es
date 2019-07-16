@@ -5,17 +5,16 @@ description: Tutorial de una implementación de clústeres de macrodatos de 2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0254b76b0845ff5f913d2d0ab69324ddd0072923
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 1688725e8944b4099623688f92931c261b7fdcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958276"
 ---
 # <a name="deploy-sql-server-big-data-cluster-on-azure-kubernetes-service-aks"></a>Implementar el clúster de macrodatos de SQL Server en Azure Kubernetes Service (AKS)
 

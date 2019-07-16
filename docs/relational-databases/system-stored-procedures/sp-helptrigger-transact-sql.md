@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048221"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'table'` Es el nombre de la tabla en la base de datos actual que se va a devolver información de desencadenadores. *tabla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @tabname = ] 'table'` Es el nombre de la tabla en la base de datos actual que se va a devolver información de desencadenadores. *tabla* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
   
-`[ @triggertype = ] 'type'` Es el tipo de desencadenador DML para devolver información acerca de. *tipo* es **char(6)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+`[ @triggertype = ] 'type'` Es el tipo de desencadenador DML para devolver información acerca de. *tipo* es **char(6)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

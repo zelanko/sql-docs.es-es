@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9fdc9762-e203-4cff-9212-54f450bf18d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d8f64172685c42a5dde8de9027c8c7e621ddd9f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff187d5d2b67c5fc3d40a80a136ff9f0c65b2ed2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070046"
 ---
 # <a name="transfer-octet-length"></a>Transferir la longitud en octetos
 La longitud de bytes de transferencia de una columna es el número máximo de bytes devueltos a la aplicación cuando los datos se transfieren a su tipo de datos C predeterminado. Para datos de caracteres, la longitud en octetos transferencia no incluye espacio para el carácter de terminación null. La longitud de octeto de la transferencia de una columna puede ser diferente del número de bytes necesarios para almacenar los datos en el origen de datos.  

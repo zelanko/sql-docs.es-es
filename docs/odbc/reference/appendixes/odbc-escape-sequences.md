@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 646d5f0b-df0c-47a6-a630-99cac1026a4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b809aff14e75f41089f01345607f63f8c2dd9166
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06f98cd40ee003a7e8805e6b83fdac0940526e49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990632"
 ---
 # <a name="odbc-escape-sequences"></a>Secuencias de escape ODBC
 Se utilizan las siguientes secuencias de escape de ODBC. La gramática de esta sección usa algunos elementos definidos en [elementos que se usan en instrucciones SQL](../../../odbc/reference/appendixes/elements-used-in-sql-statements.md).  

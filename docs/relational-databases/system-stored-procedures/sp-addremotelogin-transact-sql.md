@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 71b7cd36-a17d-4b12-b102-10aeb0f9268b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: e23684e04d8e49d1a6456185f94ad74b71b1604c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eb45ce1c3e1786eb5a9a3cd630741dd4df773c40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537932"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030961"
 ---
 # <a name="spaddremotelogin-transact-sql"></a>sp_addremotelogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,13 +44,13 @@ sp_addremotelogin [ @remoteserver = ] 'remoteserver'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @remoteserver **=** ] **'**_remoteserver_**'**  
+ [ @remoteserver **=** ] **'** _remoteserver_ **'**  
  Es el nombre del servidor remoto al que se aplica el inicio de sesión remoto. *remoteserver* es **sysname**, no tiene ningún valor predeterminado. Si solo *remoteserver* se especifica, todos los usuarios en *remoteserver* se asignan a inicios de sesión existentes del mismo nombre en el servidor local. El servidor debe ser un servidor conocido por el servidor local. Esto se agrega mediante sp_addserver. Cuando los usuarios en *remoteserver* conectarse al servidor local que se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con el inicio de sesión local que coincide con su propio inicio de sesión en *remoteserver* . *remoteserver* es el servidor que inicia la llamada a procedimiento remoto.  
   
- [ @loginame **=** ] **'**_inicio de sesión_**'**  
+ [ @loginame **=** ] **'** _inicio de sesión_ **'**  
  Es el identificador de inicio de sesión del usuario en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL. *inicio de sesión*ya debe existir en la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si *inicio de sesión* se especifica, todos los usuarios en *remoteserver* se asignan a ese inicio de sesión local específico. Cuando los usuarios en *remoteserver* conectarse a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, conectan con *inicio de sesión*.  
   
- [ @remotename **=** ] **'**_remote_name_**'**  
+ [ @remotename **=** ] **'** _remote_name_ **'**  
  Es el identificador de inicio de sesión del usuario en el servidor remoto. *remote_name* es **sysname**, su valor predeterminado es null. *remote_name* debe existir en *remoteserver*. Si *remote_name* se especifica, el usuario específico *remote_name* se asigna a *inicio de sesión* en el servidor local. Cuando *remote_name* en *remoteserver* se conecta a la instancia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar un procedimiento almacenado remoto, se conecta como *inicio de sesión*. El identificador de inicio de sesión de *remote_name* puede ser diferente del identificador de inicio de sesión en el servidor remoto, *inicio de sesión*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

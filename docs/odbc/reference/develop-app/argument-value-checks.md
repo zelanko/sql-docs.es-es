@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3dfee0dd00e30f6446430156617ba45a5a39b994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 013c8f80a672ed691e7519b318206c406171cfbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077116"
 ---
 # <a name="argument-value-checks"></a>Comprobaciones de valores de argumento
 El Administrador de controladores comprueba los siguientes tipos de argumentos. A menos que se indique lo contrario, el Administrador de controladores devuelve SQL_ERROR si hay errores en los valores de argumento.  

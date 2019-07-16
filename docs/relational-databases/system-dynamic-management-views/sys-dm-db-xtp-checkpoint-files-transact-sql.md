@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ac8e6333-7a9f-478a-b446-5602283e81c9
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f2c7f7f4296b3cbed025303f58cf07717db06c8e
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: fb3aa62880de7013cf503e61eb2d86a3454c2350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52510867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026911"
 ---
 # <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ ms.locfileid: "52510867"
  Para obtener más información, consulte [crear y administrar el almacenamiento para objetos con optimización para memoria](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md).  
   
 ##  <a name="bkmk_2016"></a> [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores  
- En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, empezando por **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]**.  
+ En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, empezando por **[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]** .  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor, que forma parte del archivo raíz, datos o delta. Combinaciones con file_guid en la tabla sys.database_files.|  
@@ -65,19 +64,19 @@ ms.locfileid: "52510867"
 |end_checkpoint_id|**bigint**|Id. del punto de comprobación final.|  
 |last_updated_checkpoint_id|**bigint**|Id. del último punto de comprobación que actualizar este archivo.|  
 |encryption_status|**smallint**|0, 1, 2|  
-|encryption_status_desc|**nvarchar(60)**|0 = &GT; UNENCRTPTED<br /><br /> 1 = &GT; CIFRADA CON LA CLAVE 1<br /><br /> 2 = &GT; CIFRADA CON LA CLAVE 2. Válido únicamente para los archivos activos.|  
+|encryption_status_desc|**nvarchar(60)**|0 = > UNENCRTPTED<br /><br /> 1 = > CIFRADA CON LA CLAVE 1<br /><br /> 2 = > CIFRADA CON LA CLAVE 2. Válido únicamente para los archivos activos.|  
   
 ##  <a name="bkmk_2014"></a> [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
- En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]**.  
+ En la tabla siguiente se describe las columnas para `sys.dm_db_xtp_checkpoint_files`, para **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]** .  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |container_id|**int**|Identificador del contenedor (representado como un archivo de tipo FILESTREAM en sys.database_files) del que forma parte el archivo de datos o delta. Combinaciones con file_id en [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md).|  
 |container_guid|**uniqueidentifier**|GUID del contenedor del que forma parte el archivo de datos o delta.|  
 |checkpoint_file_id|**GUID**|Identificador del archivo de datos o delta.|  
 |relative_file_path|**nvarchar(256)**|Ruta de acceso al archivo de datos o delta, con respecto a la ubicación del contenedor.|  
 |file_type|**tinyint**|0 para el archivo de datos.<br /><br /> 1 para el archivo delta.<br /><br /> Es NULL si la columna state está establecida en 7.|  
-|file_type_desc|**nvarchar(60)**|Tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna state está establecida en 7.|  
+|file_type_desc|**nvarchar(60)**|El tipo de archivo: DATA_FILE, DELTA_FILE o NULL si la columna state está establecida en 7.|  
 |internal_storage_slot|**int**|El índice del archivo en la matriz de almacenamiento interno. Es NULL si la columna state está establecida en 2 o 3.|  
 |checkpoint_pair_file_id|**uniqueidentifier**|Archivo de datos o delta correspondiente.|  
 |file_size_in_bytes|**bigint**|Tamaño del archivo que se usa. Es NULL si la columna state está establecida en 5, 6 o 7.|  

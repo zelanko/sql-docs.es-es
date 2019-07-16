@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3fdfead2-b5ab-4163-9b1d-3d2143a5db8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e1e268da5eb4c53b6270e474987c69b88383cd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa6862808643f3d687fa406cb3fc2aa23c9b7d7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924142"
 ---
 # <a name="shape-compute-clause"></a>Cláusula COMPUTE de forma
 Una cláusula COMPUTE de forma genera un elemento primario **Recordset**, cuyas columnas se componen de una referencia al elemento secundario **Recordset**; opcional columnas cuyo contenido se capítulo, nuevas o las columnas calculadas, o resultado de ejecutar las funciones de agregado en el elemento secundario **Recordset** o un previamente formados **Recordset**; y las columnas en el elemento secundario **Recordset** enumerados en la cláusula opcional.  
@@ -77,15 +76,15 @@ SHAPE {select * from Orders} AS orders             COMPUTE orders, SUM(orders
   
  Por ejemplo, suponga que tiene una tabla denominada Demographics, que consta de los campos de ciudad, estado y el rellenado. (Los datos de población en la tabla se proporcionan únicamente como ejemplo).  
   
-|State|City|Población|  
+|Estado|City|Población|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
-|O BIEN|Medford|200,000|  
-|O BIEN|Portland|400,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
 |WA|Tacoma|500,000|  
-|O BIEN|Corvallis|300,000|  
+|OR|Corvallis|300,000|  
   
  Ahora, ejecute este comando shape:  
   
@@ -105,33 +104,33 @@ rst.Open  "SHAPE {select * from demographics} AS rs "  & _
   
 ### <a name="parent"></a>Parent  
   
-|SUM (rs. Llenado)|rs|State|  
+|SUM (rs. Llenado)|rs|Estado|  
 |---------------------------|--------|-----------|  
 |1,300,000|Referencia a child1|CA|  
 |1,200,000|Referencia a child2|WA|  
-|1,100,000|Referencia a secundario3|O BIEN|  
+|1,100,000|Referencia a secundario3|OR|  
   
 ## <a name="child1"></a>Child1  
   
-|State|City|Población|  
+|Estado|City|Población|  
 |-----------|----------|----------------|  
 |CA|Los Angeles|800,000|  
 |CA|San Diego|600,000|  
   
 ## <a name="child2"></a>Child2  
   
-|State|City|Población|  
+|Estado|City|Población|  
 |-----------|----------|----------------|  
 |WA|Seattle|700,000|  
 |WA|Tacoma|500,000|  
   
 ## <a name="child3"></a>Child3  
   
-|State|City|Población|  
+|Estado|City|Población|  
 |-----------|----------|----------------|  
-|O BIEN|Medford|200,000|  
-|O BIEN|Portland|400,000|  
-|O BIEN|Corvallis|300,000|  
+|OR|Medford|200,000|  
+|OR|Portland|400,000|  
+|OR|Corvallis|300,000|  
   
 ## <a name="see-also"></a>Vea también  
  [Acceso a las filas en un conjunto de registros jerárquico](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   

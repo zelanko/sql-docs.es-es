@@ -3,18 +3,17 @@ title: Notas de la versión de SQL Server 2017 en Linux
 description: Este artículo contiene las notas y características admitidas en SQL Server 2017 en Linux. Notas de la versión se incluyen para la versión más reciente y varias versiones anteriores.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f59495ffe4bc58ec673e643b0d011a501c51ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896173"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Notas de la versión de SQL Server 2017 en Linux
 
@@ -47,25 +46,25 @@ La siguiente tabla enumera el historial de versiones para [!INCLUDE[ssSQL17](../
 
 | Release               | `Version`       | Fecha de la versión |
 |-----------------------|---------------|--------------|
-| [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
+| [CU15](#CU15)         | 14.0.3162.1   | 23-05-2019   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
 | [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
-| [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
+| [CU12](#CU12)         | 14.0.3045.24  | 24-10-2018   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
 | [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
-| [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
-| [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |
-| [CU7](#CU7)           | 14.0.3026.27  | 2018-05-24   |
-| [CU6](#CU6)           | 14.0.3025.34  | 2018-04-19   |
+| [CU9](#CU9)           | 14.0.3030.27  | 18-07-2018   |
+| [CU8](#CU8)           | 14.0.3029.16  | 21-06-2018   |
+| [CU7](#CU7)           | 14.0.3026.27  | 24-05-2018   |
+| [CU6](#CU6)           | 14.0.3025.34  | 19-04-2018   |
 | [CU5](#CU5)           | 14.0.3023.8   | 2018-03-20   |
 | [CU4](#CU4)           | 14.0.3022.28  | 2018-02-20   |
-| [CU3](#CU3)           | 14.0.3015.40  | 2018-01-03   |
-| [GDR1](#GDR1)         | 14.0.2000.63  | 2018-01-03   |
-| [CU2](#CU2)           | 14.0.3008.27  | 2017-11-28   |
-| [CU1](#CU1)           | 14.0.3006.16  | 2017-10-24   |
-| [GA](#GA)             | 14.0.1000.169 | 2017-10-02   |
+| [CU3](#CU3)           | 14.0.3015.40  | 03-01-2018   |
+| [GDR1](#GDR1)         | 14.0.2000.63  | 03-01-2018   |
+| [CU2](#CU2)           | 14.0.3008.27  | 28-11-2017   |
+| [CU1](#CU1)           | 14.0.3006.16  | 24-10-2017   |
+| [GA](#GA)             | 14.0.1000.169 | 10-2017-02   |
 
 ## <a id="cuinstall"></a> Cómo instalar actualizaciones
 

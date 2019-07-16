@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 541b83ab-b16d-4714-bcb2-3c3daa9a963b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22271cd37069123d0e11a3d0ab660134c61e283b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5639828c90141079ab66f6cceb466328ddb3f56d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019233"
 ---
 # <a name="column-size"></a>Tamaño de columna
 El tamaño de columna (o parámetro) de los tipos de datos numéricos se define como el número máximo de dígitos que utiliza el tipo de datos de la columna o del parámetro o la precisión de los datos. Tipos de caracteres, es la longitud en caracteres de los datos; para los tipos de datos binarios, el tamaño de la columna se define como la longitud en bytes de los datos. Para todos los tipos de datos de intervalo, marca de tiempo y el tiempo, esto es el número de caracteres en la representación de caracteres de los datos. El tamaño de columna definido para cada tipo de datos SQL concisa se muestra en la tabla siguiente.  
@@ -40,7 +39,7 @@ El tamaño de columna (o parámetro) de los tipos de datos numéricos se define 
 |SQL_DOUBLE[c]|15|  
 |Todos los tipos binarios [a], [b].|Define o máxima longitud en bytes de la columna o parámetro. Por ejemplo, la longitud de una columna definida como Binary (10) es 10.|  
 |SQL_TYPE_DATE[c]|10 (el número de caracteres en el *aaaa-mm-dd* formato).|  
-|SQL_TYPE_TIME[c]|8 (el número de caracteres en el *hh-mm-ss* formato), o 9 + *s* (el número de caracteres en el *hh: mm:* formato [.fff...], donde *s*es la precisión de segundos).|  
+|SQL_TYPE_TIME [c]|8 (el número de caracteres en el *hh-mm-ss* formato), o 9 + *s* (el número de caracteres en el *hh: mm:* formato [.fff...], donde *s*es la precisión de segundos).|  
 |SQL_TYPE_TIMESTAMP|16 (el número de caracteres en el *aaaa-mm-dd hh: mm* formato)<br /><br /> 19 (el número de caracteres en el *aaaa-mm-dd* *hh: mm:* formato)<br /><br /> o Administrador de configuración de<br /><br /> 20 + *s* (el número de caracteres en el *aaaa-mm-dd hh: mm:* formato [.fff...], donde *s* es la precisión de segundos).|  
 |SQL_INTERVAL_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, *p* (si *s*= 0) o *p* + *s*+ 1 (si *s*> 0). [ d.]|  
 |SQL_INTERVAL_DAY_TO_SECOND|Donde *p* es el intervalo de precisión del principio y *s* es la precisión de segundos, 9 +*p* (si *s*= 0) o 10 +*p* + *s* (si *s*> 0). [ d.]|  

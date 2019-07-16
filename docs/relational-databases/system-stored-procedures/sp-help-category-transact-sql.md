@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8cad1dcc-b43e-43bd-bea0-cb0055c84169
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 69f65ee2e299197504c4bd970a835a28c2f89b21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c297578fabca3c20781c6227307f25dbece1bbfd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62797817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055231"
 ---
 # <a name="sphelpcategory-transact-sql"></a>sp_help_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,8 +47,8 @@ sp_help_category [ [ @class = ] 'class' ]
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**JOB**|Proporciona información acerca de una categoría de trabajo.|  
-|**ALERT**|Proporciona información acerca de una categoría de alerta.|  
-|**OPERATOR**|Proporciona información acerca de una categoría de operador.|  
+|**ALERTA**|Proporciona información acerca de una categoría de alerta.|  
+|**OPERADOR**|Proporciona información acerca de una categoría de operador.|  
   
 `[ @type = ] 'type'` El tipo de categoría cuya información se solicita. *tipo* es **varchar (12)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
@@ -72,8 +71,8 @@ sp_help_category [ [ @class = ] 'class' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
-|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = Local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
-|**Nombre**|**sysname**|Nombre de la categoría|  
+|**category_type**|**tinyint**|Tipo de categoría:<br /><br /> **1** = local<br /><br /> **2** = multiservidor<br /><br /> **3** = ninguno|  
+|**name**|**sysname**|Nombre de la categoría|  
   
  Cuando **@suffix** es **1**, **sp_help_category** devuelve el conjunto de resultados siguientes:  
   
@@ -81,7 +80,7 @@ sp_help_category [ [ @class = ] 'class' ]
 |-----------------|---------------|-----------------|  
 |**category_id**|**int**|Id. de categoría|  
 |**category_type**|**sysname**|Tipo de categoría. Uno de **LOCAL**, **MULTISERVIDOR**, o **NONE**|  
-|**Nombre**|**sysname**|Nombre de la categoría|  
+|**name**|**sysname**|Nombre de la categoría|  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_help_category** se debe ejecutar desde la **msdb** base de datos.  

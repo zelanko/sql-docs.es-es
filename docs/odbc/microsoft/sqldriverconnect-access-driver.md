@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9d133e9b-7545-464d-aa3c-677fa7e2a41d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a71874c91e48c25072fbfed8f66a312d65b4697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e211797147c4da8f197247244f6f2805185b3b0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048479"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053982"
 ---
 # <a name="sqldriverconnect-access-driver"></a>SQLDriverConnect (controlador de Access)
 > [!NOTE]  
@@ -37,4 +36,4 @@ ms.locfileid: "63048479"
   
 |Controlador|Palabras clave necesarias|Ejemplos|  
 |------------|-----------------------|--------------|  
-|Microsoft Access|Controlador, DBQ|Driver={Microsoft Access Driver (*.mdb)}; DBQ=c:\\\temp\\\sample.mdb|
+|Microsoft Access|Controlador, DBQ|Driver = {controlador de Microsoft Access (*.mdb)}; DBQ = c:\\\temp\\\sample.mdb|

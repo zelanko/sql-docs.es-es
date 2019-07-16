@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ea8e6825a2019667734a9d68f5798da00084c71b
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 04f40d4d788e391026bd981f8be7218062282c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59583048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005061"
 ---
 # <a name="sysdmdatabaseencryptionkeys-transact-sql"></a>sys.dm_database_encryption_keys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,15 +46,15 @@ ms.locfileid: "59583048"
 |encryptor_thumbprint|**varbinary(20)**|Muestra la huella digital del sistema de cifrado.|  
 |encryptor_type|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] a través de la [versión actual](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describe el sistema de cifrado.|  
 |percent_complete|**real**|Porcentaje completado del cambio de estado del cifrado de la base de datos. Será 0 si no hay ningún cambio de estado.|
-|encryption_state_desc|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Cadena que indica si la base de datos está cifrada o no cifrado.<br><br>Ninguno<br><br>SIN CIFRAR<br><br>CIFRADO<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Indica el estado actual del examen de cifrado. <br><br>0 = No se ha iniciado el análisis, no está habilitado el TDE<br><br>1 = examen está en curso.<br><br>2 = examen está en curso pero se ha suspendido, el usuario puede reanudar.<br><br>3 = se ha completado correctamente el examen, TDE está habilitado y el cifrado es completando.<br><br>4 = se ha anulado el examen por alguna razón, es necesaria la intervención manual. Para obtener más ayuda, póngase en contacto con Microsoft Support.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Cadena que indica el estado actual del examen de cifrado.<br><br> Ninguno<br><br>RUNNING<br><br>SUSPENDED<br><br>ÍNTEGRO<br><br>ABORTED|
-|encryption_scan_modify_date|**datetime**|**Se aplica a**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Muestra la fecha (en UTC) se modificó por última vez el estado de examen de cifrado.|
+|encryption_state_desc|**nvarchar(32)**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Cadena que indica si la base de datos está cifrada o no cifrado.<br><br>Ninguno<br><br>SIN CIFRAR<br><br>CIFRADO<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
+|encryption_scan_state|**int**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Indica el estado actual del examen de cifrado. <br><br>0 = No se ha iniciado el análisis, no está habilitado el TDE<br><br>1 = examen está en curso.<br><br>2 = examen está en curso pero se ha suspendido, el usuario puede reanudar.<br><br>3 = se ha completado correctamente el examen, TDE está habilitado y el cifrado es completando.<br><br>4 = se ha anulado el examen por alguna razón, es necesaria la intervención manual. Para obtener más ayuda, póngase en contacto con Microsoft Support.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br>Cadena que indica el estado actual del examen de cifrado.<br><br> Ninguno<br><br>RUNNING<br><br>SUSPENDED<br><br>ÍNTEGRO<br><br>ABORTED|
+|encryption_scan_modify_date|**datetime**|**Válido para** : [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores.<br><br> Muestra la fecha (en UTC) se modificó por última vez el estado de examen de cifrado.|
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="see-also"></a>Vea también  
 

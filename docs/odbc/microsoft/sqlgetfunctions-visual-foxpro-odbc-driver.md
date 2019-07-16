@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8102932a-88b3-49d8-bf7a-c766f54878c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ae7b8eb0468dd401009ef58c83b87606b0679a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da74bbb64a76f6c3ff6c55754798b975dab83826
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003332"
 ---
 # <a name="sqlgetfunctions-visual-foxpro-odbc-driver"></a>SQLGetFunctions (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -32,21 +31,21 @@ ms.locfileid: "63313068"
   
  El controlador ODBC de Visual FoxPro admite funciones de todos los núcleos de la API de ODBC y nivel 1. En la tabla siguiente indica si el controlador admite una función específica de nivel 2.  
   
-|*Función*|Admitida|  
+|*Función*|Compatible|  
 |----------------|---------------|  
-|SQL_API_SQLBROWSECONNECT|Sin|  
+|SQL_API_SQLBROWSECONNECT|No|  
 |SQL_API_SQLCOLUMNPRIVELEGES|Sin|  
 |SQL_API_SQLDATASOURCES|Sí|  
 |SQL_API_SQLDESCRIBEPARAM|Sin|  
 |SQL_API_SQLDRIVERS|Sí|  
 |SQL_API_SQLEXTENDEDFETCH|Sí|  
-|SQL_API_SQLFOREIGNKEYS|No|  
+|SQL_API_SQLFOREIGNKEYS|Sin|  
 |SQL_API_SQLMORERESULTS|Sí|  
-|SQL_API_SQLNATIVESQL|Sin|  
+|SQL_API_SQLNATIVESQL|No|  
 |SQL_API_SQLNUMPARAMS|Sí|  
 |SQL_API_SQLPARAMOPTIONS|Sí|  
 |SQL_API_SQLPRIMARYKEYS|Sí|  
-|SQL_API_SQLPROCEDURECOLUMNS|No|  
+|SQL_API_SQLPROCEDURECOLUMNS|Sin|  
 |SQL_API_SQLPROCEDURES|Sin|  
 |SQL_API_SQLSETPOS|Sí|  
 |SQL_API_SQLSETSCROLLOPTIONS|Sí|  

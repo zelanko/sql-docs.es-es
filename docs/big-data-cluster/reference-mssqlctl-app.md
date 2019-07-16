@@ -5,17 +5,16 @@ description: Artículo de referencia para los comandos de la aplicación de mssq
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ac884a8d77aa241402cedce3eaedeef9f60512a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a14b548ed8c16776b4883e54f3ca47588dbb3e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727539"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958202"
 ---
 # <a name="mssqlctl-app"></a>Aplicación mssqlctl
 
@@ -28,10 +27,10 @@ El siguiente artículo proporciona la referencia para la **aplicación** comando
 | --- | --- |
 [plantilla de aplicación mssqlctl](reference-mssqlctl-app-template.md) | plantillas.
 [mssqlctl aplicación init](#mssqlctl-app-init) | Nueva aplicación KickStart esqueleto.
-[mssqlctl app create](#mssqlctl-app-create) | Crear la aplicación.
-[mssqlctl app update](#mssqlctl-app-update) | Actualizar la aplicación.
+[Crear aplicación mssqlctl](#mssqlctl-app-create) | Crear la aplicación.
+[actualización de la aplicación mssqlctl](#mssqlctl-app-update) | Actualizar la aplicación.
 [lista de aplicaciones mssqlctl](#mssqlctl-app-list) | Lista de aplicaciones.
-[mssqlctl app delete](#mssqlctl-app-delete) | Eliminar la aplicación.
+[eliminación de aplicación mssqlctl](#mssqlctl-app-delete) | Eliminar la aplicación.
 [ejecución de la aplicación mssqlctl](#mssqlctl-app-run) | Ejecutar la aplicación.
 [Describir la aplicación mssqlctl](#mssqlctl-app-describe) | Describir la aplicación.
 ## <a name="mssqlctl-app-init"></a>mssqlctl aplicación init
@@ -110,7 +109,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-app-update"></a>mssqlctl app update
+## <a name="mssqlctl-app-update"></a>actualización de la aplicación mssqlctl
 Actualización de una aplicación.
 ```bash
 mssqlctl app update [--spec -s] 

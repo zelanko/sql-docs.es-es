@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: ca294f6d-eeb5-42ca-9306-156281a3f0f3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: af3859f5e402dce2854cce02439ff6cb26529f46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8828a439e9685529068ab160a44d5a38a5e8555e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002452"
 ---
 # <a name="new-project-ssma-accesstosql"></a>Nuevo proyecto (SSMA) (AccessToSQL)
 Use la **nuevo proyecto** cuadro de diálogo para crear un nuevo proyecto SSMA. Para tener acceso a la **nuevo proyecto** cuadro de diálogo el **archivo** menú, haga clic en **nuevo proyecto**.  

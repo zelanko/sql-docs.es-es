@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 30abcb41-1d18-4f43-a692-4c80914c0450
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7918e257428fd85ddb54867ee5144f45a3bf89f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b29ee604f1b584fcbdcd0ef91e32c84d89cc5f96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68045991"
 ---
 # <a name="spbrowsereplcmds-transact-sql"></a>sp_browsereplcmds (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,16 +67,16 @@ sp_browsereplcmds [ [ @xact_seqno_start = ] 'xact_seqno_start' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**xact_seqno**|**varbinary(16)**|Número de secuencia del comando.|  
+|**xact_seqno**|**varbinary (16)**|Número de secuencia del comando.|  
 |**originator_srvname**|**sysname**|Servidor en el que se originó la transacción.|  
 |**originator_db**|**sysname**|Base de datos en la que se originó la transacción.|  
 |**article_id**|**int**|ID. del artículo.|  
-|**Tipo**|**int**|Tipo de comando.|  
+|**type**|**int**|Tipo de comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial.|  
 |**hashkey**|**int**|Exclusivamente para uso interno.|  
 |**originator_publication_id**|**int**|Id. de la publicación en la que se originó la transacción.|  
 |**originator_db_version**|**int**|Versión de la base de datos en la que se originó la transacción.|  
-|**originator_lsn**|**varbinary(16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
+|**originator_lsn**|**varbinary (16)**|Identifica el número de flujo de registro (LSN) para el comando de la publicación en la que se origina. Se utiliza en la replicación transaccional punto a punto.|  
 |**command**|**nvarchar(1024)**|Comando [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |**command_id**|**int**|Identificador del comando en [MSrepl_commands](../../relational-databases/system-tables/msrepl-commands-transact-sql.md).|  
   

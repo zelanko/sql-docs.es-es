@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: c551e07f-30c4-41a2-8991-6010a3511d76
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0035e5105f877d27114ded02f0cce5beb92c5881
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a771320793699811ddf79c2a3baca5ecb55309bb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66009838"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003230"
 ---
 # <a name="sqlgetinfo-returned-values-for-access"></a>SQLGetInfo devuelve valores para el acceso
 La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento y los correspondientes valores devueltos por **SQLGetInfo**. Esta información puede recuperarse transfiriendo el lenguaje C enumerado #defines a **SQLGetInfo** en el *fInfoType* argumento. Para obtener más información acerca de los valores devueltos por **SQLGetInfo**, consulte el *referencia del programador de ODBC*.  
@@ -30,7 +29,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 > [!NOTE]  
 >  Donde **SQLGetInfo** devuelve una máscara de bits de 32 bits, una barra vertical (&#124;) representa una operación OR bit a bit.  
   
-|InfoType|Valor devuelto|  
+|tipo de información|Valor devuelto|  
 |--------------|--------------------|  
 |SQL_ACCESSIBLE_PROCEDURES|"Y"|  
 |SQL_ACCESSIBLE_TABLES|"Y"|  
@@ -148,7 +147,7 @@ La tabla siguiente muestra el lenguaje C# defines para el *fInfoType* argumento 
 |SQL_OJ_CAPABILITIES|Varios valores|  
 |SQL_ORDER_BY_COLUMNS_IN_SELECT|"N"|  
 |SQL_OUTER_JOINS|"Y"|  
-|SQL_PROCEDURE_TERM|"QUERY"|  
+|SQL_PROCEDURE_TERM|"CONSULTA"|  
 |SQL_PROCEDURES|"Y"|  
 |SQL_QUOTED_IDENTIFIER_CASE|SQL_IC_MIXED|  
 |SQL_ROW_UPDATES|"N"|  

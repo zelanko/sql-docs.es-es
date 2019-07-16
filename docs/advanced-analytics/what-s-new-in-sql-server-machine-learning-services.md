@@ -5,17 +5,16 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
 ms.custom: sqlseattle
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b7daefb0f5e9514372fadd9377b05c84784e34
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: b3b5b5a8a1386086f03681db49b72aca5a294d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961668"
 ---
 # <a name="whats-new-in-sql-server-machine-learning-services"></a>Novedades de SQL Server Machine Learning Services
 
@@ -31,7 +30,7 @@ Esta versión agrega las características más solicitadas para las operaciones 
 > [!NOTE]
 > ¿Para lo que es nueva documentación de Java en SQL Server 2019, consulte el [Novedades de extensiones de lenguaje de SQL Server?](https://docs.microsoft.com/sql/language-extensions/language-extensions-whats-new)
 
-| Versión | Actualización de características |
+| Release | Actualización de características |
 |---------|----------------|
 | CTP 3.0 | No hay cambios. |
 | CTP 2.5 | No hay cambios. |
@@ -102,7 +101,7 @@ Además, **SQL Server 2016 R Server (independiente)** se publicó como una maner
 
 Para todos los anuncios de características de seguridad, consulte [What ' s New in SQL Server 2016](../sql-server/what-s-new-in-sql-server-2016.md).
 
-| Versión |Actualización de características |
+| Release |Actualización de características |
 |---------|----------------|
 | CU adiciones | [**Puntuación en tiempo real** ](real-time-scoring.md) se basa en las bibliotecas de C++ nativas para leer un modelo almacenado en un formato binario optimizado y, a continuación, generar predicciones sin tener que llamar al runtime de R. Esto hace que las operaciones de puntuación mucho más rápidas. Con la puntuación en tiempo real, puede ejecutar un procedimiento almacenado o realizar la puntuación en tiempo real desde el código de R. También está disponible para SQL Server 2016, si la instancia se actualiza a la versión más reciente de puntuación en tiempo real [!INCLUDE[rsql-platform-md](../includes/rsql-platform-md.md)]. |
 | Versión inicial | [**Integración de R para realizar análisis en bases de datos**](r/sql-server-r-services.md). <br/><br/> Paquetes de R para R que realiza la llamada funciones Transact-SQL y viceversa. Funciones de RevoScaleR proporcionan análisis de R a escala mediante la fragmentación de los datos en distintos componentes, coordinación y administración de procesamiento distribuido y agregación de resultados. En SQL Server 2016 R Services (In-Database), el motor de RevoScaleR se integra con una instancia del motor de base de datos, ella juntos en el mismo contexto de procesamiento de análisis y datos. <br/><br/>La integración a través de Transact-SQL y R [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql). Puede llamar a cualquier código de R mediante este procedimiento almacenado. Esta infraestructura segura permite la implementación de nivel empresarial de modelos Rn y secuencias de comandos que se pueden llamar desde una aplicación mediante un procedimiento almacenado simple. Mejoras adicionales del rendimiento se consiguen mediante transmisión por secuencias datos de SQL a los procesos de R y la paralelización de anillos de MPI. <br/><br/>Puede usar el T-SQL [PREDICT](../t-sql/queries/predict-transact-sql.md) realice función [puntuación nativa](sql-native-scoring.md) en un modelo previamente entrenado que se ha guardado previamente en el formato binario necesario.|

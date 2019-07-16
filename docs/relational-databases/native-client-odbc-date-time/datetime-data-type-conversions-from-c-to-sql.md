@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030429"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>Conversiones del tipo de datos de fecha y hora de C a SQL
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417226"
 
   En este tema se enumera los problemas para tener en cuenta al convertir de tipos C [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos de fecha y hora.  
   
- Las conversiones descritas en la tabla siguiente se aplican a conversiones realizadas en el cliente. En casos donde el cliente especifica la precisión de fracciones de segundo para un parámetro que es distinto del que se define en el servidor, es posible que produzca la conversión del cliente, pero el servidor devolverá un error cuando **SQLExecute** o  **SQLExecuteDirect** se llama. En concreto, ODBC trata cualquier truncamiento de fracciones de segundo como un error, mientras que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza un redondeo; por ejemplo, se produce redondeo cuando se pasa de **datetime2(6)** a **datetime2(2)**. Los valores de las columnas datetime se redondean a la fracción 1/300 de segundo, mientras que para las columnas smalldatetime, el servidor establece los segundos en cero.  
+ Las conversiones descritas en la tabla siguiente se aplican a conversiones realizadas en el cliente. En casos donde el cliente especifica la precisión de fracciones de segundo para un parámetro que es distinto del que se define en el servidor, es posible que produzca la conversión del cliente, pero el servidor devolverá un error cuando **SQLExecute** o  **SQLExecuteDirect** se llama. En concreto, ODBC trata cualquier truncamiento de fracciones de segundo como un error, mientras que el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] realiza un redondeo; por ejemplo, se produce redondeo cuando se pasa de **datetime2(6)** a **datetime2(2)** . Los valores de las columnas datetime se redondean a la fracción 1/300 de segundo, mientras que para las columnas smalldatetime, el servidor establece los segundos en cero.  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417226"
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   
--   **-**: No se admite la conversión. Se genera un registro de diagnóstico con SQLSTATE 07006 y el mensaje "Infracción del atributo de tipo de datos restringido".  
+-   **-** : No se admite la conversión. Se genera un registro de diagnóstico con SQLSTATE 07006 y el mensaje "Infracción del atributo de tipo de datos restringido".  
   
 -   **1**: Si los datos proporcionados no son válidos, se genera un registro de diagnóstico con SQLSTATE 22007 y el mensaje "Formato de fecha y hora no válido".  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417226"
   
     ||||  
     |-|-|-|  
-    |Tipo|Escala supuesta<br /><br /> 0|Escala supuesta<br /><br /> 1..9|  
+    |Type|Escala supuesta<br /><br /> 0|Escala supuesta<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      Sin embargo, para SQL_C_TYPE_TIMESTAMP, si las fracciones de segundo se pueden representar con tres dígitos sin perder datos y el tamaño de columna es 23 o superior, se generan exactamente tres dígitos de fracciones de segundo. Este comportamiento asegura la compatibilidad con versiones anteriores para aplicaciones desarrolladas utilizando controladores ODBC anteriores.  

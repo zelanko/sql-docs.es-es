@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069881"
 ---
 # <a name="features-to-watch-for"></a>Características para vigilar
 En esta sección se describe una serie de características que los desarrolladores de aplicaciones a menudo dan por sentado. De hecho, estas características varían considerablemente en soporte técnico y el modo de compatibilidad entre DBMS; es probable que causa problemas en aplicaciones interoperables error al código para ellos.  

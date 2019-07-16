@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 49bfc29d-f76a-4963-b0e6-b8532dfda850
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f86d56a9f9b2d490a1cb3043d9b0761a05a848fa
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8dfa779a664d398a6fb619bf17bf67bb52ab1bb0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005711"
 ---
 # <a name="srvparammaxlen-extended-stored-procedure-api"></a>srv_parammaxlen (API de procedimiento almacenado extendido)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -62,13 +61,13 @@ n
   
 |Nuevos tipos de datos|Longitud de datos de entrada|  
 |--------------------|-----------------------|  
-|**BITN**|**NULL:** 1<br /><br /> **CERO:** 1<br /><br /> **>=255:** N/A<br /><br /> **<255:** N/A|  
-|**BIGVARCHAR**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGCHAR**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGBINARY**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**BIGVARBINARY**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NCHAR**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
-|**NVARCHAR**|**NULL:** 255<br /><br /> **CERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BITN**|**NULL:** 1<br /><br /> **ZERO:** 1<br /><br /> **>=255:** N/D<br /><br /> **<255:** N/D|  
+|**BIGVARCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGBINARY**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**BIGVARBINARY**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**NCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
+|**NVARCHAR**|**NULL:** 255<br /><br /> **ZERO:** 255<br /><br /> **>=255:** 255<br /><br /> **<255:** 255|  
 |**NTEXT**|**NULL:** -1<br /><br /> **CERO:** -1<br /><br /> **>=255:** -1<br /><br /> **\<255:** -1|  
   
 ## <a name="remarks"></a>Notas  
@@ -77,9 +76,9 @@ n
  Cuando se usan parámetros en una llamada a un procedimiento almacenado remoto, estos pueden pasarse por nombre o por posición (sin nombre). Se produce un error si la llamada al procedimiento almacenado remoto se realiza con algunos parámetros pasados por nombre y otros pasados por posición. Sigue llamándose al controlador SRV_RPC, pero parece como si no hubiera ningún parámetro y **srv_rpcparams** devuelve 0.  
   
 > [!IMPORTANT]  
->  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409 https://msdn.microsoft.com/security/).  
+>  Debe revisar minuciosamente el código fuente de los procedimientos almacenados extendidos y debe probar las DLL compiladas antes de instalarlas en el servidor de producción. Para obtener información acerca de la revisión y pruebas de seguridad, vea este [sitio web de Microsoft](https://go.microsoft.com/fwlink/?LinkID=54761&amp;clcid=0x409https://msdn.microsoft.com/security/).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [srv_paraminfo &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-paraminfo-extended-stored-procedure-api.md)   
  [srv_rpcparams &#40;API de procedimiento almacenado extendido&#41;](../../relational-databases/extended-stored-procedures-reference/srv-rpcparams-extended-stored-procedure-api.md)  
   

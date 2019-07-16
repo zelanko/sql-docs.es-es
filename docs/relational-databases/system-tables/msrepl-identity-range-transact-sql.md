@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6e92a8e8-7667-4c98-b1c4-46735bac50d8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d4ba871571c3e5d82596e0ab252c9625ef645237
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 38f5037598e240585333d246a99c29c5fd8f40fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52809247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079162"
 ---
 # <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,13 +33,13 @@ ms.locfileid: "52809247"
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|El nombre del publicador.|  
 |**publisher_db**|**sysname**|El nombre de la base de datos de publicación.|  
-|**nombre de tabla**|**sysname**|Nombre de la tabla.|  
+|**nombre de tabla**|**sysname**|El nombre de la tabla.|  
 |**identity_support**|**int**|Especifica si se habilita el control automático de intervalo de identidad. 0 especifica que no se habilita el control automático de intervalo de identidad.|  
 |**next_seed**|**bigint**|Si se habilita el intervalo automático de identidad, indica el punto de inicio del siguiente intervalo.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**intervalo**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
 |**max_identity**|**bigint**|Límite máximo del intervalo de identidad.|  
-|**umbral**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**current_max**|**bigint**|Máximo actual que se puede asignar, aunque no necesariamente.|  
   
 ## <a name="see-also"></a>Vea también  

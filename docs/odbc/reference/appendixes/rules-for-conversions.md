@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 89f846a3-001d-496a-9843-ac9c38dc1762
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3ecee500204303dfcbcd8e179b9cb9cb0a94bae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ca64355a80ce8892f0ea0494e165d934d8d7a88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057090"
 ---
 # <a name="rules-for-conversions"></a>Reglas para conversiones
 Las reglas en esta sección se aplican las conversiones que involucran literales numéricos. Para los fines de estas reglas, se definen los términos siguientes:  
@@ -76,7 +75,7 @@ Las reglas en esta sección se aplican las conversiones que involucran literales
   
     -   Si NS es menor que 0, a continuación, se denominará Y el resultado de:  
   
-         '-' &AMP;#124; &AMP;#124; YP  
+         '-' &#124; &#124; YP  
   
          donde '&#124;&#124;' es el operador de concatenación de cadenas.  
   

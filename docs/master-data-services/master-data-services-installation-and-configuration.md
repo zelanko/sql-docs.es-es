@@ -10,13 +10,12 @@ ms.topic: quickstart
 ms.assetid: f6cd850f-b01b-491f-972c-f966b9fe4190
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 2d1cd12ff92b45c78eaf3dbe17a08c4e83d0f3b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e3d9346d301357fff052566cf66b7ce133b5e4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65994118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985284"
 ---
 # <a name="master-data-services-installation-and-configuration"></a>Instalación y configuración de Master Data Services
 
@@ -130,9 +129,9 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
   
 3.  En el **Database Server** página, especifique la instancia de SQL Server. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Agrega compatibilidad con instancia administrada de SQL Server. Establezca el valor de **instancia de SQL Server** al host de una base de datos de SQL Azure de instancia administrada. Por ejemplo, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] Agrega compatibilidad con instancia administrada de SQL Server. Establezca el valor de **instancia de SQL Server** al host de una base de datos de SQL Azure de instancia administrada. Por ejemplo: `xxxxxx.xxxxxx.database.windows.net`.
 
-4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **Probar conexión** para confirmar que puede conectarse a la base de datos con las credenciales para el tipo de autenticación seleccionado. Haga clic en **Siguiente**.
+4. Seleccione el **tipo de autenticación** y, a continuación, haga clic en **Probar conexión** para confirmar que puede conectarse a la base de datos con las credenciales para el tipo de autenticación seleccionado. Haga clic en **Next**.
 
     >Para [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], para conectarse a Azure SQL Database de instancia administrada, use uno de los siguientes tipos de autenticación:
     >
@@ -146,7 +145,7 @@ Si le interesa hacer cambios en la instalación de [!INCLUDE[ssCurrent_md](../in
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_ServerPage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-serverpage.png)  
   
-4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Siguiente**.
+4.  Escriba un nombre en el campo **Nombre de la base de datos** . Opcionalmente, para seleccionar una intercalación de Windows, desmarque la casilla **Intercalación predeterminada de SQL Server** y haga clic en una o varias de las opciones disponibles, como **Distinguir mayúsculas de minúsculas**. Haga clic en **Next**.
 
     ![mds_2016ConfigManager_CreateDatabaseWizard_DatabasePage](../master-data-services/media/mds-2016configmanager-createdatabasewizard-databasepage.png)  
   

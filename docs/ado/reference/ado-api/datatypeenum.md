@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c57eca6-9336-4b06-ba10-9fef5926b1d0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cb3e56d0219973be97b694ee2b22dbbb58eb0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27386894ce6d1d393505d49b4863a0ba9bf3320b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933227"
 ---
 # <a name="datatypeenum"></a>DataTypeEnum
 Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-object.md), [parámetro](../../../ado/reference/ado-api/parameter-object.md), o [propiedad](../../../ado/reference/ado-api/property-object-ado.md). El indicador de tipo OLE DB correspondiente se muestra entre paréntesis en la columna de descripción de la tabla siguiente.  
@@ -70,7 +69,7 @@ Especifica el tipo de datos de un [campo](../../../ado/reference/ado-api/field-o
 |**adWChar**|130|Indica un caracteres de Unicode terminada en null, cadena (DBTYPE_WSTR).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

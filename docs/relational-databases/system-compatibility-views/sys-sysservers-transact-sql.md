@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d02f186f-c00f-44a6-b38d-dc78a3d2145b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ede7e1a97ca121073760eaa0c5dcd309b5e3e412
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 03875d828940a2baa5d9f30f7beb58adb77abf07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47608081"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018108"
 ---
 # <a name="syssysservers-transact-sql"></a>sys.sysservers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47608081"
 |**srvproduct**|**sysname**|Nombre de producto del servidor remoto.|  
 |**ProviderName**|**nvarchar(128)**|Nombre de proveedor OLE DB para el acceso a este servidor.|  
 |**datasource**|**nvarchar(4000)**|Valor de origen de datos OLE DB.|  
-|**Ubicación**|**nvarchar(4000)**|Valor de ubicación OLE DB.|  
+|**location**|**nvarchar(4000)**|Valor de ubicación OLE DB.|  
 |**PROVIDERSTRING**|**nvarchar(4000)**|Valor de cadena de proveedor OLE DB.|  
 |**schemadate**|**datetime**|Fecha en que se actualizó la fila por última vez.|  
 |**topologyx**|**int**|No se usa.|  
@@ -55,15 +54,15 @@ ms.locfileid: "47608081"
 |**QueryTimeout**|**int**|Configuración del tiempo de espera para consultas sobre un servidor.|  
 |**srvnetname**|**Char (30)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**isremote**|**bit**|1 = El servidor es un servidor remoto.<br /><br /> 0 = El servidor es un servidor vinculado.|  
-|**RPC**|**bit**|1 = **sp_serveroption@rpc** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@rpc** establecido en **false** o **desactivar**.|  
+|**rpc**|**bit**|1 = **sp_serveroption@rpc** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@rpc** establecido en **false** o **desactivar**.|  
 |**pub**|**bit**|1 = **sp_serveroption@pub** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@pub** establecido en **false** o **desactivar**.|  
-|**Sub**|**bit**|1 = **sp_serveroption@sub** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@sub** establecido en **false** o **desactivar**.|  
+|**sub**|**bit**|1 = **sp_serveroption@sub** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@sub** establecido en **false** o **desactivar**.|  
 |**dist**|**bit**|1 = **sp_serveroption@dist** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@dist** establecido en **false** o **desactivar**.|  
 |**dpub**|**bit**|1 = **sp_serveroption@dpub** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@dpub** establecido en **false** o **desactivar**.|  
 |**rpcout**|**bit**|1 =  **sp_serveroption@rpc out** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@rpc out** establecido en **false** o **desactivar**.|  
 |**DataAccess**|**bit**|1 =  **sp_serveroption@data acceso** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@data acceso** establecido en **false** o **desactivar**.|  
 |**collationcompatible**|**bit**|1 =  **sp_serveroption@collation compatible** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@collation compatible** establecido en **false** o **desactivar**.|  
-|**Sistema**|**bit**|1 = **sp_serveroption@system** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@system** establecido en **false** o **desactivar**.|  
+|**system**|**bit**|1 = **sp_serveroption@system** establecido en **true** o **en**.<br /><br /> 0 = **sp_serveroption@system** establecido en **false** o **desactivar**.|  
 |**UseRemoteCollation**|**bit**|1 =  **sp_serveroption@remote intercalación** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@remote intercalación** establecido en **false** o **desactivar**.|  
 |**lazyschemavalidation**|**bit**|1 =  **sp_serveroption@lazy validación del esquema** establecido en **true** o **en**.<br /><br /> 0 =  **sp_serveroption@lazy validación del esquema** establecido en **false** o **desactivar**.|  
 |**intercalación**|**sysname**|Intercalación del servidor según lo establecido por  **sp_serveroption@collation nombre**.|  

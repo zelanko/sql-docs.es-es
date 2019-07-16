@@ -5,18 +5,17 @@ description: Obtenga información acerca de cómo crear clústeres de grupo de d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dd0d6fb9-df0a-41b9-9f22-9b558b2b2233
-ms.openlocfilehash: 39753e86cc4d6f82d8bddb0c10356d9be172e90f
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 85391418d74ac81b0857e705c1dc250add1143b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027311"
 ---
 # <a name="configure-ubuntu-cluster-and-availability-group-resource"></a>Configurar el clúster de Ubuntu y recursos del grupo de disponibilidad
 
@@ -29,7 +28,7 @@ Este documento explica cómo crear un clúster de tres nodos en Ubuntu y agregar
 
 Las siguientes secciones se guiarán por los pasos para configurar una solución de clúster de conmutación por error. 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Mapa de ruta
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 

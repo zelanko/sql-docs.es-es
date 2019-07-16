@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 67437853-8a55-44d9-9337-90689ebba730
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3293cbed44cc6eeae12c3c48247de8748ddad894
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 746ce8cec228b6fe9a9d36c4e0287ad7c2f3c517
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51664875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951672"
 ---
 # <a name="sqlcontext-object"></a>Objeto SqlContext
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,19 +29,19 @@ ms.locfileid: "51664875"
   
  **SqlContext** proporciona acceso a los siguientes componentes:  
   
--   **SqlPipe**: el **SqlPipe** objeto representa la "canalización" por qué los resultados fluyen hacia el cliente. Para obtener más información sobre la **SqlPipe** de objetos, consulte [SqlPipe, objetos](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
+-   **SqlPipe**: El **SqlPipe** objeto representa la "canalización" por qué los resultados fluyen hacia el cliente. Para obtener más información sobre la **SqlPipe** de objetos, consulte [SqlPipe, objetos](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqlpipe-object.md).  
   
--   **SqlTriggerContext**: el **SqlTriggerContext** objeto sólo se puede recuperar desde dentro de un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre la **SqlTriggerContext** de objetos, consulte [objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
+-   **SqlTriggerContext**: El **SqlTriggerContext** objeto sólo se puede recuperar desde dentro de un desencadenador CLR. Proporciona información sobre la operación que hizo que se activara el desencadenador y un mapa de las columnas actualizadas. Para obtener más información sobre la **SqlTriggerContext** de objetos, consulte [objeto SqlTriggerContext](../../relational-databases/clr-integration-data-access-in-process-ado-net/sqltriggercontext-object.md).  
   
--   **IsAvailable**: el **IsAvailable** propiedad se utiliza para determinar la disponibilidad de contexto.  
+-   **IsAvailable**: El **IsAvailable** propiedad se utiliza para determinar la disponibilidad de contexto.  
   
--   **WindowsIdentity**: el **WindowsIdentity** propiedad se utiliza para recuperar la identidad de Windows del llamador.  
+-   **WindowsIdentity**: El **WindowsIdentity** propiedad se utiliza para recuperar la identidad de Windows del llamador.  
   
 ## <a name="determining-context-availability"></a>Determinar la disponibilidad del contexto  
  Consulta el **SqlContext** clase para ver si el código que se está ejecutando actualmente se está ejecutando en proceso. Para ello, compruebe el **IsAvailable** propiedad de la **SqlContext** objeto. El **IsAvailable** propiedad es de solo lectura y devuelve **True** si se está ejecutando el código de llamada dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y si otros **SqlContext** pueden tener acceso a miembros. Si el **IsAvailable** propiedad devuelve **False**, todos los demás **SqlContext** los miembros de producir una **InvalidOperationException**, si se usa . Si **IsAvailable** devuelve **False**, cualquier intento de abrir un objeto de conexión que tiene "conexión de contexto = true" en la cadena de conexión se produce un error.  
   
 ## <a name="retrieving-windows-identity"></a>Recuperar la identidad de Windows  
- El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar algunas acciones utilizando la identidad del usuario que realiza la llamada, en lugar de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidad de proceso, a continuación, se debe obtener un token de suplantación a través de la **WindowsIdentity** propiedad de la  **SqlContext** objeto. El **WindowsIdentity** propiedad devuelve un **WindowsIdentity** instancia que representa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidad de Windows del llamador, o null si el cliente se autenticó utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación. Sólo los ensamblados marcan con **EXTERNAL_ACCESS** o **UNSAFE** permisos tener acceso a esta propiedad.  
+ El código CLR que se ejecuta dentro de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] siempre se invoca en el contexto de la cuenta de proceso. Si el código debe realizar algunas acciones utilizando la identidad del usuario que realiza la llamada, en lugar de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identidad de proceso, a continuación, se debe obtener un token de suplantación a través de la **WindowsIdentity** propiedad de la  **SqlContext** objeto. El **WindowsIdentity** propiedad devuelve un **WindowsIdentity** instancia que representa el [!INCLUDE[msCoName](../../includes/msconame-md.md)] identidad de Windows del llamador, o null si el cliente se autenticó utilizando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Autenticación. Solo los ensamblados marcados con **EXTERNAL_ACCESS** o **UNSAFE** permisos pueden tener acceso a esta propiedad.  
   
  Después de obtener el **WindowsIdentity** de objeto, los autores de llamadas pueden suplantar la cuenta de cliente y realizar acciones en su nombre.  
   

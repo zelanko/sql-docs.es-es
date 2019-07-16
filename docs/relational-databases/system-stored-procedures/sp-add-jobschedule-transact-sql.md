@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078188"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>Argumentos  
 `[ @job_id = ] job_id` Número de identificación del trabajo del trabajo al que se agrega la programación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
-`[ @job_name = ] 'job_name'` Nombre del trabajo al que se agrega la programación. *job_name* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
+`[ @job_name = ] 'job_name'` Nombre del trabajo al que se agrega la programación. *job_name* es **nvarchar (128)** , no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Cualquier *job_id* o *job_name* debe especificarse, pero no se pueden especificar ambos.  
   
-`[ @name = ] 'name'` Nombre de la programación. *nombre* es **nvarchar (128)**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` Nombre de la programación. *nombre* es **nvarchar (128)** , no tiene ningún valor predeterminado.  
   
 `[ @enabled = ] enabled_flag` Indica el estado actual de la programación. *enabled_flag* es **tinyint**, su valor predeterminado es **1** (habilitado). Si **0**, la programación no está habilitada. Si la programación está deshabilitada, el trabajo no se ejecutará.  
   

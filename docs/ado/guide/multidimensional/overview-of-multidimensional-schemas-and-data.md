@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5c3aa056447bd6e2eb7451db4d9af8090edc54d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e4681bb9e1fd1028ee1ddc2bd7f72efc03fb6c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923187"
 ---
 # <a name="overview-of-multidimensional-schemas-and-data"></a>Información general de esquemas y datos multidimensionales
 ## <a name="understanding-multidimensional-schemas"></a>Esquemas multidimensionales  

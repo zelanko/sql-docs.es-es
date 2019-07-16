@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5f57c32-efc0-4455-a74f-684dc2ae51f8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: db146c450afdae024942d543ff5c9fa5d7c169e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1724f86f9bfc34e505b9ba6ecddae4104270cd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62694217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094769"
 ---
 # <a name="syspublications-system-view-transact-sql"></a>syspublications (Vista del sistema) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,12 +32,12 @@ ms.locfileid: "62694217"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**description**|**nvarchar(255)**|La entrada descriptiva para la publicación.|  
-|**Nombre**|**sysname**|Nombre único asociado a la publicación.|  
+|**name**|**sysname**|Nombre único asociado a la publicación.|  
 |**pubid**|**int**|Columna de identidad que proporciona un id. único para la publicación.|  
 |**repl_freq**|**tinyint**|Frecuencia de replicación:<br /><br /> **0** = basada en transacciones (transaccional).<br /><br /> **1** = actualización programada de tabla (instantánea).|  
 |**status**|**tinyint**|Estado de la publicación:<br /><br /> **0** = inactivo.<br /><br /> **1** = activo.|  
 |**sync_method**|**tinyint**|Método de sincronización:<br /><br /> **0** = programa de copia masiva en modo nativo (bcp).<br /><br /> **1** = carácter BCP.<br /><br /> **3** = concurrent, que significa que se utiliza BCP nativo pero no se bloquean las tablas durante la instantánea.<br /><br /> **4** = Concurrent_c, que significa que se utiliza BCP de caracteres, pero las tablas no se bloquean durante la instantánea.|  
-|**snapshot_jobid**|**binary(16)**|Identifica el trabajo del agente programado para generar la instantánea inicial.|  
+|**snapshot_jobid**|**binary (16)**|Identifica el trabajo del agente programado para generar la instantánea inicial.|  
 |**independent_agent**|**bit**|Especifica si hay un Agente de distribución independiente para esta publicación.<br /><br /> **0** = la publicación utiliza un agente de distribución compartido, y cada par de base de datos de publicador y suscriptor de base de datos tiene un único agente compartido.<br /><br /> **1** = hay un agente de distribución independiente para esta publicación.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean o vuelven a crear cada vez que se ejecuta el agente de instantáneas, donde **1** significa que se crean cada vez que se ejecuta el agente.|  
 |**enabled_for_internet**|**bit**|Indica si los archivos de sincronización para la publicación se exponen en Internet a través del protocolo de transferencia de archivos (FTP) y otros servicios, donde **1** significa que puede obtenerse desde Internet.|  

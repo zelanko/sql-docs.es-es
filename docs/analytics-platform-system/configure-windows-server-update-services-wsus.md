@@ -2,19 +2,18 @@
 title: Configurar WSUS - Analytics Platform System | Microsoft Docs
 description: Estas instrucciones le guiarán a través de los pasos para usar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961122"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Configurar Windows Server Update Services (WSUS) de Analytics Platform System
 Estas instrucciones le guiarán a través de los pasos para usar al Asistente para que configuración de Windows Server Update Services (WSUS) para configurar WSUS para Analytics Platform System. Deberá configurar WSUS antes de aplicar las actualizaciones de software para el dispositivo. WSUS se ha instalado en la máquina virtual VMM del dispositivo.  
@@ -83,7 +82,7 @@ Para configurar WSUS, deberá:
   
     #### <a name="to-update-by-using-microsoft-update"></a>Actualizar con Microsoft Update  
   
-    1.  Si elige sincronizar con Microsoft Update, no es necesario realizar ningún cambio a la **Elegir servidor que precede** página. Haga clic en **Siguiente**.  
+    1.  Si elige sincronizar con Microsoft Update, no es necesario realizar ningún cambio a la **Elegir servidor que precede** página. Haga clic en **Next**.  
   
         ![WSUS-Sincronizar servidor que precede en](./media/configure-windows-server-update-services-wsus/WSUS_Wiz4a.png "WSUS_Wiz4a")  
   
@@ -153,7 +152,7 @@ Para configurar WSUS, deberá:
   
     Seleccione **actualizaciones críticas** y **las actualizaciones de seguridad** para las actualizaciones que se sincronizarán para el dispositivo de Analytics Platform System y, a continuación, haga clic en **siguiente**.  
   
-    ![Choose classifications](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
+    ![Elegir clasificaciones](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSChooseClassifications.png "SQL_Server_PDW_WSUSChooseClassifications")  
   
 10. Configure la programación de sincronización.  
   
@@ -167,7 +166,7 @@ Para configurar WSUS, deberá:
   
 12. Finalizar.  
   
-    Haga clic en **Finalizar**.  
+    Haga clic en **Finalizar**  
   
 ## <a name="bkmk_WSUSGroup"></a>Agrupar los servidores de dispositivo de WSUS  
 Después de configurar WSUS para Analytics Platform System, el siguiente paso es agrupar los servidores de aplicación. Mediante la adición de todos los servidores de dispositivo a un grupo, WSUS se podrán realizar las actualizaciones de software se aplican a todos los servidores en el dispositivo.  
@@ -179,7 +178,7 @@ Después de configurar WSUS para Analytics Platform System, el siguiente paso es
   
 1.  Abra la consola WSUS, haga clic en **todos los equipos** y, a continuación, haga clic en **Agregar grupo de equipos**.  
   
-    ![Add a computer group.](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
+    ![Agregar un grupo de equipos. ](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSAddComputerGroup.png "SQL_Server_PDW_WSUSAddComputerGroup")  
   
 2.  Escriba el nombre "AP" para el grupo de equipos y, a continuación, haga clic en **agregar**.  
   
@@ -195,7 +194,7 @@ Después de configurar WSUS para Analytics Platform System, el siguiente paso es
   
 5.  Seleccione el nuevo grupo de equipos que ha creado haciendo clic en la casilla de verificación y, a continuación, haga clic en **Aceptar**.  
   
-    ![Set Computer Group Membership](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
+    ![Pertenencia al grupo de equipos del conjunto](./media/configure-windows-server-update-services-wsus/SQL_Server_PDW_WSUSSetComputerGroupMembership.png "SQL_Server_PDW_WSUSSetComputerGroupMembership")  
   
 6.  Seleccione el nuevo grupo de equipos, cambiar su **estado** a **cualquier**y, a continuación, haga clic en **actualizar**. Todos los equipos ahora deben ser asignados a este grupo y aparece en el panel derecho. Por lo general es seguro continuar cuando los nodos muestran las advertencias como **este nodo no ha notificado estado aún**.  
   

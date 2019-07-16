@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1e155fb51bd5f78a3c4a639e9233746131ddf6f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ba3753a18d8e79848b0674e4738f2d2b811143e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032669"
 ---
 # <a name="spsyscollectorcreatecollectionitem-transact-sql"></a>sp_syscollector_create_collection_item (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,10 +46,10 @@ sp_syscollector_create_collection_item
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @collection_set_id = ] *collection_set_id*  
+ [ @collection_set_id =] *collection_set_id*  
  Es el identificador único local del conjunto de recopilaciones. *collection_set_id* es **int**.  
   
- [ @collector_type_uid = ] '*collector_type_uid*'  
+ [ @collector_type_uid =] '*collector_type_uid*'  
  Es el GUID que identifica el tipo de recopilador que se utilizará para este elemento *collector_type_uid* es **uniqueidentifier** con ningún valor predeterminado... Para obtener una lista de los tipos de recopilador, consulte la vista del sistema syscollector_collector_types.  
   
  [ @name =] '*nombre*'  

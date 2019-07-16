@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961905"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de Python para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ Tanto si es un programador SQL nuevo para Python, o un desarrollador de Python e
 
 + [Lección 1: Explorar y visualizar datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
 
-+ [Lección 2: Crear características de datos mediante funciones SQL personalizadas](sqldev-py4-create-data-features-using-t-sql.md)
++ [Lección 2: Crear características de datos mediante funciones SQL personalizadas](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Lección 3: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
@@ -56,7 +55,7 @@ Después de que el modelo se ha guardado en la base de datos, puede llamar el mo
 
 + [Permisos](../security/user-permission.md)
 
-+ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
++ [Base de datos de demostración de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
 
 Todas las tareas que pueden hacerse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] los procedimientos almacenados de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

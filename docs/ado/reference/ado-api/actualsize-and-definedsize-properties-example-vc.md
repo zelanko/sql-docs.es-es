@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6597d6a834771872abab75d9be3fbf3127eca539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921470"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>Ejemplo ActualSize y DefinedSize propiedades (VC ++)
 Este ejemplo se usa el [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) y [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) propiedades para mostrar el tamaño definido y el tamaño real de un campo.  

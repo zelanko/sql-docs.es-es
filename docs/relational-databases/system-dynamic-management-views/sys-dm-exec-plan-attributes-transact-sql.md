@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: dacf3ab3-f214-482e-aab5-0dab9f0a3648
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c17f1ba2b6e57fe9194d4cbf4a6e365e65a89d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b16284240d4e93e8de3f56a704c97efcfebdc4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013220"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097727"
 ---
 # <a name="sysdmexecplanattributes-transact-sql"></a>sys.dm_exec_plan_attributes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,12 +47,12 @@ sys.dm_exec_plan_attributes ( plan_handle )
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |atributo|**varchar(128)**|Nombre del atributo asociado a este plan. La tabla inmediatamente debajo de ésta enumeran los posibles atributos, sus tipos de datos y sus descripciones.|  
-|value|**sql_variant**|Valor del atributo asociado a este plan.|  
+|valor|**sql_variant**|Valor del atributo asociado a este plan.|  
 |is_cache_key|**bit**|Indica si el atributo se utiliza como parte de la clave de búsqueda en caché para el plan.|  
 
 En la tabla anterior, **atributo** puede tener los siguientes valores:
 
-|Attribute|Tipo de datos|Descripción|  
+|Atributo|Tipo de datos|Descripción|  
 |---------------|---------------|-----------------|  
 |set_options|**int**|Indica los valores de las opciones con las que se compiló el plan.|  
 |objectid|**int**|Una de las claves principales utilizadas para buscar un objeto en la caché. Este es el objeto identificador almacenado en [sys.objects](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md) para objetos de base de datos (procedimientos, vistas, desencadenadores etc.). Con los planes de tipo "ad hoc" o preparados, es un valor hash interno del texto del lote.|  
@@ -82,7 +81,7 @@ En la tabla anterior, **atributo** puede tener los siguientes valores:
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="remarks"></a>Comentarios  
   

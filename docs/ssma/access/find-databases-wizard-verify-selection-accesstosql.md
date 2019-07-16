@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 62e20e03-50cc-4ac8-8072-524d194d2ec3
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f2b3abf36923d11776ac08f4e4386981eb2aad48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2edf02c31b8b52d6743113e6c6c5878bf5180a83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024737"
 ---
 # <a name="find-databases-wizard-verify-selection-accesstosql"></a>Buscar bases de datos (comprobar selección) (AccessToSQL)
 La página de selección de comprobación del Asistente para encontrar las bases de datos incluyen los archivos que se agregarán a SSMA. Si la lista de archivos es incorrecta, haga clic en **volver** para modificar la lista. En caso contrario, haga clic en **finalizar** para agregar los archivos.  

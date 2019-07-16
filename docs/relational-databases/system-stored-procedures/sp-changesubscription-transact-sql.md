@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9d91fe3-47cf-4915-b6bf-14c9c3d8a029
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c81843220b9613bfc59f03d197f369e77a850f84
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cddc14c14054ecfa81a963d15a7a604e8d71d085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016537"
 ---
 # <a name="spchangesubscription-transact-sql"></a>sp_changesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,9 +56,9 @@ sp_changesubscription [ @publication = ] 'publication'
   
 `[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de suscripción. *destination_db* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es la propiedad para cambiar de la suscripción especificada. *propiedad* es **nvarchar (30)**, y puede tener uno de los valores de la tabla.  
+`[ @property = ] 'property'` Es la propiedad para cambiar de la suscripción especificada. *propiedad* es **nvarchar (30)** , y puede tener uno de los valores de la tabla.  
   
-`[ @value = ] 'value'` Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (4000)**, y puede tener uno de los valores de la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor para el elemento especificado *propiedad*. *valor* es **nvarchar (4000)** , y puede tener uno de los valores de la tabla.  
   
 |Property|Valor|Descripción|  
 |--------------|-----------|-----------------|  
@@ -74,7 +73,7 @@ sp_changesubscription [ @publication = ] 'publication'
 ||**0**|Se utiliza la autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para la conexión con el suscriptor.|  
 |**subscriber_provider**||Identificador de programación único (PROGID) mediante el cual se registra el proveedor OLE DB para los orígenes de datos que no son de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
 |**subscriber_providerstring**||Cadena de conexión específica del proveedor OLE DB que identifica el origen de datos. *Esta propiedad sólo es válida para que no sean de* [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *los suscriptores.*|  
-|**subscriptionstreams**||Es el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor. Un intervalo de valores de **1** a **64** es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Esta propiedad debe ser **0** para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores, los publicadores de Oracle o suscripciones punto a punto.|  
+|**flujos de suscripción**||Es el número de conexiones permitidas por Agente de distribución para aplicar lotes de cambios en paralelo a un suscriptor. Un intervalo de valores de **1** a **64** es compatible con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicadores. Esta propiedad debe ser **0** para que no sean de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] los suscriptores, los publicadores de Oracle o suscripciones punto a punto.|  
 |**subscriber_type**|**1**|Servidor del origen de datos ODBC|  
 ||**3**|Proveedor OLE DB|  
 |**memory_optimized**|**bit**|Indica que la suscripción admite tablas optimizadas para memoria. *memory_optimized* es **bit**, donde 1 es igual a true (la suscripción es compatible con tablas optimizadas para memoria).|  

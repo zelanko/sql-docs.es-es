@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: 1016db6e-9950-4ae2-a004-bd4171e27359
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d0b15109f261e1d793235593c54a0178b7e76f2d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 152265e072d9f21baae715692cada63ee4f7ab11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47805943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005183"
 ---
 # <a name="sysexternaldatasources-transact-sql"></a>Sys.external_data_sources (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -31,10 +30,10 @@ ms.locfileid: "47805943"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |data_source_id|**int**|Id. de objeto para el origen de datos externo.||  
-|NAME|**sysname**|Nombre del origen de datos externo.||  
+|name|**sysname**|Nombre del origen de datos externo.||  
 |ubicación|**nvarchar(4000)**|La cadena de conexión, que incluye el protocolo, dirección IP y puerto para el origen de datos externo.||  
 |type_desc|**nvarchar(255)**|Tipo que se muestra como una cadena de origen de datos.|HADOOP, RDBMS, SHARD_MAP_MANAGER, RemoteDataArchiveTypeExtDataSource|  
-|Tipo|**tinyint**|Tipo de origen de datos aparece como un número.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
+|type|**tinyint**|Tipo de origen de datos aparece como un número.|0 - HADOOP<br /><br /> 1 - RDBMS<br /><br /> 2 - SHARD_MAP_MANAGER<br /><br /> 3 - RemoteDataArchiveTypeExtDataSource|  
 |resource_manager_location|**nvarchar(4000)**|Para que escriba HADOOP, la dirección IP y puerto de ubicación del Administrador de recursos de Hadoop. Esto se usa para enviar un trabajo en un origen de datos de Hadoop.<br /><br /> NULL para otros tipos de orígenes de datos externos.||  
 |credential_id|**int**|El identificador de objeto de la base de datos con ámbito de credencial que se usa para conectarse al origen de datos externo.||  
 |database_name|**sysname**|De tipo RDBMS, el nombre de la base de datos remoto. Para el tipo, SHARD_MAP_MANAGER, el nombre de la base de datos del Administrador de mapa de particiones. NULL para otros tipos de orígenes de datos externos.||  

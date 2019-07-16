@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964515"
 ---
 # <a name="createrecordset-method-rds"></a>Ejemplo del método CreateRecordset (RDS)
 Crea una vacía, desconectado [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -47,10 +46,10 @@ object.CreateRecordset(ColumnInfos)
  *ColumnsInfos*  
  Un **Variant** matriz de atributos que define cada columna en el **Recordset** creado. Cada definición de columna contiene una matriz de cuatro atributos necesarios y un atributo opcional.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
-|Name|Nombre del encabezado de columna.|  
-|Tipo|Entero del tipo de datos.|  
+|NOMBRE|Nombre del encabezado de columna.|  
+|Type|Entero del tipo de datos.|  
 |Tamaño|Entero del ancho en caracteres, independientemente del tipo de datos.|  
 |Nulabilidad|Valor booleano.|  
 |Escala (opcional)|Este atributo opcional define la escala para los campos numéricos. Si no se especifica este valor, se truncará a una escala de tres valores numéricos. No se ve afectada la precisión, pero el número de dígitos después del separador decimal se truncará a tres.|  
@@ -68,26 +67,26 @@ object.CreateRecordset(ColumnInfos)
   
 |Longitud|Constante|Number|Substitution|  
 |------------|--------------|------------|------------------|  
-|Fixed|**adTinyInt**|16||  
-|Fixed|**adSmallInt**|2||  
-|Fixed|**adInteger**|3||  
-|Fixed|**adBigInt**|20||  
-|Fixed|**adUnsignedTinyInt**|17||  
-|Fixed|**adUnsignedSmallInt**|18||  
-|Fixed|**adUnsignedInt**|19||  
-|Fixed|**adUnsignedBigInt**|21||  
-|Fixed|**adSingle**|4||  
-|Fixed|**adDouble**|5||  
-|Fixed|**adCurrency**|6||  
-|Fixed|**adDecimal**|14||  
-|Fixed|**adNumeric**|131||  
-|Fixed|**adBoolean**|11||  
-|Fixed|**adError**|10||  
-|Fixed|**adGuid**|72||  
-|Fixed|**adDate**|7||  
-|Fixed|**adDBDate**|133||  
-|Fixed|**adDBTime**|134||  
-|Fixed|**adDBTimestamp**|135|7|  
+|Corregido|**adTinyInt**|16||  
+|Corregido|**adSmallInt**|2||  
+|Corregido|**adInteger**|3||  
+|Corregido|**adBigInt**|20||  
+|Corregido|**adUnsignedTinyInt**|17||  
+|Corregido|**adUnsignedSmallInt**|18||  
+|Corregido|**adUnsignedInt**|19||  
+|Corregido|**adUnsignedBigInt**|21||  
+|Corregido|**adSingle**|4||  
+|Corregido|**adDouble**|5||  
+|Corregido|**adCurrency**|6||  
+|Corregido|**adDecimal**|14||  
+|Corregido|**adNumeric**|131||  
+|Corregido|**adBoolean**|11||  
+|Corregido|**adError**|10||  
+|Corregido|**adGuid**|72||  
+|Corregido|**adDate**|7||  
+|Corregido|**adDBDate**|133||  
+|Corregido|**adDBTime**|134||  
+|Corregido|**adDBTimestamp**|135|7|  
 |Variable|**adBSTR**|8|130|  
 |Variable|**adChar**|129|200|  
 |Variable|**adVarChar**|200||  

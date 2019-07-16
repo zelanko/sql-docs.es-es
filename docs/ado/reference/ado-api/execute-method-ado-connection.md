@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0489bb43ee3b41ebf4334da0d6b8045e117acc39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4999b1e21ec145713cadae28ff7ee8a64dd460b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932890"
 ---
 # <a name="execute-method-ado-connection"></a>Execute (método) (conexión de ADO)
 Ejecuta la consulta especificada, instrucción SQL, procedimiento almacenado o texto específico del proveedor.  
@@ -40,7 +39,7 @@ Set recordset = connection.Execute (CommandText, RecordsAffected, Options)
   
 #### <a name="parameters"></a>Parámetros  
  *CommandText*  
- Un **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,**, se pueden usar los nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo si un nombre de tabla de "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
+ Un **cadena** valor que contiene la instrucción SQL, el procedimiento almacenado, una dirección URL o el texto específico del proveedor para ejecutar. **Opcionalmente,** , se pueden usar los nombres de tabla, pero solo si el proveedor es compatible con SQL. Por ejemplo si un nombre de tabla de "Clientes" se utiliza, ADO antepondrá automáticamente la sintaxis estándar Select de SQL para formar y pasar "SELECT * FROM Customers" como un [!INCLUDE[tsql](../../../includes/tsql-md.md)] instrucción al proveedor.  
   
  *RecordsAffected*  
  Opcional. Un **largo** variable a la que el proveedor devuelve el número de registros que se ven afectados por la operación.  

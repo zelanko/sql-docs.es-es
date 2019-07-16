@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 978b8205-535b-461c-91f3-af9b08eca467
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a9264ed33ffeea224f69b8a880e235753ead1467
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13cf57e181c3fbb1371c10b554eb9da344a951d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004732"
 ---
 # <a name="dbosysjobsteps-transact-sql"></a>dbo.sysjobsteps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ ms.locfileid: "62470750"
 |**retry_attempts**|**int**|Número de reintentos si el paso no se ejecuta correctamente.|  
 |**retry_interval**|**int**|Tiempo que se debe esperar entre cada intento.|  
 |**os_run_priority**|**int**|Reservado.|  
-|**output_file_name**|**nvarchar(200)**|Nombre del archivo en el que la salida del paso se guarda cuando **subsistema** es TSQL, PowerShell, o **CmdExec**_._|  
+|**output_file_name**|**nvarchar(200)**|Nombre del archivo en el que la salida del paso se guarda cuando **subsistema** es TSQL, PowerShell, o **CmdExec** _._|  
 |**last_run_outcome**|**int**|Resultado de la ejecución anterior del paso del trabajo.<br /><br /> **0** = error<br /><br /> **1** = se ha realizado correctamente<br /><br /> **2** = reintento<br /><br /> **3** = cancelado<br /><br /> **5** = desconocido|  
 |**last_run_duration**|**int**|Duración (hhmmss) del paso la última vez que se ejecutó.|  
 |**last_run_retries**|**int**|Número de reintentos en la última ejecución del paso del trabajo.|  

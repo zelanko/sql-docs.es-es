@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc storage-pool mount reference
+title: referencia de montaje de bloque de almacenamiento de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de montaje de mssqlctl bdc bloque de almacenamiento.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b6a412c6d7cab9fb869a9aa8ee1b62ae0ed3f717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958000"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>montaje de bloque de almacenamiento de bdc mssqlctl
 
@@ -26,8 +25,8 @@ El siguiente artículo proporciona la referencia para la **montaje del bloque de
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[mssqlctl bdc storage-pool mount create](#mssqlctl-bdc-storage-pool-mount-create) | Crear montajes de almacenes remotos en HDFS.
-[mssqlctl bdc storage-pool mount delete](#mssqlctl-bdc-storage-pool-mount-delete) | Eliminar montajes de almacenes remotos en HDFS.
+[montaje de bloque de almacenamiento de bdc mssqlctl crear](#mssqlctl-bdc-storage-pool-mount-create) | Crear montajes de almacenes remotos en HDFS.
+[eliminación de montaje de bloque de almacenamiento de bdc mssqlctl](#mssqlctl-bdc-storage-pool-mount-delete) | Eliminar montajes de almacenes remotos en HDFS.
 [estado de montaje de bloque de almacenamiento de bdc mssqlctl](#mssqlctl-bdc-storage-pool-mount-status) | Estado de mount(s).
 ## <a name="mssqlctl-bdc-storage-pool-mount-create"></a>montaje de bloque de almacenamiento de bdc mssqlctl crear
 Crear montajes de almacenes remotos en HDFS. Deben especificar las credenciales para tener acceso al almacén remoto, si hay alguno, mediante la variable de entorno MOUNT_CREDENTIALS como una lista separada por comas de clave de pares nombre-valor. Las comas de las claves o valores deben ser de escape.
@@ -62,7 +61,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc storage-pool mount delete
+## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>eliminación de montaje de bloque de almacenamiento de bdc mssqlctl
 Eliminar montajes de almacenes remotos en HDFS.
 ```bash
 mssqlctl bdc storage-pool mount delete --mount-path 

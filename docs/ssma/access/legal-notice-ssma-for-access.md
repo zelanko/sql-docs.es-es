@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 563cd62cb600be54ab1e4412db4d8869bd84e18f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d22a41b67d4b33d573a1c3ecc5f2235560cceea3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947514"
 ---
 # <a name="legal-notice-ssma-for-access"></a>Aviso legal (SSMA para Access)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

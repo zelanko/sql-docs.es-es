@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b36c576fb5bb3bb3cc168430902223802ca937a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a8e6a8187936e7a2f824315123937cf9c7eca9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933866"
 ---
 # <a name="spdropmessage-transact-sql"></a>sp_dropmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_dropmessage [ @msgnum = ] message_number
  Debe pertenecer a la **sysadmin** y **serveradmin** roles fijos de servidor.  
   
 ## <a name="remarks"></a>Comentarios  
- A menos que **todos los** se especifica para *lenguaje*todo localizado versiones de un mensaje deben quitarse antes de Estados Unidos para poder quitar a su vez la versión en inglés (EE.UU.) del mensaje.  
+ A menos que **todos los** se especifica para *lenguaje*todo localizado versiones de un mensaje deben quitarse antes de Estados Unidos Se puede quitar la versión en inglés del mensaje.  
   
 ## <a name="examples"></a>Ejemplos  
   

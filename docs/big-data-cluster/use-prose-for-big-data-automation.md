@@ -5,17 +5,16 @@ description: En este artículo se describe cómo usar el Acelerador de código d
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 12/06/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: c26a6efa1f96ac5016d1560f0ae4d9e02f0d369d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: e21c172bf886695a3d424d25907a0c36e4b22f20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957685"
 ---
 # <a name="data-wrangling-using-prose-code-accelerator"></a>Uso del Acelerador de código de PROSE de Wrangling de datos
 
@@ -114,7 +113,7 @@ Para obtener más información, consulte el [documentación](https://aka.ms/pros
 Otro escenario común es detectar patrones en una columna de cadena con el fin de limpieza o de agrupación. Por ejemplo, puede tener una columna de fecha con fechas en varios formatos diferentes. Con el fin de normalizar los valores, puede escribir instrucciones condicionales mediante expresiones regulares.
 
 
-|   |Name                      |BirthDate      |
+|   |NOMBRE                      |BirthDate      |
 |---|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Desconocido        |

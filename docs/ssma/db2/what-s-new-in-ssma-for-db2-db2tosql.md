@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 02d320990b255cdee2a6d75ac88a93ab98ce5ff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 036ae77a6d65ff396df60f54b38eeffba4e202f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086202"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>Novedades de SSMA para DB2 (DB2ToSQL)
 
@@ -35,7 +34,7 @@ La versión v8.2 de SSMA para DB2 se ha mejorado con para solucionar problemas c
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La versión v8.1 de SSMA para DB2 se ha mejorado para proporcionar correcciones de destino que están diseñadas para mejorar las métricas de calidad y la conversión.
 

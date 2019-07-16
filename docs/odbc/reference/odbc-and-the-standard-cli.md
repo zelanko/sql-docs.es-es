@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 79b9c268-16ac-4b80-b451-f9dcd8c02ca4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adddf32a29d3a891a4a2c6fb2353648e62b0d9c5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5222282bce2acf49cc6a144667ddd691528b3693
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944845"
 ---
 # <a name="odbc-and-the-standard-cli"></a>ODBC y la CLI estándar
 ODBC se alinea con las siguientes especificaciones y estándares que tratan con la interfaz de nivel de llamada (CLI). (Las funciones ODBC son un superconjunto de cada uno de estos estándares).  

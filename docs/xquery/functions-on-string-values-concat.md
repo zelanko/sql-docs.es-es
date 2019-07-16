@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d50afd20-a297-445e-be9e-13b48017e7ca
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a2dd68c36887c373c7102b150ffc1032750eb52
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 063eca49a6a4d69e84e8a3d05221b632d0690bef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099827"
 ---
 # <a name="functions-on-string-values---concat"></a>Funciones usadas en valores de cadena: concat
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ fn:concat ($string as xs:string?
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos de ejemplo AdventureWorks.  
   
 ### <a name="a-using-the-concat-xquery-function-to-concatenate-strings"></a>A. Usar la función de XQuery concat() para concatenar cadenas  
- Para un modelo de producto determinado, esta consulta devuelve una cadena creada mediante la concatenación del período de garantía y la descripción de la misma. En el documento de descripción del catálogo, el elemento <`Warranty`> está formado por los elementos secundarios <`WarrantyPeriod`> y <`Description`>.  
+ Para un modelo de producto determinado, esta consulta devuelve una cadena creada mediante la concatenación del período de garantía y la descripción de la misma. En el documento de descripción de catálogo, el <`Warranty`> elemento está formado por <`WarrantyPeriod`> y <`Description`> elementos secundarios.  
   
 ```  
 WITH XMLNAMESPACES (  
@@ -78,7 +77,7 @@ WHERE  PD.ProductModelID=28
   
 -   El documento en el que se ejecuta la consulta utiliza espacios de nombres. Por lo tanto, el **espacio de nombres** palabra clave se usa para definir el prefijo del espacio de nombres. Para obtener más información, consulte [prólogo de XQuery](../xquery/modules-and-prologs-xquery-prolog.md).  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <Product ProductModelID="28" ProductModelName="Road-450">1 year-parts and labor</Product>  

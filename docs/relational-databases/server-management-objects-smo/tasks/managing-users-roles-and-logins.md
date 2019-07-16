@@ -14,31 +14,30 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 80a84d208ecd75b86df312d8d520a332669a8ce8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ae6c07026bbbc12fc526eca1b5079bcc9cf36782
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030257"
 ---
 # <a name="managing-users-roles-and-logins"></a>Administrar usuarios, roles e inicios de sesión
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Login> representa los inicios de sesión. Si existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se puede agregar a un rol del servidor. El rol de servidor representado por la <xref:Microsoft.SqlServer.Management.Smo.ServerRole> objeto. El objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> representa el rol de la base de datos y el objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> representa el rol de aplicación.  
+  En SMO, el objeto <xref:Microsoft.SqlServer.Management.Smo.Login> representa los inicios de sesión. Si existe un inicio de sesión en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se puede agregar a un rol del servidor. El objeto <xref:Microsoft.SqlServer.Management.Smo.ServerRole> representa el rol del servidor. El objeto <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> representa el rol de la base de datos y el objeto <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> representa el rol de aplicación.  
   
- Los privilegios asociados con el nivel de servidor se enumeran como propiedades de la <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> objeto. Los privilegios del nivel del servidor se pueden conceder, denegar o revocar de las cuentas de inicio de sesión individuales.  
+ Los privilegios asociados al nivel del servidor se enumeran como propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.ServerPermission>. Los privilegios del nivel del servidor se pueden conceder, denegar o revocar de las cuentas de inicio de sesión individuales.  
   
- Cada <xref:Microsoft.SqlServer.Management.Smo.Database> objeto tiene un <xref:Microsoft.SqlServer.Management.Smo.UserCollection> objeto que especifica todos los usuarios en la base de datos. Cada usuario está asociado a un inicio de sesión. Se puede asociar un inicio de sesión con usuarios en más de una base de datos. El <xref:Microsoft.SqlServer.Management.Smo.Login> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> método puede utilizarse para enumerar todos los usuarios de cada base de datos que está asociado con el inicio de sesión. Alternativamente, la propiedad <xref:Microsoft.SqlServer.Management.Smo.User> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> especifica el inicio de sesión asociado con el usuario.  
+ Cada objeto <xref:Microsoft.SqlServer.Management.Smo.Database> tiene un objeto <xref:Microsoft.SqlServer.Management.Smo.UserCollection> que especifica todos los usuarios en la base de datos. Cada usuario está asociado a un inicio de sesión. Se puede asociar un inicio de sesión con usuarios en más de una base de datos. El método <xref:Microsoft.SqlServer.Management.Smo.Login> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> se puede utilizar para hacer una lista de todos los usuarios en cada base de datos que está asociada al inicio de sesión. Alternativamente, la propiedad <xref:Microsoft.SqlServer.Management.Smo.User> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> especifica el inicio de sesión asociado con el usuario.  
   
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] las bases de datos también tienen roles que especifican un conjunto de privilegios de nivel de base de datos que permiten a un usuario realizar tareas específicas. A diferencia de los roles del servidor, los roles de la base de datos no son fijos. Se pueden crear, modificar y quitar. Los privilegios y usuarios pueden estar asignados a un rol de la base de datos para la administración masiva.  
+ Las bases de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] también tienen roles que especifican un conjunto de privilegios en el nivel de base de datos que permiten a un usuario realizar tareas concretas. A diferencia de los roles del servidor, los roles de la base de datos no son fijos. Se pueden crear, modificar y quitar. Los privilegios y usuarios pueden estar asignados a un rol de la base de datos para la administración masiva.  
   
 ## <a name="example"></a>Ejemplo  
  Para los siguientes ejemplos de código, deberá seleccionar el entorno de programación, la plantilla de programación y el lenguaje de programación en los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
   
 ## <a name="enumerating-logins-and-associated-users-in-visual-c"></a>Enumerar inicios de sesión y usuarios asociados en Visual C#  
- Cada usuario de una base de datos está asociado a un inicio de sesión. El inicio de sesión puede asociarse a usuarios de más de una base de datos. El ejemplo de código muestra cómo llamar al método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para hacer una lista de todos los usuarios de la base de datos que están asociados al inicio de sesión. El ejemplo crea un inicio de sesión y un usuario en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos para asegurarse de que no hay información de asignación que enumerar.  
+ Cada usuario de una base de datos está asociado a un inicio de sesión. El inicio de sesión puede asociarse a usuarios de más de una base de datos. El ejemplo de código muestra cómo llamar al método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para hacer una lista de todos los usuarios de la base de datos que están asociados al inicio de sesión. En el ejemplo se crean un inicio de sesión y un usuario en la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para asegurarse de que hay información de asignación que mostrar.  
   
 ```csharp  
 {   
@@ -64,7 +63,7 @@ foreach ( Database db in srv.Databases) {
 ```  
   
 ## <a name="enumerating-logins-and-associated-users-in-powershell"></a>Enumerar inicios de sesión y usuarios asociados en PowerShell  
- Cada usuario de una base de datos está asociado a un inicio de sesión. El inicio de sesión puede asociarse a usuarios de más de una base de datos. El ejemplo de código muestra cómo llamar al método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para hacer una lista de todos los usuarios de la base de datos que están asociados al inicio de sesión. El ejemplo crea un inicio de sesión y un usuario en el [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] base de datos para asegurarse de que no hay información de asignación que enumerar.  
+ Cada usuario de una base de datos está asociado a un inicio de sesión. El inicio de sesión puede asociarse a usuarios de más de una base de datos. El ejemplo de código muestra cómo llamar al método <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Login> para hacer una lista de todos los usuarios de la base de datos que están asociados al inicio de sesión. En el ejemplo se crean un inicio de sesión y un usuario en la base de datos [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] para asegurarse de que hay información de asignación que mostrar.  
   
 ```powershell  
 # Set the path context to the local, default instance of SQL Server.  

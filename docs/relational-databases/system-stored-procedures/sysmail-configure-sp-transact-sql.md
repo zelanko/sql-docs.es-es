@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 73b33c56-2bff-446a-b495-ae198ad74db1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: abe47df497b61d35c66bfebfb3ba5a75fad0e183
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: 7984fba52f813644c9dcb25bca2beb123be85622
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017725"
 ---
 # <a name="sysmailconfiguresp-transact-sql"></a>sysmail_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@parameter_name** =] **'**_parameter_name_**'**  
+ [ **@parameter_name** =] **'** _parameter_name_ **'**  
  Nombre del parámetro que se va a cambiar.  
   
- [**@parameter_value** =] **'**_parameter_value_**'**  
+ [ **@parameter_value** =] **'** _parameter_value_ **'**  
  Valor nuevo del parámetro.  
   
- [**@description** =] **'**_descripción_**'**  
+ [ **@description** =] **'** _descripción_ **'**  
  Descripción del parámetro.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
@@ -62,7 +61,7 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
   
 ||||  
 |-|-|-|  
-|Nombre del parámetro|Descripción|Valor predeterminado|  
+|Nombre de parámetro|Descripción|Valor predeterminado|  
 |*AccountRetryAttempts*|Número de veces que el proceso de correo electrónico externo intenta enviar el mensaje de correo electrónico con cada cuenta del perfil especificado.|**1**|  
 |*AccountRetryDelay*|Cantidad de tiempo en segundos que el proceso de correo electrónico externo espera entre cada intento de envío de un mensaje.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|Cantidad de tiempo mínima en segundos que el proceso de correo electrónico externo permanece activo. Si el Correo electrónico de base de datos está enviando muchos mensajes, aumente este valor para mantener activo el Correo electrónico de base de datos y evitar una sobrecarga de inicios y detenciones frecuentes.|**600**|  

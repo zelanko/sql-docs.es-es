@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719723"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053393"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "47719723"
 |-----------------|---------------|-----------------|  
 |langid|**smallint**|Id. de idioma único.|  
 |dateformat|**nchar(3)**|Orden de la fecha (por ejemplo, DMA).|  
-|datefirst|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
-|Actualizar|**int**|Reservado para uso del sistema.|  
-|NAME|**sysname**|Nombre de idioma oficial, por ejemplo, en francés.|  
+|datefirst|**tinyint**|Primer día de la semana: 1 para el lunes, 2 para el martes y así sucesivamente hasta 7 para el domingo.|  
+|upgrade|**int**|Reservado para uso del sistema.|  
+|name|**sysname**|Nombre de idioma oficial, por ejemplo, en francés.|  
 |alias|**sysname**|Nombre alternativo del idioma (por ejemplo, francés).|  
 |meses|**nvarchar(372)**|Lista separada por comas con los nombres completos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 20 caracteres.|  
 |shortmonths|**nvarchar(132)**|Lista separada por comas con los nombres cortos de los meses, de enero a diciembre, en la que cada mes puede contener hasta 9 caracteres.|  
@@ -53,7 +52,7 @@ ms.locfileid: "47719723"
 |Nombre en español|LCID de Windows|Id. de grupo de mensajes del [!INCLUDE[ssDE](../../includes/ssde-md.md)]|  
 |---------------------|------------------|-----------------------------------------|  
 |Inglés|3082|3082|  
-|German|1031|1031|  
+|Alemán|1031|1031|  
 |Francés|1036|1036|  
 |Japonés|1041|1041|  
 |Danish|1030|1030|  

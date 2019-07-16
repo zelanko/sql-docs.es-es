@@ -10,20 +10,19 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469079"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959261"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Uso de cuadernos en Azure Data Studio
 
 En este artículo se describe cómo iniciar la experiencia del cuaderno en Azure Data Studio y cómo empezar a crear sus propios cuadernos. También muestra cómo escribir utilizando diferentes kernels de cuadernos.
 
 
-## <a name="connect-to-sql-server"></a>Conectar a SQL Server
+## <a name="connect-to-sql-server"></a>Conexión con SQL Server
 
 Puede conectarse al tipo de conexión de Microsoft SQL Server en Azure Data Studio.
 En Azure Data Studio, también puede presionar F1 y haga clic en **nueva conexión** y conectarse a SQL Server.
@@ -51,7 +50,7 @@ El núcleo de SQL también puede utilizarse para conectarse a instancias de serv
 
 ![image7](media/sql-notebooks/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>Núcleo SQL
 
 En las celdas de código en el Bloc de notas, similar a nuestro editor de consultas, se admite SQL moderna experiencia que facilita sus tareas diarias con características integradas, como un editor SQL enriquecido, IntelliSense y fragmentos de código integrados de codificación. Fragmentos de código le permiten generar la sintaxis correcta de SQL para crear bases de datos, tablas, vistas, procedimientos almacenados, etc. y para actualizar los objetos de base de datos existente. Usar fragmentos de código para crear rápidamente copias de la base de datos para el desarrollo o con fines de prueba y para generar y ejecutar scripts.
 
@@ -71,23 +70,23 @@ Núcleo de SQL para conectarse a la instancia del servidor de PostgreSQL
 
 Resultados de la consulta
 
-![image20](media/sql-notebooks/pgsql-cell-results.png)
+![Image20](media/sql-notebooks/pgsql-cell-results.png)
 
 ### <a name="configure-python-for-notebooks"></a>Configurar Python para cuadernos
 
 Al seleccionar cualquiera de los kernels aparte de SQL en la lista desplegable de kernel, esto le pide que **configurar Python para cuadernos de**. Las dependencias de Bloc de notas se instalan en una ubicación especificada, pero puede decidir si va a establecer la ubicación de instalación. Esta instalación puede tardar algún tiempo y se recomienda no cerrar la aplicación hasta que finalice la instalación. Una vez finalizada la instalación, puede empezar a escribir código en el idioma.
 
-![image21](media/sql-notebooks/configure-python.png)
+![Image21](media/sql-notebooks/configure-python.png)
 
 Una vez que la instalación se realiza correctamente, encontrará una notificación en el historial de tareas junto con la ubicación del servidor de back-end de Jupyter que se ejecuta en el Terminal de salida.
 
-![image22](media/sql-notebooks/jupyter-backend.png)
+![Image22](media/sql-notebooks/jupyter-backend.png)
 
 |Kernel|Descripción
 |:-----|:-----
-| SQL Kernel | Escribir código de SQL destinado a la base de datos relacional.
+| Núcleo SQL | Escribir código de SQL destinado a la base de datos relacional.
 |PySpark3 y Kernel PySpark| Escribir código de Python mediante el proceso de Spark del clúster.
-|Spark Kernel|Escribir código de Scala y R mediante el proceso de Spark del clúster.
+|Kernel de Spark|Escribir código de Scala y R mediante el proceso de Spark del clúster.
 |Python Kernel|Escribir código de Python para el desarrollo local.
 
 `Attach to` proporciona el contexto para el Kernel adjuntar. Si usas el núcleo de SQL, puede `Attach to` cualquiera de las instancias de SQL Server.
@@ -118,7 +117,7 @@ Blocs de notas abierto en Azure Data Studio son predeterminados **confianza**.
 
 Si abre un bloc de notas de algún otro origen, se abrirá en **que no son de confianza** modo y, a continuación, se puede realizar **confianza**.
 
-### <a name="save"></a>Guardar 
+### <a name="save"></a>Save 
 
 Puede guardar el cuaderno por **CTRL+s** o haciendo clic en el **Guardar archivo**, **Guardar como...**  y **archivo Guardar todo** comandos en el menú archivo y **archivo: Guardar** los comandos escritos en la paleta de comandos.
 
@@ -130,7 +129,7 @@ Haga clic en **Ejecutar**.
 
 La aplicación de Spark se inicia y devuelve el siguiente resultado:
 
-![image12](media/sql-notebooks/pyspark.png)
+![Image12](media/sql-notebooks/pyspark.png)
 
 ### <a name="spark-kernel--scala-language"></a>Kernel de Spark | Lenguaje de scala
 

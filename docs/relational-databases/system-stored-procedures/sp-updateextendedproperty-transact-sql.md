@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7f02360f-cb9e-48b4-b75f-29b4bc9ea304
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 347e8d170006cb289b421171851140b18e64f14b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2f1c1c856cadbb4f005a99d5a5d49dc0c1280a8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898418"
 ---
 # <a name="spupdateextendedproperty-transact-sql"></a>sp_updateextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_updateextendedproperty
  Es el valor asociado a la propiedad. *valor* es **sql_variant**, su valor predeterminado es null. El tamaño de *valor* no puede ser superior a 7.500 bytes.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son el ENSAMBLADO, contrato, notificación de eventos, grupo de archivos, tipo de mensaje, la función de partición, esquema de partición, Guía de PLAN, REMOTE SERVICE BINDING, ROUTE, esquema, servicio, usuario, DESENCADENADOR, tipo y NULL.  
+ Es el usuario o el tipo definido por el usuario. *level0_object_type* es **varchar (128)** , su valor predeterminado es null. Las entradas válidas son el ENSAMBLADO, contrato, notificación de eventos, grupo de archivos, tipo de mensaje, la función de partición, esquema de partición, Guía de PLAN, REMOTE SERVICE BINDING, ROUTE, esquema, servicio, usuario, DESENCADENADOR, tipo y NULL.  
   
 > [!IMPORTANT]  
 >  USER y TYPE como tipos de nivel 0 se quitarán en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Evite utilizar estas características en los nuevos trabajos de programación y planee modificar las aplicaciones que actualmente las utilizan. En lugar de USER, use SCHEMA como tipo de nivel 0. Para TYPE, use SCHEMA como tipo de nivel 0 y TYPE como tipo de nivel 1.  
@@ -120,7 +119,7 @@ EXEC sp_updateextendedproperty
 GO  
 ```  
   
-### <a name="b-updating-an-extended-property-on-a-database"></a>B. Actualizar una propiedad extendida de una base de datos  
+### <a name="b-updating-an-extended-property-on-a-database"></a>b. Actualizar una propiedad extendida de una base de datos  
  El siguiente ejemplo crea primero una propiedad extendida en la base de datos de muestra [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] y después actualiza el valor de esa propiedad.  
   
 ```  
@@ -138,9 +137,9 @@ GO
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
  [sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addextendedproperty-transact-sql.md)   
- [los procedimientos sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [Sys.extended_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/extended-properties-catalog-views-sys-extended-properties.md)  
   
   

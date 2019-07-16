@@ -2,19 +2,18 @@
 title: Permisos GRANT T-SQL - almacenamiento de datos paralelos | Microsoft Docs
 description: Permisos GRANT de Transact-SQL para las operaciones de base de datos en almacenamiento de datos paralelos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 01ef7b199a07be8bbc2dc1dee40d9c4d5771db1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15798edc4d6a9b1f00c8dd489dfed76a39e5f340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960945"
 ---
 # <a name="grant-t-sql-permissions-for-parallel-data-warehouse"></a>Permisos GRANT de Transact-SQL para el almacenamiento de datos paralelos
 Permisos GRANT de Transact-SQL para las operaciones de base de datos en almacenamiento de datos paralelos.

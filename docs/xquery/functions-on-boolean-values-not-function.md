@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 93dfc377-45f1-4384-9392-560d9331a915
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5a39312142a2d81761320c1e5f75cefe2a85b9d7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8711190a6d3cbae0c716f7f62af478b70b9473e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038913"
 ---
 # <a name="functions-on-boolean-values---not-function"></a>Funciones usadas en valores booleanos: función not 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn:not($arg as item()*) as xs:boolean
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-not-xquery-function-to-find-product-models-whose-catalog-descriptions-do-not-include-the-specifications-element"></a>A. Usar la función not() de XQuery para buscar modelos de producto cuyas descripciones de catálogo no incluyen el \<especificaciones > elemento.  
- La siguiente consulta genera XML que contiene identificadores correspondientes a modelos de producto cuyas descripciones de catálogo no incluyen el elemento <`Specifications`>.  
+ La siguiente consulta genera XML que contiene los identificadores de modelo de producto para los modelos de producto cuyas descripciones de catálogo no incluyen el <`Specifications`> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' AS pd)  
@@ -70,7 +69,7 @@ WHERE CatalogDescription.exist('
   
  Este conjunto de resultados está vacío, porque cada descripción de catálogo del modelo de producto se incluye la \<especificaciones > elemento.  
   
-### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>B. Usar la función not() de XQuery para recuperar ubicaciones de centros de trabajo que no contienen el atributo MachineHours.  
+### <a name="b-using-the-not-xquery-function-to-retrieve-work-center-locations-that-do-not-have-a-machinehours-attribute"></a>b. Usar la función not() de XQuery para recuperar ubicaciones de centros de trabajo que no contienen el atributo MachineHours.  
  La siguiente consulta se especifica para la columna Instructions. En esta columna, se almacenan las instrucciones de fabricación de los modelos de producto.  
   
  Para un modelo de producto determinado, la consulta recupera las ubicaciones de los centros de trabajo para las que no se ha especificado MachineHours. Es decir, el atributo **MachineHours** no se especifica para el \<ubicación > elemento.  
@@ -94,7 +93,7 @@ WHERE ProductModelID=7
   
 -   En la consulta, el **no (@MachineHours)** predicado devuelve True si no hay ningún **MachineHours** atributo.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 ProductModelID Result   

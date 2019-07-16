@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ca5e6844-368c-42e2-b187-6e5f5afc8df3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 10a17dba594359ca83fbc3b15e148fb72356e162
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6ce0fa8270a05d8c3385cbc7b5c25edeaa84bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899636"
 ---
 # <a name="sysdmoswaitingtasks-transact-sql"></a>sys.dm_os_waiting_tasks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,13 +54,13 @@ ms.locfileid: "62998004"
   
  **Propietario del recurso de grupo de subprocesos:**  
   
--   threadpool id=scheduler\<hex-address>  
+-   Id. de grupo de subprocesos = programador\<hex-address >  
   
  **Propietario del recurso de consulta en paralelo:**  
   
--   exchangeEvent id={Port|Pipe}\<hex-address> WaitType=\<exchange-wait-type> nodeId=\<exchange-node-id>  
+-   exchangeEvent id = {puerto | Canalización}\<hex-address > WaitType =\<tipo de espera de exchange > nodeId =\<Id. de nodo de exchange >  
   
- **Exchange-wait-type:**  
+ **Exchange-espera-type:**  
   
 -   e_waitNone  
   
@@ -79,7 +78,7 @@ ms.locfileid: "62998004"
   
  **Propietario del recurso de bloqueo:**  
   
--   \<type-specific-description> id=lock\<lock-hex-address> mode=\<mode> associatedObjectId=\<associated-obj-id>  
+-   \<tipo-specific-description > Id. = bloqueo\<bloqueo-hex-address > modo =\<modo > associatedObjectId =\<asociados-obj-id >  
   
      **\<tipo-specific-description > puede ser:**  
   
@@ -103,7 +102,7 @@ ms.locfileid: "62998004"
   
     -   Para HOBT: Hobtlock hobtid =\<hobt-id > subresource =\<hobt-subresource > dbid =\<db-id >  
   
-    -   For ALLOCATION_UNIT: allocunitlock hobtid=\<hobt-id> subresource=\<alloc-unit-subresource> dbid=\<db-id>  
+    -   Para ALLOCATION_UNIT: Allocunitlock hobtid =\<hobt-id > subresource =\<alloc-unit-subresource > dbid =\<db-id >  
   
      **\<modo > puede ser:**  
   
@@ -138,7 +137,7 @@ ms.locfileid: "62998004"
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
  
 ## <a name="example"></a>Ejemplo
 En este ejemplo identificará las sesiones bloqueadas.  Ejecute el [!INCLUDE[tsql](../../includes/tsql-md.md)] consultar en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4f9f9ae346e58c9ea5db95386fcc80264ec82e95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54e37940062427008e9b90f6cda4cec825a721ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915290"
 ---
 # <a name="sqlsetdriverconnectinfo-function"></a>Función SQLSetDriverConnectInfo
 **Conformidad**  
@@ -50,7 +49,7 @@ SQLRETURN SQLSetDriverConnectInfo(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Igual que [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) relacionados con cualquier error de validación de entrada, salvo que se va a usar el Administrador de controladores un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentarios  

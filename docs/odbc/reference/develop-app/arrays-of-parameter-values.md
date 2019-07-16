@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9b572c5b-1dfe-40af-bebd-051548ab6d90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 03479a0187c7720a595b550290a8f5ac8197fa9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e65928cd078a3f05032f4e4fb400e3e2eb1f27a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077071"
 ---
 # <a name="arrays-of-parameter-values"></a>Matrices de valores de parámetro
 A menudo resulta útil para las aplicaciones pasar matrices de parámetros. Por ejemplo, con las matrices de parámetros y un parametrizada **insertar** instrucción, una aplicación puede insertar un número de filas a la vez. Hay varias ventajas al uso de matrices. En primer lugar, se reduce el tráfico de red porque los datos para muchas de las instrucciones se envían en un único paquete (si el origen de datos admite matrices de parámetros de forma nativa). En segundo lugar, algunos orígenes de datos pueden ejecutar instrucciones SQL mediante matrices con más rapidez que ejecutar el mismo número de instrucciones SQL independientes. Por último, cuando los datos se almacenan en una matriz, como suele ser el caso de los datos de la pantalla, la aplicación puede enlazar todas las filas de una columna en particular con una sola llamada a **SQLBindParameter** y actualizarlas mediante la ejecución de una sola instrucción.  

@@ -5,17 +5,16 @@ description: Artículo de referencia para los comandos de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958176"
 ---
 # <a name="mssqlctl-bdc-config"></a>configuración de bdc mssqlctl
 
@@ -91,7 +90,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-bdc-config-list"></a>mssqlctl bdc config list
+## <a name="mssqlctl-bdc-config-list"></a>lista de configuración de bdc mssqlctl
 Enumera las opciones de perfil de configuración disponibles para su uso en `bdc config init`
 ```bash
 mssqlctl bdc config list [--config-profile -c] 

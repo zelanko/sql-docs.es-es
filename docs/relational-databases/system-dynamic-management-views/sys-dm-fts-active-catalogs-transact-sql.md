@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3157284e23c2ec2ccee6df89b24c557403ecc5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91a811fd2c868194ad0fc45d75cae7649a324672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944400"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950995"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "65944400"
 |**database_id**|**int**|Id. de la base de datos que contiene el catálogo de texto completo activo.|  
 |**catalog_id**|**int**|Id. del catálogo de texto completo activo.|  
 |**memory_address**|**varbinary(8)**|Dirección de búferes de memoria asignados para la actividad de llenado relacionada con este catálogo de texto completo.|  
-|**Nombre**|**nvarchar(128)**|Nombre del catálogo de texto completo activo.|  
+|**name**|**nvarchar(128)**|Nombre del catálogo de texto completo activo.|  
 |**is_paused**|**bit**|Indica si el llenado del catálogo de texto completo activo se ha pausado.|  
 |**status**|**int**|Estado actual del catálogo de texto completo. Uno de los siguientes:<br /><br /> 0 = Inicializando<br /><br /> 1 = Preparado<br /><br /> 2 = En pausa<br /><br /> 3 = Error temporal<br /><br /> 4 = Necesario volver a montar<br /><br /> 5 = Apagado<br /><br /> 6 = En modo inactivo para copia de seguridad<br /><br /> 7 = La copia de seguridad se realiza a través del catálogo<br /><br /> 8 = El catálogo está dañado|  
 |**status_description**|**nvarchar(120)**|Descripción del estado actual del catálogo de texto completo activo.|  
@@ -62,7 +61,7 @@ ms.locfileid: "65944400"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
 ## <a name="physical-joins"></a>Combinaciones físicas  
  ![Combinaciones significativas de esta vista de administración dinámica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "combinaciones significativas de esta vista de administración dinámica")  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 2c17fba0-7a3c-453c-91b7-f801e7b39ccb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 179885276bdda206e4414bd22675e97449df9129
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: fc61ad955be287faad20289245ca4520efcd4bbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67687611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913174"
 ---
 # <a name="create-a-distributed-transaction"></a>Crear una transacción distribuida
 
@@ -44,7 +43,7 @@ El Coordinador de transacciones distribuidas de Microsoft (MSDTC) permite a las 
 
 MSDTC está instalado para Microsoft SQL Server local, pero no está disponible para el servicio de nube de Microsoft Azure SQL Database.
 
-MSDTC es llamado por el controlador de SQL Server Native Client para conectividad abierta de base de datos (ODBC), cuando su C++ programa administra una transacción distribuida. El controlador ODBC de Native Client tiene un administrador de transacciones que sea compatible con el Abrir grupo Distributed transacción procesamiento (DTP) estándar XA. Se requiere este cumplimiento por MSDTC. Por lo general, todos los comandos de administración de transacciones se envían a través de este controlador ODBC de Native Client. La secuencia es como sigue:
+MSDTC es llamado por el controlador de SQL Server Native Client para conectividad abierta de base de datos (ODBC), cuando su C++ programa administra una transacción distribuida. El controlador ODBC de Native Client tiene un administrador de transacciones que sea compatible con el Abrir grupo Distributed transacción procesamiento (DTP) estándar XA. Se requiere este cumplimiento por MSDTC. Por lo general, todos los comandos de administración de transacciones se envían a través de este controlador ODBC de Native Client. La secuencia es la siguiente:
 
 1. Su C++ aplicación ODBC de Native Client comienza una transacción mediante una llamada a [SQLSetConnectAttr](../../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), con el modo de confirmación automática desactivado.
 

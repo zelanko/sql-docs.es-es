@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7a8c298a-2160-491d-a300-d36f45568d9c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ebb09b3118c2d16041d4ca60bf738d0fda561346
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eeb8fae9c563e675499dec47839acdd0a003765a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020510"
 ---
 # <a name="retrieving-output-parameters-using-sqlgetdata"></a>Recuperar parámetros de salida mediante SQLGetData
 Antes de ODBC 3.8, una aplicación podría recuperar solo los parámetros de salida de una consulta con un búfer de salida enlazada. Sin embargo, es difícil asignar un búfer muy grande cuando el tamaño del valor del parámetro es muy grande (por ejemplo, una imagen grande). ODBC 3.8 presenta una nueva forma de recuperar parámetros de salida en partes. Ahora puede llamar una aplicación **SQLGetData** con un búfer pequeño varias veces para recuperar un valor de parámetro grande. Esto es similar a la recuperación de datos de columna grande.  
@@ -72,7 +71,7 @@ Antes de ODBC 3.8, una aplicación podría recuperar solo los parámetros de sal
 |Los datos incluyen un conjunto de resultados y parámetros de salida transmitidos|SQL_SUCCESS|Recuperar el conjunto de resultados con **SQLBindCol** y **SQLGetData**.<br /><br /> Llame a **SQLMoreResults** para iniciar el procesamiento de los parámetros de salida transmitidos. Debe devolver SQL_PARAM_DATA_AVAILABLE.<br /><br /> Use **SQLParamData** y **SQLGetData** para recuperar los parámetros de salida transmitidos.|  
 |Los datos incluyen un mensaje de advertencia y parámetros de salida transmitidos|SQL_SUCCESS_WITH_INFO|Use **SQLGetDiagRec** y **SQLGetDiagField** para procesar los mensajes de advertencia.<br /><br /> Llame a **SQLMoreResults** para iniciar el procesamiento de los parámetros de salida transmitidos. Debe devolver SQL_PARAM_DATA_AVAILABLE.<br /><br /> Use **SQLParamData** y **SQLGetData** para recuperar los parámetros de salida transmitidos.|  
 |Datos incluyen un mensaje de advertencia, conjunto de resultados y parámetros de salida transmitidos|SQL_SUCCESS_WITH_INFO|Use **SQLGetDiagRec** y **SQLGetDiagField** para procesar los mensajes de advertencia. A continuación, llame a **SQLMoreResults** que empiece a procesar el resultado de conjunto.<br /><br /> Recuperar un conjunto de resultados con **SQLBindCol** y **SQLGetData**.<br /><br /> Llame a **SQLMoreResults** para iniciar el procesamiento de los parámetros de salida transmitidos. **SQLMoreResults** debe devolver SQL_PARAM_DATA_AVAILABLE.<br /><br /> Use **SQLParamData** y **SQLGetData** para recuperar los parámetros de salida transmitidos.|  
-|Consulta con parámetros de entrada DAE, por ejemplo, un parámetro (DAE) de entrada/salida por secuencias|SQL NEED_DATA|Llame a **SQLParamData** y **SQLPutData** DAE de enviar datos de parámetro de entrada.<br /><br /> Una vez procesados todos los parámetros de entrada DAE, **SQLParamData** puede devolver cualquier código de retorno que **SQLExecute** y **SQLExecDirect** puede devolver. A continuación, se pueden aplicar los casos en esta tabla.<br /><br /> Si el código de retorno es SQL_PARAM_DATA_AVAILABLE, parámetros de salida transmitidos están disponibles. Una aplicación debe llamar a **SQLParamData** nuevo para recuperar el token para el parámetro de salida transmitidos, como se describe en la primera fila de esta tabla.<br /><br /> Si el código de retorno es SQL_SUCCESS, hay un conjunto de resultados para procesar o el procesamiento está completo.<br /><br /> Si el código de retorno es SQL_SUCCESS_WITH_INFO, hay mensajes de advertencia para procesar.|  
+|Consulta con parámetros de entrada DAE, por ejemplo, un parámetro (DAE) de entrada/salida por secuencias|NEED_DATA SQL|Llame a **SQLParamData** y **SQLPutData** DAE de enviar datos de parámetro de entrada.<br /><br /> Una vez procesados todos los parámetros de entrada DAE, **SQLParamData** puede devolver cualquier código de retorno que **SQLExecute** y **SQLExecDirect** puede devolver. A continuación, se pueden aplicar los casos en esta tabla.<br /><br /> Si el código de retorno es SQL_PARAM_DATA_AVAILABLE, parámetros de salida transmitidos están disponibles. Una aplicación debe llamar a **SQLParamData** nuevo para recuperar el token para el parámetro de salida transmitidos, como se describe en la primera fila de esta tabla.<br /><br /> Si el código de retorno es SQL_SUCCESS, hay un conjunto de resultados para procesar o el procesamiento está completo.<br /><br /> Si el código de retorno es SQL_SUCCESS_WITH_INFO, hay mensajes de advertencia para procesar.|  
   
  Después de **SQLExecute**, **SQLExecDirect**, o **SQLMoreResults** devuelve SQL_PARAM_DATA_AVAILABLE, un error de secuencia de función se producirá si una aplicación llama a un función que no está en la lista siguiente:  
   

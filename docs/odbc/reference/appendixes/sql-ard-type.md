@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057055"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 El identificador del tipo SQL_ARD_TYPE se utiliza para indicar que los datos en un búfer será del tipo especificado en el campo SQL_DESC_CONCISE_TYPE de la descartar. SQL_ARD_TYPE se escribe en el *TargetType* argumento de una llamada a **SQLGetData** en lugar de un tipo de datos específica y permite escribir una aplicación para cambiar los datos del búfer cambiando el descriptor campo. Este valor bloquea el tipo de datos de la  *\*TargetValuePtr* búfer para el campo descriptor. (No se especificaron SQL_ARD_TYPE en una llamada a **SQLBindCol** o **SQLBindParameter** porque el tipo de búfer dependiente ya está asociado a los campos de SQL_DESC_TYPE, SQL_DESC_CONCISE_TYPE y se puede cambiar en cualquier momento cambiando cualquiera de esos campos.)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f83c2e41-5722-47c3-b5b8-bf0f8cbe05d3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ee9a48b4bec625e4d64caf20aa1b5c8eaefe34f3
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 8e75db08f283631cf9b5daf064790786a1abc10f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946413"
 ---
 # <a name="path-expressions---using-abbreviated-syntax"></a>Expresiones de ruta de acceso: Usar una sintaxis abreviada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ child::ProductDescription[attribute::ProductModelID=19]
   
      Si reemplaza la expresión de ruta de acceso por la sintaxis abreviada, `//act:telephoneNumber`, obtendrá los mismos resultados.  
   
--   El **self::node()** en un paso puede abreviarse con un solo punto (.). Sin embargo, el punto no es equivalente o intercambiable con el **self::node()**.  
+-   El **self::node()** en un paso puede abreviarse con un solo punto (.). Sin embargo, el punto no es equivalente o intercambiable con el **self::node()** .  
   
      Por ejemplo, en la consulta siguiente, el uso de un punto representa un valor y no un nodo:  
   

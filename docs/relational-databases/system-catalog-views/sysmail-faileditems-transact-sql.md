@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a31562c5-358e-4cfc-a72d-b3faccc53851
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92e8031b42b3b0b54aac09913e7eb54e5be07e86
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 586727c86dca057abeb221c828720ea38e24d7b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47624093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060211"
 ---
 # <a name="sysmailfaileditems-transact-sql"></a>sysmail_faileditems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "47624093"
 |**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
-|**Asunto**|**nvarchar(510)**|Línea de asunto del mensaje.|  
-|**Cuerpo**|**ntext**|El cuerpo del mensaje.|  
-|**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
+|**subject**|**nvarchar(510)**|Línea de asunto del mensaje.|  
+|**body**|**ntext**|El cuerpo del mensaje.|  
+|**body_format**|**varchar(20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
 |**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
-|**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
+|**Sensibilidad**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
-|**Attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
+|**Attachment_encoding**|**varchar(20)**|Tipo de datos adjuntos.|  
 |**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
@@ -57,7 +56,7 @@ ms.locfileid: "47624093"
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  
 |**send_request_user**|**sysname**|Usuario que envió el mensaje. Se trata del contexto de usuario del procedimiento del Correo electrónico de base de datos, no del campo De: del mensaje.|  
 |**sent_account_id**|**int**|Identificador de la cuenta del Correo electrónico de base de datos utilizada para enviar el mensaje. Siempre es NULL para esta vista.|  
-|**sent_status**|**varchar (8)**|Estado del mensaje. Siempre **no se pudo** para esta vista.|  
+|**sent_status**|**varchar(8)**|Estado del mensaje. Siempre **no se pudo** para esta vista.|  
 |**sent_date**|**datetime**|Fecha y hora en que se eliminó el mensaje de la cola de correo electrónico.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  

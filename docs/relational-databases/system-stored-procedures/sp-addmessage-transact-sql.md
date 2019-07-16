@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54746d30-f944-40e5-a707-f2d9be0fb9eb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 63d206e6b6f32aeb12e2e04b9edc2ef1d84599b2
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 52d3db15c46af273e2f151e769a6b04be322ce5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061843"
 ---
 # <a name="spaddmessage-transact-sql"></a>sp_addmessage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
 > [!NOTE]  
 >  Si se escribe un mensaje en el registro de aplicación Windows, también se escribe en el archivo de registro de errores del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-`[ \@replace = ] 'replace'` Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si se sustituye un mensaje en inglés de EE.UU., Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
+`[ \@replace = ] 'replace'` Si se especifica como la cadena *reemplazar*, un mensaje de error existente se sobrescribe con el nuevo nivel de texto y la gravedad del mensaje. *Reemplace* es **varchar(7)** con el valor predeterminado es NULL. Esta opción debe especificarse si *msg_id* ya existe. Si sustituye un EE. UU. Se reemplaza el mensaje en inglés, el nivel de gravedad para todos los mensajes en todos los otros lenguajes que tienen el mismo *msg_id*.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -65,13 +64,13 @@ sp_addmessage [ @msgnum= ] msg_id , [ @severity= ] severity , [ @msgtext= ] 'msg
  None  
   
 ## <a name="remarks"></a>Comentarios  
- Para las versiones no inglesas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], la versión en inglés de EE.UU. de un mensaje deberá existir para que pueda agregarse el mensaje en otro idioma. La gravedad de las dos versiones del mensaje debe coincidir.  
+ Para las versiones no inglesas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Estados Unidos. Versión en inglés de un mensaje debe existir antes de que el mensaje se puede agregar otro idioma. La gravedad de las dos versiones del mensaje debe coincidir.  
   
  Para traducir mensajes que contienen parámetros, utilice los números de parámetro que corresponden a los parámetros del mensaje original. Inserte un signo de exclamación (!) detrás de cada número de parámetro.  
   
 |Mensaje original|Mensaje traducido|  
 |----------------------|-----------------------|  
-|‘Parámetro 1 del mensaje original: %s, <br /><br /> parámetro 2: %d'|‘Parámetro 1 del mensaje traducido: %1!, <br /><br /> parámetro 2: %2!'|  
+|‘Parámetro 1 del mensaje original: %s,<br /><br /> parámetro 2: %d'|‘Parámetro 1 del mensaje traducido: %1!,<br /><br /> parámetro 2: %2!'|  
   
  Debido a las diferencias sintácticas que existen entre los idiomas, puede que los números de los parámetros del mensaje traducido no aparezcan en la misma secuencia que en el mensaje original.  
   
@@ -93,7 +92,7 @@ GO
 ```  
   
 ### <a name="b-adding-a-message-in-two-languages"></a>b. Agregar un mensaje en dos idiomas  
- En el ejemplo siguiente se agrega primero un mensaje en inglés de EE.UU. y luego se agrega el mismo mensaje en francés`.`  
+ En el ejemplo siguiente se agrega primero un mensaje en EE. UU. La versión en inglés y, a continuación, agrega el mismo mensaje en francés`.`  
   
 ```  
 USE master;  
@@ -109,7 +108,7 @@ GO
 ```  
   
 ### <a name="c-changing-the-order-of-parameters"></a>C. Cambiar el orden de parámetros  
- En el ejemplo siguiente se agrega primero un mensaje en inglés de EE.UU. y luego se agrega un mensaje traducido con el orden de los parámetros cambiado.  
+ En el ejemplo siguiente se agrega primero un mensaje en EE. UU. La versión en inglés y, a continuación, agrega un mensaje localizado en el que se cambia el orden de los parámetros.  
   
 ```  
 USE master;  

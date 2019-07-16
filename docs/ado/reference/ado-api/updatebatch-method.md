@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23f9314c-b027-4a51-aeae-50caa2977740
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 11c930efdffe5eb685494843f2b0abe7b753ea3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e9d74fe938ce486a4cd15573af8166dbed12ba6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937841"
 ---
 # <a name="updatebatch-method"></a>Método UpdateBatch
 Escribe todas las actualizaciones por lotes pendientes en el disco.  

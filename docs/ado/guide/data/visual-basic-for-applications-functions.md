@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ccbdea9d-f9cf-4b0c-ade2-2d65311e12dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ada9b4c6b1e22769e15714f4da8c81ce5e1f48ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25cac9bffce7602ce211be7f83c7e55239061282
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923461"
 ---
 # <a name="visual-basic-for-applications-functions"></a>Visual Basic para las funciones de aplicaciones
 El siguiente ejemplo de Visual Basic para las funciones de aplicaciones puede usarse en forma de expresiones de cálculo de datos:  
@@ -29,21 +28,21 @@ El siguiente ejemplo de Visual Basic para las funciones de aplicaciones puede us
 |||||||  
 |-|-|-|-|-|-|  
 |Abs|Asc|Atn|CBool|CByte|CCur|  
-|CDate|CDbl|Chr|ChrB|ChrW|Chr$|  
-|ChrB$|CInt|CLng|Cos|CSng|CStr|  
-|Cvar|CVDate|CVErr|date|Date$|DateAdd|  
+|CDate|CDbl|Chr|CarB|ChrW|Chr$|  
+|CarB$|CInt|CLng|Cos|CSng|CStr|  
+|Cvar|CVDate|CVErr|Date|Date$|DateAdd|  
 |DateDiff|DatePart|DateSerial|DateValue|Day|DDB|  
 |Error|Error$|Exp|Fix|Formato|Format$|  
 |FV|Hex|Hex$|Hour|IIF|InStr|  
-|int|IPmt|IRR|IsDate|IsEmpty|IsError|  
+|Int|IPmt|IRR|IsDate|IsEmpty|IsError|  
 |IsNull|IsNumeric|IsObject|LCase|LCase$|Izquierda|  
-|LeftB|Left$|LeftB$|Len|Log|LTrim|  
-|LTrim$|Mid|Mid$|Minute|MIRR|Month|  
+|LeftB|Left$|LeftB$|Len|Registro|LTrim|  
+|LTrim$|Mid|Mid$|Minute|MIRR|Mes|  
 |Ahora|NPer|NPV|Oct|Oct$|Pmt|  
 |PPmt|PV|QBColor|Rate|RGB|Derecha|  
 |RightB|Right$|RightB$|Rnd|RTrim|RTrim$|  
 |Second|Sgn|Sin|SLN|Space|Space$|  
-|Sqr|Str|Str$|StrComp|StrConv|String|  
+|Sqr|Str|Str$|StrComp|StrConv|Cadena|  
 |String$|SYD|Tan|Time|Time$|Timer|  
 |TimeSerial|TimeValue|Trim|Trim$|TypeName|UCase|  
 |UCase$|Val|VarType|Weekday|Year||  

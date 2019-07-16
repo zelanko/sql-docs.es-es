@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a9b287f5-04b0-4514-8143-f67879ca9842
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88fcf471b2f853a5e1a874c29d2192c17d23b113
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bee7d185d5f598a2f0a086bb7e3bea49ddfff88c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924907"
 ---
 # <a name="more-about-recordset-persistence"></a>Más información acerca de la persistencia de conjunto de registros
 El objeto de conjunto de registros ADO admite almacenar el contenido de un **Recordset** objeto en un archivo mediante el uso de su [guardar](../../../ado/reference/ado-api/save-method.md) método. El archivo de forma persistente almacenado existan en una variable local de unidad, servidor, o como una dirección URL en un servidor Web de sitio. Más adelante, se puede restaurar el archivo con cualquiera el [abierto](../../../ado/reference/ado-api/open-method-ado-recordset.md) método de la **Recordset** objeto o la [Execute](../../../ado/reference/ado-api/execute-method-ado-connection.md) método de la [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  

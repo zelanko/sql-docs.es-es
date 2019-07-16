@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9168b0b6-a828-4fef-b8cd-bdf439776f23
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af0ed8307652ccf45e7fbfffb6c00355c8a8b004
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5863935ddf595409d48be79dc646c0994ddeb0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019326"
 ---
 # <a name="c-to-sql-guid"></a>C a SQL: GUID
 El identificador para el tipo de datos C de ODBC GUID es:  
@@ -31,13 +30,13 @@ El identificador para el tipo de datos C de ODBC GUID es:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR|Longitud de bytes de la columna > = 36|n/d|  
+|SQL_CHAR|Longitud de bytes de la columna > = 36|N/D|  
 |SQL_VARCHAR|Columna de bytes de longitud < 36|22001|  
 |SQL_LONGVARCHAR|Valor de datos no es un GUID válido|22018|  
-|SQL_WCHAR|Longitud de caracteres de la columna > = 36|n/d|  
+|SQL_WCHAR|Longitud de caracteres de la columna > = 36|N/D|  
 |SQL_WVARCHAR|Columna de caracteres de longitud < 36|22001|  
 |SQL_WLONGVARCHAR|Valor de datos no es un GUID válido|22018|  
-|SQL_GUID|[A] ninguno|n/d|  
+|SQL_GUID|[A] ninguno|N/D|  
   
  [a] todos los valores hexadecimales son válidos como un GUID.  
   

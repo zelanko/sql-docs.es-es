@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 796322df-e62a-45bf-b519-89e1d521abce
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 46c055e017c2cf5c06993f3e117010ac1621e175
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2521d9543c71d9dee298fbb58518163fd45fbfdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999530"
 ---
 # <a name="sysdatabasecredentials-transact-sql"></a>sys.database_credentials (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62936745"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |credential_id|**int**|Credencial de ámbito de Id. de la base de datos. Es único en la base de datos.|  
-|NAME|**sysname**|Credencial de ámbito de nombre de la base de datos. Es único en la base de datos.|  
+|name|**sysname**|Credencial de ámbito de nombre de la base de datos. Es único en la base de datos.|  
 |credential_identity|**nvarchar(4000)**|Nombre de la identidad que se va a utilizar. Suele ser un usuario de Windows. No tiene que ser único.|  
 |create_date|**datetime**|Hora en que se creó la credencial con ámbito de base de datos.|  
 |modify_date|**datetime**|Hora a la que se modificó por última vez la credencial con ámbito de base de datos.|  

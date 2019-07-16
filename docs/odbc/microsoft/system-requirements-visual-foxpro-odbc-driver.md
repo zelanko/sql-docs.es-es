@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fb4d5157-9a3e-43bf-97b5-7a614558652c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff2db6cff725e133789804856b1913517c34ceb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 762d6c3647081c1745ab6a11d7f00d7a7072bd7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939803"
 ---
 # <a name="system-requirements-visual-foxpro-odbc-driver"></a>Requisitos del sistema (controlador ODBC de Visual FoxPro)
 Los requisitos del sistema para la instalación de proporcionan la mínima sistema operativo y el espacio en disco necesario para instalar correctamente el controlador. Después de instalar al controlador, puede seleccionar el software de aplicación específica que desea utilizar para tener acceso a datos de Visual FoxPro.  
@@ -37,7 +36,7 @@ Los requisitos del sistema para la instalación de proporcionan la mínima siste
   
 -   Software de cliente de ODBC (se instala automáticamente con el controlador)  
   
--   Microsoft Visual FoxPro ODBC Driver  
+-   Controlador ODBC de Microsoft Visual FoxPro  
   
 -   Cualquiera de los siguientes tipos de software de aplicación:  
   

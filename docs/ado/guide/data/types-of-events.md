@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: f3327ea0-635a-43d4-bd78-c1674f62f1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 78505f010706a39e5278d50219dd4504e33dd67c
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: c02d8d115a4336470c0e0d32aebabea63c05ab0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63142944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923814"
 ---
 # <a name="types-of-events"></a>Tipos de eventos
 Hay dos tipos básicos de eventos. "Eventos will", que se llama antes de iniciarse una operación, normalmente incluyen "Will" en sus nombres: por ejemplo, **WillChangeRecordset** o **WillConnect**. Los eventos que se invocan después de un evento se ha completado generalmente incluyen, por ejemplo, "Completado" en sus nombres - **RecordChangeComplete** o **ConnectComplete**. Existen excepciones - como **InfoMessage** - pero estas se producen una vez completada la operación asociada.  

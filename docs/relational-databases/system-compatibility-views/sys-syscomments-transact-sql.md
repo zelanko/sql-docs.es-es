@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 767dd410-6bc9-4c4a-ab0f-6d2cf6163426
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 12d6c57e59ee37443b9ec600d8eb760c7f53018a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 183fa2fc1a674ec1cc987c265f5a0d4c399e27cc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843784"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010749"
 ---
 # <a name="syssyscomments-transact-sql"></a>sys.syscomments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,15 +38,15 @@ ms.locfileid: "47843784"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador del objeto al que se aplica el texto.|  
-|**Número**|**smallint**|Número dentro del grupo de procedimientos, en el caso de procedimientos agrupados.<br /><br /> 0 = Las no son procedimientos.|  
+|**number**|**smallint**|Número dentro del grupo de procedimientos, en el caso de procedimientos agrupados.<br /><br /> 0 = Las no son procedimientos.|  
 |**colid**|**smallint**|Número de secuencia de fila para las definiciones de objeto de más de 4.000 caracteres.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**CTEXT**|**varbinary(8000)**|Los bytes sin formato de la instrucción de definición de SQL.|  
 |**textType**|**smallint**|0 = Comentario proporcionado por el usuario<br /><br /> 1 = Comentario proporcionado por el sistema<br /><br /> 4 = Comentario cifrado|  
-|**Idioma**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Cifrado**|**bit**|Indica si se ofusca la definición de procedimiento.<br /><br /> 0 = no ofuscado<br /><br /> 1 = ofuscó<br /><br /> **\*\* Importante \* \***  para ofuscar las definiciones de procedimientos almacenados, utilice CREATE PROCEDURE con la palabra clave de cifrado.|  
+|**language**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**encrypted**|**bit**|Indica si se ofusca la definición de procedimiento.<br /><br /> 0 = no ofuscado<br /><br /> 1 = ofuscó<br /><br /> **\*\* Importante \* \***  para ofuscar las definiciones de procedimientos almacenados, utilice CREATE PROCEDURE con la palabra clave de cifrado.|  
 |**comprimidos**|**bit**|Siempre devuelve 0. Ello indica que el procedimiento está comprimido.|  
-|**texto**|**nvarchar(4000)**|Texto real de la instrucción de definición de SQL.<br /><br /> La semántica de la expresión descodificada es equivalente al texto original; no obstante, no existen garantías sintácticas. Por ejemplo, los espacios en blanco se quitan de la expresión descodificada.<br /><br /> Esto [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-vista compatible obtiene información de actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructuras y puede devolver más caracteres que el **nvarchar (4000)** definición. **sp_help** devuelve **nvarchar (4000)** como el tipo de datos de la columna de texto. Cuando se trabaja con **syscomments** considere el uso de **nvarchar (max)**. Para los nuevos trabajos de desarrollo, no use **syscomments**.|  
+|**texto**|**nvarchar(4000)**|Texto real de la instrucción de definición de SQL.<br /><br /> La semántica de la expresión descodificada es equivalente al texto original; no obstante, no existen garantías sintácticas. Por ejemplo, los espacios en blanco se quitan de la expresión descodificada.<br /><br /> Esto [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]-vista compatible obtiene información de actual [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructuras y puede devolver más caracteres que el **nvarchar (4000)** definición. **sp_help** devuelve **nvarchar (4000)** como el tipo de datos de la columna de texto. Cuando se trabaja con **syscomments** considere el uso de **nvarchar (max)** . Para los nuevos trabajos de desarrollo, no use **syscomments**.|  
   
 ## <a name="see-also"></a>Vea también  
  [Asignar tablas del sistema a vistas del sistema &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   

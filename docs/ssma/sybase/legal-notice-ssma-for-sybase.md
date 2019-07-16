@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: fe086e53-e2a9-4bb8-9534-94369d32ab41
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6857a18ca740c399feb5e8fd65dae4ec9a7d7dd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c65cc8fa51061ba9f8886bf81e0fa80d53781f91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63245866"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028948"
 ---
 # <a name="legal-notice-ssma-for-sybase"></a>Aviso legal (SSMA para Sybase)
 Tanto esta documentación como las aplicaciones de ejemplo que contiene, se proporcionan únicamente con fines informativos y sin ninguna garantía, ya sea expresa o implícita. La información que se proporciona en esta documentación, incluidas las direcciones URL y otras referencias a sitios web de Internet, está sujeta a modificaciones sin previo aviso. El usuario asume todos los riesgos derivados del uso de esta documentación.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2dc0372d-e74d-4d0f-9c8c-04e5a168c148
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fd8374eaa97ffc08528c245569ec7bff8499747a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 25db7fdb20ceb2dd24f819e1db7077d40f7e7e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926634"
 ---
 # <a name="microsoft-ole-db-provider-for-odbc-overview"></a>Proveedor Microsoft OLE DB para ODBC Introducción
 Para un programador de ADO o RDS, un mundo ideal sería uno de los datos de cada origen expone una interfaz OLE DB, por lo que podría llamar ADO directamente en el origen de datos. Aunque cada vez más proveedores de base de datos están implementando las interfaces OLE DB, algunos orígenes de datos aún no están expuestos de este modo. Sin embargo, la mayoría de los sistemas DBMS en uso hoy en día puede obtenerse a través de ODBC.
@@ -56,7 +55,7 @@ MSDASQL
 |**DSN**|Especifica el nombre del origen de datos.|
 |**UID**|Especifica el nombre de usuario.|
 |**PWD**|Especifica la contraseña del usuario.|
-|**Dirección URL**|Especifica la dirección URL de un archivo o directorio publicado en una carpeta Web.|
+|**URL**|Especifica la dirección URL de un archivo o directorio publicado en una carpeta Web.|
 
  Dado que este es el proveedor predeterminado para ADO, si se omite el **proveedor =** parámetro de la cadena de conexión ADO intentará establecer una conexión con este proveedor.
 
@@ -65,7 +64,7 @@ MSDASQL
 
  El proveedor no admite los parámetros de conexión específico además de los definidos por ADO. Sin embargo, el proveedor pasará los parámetros de conexión que no son de ADO para el Administrador de controladores ODBC.
 
- Dado que se puede omitir el **proveedor** parámetro, por lo tanto, puede crear una cadena de conexión de ADO que es idéntica a una cadena de conexión ODBC para el mismo origen de datos. Use los mismos nombres de parámetro (**controlador =**, **base de datos =**, **DSN =**, y así sucesivamente), valores y la sintaxis como se haría al componer una cadena de conexión ODBC. Puede conectar con o sin un nombre de origen de datos predefinidos (DSN) o un FileDSN.
+ Dado que se puede omitir el **proveedor** parámetro, por lo tanto, puede crear una cadena de conexión de ADO que es idéntica a una cadena de conexión ODBC para el mismo origen de datos. Use los mismos nombres de parámetro (**controlador =** , **base de datos =** , **DSN =** , y así sucesivamente), valores y la sintaxis como se haría al componer una cadena de conexión ODBC. Puede conectar con o sin un nombre de origen de datos predefinidos (DSN) o un FileDSN.
 
 ## <a name="syntax-with-a-dsn-or-filedsn"></a>Sintaxis con un DSN o FileDSN:
 
@@ -84,9 +83,9 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 ## <a name="remarks"></a>Comentarios
  Si usa un **DSN** o **FileDSN**, debe definirse mediante el Administrador de origen de datos ODBC en el Panel de Control de Windows. En Microsoft Windows 2000, el Administrador de ODBC se encuentra en Herramientas administrativas. En versiones anteriores de Windows, el icono de administrador de ODBC se denomina **ODBC 32-bit** o simplemente **ODBC**.
 
- Como alternativa a la configuración de un **DSN**, puede especificar el controlador ODBC (**controlador =**), como "SQL Server"; el nombre del servidor (**SERVER =**); y el nombre de la base de datos (**Base de datos =**).
+ Como alternativa a la configuración de un **DSN**, puede especificar el controlador ODBC (**controlador =** ), como "SQL Server"; el nombre del servidor (**SERVER =** ); y el nombre de la base de datos (**Base de datos =** ).
 
- También puede especificar un nombre de cuenta de usuario (**UID =**) y la contraseña para la cuenta de usuario (**PWD =**) en los parámetros específicos de ODBC o en el estándar definidos por ADO *usuario* y *contraseña* parámetros.
+ También puede especificar un nombre de cuenta de usuario (**UID =** ) y la contraseña para la cuenta de usuario (**PWD =** ) en los parámetros específicos de ODBC o en el estándar definidos por ADO *usuario* y *contraseña* parámetros.
 
  Aunque un **DSN** definición ya especifica una base de datos, puede especificar *un* *base de datos* parámetro además un **DSN** para conectarse para una base de datos diferentes. Es una buena idea incluir siempre *el* *base de datos* cuando use un **DSN**. Esto garantizará que conectarse a la base de datos si otro usuario cambia el parámetro de base de datos predeterminado desde la última la **DSN** definición.
 
@@ -179,7 +178,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|no disponible|no disponible|lectura/escritura|lectura/escritura|
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
@@ -191,7 +190,7 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|lectura/escritura|no disponible|solo lectura|solo lectura|
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
+|[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|lectura/escritura|lectura/escritura|lectura/escritura|
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|solo lectura|solo lectura|solo lectura|
 |[Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md)|solo lectura|solo lectura|solo lectura|solo lectura|
 
@@ -205,24 +204,24 @@ DATABASE=database; UID=MyUserID; PWD=MyPassword"
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|Sí|Sí|Sí|Sí|
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sí|Sí|Sí|Sí|
-|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sin |No|Sí|Sí|
+|[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sin|Sin|Sí|Sí|
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
 |[GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)|Sí|Sí|Sí|Sí|
 |[Mover](../../../ado/reference/ado-api/move-method-ado.md)|Sí|Sí|Sí|Sí|
 |[MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin |Sí|Sí|Sí|
+|[MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin|Sí|Sí|Sí|
 |[MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|Sí|Sí|Sí|
-|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin |Sí|Sí|Sí|
+|[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sin|Sí|Sí|Sí|
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)*|Sí|Sí|Sí|Sí|
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|Sí|Sí|Sí|
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|No|Sin |Sí|Sí|
+|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|Sí|Sí|Sí|
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sin|No|Sí|Sí|
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|Sí|Sí|Sí|
 |[Update](../../../ado/reference/ado-api/update-method.md)|Sí|Sí|Sí|Sí|
 |[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sí|Sí|Sí|Sí|
 
- * No se admite para bases de datos de Microsoft Access.
+ \* No se admite para bases de datos de Microsoft Access.
 
 ## <a name="dynamic-properties"></a>Propiedades dinámicas
  El proveedor Microsoft OLE DB para ODBC inserta varias propiedades dinámicas en la **propiedades** colección de los no abierto [conexión](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y [Comando](../../../ado/reference/ado-api/command-object-ado.md) objetos.

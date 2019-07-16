@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537907"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032930"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` Es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden es necesario establecer o cambiar. [_triggerschema_**.**] *triggername* es **sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. *triggerschema* no se puede especificar para desencadenadores DDL o logon.  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` Es el nombre del desencadenador y el esquema al que pertenece, si procede, cuyo orden es necesario establecer o cambiar. [_triggerschema_ **.** ] *triggername* es **sysname**. Si el nombre no corresponde a un desencadenador o si corresponde a un desencadenador INSTEAD OF, el procedimiento devolverá un error. *triggerschema* no se puede especificar para desencadenadores DDL o logon.  
   
 `[ @order = ] 'value'` Es la configuración del nuevo orden del desencadenador. *valor* es **varchar (10)** y puede ser uno de los siguientes valores.  
   
@@ -61,7 +60,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  Un desencadenador puede designarse como el **primera** o **última** desencadenador para un tipo de instrucción solo después de haber definido ese desencadenador como desencadenador para ese tipo de instrucción. Por ejemplo, desencadenar **TR1** puede designarse **primera** para INSERT en la tabla **T1** si **TR1** se define como un desencadenador INSERT. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] devuelve un error si **TR1**, que se ha definido solo como un desencadenador INSERT, se establece como un **primera**, o **última**, desencadenador de una instrucción UPDATE. Para obtener más información, vea la sección Comentarios.  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL}  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL}  
  Cuando *triggername* es un desencadenador DDL, **@namespace** especifica si *triggername* se creó con ámbito de base de datos o de servidor. Si *triggername* es un desencadenador de inicio de sesión, se debe especificar el servidor. Para obtener más información sobre el ámbito del desencadenador DDL, vea [desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md). Si no se especifica, o si se especifica NULL, *triggername* es un desencadenador DML.  
   
 ||  

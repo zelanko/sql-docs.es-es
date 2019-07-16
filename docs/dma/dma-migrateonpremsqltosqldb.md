@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 592b581ae4981e42bea2f6bf6f9135018917b002
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49300b679ea650bf4dd6f032fb9c1443224e9f86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054751"
 ---
 # <a name="migrate-on-premises-sql-server-or-sql-server-on-azure-vms-to-azure-sql-database-using-the-data-migration-assistant"></a>Migrar un entorno local SQL Server o SQL Server en máquinas virtuales de Azure a Azure SQL Database mediante Data Migration Assistant
 
@@ -58,7 +57,7 @@ En este artículo proporciona instrucciones paso a paso para migrar SQL Server l
 
     ![Seleccione la base de datos de origen](../dma/media/select-source-database.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 ## <a name="specify-the-target-server-and-database"></a>Especifique el servidor de destino y la base de datos
 
@@ -80,7 +79,7 @@ En este artículo proporciona instrucciones paso a paso para migrar SQL Server l
 
     ![Seleccione la base de datos de destino](../dma/media/select-target-database.png)
 
-5. Seleccione **Siguiente**.
+5. Seleccione **Next** (Siguiente).
 
 ## <a name="select-schema-objects"></a>Seleccione los objetos de esquema
 

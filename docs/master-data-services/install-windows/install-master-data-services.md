@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bb7aa3e7-8807-42c8-884f-0e41d7a20837
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: be150cce4e4dcdec19f2369e058a9283d8d137a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbd4679502b433f6d25eacf51570e24ec50f649a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944975"
 ---
 # <a name="installation-tasks-for-master-data-services"></a>Tareas de instalación de Master Data Services
 
@@ -32,7 +31,7 @@ ms.locfileid: "65488485"
   
 ##  <a name="preinstall"></a> Tareas de preinstalación:  
   
-|Acción|Detalles|Temas relacionados|  
+|.|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
 |Comprobar los requisitos de instalación|El equipo donde se ejecuta el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe cumplir los requisitos mínimos para:<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .<br /><br /> Los servicios web y la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> La base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , si hospeda la base de datos en el mismo equipo que la aplicación web.<br /><br /> <br /><br /> Puede separar el equipo servidor web y el equipo servidor de bases de datos ejecutando el programa de instalación solo en el equipo servidor web y creando la base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en un equipo remoto que ejecute una versión y edición compatibles de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Características compatibles con las ediciones de SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)<br /><br /> [Requisitos de hardware y software para instalar SQL Server 2016](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)<br /><br /> [Requisitos de la aplicación web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)<br /><br /> [Requisitos de base de datos &#40;Master Data Services&#41;](../../master-data-services/install-windows/database-requirements-master-data-services.md)|  
 |Configurar los roles necesarios, servicios del rol y características|Antes de ejecutar el programa de instalación, configure el equipo con los roles de Windows, los servicios de rol y las características necesarios.<br /><br /> Nota: Aunque puede realizar este paso más adelante en el flujo de trabajo, es útil configurar esto antes de ejecutar el programa de instalación para que pueda realizar las tareas de configuración de web inmediatamente después de la instalación.|[Requisitos de la aplicación web &#40;Master Data Services&#41;](../../master-data-services/install-windows/web-application-requirements-master-data-services.md)|  
@@ -40,13 +39,13 @@ ms.locfileid: "65488485"
   
 ##  <a name="install"></a> Operaciones de instalación  
   
-|Acción|Detalles|Temas relacionados|  
+|.|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
 |Ejecutar el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|En el equipo que hospedará la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] y los servicios web de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , utilice el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o un símbolo del sistema para instalar [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Cuando se usa el programa de instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] está disponible en la página **Selección de características** en **Características compartidas**. Si se usa un símbolo del sistema, [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] está disponible como parámetro de característica. Tenga en cuenta que el proceso de instalación desde la línea de comandos instala [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], pero no lo configura. Debe configurarlo mediante el Administrador de configuración de Master Data Services.<br /><br /> Proceso de instalación:<br /><br /> Instala las carpetas y los archivos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en la ubicación que especifique para las características compartidas y asigna permisos a estos objetos.<br /><br /> Registra los ensamblados de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] en la memoria caché global de ensamblados (GAC).<br /><br /> Instala [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)].|[Instalación de SQL Server 2016 desde el Asistente para la instalación &#40;programa de instalación&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)<br /><br /> [Permisos de carpetas y archivos &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)|  
   
 ##  <a name="postinstall"></a> Tareas posteriores a la instalación:  
   
-|Acción|Detalles|Temas relacionados|  
+|.|Detalles|Temas relacionados|  
 |------------|-------------|--------------------|  
 |Abrir [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para completar las operaciones posteriores a la instalación|Una vez completada la instalación, abra [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)]. [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] realiza las siguientes operaciones posteriores a la instalación en el equipo local:<br /><br /> Crea un grupo de Windows, **MDS_ServiceAccounts**, para contener las cuentas de servicio de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los grupos de aplicaciones.<br /><br /> En la ruta de instalación de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] , crea la carpeta MDSTempDir y asigna permisos para **MDS_ServiceAccounts**. Esta carpeta es donde los archivos de compilación temporales se compilan para la aplicación web de [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] .<br /><br /> En el archivo Web.config de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)], configura el atributo **tempDirectory** del elemento **\<compilation>** con la ruta de acceso a la carpeta MDSTempDir.|[Permisos de carpetas y archivos &#40;Master Data Services&#41;](../../master-data-services/folder-and-file-permissions-master-data-services.md)<br /><br /> [Referencia de la configuración web &#40;Master Data Services&#41;](../../master-data-services/web-configuration-reference-master-data-services.md)|  
 |Crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]|Use [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] para crear una base de datos de [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] para los datos maestros.|[Crea una base de datos de Master Data Services](../../master-data-services/install-windows/create-a-master-data-services-database.md)|  

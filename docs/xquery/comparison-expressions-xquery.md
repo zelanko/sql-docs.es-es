@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: dc671348-306f-48ef-9e6e-81fc3c7260a6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ac4e617b7abb220dd2a8767a334ddbdf1c685d2c
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 7462e089f70b4da76edea25dcfe6e7e314ad7c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51661844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039032"
 ---
 # <a name="comparison-expressions-xquery"></a>Expresiones de comparación (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -122,7 +121,7 @@ WHERE ContactID=1
   
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 \<act:number   
@@ -174,7 +173,7 @@ WHERE ProductModelID=19
   
 -   Tenga en cuenta que dado que los operadores de valores solo funcionan en valores atómicos, la **data()** función implícitamente se usa para recuperar el valor del nodo. Es decir, `data($P/PD:Size) eq "small"` obtiene el mismo resultado.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 \<PD:Picture   
@@ -208,7 +207,7 @@ FROM Production.ProductModel
 WHERE ProductModelID=7           
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 ProductModelID       Result          
@@ -221,9 +220,9 @@ ProductModelID       Result
   
  A continuación se exponen las comparaciones que se realizan en función del orden en el documento:  
   
--   `<<` : No **operando 1** preceder **operando 2** en el orden del documento.  
+-   `<<` : Does **operando 1** preceder **operando 2** en el orden del documento.  
   
--   `>>` : No **operando 1** siga **operando 2** en el orden del documento.  
+-   `>>` : Does **operando 1** siga **operando 2** en el orden del documento.  
   
  La consulta siguiente devuelve True si la descripción del catálogo de productos el \<garantía > elemento que aparezcan antes que la \<Mantenimiento > elemento en el orden del documento de un determinado producto.  
   

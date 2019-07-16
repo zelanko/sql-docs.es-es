@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ada6acc1-82eb-4cfa-8f2f-617a916ffd8d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2e319fe88f709acd25bded8c4dce8e6b4c702773
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 533ffd2404d445e89dd50695fb6317eb72db1435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932857"
 ---
 # <a name="execute-requery-and-clear-methods-example-vc"></a>Execute, Requery y Clear métodos ejemplo (VC ++)
 Este ejemplo se muestra el **Execute** método cuando se ejecuta desde ambos un [comando](../../../ado/reference/ado-api/command-object-ado.md) objeto y un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto. También usa el [Requery](../../../ado/reference/ado-api/requery-method.md) método para recuperar los datos actuales en un [recordset](../../../ado/reference/ado-api/recordset-object-ado.md)y el [borrar](../../../ado/reference/ado-api/clear-method-ado.md) método para borrar el contenido de la [errores](../../../ado/reference/ado-api/errors-collection-ado.md)colección. Las funciones ExecuteCommand y PrintOutput son necesarias para ejecutar este ejemplo.  

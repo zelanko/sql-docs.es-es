@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d50ea3e6-7a9e-4fb6-8cd8-1d429d2f7b3c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: df7a2d036692cefcd1b2ea2338d51938a11ea85a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d0ed7a5f488765b56b2af0688ca14361590ab44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022103"
 ---
 # <a name="vertical-applications"></a>Aplicaciones verticales
 Aplicaciones verticales suelen realizan una tarea bien definida en un único DBMS. Por ejemplo, una aplicación de entrada de pedidos realiza un seguimiento de los pedidos en una empresa. Lo que estos tipos de aplicaciones tienen en común es que normalmente se diseña el esquema de base de datos por el desarrollador de aplicaciones y, mientras que la aplicación puede funcionar con un número de diferentes DBMS, funciona con un DBMS único para un solo cliente.  

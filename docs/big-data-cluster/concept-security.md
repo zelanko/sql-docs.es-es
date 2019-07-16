@@ -5,17 +5,16 @@ description: En este artículo se describe los conceptos de seguridad de clúste
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 49577ce5a29a0c014fea7c8c9a0c5c320a9b7174
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958665"
 ---
 # <a name="security-concepts-for-sql-server-big-data-clusters"></a>Conceptos de seguridad para los clústeres de macrodatos de SQL Server
 
@@ -55,13 +54,13 @@ Algunos de estos inicios de sesión son para que los servicios se comuniquen ent
 Tras el aprovisionamiento del clúster, un número de contraseñas de usuario final debe establecerse mediante variables de entorno. Estas son las contraseñas que los administradores de SQL y los administradores de clústeres se usan para tener acceso a servicios:
 
 Nombre de usuario del controlador:
- + CONTROLLER_USERNAME=<controller_username>
+ + CONTROLLER_USERNAME = < controller_username >
 
 Contraseña del controlador:  
  + CONTROLLER_PASSWORD = < controller_password >
 
 Contraseña de SA de SQL Master: 
- + MSSQL_SA_PASSWORD=<controller_sa_password>
+ + MSSQL_SA_PASSWORD = < controller_sa_password >
 
 Contraseña para acceder al punto de conexión de Spark o HDFS:
  + KNOX_PASSWORD = < knox_password >

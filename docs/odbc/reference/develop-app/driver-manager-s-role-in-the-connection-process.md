@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 77c05630-5a8b-467d-b80e-c705dc06d601
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af81fd6c4b0b56474497a829985a754ccf88f3ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fdc7f82059579f23c9a1a1203aee5e45c87693e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046943"
 ---
 # <a name="driver-manager39s-role-in-the-connection-process"></a>Administrador de controladores&#39;s rol en el proceso de conexión
 Recuerde que las aplicaciones no llame a las funciones del controlador directamente. En su lugar, llaman a funciones de administrador de controladores con el mismo nombre y el Administrador de controladores, llama a las funciones de controlador. Normalmente, esto ocurre casi inmediatamente. Por ejemplo, la aplicación llama a **SQLExecute** en el Administrador de controladores y después algunas comprobaciones de errores, el Administrador de controladores se llama a **SQLExecute** en el controlador.  

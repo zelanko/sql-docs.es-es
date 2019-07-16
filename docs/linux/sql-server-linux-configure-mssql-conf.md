@@ -3,18 +3,17 @@ title: Configuración de SQL Server en Linux
 description: En este artículo se describe cómo usar la herramienta mssql-conf para configurar la configuración de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077600"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Configurar SQL Server en Linux con la herramienta mssql-conf
 
@@ -27,7 +26,7 @@ ms.locfileid: "67834007"
 
 |||
 |---|---|
-| [Agente](#agent) | Habilitar el Agente SQL Server |
+| [Agente](#agent) | Habilitar el Agente SQL Server. |
 | [Intercalación](#collation) | Establecer una nueva intercalación de SQL Server en Linux. |
 | [Comentarios del cliente](#customerfeedback) | Elija si SQL Server envía comentarios a Microsoft. |
 | [Perfil de Correo electrónico de base de datos](#dbmail) | Establezca el perfil de correo electrónico de base de datos predeterminada para SQL Server en Linux. |
@@ -45,7 +44,7 @@ ms.locfileid: "67834007"
 | [Límite de memoria](#memorylimit) | Establecer el límite de memoria para SQL Server. |
 | [Puerto TCP](#tcpport) | Cambiar el puerto donde escucha SQL Server para las conexiones. |
 | [TLS](#tls) | Configurar la seguridad de nivel de transporte. |
-| [Traceflags](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
+| [Marcas de seguimiento](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
 
 ::: moniker-end
 <!--SQL Server 2019 on Linux-->
@@ -76,7 +75,7 @@ ms.locfileid: "67834007"
 | [outboundnetworkaccess](#mlservices-outbound-access) |Habilitar el acceso de red saliente para [mlservices](sql-server-linux-setup-machine-learning.md) extensiones de R, Python y Java.|
 | [Puerto TCP](#tcpport) | Cambiar el puerto donde escucha SQL Server para las conexiones. |
 | [TLS](#tls) | Configurar la seguridad de nivel de transporte. |
-| [Traceflags](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
+| [Marcas de seguimiento](#traceflags) | Establecer las marcas de seguimiento que se va a usar el servicio. |
 
 ::: moniker-end
 
@@ -396,7 +395,7 @@ La primera captura de fase se controla mediante el **coredump.coredumptype** con
 
     | Type | Descripción |
     |-----|-----|
-    | **mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. La información del sistema Linux usa para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene solo los módulos y las pilas de subprocesos del entorno de host. No tiene referencias de memoria indirecta o variables globales. |
+    | **Mini** | Mini es el tipo de archivo de volcado de memoria más pequeño. La información del sistema Linux usa para determinar los subprocesos y módulos en el proceso. El volcado de memoria contiene solo los módulos y las pilas de subprocesos del entorno de host. No tiene referencias de memoria indirecta o variables globales. |
     | **miniplus** | Es similar a mini miniPlus, pero incluye memoria adicional. Comprende los aspectos internos de SQLPAL y el entorno de host, agregar las siguientes regiones de memoria para el volcado de memoria:</br></br> -Globals varios</br> -Toda la memoria por encima de 64TB</br> -Denominado regiones se encuentra en   **/proc / pid de $/ asignaciones**</br> -Memoria indirecta de subprocesos y las pilas</br> : La información de subproceso</br> -Asociada del Teb y del Peb</br> : Información de módulo</br> -VMM y VAD árbol |
     | **filtered** | Diseño de usos filtrado basado en una resta donde se incluye toda la memoria en el proceso a menos que se excluyan específicamente. El diseño comprende los aspectos internos de SQLPAL y el entorno de host, exclusión de determinadas regiones del volcado de memoria.
     | **full** | Completa se encuentra un volcado de memoria de proceso completo que incluye todas las regiones en **/proc / pid de $/ asignaciones**. Esto no se controla mediante **coredump.captureminiandfull** configuración. |
@@ -508,7 +507,7 @@ Además de establecer estos valores, también debe configurar el enrutamiento y 
 
 Hay otras opciones para mssql-conf que puede usar para supervisar y solucionar problemas de MSDTC. La siguiente tabla describe brevemente estos valores. Para obtener más información sobre su uso, consulte los detalles en el artículo de soporte técnico de Windows, [cómo habilitar el seguimiento de diagnóstico de MS DTC](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute).
 
-| mssql-conf setting | Descripción |
+| configuración de MSSQL-conf | Descripción |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | Configurar llamadas RPC sola seguras para las transacciones distribuidas |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | Configurar llamadas RPC sola de seguridad para distribuir |transacciones

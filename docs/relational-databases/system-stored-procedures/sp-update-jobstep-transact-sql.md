@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f1ab6c1408b9f9c2de2e4070ab35e34ea8a458df
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7914e3b56dd02d96c02835bf6b4dcc5eb90e8f4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084886"
 ---
 # <a name="spupdatejobstep-transact-sql"></a>sp_update_jobstep (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,9 +69,9 @@ sp_update_jobstep
   
 `[ @step_name = ] 'step_name'` Es un nuevo nombre para el paso. *Step_name*es **sysname**, su valor predeterminado es null.  
   
-`[ @subsystem = ] 'subsystem'` El subsistema utilizado por el agente de Microsoft SQL Server para ejecutar *comando*. *subsistema* es **nvarchar (40)**, su valor predeterminado es null.  
+`[ @subsystem = ] 'subsystem'` El subsistema utilizado por el agente de Microsoft SQL Server para ejecutar *comando*. *subsistema* es **nvarchar (40)** , su valor predeterminado es null.  
   
-`[ @command = ] 'command'` Los comandos que se ejecutará a través de *subsistema*. *comando* es **nvarchar (max)**, su valor predeterminado es null.  
+`[ @command = ] 'command'` Los comandos que se ejecutará a través de *subsistema*. *comando* es **nvarchar (max)** , su valor predeterminado es null.  
   
 `[ @additional_parameters = ] 'parameters'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -100,7 +99,7 @@ sp_update_jobstep
   
 `[ @on_fail_step_id = ] fail_step_id` El número de identificación del paso de este trabajo que se ejecutará si se produce un error en el paso y *fail_action* es **4**. *fail_step_id* es **int**, su valor predeterminado es null.  
   
-`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* es **nvarchar (128)**, su valor predeterminado es null.  
+`[ @server = ] 'server'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] *servidor* es **nvarchar (128)** , su valor predeterminado es null.  
   
 `[ @database_name = ] 'database'` El nombre de la base de datos en el que se va a ejecutar un [!INCLUDE[tsql](../../includes/tsql-md.md)] paso. *base de datos*es **sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
@@ -112,7 +111,7 @@ sp_update_jobstep
   
 `[ @os_run_priority = ] run_priority` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @output_file_name = ] 'file_name'` El nombre del archivo que se guarda la salida de este paso. *file_name* es **nvarchar (200)**, su valor predeterminado es null. Este parámetro solo es válido con comandos que se ejecutan en subsistemas [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
+`[ @output_file_name = ] 'file_name'` El nombre del archivo que se guarda la salida de este paso. *file_name* es **nvarchar (200)** , su valor predeterminado es null. Este parámetro solo es válido con comandos que se ejecutan en subsistemas [!INCLUDE[tsql](../../includes/tsql-md.md)] o CmdExec.  
   
  Para restablecer output_file_name en NULL, se debe establecer *nombre_archivo_de_salida* en una cadena vacía (' ') o en una cadena de caracteres en blanco, pero no se puede usar el **CHAR(32)** función. Por ejemplo, establezca este argumento en una cadena vacía del modo siguiente:  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6edec1b341855154e6df6ef24abb7da3d93ffc2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31ddab7291807222882050233715d3ad61e25124
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061461"
 ---
 # <a name="sqlgetstmtattr-function"></a>Función SQLGetStmtAttr
 **Conformidad**  
@@ -80,7 +79,7 @@ SQLRETURN SQLGetStmtAttr(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLGetStmtAttr** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL _HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLGetStmtAttr** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7cd69c8b-cf2c-478c-b9a3-e0e14e1aa8aa
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8193643e59c89d1bdc2877e72105f83a1fd6df3f
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 12ae1efbf900a505a5f257f9684842a0ad9ff21f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004653"
 ---
 # <a name="functions-on-string-values---string-length"></a>Funciones usadas en valores de cadena: string-length
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ fn:string-length($arg as xs:string?) as xs:integer
   
  Si el valor contiene un carácter Unicode de 4 bytes representado por dos caracteres suplentes, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] contará los caracteres suplentes individualmente.  
   
- El **string-length()** sin un parámetro solo se puede usar dentro de un predicado. Por ejemplo, la siguiente consulta devuelve el elemento <`ROOT`>:  
+ El **string-length()** sin un parámetro solo se puede usar dentro de un predicado. Por ejemplo, la consulta siguiente devuelve el <`ROOT`> elemento:  
   
 ```  
 DECLARE @x xml;  
@@ -62,7 +61,7 @@ SELECT @x.query('/ROOT[string-length()=5]');
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-string-length-xquery-function-to-retrieve-products-with-long-summary-descriptions"></a>A. Usar la función string-length() de XQuery para recuperar productos con descripciones resumidas largas  
- Para productos cuya descripción resumida tiene más de 50 caracteres, la consulta siguiente recupera el id. de producto, la longitud de la descripción resumida y el resumen en sí, el elemento <`Summary`>.  
+ Para los productos cuya descripción resumida tiene más de 50 caracteres, la consulta siguiente recupera el identificador de producto, la longitud de la descripción resumida y el resumen en Sí, el <`Summary`> elemento.  
   
 ```  
 WITH XMLNAMESPACES ('https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription' as pd)  
@@ -99,10 +98,10 @@ Result
 ...  
 ```  
   
-### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>B. Usar la función de XQuery string-length() para recuperar productos cuya descripción de garantía es corta  
- Para los productos cuya descripción de garantía tiene menos de 20 caracteres, la consulta siguiente recupera XML que incluye el identificador de producto, la longitud, la descripción de garantía y el elemento <`Warranty`> en sí.  
+### <a name="b-using-the-string-length-xquery-function-to-retrieve-products-whose-warranty-descriptions-are-short"></a>b. Usar la función de XQuery string-length() para recuperar productos cuya descripción de garantía es corta  
+ Para los productos cuya descripción de garantía tienen menos de 20 caracteres, la consulta siguiente recupera XML que incluye el identificador de producto, longitud, la descripción de garantía, y la <`Warranty`> propio elemento.  
   
- Warranty es una de las características del producto. Un elemento secundario <`Warranty`> opcional sigue al elemento <`Features`>.  
+ Warranty es una de las características del producto. Opcional <`Warranty`> elemento secundario sigue después de la <`Features`> elemento.  
   
 ```  
 WITH XMLNAMESPACES (  

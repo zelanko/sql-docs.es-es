@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 274451cdd2d1c3d811e4105a6d646044537999f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a86d958114a0755d8aead4470936115902f9c57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024551"
 ---
 # <a name="sqlremovedriver-function"></a>Función SQLRemoveDriver
 **Conformidad**  
@@ -59,7 +58,7 @@ BOOL SQLRemoveDriver(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error. Si no existe ninguna entrada en la información del sistema cuando se llama a esta función, la función devuelve FALSE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLRemoveDriver** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

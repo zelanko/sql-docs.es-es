@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918625"
 ---
 # <a name="find-method-ado"></a>Find (método) (ADO)
 Busca un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) para la fila que cumple los criterios especificados. Opcionalmente, se puede especificar la dirección de la búsqueda, la fila inicial y el desplazamiento desde la fila inicial. Si se cumplen los criterios, la posición de fila actual se establece en el registro se encuentra; en caso contrario, se establece la posición al final (o inicio) de la **Recordset**.  

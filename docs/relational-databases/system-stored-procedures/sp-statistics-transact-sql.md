@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fdf0984f172657ad45ee6da0a09de5e0e457b003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4e3e25dbab53f31e354dcff537b6bfb9a6b433d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032739"
 ---
 # <a name="spstatistics-transact-sql"></a>sp_statistics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,13 +52,13 @@ sp_statistics [ @table_name = ] 'table_name'
   
  En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el usuario actual es propietario de una tabla en la que se especifica el nombre, se devuelven los índices de esa tabla. Si *propietario* no se especifica y el usuario actual no posee una tabla con los valores especificados *nombre*, este procedimiento busca una tabla con los valores especificados *nombre* que pertenecen a la propietario de la base de datos. Si existe una, se devuelven los índices de esa tabla.  
   
-`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
+`[ @table_qualifier = ] 'qualifier'` Es el nombre del calificador de tabla. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], este parámetro representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla.  
   
 `[ @index_name = ] 'index_name'` Es el nombre del índice. *index_name* es **sysname**, su valor predeterminado es %. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ @is_unique = ] 'is_unique'` Es si solo los índices únicos (si **Y**) se devuelven. *is_unique* es **char (1)**, su valor predeterminado es **N**.  
+`[ @is_unique = ] 'is_unique'` Es si solo los índices únicos (si **Y**) se devuelven. *is_unique* es **char (1)** , su valor predeterminado es **N**.  
   
-`[ @accuracy = ] 'accuracy'` Es el nivel de precisión de la página de estadísticas y cardinalidad. *precisión* es **char (1)**, su valor predeterminado es **Q**. Especificar **E** para asegurarse de que las estadísticas se actualizan para que la cardinalidad y las páginas son precisas.  
+`[ @accuracy = ] 'accuracy'` Es el nivel de precisión de la página de estadísticas y cardinalidad. *precisión* es **char (1)** , su valor predeterminado es **Q**. Especificar **E** para asegurarse de que las estadísticas se actualizan para que la cardinalidad y las páginas son precisas.  
   
  El valor **E** (SQL_ENSURE) pide al controlador para recuperar las estadísticas de forma incondicional.  
   

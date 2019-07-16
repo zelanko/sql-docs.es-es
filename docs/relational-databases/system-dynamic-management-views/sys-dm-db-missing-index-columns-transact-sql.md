@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 3b24e5ed-0c79-47e5-805c-a0902d0aeb86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2f860306c721bba75a9d5fc9af63ddbe0c6fc9bd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38d21e20ec158ea316caf6acd17f7225c8d3a49d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47649543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002652"
 ---
 # <a name="sysdmdbmissingindexcolumns-transact-sql"></a>sys.dm_db_missing_index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sys.dm_db_missing_index_columns(index_handle)
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identificador de la columna.|  
 |**column_name**|**sysname**|Nombre de la columna de la tabla.|  
-|**column_usage**|**varchar (20)**|Forma en que la consulta utiliza la columna. Son los valores posibles y sus descripciones:<br /><br /> IGUALDAD: Columna contribuye a crear un predicado que expresa igualdad, del formulario: <br />                        *table.column* = *constant_value*<br /><br /> DESIGUALDAD: Columna contribuye a crear un predicado que expresa desigualdad, por ejemplo, un predicado del formulario: *table.column* > *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUDE: No se usa para evaluar un predicado de columna, pero se utiliza cualquier otro motivo, por ejemplo, para cubrir una consulta.|  
+|**column_usage**|**varchar(20)**|Forma en que la consulta utiliza la columna. Son los valores posibles y sus descripciones:<br /><br /> IGUALDAD: Columna contribuye a un predicado que expresa igualdad, del formulario: <br />                        *table.column* = *constant_value*<br /><br /> DESIGUALDAD: Columna contribuye a crear un predicado que expresa desigualdad, por ejemplo, un predicado del formulario: *table.column* > *constant_value*. Cualquier operador de comparación distinto de "=" expresa desigualdad.<br /><br /> INCLUÍR: Columna no se usa para evaluar un predicado, pero se utiliza cualquier otro motivo, por ejemplo, para cubrir una consulta.|  
   
 ## <a name="remarks"></a>Comentarios  
  Información devuelta por **sys.dm_db_missing_index_columns** se actualiza cuando una consulta está optimizada por el optimizador de consultas y no se conserva. La información sobre índices que faltan solo se conserva hasta que se reinicia [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Los administradores de bases de datos deben realizar copias de seguridad de forma periódica de la información de índices que faltan si desean conservarla después de reciclar el servidor.  

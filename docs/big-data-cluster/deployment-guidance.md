@@ -5,17 +5,16 @@ description: Obtenga información sobre cómo implementar clústeres de macrodat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e04986691b52149f0918b1559f1f3db1d99cab38
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0f2993d15cecd87879cabc50918d784a16750b30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958417"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Cómo implementar clústeres de macrodatos de SQL Server en Kubernetes
 
@@ -84,7 +83,7 @@ Las opciones se definen en archivos de configuración JSON de implementación de
 |---|---|
 | **aks-dev-test** | Azure Kubernetes Service (AKS) |
 | **kubeadm-dev-test** | Varias máquinas (kubeadm) |
-| **minikube-dev-test** | minikube |
+| **minikube-dev-test** | Minikube |
 
 Puede implementar un clúster de macrodatos mediante la ejecución de **mssqlctl bdc crear**. Esto le pedirá que elija una de las configuraciones predeterminadas y, a continuación, le guía a través de la implementación.
 

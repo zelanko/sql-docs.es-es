@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f551cf6e-1575-4206-9cca-975b5b43a6b8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: fee221caf91d5d70f291f9351d05a00352e7cc00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: debdd549dc010f7be6b9d9b37a4caf649d4e106a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63253262"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103123"
 ---
 # <a name="conversion-settings-mysqltosql"></a>Configuración de conversión (MySQLToSQL)
 El **'Configuración'** pestaña permite al usuario establecer la configuración del nivel de nodo. La pestaña estará disponible en los siguientes nodos de la Metabase:  

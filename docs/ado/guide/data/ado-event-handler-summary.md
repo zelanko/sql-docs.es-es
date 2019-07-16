@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f1901892b3e48446f3598b24ebb0a529360b9edf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4fef63ff610ad85e353c2ef1dc0f8e5987c74ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926197"
 ---
 # <a name="ado-connection-and-recordset-events"></a>Conexión de ADO y eventos de conjunto de registros
 Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto y el [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto. El **ConnectionEvent** familia pertenece a las operaciones en el **conexión** objeto y el **RecordsetEvent** familia pertenece a las operaciones en el  **Conjunto de registros** objeto.
@@ -32,8 +31,8 @@ Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/a
 
 |ConnectionEvent|Descripción|
 |---------------------|-----------------|
-|[BeginTransComplete, CommitTransComplete, RollbackTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Administración de transacciones** -notificación de que ha iniciado la transacción actual en la conexión, confirmado o revertido.|
-|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, Disconnect](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Administración de conexiones** -se ha iniciado la notificación que se iniciará la conexión actual, o ha finalizado.|
+|[RollbackTransComplete BeginTransComplete, CommitTransComplete,](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|**Administración de transacciones** -notificación de que ha iniciado la transacción actual en la conexión, confirmado o revertido.|
+|[WillConnect](../../../ado/reference/ado-api/willconnect-event-ado.md), [ConnectComplete, desconectar](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|**Administración de conexiones** -se ha iniciado la notificación que se iniciará la conexión actual, o ha finalizado.|
 |[WillExecute](../../../ado/reference/ado-api/willexecute-event-ado.md), [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)|**Administración de la ejecución del comando** -notificación de que la ejecución del comando actual en la conexión se iniciará o ha finalizado.|
 |[InfoMessage](../../../ado/reference/ado-api/infomessage-event-ado.md)|**Informativo** -notificación de que hay información adicional acerca de la operación actual.|
 
@@ -41,7 +40,7 @@ Dos objetos ADO pueden provocar eventos: el [conexión](../../../ado/reference/a
 |--------------------|-----------------|
 |[FetchProgress](../../../ado/reference/ado-api/fetchprogress-event-ado.md), [FetchComplete](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|**Estado de recuperación** -notificación del progreso de una operación de recuperación de datos o que se ha completado la operación de recuperación. Estos eventos solo están disponibles si el **Recordset** se abrió mediante un cursor de cliente.|
 |[WillChangeField, FieldChangeComplete](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|**Administración de cambios de campo** -notificación de que se cambia el valor del campo actual o se ha cambiado.|
-|[WillMove, MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Administración de navegación** -notificación de que la fila actual se coloque en un **Recordset** cambiará, ha cambiado o ha llegado al final de la **Recordset**.|
+|[Eventos WillMove, MoveComplete](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md), [EndOfRecordset](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|**Administración de navegación** -notificación de que la fila actual se coloque en un **Recordset** cambiará, ha cambiado o ha llegado al final de la **Recordset**.|
 |[WillChangeRecord, RecordChangeComplete](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|**Administración de cambios de fila** -notificación de que algo en la fila actual de la **Recordset** se cambia o se ha cambiado.|
 |[WillChangeRecordset, RecordsetChangeComplete](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|**Administración de cambios del conjunto de registros** -notificación de que algo en actual **Recordset** se cambia o se ha cambiado.|
 

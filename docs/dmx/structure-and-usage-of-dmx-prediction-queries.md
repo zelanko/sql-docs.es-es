@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 37ff157cbddb0894880f12097c977b923d92f177
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 99d8ef98ad4e86bce0e1beff819a8d140662aaf7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37981919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938067"
 ---
 # <a name="structure-and-usage-of-dmx-prediction-queries"></a>Estructura y uso de las consultas de predicción DMX
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "37981919"
   
 -   **TOP**  
   
--   **DESDE***\<modelo >***PREDICTION JOIN**   
+-   **DESDE** *\<modelo >* **PREDICTION JOIN**  
   
 -   **ON**  
   
@@ -70,7 +69,7 @@ ms.locfileid: "37981919"
  Para obtener más información sobre la sintaxis de una instrucción de predicción, vea [SELECT FROM &#60;modelo&#62; PREDICTION JOIN &#40;DMX&#41; ](../dmx/select-from-model-prediction-join-dmx.md) y [SELECT FROM &#60;modelo&#62; &#40;DMX &#41;](../dmx/select-from-model-dmx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   

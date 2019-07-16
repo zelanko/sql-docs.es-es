@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 167cd23ae60ff1eb33f6384dab03cb1c473a8ed4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 7de3f8de87804facf6670cf0dd261464143c2aeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52791677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017689"
 ---
 # <a name="msmergehistory-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52791677"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|El Id. del trabajo del Agente de mezcla.|  
-|**valor de agent_id**|**int**|El Id. del Agente de mezcla.|  
+|**agent_id**|**int**|El Id. del Agente de mezcla.|  
 |**Comentarios**|**nvarchar(255)**|El texto del mensaje.|  
 |**error_id**|**int**|El identificador de un error en la [MSrepl_errors](../../relational-databases/system-tables/msrepl-errors-transact-sql.md) tabla del sistema.|  
 |**timestamp**|**timestamp**|La columna de marca de tiempo de esta tabla.|  

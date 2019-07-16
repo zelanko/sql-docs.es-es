@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038990"
 ---
 # <a name="constructor-functions-xquery"></a>Funciones de constructor (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -139,7 +138,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
  En este tema se proporciona ejemplos de XQuery con instancias XML almacenadas en varias **xml** columnas de tipo en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. Usar la función dateTime() de XQuery para recuperar descripciones antiguas de productos  
- En este ejemplo, un documento XML de ejemplo primero se asigna a un **xml** variable de tipo. El documento contiene tres elementos <`ProductDescription`> de ejemplo, y cada uno de ellos contiene un elemento secundario <`DateCreated`>.  
+ En este ejemplo, un documento XML de ejemplo primero se asigna a un **xml** variable de tipo. Este documento contiene tres ejemplos <`ProductDescription`> elementos, con cada uno de ellos contiene un <`DateCreated`> elemento secundario.  
   
  A continuación, se realiza una consulta en la variable para recuperar solo las descripciones de producto que se crearon antes de una fecha específica. Para fines de comparación, la consulta utiliza la **xs:DateTime()** función constructora para escribir las fechas.  
   
@@ -174,13 +173,13 @@ select @x.query('
   
  Observe lo siguiente en la consulta anterior:  
   
--   La estructura de bucle FOR ... Estructura de bucle de dónde se usa para recuperar el \<ProductDescription > elemento que cumpla la condición especificada en la cláusula WHERE.  
+-   El bucle FOR... Estructura de bucle de dónde se usa para recuperar el \<ProductDescription > elemento que cumpla la condición especificada en la cláusula WHERE.  
   
 -   El **dateTime() de** función constructora que se usa para construir **dateTime** escriba valores para que se puedan comparar adecuadamente.  
   
 -   Finalmente, la consulta construye el XML resultante. Dado que se pretende construir una secuencia de atributos, en la construcción de XML se utilizan comas y paréntesis.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <Product   

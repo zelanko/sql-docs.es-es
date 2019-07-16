@@ -2,24 +2,23 @@
 title: Cifrado de datos transparente - almacenamiento de datos paralelos | Microsoft Docs
 description: Cifrado de datos transparente (TDE) para el almacenamiento de datos paralelos (PDW) realiza el cifrado de E/S en tiempo real y descifrado de los datos y archivos de registro de transacciones y los archivos de registro PDW especiales."
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959981"
 ---
 # <a name="transparent-data-encryption"></a>Cifrado de datos transparente
 Puede tomar varias precauciones para proteger la base de datos, como diseñar un sistema seguro, cifrar los datos confidenciales e instalar un firewall alrededor de los servidores de bases de datos. Sin embargo, para un escenario en el que se roban medios físicos (como unidades o cintas de copia de seguridad), un tercero malintencionado puede simplemente restaurar o adjuntar la base de datos y examinar los datos. Una solución consiste en cifrar los datos confidenciales en la base de datos y usar un certificado para proteger las claves que se utilizan para cifrarlos. Esto evita que utilice los datos cualquiera que carezca de las claves, pero este tipo de protección debe planearse de antemano.  
   
-*Cifrado de datos transparente* (TDE) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y los archivos de registro de archivos de registro de transacciones y PDW especial. El cifrado utiliza una clave de cifrado de la base de datos (DEK), que está almacenada en el registro de arranque de la base de datos para que esté disponible durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra de SQL Server PDW. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. Esta característica permite a los desarrolladores de software cifrar los datos mediante el uso de algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
+*Cifrado de datos transparente* (TDE) realiza el cifrado de E/S en tiempo real y el descifrado de los datos y los archivos de registro de archivos de registro de transacciones y PDW especial. El cifrado usa una clave de cifrado de base de datos (DEK), que se almacena en el registro de arranque de la base de datos de disponibilidad durante la recuperación. La DEK es una clave simétrica protegida utilizando un certificado almacenado en la base de datos maestra de SQL Server PDW. TDE protege los datos "en reposo", es decir, los archivos de datos y de registro. Ofrece la posibilidad de cumplir muchas leyes, normativas y directrices establecidas en diversos sectores. Esta característica permite a los desarrolladores de software cifrar los datos mediante el uso de algoritmos de cifrado AES y 3DES sin cambiar las aplicaciones existentes.  
   
 > [!IMPORTANT]  
 > TDE no proporciona cifrado de datos que se desplazan entre el cliente y PDW. Para obtener más información acerca de cómo cifrar los datos entre el cliente y SQL Server PDW, vea [aprovisionar un certificado](provision-certificate.md).  
@@ -144,7 +143,7 @@ Mientras se realiza el examen del proceso de nuevo cifrado para una operación d
   
 Puede encontrar el estado de la base de datos de cifrado mediante la **sys.dm_pdw_nodes_database_encryption_keys** vista de administración dinámica. Para obtener más información, consulte el *vistas de catálogo y vistas de administración dinámica* anteriormente en este artículo.  
   
-### <a name="restrictions"></a>Restrictions  
+### <a name="restrictions"></a>Restricciones  
 No se permiten las operaciones siguientes durante el `CREATE DATABASE ENCRYPTION KEY`, `ALTER DATABASE ENCRYPTION KEY`, `DROP DATABASE ENCRYPTION KEY`, o `ALTER DATABASE...SET ENCRYPTION` instrucciones.  
   
 -   Eliminar la base de datos.  

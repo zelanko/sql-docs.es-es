@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 118a7cac-4c0d-44fd-b63e-3d542932d239
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f4d8f3684f4b01a17b6c0ce41ddb8e2fc1ab63e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3e52ecc471255db772fddc46585f635fbc6cb182
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47794363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987551"
 ---
 # <a name="using-ado-with-sql-server-native-client"></a>Usar ADO con SQL Server Native Client
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47794363"
  Para permitir que ADO utilice las características nuevas de las versiones más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], se han realizado algunas mejoras en el proveedor OLE DB de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client que extiende las características principales de OLE DB. Estas mejoras permiten a las aplicaciones ADO usar las características más recientes de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] y usar dos tipos de datos introducidos en [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]: **xml** y **udt**. Estas mejoras también aprovechan las mejoras realizadas en los tipos de datos **varchar**, **nvarchar** y **varbinary**. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega la propiedad de inicialización SSPROP_INIT_DATATYPECOMPATIBILITY de propiedades DBPROPSET_SQLSERVERDBINIT para su uso por las aplicaciones ADO para que los nuevos tipos de datos se expongan en un modo compatible con ADO. Además, el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proveedor OLE DB de Native Client también define una nueva palabra clave de conexión denominada **DataTypeCompatibility** que se establece en la cadena de conexión.  
   
 > [!NOTE]  
->  Las aplicaciones ADO existentes pueden obtener acceso y actualizar XML, UDT, texto de valores grandes y valores de campo binarios mediante el proveedor SQLOLEDB. Los nuevos tipos de datos de mayor tamaño **varchar(max)**, **nvarchar(max)** y **varbinary(max)** se devuelven como los tipos ADO **adLongVarChar**, **adLongVarWChar** y **adLongVarBinary** respectivamente. Las columnas XML se devuelven como **adLongVarChar** y las columnas UDT se devuelven como **adVarBinary**. Sin embargo, si usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor OLE DB de Native Client (SQLNCLI11) en lugar de SQLOLEDB, deberá asegurarse de que establecer el **DataTypeCompatibility** palabra clave en "80" para que los nuevos tipos de datos se asignen correctamente a los datos de ADO tipos.  
+>  Las aplicaciones ADO existentes pueden obtener acceso y actualizar XML, UDT, texto de valores grandes y valores de campo binarios mediante el proveedor SQLOLEDB. Los nuevos tipos de datos de mayor tamaño **varchar(max)** , **nvarchar(max)** y **varbinary(max)** se devuelven como los tipos ADO **adLongVarChar**, **adLongVarWChar** y **adLongVarBinary** respectivamente. Las columnas XML se devuelven como **adLongVarChar** y las columnas UDT se devuelven como **adVarBinary**. Sin embargo, si usa el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] el proveedor OLE DB de Native Client (SQLNCLI11) en lugar de SQLOLEDB, deberá asegurarse de que establecer el **DataTypeCompatibility** palabra clave en "80" para que los nuevos tipos de datos se asignen correctamente a los datos de ADO tipos.  
   
 ## <a name="enabling-sql-server-native-client-from-ado"></a>Habilitar SQL Server Native Client desde ADO  
  Para habilitar el uso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, las aplicaciones ADO necesitarán implementar las siguientes palabras clave en sus cadenas de conexión:  

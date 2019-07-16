@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: fa41e052-a79a-4194-9b1a-2885f7828500
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: ed8d04f571deb231f3dbea4d840ee69e3ea1b140
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 82f433d18ff0940c9283f93cfa5e3f87179d31ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944346"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078553"
 ---
 # <a name="sysdmftsindexkeywordsbyproperty-transact-sql"></a>sys.dm_fts_index_keywords_by_property (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ OBJECT_ID('table_name')
  db_id('*database_name*')  
  Una llamada a la [DB_ID ()](../../t-sql/functions/db-id-transact-sql.md) función. Esta función acepta un nombre de base de datos y devuelve el identificador de la base de datos, qué sys.dm_fts_index_keywords_by_property se usa para buscar la base de datos especificado. Si el parámetro *database_name* se omite, se devuelve el identificador de base de datos actual.  
   
- object_id('*table_name*')  
+ object_id ('*table_name*')  
  Una llamada a la [object_id ()](../../t-sql/functions/object-id-transact-sql.md) función. Esta función acepta un nombre de tabla y devuelve el identificador de la tabla que contiene el índice de texto completo que se va a inspeccionar.  
   
 ## <a name="table-returned"></a>Tabla devuelta  

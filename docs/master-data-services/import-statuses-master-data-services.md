@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 306577c5-e7d7-4cff-aff4-efb5c6354036
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64368e9f68b62f61b84d0bcb45278870bfab8689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8193dd3e345ab8290239e0f01cbea82221a64c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485870"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945091"
 ---
 # <a name="import-statuses-master-data-services"></a>Estados de importación (Master Data Services)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65485870"
 
   En el área funcional **Administración de integraciones** , en la página **Lotes de almacenamiento provisional** , son posibles los estados siguientes.  
   
-|Estado|Descripción|Status_ID|  
+|Status|Descripción|Status_ID|  
 |------------|-----------------|----------------|  
 |En cola para ejecutar|No se ha iniciado el procesamiento del lote.|1|  
 |En ejecución|Se está procesando el lote.|2|  

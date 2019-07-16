@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036389"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>Asignación de funciones de reemplazo para mantener la compatibilidad de aplicaciones
 Un ODBC *3.x* la aplicación funciona a través de ODBC *3.x* funcionará el Administrador de controladores en un ODBC *2.x* siempre y cuando no se usa ninguna característica nueva de controlador. Ambos duplican la funcionalidad y cambios de comportamiento, sin embargo,, afectan al modo en que ODBC *3.x* aplicación funciona en un ODBC *2.x* controlador. Cuando se trabaja con un ODBC *2.x* controlador, se asigna el Administrador de controladores ODBC siguiente *3.x* funciones, que se reemplazaron uno o más ODBC *2.x* funciones, en el ODBC correspondiente *2.x* funciones.  
@@ -452,7 +451,7 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |Búfer|Valor|  
 |------------|-----------|  
 |ColumnName|"" (cadena vacía)|  
-|*NameLengthPtr|0|  
+|\* NameLengthPtr|0|  
 |*DataTypePtr|SQL_BINARY|  
 |*ColumnSizePtr|4|  
 |*DecimalDigitsPtr|0|  

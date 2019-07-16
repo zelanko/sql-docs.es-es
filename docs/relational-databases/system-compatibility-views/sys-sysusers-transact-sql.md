@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 5f0e6a8d-c983-44f6-97e9-aab5bff67d18
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e1b5ade681827e28a67262c8514be35e1e914015
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b8bec28a2e7778a449cb36aeee81481a311c6b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018061"
 ---
 # <a name="syssysusers-transact-sql"></a>sys.sysusers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -41,15 +40,15 @@ ms.locfileid: "47658883"
 |-----------------|---------------|-----------------|  
 |**UID**|**smallint**|Id. de usuario, único en esta base de datos.<br /><br /> 1 = Propietario de la base de datos<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**status**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Nombre**|**sysname**|Nombre de usuario o de grupo, único en esta base de datos.|  
-|**SID**|**varbinary(85)**|Identificador de seguridad de esta entrada.|  
+|**name**|**sysname**|Nombre de usuario o de grupo, único en esta base de datos.|  
+|**sid**|**varbinary(85)**|Identificador de seguridad de esta entrada.|  
 |**Roles**|**varbinary(2048)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**CREATEDATE**|**datetime**|Fecha en que se agregó la cuenta.|  
-|**UpdateDate**|**datetime**|Fecha en que se cambió la cuenta por última vez.|  
+|**createdate**|**datetime**|Fecha en que se agregó la cuenta.|  
+|**updatedate**|**datetime**|Fecha en que se cambió la cuenta por última vez.|  
 |**altuid**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
 |**password**|**varbinary(256)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**GID**|**smallint**|Id. de grupo al que pertenece este usuario. Si **uid** es el mismo que **gid**, esta entrada define un grupo. Produce un desbordamiento o devuelve NULL si el número combinado de grupos y usuarios es superior a 32.767.|  
-|**Environ**|**varchar (255)**|Reservado.|  
+|**Environ**|**varchar(255)**|Reservado.|  
 |**hasdbaccess**|**int**|1 = La cuenta tiene acceso a la base de datos.|  
 |**islogin**|**int**|1 = La cuenta pertenece a un grupo de Windows, a un usuario de Windows o a un usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con una cuenta de inicio de sesión.|  
 |**isntname**|**int**|1 = La cuenta corresponde a un usuario o grupo de Windows.|  

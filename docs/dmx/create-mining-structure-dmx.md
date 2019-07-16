@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 457385a43c9f5b2864e5596f2da33f4ed38e7756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070993"
 ---
 # <a name="create-mining-structure-dmx"></a>CREAR ESTRUCTURA DE MINERÍA DE DATOS (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,16 +34,16 @@ CREATE [SESSION] MINING STRUCTURE <structure>
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *structure*  
+ *estructura*  
  Nombre único de la estructura.  
   
  *lista de definiciones de columna*  
  Lista delimitada por comas de definiciones de columna.  
   
- *holdout-maxpercent*  
+ *exclusión maxpercent*  
  Número entero entre 1 y 100 que indica el porcentaje de datos que se reservan para las pruebas.  
   
- *holdout-maxcases*  
+ *exclusión maxcases*  
  Número entero que indica el número máximo de casos que deben utilizarse para las pruebas.  
   
  Si el valor especificado para el número máximo de casos es mayor que el número de casos de entrada, se utilizarán todos los casos de entrada para las pruebas y se generará un mensaje de advertencia.  

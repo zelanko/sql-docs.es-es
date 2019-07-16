@@ -16,19 +16,18 @@ helpviewer_keywords:
 ms.assetid: f242c1bd-3cc8-4c8b-8aaf-c79b6a8a0329
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: d7fff3c65aaf6a5670be2d457440f4384f7c5fdd
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: ec3fae7d4e2a649ea05c48d400728e229607d92f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56011996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079271"
 ---
 # <a name="syselasticpoolresourcestats-azure-sql-database"></a>Sys.elastic_pool_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve estadísticas de uso de recursos para todos los grupos elásticos en un servidor de base de datos SQL. Para cada grupo elástico, hay una fila para cada 15 segundos (cuatro filas por minuto) de la ventana de informe. Esto incluye el uso de CPU, E/S, registro, consumo de almacenamiento y simultáneas de solicitudes o sesiones todas las bases de datos en el grupo. Estos datos se conservan durante 14 días. 
+  Devuelve estadísticas de uso de recursos de todos los grupos elásticos de un servidor de SQL Database. Para cada grupo elástico hay una fila por cada ventana de informe de 15 segundos (cuatro filas por minuto). Esto incluye uso de CPU, E/S, registro, almacenamiento y empleo simultáneo de solicitudes o sesiones por parte de todas las bases de datos del grupo. Estos datos se conservan durante 14 días. 
   
 ||  
 |-|  

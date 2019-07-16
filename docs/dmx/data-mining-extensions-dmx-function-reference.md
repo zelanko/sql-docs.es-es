@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9f0851d3ec373161c9277013fc746ebda5b91f89
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 68d57ac2db4149178a61424affef5e8948de0063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37998427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070951"
 ---
 # <a name="data-mining-extensions-dmx-function-reference"></a>Referencia de funciones de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "37998427"
 |[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|Devuelve una tabla que contiene las últimas filas del elemento n de la expresión de tabla, en orden decreciente, según una expresión de rango.|  
 |[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|Devuelve una tabla que contiene el número más pequeño de filas del nivel más bajo que cumplen con una expresión de porcentaje especificada, en orden ascendente de rango en función de una expresión de rango.|  
 |[BottomSum &#40;DMX&#41;](../dmx/bottomsum-dmx.md)|Devuelve una tabla que contiene el número más pequeño de filas del nivel más bajo que cumplen con una expresión de suma especificada, en orden ascendente de rango en función de una expresión de rango.|  
-|[Clúster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.|  
+|[Cluster &#40;DMX&#41;](../dmx/cluster-dmx.md)|Devuelve el clúster que tiene la mayor probabilidad de contener el caso de entrada.|  
 |[ClusterProbability &#40;DMX&#41;](../dmx/clusterprobability-dmx.md)|Devuelve la probabilidad de que el caso de entrada pertenezca al clúster.|  
 |[Existe &#40;DMX&#41;](../dmx/exists-dmx.md)|Devuelve true si el conjunto de resultados que devuelve la instrucción SELECT especificada contiene al menos una fila.|  
 |[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|Indica si el nodo actual desciende del nodo especificado.|  
@@ -42,7 +41,7 @@ ms.locfileid: "37998427"
 |[IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|Indica si un caso pertenece al conjunto de casos de prueba.|  
 |[IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)|Indica si un caso pertenece al conjunto de casos de entrenamiento.|  
 |[Lag &#40;DMX&#41;](../dmx/lag-dmx.md)|Devuelve el intervalo entre la fecha del caso actual y la última fecha que figura en los datos.|  
-|[Predecir &#40;DMX&#41;](../dmx/predict-dmx.md)|Realiza una predicción sobre una columna específica.|  
+|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|Realiza una predicción sobre una columna específica.|  
 |[PredictAdjustedProbability &#40;DMX&#41;](../dmx/predictadjustedprobability-dmx.md)|Devuelve la probabilidad ajustada de la columna de predicción especificada.|  
 |[PredictAssociation &#40;DMX&#41;](../dmx/predictassociation-dmx.md)|Predice los miembros de asociaciones en una columna.|  
 |[PredictCaseLikelihood &#40;DMX&#41;](../dmx/predictcaselikelihood-dmx.md)|Devuelve la probabilidad de que se ajuste a un caso de entrada del modelo existente. Esta función sólo puede usarse con los modelos de clústeres.|  
@@ -68,7 +67,7 @@ ms.locfileid: "37998427"
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   

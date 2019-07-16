@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946200"
 ---
 # <a name="type-system-xquery"></a>Sistema de tipos (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  Cuando se consulta una instancia XML con tipo y la expresión de la consulta incluye el eje principal, deja de estar disponible la información del tipo estático de los nodos resultantes. Sin embargo, el tipo dinámico sigue asociado a los nodos.  
   
-## <a name="typed-value-vs-string-value"></a>Valor con tipo y valor de cadena  
+## <a name="typed-value-vs-string-value"></a>Valor con tipo y. Valor de cadena  
  Cada nodo tiene un valor con tipo y un valor de cadena. Para los datos XML con tipo, la colección de esquemas XML asociada a la columna o variable que se consulta proporciona el tipo del valor con tipo. Para los datos XML sin tipo, el tipo de valor con tipo es **xdt: untypedAtomic**.  
   
  Puede usar el **data()** o **string()** función para recuperar el valor de un nodo:  
@@ -106,7 +105,7 @@ SELECT @x.query( '/a[1] instance of element()')
   
 -   El [cadena función &#40;XQuery&#41; ](../xquery/data-accessor-functions-string-xquery.md) devuelve el valor de cadena del nodo.  
   
- En la siguiente colección de esquemas XML, se define el elemento <`root`> del tipo entero:  
+ En la siguiente colección de esquemas XML, el <`root`> se define el elemento de tipo entero:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 959d7c51a636045f806de3f6f58e14e1964a2f71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bd304bd86631ae143070f8bbf109fd9b9df8056
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932679"
 ---
 # <a name="fields-collection-properties-methods-and-events"></a>Propiedades de la colección de campos, métodos y eventos
 ## <a name="properties"></a>Propiedades  

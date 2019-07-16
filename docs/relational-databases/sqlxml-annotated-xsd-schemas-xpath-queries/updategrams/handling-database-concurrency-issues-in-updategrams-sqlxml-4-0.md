@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086864"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>Controlar problemas de simultaneidad de base de datos en diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "56023046"
   
 -   Especifique la columna de marca de tiempo (si está disponible) en el  **\<antes >** bloque.  
   
-     En lugar de especificar todas las columnas del registro en el  **\<antes**> bloque, sólo puede especificar la columna de marca de tiempo (si la tabla tiene uno), junto con las columnas de clave principal en el  **\<antes >** bloque. La base de datos actualizará la columna de marca de tiempo a un valor único tras cada actualización del registro. En este caso, el diagrama de actualización compara el valor de la marca de tiempo con el valor correspondiente de la base de datos. El valor de marca de tiempo almacenado en la base de datos es un valor binario. Por lo tanto, se debe especificar la columna de marca de tiempo en el esquema como **dt:type="bin.hex"**, **dt:type="bin.base64"**, o **SQL: DataType = "timestamp"**. (Puede especificar el **xml** tipo de datos o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos.)  
+     En lugar de especificar todas las columnas del registro en el  **\<antes**> bloque, sólo puede especificar la columna de marca de tiempo (si la tabla tiene uno), junto con las columnas de clave principal en el  **\<antes >** bloque. La base de datos actualizará la columna de marca de tiempo a un valor único tras cada actualización del registro. En este caso, el diagrama de actualización compara el valor de la marca de tiempo con el valor correspondiente de la base de datos. El valor de marca de tiempo almacenado en la base de datos es un valor binario. Por lo tanto, se debe especificar la columna de marca de tiempo en el esquema como **dt:type="bin.hex"** , **dt:type="bin.base64"** , o **SQL: DataType = "timestamp"** . (Puede especificar el **xml** tipo de datos o el [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tipo de datos.)  
   
 #### <a name="to-test-the-updategram"></a>Para probar el diagrama de actualización  
   

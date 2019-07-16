@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 2016818bb5403e3f75243a0c4bc437cb7cbc73d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fb396d47da69724d16c0d72e1373527f9c5e700f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47632433"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102435"
 ---
 # <a name="syslogintoken-transact-sql"></a>sys.login_token (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,10 +36,10 @@ ms.locfileid: "47632433"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**principal_id**|**int**|Id. de la entidad de seguridad. Este valor es único en el servidor.|  
-|**SID**|**varbinary(85)**|Identificador de seguridad de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, **sid** = SID de Windows. Si el inicio de sesión está asignado a un certificado, **sid** = GUID a partir del certificado.|  
-|**Nombre**|**nvarchar(128)**|Nombre de la entidad de seguridad. Este valor es único en el servidor.|  
-|**Tipo**|**nvarchar(128)**|Descripción del tipo de entidad de seguridad. Todos los tipos se asignan a **sid**. El valor puede ser uno de los siguientes:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
-|**Uso de**|**nvarchar(128)**|Indica que la entidad de seguridad participa en la evaluación de los permisos GRANT o DENY o sirve como autenticador.<br /><br /> Este valor puede ser uno de los siguientes:<br /><br /> GRANT o DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
+|**sid**|**varbinary(85)**|Identificador de seguridad de la entidad de seguridad. Si se trata de una entidad de seguridad de Windows, **sid** = SID de Windows. Si el inicio de sesión está asignado a un certificado, **sid** = GUID a partir del certificado.|  
+|**name**|**nvarchar(128)**|Nombre de la entidad de seguridad. Este valor es único en el servidor.|  
+|**type**|**nvarchar(128)**|Descripción del tipo de entidad de seguridad. Todos los tipos se asignan a **sid**. El valor puede ser uno de los siguientes:<br /><br /> SQL LOGIN<br /><br /> WINDOWS LOGIN<br /><br /> WINDOWS GROUP<br /><br /> SERVER ROLE<br /><br /> LOGIN MAPPED TO CERTIFICATE<br /><br /> LOGIN MAPPED TO ASYMMETRIC KEY<br /><br /> CERTIFICATE<br /><br /> ASYMMETRIC KEY|  
+|**usage**|**nvarchar(128)**|Indica que la entidad de seguridad participa en la evaluación de los permisos GRANT o DENY o sirve como autenticador.<br /><br /> Este valor puede ser uno de los siguientes:<br /><br /> GRANT o DENY<br /><br /> DENY ONLY<br /><br /> AUTHENTICATOR|  
   
 ## <a name="see-also"></a>Vea también  
  [Sys.user_token &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-user-token-transact-sql.md)   

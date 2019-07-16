@@ -1,21 +1,20 @@
 ---
-title: mssqlctl hdfs reference
+title: referencia de hdfs mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia para los comandos de hdfs mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8f211faf827bdf925a8fde938fff8f96998bc359
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6a2044594065e6f98ed919ace2171279e6f72c25
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957914"
 ---
 # <a name="mssqlctl-hdfs"></a>mssqlctl hdfs
 
@@ -26,18 +25,18 @@ El siguiente artículo proporciona la referencia para la **hdfs** comandos en el
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[mssqlctl hdfs shell](#mssqlctl-hdfs-shell) | El shell HDFS es un shell sencillo comando interactivo para el sistema de archivos HDFS.
+[shell de hdfs mssqlctl](#mssqlctl-hdfs-shell) | El shell HDFS es un shell sencillo comando interactivo para el sistema de archivos HDFS.
 [mssqlctl hdfs ls](#mssqlctl-hdfs-ls) | Enumera el estado del directorio o archivo especificado.
-[mssqlctl hdfs exists](#mssqlctl-hdfs-exists) | Determinar si existe un archivo o directorio.  Devuelve True si existe y False en caso contrario.
+[hdfs mssqlctl existe](#mssqlctl-hdfs-exists) | Determinar si existe un archivo o directorio.  Devuelve True si existe y False en caso contrario.
 [mssqlctl hdfs mkdir](#mssqlctl-hdfs-mkdir) | Cree un directorio en la ruta especificada.
 [mssqlctl hdfs mv](#mssqlctl-hdfs-mv) | Mover el archivo especificado o la ruta de acceso a la ubicación especificada.
 [mssqlctl hdfs create](#mssqlctl-hdfs-create) | Cree el archivo de texto en la ubicación especificada.  Contenido de texto simple se puede agregar a través del parámetro de datos.
-[mssqlctl hdfs read](#mssqlctl-hdfs-read) | Leer el contenido de un archivo.  Desplazamiento y longitud en bytes son parámetros opcionales.
+[hdfs mssqlctl leer](#mssqlctl-hdfs-read) | Leer el contenido de un archivo.  Desplazamiento y longitud en bytes son parámetros opcionales.
 [mssqlctl hdfs rm](#mssqlctl-hdfs-rm) | Quitar un archivo o directorio.
 [mssqlctl hdfs rmr](#mssqlctl-hdfs-rmr) | Quitan de forma recursiva un archivo o directorio.
 [mssqlctl hdfs chmod](#mssqlctl-hdfs-chmod) | Cambie el permiso en el archivo o directorio especificado.
 [mssqlctl hdfs chown](#mssqlctl-hdfs-chown) | Cambiar el propietario o grupo del archivo especificado.
-## <a name="mssqlctl-hdfs-shell"></a>mssqlctl hdfs shell
+## <a name="mssqlctl-hdfs-shell"></a>shell de hdfs mssqlctl
 El shell HDFS es un shell sencillo comando interactivo para el sistema de archivos HDFS.
 ```bash
 mssqlctl hdfs shell 
@@ -58,7 +57,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-hdfs-ls"></a>mssqlctl hdfs ls
+## <a name="mssqlctl-hdfs-ls"></a>mssqlctl ls de hdfs
 Enumera el estado del directorio o archivo especificado.
 ```bash
 mssqlctl hdfs ls --path -p 
@@ -83,7 +82,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-hdfs-exists"></a>mssqlctl hdfs exists
+## <a name="mssqlctl-hdfs-exists"></a>hdfs mssqlctl existe
 Determinar si existe un archivo o directorio.  Devuelve True si existe y False en caso contrario.
 ```bash
 mssqlctl hdfs exists --path -p 
@@ -160,7 +159,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-hdfs-create"></a>mssqlctl hdfs create
+## <a name="mssqlctl-hdfs-create"></a>crear mssqlctl hdfs
 Cree el archivo de texto en la ubicación especificada.  Contenido de texto simple se puede agregar a través del parámetro de datos.
 ```bash
 mssqlctl hdfs create --path -p 
@@ -187,7 +186,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-hdfs-read"></a>mssqlctl hdfs read
+## <a name="mssqlctl-hdfs-read"></a>hdfs mssqlctl leer
 Leer el contenido de un archivo.  Desplazamiento y longitud en bytes son parámetros opcionales.
 ```bash
 mssqlctl hdfs read --path -p 

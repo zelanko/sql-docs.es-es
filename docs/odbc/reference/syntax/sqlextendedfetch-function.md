@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 940b5cf7-581c-4ede-8533-c67d5e9ef488
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63030b34e4b607b850f25a67357d62a7184467c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce4bd75b2a1ffac44b14c9906e669421d55888c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003078"
 ---
 # <a name="sqlextendedfetch-function"></a>Función SQLExtendedFetch
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  **SQLExtendedFetch** recupera el conjunto especificado filas de datos del conjunto de resultados y devuelve datos para todas las columnas enlazadas. Los conjuntos de filas pueden especificarse en una posición absoluta o relativa, o por el marcador.  
@@ -72,7 +71,7 @@ SQLRETURN SQLExtendedFetch(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLExtendedFetch** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLError**. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLExtendedFetch** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario. Si se produce un error en una sola columna, **SQLGetDiagField** se puede llamar con un *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar la columna que se produjo el error; y  **SQLGetDiagField** se puede llamar con un *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar la fila que contiene la columna.  
   
 |SQLSTATE|Error|Descripción|  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17ac06d65d519be86ec077e6c6d39896c7f5ad46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061471"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>Función SQLGetPrivateProfileString
 **Conformidad**  
@@ -69,7 +68,7 @@ int SQLGetPrivateProfileString(
 ## <a name="returns"></a>Devuelve  
  **SQLGetPrivateProfileString** devuelve un valor entero que indica el número de caracteres leídos.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando una llamada a **SQLGetPrivateProfileString** produce un error, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

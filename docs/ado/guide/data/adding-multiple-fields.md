@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90904154f324a86088fac0d637301193464feb2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926277"
 ---
 # <a name="adding-multiple-fields-and-values"></a>Agregar varios campos y valores
 En ocasiones, podría ser más eficaz pasar una matriz de campos y sus valores correspondientes a la **AddNew** método, en lugar de la configuración **valor** varias veces para cada nuevo campo. Si *FieldList* es una matriz, *valores* también debe ser una matriz con el mismo número de miembros; de lo contrario, se produce un error. El orden de los nombres de campo debe coincidir con el orden de los valores de campo en cada matriz. El código siguiente pasa una matriz de campos y una matriz de valores para el **AddNew** método.

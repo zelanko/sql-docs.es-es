@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 5bc5f64b-c75a-43d2-8745-102ec7a49000
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22a9a9d50891a6101076af6378fb33543274b21b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d7c320521a9948c7968f4f7f5d42fd715f6c03d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63237949"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68062680"
 ---
 # <a name="catalog-position"></a>Posición del catálogo
 La posición de un nombre de catálogo en un identificador y cómo lo está separado del resto del identificador varía en función del origen de datos al origen de datos. Por ejemplo, en un origen de datos de Xbase, el nombre del catálogo es un directorio y, en Microsoft® Windows®, se separa del nombre de tabla (que es un nombre de archivo) por una barra diagonal inversa (\\). La siguiente ilustración muestra esta condición.  

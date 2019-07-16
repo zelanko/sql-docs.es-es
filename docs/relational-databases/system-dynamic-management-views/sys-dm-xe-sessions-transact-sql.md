@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: defd6efb-9507-4247-a91f-dc6ff5841e17
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e5c46d9051fb1760791c16c9274a1803c58c1e90
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 9b42a6808d9cab6a3431a68bff9e29e83354a2af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090220"
 ---
 # <a name="sysdmxesessions-transact-sql"></a>sys.dm_xe_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "53785886"
     
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|address|**varbinary (8)**|La dirección de memoria de la sesión. dirección es única en todo el sistema local. No admite valores NULL.|  
-|NAME|**nvarchar(256)**|El nombre de la sesión. nombre es único en el sistema local. No admite valores NULL.|  
+|address|**varbinary(8)**|La dirección de memoria de la sesión. dirección es única en todo el sistema local. No admite valores NULL.|  
+|name|**nvarchar(256)**|El nombre de la sesión. nombre es único en el sistema local. No admite valores NULL.|  
 |pending_buffers|**int**|Número de búferes llenos pendientes de procesamiento. No admite valores NULL.|  
-|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: Búferes normales que se usan la mayor parte del tiempo. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información acerca la MEMORY_PARTITION_MODE y MAX_MEMORY opciones, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
+|total_regular_buffers|**int**|Número total de búferes normales que están asociados a la sesión. No admite valores NULL.<br /><br /> Nota: La mayoría de los casos, se utilizan búferes normales. Estos búferes son de tamaño suficiente para contener muchos eventos. Normalmente habrá tres búferes o más por cada sesión. El servidor determina automáticamente el número de búferes normales, según las particiones de memoria que se establecen a través de la opción MEMORY_PARTITION_MODE. El tamaño de los búferes normales es igual al valor de la opción MAX_MEMORY (que es de 4 MB de forma predeterminado) dividido por el número de búferes. Para obtener más información acerca la MEMORY_PARTITION_MODE y MAX_MEMORY opciones, consulte [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |regular_buffer_size|**bigint**|Tamaño en bytes del búfer de salida normal. No admite valores NULL.|  
 |total_large_buffers|**int**|Número total de búferes grandes. No admite valores NULL.<br /><br /> Nota: Los búferes grandes se usan cuando un evento es mayor que un búfer normal. Con este fin se reservan explícitamente. Los búferes grandes se asignan cuando se inicia la sesión del evento y su tamaño se determina según la opción MAX_EVENT_SIZE. Para obtener más información acerca de la opción MAX_EVENT_SIZE, vea [CREATE EVENT SESSION &#40;Transact-SQL&#41;](../../t-sql/statements/create-event-session-transact-sql.md).|  
 |large_buffer_size|**bigint**|Tamaño en bytes del búfer grande. No admite valores NULL.|  

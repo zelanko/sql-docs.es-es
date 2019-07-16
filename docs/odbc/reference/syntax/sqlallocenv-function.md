@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f744abc1bca3077ca4ba191782f7ccdcfafdb0a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a14b1ba846956b13cf65fa969c649d18ecc2b4e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036239"
 ---
 # <a name="sqlallocenv-function"></a>Función SQLAllocEnv
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  En ODBC 3. *x*, ODBC 2. *x* función **SQLAllocEnv** ha sido reemplazado por **SQLAllocHandle**. Para obtener más información, consulte [función SQLAllocHandle](../../../odbc/reference/syntax/sqlallochandle-function.md).  

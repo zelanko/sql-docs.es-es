@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cae34190da8179663996c7a385cc13541353ee0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da99b63c986029a1791793fbbd33910bb95d4b7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086802"
 ---
 # <a name="using-test-repositories-oracletosql"></a>Uso de repositorios de prueba (OracleToSQL)
 Los almacenes de repositorio de pruebas de SSMA SSMA evaluador casos de prueba y los resultados de pruebas para su uso posterior. Los datos del repositorio se guardan en las tablas de SQL Server **TestCaseRepository** y **RunTestCaseResultRepository** en el esquema **ssma_oracle_utilities** de **ssmatesterdb** base de datos.  

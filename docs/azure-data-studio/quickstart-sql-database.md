@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778289"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959434"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar la base de datos SQL de Azure
 
@@ -59,7 +58,7 @@ Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para establecer una cone
 
 3. Seleccione **Conectar**.
 
-4. 4.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
+4. 4\.Si el servidor no tiene una regla de firewall que permita Studio de datos de Azure para conectarse, se abrirá el formulario **crear nueva regla de firewall**. Complete el formulario para crear una nueva regla de firewall. Para obtener más información, consulte [reglas de Firewall](https://docs.microsoft.com/azure/sql-database/sql-database-firewall-configure).
 
    ![Nueva regla de firewall](media/quickstart-sql-database/firewall.png)  
 
@@ -150,7 +149,7 @@ Mostrarán los resultados de consulta:
    ![Seleccione los resultados](media/quickstart-sql-database/select-results2.png)
 
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Los artículos de inicio rápido posteriores se basan en los recursos creados aquí. Si tiene previsto trabajar con estos artículos, asegúrese de no eliminar estos recursos. En caso contrario, en el portal de Azure, elimine los recursos que ya no necesita. Para obtener más información, consulte [limpiar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).
 

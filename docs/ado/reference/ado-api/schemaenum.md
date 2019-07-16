@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931117"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) recupera del método.  
@@ -48,13 +47,13 @@ Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/ref
 |**adSchemaConstraintColumnUsage**|6|Devuelve las columnas utilizadas por las restricciones referenciales, restricciones únicas, restricciones check y aserciones, definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas CONSTRAINT_COLUMN_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaConstraintTableUsage**|7|Devuelve las tablas que se usan por las restricciones referenciales, restricciones únicas, restricciones check y aserciones definidas en el catálogo y que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas CONSTRAINT_TABLE_USAGE)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaCubes**|32|Devuelve información acerca de los cubos disponibles en un esquema (o el catálogo, si el proveedor no admite esquemas).<br /><br /> (Los cubos de filas *)|CATALOG_NAME SCHEMA_NAME CUBE_NAME|  
-|**adSchemaDBInfoKeywords**|30|Devuelve una lista de palabras clave específicas del proveedor.<br /><br /> (IDBInfo::GetKeywords)|\<None>|  
-|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en los comandos de texto.<br /><br /> (IDBInfo::GetLiteralInfo)|\<None>|  
+|**adSchemaDBInfoKeywords**|30|Devuelve una lista de palabras clave específicas del proveedor.<br /><br /> (IDBInfo::GetKeywords)|\<Ninguno >|  
+|**adSchemaDBInfoLiterals**|31|Devuelve una lista de literales específicos del proveedor utilizados en los comandos de texto.<br /><br /> (IDBInfo::GetLiteralInfo)|\<Ninguno >|  
 |**adSchemaDimensions**|33|Devuelve información acerca de las dimensiones de un cubo determinado. Tiene una fila para cada dimensión.<br /><br /> (Conjunto de filas de dimensiones)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|Devuelve las columnas de clave externas definidas en el catálogo por un usuario determinado.<br /><br /> (Conjunto de filas FOREIGN_KEYS)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME FK_TABLE_CATALOG FK_TABLE_SCHEMA FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|Devuelve información acerca de las jerarquías disponibles en una dimensión.<br /><br /> (Conjunto de filas de las JERARQUÍAS)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
 |**adSchemaIndexes**|12|Devuelve los índices definidos en el catálogo que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas de índices)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TIPO TABLE_NAME|  
-|**adSchemaKeyColumnUsage**|8|Devuelve las columnas definidas en el catálogo que un usuario determinado restringe como claves.<br /><br /> (KEY_COLUMN_USAGE Rowset)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
+|**adSchemaKeyColumnUsage**|8|Devuelve las columnas definidas en el catálogo que un usuario determinado restringe como claves.<br /><br /> (Conjunto de filas KEY_COLUMN_USAGE)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME COLUMN_NAME|  
 |**adSchemaLevels**|35|Devuelve información sobre los niveles disponibles en una dimensión.<br /><br /> (Los niveles de conjunto de filas)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|Devuelve información acerca de las medidas disponibles.<br /><br /> (Conjunto de filas de las medidas)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|Devuelve información acerca de los miembros disponibles.<br /><br /> (Conjunto de filas de miembros)|Catalog_Name SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE operador de árbol. Para obtener más información, consulte OLE DB para OLAP Online Analytical Processing ().|  
@@ -67,7 +66,7 @@ Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/ref
 |**adSchemaProviderTypes**|22|Devuelve los tipos de datos (base) admitidos por el proveedor de datos.<br /><br /> (Conjunto de filas PROVIDER_TYPES)|DATA_TYPE BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|Devuelve las restricciones referenciales definidas en el catálogo que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas REFERENTIAL_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaSchemata**|17|Devuelve los esquemas (objetos de base de datos) pertenecientes a un usuario determinado.<br /><br /> (Conjunto de filas de esquema de datos)|CATALOG_NAME SCHEMA_NAME SCHEMA_OWNER|  
-|**adSchemaSQLLanguages**|18|Devuelve los niveles de compatibilidad, opciones y dialectos admitidos por los datos de procesamiento de implementación SQL definidos en el catálogo.<br /><br /> (Conjunto de filas SQL_LANGUAGES)|\<None>|  
+|**adSchemaSQLLanguages**|18|Devuelve los niveles de compatibilidad, opciones y dialectos admitidos por los datos de procesamiento de implementación SQL definidos en el catálogo.<br /><br /> (Conjunto de filas SQL_LANGUAGES)|\<Ninguno >|  
 |**adSchemaStatistics**|19|Devuelve las estadísticas definidas en el catálogo que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas de estadísticas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaTableConstraints**|10|Devuelve las restricciones de tabla definidas en el catálogo que pertenecen a un usuario determinado.<br /><br /> (Conjunto de filas TABLE_CONSTRAINTS)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG TABLE_SCHEMA TABLE_NAME CONSTRAINT_TYPE|  
 |**adSchemaTablePrivileges**|14|Devuelve los privilegios en tablas definidas en el catálogo que están disponibles para o a un usuario determinado.<br /><br /> (Conjunto de filas TABLE_PRIVILEGES)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME GRANTOR GRANTEE|  
@@ -75,12 +74,12 @@ Especifica el tipo de esquema **Recordset** que la [OpenSchema](../../../ado/ref
 |**adSchemaTranslations**|21|Devuelve las conversiones de caracteres definidas en el catálogo que se puede acceder a un usuario determinado.<br /><br /> (Conjunto de filas de traducciones)|TRANSLATION_CATALOG TRANSLATION_SCHEMA TRANSLATION_NAME|  
 |**adSchemaTrustees**|39|Reservado para uso futuro.||  
 |**adSchemaUsagePrivileges**|15|Devuelve los privilegios USAGE en objetos definidos en el catálogo que están disponibles para o a un usuario determinado.<br /><br /> (Conjunto de filas USAGE_PRIVILEGES)|RECEPTOR DE OBJECT_CATALOG OBJECT_SCHEMA OBJECT_NAME OBJECT_TYPE OTORGANTE DE PERMISOS|  
-|**adSchemaViewColumnUsage**|24|Devuelve las columnas en el que las tablas vistas, definen en el catálogo y que pertenecen a un usuario determinado, son dependientes.<br /><br /> (VIEW_COLUMN_USAGE Rowset)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
+|**adSchemaViewColumnUsage**|24|Devuelve las columnas en el que las tablas vistas, definen en el catálogo y que pertenecen a un usuario determinado, son dependientes.<br /><br /> (Conjunto de filas VIEW_COLUMN_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
 |**adSchemaViews**|23|Devuelve las vistas definidas en el catálogo que se puede acceder a un usuario determinado.<br /><br /> (Conjunto de filas de las vistas)|TABLE_CATALOG TABLE_SCHEMA TABLE_NAME|  
 |**adSchemaViewTableUsage**|25|Devuelve las tablas en el que las tablas vistas, definen en el catálogo y que pertenecen a un usuario determinado, son dependientes.<br /><br /> (Conjunto de filas VIEW_TABLE_USAGE)|VIEW_CATALOG VIEW_SCHEMA VIEW_NAME|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966045"
 ---
 # <a name="indexes-collection-adox"></a>Colección de índices (ADOX)
 Todos los contiene [índice](../../../ado/reference/adox-api/index-object-adox.md) objetos de una tabla.  
   
 ## <a name="remarks"></a>Comentarios  
- El [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) método para un **índices** colección es único para ADOX. Puede hacer lo siguiente:  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-indexes.md) método para un **índices** colección es único para ADOX. Puede:  
   
 -   Agregar un nuevo índice a la colección con el **Append** método.  
   
- Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede:  
   
 -   Obtener acceso a un índice de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   

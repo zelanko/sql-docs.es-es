@@ -2,19 +2,18 @@
 title: Realizar un seguimiento de las alertas del dispositivo - Analytics Platform System | Microsoft Docs
 description: Realizar un seguimiento de las alertas del dispositivo en Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f38f76975290538a35203ddbbed84b9354285edc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62f116b8e45512d5a6fc5ce50c0fbc76344103be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960028"
 ---
 # <a name="track-appliance-alerts-in-analytics-platform-system"></a>Realizar un seguimiento de las alertas del dispositivo en Analytics Platform System
 En este tema se explica cómo usar la consola de administración y las vistas del sistema para realizar un seguimiento de las alertas en un dispositivo PDW de SQL Server.  
@@ -27,7 +26,7 @@ PDW de SQL Server registra las alertas en el [sys.dm_pdw_component_health_alerts
 ### <a name="view-alerts-by-using-the-admin-console"></a>Ver alertas mediante el uso de la consola de administración  
 Hay un **alertas** ficha para la región PDW y para la región de tejido del dispositivo. Después de producirse la conmutación por error, el evento de conmutación por error se incluye en el número de alertas en la página. Hay una página de la región PDW y la región de tejido del dispositivo. Cada página de mantenimiento tiene una pestaña. Para obtener más información sobre una alerta, haga clic en el **mantenimiento** página, el **alertas** pestaña y, a continuación, haga clic en una alerta.  
   
-![PDW Admin Console Alerts](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
+![Alertas de consola de administración PDW](./media/track-appliance-alerts/SQL_Server_PDW_AdminConsole_AlertsV2.png "SQL_Server_PDW_AdminConsole_AlertsV2")  
   
 En el **alertas** página:  
   

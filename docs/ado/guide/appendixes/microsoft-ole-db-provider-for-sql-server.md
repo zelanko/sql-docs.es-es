@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 99bc40c4-9181-4ca1-a06f-9a1a914a0b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f083f62a67a2255b59fe9ca7cffc03e5aaf5f0a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd28ece0e82c4551409920c876d54fbd7dc501ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701183"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926613"
 ---
 # <a name="microsoft-ole-db-provider-for-sql-server-overview"></a>Proveedor Microsoft OLE DB para Introducción a SQL Server
 El proveedor Microsoft OLE DB para SQL Server, SQLOLEDB, permite que ADO tener acceso a Microsoft SQL Server.
@@ -69,7 +68,7 @@ User ID=MyUserID;Password=MyPassword;"
 |Dirección de red|Indica la dirección de red de SQL Server especificado por el **ubicación** propiedad.|
 |Biblioteca de red|Indica el nombre de la biblioteca de red (DLL) utilizada para comunicarse con el servidor SQL Server. El nombre no debe incluir la ruta de acceso ni la extensión de nombre de archivo .dll. El valor predeterminado es proporcionado por la configuración de cliente de SQL Server.|
 |Usar procedimiento para preparar|Determina si SQL Server crea los procedimientos almacenados temporales cuando se preparan los comandos (mediante el **Prepared** propiedad).|
-|Auto Translate|Indica si se convierten los caracteres OEM/ANSI. Esta propiedad puede establecerse en **True** o **False**. El valor predeterminado es **True**. Si esta propiedad se establece en **True**, SQLOLEDB realiza la conversión de caracteres OEM/ANSI cuando se recuperan de las cadenas de caracteres multibyte o envía a SQL Server. Si esta propiedad se establece en **False**, SQLOLEDB no realiza la conversión de caracteres OEM/ANSI en los datos de cadena de caracteres multibyte.|
+|Traducir automáticamente|Indica si se convierten los caracteres OEM/ANSI. Esta propiedad puede establecerse en **True** o **False**. El valor predeterminado es **True**. Si esta propiedad se establece en **True**, SQLOLEDB realiza la conversión de caracteres OEM/ANSI cuando se recuperan de las cadenas de caracteres multibyte o envía a SQL Server. Si esta propiedad se establece en **False**, SQLOLEDB no realiza la conversión de caracteres OEM/ANSI en los datos de cadena de caracteres multibyte.|
 |Tamaño del paquete|Indica un tamaño de paquete de red en bytes. El valor de propiedad de tamaño de paquete debe estar entre 512 y 32767. El tamaño de paquete de red SQLOLEDB predeterminado es 4096.|
 |Application Name|Indica el nombre de la aplicación cliente.|
 |Id. de estación de trabajo|Cadena que identifica la estación de trabajo.|

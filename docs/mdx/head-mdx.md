@@ -1,5 +1,5 @@
 ---
-title: Head (MDX) | Microsoft Docs
+title: HEAD (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 05cfcb3c23a0369f010b8440d4a27e94ffacdb21
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e6d8da7a5813f7e99c022e19f18de2800598885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906008"
 ---
 # <a name="head-mdx"></a>Head (MDX)
 
@@ -59,7 +58,7 @@ FROM [Adventure Works]
  [Tail &#40;MDX&#41;](../mdx/tail-mdx.md)   
  [Elemento &#40;tupla&#41; &#40;MDX&#41;](../mdx/item-tuple-mdx.md)   
  [Elemento &#40;miembro&#41; &#40;MDX&#41;](../mdx/item-member-mdx.md)   
- [Rank &#40;MDX&#41;](../mdx/rank-mdx.md)   
+ [Rango &#40;MDX&#41;](../mdx/rank-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1c79e271-21ec-41a8-8163-c5e89f0001a7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21f8ec6ea0ed9cd1af8257dcd10b18f59903c929
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba871d6d0e84b8068cb36a3ed2516a2665db28d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932436"
 ---
 # <a name="index-property"></a>Propiedad Index
 Indica el nombre del índice actualmente en vigor para un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -46,7 +45,7 @@ Indica el nombre del índice actualmente en vigor para un [Recordset](../../../a
   
  Si se puede establecer el índice y el [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) propiedad es **adLockPessimistic** o **adLockOptimistic**, a continuación, implícita [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) se realiza la operación. Esto libera los grupos afectados y actuales. Se liberan todos los filtros existentes, y se cambia la posición de fila actual a la primera fila de la reordenada **Recordset**.  
   
- El **índice** propiedad se utiliza junto con el [Seek](../../../ado/reference/ado-api/seek-method.md) método. Si el proveedor subyacente no admite la **índice** propiedad y, por tanto, el **Seek** método, considere el uso de la [buscar](../../../ado/reference/ado-api/find-method-ado.md) método en su lugar. Determinar si el **Recordset** objeto admite índices con el [admite](../../../ado/reference/ado-api/supports-method.md)**(adIndex)** método.  
+ El **índice** propiedad se utiliza junto con el [Seek](../../../ado/reference/ado-api/seek-method.md) método. Si el proveedor subyacente no admite la **índice** propiedad y, por tanto, el **Seek** método, considere el uso de la [buscar](../../../ado/reference/ado-api/find-method-ado.md) método en su lugar. Determinar si el **Recordset** objeto admite índices con el [admite](../../../ado/reference/ado-api/supports-method.md) **(adIndex)** método.  
   
  Integrado **índice** propiedad no está relacionado con el dinámico [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad, aunque ambas tienen que ver con los índices.  
   

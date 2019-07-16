@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: cfe24e82-a645-4f93-ab16-39c21f90cce6
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 884ed081e9d1ec445815802545da2160057e9f3b
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cf5835e513b1d03ac1065ae039c989c6f80a659f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56026886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018541"
 ---
 # <a name="introduction-to-updategrams-sqlxml-40"></a>Introducción a los diagramas de actualización (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,10 +42,10 @@ ms.locfileid: "56026886"
 >  En esta documentación se asume que está familiarizado con la compatibilidad de las plantillas y el esquema de asignación de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, consulte [Introducción a los esquemas XSD anotados &#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md). Para obtener información sobre las aplicaciones heredadas que usan XDR, vea [esquemas XDR anotados &#40;desusado en SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md).  
   
 ## <a name="required-namespaces-in-the-updategram"></a>Espacios de nombres necesarios en el diagrama de actualización  
- Las palabras clave en un diagrama de actualización, como  **\<sincronización >**,  **\<antes >**, y  **\<después >**, existe en el **urn: schemas-microsoft-com: diagrama de actualización** espacio de nombres. Se usa un prefijo de espacio de nombres arbitrario. En esta documentación, el **updg** prefijo denota el **updategram** espacio de nombres.  
+ Las palabras clave en un diagrama de actualización, como  **\<sincronización >** ,  **\<antes >** , y  **\<después >** , existe en el **urn: schemas-microsoft-com: diagrama de actualización** espacio de nombres. Se usa un prefijo de espacio de nombres arbitrario. En esta documentación, el **updg** prefijo denota el **updategram** espacio de nombres.  
   
 ## <a name="reviewing-syntax"></a>Revisar la sintaxis  
- Un diagrama de actualización es una plantilla con  **\<sincronización >**,  **\<antes >**, y  **\<después >** bloques que forman la sintaxis de la diagrama de actualización. El código siguiente muestra esta sintaxis en su forma más simple:  
+ Un diagrama de actualización es una plantilla con  **\<sincronización >** ,  **\<antes >** , y  **\<después >** bloques que forman la sintaxis de la diagrama de actualización. El código siguiente muestra esta sintaxis en su forma más simple:  
   
 ```  
 <ROOT xmlns:updg="urn:schemas-microsoft-com:xml-updategram">  

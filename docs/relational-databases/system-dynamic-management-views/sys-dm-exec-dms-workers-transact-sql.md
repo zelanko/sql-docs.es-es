@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: f468da29-78c3-4f10-8a3c-17905bbf46f2
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8a31b03208eba573fc6bd50f2348733ef0a07c2b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3728fddb26d45107b0e695453bef6eeb9fa5de63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013322"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097780"
 ---
 # <a name="sysdmexecdmsworkers-transact-sql"></a>sys.dm_exec_dms_workers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "63013322"
 |-----------------|---------------|-----------------|-----------|  
 |execution_id|**nvarchar(32)**|Consulta que este trabajador DMS es parte of.request_id, step_index, y dms_step_index forman la clave para esta vista.||  
 |step_index|**int**|Este trabajador DMS forma parte del paso de consulta.|Consulte el índice de paso en [sys.dm_exec_distributed_request_steps &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-distributed-request-steps-transact-sql.md).|  
-|dms_step_index|**int**|El paso en el plan DMS que se está ejecutando este trabajo.|See [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
+|dms_step_index|**int**|El paso en el plan DMS que se está ejecutando este trabajo.|Consulte [sys.dm_exec_dms_workers (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-exec-dms-workers-transact-sql.md)|  
 |compute_node_id|**int**|Nodo que se está ejecutando el trabajo.|See [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md).|  
 |distribution_id|**int**|||  
 |type|**nvarcha(32)**|||  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dc92086e-3b01-4b0b-9f54-3bbf306cf7ae
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 7220b0fe10f88ec9ba78d31a8507d12eba7aafff
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 04cb465c5180b829ff7d125c1695c3865c3f33c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039002"
 ---
 # <a name="context-functions---last-xquery"></a>Funciones de contexto: last (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ WHERE ProductModelID=7
   
  En la consulta anterior, el **last()** funcionando en /`/AWMI:root//AWMI:Location)[1]/AWMI:step[last()]` devuelve el número de pasos de fabricación. Este valor se utiliza para recuperar el último paso de fabricación de la ubicación de centro de trabajo.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 ProductModelID Result    

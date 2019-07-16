@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 450abd88-90a1-4fbc-b417-8efbdd8e1dea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 72e79d377371277720e2fcc15a31ce715693d832
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bd6640c0dc06d9e957176717ef26aa3e444ffa9f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022521"
 ---
-# <a name="diagnostics"></a>Diagnósticos
+# <a name="diagnostics"></a>Diagnóstico
 Funciones de ODBC devuelven información de diagnóstico de dos maneras. El código de retorno indica el éxito o error de la función, general, mientras que los registros de diagnóstico proporcionan información detallada acerca de la función. Incluso si la función se realiza correctamente, se devuelve al menos un registro de diagnóstico: el registro de encabezado.  
   
  Información de diagnóstico se usa en tiempo de desarrollo para detectar errores de programación como identificadores no válidos y errores de sintaxis en las instrucciones SQL codificadas de forma rígida. En tiempo de ejecución se usa para detectar errores de tiempo de ejecución y las advertencias como errores de sintaxis, las infracciones de acceso y el truncamiento de datos en instrucciones SQL escritas por el usuario.  

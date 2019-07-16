@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f87d46fb-4b33-42b5-8a54-6d2c4577c69a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 53fc430dc0b6a154c844e2db176ca98b2cd184d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ccfe887f870bc6a517913dd49848a434572994
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708030"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966898"
 ---
 # <a name="column-object-properties-methods-and-events"></a>Propiedades, métodos y eventos del objeto Column
 ## <a name="propertiescollections"></a>Propiedades y colecciones  

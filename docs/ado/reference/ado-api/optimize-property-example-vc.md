@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cb335455-b027-4f66-868d-d0d8b2175de1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d602faed36d2348652aa8fd026f0c0810928b6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5000a537e068136de98e8635f348ff6aa3d9e364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931837"
 ---
 # <a name="optimize-property-example-vc"></a>Ejemplo de la propiedad Optimize (VC ++)
 Este ejemplo se muestra el [campo](../../../ado/reference/ado-api/field-object.md) objeto dinámico **optimizar** propiedad. El **zip** campo de la **autores** de tabla en la **Pubs** base de datos no está indizada. Establecer el [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad **True** en el **zip** campo autoriza a ADO para generar un índice que mejora el rendimiento de la [buscar](../../../ado/reference/ado-api/find-method-ado.md)método.  
@@ -133,7 +132,7 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
- **Akiko Yokomoto    3 Silver Ct. Walnut Creek CA**   
+ **Akiko Yokomoto CT de 3 Silver. Walnut Creek CA**   
 ## <a name="see-also"></a>Vea también  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Propiedad dinámica Optimize (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)

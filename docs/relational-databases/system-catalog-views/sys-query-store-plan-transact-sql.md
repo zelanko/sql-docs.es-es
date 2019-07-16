@@ -1,5 +1,5 @@
 ---
-title: sys.query_store_plan (Transact-SQL) | Microsoft Docs
+title: Sys.query_store_plan (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/23/2019
 ms.prod: sql
@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b4d05439-6360-45db-b1cd-794f4a64935e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7adf4a825fb93b6c87714476607b30e9f4ec97a7
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d1aee3dcdfe287e4d6db64be6c74edb7eb1362a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068049"
 ---
 # <a name="sysquerystoreplan-transact-sql"></a>sys.query_store_plan (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "67833575"
 |**plan_group_id**|**bigint**|Id. de grupo del plan. Las consultas de cursor suele requieran varios (rellenar y capturar) planes. Rellenar y son los planes de recuperación que se compilan juntos en el mismo grupo.<br /><br /> 0 significa que el plan no está en un grupo.|  
 |**engine_version**|**nvarchar(32)**|Versión del motor usado para compilar el plan en **'principal.secundaria.compilación.revisión'** formato.|  
 |**compatibility_level**|**smallint**|Nivel de compatibilidad de base de datos de la base de datos al que hace referencia en la consulta.|  
-|**query_plan_hash**|**binary(8)**|Hash MD5 de los planes individuales.|  
+|**query_plan_hash**|**binary (8)**|Hash MD5 de los planes individuales.|  
 |**query_plan**|**nvarchar(max)**|SHOWPLAN XML del plan de consulta.|  
 |**is_online_index_plan**|**bit**|Plan utilizó durante la generación de índice en línea. <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**is_trivial_plan**|**bit**|Plan es un plan trivial (salida en la etapa 0 del optimizador de consultas). <br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  

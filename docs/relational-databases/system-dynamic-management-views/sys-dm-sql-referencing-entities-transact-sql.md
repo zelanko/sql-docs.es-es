@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c16f8f0a-483f-4feb-842e-da90426045ae
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: cf1f5b633b432d24ea143d857dcd7fbdf72968fd
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b5bd5257e06b784418625616c71cfb7d3e5510a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090663"
 ---
 # <a name="sysdmsqlreferencingentities-transact-sql"></a>sys.dm_sql_referencing_entities (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "53204544"
   
 -   Entidades enlazadas o no a un esquema.  
   
--   Desencadenadores DLL de nivel de base de datos   
+-   Desencadenadores DLL de nivel de base de datos  
   
--   Desencadenadores DDL de nivel de servidor   
+-   Desencadenadores DDL de nivel de servidor  
   
-**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
+**Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]), [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -66,7 +65,7 @@ sys.dm_sql_referencing_entities (
   
  *schema_name* es necesaria excepto cuando la clase que se hace referencia es PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* es **nvarchar (517)**.  
+ *schema_name.referenced_entity_name* es **nvarchar (517)** .  
   
  *< Referenced_class >* :: = {objeto | TIPO | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION}  
  Es la clase de la entidad a la que se hace referencia. Solo se puede especificar una clase por instrucción.  
@@ -80,7 +79,7 @@ sys.dm_sql_referencing_entities (
 |referencing_schema_name|**sysname**|Esquema al que pertenece la entidad que hace la referencia. Acepta valores NULL.<br /><br /> NULL para desencadenadores DDL de nivel de base de datos y nivel de servidor.|  
 |referencing_entity_name|**sysname**|Nombre de la entidad que hace la referencia. No admite valores NULL.|  
 |referencing_id|**int**|Identificador de la entidad que hace la referencia. No admite valores NULL.|  
-|referencing_class|**tinyint**|Clase de la entidad que hace la referencia. No admite valores NULL.<br /><br /> 1 = Objeto<br /><br /> 12 = Desencadenador DLL de nivel de base de datos <br /><br /> 13 = Desencadenador DDL de nivel de servidor |  
+|referencing_class|**tinyint**|Clase de la entidad que hace la referencia. No admite valores NULL.<br /><br /> 1 = Objeto<br /><br /> 12 = Desencadenador DLL de nivel de base de datos<br /><br /> 13 = Desencadenador DDL de nivel de servidor|  
 |referencing_class_desc|**nvarchar(60)**|Descripción de la clase de entidad de referencia.<br /><br /> OBJECT<br /><br /> DATABASE_DDL_TRIGGER<br /><br /> SERVER_DDL_TRIGGER|  
 |is_caller_dependent|**bit**|Indica que la resolución del identificador de la entidad a la que se hace referencia se realiza en tiempo de ejecución porque depende del esquema del autor de la llamada.<br /><br /> 1 = La entidad que hace la referencia tiene el potencial para hacer referencia a la entidad; sin embargo, la resolución del identificador de la entidad depende del autor de la llamada y no se puede determinar. Esto solo se produce para las referencias no enlazadas a un esquema a un procedimiento almacenado, un procedimiento almacenado extendido o una función definida por el usuario llamada en una instrucción EXECUTE.<br /><br /> 0 = La entidad a la que se hace referencia no depende del autor de la llamada.|  
   
@@ -102,21 +101,21 @@ sys.dm_sql_referencing_entities (
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
-|Table|Sí*|Sí|  
+|Tabla|Sí*|Sí|  
 |Ver|Sí|Sí|  
 |Procedimiento almacenado de [!INCLUDE[tsql](../../includes/tsql-md.md)]**|Sí|Sí|  
 |procedimiento almacenado CLR|No|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
 |Función CLR definida por el usuario|No|Sí|  
-|Desencadenador CLR (DML y DDL)|No|No|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Procedimientos almacenados extendidos|No|Sí|  
+|Desencadenador CLR (DML y DDL)|Sin|Sin|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
+|Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
+|Procedimientos almacenados extendidos|Sin|Sí|  
 |Cola|No|Sí|  
 |Synonym (Sinónimo)|No|Sí|  
-|Tipo (tipo CLR y alias definido por el usuario)|No|Sí|  
-|Colección de esquemas XML|No|Sí|  
+|Tipo (tipo CLR y alias definido por el usuario)|Sin|Sí|  
+|Colección de esquemas XML|Sin|Sí|  
 |Función de partición|No|Sí|  
   
  \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  

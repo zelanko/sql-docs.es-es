@@ -9,19 +9,18 @@ ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0516016ad04132cae3899811b8f20f7f43538d53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 40587866b77e67947a1658c742ceed9f9e71b581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090444"
 ---
 # <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Devuelve información sobre las acciones de la sesión de eventos. Se ejecutan las acciones cuando se activan los eventos. Esta vista de administración agrega estadísticas del número de veces que se ha ejecutado una acción y el tiempo de ejecución total de la acción.  
+  Devuelve información acerca de las acciones de la sesión de eventos. Se ejecutan las acciones cuando se activan los eventos. Esta vista de administración agrega estadísticas del número de veces que se ha ejecutado una acción y el tiempo de ejecución total de la acción.  
   
 ||  
 |-|  
@@ -36,7 +35,7 @@ ms.locfileid: "56035886"
 |event_package_guid|**uniqueidentifier**|El GUID del paquete que contiene el evento. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
- Requiere el permiso VIEW DATABASE STATE.  
+ Necesita el permiso VIEW DATABASE STATE.  
   
 ### <a name="relationship-cardinalities"></a>Cardinalidades de relación  
   

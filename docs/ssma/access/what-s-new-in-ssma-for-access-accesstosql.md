@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0f0084f93fa648e5db79ef70dd5f05a259b94b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 50723f7b7161bbed960ce2f94e1b7bbf79d420d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938414"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>Novedades de SSMA para Access (AccessToSQL)
 
@@ -31,7 +30,7 @@ La versión v8.2 de SSMA para Access se ha mejorado con correcciones de destino 
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La versión v8.1 de SSMA para Access se ha mejorado con correcciones de destino que están diseñadas para mejorar las métricas de calidad y la conversión.
 

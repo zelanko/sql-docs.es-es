@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 038d751a-fca5-4b4c-9129-cba741a4e173
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 680712fb2ac5b31484fc7650a8a4fab8047fc7af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 34473e6eb173a0aabc5c2067e50aeeec27ce5636
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65103272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067739"
 ---
 # <a name="semanticsimilaritydetailstable-transact-sql"></a>semanticsimilaritydetailstable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ SEMANTICSIMILARITYDETAILSTABLE
 ## <a name="table-returned"></a>Tabla devuelta  
  En la tabla siguiente se describe la información sobre las frases clave que devuelve esta función de conjunto de filas.  
   
-|Column_name|Tipo|Descripción|  
+|Column_name|Type|Descripción|  
 |------------------|----------|-----------------|  
 |**keyphrase**|**NVARCHAR**|Frase clave que contribuye a la similitud entre el documento de origen y el documento coincidente.|  
 |**score**|**REAL**|Valor relativo de esta frase clave en su relación con todas las demás frases clave que son similares entre los dos documentos.<br /><br /> El valor es un valor fraccionario decimal en el intervalo de [0.0, 1.0] donde una puntuación superior representa una ponderación mayor y 1.0 es la puntuación perfecta.|  

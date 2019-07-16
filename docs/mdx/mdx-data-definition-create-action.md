@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098552"
 ---
 # <a name="mdx-data-definition---create-action"></a>Definición de datos de MDX: CREATE ACTION
 
@@ -83,7 +82,7 @@ FOR
   
 |Tipo de acción|Descripción|  
 |-----------------|-----------------|  
-|**Dirección URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador, a menos que **SafetyOptions** está establecido en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
+|**URL**|La cadena de acción que se devuelve es una dirección URL que debe abrirse mediante un explorador de Internet.<br /><br /> Nota: Si esta acción no se inicia con `https://` o `https://`, la acción no estará disponible en el explorador, a menos que **SafetyOptions** está establecido en **DBPROPVAL_MSMD_SAFETY_OPTIONS_ALLOW_ALL**.|  
 |**HTML**|La cadena de acción que se devuelve es un script HTML. La cadena debe guardarse en un archivo y ese archivo debe representarse mediante un explorador de Internet. En este caso, un script completo debe ejecutarse como parte del HTML generado.|  
 |**INSTRUCCIÓN**|La cadena de acción devuelta es una instrucción que se debe ejecutar estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute**método. Si el comando no ha funcionado, se muestra un error.|  
 |**CONJUNTO DE DATOS**|La cadena de acción devuelta es una instrucción MDX que debe ejecutarse estableciendo el **SetText** método de un objeto de comando a la cadena y llamar a la **ICommand:: Execute** método. La interfaz solicitada debe ser el identificador (IID) **IDataset**. El comando tiene éxito si se ha creado un conjunto de datos. La aplicación cliente debe permitir al usuario explorar el conjunto de datos devuelto.|  
@@ -96,7 +95,7 @@ FOR
   
 |Tipo de invocación|Descripción|  
 |---------------------|-----------------|  
-|**INTERACTIVE**|La aplicación cliente debe invocar la acción mediante la interacción del usuario.|  
+|**INTERACTIVO**|La aplicación cliente debe invocar la acción mediante la interacción del usuario.|  
 |**ON_OPEN**|La aplicación cliente debe invocar la acción cuando se abre el objeto de destino. Este tipo de invocación no está implementada actualmente.|  
 |**BATCH**|La aplicación cliente debe invocar la acción cuando el objeto de destino esté relacionado con una operación por lotes, según determine la aplicación cliente. Este tipo de invocación no está implementada actualmente.|  
   

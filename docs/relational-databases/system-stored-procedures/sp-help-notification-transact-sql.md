@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906104"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @object_type = ] 'object_type'` El tipo de información que se devuelve. *object_type*es **char (9)**, no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que enumera las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que se enumeran los operadores responsables del nombre de alerta especificado *.*  
+`[ @object_type = ] 'object_type'` El tipo de información que se devuelve. *object_type*es **char (9)** , no tiene ningún valor predeterminado. *object_type* puede ser ALERTS, que enumera las alertas asignadas al nombre del operador especificado *,* u OPERATORS, que se enumeran los operadores responsables del nombre de alerta especificado *.*  
   
 `[ @name = ] 'name'` Un nombre de operador (si *object_type* es OPERATORS) o un nombre de alerta (si *object_type* es ALERTS). *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @enum_type = ] 'enum_type'` El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
+`[ @enum_type = ] 'enum_type'` El *object_type*información que se devuelve. *enum_type* es ACTUAL en la mayoría de los casos. *enum_type*es **char (10)** , no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

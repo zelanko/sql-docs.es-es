@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 406715f59a3a45184b9700d72331688911bc83e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2134429ae9d14e00e99c88f1596b1216170e5b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078154"
 ---
 # <a name="mscachedpeerlsns-transact-sql"></a>MScached_peer_lsns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "62817034"
 |**originator_db**|**sysname**|Nombre de la base de datos de publicación de origen.|  
 |**originator_publication_id**|**int**|Identifica la publicación de origen.|  
 |**originator_db_version**|**int**|Identifica el número de versión de la base de datos de origen.|  
-|**originator_lsn**|**varbinary(16)**|LSN de la transacción de origen.|  
+|**originator_lsn**|**varbinary (16)**|LSN de la transacción de origen.|  
   
 ## <a name="remarks"></a>Comentarios  
  Los valores de LSN solo se utilizan inmediatamente después de la inserción, y no tienen un significado duradero en el sistema.  

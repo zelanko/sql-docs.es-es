@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036595"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -108,7 +107,7 @@ FROM [Adventure Works]
 |Touring-2000 Blue, 50|$157,444.56|$163,112.57|($5,668.01)|  
 |Touring-2000 azul, 46|$321,027.03|$333,021.50|($11,994.47)|  
 |62 azul, Touring-3000|$87,773.61|$100,133.52|($12,359.91)|  
-|…|…|…|…|  
+|...|...|...|...|  
 |46 amarillo, Touring-1000|$1,016,312.83|$1,234,454.27|($218,141.44)|  
 |Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
   

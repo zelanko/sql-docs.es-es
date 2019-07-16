@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 57326f57-daba-46b6-b0be-6c97213b9ef1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6eb6bedb20e1f61c48776d03df59aa6865cfb2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f40299dccc0313f662aeadfcb26b71326cdc6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073901"
 ---
 # <a name="sqlgetinfo-support"></a>Compatibilidad con SQLGetInfo
 Cuando un ODBC 2. *x* aplicación llama a **SQLGetInfo** a una aplicación ODBC 3 *.x* controlador, el *InfoType* argumentos en la tabla siguiente deben ser compatibles.  

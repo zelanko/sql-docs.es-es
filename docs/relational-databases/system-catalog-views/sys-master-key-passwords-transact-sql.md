@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: b8e18cff-a9e6-4386-98ce-1cd855506e03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac97ef26a358fb48749b7758f32ed5d2f82d3ba1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 87bb4a97db318330f253d068febb1309e4eda12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102403"
 ---
 # <a name="sysmasterkeypasswords-transact-sql"></a>sys.master_key_passwords (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por cada contraseña de clave maestra de base de datos agregada mediante el uso de la **sp_control_dbmasterkey_password** procedimiento almacenado. Las contraseñas que se usan para proteger las claves maestras se almacenan en el almacén de credenciales. El nombre de credencial sigue este formato: ##DBMKEY_<database_family_guid>_<random_password_guid>##. La contraseña se almacena como el secreto de la credencial. Para cada contraseña agregada con **sp_control_dbmasterkey_password**, hay una fila en **sys.credentials**.  
+  Devuelve una fila por cada contraseña de clave maestra de base de datos agregada mediante el uso de la **sp_control_dbmasterkey_password** procedimiento almacenado. Las contraseñas que se usan para proteger las claves maestras se almacenan en el almacén de credenciales. El nombre de credencial sigue este formato: # #dbmkey_ < database_family_guid > _ < random_password_guid > ##. La contraseña se almacena como el secreto de la credencial. Para cada contraseña agregada con **sp_control_dbmasterkey_password**, hay una fila en **sys.credentials**.  
   
  Cada fila en esta vista muestra una **credential_id** y **family_guid** de una base de datos de la clave maestra de la que está protegida por la contraseña asociada con esa credencial. Una combinación con **sys.credentials** en el **credential_id** devolverá campos útiles, como el **create_date** y nombre de la credencial.  
   

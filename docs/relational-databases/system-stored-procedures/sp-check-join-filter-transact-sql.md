@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070424"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filtered_table = ] 'filtered_table'` Es el nombre de una tabla filtrada. *filtered_table* es **nvarchar (400)**, no tiene ningún valor predeterminado.  
+`[ @filtered_table = ] 'filtered_table'` Es el nombre de una tabla filtrada. *filtered_table* es **nvarchar (400)** , no tiene ningún valor predeterminado.  
   
-`[ @join_table = ] 'join_table'` Es el nombre de una tabla que se combina con *filtered_table*. *join_table* es **nvarchar (400)**, no tiene ningún valor predeterminado.  
+`[ @join_table = ] 'join_table'` Es el nombre de una tabla que se combina con *filtered_table*. *join_table* es **nvarchar (400)** , no tiene ningún valor predeterminado.  
   
-`[ @join_filterclause = ] 'join_filterclause'` Se está probando la cláusula de filtro de combinación. *join_filterclause* es **nvarchar (1000)**, no tiene ningún valor predeterminado.  
+`[ @join_filterclause = ] 'join_filterclause'` Se está probando la cláusula de filtro de combinación. *join_filterclause* es **nvarchar (1000)** , no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

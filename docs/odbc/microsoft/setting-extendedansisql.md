@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 37b775d1-65ac-45ac-8572-454bc4e3c1a2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c9b8999e229e8a6ed4804b2f06a4072d139ae93a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 330b55ef2d4fee090c453990d3fe75e6e2dacb6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063597"
 ---
 # <a name="setting-extendedansisql"></a>Establecer ExtendedAnsiSQL
 El atributo se puede controlar en la cadena de conexión, agregando el atributo ExtendedAnsiSQL:  

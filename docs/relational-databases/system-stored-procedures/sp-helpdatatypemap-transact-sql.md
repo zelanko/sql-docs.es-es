@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 800c9c65-723e-4961-a63d-327987f129f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf42231158f646e34c63bd148ba66c9780b14785
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: ee304c9847019b21f1e08f57a3e0fdf0b439d241
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101402"
 ---
 # <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**MSSQLSERVER**|El origen es una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**ORACLE**|El origen es una base de datos de Oracle.|  
   
-`[ @source_version = ] 'source_version'` Es la versión del producto del DBMS de origen. *source_version*es **varchar (10)**, y si no se especifica, los datos de asignaciones de tipos para todas las versiones de la fuente de DBMS se devuelven. Permite filtrar el conjunto de resultados por la versión de origen del DBMS.  
+`[ @source_version = ] 'source_version'` Es la versión del producto del DBMS de origen. *source_version*es **varchar (10)** , y si no se especifica, los datos de asignaciones de tipos para todas las versiones de la fuente de DBMS se devuelven. Permite filtrar el conjunto de resultados por la versión de origen del DBMS.  
   
 `[ @source_type = ] 'source_type'` El tipo de datos aparece en el DBMS de origen. *source_type* es **sysname**, y si no se especifica, se devuelven las asignaciones para todos los tipos de datos del DBMS de origen. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de origen.  
   
@@ -64,7 +63,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
 |**DB2**|El destino es una base de datos IBM DB2.|  
 |**SYBASE**|El destino es una base de datos Sybase.|  
   
-`[ @destination_version = ] 'destination_version'` Es la versión del producto del DBMS de destino. *destination_version*es **varchar (10)**, y si no se especifica, se devuelven las asignaciones para todas las versiones del DBMS de destino. Permite filtrar el conjunto de resultados por la versión de destino del DBMS.  
+`[ @destination_version = ] 'destination_version'` Es la versión del producto del DBMS de destino. *destination_version*es **varchar (10)** , y si no se especifica, se devuelven las asignaciones para todas las versiones del DBMS de destino. Permite filtrar el conjunto de resultados por la versión de destino del DBMS.  
   
 `[ @destination_type = ] 'destination_type'` El tipo de datos aparece en el DBMS de destino. *destination_type*es **sysname**, y si no se especifica, se devuelven las asignaciones para todos los tipos de datos del DBMS de destino. Permite filtrar el conjunto de resultados por tipo de datos en el DBMS de destino.  
   

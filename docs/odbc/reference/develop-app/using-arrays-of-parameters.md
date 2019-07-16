@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a28be88-e171-4f5b-bf4d-543c4383c869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ff4a76c38f04c7b9b12842ef800bc8a26a27ed9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf6b5127bac7aedf9e67918d38020c73a4afe186
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079598"
 ---
 # <a name="using-arrays-of-parameters"></a>Utilizar matrices de parámetros
 Utilizar matrices de parámetros, la aplicación llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAMSET_SIZE para especificar el número de conjuntos de parámetros. Llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAMS_PROCESSED_PTR para especificar la dirección de una variable en el que el controlador puede devolver el número de conjuntos de parámetros procesados, establece el error incluida. Llama a **SQLSetStmtAttr** con un *atributo* argumento de SQL_ATTR_PARAM_STATUS_PTR para que apunte a una matriz en la que se va a devolver información de estado para cada fila de valores de parámetro. El controlador almacena estas direcciones en la estructura que se mantiene para la instrucción.  

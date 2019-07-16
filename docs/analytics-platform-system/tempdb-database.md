@@ -2,19 +2,18 @@
 title: Base de datos tempdb - almacenamiento de datos paralelos | Microsoft Docs
 description: Base de datos tempdb en almacenamiento de datos paralelos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 7e11f4eff980358f4b4906f8a100cfc509d19dd5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1790ae3bc63a379c1bcf143655f10829db60a339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960018"
 ---
 # <a name="tempdb-database-in-parallel-data-warehouse"></a>base de datos tempdb en almacenamiento de datos paralelos
 **tempdb** es una base de datos del sistema de PDW de SQL Server que almacena las tablas temporales locales para las bases de datos de usuario. Las tablas temporales se usan a menudo para mejorar el rendimiento de las consultas. Por ejemplo, puede usar una tabla temporal para modularizar una secuencia de comandos y reutilizar datos calculados.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5bf3c4b8a7cbbee1e384c08746f32d6a7e550ddd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d828c2b9b49138cc4dfd6345d90e70c333554fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947431"
 ---
 # <a name="xactattributeenum"></a>XactAttributeEnum
 Especifica los atributos de transacción de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto.  
@@ -32,7 +31,7 @@ Especifica los atributos de transacción de un [conexión](../../../ado/referenc
 |**adXactCommitRetaining**|131072|Realiza confirmaciones con retención mediante una llamada a [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) iniciar automáticamente una nueva transacción. No todos los proveedores admiten este comportamiento.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

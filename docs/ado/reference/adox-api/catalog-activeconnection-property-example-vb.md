@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1946db63ffaf4193a776c7ead9b70e76b729bc26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c6d30aeeb650525873669ccd175155c7e69cd0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967116"
 ---
 # <a name="catalog-activeconnection-property-example-vb"></a>Ejemplo de propiedad ActiveConnection de catálogo (VB)
 Establecer el [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) propiedad en una conexión válida, abra "abre" el catálogo. Desde un catálogo abierto, puede tener acceso a los objetos de esquema dentro de dicho catálogo.  

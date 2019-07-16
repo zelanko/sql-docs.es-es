@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079389"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -37,7 +36,7 @@ Si una base de datos no es `ONLINE`, o `AUTO_CLOSE` está establecido en `ON` y 
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dentro de un servidor de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
+|**name**|**sysname**|Nombre de base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dentro de un servidor de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**database_id**|**int**|Identificador de la base de datos, único en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o dentro de un servidor de [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|  
 |**source_database_id**|**int**|Distinto de NULL = Id. de la base de datos de origen de esta instantánea de base de datos.<br /> NULL = No es una instantánea de base de datos.|  
 |**owner_sid**|**varbinary(85)**|SID (identificador de seguridad) del propietario externo de la base de datos, según se ha registrado en el servidor. Para obtener información sobre quién puede poseer una base de datos, vea el **ALTER AUTHORIZATION para bases de datos** sección de [ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md).|  
@@ -49,7 +48,7 @@ Si una base de datos no es `ONLINE`, o `AUTO_CLOSE` está establecido en `ON` y 
 |**is_read_only**|**bit**|1 = La base de datos es READ_ONLY<br /> 0 = La base de datos es READ_WRITE|  
 |**is_auto_close_on**|**bit**|1 = AUTO_CLOSE es ON<br /> 0 = AUTO_CLOSE es OFF|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK es ON<br /> 0 = AUTO_SHRINK es OFF|  
-|**state**|**tinyint**|**Valor &#124; se aplica a**<br /> 0 = Con conexión  <br /> 1 = En restauración  <br /> 2 = en recuperación &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = Sospechoso  <br /> 5 = emergencia &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = sin conexión &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Nota:** Siempre en las bases de datos, consultar el `database_state` o `database_state_desc` columnas de [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
+|**state**|**tinyint**|**Valor &#124; se aplica a**<br /> 0 = Con conexión <br /> 1 = En restauración <br /> 2 = en recuperación &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = Sospechoso <br /> 5 = emergencia &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = sin conexión &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] a través de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **Nota:** Siempre en las bases de datos, consultar el `database_state` o `database_state_desc` columnas de [sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md).|  
 |**state_desc**|**nvarchar(60)**|Descripción del estado de la base de datos. Vea el estado.|  
 |**is_in_standby**|**bit**|La base de datos es de solo lectura para RESTORE LOG.|  
 |**is_cleanly_shutdown**|**bit**|1 = La base de datos se ha cerrado correctamente; no es necesaria la recuperación en el inicio<br /> 0 = La base de datos no se cerró correctamente; es necesaria la recuperación en el inicio|  

@@ -2,19 +2,18 @@
 title: Carga con Integration Services - almacenamiento de datos paralelos | Microsoft Docs
 description: Proporciona información de referencia e implementación para cargar datos en el almacenamiento de datos paralelos (PDW) mediante el uso de paquetes de SQL Server Integration Services (SSIS).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960679"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Carga de datos con Integration Services para almacenamiento de datos paralelos
 Proporciona información de referencia e implementación para cargar datos en almacenamiento de datos paralelos de SQL Server mediante el uso de paquetes de SQL Server Integration Services (SSIS).  
@@ -61,7 +60,7 @@ Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`
 ### <a name="run-from-a-windows-command-prompt"></a>Ejecución de Windows de un símbolo del sistema 
 Para ejecutar el paquete desde un símbolo del sistema de Windows, utilizando el **dtexec** utilidad: `dtexec /FILE <packagePath>`  
   
-Por ejemplo, `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
+Por ejemplo: `dtexec /FILE "C:\Users\User1\Desktop\Package.dtsx"`  
   
 ## <a name="DataTypes"></a>Tipos de datos  
 Al utilizar Integration Services para cargar datos desde un origen de datos a una base de datos de SQL Server PDW, los datos se asignan primero del origen de datos a tipos de datos de Integration Services. Esto permite que los datos de varios orígenes de datos se asignen a un conjunto común de tipos de datos.  
@@ -71,7 +70,7 @@ A continuación, se asignan los datos de Integration Services a tipos de datos d
 |Tipo de datos PDW|Tipos de datos de servicios de integración (s) que se asignan al tipo de datos PDW|  
 |---------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------|  
 |BIT|DT_BOOL|  
-|bigint|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
+|BIGINT|DT_I1, DT_I2, DT_I4, DT_I8, DT_UI1, DT_UI2, DT_UI4|  
 |CHAR|DT_STR|  
 |DATE|DT_DBDATE|  
 |DATETIME|DT_DATE, DT_DBDATE, DT_DBTIMESTAMP, DT_DBTIMESTAMP2|  

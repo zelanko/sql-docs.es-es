@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 913cd5d4-39a3-4a4b-a926-75ed32878884
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 39a1e699b52b29db74209aa5288bb5dc01896a3b
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: fabfac2d228be78efb2fc728d1b405ec7edce035
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085046"
 ---
 # <a name="sphelp-transact-sql"></a>sp_help (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -68,9 +67,9 @@ sp_help [ [ @objname = ] 'name' ]
     |**Longitud**|**smallint**|Longitud física del tipo de datos (en bytes).|  
     |**Prec**|**int**|Precisión (número total de dígitos).|  
     |**Escala**|**int**|Número de dígitos a la derecha del separador decimal.|  
-    |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL: Sí o no.|  
+    |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL: Sí o No.|  
     |**Default_name**|**nvarchar(** 128 **)**|Nombre de un valor predeterminado enlazado a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
-    |**Rule_name**|**nvarchar(** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
+    |**Nombre_regla**|**nvarchar(** 128 **)**|Nombre de una regla enlazada a este tipo.<br /><br /> NULL = No hay un valor predeterminado enlazado.|  
     |**Intercalación**|**sysname**|Intercalación del tipo de datos. NULL para tipos de datos que no sean de caracteres.|  
   
 3.  Si *nombre* es cualquier objeto de base de datos que no sea un tipo de datos, **sp_help** devuelve este resultado conjuntos de resultados establecido y también adicionales, según el tipo del objeto especificado.  
@@ -79,7 +78,7 @@ sp_help [ [ @objname = ] 'name' ]
 
     |Nombre de columna|Tipo de datos|Descripción|  
     |-----------------|---------------|-----------------|  
-    |**Name**|**nvarchar(** 128 **)**|Nombre de la tabla|  
+    |**Name**|**nvarchar(** 128 **)**|Nombre de tabla|  
     |**Propietario**|**nvarchar(** 128 **)**|Propietario de la tabla.|  
     |**Tipo**|**nvarchar(** 31 **)**|Tipo de tabla.|  
     |**Created_datetime**|**datetime**|Tabla de fechas creado|  
@@ -94,11 +93,11 @@ sp_help [ [ @objname = ] 'name' ]
         |-----------------|---------------|-----------------|  
         |**Column_name**|**nvarchar(** 128 **)**|Nombre de columna.|  
         |**Tipo**|**nvarchar(** 128 **)**|Tipo de datos de la columna.|  
-        |**Calculado**|**varchar(** 35 **)**|Indica si se calculan los valores de la columna: Sí o no.|  
+        |**Calculado**|**varchar(** 35 **)**|Indica si se calculan los valores de la columna: Sí o No.|  
         |**Longitud**|**int**|Longitud de la columna en bytes.<br /><br /> Nota: Si el tipo de datos de columna es un tipo de valor grande (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** , o **xml**), el valor será se mostrará como -1.|  
         |**Prec**|**char(** 5 **)**|Precisión de columna.|  
         |**Escala**|**char(** 5 **)**|Escala de la columna.|  
-        |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL en la columna: Sí o no.|  
+        |**Admisión de valores NULL**|**varchar(** 35 **)**|Indica si se permiten valores NULL en la columna: Sí o No.|  
         |**TrimTrailingBlanks**|**varchar(** 35 **)**|Recorta los espacios en blanco finales. Devuelve Yes o No.|  
         |**FixedLenNullInSource**|**varchar(** 35 **)**|Se conserva únicamente por compatibilidad con versiones anteriores.|  
         |**Intercalación**|**sysname**|Intercalación de la columna. NULL para los tipos de datos que no son caracteres.|  
@@ -141,7 +140,7 @@ sp_help [ [ @objname = ] 'name' ]
         |**delete_action**|**nvarchar(** 9 **)**|Indica si la acción DELETE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
         |**update_action**|**nvarchar(** 9 **)**|Indica si la acción UPDATE es: NO_ACTION, CASCADE, SET_NULL, SET_DEFAULT o N/A.<br /><br /> Solo se aplica a las restricciones FOREIGN KEY.|  
         |**status_enabled**|**varchar(** 8 **)**|Indica si la restricción está habilitada: Habilitado, Disabled o N/A.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
-        |**status_for_replication**|**varchar(** 19 **)**|Indica si la restricción es para replicación.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
+        |**status_for_replication**|**varchar (** 19 **)**|Indica si la restricción es para replicación.<br /><br /> Solo se aplica a las restricciones CHECK y FOREIGN KEY.|  
         |**constraint_keys**|**nvarchar(** 2078 **)**|Nombres de las columnas que componen la restricción o, en el caso de valores predeterminados y reglas, el texto que define el valor predeterminado o la regla.|  
   
     -   Conjunto de resultados adicional devuelto en los objetos de referencia:  

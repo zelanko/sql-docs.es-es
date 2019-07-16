@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6c29d93b-696c-4960-bff3-4d6bc41bc513
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 193bdadaf36e975b1f79327bfef161daaaed427b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afdb1f18ad641224d13373436dd58f1919a3d280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952347"
 ---
 # <a name="descriptor-field-conformance"></a>Conformidad de campo de descriptor
 En la tabla siguiente indica el nivel de cumplimiento de cada campo de encabezado de descriptor ODBC, donde esto está bien definido.  

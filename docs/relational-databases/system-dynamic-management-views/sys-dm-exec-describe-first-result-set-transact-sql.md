@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6ea88346-0bdb-4f0e-9f1f-4d85e3487d23
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 72244883d45245efcdcbcf8aba9e4db4c6e25a8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 523a94718f123fab9d501de9497ca5ecc2b09c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097811"
 ---
 # <a name="sysdmexecdescribefirstresultset-transact-sql"></a>sys.dm_exec_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sys.dm_exec_describe_first_result_set(@tsql, @params, @include_browse_informatio
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit**|Especifica que la columna es una columna adicional agregada con la finalidad de buscar información que realmente no aparece en el conjunto de resultados.|  
 |**column_ordinal**|**int**|Contiene la posición ordinal de la columna en el conjunto de resultados. Posición de la primera columna se especificará como 1.|  
-|**Nombre**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. Si no, contendrá NULL.|  
+|**name**|**sysname**|Contiene el nombre de la columna si se puede determinar uno. Si no, contendrá NULL.|  
 |**is_nullable**|**bit**|Contiene los valores siguientes:<br /><br /> El valor 1 si la columna permite valores NULL.<br /><br /> El valor 0 si la columna no permite valores NULL.<br /><br /> El valor 1 si no se puede determinar que la columna admite valores NULL.|  
 |**system_type_id**|**int**|Contiene el system_type_id del tipo de datos de columna como se especifica en sys.types. En el caso de los tipos de CLR, aunque la columna system_type_name devuelva NULL, esta columna devolverá el valor 240.|  
 |**system_type_name**|**nvarchar(256)**|Contiene el nombre y los argumentos (como length, precision y scale) especificados para el tipo de datos de la columna.<br /><br /> Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí.<br /><br /> Si es un tipo de datos definido por el usuario de CLR, en esta columna se devuelve NULL.|  

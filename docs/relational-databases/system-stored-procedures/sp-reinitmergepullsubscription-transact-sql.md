@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 48464bc9-60aa-4886-b526-163f010102b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: edda5c400ebc9158fbc18e4c8ad8c9a118d9e476
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 08a62e26c130b3753c90cfe05f7e4077ef86d5a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075712"
 ---
 # <a name="spreinitmergepullsubscription-transact-sql"></a>sp_reinitmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_reinitmergepullsubscription [ [ @publisher = ] 'publisher' ]
   
 `[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, con un valor predeterminado es ALL.  
   
-`[ @upload_first = ] 'upload_first'` Especifica si se cargan los cambios en el suscriptor antes de reinicializar la suscripción. *upload_first* es **nvarchar (5)**, su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
+`[ @upload_first = ] 'upload_first'` Especifica si se cargan los cambios en el suscriptor antes de reinicializar la suscripción. *upload_first* es **nvarchar (5)** , su valor predeterminado es False. Si **true**, los cambios se cargan antes de reinicializar la suscripción. Si **false**, no se cargan los cambios.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

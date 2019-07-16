@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 96b28abb-b059-48db-be2b-d60fe127f6aa
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 73e30668dc103c478d0308d1fd8ee09689822129
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: aade9e02515e0d18e4edae188d72e5edafebbd3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47731813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059185"
 ---
 # <a name="sysfnvirtualfilestats-transact-sql"></a>sys.fn_virtualfilestats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ FROM fn_virtualfilestats(1, 1);
 GO  
 ```  
   
-### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>B. Mostrar información estadística de una base de datos y un archivo con nombre  
+### <a name="b-displaying-statistical-information-for-a-named-database-and-file"></a>b. Mostrar información estadística de una base de datos y un archivo con nombre  
  En el siguiente ejemplo se muestra información estadística del archivo de registro de la base de datos de ejemplo [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]. La función del sistema `DB_ID` se usa para especificar el *database_id* parámetro.  
   
 ```sql  

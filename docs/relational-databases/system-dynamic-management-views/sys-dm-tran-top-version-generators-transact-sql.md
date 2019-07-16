@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: cec7809b-ba8a-4df9-b5bb-d4f651ff1a86
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d141da7523501560fc4bd21752ced988c42a7f23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 61bbef9d64ad204b1e7c747559c20d99d8811507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47755853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090483"
 ---
 # <a name="sysdmtrantopversiongenerators-transact-sql"></a>sys.dm_tran_top_version_generators (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -55,7 +54,7 @@ sys.dm_tran_top_version_generators
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="remarks"></a>Comentarios  
  Dado que **sys.dm_tran_top_version_generators** podría tener que leer muchas páginas, ya que recorre el almacén de versiones completo, ejecute **sys.dm_tran_top_version_generators** puede interferir con el sistema rendimiento.  

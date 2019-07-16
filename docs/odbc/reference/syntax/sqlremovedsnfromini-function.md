@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2e8273-7b61-4113-bfc8-f7ccc607c811
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01ecb5457ce3fbc343541063047cb935cbf85a72
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cc83a8cafffc9b5d1166df76d91ce4c63f0b858
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024531"
 ---
 # <a name="sqlremovedsnfromini-function"></a>Función SQLRemoveDSNFromIni
 **Conformidad**  
@@ -49,7 +48,7 @@ BOOL SQLRemoveDSNFromIni(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si quita el origen de datos o el origen de datos no se encuentra en el archivo Odbc.ini. Devuelve FALSE si se produce un error al quitar el origen de datos.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLRemoveDSNFromIni** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

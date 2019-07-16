@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 55081a05169ac91da2a54e27ea5869a19bd5b329
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a26f602e5746f1dfc0556d16448514ae8df7215
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706598"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966028"
 ---
 # <a name="indexes-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de índices
 ## <a name="properties"></a>Propiedades  

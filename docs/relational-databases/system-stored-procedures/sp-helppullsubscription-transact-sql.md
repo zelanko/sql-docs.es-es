@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914961"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publisher = ] 'publisher'` Es el nombre del servidor remoto. *publicador* es **sysname**, su valor predeterminado es **%**, que devuelve información de todos los publicadores.  
+`[ @publisher = ] 'publisher'` Es el nombre del servidor remoto. *publicador* es **sysname**, su valor predeterminado es **%** , que devuelve información de todos los publicadores.  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es **%**, que devuelve todas las bases de datos del publicador.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db* es **sysname**, su valor predeterminado es **%** , que devuelve todas las bases de datos del publicador.  
   
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**, que devuelve todas las publicaciones. Si este parámetro es igual a todas las suscripciones de extracción solo independent_agent = **0** se devuelven.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%** , que devuelve todas las publicaciones. Si este parámetro es igual a todas las suscripciones de extracción solo independent_agent = **0** se devuelven.  
   
-`[ @show_push = ] 'show_push'` Indica si se devuelven todas las suscripciones de inserción. *el argumento show_push*es **nvarchar (5)**, su valor predeterminado es False, que no devuelve las suscripciones de inserción.  
+`[ @show_push = ] 'show_push'` Indica si se devuelven todas las suscripciones de inserción. *el argumento show_push*es **nvarchar (5)** , su valor predeterminado es False, que no devuelve las suscripciones de inserción.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -55,19 +54,19 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**base de datos del publicador**|**sysname**|Nombre de la base de datos del publicador.|  
-|**publication**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
 |**tipo de suscripción**|**int**|Tipo de suscripción a la publicación.|  
 |**agente de distribución**|**nvarchar(100)**|Agente de distribución que controla la suscripción.|  
 |**Descripción de la publicación**|**nvarchar(255)**|Descripción de la publicación.|  
 |**última hora de actualización**|**date**|Hora en que se actualizó la información de suscripción. Es una cadena UNICODE de fecha ISO (114) + hora ODBC (121). El formato es aaaammdd hh:mi:sss.mmm, donde 'aaaa' es el año, 'mm' el mes, 'dd' el día, 'hh' la hora, 'mi' los minutos, 'sss' los segundos y 'mmm' los milisegundos.|  
 |**nombre de la suscripción**|**varchar(386)**|Nombre de la suscripción.|  
-|**última marca de tiempo de transacción**|**varbinary(16)**|Marca de tiempo de la última transacción replicada.|  
+|**última marca de tiempo de transacción**|**varbinary (16)**|Marca de tiempo de la última transacción replicada.|  
 |**modo de actualización**|**tinyint**|Tipo de actualizaciones permitidas.|  
 |**job_id de agente de distribución**|**int**|Id. de trabajo del agente de distribución.|  
 |**enabled_for_synmgr**|**int**|Indica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
-|**guid de la suscripción**|**binary(16)**|Identificador global para la versión de la suscripción en la publicación.|  
-|**subid**|**binary(16)**|Identificador global de una suscripción anónima.|  
+|**guid de la suscripción**|**binary (16)**|Identificador global para la versión de la suscripción en la publicación.|  
+|**subid**|**binary (16)**|Identificador global de una suscripción anónima.|  
 |**immediate_sync**|**bit**|Indica si los archivos de sincronización se crean, o se vuelven a crear, cada vez que se ejecuta el Agente de instantáneas.|  
 |**inicio de sesión del publicador**|**sysname**|Id. de inicio de sesión utilizado en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**contraseña del publicador**|**nvarchar(524)**|Contraseña (cifrada) utilizada en el publicador para la Autenticación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
@@ -92,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|Descripción de los resultados de la última sincronización.|  
 |**last_sync_time**|**datetime**|Hora en que se actualizó la información de suscripción. Es una cadena UNICODE de fecha ISO (114) + hora ODBC (121). El formato es aaaammdd hh:mi:sss.mmm, donde 'aaaa' es el año, 'mm' el mes, 'dd' el día, 'hh' la hora, 'mi' los minutos, 'sss' los segundos y 'mmm' los milisegundos.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de distribución, que se devuelve en el formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Por motivos de seguridad, un valor de "**\*\*\*\*\*\*\*\*\*\***" es siempre se devuelven.|  
+|**job_password**|**sysname**|Por motivos de seguridad, un valor de " **\*\*\*\*\*\*\*\*\*\*** " es siempre se devuelven.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

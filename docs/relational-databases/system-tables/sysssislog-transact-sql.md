@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7fa288a1-81e3-42a0-82f6-8a59019693d0
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: bde0c339b369aaccce107ded51f3b124be3b37f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d837049f36e4f7925f8e62a18987f51235f19c14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65489774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029610"
 ---
 # <a name="sysssislog-transact-sql"></a>sysssislog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "65489774"
 |event|**sysname**|Nombre del evento que genera la entrada de registro.|  
 |computer|**nvarchar**|Equipo en el que se estaba ejecutando el paquete cuando se generó la entrada de registro.|  
 |operador|**nvarchar**|Nombre de usuario de la persona que ejecutó el paquete que generó la entrada de registro.|  
-|origen|**nvarchar**|Nombre del ejecutable, en el paquete, que generó la entrada de registro.|  
+|source|**nvarchar**|Nombre del ejecutable, en el paquete, que generó la entrada de registro.|  
 |sourceid|**uniqueidentifier**|GUID del ejecutable, en el paquete, que generó la entrada de registro.|  
 |executionid|**uniqueidentifier**|GUID de la instancia de ejecución del ejecutable que genera la entrada de registro.|  
 |starttime|**datetime**|El tiempo que el paquete empezó a ejecutarse.|  

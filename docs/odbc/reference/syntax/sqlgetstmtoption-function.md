@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff2abca6d68e2de225bdbb2bb806c531b50804f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242349"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030669"
 ---
 # <a name="sqlgetstmtoption-function"></a>Función SQLGetStmtOption
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  En ODBC 3. *x*, la función ODBC 2.0 **SQLGetStmtOption** ha sido reemplazado por **SQLGetStmtAttr**. Para obtener más información, consulte [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md).  

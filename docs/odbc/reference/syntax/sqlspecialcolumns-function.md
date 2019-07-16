@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f3fe596428450795426537f5c2f5913a6c83a46
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 15fa1269b733c9adc938b1880735ae2a4e5db731
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039564"
 ---
 # <a name="sqlspecialcolumns-function"></a>Función SQLSpecialColumns
 **Conformidad**  
@@ -172,7 +171,7 @@ SQLRETURN SQLSpecialColumns(
 |COLUMN_SIZE (ODBC 1.0)|5|Entero|El tamaño de la columna del origen de datos. Para obtener más información sobre el tamaño de la columna, vea [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |BUFFER_LENGTH (ODBC 1.0)|6|Entero|La longitud en bytes de datos transferidos en un **SQLGetData** o **SQLFetch** operación si se especifica SQL_C_DEFAULT. Para los datos numéricos, este tamaño puede ser diferente que el tamaño de los datos almacenados en el origen de datos. Este valor es igual que la columna COLUMN_SIZE para caracteres o datos binarios. Para obtener más información, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
 |DECIMAL_DIGITS (ODBC 1.0)|7|Smallint|Los dígitos decimales de la columna del origen de datos. Se devuelve NULL para los tipos de datos que no son aplicables los dígitos decimales. Para obtener más información relativa a los dígitos decimales, consulte [tamaño de la columna, dígitos decimales, transferir la longitud en octetos y tamaño de presentación](../../../odbc/reference/appendixes/column-size-decimal-digits-transfer-octet-length-and-display-size.md).|  
-|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica si la columna es una pseudocolumna, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Note:**  Para obtener la máxima interoperatividad, pseudocolumnas no deben ir entrecomillados con el carácter de comilla de identificador devuelto por **SQLGetInfo**.|  
+|PSEUDO_COLUMN (ODBC 2.0)|8|Smallint|Indica si la columna es una pseudocolumna, como Oracle ROWID:<br /><br /> SQL_PC_UNKNOWN SQL_PC_NOT_PSEUDO SQL_PC_PSEUDO **Nota:**  Para obtener la máxima interoperatividad, pseudocolumnas no deben ir entrecomillados con el carácter de comilla de identificador devuelto por **SQLGetInfo**.|  
   
  Una vez que la aplicación recupera los valores para SQL_BEST_ROWID, la aplicación puede utilizar estos valores para volver a seleccionar esa fila dentro del ámbito definido. El **seleccione** instrucción se garantiza para devolver ninguna fila o una fila.  
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6dafa4e-e47e-43ec-acfc-88c0af53c1a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 61a541457f170ee884a1f0b8c3560b04601ffde5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b814f8cb0013a202f88aba76b99cf52c49dd1c1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47736803"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061414"
 ---
 # <a name="sysendpoints-transact-sql"></a>sys.endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "47736803"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre del punto de conexión. Es único en el servidor. No admite valores NULL.|  
+|**name**|**sysname**|Nombre del punto de conexión. Es único en el servidor. No admite valores NULL.|  
 |**endpoint_id**|**int**|Id. del extremo. Es único en el servidor. Un extremo con un identificador inferior a 65536 es un extremo del sistema. No admite valores NULL.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad del servidor que creó y es propietaria de este extremo. Acepta valores NULL.|  
 |**Protocolo**|**tinyint**|Protocolo del extremo.<br /><br /> 1 = HTTP<br /><br /> 2 = TCP<br /><br /> 3 = Canalizaciones con nombre<br /><br /> 4 = Memoria compartida<br /><br /> 5 = Adaptador de interfaz virtual (VIA)<br /><br /> No admite valores NULL.|  
-|**protocol_desc**|**nvarchar(60)**|Descripción del protocolo del extremo. QUE ACEPTA VALORES NULL. Los valores pueden ser los siguientes:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **A través de** Nota: el protocolo VIA está en desuso. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
-|**Tipo**|**tinyint**|Tipo de carga del extremo.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> No admite valores NULL.|  
+|**protocol_desc**|**nvarchar(60)**|Descripción del protocolo del extremo. QUE ACEPTA VALORES NULL. Los valores pueden ser los siguientes:<br /><br /> **HTTP**<br /><br /> **TCP**<br /><br /> **NAMED_PIPES**<br /><br /> **SHARED_MEMORY**<br /><br /> **A través de** Nota: El protocolo VIA está desusado. [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]|  
+|**type**|**tinyint**|Tipo de carga del extremo.<br /><br /> 1 = SOAP<br /><br /> 2 = TSQL<br /><br /> 3 = SERVICE_BROKER<br /><br /> 4 = DATABASE_MIRRORING<br /><br /> No admite valores NULL.|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de carga del extremo. Acepta valores NULL. Los valores pueden ser los siguientes:<br /><br /> **SOAP**<br /><br /> **TSQL**<br /><br /> **SERVICE_BROKER**<br /><br /> **DATABASE_MIRRORING**|  
 |**state**|**tinyint**|Estado del extremo.<br /><br /> 0 = INICIADO, escucha y procesa solicitudes.<br /><br /> 1 = DETENIDO, escucha pero no procesa solicitudes.<br /><br /> 2 = DESHABILITADO, no escucha.<br /><br /> El estado predeterminado es 1. Acepta valores NULL.|  
 |**state_desc**|**nvarchar(60)**|Descripción del estado del extremo.<br /><br /> INICIADO = Escucha y procesa solicitudes.<br /><br /> DETENIDO = Escucha pero no procesa solicitudes.<br /><br /> DESHABILITADO = No escucha.<br /><br /> El estado predeterminado es DETENIDO.<br /><br /> Acepta valores NULL.|  

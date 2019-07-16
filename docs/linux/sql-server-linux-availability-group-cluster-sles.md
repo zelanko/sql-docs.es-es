@@ -5,18 +5,17 @@ description: Aprenda a crear clústeres de grupo de disponibilidad para SQL Serv
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 04/30/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 0f6638d1d31be45f12f0b80b7fc63f918e90d5ca
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003561"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>Configuración de clúster SLES para el grupo de disponibilidad de SQL Server
 
@@ -30,7 +29,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 >En este momento, integración de SQL Server con Pacemaker en Linux no es tan acoplamiento como con WSFC en Windows. Servicio de SQL Server en Linux no es compatible con clústeres. Pacemaker controla todo de la orquestación de los recursos de clúster, incluido el recurso de grupo de disponibilidad. En Linux, no deben depender siempre en disponibilidad grupo vistas de administración dinámica (DMV) que proporcionan información del clúster como sys.dm_hadr_cluster. Además, nombre de red virtual es WSFC específico, no hay ningún equivalente de la misma en Pacemaker. Puede crear un agente de escucha para que lo utilicen para la reconexión después de la conmutación por error transparente, pero tendrá que registrar manualmente el nombre de agente de escucha en el servidor DNS con la dirección IP usada para crear el recurso IP virtual (como se explica en las secciones siguientes).
 
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Mapa de ruta
 
 El procedimiento para crear un grupo de disponibilidad para alta disponibilidad difiere entre los servidores Linux y un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 

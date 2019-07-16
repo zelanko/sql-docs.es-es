@@ -4,19 +4,18 @@ description: En este artículo se describe cómo configurar la replicación de S
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/20/2018
 ms.topic: article
 ms.prod: sql
 ms.prod_service: database-engine
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fe12afac12e34dfb6c66a44a1d1de6c2b5ce1876
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: d7e3f4d81b5b40db2be1e45fbf28d27411492f83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895934"
 ---
 # <a name="configure-sql-server-replication-on-linux"></a>Configurar la replicación de SQL Server en Linux
 

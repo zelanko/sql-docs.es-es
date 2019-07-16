@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aee87059-a4c1-459a-a95c-641b4e3f0e73
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c263f7e3df69b6eb3d9517b2dc973a1cb4102f7d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3bdcea5da463e2501954c4bf96ca58bac216eb58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060201"
 ---
 # <a name="sysmailmailattachments-transact-sql"></a>sysmail_mailattachments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47627313"
 |-----------------|---------------|-----------------|  
 |**attachment_id**|**int**|Identificador de los datos adjuntos.|  
 |**mailitem_id**|**int**|Identificador del elemento de correo que incluía los datos adjuntos.|  
-|**Nombre de archivo**|**nvarchar (520)**|Nombre de archivo de los datos adjuntos. Cuando **attach_query_result** es 1 y **query_attachment_filename** es NULL, correo electrónico de base de datos crea un nombre de archivo arbitrario.|  
+|**filename**|**nvarchar (520)**|Nombre de archivo de los datos adjuntos. Cuando **attach_query_result** es 1 y **query_attachment_filename** es NULL, correo electrónico de base de datos crea un nombre de archivo arbitrario.|  
 |**tamaño de archivo**|**int**|Tamaño de los datos adjuntos en bytes.|  
 |**datos adjuntos**|**varbinary(max)**|Contenido de los datos adjuntos.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  

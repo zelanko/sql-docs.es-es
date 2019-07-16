@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097683"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_changemergepublication [ @publication= ] 'publication'
   
 `[ @property = ] 'property'` La propiedad quiere cambiar para la publicación indicada. *propiedad* es **sysname**, y puede ser uno de los valores que aparecen en la tabla siguiente.  
   
-`[ @value = ] 'value'` El nuevo valor para la propiedad especificada. *valor* es **nvarchar (255)**, y puede ser uno de los valores que aparecen en la tabla siguiente.  
+`[ @value = ] 'value'` El nuevo valor para la propiedad especificada. *valor* es **nvarchar (255)** , y puede ser uno de los valores que aparecen en la tabla siguiente.  
   
  Esta tabla describe las propiedades de la publicación que se pueden cambiar, así como las restricciones de los valores de esas propiedades.  
   

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bd80395b4df7957f48cc480ba858af387e870b86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20fc72ce649d8ab66c43fe1c8f3a87775d83f9fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086786"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>Novedades de SSMA para Oracle (OracleToSQL)
 Este artículo se enumeran los cambios de Oracle en cada versión de SQL Server Migration Assistant (SSMA).
@@ -42,7 +41,7 @@ Además, esta versión incluye un conjunto de correcciones diseñado para mejora
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La versión v8.1 de SSMA para Oracle se ha mejorado con correcciones de destino que están diseñadas para mejorar las métricas de calidad y la conversión.
 

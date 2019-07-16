@@ -5,18 +5,17 @@ description: Obtenga información sobre cómo crear un SQL Server siempre en gru
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 02/14/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a8e367bdf33b22f3e2a122c31bcdfb8b5d65e648
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e97708fc227cbbcadfeb6fe961fce2ad9ee41765
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027249"
 ---
 # <a name="configure-sql-server-always-on-availability-group-for-high-availability-on-linux"></a>Configurar SQL Server grupo de disponibilidad AlwaysOn para alta disponibilidad en Linux
 
@@ -30,7 +29,7 @@ Las configuraciones que garantizan la alta disponibilidad y protección de datos
 
 Deben ser todos los servidores físicos o virtuales y servidores virtuales deben estar en la misma plataforma de virtualización. Este requisito es porque los agentes de vallado son específicas de la plataforma. Consulte [directivas para los clústeres invitados](https://access.redhat.com/articles/29440#guest_policies).
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Mapa de ruta
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 

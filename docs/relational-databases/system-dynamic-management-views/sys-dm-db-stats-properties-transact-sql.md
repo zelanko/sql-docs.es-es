@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8a54889d-e263-4881-9fcb-b1db410a9453
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 19a5f2f82fd46b8aa4c3f54b62287f447c8b2c1a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 274e801bfb8e627564f5586574c16ecd916e9859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845143"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910711"
 ---
 # <a name="sysdmdbstatsproperties-transact-sql"></a>sys.dm_db_stats_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ El ejemplo siguiente devuelve las estadísticas para el `Person.Person` tabla en
 SELECT * FROM sys.dm_db_stats_properties (object_id('Person.Person'), 1);
 ``` 
   
-### <a name="b-returning-all-statistics-properties-for-a-table"></a>B. Devolver propiedades de todas las estadísticas de una tabla  
+### <a name="b-returning-all-statistics-properties-for-a-table"></a>b. Devolver propiedades de todas las estadísticas de una tabla  
  En el ejemplo siguiente se devuelven propiedades de todas las estadísticas que existen para la tabla TEST.  
   
 ```sql  

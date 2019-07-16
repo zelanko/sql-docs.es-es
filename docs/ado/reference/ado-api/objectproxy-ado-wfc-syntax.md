@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: f68f58bc-ad28-46cc-9fb3-099e1a678397
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0b1a69ebbc96197a5bf8fc1cb617e7fde65c731
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 485d011fa6762acd04cad54ff7fffc8d8136e063
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917956"
 ---
 # <a name="objectproxy-ado---wfc-syntax"></a>ObjectProxy (ADO - sintaxis WFC)
 Un **ObjectProxy** objeto representa un servidor y es devuelto por la **createObject** método de la [DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto. La clase ObjectProxy tiene un método, **llamar**, que se puede invocar un método en el servidor y devolver un objeto resultante de esa llamada.  
   
- **package com.ms.wfc.data**  
+ **paquete com.ms.wfc.data**  
   
 ## <a name="methods"></a>Métodos  
   

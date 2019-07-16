@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 714e2935-1bc7-4901-aea2-64b1bbda03d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 46700bb94749269eb56e60cade035fdf4c8f388c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 40b1ebc5319c13b5aa84a28e1a5c5546dd62bd03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094820"
 ---
 # <a name="sysmergepartitioninfoview-transact-sql"></a>sysmergepartitioninfoview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "54124687"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|El nombre del artículo.|  
-|**Tipo**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **0x0A** = tabla.<br /><br /> **0 x 20** = solamente esquema de procedimiento.<br /><br /> **0 x 40** = view schema only o solo el esquema de vista indizada.<br /><br /> **0 x 80** = solamente esquema de función.|  
-|**ObjID**|**int**|El identificador del objeto publicado.|  
+|**name**|**sysname**|El nombre del artículo.|  
+|**type**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **0x0A** = tabla.<br /><br /> **0 x 20** = solamente esquema de procedimiento.<br /><br /> **0 x 40** = view schema only o solo el esquema de vista indizada.<br /><br /> **0 x 80** = solamente esquema de función.|  
+|**objid**|**int**|El identificador del objeto publicado.|  
 |**sync_objid**|**int**|Id. de objeto de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
@@ -62,7 +61,7 @@ ms.locfileid: "54124687"
 |**missing_col_count**|**int**|El número de columnas publicadas que faltan en el artículo.|  
 |**missing_cols**|**varbinary(128)**|El mapa de bits que describe las columnas que faltan en el artículo.|  
 |**excluded_cols**|**varbinary(128)**|El mapa de bits de las columnas excluidas del artículo.|  
-|**excluded_col_count**|**int**|El número de columnas excluidas del artículo. |  
+|**excluded_col_count**|**int**|El número de columnas excluidas del artículo.|  
 |**columns**|**varbinary(128)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**deleted_cols**|**varbinary(128)**|El mapa de bits que describe las columnas eliminadas del artículo.|  
 |**resolver_info**|**nvarchar(255)**|Almacenamiento para la información adicional requerida por los solucionadores de conflictos personalizados.|  
@@ -77,7 +76,7 @@ ms.locfileid: "54124687"
 |**fast_multicol_updateproc**|**bit**|Especifica si se ha habilitado el Agente de mezcla para aplicar cambios a varias columnas de la misma fila en una instrucción UPDATE.<br /><br /> **0** = problemas cambiada una actualización independiente para cada columna.<br /><br /> **1** = emitido en la instrucción UPDATE que lleva a cabo actualizaciones en varias columnas en una sola instrucción.|  
 |**check_permissions**|**int**|El mapa de bits de los permisos de nivel de tabla que se comprobarán cuando el agente de mezcla aplique cambios en el publicador. *check_permissions* puede tener uno de estos valores:<br /><br /> **0 x 00** = no se comprueban los permisos.<br /><br /> **0 x 10** = comprueba los permisos del publicador antes de realizan inserciones en el suscriptor se pueden cargar.<br /><br /> **0 x 20** = comprueba los permisos en el publicador antes de poder cargar los UPDATE creados en un suscriptor.<br /><br /> **0 x 40** = comprueba los permisos en el publicador antes de poder cargar los DELETE creados en un suscriptor.|  
 |**maxversion_at_cleanup**|**int**|La generación máxima que se limpiará la próxima vez que se ejecute el Agente de mezcla.|  
-|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
+|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para más información, vea [Specify merge replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Especificación de propiedades de replicación de mezcla).|  
 |**upload_options**|**tinyint**|Define si es posible realizar cambios en el suscriptor o cargarlos desde él. Puede se uno de los siguientes valores.<br /><br /> **0** = no hay ninguna restricción en las actualizaciones realizadas en el suscriptor; todos los cambios se cargan en el publicador.<br /><br /> **1** = se permiten realizar cambios en el suscriptor, pero no se cargan en el publicador.<br /><br /> **2** = no se permiten cambios en el suscriptor.|  
 |**published_in_tran_pub**|**bit**|Indica que un artículo de una publicación de combinación también se publica en una publicación transaccional.<br /><br /> **0** = el artículo no está publicado en un artículo transaccional.<br /><br /> **1** = el artículo también se publica en un artículo transaccional.|  
 |**ligero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -88,7 +87,7 @@ ms.locfileid: "54124687"
 |**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = compensación se deshabilitan las acciones.<br /><br /> **1** = los cambios que no se puede aplicar a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla en el suscriptor o publicador siempre.<br /><br /> Nota: Un valor de **0** da como resultado una falta de convergencia.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**intervalo**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
-|**umbral**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**stream_blob_columns**|**bit**|Indica si se utiliza la optimización de transmisión para columnas de objetos binarios grandes. **1** significa que se intenta realizar la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación utiliza una columna rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación agregará la columna ROWGUIDCOL.|  
 |**partition_view_id**|**int**|Identifica la vista que define a una partición del suscriptor.|  
@@ -105,7 +104,7 @@ ms.locfileid: "54124687"
 |**logical_record_level_conflict_detection**|**bit**|Indica si los conflictos se deben detectar en el nivel de registro lógico o en el nivel de fila o de columna.<br /><br /> **0** = o columna de nivel de fila se utiliza la detección de conflictos.<br /><br /> **1** = lógicos se utiliza la detección de conflictos de registro, donde un cambio en una fila en el publicador y el cambio en otra fila a la misma lógica se controla el registro en el suscriptor como un conflicto.<br /><br /> Cuando este valor es 1, solo se puede utilizar la resolución de conflictos de nivel de registro lógico.|  
 |**logical_record_level_conflict_resolution**|**bit**|Indica si los conflictos se deben solucionar en el nivel de registro lógico o en el nivel de fila o de columna.<br /><br /> **0** = o columna de nivel de fila se utiliza la resolución.<br /><br /> **1** = en caso de conflicto, el registro lógico completo del ganador sobrescribe el registro lógico completo de la parte perdedora.<br /><br /> Se puede utilizar un valor de 1 tanto con la detección de nivel de registro lógico como con la detección de nivel de fila o de columna.|  
 |**partition_options**|**tinyint**|Define el modo en el que se realiza la partición de los datos en el artículo, lo que permite optimizaciones de rendimiento cuando todas las filas pertenecen solamente a una partición o solamente a una suscripción. El *partition_options* puede ser uno de los siguientes valores.<br /><br /> **0** = el filtro del artículo es estático o no produce un único subconjunto de datos para cada partición, es decir, una partición "superpuesta".<br /><br /> **1** = las particiones se superponen y las actualizaciones DML realizadas en el suscriptor no pueden cambiar la partición a la que pertenece una fila.<br /><br /> **2** = el filtro del artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.<br /><br /> **3** = el filtro del artículo produce particiones no superpuestas que son únicas para cada suscripción.|  
-|**Nombre**|**sysname**|El nombre de una partición.|  
+|**name**|**sysname**|El nombre de una partición.|  
   
 ## <a name="see-also"></a>Vea también  
  [Administrar particiones para una publicación de mezcla con filtros con parámetros](../../relational-databases/replication/publish/manage-partitions-for-a-merge-publication-with-parameterized-filters.md)   

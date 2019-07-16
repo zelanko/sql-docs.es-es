@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055170"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,10 +45,10 @@ sp_help_fulltext_catalog_components
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**full-text catalog name**|**int**|Nombre del catálogo de texto completo.|  
+|**nombre del catálogo de texto completo**|**int**|Nombre del catálogo de texto completo.|  
 |**full-text catalog id**|**sysname**|Id. del catálogo de texto completo.|  
 |**componenttype**|**sysname**|Tipo de componente. Uno de los siguientes:<br /><br /> Filter<br /><br /> Controlador de protocolo<br /><br /> Separador de palabras|  
-|**componentname**|**sysname**|Nombre del componente.|  
+|**nombre de componente**|**sysname**|Nombre del componente.|  
 |**clsid**|**uniqueidentifier**|Identificador de clase del componente.|  
 |**fullpath**|**nvarchar(256)**|Ruta de acceso a la ubicación del componente.<br /><br /> NULL = el llamador no es un miembro de **serveradmin** rol fijo de servidor.|  
 |**version**|**nvarchar(30)**|Versión del componente.|  

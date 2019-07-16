@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527697"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085283"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_help_proxy
 |Dts|Ejecución de paquetes SSIS|  
 |PowerShell|Script de PowerShell|  
   
-`[ @name = ] 'name'` El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los servidores proxy para inicio de sesión. El nombre es **nvarchar (256)**, su valor predeterminado es null. Cuando *nombre* se especifica, *subsystem_name* también debe especificarse.  
+`[ @name = ] 'name'` El nombre de un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para mostrar los servidores proxy para inicio de sesión. El nombre es **nvarchar (256)** , su valor predeterminado es null. Cuando *nombre* se especifica, *subsystem_name* también debe especificarse.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  
@@ -76,7 +75,7 @@ sp_help_proxy
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificación del proxy.|  
-|**Nombre**|**sysname**|Nombre del proxy.|  
+|**name**|**sysname**|Nombre del proxy.|  
 |**credential_identity**|**sysname**|Nombre de dominio y nombre de usuario de Microsoft Windows para la credencial asociada con el proxy.|  
 |**enabled**|**tinyint**|Si el proxy está habilitado. { **0** = no habilitado, **1** = habilitado}|  
 |**description**|**nvarchar(1024)**|Descripción de este proxy.|  

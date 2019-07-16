@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: be4c586e3a3bdf4387601d1221bd7afeab852677
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9cbd14a7ce8dd1cfb1571874a83a615065200014
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47595303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053520"
 ---
 # <a name="syssysdevices-transact-sql"></a>sys.sysdevices (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,12 +37,12 @@ ms.locfileid: "47595303"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre lógico del archivo de copia de seguridad o de base de datos.|  
+|**name**|**sysname**|Nombre lógico del archivo de copia de seguridad o de base de datos.|  
 |**size**|**int**|Tamaño del archivo en páginas de 2 KB.|  
 |**Baja**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
 |**Alta**|**int**|Se mantiene únicamente por compatibilidad con versiones anteriores.|  
 |**status**|**smallint**|Mapa de bits que indica el tipo de dispositivo:<br /><br /> 1 = Disco predeterminado<br /><br /> 2 = Disco físico<br /><br /> 4 = Disco lógico<br /><br /> 8 = Omitir encabezado<br /><br /> 16 = Archivo de copia de seguridad<br /><br /> 32 = Escrituras en serie<br /><br /> 4096 = Solo lectura|  
-|**CntrlType**|**smallint**|Tipo de controlador:<br /><br /> 0 = Archivo de base de datos que no está en CD-ROM<br /><br /> 2 = Archivo de copia de seguridad en disco<br /><br /> 3 - 4 = Archivo de copia de seguridad en disquete<br /><br /> 5 = Archivo de copia de seguridad en cinta<br /><br /> 6 = Archivo de canalización con nombre|  
+|**cntrltype**|**smallint**|Tipo de controlador:<br /><br /> 0 = Archivo de base de datos que no está en CD-ROM<br /><br /> 2 = Archivo de copia de seguridad en disco<br /><br /> 3 - 4 = Archivo de copia de seguridad en disquete<br /><br /> 5 = Archivo de copia de seguridad en cinta<br /><br /> 6 = Archivo de canalización con nombre|  
 |**phyname**|**nvarchar(260)**|Nombre del archivo físico.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 41322737-890d-4a81-aed2-06cc3d546962
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 297c856cc2481a6d3266d7654797f81b9b9f5c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c390dacb5072c5d516e95b4fe6b789bfffbbd2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005804"
 ---
 # <a name="sqlpoolconnect-function"></a>Función SQLPoolConnect
 **Conformidad**  
@@ -60,7 +59,7 @@ SQLRETURN  SQLPoolConnect(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Similar a [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md) para cualquier error de validación de entrada, salvo que se va a usar el Administrador de controladores un **HandleType** de SQL_HANDLE_DBC_INFO_TOKEN y un **controlar** de *hDbcInfoToken*.  
   
 ## <a name="remarks"></a>Comentarios  

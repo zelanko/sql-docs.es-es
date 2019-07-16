@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 15ddd536-db03-454e-b9b5-36efe1f756d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dd226aef62c2d05eead5e2b5f72b2f358422025a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4725da28e9cd83df4979d1cc476cd60a488c0aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471084"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084767"
 ---
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 9a03c039-70e4-4974-95d8-d3fa45984ffb
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b5a11a5e7090f89f4a31ffd15f8ebbce78ea395a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d47c6ae6d43b48b83be934a0bbfcce822e16fc42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013390"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097884"
 ---
 # <a name="sysdmexeccomputenodeerrors-transact-sql"></a>sys.dm_exec_compute_node_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -38,10 +37,10 @@ ms.locfileid: "63013390"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |error_id|**nvarchar(36)**|Identificador numérico único asociado con el error.|Único en todos los errores de consulta en el sistema|  
-|origen|**nvarchar(255)**|Descripción del origen de proceso o subproceso||  
+|source|**nvarchar(255)**|Descripción del origen de proceso o subproceso||  
 |type|**nvarchar(255)**|Tipo de error.||  
 |create_time|**datetime**|La hora de la aparición de error||  
-|compute_node_id|**int**|Identificador del nodo de proceso específicos|See compute_node_id of [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
+|compute_node_id|**int**|Identificador del nodo de proceso específicos|Consulte compute_node_id de [sys.dm_exec_compute_nodes &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-compute-nodes-transact-sql.md)|  
 |rexecution_id|**nvarchar(36)**|Identificador de la consulta de PolyBase, si existe.||  
 |spid|**int**|Identificador de la sesión de SQL Server||  
 |thread_id|**int**|Identificador numérico del subproceso en el que se produjo el error.||  

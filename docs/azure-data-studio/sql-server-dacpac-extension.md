@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 70b06749d1cbecc2127c70fee28b60f49583d5ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959194"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>Extensión dacpac de SQL Server (versión preliminar)
 
@@ -24,7 +23,7 @@ ms.locfileid: "66797986"
 
 Esta experiencia está actualmente en su versión preliminar inicial. Por favor, notificar problemas y solicitudes de características [aquí.](https://github.com/microsoft/azuredatastudio/issues)
 
-![data-actions](media/sql-server-dacpac-extension/data-tier-application-actions.png)
+![acciones de datos](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
  ### <a name="requirements"></a>Requisitos
  * Este asistente requiere una conexión activa a una instancia de SQL Server para iniciar.

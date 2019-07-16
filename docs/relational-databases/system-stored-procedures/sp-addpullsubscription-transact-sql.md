@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0f4bbedc-0c1c-414a-b82a-6fd47f0a6a7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dbdd156c20378eda748cef17ec58f6ecf7129cb9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ea87c5e83b5be3945469ddb0e32c9f8158a5e116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022437"
 ---
 # <a name="spaddpullsubscription-transact-sql"></a>sp_addpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,18 +50,18 @@ sp_addpullsubscription [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @independent_agent = ] 'independent_agent'` Especifica si hay un agente de distribución independiente para esta publicación. *independent_agent* es **nvarchar (5)**, su valor predeterminado es true. Si **true**, hay un agente de distribución independiente para esta publicación. Si **false**, hay un agente de distribución para cada par de base de datos de publicador y suscriptor de base de datos. *independent_agent* es una propiedad de la publicación y debe tener el mismo valor aquí y en el publicador.  
+`[ @independent_agent = ] 'independent_agent'` Especifica si hay un agente de distribución independiente para esta publicación. *independent_agent* es **nvarchar (5)** , su valor predeterminado es true. Si **true**, hay un agente de distribución independiente para esta publicación. Si **false**, hay un agente de distribución para cada par de base de datos de publicador y suscriptor de base de datos. *independent_agent* es una propiedad de la publicación y debe tener el mismo valor aquí y en el publicador.  
   
-`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type* es **nvarchar(9)**, su valor predeterminado es **anónimo**. Debe especificar un valor de **extracción** para *subscription_type*, a menos que desee crear una suscripción sin registrarla en el publicador. En este caso, debe especificar un valor de **anónimo**. Esto es necesario en casos donde no puede establecer una conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el publicador durante la configuración de la suscripción.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type* es **nvarchar(9)** , su valor predeterminado es **anónimo**. Debe especificar un valor de **extracción** para *subscription_type*, a menos que desee crear una suscripción sin registrarla en el publicador. En este caso, debe especificar un valor de **anónimo**. Esto es necesario en casos donde no puede establecer una conexión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el publicador durante la configuración de la suscripción.  
   
-`[ @description = ] 'description'` Es la descripción de la publicación. *descripción* es **nvarchar (100)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` Es la descripción de la publicación. *descripción* es **nvarchar (100)** , su valor predeterminado es null.  
   
-`[ @update_mode = ] 'update_mode'` Es el tipo de actualización. *update_mode* es **nvarchar (30)**, y puede tener uno de los siguientes valores.  
+`[ @update_mode = ] 'update_mode'` Es el tipo de actualización. *update_mode* es **nvarchar (30)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**de sólo lectura** (valor predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se devuelven al publicador. Se debe utilizar cuando las actualizaciones no se realicen en el suscriptor.|  
-|**synctran**|Habilita la compatibilidad con las suscripciones de actualización inmediata.|  
+|**Synctran**|Habilita la compatibilidad con las suscripciones de actualización inmediata.|  
 |**tran en cola**|Permite la actualización en cola de la suscripción. Las modificaciones de los datos se realizan en el suscriptor, se almacenan en una cola y después se propagan al publicador.|  
 |**failover**|Permite la actualización inmediata de las suscripciones con la actualización en cola como conmutación por error. Las modificaciones de los datos se pueden realizar en el suscriptor y propagarse inmediatamente al publicador. Si el publicador y el suscriptor no están conectados, las modificaciones de los datos realizadas en el suscriptor pueden almacenarse en una cola hasta que el suscriptor y el publicador vuelvan a conectarse.|  
 |**en cola de conmutación por error**|Habilita la suscripción como una suscripción de actualización en cola con la capacidad de cambiar al modo de actualización inmediata. Las modificaciones de los datos se pueden realizar en el suscriptor y almacenarse en una cola hasta que se establezca una conexión entre el suscriptor y el publicador. Cuando se establece una conexión continua, el modo de actualización puede cambiar a actualización inmediata. *No se admite para publicadores de Oracle*.|  

@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 3126872e3333383d0cea53f38b3cfd06be86b704
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962792"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>Paquetes de R de forma predeterminada y Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +49,7 @@ La distribución de R de código abierto, incluido en la instalación es [Micros
 
 En la tabla siguiente se resume las versiones de R proporcionados por MRO mediante el programa de instalación de SQL Server.
 
-|Versión             | Versión de R       |
+|Release             | Versión de R       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
 | [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
@@ -63,7 +62,7 @@ SQL Server 2017 agrega los componentes de Python. Cuando se selecciona la opció
 
 Aprendizaje automático de SQL Server 2017 es la primera versión que R y Python admite.
 
-|Versión             | Versión de anaconda| Paquetes de Microsoft    |
+|Release             | Versión de anaconda| Paquetes de Microsoft    |
 |--------------------|-----------------|-----------------------|
 | SQL Server 2017 Machine Learning Services  | 4.2 sobre Python 3.5 | revoscalepy, microsoftml |
 
@@ -98,7 +97,7 @@ Las rutas de acceso de archivo también incluyen los nombres de instancia. SQL S
 
 En la tabla siguiente se enumera las rutas de acceso predeterminada de los archivos binarios cuando se instala SQL Server 2016 R Server (independiente) o el servidor de SQL Server 2017 Machine Learning Server (independiente). 
 
-|Versión| Instalación|Ruta de acceso predeterminada|
+|`Version`| Instalación|Ruta de acceso predeterminada|
 |-------|-------------|------------|
 | SQL Server 2016|R Server (Standalone)| C:\Program Files\Microsoft SQL Server\130\R_SERVER|
 |SQL Server 2017|Machine Learning Server con R |C:\Program Files\Microsoft SQL Server\140\R_SERVER|

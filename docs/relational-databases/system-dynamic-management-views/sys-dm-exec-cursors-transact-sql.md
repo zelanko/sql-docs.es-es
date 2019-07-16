@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f520b63c-36af-40f1-bf71-6901d6331d3d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 24648d8c52134e572dce82cf37cb59717f139eb1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ebffa740abe55a176c8577f754cf1a18db65022
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097842"
 ---
 # <a name="sysdmexeccursors-transact-sql"></a>sys.dm_exec_cursors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ dm_exec_cursors (session_id | 0 )
 |-----------------|---------------|-----------------|  
 |**session_id**|**int**|Id. de la sesión que alberga este cursor.|  
 |**cursor_id**|**int**|Id. del objeto de cursor.|  
-|**Nombre**|**nvarchar(256)**|Nombre del cursor tal como lo ha definido el usuario.|  
+|**name**|**nvarchar(256)**|Nombre del cursor tal como lo ha definido el usuario.|  
 |**properties**|**nvarchar(256)**|Especifica las propiedades del cursor. Los valores de las propiedades siguientes se concatenan para formar el valor de esta columna:<br />Interfaz de declaración<br />Tipo de cursor <br />Simultaneidad de cursor<br />Alcance del cursor<br />Nivel de anidamiento de cursor<br /><br /> Por ejemplo, el valor devuelto de esta columna podría ser "TSQL &#124; dinámica &#124; Optimistic &#124; Global (0)".|  
 |**sql_handle**|**varbinary(64)**|Identificador del texto del lote que declaró el cursor.|  
 |**statement_start_offset**|**int**|Número de caracteres en el lote que se está ejecutando actualmente o procedimiento almacenado en el que se inicia la instrucción que se está ejecutando actualmente. Puede utilizarse junto con el **sql_handle**, **statement_end_offset**y el [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md) función de administración dinámica para recuperar el actualmente ejecutar la instrucción para la solicitud.|  
@@ -66,7 +65,7 @@ dm_exec_cursors (session_id | 0 )
 |**ansi_position**|**int**|Posición del cursor en el búfer de lectura.|  
 |**worker_time**|**bigint**|Tiempo empleado, en microsegundos, por los trabajadores que ejecutan este cursor.|  
 |**reads**|**bigint**|Número de lecturas realizadas por el cursor.|  
-|**writes**|**bigint**|Número de escrituras realizadas por el cursor.|  
+|**operaciones de escritura**|**bigint**|Número de escrituras realizadas por el cursor.|  
 |**dormant_duration**|**bigint**|Milisegundos desde que se inició la última consulta (abierta o capturada) en este cursor.|  
   
 ## <a name="permissions"></a>Permisos  
@@ -82,7 +81,7 @@ dm_exec_cursors (session_id | 0 )
   
  En la tabla siguiente se proporciona información acerca del tipo de cursor y se incluyen los valores posibles para la columna de propiedades.  
   
-|Tipo|Descripción|  
+|Type|Descripción|  
 |----------|-----------------|  
 |Keyset|El cursor se ha declarado como de conjunto de claves.|  
 |Dinámico|El cursor se ha declarado como dinámico.|  

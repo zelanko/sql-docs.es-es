@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946480"
 ---
 # <a name="path-expressions---specifying-axis"></a>Expresiones de ruta de acceso: Especificación de ejes
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +48,8 @@ ms.locfileid: "51670334"
 |**elemento secundario**|Devuelve elementos secundarios del nodo de contexto.|  
 |**descendiente**|Devuelve todos los descendientes del nodo de contexto.|  
 |**parent**|Devuelve el elemento primario del nodo de contexto.|  
-|**Atributo**|Devuelve atributos del nodo de contexto.|  
-|**Self**|Devuelve el propio nodo de contexto.|  
+|**attribute**|Devuelve atributos del nodo de contexto.|  
+|**self**|Devuelve el propio nodo de contexto.|  
 |**descendant-or-self**|Devuelve el nodo de contexto y todos los descendientes del mismo.|  
   
  Todos estos ejes, excepto el **primario** eje, son ejes hacia delante. El **primario** eje es un eje inverso, ya que busca hacia atrás en la jerarquía del documento. Por ejemplo, la expresión de ruta de acceso relativa `child::ProductDescription/child::Summary` tiene dos pasos, y cada uno especifica un eje `child`. El primer paso recupera los \<ProductDescription > elementos secundarios del nodo de contexto. Para cada \<ProductDescription > nodo de elemento, el segundo paso recupera los \<resumen > elementos secundarios del nodo de elemento.  
@@ -77,7 +76,7 @@ WHERE ProductModelID=19
   
 -   Ambos pasos de la expresión de ruta de acceso especifican un eje `child` y los nombres de nodo, `ProductDescription` y `Features`, como pruebas de nodo. Para obtener información acerca de las pruebas de nodo, vea [especificando la prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md).  
   
-### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. Especificar ejes descendant y descendant-or-self  
+### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>b. Especificar ejes descendant y descendant-or-self  
  En el ejemplo siguiente se utilizan ejes descendant y descendant-or-self. La consulta en este ejemplo se especifica en un **xml** variable de tipo. Se ha simplificado la instancia XML para ilustrar claramente la diferencia en los resultados generados.  
   
 ```  
@@ -109,11 +108,11 @@ select @y
   
  En esta expresión, si especifica un eje descendant para la expresión de ruta de acceso,  
   
- `/child::a/child::b/descendant::*`, está solicitando todos los descendientes del nodo de elemento <`b`>.  
+ `/child::a/child::b/descendant::*`, que pide todos los descendientes de la <`b`> nodo de elemento.  
   
  El asterisco (*) en la prueba de nodo representa el nombre del nodo como prueba de nodo. Por tanto, el tipo de nodo principal del eje descendant, el nodo de elemento, determina los tipos de nodos devueltos. Es decir, la expresión devuelve todos los nodos de elemento. No se devuelven los nodos de texto. Para obtener más información sobre el tipo de nodo principal y su relación con la prueba de nodo, vea [especificar prueba de nodo en un paso de expresión de ruta de acceso](../xquery/path-expressions-specifying-node-test.md) tema.  
   
- Los nodos de elemento <`c`> y <`d`> se devuelven, tal como se muestra en el resultado siguiente:  
+ Los nodos de elemento <`c`> y <`d`> se devuelven, tal como se muestra en el siguiente resultado:  
   
 ```  
 <c>text2  
@@ -122,9 +121,9 @@ select @y
 <d>text3</d>  
 ```  
   
- Si se especifica un eje descendant-or-self en lugar de un eje descendant, `/child::a/child::b/descendant-or-self::*` devolverá el nodo de contexto, el elemento <`b`> y su descendiente.  
+ Si especifica un eje descendant-or-self en lugar del eje descendant, `/child::a/child::b/descendant-or-self::*` devuelve el nodo de contexto, elemento <`b`> y sus descendientes.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <b>text1  
@@ -152,9 +151,9 @@ WHERE ProductModelID=19
 ```  
   
 ### <a name="c-specifying-a-parent-axis"></a>C. Especificar un eje parent  
- La consulta siguiente devuelve el elemento secundario <`Summary`> del elemento <`ProductDescription`> en el documento XML del catálogo de productos almacenado en la tabla `Production.ProductModel`.  
+ La consulta siguiente devuelve el <`Summary`> elemento secundario de la <`ProductDescription`> elemento en el documento XML de catálogo de productos se almacena en el `Production.ProductModel` tabla.  
   
- En este ejemplo se utiliza el eje parent para volver al elemento primario del elemento <`Feature`> y recuperar el elemento secundario <`Summary`> del elemento <`ProductDescription`>.  
+ En este ejemplo utiliza el eje parent para volver al elemento primario de la <`Feature`> elemento y recuperar el <`Summary`> elemento secundario de la <`ProductDescription`> elemento.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -194,7 +193,7 @@ WHERE  ProductModelID=19
 <Feature ProductModelID="...">...</Feature>  
 ```  
   
- Para agregar el `ProductModelID` de cada elemento `<Feature`>, se especifica el eje `parent`:  
+ Para agregar la `ProductModelID` para cada `<Feature`> elemento, el `parent` se especifica el eje:  
   
 ```  
 SELECT CatalogDescription.query('  

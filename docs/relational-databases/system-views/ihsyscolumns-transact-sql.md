@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 263452f1-9708-48f0-9536-402a89e7f5bf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 74116af7883c4b9a3f27c2afed88d16c993198ce
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: a432685809676f997049940ea5aa1ce43dc38a60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52747894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029627"
 ---
 # <a name="ihsyscolumns-transact-sql"></a>IHsyscolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "52747894"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de la columna o parámetro de procedimiento.|  
+|**name**|**sysname**|Nombre de la columna o parámetro de procedimiento.|  
 |**id**|**int**|Id. de objeto de la tabla a la que pertenece esta columna o Id. del procedimiento almacenado al que está asociado este parámetro.|  
 |**alguno**|**tinyint**|El tipo de almacenamiento físico de [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**typestat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -43,22 +42,22 @@ ms.locfileid: "52747894"
 |**colid**|**int**|Id. de la columna o parámetro.|  
 |**XOffset**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**bitpos**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**Reservado**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**colstat**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**cdefault**|**int**|El identificador del valor predeterminado para esta columna.|  
-|**Dominio**|**int**|El identificador de la regla o restricción CHECK para esta columna.|  
+|**domain**|**int**|El identificador de la regla o restricción CHECK para esta columna.|  
 |**number**|**int**|El número de subprocedimiento cuando el procedimiento está agrupado (**0** para las entradas).|  
 |**colorder**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**autoval**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**offset**|**int**|Desplazamiento en la fila en la que aparece esta columna.|  
 |**collationid**|**int**|El identificador de la intercalación de la columna. Es NULL para las columnas no basadas en caracteres.|  
-|**Idioma**|**int**|Identificador de idioma de la columna.|  
+|**language**|**int**|Identificador de idioma de la columna.|  
 |**status**|**int**|El mapa de bits utilizado para describir una propiedad de la columna o el parámetro:<br /><br /> **0 x 08** = columna permite valores null.<br /><br /> **0 x 10** = relleno ANSI activado al **varchar** o **varbinary** se han agregado las columnas. Se conservan los espacios en blanco para **varchar** y se conservan los ceros finales **varbinary** columnas.<br /><br /> **0 x 40** = parámetro es un parámetro de salida.<br /><br /> **0 x 80** = es una columna de identidad.|  
-|**Tipo**|**int**|El tipo de almacenamiento físico de [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
+|**type**|**int**|El tipo de almacenamiento físico de [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**usertype**|**tinyint**|El identificador del tipo de datos definido por el usuario desde [sys.systypes &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-systypes-transact-sql.md).|  
 |**printfmt**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**int**|Nivel de precisión de esta columna.|  
-|**escala**|**int**|Escala de esta columna.|  
+|**scale**|**int**|Escala de esta columna.|  
 |**es calculado**|**int**|Marca que especifica si es una columna calculada:<br /><br /> **0** = no calculada.<br /><br /> **1** = calculada.|  
 |**isoutparam**|**int**|Indica si el parámetro de procedimiento es un parámetro de salida:<br /><br /> **1** = true.<br /><br /> **0** = false.|  
 |**IsNullable**|**int**|Indica si la columna admite valores NULL:<br /><br /> **1** = true.<br /><br /> **0** = false.|  

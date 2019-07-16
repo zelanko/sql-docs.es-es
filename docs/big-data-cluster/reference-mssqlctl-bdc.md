@@ -5,17 +5,16 @@ description: Artículo de referencia para los comandos de bdc mssqlctl.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 96ecf1c987baffec0ff71b8b6ef5eccb204b3108
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a9da2de60248246bee3daeeaee40d3071da69c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727491"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957959"
 ---
 # <a name="mssqlctl-bdc"></a>mssqlctl bdc
 
@@ -27,13 +26,13 @@ El siguiente artículo proporciona la referencia para la **bdc** comandos en el 
 |     |     |
 | --- | --- |
 [mssqlctl bdc create](#mssqlctl-bdc-create) | Crear el clúster de Macrodatos.
-[mssqlctl bdc delete](#mssqlctl-bdc-delete) | Eliminar clúster de Macrodatos.
+[eliminación de bdc mssqlctl](#mssqlctl-bdc-delete) | Eliminar clúster de Macrodatos.
 [configuración de bdc mssqlctl](reference-mssqlctl-bdc-config.md) | Comandos de configuración.
 [punto de conexión de bdc mssqlctl](reference-mssqlctl-bdc-endpoint.md) | Comandos de punto de conexión.
 [estado de bdc mssqlctl](reference-mssqlctl-bdc-status.md) | Comandos de estado.
-[mssqlctl bdc debug](reference-mssqlctl-bdc-debug.md) | Comandos de depuración.
-[mssqlctl bdc storage-pool](reference-mssqlctl-bdc-storage-pool.md) | Comandos del grupo de almacenamiento.
-[mssqlctl bdc control](reference-mssqlctl-bdc-control.md) | Comandos de control.
+[depuración de bdc mssqlctl](reference-mssqlctl-bdc-debug.md) | Comandos de depuración.
+[grupo de almacenamiento de bdc mssqlctl](reference-mssqlctl-bdc-storage-pool.md) | Comandos del grupo de almacenamiento.
+[control de bdc mssqlctl](reference-mssqlctl-bdc-control.md) | Comandos de control.
 [grupo de bdc mssqlctl](reference-mssqlctl-bdc-pool.md) | Comandos del grupo.
 ## <a name="mssqlctl-bdc-create"></a>crear mssqlctl bdc
 Crear un clúster grande de datos de SQL Server: configuración de kube es necesaria en el sistema junto con las siguientes variables de entorno ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'DOCKER_USERNAME', 'DOCKER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'].
@@ -60,7 +59,7 @@ mssqlctl bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--config-profile -c`
 Perfil de configuración BDC, usado para implementar el clúster: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-¿Acepta los términos de licencia? [yes/no]. Si no desea utilizar este argumento, puede establecer la variable de entorno ACCEPT_EULA en 'Sí'
+¿Acepta los términos de licencia? [Sí/no]. Si no desea utilizar este argumento, puede establecer la variable de entorno ACCEPT_EULA en 'Sí'
 #### `--node-label -l`
 Etiqueta del nodo de BDC, que se usa para designar qué nodos se deben implementar para.
 #### `--force -f`

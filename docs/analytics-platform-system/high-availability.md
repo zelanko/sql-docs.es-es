@@ -2,19 +2,18 @@
 title: Alta disponibilidad en Analytics Platform System | Microsoft Docs
 description: Obtenga información sobre cómo Analytics Platform System (APS) está diseñado para lograr alta disponibilidad.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5c8a562ab105e1bc40b590916d0881757036aeff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdf1837bd3b3b1cdf8e189ae591cd6fbff58387a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960863"
 ---
 # <a name="analytics-platform-system-high-availability"></a>Alta disponibilidad de Analytics Platform System
 Obtenga información sobre cómo Analytics Platform System (APS) está diseñado para lograr alta disponibilidad.  
@@ -27,7 +26,7 @@ Disponibilidad de la red, el dispositivo APS tiene dos redes InfiniBand. Si una 
   
 Para obtener más información, consulte [adaptadores de red InfiniBand configurar](configure-infiniband-network-adapters.md).  
   
-## <a name="storage"></a>Storage  
+## <a name="storage"></a>Almacenamiento  
 Para mantener seguros los datos, puntos de acceso utiliza RAID 1 para mantener dos copias de todos los datos de usuario de creación de reflejo. Cuando se produce un error en un disco, el sistema de hardware regenera los datos en un disco de repuesto y establece una alerta que hay un error de disco.  
   
 Para mantener los datos disponibles en línea, APS usa espacios de almacenamiento de Windows y volúmenes compartidos en clúster para administrar los discos de datos de usuario en el almacenamiento de conexión directa. Hay un grupo de almacenamiento por unidad de escalado de datos que se organizan en volúmenes compartidos de clúster que están disponibles para los hosts de nodo de proceso a través de puntos de montaje.  

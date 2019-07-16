@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 3498e841b70ca7a19d9353d277221a88b9cbf86f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 63cd10aaddfb0a22f8942e48007d36f8e634b233
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906736"
 ---
 # <a name="select-from-ltmodelgtcontent-dmx"></a>SELECT FROM &lt;modelo&gt;. CONTENIDO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -47,7 +46,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
  Opcional. Expresión que devuelve un valor escalar.  
   
 ## <a name="remarks"></a>Comentarios  
- El **SELECT FROM**  _\<modelo >_**. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
+ El **SELECT FROM**  _\<modelo >_ **. CONTENIDO** instrucción devuelve contenido específico para cada algoritmo. Por ejemplo, podría desear usar las descripciones de todas las reglas de un modelo de reglas de asociación en una aplicación personalizada. Puede usar un **SELECT FROM \<modelo >. CONTENIDO** instrucción para devolver valores en la columna NODE_RULE del modelo.  
   
  En la tabla siguiente se enumeran las columnas que están incluidas en el contenido del modelo de minería de datos.  
   
@@ -60,7 +59,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.CONTENT
 |MODEL_SCHEMA|Nombre del esquema no completo. Su valor es NULL si el proveedor no admite esquemas.|  
 |MODEL_NAME|Un nombre de modelo. Esta columna no puede contener valores NULL.|  
 |ATTRIBUTE_NAME|Nombre del atributo que corresponde al nodo.|  
-|NODE_NAME|Nombre del nodo.|  
+|NODE_NAME|El nombre del nodo.|  
 |NODE_UNIQUE_NAME|Nombre único del nodo dentro del modelo.|  
 |NODE_TYPE|Entero que representa el tipo del nodo. .|  
 |NODE_GUID|GUID del nodo. Su valor es NULL si no hay ningún GUID.|  
@@ -144,7 +143,7 @@ WHERE NODE_TYPE = 26
 |TM_NaiveBayes|Bike Buyer|1|6383|  
   
 ## <a name="see-also"></a>Vea también  
- [SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [SELECT &#40;DMX&#41;](../dmx/select-dmx.md)   
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)   
  [Referencia de instrucciones de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-statements.md)  
   

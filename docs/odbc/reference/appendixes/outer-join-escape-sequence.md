@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100638"
 ---
 # <a name="outer-join-escape-sequence"></a>Secuencia de escape de combinación externa
 ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis de esta secuencia de escape es como sigue:  
@@ -32,11 +31,11 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
 ## <a name="remarks"></a>Comentarios  
  En la notación de BNF, la sintaxis es como sigue:  
   
- *ODBC-outer-join-escape* ::=  
+ *Outer-join-escape ODBC* :: =  
   
  *Iniciador de esc de ODBC* jugo *combinación externa ODBC terminador esc*  
   
- *outer-join* ::= *table-name* [*correlation-name*] {LEFT &#124; RIGHT &#124; FULL}  
+ *combinación externa* :: = *nombre-tabla* [*nombre de correlación*] {izquierda &#124; derecha &#124; completa}  
   
  COMBINACIÓN externa {*nombre-tabla* [*nombre de correlación*] &#124; *combinación externa*} ON  
   
@@ -44,9 +43,9 @@ ODBC utiliza secuencias de escape para las combinaciones externas. La sintaxis d
   
  *condition*  
   
- *correlation-name* ::= *user-defined-name*  
+ *nombre de correlación* :: = *nombre definido por el usuario*  
   
- *ODBC-esc-initiator* ::= {  
+ *Iniciador de esc de ODBC* :: = {  
   
  *ODBC-esc-terminator* ::= }  
   

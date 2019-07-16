@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7225f8a7612f08947720eb2912722dc92b7a2a96
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85bef64902f014e7b5269d6df328128bc8fe8d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937882"
 ---
 # <a name="stringformatenum"></a>StringFormatEnum
 Especifica el formato al recuperar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) como una cadena.  
@@ -31,7 +30,7 @@ Especifica el formato al recuperar un [Recordset](../../../ado/reference/ado-api
 |**adClipString**|2|Delimita filas por *RowDelimiter*, las columnas por *ColumnDelimiter*y los valores por null *NullExpr*. Estos tres parámetros de la [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) método solo son válidos con un *StringFormat* de **adClipString**.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

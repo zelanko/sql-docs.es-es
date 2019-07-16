@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bde6c467-38d0-4766-a7af-d6c9d6302b07
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 35e2af3f371d66ce38df5cb376516d40d01006bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e36d05c39fb3bc4fc19d2ea0c28def7cd626fbf1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62515490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052524"
 ---
 # <a name="sqlerrorlogevent-class"></a>SqlErrorLogEvent, clase
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ class SQLErrorLogEvent
 |FileName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> El nombre del archivo de registro de errores.|  
 |InstanceName|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> El nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] donde reside el archivo de registro.|  
 |LogDate|Tipo de datos: **datetime**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> Calificadores: Key<br /><br /> <br /><br /> Fecha y hora en que el evento se grabó en el archivo de registro.|  
-|de mensaje|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
+|Message|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Mensaje del evento.|  
 |ProcessInfo|Tipo de datos: **cadena**<br /><br /> Tipo de acceso: Solo lectura<br /><br /> <br /><br /> Información sobre el identificador del proceso del servidor de origen (SPID) para el evento.|  
   
 ## <a name="remarks"></a>Comentarios  

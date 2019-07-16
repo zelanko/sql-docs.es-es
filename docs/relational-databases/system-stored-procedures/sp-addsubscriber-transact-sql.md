@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079230"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Ahora se especifica la propiedad por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @password = ] 'password'` Es la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *contraseña* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @password = ] 'password'` Es la contraseña de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. *contraseña* es **nvarchar (524)** , su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  No utilice una contraseña en blanco. Utilice una contraseña segura.  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Ahora se especifica la propiedad por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  Es el valor que se aplica a la frecuencia establecida por *frequency_type*. *frequency_interval* es **int**, su valor predeterminado es 1.  
   
 > [!NOTE]  
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solo se mantiene por compatibilidad de scripts con versiones anteriores. Ahora se especifica la propiedad por suscripción al ejecutar [sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md). Cuando se especifica un valor, se utilizará como valor predeterminado al crear suscripciones en este suscriptor. Además se devolverá un mensaje de advertencia.  
   
-`[ @description = ] 'description'` Es una descripción del suscriptor. *descripción* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @description = ] 'description'` Es una descripción del suscriptor. *descripción* es **nvarchar (255)** , su valor predeterminado es null.  
   
 `[ @security_mode = ] security_mode` Es el modo de seguridad implementado. *security_mode* es **int**, su valor predeterminado es 1. **0** especifica [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación. **1** especifica autenticación de Windows.  
   

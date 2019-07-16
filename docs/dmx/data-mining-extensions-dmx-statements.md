@@ -8,15 +8,14 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1baab80455cc5267686bf26251629a1d47065344
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 7a7a9c18599d13c4db510793a1d75c85bbb7a829
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38042123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070863"
 ---
-# <a name="data-mining-extensions-dmx-statements"></a>Instrucciones (DMX) de extensiones de minería de datos
+# <a name="data-mining-extensions-dmx-statements"></a>Instrucciones de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   Trabajar con datos de modelos de minería de datos [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] implica las siguientes tareas principales:  
@@ -61,7 +60,7 @@ ms.locfileid: "38042123"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)|Forman parte del lenguaje de definición de datos (DDL). Sirven para definir un nuevo modelo de minería de datos (incluido el entrenamiento) o para quitar un modelo de minería de datos existente de una base de datos.|  
+|[Instrucciones de definición de datos de Extensiones de minería de datos &#40;DMX&#41;](../dmx/dmx-statements-data-definition.md)|Forman parte del lenguaje de definición de datos (DDL). Sirven para definir un nuevo modelo de minería de datos (incluido el entrenamiento) o para quitar un modelo de minería de datos existente de una base de datos.|  
 |[Extensiones de minería de datos &#40;DMX&#41; instrucciones de manipulación de datos](../dmx/dmx-statements-data-manipulation.md)|Forman parte del lenguaje de manipulación de datos (DML). Sirven para trabajar con modelos de minería de datos existentes, incluida la exploración de un modelo y la creación de predicciones.|  
   
 ## <a name="see-also"></a>Vea también  

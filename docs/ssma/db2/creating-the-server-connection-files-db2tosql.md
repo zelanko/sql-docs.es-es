@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 685419f6-8606-462c-be12-8bace45bede6
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ea6d9a77cc7639bc9adc8daa38f12d0e21dbfb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484b9e12d53d22160358d873ddb2a3dc60d0977e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989815"
 ---
 # <a name="creating-the-server-connection-files-db2tosql"></a>Creación de los archivos de conexión de servidor (DB2ToSQL)
 Información del servidor puede especificarse en la sección de servidores del archivo de script o en un archivo de conexión de servidor independiente. El parámetro de línea de comandos para el archivo de conexión de servidor es, `-c <serverconnectionfile>`. Si el mismo identificador de servidor está presente en el archivo de script y el archivo de conexión de servidor, se considera la definición del servidor en el archivo de script.  

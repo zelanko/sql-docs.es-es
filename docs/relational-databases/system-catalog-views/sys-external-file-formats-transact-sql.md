@@ -12,14 +12,13 @@ dev_langs:
 ms.assetid: a89efb2c-0a3a-4b64-9284-6e93263e29ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b16deb7ed2bd43cc45966d27b79729897e76405c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: eae119fe16b916f47f1acdcd2ebe15efd96e51e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532357"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048389"
 ---
 # <a name="sysexternalfileformats-transact-sql"></a>Sys.external_file_formats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -31,15 +30,15 @@ ms.locfileid: "52532357"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |file_format_id|**int**|Id. de objeto para el formato de archivo externo.||  
-|NAME|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], debe ser único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], debe ser único para el servidor.||  
+|name|**sysname**|Nombre del formato de archivo. en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], debe ser único para la base de datos. En [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], debe ser único para el servidor.||  
 |format_type|**tinyint**|El tipo de formato de archivo.|DELIMITEDTEXT, RCFILE, ORC, PARQUET|  
-|field_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, esto es el terminador de campo.||  
-|string_delimiter|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, es el delimitador de cadena.||  
+|field_terminator|**nvarchar(10)**|Para obtener más format_type = DELIMITEDTEXT, esto es el terminador de campo.||  
+|string_delimiter|**nvarchar(10)**|Para obtener más format_type = DELIMITEDTEXT, es el delimitador de cadena.||  
 |date_format|**nvarchar(50)**|Para obtener más format_type = DELIMITEDTEXT, esto es el formato de hora y fecha definido por el usuario.||  
 |use_type_default|**bit**|Para format_type = texto DELIMITADO, especifica cómo controlar los valores que faltan cuando PolyBase está importando datos desde archivos de texto HDFS a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].|0 - almacenar los valores que faltan, como la cadena 'NULL'.<br /><br /> 1: almacenar los valores que faltan como el valor predeterminado de columna.|  
 |serde_method|**nvarchar(255)**|Para obtener más format_type = RCFILE, este es el método de serialización y deserialización.||  
-|row_terminator|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, se trata de la cadena de caracteres que finaliza cada fila en el archivo externo de Hadoop.|Siempre '\n'.|  
-|codificación|**nvarchar (10)**|Para obtener más format_type = DELIMITEDTEXT, este es el método de codificación para el archivo externo de Hadoop.|Siempre 'UTF8'.|  
+|row_terminator|**nvarchar(10)**|Para obtener más format_type = DELIMITEDTEXT, se trata de la cadena de caracteres que finaliza cada fila en el archivo externo de Hadoop.|Siempre '\n'.|  
+|codificación|**nvarchar(10)**|Para obtener más format_type = DELIMITEDTEXT, este es el método de codificación para el archivo externo de Hadoop.|Siempre 'UTF8'.|  
 |data_compression|**nvarchar(255)**|El método de compresión de datos para los datos externos.|Para obtener más format_type = DELIMITEDTEXT:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-'org.apache.hadoop.io.compress.GzipCodec'<br /><br /> Para obtener más format_type = RCFILE:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br /><br /> Para obtener más format_type = ORC:<br /><br /> -'org.apache.hadoop.io.compress.DefaultCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'<br /><br /> Para obtener más format_type = PARQUET:<br /><br /> -'org.apache.hadoop.io.compress.GzipCodec'<br />-   'org.apache.hadoop.io.compress.SnappyCodec'|  
   
 ## <a name="permissions"></a>Permisos  

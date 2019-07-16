@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dea05698-527a-41ab-8729-bbed85556185
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26d4be96ca4dabebd93ee96e2888e18d39257412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1676af6216ac703e9a8976951ec2888b9e940b67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085522"
 ---
 # <a name="insert-statement-limitations"></a>Limitaciones de la instrucción de INSERCIÓN
 Los datos insertados se truncan a la derecha sin previo aviso si es demasiado largo para caber en la columna.  

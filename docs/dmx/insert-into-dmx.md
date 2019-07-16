@@ -1,5 +1,5 @@
 ---
-title: INSERT INTO (DMX) | Microsoft Docs
+title: INSERTAR (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 16732c1d889f7125d71d01bd0804b4202daceb7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 463bd3ac40a2f90a66457faa9a80b9512b67b53a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62505162"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937788"
 ---
 # <a name="insert-into-dmx"></a>INSERT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +34,7 @@ INSERT INTO [MINING MODEL]|[MINING STRUCTURE] <model>|<structure>.COLUMN_VALUES 
  *model*  
  Identificador de modelo.  
   
- *structure*  
+ *estructura*  
  Identificador de estructura.  
   
  *columnas del modelo asignada*  
@@ -59,7 +58,7 @@ INSERT INTO [MINING MODEL] <model>
   
  La siguiente tabla ofrece una descripción del resultado de distintas formas de la instrucción, en función del estado de los objetos.  
   
-|.|Estado de los objetos|Resultado|  
+|Instrucción|Estado de los objetos|Resultado|  
 |---------------|----------------------|------------|  
 |INSERT INTO MINING MODEL *\<modelo >*|La estructura de minería de datos está procesada.|Se procesa el modelo de minería de datos.|  
 ||La estructura de minería de datos no está procesada.|Se procesan el modelo y la estructura de minería de datos.|  
@@ -87,7 +86,7 @@ INSERT INTO [MINING MODEL] <model>
   
 -   **OPENROWSET**  
   
--   **SHAPE**  
+-   **FORMA**  
   
 -   Cualquier consulta de [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] que devuelva un conjunto de filas  
   

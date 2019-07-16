@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071065"
 ---
 # <a name="dmx-statements---data-manipulation"></a>Instrucciones de DMX: manipulación de datos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +22,11 @@ ms.locfileid: "37968187"
   
 |Tema|Descripción|  
 |-----------|-----------------|  
-|[ELIMINAR &AMP;#40;DMX&AMP;#41;](../dmx/delete-dmx.md)|Borra el contenido entrenado de un modelo de minería de datos.|  
-|[INSERTAR EN &AMP;#40;DMX&AMP;#41;](../dmx/insert-into-dmx.md)|Entrena un modelo de minería de datos.|  
-|[SELECCIONE &AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)|Examina un modelo de minería de datos.|  
+|[ELIMINAR &#40;DMX&#41;](../dmx/delete-dmx.md)|Borra el contenido entrenado de un modelo de minería de datos.|  
+|[INSERTAR EN &#40;DMX&#41;](../dmx/insert-into-dmx.md)|Entrena un modelo de minería de datos.|  
+|[SELECCIONE &#40;DMX&#41;](../dmx/select-dmx.md)|Examina un modelo de minería de datos.|  
 |[&#60;consulta de origen de datos&#62;](../dmx/source-data-query.md)|Consulta orígenes de datos para ambos **INSERT INTO** y **seleccione** instrucciones.|  
-|[ACTUALIZACIÓN &AMP;#40;DMX&AMP;#41;](../dmx/update-dmx.md)|Cambia el contenido del modelo de minería de datos.|  
+|[ACTUALIZACIÓN &#40;DMX&#41;](../dmx/update-dmx.md)|Cambia el contenido del modelo de minería de datos.|  
   
 ## <a name="see-also"></a>Vea también  
  [Extensiones de minería de datos &#40;DMX&#41; instrucciones de definición de datos](../dmx/dmx-statements-data-definition.md)   

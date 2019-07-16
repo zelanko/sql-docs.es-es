@@ -2,19 +2,18 @@
 title: Base de datos master - almacenamiento de datos paralelos | Microsoft Docs
 description: Obtenga información sobre la base de datos maestra en el almacenamiento de datos paralelos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960650"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Base de datos master - almacenamiento de datos paralelos
 La base de datos master PDW de SQL Server almacena información de inicio de sesión de nivel de dispositivo y el catálogo de base de datos. Es una base de datos maestra de SQL Server reside en el nodo de Control. Por lo tanto, proporciona una funcionalidad similar a SQL Server PDW como maestros proporciona a SQL Server.  

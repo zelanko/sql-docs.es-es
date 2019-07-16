@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ef5a91cd-158e-40bf-b5a8-8ba535c4705e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0fdb1789c6640c072ec013c341bd4889b28bb469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 833c953df3502eb7e5d5676da8df057734174619
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128091"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071924"
 ---
 # <a name="driver-architecture-overview"></a>Información general de la arquitectura de controlador
 El controlador ODBC de Microsoft Visual FoxPro es un controlador de 32 bits que permite abrir y consultar una base de datos de Microsoft Visual FoxPro o las tablas de FoxPro a través de la interfaz de conectividad abierta de base de datos (ODBC). Puede tener acceso a datos de FoxPro mediante los siguientes tipos de aplicaciones:  

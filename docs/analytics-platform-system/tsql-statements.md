@@ -2,19 +2,18 @@
 title: 'Instrucciones de T-SQL: almacenamiento de datos paralelos | Microsoft Docs'
 description: Instrucciones de T-SQL para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959949"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Instrucciones de T-SQL para almacenamiento de datos paralelos
 Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
@@ -28,13 +27,13 @@ Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Par
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [CREAR BASE DE DATOS CON ÁMBITO DE CREDENCIAL](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [CREAR ORIGEN DE DATOS EXTERNO](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [CREAR FORMATO DE ARCHIVO EXTERNO](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [CREAR TABLA EXTERNA](../t-sql/statements/create-external-table-transact-sql.md)
 * [CREAR FUNCIÓN](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
 * [CREATE PROCEDURE](../t-sql/statements/create-procedure-transact-sql.md)
-* [CREATE SCHEMA](../t-sql/statements/create-schema-transact-sql.md)
+* [CREAR ESQUEMA](../t-sql/statements/create-schema-transact-sql.md)
 * [CREATE STATISTICS](../t-sql/statements/create-statistics-transact-sql.md)
 * [CREATE TABLE](../t-sql/statements/create-table-azure-sql-data-warehouse.md)
 * [INSTRUCCIÓN CREATE TABLE AS SELECT](../t-sql/statements/create-table-as-select-azure-sql-data-warehouse.md)
@@ -85,7 +84,7 @@ Instrucciones de Transact-SQL (T-SQL) para analíticas Platform System (APS) Par
 * [Subconsultas](../t-sql/queries/subqueries-azure-sql-data-warehouse-parallel-data-warehouse.md)
 
 ## <a name="security-statements"></a>Instrucciones de seguridad
-* Permisos: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOKE](../t-sql/statements/revoke-transact-sql.md)
+* Permisos: [GRANT](../t-sql/statements/grant-transact-sql.md), [DENY](../t-sql/statements/deny-transact-sql.md), [REVOCAR](../t-sql/statements/revoke-transact-sql.md)
 * [ALTER AUTHORIZATION](../t-sql/statements/alter-authorization-transact-sql.md)
 * [MODIFICAR CERTIFICADO](../t-sql/statements/alter-certificate-transact-sql.md)
 * [MODIFICAR CLAVE DE CIFRADO DE BASE DE DATOS](../t-sql/statements/alter-database-encryption-key-transact-sql.md)

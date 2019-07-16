@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 59e84c4e-debe-49d7-b97b-84c736b0c793
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ad9c944af33da86e0d4f85769288f4ab7b6c369f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33cc778d921b90a460dab6bda352fd7627d2cf7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62665347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054070"
 ---
 # <a name="sqlconfigdatasource-paradox-driver"></a>SQLConfigDataSource (controlador de Paradox)
 > [!NOTE]  
@@ -31,10 +30,10 @@ ms.locfileid: "62665347"
 |-------------|-----------------|  
 |COLLATINGSEQUENCE|La secuencia en la que se ordenan los campos.<br /><br /> Cuando se usa el controlador de Paradox, la secuencia puede ser ASCII (valor predeterminado), internacional, sueco / finlandés o noruego danés.<br /><br /> Esto establece la misma opción como **secuencia de intercalación** en el cuadro de diálogo programa de instalación.|  
 |DBQ|El nombre del archivo de base de datos.<br /><br /> Esto establece la misma opción como **base de datos** en el cuadro de diálogo programa de instalación.|  
-|DEFAULTDIR|La especificación de ruta de acceso al directorio.|  
+|VALOR DE ESTA OPCIÓN|La especificación de ruta de acceso al directorio.|  
 |DESCRIPTION|Una descripción de los datos del origen de datos.<br /><br /> Esto establece la misma opción como **descripción** en el cuadro de diálogo programa de instalación.|  
 |DRIVER|La especificación de ruta de acceso a la DLL del controlador.|  
-|DRIVERID|Un identificador entero para el controlador.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (Paradox 4.x)<br /><br /> 538 (Paradox 5.x)|  
+|DRIVERID|Un identificador entero para el controlador.<br /><br /> 26 (paradox 3.x)<br /><br /> 282 (paradox 4.x)<br /><br /> 538 (paradox 5.x)|  
 |EXCLUSIVO|Determina si la base de datos se abrirá en modo exclusivo (obtengan acceso a solo un usuario a la vez) o modo (obtengan acceso a más de un usuario a la vez) compartido. Puede ser true (modo exclusivo) o false (modo compartido).<br /><br /> Esto establece la misma opción como **exclusivo** en el cuadro de diálogo programa de instalación.|  
 |FIL|Archivo tipo Paradox 3.x, Paradox 4.x o Paradox 5.x|  
 |TIPO DE ARCHIVO|Tipo de archivo para el controlador de texto (texto).|  

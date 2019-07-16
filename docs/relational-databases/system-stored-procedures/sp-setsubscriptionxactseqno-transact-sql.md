@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9b6f9426d4381f33d529e1efefa8afd6a1fc44b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a7f35a915e2bff62932124aef64984a63cbd0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66270163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021085"
 ---
 # <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,14 +49,14 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 `[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado. Cuando el agente de distribución se comparte por más de una publicación, debe especificar un valor de ALL para *publicación*.  
   
-`[ @xact_seqno = ] xact_seqno` Es el LSN de la siguiente transacción en el distribuidor que se aplicará en el suscriptor. *xact_seqno* es **varbinary (16)**, no tiene ningún valor predeterminado.  
+`[ @xact_seqno = ] xact_seqno` Es el LSN de la siguiente transacción en el distribuidor que se aplicará en el suscriptor. *xact_seqno* es **varbinary (16)** , no tiene ningún valor predeterminado.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|El LSN original de la siguiente transacción que se va a aplicar en el suscriptor.|  
-|**UPDATED XACT_SEQNO**|**varbinary(16)**|El LSN actualizado de la siguiente transacción que se va a aplicar en el suscriptor.|  
+|**ORIGINAL XACT_SEQNO**|**varbinary (16)**|El LSN original de la siguiente transacción que se va a aplicar en el suscriptor.|  
+|**UPDATED XACT_SEQNO**|**varbinary (16)**|El LSN actualizado de la siguiente transacción que se va a aplicar en el suscriptor.|  
 |**NÚMERO DE SECUENCIA DE LA SUSCRIPCIÓN**|**int**|El número de flujos de suscripción utilizados durante la última sincronización.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

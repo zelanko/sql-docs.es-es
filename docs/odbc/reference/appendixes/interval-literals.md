@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f9e6c3c7-4f98-483f-89d8-ebc5680f021b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc5d09bca83724bb956d39512c51c3dc47db1bad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e90f7683c13d8693529c60f1ba893bd645920bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041911"
 ---
 # <a name="interval-literals"></a>Literales de intervalo
 ODBC exige que todos los controladores para admiten la conversión del tipo de datos SQL_CHAR o SQL_VARCHAR a todos los tipos de datos de intervalo de C. Sin embargo, si el origen de datos subyacente no admite tipos de datos interval, el controlador necesita conocer el formato correcto del valor en el campo SQL_CHAR para admitir estas conversiones. De forma similar, ODBC requiere que se debe tener cualquier tipo ser convertible a SQL_CHAR o SQL_VARCHAR, por lo que necesita saber qué formato de un intervalo que se almacena en el campo de carácter un controlador de C de ODBC. En esta sección se describe la sintaxis de literales de intervalo, que debe usar para validar los campos SQL_CHAR durante la conversión a o desde tipos de datos de intervalo de C el escritor de controlador.  

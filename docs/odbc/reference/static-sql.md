@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd82e2c3c44f05a27e9d14442d8d0fb58e1986cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e6d053e4d2a5520432c4c1debbafb35fdb17bc4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016743"
 ---
 # <a name="static-sql"></a>SQL estático
 El SQL incrustado se muestra en [ejemplo SQL incrustado](../../odbc/reference/embedded-sql-example.md) se conoce como SQL estático. Se denomina SQL estático porque son estáticas; las instrucciones SQL en el programa es decir, no cambie cada vez que se ejecuta el programa. Como se describe en la sección anterior, estas instrucciones se compilan cuando se compila el resto del programa.  

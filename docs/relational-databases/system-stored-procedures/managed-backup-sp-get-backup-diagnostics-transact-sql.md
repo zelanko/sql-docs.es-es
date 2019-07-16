@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 2266a233-6354-464b-91ec-824ca4eb9ceb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 84fe7cea5418a022282958a7c16d263e5c7e9604
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 5e967ae5b46ec703da4e8b1fff64f298fdf8a081
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52399839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942045"
 ---
 # <a name="managedbackupspgetbackupdiagnostics-transact-sql"></a>managed_backup.sp_get_backup_diagnostics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
   
 ##  <a name="Arguments"></a> Argumentos  
  @xevent_channel  
- Tipo de evento extendido. El valor predeterminado se establece para devolver todos los eventos registrados durante los 30 minutos anteriores. Los eventos registrados dependen del tipo de Eventos extendidos habilitados. Puede utilizar este parámetro para filtrar el procedimiento almacenado para mostrar solo los eventos de un tipo determinado. Puede especificar el nombre completo del evento o bien especificar una subcadena como: **'Admin'**, **'Analytic'**, **'Operational'**, y **'Debug'**. El @event_channel es **VARCHAR (255)**.  
+ Tipo de evento extendido. El valor predeterminado se establece para devolver todos los eventos registrados durante los 30 minutos anteriores. Los eventos registrados dependen del tipo de Eventos extendidos habilitados. Puede utilizar este parámetro para filtrar el procedimiento almacenado para mostrar solo los eventos de un tipo determinado. Puede especificar el nombre completo del evento o especifique una subcadena como: **'Admin'** , **'Analytic'** , **'Operational'** , y **'Debug'** . El @event_channel es **VARCHAR (255)** .  
   
  Para obtener una lista de eventos habilitados actualmente tipos uso el **managed_backup.fn_get_current_xevent_settings** función.  
   
@@ -63,7 +62,7 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 |Nombre de la columna|Tipo de datos|Descripción|  
 |event_type|NVARCHAR (512)|Tipo de evento extendido.|  
 |Evento|NVARCHAR (512)|Resumen de los registros de eventos.|  
-|Timestamp|timestamp|Marca de tiempo de evento que muestra si el evento se ha producido.|  
+|Timestamp|TIMESTAMP|Marca de tiempo de evento que muestra si el evento se ha producido.|  
   
 ## <a name="security"></a>Seguridad  
   

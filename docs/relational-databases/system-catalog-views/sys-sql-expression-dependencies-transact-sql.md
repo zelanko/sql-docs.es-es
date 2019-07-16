@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 78a218e4-bf99-4a6a-acbf-ff82425a5946
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e4ef878879fb5c2896c45aedbf2a86f83557804c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bee68e3ba1863602d9a96635cdfa4c533a00c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62856105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073174"
 ---
 # <a name="syssqlexpressiondependencies-transact-sql"></a>sys.sql_expression_dependencies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -70,23 +69,23 @@ ms.locfileid: "62856105"
   
 |Tipo de entidad|Entidad que hace la referencia|Entidad a la que se hace referencia|  
 |-----------------|------------------------|-----------------------|  
-|Table|Sí*|Sí|  
+|Tabla|Sí*|Sí|  
 |Ver|Sí|Sí|  
-|Índice filtrado|Sí**|No|  
+|Índice filtrado|Sí**|Sin|  
 |Estadísticas filtradas|Sí**|Sin|  
 |Procedimiento almacenado [!INCLUDE[tsql](../../includes/tsql-md.md)]***|Sí|Sí|  
 |procedimiento almacenado CLR|Sin|Sí|  
 |Función definida por el usuario de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sí|  
 |Función CLR definida por el usuario|Sin|Sí|  
-|Desencadenador CLR (DML y DDL)|No|Sin|  
-|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
-|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
+|Desencadenador CLR (DML y DDL)|No|No|  
+|Desencadenador DML de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|Sin|  
+|Desencadenador DDL de nivel de base de datos de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Desencadenador DDL de nivel de servidor de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Sí|No|  
 |Procedimientos almacenados extendidos|No|Sí|  
-|Cola|Sin|Sí|  
+|Cola|No|Sí|  
 |Synonym (Sinónimo)|Sin|Sí|  
 |Tipo (tipo CLR y alias definido por el usuario)|Sin|Sí|  
-|Colección de esquemas XML|Sin|Sí|  
+|Colección de esquemas XML|No|Sí|  
 |Función de partición|Sin|Sí|  
   
  \* Una tabla se realiza un seguimiento como una entidad de referencia solo cuando hace referencia a un [!INCLUDE[tsql](../../includes/tsql-md.md)] módulo, tipo definido por el usuario o la colección de esquemas XML en la definición de una columna calculada, restricción CHECK o restricción predeterminada.  

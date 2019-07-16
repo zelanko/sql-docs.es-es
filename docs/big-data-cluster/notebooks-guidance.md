@@ -5,17 +5,16 @@ description: Este artículo explica cómo ejecutar Jupyter Notebook en Azure Dat
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 05/08/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ea907e507c9b37b8a6b911b7e1705ce31f231796
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 166964f97f5201d906ea2d1f6262b7a221eb2cba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958297"
 ---
 # <a name="how-to-use-notebooks-in-sql-server-2019-preview"></a>Uso de cuadernos en versión preliminar de SQL Server 2019
 
@@ -52,7 +51,7 @@ El núcleo de SQL también puede utilizarse para conectarse a instancias de serv
 
 ![Conexión de PostgreSQL](media/notebooks-guidance/sql-kernel-dropdown.png)
 
-### <a name="sql-kernel"></a>SQL Kernel
+### <a name="sql-kernel"></a>Núcleo SQL
 
 En las celdas de código en el Bloc de notas, similar a nuestro editor de consultas, se admite SQL moderna experiencia que facilita sus tareas diarias con características integradas, como un editor SQL enriquecido, IntelliSense y fragmentos de código integrados de codificación. Fragmentos de código le permiten generar la sintaxis correcta de SQL para crear bases de datos, tablas, vistas, procedimientos almacenados, etc. y para actualizar los objetos de base de datos existente. Usar fragmentos de código para crear rápidamente copias de la base de datos para el desarrollo o con fines de prueba y para generar y ejecutar scripts.
 
@@ -60,7 +59,7 @@ Haga clic en **ejecutar** para ejecutar cada celda.
 
 Núcleo de SQL para conectarse a la instancia de SQL Server
 
-![SQL Kernel](media/notebooks-guidance/intellisense-code-cell.png)
+![Núcleo SQL](media/notebooks-guidance/intellisense-code-cell.png)
 
 Resultados de la consulta
 
@@ -99,9 +98,9 @@ Una vez que la instalación se realiza correctamente, encontrará una notificaci
 
 |Kernel|Descripción
 |:-----|:-----
-| SQL Kernel | Escribir código de SQL destinado a la base de datos relacional.
+| Núcleo SQL | Escribir código de SQL destinado a la base de datos relacional.
 |PySpark3 y Kernel PySpark| Escribir código de Python mediante el proceso de Spark del clúster.
-|Spark Kernel|Escribir código de Scala y R mediante el proceso de Spark del clúster.
+|Kernel de Spark|Escribir código de Scala y R mediante el proceso de Spark del clúster.
 |Python Kernel|Escribir código de Python para el desarrollo local.
 
 `Attach to` proporciona el contexto para el Kernel adjuntar. Si usas el núcleo de SQL, puede `Attach to` cualquiera de las instancias de SQL Server.
@@ -152,7 +151,7 @@ Para guardar el Bloc de notas realice una de las siguientes acciones.
 - Haga clic en **archivo** > **guardar**
 - Haga clic en **archivo** > **Guardar como...**
 - Haga clic en **archivo** > **guardar todo** 
-- En la paleta de comandos, escriba **archivo: Save** 
+- En la paleta de comandos, escriba **archivo: Guardar** 
 
 ### <a name="pyspark3pyspark-kernel"></a>Kernel Pyspark3/PySpark
 

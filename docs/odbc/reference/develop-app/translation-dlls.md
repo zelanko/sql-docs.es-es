@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 38975059-b346-410f-bb27-326f3f7bbf39
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ec1d0e23019f3e5b68ad38711c1f041b160ceb31
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 168b7b5ef6f8b88a39dbbb0942cf1520adf261e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086034"
 ---
 # <a name="translation-dlls"></a>Archivos DLL de traducción
 La aplicación y el origen de datos a menudo almacenan datos en diferentes conjuntos de caracteres. ODBC proporciona un mecanismo genérico que permite al controlador traducir datos de un juego de caracteres a otro. Consta de un archivo DLL que implementa las funciones de traducción **SQLDriverToDataSource** y **SQLDataSourceToDriver**, que llama el controlador traduzca todos los datos que fluyen entre el origen de datos y el controlador. Este archivo DLL puede escribirse mediante el programador de aplicaciones, el desarrollador del controlador o un tercero.  

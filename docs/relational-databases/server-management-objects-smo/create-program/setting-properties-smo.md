@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 342569ba-d2f7-44d2-8f3f-ae9c701c7f0f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 41595e6aeee31c5503531f2eb13e9e50c13430b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cf121a37bf0229ba3366e18c149530f316fcdc56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47790863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098285"
 ---
 # <a name="setting-properties---smo"></a>Establecer propiedades: SMO
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47790863"
  Un valor de propiedad se puede modificar o recuperar dependiendo de si la propiedad tiene acceso de lectura/escritura o acceso de solo lectura. También es necesario establecer ciertas propiedades antes de que se pueda crear un objeto. Para obtener más información, vea la referencia de SMO del objeto concreto.  
   
 > [!NOTE]  
->  Las colecciones de objetos secundarios aparecen como la propiedad de un objeto. Por ejemplo, la colección **Tables** es una propiedad de un objeto **Server** . Para obtener más información, consulte [usar colecciones](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
+>  Las colecciones de objetos secundarios aparecen como la propiedad de un objeto. Por ejemplo, la colección **Tables** es una propiedad de un objeto **Server** . Para más información, consulte [Using Collections](../../../relational-databases/server-management-objects-smo/create-program/using-collections.md).  
   
  Las propiedades de un objeto son miembros de la colección Properties. La colección Properties se puede utilizar para recorrer en iteración cada propiedad de un objeto.  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47790863"
   
 -   La versión de servidor no admite la propiedad, como en el caso de que intente obtener acceso a una propiedad que representa una nueva característica de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] en una versión anterior de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   El servidor no proporciona datos para la propiedad, por ejemplo, si intenta tener acceso a una propiedad que representa un [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] componente que no está instalado.  
+-   El servidor no proporciona datos para la propiedad, como en el caso de que intente obtener acceso a una propiedad que representa un componente de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] que no está instalado.  
   
  Puede controlar estas circunstancias si detecta las excepciones SMO <xref:Microsoft.SqlServer.Management.Smo.UnknownPropertyException> y <xref:Microsoft.SqlServer.Management.Smo.PropertyCannotBeRetrievedException>.  
   
@@ -52,11 +51,11 @@ ms.locfileid: "47790863"
   
 2.  Totalmente cargado. Cuando se hace referencia a una propiedad, las propiedades restantes que se cargan rápidamente se inicializan y pasan a estar disponibles.  
   
-3.  Propiedades que utilizan mucha memoria. Las propiedades no disponibles restantes utilizan mucha memoria y tienen un <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> valor de propiedad es True (como <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Estas propiedades solo se cargan cuando se hace referencia a ellas de forma específica.  
+3.  Propiedades que utilizan mucha memoria. Las propiedades no disponibles restantes utilizan mucha memoria y tienen un valor de propiedad <xref:Microsoft.SqlServer.Management.Smo.Property.Expensive%2A> de True (como <xref:Microsoft.SqlServer.Management.Smo.Database.DataSpaceUsage%2A>). Estas propiedades solo se cargan cuando se hace referencia a ellas de forma específica.  
   
- Si la aplicación captura propiedades adicionales, además de las que se proporcionan en el estado parcialmente cargado, envía una consulta para recuperar estas propiedades adicionales y pasa al estado totalmente cargado. Esto puede producir un tráfico innecesario entre cliente y servidor. Mayor optimización puede lograrse mediante una llamada a la <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> método. El método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> permite la especificación de las propiedades que se cargan al inicializar el objeto.  
+ Si la aplicación captura propiedades adicionales, además de las que se proporcionan en el estado parcialmente cargado, envía una consulta para recuperar estas propiedades adicionales y pasa al estado totalmente cargado. Esto puede producir un tráfico innecesario entre cliente y servidor. Si se llama al método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> se puede conseguir una mayor optimización. El método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> permite la especificación de las propiedades que se cargan al inicializar el objeto.  
   
- El método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> establece el comportamiento de carga de propiedades para el resto de aplicación o hasta que se restablece. Puede guardar el comportamiento original mediante el <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> método y restaurarlo cuando sea necesario.  
+ El método <xref:Microsoft.SqlServer.Management.Smo.Server.SetDefaultInitFields%2A> establece el comportamiento de carga de propiedades para el resto de aplicación o hasta que se restablece. Puede guardar el comportamiento original mediante el método <xref:Microsoft.SqlServer.Management.Smo.Server.GetDefaultInitFields%2A> y restaurarlo cuando sea necesario.  
   
 ## <a name="examples"></a>Ejemplos  
 Para utilizar cualquier ejemplo de código que se proporcione, deberá elegir el entorno de programación, la plantilla de programación y el lenguaje de programación con los que crear su aplicación. Para obtener más información, consulte [crear un Visual C&#35; proyecto SMO en Visual Studio .NET](../../../relational-databases/server-management-objects-smo/how-to-create-a-visual-csharp-smo-project-in-visual-studio-net.md).  
@@ -91,7 +90,7 @@ srv.ConnectionContext.SqlExecutionModes = SqlExecutionModes.ExecuteSql;
 ```  
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-basic"></a>Establecer diversas propiedades antes de crear un objeto en Visual Basic  
- Este ejemplo de código muestra cómo establecer directamente la <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Table> objeto y cómo crear y agregar columnas antes de crear el <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
+ En este ejemplo de código se muestra cómo establecer directamente la propiedad <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Table> y cómo crear y agregar columnas antes de crear el objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -122,7 +121,7 @@ tb.Create()
 ```
   
 ## <a name="setting-various-properties-before-an-object-is-created-in-visual-c"></a>Establecer diversas propiedades antes de crear un objeto en Visual C#  
- Este ejemplo de código muestra cómo establecer directamente la <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> propiedad de la <xref:Microsoft.SqlServer.Management.Smo.Table> objeto y cómo crear y agregar columnas antes de crear el <xref:Microsoft.SqlServer.Management.Smo.Table> objeto.  
+ En este ejemplo de código se muestra cómo establecer directamente la propiedad <xref:Microsoft.SqlServer.Management.Smo.Table.AnsiNullsStatus%2A> del objeto <xref:Microsoft.SqlServer.Management.Smo.Table> y cómo crear y agregar columnas antes de crear el objeto <xref:Microsoft.SqlServer.Management.Smo.Table>.  
   
 ```csharp  
 {   
@@ -157,7 +156,7 @@ tb.Create();
 ## <a name="iterating-through-all-properties-of-an-object-in-visual-basic"></a>Recorrer en iteración todas las propiedades de un objeto en Visual Basic  
  Este ejemplo de código se recorre el **propiedades** colección del <xref:Microsoft.SqlServer.Management.Smo.StoredProcedure> objeto y los muestra en el [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] pantalla salida.  
   
- En el ejemplo, el <xref:Microsoft.SqlServer.Management.Smo.Property> objeto se ha incluido entre corchetes porque también es un [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)] palabra clave.  
+ En el ejemplo, el objeto <xref:Microsoft.SqlServer.Management.Smo.Property> se ha incluido entre corchetes porque también es una palabra clave de [!INCLUDE[vbprvb](../../../includes/vbprvb-md.md)].  
   
 ```VBNET
 'Connect to the local, default instance of SQL Server.
@@ -202,7 +201,7 @@ sp.QuotedIdentifierStatus = false;
 ```  
   
 ## <a name="setting-default-initialization-fields-in-visual-basic"></a>Establecer campos de inicialización predeterminados en Visual Basic  
- En este ejemplo de código se muestra cómo minimizar el número de propiedades de objeto inicializadas en un programa SMO. Debe incluir el `using System.Collections.Specialized`; instrucción que se utiliza el <xref:System.Collections.Specialized.StringCollection> objeto.  
+ En este ejemplo de código se muestra cómo minimizar el número de propiedades de objeto inicializadas en un programa SMO. Debe incluir la instrucción `using System.Collections.Specialized` para utilizar el objeto <xref:System.Collections.Specialized.StringCollection>.  
   
  Puede utilizarse [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] para comparar el número de instrucciones enviadas a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con esta optimización.  
   
@@ -234,7 +233,7 @@ srv.SetDefaultInitFields(typ, sc)
 ```
   
 ## <a name="setting-default-initialization-fields-in-visual-c"></a>Establecer campos de inicialización predeterminados en Visual C#  
- En este ejemplo de código se muestra cómo minimizar el número de propiedades de objeto inicializadas en un programa SMO. Debe incluir el `using System.Collections.Specialized`; instrucción que se utiliza el <xref:System.Collections.Specialized.StringCollection> objeto.  
+ En este ejemplo de código se muestra cómo minimizar el número de propiedades de objeto inicializadas en un programa SMO. Debe incluir la instrucción `using System.Collections.Specialized` para utilizar el objeto <xref:System.Collections.Specialized.StringCollection>.  
   
  Puede utilizarse [!INCLUDE[ssSqlProfiler](../../../includes/sssqlprofiler-md.md)] para comparar el número de instrucciones enviadas a la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] con esta optimización.  
   

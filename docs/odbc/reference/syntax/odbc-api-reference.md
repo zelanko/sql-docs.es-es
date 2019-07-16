@@ -11,13 +11,12 @@ apitype: dllExport
 ms.assetid: b7a49774-f458-44ce-9a04-a0457501405b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d56d6068b842256bd450844c7b163727e5d35f3d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5073d7efcb2cb99e51fe0d9cd0382806501cfd0a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085464"
 ---
 # <a name="odbc-api-reference"></a>Referencia de API ODBC
 Los temas de esta sección describen cada función ODBC en orden alfabético. Cada función se define como una función de lenguaje de programación de C. Las descripciones siguientes:  
@@ -34,7 +33,7 @@ Los temas de esta sección describen cada función ODBC en orden alfabético. Ca
   
 -   Valores devueltos  
   
--   Diagnósticos  
+-   Diagnóstico  
   
 -   Comentarios sobre la implementación y uso  
   

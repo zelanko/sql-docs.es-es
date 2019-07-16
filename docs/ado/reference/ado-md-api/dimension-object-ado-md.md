@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 66adbbd2-23a3-4c19-a91b-84c31309aa1b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f69acfa84272e73bcafb370eb85c6a14614a367c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f7a13ad87d56f5e7855070d8fe577bb408d6ce9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938538"
 ---
 # <a name="dimension-object-ado-md"></a>Objeto de dimensión (ADO MD)
 Representa una de las dimensiones de un cubo multidimensional, que contiene una o más jerarquías de miembros.  

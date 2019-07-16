@@ -29,13 +29,12 @@ helpviewer_keywords:
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: c4bb3d1b6fdc57e1251e9c8ca39f0c7437ffb126
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56c55dbc5df61bfdb9013e505335af16fccbeecd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63139031"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006631"
 ---
 # <a name="converting-access-database-objects-accesstosql"></a>Convertir objetos de base de datos de Access (AccessToSQL)
 Una vez que haya agregado las bases de datos de Access y conectado a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure, SSMA muestra los metadatos para el acceso y [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] u objetos de base de datos de SQL Azure. Puede seleccionar ahora obtener acceso a objetos de base de datos y, a continuación, convertir los esquemas a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o esquemas de SQL Azure.  
@@ -58,12 +57,12 @@ La siguiente tabla muestra qué objetos de acceso se convierten y resultante [!I
 |-----------------|-------------------------------|  
 |table|table|  
 |column|column|  
-|índice|índice|  
+|index|index|  
 |clave externa|clave externa|  
-|Query|ver<br /><br />Las consultas más SELECT se convierten en las vistas. Otras consultas, como consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros ni son consultas cruzadas.|  
+|query|ver<br /><br />Las consultas más SELECT se convierten en las vistas. Otras consultas, como consultas de actualización, no se migran.<br /><br />No se convierten las consultas SELECT que toman parámetros ni son consultas cruzadas.|  
 |informe|no convertir|  
 |Formulario|no convertir|  
-|macro|no convertir|  
+|Macro|no convertir|  
 |módulo|no convertir|  
 |Valor predeterminado|Valor predeterminado|  
 |Permitir cero propiedad de columna de longitud|restricción CHECK|  

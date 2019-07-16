@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 41782719-f54d-4e11-941a-c050c7576e23
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7c385bfc4fd977efd695020dedf9669dff6eebf0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f31bc59e918a2a2ca4f0cf9e3833571028e85a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47714353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090797"
 ---
 # <a name="sysdmservermemorydumps-transact-sql"></a>sys.dm_server_memory_dumps (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47714353"
  
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre de archivo**|**nvarchar(256)**|Ruta de acceso y nombre del archivo de volcado de memoria. No puede ser null.|  
+|**filename**|**nvarchar(256)**|Ruta de acceso y nombre del archivo de volcado de memoria. No puede ser null.|  
 |**creation_time**|**datetimeoffset(7)**|Fecha y hora en que se creó el archivo. No puede ser null.|  
 |**size_in_bytes**|**bigint**|Tamaño (en bytes) del archivo. Acepta valores NULL.|  
   

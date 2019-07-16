@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8c544388-fe9d-4f94-a0ac-fa0b9c9c88a5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ce80e7b9c6e8cfcf15c0810986c1a34e8d881ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cca223510ebb6838048e3babbf8fdcada42f87a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742261"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039739"
 ---
 # <a name="sqlsetdescfield-function"></a>Función SQLSetDescField
 
@@ -77,7 +76,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLSetDescField** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_DESC y un *controlar* de *DescriptorHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLSetDescField** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
@@ -140,21 +139,21 @@ SQLRETURN SQLSetDescField(
   
  La inicialización de campos de encabezado se describe en la tabla siguiente.  
   
-|Nombre del campo de encabezado|Tipo|L/E|Default|  
+|Nombre del campo de encabezado|Type|L/E|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_ALLOC_TYPE|SQLSMALLINT|DESCARTAR: R APD: R IRD: R IPD: R|DESCARTAR: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> APD: SQL_DESC_ALLOC_AUTO para implícita o SQL_DESC_ALLOC_USER para explícita<br /><br /> IRD: SQL_DESC_ALLOC_AUTO<br /><br /> IPD: SQL_DESC_ALLOC_AUTO|  
 |SQL_DESC_ARRAY_SIZE|SQLULEN|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: [1] APD: [1] IRD: IPD sin usar: No utilizado|  
-|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT*|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: Ptr null APD: Ptr null IRD: Ptr null IPD: Ptr null|  
+|SQL_DESC_ARRAY_STATUS_PTR|SQLUSMALLINT *|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: Ptr null APD: Ptr null IRD: Ptr null IPD: Ptr null|  
 |SQL_DESC_BIND_OFFSET_PTR|SQLLEN*|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: Ptr null APD: Ptr null IRD: IPD sin usar: No utilizado|  
 |SQL_DESC_BIND_TYPE|SQLINTEGER|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: IPD sin usar: No utilizado|DESCARTAR: SQL_BIND_BY_COLUMN<br /><br /> APD: SQL_BIND_BY_COLUMN<br /><br /> IRD: No utilizado<br /><br /> IPD: No utilizado|  
 |SQL_DESC_COUNT|SQLSMALLINT|DESCARTAR: APD DE LECTURA/ESCRITURA: LECTURA/ESCRITURA IRD: R IPD: L/E|DESCARTAR: APD 0: 0 IRD: D IPD: 0|  
-|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN*|DESCARTAR: APD sin usar: IRD sin usar: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: APD sin usar: IRD sin usar: Ptr null IPD: Ptr null|  
+|SQL_DESC_ROWS_PROCESSED_PTR|SQLULEN *|DESCARTAR: APD sin usar: IRD sin usar: LECTURA/ESCRITURA IPD: L/E|DESCARTAR: APD sin usar: IRD sin usar: Ptr null IPD: Ptr null|  
   
  [1] estos campos se definen sólo cuando la IPD se rellena automáticamente con el controlador. Si no, son indefinidos. Si una aplicación intenta establecer estos campos, HY091 SQLSTATE se devolverán (identificador de campo descriptor no válido).  
   
  La inicialización de campos de registro es como se muestra en la tabla siguiente.  
   
-|Nombre del campo de registro|Tipo|L/E|Default|  
+|Nombre del campo de registro|Type|L/E|Default|  
 |-----------------------|----------|----------|-------------|  
 |SQL_DESC_AUTO_UNIQUE_VALUE|SQLINTEGER|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
 |SQL_DESC_BASE_COLUMN_NAME|SQLCHAR *|DESCARTAR: APD sin usar: IRD sin usar: R IPD: No utilizado|DESCARTAR: APD sin usar: IRD sin usar: D IPD: No utilizado|  
@@ -201,7 +200,7 @@ SQLRETURN SQLSetDescField(
 ## <a name="header-fields"></a>Campos de encabezado  
  Cada descriptor tiene un encabezado que consta de los siguientes campos:  
   
- **SQL_DESC_ALLOC_TYPE [All]**  
+ **SQL_DESC_ALLOC_TYPE [todos]**  
  Este campo de encabezado SQLSMALLINT de solo lectura especifica si el descriptor se asignó automáticamente por el controlador o explícitamente mediante la aplicación. Puede obtener la aplicación, pero no modificar, este campo. El campo se establece en SQL_DESC_ALLOC_AUTO por el controlador si el descriptor se asignó automáticamente por el controlador. Si el descriptor se ha asignado explícitamente por la aplicación se establece en SQL_DESC_ALLOC_USER por el controlador.  
   
  **SQL_DESC_ARRAY_SIZE [descriptores de aplicación]**  
@@ -301,7 +300,7 @@ SQLRETURN SQLSetDescField(
   
  También puede establecerse mediante una llamada a este campo en el APD **SQLSetStmtAttr** con el SQL_ATTR_PARAM_BIND_TYPE *atributo*.  
   
- **SQL_DESC_COUNT [All]**  
+ **SQL_DESC_COUNT [todos]**  
  Este campo SQLSMALLINT de encabezado especifica el índice basado en 1 del registro con el número mayor que contiene los datos. Cuando el controlador establece el descriptor de la estructura de datos, también debe establecer el campo SQL_DESC_COUNT para mostrar el número de registros es significativo. Cuando una aplicación asigna una instancia de esta estructura de datos, no tiene que especificar cuántos registros para reservar espacio para. Como la aplicación especifica el contenido de los registros, el controlador toma cualquier acción necesaria para asegurarse de que el identificador de descriptor hace referencia a una estructura de datos del tamaño adecuado.  
   
  SQL_DESC_COUNT no es un recuento de todas las columnas de datos que están enlazadas (si el campo está en un descartar) o de todos los parámetros que están enlazados (si el campo está en un APD), pero el número del registro con el número mayor. Si la columna con el número mayor o parámetro no está enlazada, SQL_DESC_COUNT se cambia al número de la columna siguiente con el número mayor o parámetro. Si una columna o un parámetro con un número que es menor que el número de la columna con el número mayor es independiente (mediante una llamada a **SQLBindCol** con el *TargetValuePtr* argumento establecido en un puntero nulo, o **SQLBindParameter** con el *ParameterValuePtr* argumento establecido en un puntero nulo), SQL_DESC_COUNT no cambia. Si se enlazan parámetros o columnas adicionales con un número mayor que el registro con el número mayor que contiene los datos, el controlador aumenta automáticamente el valor del campo SQL_DESC_COUNT. Si todas las columnas se han desenlazado mediante una llamada a **SQLFreeStmt** con la opción SQL_UNBIND, los campos SQL_DESC_COUNT en Descartar y IRD se establecen en 0. Si **SQLFreeStmt** se llama con la opción SQL_RESET_PARAMS, los campos SQL_DESC_COUNT en el APD y IPD se establecen en 0.  
@@ -339,7 +338,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_CATALOG_NAME [IRDs]**  
  Este SQLCHAR de solo lectura * campo de registro contiene el catálogo de la tabla base que contiene la columna. El valor devuelto es dependiente del controlador si la columna es una expresión o si la columna forma parte de una vista. Si el origen de datos no admite catálogos o no se puede determinar el catálogo, esta variable contiene una cadena vacía.  
   
- **SQL_DESC_CONCISE_TYPE [All]**  
+ **SQL_DESC_CONCISE_TYPE [todos]**  
  Este campo SQLSMALLINT de encabezado especifica el tipo de datos concisa para todos los tipos de datos, incluidos los tipos de datos datetime e interval.  
   
  Los valores de los campos SQL_DESC_CONCISE_TYPE SQL_DESC_TYPE y SQL_DESC_DATETIME_INTERVAL_CODE son interdependientes. Cada vez que uno de los campos se establece, el otro también debe establecerse. SQL_DESC_CONCISE_TYPE puede establecerse mediante una llamada a **SQLBindCol** o **SQLBindParameter**, o **SQLSetDescField**. Se puede establecer SQL_DESC_TYPE mediante una llamada a **SQLSetDescField** o **SQLSetDescRec**.  
@@ -368,29 +367,29 @@ SQLRETURN SQLSetDescField(
 |--------------------|------------------------------|  
 |SQL_TYPE_DATE/SQL_C_TYPE_DATE|SQL_CODE_DATE|  
 |SQL_TYPE_TIME/SQL_C_TYPE_TIME|SQL_CODE_TIME|  
-|SQL_TYPE_TIMESTAMP/ SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
+|SQL_TYPE_TIMESTAMP / SQL_C_TYPE_TIMESTAMP|SQL_CODE_TIMESTAMP|  
   
  Este campo se puede establecer para los tipos de datos de intervalo aparecen en la tabla siguiente.  
   
 |Tipo de intervalo|DATETIME_INTERVAL_CODE|  
 |-------------------|------------------------------|  
-|SQL_INTERVAL_DAY/ SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
-|SQL_INTERVAL_DAY_TO_HOUR/ SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
+|SQL_INTERVAL_DAY / SQL_C_INTERVAL_DAY|SQL_CODE_DAY|  
+|SQL_INTERVAL_DAY_TO_HOUR / SQL_C_INTERVAL_DAY_TO_HOUR|SQL_CODE_DAY_TO_HOUR|  
 |SQL_INTERVAL_DAY_TO_MINUTE/ SQL_C_INTERVAL_DAY_TO_MINUTE|SQL_CODE_DAY_TO_MINUTE|  
-|SQL_INTERVAL_DAY_TO_SECOND/ SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
+|SQL_INTERVAL_DAY_TO_SECOND / SQL_C_INTERVAL_DAY_TO_SECOND|SQL_CODE_DAY_TO_SECOND|  
 |SQL_INTERVAL_HOUR/ SQL_C_INTERVAL_HOUR|SQL_CODE_HOUR|  
 |SQL_INTERVAL_HOUR_TO_MINUTE/ SQL_C_INTERVAL_HOUR_TO_MINUTE|SQL_CODE_HOUR_TO_MINUTE|  
 |SQL_INTERVAL_HOUR_TO_SECOND/ SQL_C_INTERVAL_HOUR_TO_SECOND|SQL_CODE_HOUR_TO_SECOND|  
 |SQL_INTERVAL_MINUTE/ SQL_C_INTERVAL_MINUTE|SQL_CODE_MINUTE|  
 |SQL_INTERVAL_MINUTE_TO_SECOND/ SQL_C_INTERVAL_MINUTE_TO_SECOND|SQL_CODE_MINUTE_TO_SECOND|  
-|SQL_INTERVAL_MONTH/ SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
-|SQL_INTERVAL_SECOND/ SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
+|SQL_INTERVAL_MONTH / SQL_C_INTERVAL_MONTH|SQL_CODE_MONTH|  
+|SQL_INTERVAL_SECOND / SQL_C_INTERVAL_SECOND|SQL_CODE_SECOND|  
 |SQL_INTERVAL_YEAR/ SQL_C_INTERVAL_YEAR|SQL_CODE_YEAR|  
-|SQL_INTERVAL_YEAR_TO_MONTH/ SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
+|SQL_INTERVAL_YEAR_TO_MONTH / SQL_C_INTERVAL_YEAR_TO_MONTH|SQL_CODE_YEAR_TO_MONTH|  
   
  Para obtener más información acerca de los intervalos de datos y este campo, consulte [identificadores de tipo de datos y los descriptores de](../../../odbc/reference/appendixes/data-type-identifiers-and-descriptors.md).  
   
- **SQL_DESC_DATETIME_INTERVAL_PRECISION [All]**  
+ **SQL_DESC_DATETIME_INTERVAL_PRECISION [todos]**  
  Este campo de registro SQLINTEGER contiene el intervalo inicial precisión si el campo SQL_DESC_TYPE está SQL_INTERVAL. Cuando el campo SQL_DESC_DATETIME_INTERVAL_CODE se establece en un tipo de datos de intervalo, este campo se establece en el intervalo predeterminado de precisión del principio.  
   
  **SQL_DESC_DISPLAY_SIZE [IRDs]**  
@@ -442,7 +441,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_NUM_PREC_RADIX [All]**  
  Este campo SQLINTEGER contiene un valor de 2 si el tipo de datos en el campo SQL_DESC_TYPE es un tipo de datos numéricos aproximados, porque el campo SQL_DESC_PRECISION contiene el número de bits. Este campo contiene un valor de 10 si el tipo de datos en el campo SQL_DESC_TYPE es un tipo de datos numérico exacto, porque el campo SQL_DESC_PRECISION contiene el número de dígitos decimales. Este campo se establece en 0 para todos los tipos de datos no numéricos.  
   
- **SQL_DESC_OCTET_LENGTH [All]**  
+ **SQL_DESC_OCTET_LENGTH [todos]**  
  Este campo de registro SQLLEN contiene la longitud, en bytes, de una cadena de caracteres o tipo de datos binarios. Para tipos binarios o de caracteres de longitud fija, esto es la longitud real en bytes. Para tipos binarios o de caracteres de longitud variable, se trata de la longitud máxima en bytes. Este valor excluye siempre espacio para el carácter de terminación null para los descriptores de implementación y siempre incluye espacio para el carácter de terminación null para los descriptores de la aplicación. Datos de aplicación, este campo contiene el tamaño del búfer. Para APD, este campo está definido solo para salida o parámetros de entrada/salida.  
   
  **SQL_DESC_OCTET_LENGTH_PTR [descriptores de aplicación]**  
@@ -467,7 +466,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_ROWVER [descriptores de implementación]**  
  Este campo SQLSMALLINTrecord indica si una columna se modifica automáticamente el DBMS cuando se actualiza una fila (por ejemplo, una columna de tipo "timestamp" en SQL Server). El valor de este campo de registro se establece en SQL_TRUE si la columna es una columna del control de versiones de fila y SQL_FALSE en caso contrario. Este atributo de columna es similar a llamar a **SQLSpecialColumns** con IdentifierType de SQL_ROWVER para determinar si una columna se actualiza automáticamente.  
   
- **SQL_DESC_SCALE [All]**  
+ **SQL_DESC_SCALE [todos]**  
  Este campo SQLSMALLINT de registro contiene la escala definida para los tipos de datos decimal y numeric. El campo está definido para los demás tipos de datos.  
   
  El valor de este campo puede ser diferente del valor de "escala", tal como se define en el 2 de ODBC *.x*. Para obtener más información, consulte [apéndice D: Tipos de datos](../../../odbc/reference/appendixes/appendix-d-data-types.md).  
@@ -489,7 +488,7 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_TABLE_NAME [IRDs]**  
  Este SQLCHAR de solo lectura * campo de registro contiene el nombre de la tabla base que contiene esta columna. El valor devuelto es dependiente del controlador si la columna es una expresión o si la columna forma parte de una vista.  
   
- **SQL_DESC_TYPE [All]**  
+ **SQL_DESC_TYPE [todos]**  
  Este campo SQLSMALLINT de registro especifica el tipo de datos SQL o C conciso para todos los tipos de datos, excepto los tipos de datos datetime e interval. Para los tipos de datos datetime e interval, este campo especifica el tipo de datos detallados, que es SQL_DATETIME o SQL_INTERVAL.  
   
  Cada vez que este campo contiene SQL_DATETIME o SQL_INTERVAL, el campo SQL_DESC_DATETIME_INTERVAL_CODE debe contener el subcódigo adecuado para el tipo conciso. Para los tipos de datos de fecha y hora, SQL_DESC_TYPE contiene SQL_DATETIME y el campo SQL_DESC_DATETIME_INTERVAL_CODE contiene un subcódigo para el tipo de datos de fecha y hora específicas. Para los tipos de datos interval, SQL_DESC_TYPE contiene SQL_INTERVAL y el campo SQL_DESC_DATETIME_INTERVAL_CODE contiene un subcódigo para el tipo de datos de un intervalo específico.  

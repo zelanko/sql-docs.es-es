@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: c91733601949e8a084fef72e6ae388c25b569085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961687"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>Ver y resumir datos de SQL Server con R (tutorial)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -21,7 +20,7 @@ ms.locfileid: "58510912"
 En esta lección le presenta las funciones de la **RevoScaleR** empaquetar y le guiará en las siguientes tareas:
 
 > [!div class="checklist"]
-> * Conectar a SQL Server
+> * Conexión con SQL Server
 > * Definir una consulta con los datos que necesita o especificar una tabla o vista
 > * Definir uno o más contextos de cálculo para usarlos al ejecutar código de R
 > * Opcionalmente, puede definir las transformaciones que se aplican al origen de datos mientras se leen desde el origen

@@ -5,17 +5,16 @@ description: Artículo de referencia para los comandos de punto de conexión de 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae9a5ad79f388f260494c18448dd80e815b3ac02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958089"
 ---
 # <a name="mssqlctl-bdc-endpoint"></a>punto de conexión de bdc mssqlctl
 
@@ -26,7 +25,7 @@ El siguiente artículo proporciona la referencia para la **punto de conexión de
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[mssqlctl bdc endpoint list](#mssqlctl-bdc-endpoint-list) | Enumera los puntos de conexión para el clúster grande de datos.
+[lista de puntos de conexión de bdc mssqlctl](#mssqlctl-bdc-endpoint-list) | Enumera los puntos de conexión para el clúster grande de datos.
 ## <a name="mssqlctl-bdc-endpoint-list"></a>lista de puntos de conexión de bdc mssqlctl
 Enumera los puntos de conexión para el clúster grande de datos.
 ```bash

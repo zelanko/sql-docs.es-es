@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255130"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946284"
 ---
 # <a name="sequencetype-expressions-xquery"></a>Expresiones SequenceType (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,11 +39,11 @@ ms.locfileid: "54255130"
 Expression instance of SequenceType[Occurrence indicator]  
 ```  
   
- Tenga en cuenta que el `instance of` operador, el `Occurrence indicator`, especifica la cardinalidad, número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo el signo de interrogación (**?)**  es compatible con el indicador de repetición. ¿El **?** indicador de repetición indica que `Expression` puede devolver cero o un elemento. ¿Si el **?** se especifica el indicador de repetición, `instance of` devuelve True si el `Expression` tipo coincide con el especificado `SequenceType`, independientemente de si `Expression` devuelve un singleton o una secuencia vacía.  
+ Tenga en cuenta que el `instance of` operador, el `Occurrence indicator`, especifica la cardinalidad, número de elementos de la secuencia resultante. Si no se especifica esto, se supone que la cardinalidad es 1. En [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], solo el signo de interrogación ( **?)**  es compatible con el indicador de repetición. ¿El **?** indicador de repetición indica que `Expression` puede devolver cero o un elemento. ¿Si el **?** se especifica el indicador de repetición, `instance of` devuelve True si el `Expression` tipo coincide con el especificado `SequenceType`, independientemente de si `Expression` devuelve un singleton o una secuencia vacía.  
   
  ¿Si el **?** no se especifica el indicador de repetición, `sequence of` solo devolverá True cuando la `Expression` escriba coincide con el `Type` especificado y `Expression` devuelve un singleton.  
   
- **Tenga en cuenta** el signo más (**+**) y el asterisco (**&#42;**) indicadores de repetición no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+ **Tenga en cuenta** el signo más ( **+** ) y el asterisco ( **&#42;** ) indicadores de repetición no se admiten en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
  Los ejemplos siguientes ilustran el uso de la**instanci** operador XQuery.  
   
@@ -164,7 +163,7 @@ CREATE XML SCHEMA COLLECTION MyTestSchema AS '
 Go  
 ```  
   
- La consulta siguiente devuelve False, pues el valor de SequenceType especificado en la expresión `instance of` no es el principal máximo del tipo real de la expresión especificada. Es decir, el valor de <`TestElement`> es de tipo entero. El principal máximo es xs:decimal. No obstante, no se especifica como el segundo operando del operador `instance of`.  
+ La consulta siguiente devuelve False, pues el valor de SequenceType especificado en la expresión `instance of` no es el principal máximo del tipo real de la expresión especificada. Es decir, el valor de la <`TestElement`> es un tipo entero. El principal máximo es xs:decimal. No obstante, no se especifica como el segundo operando del operador `instance of`.  
   
 ```  
 SET QUOTED_IDENTIFIER ON  
@@ -191,7 +190,7 @@ go
 ### <a name="example-d"></a>Ejemplo D  
  En este ejemplo, que primero cree una colección de esquemas XML y utilizarla para escribir un **xml** variable. El tipado **xml** , a continuación, se consulta la variable para ilustrar la `instance of` funcionalidad.  
   
- La colección de esquemas XML siguiente define un tipo simple, myType, y un elemento, <`root`>, del tipo myType:  
+ La colección de esquemas XML siguiente define un tipo simple, myType y un elemento, <`root`>, de tipo myType:  
   
 ```  
 drop xml schema collection SC  
@@ -239,7 +238,7 @@ go
   
 -   Crea un tipo **xml** variable y asigna un ejemplo de XML de instancia a él.  
   
--   Se especifica una consulta con la variable. La expresión de consulta recupera el primer valor de Id. de orden del atributo OrderList de tipo IDRERS del primer <`Customer`>. El valor recuperado es de tipo IDREF. Por lo tanto, `instance of` devuelve True.  
+-   Se especifica una consulta con la variable. La expresión de consulta recupera el primer valor de Id. de pedido desde el atributo de tipo IDRERS OrderList del primer <`Customer`>. El valor recuperado es de tipo IDREF. Por lo tanto, `instance of` devuelve True.  
   
 ```  
 create xml schema collection SC as  
@@ -315,7 +314,7 @@ select @x.query(' declare namespace CustOrders="Customers";
   
 -   Cuando se utiliza un formulario de la **element()** de secuencia de tipo que especifica un nombre de tipo, como `element(ElementName, TypeName)`, el tipo debe calificarse con un signo de interrogación (?). Por ejemplo, `element(Title, xs:string?)` indica que el elemento puede ser NULL. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no admite la detección de tiempo de ejecución de la **xsi: nil** propiedad mediante el uso de `instance of`.  
   
--   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si se define <`e1`> para que tenga un tipo estático de (xs:integer | xs:string), el ejemplo siguiente devolverá False.  
+-   Si el valor de `Expression` procede de un elemento o atributo del tipo unión, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] solo podrá identificar el tipo primitivo, no derivado, del que procede el tipo del valor. Por ejemplo, si <`e1`> se define para tener un tipo estático de (xs: Integer | xs: String), el siguiente devolverá False.  
   
     ```  
     data(<e1>123</e1>) instance of xs:integer  

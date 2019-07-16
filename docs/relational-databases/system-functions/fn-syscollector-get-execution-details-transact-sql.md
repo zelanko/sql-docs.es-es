@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d59ddf0c-72c0-4c57-bc83-aef260e4e105
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 032b424c0ac7706962d17520b47d6b8ec447a536
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2ed385026d2bd47912a1a95d237b2adedafa26d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042822"
 ---
 # <a name="fnsyscollectorgetexecutiondetails-transact-sql"></a>fn_syscollector_get_execution_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,13 +50,13 @@ fn_syscollector_get_execution_details ( log_id )
 |event|**sysname**|Nombre del evento que genera la entrada de registro.|  
 |computer|**nvarchar**|Equipo en el que se estaba ejecutando el paquete cuando se generó la entrada de registro.|  
 |operador|**nvarchar**|Nombre de usuario de la persona o agente que ejecuta el paquete que genera la entrada de registro.|  
-|origen|**nvarchar**|Nombre del ejecutable que genera la entrada de registro.|  
+|source|**nvarchar**|Nombre del ejecutable que genera la entrada de registro.|  
 |sourceid|**uniqueidentifier**|GUID del ejecutable que genera la entrada de registro.|  
 |executionid|**uniqueidentifier**|GUID de la instancia de ejecución del ejecutable que genera la entrada de registro.|  
 |starttime|**datetime**|Hora en que el paquete empezó a ejecutarse.|  
 |endtime|**datetime**|Hora en que la ejecución del paquete se completó.|  
 |datacode|**int**|Valor entero que identifica el evento asociado a la entrada de registro. El valor "0" indica que el evento no ha generado ningún identificador.|  
-|databytes|**imagen**|Matriz de bytes que identifica un valor devuelto.|  
+|databytes|**image**|Matriz de bytes que identifica un valor devuelto.|  
 |message|**nvarchar**|Descripción del evento e información asociada a dicho evento.|  
   
 ## <a name="permissions"></a>Permisos  

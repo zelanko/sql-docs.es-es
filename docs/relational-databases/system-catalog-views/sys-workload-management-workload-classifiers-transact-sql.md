@@ -11,14 +11,13 @@ dev_langs:
 - TSQL
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: 5d125f6bdbc024e0f72cb138075e5abb97ae93eb
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: c6947ae0df357c1a1bd1da2973ff3bf6a81717f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059329"
 ---
 # <a name="sysworkloadmanagementworkloadclassifiers-transact-sql"></a>sys.workload_management_workload_classifiers (Transact-SQL)
 
@@ -30,7 +29,7 @@ ms.locfileid: "67413234"
 |-----------------|---------------|-----------------|-----------|
 |classifier_id|**int**|Id. exclusivo del clasificador. No admite valores NULL||
 group_name|**sysname**|Se asigna a nombre del grupo de cargas de trabajo del clasificador. No admite valores NULL. |Clases de recursos estáticos</br>staticrc10</br>staticrc20</br>staticrc30</br>staticrc40</br>staticrc50</br>staticrc60</br>staticrc70</br>staticrc80 </br> </br>Clases de recursos dinámicos</br>smallrc</br>mediumrc</br>largerc</br>xlargerc|
-NAME|**sysname**|Nombre del clasificador. Debe ser único para la instancia. No admite valores NULL.||
+name|**sysname**|Nombre del clasificador. Debe ser único para la instancia. No admite valores NULL.||
 |importance|**sysname**|Es la importancia relativa de una solicitud de este grupo de cargas de trabajo y a través de grupos de cargas de trabajo para los recursos compartidos.  Importancia especificada en el clasificador invalida la configuración de importancia del grupo de cargas de trabajo.|bajo, below_normal, normal, above_normal, alto |
 |create_time|**datetime**|Hora de que creación del clasificador. No admite valores NULL.||
 modify_time|**datetime**|Hora de que última modificación el clasificador. No admite valores NULL.||

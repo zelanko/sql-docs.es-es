@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 96270c4f-2efd-4dc1-a985-ed7fd5658db2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edf912bf3b8073a05dd900cd00511715020ee0c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dfbf23f0be369ae540dac33d33a3e3c1505d5ebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63045510"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076281"
 ---
 # <a name="processing-a-sql-statement"></a>Procesar una instrucción SQL
 Antes de explicar las técnicas de uso de SQL mediante programación, es necesario describir cómo se procesa una instrucción SQL. Los pasos implicados son comunes a todas las tres técnicas, aunque cada una de ellas realiza en momentos diferentes. La siguiente ilustración muestra los pasos implicados en el procesamiento de una instrucción SQL, que se describen en el resto de esta sección.  

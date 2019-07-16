@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: a90374bf-406f-4384-ba81-59478017db68
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0c5cb588e96bcabad464339b7227ada3aef86221
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c9f66bf1ded94b0877309917e9f03e71512ac8f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051593"
 ---
 # <a name="xpath-data-types-sqlxml-40"></a>Tipos de datos de XPath (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ ms.locfileid: "62678061"
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no realiza la selección por posición en los conjuntos de nodos: por ejemplo, la consulta de XPath `Customer[3]` significa el tercer cliente; este tipo de selección por posición no se admite en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Por lo tanto, el nodo-establecer-a-**cadena** o nodo-establecer-a-**número** conversiones, como se describe en la especificación de XPath no se implementan. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utiliza la semántica "cualquiera" donde la especificación de XPath especifica la semántica "primero". Por ejemplo, según la especificación XPath de W3C, la consulta XPath `Order[OrderDetail/@UnitPrice > 10.0]` selecciona los pedidos con el primer **OrderDetail** que tiene un **UnitPrice** mayor que 10.0. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta consulta XPath selecciona los pedidos con cualquier **OrderDetail** que tiene un **UnitPrice** mayor que 10.0.  
   
- Conversión a **booleano** genera una existencia prueba; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products.Discontinued is not null", no la expresión de SQL "Products.Discontinued = 1". Para hacer que la consulta equivalente a la última expresión de SQL, convierta primero el conjunto de nodos para que no es**booleano** escriba, por ejemplo, **número**. Por ejemplo, `Products[number(@Discontinued) = true()]`.  
+ Conversión a **booleano** genera una existencia prueba; por lo tanto, la consulta XPath `Products[@Discontinued=true()]` es equivalente a la expresión SQL "Products.Discontinued is not null", no la expresión de SQL "Products.Discontinued = 1". Para hacer que la consulta equivalente a la última expresión de SQL, convierta primero el conjunto de nodos para que no es**booleano** escriba, por ejemplo, **número**. Por ejemplo: `Products[number(@Discontinued) = true()]`.  
   
  Dado que la mayoría de los operadores están definidos para ser TRUE si son TRUE para cualquiera o uno de los nodos del conjunto de nodos, estas operaciones siempre se evalúan como FALSE si el conjunto de nodos está vacío. Así, si A está vacío, `A = B` y `A != B` son FALSE y `not(A=B)` y `not(A!=B)` son TRUE.  
   
@@ -91,8 +90,8 @@ ms.locfileid: "62678061"
 |Tipo de datos XDR|Tipo de datos de XPath<br /><br /> equivalente|Conversión de SQL Server utilizada|  
 |-------------------|------------------------------------|--------------------------------|  
 |Nonebin.base64bin.hex|N/D|NoneEmployeeID|  
-|boolean|boolean|CONVERT (bit, IdEmpleado)|  
-|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|number|CONVERT(float(53), EmployeeID)|  
+|booleano|booleano|CONVERT (bit, IdEmpleado)|  
+|number, int, float,i1, i2, i4, i8,r4, r8ui1, ui2, ui4, ui8|número|CONVERT(float(53), EmployeeID)|  
 |id, idref, idrefsentity, entities, enumerationnotation, nmtoken, nmtokens, chardate, Timedate, Time.tz, string, uri, uuid|string|CONVERT(nvarchar(4000), EmployeeID, 126)|  
 |fixed14.4|N/D (no hay ningún tipo de datos de XPath que sea equivalente al tipo de datos fixed14.4 de XDR)|CONVERT(money, EmployeeID)|  
 |date|string|LEFT(CONVERT(nvarchar(4000), EmployeeID, 126), 10)|  
@@ -131,7 +130,7 @@ CONVERT(float(CONVERT(money, m)) + CONVERT(float(53), 3) = CONVERT(float(53), 3)
 ||X es desconocido|X es **cadena**|X es **número**|X es **booleano**|  
 |string(X)|CONVERT (nvarchar(4000), X, 126)|-|CONVERT (nvarchar(4000), X, 126)|CASE WHEN X THEN N'true' ELSE N'false' END|  
 |number(X)|CONVERT (float(53), X)|CONVERT (float(53), X)|-|CASE WHEN X THEN 1 ELSE 0 END|  
-|boolean(X)|-|LEN(X) > 0|X != 0|-|  
+|boolean(X)|-|LEN > 0|X != 0|-|  
   
 ## <a name="examples"></a>Ejemplos  
   

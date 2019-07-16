@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 97ad8e64260d337135a1b0d5cda739d8c81b1799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: be67029c8a98408b3fccd61051cd50d0da0c6b24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62707147"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009785"
 ---
 # <a name="clr-table-valued-functions"></a>Funciones con valores de tabla en CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ select * from table t cross apply function(t.column);
 ## <a name="a-sample-table-valued-function"></a>A. Función con valores de tabla de ejemplo  
  La siguiente función con valores de tabla devuelve información del registro de eventos del sistema. La función toma un único argumento de cadena que contiene el nombre del registro de eventos que va a leerse.  
   
-###### <a name="sample-code"></a>Código muestra  
+###### <a name="sample-code"></a>Código de ejemplo  
   
 ```csharp  
 using System;  

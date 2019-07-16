@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f216d5406a649862ff35cd64508f93b97e31b310
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3f8a0217492cd5f2ce22cfe7d5823f2fe08caae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62982228"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039711"
 ---
 # <a name="sqlsetparam-function"></a>Función SQLSetParam
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  En ODBC 2.0, la función ODBC 1.0 **SQLSetParam** ha sido reemplazado por **SQLBindParameter**. Para obtener más información, consulte [función SQLBindParameter](../../../odbc/reference/syntax/sqlbindparameter-function.md).  

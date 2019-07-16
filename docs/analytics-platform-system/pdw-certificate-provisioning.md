@@ -2,19 +2,18 @@
 title: Aprovisionamiento del certificado PDW - Analytics Platform System | Microsoft Docs
 description: La página de suministro de certificados de PDW de Analytics Platform System Configuration Manager importa o quita el certificado utilizado por la región PDW.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: af6d4df964820ced9f4d79b67859e010a895bc29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48ad2aed20f497c8400727d9d217dc8f467ac492
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960435"
 ---
 # <a name="pdw-certificate-provisioning---analytics-platform-system"></a>Aprovisionamiento del certificado PDW - Analytics Platform System
 El **suministro de certificados de PDW** página del sistema de plataforma de análisis **Configuration Manager** importa o quita el certificado utilizado por la región PDW. Un certificado para cifrar las conexiones permiten una comunicación segura al nodo de Control a través de los clientes de SQL Server, las herramientas que usan los controladores de PDW de SQL Server, el [Admin Console](monitor-the-appliance-by-using-the-admin-console.md), y los servicios de integración de carga.  

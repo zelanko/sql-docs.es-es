@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 ms.author: davidph
 author: dphansen
-manager: cgronlun
-ms.openlocfilehash: 8a53069195ee351630f2ef79f56069f013137d9b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: bb9eb4d706b37501a1919ea3b2178525a6026af3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962415"
 ---
 # <a name="upgrade-and-installation-faq-for-sql-server-machine-learning-or-r-server"></a>Preguntas más frecuentes de actualización e instalación de SQL Server Machine Learning o R Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -71,7 +70,7 @@ Ya no se admiten actualizaciones de versiones preliminares de SQL Server 2016. E
 
 Las siguientes versiones se instalaron con versiones preliminares de SQL Server 2016.
 
-| Versión | Compilar         |
+| `Version` | Compilación         |
 |---------|---------------|
 | CTP 3.0 | 13.0.xxx      |
 | CTP 3.1 | 13.0.801.12   |

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a46d23c-efef-4ec7-815d-cd3ac86787dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8ac03231680ecd807234b20ac7b210bc480f2c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6493157c00e5a71c7c2f085191231bb33bb5279a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967327"
 ---
 # <a name="append-method-adox-columns"></a>Append (método) (columnas ADOX)
 Agrega un nuevo [columna](../../../ado/reference/adox-api/column-object-adox.md) de objeto para el [columnas](../../../ado/reference/adox-api/columns-collection-adox.md) colección.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0f892bf81811538eeb06b18feb725778464910b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1713974a8ba90474393ff9bb65f6b98a5c74b601
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054897"
 ---
 # <a name="sphelpjobsinschedule-transact-sql"></a>sp_help_jobs_in_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_help_jobs_in_schedule
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo.|  
 |**originating_server**|**nvarchar(30)**|Nombre del servidor del que proviene el trabajo.|  
-|**Nombre**|**sysname**|Nombre del trabajo.|  
+|**name**|**sysname**|Nombre del trabajo.|  
 |**enabled**|**tinyint**|Indica si el trabajo está habilitado para su ejecución.|  
 |**description**|**nvarchar(512)**|Descripción del trabajo.|  
 |**start_step_id**|**int**|Id. del paso del trabajo en el que debe comenzar la ejecución.|  
@@ -85,7 +84,7 @@ sp_help_jobs_in_schedule
 |**has_step**|**int**|Número de pasos que tiene el trabajo.|  
 |**has_schedule**|**int**|Número de programaciones que tiene el trabajo.|  
 |**has_target**|**int**|Número de servidores de destino que tiene el trabajo.|  
-|**Tipo**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
+|**type**|**int**|Tipo de trabajo:<br /><br /> **1** = trabajo local.<br /><br /> **2** = trabajo multiservidor.<br /><br /> **0** = trabajo no tiene ningún servidor de destino.|  
   
 ## <a name="remarks"></a>Comentarios  
  Este procedimiento muestra información acerca de los trabajos adjuntos a la programación especificada.  

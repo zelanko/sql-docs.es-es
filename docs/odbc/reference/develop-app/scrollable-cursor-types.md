@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dbd32576-0453-4e90-ae45-1a81cee8259d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6290d18ec26fcfa6e2960c3a2c1c408938d9e0e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 210b66a800670f033508f903b18778f88ddd4c8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061636"
 ---
 # <a name="scrollable-cursor-types"></a>Tipos de Cursor desplazable
 Los cuatro tipos de cursores desplazables son estáticos, dinámicos, cursores controlados por y mixto. Los cursores estáticos detectan pocos o ningún cambio, pero son relativamente económicas implementar. Los cursores dinámicos detectan todos los cambios, pero son costosos de implementar. Cursores mixtos y controlado por encuentran entre, detectar la mayoría de los cambios, pero con un consumo menor que los cursores dinámicos.  

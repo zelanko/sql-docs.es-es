@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c9e5d21-9321-49f8-a055-69459e1c9c85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8e2f3b1e63578af7c0b42f00113fbb9e87cb8003
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8478e80ae2ebd19a3e0f2aa8307e0985b2c092d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043691"
 ---
 # <a name="paradox-data-types"></a>Tipos de datos de Paradox
 El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQL de ODBC. En la tabla siguiente se enumera todos los tipos de datos de Paradox y muestra el SQL de ODBC se asignan a los tipos de datos.  
@@ -36,8 +35,8 @@ El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQ
 |BYTES [1]|SQL_BINARY|  
 |DATE|SQL_DATE|  
 |IMAGEN DE [2]|SQL_LONGVARBINARY|  
-|LOGICAL[1]|SQL_BIT|  
-|LONG[1]|SQL_INTEGER|  
+|LÓGICO [1]|SQL_BIT|  
+|LONG [1]|SQL_INTEGER|  
 |MEMO[2]|SQL_LONGVARCHAR|  
 |MONEY [1]|SQL_DOUBLE|  
 |NUMBER|SQL_DOUBLE|  
@@ -59,6 +58,6 @@ El controlador ODBC Paradox asigna tipos de datos de Paradox a tipos de datos SQ
 |ALFANUMÉRICO|Creación de una columna ALFANUMÉRICA de cero o sin especificar longitud devuelve realmente una columna de 255 bytes.|  
 |BYTES|Si inserta NULL en una columna binaria con el controlador Paradox5, se cambia a 0.|  
 |LONG|El valor negativo máximo admitido por el controlador de Paradox para el tipo de datos Long en 5 Paradox. *x* no es -2 ^ 31 (-2147483648), como debería ser desde largo se asigna a los datos ODBC escriba SQL_INTEGER. El valor negativo máximo admitido durante mucho tiempo es realmente -2 ^ 31 + 1 (-2147483647).|  
-|timestamp|Cuando un valor se inserta en una columna de marca de tiempo por el controlador de Paradox y luego posteriormente recuperado de la columna, el valor recuperado puede diferir el valor insertado por tanto como 1 segundo a causa del redondeo.|  
+|TIMESTAMP|Cuando un valor se inserta en una columna de marca de tiempo por el controlador de Paradox y luego posteriormente recuperado de la columna, el valor recuperado puede diferir el valor insertado por tanto como 1 segundo a causa del redondeo.|  
   
  Para conocer más limitaciones en los tipos de datos pueden encontrarse en [limitaciones del tipo de datos](../../odbc/microsoft/data-type-limitations.md).

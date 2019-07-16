@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65c96ade0964146e1d8ff9cfa52f99938d290712
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28101e099f698039058aa4a4b252616aa4eef4b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759863"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060322"
 ---
 # <a name="sysmailallitems-transact-sql"></a>sysmail_allitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "62759863"
 |-----------------|---------------|-----------------|  
 |**mailitem_id**|**int**|Identificador del elemento de correo en la cola de correo electrónico.|  
 |**profile_id**|**int**|Identificador del perfil utilizado para enviar el mensaje.|  
-|**recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
+|**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
 |**subject**|**nvarchar(510)**|Línea de asunto del mensaje.|  
 |**body**|**ntext**|El cuerpo del mensaje.|  
 |**body_format**|**varchar(20)**|El formato del cuerpo del mensaje. Los valores posibles son TEXT y HTML.|  
-|**importance**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
-|**sensitivity**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
+|**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
+|**Sensibilidad**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
 |**attachment_encoding**|**varchar(20)**|Tipo de datos adjuntos.|  
 |**query**|**ntext**|Consulta ejecutada por el programa de correo.|  

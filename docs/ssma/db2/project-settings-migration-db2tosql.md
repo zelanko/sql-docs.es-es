@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48aaa8e6-a9cb-487d-9ba5-fc3f1c4786ae
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 4fe3619ae24f8dbee774aef95abc37ad57ca6e19
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40c6c1063ff738428072f3198cae8827e78e2390
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060154"
 ---
 # <a name="project-settings-migration-db2tosql"></a>Configuración del proyecto (migración) (DB2ToSQL)
 La página de migración de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA migra datos desde DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

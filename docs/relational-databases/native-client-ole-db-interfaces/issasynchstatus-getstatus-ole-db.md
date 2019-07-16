@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 354b6ee4-b5a1-48f6-9403-da3bdc911067
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b67b474a9038d4d94b7e209ff6ef36bb75488361
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 855bc71e1a7ad7c0d462d16e266f392128b04519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52518323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051020"
 ---
 # <a name="issasynchstatusgetstatus-ole-db"></a>ISSAsynchStatus::GetStatus (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -50,7 +49,7 @@ HRESULT GetStatus(
  *eOperation*[in]  
  Operación para la que se solicita el estado asincrónico. El valor debe ser el siguiente:  
   
- DBASYNCHOP_OPEN: el consumidor solicita información sobre la apertura o rellenado asincrónico de un conjunto de filas o la inicialización asincrónica de un objeto de origen de datos. Si el proveedor es un proveedor compatible con OLE DB 2.5 que admite el enlace URL directo, el consumidor solicita información sobre la inicialización asincrónica o el rellenado asincrónico de un origen de datos, conjunto de filas, fila u objeto de flujo.  
+ DBASYNCHOP_OPEN: el consumidor solicita información sobre la apertura asincrónica o rellenado asincrónico de un conjunto de filas o sobre la inicialización asincrónica de un objeto de origen de datos. Si el proveedor es un proveedor compatible con OLE DB 2.5 que admite el enlace URL directo, el consumidor solicita información sobre la inicialización asincrónica o el rellenado asincrónico de un origen de datos, conjunto de filas, fila u objeto de flujo.  
   
  *pulProgress*[out]  
  Puntero a memoria en el que se devuelve el progreso actual de la operación asincrónica con respecto al máximo esperado indicado en el parámetro *pulProgressMax* . Para obtener más información acerca del significado de *pulProgress*, vea la descripción de *peAsynchPhase*.  
@@ -65,16 +64,16 @@ HRESULT GetStatus(
  *peAsynchPhase*[out]  
  Puntero a memoria en el que se devuelve información adicional con respecto al progreso de la operación asincrónica. Los valores válidos incluyen:  
   
- DBASYNCHPHASE_INITIALIZATION: el objeto está en fase de inicialización. Los argumentos *pulProgress* y *pulProgressMax* indican una proporción estimada de progreso. El objeto aún no se ha materializado por completo. Al intentar llamar a otras interfaces puede generarse un error y es posible que en el objeto no esté disponible el conjunto completo de interfaces. Si la operación asincrónica se realizó como resultado de llamar a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas y si *cParamSets* es mayor que 1, *pulProgress* y *pulProgressMax* pueden indicar el progreso de un conjunto único de parámetros o de la matriz completa de conjuntos de parámetros.  
+ DBASYNCHPHASE_INITIALIZATION: el objeto se encuentra en fase de inicialización. Los argumentos *pulProgress* y *pulProgressMax* indican una proporción estimada de progreso. El objeto aún no se ha materializado por completo. Al intentar llamar a otras interfaces puede generarse un error y es posible que en el objeto no esté disponible el conjunto completo de interfaces. Si la operación asincrónica se realizó como resultado de llamar a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas y si *cParamSets* es mayor que 1, *pulProgress* y *pulProgressMax* pueden indicar el progreso de un conjunto único de parámetros o de la matriz completa de conjuntos de parámetros.  
   
- DBASYNCHPHASE_POPULATION: el objeto está en fase de rellenado. Si bien el conjunto de filas está totalmente inicializado y en el objeto está disponible todo el conjunto de interfaces, es posible que el conjunto de filas cuente con filas adicionales aún sin rellenar. Aunque *pulProgress* y *pulProgressMax* pueden basarse en el número de filas rellenado, generalmente se basan en el tiempo o el esfuerzo exigidos para rellenar el conjunto de filas. Por lo tanto, el autor de la llamada debe usar esta información como un cálculo aproximado del tiempo que puede durar el proceso, y no del recuento de filas final. Esta fase solo se devuelve durante el rellenado de un conjunto de filas; nunca se devuelve durante la inicialización de un objeto de origen de datos ni debido a la ejecución de un comando que actualiza, elimina o inserta filas.  
+ DBASYNCHPHASE_POPULATION: el objeto se encuentra en fase de rellenado. Si bien el conjunto de filas está totalmente inicializado y en el objeto está disponible todo el conjunto de interfaces, es posible que el conjunto de filas cuente con filas adicionales aún sin rellenar. Aunque *pulProgress* y *pulProgressMax* pueden basarse en el número de filas rellenado, generalmente se basan en el tiempo o el esfuerzo exigidos para rellenar el conjunto de filas. Por lo tanto, el autor de la llamada debe usar esta información como un cálculo aproximado del tiempo que puede durar el proceso, y no del recuento de filas final. Esta fase solo se devuelve durante el rellenado de un conjunto de filas; nunca se devuelve durante la inicialización de un objeto de origen de datos ni debido a la ejecución de un comando que actualiza, elimina o inserta filas.  
   
- Se ha completado el procesamiento asincrónico del objeto DBASYNCHPHASE_COMPLETE-All. **ISSAsynchStatus::GetStatus** devuelve un HRESULT, que indica el resultado de la operación. Normalmente, será el HRESULT que se habría devuelto si la operación se hubiese llamado de forma sincrónica. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas, el valor de los parámetros *pulProgress* y *pulProgressMax* será igual al número total de filas afectadas por el comando. Si el valor de *cParamSets* es mayor que 1, éste será el número total de filas afectadas por todos los conjuntos de parámetros especificados en la ejecución. Si *peAsynchPhase* es un puntero NULL, no se devuelve ningún código de estado.  
+ DBASYNCHPHASE_COMPLETE: se ha completado el procesamiento asincrónico del objeto. **ISSAsynchStatus::GetStatus** devuelve un HRESULT, que indica el resultado de la operación. Normalmente, será el HRESULT que se habría devuelto si la operación se hubiese llamado de forma sincrónica. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** en un comando que actualiza, elimina o inserta filas, el valor de los parámetros *pulProgress* y *pulProgressMax* será igual al número total de filas afectadas por el comando. Si el valor de *cParamSets* es mayor que 1, éste será el número total de filas afectadas por todos los conjuntos de parámetros especificados en la ejecución. Si *peAsynchPhase* es un puntero NULL, no se devuelve ningún código de estado.  
   
- Se anuló el procesamiento asincrónico de DBASYNCHPHASE_CANCELED del objeto. **ISSAsynchStatus::GetStatus** devuelve DB_E_CANCELED. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** de un comando que actualiza, elimina o inserta filas, el valor de *pulProgress* es igual al número total de filas, de todos los conjuntos de parámetros, afectadas por el comando antes de la cancelación.  
+ DBASYNCHPHASE_CANCELED: se ha anulado el procesamiento asincrónico del objeto. **ISSAsynchStatus::GetStatus** devuelve DB_E_CANCELED. Si la operación asincrónica era el resultado de una llamada a **ICommand::Execute** de un comando que actualiza, elimina o inserta filas, el valor de *pulProgress* es igual al número total de filas, de todos los conjuntos de parámetros, afectadas por el comando antes de la cancelación.  
   
  *ppwszStatusText*[in/out]  
- Puntero a memoria que contiene información adicional sobre la operación. Un proveedor puede usar este valor para distinguir entre los distintos elementos de una operación-por ejemplo, los distintos recursos que se obtiene acceso. Esta cadena se localiza según la propiedad DBPROP_INIT_LCID del objeto de origen de datos.  
+ Puntero a memoria que contiene información adicional sobre la operación. Un proveedor puede usar este valor para distinguir los diferentes elementos de una operación; por ejemplo, el acceso a diferentes recursos. Esta cadena se localiza según la propiedad DBPROP_INIT_LCID del objeto de origen de datos.  
   
  Si *ppwszStatusText* no es NULL en la entrada, el proveedor devuelve el estado asociado al elemento específico identificado por *ppwszStatusText*. Si *ppwszStatusText* no indica ningún elemento de *eOperation*, el proveedor devuelve S_OK con los parámetros *pulProgress* y *pulProgressMax* establecidos en el mismo valor. Si el proveedor no distingue entre elementos basados en un identificador textual, establece *ppwszStatusText* en NULL y devuelve información sobre la operación como un todo; de lo contrario, si *ppwszStatusText* no es NULL en la entrada, el proveedor deja *ppwszStatusText* intacto.  
   

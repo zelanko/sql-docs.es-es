@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d0b929ba60915f116d9ff6843b4f20b3105a7ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020753"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942843"
 ---
 # <a name="slash-star-comment-dmx"></a>Barra diagonal y asterisco (comentario) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38020753"
  *Comment_Text*  
  Cadena que contiene el texto del comentario.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  Los comentarios con varias líneas deben indicarse con /* y \*/.  
   
  No hay límite de longitud para los comentarios.  
@@ -43,6 +42,6 @@ ms.locfileid: "38020753"
  [Doble barra diagonal &#40;comentario&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   
  [-- &#40;Comentario&#41; &#40;DMX&#41; resumen](../dmx/comment-dmx-summary.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
   
   

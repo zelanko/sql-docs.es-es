@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: dec96be6-0b31-4953-9c9a-e962b5afcd18
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 918836e949593672417240c1b91026e1e02c4788
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6b50714cdff536418e759828d972c16abd7d7a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964542"
 ---
 # <a name="createobject-method-rds"></a>CreateObject (método) (RDS)
 Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él. El proxy paquetes y ordena los datos en el código auxiliar del lado servidor para las comunicaciones con el objeto de negocios enviar solicitudes y datos a través de Internet. Para los objetos del componente en proceso, se utiliza ningún proxy, se proporciona solo un puntero al objeto.  
@@ -41,7 +40,7 @@ Crea al proxy para el objeto de negocios de destino y devuelve un puntero a él.
  *Objeto*  
  Una variable de objeto que se evalúa como un objeto que es del tipo especificado en *ProgID*.  
   
- *DataSpace*  
+ *Espacio de datos*  
  Una variable de objeto que representa un [RDS. DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) objeto utilizado para crear una instancia del nuevo objeto.  
   
  *ProgID*  

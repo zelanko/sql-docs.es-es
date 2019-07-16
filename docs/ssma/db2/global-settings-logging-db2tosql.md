@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: d314a2ca-ea2e-46e0-ae5e-8774841da91b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d632b040a5124d73470ce825af91e254866a0ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16f987415e59d145c4ff423b1c221bffe54bd13d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299216"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989559"
 ---
 # <a name="global-settings-logging-db2tosql"></a>Configuración global (registro) (DB2ToSQL)
 Use la **configuración Global** cuadro de diálogo para especificar la configuración de registro para SSMA. Normalmente, desea cambiar esta configuración solo cuando se trabaja con servicios de soporte técnico.  
@@ -29,14 +28,14 @@ Las siguientes opciones están disponibles en **mensajes nivel**:
 |Opción|Descripción|  
 |----------|---------------|  
 |**[todas las categorías]**|Se usa para establecer el nivel de registro para todas las opciones siguientes.|  
-|**Collector**|Recopila metadatos sobre el esquema de origen y lo guarda en el proyecto.|  
+|**Recopilador**|Recopila metadatos sobre el esquema de origen y lo guarda en el proyecto.|  
 |**Convertidor de tipos**|Convierte las estructuras de objetos de base de datos de origen, como tablas y procedimientos almacenados, en correspondiente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] estructuras.|  
 |**Migrador de datos**|Migra los datos de la base de datos de origen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**Formatter**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
+|**Formateador**|Subcomponente del convertidor que genera scripts para el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] esquema.|  
 |**Interfaz gráfica de usuario**|Mensajes que aparecen cuando se usa la herramienta SSMA.|  
-|**Linker**|Resuelve los identificadores de SQL y se proporciona información a otros componentes.|  
+|**Vinculador**|Resuelve los identificadores de SQL y se proporciona información a otros componentes.|  
 |**Otro**|Todos los mensajes que no están en cualquier otra categoría.|  
-|**Parser**|Analiza el esquema de origen.|  
+|**Analizador**|Analiza el esquema de origen.|  
 |**Sincronizador**|En los objetos de base de datos del origen de carga [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**TreeConverter**|Convierte los objetos en los metadatos de origen en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] metadatos.|  
 |**Herramienta de comprobación**|Mensajes que aparecen cuando se usa la herramienta de comprobación de SSMA.|  

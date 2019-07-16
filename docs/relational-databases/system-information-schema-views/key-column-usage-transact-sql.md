@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 5f68c5e5671e31b166e82970e59c265334ed3188
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: d38e6ae0eaf7ed6015834052067db28993cbcccd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53588910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948612"
 ---
 # <a name="keycolumnusage-transact-sql"></a>KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "53588910"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**CONSTRAINT_CATALOG**|**nvarchar (** 128 **)**|Calificador de la restricción.|  
-|**CONSTRAINT_SCHEMA**|**nvarchar (** 128 **)**|Nombre del esquema que contiene la restricción.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
-|**CONSTRAINT_NAME**|**nvarchar (** 128 **)**|Nombre de la restricción.|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
-|**TABLE_NAME**|**nvarchar (** 128 **)**|Nombre de la tabla.|  
-|**COLUMN_NAME**|**nvarchar (** 128 **)**|Nombre de columna.|  
+|**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|Calificador de la restricción.|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|Nombre del esquema que contiene la restricción.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**CONSTRAINT_NAME**|**nvarchar(** 128 **)**|Nombre de la restricción.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Calificador de tabla.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> <strong>\*\* Importante \* \*</strong>  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**TABLE_NAME**|**nvarchar(** 128 **)**|Nombre de la tabla.|  
+|**COLUMN_NAME**|**nvarchar(** 128 **)**|Nombre de columna.|  
 |**ORDINAL_POSITION**|**int**|Posición ordinal de la columna.|  
   
 ## <a name="see-also"></a>Vea también  

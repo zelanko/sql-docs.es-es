@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046979"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962023"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>Inicio rápido: Controlar los tipos de datos y objetos con R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -140,7 +139,7 @@ En realidad, la única columna de tres valores se convierte en una matriz de una
 |---|---|---|---|
 |12|13|14|15|
 |120|130|140|150|
-|1200|1300|1400|1500|
+|1200|1300|1400|1\.500|
 
 Sin embargo, tenga en cuenta lo que sucede cuando se cambia el tamaño de la matriz `y`.
 

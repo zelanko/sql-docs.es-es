@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0590b466-2a36-49a2-868e-028ef5e49394
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0a72cf80f9fee9c887e7805f3a2a5bd542d7f47c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a7ed836b9b57ddd690dd85dd94cc12cb967c472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926006"
 ---
 # <a name="aggregate-functions-the-calc-function-and-the-new-keyword"></a>Las funciones de agregado, la función CALC y la palabra clave NEW
 La forma de datos admite las funciones siguientes. El nombre asignado al capítulo que contiene la columna que se opera es la *alias de capítulo*.  
@@ -30,21 +29,21 @@ La forma de datos admite las funciones siguientes. El nombre asignado al capítu
   
 |Funciones de agregado|Descripción|  
 |-------------------------|-----------------|  
-|SUM(*chapter-alias*.*column-name*)|Calcula la suma de todos los valores de la columna especificada.|  
+|SUM (*alias de capítulo*. *nombre de columna*)|Calcula la suma de todos los valores de la columna especificada.|  
 |AVG (*alias de capítulo*. *nombre de columna*)|Calcula el promedio de todos los valores de la columna especificada.|  
 |MAX (*alias de capítulo*. *nombre de columna*)|Calcula el valor máximo de la columna especificada.|  
 |MIN (*alias de capítulo*. *nombre de columna*)|Calcula el valor mínimo de la columna especificada.|  
 |RECUENTO (*alias de capítulo*[. *nombre de columna*])|Cuenta el número de filas en el alias especificado. Si se especifica una columna, solo las filas para los que esa columna es distinto de Null se incluyen en el recuento.|  
 |STDEV (*alias de capítulo*. *nombre de columna*)|Calcula la desviación estándar de la columna especificada.|  
-|ANY(*chapter-alias*.*column-name*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas en el capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE arbitrariamente devuelve uno de los valores que sea el valor de la función ANY.|  
+|CUALQUIER (*alias de capítulo*. *nombre de columna*)|Un valor de la columna especificada. ALGUNA tiene un valor de predicción solo cuando el valor de la columna es el mismo para todas las filas en el capítulo.<br /><br /> **Tenga en cuenta** si la columna no contiene el mismo valor para todas las filas en el capítulo, el comando SHAPE arbitrariamente devuelve uno de los valores que sea el valor de la función ANY.|  
   
 |Expresión calculada|Descripción|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|Calcula una expresión arbitraria, pero solo en la fila de la **Recordset** que contiene la función CALC. Cualquier expresión mediante estos [Visual Basic para aplicaciones (VBA) funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) está permitido.|  
+|CALC (*expresión*)|Calcula una expresión arbitraria, pero solo en la fila de la **Recordset** que contiene la función CALC. Cualquier expresión mediante estos [Visual Basic para aplicaciones (VBA) funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md) está permitido.|  
   
 |NUEVA palabra clave|Descripción|  
 |-----------------|-----------------|  
-|NEW *field-type* [(*width* &#124; *scale* &#124; *precision* &#124; *error* [, *scale* &#124; *error*])]|Agrega una columna vacía del tipo especificado a la **Recordset**.|  
+|NUEVO *tipo de campo* [(*ancho* &#124; *escala* &#124; *precisión* &#124; *error*[, *escala* &#124; *error*])]|Agrega una columna vacía del tipo especificado a la **Recordset**.|  
   
  El *tipo de campo* pasa con la palabra clave NEW puede ser cualquiera de los siguientes tipos de datos.  
   

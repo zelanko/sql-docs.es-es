@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb17498d-4f1d-4b3d-b33d-1e62c7d3c32d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18b1c144e84bf0be5aaeb68b66660f7bc7865ade
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9daa81e2e0c2e927ee7407d4a00d5d48c333bd54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990720"
 ---
 # <a name="numeric-literal-syntax"></a>Sintaxis de los literales numéricos
 Literales numéricos en ODBC, se usa la sintaxis siguiente:  
@@ -35,17 +34,17 @@ Literales numéricos en ODBC, se usa la sintaxis siguiente:
   
  *inicio de sesión* :: = *signo &#124; signo menos*  
   
- *approximate-numeric-literal* ::= *mantissa E exponent*  
+ *literal numérico aproximado* :: = *exponente mantisa E*  
   
  *mantissa* ::= *exact-numeric-literal*  
   
  *exponent* ::= *signed-integer*  
   
- *signed-integer* ::= [*sign*] *unsigned-integer*  
+ *entero firmado* :: = [*sesión*] *entero sin signo*  
   
  *entero unsigned* :: = *dígitos...*  
   
- *plus-sign* ::= *+*  
+ *signo* :: = *+*  
   
  *signo* :: = -  
   

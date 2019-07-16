@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518625"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927025"
 ---
 # <a name="ado-programming-task-table"></a>Tabla de tareas de programación de ADO
 En la tabla siguiente se enumera las tareas de programación contenidas en el *Guía del programador de ADO* y ofrece referencias para cada tarea. Estas referencias pueden ser descripciones textuales o ejemplos de código en el que puede encontrar información sobre la característica de ADO que realiza la tarea.
 
-|Tarea de ADO|References|
+|Tarea de ADO|Referencias|
 |--------------|----------------|
 |Conectarse a un proveedor de datos|[Conectarse a orígenes de datos](../../ado/guide/data/connecting-to-data-sources.md)|
 |Ejecución de comandos o llamar a procedimientos almacenados|[Preparar y ejecutar comandos](../../ado/guide/data/preparing-and-executing-commands.md)|

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: de5b4a62dbb86008f686cb0d630386340238f42c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743203"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895549"
 ---
 # <a name="bcpgettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -42,7 +41,7 @@ RETCODE bcp_gettypename (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *símbolo (token)*  
+ *token*  
  Valor que indica un token de tipo BCP.  
   
  *field*  
@@ -66,22 +65,22 @@ RETCODE bcp_gettypename (
 |**SQLMONEY**|Antes o después|**money**|  
 |**SQLFLT8**|Antes o después|**float**|  
 |**SQLDATETIME**|Antes o después|**datetime**|  
-|**SQLBITN**|Antes o después|**bit null**|  
+|**SQLBITN**|Antes o después|**bit-null**|  
 |**SQLBIT**|Antes o después|**bit**|  
-|**SQLBIGCHAR**|no|**char**|  
-|**SQLCHARACTER**|no|**char**|  
-|**SQLBIGVARCHAR**|no|**varchar**|  
-|**SQLVARCHAR**|no|**varchar**|  
+|**SQLBIGCHAR**|No|**char**|  
+|**SQLCHARACTER**|No|**char**|  
+|**SQLBIGVARCHAR**|No|**varchar**|  
+|**SQLVARCHAR**|Sin|**varchar**|  
 |**SQLTEXT**|Antes o después|**texto**|  
-|**SQLBIGBINARY**|no|**binario**|  
-|**SQLBINARY**|no|**Binario**|  
-|**SQLBIGVARBINARY**|no|**varbinary**|  
-|**SQLVARBINARY**|no|**varbinary**|  
-|**SQLIMAGE**|Antes o después|**Imagen**|  
-|**SQLINTN**|Antes o después|**int null**|  
+|**SQLBIGBINARY**|Sin|**binario**|  
+|**SQLBINARY**|Sin|**Binario**|  
+|**SQLBIGVARBINARY**|Sin|**varbinary**|  
+|**SQLVARBINARY**|No|**varbinary**|  
+|**SQLIMAGE**|Antes o después|**Image**|  
+|**SQLINTN**|Antes o después|**int-null**|  
 |**SQLDATETIMN**|Antes o después|**datetime-null**|  
-|**SQLMONEYN**|Antes o después|**Money null**|  
-|**SQLFLTN**|Antes o después|**float null**|  
+|**SQLMONEYN**|Antes o después|**money-null**|  
+|**SQLFLTN**|Antes o después|**float-null**|  
 |**SQLAOPSUM**|Antes o después|**Sum**|  
 |**SQLAOPAVG**|Antes o después|**Avg**|  
 |**SQLAOPCNT**|Antes o después|**Count**|  
@@ -91,9 +90,9 @@ RETCODE bcp_gettypename (
 |**SQLMONEY4**|Antes o después|**smallmoney**|  
 |**SQLFLT4**|Antes o después|**real**|  
 |**SQLUNIQUEID**|Antes o después|**uniqueidentifier**|  
-|**SQLNCHAR**|no|**nchar**|  
-|**SQLNVARCHAR**|no|**Nvarchar**|  
-|**SQLNTEXT**|Antes o después|**ntext**|  
+|**SQLNCHAR**|Sin|**nchar**|  
+|**SQLNVARCHAR**|Sin|**Nvarchar**|  
+|**SQLNTEXT**|Antes o después|**Ntext**|  
 |**SQLVARIANT**|Antes o después|**sql_variant**|  
 |**SQLINT8**|Antes o después|**Bigint**|  
 |**SQLCHARACTER**|Sí|**ntext**|  
@@ -107,7 +106,7 @@ RETCODE bcp_gettypename (
 |**SQLNCHAR**|Sí|**nvarchar(max)**|  
 |**SQLNVARCHAR**|Sí|**nvarchar(max)**|  
 |**SQLXML**|Sí|**Xml**|  
-|**SQLUDT**|Antes o después|**UDT**|  
+|**SQLUDT**|Antes o después|**Udt**|  
   
 ## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename admite las características mejoradas de fecha y hora  
  Se describen los valores de parámetro de token para los tipos de fecha y hora en la columna "Tipo en sqlncli.h" de la tabla en [cambios de copia masiva para tipos mejorada de fecha y hora &#40;OLE DB y ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md). El valor devuelto está en la fila correspondiente de la columna " Tipo de almacenamiento de archivo".  

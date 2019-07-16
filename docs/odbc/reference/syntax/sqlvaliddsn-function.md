@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 991884e14f68cf279543b9194114c5ea1fc8d7dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039482"
 ---
 # <a name="sqlvaliddsn-function"></a>Función SQLValidDSN
 **Conformidad**  
@@ -49,7 +48,7 @@ BOOL SQLValidDSN(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si el nombre del origen de datos es válido. Devuelve FALSE si el nombre del origen de datos no es válido o no la llamada de función.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLValidDSN** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. Un  *\*pfErrorCode* si se devuelve solo si la llamada de función no se pudo, no se devuelve FALSE porque el nombre del origen de datos no es válido. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941778"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_category
 |ALERT|Agrega una categoría de alerta.|  
 |OPERATOR|Agrega una categoría de operador.|  
   
-`[ @type = ] 'type'` El tipo de categoría que se va a agregarse. *tipo* es **varchar (12)**, con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
+`[ @type = ] 'type'` El tipo de categoría que se va a agregarse. *tipo* es **varchar (12)** , con un valor predeterminado de **LOCAL**, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

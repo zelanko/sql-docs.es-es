@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca1b0fc2f7a1a74e1b9ab9a85baba945e4edf491
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087814"
 ---
 # <a name="types-of-changes"></a>Tipos de cambios
 Tres tipos de cambios se realizan en ODBC *3.x* (y cualquier versión de ODBC). Cada una de ellas afecta a la compatibilidad con versiones anteriores de manera diferente y se controla de manera diferente. Estos cambios se describen en la tabla siguiente.  

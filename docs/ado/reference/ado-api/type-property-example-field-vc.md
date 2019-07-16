@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936655"
 ---
 # <a name="type-property-example-field-vc"></a>Ejemplo de la propiedad de tipo (campo) (VC ++)
 Este ejemplo se muestra el [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad mostrando el nombre de la constante que corresponde al valor de la **tipo** propiedad de todos el [campo](../../../ado/reference/ado-api/field-object.md) objetos en el ***Empleados*** tabla. La función FieldType es necesaria ejecutar este procedimiento.  
@@ -156,11 +155,11 @@ void PrintComError(_com_error &e) {
   
  **Campos de tabla de empleados:**  
  **Nombre: emp_id**  
- **Type: adChar**  
+ **Tipo: cada**  
  **Nombre: fname**  
  **Type: adVarChar**  
  **Nombre: minit**  
- **Type: adChar**  
+ **Tipo: cada**  
  **Nombre: lname**  
  **Type: adVarChar**  
  **Nombre: job_id**  
@@ -168,9 +167,9 @@ void PrintComError(_com_error &e) {
  **Nombre: nivel**  
  **Type: adUnsignedTinyInt**  
  **Nombre: pub_id**  
- **Type: adChar**  
+ **Tipo: cada**  
  **Nombre: hire_date**  
- **Type: adDBTimeStamp**   
+ **Tipo: adDBTimeStamp**   
 ## <a name="see-also"></a>Vea también  
  [Objeto Field](../../../ado/reference/ado-api/field-object.md)   
  [Tipo (propiedad, ADO)](../../../ado/reference/ado-api/type-property-ado.md)

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e74633d19bf165b362995f587f9cf641baadb1d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04000b62ea8d48b78d7673444003564ae0701193
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938695"
 ---
 # <a name="version-property-example-vc"></a>Ejemplo de la propiedad de versión (VC ++)
 Este ejemplo se usa el [versión](../../../ado/reference/ado-api/version-property-ado.md) propiedad de un [conexión](../../../ado/reference/ado-api/connection-object-ado.md) objeto para mostrar la versión actual de ADO. También se utilizan varias propiedades dinámicas para mostrar:  

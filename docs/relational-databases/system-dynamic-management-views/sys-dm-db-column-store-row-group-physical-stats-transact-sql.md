@@ -19,14 +19,13 @@ helpviewer_keywords:
 - sys.dm_db_column_store_row_group_physical_stats dynamic management view
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1460ef53098a9cdd7cf8bb1672c45cfd27adff57
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e5e421935a9642c42a525fe8a25c4c8c9504c97
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005018"
 ---
 # <a name="sysdmdbcolumnstorerowgroupphysicalstats-transact-sql"></a>sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
@@ -50,15 +49,15 @@ ms.locfileid: "66822737"
 |**size_in_bytes**|**bigint**|Tamaño total, en bytes, de todas las páginas de este grupo de filas. Este tamaño no incluye el tamaño necesario para almacenar los metadatos o diccionarios compartidos.|  
 |**trim_reason**|**tinyint**|Motivo por el que se desencadena el grupo de filas COMPRESSED tener menor que el número máximo de filas.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION<br /><br /> 1 - NO_TRIM<br /><br /> 2 - CARGA MASIVA<br /><br /> 3 - REORG<br /><br /> 4 - DICTIONARY_SIZE<br /><br /> 5 - MEMORY_LIMITATION<br /><br /> 6 - RESIDUAL_ROW_GROUP<br /><br /> 7 - STATS_MISMATCH<br /><br /> 8 - EXCEDENTES|  
 |**trim_reason_desc**|**nvarchar(60)**|Descripción de *trim_reason*.<br /><br /> 0 - UNKNOWN_UPGRADED_FROM_PREVIOUS_VERSION: Se produjo al actualizar desde la versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> 1 - NO_TRIM: El grupo de filas no se recorta. El grupo de filas se comprimió con el número máximo de 1,048,476 filas.  El número de filas puede ser menor si se ha eliminado un subsset de filas después de que se cerró el grupo de filas delta<br /><br /> 2 - CARGA MASIVA: El tamaño del lote de carga masiva limita el número de filas.<br /><br /> 3 - REORG:  Fuerza la compresión como parte del comando REORG.<br /><br /> 4 - DICTIONARY_SIZE: Tamaño del diccionario ha crecido demasiado grande para comprimir todas las filas entre sí.<br /><br /> 5 - MEMORY_LIMITATION: No hay suficiente memoria disponible para comprimir todas las filas entre sí.<br /><br /> 6 - RESIDUAL_ROW_GROUP:  Cerrado como parte del último grupo de filas con millones de filas < 1 durante la operación de generación de índice<br /><br /> STATS_MISMATCH: Solo para el almacén de columnas en la tabla en memoria. Si las estadísticas indican incorrectamente > = 1 millón de filas completo en la cola, pero se encontró menos, el grupo de filas comprimido tendrá < 1 millones de filas<br /><br /> EXCEDENTES: Solo para el almacén de columnas en la tabla en memoria. Si la cola tiene > 1 millones de filas completo, se comprimen las últimas filas restantes por lotes si el número está comprendido entre 100 KB y 1 millón|  
-|**transition_to_compressed_state**|TINYINT|Muestra cómo se ha movido este grupo de filas del almacén delta en estado comprimido en el almacén de columnas.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4 - REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6 - CARGA MASIVA<br /><br /> 7 - MERGE|  
+|**transition_to_compressed_state**|tinyint|Muestra cómo se ha movido este grupo de filas del almacén delta en estado comprimido en el almacén de columnas.<br /><br /> 1 - NOT_APPLICABLE<br /><br /> 2 - INDEX_BUILD<br /><br /> 3 - TUPLE_MOVER<br /><br /> 4 - REORG_NORMAL<br /><br /> 5 - REORG_FORCED<br /><br /> 6 - CARGA MASIVA<br /><br /> 7 - MERGE|  
 |**transition_to_compressed_state_desc**|nvarchar(60)|NOT_APPLICABLE: la operación no se aplica al almacén delta. O bien, el grupo de filas se comprime antes de actualizar a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] en cuyo caso no se conserva el historial.<br /><br /> Crear un índice INDEX_BUILD - o regeneración de índice comprime el grupo de filas.<br /><br /> TUPLE_MOVER: el motor de tupla que se ejecuta en segundo plano comprime el grupo de filas. Esto sucede después de que el grupo de filas cambia el estado de abierto a cerrado.<br /><br /> REORG_NORMAL: la operación de reorganización, ALTER INDEX... REORG, mueve el grupo de filas cerrado desde el almacén delta al almacén de columnas. Esto ocurrió antes de que el motor de tupla tenido tiempo para mover el grupo de filas.<br /><br /> REORG_FORCED: este grupo de filas estaba abierto en el almacén delta y ha tenido en el almacén de columnas antes de que tenía un número total de filas.<br /><br /> Carga masiva: una operación de carga masiva comprime el grupo de filas directamente sin usar el almacén delta.<br /><br /> COMBINACIÓN - consolidado de uno o varios grupos de filas en este grupo de filas de una operación de combinación y, a continuación, realiza la compresión de almacén de columnas.|  
 |**has_vertipaq_optimization**|bit|Optimización de Vertipaq mejora la compresión columnstore reorganizar el orden de las filas en el grupo de filas para lograr una compresión mayor. Esta optimización se produce automáticamente en la mayoría de los casos. Hay dos casos no se utiliza la optimización de Vertipaq:<br/>  a. Cuando mueve un grupo de filas delta al almacén de columnas y hay uno o varios índices no agrupados en el índice de almacén de columnas - en este caso se omite la optimización de Vertipaq a minimiza los cambios realizados en el índice de asignación;<br/> b. para los índices de almacén de columnas en tablas optimizadas para memoria. <br /><br /> 0 = No<br /><br /> 1 = Sí|  
-|**generation**|BIGINT|Generación de grupo de filas asociada a este grupo de filas.|  
+|**generation**|bigint|Generación de grupo de filas asociada a este grupo de filas.|  
 |**created_time**|datetime2|Hora del reloj para cuando se creó este grupo de filas.<br /><br /> NULL - para un índice de almacén de columnas en una tabla en memoria.|  
 |**closed_time**|datetime2|Hora del reloj para cuando se ha cerrado este grupo de filas.<br /><br /> NULL - para un índice de almacén de columnas en una tabla en memoria.|  
 | &nbsp; | &nbsp; | &nbsp; |
 
-## <a name="results"></a>Resultado  
+## <a name="results"></a>Resultados  
  Devuelve una fila por cada grupo de filas en la base de datos actual.  
   
 ## <a name="permissions"></a>Permisos  

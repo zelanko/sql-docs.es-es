@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 2e0505cf847a091a5650b392aab56f486cee16aa
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f2793c6773dc38ebeb4a420e24c38504deb412d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961852"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>Entrenar y guardar un modelo de Python mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -116,12 +115,12 @@ Para que sea más fácil volver a entrenar el modelo con nuevos datos, ajuste la
 
     Procesamiento de los datos y ajuste del modelo pueden tardar un par de minutos. Los mensajes que se canalicen de Python **stdout** secuencia se muestran en el **mensajes** ventana de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
 
-    *Mensajes STDOUT del script externo:*
+    *Mensajes STDOUT del script externo:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Abra la tabla *nyc\_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561...*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -180,7 +179,7 @@ Mediante el uso de **revoscalepy**, puede crear contextos de cálculo remoto, el
 
     Procesamiento de los datos y ajuste del modelo pueden tardar un rato. Los mensajes que se canalicen de Python **stdout** secuencia se muestran en el **mensajes** ventana de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Por ejemplo:
 
-    *Mensajes STDOUT del script externo:*
+    *Mensajes STDOUT del script externo:* 
   *C:\Program Files\Microsoft SQL Server\MSSQL14. MSSQLSERVER\PYTHON_SERVICES\lib\site packages\revoscalepy*
 
 3. Abra la tabla *nyc_taxi_models*. Puede ver que se ha agregado una fila nueva, que contiene el modelo serializado en la columna _modelo_.

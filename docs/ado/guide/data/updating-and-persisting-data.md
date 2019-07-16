@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8dc27274-4f96-43d1-913c-4ff7d01b9a27
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b251da97fe14abb8b10abe974c40b9adf0b37898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26fabdc205018b8e94575cfb5bd5e945a8fb28ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923726"
 ---
 # <a name="updating-and-persisting-data"></a>Actualizar y conservar datos
 En los capítulos anteriores se han explicado cómo utilizar ADO para obtener datos de un origen de datos, cómo moverse por los datos e incluso cómo editar los datos. Por supuesto, si el objetivo de la aplicación es permitir a los usuarios realizar cambios en los datos, deberá comprender cómo guardar los cambios. O bien puede conservar la **Recordset** cambia a un archivo mediante el **guardar** método, o bien puede enviar los cambios de vuelta al origen de datos para almacenamiento mediante el **actualización** o  **UpdateBatch** métodos.  

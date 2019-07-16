@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 59760114-508e-46c5-81d2-8f2498c0d778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b92eeb64b95d666b15c03c70d656d2309a63eabf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a945eef43a1fc12689853c3fa209f6126df4f0d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042191"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951876"
 ---
 # <a name="considering-database-features-to-use"></a>Teniendo en cuenta las características de base de datos que se utilizan
 Una vez que se conoce el nivel básico de interoperabilidad, se deben considerar las características de base de datos usadas por la aplicación. Por ejemplo, ¿qué instrucciones SQL ejecutará la aplicación? ¿La aplicación van a usar los cursores desplazables? ¿Transacciones? ¿Procedimientos? ¿Datos de tipo Long? Para ideas acerca de las características que no es posible que sea compatible con todos los DBMS, consulte el [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md), [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md), y [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md) descripciones de las funciones y [ Apéndice C: Gramática de SQL](../../../odbc/reference/appendixes/appendix-c-sql-grammar.md). Las características necesarias para una aplicación podrían eliminar algunos de los DBMS en la lista de DBMS de destino. También es posible que muestran que la aplicación puede tener como destino muchos DBMS.  

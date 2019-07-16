@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dd7e15e6e0a1a4097cbc79535ffec968f6776db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910074"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "54125885"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|El nombre del artículo.|  
-|**Tipo**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solamente esquema de procedimiento.<br /><br /> **64** = view schema only o solo el esquema de vista indizada.<br /><br /> **128** = solamente esquema de función.<br /><br /> **160** = solamente esquema de sinónimo.|  
-|**ObjID**|**int**|Identificador del objeto de publicador.|  
+|**name**|**sysname**|El nombre del artículo.|  
+|**type**|**tinyint**|Indica el tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla.<br /><br /> **32** = solamente esquema de procedimiento.<br /><br /> **64** = view schema only o solo el esquema de vista indizada.<br /><br /> **128** = solamente esquema de función.<br /><br /> **160** = solamente esquema de sinónimo.|  
+|**objid**|**int**|Identificador del objeto de publicador.|  
 |**sync_objid**|**int**|Identificador de la vista que representa el conjunto de datos sincronizado.|  
 |**view_type**|**tinyint**|Tipo de vista:<br /><br /> **0** = no es una vista; usar todo el objeto base.<br /><br /> **1** = vista permanente.<br /><br /> **2** = vista temporal.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
@@ -74,7 +73,7 @@ ms.locfileid: "54125885"
 |**fast_multicol_updateproc**|**bit**|Especifica si se ha habilitado el Agente de mezcla para aplicar cambios a varias columnas de la misma fila en una instrucción UPDATE.<br /><br /> **0** = problemas cambiada una actualización independiente para cada columna.<br /><br /> **1** = emitido en la instrucción UPDATE que lleva a cabo actualizaciones en varias columnas en una sola instrucción.|  
 |**check_permissions**|**int**|El mapa de bits de los permisos de nivel de tabla que se comprobarán cuando el agente de mezcla aplique cambios en el publicador. *check_permissions* puede tener uno de estos valores:<br /><br /> **0 x 00** = no se comprueban los permisos.<br /><br /> **0 x 10** = comprueba los permisos en el publicador antes de poder cargar los INSERT creado en un suscriptor.<br /><br /> **0 x 20** = comprueba los permisos en el publicador antes de poder cargar los UPDATE creados en un suscriptor.<br /><br /> **0 x 40** = comprueba los permisos en el publicador antes de poder cargar los DELETE creados en un suscriptor.|  
 |**maxversion_at_cleanup**|**int**|El valor más alto de generación para el cual se limpian los metadatos.|  
-|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para obtener más información, consulte [las propiedades de replicación de mezcla especificar](../../relational-databases/replication/merge/specify-merge-replication-properties.md).|  
+|**processing_order**|**int**|Indica el orden de procesamiento de artículos en una publicación de combinación; el valor **0** indica que el artículo está desordenado y artículos se procesan en orden de menor a mayor valor. Si existen dos artículos que tienen el mismo valor, se procesan al mismo tiempo. Para más información, vea [Specify merge replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md) (Especificación de propiedades de replicación de mezcla).|  
 |**published_in_tran_pub**|**bit**|Indica que un artículo de una publicación de combinación también se publica en una publicación transaccional.<br /><br /> **0** = artículo no está publicado en un artículo transaccional.<br /><br /> **1** = artículo también está publicado en un artículo transaccional.|  
 |**upload_options**|**tinyiny**|Define si es posible realizar cambios en el suscriptor o cargarlos desde él. Puede se uno de los siguientes valores.<br /><br /> **0** = no hay ninguna restricción en las actualizaciones realizadas en el suscriptor; todos los cambios se cargan en el publicador.<br /><br /> **1** = se permiten realizar cambios en el suscriptor, pero no se cargan en el publicador.<br /><br /> **2** = no se permiten cambios en el suscriptor.|  
 |**ligero**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
@@ -84,7 +83,7 @@ ms.locfileid: "54125885"
 |**compensate_for_errors**|**bit**|Indica si se llevan a cabo acciones de compensación cuando se producen errores durante la sincronización.<br /><br /> **0** = compensación se deshabilitan las acciones.<br /><br /> **1** = los cambios que no se puede aplicar a acciones de compensación para deshacer estos cambios, que es el comportamiento predeterminado para la replicación de mezcla en el suscriptor o publicador siempre.<br /><br /> Nota: Un valor de **0** da como resultado una falta de convergencia.|  
 |**pub_range**|**bigint**|Tamaño del intervalo de identidad del publicador.|  
 |**intervalo**|**bigint**|Tamaño de los valores de identidad consecutivos que podrían asignarse a los suscriptores en un ajuste.|  
-|**umbral**|**int**|Porcentaje de umbral del intervalo de identidad.|  
+|**threshold**|**int**|Porcentaje de umbral del intervalo de identidad.|  
 |**metadata_select_proc**|**sysname**|Nombre del procedimiento almacenado, y generado automáticamente, utilizado para obtener acceso a los metadatos en las tablas del sistema de replicación de mezcla.|  
 |**stream_blob_columns**|**bit**|Especifica si se utiliza una optimización del flujo de datos al replicar columnas de objetos grandes binarios. **1** significa que se intentará la optimización.|  
 |**preserve_rowguidcol**|**bit**|Indica si la replicación utiliza una columna rowguid existente. Un valor de **1** significa que se utiliza una columna ROWGUIDCOL existente. **0** significa que la replicación agregará la columna ROWGUIDCOL.|  

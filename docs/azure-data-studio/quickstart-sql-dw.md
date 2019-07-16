@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: f98f6be4502254910b5c144f08a95181ccf1b2a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 810d03ab97fd584e1ddaab45e06a21377b81685d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959403"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-data-in-azure-sql-data-warehouse"></a>Inicio rápido: Use [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse y consultar datos en Azure SQL Data Warehouse
 
@@ -139,7 +138,7 @@ El editor de consultas aún está conectado a la *maestro* base de datos, pero s
    ![Seleccione los resultados](media/quickstart-sql-dw/select-results.png)
 
 
-## <a name="clean-up-resources"></a>Limpiar recursos
+## <a name="clean-up-resources"></a>Limpieza de recursos
 
 Otros artículos de esta colección se basan en esta guía. Si tiene previsto seguir trabajando con los tutoriales posteriores, no limpie los recursos creados en esta guía de inicio rápido. Si no tiene previsto continuar, utilice los pasos siguientes para eliminar recursos creados en este inicio rápido en el portal de Azure.
 Limpiar los recursos mediante la eliminación de los grupos de recursos que ya no necesita. Para obtener más información, consulte [limpiar recursos](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal#clean-up-resources).

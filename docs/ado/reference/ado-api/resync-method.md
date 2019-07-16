@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 73b355d4-a4c0-434b-bfc4-039b1c76b32e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 251c2f67861dd996ac78efc9a8e599d7ec191072
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e2f83a3637af8f0e89c4125d3207c8c54b86763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917158"
 ---
 # <a name="resync-method"></a>Método Resync
 Actualiza los datos en el actual [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto, o [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección de un [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto desde la base de datos subyacente.  
@@ -56,7 +55,7 @@ Recordset.Resync AffectRecords, ResyncValues Record.Fields.Resync ResyncValues
   
  Si el [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) y [resincronizar comando](../../../ado/reference/ado-api/resync-command-property-dynamic-ado.md) se establecen las propiedades dinámicas y el **Recordset** es el resultado de ejecutar una operación JOIN en varias tablas y, a continuación, el  **Resincronizar** método ejecutará el comando especificado en el **resincronizar comando** propiedad solo en la tabla mencionada en el **Unique Table** propiedad.  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
  Use la **Resync** método para volver a sincronizar los valores de la **campos** colección de un **registro** objeto con el origen de datos subyacente. El [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad no se ve afectada por este método.  
   
  Si *ResyncValues* está establecido en **adResyncAllValues** (el valor predeterminado), el [UnderlyingValue](../../../ado/reference/ado-api/underlyingvalue-property.md), [valor](../../../ado/reference/ado-api/value-property-ado.md), y [ OriginalValue](../../../ado/reference/ado-api/originalvalue-property-ado.md) propiedades de [campo](../../../ado/reference/ado-api/field-object.md) se sincronizan los objetos de la colección. Si *ResyncValues* está establecido en **adResyncUnderlyingValues**, solo el **UnderlyingValue** propiedad está sincronizada.  

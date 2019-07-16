@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dff6d19b-765c-4df9-afff-9a0e7be9b91b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44ab042814b95886faa9f632fb58d7a809c9e458
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 31a52f86692d5769fe22f4cf0b5a04ad324c3ac0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930114"
 ---
 # <a name="functions-on-nodes---number"></a>Funciones usadas en nodos: number
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ fn:number($arg as node()?) as xs:double?
  Nodo cuyo valor se devolverá como un número.  
   
 ## <a name="remarks"></a>Comentarios  
- Si *$arg* no es se especifica, el valor numérico del nodo de contexto, puede convertido en double, se devuelve. En SQL Server, **fn:Number()** sin un argumento solo se puede utilizar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes ([ ]). Por ejemplo, la expresión siguiente devuelve el elemento <`ROOT`>.  
+ Si *$arg* no es se especifica, el valor numérico del nodo de contexto, puede convertido en double, se devuelve. En SQL Server, **fn:Number()** sin un argumento solo se puede utilizar en el contexto de un predicado dependiente del contexto. En concreto, solo se puede utilizar entre corchetes ([ ]). Por ejemplo, la siguiente expresión devuelve el <`ROOT`> elemento.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ WHERE ProductModelID=7
   
 -   La consulta para **LotSizeD** se muestra el uso de un valor numérico en una operación aritmética.  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 ProductModelID   Result  

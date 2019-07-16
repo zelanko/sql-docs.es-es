@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003067"
 ---
 # <a name="sqlfetch-function"></a>Función SQLFetch
 **Conformidad**  
@@ -49,7 +48,7 @@ SQLRETURN SQLFetch(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLFetch** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a [función SQLGetDiagRec](../../../odbc/reference/syntax/sqlgetdiagrec-function.md) con un *HandleType*de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLFetch** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario. Si se produce un error en una sola columna, [SQLGetDiagField](../../../odbc/reference/syntax/sqlgetdiagfield-function.md) se puede llamar con un *DiagIdentifier* de SQL_DIAG_COLUMN_NUMBER para determinar la columna que se produjo el error; y  **SQLGetDiagField** se puede llamar con un *DiagIdentifier* de SQL_DIAG_ROW_NUMBER para determinar la fila que contiene esa columna.  
   
  Para todas esas SQLSTATE que puede devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO, si se produce un error en uno o más, pero no todas las filas de una operación de varias filas, y se devuelve SQL_ERROR si se produce un error en un fila única operación.  
@@ -107,7 +106,7 @@ SQLRETURN SQLFetch(
 |Condición|Primera fila del conjunto de filas nuevas|  
 |---------------|-----------------------------|  
 |Antes de comenzar|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \< =  *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
 |*CurrRowsetStart* > *LastResultRow - RowsetSize*[1]|Después de finales|  
 |Después de finales|Después de finales|  
   
@@ -232,16 +231,16 @@ SQLRETURN SQLFetch(
   
 |Campo descriptor|Desc.|Campo en|Establecer a través de|  
 |----------------------|-----------|--------------|-----------------|  
-|SQL_DESC_ARRAY_SIZE|DESCARTAR|header|SQL_ATTR_ROW_ARRAY_SIZE statement attribute|  
-|SQL_DESC_ARRAY_STATUS_PTR|IRD|header|Atributo de instrucción SQL_ATTR_ROW_STATUS_PTR|  
-|SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|header|Atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_DESC_BIND_TYPE|DESCARTAR|header|Atributo de instrucción SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_DESC_COUNT|DESCARTAR|header|*ColumnNumber* argumento de **SQLBindCol**|  
+|SQL_DESC_ARRAY_SIZE|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE|  
+|SQL_DESC_ARRAY_STATUS_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROW_STATUS_PTR|  
+|SQL_DESC_BIND_OFFSET_PTR|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_OFFSET_PTR|  
+|SQL_DESC_BIND_TYPE|DESCARTAR|Encabezado|Atributo de instrucción SQL_ATTR_ROW_BIND_TYPE|  
+|SQL_DESC_COUNT|DESCARTAR|Encabezado|*ColumnNumber* argumento de **SQLBindCol**|  
 |SQL_DESC_DATA_PTR|DESCARTAR|Registros|*TargetValuePtr* argumento de **SQLBindCol**|  
 |SQL_DESC_INDICATOR_PTR|DESCARTAR|Registros|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH|DESCARTAR|Registros|*BufferLength* argumento en **SQLBindCol**|  
 |SQL_DESC_OCTET_LENGTH_PTR|DESCARTAR|Registros|*StrLen_or_IndPtr* argumento en **SQLBindCol**|  
-|SQL_DESC_ROWS_PROCESSED_PTR|IRD|header|Atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR|  
+|SQL_DESC_ROWS_PROCESSED_PTR|IRD|Encabezado|Atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR|  
 |SQL_DESC_TYPE|DESCARTAR|Registros|*TargetType* argumento en **SQLBindCol**|  
   
  También pueden establecerse a través de todos los campos de descriptor **SQLSetDescField**.  

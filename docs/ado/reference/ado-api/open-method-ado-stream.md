@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d26f48fb-904e-4932-a245-3b4332ca1600
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c1d1863b28367ba825541c6e334613f65d3bc657
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6549fd10b173a8e133c941ea4315634badb3f35f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917836"
 ---
 # <a name="open-method-ado-stream"></a>Open (método) (Stream de ADO)
 Se abre un [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objeto para manipular secuencias de datos binarios o texto.  
@@ -35,7 +34,7 @@ Stream.Open Source, Mode , OpenOptions, UserName, Password
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *Source*  
+ *Origen*  
  Opcional. Un **Variant** valor que especifica el origen de datos para el **Stream**. *Origen* puede contener una cadena de dirección URL absoluta que apunta a un nodo existente en una estructura de árbol conocida, como un sistema de correo electrónico o archivo. Se debe especificar una dirección URL mediante la palabra clave de dirección URL ("URL =*esquema*://*server*/*carpeta*"). Como alternativa, *origen* puede contener una referencia a una ya está abierta [registro](../../../ado/reference/ado-api/record-object-ado.md) objeto, que se abre la secuencia predeterminada asociada con el **registro**. Si *origen* no se especifica un **Stream** se crea una instancia y abierto, asociada a ningún origen subyacente de forma predeterminada. Para obtener más información sobre los esquemas de dirección URL y sus proveedores asociados, consulte [absoluto y las direcciones URL relativas](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
  *Modo*  

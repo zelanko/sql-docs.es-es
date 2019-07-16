@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 67b7dee0-e5b1-4469-a626-0c7767852b80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f6bd73a1bd7a9f41b20300e4abf47688a6c78794
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6d7a35d0697d1dcbda8f9f64b7ac5a32307d5c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051140"
 ---
 # <a name="date-time-and-timestamp-escape-sequences"></a>Secuencias de escape de fecha, hora y marca de tiempo
 ODBC define secuencias de escape para fecha, hora y marca de tiempo literales. La sintaxis de estas secuencias de escape es como sigue:  

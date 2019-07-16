@@ -16,23 +16,22 @@ helpviewer_keywords:
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba06c10b3f890f08abac371346c3d03a0278aa8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0bf28af10084a30a5c81c76fe7e44781178979ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965133"
 ---
 # <a name="tables-collection-adox"></a>Colección de tablas (ADOX)
 Todos los contiene [tabla](../../../ado/reference/adox-api/table-object-adox.md) objetos de un catálogo.  
   
 ## <a name="remarks"></a>Comentarios  
- El [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) método para un **tablas** colección es único para ADOX. Puede hacer lo siguiente:  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-tables.md) método para un **tablas** colección es único para ADOX. Puede:  
   
 -   Agregar una nueva tabla a la colección con el **Append** método.  
   
- Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede:  
   
 -   Acceso a una tabla en la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   

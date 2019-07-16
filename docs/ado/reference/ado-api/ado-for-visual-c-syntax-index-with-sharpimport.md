@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987dbf95c4db08d5ac88d56dbd7097b8a45afe77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920963"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>ADO para Visual C++ índice de sintaxis con #import
 Este índice es una referencia cruzada a la referencia del lenguaje ADO basado en Microsoft Visual C++ y la **#import** directiva.  

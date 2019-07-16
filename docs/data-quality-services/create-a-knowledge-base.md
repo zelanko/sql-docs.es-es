@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: a56193f453781bf25dc34079c9845a7d0566f820
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0512f4b1dafb44384f99d4ed056bc4322c9b2513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66785699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935485"
 ---
 # <a name="create-a-knowledge-base"></a>Crear una base de conocimiento
 
@@ -61,7 +60,7 @@ ms.locfileid: "66785699"
   
     -   Seleccione **Directiva de coincidencia** para crear una directiva de coincidencia y agregarla a la base de conocimiento.  
   
-6.  Haga clic en **Crear**.  
+6.  Haga clic en **Create**(Crear).  
   
 ##  <a name="FollowUp"></a> Seguimiento: después de crear una base de conocimiento  
  Una vez creada la base de conocimiento, aparecerá un asistente que podrá utilizar para realizar la detección de conocimiento, un asistente para crear una directiva de coincidencia o varias páginas que le permitirán realizar la administración de dominios. Para más información sobre la detección de conocimiento, la administración de dominios o la directiva de coincidencia, vea [Realizar la detección de conocimiento](../data-quality-services/perform-knowledge-discovery.md), [Administrar un dominio](../data-quality-services/managing-a-domain.md) o [Crear una directiva de coincidencia](../data-quality-services/create-a-matching-policy.md).  

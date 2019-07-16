@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 8f0506b6-a4ac-4e4d-91db-8077c40cb17a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 93acd6ad9e904e1e3db5dfe7e244b459e7853d70
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: e5363e741c827a0fb16528a8b617e26a5b95f8a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025692"
 ---
 # <a name="spsetdatabasefirewallrule-azure-sql-database"></a>sp_set_database_firewall_rule (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  Crea o actualiza las reglas de firewall de nivel de base de datos para su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las reglas de firewall de base de datos se pueden configurar para la **maestro** base de datos y para las bases de datos de usuario en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Las reglas de firewall de base de datos son especialmente útiles cuando utilizando los usuarios de base de datos de contenido. Para obtener más información, vea [Usuarios de base de datos independiente: hacer que la base de datos sea portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
+  Crea o actualiza las reglas de firewall de nivel de base de datos para su [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Las reglas de firewall de base de datos se pueden configurar para la **maestro** base de datos y para las bases de datos de usuario en [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. Las reglas de firewall de base de datos son especialmente útiles cuando utilizando los usuarios de base de datos de contenido. Para obtener más información, vea [Usuarios de base de datos independiente - Conversión de la base de datos en portátil](../../relational-databases/security/contained-database-users-making-your-database-portable.md).  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -44,13 +43,13 @@ sp_set_database_firewall_rule [@name = ] [N]'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- **[@name** = ] [N]'*name*'  
+ **[@name**  =] [N]'*nombre*'  
  El nombre utilizado para describir y distinguir la configuración del firewall de nivel de base de datos. *nombre* es **nvarchar (128)** con ningún valor predeterminado. El identificador de Unicode `N` es opcional para [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
  **[@start_ip_address**  =] '*start_ip_address*'  
  La dirección IP más baja en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o superiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más baja posible es `0.0.0.0`. *start_ip_address* es **varchar (50)** con ningún valor predeterminado.  
   
- [**@end_ip_address** =] '*end_ip_address*'  
+ [ **@end_ip_address** =] '*end_ip_address*'  
  La dirección IP más alta en el intervalo de la configuración del firewall de nivel de base de datos. Las direcciones IP iguales o inferiores a esta pueden intentar conectarse con la instancia de [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. La dirección IP más alta posible es `255.255.255.255`. *end_ip_address* es **varchar (50)** con ningún valor predeterminado.  
   
  En la tabla siguiente se muestran los argumentos admitidos y opciones en [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  

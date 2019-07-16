@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 538fcdf67654ad509e826fcfaaf141fb4f8e32ec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e13079d18c8887aa0cdba8e5ae06f86eebca897c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710620"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938864"
 ---
 # <a name="type-property-example-property-vc"></a>Ejemplo de la propiedad Type (propiedad) (VC ++)
 Este ejemplo se muestra el [tipo](../../../ado/reference/ado-api/type-property-ado.md) propiedad. Es un modelo de una utilidad para enumerar los nombres y tipos de una colección, como [propiedades](../../../ado/reference/ado-api/properties-collection-ado.md), [campos](../../../ado/reference/ado-api/fields-collection-ado.md), etcetera.  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8ae29a85-2b77-48db-a2b9-a1720287b271
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 907e7d73651075a122cfb6b7e4a8d3eac44f072c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 703d7cb0b225bf12e7ccd91bdf34251c3044230b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950842"
 ---
 # <a name="columnprivileges-transact-sql"></a>COLUMN_PRIVILEGES (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "54124325"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**OTORGANTE DE PERMISOS**|**nvarchar (** 128 **)**|La persona que concede el privilegio.|  
-|**RECEPTOR DE PERMISOS**|**nvarchar (** 128 **)**|La persona que recibe el privilegio.|  
-|**TABLE_CATALOG**|**nvarchar (** 128 **)**|Calificador de tabla.|  
-|**TABLE_SCHEMA**|**nvarchar (** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
+|**OTORGANTE DE PERMISOS**|**nvarchar(** 128 **)**|La persona que concede el privilegio.|  
+|**RECEPTOR DE PERMISOS**|**nvarchar(** 128 **)**|La persona que recibe el privilegio.|  
+|**TABLE_CATALOG**|**nvarchar(** 128 **)**|Calificador de tabla.|  
+|**TABLE_SCHEMA**|**nvarchar(** 128 **)**|Nombre de esquema que contiene la tabla.<br /><br /> **&#42;&#42;Importante &#42; &#42;**  no utilice las vistas INFORMATION_SCHEMA para determinar el esquema de un objeto. La única manera confiable de localizar el esquema de un objeto consiste en consultar la vista de catálogo sys.objects.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla.|  
 |**COLUMN_NAME**|**sysname**|Nombre de columna.|  
-|**PRIVILEGE_TYPE**|**varchar (** 10 **)**|Tipo de privilegio.|  
-|**IS_GRANTABLE**|**varchar (** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
+|**PRIVILEGE_TYPE**|**varchar(** 10 **)**|Tipo de privilegio.|  
+|**IS_GRANTABLE**|**varchar(** 3 **)**|Especifica si la persona que recibe el privilegio puede conceder permisos a otros.|  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del sistema &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)   

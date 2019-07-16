@@ -2,19 +2,18 @@
 title: Crear un administrador de dominio - Analytics Platform System | Microsoft Docs
 description: Algunas operaciones requieren privilegios de administrador de dominio de Analytics Platform System. Esto explica cómo crear administradores de dominio de aplicación adicionales.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 852fb3c6cee7c65f8799102bbd65ab368cd0d9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51ed729cda33b5d68a4d115c71f712e2b81d1a65
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134399"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961090"
 ---
 # <a name="create-an-aps-domain-administrator"></a>Crear un administrador de dominio APS
 Algunas operaciones requieren privilegios de administrador de dominio de Analytics Platform System. Esto explica cómo crear administradores de dominio de aplicación adicionales.  

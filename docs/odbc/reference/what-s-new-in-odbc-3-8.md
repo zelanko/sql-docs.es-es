@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951786"
 ---
 # <a name="what39s-new-in-odbc-38"></a>¿Qué&#39;s de ODBC 3.8
 Windows 8 incluye una versión actualizada de ODBC 3.8. ODBC 3.8 en Windows 8 incluye las siguientes características:  

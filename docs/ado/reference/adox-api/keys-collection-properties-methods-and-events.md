@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d0ea23066734b82ce0fc7ff5f4d083e95449664e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 516a26466a4e817fc2fdabffadf8f19dc9593781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965805"
 ---
 # <a name="keys-collection-properties-methods-and-events"></a>Eventos, métodos y propiedades de la colección de claves
 ## <a name="properties"></a>Propiedades  

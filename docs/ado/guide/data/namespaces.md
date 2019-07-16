@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: efff5569-db52-451d-a039-2e74870534da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0e04ffd13183462b0d2a5e68ebc177b8b342b570
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5f28b5d593524288a755f4c9455bba39554d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701852"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924816"
 ---
 # <a name="namespaces"></a>Espacios de nombres
 El formato de persistencia de XML en ADO utiliza los siguientes espacios de nombres de cuatro.  
@@ -29,7 +28,7 @@ El formato de persistencia de XML en ADO utiliza los siguientes espacios de nomb
 |Prefijo|Descripción|  
 |------------|-----------------|  
 |s|Hace referencia al espacio de nombres "XML-Data" que contiene los elementos y atributos que definen el esquema del conjunto de registros actual.|  
-|dt|Hace referencia a la especificación de las definiciones de tipo de datos.|  
+|DT|Hace referencia a la especificación de las definiciones de tipo de datos.|  
 |rs|Hace referencia al espacio de nombres que contienen elementos y atributos específicos de las propiedades del conjunto de registros ADO y atributos.|  
 |z|Hace referencia al esquema del conjunto de filas actual.|  
   

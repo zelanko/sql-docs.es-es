@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee95ffdb-5aa1-49a3-beb2-7695b27c3df9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 96a48d60cc0c127f41e6e1b79b9faf29ea4392cf
-ms.sourcegitcommit: eacc2d979f1f13cfa07e0aa4887eb9d48824b633
+ms.openlocfilehash: 92aab28274d3709047e46c55192b437449e252ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67533826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047011"
 ---
 # <a name="driver-manager-connection-pooling"></a>Agrupación de conexiones de administrador de controladores
 Agrupación de conexiones permite a una aplicación usar una conexión de un grupo de conexiones que no es necesario volver a establecerse para cada usuario. Una vez creada y colocada en un grupo de una conexión, una aplicación puede reutilizar esa conexión sin necesidad de realizar el proceso de conexión completa.  

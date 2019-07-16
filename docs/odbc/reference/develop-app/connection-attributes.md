@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: e6d03089-30a3-4627-a642-591ba0980894
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f0fad1db10e40c71d22dd75417420c54cefa7803
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09b29277d74383abff1510ca7394aecad036fc7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194438"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036440"
 ---
 # <a name="connection-attributes"></a>Atributos de conexión
 Los atributos de conexión son características de la conexión. Por ejemplo, dado que las transacciones se producen en el nivel de conexión, el nivel de aislamiento de transacción es un atributo de conexión. De forma similar, el tiempo de espera de inicio de sesión o el número de segundos de espera al intentar conectarse antes de agotar el tiempo, es un atributo de conexión.  

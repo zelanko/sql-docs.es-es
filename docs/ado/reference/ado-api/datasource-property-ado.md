@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 300a702a-3544-48c5-b759-83b511fe97e0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c62953f958ef14134d7463c899f5b842d94f596
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: fd677e29631e53eeb71c43e8174baff553defc85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933245"
 ---
 # <a name="datasource-property-ado"></a>Propiedad de origen de datos (ADO)
 Indica un objeto que contiene los datos que se puede representar como un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  

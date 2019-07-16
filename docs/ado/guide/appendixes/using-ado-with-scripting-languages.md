@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 76fc4d00-0c9f-422b-af5c-af6ed8fb29d8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d41d5a0239f11882c135c27fd4af8e817e83b799
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b322dacbf85ec24b58e315ecbbf9d547d1481f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926489"
 ---
 # <a name="using-ado-with-scripting-languages"></a>Usar ADO con lenguajes de Scripting
 Dentro de un entorno de scripting, ADO permite exponer los datos por medio de scripting del lado servidor. En este escenario, ADO, el proveedor OLE DB subyacente que usa, y cualquier otro componente necesario para hacer referencia a un almacén de datos determinado está instalado en un servidor que ejecuta Internet Information Services (IIS). Uso de páginas Active Server (ASP), ADO es un componente al que hace referencia en una secuencia de comandos que puede generar código HTML, por ejemplo. Este contenido HTML se puede pasar a través de HTTP a un explorador Web cliente. Mediante el uso de secuencias de comandos, la página Web puede enviar acciones a la secuencia de comandos del lado servidor, lo que le permite actualizar, recorrer o ver datos específicos.  
@@ -29,12 +28,12 @@ Dentro de un entorno de scripting, ADO permite exponer los datos por medio de sc
 |Object|¿Es seguro para Scripting?|  
 |------------|-------------------------|  
 |Conexión de ADO|Sí|  
-|Comando de ADO|Sin|  
+|Comando de ADO|No|  
 |Parámetro de ADO|Sin|  
 |Conjunto de registros ADO|Sí|  
 |Registro de ADO|Sí|  
 |Stream de ADO|Sí|  
-|Error de ADO.|Sin|  
+|Error de ADO.|No|  
 |Catálogo ADOX|Sin|  
 |Conjunto de celdas ADOX|Sin|  
 |RDS DataControl|Sí|  
@@ -48,7 +47,7 @@ Dentro de un entorno de scripting, ADO permite exponer los datos por medio de sc
 |Forma|Sí|  
 |Persist|Sí|  
 |Remote|Sí|  
-|Proveedor OLE DB para SQL Server (SQLOLEDB)|No|  
+|Proveedor OLE DB para SQL Server (SQLOLEDB)|Sin|  
 |Proveedor OLE DB para ODBC (MSDASQL)|Sin|  
   
 ## <a name="odbc-data-sources"></a>Orígenes de datos ODBC  

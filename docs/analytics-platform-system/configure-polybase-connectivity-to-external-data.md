@@ -2,19 +2,18 @@
 title: Configurar la conectividad de PolyBase - Analytics Platform System | Microsoft Docs
 description: Explica cómo configurar PolyBase en almacenamiento de datos paralelos para conectarse a Hadoop o Microsoft Azure storage blob orígenes de datos externos. Uso de PolyBase para ejecutar consultas que se integran datos desde varios orígenes, como Hadoop, Azure blob storage y almacenamiento de datos paralelos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: da6d71521f72ff23b4caf2f27dbc663dee684592
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c218d686951e8855dd0687e35c1b777b0ae29617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057826"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961247"
 ---
 # <a name="what-is-polybase"></a>¿Qué es PolyBase?
 PolyBase permite su Analytics Platform System (APS) para procesar consultas Transact-SQL que pueden leer y escribir datos en orígenes de datos externos. Las mismas consultas que tienen acceso a datos externos también pueden incluir tablas de relaciones en los puntos de acceso. Esto le permite combinar datos de orígenes externos con datos relacionales de gran valor en las bases de datos de puntos de acceso.

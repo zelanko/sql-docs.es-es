@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44404a79-b716-4bc1-9ffb-70cd8239d237
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2ccf5afd559d4d3716c22b42665c516aa230fafe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13e8caf9f3a9643f8063d6227258245a603f1665
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901635"
 ---
 # <a name="setting-tracing-options"></a>Establecer las opciones de seguimiento
 El **seguimiento** pestaña de la **Administrador de orígenes de datos ODBC** cuadro de diálogo le permite configurar la forma en que se realiza un seguimiento de llamadas a funciones ODBC.  

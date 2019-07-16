@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 594f1dd0-3c27-41b3-b809-9ce6714c5a97
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a26fda3dc3edc1870b7a587d926d8e26d69f186e
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: fe18f488b83c1a8c9236c642751c1dc80bfe7e6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946575"
 ---
 # <a name="numeric-values-functions---ceiling"></a>Funciones de valores numéricos: ceiling 
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ WHERE ProductModelID=7
   
     -   El {$i/@LotSize } expresión recupera el atributo LotSize del documento, si está presente.  
   
-    -   El resultado es el siguiente:  
+    -   Éste es el resultado:  
   
 ```  
 ProductModelID Result    

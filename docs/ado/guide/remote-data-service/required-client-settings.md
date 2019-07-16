@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e776b4e3-fcc4-4bfb-a7e8-5ffae1d83833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ce22c31c4924c050baff2f7d96c224a8c5c3403b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb99cb3d792900f48ceb69c25c7ae720c339683
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922292"
 ---
 # <a name="required-client-settings"></a>Configuración de cliente requerida
 > [!IMPORTANT]
@@ -69,7 +68,7 @@ rs.CursorLocation = adUseClient
   
  Especifique el [propiedad de controlador (RDS)](../../../ado/reference/rds-api/handler-property-rds.md) propiedad o la palabra clave; el [propiedad de proveedor (ADO)](../../../ado/reference/ado-api/provider-property-ado.md) propiedad o la palabra clave; y la *CustomerById* y  *CustomerDatabase* identificadores. A continuación, abra el **Recordset** objeto  
   
- rs.Open "CustomerById(4)", "Handler=MSDFMAP.Handler;" & _  
+ RS. Abra "CustomerById (4)", "controlador = MSDFMAP. Controlador;"& _  
   
 ```vb
 "Provider=MS Remote;Data Source=CustomerDatabase;" & _  

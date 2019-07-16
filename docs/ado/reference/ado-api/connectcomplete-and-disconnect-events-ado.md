@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 568f5252-d069-4d99-a01b-2ada87ad1304
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2f84f89b1ace38350261d461993bf6f89bc155c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 448270ddf0e8cd7efb5ec39a93d4ff993360730e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919578"
 ---
 # <a name="connectcomplete-and-disconnect-events-ado"></a>Eventos ConnectComplete y Disconnect (ADO)
 El **ConnectComplete** se llama al evento después de inicia una conexión. El **desconexión** se llama al evento después de que finalice una conexión.  

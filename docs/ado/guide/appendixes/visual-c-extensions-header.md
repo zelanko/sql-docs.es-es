@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e492d307-24cb-489c-a5b0-99cdc09b07da
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac2dbb1b1bd120710909ebe42b362430bae998d6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675a31ab333a6c2d92e6afcd6a461b3baebd5b3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926388"
 ---
 # <a name="visual-c-extensions-header"></a>Encabezado de extensiones de Visual C++
 El siguiente encabezado, **icrsint.h**, detalles de la interfaz que permite a los clientes recuperar los campos de un **Recordset** en variables definidas en una clase derivada de **CADORecordBinding**. Debe especificar una macro de enlace de ADO para cada campo que pretenda obtener acceso.  

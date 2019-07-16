@@ -5,17 +5,16 @@ description: En este artículo se describe la instancia principal de SQL Server 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0b9cd9d8270a82eb578781a6376d8ac1045aa485
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: cafc62e12bcecad1ac6bcf389b87c864576c83a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729116"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958702"
 ---
 # <a name="what-is-the-master-instance-in-a-sql-server-big-data-cluster"></a>¿Qué es la instancia maestra en un clúster de macrodatos de SQL Server?
 

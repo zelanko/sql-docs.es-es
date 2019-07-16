@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 67cc4945-4850-4eb4-8da6-b835ddaeca4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6a1f8893351ceb68ebd7c42e3ac82c876c01c10b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dc741321894ae69a9ffb59738576a01d47628f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198759"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901659"
 ---
 # <a name="managing-data-sources"></a>Administrar orígenes de datos
 Después de haber instalado a un controlador ODBC desde el programa de instalación del controlador, puede definir uno o varios orígenes de datos para él. El nombre del origen de datos (DSN) debe proporcionar una descripción única de los datos; Por ejemplo, *nóminas* o *cuentas por pagar*. Se enumeran los orígenes de datos de usuario y del sistema que se definen para todos los controladores instalados actualmente en el **DSN de usuario** o **DSN de sistema** pestañas de la **Administrador de orígenes de datos ODBC**cuadro de diálogo. Los orígenes de datos de archivo en un directorio determinado se muestran en el **DSN de archivo** pestaña; se especifica el directorio que se mostrará en el **buscar en** cuadro el **DSN de archivo** ficha.  
@@ -40,7 +39,7 @@ The specified DSN contains an architecture mismatch between the Driver and Appli
   
  Un origen de datos asocia un controlador ODBC específico con los datos que desea tener acceso a través de ese controlador. Por ejemplo, puede crear un origen de datos para usar el controlador ODBC dBASE para tener acceso a uno o varios archivos dBASE se encuentra en un directorio específico en el disco duro o una unidad de red. Mediante el Administrador de orígenes de datos ODBC, puede agregar, modificar y eliminar orígenes de datos, como se describe en la tabla siguiente.  
   
-|Acción|Descripción|  
+|.|Descripción|  
 |------------|-----------------|  
 |Agregar orígenes de datos|Es posible agregar varios orígenes de datos, cada una de ellas se asocia un controlador de algunos datos que desea tener acceso mediante el uso de ese controlador. Asigne un nombre que identifica ese origen de datos a cada origen de datos. Por ejemplo, si crea un origen de datos para un conjunto de archivos de dBASE que contienen información de cliente, podría denominar el origen de datos "Clientes". Las aplicaciones suelen mostrar los nombres de origen de datos para los usuarios elijan.<br /><br /> Agregar un origen de datos de archivo es ligeramente diferente de agregar orígenes de datos del sistema o de usuario. Para obtener más información, consulte el Administrador de orígenes de datos ODBC a archivo de ayuda.|  
 |Modificar orígenes de datos|Según sus requisitos, le resultará necesario volver a configurar los orígenes de datos. Puede restablecer las opciones, haga clic en **configurar** en cualquier cuadro de diálogo del programa de instalación de controlador.|  

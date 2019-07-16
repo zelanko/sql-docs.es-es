@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 71fa6ea4-007c-4c2b-b5af-2cec6ea79b58
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 22eb60ce88c0d7d0a623a90c202c77a9828e3a34
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 08997f610b00f22d436a5c91d34beb2a8fc2cc1d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944854"
 ---
 # <a name="affected-odbc-components"></a>Componentes de ODBC afectados
 Compatibilidad con versiones anteriores, describe cómo las aplicaciones, el Administrador de controladores y los controladores se ven afectados por la introducción de una nueva versión del Administrador de controladores. Esto afecta a las aplicaciones y controladores cuando cualquiera de ellas o ambas permanecen en la versión anterior. Hay, por lo tanto, tres tipos de compatibilidad con versiones anteriores que deben considerarse, como se muestra en la tabla siguiente.  

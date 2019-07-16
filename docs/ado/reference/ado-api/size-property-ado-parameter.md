@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: caad25759038fde0107fa7602394de2a8a01e38c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3796f772dedb961ec34eb0639034350989f99142
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931055"
 ---
 # <a name="size-property-ado-parameter"></a>Propiedad Size (parámetro de ADO)
 Indica el tamaño máximo, en bytes o caracteres, de un [parámetro](../../../ado/reference/ado-api/parameter-object.md) objeto.  

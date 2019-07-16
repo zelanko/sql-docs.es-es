@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b58a9463932e9761688fd744b972f50ad3286381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a058a2d0c5a808f29807744c6ba01f658bebc120
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924445"
 ---
 # <a name="recordset-dynamic-properties-in-xml"></a>Propiedades del conjunto de registros dinámicos en XML
 Actualmente, las siguientes propiedades específicas del proveedor de conjunto de registros (desde el motor de Cursor de cliente) se conservan en el formato XML:  

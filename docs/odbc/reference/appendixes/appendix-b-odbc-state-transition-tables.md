@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996243"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>Apéndice B: Tablas de transición de estado de ODBC
 Las tablas de este apéndice muestran cómo hacen que las transiciones del entorno, conexión, instrucción y Estados de descriptor funciones ODBC. El estado del entorno, conexión, instrucción o descriptor determina normalmente cuando se pueden llamar funciones que usan el tipo de identificador (entorno, conexión, instrucción o descriptor) correspondiente. Los Estados del entorno, conexión, instrucción y descriptor se superponen aproximadamente como se muestra en las siguientes ilustraciones. Por ejemplo, la superposición de conexión exacta Estados C5 y C6 y Estados de instrucción que s1 a través de S12 es depende del origen de datos, ya que las transacciones comienzan en momentos diferentes en distintos orígenes de datos, y depende del estado de descriptor D1i (implícitamente asignados descriptor) en el estado de la instrucción que está asociado el descriptor de, al estado D1e (asignado explícitamente descriptor) es independiente del estado de cualquier instrucción. Para obtener una descripción de cada estado, vea [transiciones de entorno](../../../odbc/reference/appendixes/environment-transitions.md), [transiciones de conexión](../../../odbc/reference/appendixes/connection-transitions.md), [transiciones de instrucción](../../../odbc/reference/appendixes/statement-transitions.md), y [transiciones de Descriptor ](../../../odbc/reference/appendixes/descriptor-transitions.md), más adelante en este apéndice.  
@@ -67,7 +66,7 @@ Las tablas de este apéndice muestran cómo hacen que las transiciones del entor
 |d|Necesita los datos. La función devuelve SQL_NEED_DATA.|  
 |e|Error. La función devuelve SQL_ERROR.|  
 |i|Fila no válida. El cursor se coloca en una fila en el resultado se había eliminados conjunto y la fila o se ha producido un error en una operación en la fila. Si existiera la matriz de Estados de fila, el valor de la matriz de estado de fila para la fila era SQL_ROW_DELETED o SQL_ROW_ERROR. (La matriz de Estados de fila está indicada por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR.)|  
-|nf|No se encontró. La función devuelve SQL_NO_DATA. Esto no es aplicable cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
+|NF|No se encontró. La función devuelve SQL_NO_DATA. Esto no es aplicable cuando **SQLExecDirect**, **SQLExecute**, o **SQLParamData** devuelve SQL_NO_DATA después de ejecutar una búsqueda instrucción update o delete.|  
 |np|No preparado. No se ha preparado la instrucción.|  
 |nr|No hay resultados. La instrucción no puede o no ha creado un conjunto de resultados.|  
 |o|Otra función. Otra función se estaba ejecutando de forma asincrónica.|  

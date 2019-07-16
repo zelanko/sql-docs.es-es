@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759709"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068955"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Esquemas de inventario de Access (AccessToSQL)
 Las siguientes secciones describen las tablas que se crean mediante SSMA al exportar esquemas de acceso a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -79,7 +78,7 @@ Metadatos de tabla se exportan a la **SSMA_Access_InventoryTables** tabla. Esta 
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|Identifica la base de datos que contiene esta tabla.|  
 |**TableId**|**uniqueidentifier**|Un GUID que identifica la tabla. Esta columna también es la clave principal de la tabla.|  
-|**TableName**|**nvarchar(4000)**|Nombre de la tabla.|  
+|**TableName**|**nvarchar(4000)**|El nombre de la tabla.|  
 |**RowsCount**|**int**|Número de filas de la tabla.|  
 |**ValidationRule**|**nvarchar(4000)**|La regla que define una entrada válida para la tabla. Si no existe ninguna regla de validación, el campo contendrá una cadena vacía.|  
 |**LinkedTable**|**nvarchar(4000)**|Otra tabla, si hay alguno, que se vincula con la tabla. Vincular tablas permite que las adiciones, eliminaciones y actualizaciones a la otra tabla mediante el uso de esta tabla.|  

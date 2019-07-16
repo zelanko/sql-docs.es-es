@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff759185-df41-4507-8d12-0921894ffbd9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f89b08d968b5f601c37f89b15196d6ef03db434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9d60695bd033bfc83e3a091490f27f9432782c0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926451"
 ---
 # <a name="visual-c-extensions"></a>Extensiones de Visual C++
 ## <a name="the-iadorecordbinding-interface"></a>La interfaz IADORecordBinding
@@ -87,7 +86,7 @@ Update(CADORecordBinding *binding)
  Para obtener más información, consulte [Apéndice A: Tipos de datos](https://msdn.microsoft.com/e3a0533a-2196-4eb0-a31e-92fe9556ada6), de referencia del programador OLE DB.
 
 ### <a name="begin-binding-entries"></a>Empezar a entradas de enlace
- **BEGIN_ADO_BINDING**(*Class*)
+ **BEGIN ADO Binding**(*clase*)
 
 ### <a name="fixed-length-data"></a>Datos de longitud fija
  **ADO Fixed Length Entry**(*Ordinal, tipo de datos, búfer, estado, modificar*)
@@ -104,9 +103,9 @@ Update(CADORecordBinding *binding)
 
  **ADO_VARIABLE_LENGTH_ENTRY2**(*Ordinal, tipo de datos, búfer, tamaño, estado, modificar*)
 
- **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, DataType, Buffer, Size, Length, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY3**(*Ordinal, tipo de datos, búfer, tamaño, longitud, modificar*)
 
- **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, DataType, Buffer, Size, Modify*)
+ **ADO_VARIABLE_LENGTH_ENTRY4**(*Ordinal, tipo de datos, búfer, el tamaño, modificar*)
 
 ### <a name="end-binding-entries"></a>Final de entradas de enlace
  **END_ADO_BINDING**()

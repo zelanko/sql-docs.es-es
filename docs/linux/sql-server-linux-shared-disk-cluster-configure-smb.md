@@ -4,17 +4,16 @@ description: ''
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 74b8779a4654f544f8085041adeafb14a59688bf
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: e93b7fac2f75758a0a95a4053ee0a989e410c70e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032324"
 ---
 # <a name="configure-failover-cluster-instance---smb---sql-server-on-linux"></a>Configurar la instancia de clúster de conmutación por error: SMB: SQL Server en Linux
 
@@ -22,7 +21,7 @@ ms.locfileid: "67833179"
 
 En este artículo se explica cómo configurar el almacenamiento SMB para una instancia de clúster de conmutación por error (FCI) en Linux. 
  
-En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\SERVERNAME\SHARENAME. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
+En el mundo que no sean Windows, SMB a menudo se conoce para compartir como un sistema de archivos de Internet común (CIFS) y se implementa a través de Samba. En el mundo de Windows, el acceso a un recurso compartido SMB se realiza de este modo: \\NOMBRESERVIDOR\NOMBRERECURSOCOMPARTIDO. Para las instalaciones de SQL Server basada en Linux, se debe montar el recurso compartido SMB como una carpeta.
 
 ## <a name="important-source-and-server-information"></a>Información importante de origen y el servidor
 

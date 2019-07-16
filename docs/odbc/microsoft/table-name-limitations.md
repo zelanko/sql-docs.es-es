@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d9843e4b-1d05-4d5a-9dc3-ee9ec59edb97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31c1703bc03a2881e7b9b96989b8949cc81aba7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 152a0aa1e8d92424b2f60c49f44888de7d3e528c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939775"
 ---
 # <a name="table-name-limitations"></a>Limitaciones de nombre de tabla
 Los nombres de tabla pueden contener cualquier carácter válido (por ejemplo, espacios en blanco). Si los nombres de tabla contienen cualquier carácter excepto letras, números y caracteres de subrayado, el nombre debe estar delimitado escribiéndolo en el back-comillas (').  

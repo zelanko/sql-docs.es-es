@@ -5,17 +5,16 @@ description: Obtenga información sobre cómo explorar y administrar la instanci
 ms.custom: seodec18
 author: yanancai
 ms.author: yanacai
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: azure-data-studio
-ms.openlocfilehash: 91e766fae5dca7a3d9e2dec56af17161d684e145
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87a0364555b9da22c89470965c281b3d939b6f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959714"
 ---
 # <a name="explore-and-manage-azure-sql-resources-with-azure-resource-explorer"></a>Explorar y administrar recursos de SQL Azure con Azure Resource Explorer
 
@@ -78,7 +77,7 @@ Una vez que inicia sesión en una cuenta de Azure, todas las suscripciones asoci
 
 2. Seleccione las casillas de las suscripciones que desea examinar y, a continuación, haga clic en la cuenta **Aceptar**.
 
-   ![Seleccione la suscripción](media/azure-resource-explorer/select-subscription.png)
+   ![Selección de la suscripción](media/azure-resource-explorer/select-subscription.png)
 
 ## <a name="explore-azure-sql-resources"></a>Explore los recursos de SQL Azure
 

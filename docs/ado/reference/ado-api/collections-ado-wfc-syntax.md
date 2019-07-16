@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 073f9a0e-c755-42dd-9f71-4647d68e331a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 943fdce253fe7197d5ac8793502bfe707cbb10ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b26c78f514ef6786f642c534b2621d0c81c71e51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919907"
 ---
 # <a name="collections-ado---wfc-syntax"></a>Colecciones (ADO - sintaxis WFC)
-**package com.ms.wfc.data**  
+**paquete com.ms.wfc.data**  
   
 ## <a name="parameters"></a>Parámetros  
   
@@ -45,7 +44,7 @@ public Parameter getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="fields"></a>Campos  
+## <a name="fields"></a>Fields  
   
 ### <a name="methods"></a>Métodos  
   
@@ -66,7 +65,7 @@ public com.ms.wfc.data.Field getItem(String s)
 public int getCount()  
 ```  
   
-## <a name="errors"></a>Errores  
+## <a name="errors"></a>Errors  
   
 ### <a name="methods"></a>Métodos  
   

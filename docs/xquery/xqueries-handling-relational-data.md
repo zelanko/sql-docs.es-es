@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9aa8b150a26e64d4a61efe80ab635110e540af33
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
+ms.openlocfilehash: ed4583b30ed1e4538a36079f9f7794704b819cda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51291024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946168"
 ---
 # <a name="xqueries-handling-relational-data"></a>Funciones de XQuery para controlar datos relacionales
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Especificar XQuery en una **xml** columna de tipo o una variable con uno de los [métodos del tipo de datos XML](../t-sql/xml/xml-data-type-methods.md). Estos incluyen **query()**, **value()**, **exist()**, o **modify()**. La función de XQuery se ejecuta en la instancia XML identificada en la consulta que genera el XML.  
+  Especificar XQuery en una **xml** columna de tipo o una variable con uno de los [métodos del tipo de datos XML](../t-sql/xml/xml-data-type-methods.md). Estos incluyen **query()** , **value()** , **exist()** , o **modify()** . La función de XQuery se ejecuta en la instancia XML identificada en la consulta que genera el XML.  
   
  EL XML generado mediante la ejecución de una XQuery puede incluir valores recuperados de otras columnas de conjunto de filas o variable de Transact-SQL. Para enlazar datos relacionales no XML con el XML resultante, SQL Server proporciona las siguientes pseudofunciones como extensiones de XQuery:  
   
@@ -36,7 +35,7 @@ ms.locfileid: "51291024"
   
  Puede usar estas extensiones de XQuery al especificar una XQuery en el **query()** método de la **xml** tipo de datos. Como resultado, el **query()** método puede generar XML que combine los datos desde XML y no-**xml** tipos de datos.  
   
- También puede usar estas funciones cuando se usa el **xml** métodos del tipo de datos **modify()**, **value()**, **query()**, y  **exist()** para exponer un valor relacional dentro de XML.  
+ También puede usar estas funciones cuando se usa el **xml** métodos del tipo de datos **modify()** , **value()** , **query()** , y  **exist()** para exponer un valor relacional dentro de XML.  
   
  Para obtener más información, consulte [función SQL:Column() (XQuery)](../xquery/xquery-extension-functions-sql-column.md) y [SQL:variable() (función de XQuery)](../xquery/xquery-extension-functions-sql-variable.md).  
   

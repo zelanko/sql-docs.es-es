@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934554"
 ---
 # <a name="automatic-tuning"></a>Ajuste automático
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ El ajuste automático [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] per
 
 El [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] supervisa las consultas que se ejecutan en la base de datos y automáticamente se mejora el rendimiento de la carga de trabajo. El [!INCLUDE[ssde_md](../../includes/ssde_md.md)] tiene un mecanismo de inteligencia integrada que puede ajustar y mejorar el rendimiento de las consultas mediante la adaptación dinámica de la base de datos para la carga de trabajo automáticamente. Hay dos características de ajuste automático que están disponibles:
 
- -  **Corrección automática de planes** identifica las consultas problemáticas planes de ejecución y corrige los problemas de rendimiento de planes de ejecución de la consulta. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (A partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **Corrección automática de planes** identifica las consultas problemáticas planes de ejecución y corrige los problemas de rendimiento de planes de ejecución de la consulta. **Se aplica a**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (a partir de [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) y [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **Administración automática de índices** identifica los índices que se deben agregar en la base de datos y los índices que se deben quitar. **Se aplica a**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>¿Por qué el ajuste automático?
@@ -96,7 +95,7 @@ Los planes forzados manualmente no se deberían forzar para siempre, porque el [
 
 En [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], puede encontrar las regresiones de elección del plan mediante vistas de consulta Store del sistema. En [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)], [!INCLUDE[ssde_md](../../includes/ssde_md.md)] detecta y muestra los posibles regresiones de elección de plan y las acciones recomendadas que deben aplicarse en el [sys.dm_db_tuning_recommendations &#40;Transact-SQL&#41; ](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) vista. La vista muestra información sobre el problema, la importancia del problema y los detalles como la consulta identificada, el identificador del plan con regresión, el identificador del plan que se usó como línea base para la comparación y el [!INCLUDE[tsql_md](../../includes/tsql-md.md)] instrucción que se puede ejecutar para corregir el problema.
 
-| Tipo | description | DATETIME | score | detalles | … |
+| type | description | datetime | score | detalles | ... |
 | --- | --- | --- | --- | --- | --- |
 | `FORCE_LAST_GOOD_PLAN` | Tiempo de CPU ha cambiado de ms de 4 a 14 ms | 3/17/2017 | 83 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
 | `FORCE_LAST_GOOD_PLAN` | Tiempo de CPU ha cambiado de 37 ms a ms 84 | 3/16/2017 | 26 | `queryId` `recommendedPlanId` `regressedPlanId` `T-SQL` |   |
@@ -189,5 +188,5 @@ Sin administración automática de índices, usuario tendría que consultar manu
  [Planes de ejecución](../../relational-databases/performance/execution-plans.md)    
  [Supervisión y optimización del rendimiento](../../relational-databases/performance/monitor-and-tune-for-performance.md)     
  [Herramientas de supervisión y optimización del rendimiento](../../relational-databases/performance/performance-monitoring-and-tuning-tools.md)     
- [Supervisar el rendimiento mediante el almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
+ [Supervisar el rendimiento mediante el Almacén de consultas](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)  
  [Asistente para optimización de consultas](../../relational-databases/performance/upgrade-dbcompat-using-qta.md)

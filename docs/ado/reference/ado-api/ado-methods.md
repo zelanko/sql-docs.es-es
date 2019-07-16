@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696856"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920925"
 ---
 # <a name="ado-methods"></a>Métodos de ADO
 
@@ -67,11 +66,11 @@ ms.locfileid: "66696856"
 |[Lectura](../../../ado/reference/ado-api/read-method.md)|Lee un número especificado de bytes a partir de un **Stream** objeto.|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|Lee un número especificado de caracteres de un texto **Stream** objeto.|  
 |[Actualizar](../../../ado/reference/ado-api/refresh-method-ado.md)|Actualiza los objetos de una colección para reflejar los objetos disponibles y específicos del proveedor.|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Actualiza los datos en un **Recordset** objeto volviendo a ejecutar la consulta en el que se basa el objeto.|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Actualiza los datos en el actual **Recordset** objeto, o **campos** colección de un **registro** objeto desde la base de datos subyacente.|  
+|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Actualiza los datos en un **Recordset** objeto volviendo a ejecutar la consulta en el que se basa el objeto.|  
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Actualiza los datos en el actual **Recordset** objeto, o **campos** colección de un **registro** objeto desde la base de datos subyacente.|  
 |[Guardar](../../../ado/reference/ado-api/save-method.md)|Guarda el **Recordset** en un archivo o **Stream** objeto.|  
 |[SaveToFile](../../../ado/reference/ado-api/savetofile-method.md)|Guarda el contenido binario de un **Stream** a un archivo.|  
-|[Seek](../../../ado/reference/ado-api/seek-method.md)|Busca el índice de un **Recordset** para localizar rápidamente la fila que coincide con los valores especificados y cambia la posición de fila actual para esa fila.|  
+|[Buscar](../../../ado/reference/ado-api/seek-method.md)|Busca el índice de un **Recordset** para localizar rápidamente la fila que coincide con los valores especificados y cambia la posición de fila actual para esa fila.|  
 |[SetEOS](../../../ado/reference/ado-api/seteos-method.md)|Establece la posición que es el final de la secuencia.|  
 |[SkipLine](../../../ado/reference/ado-api/skipline-method.md)|Omite una línea completa al leer una secuencia de texto.|  
 |[Stat](../../../ado/reference/ado-api/stat-method.md)|Obtiene información estadística sobre una secuencia abierta.|  

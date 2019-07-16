@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8b52f2cf665232c5e16677a257465d020c227c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7e5b9a973e5ccf04f92a2162d88ee25b7fa5242
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702735"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926792"
 ---
 # <a name="microsoft-cursor-service-for-ole-db-overview"></a>Servicio de cursores de Microsoft para información general OLE DB
 El servicio de cursores de Microsoft para OLE DB complementa las funciones de compatibilidad de cursor de proveedores de datos. Como resultado, el usuario percibe una funcionalidad relativamente uniforme en todos los proveedores de datos.
@@ -61,7 +60,7 @@ Recordset1.Properties.Item("Command Time out") = 50
 |-------------------|-----------------|
 |Recálculo automático (DBPROP_ADC_AUTORECALC)|Para conjuntos de registros creados con el servicio de forma de datos, este valor se indica con qué frecuencia se calculan las columnas calculadas y de agregado. El valor predeterminado (valor = 1) es volver a calcular cada vez que el servicio de forma de datos determina que los valores han cambiado. Si el valor es 0, solo se calculan las columnas calculadas o de agregado cuando la jerarquía se crea inicialmente.|
 |Tamaño del lote (DBPROP_ADC_BATCHSIZE)|Indica el número de instrucciones de actualización que pueden encontrarse por lotes antes de enviarse al almacén de datos. Las instrucciones de más de un lote, el menos ciclos de ida y a los datos de almacén.|
-|Cache Child Rows (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros creadas con el servicio de forma de datos, este valor indica si los conjuntos de registros secundarios se almacenan en una memoria caché para su uso posterior.|
+|Almacenar en caché las filas secundarias (DBPROP_ADC_CACHECHILDROWS)|Para conjuntos de registros creadas con el servicio de forma de datos, este valor indica si los conjuntos de registros secundarios se almacenan en una memoria caché para su uso posterior.|
 |Versión del motor de cursor (DBPROP_ADC_CEVER)|Indica la versión del servicio de Cursor que se va a usar.|
 |Mantener el estado de cambio (DBPROP_ADC_MAINTAINCHANGESTATUS)|Indica el texto del comando utilizado para volver a sincronizar un una o varias filas en una combinación de varias tablas.|
 |[Optimización](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Indica si se debe crear un índice. Cuando se establece en **True**, autoriza la creación de índices para mejorar la ejecución de ciertas operaciones temporal.|

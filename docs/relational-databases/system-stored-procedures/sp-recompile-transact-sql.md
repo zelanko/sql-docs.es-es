@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6192ca87-febd-4075-8199-14b4fa609b8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 67b4523b871e386fed62388a464a42ee6e9e10bb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0f9b72c1a97c17f975144ad0fd364260afab1fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688293"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002565"
 ---
 # <a name="sprecompile-transact-sql"></a>sp_recompile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_recompile [ @objname = ] 'object'
   
 ## <a name="arguments"></a>Argumentos  
  [ @objname=] '*objeto*'  
- El nombre calificado o no calificado de un desencadenador, tabla, vista, procedimiento almacenado o función definida por el usuario de la base de datos actual. *objeto* es **nvarchar(776)**, no tiene ningún valor predeterminado. Si *objeto* es el nombre de un desencadenador de función definido por el usuario, el procedimiento almacenado, desencadenador o procedimiento almacenado o función se volverá a compilar la próxima vez que se ejecute. Si *objeto* es el nombre de una tabla o vista, todos los procedimientos almacenados, desencadenadores o funciones definidas por el usuario que hacen referencia a la tabla o vista se recompilarán la próxima vez que se ejecuten.  
+ El nombre calificado o no calificado de un desencadenador, tabla, vista, procedimiento almacenado o función definida por el usuario de la base de datos actual. *objeto* es **nvarchar(776)** , no tiene ningún valor predeterminado. Si *objeto* es el nombre de un desencadenador de función definido por el usuario, el procedimiento almacenado, desencadenador o procedimiento almacenado o función se volverá a compilar la próxima vez que se ejecute. Si *objeto* es el nombre de una tabla o vista, todos los procedimientos almacenados, desencadenadores o funciones definidas por el usuario que hacen referencia a la tabla o vista se recompilarán la próxima vez que se ejecuten.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o un número distinto de cero (error)  

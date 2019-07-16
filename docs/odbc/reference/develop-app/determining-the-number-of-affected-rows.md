@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6a1bebf7d5cfb85e49fb0e382dacc4f4464054e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63262103"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039981"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>Determinar el número de filas afectadas
 Después de una aplicación actualiza, elimina o inserta filas, puede llamar a **SQLRowCount** para determinar el número de filas afectado. **SQLRowCount** devuelve este valor si las filas se han actualizado, eliminadas o insertado mediante la ejecución de un **actualización**, **eliminar**, o **insertar** instrucción, mediante la ejecución de un posicionadas update o delete, instrucción o al llamar a **SQLSetPos**.  

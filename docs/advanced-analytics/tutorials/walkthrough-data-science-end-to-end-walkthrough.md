@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0b1820e15975ca027af7b51e809ba920af3ffc82
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 45d587b4d62c33e944b15c6b951fa1323620c50e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961700"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>Tutorial: Desarrollo de SQL para científicos de datos de R
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ Dado que el tutorial está diseñado para presentar a los desarrolladores de R [
 
 + [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
 
-+ [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
++ [Base de datos de demostración de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
 
 + Un IDE de R como RStudio o la herramienta RGUI integrada que se incluye con R
 

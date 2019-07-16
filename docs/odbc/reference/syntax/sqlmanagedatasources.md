@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 529c503bc10d3ed0b69a4c280c7fa63e72893f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 819856a584c6133e28e222a704b720337f99cd9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536564"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018965"
 ---
 # <a name="sqlmanagedatasources"></a>SQLManageDataSources
 **Conformidad**  
@@ -49,7 +48,7 @@ BOOL SQLManageDataSources(
 ## <a name="returns"></a>Devuelve  
  **SQLManageDataSources** devuelve FALSE si *hwnd* no es un identificador de ventana válido. En caso contrario, devuelve TRUE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLManageDataSources** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

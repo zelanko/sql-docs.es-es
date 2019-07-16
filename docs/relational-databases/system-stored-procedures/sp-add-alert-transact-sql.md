@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493807"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942381"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @name = ] 'name'` El nombre de la alerta. El nombre aparece en el mensaje de correo electrónico o de buscapersonas enviado como respuesta a la alerta. Debe ser único y puede contener el porcentaje (**%**) caracteres. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
+`[ @name = ] 'name'` El nombre de la alerta. El nombre aparece en el mensaje de correo electrónico o de buscapersonas enviado como respuesta a la alerta. Debe ser único y puede contener el porcentaje ( **%** ) caracteres. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
 `[ @message_id = ] message_id` El número de error de mensaje que define la alerta. (Normalmente, corresponde a un número de error en la **sysmessages** tabla.) *message_id* es **int**, su valor predeterminado es **0**. Si *gravedad* se utiliza para definir la alerta, *message_id* debe ser **0** o NULL.  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  Al establecer este valor, es posible evitar, por ejemplo, que se envíen mensajes de correo electrónico no deseados cuando una alerta se produce repetidamente en un período de tiempo breve.  
   
-`[ @notification_message = ] 'notification_message'` Es un mensaje adicional opcional enviado al operador como parte del correo electrónico, **net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null. Especificar *notification_message* es útil para agregar notas especiales como procedimientos correctoras.  
+`[ @notification_message = ] 'notification_message'` Es un mensaje adicional opcional enviado al operador como parte del correo electrónico, **net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)** , su valor predeterminado es null. Especificar *notification_message* es útil para agregar notas especiales como procedimientos correctoras.  
   
 `[ @include_event_description_in = ] include_event_description_in` Es si la descripción de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error debe incluirse como parte del mensaje de notificación. *include_event_description_in*es **tinyint**, su valor predeterminado es **5** (correo electrónico y **net send**) y puede tener uno o varios de estos valores combinados con un **o** operador lógico.  
   
@@ -89,7 +88,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @database_name = ] 'database'` La base de datos en el que debe producirse el error para que se desencadene la alerta. Si *base de datos*no se proporciona, la alerta se activa independientemente de dónde se produjo el error. *base de datos* es **sysname**. No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La secuencia de caracteres que la descripción de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error debe ser similares. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *vent_description_pattern* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar los nombres de objeto (por ejemplo, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` La secuencia de caracteres que la descripción de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error debe ser similares. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *vent_description_pattern* es **nvarchar (100)** , su valor predeterminado es null. Este parámetro resulta útil para filtrar los nombres de objeto (por ejemplo, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` El número de identificación del trabajo de la tarea se ejecute en respuesta a esta alerta. *job_id* es **uniqueidentifier**, su valor predeterminado es null.  
   
@@ -105,14 +104,14 @@ sp_add_alert [ @name = ] 'name'
 |Elemento de formato|Descripción|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores: >, < o =.|  
+|*Comparador*|Uno de estos operadores: >, <, o =|  
 |*Valor*|Valor numérico del contador|  
   
 `[ @category_name = ] 'category'` El nombre de la categoría de alerta. *categoría* es **sysname**, su valor predeterminado es null.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` El espacio de nombres WMI para consultar los eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null. Solo se admiten espacios de nombres del servidor local.  
   
-`[ @wmi_query = ] 'wmi_query'` La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)**, su valor predeterminado es null.  
+`[ @wmi_query = ] 'wmi_query'` La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)** , su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

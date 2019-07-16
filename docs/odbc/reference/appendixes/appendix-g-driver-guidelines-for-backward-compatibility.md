@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 911cd335-f2c0-4d03-9739-1078308a678a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d78de7b3bd1d91351a4159847d6605e30cc1353d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a07e936617100c56f8fa873df1b490e1d61e3f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909956"
 ---
 # <a name="appendix-g-driver-guidelines-for-backward-compatibility"></a>Apéndice G: Directrices de controlador para la compatibilidad con versiones anteriores
 En este apéndice se proporciona información para los escritores de controladores que trabaja en ODBC 3. *x* controladores que necesitan compatibilidad con ODBC 2. *x* aplicaciones. Para obtener más información sobre la compatibilidad con versiones anteriores, consulte [compatibilidad con versiones anteriores y el cumplimiento de estándares](../../../odbc/reference/develop-app/backward-compatibility-and-standards-compliance.md).  

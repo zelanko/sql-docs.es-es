@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2a7ad7a6-f00d-4355-b0b5-d0ab957b0566
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 78e6ed78e8c61a9ce14e30f0eb286d55da0e63b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d6e649201b8bf23a1b696d574baea2f4b049e06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924531"
 ---
 # <a name="receiving-multiple-recordsets"></a>Recibir varios conjuntos de registros
 El [proveedor Microsoft OLE DB para SQL Server](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) permite devolver varias **Recordset** objetos para un único comando que contiene varias instrucciones SQL, una **Recordset**por la instrucción SQL. El orden en que el **Recordset**s devueltos siguen el orden en que las instrucciones SQL se colocan en el texto del comando.  

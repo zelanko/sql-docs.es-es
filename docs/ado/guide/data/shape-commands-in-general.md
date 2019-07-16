@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1fac7831-a187-4b15-9b43-aad380c5556c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44063e4f1994e01f3685fdb2c7c47a5c41d4998
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09fec8bd07d036fd6a93b8f6bcb54a51a68150fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704899"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924176"
 ---
 # <a name="shape-commands-in-general"></a>Comandos Shape en General
 La forma de datos define las columnas de una forma **Recordset**, las relaciones entre las entidades representadas por las columnas y la forma en que el **Recordset** se rellena con datos.  
@@ -28,7 +27,7 @@ La forma de datos define las columnas de una forma **Recordset**, las relaciones
   
 |Tipo de columna|Descripción|  
 |-----------------|-----------------|  
-|datos|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **Recordset**.|  
+|data|Campos de un **Recordset** devuelto por un comando de consulta a un proveedor de datos, tabla o en forma de anteriormente **Recordset**.|  
 |Capítulo|Una referencia a otro **Recordset**, denominado un *capítulo*. Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el *secundarios* es el **Recordset** representado por el capítulo.|  
 |agregado|El valor de la columna se deriva ejecutando una *función de agregado* en todas las filas o una columna de todas las filas de un elemento secundario **Recordset**. (Vea las funciones de agregado en el tema siguiente, [las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md).)|  
 |Expresión calculada|El valor de la columna se deriva calculando un Visual Basic para la expresión de aplicaciones en las columnas de la misma fila de la **Recordset**. La expresión es el argumento a la función CALC. (Vea expresión calculada en el tema siguiente, [las funciones de agregado, la función CALC y la palabra clave NEW](../../../ado/guide/data/aggregate-functions-the-calc-function-and-the-new-keyword.md) y en [Visual Basic para aplicaciones de funciones](../../../ado/guide/data/visual-basic-for-applications-functions.md).)|  

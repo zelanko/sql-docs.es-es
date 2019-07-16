@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: b987c2b9-998a-4a5f-a82d-280dc6963cbe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a64e683ebe83da31f678f1a5ec1e6c97abf1e601
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5e6a6c91cb31c9c3036bc95239f0aff9c75fda7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936976"
 ---
 # <a name="sysdmauditactions-transact-sql"></a>sys.dm_audit_actions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -35,17 +34,17 @@ ms.locfileid: "47824813"
 |-----------------|---------------|-----------------|  
 |**action_id**|**varchar(4)**|Id. de la acción de auditoría. Relacionados con la **action_id** valor escrito en cada registro de auditoría. Acepta valores NULL. Es NULL para los grupos de auditoría.|  
 |**action_in_log**|**bit**|Indica si una acción se puede escribir en un registro de auditoría. Los valores son los siguientes:<br /><br /> 1 = Sí<br /><br /> 0 = No|  
-|**Nombre**|**sysname**|Nombre de la acción de auditoría o del grupo de acciones de auditoría. No admite valores NULL.|  
+|**name**|**sysname**|Nombre de la acción de auditoría o del grupo de acciones de auditoría. No admite valores NULL.|  
 |**class_desc**|**nvarchar(120)**|El nombre de la clase del objeto al que se aplica la acción de auditoría. Puede ser cualquiera de los objetos de ámbito de servidor, de base de datos o de esquema, pero no incluye los objetos de esquema. No admite valores NULL.|  
 |**parent_class_desc**|**nvarchar(120)**|Nombre de la clase primaria del objeto descrito por class_desc. Es NULL si class_desc es Server.|  
 |**covering_parent_action_name**|**nvarchar(120)**|Nombre de la acción de auditoría o del grupo de acciones de auditoría que contiene la acción de auditoría descrita en esta fila. Se usa para crear una jerarquía de acciones, incluyendo acciones de cobertura. Acepta valores NULL.|  
-|**configuration_level**|**nvarchar (10)**|Indica que la acción o el grupo de acciones especificado en esta fila se puede configurar en el nivel de grupo o de acción. Es NULL si la acción no se puede configurar.|  
+|**configuration_level**|**nvarchar(10)**|Indica que la acción o el grupo de acciones especificado en esta fila se puede configurar en el nivel de grupo o de acción. Es NULL si la acción no se puede configurar.|  
 |**containing_group_name**|**nvarchar(120)**|El nombre del grupo de auditoría que contiene la acción especificada. Es NULL si el valor del nombre es un grupo.|  
   
 ## <a name="permissions"></a>Permisos  
  Las entidades de seguridad deben tener **seleccione** permiso. De forma predeterminada, dicho permiso se concede a Public.  
   
- [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
+ [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]. Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   

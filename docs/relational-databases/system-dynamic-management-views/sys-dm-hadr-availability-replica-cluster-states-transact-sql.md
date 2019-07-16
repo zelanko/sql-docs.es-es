@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 2e0dd780-6a71-4f4b-b7f7-6e063bec71d6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5e39bd1072f3de3448381d9ac457ef8ab4459184
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5021a2074d49d7a8b1da88d82c52b175f16ff3c3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900637"
 ---
 # <a name="sysdmhadravailabilityreplicaclusterstates-transact-sql"></a>sys.dm_hadr_availability_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila por cada siempre en réplica de disponibilidad (independientemente de su estado de unión) de todos los grupos de AlwaysOn disponibilidad (independientemente de la ubicación de réplica) en el clúster de clústeres de conmutación por error de servidor de Windows (WSFC).  
+  Devuelve una fila para cada réplica de disponibilidad AlwaysOn (independientemente de su estado de unión) de todos los Grupos de disponibilidad AlwaysOn (con independencia de la ubicación de la réplica) del clúster del servicio de clústeres de conmutación por error de Windows Server (WSFC).  
   
 ##  <a name="connected_state"></a>  
   

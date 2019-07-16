@@ -1,5 +1,5 @@
 ---
-title: OPENROWSET (DMX) | Documentos de Microsoft
+title: OPENROWSET (DMX) | Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 43431be3f68bc7146d9e5a6cc137100ec384c960
-ms.sourcegitcommit: 8f0faa342df0476884c3238e36ae3d9634151f87
+ms.openlocfilehash: 8be3fe8cbf30121ec2895f59306c925a422d5c39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/07/2018
-ms.locfileid: "34842118"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938122"
 ---
 # <a name="ltsource-data-querygt---openrowset"></a>&lt;consulta de origen de datos&gt; -OPENROWSET
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -38,8 +37,8 @@ OPENROWSET(provider_name,provider_string,query_syntax)
  *query_syntax*  
  Sintaxis de consulta que devuelve un conjunto de filas.  
   
-## <a name="remarks"></a>Notas  
- El proveedor de minería de datos, establecerá una conexión con el objeto de origen de datos mediante el uso de *NombreProveedor* y *provider_string,* y se ejecutará la consulta especificada en *query_syntax* para recuperar el conjunto de filas del origen de datos.  
+## <a name="remarks"></a>Comentarios  
+ El proveedor de minería de datos establecerá una conexión con el objeto de origen de datos mediante el uso de *provider_name* y *provider_string,* y ejecutará la consulta especificada en *query_syntax* para recuperar el conjunto de filas del origen de datos.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo puede usarse en una instrucción PREDICTION JOIN para recuperar datos de la base de datos [!INCLUDE[ssSampleDBDWobject](../includes/sssampledbdwobject-md.md)] mediante una instrucción SELECT de [!INCLUDE[tsql](../includes/tsql-md.md)].  

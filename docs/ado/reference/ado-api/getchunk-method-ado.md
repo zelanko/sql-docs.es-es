@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc268e22-205b-44a3-9038-ffed51e23e10
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c5dc09043d780c2a743059773eed56e16a799bf5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43c5fef08d22364b9842c58fc82d46ba4bfa00bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694942"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918565"
 ---
 # <a name="getchunk-method-ado"></a>Método GetChunk (ADO)
 Devuelve todo o parte del contenido de un texto grande o datos binarios [campo](../../../ado/reference/ado-api/field-object.md) objeto.  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9a545233-1b0a-488a-a1ec-c33aa608dcc1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 65f9070aabc6f64e1fc327abe67e595696c04423
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5c12a2ddb97c6d599e5adfc57277e0a5f64288e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63266458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060194"
 ---
 # <a name="project-settingsloading-system-objects-db2tosql"></a>Configuración (cargar objetos del sistema) del proyecto (DB2ToSQL)
 La página cargar objetos del sistema de la **configuración del proyecto** cuadro de diálogo le permite especificar qué objetos del sistema DB2 SSMA convierte y se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,11 +28,11 @@ Está disponible en el panel de objetos del sistema al cargar el **configuració
 ## <a name="default-settings"></a>Configuración predeterminada  
 Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona sólo los objetos del sistema utilizadas con frecuencia, como se muestra en la lista siguiente:  
   
--   SYS.DBMS_OUTPUT  
+-   SYS. DBMS_OUTPUT  
   
 -   SYS.DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   SYS. DBMS_UTILITY  
   
 -   SYS. ESTÁNDAR  
   
@@ -43,7 +42,7 @@ Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. P
   
 -   SYS.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   SYS. DBMS_SESSION  
   
 Si los objetos de DB2 que hacen referencia a objetos del sistema adicionales, debe seleccionar esos objetos. Si no selecciona los objetos del sistema que hacen referencia los objetos de base de datos de DB2, SSMA va a notificar errores de conversión. Si recibe errores de conversión que se debe a que faltan los objetos del sistema, seleccione los objetos que faltan en este cuadro de diálogo. A continuación, puede repetir la conversión según sea necesario.  
   

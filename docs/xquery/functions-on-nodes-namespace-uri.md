@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a21c38506d44c687d639b13ca452e155a97adcef
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 05412c69aa121b9de14f2bab16555db2a8a4fdb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255110"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929943"
 ---
 # <a name="functions-on-nodes---namespace-uri"></a>Funciones usadas en nodos: namespace-uri
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ SELECT @x.query('namespace-uri(/ROOT[1])')
   
  Dado que el QName especificado no tiene la parte del URI del espacio de nombres sino únicamente la parte del nombre local, el resultado es una cadena de longitud cero.  
   
- La siguiente consulta se especifica en las instrucciones que se ha escrito **xml** columna. La expresión `namespace-uri(/AWMI:root[1]/AWMI:Location[1])` devuelve el URI del espacio de nombres del primer elemento secundario <`Location`> del elemento <`root`>.  
+ La siguiente consulta se especifica en las instrucciones que se ha escrito **xml** columna. La expresión, `namespace-uri(/AWMI:root[1]/AWMI:Location[1])`, devuelve el espacio de nombres URI de los primeros <`Location`> elemento secundario de la <`root`> elemento.  
   
 ```  
 SELECT Instructions.query('  
@@ -99,7 +98,7 @@ WHERE ProductModelID=19
 ...  
 ```  
   
- Puede cambiar el URI del espacio de nombres de la consulta anterior por `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. En este caso, recibirá todos los elementos secundarios del nodo del elemento <`ProductDescription`> cuya parte del URI del espacio de nombres del QName expandido es `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
+ Puede cambiar el URI del espacio de nombres de la consulta anterior por `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`. A continuación, recibirá todos los secundarios del nodo de elemento de la <`ProductDescription`> cuya parte URI de espacio de nombres de QName expandido es el elemento `https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelWarrAndMain`.  
   
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones:  

@@ -16,20 +16,19 @@ helpviewer_keywords:
 ms.assetid: c6bad147-1449-4e20-a42e-b51aed76963c
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cd8520a26b28c16876163cf8f2c0f7a57b3c33ad
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0a4e0e62121d289f9eb897c79abb2991a57890a4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043051"
 ---
 # <a name="cdcfncdcgetallchangesltcaptureinstancegt--transact-sql"></a>cdc.fn_cdc_get_all_changes_&lt;capture_instance&gt;  (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Devuelve una fila para cada cambio aplicado a la tabla de origen dentro del intervalo del número de secuencia de registro (LSN) especificado. Si una fila de origen ha tenido muchos cambios durante el intervalo, cada cambio se representa en el conjunto de resultados devuelto. Además de devolver los datos del cambio, cuatro columnas de metadatos proporcionan la información que necesita aplicar los cambios a otro origen de datos. Las opciones de filtrado de filas rigen el contenido de las columnas de metadatos y de las filas devueltas en el conjunto de resultados. Cuando se especifica la opción de filtro de filas 'all', cada cambio tiene exactamente una fila para identificar el cambio. Cuando se especifica la opción 'all update old', las operaciones de actualización se representan como dos filas: una que contiene los valores de las columnas capturadas antes de la actualización y otra que contiene los valores de las columnas capturadas después de la actualización.  
   
- Esta función de enumeración se crea cuando se habilita una tabla de origen para la captura de datos modificados. Usa el formato y se obtiene el nombre de función **cdc.fn_cdc_get_all_changes_**_capture_instance_ donde *capture_instance* es el valor especificado para la captura instancia de la tabla de origen está habilitada para la captura de datos modificados.  
+ Esta función de enumeración se crea cuando se habilita una tabla de origen para la captura de datos modificados. Usa el formato y se obtiene el nombre de función **cdc.fn_cdc_get_all_changes_** _capture_instance_ donde *capture_instance* es el valor especificado para la captura instancia de la tabla de origen está habilitada para la captura de datos modificados.  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -47,12 +46,12 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumentos  
  *from_lsn*  
- Establezca el valor LSN que representa el extremo inferior del intervalo LSN para incluir en el resultado. *from_lsn* es **binary (10)**.  
+ Establezca el valor LSN que representa el extremo inferior del intervalo LSN para incluir en el resultado. *from_lsn* es **binary (10)** .  
   
  Solo las filas de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) cambiar la tabla con un valor en **__ $start_lsn** mayor o igual a *from_lsn* se incluyen en el conjunto de resultados.  
   
  *to_lsn*  
- El valor LSN que representa el extremo inferior del rango de LSN que se incluirá en el conjunto de resultados. *to_lsn* es **binary (10)**.  
+ El valor LSN que representa el extremo inferior del rango de LSN que se incluirá en el conjunto de resultados. *to_lsn* es **binary (10)** .  
   
  Solo las filas de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) cambiar la tabla con un valor en **__ $start_lsn** menor o igual a *from_lsn* o igual que *to_lsn* se incluyen en el conjunto de resultados.  
   
@@ -83,7 +82,7 @@ cdc.fn_cdc_get_all_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
 ## <a name="remarks"></a>Comentarios  
  Si el intervalo de LSN especificado no cae dentro de la escala de tiempo del seguimiento de cambios de la instancia de captura, la función devuelve el error 208 ("Se ha especificado un número insuficiente de argumentos para el procedimiento o la función cdc.fn_cdc_get_all_changes".).  
   
- Las columnas de tipo de datos **imagen**, **texto**, y **ntext** siempre se les asigna un valor NULL al valor **__ $operation** = 1 o **__ $ operación** = 3. Las columnas de tipo de datos **varbinary (max)**, **varchar (max)**, o **nvarchar (max)** se asignan un valor NULL al valor **__ $operation** = 3 a menos que la columna cambie durante la actualización. Cuando **__ $operation** = 1, estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que están incluidas en una instancia de captura siempre tienen el valor NULL.  
+ Las columnas de tipo de datos **imagen**, **texto**, y **ntext** siempre se les asigna un valor NULL al valor **__ $operation** = 1 o **__ $ operación** = 3. Las columnas de tipo de datos **varbinary (max)** , **varchar (max)** , o **nvarchar (max)** se asignan un valor NULL al valor **__ $operation** = 3 a menos que la columna cambie durante la actualización. Cuando **__ $operation** = 1, estas columnas se les asigna su valor en el momento de la eliminación. Las columnas calculadas que están incluidas en una instancia de captura siempre tienen el valor NULL.  
   
 ## <a name="examples"></a>Ejemplos  
  Varias [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] existen plantillas que muestran cómo utilizar las funciones de consulta de captura de datos modificados. Estas plantillas están disponibles en el **vista** menú [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Para obtener más información, consulte [Explorador de plantillas](../../ssms/template/template-explorer.md).  

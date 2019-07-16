@@ -2,19 +2,18 @@
 title: Mensajes de error - almacenamiento de datos paralelos | Microsoft Docs
 description: Mensajes de error de almacenamiento de datos (PDW) paralelo notifican los errores y problemas detectados por los componentes PDW y también pueden incluir errores de SQL Server que se exponen a través de PDW. Estos mensajes de error utilizan una sintaxis coherente para presentar información. Descripción de esta sintaxis le permitirá identificar y corregir problemas.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3ffc7a097845f4652f56d82c572ecfab868d33f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78c5cd8dab37ac9cb32de794861c68e6c8085747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63042601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960968"
 ---
 # <a name="error-messages-in-parallel-data-warehouse"></a>Mensajes de error en el almacenamiento de datos paralelos
 

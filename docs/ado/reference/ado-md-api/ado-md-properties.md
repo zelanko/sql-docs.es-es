@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709997"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930550"
 ---
 # <a name="ado-md-properties"></a>Propiedades de ADO MD
 
@@ -45,7 +44,7 @@ ms.locfileid: "66709997"
 |[Ordinal (posición)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|Identifica una posición a lo largo de un eje.|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|Indica al miembro que es el elemento primario del miembro actual en una jerarquía.|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|Indica si el elemento primario de este miembro de posición es el mismo que el elemento primario del miembro inmediatamente anterior.|  
-|[Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica el origen de datos en el conjunto de celdas.|  
+|[Origen](../../../ado/reference/ado-md-api/source-property-ado-md.md)|Indica el origen de datos en el conjunto de celdas.|  
 |[Estado](../../../ado/reference/ado-md-api/state-property-ado-md.md)|Indica el estado actual del conjunto de celdas.|  
 |[Tipo](../../../ado/reference/ado-md-api/type-property-ado-md.md)|Indica el tipo del miembro actual.|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|Indica un nombre único para el objeto actual.|  

@@ -5,17 +5,16 @@ description: Este tutorial muestra cómo consultar datos de Oracle desde un clú
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-manager: jroth
 ms.date: 12/12/2018
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8da0248eb4e31e25503efad9797f4c58243f3b5e
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957711"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>Tutorial: Consultas de Oracle desde un clúster de macrodatos de SQL Server
 

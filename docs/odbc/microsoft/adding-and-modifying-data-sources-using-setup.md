@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 54b2d61d-6ce5-45af-a776-e03180470ecf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 953563285d3c62a8523079a604cf607f2e0edf62
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 621d10c3c602b2f406461a24e53b2302e45835eb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63219109"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901403"
 ---
 # <a name="adding-and-modifying-data-sources-using-setup"></a>Agregar y modificar orígenes de datos mediante el programa de instalación
 > [!IMPORTANT]  

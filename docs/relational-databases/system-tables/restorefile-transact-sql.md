@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7414ca1c7d3ef3455aeb3b41c677ebc946a0e3d3
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 788d0296087ee8980be0b0ecf56c43f09fb3780c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47806822"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910190"
 ---
 # <a name="restorefile-transact-sql"></a>restorefile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47806822"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|Número de identificación único que identifica la operación de restauración correspondiente. Referencias **RestoreHistory (restore_history_id)**.|  
+|**restore_history_id**|**int**|Número de identificación único que identifica la operación de restauración correspondiente. Referencias **RestoreHistory (restore_history_id)** .|  
 |**file_number**|**numeric(10,0)**|Número de identificación de archivo del archivo restaurado. Este número debe ser único en cada base de datos. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  
 |**destination_phys_drive**|**nvarchar(260)**|Unidad o partición en la que se ha restaurado el archivo. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  
 |**destination_phys_name**|**nvarchar(260)**|Nombre de archivo, sin la información de unidad o partición, en el que se ha restaurado el archivo. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  

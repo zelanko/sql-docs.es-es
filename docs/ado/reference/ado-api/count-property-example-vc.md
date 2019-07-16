@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 54dfb1dd-636c-4560-8a3f-32b1f6aa07d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08ef2f2f9989f9b8dc8dc33b94c73f6ab579eab5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73557703a1375128a141de8194929f9284b86930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919336"
 ---
 # <a name="count-property-example-vc"></a>Ejemplo de la propiedad Count (VC ++)
 Este ejemplo se muestra el [recuento](../../../ado/reference/ado-api/count-property-ado.md) propiedad con dos colecciones en la ***empleado*** base de datos. La propiedad obtiene el número de objetos de cada colección y establece el límite superior para los bucles que enumerar estas colecciones.  

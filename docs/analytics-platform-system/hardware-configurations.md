@@ -2,19 +2,18 @@
 title: Las configuraciones de hardware - Analytics Platform System | Microsoft Docs
 description: El hardware de dispositivo de Analytics Platform System (APS) está diseñado con unidades escalables de forma que comprar la cantidad adecuada de procesamiento y almacenamiento según sus requisitos empresariales. El dispositivo escala almacenamiento para almacenamiento de datos paralelos de unos pocos terabytes a más de 6 petabytes de datos.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960894"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Configuraciones de hardware - Analytics Platform System
 El hardware de Analytics Platform System (APS) está diseñado con unidades escalables de forma que comprar la cantidad adecuada de procesamiento y almacenamiento según sus requisitos empresariales. El dispositivo se puede escalar almacenamiento para SQL Server paralelo datos Wareouse (PDW) de unos pocos Terabytes a más de 6 Petabytes de datos.  

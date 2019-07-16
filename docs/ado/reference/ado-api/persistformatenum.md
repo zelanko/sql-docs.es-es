@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7167067d0dc5942bc898c4cc2f01cad2a44ec559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a26fd370e80cb288ee62b0fc53ed6670300172e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703475"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917611"
 ---
 # <a name="persistformatenum"></a>PersistFormatEnum
 Especifica el formato en el que se va a guardar un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -34,7 +33,7 @@ Especifica el formato en el que se va a guardar un [Recordset](../../../ado/refe
 |**adPersistProviderSpecific**|2|Indica que el proveedor se conservará el **Recordset** mediante su propio formato.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

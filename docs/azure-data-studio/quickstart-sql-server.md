@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959395"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar con SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 En este tutorial rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a SQL Server y, a continuación, usar instrucciones Transact-SQL (T-SQL) para crear el *TutorialDB* utilizados en [!INCLUDE[name-sos](../includes/name-sos-short.md)] tutoriales.
@@ -48,13 +47,13 @@ Si no tiene acceso a un servidor SQL Server, seleccione su plataforma desde los 
     - **Nombre de usuario:** Nombre de usuario de SQL Server  
     - **Contraseña:** Contraseña de SQL Server  
     - **Nombre de la base de datos:** deje este campo en blanco 
-    - **Grupo de servidores:** \<Default\>  
+    - **Grupo de servidores:** \<Valor predeterminado\>  
 
    ![Nueva pantalla de conexión](media/quickstart-sql-server/new-connection-screen.png)
 
 
 
-## <a name="create-a-database"></a>Crear una base de datos
+## <a name="create-a-database"></a>Creación de una base de datos
 
 Los pasos siguientes crean una base de datos denominada **TutorialDB**:
 

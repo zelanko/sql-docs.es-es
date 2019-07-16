@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006554"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Exportación de un inventario de Access (AccessToSQL)
 Si tiene varias bases de datos de Access y no está seguro de cuáles para migrar a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede exportar un inventario de todas las bases de datos de Access en un proyecto. A continuación, puede revisar y consultar los metadatos de inventario para determinar qué bases de datos y objetos dentro de esas bases de datos para migrar. Este inventario le permite rápidamente buscar respuestas a preguntas como las siguientes:  
@@ -91,7 +90,7 @@ Para obtener más información sobre cómo crear proyectos, vea [crear y adminis
   
     Puede usar el **seleccionar todo** y **Borrar todo** botones en la parte superior de la lista para seleccionar o borrar todas las bases de datos. También puede presionada la tecla CTRL para seleccionar varias filas, o mantenga presionada la tecla MAYÚS hacia abajo para seleccionar un intervalo de filas.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página de comprobación, haga clic en **finalizar**.  
   

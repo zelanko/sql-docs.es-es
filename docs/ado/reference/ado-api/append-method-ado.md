@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f8a9bbed-ba9c-4698-945d-317ad22d2e92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987b7d7006ff448a92eee1926a2c60c3b7ae039e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17fa0ff30e8dcdbf7ea67080f17c3e066bba8605
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696681"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920672"
 ---
 # <a name="append-method-ado"></a>Append (método) (ADO)
 Anexa un objeto a una colección. Si la colección es [campos](../../../ado/reference/ado-api/fields-collection-ado.md), un nuevo [campo](../../../ado/reference/ado-api/field-object.md) se puede crear el objeto antes de se anexa a la colección.  
@@ -35,7 +34,7 @@ fields.Append Name, Type, DefinedSize, Attrib, FieldValue
 ```  
   
 #### <a name="parameters"></a>Parámetros  
- *collection*  
+ *colección*  
  Un objeto de colección.  
   
  *fields*  

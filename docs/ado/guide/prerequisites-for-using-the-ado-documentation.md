@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 557ee99f-3cc8-4578-9694-6b1b0788cfdd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d3132a1ac1ca146ecd4920ed907b3489da2354f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bddd5570faefba99c451fc60a7448cbfb7e3216
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923125"
 ---
 # <a name="prerequisites-for-using-the-ado-documentation"></a>Requisitos previos para usar la documentación de ADO
 Para usar esta documentación, debe tener, como mínimo, cierta experiencia en desarrollo de aplicaciones con Microsoft Visual Basic, porque la mayoría de los ejemplos de la guía se escribe en este idioma. También hay algunos ejemplos escritos en Microsoft Visual C++, Java, Visual Basic Scripting Edition (VBScript) y Microsoft JScript.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ef988dbc-dd0b-4132-80ab-81eebec1cffe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b125eeaab0ea833a801123ea4540f076696894d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9852aaaf0b719bfa03736997959d76110dff4d6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997507"
 ---
 # <a name="sphelpreplicationoption-transact-sql"></a>sp_helpreplicationoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**transactional**|Se devuelve un conjunto de resultados cuando se habilita la replicación transaccional.|  
+|**Transaccional**|Se devuelve un conjunto de resultados cuando se habilita la replicación transaccional.|  
 |**merge**|Se devuelve un conjunto de resultados cuando se habilita la replicación de mezcla.|  
 |NULL (predeterminado)|No se devuelve ningún conjunto de resultados.|  
   
@@ -50,10 +49,10 @@ sp_helpreplicationoption [ [ @optname =] 'option_name' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **transactional**<br /><br /> **merge**|  
+|**optname**|**sysname**|Es el nombre de la opción de replicación y puede ser uno de los valores siguientes:<br /><br /> **Transaccional**<br /><br /> **merge**|  
 |**value**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**major_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
-|**minor_version**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**versión_secundaria**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**revision**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**install_failures**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   

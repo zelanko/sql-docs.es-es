@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d64f309-2a6e-4ad1-a6b5-e81145549c56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2391c01d93c876562ab9d870ab0dba22bf74cea5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c69f784c2ce7c29cb49c81bf23f34a9cad12089
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63189018"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913621"
 ---
 # <a name="executing-positioned-update-and-delete-statements"></a>Ejecución de instrucciones de eliminación y actualización Positioned
 > [!IMPORTANT]  
@@ -62,6 +61,6 @@ ms.locfileid: "63189018"
 |Instrucción que se utiliza|Valor de matriz de estado de fila|Valores de<br /><br /> búferes del conjunto de filas|Valores de<br /><br /> búferes de memoria caché|  
 |--------------------|-------------------------------|----------------------------------|---------------------------------|  
 |Actualización posicionada|SQL_ROW_UPDATED|Nuevos valores [1]|Nuevos valores [1]|  
-|Delete posicionada|SQL_ROW_DELETED|Valores antiguos|Valores antiguos|  
+|Delete posicionada|SQL_ROW_DELETED|Valores anteriores|Valores anteriores|  
   
  [1] en la aplicación debe actualizar los valores de los búferes de conjunto de filas antes de ejecutar la instrucción de actualización por posición; Después de ejecutar la instrucción de actualización por posición, la biblioteca de cursores copia los valores de los búferes de conjunto de filas en su memoria caché.

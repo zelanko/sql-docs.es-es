@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc debug reference
+title: referencia de depuración de bdc mssqlctl
 titleSuffix: SQL Server big data clusters
 description: Artículo de referencia de comandos de depuración mssqlctl bdc.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 20257039a40594cd592bcc4d4f6050027d8858ea
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 9e7fc8e54a1473803dbeacb9c671b060b8ff8b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958103"
 ---
 # <a name="mssqlctl-bdc-debug"></a>depuración de bdc mssqlctl
 
@@ -26,9 +25,9 @@ El siguiente artículo proporciona la referencia para la **depuración bdc** com
 ## <a name="commands"></a>Comandos:
 |     |     |
 | --- | --- |
-[mssqlctl bdc debug copy-logs](#mssqlctl-bdc-debug-copy-logs) | Copiar los registros.
-[mssqlctl bdc debug dump](#mssqlctl-bdc-debug-dump) | Volcado del registro de desencadenador.
-## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc debug copy-logs
+[mssqlctl bdc Depurar registros de copia](#mssqlctl-bdc-debug-copy-logs) | Copiar los registros.
+[volcado de depuración de bdc mssqlctl](#mssqlctl-bdc-debug-dump) | Volcado del registro de desencadenador.
+## <a name="mssqlctl-bdc-debug-copy-logs"></a>mssqlctl bdc Depurar registros de copia
 Copiar los registros de depuración desde el clúster de datos grande: se requiere la configuración de kube en el sistema.
 ```bash
 mssqlctl bdc debug copy-logs --namespace -n 
@@ -60,7 +59,7 @@ Formato de salida.  Los valores permitidos: json, jsonc, table y tsv.  Predeterm
 Cadena de consulta de JMESPath. Consulte [ http://jmespath.org/ ](http://jmespath.org/]) para obtener más información y ejemplos.
 #### `--verbose`
 Aumenta el nivel de detalle de registro. Use --debug para obtener registros de depuración completos.
-## <a name="mssqlctl-bdc-debug-dump"></a>mssqlctl bdc debug dump
+## <a name="mssqlctl-bdc-debug-dump"></a>volcado de depuración de bdc mssqlctl
 Desencadenar el registro de volcado de memoria y copiarla desde el contenedor: se requiere la configuración de kube en el sistema.
 ```bash
 mssqlctl bdc debug dump --namespace -n 

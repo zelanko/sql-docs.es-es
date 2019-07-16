@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8c56fb69-ca04-4aba-b55a-64ae216c492d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b6850f15718cb810b5428f75980983fc4a8a0a88
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 164092d91a6450815662c5022ac6eb62941e3b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946224"
 ---
 # <a name="type-system---sequence-type-matching"></a>Sistema de tipo: Equiparación de tipos de secuencia
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "54255250"
 ### <a name="example-determining-whether-a-sequence-is-empty"></a>Ejemplo: Determinar si una secuencia está vacía  
  El **empty() de** tipo de secuencia se puede usar en una expresión de tipo de secuencia para determinar si la secuencia devuelta por la expresión especificada es una secuencia vacía.  
   
- En el ejemplo siguiente, el esquema XML permite que el elemento <`root`> tenga el atributo nillable:  
+ En el ejemplo siguiente, el esquema XML permite la <`root`> elemento tenga el atributo nillable:  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -52,7 +51,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Ahora, si una instancia XML con tipo especifica un valor para el elemento <`root`>, `instance of empty()` devuelve False.  
+ Ahora, si una instancia XML con tipo especifica un valor para el <`root`> elemento, `instance of empty()` devuelve False.  
   
 ```  
 DECLARE @var XML(SC1)  
@@ -62,7 +61,7 @@ SELECT @var.query('data(/root[1]) instance of  empty() ')
 GO  
 ```  
   
- Si el elemento <`root`> tiene el atributo nillable en la instancia, su valor es una secuencia vacía e `instance of empty()` devuelve True.  
+ Si el <`root`> elemento tiene el atributo nillable en la instancia, su valor es una secuencia vacía y el `instance of empty()` devuelve True.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -113,7 +112,7 @@ GO
 ```  
   
 ### <a name="example-cardinality-in-sequence-expressions"></a>Ejemplo: Cardinalidad en expresiones de secuencia  
- Este ejemplo ilustra el efecto de la cardinalidad en una expresión de secuencia. El siguiente esquema XML define un elemento <`root`> de tipo byte que es nillable.  
+ Este ejemplo ilustra el efecto de la cardinalidad en una expresión de secuencia. El siguiente esquema XML define un <`root`> elemento que es de tipo byte y es "nillable".  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -132,7 +131,7 @@ SELECT @var.query('data(/root[1]) instance of  xs:byte ')
 GO  
 ```  
   
- Si se convierte el elemento <`root`> en nillable, el valor es una secuencia vacía. En otras palabras, la expresión, `/root[1]`, devuelve una secuencia vacía. En consecuencia, `instance of xs:byte` devuelve False. Observe que, en este caso, la cardinalidad predeterminada es 1.  
+ Si realiza la <`root`> elemento nil, su valor es una secuencia vacía. En otras palabras, la expresión, `/root[1]`, devuelve una secuencia vacía. En consecuencia, `instance of xs:byte` devuelve False. Observe que, en este caso, la cardinalidad predeterminada es 1.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -206,7 +205,7 @@ SELECT @var.query('data(/root[1]/a[1]) instance of item()')
 SELECT @var.query('/root[1]/a[1] instance of item()')  
 ```  
   
- Todas las expresiones XQuery de las tres consultas siguientes devuelven el elemento secundario del nodo de elemento <`root`>. Por tanto, la expresión de tipo de secuencia (`instance of node()`) devuelve True y las otras dos expresiones (`instance of text()` y `instance of document-node()`) devuelven False.  
+ Todas las expresiones XQuery de las tres consultas siguientes devuelven el nodo de elemento secundario de la <`root`> elemento. Por tanto, la expresión de tipo de secuencia (`instance of node()`) devuelve True y las otras dos expresiones (`instance of text()` y `instance of document-node()`) devuelven False.  
   
 ```  
 SELECT @var.query('(/root/*)[1] instance of node()')  
@@ -214,7 +213,7 @@ SELECT @var.query('(/root/*)[1] instance of text()')
 SELECT @var.query('(/root/*)[1] instance of document-node()')   
 ```  
   
- En la consulta siguiente, la expresión `instance of document-node()` devuelve True, porque el elemento primario del elemento <`root`> es un nodo de documento.  
+ En la siguiente consulta, el `instance of document-node()` expresión devuelve True, porque el elemento primario de la <`root`> elemento es un nodo de documento.  
   
 ```  
 SELECT @var.query('(/root/..)[1] instance of document-node()') -- true  
@@ -256,7 +255,7 @@ element(*, ElementType?)
  Los ejemplos siguientes ilustran situaciones en las que son útiles las pruebas de elementos y atributos.  
   
 ### <a name="example-a"></a>Ejemplo A  
- El siguiente esquema XML define el tipo complejo `CustomerType`, donde los elementos <`firstName`> y <`lastName`> son opcionales. Puede que sea necesario determinar, para una instancia XML específica, si existe un nombre para un cliente concreto.  
+ El siguiente esquema XML define el `CustomerType` tipo complejo donde <`firstName`> y <`lastName`> elementos son opcionales. Puede que sea necesario determinar, para una instancia XML específica, si existe un nombre para un cliente concreto.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -280,7 +279,7 @@ SET @var = '<x:customer xmlns:x="myNS">
 </x:customer>'  
 ```  
   
- La consulta siguiente utiliza una expresión `instance of element (firstName)` para determinar si el primer elemento secundario de <`customer`> es un elemento cuyo nombre es <`firstName`>. En este caso, devuelve True.  
+ La consulta siguiente utiliza una `instance of element (firstName)` expresión para determinar si el primer elemento secundario de <`customer`> es un elemento cuyo nombre es <`firstName`>. En este caso, devuelve True.  
   
 ```  
 SELECT @var.query('declare namespace x="myNS";   
@@ -288,7 +287,7 @@ SELECT @var.query('declare namespace x="myNS";
 GO  
 ```  
   
- Si se quita el elemento <`firstName`> de la instancia, la consulta devolverá False.  
+ Si quita el <`firstName`> elemento de la instancia, la consulta devolverá False.  
   
  También se puede utilizar lo siguiente:  
   
@@ -309,7 +308,7 @@ GO
 ### <a name="example-b"></a>Ejemplo B  
  En el ejemplo siguiente se muestra cómo determinar si el nodo devuelto por una expresión es un nodo de elemento con un nombre específico. Usa el **element()** probar.  
   
- En el ejemplo siguiente, los dos elementos <`Customer`> de la instancia XML que se consultan son de dos tipos diferentes (`SpecialCustomerType` y `CustomerType`). Se da por supuesto que se desea conocer el tipo del elemento <`Customer`> devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
+ En el ejemplo siguiente, los dos <`Customer`> elementos de la instancia XML que se consultan son de dos tipos diferentes, `CustomerType` y `SpecialCustomerType`. Suponga que desea conocer el tipo de la <`Customer`> elemento devuelto por la expresión. En la siguiente colección de esquemas XML se definen los tipos `CustomerType` y `SpecialCustomerType`.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -336,7 +335,7 @@ CREATE XML SCHEMA COLLECTION SC AS N'
 GO  
 ```  
   
- Esta colección de esquemas XML se utiliza para crear un tipo **xml** variable. La instancia XML asignada a esta variable tiene dos elementos <`customer`> de dos tipos diferentes. El primer elemento es de tipo `CustomerType` y el segundo elemento es de tipo `SpecialCustomerType`.  
+ Esta colección de esquemas XML se utiliza para crear un tipo **xml** variable. La instancia XML asignada a esta variable tiene dos <`customer`> elementos de dos tipos diferentes. El primer elemento es de tipo `CustomerType` y el segundo elemento es de tipo `SpecialCustomerType`.  
   
 ```  
 DECLARE @var XML(SC)  
@@ -359,10 +358,10 @@ SELECT @var.query('declare namespace x="myNS";
     (/x:customer)[1] instance of element (*, x:SpecialCustomerType ?)')  
 ```  
   
- Si se cambia la expresión de la consulta anterior y se recupera el segundo elemento <`customer`> (`instance of`), `/x:customer)[2]` devolverá True.  
+ Si cambia la expresión de la consulta anterior y recuperar el segundo <`customer`> elemento (`/x:customer)[2]`), el `instance of` devolverá True.  
   
 ### <a name="example-c"></a>Ejemplo C  
- En este ejemplo se utiliza la prueba de atributos. El siguiente esquema XML define el tipo complejo CustomerType, con los atributos CustomerID y Age. El atributo Age es opcional. Quizás se desee determinar si el atributo Age está presente en el elemento <`customer`> para una instancia XML específica.  
+ En este ejemplo se utiliza la prueba de atributos. El siguiente esquema XML define el tipo complejo CustomerType, con los atributos CustomerID y Age. El atributo Age es opcional. Para una instancia XML específica, que es posible que desee para determinar si el atributo Age está presente en el <`customer`> elemento.  
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS N'  
@@ -421,7 +420,7 @@ RETURN
 ### <a name="implementation-limitations"></a>Limitaciones de la implementación  
  Éstas son las limitaciones específicas:  
   
--   En la prueba de elemento, el nombre de tipo debe ir seguido por el indicador de repetición (**?**).  
+-   En la prueba de elemento, el nombre de tipo debe ir seguido por el indicador de repetición ( **?** ).  
   
 -   **Element (ElementName, TypeName)** no se admite.  
   

@@ -2,19 +2,18 @@
 title: 'Restablecimiento de contraseña: Analytics Platform System | Microsoft Docs'
 description: La página de restablecimiento de contraseña permite cambiar la contraseña de Analytics Platform System utilizada las cuentas de administrador.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960466"
 ---
 # <a name="password-reset---analytics-platform-system"></a>Restablecimiento de contraseñas: Analytics Platform System
 El **de restablecimiento de contraseña** página le permite cambiar la contraseña de Analytics Platform System utilizada las cuentas de administrador.  
@@ -24,10 +23,10 @@ El **de restablecimiento de contraseña** página le permite cambiar la contrase
   
 Las contraseñas de Analytics Platform System, se proporciona cuando se entrega el dispositivo. Siempre debe cambiar las contraseñas con los nuevos valores cuando asume la responsabilidad de su dispositivo. Hay tres contraseñas para la actualización. Las contraseñas no debe ser igual entre sí.  
   
-**F<*xxxx*>\Administrator**  
+**F <*xxxx*> \Administrator**  
 El **administrador** del dominio de aplicación.  
   
-**.\Administrator**  
+**. \Administrator**  
 Local **administrador** cuenta en los equipos que hospedan las máquinas virtuales.  
   
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ El **sa** inicio de sesión en SQL Server. **SA** es un miembro de la **sysadmin
 Las credenciales de administrador de dominio y las credenciales de administrador del sistema cumplan las directivas de seguridad de contraseñas para cada tipo de credencial. Al cambiar las credenciales de administrador de dominio, la nueva contraseña se actualiza en el dominio donde sea necesario a lo largo de PDW de SQL Server.  
   
 > [!IMPORTANT]  
-> PDW de SQL Server no admite el carácter de signo de dólar (**$**) en el Administrador de dominio o las contraseñas de administrador local. Los caracteres **^ % &** se permiten en las contraseñas, sin embargo, PowerShell lo que respecta a estos elementos como caracteres especiales. Si alguno de estos caracteres se usan en las contraseñas para el administrador del sistema o SQL Server**sa** cuentas (el **AdminPassword** y **PdwSAPassword** parámetros durante programa de instalación), a continuación, instalación, se producirá un error de instalación, actualización, REPLACENODE y aplicación de revisiones, incluidos. Para garantizar una actualización correcta cuando contraseñas actuales contienen caracteres no admitidos, cambiar estas contraseñas para que no contienen dichos caracteres antes de ejecutar la actualización. Una vez completada la actualización, puede establecer estas contraseñas a sus valores originales. Para obtener más información acerca de los requisitos de contraseña, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
+> PDW de SQL Server no admite el carácter de signo de dólar ( **$** ) en el Administrador de dominio o las contraseñas de administrador local. Los caracteres **^ % &** se permiten en las contraseñas, sin embargo, PowerShell lo que respecta a estos elementos como caracteres especiales. Si alguno de estos caracteres se usan en las contraseñas para el administrador del sistema o SQL Server**sa** cuentas (el **AdminPassword** y **PdwSAPassword** parámetros durante programa de instalación), a continuación, instalación, se producirá un error de instalación, actualización, REPLACENODE y aplicación de revisiones, incluidos. Para garantizar una actualización correcta cuando contraseñas actuales contienen caracteres no admitidos, cambiar estas contraseñas para que no contienen dichos caracteres antes de ejecutar la actualización. Una vez completada la actualización, puede establecer estas contraseñas a sus valores originales. Para obtener más información acerca de los requisitos de contraseña, consulte [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md).  
   
 ## <a name="to-reset-a-password"></a>Para restablecer una contraseña  
   

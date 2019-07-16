@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 938522b4-f836-4c80-8d27-a598a000f0ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6cfc8cf9a618851e3e53b35d54fa1a989ce9c785
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3d9ab76d2f2ed1a6f5dbeaf58be7d2f919acd3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932544"
 ---
 # <a name="flush-method-ado"></a>Flush (método) (ADO)
 Fuerza que el contenido de la [Stream](../../../ado/reference/ado-api/stream-object-ado.md) permanecen en el búfer de ADO para el objeto subyacente con el que el **Stream** está asociado.  

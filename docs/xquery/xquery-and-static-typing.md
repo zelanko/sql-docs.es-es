@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d599c791-200d-46f8-b758-97e761a1a5c0
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 232b071c11d4a2a0bb2e42b6f9787d07f99e21e2
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 5ad42a174f558202544650fb1580574f290d4466
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226592"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946082"
 ---
 # <a name="xquery-and-static-typing"></a>XQuery y el establecimiento de tipos estáticos
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "54226592"
   
  En el caso de las instancias XML sin tipo, existen tipos especiales que indican que no se ha asignado un tipo a los datos. Esta información se utiliza durante la comprobación de tipos estáticos y para realizar determinadas conversiones implícitas.  
   
- En el caso de los datos con tipo, se deduce el tipo de entrada a partir de la colección de esquemas XML que restringe la instancia de tipo de datos XML. Por ejemplo, si el esquema permite sólo los elementos del tipo **xs: Integer**, los resultados de una expresión de ruta de acceso utilizando ese elemento serán cero o más elementos de tipo **xs: Integer**. Actualmente esto se expresa mediante una expresión, como `element(age,xs:integer)*` donde el asterisco (\*) indica la cardinalidad del tipo resultante. En este ejemplo, la expresión puede dar como resultado cero o más elementos de nombre "age" y el tipo **xs: Integer**. Las demás cardinalidades son exactamente uno y se expresan con el nombre de tipo por sí solo, cero o uno con un signo de interrogación (**?**) y 1 o más y con un signo más (**+**) .  
+ En el caso de los datos con tipo, se deduce el tipo de entrada a partir de la colección de esquemas XML que restringe la instancia de tipo de datos XML. Por ejemplo, si el esquema permite sólo los elementos del tipo **xs: Integer**, los resultados de una expresión de ruta de acceso utilizando ese elemento serán cero o más elementos de tipo **xs: Integer**. Actualmente esto se expresa mediante una expresión, como `element(age,xs:integer)*` donde el asterisco (\*) indica la cardinalidad del tipo resultante. En este ejemplo, la expresión puede dar como resultado cero o más elementos de nombre "age" y el tipo **xs: Integer**. Las demás cardinalidades son exactamente uno y se expresan con el nombre de tipo por sí solo, cero o uno con un signo de interrogación ( **?** ) y 1 o más y con un signo más ( **+** ) .  
   
- En ocasiones, la inferencia de tipos estáticos puede deducir que una expresión siempre devolverá la secuencia vacía. Por ejemplo, si una expresión de ruta de acceso en un tipo de datos XML con tipo busca un \<nombre > elemento dentro de un \<cliente > elemento (/ customer/name), pero el esquema no permite un \<nombre > dentro de un \<cliente >, la inferencia de tipos estáticos deducirá que el resultado estará vacío. Esto se usará para detectar consultas incorrectas y se notificará como un error estático, a menos que la expresión sea () o **datos (())**.  
+ En ocasiones, la inferencia de tipos estáticos puede deducir que una expresión siempre devolverá la secuencia vacía. Por ejemplo, si una expresión de ruta de acceso en un tipo de datos XML con tipo busca un \<nombre > elemento dentro de un \<cliente > elemento (/ customer/name), pero el esquema no permite un \<nombre > dentro de un \<cliente >, la inferencia de tipos estáticos deducirá que el resultado estará vacío. Esto se usará para detectar consultas incorrectas y se notificará como un error estático, a menos que la expresión sea () o **datos (())** .  
   
  Las reglas de inferencia detalladas se proporcionan en la semántica formal de la especificación XQuery. Microsoft la ha modificado ligeramente para trabajar con instancias de tipos de datos XML con tipo. El cambio más importante del estándar es que el nodo de documento implícito conoce el tipo de la instancia de tipo de datos XML. Como resultado, el tipo de una expresión de ruta de acceso con la forma /age se asignará de forma precisa basándose en esa información.  
   
@@ -60,7 +59,7 @@ ms.locfileid: "54226592"
   
  Si es necesaria tras una conversión implícita, la comprobación de tipos estáticos garantiza que solo se pasarán a una operación los valores de los tipos permitidos con la cardinalidad correcta. Para "string" + 1, reconoce que es el tipo estático de "string" **xs: String**. Dado que esto no es un tipo permitido para el **+** operación, un tipo de error se genera.  
   
- Si se agrega el resultado de una expresión arbitraria E1 a una expresión arbitraria E2 (E1 + E2), la inferencia de tipos estáticos determinará en primer lugar los tipos estáticos de E1 y E2 y, a continuación, comprobará sus tipos estáticos con los tipos permitidos para la operación. Por ejemplo, si el tipo estático de E1 puede ser un **xs: String** o un **xs: Integer**, la comprobación de tipos estáticos provocará un error de tipo, aunque algunos de los valores en tiempo de ejecución sean enteros. Lo mismo sería el caso si el tipo estático de E1 **xs: Integer&#42;**. Dado que el **+** operación solo acepta exactamente un valor entero y E1 puede devolver cero o más de 1, la comprobación de tipo estático genera un error.  
+ Si se agrega el resultado de una expresión arbitraria E1 a una expresión arbitraria E2 (E1 + E2), la inferencia de tipos estáticos determinará en primer lugar los tipos estáticos de E1 y E2 y, a continuación, comprobará sus tipos estáticos con los tipos permitidos para la operación. Por ejemplo, si el tipo estático de E1 puede ser un **xs: String** o un **xs: Integer**, la comprobación de tipos estáticos provocará un error de tipo, aunque algunos de los valores en tiempo de ejecución sean enteros. Lo mismo sería el caso si el tipo estático de E1 **xs: Integer&#42;** . Dado que el **+** operación solo acepta exactamente un valor entero y E1 puede devolver cero o más de 1, la comprobación de tipo estático genera un error.  
   
  Como se ha mencionado anteriormente, la inferencia de tipos suele inferir un tipo más general que el tipo que el usuario conoce de los datos que se pasan. En estos casos, el usuario debe volver a escribir la consulta. A continuación se exponen algunos casos habituales:  
   
@@ -74,7 +73,7 @@ ms.locfileid: "54226592"
  Los tipos de unión requieren un tratamiento especial debido a la comprobación de tipos. Dos de los problemas se muestran en los ejemplos siguientes.  
   
 ### <a name="example-function-over-union-type"></a>Ejemplo: Función sobre tipo de unión  
- Considere la definición de un elemento para <`r`> de un tipo de unión:  
+ Considere la posibilidad de una definición de elemento para <`r`> de un tipo de unión:  
   
 ```  
 <xs:element name="r">  
@@ -84,7 +83,7 @@ ms.locfileid: "54226592"
 </xs:element>  
 ```  
   
- Dentro del contexto de XQuery, la función "promedio" `fn:avg (//r)` devuelve un error estático, porque el compilador XQuery no puede agregar valores de tipos diferentes (**xs: int**, **xs: float** o **xs: Double**) para el <`r`> elementos en el argumento de **fn:avg()**. Para resolver esto, rescriba la invocación de función como `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
+ Dentro del contexto de XQuery, la función "promedio" `fn:avg (//r)` devuelve un error estático, porque el compilador XQuery no puede agregar valores de tipos diferentes (**xs: int**, **xs: float** o **xs: Double**) para el <`r`> elementos en el argumento de **fn:avg()** . Para resolver esto, rescriba la invocación de función como `fn:avg(for $r in //r return $r cast as xs:double ?)`.  
   
 ### <a name="example-operator-over-union-type"></a>Ejemplo: Operador sobre tipo de unión  
  La operación de suma ("+") requiere tipos precisos para los operandos. Como resultado, la expresión `(//r)[1] + 1` devuelve un error estático que tiene la definición de tipo descrita previamente para el elemento <`r`>. Una posible solución es rescribirlo como `(//r)[1] cast as xs:int? +1`, donde "?" indica 0 o 1 repeticiones. [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], requiere "cast as" con "?", porque cualquier conversión puede resultar en una secuencia vacía como consecuencia de los errores en tiempo de ejecución.  

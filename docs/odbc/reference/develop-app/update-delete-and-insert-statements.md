@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632483"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942839"
 ---
 # <a name="update-delete-and-insert-statements"></a>Las instrucciones INSERT, DELETE y UPDATE
 Las aplicaciones basadas en SQL realizar cambios en las tablas mediante la ejecución de la **actualización**, **eliminar**, y **insertar** instrucciones. Estas instrucciones forman parte del nivel de conformidad de gramática mínima de SQL y deben ser compatibles con todos los controladores y orígenes de datos.  
@@ -33,15 +32,15 @@ Las aplicaciones basadas en SQL realizar cambios en las tablas mediante la ejecu
   
  **SET** _column-identifier_ **=** {*expression* &#124; **NULL**}  
   
- [**,** _column-identifier_ **=** {*expression* &#124; **NULL**}]...  
+ [ **,** _identificador de columna_ **=** {*expresión* &#124; **NULL**}]...  
   
  [**Donde** _condición de búsqueda_]  
   
  **DELETE FROM** _nombre-tabla_[**donde** _condición de búsqueda_]  
   
- **INSERT INTO** _nombre-tabla_[**(** _identificador de columna_ [**,** _deidentificadordecolumna_]... **)**]  
+ **INSERT INTO** _nombre-tabla_[ **(** _identificador de columna_ [ **,** _deidentificadordecolumna_]... **)** ]  
   
- {*especificación de consulta* &#124; **valores (** _Insertar valor_ [**,** _Insertar valor_]... **)**}  
+ {*especificación de consulta* &#124; **valores (** _Insertar valor_ [ **,** _Insertar valor_]... **)** }  
   
  Tenga en cuenta que el *especificación de consulta* elemento es válido solo en las gramáticas de Core y SQL extendido y que la *expresión* y *condición de búsqueda* elementos se convierten en más complejas en las gramáticas de Core y SQL extendido.  
   

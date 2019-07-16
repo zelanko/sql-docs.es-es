@@ -2,19 +2,18 @@
 title: Administración de cargas de trabajo de Analytics Platform System | Microsoft Docs
 description: Administración de cargas de trabajo de Analytics Platform System.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2281262c086f4d8dcab27debc8bb735ea5e8e1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: adc3928e1b7464d93970d280af6acf303ebc6d16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959748"
 ---
 # <a name="workload-management-in-analytics-platform-system"></a>Administración de cargas de trabajo de Analytics Platform System
 
@@ -60,10 +59,10 @@ En la tabla siguiente se describe las clases de recursos y sus asignaciones de r
   
 |Clase de recursos|Importancia de la solicitud|Uso de memoria máxima *|Espacios de simultaneidad (máxima = 32)|Descripción|  
 |------------------|----------------------|--------------------------|---------------------------------------|---------------|  
-|predeterminados|Media|400 MB|1|De forma predeterminada, cada inicio de sesión se permite una pequeña cantidad de memoria y simultaneidad de recursos para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recursos, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminado.|  
-|MediumRC|Media|1200 MB|3|Ejemplos de solicitudes que pueden necesitar la clase de recursos de tamaño medio:<br /><br />Las operaciones de CTAS que tengan grandes combinaciones hash.<br /><br />Seleccione las operaciones que necesitan más memoria para evitar el almacenamiento en caché en el disco.<br /><br />Cargar datos en los índices de almacén de columnas agrupado.<br /><br />Creación, la regeneración y reorganización de índices de almacén de columnas agrupado para tablas más pequeñas que tienen columnas de 10-15.|  
-|Largerc|Alta|2,8 GB|7|Ejemplos de solicitudes que pueden necesitar la clase de recursos grande:<br /><br />Operaciones de CTAS muy grandes que tienen las combinaciones hash enorme o contienen grandes agregaciones, como grandes cláusulas ORDER BY o GROUP BY.<br /><br />Seleccione las operaciones que requieren grandes cantidades de memoria para operaciones como las combinaciones hash o agregaciones, como las cláusulas ORDER BY o GROUP BY<br /><br />Cargar datos en los índices de almacén de columnas agrupado.<br /><br />Creación, la regeneración y reorganización de índices de almacén de columnas agrupado para tablas más pequeñas que tienen columnas de 10-15.|  
-|xlargerc|Alta|8.4 GB|22|La clase de recurso extra grande es para las solicitudes que podrían requerir el consumo de recursos extragrande en tiempo de ejecución.|  
+|valor predeterminado|Mediano|400 MB|1|De forma predeterminada, cada inicio de sesión se permite una pequeña cantidad de memoria y simultaneidad de recursos para sus solicitudes.<br /><br />Cuando se agrega un inicio de sesión a una clase de recursos, la nueva clase tiene prioridad. Cuando se quita un inicio de sesión de todas las clases de recursos, el inicio de sesión vuelve a la asignación de recursos predeterminado.|  
+|MediumRC|Mediano|1200 MB|3|Ejemplos de solicitudes que pueden necesitar la clase de recursos de tamaño medio:<br /><br />Las operaciones de CTAS que tengan grandes combinaciones hash.<br /><br />Seleccione las operaciones que necesitan más memoria para evitar el almacenamiento en caché en el disco.<br /><br />Cargar datos en los índices de almacén de columnas agrupado.<br /><br />Creación, la regeneración y reorganización de índices de almacén de columnas agrupado para tablas más pequeñas que tienen columnas de 10-15.|  
+|Largerc|Alto|2,8 GB|7|Ejemplos de solicitudes que pueden necesitar la clase de recursos grande:<br /><br />Operaciones de CTAS muy grandes que tienen las combinaciones hash enorme o contienen grandes agregaciones, como grandes cláusulas ORDER BY o GROUP BY.<br /><br />Seleccione las operaciones que requieren grandes cantidades de memoria para operaciones como las combinaciones hash o agregaciones, como las cláusulas ORDER BY o GROUP BY<br /><br />Cargar datos en los índices de almacén de columnas agrupado.<br /><br />Creación, la regeneración y reorganización de índices de almacén de columnas agrupado para tablas más pequeñas que tienen columnas de 10-15.|  
+|xlargerc|Alto|8.4 GB|22|La clase de recurso extra grande es para las solicitudes que podrían requerir el consumo de recursos extragrande en tiempo de ejecución.|  
   
 <sup>*</sup>Uso máximo de memoria es una aproximación.  
   

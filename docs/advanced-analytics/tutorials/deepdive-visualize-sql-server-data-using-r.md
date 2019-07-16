@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: c39d19807cfe01ca9c96b47de020abb9227c43a0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4092de07d19d4d33bd56025076e606269c2b04e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962153"
 ---
 #  <a name="visualize-sql-server-data-using-r-sql-server-and-revoscaler-tutorial"></a>Visualizar datos de SQL Server con R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -79,7 +78,7 @@ En función de las estadísticas de resumen calculadas de la lección anterior, 
 En este momento, las modificaciones afectan a solo el objeto de origen de datos en R; No hay nuevos datos se ha escrito todavía en la tabla de base de datos. Sin embargo, puede usar los datos capturados en la variable sumOut para crear visualizaciones y resúmenes. 
 
 > [!TIP]
-> Si olvida qué contexto de proceso está usando, ejecute **rxGetComputeContext()**. Un valor devuelto de "Contexto de cálculo de RxLocalSeq" indica que se está ejecutando en el contexto de proceso local.
+> Si olvida qué contexto de proceso está usando, ejecute **rxGetComputeContext()** . Un valor devuelto de "Contexto de cálculo de RxLocalSeq" indica que se está ejecutando en el contexto de proceso local.
 
 ## <a name="visualize-data-using-rxhistogram"></a>Visualizar datos con rxHistogram
 

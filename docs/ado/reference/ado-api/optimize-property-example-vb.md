@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea988ca1274ad8487270483f7a449f77651beb12
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f36c0c574917e4f73533a400ea60f363aeb9d74b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917813"
 ---
 # <a name="optimize-property-example-vb"></a>Ejemplo de la propiedad Optimize (VB)
 Este ejemplo se muestra el [campo](../../../ado/reference/ado-api/field-object.md) del dinámica objeto **optimizar** propiedad. El ***zip*** campo de la ***autores*** de tabla en la ***Pubs*** base de datos no está indizada. Establecer el [optimizar](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) propiedad **True** en el ***zip*** campo autoriza a ADO para generar un índice que mejora el rendimiento de la [buscar](../../../ado/reference/ado-api/find-method-ado.md)método.  

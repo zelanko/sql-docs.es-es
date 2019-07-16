@@ -11,13 +11,12 @@ f1_keywords:
 ms.assetid: 88d40d3b-8983-4a57-b79d-ed1477a5c3c6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 5983223e1f945cc9f09ceee08a07230847c5f869
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: cab96fb470e4cc19da0612163f364d6339841985
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47735493"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027975"
 ---
 # <a name="assemblies---properties"></a>Ensamblados: propiedades
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "47735493"
  Escriba el nombre del propietario o del esquema, o bien selecciónelo en la lista.  
   
  **Conjunto de permisos**  
- Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **seguro**, **acceso externo**, y **Unsafe** acceso.  
+ Establece el nivel de seguridad del ensamblado. Se proporcionan tres niveles de seguridad: **Seguro**, **acceso externo**, y **Unsafe** acceso.  
   
  **Ruta de acceso al ensamblado**  
  Escriba la ruta de acceso al archivo de ensamblado.  

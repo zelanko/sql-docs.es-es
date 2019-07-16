@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: acd7c73926e996100511569df3a5693068894b10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e204a4f6f7f395ca93198bc560f4a216d5a70673
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926679"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-active-directory-service"></a>Proveedor Microsoft OLE DB para el servicio de Microsoft Active Directory
 El proveedor de Interfaces de servicio de Active Directory (ADSI) permite ADO para conectarse a servicios de directorio heterogéneos a través de ADSI. Esto proporciona a las aplicaciones ADO acceso de solo lectura a los servicios de directorio de Microsoft Windows NT 4.0 y Microsoft Windows 2000, además de cualquier servicio de directorio compatible con LDAP y servicios de directorio Novell. ADSI se basa en un modelo de proveedor, por lo que si hay un nuevo proveedor proporcionar acceso a otro directorio, la aplicación ADO podrán acceder a él sin problemas. El proveedor ADSI es de subprocesamiento libre y está habilitado para Unicode.  
@@ -96,11 +95,11 @@ objectClass='user' AND objectCategory='Person'"
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|lectura/escritura|  
 |[ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)|solo lectura|  
 |[BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|lectura/escritura|  
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|lectura/escritura|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|lectura/escritura|  
-|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|always **adUseServer**|  
-|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|always **adOpenStatic**|  
-|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|always **adEditNone**|  
+|[CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md)|siempre **adUseServer**|  
+|[CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md)|siempre **adOpenStatic**|  
+|[EditMode](../../../ado/reference/ado-api/editmode-property.md)|siempre **adEditNone**|  
 |[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|solo lectura|  
 |[Filter](../../../ado/reference/ado-api/filter-property.md)|lectura/escritura|  
 |[LockType](../../../ado/reference/ado-api/locktype-property-ado.md)|lectura/escritura|  
@@ -109,7 +108,7 @@ objectClass='user' AND objectCategory='Person'"
 |[PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md)|solo lectura|  
 |[PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md)|lectura/escritura|  
 |[RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)|solo lectura|  
-|[Source](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|  
+|[Origen](../../../ado/reference/ado-api/source-property-ado-recordset.md)|lectura/escritura|  
 |[Estado](../../../ado/reference/ado-api/state-property-ado.md)|solo lectura|  
 |[Estado](../../../ado/reference/ado-api/status-property-ado-recordset.md)|solo lectura|  
   
@@ -117,10 +116,10 @@ objectClass='user' AND objectCategory='Person'"
   
 |Método|¿Está disponible?|  
 |------------|----------------|  
-|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|No|  
+|[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Sin|  
 |[Cancelar](../../../ado/reference/ado-api/cancel-method-ado.md)|No|  
 |[CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|No|  
-|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|No|  
+|[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|Sin|  
 |[Clon](../../../ado/reference/ado-api/clone-method-ado.md)|Sí|  
 |[Cerrar](../../../ado/reference/ado-api/close-method-ado.md)|Sí|  
 |[Eliminar](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|Sin|  
@@ -132,11 +131,11 @@ objectClass='user' AND objectCategory='Person'"
 |[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)|Sí|  
 |[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)|Sí|  
 |[Abrir](../../../ado/reference/ado-api/open-method-ado-recordset.md)|Sí|  
-|[Requery](../../../ado/reference/ado-api/requery-method.md)|Sí|  
-|[Resync](../../../ado/reference/ado-api/resync-method.md)|Sí|  
+|[Nueva consulta](../../../ado/reference/ado-api/requery-method.md)|Sí|  
+|[Resincronización](../../../ado/reference/ado-api/resync-method.md)|Sí|  
 |[Es compatible con](../../../ado/reference/ado-api/supports-method.md)|Sí|  
-|[Update](../../../ado/reference/ado-api/update-method.md)|Sin|  
-|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|Sin|  
+|[Update](../../../ado/reference/ado-api/update-method.md)|No|  
+|[UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md)|No|  
   
  Para obtener más información acerca de ADSI y los detalles del proveedor, consulte la documentación de Active Directory Service Interfaces o visite la página Web de ADSI.  
   

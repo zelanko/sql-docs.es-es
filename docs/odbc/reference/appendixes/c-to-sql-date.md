@@ -1,5 +1,5 @@
 ---
-title: 'C a SQL: Date | Microsoft Docs'
+title: 'C a SQL: Fecha | Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: bea087d3-911f-418b-b483-d2b5b334da19
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8edb075be1bf64dad8f4ef18924a6396b7c64e80
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 02ee7c1fb396dc1c9c0708cf6c0e7a52ff1c11ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63294368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019409"
 ---
-# <a name="c-to-sql-date"></a>C a SQL: date
+# <a name="c-to-sql-date"></a>C a SQL: Date
 El identificador para el tipo de datos ODBC C fecha es:  
   
  SQL_C_TYPE_DATE  
@@ -31,10 +30,10 @@ El identificador para el tipo de datos ODBC C fecha es:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = 10<br /><br /> Columna de bytes de longitud < 10<br /><br /> Valor de datos no es una fecha válida|n/d<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = 10<br /><br /> Columna de caracteres de longitud < 10<br /><br /> Valor de datos no es una fecha válida|n/d<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Valor de datos es una fecha válida<br /><br /> Valor de datos no es una fecha válida|n/d<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Valor de datos es una fecha válida [a]<br /><br /> Valor de datos no es una fecha válida|n/d<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = 10<br /><br /> Columna de bytes de longitud < 10<br /><br /> Valor de datos no es una fecha válida|N/D<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = 10<br /><br /> Columna de caracteres de longitud < 10<br /><br /> Valor de datos no es una fecha válida|N/D<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Valor de datos es una fecha válida<br /><br /> Valor de datos no es una fecha válida|N/D<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Valor de datos es una fecha válida [a]<br /><br /> Valor de datos no es una fecha válida|N/D<br /><br /> 22007|  
   
  [a] la parte de hora de la marca de tiempo se establece en cero.  
   

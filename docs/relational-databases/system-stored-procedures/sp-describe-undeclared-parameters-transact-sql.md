@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8bfd021414ab9e8078ec0df9c23c33828e36d0f9
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 27d30c4160571274339b5befba8f0b9a8cedb859
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67584608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053012"
 ---
 # <a name="spdescribeundeclaredparameters-transact-sql"></a>sp_describe_undeclared_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -61,27 +60,27 @@ sp_describe_undeclared_parameters
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**parameter_ordinal**|**int no NULL**|Contiene la posición ordinal del parámetro en el conjunto de resultados. La posición del primer parámetro se especificará como 1.|  
-|**Nombre**|**sysname no NULL**|Contiene el nombre del parámetro.|  
+|**name**|**sysname no NULL**|Contiene el nombre del parámetro.|  
 |**suggested_system_type_id**|**int no NULL**|Contiene el **system_type_id** del tipo de datos del parámetro como se especifica en sys.types.<br /><br /> Para los tipos CLR, aunque el **system_type_name** columna devolverá NULL, esta columna devolverá el valor 240.|  
 |**suggested_system_type_name**|**nvarchar (256) NULL**|Contiene el nombre del tipo de datos. Incluye los argumentos (como length, precision y scale) especificados para el tipo de datos del parámetro. Si el tipo de datos es un tipo de alias definido por el usuario, el tipo de sistema subyacente se especifica aquí. Si es un tipo de datos definido por el usuario de CLR, NULL se devuelve en esta columna. Si no se puede deducir el tipo del parámetro, se devuelve NULL.|  
 |**suggested_max_length**|**smallint no NULL**|Consulte sys.columns. para **max_length** descripción de la columna.|  
 |**suggested_precision**|**tinyint no NULL**|Consulte sys.columns. para obtener la descripción de la columna de precisión.|  
 |**suggested_scale**|**tinyint no NULL**|Consulte sys.columns. para obtener la descripción de la columna de escala.|  
 |**suggested_user_type_id**|**int NULL**|Para los tipos de alias y CLR, contiene el user_type_id del tipo de datos de la columna tal y como se especifica en sys.types. De lo contrario, es NULL.|  
-|**suggested_user_type_database**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
-|**suggested_user_type_schema**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre del esquema en el que se define el tipo. De lo contrario, es NULL.|  
-|**suggested_user_type_name**|**sysname NULL**|Para los tipos de alias y CLR, contiene el nombre del tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_database**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre de la base de datos en la que se define el tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_schema**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre del esquema en el que se define el tipo. De lo contrario, es NULL.|  
+|**suggested_user_type_name**|**sysname es NULL**|Para los tipos de alias y CLR, contiene el nombre del tipo. De lo contrario, es NULL.|  
 |**suggested_assembly_qualified_type_name**|**nvarchar (4000) NULL**|Para los tipos de CLR, devuelve el nombre del ensamblado y la clase que define el tipo. De lo contrario, es NULL.|  
 |**suggested_xml_collection_id**|**int NULL**|Contiene el xml_collection_id del tipo de datos del parámetro tal como se especifica en sys.columns. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_database**|**sysname NULL**|Contiene la base de datos en la que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_schema**|**sysname NULL**|Contiene el esquema en el que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
-|**suggested_xml_collection_name**|**sysname NULL**|Contiene el nombre de la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_database**|**sysname es NULL**|Contiene la base de datos en la que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_schema**|**sysname es NULL**|Contiene el esquema en el que se define la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
+|**suggested_xml_collection_name**|**sysname es NULL**|Contiene el nombre de la colección de esquema XML asociado a este tipo. Esta columna devolverá NULL si el tipo devuelto no está asociado a una colección de esquema XML.|  
 |**suggested_is_xml_document**|**bit NOT NULL**|Devuelve 1 si el tipo que se va a devolver es XML y se garantiza que es un documento XML. De lo contrario, devuelve 0.|  
 |**suggested_is_case_sensitive**|**bit NOT NULL**|Devuelve 1 si la columna es de un tipo de cadena con distinción entre mayúsculas y minúsculas, y 0 en caso contrario.|  
 |**suggested_is_fixed_length_clr_type**|**bit NOT NULL**|Devuelve 1 si la columna es de un tipo CLR de longitud fija y 0 en caso contrario.|  
 |**suggested_is_input**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en cualquier otro lugar que no sea el lado izquierdo de una asignación. De lo contrario, devuelve 0.|  
 |**suggested_is_output**|**bit NOT NULL**|Devuelve 1 si el parámetro se utiliza en el lado izquierdo de una asignación o se pasa a un parámetro de salida de un procedimiento almacenado. De lo contrario, devuelve 0.|  
-|**formal_parameter_name**|**sysname NULL**|Si el parámetro es un argumento para un procedimiento almacenado o una función definida por el usuario, devuelve el nombre del parámetro formal correspondiente. En caso contrario, devuelve NULL.|  
+|**formal_parameter_name**|**sysname es NULL**|Si el parámetro es un argumento para un procedimiento almacenado o una función definida por el usuario, devuelve el nombre del parámetro formal correspondiente. En caso contrario, devuelve NULL.|  
 |**suggested_tds_type_id**|**int no NULL**|Para uso interno.|  
 |**suggested_tds_length**|**int no NULL**|Para uso interno.|  
   

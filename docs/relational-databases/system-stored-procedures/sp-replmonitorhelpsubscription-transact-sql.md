@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a681b2db-c82d-4624-a10c-396afb0ac42f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 92cd44dcc30a0843409c908cb3cc3a76276519aa
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8e8f76699e35c71e7bbf85b972cd76eb0cb3c289
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950544"
 ---
 # <a name="spreplmonitorhelpsubscription-transact-sql"></a>sp_replmonitorhelpsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -88,10 +87,10 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**suscriptor**|**sysname**|Es el nombre del suscriptor.|  
 |**subscriber_db**|**sysname**|Es el nombre de la base de datos utilizada para la suscripción.|  
 |**publisher_db**|**sysname**|Es el nombre de la base de datos de publicación.|  
-|**publication**|**sysname**|Es el nombre de una publicación.|  
+|**publicación**|**sysname**|Es el nombre de una publicación.|  
 |**publication_type**|**int**|Es el tipo de publicación, que puede ser uno de estos valores:<br /><br /> **0** = publicación transaccional<br /><br /> **1** = publicación de instantáneas<br /><br /> **2** = publicación de combinación|  
-|**subtype**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
-|**latency**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
+|**subtipo**|**int**|Es el tipo de suscripción, que puede ser uno de los siguientes valores:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
+|**latencia**|**int**|La mayor latencia, en segundos, para los cambios de datos propagados por los agentes de distribución o de registro del LOG para una publicación transaccional.|  
 |**latencythreshold**|**int**|La latencia máxima para la publicación transaccional por encima de la cual se genera una advertencia.|  
 |**agentnotrunning**|**int**|Es la cantidad de tiempo, en horas, durante la que el agente no se ha ejecutado.|  
 |**agentnotrunningthreshold**|**int**|Es el tiempo, en horas, que el agente no se ha ejecutado antes de que se genere una advertencia.|  
@@ -107,8 +106,8 @@ sp_replmonitorhelpsubscription [ @publisher = ] 'publisher'
 |**mergerunspeed**|**float**|Tasa de entrega de la última sincronización de la suscripción.|  
 |**mergerunduration**|**int**|Es el tiempo necesario para completar la última sincronización de la suscripción.|  
 |**monitorranking**|**int**|Es el valor de categoría utilizado para ordenar las suscripciones en el conjunto de resultados. Puede ser uno de estos valores:<br /><br /> Para una publicación transaccional:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **52** = advertencia: con expiración en breve o expirada<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = no está en ejecución (correcto)<br /><br /> **20** = en ejecución (inicio, ejecución o inactivo)<br /><br /> Para una publicación de combinación:<br /><br /> **60** = error<br /><br /> **56** = advertencia: rendimiento crítico<br /><br /> **54** = advertencia: mezcla de ejecución prolongada<br /><br /> **52** = advertencia: con expiración en breve<br /><br /> **50** = advertencia: suscripción no inicializada<br /><br /> **40** = reintentando comando con errores<br /><br /> **30** = en ejecución (inicio, ejecución o inactivo)<br /><br /> **20** = no está en ejecución (correcto)|  
-|**distributionagentjobid**|**binary(16)**|Id. del trabajo de Agente de distribución para las suscripciones a una publicación transaccional.|  
-|**mergeagentjobid**|**binary(16)**|Id. del trabajo de Agente de mezcla para las suscripciones a una publicación de combinación.|  
+|**distributionagentjobid**|**binary (16)**|Id. del trabajo de Agente de distribución para las suscripciones a una publicación transaccional.|  
+|**mergeagentjobid**|**binary (16)**|Id. del trabajo de Agente de mezcla para las suscripciones a una publicación de combinación.|  
 |**distributionagentid**|**int**|Id. del trabajo de Agente de distribución para la suscripción.|  
 |**distributionagentprofileid**|**int**|Identificador del perfil del agente utilizado por el Agente de distribución.|  
 |**mergeagentid**|**int**|Identificador del trabajo del Agente de combinación para la suscripción.|  

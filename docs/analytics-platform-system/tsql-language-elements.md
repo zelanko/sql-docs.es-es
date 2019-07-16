@@ -2,19 +2,18 @@
 title: Elementos del lenguaje T-SQL - almacenamiento de datos paralelos | Microsoft Docs
 description: Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d9e2011ef30864e35245f59cab0861ea116d1502
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f019599e5dde2759da9f1e8f94e71b2fe2b9c9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63035006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959946"
 ---
 # <a name="t-sql-language-elements-for-parallel-data-warehouse"></a>Elementos del lenguaje Transact-SQL para el almacenamiento de datos paralelos
 Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Parallel Data Warehouse (PDW de SQL Server).
@@ -24,11 +23,11 @@ Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Paral
 * [reglas de nomenclatura de objetos](../relational-databases/databases/database-identifiers.md)
 * [palabras clave reservadas](../t-sql/language-elements/reserved-keywords-transact-sql.md)
 * [Intercalaciones](https://msdn.microsoft.com/library/ff848763.aspx)
-* [comments](../t-sql/language-elements/comment-transact-sql.md)
+* [Comentarios](../t-sql/language-elements/comment-transact-sql.md)
 * [constants](../t-sql/data-types/constants-transact-sql.md)
 * [Tipos de datos](../t-sql/data-types/data-types-transact-sql.md)
 * [EXECUTE](../t-sql/language-elements/execute-transact-sql.md)
-* [expressions](../t-sql/language-elements/expressions-transact-sql.md)
+* [Expresiones](../t-sql/language-elements/expressions-transact-sql.md)
 * [KILL](../t-sql/language-elements/kill-transact-sql.md)
 * [Solución alternativa de propiedad de identidad](../t-sql/statements/create-table-transact-sql-identity-property.md)
 * [PRINT](../t-sql/language-elements/print-transact-sql.md)
@@ -224,8 +223,8 @@ Elementos del lenguaje Transact-SQL para analíticas Platform System (APS) Paral
 * [YEAR](../t-sql/functions/year-transact-sql.md)
 * [XACT_STATE](../t-sql/functions/xact-state-transact-sql.md)
 
-## <a name="transactions"></a>Transactions
-* [transactions](../t-sql/language-elements/transactions-sql-data-warehouse.md)
+## <a name="transactions"></a>Transacciones
+* [Transacciones](../t-sql/language-elements/transactions-sql-data-warehouse.md)
 
 ## <a name="diagnostic-sessions"></a>Sesiones de diagnóstico
 * [CREATE DIAGNOSTICS SESSION](../t-sql/language-elements/create-diagnostics-session-transact-sql.md)

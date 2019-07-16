@@ -2,19 +2,18 @@
 title: 'Configuración de red del dispositivo: Analytics Platform System | Microsoft Docs'
 description: El dispositivo de Analytics Platform System (APS) está creado y configurado con un conjunto de corrección de las direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Cuando se entrega el dispositivo, la dirección IP externa (Ethernet) debe reconfigurarse para satisfacer las necesidades de centro de datos del cliente específico.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: dc0fbd64ac1179cc77e5b8a3cf9f0e5fed73d7fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bc836e3e05525b18ea994e768f65012e5c3d945
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276113"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961468"
 ---
 # <a name="appliance-network-configuration-for-analytics-platform-system"></a>Configuración de red del dispositivo para Analytics Platform System
 El dispositivo de Analytics Platform System (APS) está creado y configurado con un conjunto de corrección de las direcciones IP a lo largo de todos los servidores y dispositivos aplicables de fábrica del IHV. Cuando se entrega el dispositivo, la dirección IP externa (Ethernet) debe reconfigurarse para satisfacer las necesidades de centro de datos del cliente específico.  

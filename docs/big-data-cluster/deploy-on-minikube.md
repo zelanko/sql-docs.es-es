@@ -5,17 +5,16 @@ description: Obtenga información sobre cómo configurar minikube para las imple
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 70e4fe9439264b9b2dee3d95423bf1d3f420379d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 6c2261b5cfbbe590c76ce410da4b95ee678a20b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958473"
 ---
 # <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>Configurar minikube para las implementaciones de clústeres de macrodatos de SQL Server
 

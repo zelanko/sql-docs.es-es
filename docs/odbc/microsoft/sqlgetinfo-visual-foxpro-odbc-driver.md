@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fbc39e3d-67d9-4331-bf5f-76dbd74c4c45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 015ea45d1383e6813973aeb1e4c86451a506a2aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14837bc5ba3368fbb0d33680ee1c54936ab0a224
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898846"
 ---
 # <a name="sqlgetinfo-visual-foxpro-odbc-driver"></a>SQLGetInfo (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -43,7 +42,7 @@ ms.locfileid: "63213328"
   
  SQL_ALTER_TABLE devuelve SQL_AT_ADD_COLUMN o SQL_AT_DROP_COLUMN.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  SQL_BOOKMARK_PERSISTENCE devuelve SQL_BP_SCROLL.  
   
 ## <a name="c"></a>C  
@@ -179,19 +178,19 @@ ms.locfileid: "63213328"
   
  SQL_MAX_COLUMN_NAME_LEN devuelve 128.  
   
- SQL_MAX_COLUMNS_IN_GROUP_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_GROUP_BY devuelve 16.  
   
- SQL_MAX_COLUMNS_IN_ORDER_BY returns 16.  
+ SQL_MAX_COLUMNS_IN_ORDER_BY devuelve 16.  
   
- SQL_MAX_COLUMNS_IN_INDEX returns 0.  
+ SQL_MAX_COLUMNS_IN_INDEX devuelve 0.  
   
- SQL_MAX_COLUMNS_IN_SELECT returns 254.  
+ SQL_MAX_COLUMNS_IN_SELECT devuelve 254.  
   
- SQL_MAX_COLUMNS_IN_TABLE returns 254.  
+ SQL_MAX_COLUMNS_IN_TABLE devuelve 254.  
   
  SQL_MAX_CURSOR_NAME_LEN devuelve 254.  
   
- SQL_MAX_INDEX_SIZE returns 0.  
+ SQL_MAX_INDEX_SIZE devuelve 0.  
   
  SQL_MAX_OWNER_NAME_LEN devuelve 0.  
   
@@ -199,15 +198,15 @@ ms.locfileid: "63213328"
   
  SQL_MAX_QUALIFIER_NAME_LEN devuelve la longitud máxima del sistema operativo.  
   
- SQL_MAX_ROW_SIZE returns 254^2.  
+ SQL_MAX_ROW_SIZE devuelve 254 ^ 2.  
   
- SQL_MAX_ROW_SIZE_INCLUDES_LONG returns 'N'.  
+ Devuelve SQL_MAX_ROW_SIZE_INCLUDES_LONG ' n '.  
   
  SQL_MAX_STATEMENT_LEN devuelve 8192.  
   
  SQL_MAX_TABLE_NAME_LEN devuelve 128.  
   
- SQL_MAX_TABLES_IN_SELECT returns 16.  
+ SQL_MAX_TABLES_IN_SELECT devuelve 16.  
   
  SQL_MAX_USER_NAME_LEN devuelve 0.  
   
@@ -279,7 +278,7 @@ ms.locfileid: "63213328"
   
  SQL_ODBC_VER se implementa mediante el Administrador de controladores.  
   
- SQL_ORDER_BY_COLUMNS_IN_SELECT returns "N".  
+ Devuelve SQL_ORDER_BY_COLUMNS_IN_SELECT "N".  
   
  Devuelve SQL_OUTER_JOINS "N".  
   

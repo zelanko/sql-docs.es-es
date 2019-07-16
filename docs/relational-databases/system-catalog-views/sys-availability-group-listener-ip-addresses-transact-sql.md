@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: e515fa6b-1354-4110-9b70-ab2e6164c992
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: ca29b9925de2d2c1c80e18372a8abf6e818edd15
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a9c66e12ec326ba5021de0829b0d7cc479f858c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47814730"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997589"
 ---
 # <a name="sysavailabilitygrouplisteneripaddresses-transact-sql"></a>sys.availability_group_listener_ip_addresses (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada dirección IP que está asociado con cualquier siempre en agente de escucha en el clúster de clústeres de conmutación por error de servidor de Windows (WSFC).  
+  Devuelve una fila para cada dirección IP asociada a cualquier escucha de grupo de disponibilidad AlwaysOn del clúster de clústeres de conmutación por error de Windows Server (WSFC).  
   
  Clave principal: **listener_id** + **dirección_IP** + **ip_sub_mask**  
   
@@ -41,7 +40,7 @@ ms.locfileid: "47814730"
 |-----------------|---------------|-----------------|  
 |**listener_id**|**nvarchar(36)**|GUID de recurso del clúster de conmutación por error de Windows Server (WSFC).|  
 |**ip_address**|**nvarchar(48)**|Dirección IP virtual configurada del agente de escucha del grupo de disponibilidad. Devuelve una sola dirección IPv4 o IPv6.|  
-|**ip_subnet_mask**|**nvarchar (15)**|Máscara de subred de IP configurada para la dirección IPv4, si existe, que se configura para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = subred IPv6|  
+|**ip_subnet_mask**|**nvarchar(15)**|Máscara de subred de IP configurada para la dirección IPv4, si existe, que se configura para el agente de escucha del grupo de disponibilidad.<br /><br /> NULL = subred IPv6|  
 |**is_dhcp**|**bit**|Si la dirección IP está configurada por DHCP, puede ser:<br /><br /> 0 = La dirección IP no está configurada por DHCP.<br /><br /> 1 = La dirección IP está configurada por DHCP|  
 |**network_subnet_ip**|**nvarchar(48)**|Dirección IP de subred de red que especifica la subred a la que pertenece la dirección IP.|  
 |**network_subnet_prefix_length**|**int**|Longitud de prefijo de subred de red de la subred a la que pertenece la dirección IP.|  

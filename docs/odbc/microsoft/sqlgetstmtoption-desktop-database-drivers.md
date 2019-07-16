@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f9ed31af-2fa9-4a0c-9639-08b63199b092
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0af5c392045316b692164a1dce16a5e90c960901
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffe0e5f8932dc4ef53d7fac3fd0ea580892eb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690160"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898777"
 ---
 # <a name="sqlgetstmtoption-desktop-database-drivers"></a>SQLGetStmtOption (controladores de escritorio de la base de datos)
 Los marcadores devueltos por una *fOption* de SQL_GETBOOKMARK solo son válidos mientras la consulta está abierta y se invalidan cuando se vuelve a emitir la consulta. No se admiten marcadores persistentes.

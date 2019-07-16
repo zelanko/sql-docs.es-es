@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 51d643ed-015b-4639-969a-9491d9875aca
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e74a3207691aca001dcf334c1ee50d53d4f34d69
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0adedfb69cd4a7b5cf195916747687826805e8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905389"
 ---
 # <a name="sqlsetscrolloptions-desktop-database-drivers"></a>SQLSetScrollOptions (controladores de escritorio de la base de datos)
 Se admiten cursores estáticos y hacia delante para SQL_CONCUR_READ_ONLY.  

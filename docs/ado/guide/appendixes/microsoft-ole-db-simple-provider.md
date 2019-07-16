@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e7dc6f0-482c-4103-8187-f890865e40fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc17df7bad00205803b33cb4af17cb3c6ddaac56
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3acdfc7e03115b415e7641047e7621d5ab463e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926607"
 ---
 # <a name="microsoft-ole-db-simple-provider-overview"></a>Información general de un proveedor sencillo de OLE DB de Microsoft
 Permite que Microsoft OLE DB simples proveedor (OSP) ADO tener acceso a los datos para el que un proveedor se ha escrito utilizando el [Kit de herramientas de OLE DB simples proveedor (OSP)](https://msdn.microsoft.com/6e7b7931-9e4a-4151-ae51-672abd3f84a6). Simple proveedores están diseñados para tener acceso a orígenes de datos que requieren la compatibilidad de OLE DB solo fundamental, como matrices en memoria o documentos XML.

@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 93966909-d758-4d50-950b-f5066d104fa6
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: a5df628a6b37c8d89843506c5b7f4c5050157158
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 61593522e09ed86ec10f08a6ad8ff7a941a2e10e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56027397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899343"
 ---
 # <a name="sysdmpdwnodes-transact-sql"></a>sys.dm_pdw_nodes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -28,8 +27,8 @@ ms.locfileid: "56027397"
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
 |pdw_node_id|**int**|Identificador numérico único asociado al nodo.<br /><br /> Clave para esta vista.|Es único en todo el dispositivo, independientemente del tipo.|  
-|Tipo|**nvarchar(32)**|Tipo del nodo.|'ADMINISTRACIÓN DE PROCESO', 'CONTROL',' '|  
-|NAME|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
+|type|**nvarchar(32)**|Tipo del nodo.|'ADMINISTRACIÓN DE PROCESO', 'CONTROL',' '|  
+|name|**nvarchar(32)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
 |address|**nvarchar(32)**|Dirección IP de este nodo.|En el formato de [0-255]. [0-255]. [0-255]. [0-255].|  
 |is_passive|**int**|Indica si la máquina virtual ejecuta el nodo se está ejecutando en el servidor asignado o se ha conmutado por error para el servidor de reserva.|0 - nodo de máquina virtual se está ejecutando en el servidor original.<br /><br /> 1 - máquina virtual del nodo se está ejecutando en el servidor de reserva.|  
 |región|**nvarchar(32)**|La región donde se está ejecutando el nodo.|'PDW', 'HDINSIGHT'|  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7b861c82-357e-4590-8074-45136e9ed15e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 485cd951992ed427461e497c53d17a4f6db24a38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7184c8ac9e0ad1813999a276f1579351f98544ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63127232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020400"
 ---
 # <a name="role-of-the-driver-manager"></a>Rol del Administrador de controladores
 El Administrador de controladores determina el orden en que se va a devolver registros de estado que genera final. En concreto, determina el registro que tiene la clasificación más alta y se devuelve en primer lugar. El controlador es responsable de ordenar los registros de estado que genera. Si se registran registros de estado por el Administrador de controladores y el controlador, el Administrador de controladores es responsable de ordenarlas. Para obtener más información, consulte [secuencia de registros de estado](../../../odbc/reference/develop-app/sequence-of-status-records.md).  

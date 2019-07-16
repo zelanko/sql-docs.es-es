@@ -2,19 +2,18 @@
 title: Conecte el dispositivo o desactivar - Analytics Platform System | Microsoft Docs
 description: Alimentación del dispositivo o desactivar para Analytics Platform System
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 994b0f94448b7fb7901734b2ae737e26be23900f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d24f808365a8a04fdc6b469a8eaac98c208c19e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960245"
 ---
 # <a name="power-the-appliance-on-or-off-for-analytics-platform-system"></a>Alimentación del dispositivo o desactivar para Analytics Platform System
 Este tema describe cómo a encendido o apagado su Systemappliance de plataforma de análisis ejecuta con almacenamiento de datos paralelos. Use este tema cuando se mueve una aplicación Analytics Platform System, o a la potencia en un dispositivo tras un error grave de energía.  
@@ -27,7 +26,7 @@ Las conexiones a los nodos de PDW de SQL Server pueden realizarse con las direcc
   
 ## <a name="PowerOff"></a>Apagar el dispositivo  
   
-### <a name="before-you-begin"></a>Antes de comenzar  
+### <a name="before-you-begin"></a>Antes de empezar  
 Antes de apagar el dispositivo, debe terminar todas las actividades en el dispositivo. Para finalizar todas las actividades:  
   
 -   Use la **sesiones** página de la consola de administración para identificar los usuarios actuales. Póngase en contacto con ellos y pídale que cierre la sesión.  

@@ -1,5 +1,5 @@
 ---
-title: Setup DLL | Microsoft Docs
+title: DLL de instalación | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7e036b66-2fbe-4ce2-815c-2fd03b6fce4d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3e6d88e53ae40d98f9f6edf799be714ad0ba2814
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ddc680dce5e4d39dd88e8677718a83ad0ea89cac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063414"
 ---
 # <a name="setup-dll"></a>Archivo DLL de configuración
 El Administrador de ODBC llama a la función **ConfigDSN** cuando los usuarios configurar orígenes de datos.

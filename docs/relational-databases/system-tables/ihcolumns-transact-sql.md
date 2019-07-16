@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5bb027e5-5279-487b-9c33-5f402987253c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c5d05f2667b6f7196338b182f2b9cca1a84e7b6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9985b0587316641955219eb5179ffd6ed07916d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990386"
 ---
 # <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62744173"
 |-----------------|---------------|-----------------|  
 |**column_id**|**int**|Identifica una columna publicada.|  
 |**publishercolumn_id**|**int**|Asocia una columna publicada a metadatos de columna almacenados en el [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) tabla del sistema.|  
-|**Nombre**|**sysname**|Especifica el nombre de la columna.|  
+|**name**|**sysname**|Especifica el nombre de la columna.|  
 |**article_id**|**int**|Identifica el artículo al que pertenece la columna.|  
 |**column_ordinal**|**int**|Identifica la columna por orden.|  
 |**mapped_type**|**tinyint**|Tipo de datos de columna de la columna de destino en el suscriptor.|  

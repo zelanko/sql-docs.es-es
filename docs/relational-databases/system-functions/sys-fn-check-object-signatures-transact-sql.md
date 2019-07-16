@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 47509566-d3d7-46a9-89c1-91b4895d56b9
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dc6d8bb4c3318f488c7969359c6aa8b18782b6cb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1b9054cae2d8b67a96be964ca8dd0f1effe2113a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47800963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046308"
 ---
 # <a name="sysfncheckobjectsignatures-transact-sql"></a>sys.fn_check_object_signatures (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -56,14 +55,14 @@ fn_ check_object_signatures (
  \@*clase* es **sysname**.  
   
  { \@ *huella digital* }  
- El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. \@*huella digital* es **varbinary(20)**.  
+ El valor hash SHA-1 del certificado o GUID de la clave asimétrica con el que se cifra la clave. \@*huella digital* es **varbinary(20)** .  
   
 ## <a name="tables-returned"></a>Tablas devueltas  
  La tabla siguiente enumeran las columnas que **fn_check_object_signatures** devuelve.  
   
-|columna|Tipo|Descripción|  
+|columna|Type|Descripción|  
 |------------|----------|-----------------|  
-|Tipo|**nvarchar(120)**|Devuelve la descripción del tipo o ensamblado.|  
+|type|**nvarchar(120)**|Devuelve la descripción del tipo o ensamblado.|  
 |entity_id|**int**|Devuelve el identificador de objeto del objeto que se está evaluando.|  
 |is_signed|**int**|Devuelve 0 cuando la huella digital proporcionada no firma el objeto. Devuelve 1 cuando la huella digital proporcionada firma el objeto.|  
 |is_signature_valid|**int**|Cuando el valor de is_signed es 1, devuelve 0 si la firma no es válida. Devuelve 1 cuando la firma es válida.<br /><br /> Cuando el valor de is_signed es 0, siempre devuelve 0.|  

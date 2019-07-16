@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0a30fa74-6f10-4410-bd70-882e7c43cd46
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbf05e0b177cc61ed9de757db46f8950aaa7dccd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a6146a942e572e28692ceaafd77d6958cdab9dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964951"
 ---
 # <a name="users-collection-adox"></a>Colección de usuarios (ADOX)
 Todos los contiene almacenan [usuario](../../../ado/reference/adox-api/user-object-adox.md) objetos de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) o [grupo](../../../ado/reference/adox-api/group-object-adox.md).  
@@ -31,11 +30,11 @@ Todos los contiene almacenan [usuario](../../../ado/reference/adox-api/user-obje
 ## <a name="remarks"></a>Comentarios  
  El **usuarios** colección de un [catálogo](../../../ado/reference/adox-api/catalog-object-adox.md) representa todas las de los usuarios del catálogo. El **usuarios** colección para un [grupo](../../../ado/reference/adox-api/group-object-adox.md) representa sólo los usuarios que tienen una pertenencia al grupo específico.  
   
- El [Append](../../../ado/reference/adox-api/append-method-adox-users.md) método para un **usuarios** colección es único para ADOX. Puede hacer lo siguiente:  
+ El [Append](../../../ado/reference/adox-api/append-method-adox-users.md) método para un **usuarios** colección es único para ADOX. Puede:  
   
 -   Agregar un nuevo usuario a la colección mediante el **Append** método.  
   
- Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede hacer lo siguiente:  
+ Las propiedades y métodos restantes son estándar para colecciones de ADO. Puede:  
   
 -   Obtener acceso a un usuario de la colección con el [elemento](../../../ado/reference/ado-api/item-property-ado.md) propiedad.  
   

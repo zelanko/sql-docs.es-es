@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537327"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006229"
 ---
 # <a name="sqlfreehandle-function"></a>Función SQLFreeHandle
 **Conformidad**  
@@ -72,7 +71,7 @@ SQLRETURN SQLFreeHandle(
   
  Si **SQLFreeHandle** devuelve SQL_ERROR, el identificador es válido aún.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLFreeHandle** devuelve SQL_ERROR, un valor SQLSTATE asociado puede obtenerse a partir de la estructura de datos de diagnóstico para el identificador que **SQLFreeHandle** intentó libre pero no se pudo. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLFreeHandle** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  

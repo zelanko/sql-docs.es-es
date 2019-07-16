@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c4af3d6a65f6104240c5c9a32d1761e4be69a41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1a03ecd9f41fe7d236f8c61f7059014a6ac07fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63277601"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088208"
 ---
 # <a name="operators-mdx-syntax"></a>Operadores (sintaxis de MDX)
 
@@ -72,11 +71,11 @@ ms.locfileid: "63277601"
   
 -   NOT  
   
--   y  
+-   Y  
   
 -   XOR  
   
--   O BIEN  
+-   OR  
   
  Para obtener más información acerca de los operadores en MDX, vea [referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md).  
   
@@ -92,10 +91,10 @@ ms.locfileid: "63277601"
   
 |Tipo original|Tipo necesario|Conversión|  
 |-------------------|-----------------|----------------|  
-|Nivel|Establecer|\<level>.members|  
-|Hierarchy|Miembro|\<hierarchy>.defaultmember|  
-|Miembro|Tuple|(\<Miembro >)|  
-|Tuple|Miembro|\<tuple>.item(0)|  
+|Nivel|Establecer|\<nivel > .members|  
+|Hierarchy|Member|\<jerarquía > .defaultmember|  
+|Member|Tuple|(\<Miembro >)|  
+|Tuple|Member|\<tuple>.item(0)|  
 |Tuple|escalar|\<tuple>.value|  
   
 ## <a name="see-also"></a>Vea también  

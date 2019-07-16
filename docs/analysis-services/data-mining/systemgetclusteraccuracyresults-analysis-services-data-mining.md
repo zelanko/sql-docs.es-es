@@ -1,5 +1,5 @@
 ---
-title: 'SystemGetClusterAccuracyResults (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: SystemGetClusterAccuracyResults (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9521cfd6e2b9ec0d08f290c60167c682c98e46f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019162"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209653"
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -72,7 +72,7 @@ SystemGetClusterAccuracyResults(
   
  En la tabla siguiente se muestran las columnas que devuelve **SystemGetClusterAccuracyResults**. Para obtener más información sobre cómo interpretar la información que devuelve el procedimiento almacenado, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).  
   
-|Nombre de la columna|Description|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |ModelName|Nombre del modelo probado. **Todos** indica que el resultado es un agregado para todos los modelos.|  
 |AttributeName|No aplicable a los modelos de agrupación en clústeres.|  
@@ -81,12 +81,12 @@ SystemGetClusterAccuracyResults(
 |PartitionCases|Entero que indica el número de casos que se han probado.|  
 |Prueba|Tipo de prueba que se realizó.|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas para cada modelo dependen del tipo de modelo, y el tipo del valor de predicción.<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Puntuación de probabilidad que indica la probabilidad del caso de clúster.|  
+|Valor|Puntuación de probabilidad que indica la probabilidad del caso de clúster.|  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se proporcionan ejemplos de los valores que puede utilizar para especificar los datos de la estructura de minería de datos que se usan para la validación cruzada. Si desea utilizar casos de prueba para la validación cruzada, la estructura de minería de datos ya debe contener un conjunto de datos de prueba. Para obtener información sobre cómo definir un conjunto de datos de prueba al crear una estructura de minería de datos, vea [Conjuntos de datos de entrenamiento y de prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valor entero|Description|  
+|Valor entero|Descripción|  
 |-------------------|-----------------|  
 |1|Solo se utilizan casos de entrenamiento.|  
 |2|Solo se utilizan casos de prueba.|  
@@ -111,7 +111,7 @@ CALL SystemGetClusterAccuracyResults (
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Clúster 1|||0|5545|Agrupación en clústeres|Probabilidad de casos|0.796514342249313|  
 |Clúster 2|||0|5545|Agrupación en clústeres|Probabilidad de casos|0.732122471228572|  
@@ -121,8 +121,8 @@ CALL SystemGetClusterAccuracyResults (
   
 ## <a name="see-also"></a>Vea también  
  [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
  [SystemClusterGetAccuracyResults](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

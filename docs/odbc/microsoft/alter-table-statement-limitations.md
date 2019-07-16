@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f3e88f85-edf4-47cd-a822-292b106ddb34
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 02ce530385cdc911250a81d831dd2fdb81873f76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1333cd6cd5946b7a3a70152e12f4d3decfa7fed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138433"
 ---
 # <a name="alter-table-statement-limitations"></a>Limitaciones de declaración de tabla ALTER
 Cuando el controlador de Paradox o dBASE se usa, una vez que se ha creado un índice y agrega un nuevo registro, la estructura de la tabla no se puede cambiar mediante la instrucción ALTER TABLE, a menos que se quita el índice y se elimina el contenido de la tabla.  

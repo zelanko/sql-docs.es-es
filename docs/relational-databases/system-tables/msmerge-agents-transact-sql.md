@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 639d2ebb-2c37-4fe0-b14b-1637bc5fc221
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1053b358a5854febe1147ceb5ec0a374468c5b69
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 980ecd00a07e1119a64552a3f4c903434fd09029
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106443"
 ---
 # <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52785707"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|El Id. del Agente de mezcla.|  
-|**Nombre**|**Nvarchar (100)**|Nombre del Agente de mezcla.|  
+|**name**|**nvarchar(100)**|Nombre del Agente de mezcla.|  
 |**publisher_id**|**smallint**|El ID. del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicación**|**sysname**|Nombre de la publicación.|  
@@ -47,13 +46,13 @@ ms.locfileid: "52785707"
 |**creation_date**|**datetime**|La fecha y hora que se ha creado la distribución o el agente de mezcla.|  
 |**offload_enabled**|**bit**|Especifica que el agente puede activarse de manera remota.<br /><br /> **0** especifica que el agente no puede activarse de forma remota.<br /><br /> **1** especifica que el agente se activará de forma remota y en el equipo remoto especificado en la propiedad offload_server.|  
 |**offload_server**|**sysname**|Especifica el nombre de red del servidor a utilizar en la activación remota del agente.|  
-|**SID**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
+|**sid**|**varbinary(85)**|Número de identificación de seguridad (SID) del Agente de distribución o del Agente de mezcla durante su primera ejecución.|  
 |**subscriber_security_mode**|**smallint**|Modo de seguridad utilizado por el agente cuando se conecta al suscriptor, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**subscriber_login**|**sysname**|Inicio de sesión que se utilizará en la conexión con el suscriptor.|  
-|**subscriber_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utilizará en la conexión con el suscriptor.|  
+|**subscriber_password**|**nvarchar(524)**|Valor cifrado de la contraseña que se utilizará en la conexión con el suscriptor.|  
 |**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
-|**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
+|**publisher_password**|**nvarchar(524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  
   
 ## <a name="see-also"></a>Vea también  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e6474b79-4d55-458f-81ce-abfafe357f83
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a0ae475ba4dc290f57eadf94d1e45e8a203a7ce5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab9461d87a3df2efc98c38e4c72cee4c247fee7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138026"
 ---
 # <a name="sqlinstallererror-function"></a>Función SQLInstallerError
 **Conformidad**  
@@ -68,7 +67,7 @@ RETCODE SQLInstallerError(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA o SQL_ERROR.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  **SQLInstallerError** no registra los valores de error para sí mismo. **SQLInstallerError** devuelve SQL_NO_DATA cuando no puede recuperar cualquier información de error (en cuyo caso *pfErrorCode* no está definido). Si **SQLInstallerError** no se puede obtener acceso a los valores de error por algún motivo que normalmente devolvería SQL_ERROR, **SQLInstallerError** devuelve SQL_ERROR, pero no envía los valores de error. Si no conoce la longitud de la cadena de advertencia (*lpszErrorMsg*), puede establecer *lpszErrorMsg* en NULL y llamada **SQLInstallerError**. **SQLInstallerError** le retorno, a continuación, la longitud de la cadena de advertencia en *cbErrorMsgMax*. Si el búfer del mensaje de error es demasiado corto, **SQLInstallerError** devuelve SQL_SUCCESS_WITH_INFO y devuelve el valor correcto *pfErrorCode* valor **SQLInstallerError**.  
   
  Para determinar si se produjo un truncamiento en el mensaje de error, una aplicación puede comparar el valor de la *cbErrorMsgMax* argumento a la longitud real del texto del mensaje que escribe en el *pcbErrorMsg* argumento. Si se produce un truncamiento, se debe asignar la longitud del búfer correcto para *lpszErrorMsg* y **SQLInstallerError** se debe llamar de nuevo con el correspondiente *iError*registro.  

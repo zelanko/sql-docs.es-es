@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7967dc0b-bee2-4c63-b8e9-1c3ce2f5db2a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a226b17a1394cdb37982367d5c4b367f72a84ffe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 201daf29a40d0d7c7a4f49539c75fdc07bad1e31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117760"
 ---
 # <a name="spapprolepassword-transact-sql"></a>sp_approlepassword (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_approlepassword [ @rolename= ] 'role' , [ @newpwd = ] 'password'
 `[ @newpwd = ] 'password'` Es la nueva contraseña para el rol de aplicación. *contraseña* es **sysname**, no tiene ningún valor predeterminado. *contraseña* no puede ser NULL.  
   
 > [!IMPORTANT]  
->  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Strong Passwords](../../relational-databases/security/strong-passwords.md).  
+>  No utilice una contraseña NULL. Utilice una contraseña segura. Para obtener más información, consulte [Contraseñas seguras](../../relational-databases/security/strong-passwords.md).  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

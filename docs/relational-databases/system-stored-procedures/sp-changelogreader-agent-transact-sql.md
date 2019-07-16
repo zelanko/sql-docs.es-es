@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 929b2fa7-1267-41d0-8b69-e9ab26a62c0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6d3671c96b73fa1fb8138a7085748704c7a38d76
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cfa7196c0ad197a3eb7cb1a31fbdb58e74a78968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110825"
 ---
 # <a name="spchangelogreaderagent-transact-sql"></a>sp_changelogreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. *job_login* es **nvarchar (257)**, su valor predeterminado es null. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *No se puede cambiar para que no es* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta bajo la que se ejecuta el agente. *job_login* es **nvarchar (257)** , su valor predeterminado es null. En Azure SQL Database Managed Instance, utilice una cuenta de SQL Server. *No se puede cambiar para que no es* [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
 `[ @job_password = ] 'job_password'` Es la contraseña de la cuenta bajo la que se ejecuta el agente. *job_password* es **sysname**, su valor predeterminado es null.  
   

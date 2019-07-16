@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 87e2903607b476b04c44ac81ba337ea38e68a58b
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38983497"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208074"
 ---
 # <a name="power-pivot-server-administration-and-configuration-in-central-administration"></a>Administración y configuración del servidor de Power Pivot en Administración central
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,16 +47,16 @@ ms.locfileid: "38983497"
   
 ## <a name="related-tasks"></a>Related Tasks  
   
-|Vínculo|Tipo|Descripción de la tarea|  
+|Vínculo|Type|Descripción de la tarea|  
 |----------|----------|----------------------|  
 |[Implementar las soluciones de Power Pivot en SharePoint](../../analysis-services/power-pivot-sharepoint/deploy-power-pivot-solutions-to-sharepoint.md)|Obligatorio|Este paso instala los archivos de solución que agregan archivos de programa y páginas de aplicación en la granja y a las colecciones de sitios.|  
 |[Creación y configuración de una aplicación de servicio PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)|Obligatorio|En este paso se aprovisiona al servicio de sistema de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] .|  
 |[Activar la integración de características de PowerPivot para colecciones de sitios en Administración central](../../analysis-services/power-pivot-sharepoint/activate-power-pivot-integration-for-site-collections-in-ca.md)|Obligatorio|En este paso se activan las características de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en el nivel de la colección de sitios.|  
 |[Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services](../../analysis-services/power-pivot-sharepoint/add-msolap-5-as-a-trusted-data-provider-in-excel-services.md)|Obligatorio|Este paso agrega el proveedor OLE DB de Analysis Services como proveedor de confianza en Excel Services.|  
-|[Actualización de datos de Power Pivot con SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Se recomienda|La actualización de datos es opcional, pero se recomienda. Permite programar actualizaciones desatendidas de los datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en los libros de Excel publicados.|  
-|[Configuración de la combinación de PowerPivot (PowerPivot para SharePoint) de la cuenta de actualización de datos desatendida](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|Se recomienda|Este paso proporciona una cuenta especial que se puede utilizar para ejecutar trabajos de actualización de datos del servidor.|  
+|[Actualización de datos Power Pivot con SharePoint 2010](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)|Se recomienda|La actualización de datos es opcional, pero se recomienda. Permite programar actualizaciones desatendidas de los datos de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en los libros de Excel publicados.|  
+|[Configurar la cuenta de actualización de datos desatendida de PowerPivot (PowerPivot para SharePoint)](http://msdn.microsoft.com/81401eac-c619-4fad-ad3e-599e7a6f8493)|Se recomienda|Este paso proporciona una cuenta especial que se puede utilizar para ejecutar trabajos de actualización de datos del servidor.|  
 |[Configurar la recolección de datos de uso para &#40;Power Pivot para SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)|Opcional|La recopilación de datos de uso está configurada de forma predeterminada. Puede utilizar estos pasos para modificar la configuración predeterminada.|  
-|[Configurar la actualización de datos dedicada o procesamiento de una sola consulta (PowerPivot para SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|Opcional|Una instancia de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se puede destinar solo a los trabajos de actualización de datos o a las consultas. Además, puede modificar la configuración predeterminada de los trabajos paralelos de actualización de datos.|  
+|[Configuración de una actualización de datos dedicada o del procesamiento de solo consultas (Power Pivot para SharePoint)](http://msdn.microsoft.com/5e027605-1086-4941-bb01-f315df8f829b)|Opcional|Una instancia de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] se puede destinar solo a los trabajos de actualización de datos o a las consultas. Además, puede modificar la configuración predeterminada de los trabajos paralelos de actualización de datos.|  
 |[Configuración de las cuentas de servicio Power Pivot](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)|Opcional|Explica cómo actualizar las contraseñas o cambiar las cuentas de servicio.|  
 |[Conectar una aplicación de servicio PowerPivot a una aplicación web de SharePoint en Administración central](../../analysis-services/power-pivot-sharepoint/connect-power-pivot-service-app-to-sharepoint-web-app-in-ca.md)|Opcional|Explica cómo modificar las asociaciones de servicio.|  
 |[Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)|Opcional|Explica cómo agregar la Galería de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] como una ubicación de confianza.|  
@@ -66,8 +66,8 @@ ms.locfileid: "38983497"
 |[Agregar un tipo de contenido de conexión de modelo semántico de BI a una biblioteca &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/add-bi-semantic-model-connection-content-type-to-library.md)|Opcional|Explica cómo ampliar una biblioteca de documentos para admitir la creación de archivos de conexión de modelo semántico de BI.|  
   
 ## <a name="see-also"></a>Vea también  
- [PowerPivot para SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
- [Referencia de las opciones de configuración &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
- [Recuperación ante desastres de PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Instalación de Power Pivot para SharePoint 2010](http://msdn.microsoft.com/8d47dde7-c941-4280-a934-e2fe3f9a938f)   
+ [Referencia de las opciones de configuración &#40;PowerPivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
+ [Recuperación ante desastres en Power Pivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

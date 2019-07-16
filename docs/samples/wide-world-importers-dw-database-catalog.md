@@ -9,14 +9,13 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azure-sqldw-latest||>=aps-pdw-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9ead11248d0eebe198890884b427f864cfea756c
-ms.sourcegitcommit: a2be75158491535c9a59583c51890e3457dc75d6
+ms.openlocfilehash: 7c3da2af72743cc8f89273bfce24fe74fc7e4dc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/07/2018
-ms.locfileid: "51270168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104296"
 ---
 # <a name="wideworldimportersdw-database-catalog"></a>Catálogo de base de datos de WideWorldImportersDW
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
@@ -30,7 +29,7 @@ Por lo tanto, los datos de WideWorldImportersDW duplica los datos en WideWorldIm
 
 Los diferentes tipos de tablas se organizan en tres esquemas.
 
-|esquema|Descripción|
+|Esquema|Descripción|
 |-----------------------------|---------------------|
 |Dimensión|Tablas de dimensiones.|
 |Hecho|Tablas de hechos.|  
@@ -44,22 +43,22 @@ Las tablas de hechos y dimensiones aparecen a continuación. Las tablas en el es
 
 WideWorldImportersDW tiene las siguientes tablas de dimensión. La descripción incluye la relación con las tablas de origen en la base de datos de WideWorldImporters.
 
-|Table|Tablas de origen|
+|Tabla|Tablas de origen|
 |-----------------------------|---------------------|
 |City|`Application.Cities`, `Application.StateProvinces`, `Application.Countries`.|
 |Customer|`Sales.Customers`, `Sales.BuyingGroups`, `Sales.CustomerCategories`.|
-|date|Nueva tabla con información sobre fechas, incluyendo ejercicio (basado en 1 de noviembre iniciar ejercicio).|
-|Employee|`Application.People` |
+|Date|Nueva tabla con información sobre fechas, incluyendo ejercicio (basado en 1 de noviembre iniciar ejercicio).|
+|Employee|`Application.People`|
 |StockItem|`Warehouse.StockItems`, `Warehouse.Colors`, `Warehouse.PackageType`.|
 |Proveedor|`Purchasing.Suppliers`, `Purchasing.SupplierCategories`.|
-|PaymentMethod|`Application.PaymentMethods` |
-|TransactionType|`Application.TransactionTypes` |
+|PaymentMethod|`Application.PaymentMethods`.|
+|TransactionType|`Application.TransactionTypes`.|
 
 ### <a name="fact-tables"></a>Tablas de hechos
 
 WideWorldImportersDW tiene las siguientes tablas de hechos. La descripción incluye la relación con las tablas de origen en la base de datos de WideWorldImporters, así como las clases de consultas de análisis y reporting que suele utilizarse con cada tabla de hechos.
 
-|Table|Tablas de origen|Análisis de la muestra|
+|Tabla|Tablas de origen|Análisis de la muestra|
 |-----------------------------|---------------------|---------------------|
 |Pedido de|`Sales.Orders` y `Sales.OrderLines`|Personal, productividad de selector/envasador, de ventas y en tiempo para elegir los pedidos. Además, bajo stock situaciones conducen a pedidos en espera.|
 |Venta|`Sales.Invoices` y `Sales.InvoiceLines`|Fechas de ventas, las fechas de entrega, rentabilidad con el tiempo, rentabilidad por vendedor.|

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b8341492-2141-4bab-80bd-f2752223079e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c70a558b065765dd9f8c0895345959e8aa22ebfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8120f3cda584240b0b58ed5d6758621b18fe44d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63232093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070478"
 ---
 # <a name="standard-gateway"></a>Puerta de enlace estándar
 Un *puerta de enlace* es un componente de software que hace que un sistema DBMS sea similar a otro. Es decir, la puerta de enlace acepta la interfaz de programación, la gramática de SQL y un DBMS único protocolo de flujo de datos y lo traduce a la interfaz de programación, gramática de SQL, y protocolo del DBMS ocultado la secuencia de datos. Por ejemplo, las aplicaciones escritas para usar Microsoft® SQL Server™ también pueden acceder a datos de DB2 a través de la puerta de enlace de Micro Decisionware DB2; Este producto hace que DB2 sea similar a SQL Server. Cuando se usan las puertas de enlace, otra puerta de enlace debe estar escrita para cada base de datos de destino.  

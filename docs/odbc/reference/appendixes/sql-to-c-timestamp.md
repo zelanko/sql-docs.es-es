@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a0617cf-d8c0-4316-8bb4-e6ddb45d7bf1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 69c9f1258f35a69d6554783f5d1b4ca79be313d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee3852c688f495d54eb07ca9c2866ac17a1f5a1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118842"
 ---
 # <a name="sql-to-c-timestamp"></a>SQL a C: Timestamp
 
@@ -32,12 +31,12 @@ La siguiente tabla muestra los tipos de datos a la que se pueden convertir los d
 
 |Identificador de tipo de C|Prueba|**TargetValuePtr*|**StrLen_or_IndPtr*|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 20 < = *BufferLength* < = longitud de bytes de caracteres<br /><br /> *BufferLength* < 20|Datos<br /><br /> Datos truncados [b]<br /><br /> No definido|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes<br /><br /> No definido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_WCHAR|*BufferLength* > longitud de caracteres<br /><br /> 20 < = *BufferLength* < = longitud de caracteres<br /><br /> *BufferLength* < 20|Datos<br /><br /> Datos truncados [b]<br /><br /> No definido|Longitud de datos de caracteres<br /><br /> Longitud de datos de caracteres<br /><br /> No definido|n/d<br /><br /> 01004<br /><br /> 22003|  
-|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|Datos<br /><br /> No definido|Longitud de datos en bytes<br /><br /> No definido|n/d<br /><br /> 22003|  
-|SQL_C_TYPE_DATE|Parte de la hora de marca de tiempo es cero [a]<br /><br /> Parte de la hora de marca de tiempo es distinto de cero [a]|Datos<br /><br /> Datos truncados [c]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
-|SQL_C_TYPE_TIME|Parte de fracciones de marca de tiempo es cero [a]<br /><br /> Parte de fracciones de marca de tiempo es distinto de cero [a]|Datos [d]<br /><br /> Datos truncados [d], [e]|6[f]<br /><br /> 6[f]|n/d<br /><br /> 01S07|  
-|SQL_C_TYPE_TIMESTAMP|No se trunca la parte fraccionaria de segundos de marca de tiempo [a]<br /><br /> Se trunca la parte fraccionaria de segundos de marca de tiempo [a]|Datos [e]<br /><br /> Datos truncados [e]|16[f]<br /><br /> 16[f]|n/d<br /><br /> 01S07|  
+|SQL_C_CHAR|*BufferLength* > longitud de bytes de caracteres<br /><br /> 20 < = *BufferLength* < = longitud de bytes de caracteres<br /><br /> *BufferLength* < 20|Datos<br /><br /> Datos truncados [b]<br /><br /> No definido|Longitud de datos en bytes<br /><br /> Longitud de datos en bytes<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_WCHAR|*BufferLength* > longitud de caracteres<br /><br /> 20 < = *BufferLength* < = longitud de caracteres<br /><br /> *BufferLength* < 20|Datos<br /><br /> Datos truncados [b]<br /><br /> No definido|Longitud de datos de caracteres<br /><br /> Longitud de datos de caracteres<br /><br /> No definido|N/D<br /><br /> 01004<br /><br /> 22003|  
+|SQL_C_BINARY|Longitud de bytes de datos < = *BufferLength*<br /><br /> Longitud de bytes de datos > *BufferLength*|Datos<br /><br /> No definido|Longitud de datos en bytes<br /><br /> No definido|N/D<br /><br /> 22003|  
+|SQL_C_TYPE_DATE|Parte de la hora de marca de tiempo es cero [a]<br /><br /> Parte de la hora de marca de tiempo es distinto de cero [a]|Datos<br /><br /> Datos truncados [c]|6[f]<br /><br /> 6[f]|N/D<br /><br /> 01S07|  
+|SQL_C_TYPE_TIME|Parte de fracciones de marca de tiempo es cero [a]<br /><br /> Parte de fracciones de marca de tiempo es distinto de cero [a]|Datos [d]<br /><br /> Datos truncados [d], [e]|6[f]<br /><br /> 6[f]|N/D<br /><br /> 01S07|  
+|SQL_C_TYPE_TIMESTAMP|No se trunca la parte fraccionaria de segundos de marca de tiempo [a]<br /><br /> Se trunca la parte fraccionaria de segundos de marca de tiempo [a]|Datos [e]<br /><br /> Datos truncados [e]|16[f]<br /><br /> 16[f]|N/D<br /><br /> 01S07|  
 
  [a] el valor de *BufferLength* se omite para esta conversión. El controlador se da por supuesto que el tamaño de **TargetValuePtr* es el tamaño del tipo de datos C.  
   

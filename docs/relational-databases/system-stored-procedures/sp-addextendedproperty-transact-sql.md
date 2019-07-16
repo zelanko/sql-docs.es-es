@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 565483ea-875b-4133-b327-d0006d2d7b4c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40437cd27af345aff91314f07888c66e2bdff2d0
-ms.sourcegitcommit: 98324d9803edfa52508b6d5d3554614d0350a0b9
+ms.openlocfilehash: 2600543715bffaba36e29305b0893a9f17cca59c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52321751"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072691"
 ---
 # <a name="spaddextendedproperty-transact-sql"></a>sp_addextendedproperty (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_addextendedproperty
  Es el valor que se va a asociar a la propiedad. *valor* es **sql_variant**, su valor predeterminado es null. El tamaño de *value* no puede ser superior a 7.500 bytes.  
   
  [ @level0type=] {'*level0_object_type*'}  
- Tipo de objeto de nivel 0. *level0_object_type* es **varchar (128)**, su valor predeterminado es null.  
+ Tipo de objeto de nivel 0. *level0_object_type* es **varchar (128)** , su valor predeterminado es null.  
   
  Las entradas válidas son ASSEMBLY, CONTRACT, EVENT NOTIFICATION, FILEGROUP, MESSAGE TYPE, PARTITION FUNCTION, PARTITION SCHEME, REMOTE SERVICE BINDING, ROUTE, SCHEMA, SERVICE, USER, TRIGGER, TYPE, PLAN GUIDE y NULL.  
   
@@ -72,12 +71,12 @@ sp_addextendedproperty
  Nombre del tipo de objeto de nivel 0 especificado. *level0_object_name* es **sysname** con el valor predeterminado es NULL.  
   
  [ @level1type=] {'*level1_object_type*'}  
- Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son AGREGADO, predeterminado, función, LOGICAL FILE NAME, procedimiento, cola, regla, secuencia, sinónimo, TABLE, TABLE_TYPE, tipo, vista, XML SCHEMA COLLECTION y NULL.    
+ Tipo de objeto de nivel 1. *level1_object_type* es **varchar (128)** , su valor predeterminado es null. Las entradas válidas son AGREGADO, predeterminado, función, LOGICAL FILE NAME, procedimiento, cola, regla, secuencia, sinónimo, TABLE, TABLE_TYPE, tipo, vista, XML SCHEMA COLLECTION y NULL.    
  [ @level1name=] {'*level1_object_name*'}  
  Nombre del tipo de objeto de nivel 1 especificado. *level1_object_name* es **sysname**, su valor predeterminado es null.  
   
  [ @level2type=] {'*level2_object_type*'}  
- Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)**, su valor predeterminado es null. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
+ Es el tipo de objeto de nivel 2. *level2_object_type* es **varchar (128)** , su valor predeterminado es null. Las entradas válidas son COLUMN, CONSTRAINT, EVENT NOTIFICATION, INDEX, PARAMETER, TRIGGER y NULL.  
   
  [ @level2name=] {'*level2_object_name*'}  
  Es el nombre del tipo de objeto de nivel 2 especificado. *level2_object_name* es **sysname**, su valor predeterminado es null.  
@@ -86,7 +85,7 @@ sp_addextendedproperty
  0 (correcto) o 1 (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Para especificar propiedades extendidas, los objetos de una base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se clasifican en tres niveles: 0, 1 y 2. El nivel 0 es el más alto y corresponde a los objetos contenidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles.  
+ Para especificar propiedades extendidas, los objetos en un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] base de datos se clasifican en tres niveles: 0, 1 y 2. El nivel 0 es el más alto y corresponde a los objetos contenidos en el ámbito de la base de datos. Los objetos de nivel 1 se incluyen en un ámbito de esquema o de usuario, y los objetos de nivel 2 están incluidos en los objetos de nivel 1. Se pueden definir propiedades extendidas para los objetos de cualquiera de estos niveles.  
   
  Las referencias a un objeto de un nivel deben estar calificadas con los nombres de los objetos del nivel superior que son sus propietarios o que los contienen. Por ejemplo, cuando se agrega una propiedad extendida a una columna de tabla (nivel 2), también se debe especificar el nombre de la tabla (nivel 1) que contiene la columna y el esquema (nivel 0) que contiene la tabla.  
   
@@ -100,7 +99,7 @@ sp_addextendedproperty
  Las propiedades extendidas solo se replican en la sincronización inicial entre el publicador y el suscriptor. Si agrega o modifica una propiedad extendida después de la sincronización inicial, el cambio no se replica. Para obtener más información acerca de cómo replicar objetos de base de datos, vea [publicar datos y objetos de base de datos](../../relational-databases/replication/publish/publish-data-and-database-objects.md).  
   
 ## <a name="schema-vs-user"></a>Esquema frente Usuario  
- No se recomienda especificar USER como tipo de nivel 0 cuando se aplica una propiedad extendida a un objeto de base de datos, ya que esto puede producir ambigüedad en la resolución de nombres. Supongamos, por ejemplo, que el usuario Mary posee dos esquemas, Mary y MySchema, y que cada uno contiene una tabla denominada MyTable. Si Mary agrega una propiedad extendida a la tabla MyTable y especifica  **@level0type = n '**,  **@level0name = Mary**, no está claro a qué tabla se aplica la propiedad extendida. Por compatibilidad con versiones anteriores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará la propiedad a la tabla contenida en el esquema Mary.  
+ No se recomienda especificar USER como tipo de nivel 0 cuando se aplica una propiedad extendida a un objeto de base de datos, ya que esto puede producir ambigüedad en la resolución de nombres. Supongamos, por ejemplo, que el usuario Mary posee dos esquemas, Mary y MySchema, y que cada uno contiene una tabla denominada MyTable. Si Mary agrega una propiedad extendida a la tabla MyTable y especifica  **@level0type = n '** ,  **@level0name = Mary**, no está claro a qué tabla se aplica la propiedad extendida. Por compatibilidad con versiones anteriores, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] aplicará la propiedad a la tabla contenida en el esquema Mary.  
   
 ## <a name="permissions"></a>Permisos  
  Los miembros de los roles fijos de base de datos db_owner y db_ddladmin pueden agregar las propiedades extendidas a cualquier objeto con la siguiente excepción: db_ddladmin no puede agregar propiedades a la base de datos, a los usuarios o a los roles.  
@@ -238,8 +237,8 @@ EXEC sys.sp_addextendedproperty
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados del motor de base de datos &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
- [los procedimientos sp_addextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
+ [sys.fn_listextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-listextendedproperty-transact-sql.md)   
+ [sp_dropextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropextendedproperty-transact-sql.md)   
  [sp_updateextendedproperty &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updateextendedproperty-transact-sql.md)  
   
   

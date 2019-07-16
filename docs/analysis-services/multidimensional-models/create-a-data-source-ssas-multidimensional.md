@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410322"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209081"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>Crear un origen de datos (SSAS multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "52410322"
   
          La nueva conexión se muestra en el panel **Conexión de datos** de la página **Seleccione cómo definir la conexión** del Asistente para orígenes de datos.  
   
-6.  Haga clic en **Siguiente**.  
+6.  Haga clic en **Next**.  
   
 7.  En la página **Información de suplantación**, especifique las credenciales de Windows o la identidad de usuario que Analysis Services usará al conectarse al origen de datos externo. Si usa la autenticación de base de datos, estas opciones no se tienen en cuenta para la conexión.  
   
@@ -109,9 +109,9 @@ ms.locfileid: "52410322"
   
      La cuenta que especifique debe tener permisos de lectura en el origen de datos.  
   
-8.  Haga clic en **Siguiente**.  En **Finalización del asistente**, escriba un nombre del origen de datos o use el nombre predeterminado. El nombre predeterminado es el nombre de la base de datos especificada en la conexión. En el panel **Vista previa** se muestra la cadena de conexión de este nuevo origen de datos.  
+8.  Haga clic en **Next**.  En **Finalización del asistente**, escriba un nombre del origen de datos o use el nombre predeterminado. El nombre predeterminado es el nombre de la base de datos especificada en la conexión. En el panel **Vista previa** se muestra la cadena de conexión de este nuevo origen de datos.  
   
-9. Haga clic en **Finalizar**.  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
+9. Haga clic en **Finalizar**  El nuevo origen de datos aparece en la carpeta **Orígenes de datos** del Explorador de soluciones.  
   
 ##  <a name="bkmk_connection"></a> Crear un origen de datos con una conexión existente  
  Al trabajar en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , el origen de datos se puede basar en un origen de datos existente de la solución o en un proyecto de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . El Asistente para orígenes de datos ofrece varias opciones para crear el objeto de origen de datos, como es usar una conexión existente en el mismo proyecto.  

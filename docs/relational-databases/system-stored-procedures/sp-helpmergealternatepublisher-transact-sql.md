@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c00e7c26a429836f0d350e60530d2dc1db8c2a61
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6875e745cc05735b9f116c2d4afa5e5218defb99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122394"
 ---
 # <a name="sphelpmergealternatepublisher-transact-sql"></a>sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpmergealternatepublisher [ @publisher = ] 'publisher', [ @publisher_db = ]
 |**alternate_publisher_db**|**sysname**|Nombre de la base de datos de publicaciones.|  
 |**alternate_publication**|**sysname**|Nombre de la publicación.|  
 |**alternate_distributor**|**sysname**|Nombre del distribuidor.|  
-|**friendly_name**|**nvarchar(255)**|Descripción del publicador alternativo.|  
+|**Nombre_descriptivo**|**nvarchar(255)**|Descripción del publicador alternativo.|  
 |**enabled**|**bit**|Especifica si el servidor es un publicador alternativo. **1** especifica que el publicador está habilitado como un publicador alternativo. **0** especifica que no está habilitado.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c965300654f8cbebdf6fbd88699afdd512632488
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: c7a6008129d6b0a4c59412428c31f6e5de625f1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005907"
 ---
 # <a name="generate-mdx"></a>Generate (MDX)
 
@@ -105,7 +104,7 @@ ON 1
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Cadena  
  El ejemplo siguiente muestra el uso de **generar** para devolver una cadena:  
   
 ```  

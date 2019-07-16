@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e49b98e4-d1f1-42b2-b16f-eb2fc7aa1cf5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 528ba1cb776124c72fcb2d6f1d1e97c0b25ea2f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c219189fbd10ca91d91f3f5a527f88c1804d6d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124371"
 ---
 # <a name="spfulltextcatalog-transact-sql"></a>sp_fulltext_catalog (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ sp_fulltext_catalog [ @ftcat= ] 'fulltext_catalog_name' ,
 |**start_incremental**|Se inicia un rellenado incremental para *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. Si ya hay un rellenado de índices de texto completo activo, se muestra una advertencia y no se produce el rellenado. Rellenado incremental solamente las filas modificadas se recuperan para la indización de texto completo, siempre que haya un **timestamp** las columnas presentes en la tabla de texto completo indizadas.|  
 |**start_full**|Inicia un rellenado completo para *fulltext_catalog_name*. Se recupera cada una de las filas de todas las tablas asociadas con este catálogo de texto para realizar la indización de texto, aunque ya se hayan indizado.|  
 |**Detener**|Detiene un rellenado del índice para *fulltext_catalog_name*. Se muestra un error si el catálogo no existe. No se muestra ninguna advertencia si el rellenado ya se ha detenido.|  
-|**Volver a generar**|Vuelve a generar *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a llenar, ejecute **sp_fulltext_catalog** con el **start_full** o **start_incremental** acción.|  
+|**Recompilación**|Vuelve a generar *fulltext_catalog_name*. Cuando vuelve a generarse un catálogo, el catálogo existente se elimina y se crea uno nuevo en su lugar. Todas las tablas que tienen referencias de índices de texto completo se asocian al catálogo nuevo. La regeneración restablece los metadatos de texto completo de las tablas del sistema de la base de datos.<br /><br /> Si el seguimiento de cambios está establecido en OFF, la regeneración no hace que se vuelva a rellenar el catálogo de texto completo recién creado. En este caso, para volver a llenar, ejecute **sp_fulltext_catalog** con el **start_full** o **start_incremental** acción.|  
   
 `[ @path = ] 'root_directory'` Es el directorio raíz (no la ruta física completa) de un **crear** acción. *root_directory* es **nvarchar (100)** y tiene un valor predeterminado es null, lo que indica el uso de la ubicación predeterminada especificada durante la instalación. Esto es el subdirectorio Ftdata del directorio Mssql; Por ejemplo, C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\MSSQL\FTData. El directorio raíz especificado debe existir, residir en una unidad en el mismo equipo y constar de más datos que solo la letra de unidad, y no puede ser una ruta de acceso relativa. No se admiten las unidades de red, discos extraíbles, disquetes y rutas de acceso UNC. Los catálogos de texto completo deben crearse en una unidad de disco duro local asociada con una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

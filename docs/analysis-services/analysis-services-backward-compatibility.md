@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984697"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210267"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Compatibilidad con versiones anteriores de Analysis Services (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -39,7 +39,7 @@ Las siguientes características están en desuso en esta versión:
 |Tabular|Los niveles de compatibilidad 1100 y 1103 del modelo tabular no se admitirán en futuras versiones. La sustitución es establecer los modelos en el nivel de compatibilidad 1200 o superior, convirtiendo las definiciones de modelo a metadatos tabulares. Consulte [Nivel de compatibilidad para modelos tabulares de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md).|  
 |Herramientas|SQL Server Profiler para captura de seguimiento<br /><br /> La sustitución es usar el Generador de perfiles de eventos extendidos integrado en SQL Server Management Studio.  <br /> Consulte [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md).|  
 |Herramientas|Server Profiler para reproducción de seguimiento <br />Sustitución. No hay ninguna sustitución.|  
-|Objetos de administración de seguimiento y API de seguimiento|Objetos de Microsoft.AnalysisServices.Trace (contiene las API para los objetos Trace y Replay de Analysis Services). La sustitución abarca varias partes:<br /><br /> -Configuración de seguimiento: Microsoft.SqlServer.Management.XEvent<br />-Lectura de seguimiento: Microsoft.SqlServer.XEvent.Linq<br />- Reproducción de seguimiento: ninguna|  
+|Objetos de administración de seguimiento y API de seguimiento|Objetos de Microsoft.AnalysisServices.Trace (contiene las API para los objetos Trace y Replay de Analysis Services). La sustitución abarca varias partes:<br /><br /> -Configuración de seguimiento: Microsoft.SqlServer.Management.XEvent<br />-Lectura de seguimiento: Microsoft.SqlServer.XEvent.Linq<br />-Reproducción de seguimiento: None|  
   
 > [!NOTE]  
 >  Los anuncios de características anteriormente en desuso de [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] siguen en vigor. Dado que todavía no se ha eliminado del producto el código que respalda esas características, muchas de ellas siguen estando presentes en esta versión. Mientras las características en desuso anteriormente podría ser accesible, todavía se consideran en desuso y podría estar físicamente quitado del producto en cualquier momento.  

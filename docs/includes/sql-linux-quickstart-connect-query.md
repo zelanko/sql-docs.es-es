@@ -1,3 +1,11 @@
+---
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
+ms.contentlocale: es-ES
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215632"
+---
 ## <a name="connect-locally"></a>Conexión local
 
 En los pasos siguientes se usa **sqlcmd** para conectarse localmente a la nueva instancia de SQL Server.
@@ -44,7 +52,7 @@ En los pasos siguientes se crea una base de datos denominada `TestDB`.
    ```
 
 > [!TIP]
-> Para más información sobre cómo escribir consultas e instrucciones Transact-SQL, vea [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
+> Para más información sobre cómo escribir instrucciones Transact-SQL y las consultas, consulte [Tutorial: Escribir instrucciones Transact-SQL](../t-sql/tutorial-writing-transact-sql-statements.md).
 
 ### <a name="insert-data"></a>Inserción de datos
 
@@ -108,9 +116,10 @@ Además **sqlcmd**, puede usar las siguientes herramientas multiplataforma para 
 
 |||
 |---|---|
-| [Studio datos de Azure](../azure-data-studio/index.md) | Una utilidad de administración de base de datos de GUI multiplataforma. |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos de Transact-SQL. |
+| [Azure Data Studio](../azure-data-studio/index.md) | Una utilidad de administración de base de datos de GUI multiplataforma. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Un editor de código de GUI multiplataforma que ejecutan las instrucciones Transact-SQL con la extensión mssql. |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | Una configuración y automatización herramienta multiplataforma en función de los cmdlets. |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | Una interfaz de línea de comandos multiplataforma para ejecutar comandos de Transact-SQL. |
 
 ## <a name="connecting-from-windows"></a>Conexión desde Windows
 

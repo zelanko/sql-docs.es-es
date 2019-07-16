@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096226"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,7 +88,7 @@ sp_addsubscription [ @publication = ] 'publication'
  Es el nombre de la base de datos de destino en la que se colocan los datos replicados. *destination_db* es **sysname**, su valor predeterminado es null. Cuando es NULL, *destination_db* se establece en el nombre de la base de datos de publicación. Para los publicadores de Oracle, *destination_db* debe especificarse. Para un suscriptor no SQL Server, especifique un valor de (destino predeterminado) para *destination_db*.  
   
  [ @sync_type=] '*sync_type*'  
- Es el tipo de sincronización de suscripción. *sync_type* es **nvarchar (255)**, y puede tener uno de los siguientes valores:  
+ Es el tipo de sincronización de suscripción. *sync_type* es **nvarchar (255)** , y puede tener uno de los siguientes valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -102,7 +101,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Las tablas y los datos del sistema se transfieren siempre.  
   
- [ @status=] '*status*'  
+ [ @status=] '*estado*'  
  Es el estado de la suscripción. *estado* es **sysname**, su valor predeterminado es null. Si este parámetro no se establece de forma explícita, la replicación lo establece automáticamente en uno de estos valores.  
   
 |Valor|Descripción|  
@@ -111,26 +110,26 @@ sp_addsubscription [ @publication = ] 'publication'
 |subscribed|La suscripción debe inicializarse. Esta opción se establece cuando el valor de *sync_type* es automática.|  
   
  [ @subscription_type=] '*subscription_type*'  
- Es el tipo de suscripción. *subscription_type* es **nvarchar (4)**, con el valor predeterminado es push. Puede ser de inserción o de extracción. Los agentes de distribución de suscripciones de inserción residen en el distribuidor y los agentes de distribución de suscripciones de extracción residen en el suscriptor. *subscription_type* puede ser de extracción para crear una suscripción de extracción con nombre conocida para el publicador. Para obtener más información, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md).  
+ Es el tipo de suscripción. *subscription_type* es **nvarchar (4)** , con el valor predeterminado es push. Puede ser de inserción o de extracción. Los agentes de distribución de suscripciones de inserción residen en el distribuidor y los agentes de distribución de suscripciones de extracción residen en el suscriptor. *subscription_type* puede ser de extracción para crear una suscripción de extracción con nombre conocida para el publicador. Para obtener más información, vea [Suscribirse a publicaciones](../../relational-databases/replication/subscribe-to-publications.md).  
   
 > [!NOTE]  
 >  Las suscripciones anónimas no necesitan utilizar este procedimiento almacenado.  
   
  [ @update_mode=] '*update_mode*'  
- Es el tipo de actualización. *update_mode* es **nvarchar (30)**, y puede tener uno de estos valores.  
+ Es el tipo de actualización. *update_mode* es **nvarchar (30)** , y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |read only (predeterminado)|La suscripción es de solo lectura. Los cambios en el suscriptor no se envían al publicador.|  
 |sync tran|Habilita la compatibilidad con las suscripciones de actualización inmediata. No es compatible con publicadores de Oracle.|  
 |queued tran|Permite la actualización en cola de la suscripción. Las modificaciones de los datos se realizan en el suscriptor, se almacenan en una cola y después se propagan al publicador. No es compatible con publicadores de Oracle.|  
-|failover|Permite la actualización inmediata de las suscripciones con la actualización en cola como conmutación por error. Las modificaciones de los datos se pueden realizar en el suscriptor y propagarse inmediatamente al publicador. Si el publicador y el suscriptor no están conectados, el modo de actualización se puede cambiar para que las modificaciones de los datos realizadas en el suscriptor se almacenen en una cola hasta que el suscriptor y el publicador vuelvan a conectarse. No es compatible con publicadores de Oracle.|  
+|Conmutación por error|Permite la actualización inmediata de las suscripciones con la actualización en cola como conmutación por error. Las modificaciones de los datos se pueden realizar en el suscriptor y propagarse inmediatamente al publicador. Si el publicador y el suscriptor no están conectados, el modo de actualización se puede cambiar para que las modificaciones de los datos realizadas en el suscriptor se almacenen en una cola hasta que el suscriptor y el publicador vuelvan a conectarse. No es compatible con publicadores de Oracle.|  
 |queued failover|Habilita la suscripción como una suscripción de actualización en cola con la capacidad de cambiar al modo de actualización inmediata. Las modificaciones de los datos se pueden realizar en el suscriptor y almacenarse en una cola hasta que se establezca una conexión entre el suscriptor y el publicador. Cuando se establece una conexión continua, el modo de actualización puede cambiar a actualización inmediata. No es compatible con publicadores de Oracle.|  
   
  Tenga en cuenta que los valores synctran y queued tran no se permiten si la publicación que se está suscribiendo permite DTS.  
   
  [ @loopback_detection=] '*el argumento loopback_detection*'  
- Especifica si el agente de distribución envía transacciones originadas en el suscriptor al mismo suscriptor. *el argumento loopback_detection* es **nvarchar (5)**, y puede tener uno de estos valores.  
+ Especifica si el agente de distribución envía transacciones originadas en el suscriptor al mismo suscriptor. *el argumento loopback_detection* es **nvarchar (5)** , y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -197,13 +196,13 @@ sp_addsubscription [ @publication = ] 'publication'
  Es la fecha en la que el agente de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
  [ @optional_command_line=] '*optional_command_line*'  
- Es el símbolo del sistema opcional que se va a ejecutar. *optional_command_line* es **nvarchar (4000)**, su valor predeterminado es null.  
+ Es el símbolo del sistema opcional que se va a ejecutar. *optional_command_line* es **nvarchar (4000)** , su valor predeterminado es null.  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*reservada*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
- Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si el valor es false, la suscripción no se registra con el Administrador de sincronización de Windows. Si el valor es true, la suscripción se registra con el Administrador de sincronización de Windows y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No es compatible con publicadores de Oracle.  
+ Indica si se puede sincronizar la suscripción a través de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)** , su valor predeterminado es False. Si el valor es false, la suscripción no se registra con el Administrador de sincronización de Windows. Si el valor es true, la suscripción se registra con el Administrador de sincronización de Windows y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. No es compatible con publicadores de Oracle.  
   
  [ @offloadagent=] '*remote_agent_activation*'  
  Especifica que el agente puede activarse de manera remota. *remote_agent_activation* es **bit** con el valor predeterminado es 0.  
@@ -211,10 +210,10 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  Este parámetro ha quedado desusado y solamente se mantiene por compatibilidad con versiones anteriores de scripts.  
   
- [ @offloadserver= ] '*remote_agent_server_name*'  
+ [ @offloadserver=] '*remote_agent_server_name*'  
  Especifica el nombre de red del servidor que se utilizará en la activación remota. *remote_agent_server_name*es **sysname**, su valor predeterminado es null.  
   
- [ @dts_package_name= ] '*dts_package_name*'  
+ [ @dts_package_name=] '*dts_package_name*'  
  Especifica el nombre del paquete de Servicios de transformación de datos (DTS). *dts_package_name* es un **sysname** con el valor predeterminado es NULL. Por ejemplo, para especificar un paquete DTSPub_Package, el parámetro sería `@dts_package_name = N'DTSPub_Package'`. Este parámetro está disponible para suscripciones de inserción. Paga agregar información de un paquete DTS a una suscripción de extracción, utilice sp_addpullsubscription_agent.  
   
  [ @dts_package_password= ] '*dts_package_password*'  
@@ -224,7 +223,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  Debe especificar una contraseña si *dts_package_name* se especifica.  
   
  [ @dts_package_location= ] '*dts_package_location*'  
- Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)**, con el valor predeterminado es DISTRIBUTOR. La ubicación del paquete puede ser distributor o subscriber.  
+ Especifica la ubicación del paquete. *dts_package_location* es un **tipo (12)** , con el valor predeterminado es DISTRIBUTOR. La ubicación del paquete puede ser distributor o subscriber.  
   
  [ @distribution_job_name=] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
@@ -235,8 +234,8 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  *publicador* no se debe especificar para una [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
- Especifica el tipo de dispositivo de copia de seguridad utilizado al inicializar un suscriptor a partir una copia de seguridad. *backupdevicetype* es **nvarchar (20)**, y puede tener uno de estos valores:  
+ [ @backupdevicetype=] '*backupdevicetype*'  
+ Especifica el tipo de dispositivo de copia de seguridad utilizado al inicializar un suscriptor a partir una copia de seguridad. *backupdevicetype* es **nvarchar (20)** , y puede tener uno de estos valores:  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -247,15 +246,15 @@ sp_addsubscription [ @publication = ] 'publication'
  *backupdevicetype* solamente se utiliza cuando *sync_method*está establecido en initialize_with_backup.  
   
  [ @backupdevicename=] '*backupdevicename*'  
- Especifica el nombre del dispositivo utilizado al inicializar un suscriptor a partir de una copia de seguridad. *backupdevicename* es **nvarchar (1000)**, su valor predeterminado es null.  
+ Especifica el nombre del dispositivo utilizado al inicializar un suscriptor a partir de una copia de seguridad. *backupdevicename* es **nvarchar (1000)** , su valor predeterminado es null.  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  Especifica una contraseña para el conjunto de medios si esta se estableció al dar formato a los medios. *MEDIAPASSWORD* es **sysname**, su valor predeterminado es null.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
- [ @password= ] '*password*'  
+ [ @password=] '*contraseña*'  
  Especifica una contraseña para la copia de seguridad si esta se estableció al crear la copia de seguridad. *contraseña*es **sysname**, su valor predeterminado es null.  
   
  [ @fileidhint= ] *fileidhint*  

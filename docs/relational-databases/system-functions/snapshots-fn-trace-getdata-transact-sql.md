@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ac28ef48-f4f4-4bf2-ba22-d44e1be88172
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 525d33568170543538473d403985ff8cb8b54c30
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a85a911d4c9f5cd4565e9839f3be44a4e2366079
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47743263"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067752"
 ---
 # <a name="snapshotsfntracegetdata-transact-sql"></a>snapshots.fn_trace_getdata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ snapshots.fn_trace_gettable ( trace_info_id, start_time, end_time )
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|\<Todas las columnas de seguimiento >|\<Varía >|Datos de seguimiento de la tabla snapshots.trace_data de la base de datos del almacén de administración de datos.<br /><br /> Una lista de las columnas para el objeto trace especificado se puede obtener mediante el uso de la consulta siguiente:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Nota:** las columnas devueltas por la función snapshots.fn_trace_gettable corresponden a los valores en la columna de nombre en la vista del sistema sys.trace_columns. La única diferencia es que la función no devuelve la columna GroupID.|  
+|\<Todas las columnas de seguimiento >|\<Varía >|Datos de seguimiento de la tabla snapshots.trace_data de la base de datos del almacén de administración de datos.<br /><br /> Una lista de las columnas para el objeto trace especificado se puede obtener mediante el uso de la consulta siguiente:<br /><br /> `SELECT * FROM sys.trace_columns`<br /><br /> **Nota:** Las columnas devueltas por la función snapshots.fn_trace_gettable corresponden a los valores de la columna de nombre de la vista del sistema sys.trace_columns. La única diferencia es que la función no devuelve la columna GroupID.|  
   
 ## <a name="permissions"></a>Permisos  
  Requiere el permiso SELECT para mdw_reader.  

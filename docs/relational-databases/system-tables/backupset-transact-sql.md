@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119332"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "52402860"
 |-----------------|---------------|-----------------|  
 |**backup_set_id**|**int**|Número de identificación único de conjunto de copia de seguridad que identifica al conjunto de copia de seguridad. Clave principal de identidad.|  
 |**backup_set_uuid**|**uniqueidentifier**|Número de identificación único de conjunto de copia de seguridad que identifica al conjunto de copia de seguridad.|  
-|**media_set_id**|**int**|Número de identificación único de conjunto de medios que identifica el conjunto de medios que contiene el conjunto de copia de seguridad. Referencias **backupmediaset (media_set_id)**.|  
+|**media_set_id**|**int**|Número de identificación único de conjunto de medios que identifica el conjunto de medios que contiene el conjunto de copia de seguridad. Referencias **backupmediaset (media_set_id)** .|  
 |**first_family_number**|**tinyint**|Número de familia del medio en el que comienza el conjunto de copia de seguridad. Puede ser NULL.|  
 |**first_media_number**|**smallint**|Número de medio del medio en el que comienza el conjunto de copia de seguridad. Puede ser NULL.|  
 |**last_family_number**|**tinyint**|Número de familia del medio en el que termina el conjunto de copia de seguridad. Puede ser NULL.|  
@@ -50,7 +49,7 @@ ms.locfileid: "52402860"
 |**position**|**int**|Posición del conjunto de copia de seguridad utilizada en la operación de restauración para buscar el conjunto de copia de seguridad y los archivos correspondientes. Puede ser NULL. Para obtener más información, consulte el archivo en [copia de seguridad &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md).|  
 |**expiration_date**|**datetime**|Fecha y hora de expiración del conjunto de copia de seguridad. Puede ser NULL.|  
 |**software_vendor_id**|**int**|Número de identificación del proveedor de software que escribe el encabezado de medios de copia de seguridad. Puede ser NULL.|  
-|**Nombre**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad. Puede ser NULL.|  
+|**name**|**nvarchar(128)**|Nombre del conjunto de copia de seguridad. Puede ser NULL.|  
 |**description**|**nvarchar(255)**|Descripción del conjunto de copia de seguridad. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre del usuario que realiza la operación de copia de seguridad. Puede ser NULL.|  
 |**software_major_version**|**tinyint**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Número de versión principal. Puede ser NULL.|  
@@ -65,10 +64,10 @@ ms.locfileid: "52402860"
 |**database_creation_date**|**datetime**|Fecha y hora en que se creó originalmente la base de datos. Puede ser NULL.|  
 |**backup_start_date**|**datetime**|Fecha y hora en que comenzó la operación de copia de seguridad. Puede ser NULL.|  
 |**backup_finish_date**|**datetime**|Fecha y hora en que terminó la operación de copia de seguridad. Puede ser NULL.|  
-|**Tipo**|**char(1)**|Tipo de copia de seguridad. Puede ser:<br /><br /> D = Base de datos<br /><br /> I = Base de datos diferencial<br /><br /> L = Registro<br /><br /> F = Archivo o grupo de archivos<br /><br /> G = Archivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Puede ser NULL.|  
+|**type**|**char(1)**|Tipo de copia de seguridad. Puede ser:<br /><br /> D = Base de datos<br /><br /> I = Base de datos diferencial<br /><br /> L = Registro<br /><br /> F = Archivo o grupo de archivos<br /><br /> G = Archivo diferencial<br /><br /> P = Parcial<br /><br /> Q = Parcial diferencial<br /><br /> Puede ser NULL.|  
 |**sort_order**|**smallint**|Criterio de ordenación del servidor que realiza la operación de copia de seguridad. Puede ser NULL. Para obtener más información acerca de los criterios de ordenación y las intercalaciones, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
 |**code_page**|**smallint**|Página de códigos del servidor que realiza la operación de copia de seguridad. Puede ser NULL. Para obtener más información acerca de las páginas de códigos, vea [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).|  
-|**COMPATIBILITY_LEVEL**|**tinyint**|Configuración del nivel de compatibilidad para la base de datos. Puede ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Puede ser NULL.<br /><br /> Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
+|**compatibility_level**|**tinyint**|Configuración del nivel de compatibilidad para la base de datos. Puede ser:<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> Puede ser NULL.<br /><br /> Para obtener más información sobre los niveles de compatibilidad, vea [Nivel de compatibilidad de ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).|  
 |**database_version**|**int**|Número de versión de la base de datos. Puede ser NULL.|  
 |**backup_size**|**numeric(20,0)**|Tamaño del conjunto de copia de seguridad, en bytes. Puede ser NULL. Copias de seguridad de VSS, backup_size es un valor estimado.|  
 |**database_name**|**nvarchar(128)**|Nombre de la base de datos que forma parte de la operación de copia de seguridad. Puede ser NULL.|  
@@ -78,7 +77,7 @@ ms.locfileid: "52402860"
 |**unicode_locale**|**int**|Configuración regional Unicode. Puede ser NULL.|  
 |**unicode_compare_style**|**int**|Estilo de comparación en Unicode. Puede ser NULL.|  
 |**collation_name**|**nvarchar(128)**|Nombre de intercalación. Puede ser NULL.|  
-|**Is_password_protected**|**bit**|Indica si el conjunto de copia de seguridad<br /><br /> está protegido mediante contraseña:<br /><br /> 0 = Sin protección <br /><br /> 1 = Protegido|  
+|**Is_password_protected**|**bit**|Indica si el conjunto de copia de seguridad<br /><br /> está protegido mediante contraseña:<br /><br /> 0 = Sin protección<br /><br /> 1 = Protegido|  
 |**recovery_model**|**nvarchar(60)**|Modelo de recuperación de la base de datos:<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**has_bulk_logged_data**|**bit**|1 = La copia de seguridad contiene datos de registros de operaciones masivas.|  
 |**is_snapshot**|**bit**|1 = La copia de seguridad se realizó con la opción SNAPSHOT.|  

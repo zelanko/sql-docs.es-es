@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2446afc2-9d21-42d3-9847-7733d3074de9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d9d42017e3dfd6016d8b4a42c6953905e804200f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: ecdc3192e0b6de26d7b829883d26cc7bbaa7e04a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216397"
 ---
 # <a name="clr-integration-programming-model-restrictions"></a>Restricciones del modelo de programación de la integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +37,9 @@ ms.locfileid: "54136025"
   
 -   El ensamblado es uno de los ensamblados compatibles. Para obtener más información, consulte [admite bibliotecas de .NET Framework](../../../relational-databases/clr-integration/database-objects/supported-net-framework-libraries.md).  
   
--   Usa **crear ENSAMBLADOS de**_\<ubicación >,_ y están disponibles en todos los ensamblados que se hace referencia y sus dependencias *\<ubicación >*.  
+-   Usa **crear ENSAMBLADOS de** _\<ubicación >,_ y están disponibles en todos los ensamblados que se hace referencia y sus dependencias *\<ubicación >* .  
   
--   Usa **crear ENSAMBLADOS de**_\<bytes... >,_ y todas las referencias se especifican a través de espacio separados por bytes.  
+-   Usa **crear ENSAMBLADOS de** _\<bytes... >,_ y todas las referencias se especifican a través de espacio separados por bytes.  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Todos los **EXTERNAL_ACCESS** ensamblados deben cumplir los siguientes criterios:  
@@ -98,7 +97,7 @@ ms.locfileid: "54136025"
   
 -   SelfAffectingThreading  
   
--   Synchronization  
+-   Sincronización  
   
 -   SharedState  
   

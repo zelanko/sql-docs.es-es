@@ -18,27 +18,26 @@ helpviewer_keywords:
 ms.assetid: e59632f4-3292-419f-9217-ca375749f1a5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25af20743a98ad674e24cf4ae028185b024697e5
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: a96bcedaa3922ebb0691ac949f9eb15ed28336b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52395900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103302"
 ---
 # <a name="sysdmfilestreamfileiohandles-transact-sql"></a>sys.dm_filestream_file_io_handles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Muestra los identificadores de archivo que conoce el propietario del espacio de nombres (NSO). Controladores de FileStream que se obtuvo un cliente con **OpenSqlFilestream** se muestran en esta vista.  
   
-|columna|Tipo|Descripción|  
+|columna|Type|Descripción|  
 |------------|----------|-----------------|  
-|**handle_context_address**|**varbinary (8)**|Muestra la dirección de la estructura NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
+|**handle_context_address**|**varbinary(8)**|Muestra la dirección de la estructura NSO interna asociada con el identificador del cliente. Acepta valores NULL.|  
 |**creation_request_id**|**int**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. No admite valores NULL.|  
 |**creation_irp_id**|**int**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. No admite valores NULL|  
 |**handle_id**|**int**|Muestra el identificador único de este controlador asignado por el controlador. No admite valores NULL.|  
-|**creation_client_thread_id**|**varbinary (8)**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
-|**creation_client_process_id**|**varbinary (8)**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
+|**creation_client_thread_id**|**varbinary(8)**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
+|**creation_client_process_id**|**varbinary(8)**|Muestra un campo desde la solicitud de E/S de REQ_PRE_CREATE usada para crear este controlador. Acepta valores NULL.|  
 |**filestream_transaction_id**|**varbinary(128)**|Muestra el identificador de la transacción asociado con el controlador determinado. Este es el valor devuelto por la **get_filestream_transaction_context** función. Utilice este campo para unirse a la **sys.dm_filestream_file_io_requests** vista. Acepta valores NULL.|  
 |**access_type**|**nvarchar(60)**|No admite valores NULL.|  
 |**logical_path**|**nvarchar(256)**|Muestra el nombre de ruta de acceso lógico del archivo que abrió este controlador. Se trata de la misma ruta de acceso devuelta por la **. PathName** método **varbinary**(**max**) filestream. Acepta valores NULL.|  

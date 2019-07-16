@@ -1,5 +1,5 @@
 ---
-title: Conectarse en modo con conexión a una base de datos de Analysis Services | Documentos de Microsoft
+title: Conectar en modo con conexión a una base de datos de Analysis Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 612e538ef01040778497242606115a01c6ef6921
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179014"
 ---
 # <a name="connect-in-online-mode-to-an-analysis-services-database"></a>Conectar con una base de datos de Analysis Services en modo en línea
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "34021312"
      En ese momento, puede editar directamente los objetos de la base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] .  
   
 ## <a name="see-also"></a>Vea también  
- [Trabajar con Analysis Services proyectos y bases de datos durante la fase de desarrollo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
- [Crear modelos multidimensionales utilizando las herramientas de datos SQL Server & #40; SSDT & #41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
+ [Trabajar con bases de datos y proyectos de Analysis Services durante la fase de desarrollo](../../analysis-services/multidimensional-models/work-with-analysis-services-projects-and-databases-in-development.md)   
+ [Crear modelos multidimensionales al usar las herramientas de datos de SQL Server &#40;SSDT&#41;](../../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)  
   
   

@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 92c67289441ab0b6baed4509bdce8dcc0b082395
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52785627"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211501"
 ---
 # <a name="configure-a-multi-homed-computer-for-sql-server-access"></a>Configurar un equipo de host múltiple para el acceso a SQL Server
   Cuando un servidor debe proporcionar una conexión a dos o más redes o subredes de la red, un escenario típico utiliza un equipo de host múltiple. Con frecuencia, este equipo se encuentra en una red perimetral (también conocida como DMZ, zona desmilitarizada o subred filtrada). En este tema se describe cómo configurar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y Firewall de Windows con seguridad avanzada para proporcionar las conexiones de red a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en un entorno de host múltiple.  
@@ -66,9 +66,9 @@ ms.locfileid: "52785627"
   
 #### <a name="to-determine-the-ip-addresses-and-ports-used-by-includessnoversionincludesssnoversion-mdmd"></a>Para determinar las direcciones IP y los puertos que usa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
   
-1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**.  
+1.  Haga clic en **Inicio**, elija **Todos los programas**, seleccione [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)], seleccione **Herramientas de configuración** y, después, haga clic en **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** .  
   
-2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**, expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>**. Después, haga doble clic en **TCP/IP**.  
+2.  En el panel de la consola del **Administrador de configuración de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** , expanda **Configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** y **Protocolos de \<nombre de instancia>** . Después, haga doble clic en **TCP/IP**.  
   
 3.  En el cuadro de diálogo **Propiedades de TCP/IP** , en la pestaña **Direcciones IP** , aparecen varias direcciones IP con el formato **IP1**, **IP2**, hasta **IPAll**. Una de estas direcciones IP, 127.0.0.1, se utiliza para el adaptador de bucle invertido. Aparecen direcciones IP adicionales para cada dirección IP configurada en el equipo.  
   
@@ -120,21 +120,21 @@ ms.locfileid: "52785627"
   
 #### <a name="to-configure-the-firewall-rule-for-a-specific-ip-addresses"></a>Para configurar la regla de firewall de una dirección IP concreta  
   
-1.  En la página **Reglas de entrada** del **Firewall de Windows con seguridad avanzada**, haga clic con el botón derecho en la regla recién creada y, después, haga clic en **Propiedades**.  
+1.  En la página **Reglas de entrada** del **Firewall de Windows con seguridad avanzada**, haga clic con el botón derecho en la regla recién creada, y después, haga clic en **Propiedades**.  
   
-2.  En el cuadro de diálogo **Propiedades de la regla** , seleccione la pestaña **Ámbito** .  
+2.  En el cuadro de diálogo **Propiedades de la regla**, seleccione la pestaña **Ámbito** .  
   
-3.  En el área **Dirección IP local** , seleccione **Estas direcciones IP**y, a continuación, haga clic en **Agregar**.  
+3.  En el área **Dirección IP local**, seleccione **Estas direcciones IP**, y a continuación, haga clic en **Agregar**.  
   
-4.  En el cuadro de diálogo **Dirección IP** , seleccione **Esta dirección IP o subred**y escriba una de las direcciones IP que desea configurar.  
+4.  En el cuadro de diálogo **Dirección IP** , seleccione **Esta dirección IP o subred** y escriba una de las direcciones IP que desea configurar.  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
-6.  En el área **Dirección IP remota** , seleccione **Estas direcciones IP**y, a continuación, haga clic en **Agregar**.  
+6.  En el área **Dirección IP remota**, seleccione **Estas direcciones IP**, y a continuación, haga clic en **Agregar**.  
   
 7.  Use el cuadro de diálogo **Dirección IP** para configurar la conectividad de la dirección IP seleccionada en el equipo. Puede habilitar las conexiones desde direcciones IP especificadas, intervalos de direcciones IP, subredes enteras o ciertos equipos. Para configurar esta opción correctamente, debe tener un gran conocimiento de la red. Para obtener información sobre la red, consulte al administrador de red.  
   
-8.  Para cerrar el cuadro de diálogo **Dirección IP** , haga clic en **Aceptar**y haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de la regla** .  
+8.  Para cerrar el cuadro de diálogo **Dirección IP**, haga clic en **Aceptar** y haga clic en **Aceptar** para cerrar el cuadro de diálogo **Propiedades de la regla**.  
   
 9. Para configurar las otras direcciones IP en un equipo de host múltiple, repita este procedimiento con otra dirección IP y otra regla.  
   

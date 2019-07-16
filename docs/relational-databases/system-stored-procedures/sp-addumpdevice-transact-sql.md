@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117912"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @devtype = ] 'device_type'` Es el tipo de dispositivo de copia de seguridad. *device_type* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @devtype = ] 'device_type'` Es el tipo de dispositivo de copia de seguridad. *device_type* es **varchar (20)** , no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` Es el nombre lógico del dispositivo de copia de seguridad utilizado en las instrucciones BACKUP y RESTORE. *nombreLógico* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
-`[ @physicalname = ] 'physical_name'` Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *physical_name* es **nvarchar (260)**, no tiene ningún valor predeterminado de valor y no puede ser NULL.  
+`[ @physicalname = ] 'physical_name'` Es el nombre físico del dispositivo de copia de seguridad. Los nombres físicos tienen que cumplir las reglas de nombres de archivo del sistema operativo o las convenciones de nomenclatura universal para los dispositivos de red, y deben incluir la ruta de acceso completa. *physical_name* es **nvarchar (260)** , no tiene ningún valor predeterminado de valor y no puede ser NULL.  
   
  Cuando cree un dispositivo de copia de seguridad en una ubicación de red remota, asegúrese de que el nombre con el que se haya iniciado el [!INCLUDE[ssDE](../../includes/ssde-md.md)] tenga permiso de escritura en el equipo remoto.  
   

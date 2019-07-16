@@ -1,5 +1,5 @@
 ---
-title: Procesar un modelo de minería de datos | Documentos de Microsoft
+title: Procesar un modelo de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bfc8d22ff87f467fa89d178d46b422918aa4dd6
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017922"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209734"
 ---
 # <a name="process-a-mining-model"></a>Procesar un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,13 +36,13 @@ ms.locfileid: "34017922"
   
      Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar el modelo. Haga clic en **Sí**.  
   
-3.  En el **procesar modelo de minería de datos - \<modelo >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo, haga clic en **ejecutar**.  
   
      Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
 4.  Una vez que haya finalizado el procesamiento del modelo correctamente, haga clic en **Cerrar** en el cuadro de diálogo **Progreso del proceso** .  
   
-5.  Haga clic en **cerrar** en el **procesar modelo de minería de datos - \<modelo >** cuadro de diálogo.  
+5.  Haga clic en **cerrar** en el **procesando modelo de minería de datos - \<modelo >** cuadro de diálogo.  
   
  Solo se han procesado la estructura y el modelo de minería de datos seleccionado.  
   
@@ -52,7 +52,7 @@ ms.locfileid: "34017922"
   
 2.  Si ha realizado cambios a la estructura de minería de datos, se le pedirá que vuelva a implementar la estructura antes de procesar los modelos. Haga clic en **Sí**.  
   
-3.  En el **procesar estructura de minería de datos - \<estructura >** cuadro de diálogo, haga clic en **ejecutar**.  
+3.  En el **procesando estructura de minería de datos - \<estructura >** cuadro de diálogo, haga clic en **ejecutar**.  
   
 4.  Se abre el cuadro de diálogo **Progreso del proceso** para mostrar información acerca del procesamiento del modelo.  
   
@@ -63,6 +63,6 @@ ms.locfileid: "34017922"
  Se han procesado la estructura y todos los modelos de minería de datos asociados.  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

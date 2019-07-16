@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 45117cb2-3247-433f-ba3d-7fa19514b1c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a0a3ac1096ff14577ba72157118dcef4e1b03e70
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a8cc9930ddf85dea60999e3b63dbcebaaf42d8f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773707"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215940"
 ---
 # <a name="spconfigurepeerconflictdetection-transact-sql"></a>sp_configure_peerconflictdetection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_configure_peerconflictdetection [ @publication = ] 'publication'
  Es el nombre de la publicación para la que se desea configurar la detección de conflictos. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ @action=] '*acción*'  
- Especifica si se habilita o deshabilita la detección de conflictos para una publicación. *acción* es **nvarchar (5)**, y puede tener uno de los siguientes valores.  
+ Especifica si se habilita o deshabilita la detección de conflictos para una publicación. *acción* es **nvarchar (5)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  

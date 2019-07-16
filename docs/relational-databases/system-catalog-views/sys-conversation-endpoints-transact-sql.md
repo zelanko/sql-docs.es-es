@@ -1,5 +1,5 @@
 ---
-title: sys.conversation_endpoints (Transact-SQL) | Microsoft Docs
+title: Sys.conversation_endpoints (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2ed758bc-2a9d-4831-8da2-4b80e218f3ea
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 493fd7d0ce579073228c467226cef7ea86b2dc26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16d29272e4229ac93b3dd5b1eaf5502a07fb0a2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62656588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109542"
 ---
 # <a name="sysconversationendpoints-transact-sql"></a>sys.conversation_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ ms.locfileid: "62656588"
 |last_out_of_order_sequence|**bigint**|Número de secuencia del último mensaje de los mensajes fuera de secuencia de este diálogo. No acepta valores NULL.|  
 |last_out_of_order_frag|**int**|Número de secuencia del último mensaje de los fragmentos no ordenados de este diálogo. No acepta valores NULL.|  
 |is_system|**bit**|1 si es un diálogo del sistema. No acepta valores NULL.|  
-|priority|**tinyint**|La prioridad de conversación que se ha asignado a este extremo de conversación. No acepta valores NULL.|  
+|prioridad|**tinyint**|La prioridad de conversación que se ha asignado a este extremo de conversación. No acepta valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

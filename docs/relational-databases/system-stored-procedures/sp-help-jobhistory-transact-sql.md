@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054932"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` Es si se debe presentar la salida con los trabajos más antiguos en primer lugar. *oldest_first* es **int**, su valor predeterminado es **0**, que presenta los trabajos más recientes en primer lugar. **1** presenta los trabajos más antiguos en primer lugar.  
   
-`[ @server = ] 'server'` El nombre del servidor en el que se realizó el trabajo. *servidor* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @server = ] 'server'` El nombre del servidor en el que se realizó el trabajo. *servidor* es **nvarchar (30)** , su valor predeterminado es null.  
   
-`[ @mode = ] 'mode'` Indica si SQL Server imprime todas las columnas del conjunto de resultados (**completa**) o un resumen de las columnas. *modo* es **varchar(7)**, su valor predeterminado es **resumen**.  
+`[ @mode = ] 'mode'` Indica si SQL Server imprime todas las columnas del conjunto de resultados (**completa**) o un resumen de las columnas. *modo* es **varchar(7)** , su valor predeterminado es **resumen**.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: b2539995f50e31e7342a4cd27fe7277a103d041f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52748539"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211749"
 ---
 # <a name="about-change-data-capture-sql-server"></a>Acerca de la captura de datos modificados (SQL Server)
   La captura de datos modificados registra la actividad de inserción, actualización y eliminación que se aplica a una tabla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Esto hace que los detalles de estos cambios estén disponibles en un formato relacional de fácil uso. La información de las columnas y los metadatos que se necesitan para aplicar los cambios a un entorno de destino se capturan para las filas modificadas y se almacenan en tablas de cambios que reflejan la estructura de columnas de las tablas de origen sometidas a seguimiento. Se proporcionan funciones con valores de tabla para permitir el acceso sistemático a los datos modificados por los consumidores.  
@@ -43,7 +43,7 @@ ms.locfileid: "52748539"
   
  Cada operación de inserción o eliminación aplicada a una tabla de origen aparece como una fila única dentro de la tabla de cambios. Las columnas de datos de la fila resultante de una operación de inserción contienen los valores de columna después de la inserción. Las columnas de datos de la fila resultante de una operación de eliminación contienen los valores de columna antes de la eliminación. Una operación de actualización requiere una entrada de fila para identificar los valores de columna antes de la actualización, y una segunda entrada de fila para identificar los valores de columna después de la actualización.  
   
- Cada fila de una tabla de cambios también contiene metadatos adicionales que permiten interpretar los cambios realizados. La columna __$start_lsn identifica el número de secuencia de registro (LSN) de confirmación que fue asignado al cambio. El LSN de confirmación identifica tanto los cambios que se confirmaron dentro de la misma transacción como el orden de esas transacciones. La columna \_\_$seqval se puede usar para ordenar los cambios adicionales que se produzcan en la misma transacción. La columna \_ \_$operation registra la operación que está asociada al cambio: 1 = eliminación, 2 = inserción, 3 = actualización (antes de la imagen) y 4 = actualización (después de la imagen). La columna \_\_$update_mask es una máscara de bits variable con un bit definido para cada columna capturada. Para las entradas correspondientes a operaciones de inserción y eliminación, la máscara de actualización siempre tendrá todos los bits activados. Las filas correspondientes a operaciones de actualización, sin embargo, tendrán solo activados los bits que correspondan a las columnas cambiadas.  
+ Cada fila de una tabla de cambios también contiene metadatos adicionales que permiten interpretar los cambios realizados. La columna __$start_lsn identifica el número de secuencia de registro (LSN) de confirmación que fue asignado al cambio. El LSN de confirmación identifica tanto los cambios que se confirmaron dentro de la misma transacción como el orden de esas transacciones. La columna \_\_$seqval se puede usar para ordenar los cambios adicionales que se produzcan en la misma transacción. En la columna \_\_$operation se registra la operación que está asociada al cambio: 1 = eliminación, 2 = inserción, 3 = actualización (antes de la imagen) y 4 = actualización (después de la imagen). La columna \_\_$update_mask es una máscara de bits variable con un bit definido para cada columna capturada. Para las entradas correspondientes a operaciones de inserción y eliminación, la máscara de actualización siempre tendrá todos los bits activados. Las filas correspondientes a operaciones de actualización, sin embargo, tendrán solo activados los bits que correspondan a las columnas cambiadas.  
   
 ## <a name="change-data-capture-validity-interval-for-a-database"></a>Intervalo de validez de la captura de datos modificados para una base de datos  
  El intervalo de validez de la captura de datos modificados para una base de datos es el tiempo durante el cual los datos modificados están disponibles para las instancias de captura. El intervalo de validez comienza cuando se crea la primera instancia de captura para una tabla de base de datos y continúa hasta el momento actual.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 35be486c-8f2d-4cec-beb8-df14151abfef
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 716471786400c030febb62ebf41c8422770a8c09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14715e40cd99f3f1a03c2ae19e825705a8376e30
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62744381"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039999"
 ---
 # <a name="determining-cursor-capabilities"></a>Determinar las capacidades del Cursor
 Las cuatro opciones siguientes en **SQLGetInfo** describen qué tipos de cursores se admiten y cuáles son sus funciones:  

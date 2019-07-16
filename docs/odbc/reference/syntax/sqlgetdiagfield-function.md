@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103776"
 ---
 # <a name="sqlgetdiagfield-function"></a>Función SQLGetDiagField
 
@@ -98,7 +97,7 @@ SQLRETURN SQLGetDiagField(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR, SQL_INVALID_HANDLE o SQL_NO_DATA.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  **SQLGetDiagField** no registra los registros de diagnóstico para sí mismo. Los siguientes valores devueltos usa para informar del resultado de su propia ejecución:  
   
 -   SQL_SUCCESS: La función devolvió información de diagnóstico.  
@@ -194,7 +193,7 @@ SQLRETURN SQLGetDiagField(
 |*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
 |*assertion-definition*|"CREAR ASERCIÓN"|SQL_DIAG_CREATE_ASSERTION|  
 |*character-set-definition*|"CREAR EL JUEGO DE CARACTERES"|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*collation-definition*|"CREAR INTERCALACIÓN"|SQL_DIAG_CREATE_COLLATION|  
+|*definición de intercalación*|"CREAR INTERCALACIÓN"|SQL_DIAG_CREATE_COLLATION|  
 |*domainn-definition*|"CREAR EL DOMINIO"|SQL_DIAG_CREATE_DOMAIN|
 |*create-index-statement*|"CREAR ÍNDICE"|SQL_DIAG_CREATE_INDEX|  
 |*create-table-statement*|"CREAR TABLA"|SQL_DIAG_CREATE_TABLE|  
@@ -213,7 +212,7 @@ SQLRETURN SQLGetDiagField(
 |*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|"CONCEDER".|SQL_DIAG_GRANT|
 |*insert-statement*|"INSERT"|SQL_DIAG_INSERT|  
-|*ODBC-procedure-extension*|"LLAMADA"|SQL_DIAG_ CALL|  
+|*ODBC-procedure-extension*|"LLAMADA"|LLAMADA SQL_DIAG_|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*schema-definition*|"CREAR ESQUEMA"|SQL_DIAG_CREATE_SCHEMA|  
 |*translation-definition*|"CREACIÓN DE TRADUCCIÓN DE"|SQL_DIAG_CREATE_TRANSLATION|  

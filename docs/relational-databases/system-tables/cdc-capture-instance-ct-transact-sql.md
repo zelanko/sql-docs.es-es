@@ -1,5 +1,5 @@
 ---
-title: cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
+title: CDC. &lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2017
 ms.prod: sql
@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c4d6202e3ac68a1c1d36e307b9073ce23f1efb6e
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: e4ad2d32c313919ed4446a5506f22e9048e09288
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586375"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119310"
 ---
-# <a name="cdcltcaptureinstancegtct-transact-sql"></a>cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
+# <a name="cdcltcaptureinstancegtct-transact-sql"></a>CDC. &lt;capture_instance&gt;_CT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   Es la tabla de cambio creada cuando la captura de datos de cambio se habilita en una tabla de origen. La tabla devuelve una fila para cada inserción y elimina la operación realizada contra la tabla de origen y dos filas para cada operación de actualización realizada contra la tabla de origen. Cuando el nombre de la tabla de cambio no se especifica en el momento que se habilita la tabla de origen, el nombre se deriva. El formato del nombre es cdc. *capture_instance*_CT donde *capture_instance* es el nombre del esquema de la tabla de origen y el nombre de tabla de origen en el formato *tabla_esquema*. Por ejemplo, si la tabla **Person.Address** en el **AdventureWorks** base de datos de ejemplo está habilitada para la captura de datos modificados, el nombre de tabla del cambio derivado sería **cdc. Person_Address_CT**.  

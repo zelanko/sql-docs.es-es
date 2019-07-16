@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105081"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` Es el nombre de la columna que se va a agregar o quitar. *columna* es **sysname**, su valor predeterminado es null. Si es NULL, se publican todas las columnas.  
   
-`[ @operation = ] 'operation'` Especifica si se agregan o quitan columnas en un artículo. *operación* es **nvarchar (5)**, con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
+`[ @operation = ] 'operation'` Especifica si se agregan o quitan columnas en un artículo. *operación* es **nvarchar (5)** , con el valor predeterminado es add. **agregar** marca la columna para la replicación. **quitar** anula la selección de la columna.  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` Especifica si se vuelven a generar los procedimientos almacenados que admiten suscripciones de actualización inmediata para que coincida con el número de columnas replicadas. *refresh_synctran_procs* es **bit**, su valor predeterminado es **1**. Si **1**, se vuelven a generar los procedimientos almacenados.  
   
@@ -68,7 +67,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1** especifica que los cambios en el artículo pueden invalidar la instantánea no es válido y si hay suscripciones existentes que requieran una nueva instantánea, concede permiso para marcar como obsoleta la instantánea existente y una nueva instantánea generada.  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [ **@force_reinit_subscription =** ] *force_reinit_subscription*  
  Confirma que la acción realizada por este procedimiento almacenado puede requerir la reinicialización de las suscripciones existentes. *force_reinit_subscription* es un **bit**, su valor predeterminado es **0**.  
   
  **0** especifica que los cambios en el artículo no invalidarán la suscripción para reinicializarla. Si el procedimiento almacenado detecta que el cambio requiere la reinicialización de suscripciones, se producirá un error y no se realizarán cambios. **1** especifica que los cambios en el artículo que se reinicialicen las suscripciones existentes y concede permiso para que se produzca la reinicialización de suscripción.  

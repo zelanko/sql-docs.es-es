@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b24ed59f-f25b-4646-a135-5f3596abc1a4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6d98d40ae24c68f90a304edb0293febfe76fac2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d7642620d510ebba050a3fbc4348898e070070
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107532"
 ---
 # <a name="simulating-positioned-update-and-delete-statements"></a>Simulación de actualización por posición y las instrucciones Delete
 Si el origen de datos no admite actualización posicionada e instrucciones delete, el controlador puede simular estos. Por ejemplo, la biblioteca de cursores ODBC simula actualización posicionada y eliminar las instrucciones. La estrategia general para simular instrucciones posicionada update y delete es convertir instrucciones posicionadas a que se busca. Para ello, reemplace el **WHERE CURRENT OF** cláusula con una búsqueda **donde** cláusula que identifica la fila actual.  

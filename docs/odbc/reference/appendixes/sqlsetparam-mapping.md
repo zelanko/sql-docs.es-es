@@ -1,5 +1,5 @@
 ---
-title: SQLSetParam Mapping | Microsoft Docs
+title: Asignación de SQLSetParam | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 022dfbc0-8d18-4c35-8a28-d9eb16063188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c5d420bc68c4704705018a37c6459181481b1d7d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6c8d2d567f899c30dfe91cd35445956cd6214da9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63297472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125550"
 ---
 # <a name="sqlsetparam-mapping"></a>Asignación de SQLSetParam
 **SQLSetParam** continúa asignarse en la parte superior de **SQLBindParameter** como en ODBC 2. *x*. Aunque es conceptualmente similar a **SQLBindParam**, no se asigna el Administrador de controladores **SQLSetParam** a **SQLBindParam**. Esto es porque cierto 2 de ODBC existente. *x* controladores utilizan el valor especial de *BufferLength* (SQL_SETPARAM_VALUE_MAX) que el Administrador de controladores que se genera cuando se asigna **SQLSetParam** en la parte superior de  **SQLBindParameter** para determinar cuando se llama mediante un 1. *x* aplicación ODBC.  

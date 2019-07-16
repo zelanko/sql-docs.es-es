@@ -1,5 +1,5 @@
 ---
-title: Crear una conexión de modelo semántico de BI en una base de datos de modelo Tabular | Documentos de Microsoft
+title: Crear una conexión de modelo semántico de BI a una base de datos de modelo Tabular | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d17f5d68c1ea60c413a631ba0d734768c61fa5b2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024302"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208270"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-tabular-model-database"></a>Crear una conexión de modelo semántico de BI a una base de datos de modelo tabular
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "34024302"
 ##  <a name="bkmk_BISM"></a> Conceder permisos de lectura en la base de datos de modelo tabular  
  Dado que la base de datos se ejecuta en un servidor que es externo a la granja, parte de la configuración de las conexiones incluirá conceder permisos de base de datos en el servidor back-end de Analysis Services. Analysis Services utiliza un modelo de permisos basado en roles. Los usuarios que se conectan a bases de datos modelo deben hacerlo con permisos de lectura o superiores, a través de un rol que conceda acceso de lectura a sus miembros.  
   
- Los roles y, a veces, la pertenencia a roles, se definen cuando el modelo se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No puede utilizar SQL Server Management Studio para crear roles, pero puede usarlo para agregar miembros a un rol que ya está definido. Para obtener más información sobre cómo crear roles, consulte [crear y administrar funciones](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
+ Los roles y, a veces, la pertenencia a roles, se definen cuando el modelo se crea en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. No puede utilizar SQL Server Management Studio para crear roles, pero puede usarlo para agregar miembros a un rol que ya está definido. Para obtener más información sobre cómo crear roles, consulte [crear y administrar Roles](../../analysis-services/tabular-models/create-and-manage-roles-ssas-tabular.md).  
   
 #### <a name="assign-role-membership"></a>Asignar pertenencia a roles  
   
@@ -144,6 +144,6 @@ ms.locfileid: "34024302"
   
 ## <a name="see-also"></a>Vea también  
  [Conexión del modelo semántico de BI de PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Creación de una conexión de modelo semántico de BI a un libro PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
+ [Crear una conexión de modelo semántico de BI a un libro PowerPivot](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff093b29-671a-4fc0-86c9-08a311a98e54
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 40dc214fa7f77dfb81c941095ecd71d3d4bf5a36
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bfa535d4175c109e96098dd1e40e93be9521de2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061563"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069689"
 ---
 # <a name="function-mapping-in-the-driver-manager"></a>Asignación de función en el Administrador de controladores
 El Administrador de controladores es compatible con dos puntos de entrada para las funciones que toman argumentos de cadena. La función no representativa (**SQLDriverConnect**) es la forma ANSI de la función. La forma de Unicode está decorada con un *W* (**SQLDriverConnectW**.)  

@@ -17,11 +17,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: 18c4b6448438ebb8c95f999569d51edfecf04206
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53375831"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211587"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usar WQL con el proveedor WMI para eventos de servidor
   Las aplicaciones de administración tienen acceso a los eventos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que utilizan el proveedor WMI de eventos de servidor emitiendo instrucciones WQL (Lenguaje de consulta de WMI). WQL es un subconjunto simplificado de lenguaje de consulta estructurado (SQL) con algunas extensiones específicas de WMI. Al utilizar WQL, una aplicación recupera un tipo de evento con una instancia concreta de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], una base de datos o un objeto de base de datos (el único objeto actualmente admitido es la cola). El proveedor WMI para eventos de servidor convierte la consulta en una notificación de eventos que se crea en la base de datos de destino para las notificaciones de eventos con ámbito de base de datos o ámbito de objeto o en el **maestro** base de datos de eventos con ámbito de servidor notificaciones.  
@@ -91,7 +91,7 @@ WHERE where_condition
   
  El proveedor WMI de eventos de servidor usa un algoritmo ascendente de tipo "el primero que sea válido" para generar un ámbito lo más restringido posible para la EVENT NOTIFICATION subyacente. El algoritmo intenta minimizar la actividad interna en el tráfico del servidor y de la red entre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el proceso de host de WMI. El proveedor examina el *event_type* especificado en la cláusula FROM y las condiciones en la cláusula WHERE e intente volver a registrar la EVENT NOTIFICATION subyacente con el ámbito más restringido posible. Si el proveedor no se puede registrar en el ámbito más restringido, intenta registrarse en ámbitos superiores consecutivamente hasta que el registro resulta satisfactorio finalmente. Si llega al ámbito superior en el nivel de servidor y se produce un error, devuelve un error al consumidor.  
   
- Por ejemplo, si DatabaseName =**'** AdventureWorks **'** se especifica en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Por ejemplo, si DatabaseName = **'** AdventureWorks **'** se especifica en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  El *where_condition* también puede actuar como un filtro para limitar más la consulta a una base de datos específica, schema u object. Por ejemplo, considere la siguiente consulta WQL:  
   

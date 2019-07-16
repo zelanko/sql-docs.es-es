@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d14c76210dcd74c2ebee59df8961624389a0ac61
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d9d3000b38f8cc59ef1349a1e0cd9219a3eb385f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47823953"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133191"
 ---
 # <a name="sysservereventsessiontargets-transact-sql"></a>sys.server_event_session_targets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila para cada destino de evento de una sesión de eventos.  
+  Devuelve una fila por cada destino de evento de una sesión de eventos.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

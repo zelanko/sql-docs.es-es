@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9c4b3931-e48b-4960-89a2-5697537e9f51
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1952d4185c80a3b49b7742a9dba1f3d8d41a6ca6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7189a0586ba4f62091d5eb209a56931627bc6f7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628915"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036401"
 ---
 # <a name="manual-commit-mode"></a>Modo de confirmación manual
 *En el modo de confirmación manual,* aplicaciones explícitamente deben completar las transacciones mediante una llamada a **SQLEndTran** confirmarlas o revertirlas. Éste es el modo de transacción normal para la mayoría de bases de datos relacionales.  

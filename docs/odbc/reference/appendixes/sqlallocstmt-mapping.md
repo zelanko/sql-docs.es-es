@@ -1,5 +1,5 @@
 ---
-title: SQLAllocStmt Mapping | Microsoft Docs
+title: Asignación de SQLAllocStmt | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2449dbb-1b6c-4b49-81b9-ebdddd4442fd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1139d87d9f97a3d63236c03e7cf4ced787ad8e85
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: cf79d3ef813e87e785cea588cfc1d6e3eed44ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793549"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064991"
 ---
 # <a name="sqlallocstmt-mapping"></a>Asignación de SQLAllocStmt
 Cuando una aplicación llama **SQLAllocStmt** a través de un ODBC *3.x* controlador, la llamada a:  

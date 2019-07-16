@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4f4e1362-a5f3-4b15-8a3c-d4e96605f221
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eabecbc399751f03e9e5c25b32423ce0839072dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576e7e10d9d6f5c7e8616f57bde2dfed05503eae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112069"
 ---
 # <a name="delete-tag-command"></a>Eliminar etiqueta, comando
 Quita una etiqueta o etiquetas de un archivo de índice compuesto (.cdx).  

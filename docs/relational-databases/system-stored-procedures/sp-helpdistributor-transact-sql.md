@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122557"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @distributor = ] 'distributor' OUTPUT` Es el nombre del distribuidor. El distribuidor es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distributor = ] 'distributor' OUTPUT` Es el nombre del distribuidor. El distribuidor es **sysname**, su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` Es el nombre de la base de datos de distribución. *distribdb* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distribdb = ] 'distribdb' OUTPUT` Es el nombre de la base de datos de distribución. *distribdb* es **sysname**, su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @directory = ] 'directory' OUTPUT` Es el directorio de trabajo. *directorio* es **nvarchar (255)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @directory = ] 'directory' OUTPUT` Es el directorio de trabajo. *directorio* es **nvarchar (255)** , su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @account = ] 'account' OUTPUT` Es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de usuario de Windows. *cuenta*es **nvarchar (255)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @account = ] 'account' OUTPUT` Es el [!INCLUDE[msCoName](../../includes/msconame-md.md)] cuenta de usuario de Windows. *cuenta*es **nvarchar (255)** , su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` Es el período de retención de distribución mínimo, en horas. *min_distretention* es **int**, su valor predeterminado es **-1**.  
   
@@ -64,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` Es el período de retención de historial, en horas. *history_retention* es **int**, su valor predeterminado es **-1**.  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Es el nombre del agente de limpieza de historial. *history_cleanupagent* es **nvarchar (100)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` Es el nombre del agente de limpieza de historial. *history_cleanupagent* es **nvarchar (100)** , su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Es el nombre del agente de limpieza de distribución. *distrib_cleanupagent* es **nvarchar (100)**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` Es el nombre del agente de limpieza de distribución. *distrib_cleanupagent* es **nvarchar (100)** , su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
 `[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador* es **sysname**, su valor predeterminado es null.  
   
-`[ @local = ] 'local'` Es si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe obtener valores del servidor local. *local* es **nvarchar (5)**, su valor predeterminado es null.  
+`[ @local = ] 'local'` Es si [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] debe obtener valores del servidor local. *local* es **nvarchar (5)** , su valor predeterminado es null.  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Es el nombre del servidor que emite llamadas a procedimiento remoto. *rpcsrvname* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` Es el nombre del servidor que emite llamadas a procedimiento remoto. *rpcsrvname* es **sysname**, su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` Es el tipo de publicador del publicador. *publisher_type* es **sysname**, su valor predeterminado es **%**, que es el único valor que devuelve un conjunto de resultados.  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` Es el tipo de publicador del publicador. *publisher_type* es **sysname**, su valor predeterminado es **%** , que es el único valor que devuelve un conjunto de resultados.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
@@ -106,9 +105,9 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |Columna del conjunto de resultados|Parámetro de salida|  
 |-----------------------|----------------------|  
-|account |**@account**|  
+|account|**@account**|  
 |min distrib retention|**@min_distretention**|  
-|max distrib retention |**@max_distretention**|  
+|max distrib retention|**@max_distretention**|  
 |history retention|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
 |distribution cleanup agent|**@distrib_cleanupagent**|  

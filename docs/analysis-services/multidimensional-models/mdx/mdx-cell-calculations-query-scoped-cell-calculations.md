@@ -1,5 +1,5 @@
 ---
-title: Creación de cálculos de celdas del ámbito de consulta (MDX) | Documentos de Microsoft
+title: Creación de cálculos de celdas del ámbito de consulta (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208783"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de celdas MDX - cálculos de celdas del ámbito de consulta
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>Cálculos de celdas MDX: cálculos de celdas del ámbito de consulta
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La palabra clave **WITH** en las expresiones multidimensionales (MDX) se usa para describir las celdas calculadas en el contexto de una consulta. La palabra clave **WITH** tiene la siguiente sintaxis:  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  El valor `CellCalc_Identifier` es el nombre de las celdas calculadas. El valor `String_Expression` contiene una lista de expresiones de conjunto MDX ortogonales de una sola dimensión. Cada una de estas expresiones de conjunto debe dar como resultado una de las categorías que figuran en la siguiente tabla:  
   
-|Categoría|Description|  
+|Category|Descripción|  
 |--------------|-----------------|  
 |Conjunto vacío|Una expresión de conjunto MDX que se resuelve en un conjunto vacío. En este caso, el ámbito de la celda calculada es todo el cubo.|  
 |Conjunto de un solo miembro|Una expresión de conjunto MDX que se resuelve en un solo miembro.|  
@@ -51,6 +51,6 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
  Por otro lado, MDX procesa la fórmula de cálculo siempre que se emite una consulta MDX en el cubo y ésta implica celdas incluidas en la definición de celdas calculadas. Este procesamiento se lleva a cabo independientemente del ámbito de creación.  
   
 ## <a name="see-also"></a>Vea también  
- [CREATE CELL CALCULATION instrucción & #40; MDX & #41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+ [CREATE CELL CALCULATION &#40;Instrucción, MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

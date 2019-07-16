@@ -1,5 +1,5 @@
 ---
-title: Este libro contiene una o más consultas que actualizan los datos externos | Documentos de Microsoft
+title: Este libro contiene una o varias consultas que la actualización de datos externos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 61056ecc8b49e7d21cd15702116da511a517ef31
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027705"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208004"
 ---
-# <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Este libro contiene una o más consultas que actualizan los datos externos
+# <a name="this-workbook-contains-one-or-more-queries-that-refresh-external-data"></a>Este libro contiene una o varias consultas que la actualización de datos externos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En los libros de Excel que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services muestra esta advertencia cuando detecta información de conexión y le indica que habilite o deshabilite las consultas para este libro.  
   

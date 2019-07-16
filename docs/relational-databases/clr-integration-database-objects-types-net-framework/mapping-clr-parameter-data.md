@@ -25,13 +25,12 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9c4697d2dcbad80d1da0fd8ed6c81750ac90695b
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 530db4d31d3db4773713816f1b68404990997512
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534121"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081312"
 ---
 # <a name="mapping-clr-parameter-data"></a>Asignar datos de parámetros CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,22 +39,22 @@ ms.locfileid: "52534121"
 ||||  
 |-|-|-|  
 |**Tipo de datos de SQL Server**|Tipo (en System.Data.SqlTypes o Microsoft.SqlServer.Types)|**Tipo de datos CLR (.NET Framework)**|  
-|**bigint**|**SqlInt64**|**Int64, que acepta valores NULL\<Int64 >**|  
-|**binario**|**SqlBytes, SqlBinary**|**Byte]**|  
+|**bigint**|**SqlInt64**|**Int64, Nullable\<Int64>**|  
+|**binario**|**SqlBytes, SqlBinary**|**Byte[]**|  
 |**bit**|**SqlBoolean**|**Boolean, que acepta valores NULL\<booleano >**|  
 |**char**|None|None|  
 |**cursor**|None|None|  
 |**date**|**SqlDateTime**|**Fecha y hora, que acepta valores NULL\<DateTime >**|  
 |**datetime**|**SqlDateTime**|**Fecha y hora, que acepta valores NULL\<DateTime >**|  
 |**datetime2**|None|**Fecha y hora, que acepta valores NULL\<DateTime >**|  
-|**DATETIMEOFFSET**|**Ninguno**|**DateTimeOffset, que acepta valores NULL\<DateTimeOffset >**|  
+|**DATETIMEOFFSET**|**Ninguno**|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |**decimal**|**SqlDecimal**|**Decimal, que acepta valores NULL\<Decimal >**|  
 |**float**|**SqlDouble**|**Double, que acepta valores NULL\<Double >**|  
 |**geography**|**SqlGeography**<br /><br /> **SqlGeography** se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
 |**geometry**|**SqlGeometry**<br /><br /> **SqlGeometry** se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
 |**hierarchyid**|**SqlHierarchyId**<br /><br /> **SqlHierarchyId** se define en Microsoft.SqlServer.Types.dll, que se instala con SQL Server y puede descargarse desde el [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [feature pack de](https://www.microsoft.com/download/details.aspx?id=52676).|None|  
-|**imagen**|None|None|  
-|**int**|**SqlInt32**|**Int32, que acepta valores NULL\<Int32 >**|  
+|**image**|None|None|  
+|**int**|**SqlInt32**|**Int32, Nullable\<Int32>**|  
 |**money**|**SqlMoney**|**Decimal, que acepta valores NULL\<Decimal >**|  
 |**nchar**|**SqlChars, SqlString**|**String, Char]**|  
 |**ntext**|None|None|  
@@ -63,7 +62,7 @@ ms.locfileid: "52534121"
 |**nvarchar**|**SqlChars, SqlString**<br /><br /> **SQLChars** es una coincidencia mejor para la transferencia de datos y acceso, y **SQLString** es una coincidencia mejor para realizar operaciones de cadenas.|**String, Char]**|  
 |**nvarchar (1), nchar (1)**|**SqlChars, SqlString**|**Char, String, Char [], Nullable\<char >**|  
 |**real**|**SqlSingle** (el intervalo de **SqlSingle**, sin embargo, es mayor que **real**)|**Que acepta valores NULL, única\<único >**|  
-|**rowversion**|None|**Byte]**|  
+|**rowversion**|None|**Byte[]**|  
 |**smallint**|**SqlInt16**|**Int16, que acepta valores NULL\<Int16 >**|  
 |**smallmoney**|**SqlMoney**|**Decimal, que acepta valores NULL\<Decimal >**|  
 |**sql_variant**|None|**Objeto**|  
@@ -71,11 +70,11 @@ ms.locfileid: "52534121"
 |**texto**|None|None|  
 |**time**|None|**Intervalo de tiempo, que acepta valores NULL\<TimeSpan >**|  
 |**timestamp**|None|None|  
-|**tinyint**|**SqlByte**|**Bytes, que acepta valores NULL\<bytes >**|  
+|**tinyint**|**SqlByte**|**Byte, Nullable\<Byte>**|  
 |**uniqueidentifier**|**SqlGuid**|**GUID, que acepta valores NULL\<Guid >**|  
 |**Type(UDT) definido por el usuario**|None|La misma clase que está enlazada al tipo definido por el usuario en el mismo ensamblado o en un ensamblado dependiente.|  
-|**varbinary**|**SqlBytes, SqlBinary**|**Byte]**|  
-|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**Byte, Byte [], Nullable\<bytes >**|  
+|**varbinary**|**SqlBytes, SqlBinary**|**Byte[]**|  
+|**varbinary(1), binary(1)**|**SqlBytes, SqlBinary**|**byte, Byte[], Nullable\<byte>**|  
 |**varchar**|None|None|  
 |**xml**|**SqlXml**|None|  
   
@@ -111,8 +110,8 @@ AS EXTERNAL NAME TestStoredProc.StoredProcedures.PriceSum
 |||  
 |-|-|  
 |**Tipo de datos CLR (SQL Server)**|**Tipo de datos de SQL Server**|  
-|**Decimal**|SMALLMONEY|  
-|**SqlMoney**|SMALLMONEY|  
+|**Decimal**|smallmoney|  
+|**SqlMoney**|smallmoney|  
 |**Decimal**|money|  
 |**DateTime**|smalldatetime|  
 |**SQLDateTime**|smalldatetime|  

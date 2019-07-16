@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087754"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208101"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Panel de administración de Power Pivot y datos de uso
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "55087754"
   
 ### <a name="open-the-dashboard-from-general-application-settings"></a>Abrir el panel desde Configuración de aplicación general  
   
-1.  En Administración central, en el grupo **Configuración de aplicación general**, haga clic en **Panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+1.  En Administración central, en el grupo **Configuración de aplicación general**, haga clic en **Panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 2.  En la página principal, seleccione la aplicación de servicio Power Pivot para la que desea ver los datos de las operaciones.  
   
@@ -81,7 +81,7 @@ ms.locfileid: "55087754"
  Para ayudarle a empezar a trabajar rápidamente con informes personalizados, el Panel de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] proporciona un archivo de conexión de datos de Office (.odc) para conectar con el libro de origen. Por ejemplo, puede usar el archivo .odc en Excel para crear informes adicionales.  
   
 > [!NOTE]  
->  Edite el archivo para evitar el error siguiente al intentar usar el archivo .odc en Excel: "Error al inicializarse el origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
+>  Edite el archivo para evitar el error siguiente al intentar usar el archivo .odc en Excel: "Error de inicialización del origen de datos". El archivo .odc generado automáticamente incluye un parámetro que el proveedor OLE DB MSOLAP no admite. Las siguientes instrucciones proporcionan la solución alternativa para quitar los parámetros.  
   
  Debe ser un administrador de granja o de servicio para compilar informes que estén basados en el libro [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] en la administración central.  
   
@@ -89,7 +89,7 @@ ms.locfileid: "55087754"
   
 2.  Desplácese a la sección **Informes** en la parte inferior de la página.  
   
-3.  Haga clic en **Datos de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+3.  Haga clic en **Datos de administración de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
 4.  Guarde el archivo .odc en una carpeta local.  
   
@@ -121,7 +121,7 @@ ms.locfileid: "55087754"
   
 9. 1.  Inicie Excel 2010.  
   
-    2.  En la cinta de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], haga clic en **Iniciar ventana de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]**.  
+    2.  En la cinta de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)], haga clic en **Iniciar ventana de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]** .  
   
     3.  En la cinta Diseño de la ventana de [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] , haga clic en **Conexiones existentes**.  
   

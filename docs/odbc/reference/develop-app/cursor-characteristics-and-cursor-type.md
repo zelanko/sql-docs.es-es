@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6f67edd2-ae71-4ca0-9b2d-abf4c20dc17b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dbef278f3f25b572ddc44e87d60b5cdcd33058c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8803e7827102f564be63454b0387df938064d84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002055"
 ---
 # <a name="cursor-characteristics-and-cursor-type"></a>Características del cursor y el tipo de Cursor
 Una aplicación puede especificar las características de un cursor en lugar de especificar el tipo de cursor (de solo avance, estático, controlado por o dinámico). Para ello, la aplicación selecciona desplazamiento del cursor (estableciendo el atributo de instrucción SQL_ATTR_CURSOR_SCROLLABLE) y sensibilidad (estableciendo el atributo de instrucción SQL_ATTR_CURSOR_SENSITIVITY) antes de abrir el cursor en la instrucción identificador. El controlador, a continuación, elige al tipo de cursor que proporciona más eficazmente las características de la aplicación solicitada.  

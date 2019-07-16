@@ -1,5 +1,5 @@
 ---
-title: Definir el tipo de relación de una relación de atributo | Documentos de Microsoft
+title: Definir el tipo de relación de una relación de atributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c6ae9dd941ecf13d05b62b1b5f8bcdd3d3784188
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179233"
 ---
-# <a name="attribute-relationships---define-the-relationship-type"></a>Relaciones de atributo: definir el tipo de relación
+# <a name="attribute-relationships---define-the-relationship-type"></a>Relaciones de los atributos: Definir el tipo de relación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede definir el tipo de una relación de atributo utilizando la pestaña **Relación de los atributos** del Diseñador de dimensiones, al que se puede tener acceso desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   

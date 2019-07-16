@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685638"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207405"
 ---
 # <a name="create-relationships"></a>Crear relaciones
 
@@ -42,7 +42,7 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
 
     El Diseñador de modelos aparece ahora en la vista de diagrama, un formato gráfico que muestra todas las tablas que importó con líneas entre ellas. Las líneas entre las tablas indican las relaciones que se crearon automáticamente cuando importó los datos.
     
-    ![as-lesson4-diagram](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
+    ![diagrama como lesson4](../tutorial-tabular-1400/media/as-lesson4-diagram.png)
   
     > [!NOTE]
     > Si no ve las relaciones entre tablas, probablemente significa que no hay ninguna relación entre esas tablas en el origen de datos.
@@ -58,7 +58,7 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
   
 3.  Compruebe que se crearon las siguientes relaciones cuando se importó cada una de las tablas de la base de datos AdventureWorksDW:  
   
-    |Activo|Table|Tabla de búsqueda relacionada|  
+    |Activo|Tabla|Tabla de búsqueda relacionada|  
     |----------|---------|------------------------|  
     |Sí|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
     |Sí|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
@@ -72,7 +72,7 @@ Antes de continuar creando el modelo, debe comprobar que las relaciones entre ta
 
 En la vista de diagrama, observe una flecha, un asterisco y un número en las líneas que muestran la relación entre tablas.
 
-![as-lesson4-line](../tutorial-tabular-1400/media/as-lesson4-line.png)
+![como en línea lesson4](../tutorial-tabular-1400/media/as-lesson4-line.png)
 
 La flecha muestra la dirección del filtro. El asterisco muestra que esta tabla es la *muchos* lado en la cardinalidad de la relación y la muestra de esta tabla es la *uno* lado de la relación. Si necesita modificar una relación; Por ejemplo, cambiar la dirección de filtro de la relación y cardinalidad, haga doble clic en la línea de relación para abrir el cuadro de diálogo Editar relación.
 
@@ -99,7 +99,7 @@ En algunos casos, tal vez necesite crear relaciones adicionales entre las tablas
   
 3.  Por último, cree una relación más. En el **FactInternetSales** de tabla, haga clic y mantenga presionado el **ShipDate** columna, a continuación, arrastre el cursor hasta la **fecha** columna en el **DimDate** tabla y, a continuación, suelte.  
     
-     ![as-lesson4-newinactive](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
+     ![newinactive como lesson4](../tutorial-tabular-1400/media/as-lesson4-newinactive.png)
   
 ## <a name="whats-next"></a>¿Qué sigue?
 

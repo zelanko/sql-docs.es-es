@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211584"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181928"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Configurar Firewall de Windows para permitir el acceso a Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -74,7 +74,7 @@ ms.locfileid: "53211584"
 ##  <a name="bkmk_default"></a> Configurar Firewall de Windows para una instancia predeterminada de Analysis Services  
  La instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] escucha en el puerto TCP 2383. Si instaló la instancia predeterminada y desea usar este puerto, solo tiene que desbloquear el acceso de entrada al puerto TCP 2383 en Firewall de Windows para habilitar el acceso remoto a la instancia predeterminada de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Si instaló la instancia predeterminada pero desea configurar el servicio para que escuche en un puerto fijo, vea [Utilizar un puerto fijo para una instancia predeterminada o con nombre de Analysis Services](#bkmk_fixed) en este tema.  
   
- Para comprobar si el servicio se está ejecutando como la instancia predeterminada (MSSQLServerOLAPService), compruebe el nombre del servicio en el Administrador de configuración de SQL Server. Una instancia predeterminada de Analysis Services siempre se muestra como **SQL Server Analysis Services (MSSQLSERVER)**.  
+ Para comprobar si el servicio se está ejecutando como la instancia predeterminada (MSSQLServerOLAPService), compruebe el nombre del servicio en el Administrador de configuración de SQL Server. Una instancia predeterminada de Analysis Services siempre se muestra como **SQL Server Analysis Services (MSSQLSERVER)** .  
   
 > [!NOTE]  
 >  Los distintos sistemas operativos Windows proporcionan herramientas alternativas para configurar Firewall de Windows. La mayoría de estas herramientas le permiten elegir entre abrir un puerto o un programa ejecutable concreto. A menos que tenga una razón para especificar el programa ejecutable, recomendamos que especifique el puerto.  

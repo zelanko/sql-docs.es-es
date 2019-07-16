@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061452"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139039"
 ---
 # <a name="handles"></a>Asas
 Los identificadores son opacos, 32 bits de los valores que identifican un elemento determinado; en ODBC, este elemento puede ser un entorno, conexión, instrucción o descriptor. Cuando la aplicación llama **SQLAllocHandle**, el Administrador de controladores o el controlador crea un nuevo elemento del tipo especificado y devuelve su identificador de la aplicación. La aplicación más adelante, usa el identificador para identificar dicho elemento al llamar a funciones ODBC. El Administrador de controladores y el controlador utilizan el identificador para buscar información sobre el elemento.  

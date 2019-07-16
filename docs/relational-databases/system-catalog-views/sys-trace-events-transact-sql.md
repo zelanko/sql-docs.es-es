@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e7d2c5df-0e17-4e94-9d41-d36c7ee60662
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 302a0ea8c058eb3e69d89c2fc1e742af1965c4ca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 17bf8ff345e2869d6189491cbf09df49312e1f75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47628303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106658"
 ---
 # <a name="systraceevents-transact-sql"></a>sys.trace_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "47628303"
 |-----------------|---------------|-----------------|  
 |**trace_event_id**|**smallint**|Id. único del evento. Esta columna también está disponible en el **sys.trace_event_bindings** y **sys.trace_subclass_values** vistas de catálogo.|  
 |**category_id**|**smallint**|Id. de categoría del evento. Esta columna también está disponible en el **sys.trace_categories** vista de catálogo.|  
-|**Nombre**|**nvarchar(128)**|Nombre único de este evento. Este parámetro no se traduce.|  
+|**name**|**nvarchar(128)**|Nombre único de este evento. Este parámetro no se traduce.|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

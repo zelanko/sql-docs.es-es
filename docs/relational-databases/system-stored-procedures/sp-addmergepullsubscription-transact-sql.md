@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042733"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` Es la prioridad de suscripción. *subscription_priority*es **real**, su valor predeterminado es null. Para las suscripciones locales y anónimas, la prioridad es **0.0**. La prioridad la utiliza el solucionador predeterminado para elegir un ganador cuando se detectan conflictos. Para los suscriptores globales, la prioridad de la suscripción debe ser menor que 100, que es la prioridad del publicador.  
   
-`[ @sync_type = ] 'sync_type'` Es el tipo de sincronización de suscripción. *sync_type*es **nvarchar (15)**, su valor predeterminado es **automática**. Puede ser **automática** o **ninguno**. Si **automática**, el esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor. Si **ninguno**, se supone que el suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas. Las tablas y los datos del sistema se transfieren siempre.  
+`[ @sync_type = ] 'sync_type'` Es el tipo de sincronización de suscripción. *sync_type*es **nvarchar (15)** , su valor predeterminado es **automática**. Puede ser **automática** o **ninguno**. Si **automática**, el esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor. Si **ninguno**, se supone que el suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas. Las tablas y los datos del sistema se transfieren siempre.  
   
 > [!NOTE]  
 >  No se recomienda especificar un valor de **ninguno**.  
   
-`[ @description = ] 'description'` Es una breve descripción de esta suscripción de extracción. *descripción*es **nvarchar (255)**, su valor predeterminado es null. Este valor se muestra el Monitor de replicación en el **Nombre_descriptivo** columna, que puede usarse para ordenar las suscripciones en una publicación supervisada.  
+`[ @description = ] 'description'` Es una breve descripción de esta suscripción de extracción. *descripción*es **nvarchar (255)** , su valor predeterminado es null. Este valor se muestra el Monitor de replicación en el **Nombre_descriptivo** columna, que puede usarse para ordenar las suscripciones en una publicación supervisada.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

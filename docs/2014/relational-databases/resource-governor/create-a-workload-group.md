@@ -14,18 +14,18 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 1cd3b72418d0791d70d28d2dca0a434190a2d4a9
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52814057"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198921"
 ---
 # <a name="create-a-workload-group"></a>Crear un grupo de cargas de trabajo
   Puede crear un grupo de cargas de trabajo utilizando [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
--   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [permisos](#Permissions)  
+-   **Antes de empezar:**  [Limitaciones y restricciones](#LimitationsRestrictions), [Permisos](#Permissions)  
   
--   **Para crear una carga de trabajo de grupo, mediante:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
+-   **Para crear un grupo de cargas de trabajo mediante:**  [SQL Server Management Studio](#CreWGProp), [Transact-SQL](#CreWGTSQL)  
   
 ##  <a name="BeforeYouBegin"></a> Antes de comenzar  
   
@@ -36,7 +36,7 @@ ms.locfileid: "52814057"
   
  Se permite la creación de índices para usar más memoria del área de trabajo que la concedida inicialmente para mejorar el rendimiento. El regulador de recursos admite este tratamiento especial; sin embargo, la concesión inicial y cualquier concesión de memoria adicional están limitadas por la configuración del grupo de cargas de trabajo y el grupo de recursos de servidor.  
   
-###  <a name="Permissions"></a> Permissions  
+###  <a name="Permissions"></a> Permisos  
  Crear un grupo de cargas de trabajo requiere un permiso CONTROL SERVER.  
   
 ##  <a name="CreWGProp"></a> Crear un grupo de cargas de trabajo mediante SQL Server Management Studio  

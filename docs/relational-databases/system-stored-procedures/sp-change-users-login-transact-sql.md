@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1554b39f-274b-4ef8-898e-9e246b474333
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bd5e23d47eaeeab77dce95dbed43e1adb541b396
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0594066f044288757e5e31f8e078fabb4c2f3775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120229"
 ---
 # <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,13 +53,13 @@ sp_change_users_login [ @Action = ] 'action'
 |**Informe**|Enumera los usuarios y sus identificadores de seguridad (SID) correspondientes, que se encuentran en la base de datos actual y no están vinculados con ningún inicio de sesión. *usuario*, *inicio de sesión*, y *contraseña* debe ser NULL o no especificado.<br /><br /> Para reemplazar la opción de informe con una consulta con las tablas del sistema, comparar las entradas de **sys.server_prinicpals** con las entradas de **sys.database_principals**.|  
 |**Update_One**|Vincula especificado *usuario* en la base de datos actual a un existente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *inicio de sesión*. *usuario* y *inicio de sesión* debe especificarse. *contraseña* debe ser NULL o no especificado.|  
   
- [ @UserNamePattern= ] '*user*'  
+ [ @UserNamePattern=] '*usuario*'  
  Es el nombre de un usuario en la base de datos actual. *usuario* es **sysname**, su valor predeterminado es null.  
   
  [ @LoginName=] '*inicio de sesión*'  
  Es el nombre de un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. *login* es de tipo **sysname** y su valor predeterminado es NULL.  
   
- [ @Password= ] '*password*'  
+ [ @Password=] '*contraseña*'  
  Es la contraseña asignada a un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión que se crea mediante la especificación de **Auto_Fix**. Si ya existe un inicio de sesión coincidente, el usuario y el inicio de sesión se asignan y *contraseña* se omite. Si no existe un inicio de sesión coincidente, sp_change_users_login crea un nuevo [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión y cesionarios *contraseña* como la contraseña para el nuevo inicio de sesión. *contraseña* es **sysname**, y no debe ser NULL.  
   
 > **IMPORTANTE:** Use siempre un [contraseña segura!](../../relational-databases/security/strong-passwords.md)

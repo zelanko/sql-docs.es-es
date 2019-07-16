@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122510"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,13 +52,13 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|Número de identificación del idioma.|  
 |**dateformat**|**nchar(3)**|Formato de la fecha.|  
-|**datefirst**|**tinyint**|Primer día de la semana: 1 para lunes, 2 para martes y así sucesivamente hasta 7 para domingo.|  
+|**datefirst**|**tinyint**|Primer día de la semana: 1 para el lunes, 2 para el martes y así sucesivamente hasta 7 para el domingo.|  
 |**upgrade**|**int**|Versión de la última actualización de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para este idioma.|  
-|**Nombre**|**sysname**|Nombre del idioma.|  
+|**name**|**sysname**|Nombre del idioma.|  
 |**alias**|**sysname**|Nombre alternativo del idioma.|  
-|**meses**|**nvarchar(372)**|Nombres de los meses.|  
-|**shortmonths**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
-|**days**|**nvarchar(217)**|Nombres de los días.|  
+|**months**|**nvarchar(372)**|Nombres de los meses.|  
+|**SHORTMONTHS**|**nvarchar(132)**|Abreviaturas de los nombres de los meses.|  
+|**Días**|**nvarchar(217)**|Nombres de los días.|  
 |**lcid**|**int**|Id. de configuración regional de Windows para el idioma.|  
 |**msglangid**|**smallint**|Identificador del grupo de mensajes del [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
   

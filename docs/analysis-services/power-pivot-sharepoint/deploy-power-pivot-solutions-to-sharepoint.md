@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544266"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208221"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>Implementar las soluciones de Power Pivot en SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "52544266"
   
  [Acerca de las soluciones de Power Pivot](#intro)  
   
-##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa el Modo clásico de autenticación.  
+##  <a name="bkmk_classic"></a> Requisito previo: Compruebe que la aplicación Web usa autenticación de modo clásico  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint solo se admite en las aplicaciones web que usan el modo clásico de autenticación de Windows. Para comprobar si la aplicación usa el modo clásico, ejecute el siguiente cmdlet de PowerShell desde la **SharePoint 2010 Management Shell**, reemplazando **http://\<nombre de sitio de nivel superior >** con el nombre del sitio de SharePoint:  
   
 ```  
@@ -104,7 +104,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
 3.  Haga clic en **Implementar solución**.  
   
-4.  En **¿Dónde implementarla?**, seleccione la aplicación web de SharePoint para la que desea agregar compatibilidad con las características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
+4.  En **¿Dónde implementarla?** , seleccione la aplicación web de SharePoint para la que desea agregar compatibilidad con las características de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
 5.  Haga clic en **Aceptar**.  
   

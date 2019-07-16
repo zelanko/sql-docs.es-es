@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6c8db22d-2e4c-4b7c-ac5a-8762ef1b175b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 99ce8003b70ad41be225a7678c97ed44d9f6c7dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bcbbf3d4e0e0b77156b7adceedbdc5aad97afdc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760177"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060365"
 ---
 # <a name="syscollectorexecutionlogfull-transact-sql"></a>syscollector_execution_log_full (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62760177"
 |-----------------|---------------|-----------------|  
 |log_id|**bigint**|Identifica cada ejecución del conjunto de recopilación. Se usa para combinar esta vista con otros registros detallados. Acepta valores NULL.|  
 |parent_log_id|**bigint**|Identifica el conjunto de recopilación o paquete primario. No admite valores NULL. Los identificadores están encadenados en la relación primaria-secundaria, lo que permite determinar qué paquete se inició y con qué conjunto de recopilación. Esta vista agrupa las entradas de registro por su vinculación primaria-secundaria y aplica sangría a los nombres de los paquetes para que la cadena de la llamada esté claramente visible.|  
-|NAME|**nvarchar(4000)**|El nombre del paquete o conjunto de recopilación que representa esta entrada de registro. Acepta valores NULL.|  
+|name|**nvarchar(4000)**|El nombre del paquete o conjunto de recopilación que representa esta entrada de registro. Acepta valores NULL.|  
 |status|**smallint**|Indica el estado actual del paquete o conjunto de recopilación. Acepta valores NULL.<br /><br /> Los valores son:<br /><br /> 0 = en ejecución<br /><br /> 1 = finalizado<br /><br /> 2 = error|  
 |runtime_execution_mode|**smallint**|Indica si la actividad del conjunto de recopilación era recopilación de datos o carga de datos. Acepta valores NULL.|  
 |start_time|**datetime**|La hora de inicio del paquete o conjunto de recopilación. Acepta valores NULL.|  

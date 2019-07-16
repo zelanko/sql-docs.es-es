@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: dc8da3880afe5cf107c7e6df260957e3df6ddc9d
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56013586"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185746"
 ---
-# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lección 1: Evalúe las prácticas recomendadas de forma y a petición
+# <a name="lesson-1-evaluate-best-practices-on-an-on-demand-basis"></a>Lección 1: Evaluación de los procedimientos a petición
   Utilizando el método a petición (o "ad hoc") de evaluación de directivas, puede evaluar rápidamente las directivas de prácticas recomendadas para determinar si una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] cumple las instrucciones y recomendaciones de las prácticas recomendadas.  
   
  En esta lección, llevará a cabo una evaluación a petición de las directivas de prácticas recomendadas para la [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en uno o más instancias de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -32,6 +32,6 @@ ms.locfileid: "56013586"
  [Realizar una evaluación a petición usando Explorador de objetos](../ssms/object/object-explorer.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
+ [Lección 2: Evaluar las directivas de prácticas recomendadas de forma programada](../../2014/tutorials/lesson-2-evaluate-best-practices-policies-on-a-scheduled-basis.md)  
   
   

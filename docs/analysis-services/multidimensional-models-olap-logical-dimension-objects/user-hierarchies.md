@@ -1,5 +1,5 @@
 ---
-title: Las jerarquías de usuario | Documentos de Microsoft
+title: Jerarquías de usuario | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 40b3ebfd8a92bb1c577c9fbd8ee4c9ed0068a700
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209228"
 ---
 # <a name="user-hierarchies"></a>Jerarquías de usuario
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  Las jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en las estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
+  Jerarquías definidas por el usuario son jerarquías definidas por el usuario de atributos que se usan en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] para organizar los miembros de una dimensión en estructuras jerárquicas y proporcionar rutas de navegación de un cubo. Por ejemplo, en la tabla siguiente se define una tabla de dimensiones para una dimensión de tiempo. La tabla de dimensiones admite tres atributos denominados Year, Quarter y Month.  
   
-|Year|Trimestre|Month|  
+|Year|Trimestre|Mes|  
 |----------|-------------|-----------|  
 |1999|Trimestre 1|Jan|  
 |1999|Trimestre 1|Feb|  
@@ -65,7 +65,7 @@ ms.locfileid: "34027152"
  El nivel Province se rellena con miembros asociados a otros miembros en el nivel CountryRegion y los miembros del nivel City se asocian a sus miembros correspondientes en el nivel Province. Sin embargo, puesto que el miembro Vatican City del nivel CountryRegion no tiene miembros asociados en el nivel Province, los miembros se deben asociar desde el nivel City directamente al miembro Vatican City en el nivel CountryRegion. Debido a los cambios, la jerarquía de la dimensión es ahora irregular. El elemento primario de la ciudad Vatican City es el país o región Vatican City, que no se encuentra en el nivel inmediatamente superior al miembro Vatican City del nivel City. Para más información, vea [Jerarquías desiguales](../../analysis-services/multidimensional-models/user-defined-hierarchies-ragged-hierarchies.md).  
   
 ### <a name="parent-child-hierarchies"></a>Jerarquías de elementos primarios y secundarios  
- Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, el siguiente diagrama ilustra el **DimOrganization** tabla principal de dimensiones en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
+ Las jerarquías de elementos primarios y secundarios para dimensiones se definen mediante un atributo especial, llamado atributo primario, para determinar cómo se relacionan entre sí los miembros. Un atributo primario describe una *relación que hace referencia a sí misma*o una *autocombinación*dentro de una tabla principal de dimensiones. Las jerarquías de elementos primarios y secundarios se construyen a partir de un único atributo primario. A una jerarquía de elementos primarios y secundarios solo se le asigna un nivel, puesto que los niveles presentes en la jerarquía se extraen de las relaciones de elementos primarios y secundarios entre los miembros asociados al atributo primario. El esquema de dimensiones de una jerarquía de elementos primarios y secundarios depende de la relación que hace referencia a sí misma presente en la tabla principal de dimensiones. Por ejemplo, el siguiente diagrama ilustra la **DimOrganization** tabla principal de dimensiones en el [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] base de datos de ejemplo.  
   
  ![Referencia a sí misma combinación en la tabla DimOrganization](../../analysis-services/multidimensional-models/media/dimorganization.gif "autorreferencia combinación en la tabla DimOrganization")  
   
@@ -80,6 +80,6 @@ ms.locfileid: "34027152"
 ## <a name="see-also"></a>Vea también  
  [Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)   
  [Propiedades de jerarquía de usuario](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies-properties.md)   
- [Referencia de propiedades de atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
+ [Referencia de las propiedades de los atributos de dimensión](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)  
   
   

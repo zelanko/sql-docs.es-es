@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: b5e7d1fb-3ffb-4767-8135-604c575016b1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 839e471e8861f081762f6129dff731e66bed77a7
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b363e410f35eb7880933520dd1dbf47f258b651e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52403490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041062"
 ---
 # <a name="sysavailabilitygrouplisteners-transact-sql"></a>sys.availability_group_listeners (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Para cada siempre en el grupo de disponibilidad, devuelve cero filas indicando que ningún nombre de red está asociada con el grupo de disponibilidad o devuelve una fila para cada configuración de agente de escucha del grupo de disponibilidad en los clústeres Windows Server conmutación por error (WSFC) clúster. Esta vista muestra la configuración en tiempo real recopilada del clúster.  
+  Para cada grupo de disponibilidad AlwaysOn, devuelve cero filas indicando que no hay ningún nombre de red asociado al grupo de disponibilidad, o devuelve una fila para cada configuración de escucha de grupo de disponibilidad en el clúster de clústeres de conmutación por error de Windows Server (WSFC). Esta vista muestra la configuración en tiempo real recopilada del clúster.  
   
 > [!NOTE]  
 >  Esta vista de catálogo no describe los detalles de una configuración IP, que se definió en el clúster de WSFC.  

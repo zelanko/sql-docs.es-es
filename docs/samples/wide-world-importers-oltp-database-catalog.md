@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091254"
 ---
 # <a name="wideworldimporters-database-catalog"></a>Catálogo de base de datos de WideWorldImporters
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,7 +28,7 @@ WideWorldImporters utiliza esquemas para fines diferentes, como almacenamiento d
 
 Estos esquemas contienen los datos. Un número de tablas es necesarios para todos los demás esquemas y se encuentra en el esquema de la aplicación.
 
-|esquema|Descripción|
+|Esquema|Descripción|
 |-----------------------------|---------------------|
 |Application|Toda la aplicación a los usuarios, contactos y parámetros. Esta vista también contiene tablas de referencia con datos que se utilizan varios esquemas|
 |Purchasing|Artículo comercial se adquiere de proveedores y los detalles sobre los proveedores.|  
@@ -40,9 +39,9 @@ Estos esquemas contienen los datos. Un número de tablas es necesarios para todo
 
 Estos esquemas se utilizan para las aplicaciones externas que no se permiten tener acceso directamente a las tablas de datos. Que contienen las vistas y procedimientos almacenados utilizados por las aplicaciones externas.
 
-|esquema|Descripción|
+|Esquema|Descripción|
 |-----------------------------|---------------------|
-|Sitio web|Todo el acceso a la base de datos desde el sitio Web de la empresa es a través de este esquema.|
+|Website|Todo el acceso a la base de datos desde el sitio Web de la empresa es a través de este esquema.|
 |Informes|Todo el acceso a la base de datos de informes de Reporting Services es a través de este esquema.|
 |PowerBI|Todo el acceso a la base de datos de los paneles de Power BI a través de la puerta de enlace empresarial es a través de este esquema.|
 
@@ -52,7 +51,7 @@ Tenga en cuenta que los informes y Power BI no se utilizan en la versión inicia
 
 Esquemas de propósito especial
 
-|esquema|Descripción|
+|Esquema|Descripción|
 |-----------------------------|---------------------|
 |Integración|Objetos y procedimientos necesarios para la integración de almacén de datos (es decir, migrar los datos a la base de datos WideWorldImportersDW).|
 |Secuencias|Contiene secuencias utilizadas por todas las tablas de la aplicación.|
@@ -65,7 +64,7 @@ Todas las tablas de la base de datos están en los esquemas de datos.
 
 Detalles de los parámetros y las personas (usuarios y contactos), junto con las tablas de referencia comunes (comunes a varios otros esquemas).
 
-|Table|Descripción|
+|Tabla|Descripción|
 |-----------------------------|---------------------|
 |SystemParameters|Contiene los parámetros configurables de todo el sistema.|
 |Personas|Contiene los nombres de usuario, información de contacto para todos los que usan la aplicación y para las personas que se ocupa de Wide World Importers en organizaciones de clientes. Esto incluye personal, los clientes, proveedores y otros contactos. Para las personas que tienen permiso para usar el sistema o el sitio Web, la información incluye detalles de inicio de sesión.|
@@ -80,7 +79,7 @@ Detalles de los parámetros y las personas (usuarios y contactos), junto con las
 
 Detalles de proveedores y de las compras de artículo comercial.
 
-|Table|Descripción|
+|Tabla|Descripción|
 |-----------------------------|---------------------|
 |Suppliers|Tabla de la entidad principal para proveedores (organizaciones)|
 |SupplierCategories|Categorías de proveedores (p. ej., sorpresa, juguetes, ropa, empaquetado, etcetera.)|
@@ -93,7 +92,7 @@ Detalles de proveedores y de las compras de artículo comercial.
 
 Detalles de los clientes, vendedores y de ventas de artículos estándar.
 
-|Table|Descripción|
+|Tabla|Descripción|
 |-----------------------------|---------------------|
 |Clientes|Tablas de la entidad principal para los clientes (organizaciones o individuos)|
 |CustomerCategories|Categorías para los clientes (es decir novedad almacenes, supermercados, etcetera.)|
@@ -109,7 +108,7 @@ Detalles de los clientes, vendedores y de ventas de artículos estándar.
 
 Detalles de artículos de stock holdings y sus transacciones.
 
-|Table|Descripción|
+|Tabla|Descripción|
 |-----------------------------|---------------------|
 |StockItems|Tabla de la entidad principal para los elementos estándar|
 |StockItemHoldings|Columnas no temporal para los elementos estándar. Estas son las columnas actualizadas con frecuencia.|
@@ -161,7 +160,7 @@ El `Reports` y `PowerBI` esquemas están diseñados para reporting services y co
 
 Estos son los procedimientos utilizados por una aplicación cliente, como un front-end Web.
 
-|Procedimiento|Propósito|
+|Procedimiento|Finalidad|
 |-----------------------------|---------------------|
 |ActivateWebsiteLogon|Permite a una persona (desde `Application.People`) para tener acceso al sitio Web.|
 |ChangePassword|Cambia una contraseña de usuario (para usuarios que no usan mecanismos de autenticación externos).|
@@ -183,7 +182,7 @@ Los procedimientos almacenados en este esquema se utilizan el proceso ETL. Obtie
 
 Simula una carga de trabajo que inserta las compras y ventas. El procedimiento almacenado principal es `PopulateDataToCurrentDate`, que se usa para insertar datos de ejemplo hasta la fecha actual.
 
-|Procedimiento|Propósito|
+|Procedimiento|Finalidad|
 |-----------------------------|---------------------|
 |Configuration_ApplyDataLoadSimulationProcedures|Vuelve a crear los procedimientos necesarios para datos de simulación de carga. Esto es necesario para llevar los datos a la fecha actual.|
 |Configuration_RemoveDataLoadSimulationProcedures|Esto quita los procedimientos de nuevo una vez completada la simulación de datos.|
@@ -196,7 +195,7 @@ Simula una carga de trabajo que inserta las compras y ventas. El procedimiento a
 
 Estos procedimientos se utilizan para configurar la muestra. Se utilizan para aplicar las características de enterprise edition a la versión de standard edition de la muestra y también para agregar la auditoría y la indización de texto completo.
 
-|Procedimiento|Propósito|
+|Procedimiento|Finalidad|
 |-----------------------------|---------------------|
 |AddRoleMemberIfNonexistant|Agrega a un miembro a una función de si el miembro no está en el rol|
 |Configuration_ApplyAuditing|Agrega la auditoría. Auditoría de servidor se aplica a bases de datos de la edición standard; auditoría de base de datos adicional se agrega para enterprise edition.|
@@ -215,7 +214,7 @@ Estos procedimientos se utilizan para configurar la muestra. Se utilizan para ap
 
 Procedimientos para configurar las secuencias de la base de datos.
 
-|Procedimiento|Propósito|
+|Procedimiento|Finalidad|
 |-----------------------------|---------------------|
 |ReseedAllSequences|Llama al procedimiento ReseedSequenceBeyondTableValue para todas las secuencias.|
 |ReseedSequenceBeyondTableValue|Se utiliza para cambiar la posición del siguiente valor de secuencia más allá del valor de cualquier tabla que utiliza la misma secuencia. (Por ejemplo, un DBCC CHECKIDENT para equivalente de columnas de identidad para las secuencias, pero en potencialmente varias tablas).|

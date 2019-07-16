@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8b17a9a4-b57f-4220-8138-fc73581b1670
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf65d69c7398165bed6a7a46c82bd7feea6af19e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c4f2f4b8ea0184d063a6423f27fdf2cf9c450a05
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078647"
 ---
 # <a name="sysspatialindextessellations-transact-sql"></a>sys.spatial_index_tessellations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,19 +40,19 @@ ms.locfileid: "47719543"
 |object_id|**int**|Identificador del objeto en el que se define el índice. Cada (object_id, index_id) par tiene una entrada correspondiente [sys.spatial_indexes](../../relational-databases/system-catalog-views/sys-spatial-indexes-transact-sql.md).|  
 |index_id|**int**|Identificador del índice espacial en el que se define la columna indizada.|  
 |tessellation_scheme|**sysname**|Nombre del esquema de teselación, uno de: GEOMETRY_GRID, GEOGRAPHY_GRID|  
-|bounding_box_xmin|**float(53)**|Cuadro de la coordenada X de la esquina inferior izquierda de los delimitadores, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada x mínima.                     **Nota:** se interpretan las coordenadas definidas por los parámetros de cuadro de límite para cada objeto según su [identificador de referencia espacial (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
-|bounding_box_ymin|**float(53)**|Cuadro de la coordenada Y de la esquina inferior izquierda de los delimitadores, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada y mínima|  
-|bounding_box_xmax|**float(53)**|Cuadro de la coordenada X de la esquina superior derecha de los delimitadores, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada x máxima|  
-|bounding_box_ymax|**float(53)**|Cuadro de la coordenada Y de la esquina superior derecha de los delimitadores, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada y máxima|  
-|level_1_grid|**smallint**|Densidad de la cuadrícula para la cuadrícula de nivel superior. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de: 16 = 4 por 4 cuadrícula (bajo) 64 = 8 mediante la cuadrícula de 8 (MEDIUM) 256 = 16 por 16 cuadrícula (alto) NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_1_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel superior, uno de: baja medio alto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|bounding_box_xmin|**float(53)**|Coordenada X de la esquina inferior izquierda del rectángulo, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada x mínima.                     **Nota:** Se interpretan las coordenadas definidas por los parámetros de cuadro de límite para cada objeto según su [identificador de referencia espacial (SRID)](../../relational-databases/spatial/spatial-reference-identifiers-srids.md).|  
+|bounding_box_ymin|**float(53)**|Coordenada Y de la esquina inferior izquierda del rectángulo, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada y mínima|  
+|bounding_box_xmax|**float(53)**|Coordenada X de la esquina superior derecha del cuadro de límite, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada x máxima|  
+|bounding_box_ymax|**float(53)**|Coordenada Y de la esquina superior derecha del cuadro de límite, uno de: NULL = no aplicable con un esquema de teselación dado (como GEOGRAPHY_GRID) *n* = si tessellation_scheme es GEOMETRY_GRID, el valor de la coordenada y máxima|  
+|level_1_grid|**smallint**|Densidad de la cuadrícula para la cuadrícula de nivel superior. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de:          16 = 4 por 4 cuadrícula (bajo) 64 = 8 mediante la cuadrícula de 8 (MEDIUM) 256 = 16 por 16 cuadrícula (alto) NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_1_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel superior, uno de: BAJA Media alta NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_2_grid|**smallint**|Densidad de la cuadrícula de segundo nivel. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de: 16 = 4 por 4 cuadrícula (bajo) 64 = 8 mediante la cuadrícula de 8 (MEDIUM) 256 = 16 por 16 cuadrícula (alto) NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|level_2_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel 2 º, uno de: baja medio alto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
+|level_2_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel 2 º, uno de: BAJA Media alta NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_3_grid|**smallint**|Densidad de la cuadrícula de tercer nivel.   Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de: 16 = 4 por 4 cuadrícula (bajo) 64 = 8 mediante la cuadrícula de 8 (MEDIUM) 256 = 16 por 16 cuadrícula (alto) NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_3_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel 3, uno de: baja medio alto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_4_grid|**smallint**|Densidad de la cuadrícula de cuarto nivel. Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, uno de: 16 = 4 por 4 cuadrícula (bajo) 64 = 8 mediante la cuadrícula de 8 (MEDIUM) 256 = 16 por 16 cuadrícula (alto) NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
 |level_4_grid_desc|**nvarchar(60)**|Densidad de cuadrícula de la cuadrícula de nivel 4, uno de: < baja medio alto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados.  Se devuelve NULL cuando se utiliza la nueva teselación de SQL Server 11.|  
-|cells_per_object|**int**|Número de celdas por objeto espacial, uno de: si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, *n* = número de celdas por objeto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados|  
+|cells_per_object|**int**|Número de celdas por objeto espacial, uno de: Si tessellation_scheme es GEOMETRY_GRID o GEOGRAPHY_GRID, *n* = número de celdas por objeto NULL = no aplicable con un esquema de teselación o un tipo de índice espacial dados|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)]  

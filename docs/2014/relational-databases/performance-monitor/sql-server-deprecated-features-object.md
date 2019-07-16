@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 6437ede86133d12622376700cfac5070dabd8fd6
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763947"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206961"
 ---
 # <a name="sql-server-deprecated-features-object"></a>Objeto SQL Server, Características en desuso
   El objeto SQLServer:Características desusadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un contador para supervisar las características designadas como desusadas. En cada caso, el contador proporciona un recuento de la utilización que muestra el número de veces que la característica desusada se encontró desde que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se inició por última vez.  
@@ -30,7 +30,7 @@ ms.locfileid: "52763947"
 |Instancias del contador Características desusadas de SQL Server|Descripción|  
 |------------------------------------------------------|-----------------|  
 |'#' y '##' como el nombre de tablas temporales y procedimientos almacenados|Se encontró un identificador que no contenía ningún carácter a parte de #. Utilice al menos un carácter adicional. Se produce una vez por cada compilación.|  
-|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM`  *\< nombre_función >*`()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
+|'::' function calling syntax|Se encontró la sintaxis de llamada a función :: para una función con valores de tabla. Reemplazar por `SELECT column_list FROM`  *\< nombre_función >* `()`. Por ejemplo, reemplace `SELECT * FROM ::fn_virtualfilestats(2,1)`con `SELECT * FROM sys.fn_virtualfilestats(2,1)`. Se produce una vez por cada compilación.|  
 |"\@" y nombres que empiezan por "\@\@" como identificadores de [!INCLUDE[tsql](../../includes/tsql-md.md)]|Se encontró un identificador que comenzaba por \@ o \@\@. No use como identificador \@, \@\@ ni ningún nombre que empiece por \@\@. Se produce una vez por cada compilación.|  
 |ADDING TAPE DEVICE|La característica desusada sp_addumpdevice'`tape`' se encontró. Utilice sp_addumpdevice'`disk`' en su lugar. Se produce una vez en cada uso.|  
 |ALL Permission|Número total de veces que se encontró la sintaxis GRANT ALL, DENY ALL o REVOKE ALL. Modifique la sintaxis para denegar permisos concretos. Se produce una vez por cada consulta.|  
@@ -57,7 +57,7 @@ ms.locfileid: "52763947"
 |DBCC DBREINDEX|Se encontró la instrucción DBCC DBREINDEX. Reescriba la instrucción para utilizar la opción REBUILD de ALTER INDEX. Se produce una vez por cada consulta.|  
 |DBCC INDEXDEFRAG|Se encontró la instrucción DBCC INDEXDEFRAG. Reescriba la instrucción para utilizar la opción REORGANIZE de ALTER INDEX. Se produce una vez por cada consulta.|  
 |DBCC SHOWCONTIG|Se encontró la instrucción DBCC SHOWCONTIG. Consulte esta información en sys.dm_db_index_physical_stats. Se produce una vez por cada consulta.|  
-|Palabra clave DEFAULT como valor predeterminado|Se encontró una sintaxis que utiliza la palabra clave DEFAULT como valor predeterminado. No debe usarse. Se produce una vez por cada compilación.|  
+|Palabra clave DEFAULT como valor predeterminado|Se encontró una sintaxis que utiliza la palabra clave DEFAULT como valor predeterminado. No usar. Se produce una vez por cada compilación.|  
 |Algoritmo de cifrado desusado|El algoritmo de cifrado RC4 desusado se quitará en la próxima versión de SQL Server. Evite usar esta característica en los nuevos trabajos de desarrollo y piense en modificar las aplicaciones que la usan actualmente. El algoritmo RC4 no es seguro y se admite únicamente por razones de compatibilidad con versiones anteriores. El material nuevo solo se puede cifrar con RC4 o RC4_128 cuando la base de datos tenga el nivel de compatibilidad 90 o 100. (No se recomienda). Use un algoritmo más reciente como uno de los algoritmos AES en su lugar. En [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] y versiones posteriores, el material cifrado con RC4 o RC4_128 se puede descifrar en cualquier nivel de compatibilidad.|  
 |Algoritmo DESX|Se encontró sintaxis que utiliza el algoritmo de cifrado DESX. Utilice otro algoritmo de cifrado. Se produce una vez por cada compilación.|  
 |dm_fts_active_catalogs|El contador dm_fts_active_catalogs siempre es 0 porque algunas columnas de la vista sys.dm_fts_active_catalogs no están desusadas. Para supervisar una columna desusada, use el contador específico de la columna; por ejemplo, dm_fts_active_catalogs.is_paused.|  
@@ -110,9 +110,9 @@ ms.locfileid: "52763947"
 |NOLOCK or READUNCOMMITTED in UPDATE or DELETE|Se encontró NOLOCK o READUNCOMMITTED en la cláusula FROM de una instrucción UPDATE o DELETE. Quite las sugerencias de tabla NOLOCK o READUNCOMMITTED de la cláusula FROM.|  
 |Operadores de combinación externa no ANSI *= o =\*|Se encontró una instrucción que usa la sintaxis de combinación *= o =\* . Reescriba la instrucción para que use la sintaxis de unión de ANSI. Se produce una vez por cada compilación.|  
 |numbered_stored_procedures||  
-|numbered_procedure_parameters|Hace referencia que se encontraron sys.numbered_procedure_parameters desusados. No debe usarse. Se produce una vez por cada compilación.|  
-|numbered_procedures|Hace referencia a que se encontraron sys.numbered_procedures desusados. No debe usarse. Se produce una vez por cada compilación.|  
-|Oldstyle RAISEERROR|Se encontró la sintaxis RAISERROR obsoleta (formato: cadena de entero RAISERROR). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
+|numbered_procedure_parameters|Hace referencia que se encontraron sys.numbered_procedure_parameters desusados. No usar. Se produce una vez por cada compilación.|  
+|numbered_procedures|Hace referencia a que se encontraron sys.numbered_procedures desusados. No usar. Se produce una vez por cada compilación.|  
+|Oldstyle RAISEERROR|RAISERROR obsoleta (formato: Se encontró la sintaxis de cadena de entero RAISERROR). Reescriba la instrucción usando la sintaxis de RAISERROR actual. Se produce una vez por cada compilación.|  
 |OLEDB para conexiones ad hoc|SQLOLEDB no es un proveedor admitido. Utilice [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client para las conexiones ad hoc.|  
 |PERMISSIONS|Se encontraron referencias a la función intrínseca PERMISSIONS. Consulte en su lugar sys.fn_my_permissions. Se produce una vez por cada consulta.|  
 |ProcNums|Se encontró la sintaxis de ProcNums desusada. Reescriba las instrucciones para quitar las referencias. Se produce una vez por cada compilación.|  
@@ -148,22 +148,22 @@ ms.locfileid: "52763947"
 |sp_certify_removable|Se encontró el procedimiento sp_certify_removable. Utilice en su lugar sp_detach_db. Se produce una vez por cada consulta.|  
 |sp_changeobjectowner|Se encontró el procedimiento sp_changeobjectowner. Use ALTER SCHEMA o ALTER AUTHORIZATION en su lugar. Se produce una vez por cada consulta.|  
 |sp_change_users_login|Se encontró el procedimiento sp_change_users_login. Utilice en su lugar ALTER USER. Se produce una vez por cada consulta.|  
-|sp_configure 'allow updates'|Se encontró la opción allow updates de sp_configure. Las tablas del sistema ya no son actualizables. No debe usarse. Se produce una vez por cada consulta.|  
+|sp_configure 'allow updates'|Se encontró la opción allow updates de sp_configure. Las tablas del sistema ya no son actualizables. No usar. Se produce una vez por cada consulta.|  
 |sp_configure 'disallow results from triggers'|Se encontró la opción disallow result sets from triggers de sp_configure. Para denegar los conjuntos de resultados de los desencadenadores, utilice sp_configure para establecer la opción en 1. Se produce una vez por cada consulta.|  
-|sp_configure 'ft crawl bandwidth (max)'|Se encontró la opción ft crawl bandwidth (max) de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'ft crawl bandwidth (min)'|Se encontró la opción ft crawl bandwidth (min) de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'ft notify bandwidth (max)'|Se encontró la opción ft notify bandwidth (max) de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'ft notify bandwidth (min)'|Se encontró la opción ft notify bandwidth (min) de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'locks'|Se encontró la opción locks de sp_configure. Los bloqueos ya no son configurables. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'open objects'|Se encontró la opción open objects de sp_configure. El número de objetos abiertos ya no es configurable. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'priority boost'|Se encontró la opción Aumento de prioridad de sp_configure. No debe usarse. Se produce una vez por cada consulta. En su lugar, use la opción start /high ... program.exe de Windows.|  
-|sp_configure 'remote proc trans'|Se encontró la opción remote proc trans de sp_configure. No debe usarse. Se produce una vez por cada consulta.|  
-|sp_configure 'set working set size'|Se encontró la opción set working set size de sp_configure. El tamaño del espacio de trabajo ya no es configurable. No debe usarse. Se produce una vez por cada consulta.|  
+|sp_configure 'ft crawl bandwidth (max)'|Se encontró la opción ft crawl bandwidth (max) de sp_configure. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'ft crawl bandwidth (min)'|Se encontró la opción ft crawl bandwidth (min) de sp_configure. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'ft notify bandwidth (max)'|Se encontró la opción ft notify bandwidth (max) de sp_configure. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'ft notify bandwidth (min)'|Se encontró la opción ft notify bandwidth (min) de sp_configure. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'locks'|Se encontró la opción locks de sp_configure. Los bloqueos ya no son configurables. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'open objects'|Se encontró la opción open objects de sp_configure. El número de objetos abiertos ya no es configurable. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'priority boost'|Se encontró la opción Aumento de prioridad de sp_configure. No usar. Se produce una vez por cada consulta. En su lugar, use la opción start /high ... program.exe de Windows.|  
+|sp_configure 'remote proc trans'|Se encontró la opción remote proc trans de sp_configure. No usar. Se produce una vez por cada consulta.|  
+|sp_configure 'set working set size'|Se encontró la opción set working set size de sp_configure. El tamaño del espacio de trabajo ya no es configurable. No usar. Se produce una vez por cada consulta.|  
 |sp_control_dbmasterkey_password|El procedimiento almacenado sp_control_dbmasterkey_password no comprueba si existe una clave maestra. Esto se admite por cuestiones de compatibilidad con versiones anteriores, pero muestra una advertencia. Este comportamiento se ha desaprobado. En una futura versión, la clave maestra debe existir y la contraseña utilizada en el procedimiento almacenado sp_control_dbmasterkey_password debe coincidir con una de las utilizadas para cifrar la clave maestra de base de datos.|  
 |sp_create_removable|Se encontró el procedimiento sp_create_removable. Utilice CREATE DATABASE en su lugar. Se produce una vez por cada consulta.|  
 |sp_db_vardecimal_storage_format|Se encontró que se usa el de formato de almacenamiento `vardecimal`. En su lugar, use la compresión de datos.|  
 |sp_dbcmptlevel|Se encontró el procedimiento sp_dbcmptlevel. Use ALTER DATABASE ... SET COMPATIBILITY_LEVEL. Se produce una vez por cada consulta.|  
-|sp_dbfixedrolepermission|Se encontró el procedimiento sp_dbfixedrolepermission. No debe usarse. Se produce una vez por cada consulta.|  
+|sp_dbfixedrolepermission|Se encontró el procedimiento sp_dbfixedrolepermission. No usar. Se produce una vez por cada consulta.|  
 |sp_dboption|Se encontró el procedimiento sp_dboption. Use ALTER DATABASE y DATABASEPROPERTYEX en su lugar. Se produce una vez por cada compilación.|  
 |sp_dbremove|Se encontró el procedimiento sp_dbremove. Use DROP DATABASE en su lugar. Se produce una vez por cada consulta.|  
 |sp_defaultdb|Se encontró el procedimiento sp_defaultdb. En su lugar, use ALTER LOGIN. Se produce una vez por cada compilación.|  
@@ -213,7 +213,7 @@ ms.locfileid: "52763947"
 |sp_unbindefault|Se encontró el procedimiento sp_unbindefault. Utilice en su lugar la palabra clave DEFAULT en las instrucciones CREATE TABLE o ALTER TABLE. Se produce una vez por cada compilación.|  
 |sp_unbindrule|Se encontró el procedimiento sp_unbindrule. Use restricciones CHECK en lugar de reglas. Se produce una vez por cada compilación.|  
 |SQL_AltDiction_CP1253_CS_AS|El evento se produce una vez por cada inicio de base de datos y una vez por cada uso de la intercalación. Prevea modificar las aplicaciones que usen esta intercalación.|  
-|Literales de cadena como alias de columna|Se encontró la sintaxis que contiene una cadena que se utiliza como un alias de columna en una instrucción SELECT, como `'string' = expression`. No debe usarse. Se produce una vez por cada compilación.|  
+|Literales de cadena como alias de columna|Se encontró la sintaxis que contiene una cadena que se utiliza como un alias de columna en una instrucción SELECT, como `'string' = expression`. No usar. Se produce una vez por cada compilación.|  
 |sys.sql_dependencies|Se encontraron referencias a sys.sql_dependencies. Use sys.sql_expression_dependencies en su lugar. Se produce una vez por cada compilación.|  
 |sysaltfiles|Se encontraron referencias a sysaltfiles. Utilice en su lugar sys.master_files. Se produce una vez por cada compilación.|  
 |syscacheobjects|Se encontraron referencias a syscacheobjects. Utilice en su lugar sys.dm_exec_cached_plans, sys.dm_exec_plan_attributes y  sys.dm_exec_sql_text. Se produce una vez por cada compilación.|  
@@ -251,13 +251,13 @@ ms.locfileid: "52763947"
 |Opción de tabla Text in row|Se encontraron referencias a la opción de tabla 'text in row'. Utilice sp_tableoption 'large value types out of row' en su lugar. Se produce una vez por cada consulta.|  
 |TEXTPTR|Se encontraron referencias a la función TEXTPTR. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
 |TEXTVALID|Se encontraron referencias a la función TEXTVALID. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
-|timestamp|Número total de veces que el tipo de datos `timestamp` obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos `rowversion`.|  
+|TIMESTAMP|Número total de veces que el tipo de datos `timestamp` obsoleto se encontró en una instrucción DDL. En su lugar, use el tipo de datos `rowversion`.|  
 |UPDATETEXT o WRITETEXT|Se encontró la instrucción WRITETEXT o UPDATETEXT. Reescriba las aplicaciones para utilizar el tipo de datos `varchar(max)` y quite la sintaxis de los tipos de datos `text`, `ntext` y `image`. Se produce una vez por cada consulta.|  
 |USER_ID|Se encontraron referencias a la función USER_ID. Utilice en su lugar la función DATABASE_PRINCIPAL_ID. Se produce una vez por cada compilación.|  
 |Uso de OLEDB para servidores vinculados||  
 |Formato de almacenamiento vardecimal|Se encontró que se usa el de formato de almacenamiento `vardecimal`. En su lugar, use la compresión de datos.|  
 |XMLDATA|Se encontró la sintaxis de FOR XML. Utilice la generación XSD para los modos AUTO y RAW. No hay sustituto para el modo explícito. Se produce una vez por cada compilación.|  
-|XP_API|Se encontró una instrucción de procedimiento almacenado extendido. No debe usarse.|  
+|XP_API|Se encontró una instrucción de procedimiento almacenado extendido. No usar.|  
 |xp_grantlogin|Se encontró el procedimiento xp_grantlogin. Utilice CREATE LOGIN en su lugar. Se produce una vez por cada compilación.|  
 |xp_loginconfig|Se encontró el procedimiento xp_loginconfig. Utilice en su lugar el argumento IsIntegratedSecurityOnly de SERVERPROPERTY. Se produce una vez por cada consulta.|  
 |xp_revokelogin|Se encontró el procedimiento xp_revokelogin. Use ALTER LOGIN DISABLE o DROP LOGIN en su lugar. Se produce una vez por cada compilación.|  

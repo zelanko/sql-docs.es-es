@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533828"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124377"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  None  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
- Varios productos DBMS admiten nombres de tres partes para tablas (_catálogo_**.** _esquema_**.** _tabla_), que se representa en el conjunto de resultados.  
+ Varios productos DBMS admiten nombres de tres partes para tablas (_catálogo_ **.** _esquema_ **.** _tabla_), que se representa en el conjunto de resultados.  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

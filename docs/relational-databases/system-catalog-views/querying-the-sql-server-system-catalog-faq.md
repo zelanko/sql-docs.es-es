@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ca202580-c37e-4ccd-9275-77ce79481f64
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8cdff2d0646dcce13257bb10f7f447169fd8c8b8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c16bc1e0c8d8d6b5a62e2823aa011b58520b1d00
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47749713"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018362"
 ---
 # <a name="querying-the-sql-server-system-catalog-faq"></a>Consultar las preguntas más frecuentes (P+F) del catálogo del sistema de SQL Server
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -617,7 +616,7 @@ GO
  [TOP](#_TOP)  
   
 ###  <a name="_FAQ20"></a> ¿Cómo se puede determinar si una columna se utiliza en una expresión de columna calculada?  
- Antes de ejecutar la consulta siguiente, reemplace `<database_name>`, `<schema_name.table_name>` y `<column_name`> por nombres válidos.  
+ Antes de ejecutar la consulta siguiente, reemplace `<database_name>`, `<schema_name.table_name>`, y `<column_name`> con los nombres válidos.  
   
 ```  
 USE <database_name>;  

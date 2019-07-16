@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139919"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,16 +50,16 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_name=] '*table_name*'  
  Es el nombre de la tabla remota para la que se proporciona información de índice. *table_name* es **sysname**, su valor predeterminado es null. Si es NULL, se devuelven todas las tablas de la base de datos especificada.  
   
- [ @table_schema= ] '*table_schema*'  
+ [ @table_schema=] '*table_schema*'  
  Especifica el esquema de la tabla. En el entorno de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], corresponde al propietario de la tabla. *TABLE_SCHEMA* es **sysname**, su valor predeterminado es null.  
   
- [ @table_catalog= ] '*table_db*'  
+ [ @table_catalog=] '*table_db*'  
  Es el nombre de la base de datos en el que *table_name* reside. *table_db* es **sysname**, su valor predeterminado es null. Si es NULL, *table_db* el valor predeterminado es **maestro**.  
   
  [ @index_name=] '*index_name*'  
  Es el nombre del índice para el que se solicita información. *índice* es **sysname**, su valor predeterminado es null.  
   
- [ @is_unique= ] '*is_unique*'  
+ [ @is_unique=] '*is_unique*'  
  Es el tipo de índice para el que se devuelve información. *is_unique* es **bit**, su valor predeterminado es null, y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  

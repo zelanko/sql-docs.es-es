@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069100"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- Mensajes de correo electrónico de base de datos y sus datos adjuntos se almacenan en el **msdb** base de datos. Los mensajes se deben eliminar periódicamente para evitar **msdb** crezca mayor de lo esperado y para cumplir con el programa de retención de documentos de las organizaciones. Use la **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar permanentemente los mensajes de correo electrónico de las tablas del correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los correos electrónicos de un tipo determinado, especificado como el **sent_status** argumento. Debe proporcionar un argumento para **@sent_before** o **@sent_status**. Para eliminar todos los mensajes, utilice  **@sent_before = getdate()**.  
+ Mensajes de correo electrónico de base de datos y sus datos adjuntos se almacenan en el **msdb** base de datos. Los mensajes se deben eliminar periódicamente para evitar **msdb** crezca mayor de lo esperado y para cumplir con el programa de retención de documentos de las organizaciones. Use la **sysmail_delete_mailitems_sp** procedimiento almacenado para eliminar permanentemente los mensajes de correo electrónico de las tablas del correo electrónico de base de datos. Un argumento opcional permite eliminar solo los mensajes de correo electrónico antiguos indicando la fecha y la hora. Se eliminarán los mensajes de correo electrónico anteriores al valor de ese argumento. Otro argumento opcional permite eliminar solo los correos electrónicos de un tipo determinado, especificado como el **sent_status** argumento. Debe proporcionar un argumento para **@sent_before** o **@sent_status** . Para eliminar todos los mensajes, utilice  **@sent_before = getdate()** .  
   
  Si se eliminan mensajes de correo electrónico, se eliminarán también los archivos adjuntos relacionados con los mismos. Eliminación de correo electrónico no elimina las entradas correspondientes en **sysmail_event_log**. Use [sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md) para eliminar elementos del registro.  
   

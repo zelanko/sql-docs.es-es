@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 9a548f25d9114e9032f2462bbc97bda637abd6d9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eee40829c72394bf95a1bc06540a434a1c74e166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251531"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125808"
 ---
 # <a name="wtd-mdx"></a>Wtd (MDX)
 
@@ -38,9 +37,9 @@ Wtd( [ Member_Expression ] )
  El **Wtd** función es una función abreviada para la [PeriodsToDate](../mdx/periodstodate-mdx.md) función donde el nivel está establecido en *semanas*. Es decir, `Wtd(Member_Expression)` es equivalente a `PeriodsToDate(Week_Level_Expression,Member_Expression)`.  
   
 ## <a name="see-also"></a>Vea también  
- [Qtd &#40;MDX&#41;](../mdx/qtd-mdx.md)   
- [Mtd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
- [Ytd &#40;MDX&#41;](../mdx/ytd-mdx.md)   
+ [QTD &#40;MDX&#41;](../mdx/qtd-mdx.md)   
+ [MTd &#40;MDX&#41;](../mdx/mtd-mdx.md)   
+ [YTD &#40;MDX&#41;](../mdx/ytd-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

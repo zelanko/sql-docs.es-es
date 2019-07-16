@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b5f47146f02559e9b546d7e5ec164462ad2fdba1
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180750"
 ---
 # <a name="dimensions---introduction"></a>Dimensiones: introducción
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "59042404"
   
  En el diagrama anterior, el **FactResellerSales** tabla de hechos no tiene una relación de clave externa con la **DimGeography** tabla de dimensiones. Sin embargo, el **FactResellerSales** tabla de hechos tienen una relación de clave externa con la **DimReseller** tabla de dimensiones, que a su vez tiene una relación de clave externa con la  **DimGeography** tabla de dimensiones. Para definir una dimensión Reseller que contenga información geográfica acerca de cada distribuidor, tendrá que recuperar estos atributos desde la **DimGeography** y **DimReseller** tablas de dimensiones. Sin embargo, en [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], se puede obtener el mismo resultado si se crean dos dimensiones independientes y se vinculan a un grupo de medida definiendo una relación de dimensión de referencia entre las dos dimensiones. Para obtener más información acerca de las relaciones de dimensión de referencia, consulte [relaciones de dimensión](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
- Una ventaja del uso de relaciones de dimensiones de referencia en este escenario es que es posible crear una única dimensión geográfica y, a continuación, crear varias dimensiones de cubo basadas en la dimensión geográfica, sin que se necesite espacio de almacenamiento adicional. Por ejemplo, puede vincular una de las dimensiones de cubo geográficas a una dimensión de distribuidor y otra de las dimensiones de cubo geográficas a una dimensión de cliente. **Temas relacionados:**[relaciones de dimensión](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definir relaciones referenciadas y propiedades de la relación hace referencia](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
+ Una ventaja del uso de relaciones de dimensiones de referencia en este escenario es que es posible crear una única dimensión geográfica y, a continuación, crear varias dimensiones de cubo basadas en la dimensión geográfica, sin que se necesite espacio de almacenamiento adicional. Por ejemplo, puede vincular una de las dimensiones de cubo geográficas a una dimensión de distribuidor y otra de las dimensiones de cubo geográficas a una dimensión de cliente. **Temas relacionados:** [relaciones de dimensión](../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md), [definir relaciones referenciadas y propiedades de la relación hace referencia](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)  
   
 ## <a name="processing-a-dimension"></a>Procesar una dimensión  
  Tras crear una dimensión, debe procesarla antes de poder ver los miembros de sus atributos y sus jerarquías. Tras modificar la estructura de una dimensión o actualizar la información de sus tablas subyacentes, tiene que volver a procesar la dimensión antes de poder ver los cambios. Cuando se procesa una dimensión después de realizar cambios estructurales, se deben procesar también los cubos que incluyen la dimensión, ya que de lo contrario el cubo no se podrá ver.  

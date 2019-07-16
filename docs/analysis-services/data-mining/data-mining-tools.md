@@ -1,5 +1,5 @@
 ---
-title: Herramientas de minería de datos | Documentos de Microsoft
+title: Herramientas de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 70d08ebe145e64f21299f5e46d33bbc7ae41536f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210086"
 ---
 # <a name="data-mining-tools"></a>Herramientas de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,9 +37,9 @@ ms.locfileid: "34015152"
 ## <a name="data-mining-wizard"></a>Asistente para minería de datos  
  Utilice el Asistente para minería de datos para empezar a crear soluciones de minería de datos. El asistente es rápido y sencillo, y le guía en el proceso de creación de una estructura de minería de datos y un modelo inicial de minería de datos relacionado. Asimismo, incluye las tareas necesarias para seleccionar un tipo de algoritmo y un origen de datos, y para definir los datos del caso usados para el análisis.  
   
- **Para más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md).  
+ **Para obtener más información:** [Asistente para minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-wizard-analysis-services-data-mining.md)  
   
-## <a name="data-mining-designer"></a>Diseñador de minería de datos  
+## <a name="data-mining-designer"></a>Data Mining Designer  
  Después de crear una estructura y modelo de minería de datos mediante el Asistente para minería de datos, puede utilizar el Diseñador de minería de datos desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] o [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para trabajar con las estructuras y modelos de minería de datos existentes.  
   
  El diseñador incluye herramientas para estas tareas:  
@@ -80,12 +80,12 @@ ms.locfileid: "34015152"
   
 -   Usar la regresión logística para segmentar los clientes de entrada por riesgo.  
   
- **Para más información:** [Proyectos relacionados para soluciones de minería de datos](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
+ **Para obtener más información:** [Proyectos relacionados en las soluciones de minería de datos](../../analysis-services/data-mining/related-projects-for-data-mining-solutions.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)   
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)   
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Soluciones de minería de datos](../../analysis-services/data-mining/data-mining-solutions.md)  
   
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 27e704e6274910e2c9e3f77fe235e02918d95425
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207659"
 ---
 # <a name="enable-directquery-mode-in-ssms"></a>Habilitar el modo DirectQuery en SSMS
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "53072212"
   
 2.  En el Explorador de objetos, haga clic con el botón derecho en la base de datos > **Propiedades** > **Nivel de compatibilidad**.  
   
-     El valor será **SQL Server 2016 (1200)** o un nivel anterior, como **SQL Server 2012 SP1 o versiones posteriores (1103)**. En el siguiente paso, siga las instrucciones aplicables al nivel de compatibilidad concreto.  
+     El valor será **SQL Server 2016 (1200)** o un nivel anterior, como **SQL Server 2012 SP1 o versiones posteriores (1103)** . En el siguiente paso, siga las instrucciones aplicables al nivel de compatibilidad concreto.  
   
  Cuando se cambia un modelo tabular al modo DirectQuery, el nuevo modo de almacenamiento de datos se aplica de inmediato.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "53072212"
     |-|-|  
     |**Valores válidos**|**Descripción**|  
     |**DirectQuery**|Las consultas se ejecutan en una base de datos relacional back-end mediante la conexión de origen de datos definida para el modelo.<br /><br /> Las consultas del modelo se convierten en consultas de bases de datos nativas y se redirigen al origen de datos.<br /><br /> Al procesar un modelo establecido en el modo DirectQuery, solo se compilan e implementan los metadatos. Los datos en sí son externos al modelo y residen en los archivos de base de datos del origen de datos operativo.|  
-    |**Importar**|Las consultas se ejecutan en la base de datos tabular en MDX o DAX.<br /><br /> Al procesar un modelo establecido en el modo de importación, los datos se recuperan desde un origen de datos back-end y se almacenan en disco. Cuando haya cargado la base de datos, los datos se copian por completo en la memoria para ofrecer consultas y recorridos de tabla muy rápidos.<br /><br /> Este es el modo predeterminado de los modelos tabulares y es el único modo para determinados orígenes de datos (no relacionales).|  
+    |**Importaciónación**|Las consultas se ejecutan en la base de datos tabular en MDX o DAX.<br /><br /> Al procesar un modelo establecido en el modo de importación, los datos se recuperan desde un origen de datos back-end y se almacenan en disco. Cuando haya cargado la base de datos, los datos se copian por completo en la memoria para ofrecer consultas y recorridos de tabla muy rápidos.<br /><br /> Este es el modo predeterminado de los modelos tabulares y es el único modo para determinados orígenes de datos (no relacionales).|  
   
 ## <a name="step-2b-switch-a-tabular-1100-1103-database-to-directquery-mode"></a>Paso 2b: Cambiar una base de datos tabular 1100-1103 al modo DirectQuery  
   

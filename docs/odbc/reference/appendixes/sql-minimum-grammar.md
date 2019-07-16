@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4f36d785-104f-4fec-93be-f201203bc7c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 26cf76200010edae7f85993ec33eb3722f35e94e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85b1f59efd809c604458bd7b99882705db240e9a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057011"
 ---
 # <a name="sql-minimum-grammar"></a>Gramática mínima de SQL
 Esta sección describe la sintaxis SQL mínima que debe admitir un controlador ODBC. La sintaxis descrita en esta sección es un subconjunto de la sintaxis de nivel de entrada de SQL-92.  
@@ -28,8 +27,8 @@ Esta sección describe la sintaxis SQL mínima que debe admitir un controlador O
   
  Los controladores que solo funcionan con orígenes de datos de solo lectura podrían no admitir aquellas partes de la gramática que se incluyen en esta sección que tratan con datos que cambian. Una aplicación puede determinar si un origen de datos es de solo lectura mediante una llamada a **SQLGetInfo** con el tipo de información SQL_DATA_SOURCE_READ_ONLY.  
   
-## <a name="statement"></a>.  
- *create-table-statement* ::=  
+## <a name="statement"></a>Instrucción  
+ *instrucción CREATE table* :: =  
   
  CREATE TABLE *nombre de la tabla de base*  
   
@@ -40,17 +39,17 @@ Esta sección describe la sintaxis SQL mínima que debe admitir un controlador O
   
  *delete-statement-searched* ::=  
   
- DELETE FROM *table-name* [WHERE *search-condition*]  
+ DELETE FROM *nombre-tabla* [donde *condición de búsqueda*]  
   
- *drop-table-statement* ::=  
+ *instrucción de tabla de DROP* :: =  
   
  DROP TABLE *nombre de la tabla de base*  
   
- *insert-statement* ::=  
+ *instrucción de inserción* :: =  
   
  INSERT INTO *nombre-tabla* [( *identificador de columna* [, *identificador de columna*]...)]      VALORES (*Insertar valor*[, *Insertar valor*]...)  
   
- *select-statement* ::=  
+ *instrucción SELECT* :: =  
   
  Seleccione [todos los &#124; DISTINCT] *lista de selección*  
   
@@ -60,7 +59,7 @@ Esta sección describe la sintaxis SQL mínima que debe admitir un controlador O
   
  [*order-by-clause*]  
   
- *statement* ::= *create-table-statement*  
+ *instrucción* :: = *instrucción create table*  
   
  &#124; *delete-statement-searched*  
   
@@ -78,7 +77,7 @@ Esta sección describe la sintaxis SQL mínima que debe admitir un controlador O
   
  ESTABLECER *identificador de columna* = {*expresión* &#124; NULL}  
   
- [, *column-identifier* = {*expression* &#124; NULL}]...  
+ [, *identificador de columna* = {*expresión* &#124; NULL}]...  
   
  [Donde *condición de búsqueda*]  
   

@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894926"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>Configuración e instalación de AdventureWorks
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ Siga los pasos siguientes para restaurar una copia de seguridad de la base de da
 
 1. Abra SQL Server Management Studio y conéctese a la instancia de SQL Server de destino.
 2. Haga doble clic en el **bases de datos** nodo y seleccione **Restore Database**.
-3. Seleccione **dispositivo** y haga clic en el botón de puntos suspensivos (**...** )
+3. Seleccione **dispositivo** y haga clic en el botón de puntos suspensivos ( **...** )
 4. En el cuadro de diálogo **seleccionar dispositivos de copia de seguridad**, haga clic en **agregar**, vaya a la copia de seguridad de base de datos en el sistema de archivos del servidor y seleccione la copia de seguridad. Haga clic en **Aceptar**.
 5. Si es necesario, cambie la ubicación de destino para los datos y archivos de registro, en el **archivos** panel. Tenga en cuenta que es una práctica recomendada para colocar los datos y archivos de registro en unidades distintas.
 6. Haga clic en **Aceptar**. Esto iniciará la restauración de base de datos. Una vez haya terminado, tendrá la base de datos de AdventureWorks instalada en su instancia de SQL Server.
@@ -82,7 +81,7 @@ Siga los pasos siguientes para adjuntar el archivo de datos para la base de dato
 2. Haga doble clic en el **bases de datos** nodo y seleccione **adjuntar**.
 3. Seleccione **agregar** y vaya a la. Archivo MDF que desea adjuntar. 
 1. Seleccione el archivo y haga clic en **Aceptar**. 
-    1. La base de datos seleccionada debe mostrarse en la ventana inferior. Si el archivo aparece como "no encontrado", seleccione el botón de puntos suspensivos (**...** ) junto al nombre de archivo y actualización de la ruta de acceso a la ruta correcta. 
+    1. La base de datos seleccionada debe mostrarse en la ventana inferior. Si el archivo aparece como "no encontrado", seleccione el botón de puntos suspensivos ( **...** ) junto al nombre de archivo y actualización de la ruta de acceso a la ruta correcta. 
     1. Si solo tiene el archivo de datos (.mdf) y no el archivo de registro (.ldf), a continuación, resalte el .ldf en la ventana inferior y seleccione **quitar**. Esto creará un nuevo archivo de registro. 
 1. Seleccione **Aceptar** para adjuntar el archivo. Una vez que se adjunta el archivo, tendrá la base de datos de AdventureWorks instalada en su instancia de SQL Server.  
 

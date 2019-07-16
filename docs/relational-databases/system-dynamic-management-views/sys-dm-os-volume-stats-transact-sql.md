@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: fa1c58ad-8487-42ad-956c-983f2229025f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 954cb83176ea64be11bd37b44303091f15604dcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7ec8171b569adbf887c1e153fb2b41619778f48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899717"
 ---
 # <a name="sysdmosvolumestats-transact-sql"></a>sys.dm_os_volume_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-2008R2SP1-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-2008R2sp1-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sys.dm_os_volume_stats (database_id, file_id)
   
 ||||  
 |-|-|-|  
-|**Columna**|**Data type**|**Descripción**|  
+|**Columna**|**Tipo de datos**|**Descripción**|  
 |**database_id**|**int**|Identificador de la base de datos. No puede ser null.|  
 |**file_id**|**int**|Id. del archivo. No puede ser null.|  
 |**volume_mount_point**|**nvarchar(512)**|Punto de montaje en el que el volumen tiene su raíz. Puede devolver una cadena vacía.|  

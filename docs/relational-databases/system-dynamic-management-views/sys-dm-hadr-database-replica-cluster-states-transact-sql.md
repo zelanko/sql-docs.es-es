@@ -20,18 +20,17 @@ helpviewer_keywords:
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 253959175db3519c00874db43466fa21c31cf5e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2fbd066113f5ad4394b83e0151643ab9ea3b7b82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900665"
 ---
 # <a name="sysdmhadrdatabasereplicaclusterstates-transact-sql"></a>sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Devuelve una fila que contiene la información diseñado para proporcionarle información sobre el estado de las bases de datos de disponibilidad en los grupos de disponibilidad Always On en cada grupo de disponibilidad Always On en el clúster de clústeres de conmutación por error de servidor de Windows (WSFC). Consulta **sys.dm_hadr_database_replica_states** responder a las preguntas siguientes:  
+  Devuelve una fila que contiene información destinada a proporcionar una visión general del estado de las bases de datos de disponibilidad de los Grupos de disponibilidad AlwaysOn de cada uno de los grupos de disponibilidad AlwaysOn del clúster del servicio de clústeres de conmutación por error de Windows Server (WSFC). Consulta **sys.dm_hadr_database_replica_states** responder a las preguntas siguientes:  
   
 -   ¿Están todas las bases de datos de un grupo de disponibilidad listas para una conmutación por error?  
   
@@ -39,7 +38,7 @@ ms.locfileid: "47636683"
   
 -   Si la réplica principal no está disponible actualmente, ¿qué réplica secundaria permitiría una pérdida de datos mínima si se convierte en la réplica principal?  
   
--   Cuando el valor de la [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** columna es "AVAILABILITY_REPLICA", qué réplica secundaria en un grupo de disponibilidad soporta el truncamiento del registro en una base de datos principal ?     
+-   Cuando el valor de la [sys.databases](~/relational-databases/system-catalog-views/sys-databases-transact-sql.md)**log_reuse_wait_desc** columna es "AVAILABILITY_REPLICA", qué réplica secundaria en un grupo de disponibilidad soporta el truncamiento del registro en una base de datos principal ?  
    
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  

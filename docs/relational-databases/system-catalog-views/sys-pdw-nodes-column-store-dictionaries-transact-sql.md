@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 7ae1c2e4-45c0-4880-a692-1f299fbcfd19
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 53637fb3ae70cd73e1bbf1cb95a8a4ca3775b812
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a588d23d5e3e7f9cb314342a739ceb8e051ca2c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666468"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059379"
 ---
 # <a name="syspdwnodescolumnstoredictionaries-transact-sql"></a>sys.pdw_nodes_column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62666468"
 |**column_id**|**int**|Identificador de la columna de almacén de columnas.|  
 |**dictionary_id**|**int**|Identificador del diccionario.|  
 |**version**|**int**|Versión del formato de diccionario.|  
-|**Tipo**|**int**|Tipo de diccionario:<br /><br /> 1 - diccionario que contiene de hash **int** valores<br /><br /> 2 - no utilizado<br /><br /> 3 - diccionario de hash que contiene los valores de cadena<br /><br /> 4 - diccionario que contiene de hash de **float** valores|  
+|**type**|**int**|Tipo de diccionario:<br /><br /> 1 - diccionario que contiene de hash **int** valores<br /><br /> 2 - no utilizado<br /><br /> 3 - diccionario de hash que contiene los valores de cadena<br /><br /> 4 - diccionario que contiene de hash de **float** valores|  
 |**last_id**|**int**|El último identificador de datos del diccionario.|  
 |**entry_count**|**bigint**|Número de entradas en el diccionario.|  
 |**on_disc_size**|**bigint**|Tamaño del diccionario en bytes.|  
@@ -42,7 +41,7 @@ ms.locfileid: "62666468"
  Requiere el permiso VIEW SERVER STATE.  
   
 ## <a name="see-also"></a>Vea también  
- [SQL Data Warehouse y vistas de catálogo del almacén de datos en paralelo](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
+ [Vistas de catálogo de SQL Data Warehouse y Almacenamiento de datos paralelos](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
  [CREATE COLUMNSTORE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-columnstore-index-transact-sql.md)   
  [sys.pdw_nodes_column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-segments-transact-sql.md)   
  [sys.pdw_nodes_column_store_row_groups &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-nodes-column-store-row-groups-transact-sql.md)  

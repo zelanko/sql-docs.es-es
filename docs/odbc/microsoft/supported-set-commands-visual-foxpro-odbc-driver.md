@@ -18,18 +18,17 @@ helpviewer_keywords:
 ms.assetid: 43a821fb-97fd-4316-aafe-4ef2de783188
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9832d2a3772d63c1b0641f6ca08205e25a9867c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54cc247827a176bc9921884ae318120b07108293
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939863"
 ---
 # <a name="supported-set-commands-visual-foxpro-odbc-driver"></a>CONJUNTO admitido de comandos (controlador ODBC de Visual FoxPro)
 La aplicación puede enviar el siguiente de Visual FoxPro **establecer** comandos a un origen de datos:  
   
- [SET ANSI](../../odbc/microsoft/set-ansi-command.md)  
+ [CONJUNTO ANSI](../../odbc/microsoft/set-ansi-command.md)  
   
  [BLOCKSIZE SET](../../odbc/microsoft/set-blocksize-command.md)  
   

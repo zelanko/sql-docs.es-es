@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b58d4a07-5c40-4f17-b66e-6d6b17188dda
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a11fb3f879336f5217abe138c91755154df868b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b40f7233bb3c50203a68c0b01cfcbdaf631e0098
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534277"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096167"
 ---
 # <a name="sptableprivilegesex-transact-sql"></a>sp_table_privileges_ex (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +60,12 @@ sp_table_privileges_ex [ @table_server = ] 'table_server'
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
+|**TABLE_CAT**|**sysname**|Nombre del calificador de tabla. Varios productos DBMS admiten nombres de tres partes para tablas (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre del servidor del entorno de base de datos de la tabla. Este campo puede ser NULL.|  
 |**TABLE_SCHEM**|**sysname**|Nombre de propietario de la tabla. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre del usuario de base de datos que creó la tabla. Este campo siempre devuelve un valor.|  
 |**TABLE_NAME**|**sysname**|Nombre de la tabla. Este campo siempre devuelve un valor.|  
 |**OTORGANTE DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que ha concedido permisos **TABLE_NAME** al **receptor**. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna siempre es el mismo que el **TABLE_OWNER**. Este campo siempre devuelve un valor. Además, la columna GRANTOR puede ser el propietario de la base de datos (**TABLE_OWNER**) o un usuario a los que el propietario de la base de datos haya concedido permiso mediante la cláusula WITH GRANT OPTION en la instrucción GRANT.|  
-|**GRANTEE**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos sobre este **TABLE_NAME** por la lista **otorgante de permisos**. Este campo siempre devuelve un valor.|  
-|**PRIVILEGE**|**varchar(** 32 **)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos de una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes de una o varias de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica privilegio es depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que el **otorgante de permisos** tiene el permiso UPDATE en otro origen de datos.|  
+|**RECEPTOR DE PERMISOS**|**sysname**|Nombre de usuario de base de datos que se ha concedido permisos sobre este **TABLE_NAME** por la lista **otorgante de permisos**. Este campo siempre devuelve un valor.|  
+|**PRIVILEGIO**|**varchar(** 32 **)**|Uno de los permisos de tabla disponibles. Los permisos de tabla pueden ser uno de los valores siguientes u otros valores que el origen de datos admita al definirse la implementación.<br /><br /> Seleccione = **receptor** puede recuperar datos de una o varias de las columnas.<br /><br /> INSERT = **receptor** puede proporcionar datos para nuevas filas de una o varias de las columnas.<br /><br /> UPDATE = **receptor** puede modificar datos existentes de una o varias de las columnas.<br /><br /> ELIMINAR = **receptor** puede quitar filas de la tabla.<br /><br /> REFERENCIAS = **receptor** puede hacer referencia a una columna de una tabla externa en una relación de clave principal/clave externa. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], las relaciones entre clave principal y clave externa se definen mediante restricciones de tabla.<br /><br /> El ámbito de acción dado a la **receptor** por una tabla específica privilegio es depende del origen de datos. Por ejemplo, el permiso de UPDATE podría permitir la **receptor** para actualizar todas las columnas de una tabla en un origen de datos y solo aquellas columnas para que el **otorgante de permisos** tiene el permiso UPDATE en otro origen de datos.|  
 |**IS_GRANTABLE**|**varchar(** 3 **)**|Indica si el **receptor** tiene permiso para conceder permisos a otros usuarios. A esto se le suele denominar permiso "conceder por concesión". Puede ser YES, NO o NULL. Un valor desconocido, o NULL, hace referencia a un origen de datos en el que “conceder por concesión” no es aplicable.|  
   
 ## <a name="remarks"></a>Comentarios  

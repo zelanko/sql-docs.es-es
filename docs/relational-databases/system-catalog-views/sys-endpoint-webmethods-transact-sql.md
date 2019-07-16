@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7dad0cf6-eafa-47cf-98cc-75ba8d3c7959
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e36ad44360f34a7af383eaeaacb703607832cbdd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 14e3534671cc36d8c2cac46f627d158056f985e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689353"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079251"
 ---
 # <a name="sysendpointwebmethods-transact-sql"></a>sys.endpoint_webmethods (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "47689353"
 |-----------------|---------------|-----------------|  
 |endpoint_id|**int**|Identificador del extremo en el que está definido WEBMETHOD.|  
 |espacio de nombres|**nvarchar(384)**|Espacio de nombres para WEBMETHOD.|  
-|method_alias|**Nvarchar (64)**|Alias del método.<br /><br /> Nota: [!INCLUDE[tsql](../../includes/tsql-md.md)] identificadores permiten caracteres que no son válidos en nombres de método WSDL.<br /><br /> El alias se utiliza para asignar el nombre expuesto en la descripción WSDL del extremo al objeto ejecutable de [!INCLUDE[tsql](../../includes/tsql-md.md)] subyacente real que se llama al invocar WEBMETHOD.|  
+|method_alias|**nvarchar(64)**|Alias del método.<br /><br /> Nota: [!INCLUDE[tsql](../../includes/tsql-md.md)] identificadores permiten caracteres que no son válidos en nombres de método WSDL.<br /><br /> El alias se utiliza para asignar el nombre expuesto en la descripción WSDL del extremo al objeto ejecutable de [!INCLUDE[tsql](../../includes/tsql-md.md)] subyacente real que se llama al invocar WEBMETHOD.|  
 |object_name|**nvarchar(776)**|Nombre de objeto al que se redirige WEBMETHOD, como se especifica en la opción NAME =. Partes del nombre se separan con un punto (.) y se delimitan mediante corchetes, `[``]`.<br /><br /> El nombre de objeto debe constar de tres partes, como se especifica en la opción WSDL.|  
 |result_schema|**tinyint**|Opción que determina si, en su caso, XSD se devuelve con una respuesta.<br /><br /> 0 = Ninguno<br /><br /> 1 = Estándar<br /><br /> 2 = Predeterminado|  
 |result_schema_desc|**nvarchar(60)**|Descripción de opción que determina si, en su caso, XSD se devuelve con una respuesta.<br /><br /> Ninguno<br /><br /> STANDARD<br /><br /> DEFAULT|  

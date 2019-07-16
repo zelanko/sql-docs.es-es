@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 64d07d7c9853fcbdf5041b1a40123ce68cd46363
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9820476ecdee25551d09c8206595b637421b9efd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47764339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083719"
 ---
 # <a name="sysspcdchelpjobs-transact-sql"></a>sys.sp_cdc_help_jobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sys.sp_cdc_help_jobs
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**job_id**|**uniqueidentifier**|Id. del trabajo.|  
-|**job_type**|**nvarchar (20)**|Tipo de trabajo.|  
+|**job_type**|**nvarchar(20)**|Tipo de trabajo.|  
 |**maxtrans**|**int**|El número máximo de transacciones para procesar en cada ciclo de examen.<br /><br /> **maxtrans** solo es válida para los trabajos de captura.|  
 |**maxscans**|**int**|El número máximo de ciclos de recorrido para ejecutar en orden y extraer todas las filas del registro.<br /><br /> **maxscans** solo es válida para los trabajos de captura.|  
 |**continua**|**bit**|Una marca que indica si el trabajo de captura debe ejecutarse continuamente (1) o solo una vez (0). Para obtener más información, consulte [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md).<br /><br /> **continua** solo es válida para los trabajos de captura.|  
-|**pollingInterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** solo es válida para los trabajos de captura.|  
-|**retención**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** solo es válida para los trabajos de limpieza.|  
-|**umbral**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
+|**pollinginterval**|**bigint**|El número de segundos entre los ciclos del recorrido del registro.<br /><br /> **pollingInterval** solo es válida para los trabajos de captura.|  
+|**retention**|**bigint**|El número de minutos que se conservan las filas de cambios en las tablas de cambios.<br /><br /> **retención** solo es válida para los trabajos de limpieza.|  
+|**threshold**|**bigint**|El número máximo de entradas correspondientes a operaciones de eliminación que se pueden eliminar mediante una única instrucción durante el proceso de limpieza.|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer a la **db_owner** rol fijo de base de datos.  

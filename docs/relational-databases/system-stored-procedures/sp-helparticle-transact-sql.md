@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 43eada100fb1de531c0d16082bdf0977e479ccfb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cffdecba62283e3fc404c3630866467bc3a2b1c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63017802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084992"
 ---
 # <a name="sphelparticle-transact-sql"></a>sp_helparticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,8 +63,8 @@ sp_helparticle [ @publication = ] 'publication'
 |**objeto base**|**nvarchar(257)**|Nombre de la tabla subyacente representada por el artículo o el procedimiento almacenado.|  
 |**objeto de destino**|**sysname**|Nombre de la tabla de destino (suscripción).|  
 |**objeto de sincronización**|**nvarchar(257)**|Nombre de la vista que define el artículo publicado.|  
-|**Tipo**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = la ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = function (solo esquema).<br /><br /> **257** = vista indizada basado en registro.<br /><br /> **259** = vista indizada basado en registro con filtro manual.<br /><br /> **261** = vista indizada basado en registro con vista manual.<br /><br /> **263** = vista indizada basado en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
-|**status**|**tinyint**|Puede ser el [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) resultado de una o más estas propiedades del artículo:<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0 x 01** = artículo está activo.<br /><br /> **0 x 08** = incluir el nombre de columna en las instrucciones insert.<br /><br /> **0 x 16** = usar instrucciones con parámetros.<br /><br /> **0 x 32** = usar instrucciones con parámetros e incluir el nombre de columna en las instrucciones insert.|  
+|**type**|**smallint**|Tipo de artículo:<br /><br /> **1** = basado en registro.<br /><br /> **3** = basado en registro con filtro manual.<br /><br /> **5** = basado en registro con vista manual.<br /><br /> **7** = basado en registro con filtro manual y vista manual.<br /><br /> **8** = ejecución de procedimiento almacenado.<br /><br /> **24** = la ejecución del procedimiento almacenado serializable.<br /><br /> **32** = procedimiento almacenado (solo esquema).<br /><br /> **64** = vista (solo esquema).<br /><br /> **96** = función de agregado (solo esquema).<br /><br /> **128** = function (solo esquema).<br /><br /> **257** = vista indizada basado en registro.<br /><br /> **259** = vista indizada basado en registro con filtro manual.<br /><br /> **261** = vista indizada basado en registro con vista manual.<br /><br /> **263** = vista indizada basado en registro con filtro manual y vista manual.<br /><br /> **320** = vista indizada (solo esquema).<br /><br />|  
+|**status**|**tinyint**|Puede ser el [& (AND bit a bit)](../../t-sql/language-elements/bitwise-and-transact-sql.md) resultado de una o más estas propiedades del artículo:<br /><br /> **0 x 00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0 x 01** = artículo está activo.<br /><br /> **0 x 08** = incluir el nombre de columna en las instrucciones insert.<br /><br /> **0 x 16** = usar instrucciones con parámetros.<br /><br /> **0 x 32** = usar instrucciones con parámetros e incluir el nombre de columna en las instrucciones insert.|  
 |**filter**|**nvarchar(257)**|Procedimiento almacenado utilizado para filtrar la tabla horizontalmente. Este procedimiento almacenado debe haber sido creado mediante la cláusula FOR REPLICATION.|  
 |**description**|**nvarchar(255)**|Entrada descriptiva del artículo.|  
 |**insert_command**|**nvarchar(255)**|El tipo de comando de replicación utilizado al replicar inserciones con artículos de la tabla. Para más información, vea [Especificar cómo se propagan los cambios para los artículos transaccionales](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md).|  
@@ -75,7 +74,7 @@ sp_helparticle [ @publication = ] 'publication'
 |**Particionamiento vertical**|**bit**|Es si está habilitado el particionamiento vertical para el artículo; el valor **1** significa que está habilitado el particionamiento vertical.|  
 |**pre_creation_cmd**|**tinyint**|Comando anterior a la creación para DROP TABLE, DELETE TABLE o TRUNCATE TABLE.|  
 |**filter_clause**|**ntext**|Cláusula WHERE que especifica el filtrado horizontal.|  
-|**schema_option**|**binary(8)**|Mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener una lista completa de **schema_option** valores, vea [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
+|**schema_option**|**binary (8)**|Mapa de bits de la opción de generación del esquema para el artículo dado. Para obtener una lista completa de **schema_option** valores, vea [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**sysname**|Nombre del propietario del objeto de destino.|  
 |**source_owner**|**sysname**|Propietario del objeto de origen.|  
 |**unqua_source_object**|**sysname**|Nombre del objeto de origen, sin el nombre del propietario.|  

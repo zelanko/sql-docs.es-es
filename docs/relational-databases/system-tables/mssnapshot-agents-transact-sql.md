@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3449893576870b9ff4f02da044a5b86d09cab286
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 2d57700abecccf3dae55289b49d4fd6c1af3e537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52808637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079964"
 ---
 # <a name="mssnapshotagents-transact-sql"></a>MSsnapshot_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52808637"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del Agente de instantáneas.|  
-|**Nombre**|**Nvarchar (100)**|Nombre del Agente de instantáneas.|  
+|**name**|**nvarchar(100)**|Nombre del Agente de instantáneas.|  
 |**publisher_id**|**smallint**|El ID. del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**publicación**|**sysname**|Nombre de la publicación.|  
@@ -45,10 +44,10 @@ ms.locfileid: "52808637"
 |**dynamic_filter_hostname**|**sysname**|El valor utilizado para evaluar la [HOST_NAME &#40;Transact-SQL&#41; ](../../t-sql/functions/host-name-transact-sql.md) función en los filtros con parámetros que definen una partición. Esta columna se utiliza para una instantánea con particiones.|  
 |**publisher_security_mode**|**smallint**|El modo de seguridad utilizado por el agente al conectar al publicador. Puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado al conectar al publicador.|  
-|**publisher_password**|**nvarchar (524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
+|**publisher_password**|**nvarchar(524)**|Valor cifrado de la contraseña que se utiliza al conectar al publicador.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  
 |**job_login**|**sysname**||  
-|**job_password**|**nvarchar (524)**||  
+|**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>Vea también  
  [Las tablas de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   

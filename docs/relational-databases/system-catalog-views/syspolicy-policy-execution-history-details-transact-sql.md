@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97ef6573-5e8b-4ba5-8ae0-7901e79a9683
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5020ae49c3b923c04ded1469915f2e5e5c1e412f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c2d0daf21a479bff171f31beb30e9dc188a9c97b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47844623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094831"
 ---
 # <a name="syspolicypolicyexecutionhistorydetails-transact-sql"></a>syspolicy_policy_execution_history_details (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "47844623"
 |history_id|**bigint**|Identificador del evento del historial. Cada evento del historial representa un intento de ejecutar una directiva. Dado que una condición puede tener varias expresiones de condiciones y varios destinos, un identificador history_id puede crear varios registros de detalle. Utilice la columna history_id para unir esta vista a la [syspolicy_policy_execution_history](../../relational-databases/system-catalog-views/syspolicy-policy-execution-history-transact-sql.md) vista.|  
 |target_query_expression|**nvarchar(max)**|Destino de la directiva y vista syspolicy_policy_execution_history.|  
 |execution_date|**datetime**|Fecha y hora cuando se creó este registro de detalle.|  
-|result|**bit**|Corrección o error de este destino y evaluación de la expresión de condición:<br /><br /> 0 (correcto) o 1 (error).|  
+|resultado|**bit**|Corrección o error de este destino y evaluación de la expresión de condición:<br /><br /> 0 (correcto) o 1 (error).|  
 |result_detail|**nvarchar(max)**|Mensaje del resultado. Solo está disponible si lo proporciona la faceta.|  
 |exception_message|**nvarchar(max)**|Mensaje generado por la excepción, si se produjo alguna.|  
 |excepción|**nvarchar(max)**|Descripción de la excepción, si se produjo alguna.|  

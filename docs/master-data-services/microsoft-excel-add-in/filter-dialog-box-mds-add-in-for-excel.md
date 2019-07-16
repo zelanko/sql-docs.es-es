@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b24ed1096078529e4e46a094737c8b37bf7020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092264"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>Cuadro de diálogo Filtrar (Complemento MDS para Excel)
 
@@ -43,7 +42,7 @@ ms.locfileid: "65477169"
   
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
-|Attribute|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar por los atributos que no va a mostrar en la hoja de cálculo.|  
+|Atributo|Muestra un atributo por el que desea filtrar. Si no aparece ningún atributo, se debe a que no se han agregado.<br /><br /> Nota: Puede filtrar por los atributos que no va a mostrar en la hoja de cálculo.|  
 |Operador|Muestra los operadores correspondientes al tipo de atributo que estaba seleccionado. Para obtener más información, consulte [Operadores de filtro &#40;Master Data Services&#41;](../../master-data-services/filter-operators-master-data-services.md).|  
 |Criterios|Los criterios por los que desea filtrar.|  
 |Resumen de actualización|Cuando trabaje con conjuntos de datos grandes, haga clic para actualizar la sección **Resumen** con detalles de la cantidad de datos que se cargarán.|  
@@ -57,7 +56,7 @@ ms.locfileid: "65477169"
 |Nombre del control|Descripción|  
 |------------------|-----------------|  
 |Modelo|Nombre del modelo.|  
-|Versión|El nombre de la versión.|  
+|`Version`|El nombre de la versión.|  
 |Entidad|Nombre de la entidad.|  
 |Filas|El número de filas que se cargan en Excel, basado en los filtros aplicados en la sección **Filas** .|  
 |Columnas|El número de columnas que se cargarán en Excel, en función de los atributos seleccionados en la sección **Columnas** .|  

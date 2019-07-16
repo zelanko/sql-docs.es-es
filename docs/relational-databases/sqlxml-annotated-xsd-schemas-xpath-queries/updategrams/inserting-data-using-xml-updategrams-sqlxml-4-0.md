@@ -33,14 +33,13 @@ helpviewer_keywords:
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ad4e43d04c16443323358f0b84e6f26a9f9ab6bf
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d7526bd23d5b49160748eff653d0e2d9c1e07ce4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56019016"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086840"
 ---
 # <a name="inserting-data-using-xml-updategrams-sqlxml-40"></a>Insertar datos con diagramas de actualización XML (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -238,7 +237,7 @@ ms.locfileid: "56019016"
   
  La columna UnitPrice en la tabla Order Details es de la **dinero** tipo. Para aplicar la conversión de tipos adecuada (desde un **cadena** tipo a un **dinero** tipo), se debe agregar el carácter de signo de dólar ($) como parte del valor. Si el diagrama de actualización no especifica un esquema de asignación, el primer carácter de la **cadena** se evalúa el valor. Si el primer carácter es un signo de dólar ($), se aplica la conversión adecuada.  
   
- Si el diagrama de actualización no se especifica en un esquema de asignación donde la columna está correctamente marcada como **dt:type="fixed.14.4"** o **SQL: DataType = "money"**, no se requiere el signo de dólar ($) y el la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
+ Si el diagrama de actualización no se especifica en un esquema de asignación donde la columna está correctamente marcada como **dt:type="fixed.14.4"** o **SQL: DataType = "money"** , no se requiere el signo de dólar ($) y el la asignación controla la conversión. Ésta es la forma recomendada de asegurarse de que se realice la conversión de tipos adecuada.  
   
 ##### <a name="to-test-a-sample-xpath-query-against-the-schema"></a>Para probar una consulta de XPath de ejemplo con respecto al esquema  
   

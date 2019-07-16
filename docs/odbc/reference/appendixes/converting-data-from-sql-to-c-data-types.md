@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 029727f6-d3f0-499a-911c-bcaf9714e43b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6819b28ba57f1e6314535a6a90ad13de39b4842c
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 95a44698c12abf0de64c8d6f7d316e9156dc139c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019110"
 ---
 # <a name="converting-data-from-sql-to-c-data-types"></a>Convertir datos de SQL a tipos de datos C
 Cuando una aplicación llama **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**, el controlador recupera los datos del origen de datos. Si es necesario, convierte los datos del tipo de datos en el que el controlador recupera para el tipo de datos especificado por el *TargetType* argumento en **SQLBindCol** o **SQLGetData.** Por último, almacena los datos en la ubicación señalada por el *TargetValuePtr* argumento en **SQLBindCol** o **SQLGetData** (y el campo SQL_DESC_DATA_PTR de la descartar).  

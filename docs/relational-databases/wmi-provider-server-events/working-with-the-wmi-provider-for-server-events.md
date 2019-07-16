@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: cd974b3b-2309-4a20-b9be-7cfc93fc4389
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 8a3f6118c2227ad81d368c012c7282e3ba962881
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 53d14ec8fe32ef665571dde0b7cd4aa4c17c7388
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095490"
 ---
 # <a name="working-with-the-wmi-provider-for-server-events"></a>Trabajar con el proveedor WMI para eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     AND ObjectType = "TABLE";  
 ```  
   
- El proveedor WMI traduce esta consulta en una notificación de eventos que se crea en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esto significa que el autor de la llamada debe tener los permisos necesarios para crear este tipo de notificación de eventos, concretamente el permiso CREATE DATABASE DDL EVENT NOTIFICATION en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ El proveedor WMI traduce esta consulta en una notificación de eventos que se crea en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] . Esto significa que el autor de la llamada debe tener los permisos necesarios para crear este tipo de notificación de eventos, concretamente el permiso CREATE DATABASE DDL EVENT NOTIFICATION en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] .  
   
  Si una consulta WQL especifica una notificación de eventos que pertenece al nivel del servidor, por ejemplo, emitiendo la consulta SELECT * FROM ALTER_TABLE, la aplicación que realiza la llamada debe tener el permiso CREATE DDL EVENT NOTIFICATION del nivel de servidor. Tenga en cuenta que las notificaciones de eventos con ámbito en el servidor se almacenan en la base de datos maestra. Puede usar la vista de catálogo [sys.server_event_notifications](../../relational-databases/system-catalog-views/sys-server-event-notifications-transact-sql.md) para ver los metadatos.  
   
@@ -111,7 +110,7 @@ WHERE DatabaseName = "AdventureWorks2012"
     -   DENY o REVOKE (solo se aplica a los permisos ALTER DATABASE, ALTER ANY DATABASE EVENT NOTIFICATION, CREATE DATABASE DDL EVENT NOTIFICATION, CONTROL SERVER, ALTER ANY EVENT NOTIFICATION, CREATE DDL EVENT NOTIFICATION o CREATE TRACE EVENT NOTIFICATION).  
   
 ## <a name="working-with-event-data-on-the-client-side"></a>Trabajar con datos de eventos en el cliente  
- Una vez que el proveedor WMI para eventos de servidor crea la notificación de eventos necesaria en la base de datos de destino, la notificación de eventos envía datos de eventos para el servicio de destino en msdb denominado **notificaciones/SQL/ProcessWMIEventProviderNotification /V1.0**. El servicio de destino coloca el evento en una cola de **msdb** denominada **WMIEventProviderNotificationQueue**. (El proveedor crea dinámicamente tanto el servicio como la cola cuando se conecta por primera vez a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) A continuación, el proveedor lee los datos de eventos XML de la cola y los convierte al formato de objetos administrados (MOF, Managed Object Format) antes de devolvérselos a la aplicación cliente. Los datos MOF se componen de las propiedades del evento solicitado por la consulta WQL como una definición de clase del Modelo de información común (CIM). Cada propiedad tiene un tipo CIM correspondiente. Por ejemplo, la propiedad `SPID` se devuelve como un tipo CIM **Sint32**. Los tipos CIM de cada propiedad se muestran debajo de cada clase de eventos en [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
+ Una vez que el proveedor WMI para eventos de servidor crea la notificación de eventos necesaria en la base de datos de destino, la notificación de eventos envía datos de eventos para el servicio de destino en msdb denominado **notificaciones/SQL/ProcessWMIEventProviderNotification /V1.0**. El servicio de destino coloca el evento en una cola de **msdb** denominada **WMIEventProviderNotificationQueue**. (El servicio y la cola se crean dinámicamente por el proveedor cuando se conecta primero al [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].) El proveedor, a continuación, lee los datos XML del evento de la cola y lo transforma managed object Format (MOF) antes de devolverlo a la aplicación cliente. Los datos MOF se componen de las propiedades del evento solicitado por la consulta WQL como una definición de clase del Modelo de información común (CIM). Cada propiedad tiene un tipo CIM correspondiente. Por ejemplo, la propiedad `SPID` se devuelve como un tipo CIM **Sint32**. Los tipos CIM de cada propiedad se muestran debajo de cada clase de eventos en [Proveedor WMI de clases y propiedades de eventos de servidor](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-classes-and-properties.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Conceptos del proveedor WMI para eventos de servidor](https://technet.microsoft.com/library/ms180560.aspx)  

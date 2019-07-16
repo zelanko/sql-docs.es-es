@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 36b754b4-6b17-4dd1-a925-bca46938b7c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe681a0f93dd88ad7f4752daf213817c21b054ad
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 690c81a46c62c8844780e82b5c82a0ff7301105d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63043770"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949762"
 ---
 # <a name="getschemaobject-method-ado-md"></a>Método GetSchemaObject (ADO MD)
 Recupera un objeto de esquema de ADO MD ([dimensión](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [jerarquía](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [nivel](../../../ado/reference/ado-md-api/level-object-ado-md.md), o [miembro](../../../ado/reference/ado-md-api/member-object-ado-md.md)) por su [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md).  

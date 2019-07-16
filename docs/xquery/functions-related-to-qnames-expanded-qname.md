@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8377042-95cc-467b-9ada-fe43cebf4bc3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: e95081c03a5a3f91b601e9db1ddbb24b9c5f295a
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 7c50409ea35809c52de718a8281bf76f75a5a0e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256900"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004583"
 ---
 # <a name="functions-related-to-qnames---expanded-qname"></a>Funciones relacionadas con QNames: expanded-QName
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ SELECT * from T
 go  
 ```  
   
- Éste es el resultado. Tenga en cuenta que ahora el elemento <`ElemQN`> del tipo QName tiene un nuevo valor:  
+ Éste es el resultado. Tenga en cuenta que el elemento <`ElemQN`> de QName tiene ahora un nuevo valor de tipo:  
   
 ```  
 <Root xmlns="QNameXSD" xmlns:ns="urn">  
@@ -158,7 +157,7 @@ SELECT *
 FROM T  
 ```  
   
- El intento siguiente agrega otro elemento <`root`> pero se produce un error, puesto que no se admite la función expanded-QName() en la construcción de XML.  
+ El intento siguiente agrega otro <`root`> elemento, pero se produce un error, porque no se admite la función expanded-QName() en construcción de XML.  
   
 ```  
 update T SET xmlCol.modify('  
@@ -166,7 +165,7 @@ insert <root>{expanded-QName("http://ns","someLocalName")}</root> as last into /
 go  
 ```  
   
- Una solución consiste en insertar primero una instancia con un valor para el elemento <`root`> y, a continuación, modificarlo. En este ejemplo, se utiliza un valor inicial nil cuando se inserta el elemento <`root`>. La colección de esquemas XML de este ejemplo permite un valor nil para el elemento <`root`>.  
+ Una solución para este problema consiste en Insertar primero una instancia con un valor para el <`root`> elemento y, a continuación, modificarlo. En este ejemplo, se usa un valor inicial nil cuando el <`root`> se inserta el elemento. La colección de esquemas XML en este ejemplo permite un valor nulo para el <`root`> elemento.  
   
 ```  
 update T SET xmlCol.modify('  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 2e5ecbe9-3ea8-45e6-a161-e31671a03e1d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 895eeeea22b305236d263827156c6717b458a96a
-ms.sourcegitcommit: f46fd79fd32a894c8174a5cb246d9d34db75e5df
+ms.openlocfilehash: 065625fdaca015de9c445e6e6f0e1ad0013f38e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/26/2018
-ms.locfileid: "53785926"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090257"
 ---
 # <a name="sysdmxepackages-transact-sql"></a>sys.dm_xe_packages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,13 +34,13 @@ ms.locfileid: "53785926"
  
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**nvarchar(256)**|El nombre del paquete. La descripción se expone a partir del propio paquete. No admite valores NULL.|  
+|name|**nvarchar(256)**|El nombre del paquete. La descripción se expone a partir del propio paquete. No admite valores NULL.|  
 |guid|**uniqueidentifier**|GUID que identifica el paquete. No admite valores NULL.|  
-|description|**nvarchar (3072)**|Descripción del paquete. descriptionis establecido por el autor del paquete y no admite valores NULL.|  
+|description|**nvarchar(3072)**|Descripción del paquete. descriptionis establecido por el autor del paquete y no admite valores NULL.|  
 |capabilities|**int**|Mapa de bits que describe la funcionalidad de este paquete. Acepta valores NULL.|  
 |capabilities_desc|**nvarchar(256)**|Lista de toda la funcionalidad posible de este paquete. Acepta valores NULL.|  
 |module_guid|**nvarchar(60)**|GUID del módulo que expone este paquete. No admite valores NULL.|  
-|module_address|**varbinary (8)**|La dirección base donde se carga el módulo que contiene el paquete. Un módulo único puede exponer varios paquetes. No admite valores NULL.|  
+|module_address|**varbinary(8)**|La dirección base donde se carga el módulo que contiene el paquete. Un módulo único puede exponer varios paquetes. No admite valores NULL.|  
   
 ## <a name="permissions"></a>Permisos  
  es necesario contar con el permiso VIEW SERVER STATE en el servidor.  

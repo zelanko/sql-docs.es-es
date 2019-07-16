@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 7d6981879f08b65c334eae9cd81e73223bc353bf
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5868120af1e98c4b2f3be78f2cf7927df53b42d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072664"
 ---
 # <a name="spaddlogin-transact-sql"></a>sp_addlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,10 +67,10 @@ sp_addlogin [ @loginame = ] 'login'
  Es el idioma predeterminado del inicio de sesión. *lenguaje* es **sysname**, su valor predeterminado es null. Si *lenguaje* no se especifica, el valor predeterminado *lenguaje* del nuevo inicio de sesión se establece en el idioma predeterminado actual del servidor.  
   
  [ @sid=] '*sid*'  
- Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)**, su valor predeterminado es null. Si *sid* es NULL, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un **varbinary** tipo de datos, los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no debe existir. Especificar *sid* es útil, por ejemplo, cuando se cifran o mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y desean que los inicios de sesión tienen el mismo SID en servidores diferentes.  
+ Especifica el número de identificación de seguridad (SID). *SID* es **varbinary (16)** , su valor predeterminado es null. Si *sid* es NULL, el sistema genera un SID para el nuevo inicio de sesión. A pesar del uso de un **varbinary** tipo de datos, los valores distintos de NULL deben tener exactamente 16 bytes de longitud y no debe existir. Especificar *sid* es útil, por ejemplo, cuando se cifran o mueven [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicios de sesión de un servidor a otro y desean que los inicios de sesión tienen el mismo SID en servidores diferentes.  
   
  [ @encryptopt=] '*encryption_option*'  
- Especifica si la contraseña se pasa como texto sin cifrar o como hash de la contraseña de texto sin cifrar. Tenga en cuenta que no se realiza el cifrado. La palabra "cifrar" se utiliza aquí para la compatibilidad con versiones anteriores. Si se pasa una contraseña de texto sin cifrar, está en formato hash. El hash se almacena. *encryption_option* es **varchar (20)**, y puede tener uno de los siguientes valores.  
+ Especifica si la contraseña se pasa como texto sin cifrar o como hash de la contraseña de texto sin cifrar. Tenga en cuenta que no se realiza el cifrado. La palabra "cifrar" se utiliza aquí para la compatibilidad con versiones anteriores. Si se pasa una contraseña de texto sin cifrar, está en formato hash. El hash se almacena. *encryption_option* es **varchar (20)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -117,7 +116,7 @@ EXEC sp_addlogin 'Victoria', 'B1r12-36';
 GO  
 ```  
   
-### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>B. Crear un inicio de sesión de SQL Server que tiene una base de datos predeterminada  
+### <a name="b-creating-a-sql-server-login-that-has-a-default-database"></a>b. Crear un inicio de sesión de SQL Server que tiene una base de datos predeterminada  
  En el siguiente ejemplo se crea un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el usuario `Albert`, con una contraseña `B5432-3M6` y una base de datos predeterminada `corporate`.  
   
 ```  

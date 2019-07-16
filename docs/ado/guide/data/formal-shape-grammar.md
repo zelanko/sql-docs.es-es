@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925347"
 ---
 # <a name="formal-shape-grammar"></a>Gramática formal de forma
 Se trata de la gramática formal para crear cualquier comando shape:  
@@ -42,28 +41,28 @@ Se trata de la gramática formal para crear cualquier comando shape:
   
 |Término|Definición|  
 |----------|----------------|  
-|\<shape-command>|SHAPE [\<table-exp> [[AS] \<alias>]][\<shape-action>]|  
+|\<shape-command>|FORMA [\<tabla exp > [[AS] \<alias >]] [\<forma Acción >]|  
 |\<table-exp>|{\<provider-command-text>} &#124;<br /><br /> (\<shape-command>) &#124;<br /><br /> TABLA \<quoted-name >&#124;<br /><br /> \<quoted-name>|  
-|\<shape-action>|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> COMPUTE \<aliased-field-list> [BY \<field-list>]|  
-|\<aliased-field-list>|\<aliased-field> [, \<aliased-field...>]|  
-|\<aliased-field>|\<field-exp> [[AS] \<alias>]|  
-|\<field-exp>|(\<relation-exp>) &#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
-|<relation_exp>|\<table-exp> [[AS] \<alias>]<br /><br /> RELACIONAR \<relación-cond-list >|  
-|\<relation-cond-list>|\<relation-cond> [, \<relation-cond>...]|  
-|\<relation-cond>|\<nombre de campo > TO \<secundarios ref >|  
+|\<shape-action>|ANEXAR \<lista de campos de un alias >&#124;<br /><br /> PROCESO \<lista de campos de un alias > [BY \<lista de campos >]|  
+|\<aliased-field-list>|\<un alias de campo > [, \<un alias de campo... >]|  
+|\<aliased-field>|\<campo: exp > [[AS] \<alias >]|  
+|\<field-exp>|(\<relación exp >)&#124;<br /><br /> \<calculated-exp> &#124;<br /><br /> \<aggregate-exp> &#124;<br /><br /> \<new-exp>|  
+|<relation_exp>|\<tabla exp > [[AS] \<alias >]<br /><br /> RELACIONAR \<relación-cond-list >|  
+|\<relación-cond-list >|\<relación cond > [, \<relación cond >...]|  
+|\<relación cond >|\<nombre de campo > TO \<secundarios ref >|  
 |\<child-ref>|\<field-name> &#124;<br /><br /> PARÁMETRO \<-ref param >|  
 |\<param-ref>|\<number>|  
 |\<field-list>|\<field-name> [, \<field-name>]|  
-|\<aggregate-exp>|SUM(\<qualified-field-name>) &#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> COUNT(\<qualified-alias> &#124; \<qualified-name>) &#124;<br /><br /> STDEV(\<qualified-field-name>) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
-|\<calculated-exp>|CALC(\<expression>)|  
+|\<aggregate-exp>|SUM (\<nombre de campo completo >)&#124;<br /><br /> AVG(\<qualified-field-name>) &#124;<br /><br /> MIN(\<qualified-field-name>) &#124;<br /><br /> MAX(\<qualified-field-name>) &#124;<br /><br /> RECUENTO (\<calificado-alias > &#124; \<calificado-name >)&#124;<br /><br /> STDEV (\<nombre de campo completo >)&#124;<br /><br /> ANY(\<qualified-field-name>)|  
+|\<calculated-exp>|CALC (\<expresión >)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
 |\<alias>|\<quoted-name>|  
-|\<field-name>|\<quoted-name> [[AS] \<alias>]|  
+|\<field-name>|\<QUOTED-name > [[AS] \<alias >]|  
 |\<quoted-name>|"\<string>" &#124;<br /><br /> '\<string>' &#124;<br /><br /> [\<string>] &#124;<br /><br /> \<name>|  
-|\<qualified-name>|alias[.alias...]|  
+|\<qualified-name>|alias [.alias...]|  
 |\<name>|alpha [ alpha &#124; digit &#124; _ &#124; # &#124; : &#124; ...]|  
 |\<number>|dígito [dígitos...]|  
-|\<new-exp>|NEW \<field-type> [(\<number> [, \<number>])]|  
+|\<new-exp>|NUEVO \<tipo de campo > [(\<número > [, \<número >])]|  
 |\<field-type>|Un tipo de datos OLE DB o ADO.|  
 |\<string>|-char Unicode [-char unicode...]|  
 |\<expression>|Un objeto Visual expresión Basic para aplicaciones cuyos operandos son otras columnas no calculadas en la misma fila.|  

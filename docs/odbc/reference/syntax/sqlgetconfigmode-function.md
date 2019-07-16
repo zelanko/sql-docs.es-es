@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7d9065d48e8b4af686e1ff64272fbe902e066cb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14fb43015db9113262320f78f0bae53f8a168f95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68044556"
 ---
 # <a name="sqlgetconfigmode-function"></a>Función SQLGetConfigMode
 **Conformidad**  
@@ -55,7 +54,7 @@ BOOL SQLGetConfigMode(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLGetConfigMode** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

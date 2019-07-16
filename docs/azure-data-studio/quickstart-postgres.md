@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959468"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>Inicio rápido: Conectarse y consultar con PostgreSQL [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 En este tutorial rápido se muestra cómo usar [!INCLUDE[name-sos](../includes/name-sos-short.md)] para conectarse a Postgres y, a continuación, usar instrucciones SQL para crear la base de datos *tutorialdb* y realiza consultas.
@@ -50,8 +49,8 @@ Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../include
    | **Nombre de usuario.** | postgres | El nombre de usuario que desea iniciar sesión. |
    | **Contraseña (inicio de sesión de SQL)** | *password* | La contraseña de la cuenta que va a iniciar sesión. |
    | **Contraseña** | *Comprobación* | Active esta casilla si no desea escribir la contraseña cada vez que se conecte. |
-   | **Nombre de la base de datos** | \<Default\> | Rellene esto si desea que la conexión para especificar una base de datos. |
-   | **Grupo del servidor** | \<Default\> | Esta opción le permite asignar esta conexión a un grupo de servidores específicos que cree. | 
+   | **Nombre de la base de datos** | \<Valor predeterminado\> | Rellene esto si desea que la conexión para especificar una base de datos. |
+   | **Grupo del servidor** | \<Valor predeterminado\> | Esta opción le permite asignar esta conexión a un grupo de servidores específicos que cree. | 
    | **Nombre (opcional)** | *Deje en blanco* | Esta opción permite especificar un nombre descriptivo para el servidor. | 
 
 5. Seleccione **Conectar**. 
@@ -59,7 +58,7 @@ Para completar este tutorial rápido, necesitará [!INCLUDE[name-sos](../include
 Después de conectarse correctamente, el servidor se abre en el **servidores** barra lateral.
 
 
-## <a name="create-a-database"></a>Crear una base de datos
+## <a name="create-a-database"></a>Creación de una base de datos
 
 Los pasos siguientes crean una base de datos denominada **tutorialdb**:
 

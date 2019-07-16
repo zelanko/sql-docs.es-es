@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cb5a68f8-dba4-41da-bafd-04efe53706b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 598326335c32f18b5d7f5a764d387e5b5ea536f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c89756e86a702217d5d9d8495bf62b0d27f52321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922470"
 ---
 # <a name="rds-returns-quotstream-not-readquot-error"></a>RDS devuelve &quot;Stream no leída&quot; Error
 "El objeto Stream no se puede leer porque está vacío o la posición actual está al final de la Stream. Para las secuencias de valores no vacíos, establezca la posición actual con la propiedad Position. Para determinar si un Stream está vacío, compruebe la propiedad de tamaño."  

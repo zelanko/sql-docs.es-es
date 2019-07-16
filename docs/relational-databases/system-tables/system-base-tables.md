@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 31f2df90-651f-4699-8067-19f59b60904f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dafea3c43e8287b92665cbdc5c901ab2ba0116d2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 43f5e96a280614d3f69472c7d794489bf1a5ba58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47833633"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029560"
 ---
 # <a name="system-base-tables"></a>Tablas base del sistema
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,12 +45,12 @@ ms.locfileid: "47833633"
 |Tabla base|Descripción|  
 |----------------|-----------------|  
 |**Sys.sysschobjs**|Existe en todas las bases de datos. Cada fila representa un objeto en la base de datos.|  
-|**Sys.sysbinobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad de Service Broker en la base de datos. Las entidades de Service Broker contienen los siguientes elementos:<br /><br /> Tipo de mensaje<br /><br /> Contrato de servicio<br /><br /> ssNoVersion<br /><br /> Los nombres y tipos utilizan intercalación binaria fija.|  
+|**Sys.sysbinobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad de Service Broker en la base de datos. Las entidades de Service Broker contienen los siguientes elementos:<br /><br /> Tipo de mensaje<br /><br /> Contrato de servicio<br /><br /> Servicio<br /><br /> Los nombres y tipos utilizan intercalación binaria fija.|  
 |**Sys.sysclsobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad clasificada que comparte las mismas propiedades comunes, entre las que se incluyen las siguientes:<br /><br /> Ensamblado<br /><br /> Dispositivo de copia de seguridad<br /><br /> Catálogo de texto completo<br /><br /> Función de partición<br /><br /> Esquema de partición<br /><br /> Grupo de archivos<br /><br /> Clave de ofuscación|  
 |**Sys.sysnsobjs**|Existe en todas las bases de datos. Contiene una fila para cada entidad centrada en el espacio de nombres. Esta tabla se usa para almacenar entidades de la colección de XML.|  
 |**Sys.syscolpars**|Existe en todas las bases de datos. Contiene una fila para cada columna en una tabla, vista o función con valores de tabla. También contiene las filas para cada parámetro de un procedimiento o función.|  
 |**Sys.systypedsubobjs**|Existe en todas las bases de datos. Contiene una fila para cada subentidad escrita. Solo se incluyen en esta categoría los parámetros de la función de partición.|  
-|**Sys.sysidxstats**|Existe en todas las bases de datos. Contiene una fila para cada índice o estadísticas para tablas y vistas indizadas<br /><br /> Nota: Todos los índices (excepto el montón) se asocia con una estadística que tiene el mismo nombre que el índice.|  
+|**Sys.sysidxstats**|Existe en todas las bases de datos. Contiene una fila para cada índice o estadísticas para tablas y vistas indizadas<br /><br /> Nota: Cada índice (excepto el montón) se asocia con una estadística que tiene el mismo nombre que el índice.|  
 |**Sys.sysiscols**|Existe en todas las bases de datos. Contiene una fila para cada índice persistente y para columna de estadísticas.|  
 |**Sys.sysscalartypes**|Existe en todas las bases de datos. Contiene una fila por cada tipo de sistema o cada tipo definido por el usuario.|  
 |**Sys.sysdbreg**|Existe en el **maestro** solo la base de datos. Contiene una fila por cada base de datos registrada.|  

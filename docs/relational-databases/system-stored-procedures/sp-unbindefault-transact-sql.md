@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095881"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna o el tipo de datos de alias desde el que el valor predeterminado es se va a quitar. *object_name* es **nvarchar(776)**, no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias.  
+`[ @objname = ] 'object_name'` Es el nombre de la tabla y columna o el tipo de datos de alias desde el que el valor predeterminado es se va a quitar. *object_name* es **nvarchar(776)** , no tiene ningún valor predeterminado. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] intenta resolver los identificadores de dos partes en nombres de columna en primer lugar, y después en tipos de datos de alias.  
   
  Cuando se desenlaza un valor predeterminado de un tipo de datos alias, también se desenlaza cualquier columna de ese tipo de datos que tenga el mismo valor predeterminado. Las columnas de ese tipo de datos cuyos valores predeterminados estén directamente enlazados a ellas no se ven afectadas.  
   
 > [!NOTE]  
 >  *object_name* puede contener corchetes **[]** como caracteres de identificadores delimitados. Para obtener más información, vea [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-`[ @futureonly = ] 'futureonly_flag'` Se usa solo cuando se desenlaza un valor predeterminado de un tipo de datos de alias. *futureonly_flag* es **varchar (15)**, su valor predeterminado es null. Cuando *futureonly_flag* es **futureonly**, las columnas existentes del tipo de datos no pierden el valor predeterminado especificado.  
+`[ @futureonly = ] 'futureonly_flag'` Se usa solo cuando se desenlaza un valor predeterminado de un tipo de datos de alias. *futureonly_flag* es **varchar (15)** , su valor predeterminado es null. Cuando *futureonly_flag* es **futureonly**, las columnas existentes del tipo de datos no pierden el valor predeterminado especificado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

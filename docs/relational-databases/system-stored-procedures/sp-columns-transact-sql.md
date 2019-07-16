@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1155937c8634fe9859b13b84f2e42be6ceb825d0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8eb18a81ff7910418e5b3c8a3b36a0e4cd94cc36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070352"
 ---
 # <a name="spcolumns-transact-sql"></a>sp_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,15 +45,15 @@ sp_columns [ @table_name = ] object
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ \@table_name = ] object` Es el nombre del objeto que se usa para devolver información del catálogo. *objeto* puede ser una tabla, vista u otro objeto que tiene columnas como funciones con valores de tabla. *objeto* es **nvarchar (384)**, no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
+`[ \@table_name = ] object` Es el nombre del objeto que se usa para devolver información del catálogo. *objeto* puede ser una tabla, vista u otro objeto que tiene columnas como funciones con valores de tabla. *objeto* es **nvarchar (384)** , no tiene ningún valor predeterminado. Se admite la coincidencia de patrón de caracteres comodín.  
   
-`[ \@table_owner = ] owner` Es el propietario del objeto del objeto que se usa para devolver información del catálogo. *propietario* es **nvarchar (384)**, su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de objeto del DBMS subyacente.  
+`[ \@table_owner = ] owner` Es el propietario del objeto del objeto que se usa para devolver información del catálogo. *propietario* es **nvarchar (384)** , su valor predeterminado es null. Se admite la coincidencia de patrón de caracteres comodín. Si *propietario* no se especifica, se aplican las reglas predeterminadas de visibilidad de objeto del DBMS subyacente.  
   
  Si el usuario actual posee un objeto con el nombre especificado, se devuelven las columnas de ese objeto. Si *propietario* no se especifica y el usuario actual no posee un objeto con los valores especificados *objeto*, **sp_columns** busca un objeto con los valores especificados  *objeto* que pertenezca al propietario de la base de datos. Si existe uno, se devuelven las columnas de ese objeto.  
   
-`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_**.** _propietario_**.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
+`[ \@table_qualifier = ] qualifier` Es el nombre del calificador de objeto. *calificador* es **sysname**, su valor predeterminado es null. Varios productos DBMS admiten nombres de tres partes para objetos (_calificador_ **.** _propietario_ **.** _nombre_). En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna representa el nombre de la base de datos. En algunos productos, representa el nombre de servidor del entorno de base de datos del objeto.  
   
-`[ \@column_name = ] column` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *columna* es **nvarchar (384)**, su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en el **syscolumns** tabla. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
+`[ \@column_name = ] column` Es una sola columna y se utiliza cuando se desea solo una columna de información del catálogo. *columna* es **nvarchar (384)** , su valor predeterminado es null. Si *columna* no es se especifica, se devuelven todas las columnas. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], *columna* representa el nombre de columna como se muestra en el **syscolumns** tabla. Se admite la coincidencia de patrón de caracteres comodín. Para obtener una interoperabilidad máxima, el cliente de puerta de enlace solo debe dar por supuesta la coincidencia de patrón estándar de SQL-92 (caracteres comodín % y _).  
   
 `[ \@ODBCVer = ] ODBCVer` Es la versión de ODBC que se está usando. *ODBCVer* es **int**, con el valor predeterminado es 2. Esto indica ODBC Versión 2. Los valores válidos son 2 ó 3. Para las diferencias de comportamiento entre las versiones 2 y 3, vea el ODBC **SQLColumns** especificación.  
   
@@ -74,9 +73,9 @@ sp_columns [ @table_name = ] object
 |**TYPE_NAME**|**sysname**|Cadena que representa un tipo de datos. El DBMS subyacente presenta este nombre del tipo de datos.|  
 |**PRECISION**|**int**|Número de dígitos significativos. El valor devuelto para la **precisión** columna es en base 10.|  
 |**LENGTH**|**int**|Tamaño de transferencia de los datos. <sup>1</sup>|  
-|**SCALE**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
+|**ESCALA**|**smallint**|Número de dígitos a la derecha del separador decimal.|  
 |**RADIX**|**smallint**|Base para tipos de datos numéricos.|  
-|**NULLABLE**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
+|**QUE ACEPTA VALORES NULL**|**smallint**|Especifica la nulabilidad.<br /><br /> 1 = Se admiten valores NULL.<br /><br /> 0 = No se admiten valores NULL.|  
 |**COMENTARIOS**|**varchar(254)**|Este campo siempre devuelve NULL.|  
 |**COLUMN_DEF**|**nvarchar(4000)**|Valor predeterminado de la columna.|  
 |**SQL_DATA_TYPE**|**smallint**|Valor del tipo de datos SQL tal como aparece en el campo TYPE del descriptor. Esta columna es el mismo que el **DATA_TYPE** columna, excepto para el **datetime** y SQL-92 **intervalo** tipos de datos. Esta columna siempre devuelve un valor.|  

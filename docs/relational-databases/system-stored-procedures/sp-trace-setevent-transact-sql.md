@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7662d1d9-6d0f-443a-b011-c901a8b77a44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54f36b46f75bf943ecf08aafd93a6b861c2da90a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b90fe62de358c226fba4b3b4a26f941c75ce5a47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538587"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095955"
 ---
 # <a name="sptracesetevent-transact-sql"></a>sp_trace_setevent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |36|SP:CacheRemove|Indica que se ha eliminado un elemento de la caché de procedimientos.|  
 |37|SP:Recompile|Indica que se ha vuelto a compilar un procedimiento almacenado.|  
 |38|SP:CacheHit|Indica que se ha encontrado un procedimiento almacenado en la caché de procedimientos.|  
-|39|Obsoleto|Obsoleto|  
+|39|En desuso|En desuso|  
 |40|SQL:StmtStarting|Se produce cuando se ha iniciado la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |41|SQL:StmtCompleted|Se produce cuando se ha completado la instrucción [!INCLUDE[tsql](../../includes/tsql-md.md)].|  
 |42|SP:Starting|Indica el inicio de un procedimiento almacenado.|  
@@ -271,7 +270,7 @@ sp_trace_setevent [ @traceid = ] trace_id
 |26|**ServerName**|Nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], ya sea *servername* o *nombreDeServidor\nombreDeInstancia*, que se va a realizar un seguimiento.|  
 |27|**EventClass**|Tipo de clase de evento que se está registrando.|  
 |28|**ObjectType**|Tipo de objeto, por ejemplo: tabla, función o procedimiento almacenado.|  
-|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. See [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
+|29|**NestLevel**|Nivel de anidamiento en el que se ejecuta este procedimiento almacenado. Consulte [@@NESTLEVEL &#40;Transact-SQL&#41;](../../t-sql/functions/nestlevel-transact-sql.md).|  
 |30|**Estado**|Estado del servidor, si se produce un error.|  
 |31|**Error**|Número de error.|  
 |32|**Modo**|Modo de bloqueo del bloqueo adquirido. Esta columna no se llena con el **bloqueo: publicado** eventos.|  
@@ -308,14 +307,14 @@ sp_trace_setevent [ @traceid = ] trace_id
 |63|**SqlHandle**|Hash de 64 bits basado en el texto de una consulta ad hoc o en el Id. de base de datos y de objeto de un objeto SQL. Este valor puede pasarse a **sys.dm_exec_sql_text()** para recuperar el texto SQL asociado.|  
 |64|**SessionLoginName**|Nombre de inicio de sesión del usuario que originó la sesión. Por ejemplo, si se conecta a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con **inicioDeSesión1** y ejecuta una instrucción como **inicioDeSesión2**, **SessionLoginName** muestra **inicioDeSesión1**y **LoginName** muestra **inicioDeSesión2**. En esta columna de datos se muestran los inicios de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y de Windows.|  
   
- **[ @on=]** *on*  
+ **[ @on=]** *en*  
  Especifica la activación o desactivación del evento mediante ON (1) u OFF (0). *en* es **bit**, no tiene ningún valor predeterminado.  
   
  Si *en* está establecido en **1**, y *column_id* es NULL, a continuación, el evento se establece en ON y se borran todas las columnas. Si *column_id* no es null, la columna se establece en ON para ese evento.  
   
  Si *en* está establecido en **0**, y *column_id* es NULL, se activa el evento desactivado y se borran todas las columnas. Si *column_id* no es null, se activa la columna OFF.  
   
- Esta tabla muestra la interacción entre **@on** y **@columnid**.  
+ Esta tabla muestra la interacción entre **@on** y **@columnid** .  
   
 |@on|@columnid|Resultado|  
 |---------|---------------|------------|  

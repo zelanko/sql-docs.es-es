@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 68feb3b7-c01a-4f42-8df9-f9c182d89325
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ebd6f25758f73e75fd96abb734bc7b0347d5ee0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4be5d2cacaeca7cf53caa330a126284370ec80f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63209972"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088192"
 ---
 # <a name="using-16-bit-applications-with-32-bit-drivers"></a>Uso de las aplicaciones de 16 bits con controladores de 32 bits
 > [!IMPORTANT]  
@@ -27,7 +26,7 @@ ms.locfileid: "63209972"
   
  Puede ejecutar aplicaciones de 16 bits con controladores de 32 bits en un sistema basado en Windows, siempre que el controlador de 32 bits no llamar explícitamente a funciones API de Win32 que crean subprocesos. El Windows en el subsistema de Windows (WOW) ejecuta las aplicaciones en modo de 16 bits y resuelve las llamadas de 16 bits en el sistema operativo. ODBC thunk dll resolve llamadas de 16 bits de la aplicación a los controladores de 32 bits. Las aplicaciones de 16 bits utilizan la API de Windows y controladores de 32 bits utilizan la API Win32.  
   
-## <a name="architecture"></a>Architecture  
+## <a name="architecture"></a>Arquitectura  
  La siguiente ilustración muestra las aplicaciones de 16 bits cómo comunicarse con los controladores de 32 bits. Entre el Administrador de controladores de 16 bits y los controladores de 32 bits que son genéricos thunk archivos DLL que conversión las llamadas a ODBC de 16 bits a las llamadas ODBC de 32 bits.  
   
  ![Cómo 16&#45;las aplicaciones de bits se comunican con 32&#45;bit controladores](../../odbc/microsoft/media/sdka2.gif "sdka2")  
@@ -61,6 +60,6 @@ ms.locfileid: "63209972"
   
 |Nombre de archivo|Descripción|  
 |---------------|-----------------|  
-|Odbc.dll|Administrador de controladores de 16 bits|  
+|ODBC.dll|Administrador de controladores de 16 bits|  
 |Odbcinst.dll|DLL de instalador de 16 bits|  
 |Odbcadm.exe|programa de administrador de ODBC de 16 bits|

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 690173882856e1b53e6f50eefc2cdd9115bd38bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937833"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Ejemplo de los métodos Update y CancelUpdate (VB)
 Este ejemplo se muestra el [actualización](../../../ado/reference/ado-api/update-method.md) método junto con el [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) método.  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 16d0b0c5-5cce-469b-aa3d-4b9248e0c085
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 375806df6e02d0195b3e81c3f56e02ef5e2d1d4f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c19e65117a03de6b473eced3c7c1379943c851a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078662"
 ---
 # <a name="sysservices-transact-sql"></a>sys.services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47802530"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre que distingue entre mayúsculas y minúsculas del servicio, único en la base de datos. No acepta valores NULL.|  
+|**name**|**sysname**|Nombre que distingue entre mayúsculas y minúsculas del servicio, único en la base de datos. No acepta valores NULL.|  
 |**service_id**|**int**|Identificador del servicio. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la entidad de seguridad de base de datos propietaria del servicio. QUE ACEPTA VALORES NULL.|  
 |**service_queue_id**|**int**|Id. del objeto de la cola que usa este servicio. No acepta valores NULL.|  

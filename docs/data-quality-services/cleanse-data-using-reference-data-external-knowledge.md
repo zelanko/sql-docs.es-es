@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 158009e9-8069-4741-8085-c14a5518d3fc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: d857e5a67c703672a9ac3d9ad48872034367ff08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e2a949511eea455c20880e053b64659b8f9c15f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992351"
 ---
 # <a name="cleanse-data-using-reference-data-external-knowledge"></a>Limpiar datos mediante conocimiento (externo) de datos de referencia
 
@@ -61,7 +60,7 @@ ms.locfileid: "66802168"
   
 1.  Cree un proyecto de calidad de datos y seleccione la actividad **Limpieza** . Consulte [Create a Data Quality Project](../data-quality-services/create-a-data-quality-project.md).  
   
-2.  En la página **Asignar**, asigne los siguientes cuatro dominios a las columnas correspondientes en los datos de origen: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**. Haga clic en **Siguiente**.  
+2.  En la página **Asignar**, asigne los siguientes cuatro dominios a las columnas correspondientes en los datos de origen: **Línea de dirección**, **Ciudad**, **Estado** y **Código postal**. Haga clic en **Next**.  
   
     > [!NOTE]  
     >  Como ha asignado los cuatro dominios dentro del dominio compuesto **Address Verification** , la limpieza de datos ahora se realizará en el nivel de dominio compuesto, y no en el nivel de dominio individual.  
@@ -78,13 +77,13 @@ ms.locfileid: "66802168"
   
      **Valor original:**  
   
-    |Address Line|City|State|Zip|  
+    |Address Line|City|Estado|Zip|  
     |------------------|----------|-----------|---------|  
     |1 msft way|Redmond||98052|  
   
      **Valores sugeridos:**  
   
-    |Address Line|City|State|Zip|  
+    |Address Line|City|Estado|Zip|  
     |------------------|----------|-----------|---------|  
     |1 Microsoft Way|Redmond|WA|98052|  
     |PO BOX 1|Redmond|WA|98073|  

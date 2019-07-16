@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: c041d416-d8c6-435e-a563-6a310abd33e3
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 78604c723c4c19e68a6c29fd3113de3d69d36d44
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 37fd17f17d8b6aa1a30f48d75258d27f4a45561a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52532793"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097803"
 ---
 # <a name="sysdmexecdistributedrequests-transact-sql"></a>Sys.dm_exec_distributed_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "52532793"
   
 |Nombre de la columna|Tipo de datos|Descripción|Intervalo|  
 |-----------------|---------------|-----------------|-----------|  
-|sql_handle|**varbinary (64)**|Clave para esta vista. Identificador numérico único asociado a la solicitud.|Es único en todas las solicitudes en el sistema.|  
+|sql_handle|**varbinary(64)**|Clave para esta vista. Identificador numérico único asociado a la solicitud.|Es único en todas las solicitudes en el sistema.|  
 |execution_id|**nvarchar (32**|Identificador numérico único asociado con la sesión en el que se ejecutó esta consulta.||  
 |status|**nvarchar (32**|Estado actual de la solicitud.|'Pendiente', 'Autorizar', 'AcquireSystemResources', 'Initializing', 'Planear', 'Análisis', 'AquireResources', 'Ejecutando', 'Cancelar', 'Completa', 'Error', 'Cancelar'.|  
 |error_id|**nvarchar(36)**|Identificador único del error asociado a la solicitud, si existe.|Se establece en NULL si se ha producido ningún error.|  

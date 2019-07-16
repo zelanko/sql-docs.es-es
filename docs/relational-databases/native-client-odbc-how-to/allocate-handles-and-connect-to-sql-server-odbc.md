@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2144513a5f5de453c93215edcc2bb416d53781bc
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 0dc7cad1d720489db4044bbd34c6516035305365
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51677384"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090821"
 ---
 # <a name="allocate-handles-and-connect-to-sql-server-odbc"></a>Asignar identificadores y conectarse a SQL Server (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,13 +33,13 @@ ms.locfileid: "51677384"
   
 2.  Incluya el archivo de encabezado específico del controlador [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Odbcss.h.  
   
-3.  Llame a [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con una **HandleType** de SQL_HANDLE_ENV para inicializar ODBC y asignar un identificador de entorno.  
+3.  Llame a [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con un **HandleType** de SQL_HANDLE_ENV para inicializar ODBC y asignar un identificador de entorno.  
   
-4.  Llame a [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) con **atributo** establecido en SQL_ATTR_ODBC_VERSION y **Sql_autocommit_off** establecido en SQL_OV_ODBC3 para indicar que la aplicación utilizará la función ODBC 3.x formato llamadas.  
+4.  Llame a [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) con **atributo** establecido en SQL_ATTR_ODBC_VERSION y **ValuePtr** establecido en SQL_OV_ODBC3 para indicar que la aplicación usará la función ODBC 3.x formato llamadas.  
   
 5.  Opcionalmente, llame a [SQLSetEnvAttr](../../relational-databases/native-client-odbc-api/sqlsetenvattr.md) para establecer otro entorno de opciones o llamada [SQLGetEnvAttr](https://go.microsoft.com/fwlink/?LinkId=58403) para obtener las opciones de entorno.  
   
-6.  Llame a [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con una **HandleType** de SQL_HANDLE_DBC para asignar un identificador de conexión.  
+6.  Llame a [SQLAllocHandle](https://go.microsoft.com/fwlink/?LinkId=58396) con un **HandleType** de SQL_HANDLE_DBC para asignar un identificador de conexión.  
   
 7.  Opcionalmente, llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) para establecer opciones de conexión o llamada [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) para obtener las opciones de conexión.  
   
@@ -69,9 +68,9 @@ ms.locfileid: "51677384"
   
 11. Llame a SQLDisconnect para desconectarse [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y realizar la conexión controlar disponibles para una conexión nueva.  
   
-12. Llame a [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con una **HandleType** de SQL_HANDLE_DBC para liberar el identificador de conexión.  
+12. Llame a [SQLFreeHandle](../../relational-databases/native-client-odbc-api/sqlfreehandle.md) con un **HandleType** de SQL_HANDLE_DBC para liberar el identificador de conexión.  
   
-13. Llame a **SQLFreeHandle** con una **HandleType** de SQL_HANDLE_ENV para liberar el identificador de entorno.  
+13. Llame a **SQLFreeHandle** con un **HandleType** de SQL_HANDLE_ENV para liberar el identificador de entorno.  
   
 > [!IMPORTANT]  
 >  Siempre que sea posible, utilice la autenticación de Windows. Si la autenticación de Windows no está disponible, solicite a los usuarios que escriban sus credenciales en tiempo de ejecución. No guarde las credenciales en un archivo. Si tiene que conservar las credenciales, debería cifrarlas con la [API de criptografía de Win32](https://go.microsoft.com/fwlink/?LinkId=64532).  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 336d0fd4-5448-4d8c-b7d9-49e857228e36
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a268e72262f9f8252ea89774876f3d04008fe4c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27f675cca5115a8336f2be4b7fa96c091aee1b62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63284946"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063557"
 ---
 # <a name="setting-options-programmatically-for-the-dbase-driver"></a>Establecer opciones mediante programación para el controlador dBASE
 
@@ -35,5 +34,5 @@ ms.locfileid: "63284946"
 |Exclusivo|Si el **exclusivo** está activada, la base de datos se abrirá en modo exclusivo y puede tener acceso a solo un usuario a la vez. Se mejora el rendimiento cuando se ejecuta en modo exclusivo.|Para establecer esta opción de forma dinámica, utilice el **exclusivo** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Tiempo de espera de página|Especifica el período de tiempo, en décimas de segundo, que permanece una página (si no usa) en el búfer antes de quitarlo. El valor predeterminado es 600 décimas de segundo (60 segundos). Esta opción se aplica a todos los orígenes de datos que usan el controlador ODBC.<br /><br /> El tiempo de espera de la página no puede ser 0 debido a un retraso inherente. El tiempo de espera de la página no puede ser menor que el retraso inherente, incluso si se establece la opción de tiempo de espera de la página por debajo de ese valor.|Para establecer esta opción de forma dinámica, utilice el **PAGETIMEOUT** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Solo lectura|La base de datos se designa como de solo lectura.|Para establecer esta opción de forma dinámica, utilice el **READONLY** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
-|Seleccionar directorio|Muestra un cuadro de diálogo donde puede seleccionar un directorio que contiene los archivos que desea tener acceso.<br /><br /> Al definir un directorio de origen de datos, especifique el directorio donde se encuentran los archivos que se usan con más frecuencia. El controlador ODBC utiliza este directorio como directorio predeterminado. Copie los otros archivos en este directorio si se usan con frecuencia. Como alternativa, puede calificar nombres de archivo en una instrucción SELECT con el nombre del directorio:<br /><br /> SELECT \* FROM C:\MYDIR\EMP<br /><br /> O bien, puede especificar un nuevo directorio predeterminado mediante el **SQLSetConnectOption** función con la opción SQL_CURRENT_QUALIFIER.|Para establecer esta opción de forma dinámica, utilice el **valor de esta opción** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
+|Seleccionar directorio|Muestra un cuadro de diálogo donde puede seleccionar un directorio que contiene los archivos que desea tener acceso.<br /><br /> Al definir un directorio de origen de datos, especifique el directorio donde se encuentran los archivos que se usan con más frecuencia. El controlador ODBC utiliza este directorio como directorio predeterminado. Copie los otros archivos en este directorio si se usan con frecuencia. Como alternativa, puede calificar nombres de archivo en una instrucción SELECT con el nombre del directorio:<br /><br /> SELECCIONE \* DESDE C:\MYDIR\EMP<br /><br /> O bien, puede especificar un nuevo directorio predeterminado mediante el **SQLSetConnectOption** función con la opción SQL_CURRENT_QUALIFIER.|Para establecer esta opción de forma dinámica, utilice el **valor de esta opción** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|  
 |Mostrar las filas eliminadas|Especifica si se pueden recuperar o colocadas en las filas que se han marcado como eliminado. Si está desactivada, no se muestran las filas eliminadas; Si se selecciona, las filas eliminadas se tratan igual que las filas no eliminados. El valor predeterminado es desactivada.|Para establecer esta opción de forma dinámica, utilice el **DELETED** palabra clave en una llamada a [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-dbase-driver.md).|

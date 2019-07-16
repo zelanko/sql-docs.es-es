@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 33c559c4-4db7-4850-9309-2743a7ae5521
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f14056ed4dac8ae8e8fa1f489dd1a7cbfd6a507
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23c6970dd503c15e0eb04d6d97bed15c5a90dc71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966074"
 ---
 # <a name="indexes-append-method-example-vc"></a>Ejemplo de método Indexes Append (VC++)
 El código siguiente muestra cómo crear un nuevo índice. El índice está en dos columnas de la tabla.  

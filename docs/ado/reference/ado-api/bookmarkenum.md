@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2b83c403d9798a8009556bf9fe21a0be0a5a0da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696315"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920355"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 Especifica un marcador que indica dónde debe comenzar la operación.  
@@ -33,7 +32,7 @@ Especifica un marcador que indica dónde debe comenzar la operación.
 |**adBookmarkLast**|2|Se inicia en el último registro.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

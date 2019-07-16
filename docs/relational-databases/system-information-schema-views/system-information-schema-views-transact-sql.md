@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e9f1dfe-27e9-40e7-8fc7-bfc5cae6be10
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d29ac26486c68bcce5b7876732ec398c995e9ee6
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 2d9216686cca6ed35d089130098026d5d958638a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51667314"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078448"
 ---
 # <a name="system-information-schema-views-transact-sql"></a>Vistas de esquema de información del sistema (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "51667314"
 |Nombre de SQL Server|Se asigna a este nombre estándar equivalente de SQL|  
 |---------------------|-----------------------------------------------|  
 |Base de datos|Catálogo|  
-|esquema|esquema|  
-|Objeto|Objeto|  
+|Esquema|Esquema|  
+|Object|Object|  
 |tipo de datos definido por el usuario|Dominio|  
   
  Esta asignación entre convenciones de nomenclaturas se aplica a las siguientes vistas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compatibles con ISO.  
@@ -56,7 +55,7 @@ ms.locfileid: "51667314"
 |[DOMAIN_CONSTRAINTS](../../relational-databases/system-information-schema-views/domain-constraints-transact-sql.md)|[TABLAS](../../relational-databases/system-information-schema-views/tables-transact-sql.md)|  
 |[DOMINIOS](../../relational-databases/system-information-schema-views/domains-transact-sql.md)|[VIEW_COLUMN_USAGE](../../relational-databases/system-information-schema-views/view-column-usage-transact-sql.md)|  
 |[KEY_COLUMN_USAGE](../../relational-databases/system-information-schema-views/key-column-usage-transact-sql.md)|[VIEW_TABLE_USAGE](../../relational-databases/system-information-schema-views/view-table-usage-transact-sql.md)|  
-|[PARÁMETROS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VISTAS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|  
+|[PARÁMETROS](../../relational-databases/system-information-schema-views/parameters-transact-sql.md)|[VIEWS](../../relational-databases/system-information-schema-views/views-transact-sql.md)|  
   
  Además, algunas vistas contienen referencias a diferentes clases de datos, como los datos de caracteres o los datos binarios.  
   

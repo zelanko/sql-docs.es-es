@@ -3,18 +3,17 @@ title: Cómo configurar MSDTC en Linux
 description: Este artículo proporciona un tutorial para configurar MSDTC en Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077607"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Cómo configurar el Coordinador de transacciones distribuidas de Microsoft (MSDTC) en Linux
 
@@ -28,7 +27,7 @@ Se habilitan las transacciones distribuidas en SQL Server en Linux mediante la i
 
 SQL Server 2019 presenta dos parámetros de configuración de la utilidad mssql-conf.
 
-| mssql-conf setting | Descripción |
+| configuración de MSSQL-conf | Descripción |
 |---|---|
 | **network.rpcport** | El puerto TCP que se enlaza al proceso del asignador de extremos RPC. |
 | **distributedtransaction.servertcpport** | El puerto que escucha el servidor MSDTC. Si no se establece, el servicio MSDTC usa un puerto efímero aleatorio en el reinicio del servicio y las excepciones del firewall debe configurarse para asegurarse de que el servicio MSDTC puede continuar la comunicación. |

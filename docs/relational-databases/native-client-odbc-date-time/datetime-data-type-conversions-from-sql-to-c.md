@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 059431e2-a65c-4587-ba4a-9929a1611e96
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b370d18c6c5c1a90be370aeef2f910713a51695b
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 0b5813635c14f569703f186ebe2a55dd933b8427
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52418586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030404"
 ---
 # <a name="datetime-data-type-conversions-from-sql-to-c"></a>Conversiones del tipo de datos de fecha y hora de SQL a C
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,16 +33,16 @@ ms.locfileid: "52418586"
 ||SQL_C_DATE|SQL_C_TIME|SQL_C_TIMESTAMP|SQL_C_SS_TIME2|SQL_C_SS_TIMESTAMPOFFSET|SQL_C_BINARY|SQL_C_CHAR|SQL_C_WCHAR|  
 |SQL_CHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
 |SQL_WCHAR|2,3,4,5|2,3,6,7,8|2,3,9,10,11|2,3,6,7|2,3,9,10,11|1|1|1|  
-|SQL_TYPE_DATE|Aceptar|12|13|12|13,23|14|16|16|  
-|SQL_SS_TIME2|12|8|15|Aceptar|10,23|17|16|16|  
-|SQL_TYPE_TIMESTAMP|18|7,8|Aceptar|7|23|19|16|16|  
-|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|Aceptar|21|16|16|  
+|SQL_TYPE_DATE|OK|12|13|12|13,23|14|16|16|  
+|SQL_SS_TIME2|12|8|15|OK|10,23|17|16|16|  
+|SQL_TYPE_TIMESTAMP|18|7,8|OK|7|23|19|16|16|  
+|SQL_SS_TIMESTAMPOFFSET|18,22|7,8,20|20|7,20|OK|21|16|16|  
   
 ## <a name="key-to-symbols"></a>Clave de los símbolos  
   
 |Símbolo|Significado|  
 |------------|-------------|  
-|Aceptar|Ningún problema de conversión.|  
+|OK|Ningún problema de conversión.|  
 |1|Se aplican las reglas anteriores a [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)].|  
 |2|Se omiten los espacios iniciales y finales.|  
 |3|La cadena se analiza en un valor de tipo date, time, timezone o timezoneoffset y permite hasta 9 dígitos para las fracciones de segundo. Si se analiza un valor de tipo timezoneoffset, la hora se convierte a la zona horaria del cliente. Si se produce un error durante esta conversión, se genera un registro de diagnóstico con SQLSTATE 22018 y el mensaje "Desbordamiento del campo Datetime".|  

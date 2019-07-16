@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef51624f3d14ef12be1c37b17727b70f5f31df10
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b7d4d26374d7b582f2ba5ddad79dd317145cecd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070431"
 ---
 # <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,23 +39,23 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@tabid =** ] '*tabid*'  
+ [ **@tabid =** ] '*tabid*'  
  Es el identificador de objeto de la tabla en la que se comprueba si hay desencadenadores de actualización inmediata. *tabid* es **int** no tiene ningún valor predeterminado.  
   
- [**@trigger_op =** ] '*trigger_output_parameters*' OUTPUT  
+ [ **@trigger_op =** ] '*trigger_output_parameters*' salida  
  Especifica si el parámetro de salida va a devolver el tipo de desencadenador desde el que se le llama. *trigger_output_parameters* es **char (10)** y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |**INS**|Desencadenador INSERT.|  
-|**Upd**|Desencadenador UPDATE.|  
+|**UPD**|Desencadenador UPDATE.|  
 |**SUPR**|Desencadenador DELETE.|  
 |NULL (predeterminado)||  
   
 `[ @fonpublisher = ] fonpublisher` Especifica la ubicación donde se ejecuta el procedimiento almacenado. *fonpublisher* es **bit**, con un valor predeterminado de 0. Si es 0, la ejecución está en el suscriptor y si es 1, la ejecución está en el publicador.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
- El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama dentro del contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve en *@trigger_op*.  
+ El valor 0 indica que el procedimiento almacenado no se llama en el contexto de un desencadenador de actualización inmediata. 1 indica que se llama dentro del contexto de un desencadenador de actualización inmediata y es el tipo de desencadenador que se devuelve en *@trigger_op* .  
   
 ## <a name="remarks"></a>Comentarios  
  **sp_check_for_sync_trigger** se utiliza en la replicación de instantáneas y transaccional.  

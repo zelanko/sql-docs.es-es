@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: bac234ef-bc16-47e6-8a7c-aa6e76d860c5
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 3d70a2546a925474e0b80bb1d7cee4ee7ab2c266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b05ca315401e587a4a200ff6fc78634993260b07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029404"
 ---
 # <a name="data-migration-report-sybasetosql"></a>Informe de migración de datos (SybaseToSQL)
 El **informe de migración de datos** aparece el cuadro de diálogo después de migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bc8f710d-0621-4673-8d8e-0361e44abed0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a52b007cedf85ae02ca103297e70aa133d5d6599
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c109f90fc023b6fbfeda01c8b4404c42a822c40a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919552"
 ---
 # <a name="compareenum"></a>CompareEnum
 Especifica la posición relativa de dos registros representados por sus marcadores.  
@@ -35,7 +34,7 @@ Especifica la posición relativa de dos registros representados por sus marcador
 |**adCompareNotEqual**|3|Indica que los marcadores no son iguales y no ordenada.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

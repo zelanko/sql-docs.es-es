@@ -3,18 +3,17 @@ title: Marcos y bibliotecas de conectividad
 description: Enumera los controladores de conectividad que las aplicaciones cliente pueden utilizar desde diversos lenguajes para conectarse a Microsoft SQL Server que se ejecutan en local o en la nube, en Docker, Windows o Linux y también a Azure SQL Database y Azure SQL Data Warehouse.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 80efe5ff-09ba-48a0-ac93-a91d62cff47c
-ms.openlocfilehash: 88b212d9a39f990184753382f433f1c002a4634d
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: dd2a70cefd0e094b53656dde99af81afca2894c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833847"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077458"
 ---
 # <a name="connectivity-libraries-and-frameworks-for-microsoft-sql-server"></a>Las bibliotecas de conectividad y marcos de trabajo para Microsoft SQL Server
 

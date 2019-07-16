@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: cc0351ae-4882-4b67-b0d8-bd235d20c901
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b28967d1000a8e307c99d05ea840dd62ced09fb8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0e6ee58a9c04c64c71ab63c3bbd639ae0c3357a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059105"
 ---
 # <a name="sysfnxefiletargetreadfile-transact-sql"></a>sys.fn_xe_file_target_read_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -49,16 +48,16 @@ sys.fn_xe_file_target_read_file ( path, mdpath, initial_file_name, initial_offse
   
 ## <a name="arguments"></a>Argumentos  
  *path*  
- Ruta de acceso a los archivos que se van a leer. *ruta de acceso* puede contener caracteres comodín e incluir el nombre de un archivo. *ruta de acceso* es **nvarchar (260)**. No tiene ningún valor predeterminado. En el contexto de base de datos de SQL Azure, este valor es una dirección URL de HTTP en un archivo en el almacenamiento de Azure.
+ Ruta de acceso a los archivos que se van a leer. *ruta de acceso* puede contener caracteres comodín e incluir el nombre de un archivo. *ruta de acceso* es **nvarchar (260)** . No tiene ningún valor predeterminado. En el contexto de base de datos de SQL Azure, este valor es una dirección URL de HTTP en un archivo en el almacenamiento de Azure.
   
  *mdpath*  
- La ruta de acceso al archivo de metadatos que corresponde al archivo o archivos especificados por el *ruta* argumento. *mdpath* es **nvarchar (260)**. No tiene ningún valor predeterminado. A partir de SQL Server 2016, este parámetro puede proporcionarse como null.
+ La ruta de acceso al archivo de metadatos que corresponde al archivo o archivos especificados por el *ruta* argumento. *mdpath* es **nvarchar (260)** . No tiene ningún valor predeterminado. A partir de SQL Server 2016, este parámetro puede proporcionarse como null.
   
 > [!NOTE]  
 >  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] no requiere la *mdpath* parámetro. Sin embargo, se mantiene para la compatibilidad con versiones anteriores para los archivos de registro generados en versiones anteriores de SQL Server.  
   
  *initial_file_name*  
- El primer archivo para leer desde *ruta de acceso*. *initial_file_name* es **nvarchar (260)**. No tiene ningún valor predeterminado. Si **null** se especifica como el argumento de todos los archivos que se encuentran en *ruta* se leen.  
+ El primer archivo para leer desde *ruta de acceso*. *initial_file_name* es **nvarchar (260)** . No tiene ningún valor predeterminado. Si **null** se especifica como el argumento de todos los archivos que se encuentran en *ruta* se leen.  
   
 > [!NOTE]  
 >  *initial_file_name* y *initial_offset* son argumentos emparejados. Si especifica un valor para cualquiera de ellos, debe especificar un valor para el otro.  

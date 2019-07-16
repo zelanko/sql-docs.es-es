@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075751"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @type = ] 'type'` Se está registrando el tipo de procedimiento almacenado personalizado o el script. *tipo* es **varchar (16)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @type = ] 'type'` Se está registrando el tipo de procedimiento almacenado personalizado o el script. *tipo* es **varchar (16)** , no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|El procedimiento almacenado personalizado registrado se ejecuta cuando se replica una instrucción DELETE.|  
 |**custom_script**|El script se ejecuta al final del desencadenador de lenguaje de definición de datos (DDL).|  
   
-`[ @value = ] 'value'` Nombre de un procedimiento almacenado o el nombre y la ruta de acceso completa a la [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se va a registrar. *valor* es **nvarchar (1024)**, no tiene ningún valor predeterminado.  
+`[ @value = ] 'value'` Nombre de un procedimiento almacenado o el nombre y la ruta de acceso completa a la [!INCLUDE[tsql](../../includes/tsql-md.md)] archivo de script que se va a registrar. *valor* es **nvarchar (1024)** , no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  Si se especifica NULL *valor*anulará un script registrado con anterioridad, que es igual que ejecutar el parámetro [sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md).  

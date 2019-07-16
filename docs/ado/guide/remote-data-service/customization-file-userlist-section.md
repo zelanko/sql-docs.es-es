@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 42e8ec20-eaac-4a95-8cb8-4bba93a75bcb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e38b253cdebcc5ab976de8c8eb355f7f6fb03aec
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 558fd9c8379808e6c2f109a9c9584e8831cddd0f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922766"
 ---
 # <a name="customization-file-userlist-section"></a>Sección UserList del archivo de personalización
 El **userlist** sección pertenece a la **conectar** sección con la misma sección *identificador* parámetro.  
@@ -32,7 +31,7 @@ El **userlist** sección pertenece a la **conectar** sección con la misma secci
 ## <a name="syntax"></a>Sintaxis  
  Es una entrada de acceso de usuario del formulario:  
   
- _userName_ **=**   
+ _Nombre de usuario_ **=**    
  **_accessRights_**  
   
 |Parte|Descripción|  

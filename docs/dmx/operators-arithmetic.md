@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: edbe8a3404217f330b5b62a9d433c7d560b28656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e78241252733e8298c0bc727f9c45dd6df2768ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008215"
 ---
 # <a name="operators---arithmetic"></a>Operadores: aritméticos
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "62502700"
   
 |Operador|Descripción|  
 |--------------|-----------------|  
-|[+ &#40;Add&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Suma dos números.|  
+|[+ &#40;Agregar&#41; &#40;DMX&#41;](../dmx/add-dmx.md)|Suma dos números.|  
 |[- &#40;Subtract&#41; &#40;DMX&#41;](../dmx/subtract-dmx.md)|Resta un número de otro.|  
 |[&#42; &#40;Multiply&#41; &#40;DMX&#41;](../dmx/multiply-dmx.md)|Multiplica un número por otro.|  
 |[&#40;Divide&#41; &#40;DMX&#41;](../dmx/divide-dmx.md)|Divide un número entre otro.|  

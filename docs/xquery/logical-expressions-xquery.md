@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: de94cd2e-2d48-49fb-9ebd-a2d90c79bf62
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fd6417c10be286164b9d56a0c2587dfd63a1de23
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 5b1dc7b961dd0b85824ea180cbc4815d5488a360
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670343"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004507"
 ---
 # <a name="logical-expressions-xquery"></a>Expresiones lógicas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ expression1 and expression2
 expression1 or expression2  
 ```  
   
- Las expresiones de prueba, `expression1,``expression2`, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede dar lugar a una secuencia vacía, una secuencia de uno o más nodos o un único valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:    
+ Las expresiones de prueba, `expression1,``expression2`, en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] puede dar lugar a una secuencia vacía, una secuencia de uno o más nodos o un único valor booleano. En función del resultado, se determinará su valor booleano efectivo de la forma siguiente:  
   
 -   Si la expresión de prueba da como resultado una secuencia vacía, el resultado será False.  
   
@@ -48,7 +47,7 @@ expression1 or expression2
   
  La operación lógica **y** y **o** operador, a continuación, se aplica a los valores booleanos resultantes de las expresiones con la semántica lógica estándar.  
   
- La consulta siguiente recupera del catálogo de productos las imágenes pequeñas de ángulo frontal, el elemento <`Picture`>, de un modelo de producto determinado. Tenga en cuenta que para cada documento de descripción de productos, se pueden almacenar en el catálogo una o varias imágenes de producto con distintos atributos, como el tamaño y el ángulo.  
+ La consulta siguiente recupera el catálogo de productos, las imágenes pequeñas de ángulo frontal, el <`Picture`> elemento para un modelo de producto específico. Tenga en cuenta que para cada documento de descripción de productos, se pueden almacenar en el catálogo una o varias imágenes de producto con distintos atributos, como el tamaño y el ángulo.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -62,7 +61,7 @@ FROM  Production.ProductModel
 where ProductModelID=19  
 ```  
   
- El resultado es el siguiente:  
+ Éste es el resultado:  
   
 ```  
 <PD:Picture   

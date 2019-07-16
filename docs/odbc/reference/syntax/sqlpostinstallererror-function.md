@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4c60d827-b2d2-4f27-b220-daa9e1fcdd8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ac7fb545938a0ec5f212e9c0da867fbea5db4817
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0d5e0a10b8c530494fa3c026be0d36fde066a97c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053673"
 ---
 # <a name="sqlpostinstallererror-function"></a>Función SQLPostInstallerError
 **Conformidad**  
@@ -53,7 +52,7 @@ RETCODE SQLPostInstallerError(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS o SQL_ERROR.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  **SQLPostInstallerError** no registra los valores de error para sí mismo. Si el error se ha registrado correctamente a la cola de errores de instalador (recuperables mediante **SQLInstallerError**), se devuelve SQL_SUCCESS. Se devolverá SQL_ERROR si el valor de la *dwErrorCode* argumento no es uno de los códigos de error del instalador especificado.  
   
 ## <a name="related-functions"></a>Funciones relacionadas  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 524f95ef-10bd-497c-84ca-c06a0ae794fb
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 0805246d5b88138cfa97019d1e0cd524c82456c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cb2f4196737cceec2f60684de1b7409f5e383a0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061008"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083393"
 ---
 # <a name="connect-to-sybase-sybasetosql"></a>Conectarse a Sybase (SybaseToSQL)
 Use la **conectarse a Sybase** cuadro de diálogo para conectarse a la instancia de Sybase Adaptive Server Enterprise (ASE) que se va a migrar.  
@@ -52,8 +51,8 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
   
     |Parámetro|Parámetro de Sybase 12,5|Parámetro de Sybase 15|  
     |-----------|-------------------------|-----------------------|  
-    |Nombre del servidor|Nombre del servidor|Servidor|  
-    |Puerto|Dirección de puerto del servidor|Puerto|  
+    |Nombre de servidor|Nombre del servidor|Server|  
+    |Port|Dirección de puerto del servidor|Port|  
     |Nombre de usuario|Id. de usuario|Id. de usuario|  
     |Contraseña|Contraseña|Contraseña|  
     |Proveedor|Proveedor|Proveedor|  
@@ -71,10 +70,10 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
     |Parámetro|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
     |Nombre del controlador|controlador|  
-    |Nombre del servidor|Servidor|  
+    |Nombre del servidor|Server|  
     |Nombre de usuario|UID|  
-    |Contraseña|Pwd|  
-    |Número de puerto|Puerto|  
+    |Contraseña|PWD|  
+    |Número de puerto|Port|  
   
     Para Sybase ASE 12,5 o 15, una cadena de conexión de ejemplo es el siguiente:  
   
@@ -84,10 +83,10 @@ Las cadenas de conexión constan de pares de nombre y valor de parámetro. Los n
   
     |Parámetro|Parámetro de Sybase 12,5/15|  
     |-----------|-----------------------------|  
-    |Nombre del servidor|Servidor|  
+    |Nombre del servidor|Server|  
     |Nombre de usuario|UID|  
-    |Contraseña|Pwd|  
-    |Número de puerto|Puerto|  
+    |Contraseña|PWD|  
+    |Número de puerto|Port|  
   
     Un ejemplo de la cadena de conexión para el proveedor ADO.NET es como sigue:  
   

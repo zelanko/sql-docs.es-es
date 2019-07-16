@@ -1,5 +1,5 @@
 ---
-title: Children (MDX) | Microsoft Docs
+title: Los elementos secundarios (MDX) | Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 03c96a1c90f7ca0a18bd49c371a2ec90582b38f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0af4d7b97777002dc5683c075f82531ccc8df86e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016797"
 ---
 # <a name="children-mdx"></a>Children (MDX)
 
@@ -54,7 +53,7 @@ FROM
   
 ```  
   
-|Versión|Historial|  
+|Release|Historial|  
 |-------------|-------------|  
 |[!INCLUDE[ssBOL2005_R03](../includes/ssbol2005-r03-md.md)]|**Contenido modificado:**<br /> -Actualizar la sintaxis y los argumentos para mejorar la claridad.<br /><br /> -Se ha agregado ejemplos actualizados.|  
   

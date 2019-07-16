@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 06b9f603-b395-497c-979b-d3ec3d6db375
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: edddcb07702a33e6c2ce5f11feaf1716fc59573b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b3128e0b8be8ec5bfaa2c4f0e7e64ce866b6295
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62751175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079583"
 ---
 # <a name="using-data-buffers"></a>Utilizar los búferes de datos
 Los búferes de datos se describen en los tres tipos de información: longitud de su tipo, dirección y byte. Cuando una función necesita uno de estos fragmentos de información y aún no la conoce, tiene un argumento con el que la aplicación pasa.  

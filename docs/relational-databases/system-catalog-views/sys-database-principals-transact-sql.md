@@ -1,5 +1,5 @@
 ---
-title: sys.database_principals (Transact-SQL) | Microsoft Docs
+title: Sys.database_principals (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 10/27/2016
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8cb239e9-eb8c-4109-9cec-0d35de95fa0e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 512994ada852ea7807cc14ecd5b25d9acff56ffc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c369bfe81a86af7a11a370a4d827440cd4544a9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632703"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022677"
 ---
 # <a name="sysdatabaseprincipals-transact-sql"></a>sys.database_principals (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "62632703"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de la entidad de seguridad, único en la base de datos.|  
+|**name**|**sysname**|Nombre de la entidad de seguridad, único en la base de datos.|  
 |**principal_id**|**int**|Id. de la entidad de seguridad, único en la base de datos.|  
-|**Tipo**|**char(1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo desde aplicaciones o el grupo de Azure Active Directory|  
+|**type**|**char(1)**|Tipo de entidad de seguridad:<br /><br /> A = Rol de aplicación<br /><br /> C = Usuario asignado a un certificado<br /><br /> E = usuario externo de Azure Active Directory<br /><br /> G = Grupo de Windows<br /><br /> K = Usuario asignado a una clave asimétrica<br /><br /> R = Rol de base de datos<br /><br /> S = Usuario de SQL<br /><br /> U = Usuario de Windows<br /><br /> X = grupo externo desde aplicaciones o el grupo de Azure Active Directory|  
 |**type_desc**|**nvarchar(60)**|Descripción del tipo de entidad de seguridad.<br /><br /> APPLICATION_ROLE<br /><br /> CERTIFICATE_MAPPED_USER<br /><br /> EXTERNAL_USER<br /><br /> WINDOWS_GROUP<br /><br /> ASYMMETRIC_KEY_MAPPED_USER<br /><br /> DATABASE_ROLE<br /><br /> SQL_USER<br /><br /> WINDOWS_USER<br /><br /> EXTERNAL_GROUPS|  
 |**default_schema_name**|**sysname**|Nombre que se utilizará al nombre SQL no especifica un esquema. Null para entidades de seguridad que no son del tipo S, U o A.|  
 |**create_date**|**datetime**|Hora en que se creó la entidad de seguridad.|  
@@ -45,7 +44,7 @@ ms.locfileid: "62632703"
 |**owning_principal_id**|**int**|Id. de la entidad de seguridad propietaria de esta entidad de seguridad. Todas las entidades de seguridad excepto Roles de base de datos deben pertenecer a **dbo**.|  
 |**sid**|**varbinary(85)**|SID (identificador de seguridad) de la entidad de seguridad.  NULL para SYS e INFORMATION SCHEMAS.|  
 |**is_fixed_role**|**bit**|Si es 1, esta fila representa una entrada para uno de los roles fijos de base de datos: db_owner, db_accessadmin, db_datareader, db_datawriter, db_ddladmin, db_securityadmin, db_backupoperator, db_denydatareader, db_denydatawriter.|  
-|**authentication_type**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 0 : Sin autenticación<br />1 : Autenticación de instancias<br />2 : Autenticación de base de datos<br />3 : Autenticación de Windows|  
+|**authentication_type**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> 0: Sin autenticación<br />1: Autenticación de instancias<br />2: Autenticación de base de datos<br />3: Autenticación de Windows|  
 |**authentication_type_desc**|**nvarchar(60)**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Descripción del tipo de autenticación. Los siguientes son los valores posibles y sus descripciones.<br /><br /> NINGUNO: Sin autenticación<br />INSTANCIA: Autenticación de instancias<br />BASE DE DATOS: Autenticación de base de datos<br />WINDOWS: Autenticación de Windows|  
 |**default_language_name**|**sysname**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Idioma predeterminado para esta entidad de seguridad.|  
 |**default_language_lcid**|**int**|**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> LCID predeterminado para esta entidad de seguridad.|  

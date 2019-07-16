@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6f0221bd-70b4-4b04-b15d-722235aceb3c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 218371ab6d8133dbaf1865eeffc11f92883b4305
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: bc004c611c218324ce2d2d8b764b3ab05cb73e5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896595"
 ---
 # <a name="spprocoption-transact-sql"></a>sp_procoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_procoption [ @ProcName = ] 'procedure'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @ProcName = ] 'procedure'` Es el nombre del procedimiento que se va a establecer una opción. *procedimiento* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+`[ @ProcName = ] 'procedure'` Es el nombre del procedimiento que se va a establecer una opción. *procedimiento* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
   
 `[ @OptionName = ] 'option'` Es el nombre de la opción para establecer. El único valor para *opción* es **inicio**.  
   
-`[ @OptionValue = ] 'value'` Indica si se establece la opción en (**true** o **en**) u off (**false** o **desactivar**). *valor* es **varchar (12)**, no tiene ningún valor predeterminado.  
+`[ @OptionValue = ] 'value'` Indica si se establece la opción en (**true** o **en**) u off (**false** o **desactivar**). *valor* es **varchar (12)** , no tiene ningún valor predeterminado.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o número de error (error)  

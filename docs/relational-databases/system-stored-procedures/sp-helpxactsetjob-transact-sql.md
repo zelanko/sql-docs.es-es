@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959615"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048189"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publisher** = ] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Es el nombre de la que no sean de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publicador al que pertenece el trabajo. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

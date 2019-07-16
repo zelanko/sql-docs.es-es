@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9700e50a-9f17-4ba3-8afb-f750741dc6ca
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40677971cc2bc5b97c62aad1e638e52deb24c67e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3512b484425749ed027f6533dab7398765c1af2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924748"
 ---
 # <a name="operation-of-non-parameterized-commands"></a>Funcionamiento de los comandos sin parámetros
 Para los comandos sin parámetros, se ejecutan todos los comandos de proveedor y el **conjuntos de registros** se crean durante la ejecución del comando. Si el comando se ejecuta sincrónicamente, todas las **conjuntos de registros** se llenará totalmente. Si se ha seleccionado un modo de llenado asincrónico, el estado relleno de la **conjuntos de registros** dependerá del modo de llenado y el tamaño de la **conjuntos de registros**.  

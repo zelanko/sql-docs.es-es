@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a441d46d-1f30-41c2-8d94-e9442f59786e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 437b25af01544a1df6197a0d63e21ae2f7bee605
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d07ca74ffb2b793038f230d2b3a5b265101a7eb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47824243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102346"
 ---
 # <a name="sysnumberedprocedureparameters-transact-sql"></a>sys.numbered_procedure_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,13 +41,13 @@ ms.locfileid: "47824243"
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador del objeto al que pertenece el parámetro.|  
 |**procedure_number**|**smallint**|Número de este procedimiento en el objeto, 2 o mayor.|  
-|**Nombre**|**sysname**|Nombre del parámetro. Es único dentro de **procedure_number**.|  
+|**name**|**sysname**|Nombre del parámetro. Es único dentro de **procedure_number**.|  
 |**parameter_id**|**int**|Id. del parámetro. Es único dentro de la **procedure_number**.|  
 |**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro.|  
 |**user_type_id**|**int**|Id. del tipo, definido por el usuario, del parámetro.|  
 |**max_length**|**smallint**|Longitud máxima del parámetro en bytes.<br /><br /> -1 = El tipo de datos de las columnas es varchar(max), nvarchar(max) o varbinary(max).|  
-|**Precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
-|**Escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**scale**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**is_output**|**bit**|1 = El parámetro es de salida o retorno; de lo contrario, es 0|  
 |**is_cursor_ref**|**bit**|1 = El parámetro es un parámetro de referencia a un cursor.|  
   

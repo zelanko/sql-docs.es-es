@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: bc78718c813ef1aa599c1ab299c634d018bc88d6
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.openlocfilehash: c1c75a6ff18b26bee65365acbc068de87678a9c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070763"
 ---
 # <a name="delete-dmx"></a>DELETE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,11 +40,11 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
   
  En la siguiente tabla se describen los resultados de usar las diferentes formas de sintaxis.  
   
-|.|Resultado|  
+|Instrucción|Resultado|  
 |---------------|------------|  
-|DELETE FROM MINING STRUCTURE*\<estructura >*<br /><br /> o Administrador de configuración de<br /><br /> DELETE FROM MINING STRUCTURE*\<estructura >*. CONTENIDO|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
-|DELETE FROM MINING STRUCTURE*\<estructura >*. CASOS|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
-|ELIMINAR del modelo de minería de datos*\<modelo >*<br /><br /> o Administrador de configuración de<br /><br /> ELIMINAR del modelo de minería de datos*\<modelo >*. CONTENIDO|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
+|DELETE FROM MINING STRUCTURE *\<estructura >*<br /><br /> o Administrador de configuración de<br /><br /> DELETE FROM MINING STRUCTURE *\<estructura >* . CONTENIDO|Realiza ProcessClear en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y sus modelos de minería de datos asociados.|  
+|DELETE FROM MINING STRUCTURE *\<estructura >* . CASOS|Realiza ProcessClearStructureOnly en la estructura de minería de datos. Se borra todo el contenido de la estructura de minería de datos y se dejan intactos sus modelos de minería de datos asociados. La obtención de detalles de los modelos de minería de datos asociados produce un error tras el borrado de la estructura de minería de datos.|  
+|ELIMINAR del modelo de minería de datos *\<modelo >*<br /><br /> o Administrador de configuración de<br /><br /> ELIMINAR del modelo de minería de datos *\<modelo >* . CONTENIDO|Realiza ProcessClear en el modelo de minería de datos, pero deja intactos los valores de estado. Los valores de estado son los estados posibles de una columna. Por ejemplo, los valores de estado de una columna de género serían masculino y femenino.|  
   
  Para obtener más información acerca de los tipos de procesamiento, vea [elemento Type &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
   

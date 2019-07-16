@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2c83a4a7-720b-4435-a3b5-788c29f56949
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 710ac16c93c725c17a0f8c83d15c81f2bc45a5ab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 04fc26296d7c499982c75296089decfb57bd9ab4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016599"
 ---
 # <a name="filestream-and-filetable-catalog-views-transact-sql"></a>Vistas de catálogo de secuencia de archivo y FileTable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47724943"
  Devuelve una fila para cada objeto FileTable. Hereda de **sys.tables**.  
 
 ## <a name="see-also"></a>Vea también
-[FileStream](../../relational-databases/blob/filestream-sql-server.md)
+[Secuencia de archivos](../../relational-databases/blob/filestream-sql-server.md)
 <br>[Filetables](../../relational-databases/blob/filetables-sql-server.md)
 <br>[Vistas de administración dinámica de secuencia de archivo y FileTable (Transact-SQL)](../system-dynamic-management-views/filestream-and-filetable-dynamic-management-views-transact-sql.md)
 <br>[Procedimientos almacenados del sistema de Filestream y FileTable (Transact-SQL)](../system-stored-procedures/filestream-and-filetable-system-stored-procedures.md)

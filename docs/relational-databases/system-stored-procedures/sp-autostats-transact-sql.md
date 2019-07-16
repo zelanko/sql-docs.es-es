@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d1df8c15-ee73-49eb-9d13-6e98943c3e38
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6264266f85edc1cae0821bbcf81c8c0993dba151
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d390cff9bf101167db277c1c7614ee68d10edb6a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62995687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046104"
 ---
 # <a name="spautostats-transact-sql"></a>sp_autostats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -70,7 +69,7 @@ sp_autostats [ @tblname = ] 'table_or_indexed_view_name'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Nombre de índice**|**varchar(60)**|Nombre del índice o de las estadísticas.|  
-|**AUTOSTATS**|**varchar(3)**|Valor actual para la opción AUTO_UPDATE_STATISTICS.|  
+|**AUTOSTAT EN**|**varchar(3)**|Valor actual para la opción AUTO_UPDATE_STATISTICS.|  
 |**Última actualización**|**datetime**|Fecha de la actualización más reciente de las estadísticas.|  
   
  El conjunto de resultados para una tabla o vista indizada incluye estadísticas creadas para índices, estadísticas de columna única generadas con la opción AUTO_CREATE_STATISTICS y estadísticas crean con el [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) instrucción.  

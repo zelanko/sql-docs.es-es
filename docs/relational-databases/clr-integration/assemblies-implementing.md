@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: c228d7bf-a906-4f37-a057-5d464d962ff8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: bcba39dba6f5a9cffa9f6f961d29aa20cebc527b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c6ca486f3464334c96c3b3874c4dfff71161e978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47799985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018849"
 ---
 # <a name="assemblies---implementing"></a>Ensamblados: implementación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47799985"
 -   [Propiedades del ensamblado &#40;página General&#41;](../../relational-databases/clr-integration/assemblies-properties.md)  
   
 ## <a name="modifying-assemblies"></a>Modificar ensamblados  
- Los ensamblados se modifican en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], o bien en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el editor asistido de ensamblados. Se puede modificar un ensamblado cuando se desea hacer lo siguiente:    
+ Los ensamblados se modifican en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante la instrucción ALTER ASSEMBLY de [!INCLUDE[tsql](../../includes/tsql-md.md)], o bien en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] mediante el editor asistido de ensamblados. Se puede modificar un ensamblado cuando se desea hacer lo siguiente:  
   
 -   Cambiar la implementación del ensamblado cargando una versión más reciente de los binarios del ensamblado. Para obtener más información, consulte [administrar versiones de ensamblados](#_managing) más adelante en este tema.  
   
@@ -83,7 +82,7 @@ ms.locfileid: "47799985"
   
  Si desea modificar un ensamblado, debe emitir una instrucción ALTER ASSEMBLY para actualizar el ensamblado en la base de datos. De este modo se actualizará el ensamblado a la copia más reciente de los módulos [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] que almacenan su implementación.  
   
- La cláusula WITH UNCHECKED DATA de la instrucción ALTER ASSEMBLY indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que actualice incluso los ensamblados de los que dependen los datos almacenados en la base de datos. En concreto, se debe especificar WITH UNCHECKED DATA si existe alguno de los elementos siguientes:    
+ La cláusula WITH UNCHECKED DATA de la instrucción ALTER ASSEMBLY indica a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que actualice incluso los ensamblados de los que dependen los datos almacenados en la base de datos. En concreto, se debe especificar WITH UNCHECKED DATA si existe alguno de los elementos siguientes:  
   
 -   Columnas calculadas persistentes que hacen referencia a métodos del ensamblado, ya sea directa o indirectamente, mediante funciones o métodos de [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -101,7 +100,7 @@ ms.locfileid: "47799985"
  ALTER ASSEMBLY cambia la versión de ensamblado. La referencia cultural y token de clave pública del ensamblado siguen siendo los mismos. SQL Server no permite registrar distintas versiones de un ensamblado con el mismo nombre, referencia cultural y clave pública.  
   
 ### <a name="interactions-with-computer-wide-policy-for-version-binding"></a>Interacciones con la directiva de equipos para los enlaces de versión  
- Si las referencias a ensamblados almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se redirigen a versiones determinadas mediante una directiva de edición o una directiva de administrador de equipos, debe realizar una de las acciones siguientes:    
+ Si las referencias a ensamblados almacenados en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se redirigen a versiones determinadas mediante una directiva de edición o una directiva de administrador de equipos, debe realizar una de las acciones siguientes:  
   
 -   Asegúrese de que la nueva versión a la que se redirigen las referencias se encuentra en la base de datos.  
   

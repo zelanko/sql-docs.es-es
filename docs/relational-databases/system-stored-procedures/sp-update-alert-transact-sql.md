@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084944"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` El nuevo período de espera, en segundos, entre respuestas a la alerta. *delay_between_responses* es **int**, su valor predeterminado es null.  
   
-`[ @notification_message = ] 'notification_message'` Texto revisado de un mensaje adicional que se envía al operador como parte del correo electrónico, **net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)**, su valor predeterminado es null.  
+`[ @notification_message = ] 'notification_message'` Texto revisado de un mensaje adicional que se envía al operador como parte del correo electrónico, **net send**, o una notificación por buscapersonas. *notification_message* es **nvarchar (512)** , su valor predeterminado es null.  
   
 `[ @include_event_description_in = ] include_event_description_in` Especifica si la descripción de la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error desde el registro de aplicación de Windows debe incluirse en el mensaje de notificación. *include_event_description_in* es **tinyint**, su valor predeterminado es null, y puede tener uno o varios de estos valores.  
   
@@ -85,11 +84,11 @@ sp_update_alert
 |**1**|Correo electrónico|  
 |**2**|Buscapersonas|  
 |**4**|**net send**|  
-|**7**|All|  
+|**7**|Todo|  
   
 `[ @database_name = ] 'database'` El nombre de la base de datos en el que debe producirse el error para que se desencadene la alerta. *base de datos* es **sysname.** No se permiten nombres incluidos entre corchetes ([ ]). El valor predeterminado es NULL.  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` Una secuencia de caracteres que debe encontrarse en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es **nvarchar (100)**, su valor predeterminado es null. Este parámetro resulta útil para filtrar los nombres de objeto (por ejemplo, **% customer_table %**).  
+`[ @event_description_keyword = ] 'event_description_keyword'` Una secuencia de caracteres que debe encontrarse en la descripción del error en el registro de mensajes de error. Se pueden usar caracteres de coincidencia de patrón de la expresión LIKE de [!INCLUDE[tsql](../../includes/tsql-md.md)]. *event_description_keyword* es **nvarchar (100)** , su valor predeterminado es null. Este parámetro resulta útil para filtrar los nombres de objeto (por ejemplo, **% customer_table %** ).  
   
 `[ @job_id = ] job_id` El número de identificación del trabajo. *job_id* es **uniqueidentifier**, su valor predeterminado es null. Si *job_id* se especifica, *job_name* debe omitirse.  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` Reservado.  
   
-`[ @performance_condition = ] 'performance_condition'` Un valor expresado en formato **'***itemcomparatorvalue***'**. *performance_condition* es **nvarchar (512)**, su valor predeterminado es null y consta de estos elementos.  
+`[ @performance_condition = ] 'performance_condition'` Un valor expresado en formato **'***itemcomparatorvalue***'** . *performance_condition* es **nvarchar (512)** , su valor predeterminado es null y consta de estos elementos.  
   
 |Elemento de formato|Descripción|  
 |--------------------|-----------------|  
 |*Elemento*|Objeto de rendimiento, contador de rendimiento o instancia con nombre del contador|  
-|*Comparador*|Uno de estos operadores: **>**, **<**, **=**|  
+|*Comparador*|Uno de estos operadores: **>** , **<** , **=**|  
 |*Valor*|Valor numérico del contador|  
   
 `[ @category_name = ] 'category'` El nombre de la categoría de alerta. *categoría* es **sysname** con el valor predeterminado es NULL.  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` El espacio de nombres WMI para consultar los eventos. *wmi_namespace* es **sysname**, su valor predeterminado es null.  
   
-`[ @wmi_query = ] 'wmi_query'` La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)**, su valor predeterminado es null.  
+`[ @wmi_query = ] 'wmi_query'` La consulta que especifica el evento WMI para la alerta. *wmi_query* es **nvarchar (512)** , su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

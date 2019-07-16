@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2c417747-2edd-4e0d-8a9c-e5f445985c1a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2332e4f80e0dded930b22d9f0faf76d80ec09141
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a833e5d1c3c67e61c4d81b4b575ab90b23f75fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013232"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097705"
 ---
 # <a name="sysdmexecquerymemorygrants-transact-sql"></a>sys.dm_exec_query_memory_grants (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ ms.locfileid: "63013232"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
    
 ## <a name="remarks"></a>Comentarios  
  Un escenario de depuración típico para un tiempo de espera de consulta puede tener el siguiente aspecto:  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: a6330b74-4e52-42a4-91ca-3f440b3223cf
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d5c63b6e2f128871740f816cf0772f44646e31f3
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 51c1898ddaee1ecf878944a3b43c3d8adbb38590
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946178"
 ---
 # <a name="xml-construction-xquery"></a>Construcción de XML (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -79,7 +78,7 @@ This is product model catalog description.
 </ProductModel>  
 ```  
   
- Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la consulta siguiente construye un elemento <`NewRoot`> con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{...}").  
+ Aunque la construcción de elementos a partir de expresiones constantes, tal como se muestra en este ejemplo, resulta útil, la auténtica ventaja de esta característica del lenguaje XQuery es la capacidad de construir XML que extrae datos de una base de datos de forma dinámica. Puede utilizar llaves para especificar expresiones de consulta. En el XML resultante, se sustituye la expresión por su valor. Por ejemplo, la siguiente consulta construcciones un <`NewRoot`> elemento con un elemento secundario (<`e`>). El valor del elemento <`e`> se calcula mediante la especificación de una expresión de ruta de acceso dentro de llaves ("{...}").  
   
 ```sql
 DECLARE @x xml;  
@@ -137,7 +136,7 @@ SELECT @y;
 <NewRoot> Hello, I can use { and  } as part of my text</NewRoot>  
 ```  
   
- La consulta siguiente es otro ejemplo de construcción de elementos mediante el constructor de elemento directo. Asimismo, el valor del elemento <`FirstLocation`> se obtiene ejecutando la expresión entre llaves. La expresión de consulta devuelve los pasos de fabricación de la primera ubicación de centro de trabajo de la columna Instructions de la tabla Production.ProductModel.  
+ La consulta siguiente es otro ejemplo de construcción de elementos mediante el constructor de elemento directo. Además, el valor de la <`FirstLocation`> elemento se obtiene mediante la ejecución de la expresión entre llaves. La expresión de consulta devuelve los pasos de fabricación de la primera ubicación de centro de trabajo de la columna Instructions de la tabla Production.ProductModel.  
   
 ```sql
 SELECT Instructions.query('  
@@ -337,7 +336,7 @@ where ProductModelID=7;
     SELECT @x.query( '<a attr="{/x}{/x}"/>' )  
     ```  
   
--   No se admiten las secuencias heterogéneas. Si se intenta asignar una secuencia heterogénea como valor de atributo, se devolverá un error, como se muestra en el ejemplo siguiente. En este ejemplo, se especifica una secuencia heterogénea, una cadena "Item" y un elemento <`x`>, como valor del atributo:  
+-   No se admiten las secuencias heterogéneas. Si se intenta asignar una secuencia heterogénea como valor de atributo, se devolverá un error, como se muestra en el ejemplo siguiente. En este ejemplo, una secuencia heterogénea, una cadena "Item" y un elemento <`x`>, se especifica como el valor del atributo:  
   
     ```sql
     DECLARE @x xml  
@@ -382,7 +381,7 @@ where ProductModelID=7;
 -   En el prólogo de las consultas XQuery.  
   
 #### <a name="using-a-namespace-declaration-attribute-to-add-namespaces"></a>Utilizar un atributo de declaración de espacio de nombres para agregar espacios de nombres  
- En el ejemplo siguiente se utiliza un atributo de declaración de espacio de nombres en la construcción del elemento <`a`> para declarar un espacio de nombres predeterminado. La construcción del elemento secundario <`b`> deshace la declaración del espacio de nombres predeterminado declarado en el elemento principal.  
+ En el ejemplo siguiente se usa un atributo de declaración de espacio de nombres en la construcción del elemento <`a`> para declarar un espacio de nombres predeterminado. La construcción del elemento secundario <`b`> deshace la declaración de espacio de nombres predeterminado declarado en el elemento primario.  
   
 ```sql
 declare @x xml  
@@ -420,7 +419,7 @@ select @x.query( '
 </x:a>  
 ```  
   
- Se puede anular la declaración de un espacio de nombres predeterminado en la construcción de XML, pero no la de un prefijo de espacio de nombres. La consulta siguiente devuelve un error, porque no se puede anular la declaración de un prefijo especificado en la construcción del elemento <`b`>.  
+ Se puede anular la declaración de un espacio de nombres predeterminado en la construcción de XML, pero no la de un prefijo de espacio de nombres. La siguiente consulta devuelve un error, porque no se puede anular-declarar un prefijo como se especifica en la construcción del elemento <`b`>.  
   
 ```sql
 declare @x xml  
@@ -431,7 +430,7 @@ select @x.query( '
   </x:a>' )  
 ```  
   
- El espacio de nombres recientemente construido está disponible para su uso en la consulta. Por ejemplo, la consulta siguiente declara un espacio de nombres en la construcción del elemento, <`FirstLocation`>, y especifica el prefijo en las expresiones de los valores de los atributos LocationID y SetupHrs.  
+ El espacio de nombres recientemente construido está disponible para su uso en la consulta. Por ejemplo, la consulta siguiente declara un espacio de nombres en la construcción del elemento, <`FirstLocation`> y especifica el prefijo en las expresiones de los valores de atributo LocationID y SetupHrs.  
   
 ```sql
 SELECT Instructions.query('  
@@ -445,7 +444,7 @@ FROM  Production.ProductModel
 where ProductModelID=7  
 ```  
   
- Tenga en cuenta que la creación de un nuevo prefijo de espacio de nombres de este modo reemplazará las declaraciones de espacios de nombres ya existentes de este prefijo. Por ejemplo, la declaración de espacio de nombres, `AWMI="https://someURI"`, del prólogo de la consulta es reemplazada por la declaración de espacio de nombres del elemento <`FirstLocation`>.  
+ Tenga en cuenta que la creación de un nuevo prefijo de espacio de nombres de este modo reemplazará las declaraciones de espacios de nombres ya existentes de este prefijo. Por ejemplo, la declaración de espacio de nombres, `AWMI="https://someURI"`, en la consulta prólogo se reemplaza por la declaración de espacio de nombres en el <`FirstLocation`> elemento.  
   
 ```sql
 SELECT Instructions.query('  
@@ -549,7 +548,7 @@ test
   
  **Tenga en cuenta** para obtener un ejemplo del uso de un constructor de nodo de texto explícitos, vea el ejemplo específico de [insertar &#40;XML DML&#41;](../t-sql/xml/insert-xml-dml.md).  
   
- En la consulta siguiente, el XML construido incluye un elemento, dos atributos, un comentario y una instrucción de procesamiento. Tenga en cuenta que se utiliza una coma antes de <`FirstLocation`>, pues se está construyendo una secuencia.  
+ En la consulta siguiente, el XML construido incluye un elemento, dos atributos, un comentario y una instrucción de procesamiento. Tenga en cuenta que se usa una coma antes de la <`FirstLocation`>, porque se está construyendo una secuencia.  
   
 ```sql
 SELECT Instructions.query('  
@@ -590,7 +589,7 @@ where ProductModelID=7;
   
 -   atributo  
   
--   texto  
+-   text  
   
  En el caso de los nodos de elemento y atributo, estas palabras clave van seguidas del nombre del nodo y de la expresión, entre llaves, que genera el contenido del nodo. En el ejemplo siguiente, se construye este XML:  
   

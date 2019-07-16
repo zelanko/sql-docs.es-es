@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3f0defd0-478d-4e7f-96be-8795c9de4e3f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8acb2fae0aa0edadf1995a0a103ff60b66a912a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c968c1c7445b89d0291faf97056417952e417dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090679"
 ---
 # <a name="sysdmserverservices-transact-sql"></a>sys.dm_server_services (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,9 +34,9 @@ ms.locfileid: "62686225"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |servicename|**nvarchar(256)**|Nombre de la [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], servicio Agente SQL Server o texto completo. No puede ser null.|  
-|startup_type|**int**|Indica el modo de inicio del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> 0: Otros<br />1: Otros<br />2: Automático<br />3: Manual<br />4: Deshabilitado<br /><br /> Acepta valores NULL.|  
-|startup_desc|**nvarchar(256)**|Describe el modo de inicio del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> Otro: Otro (inicio de arranque)<br />Otro: Otro (inicio del sistema)<br />Automático: Inicio automático<br />Manual: Inicio a petición<br />Deshabilitado: Deshabilitado<br /><br /> No puede ser null.|  
-|status|**int**|Indica el estado actual del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> 1: Detenido<br />2: Otro (Inicio pendiente)<br />3: Otro (detención pendiente)<br />4: En ejecución<br />5: Otro (continuación pendiente)<br />6: Otro (pausa pendiente)<br />7: En pausa<br /><br /> Acepta valores NULL.|  
+|startup_type|**int**|Indica el modo de inicio del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> 0: Otros<br />1: Otros<br />2: Automático<br />3: Manual<br />4: Disabled<br /><br /> Acepta valores NULL.|  
+|startup_desc|**nvarchar(256)**|Describe el modo de inicio del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> Otro: Otro (inicio de arranque)<br />Otro: Otro (inicio del sistema)<br />Automático: Inicio automático<br />Manual: Inicio a petición<br />Deshabilitado: Disabled<br /><br /> No puede ser null.|  
+|status|**int**|Indica el estado actual del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> 1: Stopped<br />2: Otro (Inicio pendiente)<br />3: Otro (detención pendiente)<br />4: En ejecución<br />5: Otro (continuación pendiente)<br />6: Otro (pausa pendiente)<br />7: En pausa<br /><br /> Acepta valores NULL.|  
 |status_desc|**nvarchar(256)**|Describe el estado actual del servicio. Los siguientes son los valores posibles y sus correspondientes descripciones.<br /><br /> Detener: El servicio está detenido.<br />Otro (operación de inicio pendiente): El servicio está en proceso de iniciarse.<br />Otro (operación de detención pendiente): El servicio está deteniéndose.<br />Ejecutando: El servicio se está ejecutando.<br />Otros (operaciones de continuación pendientes): El servicio está en un estado pendiente.<br />Otro (pausa pendiente): El servicio está en el proceso de poner en pausa.<br />En pausa: El servicio está en pausa.<br /><br /> No puede ser null.|  
 |process_id|**int**|Identificador de proceso del servicio. No puede ser null.|  
 |last_startup_time|**datetimeoffset(7)**|Fecha y hora en que el servicio se inició por última vez. Acepta valores NULL.|  

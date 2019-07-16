@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ac1fb436ded0d829d9b6a9c8fe4e642f8de8cb16
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a766ad74f42336612859c63cf42df654846ff96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084844"
 ---
 # <a name="spupdateoperator-transact-sql"></a>sp_update_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,16 +57,16 @@ sp_update_operator
  El nombre del operador que se va a modificar. *nombre* es **sysname**, no tiene ningún valor predeterminado.  
   
  [ @new_name=] '*new_name*'  
- Nuevo nombre del operador. El nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
+ Nuevo nombre del operador. Este nombre debe ser único. *new_name* es **sysname**, su valor predeterminado es null.  
   
  [ @enabled=] *habilitado*  
  Un número que indica el estado actual del operador (**1** si está habilitado, **0** si no es así). *habilitado* es **tinyint**, su valor predeterminado es null. Si no está habilitado, un operador no recibirá notificaciones de alertas.  
   
  [ @email_address=] '*email_address*'  
- La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)**, su valor predeterminado es null.  
+ La dirección de correo electrónico del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *Email_Address* es **nvarchar (100)** , su valor predeterminado es null.  
   
  [ @pager_address=] '*pager_number*'  
- La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es **nvarchar (100)**, su valor predeterminado es null.  
+ La dirección del buscapersonas del operador. Esta cadena se pasa directamente al sistema de correo electrónico. *pager_number* es **nvarchar (100)** , su valor predeterminado es null.  
   
  [ @weekday_pager_start_time=] *weekday_pager_start_time*  
  Especifica la hora a partir de la cual puede enviarse una notificación por buscapersonas a este operador, de lunes a viernes. *weekday_pager_start_time*es **int**, su valor predeterminado es null y debe especificarse en el formato HHMMSS para utilizarse con un reloj de 24 horas.  
@@ -101,7 +100,7 @@ sp_update_operator
 |**64**|Sábado|  
   
  [ @netsend_address=] '*netsend_address*'  
- La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es **nvarchar (100)**, su valor predeterminado es null.  
+ La dirección de red del operador al que se envía el mensaje de red. *netsend_address*es **nvarchar (100)** , su valor predeterminado es null.  
   
  [ @category_name=] '*categoría*'  
  El nombre de la categoría de esta alerta. *categoría* es **sysname**, su valor predeterminado es null.  

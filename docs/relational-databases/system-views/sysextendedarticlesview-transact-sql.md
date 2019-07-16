@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8bdd22f7-c268-49b6-820c-3fe603feb128
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 40a494f4cf157b85f13327f8367b90e8db2fcce7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d88db9492489175ab12e2f808b846899a1bf4a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62693769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910115"
 ---
 # <a name="sysextendedarticlesview-transact-sql"></a>sysextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,13 +39,13 @@ ms.locfileid: "62693769"
 |**filter**|**int**|Identificador de objeto del procedimiento almacenado utilizado para la partición horizontal.|  
 |**filter_clause**|**ntext**|La cláusula WHERE del artículo, utilizada para el filtrado horizontal.|  
 |**ins_cmd**|**nvarchar(255)**|Comando que se ejecuta con INSERT.|  
-|**Nombre**|**nvarchar(128)**|El nombre asociado al artículo, único en la publicación.|  
+|**name**|**nvarchar(128)**|El nombre asociado al artículo, único en la publicación.|  
 |**objid**|**int**|El Id. de objeto de la tabla publicada.|  
 |**pubid**|**int**|Id. de la publicación a la que pertenece el artículo.|  
 |**pre_creation_cmd**|**tinyint**|El comando anterior a la creación para DROP TABLE, DELETE TABLE o TRUNCATE:<br /><br /> **0** = none.<br /><br /> **1** = QUITAR.<br /><br /> **2** = DELETE.<br /><br /> **3** = TRUNCATE.|  
 |**status**|**int**|Máscara de bits para las opciones y estado del artículo; puede ser el resultado OR lógico bit a bit de uno o más de estos valores:<br /><br /> **1** = artículo está activo.<br /><br /> **8** = incluir el nombre de columna en las instrucciones INSERT.<br /><br /> **16** = usar instrucciones con parámetros.<br /><br /> **24** = ambos incluyen el nombre de columna en las instrucciones INSERT y utilizar instrucciones con parámetros.<br /><br /> Por ejemplo, un artículo activo que utilice instrucciones con parámetros tendrá un valor de 17 en esta columna. Un valor de 0 significa que el artículo no está activo y no tiene otras propiedades definidas.|  
 |**sync_objid**|**int**|El Id. de la tabla o vista que representa la definición del artículo.|  
-|**Tipo**|**tinyint**|Tipo de artículo:<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.|  
+|**type**|**tinyint**|Tipo de artículo:<br /><br /> **1** = artículo basado en registro.<br /><br /> **3** = artículo basado en registro con filtro manual.<br /><br /> **5** = artículo basado en registro con vista manual.<br /><br /> **7** = artículo basado en registro con filtro manual y vista manual.|  
 |**upd_cmd**|**nvarchar(255)**|Comando para ejecutar con UPDATE; en caso contrario, se construye a partir del registro.|  
 |**schema_option**|**binario**|Indica qué propiedades del objeto publicado se convierten en script en la instantánea. Para obtener una lista de opciones de esquema admitidos, consulte [sp_addarticle](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).|  
 |**dest_owner**|**nvarchar(128)**|Propietario de la tabla de la base de datos de destino.|  

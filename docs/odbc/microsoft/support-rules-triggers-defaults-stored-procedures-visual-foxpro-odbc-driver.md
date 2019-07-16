@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269860"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080771"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>Compatibilidad con las reglas, desencadenadores, valores predeterminados y los procedimientos almacenados (controlador ODBC de Visual FoxPro)
 No se puede crear reglas de Visual FoxPro, desencadenadores, valores predeterminados o procedimientos almacenados mediante el controlador ODBC de Visual FoxPro. Sin embargo, la aplicación podría interactuar con los procedimientos almacenados, desencadenadores, valores predeterminados o reglas existentes como inserta, actualiza o elimina datos de Visual FoxPro almacenados en una base de datos.  
@@ -71,7 +70,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 |Función ATLINE)|ATN2 (función))||  
 |Comando promedio|ACOS (función))||  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
   
 ||||  
 |-|-|-|  
@@ -132,7 +131,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|RECOPILAR el comando|Función GETNEXTMODIFIED)|GO/GOTO Command|  
+|RECOPILAR el comando|Función GETNEXTMODIFIED)|Comando GO/GOTO|  
 |Función GETFLDSTATE)|Función GOMONTH)||  
 |Función GETCP)|GETENV (función))||  
   
@@ -221,10 +220,10 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
   
 ||||  
 |-|-|-|  
-|SCAN ... Comando ENDSCAN|Comando de DISPERSIÓN|Función de seg.)|  
+|EXAMEN... Comando ENDSCAN|Comando de DISPERSIÓN|Función de seg.)|  
 |Función de segundos)|Comando Buscar|SEEK (función))|  
 |Seleccione el comando|Función SELECT (de)|Comando SELECT-SQL|  
-|Comando BLOCKSIZE Set|SET CARRY Command|Comando de siglo Set.|  
+|Comando BLOCKSIZE Set|Comando de ACARREO Set.|Comando de siglo Set.|  
 |Comando COLLATE Set|CONJUNTO de comandos de base de datos|CONJUNTO de comandos de fecha|  
 |Comando de conjunto predeterminado|Comando de eliminaciones de Set|Comando exacto de conjunto|  
 |Comando exclusivo de Set|Comando FDOW Set.|Comando de conjunto de campos|  
@@ -274,7 +273,7 @@ No se puede crear reglas de Visual FoxPro, desencadenadores, valores predetermin
 |-|-|-|  
 |SEMANA (función))|||  
   
-## <a name="y"></a>S  
+## <a name="y"></a>Y  
   
 ||||  
 |-|-|-|  

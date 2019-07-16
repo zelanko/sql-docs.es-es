@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 65d50589-39c2-4046-92b6-0c4587d8c593
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 628ef2cde5b345366a7ba0fb7ffff6c8e5143a0c
-ms.sourcegitcommit: 70e47a008b713ea30182aa22b575b5484375b041
+ms.openlocfilehash: c6fcaa491f7d42e255ed329a8e16798437aa2c7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/23/2018
-ms.locfileid: "49806695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936793"
 ---
 # <a name="sysdmexecvalidusehints-transact-sql"></a>Sys.dm_exec_valid_use_hints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ Utilice esta DMV para ver la lista de todas las sugerencias de admitidos en la n
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|El nombre de la sugerencia.|
+|name|**sysname**|El nombre de la sugerencia.|
 
 Consulte [sugerencias de consulta](../../t-sql/queries/hints-transact-sql-query.md#use_hint) para obtener descripciones de cada sugerencia.
 

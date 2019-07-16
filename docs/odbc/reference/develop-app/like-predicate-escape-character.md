@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027233"
 ---
 # <a name="like-predicate-escape-character"></a>COMO carácter de Escape de predicado
 En un **como** predicado, el signo de porcentaje (%) coincide con cero o más de cualquier carácter y el carácter de subrayado (_) coincide con cualquier carácter. Para buscar un signo de porcentaje real o un carácter de subrayado en un **como** predicado, un carácter de escape debe ir antes del signo de porcentaje o el carácter de subrayado. La secuencia de escape que define el **como** carácter de escape de predicado es:  
   
- **{escape '** *escape-character* **'}**  
+ **{escape '** *carácter de escape* **'}**  
   
  donde *carácter de escape* es cualquier carácter compatible con el origen de datos.  
   

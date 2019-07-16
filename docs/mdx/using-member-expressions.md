@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097111"
 ---
 # <a name="using-member-expressions"></a>Usar expresiones de miembro
 
@@ -63,6 +62,6 @@ Dimension_Name
 >  Para obtener más información acerca de los nombres de miembro y las claves de miembro, vea [trabajar con miembros, tuplas y conjuntos &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

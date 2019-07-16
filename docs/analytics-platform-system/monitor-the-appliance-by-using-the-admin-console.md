@@ -2,19 +2,18 @@
 title: Monitor de consola de administración - Analytics Platform System | Microsoft Docs
 description: Para Analytics Platform System, la consola de administración es una aplicación web que presenta la información de estado, el estado y rendimiento del dispositivo. Los usuarios conectarse a la consola de administración a través de un explorador de internet.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d094f809052222238806e679e38c6578422fd9aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7fb3bf769d3145118359af0e33e3cf01a0b6d325
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63027544"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960486"
 ---
 # <a name="monitor-the-appliance-with-the-admin-console---analytics-platform-system"></a>Supervisar el dispositivo con la consola de administración - Analytics Platform System
 La consola de administración es una aplicación web de PDW de SQL Server que presenta la información de estado, el estado y rendimiento del dispositivo. Los usuarios conectarse a la consola de administración a través de Internet Explorer.  
@@ -26,7 +25,7 @@ La consola de administración es una aplicación web de PDW de SQL Server que pr
 Inicio  
 Proporciona un resumen rápido del estado del dispositivo.  
   
-Estado  
+Health  
 Muestra la topología del dispositivo con indicadores que muestra el estado de cada componente supervisado dentro de cada nodo. Permite ver el estado actual de los nodos individuales y las propiedades de los componentes del nodo.  
   
 Muestra las alertas de hardware y software.  
@@ -50,7 +49,7 @@ Muestra carga los planes, el estado actual de las cargas de PDW y errores relaci
 Las copias de seguridad/restauraciones  
 Muestra un registro de PDW de copia de seguridad y las operaciones de restauración.  
   
-Estado  
+Health  
 Muestra la topología PDW con indicadores que muestra el estado de cada componente supervisado dentro de cada nodo. Permite ver el estado actual de los nodos individuales y las propiedades de los componentes del nodo.  
   
 Muestra las alertas de hardware y software.  
@@ -58,7 +57,7 @@ Muestra las alertas de hardware y software.
 Recursos  
 Muestra una lista de bloqueos de recursos PDW y su estado actual.  
   
-Storage  
+Almacenamiento  
 Resume el uso de almacenamiento PDW.  
   
 Monitor de rendimiento  

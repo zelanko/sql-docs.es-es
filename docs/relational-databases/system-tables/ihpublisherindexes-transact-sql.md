@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6008ef89-eeb9-46dc-93a2-f7623298cf0f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a24126ef3226878b4d07a056573f3b60e94495c3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 114ffee3ca13d7b5a42c3843957df0a2450b787f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990246"
 ---
 # <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,8 +34,8 @@ ms.locfileid: "52802517"
 |**publisherindex_id**|**int**|Identifica un índice publicado.|  
 |**table_id**|**int**|Identifica la tabla de [IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md) al que pertenece el índice.|  
 |**publisher_id**|**smallint**|Identifica el no publicador de SQL Server desde el que se está publicando el índice.|  
-|**Nombre**|**sysname**|Nombre del índice publicado.|  
-|**Tipo**|**nvarchar(255)**|Tipo de índice admitido desde el [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) tabla del sistema.|  
+|**name**|**sysname**|Nombre del índice publicado.|  
+|**type**|**nvarchar(255)**|Tipo de índice admitido desde el [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md) tabla del sistema.|  
   
 ## <a name="see-also"></a>Vea también  
  [Replicación de bases de datos heterogéneas](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   

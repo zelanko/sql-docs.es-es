@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e4a8d9d7-8aba-48ab-8be6-1a6129adfb8f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e6c76b1a931101fce366cc6d3b20d4aa74de23e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8a155f5d76e8a250c64d3d59e160fbb5863414f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071855"
 ---
 # <a name="driver-version-scheme"></a>Esquema de la versión de controlador
 > [!IMPORTANT]  
@@ -28,7 +27,7 @@ ms.locfileid: "63128041"
   
 |Versión del controlador|Número de compilación|Historial de disponibilidad|  
 |--------------------|------------------|--------------------------|  
-|1,0|2.00.6235|Visual C++ 4.2 y Visual Basic 5.0, Enterprise Edition|  
+|1.0|2.00.6235|Visual C++ 4.2 y Visual Basic 5.0, Enterprise Edition|  
 |2.0|2.73.7269|Visual Studio 97 y 1,5 a MDAC|  
 |2.0 actualizado|2.73.7283.01|IIS 4.0|  
 |2.0 actualizado|2.73.7283.03|MDAC 1.5b y 1.5 c|  

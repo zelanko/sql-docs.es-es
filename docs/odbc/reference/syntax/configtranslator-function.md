@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b56a5ebd0ad00e2c3abb87b72d2de8735245f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016699"
 ---
 # <a name="configtranslator-function"></a>Función ConfigTranslator
 **Conformidad**  
@@ -53,7 +52,7 @@ BOOL ConfigTranslator(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **ConfigTranslator** devuelve FALSE, un asociado  *\*pfErrorCode* valor se registra en el búfer de error del instalador mediante una llamada a **SQLPostInstallerError**y se puede obtener mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

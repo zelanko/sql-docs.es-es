@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a3c32e4b-8fe7-4a33-ae39-ae664001f315
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47e1250a92b78aefdc1611fd88e0ee9b0f772ad0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8679bea49b63ffd5dc7164942b42ac9eed7e9ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63254171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086360"
 ---
 # <a name="multiple-results"></a>Varios resultados
 Un *resultado* algo devuelto por el origen de datos después de ejecutar una instrucción. ODBC tiene dos tipos de resultados: conjuntos de resultados y recuentos de filas. *Recuento de filas* son el número de filas afectadas por una actualización, eliminación o instrucción insert. Los lotes, se describe en [Batches of SQL Statements](../../../odbc/reference/develop-app/batches-of-sql-statements.md), puede generar varios resultados.  

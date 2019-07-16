@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9f8cf1b2-3def-453f-a0ff-4646c5f15262
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8cb2edebfd0a23f7b626dfdc4cb55eab9684a2c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0ea83f40c6d6e595277a173c181c24f33e382393
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924888"
 ---
 # <a name="more-ways-to-move-in-a-recordset"></a>Otras formas de mover en un conjunto de registros
 Los cuatro métodos siguientes sirven para moverse o desplazar, en el **Recordset**: [MoveFirst, MoveLast, MoveNext y MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Algunos de estos métodos no están disponibles en los cursores de solo avance).  

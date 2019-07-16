@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0c836c99-1147-441e-998c-f0a30cd05275
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 256f1add5399d3e9c5795440d80670f66a096cb6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f82fc9006012d55902f1b5b3260dc7012fd6640a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47651695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053069"
 ---
 # <a name="spdescribecursor-transact-sql"></a>sp_describe_cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,18 +51,18 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
  Es el nombre de una variable de cursor declarada que recibirá la salida del cursor. *output_cursor_variable* es **cursor**, no tiene ningún valor predeterminado y debe no ser asociada a ningún cursor en el momento en que se llama a sp_describe_cursor. El cursor devuelto es un cursor desplazable, dinámico y de solo lectura.  
   
  [ @cursor_source=] {N ' | N'global' | N'variable'}  
- Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)**.  
+ Especifica si el cursor del que se informa está especificado con el nombre de un cursor local, un cursor global o una variable de cursor. El parámetro es **nvarchar (30)** .  
   
  [ @cursor_identity=] N'*local_cursor_name*']  
- Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL u obtuvo el valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)**.  
+ Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave LOCAL u obtuvo el valor predeterminado LOCAL. *local_cursor_name* es **nvarchar (128)** .  
   
  [ @cursor_identity=] N'*global_cursor_name*']  
- Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* es **nvarchar (128)**.  
+ Es el nombre de un cursor creado por una instrucción DECLARE CURSOR que tiene la palabra clave GLOBAL u obtuvo el valor predeterminado GLOBAL. *global_cursor_name* es **nvarchar (128)** .  
   
  *global_cursor_name* también puede ser el nombre de un cursor de servidor API que se abre una aplicación ODBC que, a continuación, se denomina mediante una llamada a SQLSetCursorName.  
   
  [ @cursor_identity=] N'*input_cursor_variable*']  
- Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)**.  
+ Es el nombre de una variable de cursor asociada a un cursor abierto. *input_cursor_variable* es **nvarchar (128)** .  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  None  
@@ -79,8 +78,8 @@ sp_describe_cursor [ @cursor_return = ] output_cursor_variable OUTPUT
 |cursor_name|**sysname**|Nombre del cursor desde una instrucción DECLARE CURSOR. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el cursor se creó estableciendo una variable de cursor como un cursor, cursor_name devuelve el nombre de la variable de cursor. En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], esta columna de salida devuelve un nombre generado por el sistema.|  
 |cursor_scope|**tinyint**|1 = LOCAL<br /><br /> 2 = GLOBAL|  
 |status|**int**|Mismos valores que informó la función del sistema CURSOR_STATUS:<br /><br /> 1 = El cursor al que hace referencia el nombre del cursor o ?la variable está abierto. Si se trata de un cursor que no distingue, estático o de conjunto de claves, el conjunto de resultados tiene una fila, como mínimo. Si el cursor es dinámico, el conjunto de resultados tiene cero o más filas.<br /><br /> 0 = El cursor al que hace referencia el nombre del cursor o la variable está abierto pero no tiene filas. Los cursores dinámicos nunca devuelven este valor.<br /><br /> -1 = El cursor al que hace referencia el nombre del cursor o la variable está cerrado.<br /><br /> -2 = Se aplica solo a variables de cursor. No hay ningún cursor asignado a la variable. Posiblemente, un parámetro OUTPUT asignó un cursor a la variable pero el procedimiento almacenado cerró el cursor antes de devolver resultados.<br /><br /> -3 = No existe un cursor o variable de cursor con el nombre especificado, o la variable del cursor no tiene todavía un cursor asignado.|  
-|model|**tinyint**|1 = Sin distinción (o estático) <br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámico<br /><br /> 4 = Avance rápido|  
-|simultaneidad|**tinyint**|1 = solo lectura<br /><br /> 2 = Bloqueos de desplazamiento<br /><br /> 3 = Optimista|  
+|model|**tinyint**|1 = Sin distinción (o estático)<br /><br /> 2 = conjunto de claves<br /><br /> 3 = dinámico<br /><br /> 4 = Avance rápido|  
+|concurrency|**tinyint**|1 = solo lectura<br /><br /> 2 = Bloqueos de desplazamiento<br /><br /> 3 = Optimista|  
 |scrollable|**tinyint**|0 = Solo avance<br /><br /> 1 = Desplazable|  
 |open_status|**tinyint**|0 = Cerrado<br /><br /> 1 = Abierto|  
 |cursor_rows|**decimal(10,0)**|Número de filas certificadas en el conjunto de resultados. Para más información, vea [@@CURSOR_ROWS &#40;Transact-SQL&#41;](../../t-sql/functions/cursor-rows-transact-sql.md).|  

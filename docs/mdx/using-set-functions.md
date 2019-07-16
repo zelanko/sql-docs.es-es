@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038053"
 ---
 # <a name="using-set-functions"></a>Usar funciones de conjuntos
 
@@ -85,7 +84,7 @@ ms.locfileid: "63251584"
   
  DESCENDANTS(  
   
- [Date].[Calendar].[Calendar Year].&[2004]  
+ [Fecha]. [Calendar]. [Año natural]. & [2004]  
   
  , [Date].[Calendar].[Date])  
   

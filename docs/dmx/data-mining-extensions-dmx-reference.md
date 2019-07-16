@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dcf3231fbff0ec4c3ea32e94f7b974a62faf05e6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: 29454fefde7850e5e45ca6a916540e7d38e2b286
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38032731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070897"
 ---
 # <a name="data-mining-extensions-dmx-reference"></a>Referencia de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "38032731"
   
  La especificación define la base de la minería de datos como el objeto virtual de modelo de minería de datos. El objeto de modelo de minería de datos encapsula toda la información conocida acerca de un modelo de minería de datos específico. El objeto de modelo de minería de datos está estructurado como una tabla de SQL, con columnas, tipos de datos y metainformación que describen el modelo. Esta estructura le permite usar el lenguaje DMX (una extensión de SQL) para crear y trabajar con modelos.  
   
- **Para obtener más información:** [estructuras de minería de datos &#40;Analysis Services - minería de datos&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
+ **Para obtener más información:** [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)  
   
 ##  <a name="BKMK_DMXStatements"></a> Instrucciones DMX  
  Puede usar instrucciones DMX para crear, procesar, eliminar, copiar, examinar y realizar predicciones con modelos de minería de datos. Hay dos tipos de instrucciones en DMX: instrucciones de definición de datos e instrucciones de manipulación de datos. Cada tipo de instrucción lleva a cabo distintos tipos de tareas.  
@@ -96,7 +95,7 @@ ms.locfileid: "38032731"
   
  Puede usar funciones DMX para obtener información descubierta durante el entrenamiento de los modelos y para calcular información nueva. Estas funciones pueden utilizarse con muchos fines, por ejemplo, para devolver estadísticas que describan los datos subyacentes o la precisión de una predicción. O bien, para devolver una explicación ampliada de una predicción.  
   
- **Para obtener más información** **información:** [descripción DMX instrucción Select](../dmx/understanding-the-dmx-select-statement.md), [funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [extensiones de minería de datos &#40;DMX&#41; referencia de funciones  ](../dmx/data-mining-extensions-dmx-function-reference.md)  
+ **Para obtener más información** **información:**  [Descripción de DMX instrucción Select](../dmx/understanding-the-dmx-select-statement.md), [funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md), [estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md), [minería de datos Extensiones &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)  
   
  [Volver a instrucciones DMX](#BKMK_DMXStatements)  
   
@@ -107,7 +106,7 @@ ms.locfileid: "38032731"
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Extensiones de minería de datos &#40;DMX&#41; elementos de sintaxis](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   

@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 35ca43c379e896072ecebf1c313c9ce9b210d73f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47e332d8dfda76bbf2702335b72793c112c15d75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102319"
 ---
 # <a name="sysobjects-transact-sql"></a>sys.objects (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "62997868"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|NAME|**sysname**|Nombre del objeto.|  
+|name|**sysname**|Nombre del objeto.|  
 |object_id|**int**|Número de identificación del objeto. Es único en una base de datos.|  
 |principal_id|**int**|Identificador del propietario individual, si es diferente del propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, es posible especificar un propietario alternativo mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Es NULL si no existe ningún propietario individual alternativo.<br /><br /> Es NULL si el tipo de objeto es uno de los siguientes:<br /><br /> C = restricción CHECK<br /><br /> D = DEFAULT (restricción o independiente)<br /><br /> F = Restricción FOREIGN KEY<br /><br /> PK = Restricción PRIMARY KEY<br /><br /> R = Regla (estilo antiguo, independiente)<br /><br /> TA = Desencadenador de ensamblado (integración CLR)<br /><br /> TR = Desencadenador SQL<br /><br /> UQ = Restricción UNIQUE<br /><br /> CE = restricción perimetral |  
 |schema_id|**int**|Id. del esquema que contiene el objeto.<br /><br /> Los objetos de sistema con ámbito de esquema siempre están contenidos en los esquemas sys o INFORMATION_SCHEMA.|  

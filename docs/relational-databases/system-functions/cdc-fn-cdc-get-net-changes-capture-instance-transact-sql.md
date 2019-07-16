@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 43ab0d1b-ead4-471c-85f3-f6c4b9372aab
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 8d60f772d7848d0e207f83b5c7a1a10da4b43b37
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77fb03c71bd0773cc8f004a89c28c1925284876b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47804943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043043"
 ---
 # <a name="cdcfncdcgetnetchangesltcaptureinstancegt-transact-sql"></a>cdc.fn_cdc_get_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ cdc.fn_cdc_get_net_changes_capture_instance ( from_lsn , to_lsn , '<row_filter_o
   
 ## <a name="arguments"></a>Argumentos  
  *from_lsn*  
- El LSN que representa el extremo inferior del rango de LSN que se va a incluir en el conjunto de resultados. *from_lsn* es **binary (10)**.  
+ El LSN que representa el extremo inferior del rango de LSN que se va a incluir en el conjunto de resultados. *from_lsn* es **binary (10)** .  
   
  Solo las filas de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) cambiar la tabla con un valor de __ $ start_lsn sea mayor o igual que *from_lsn* se incluyen en el conjunto de resultados.  
   
  *to_lsn*  
- El LSN que representa el extremo superior del rango de LSN que se va a incluir en el conjunto de resultados. *to_lsn* es **binary (10)**.  
+ El LSN que representa el extremo superior del rango de LSN que se va a incluir en el conjunto de resultados. *to_lsn* es **binary (10)** .  
   
  Solo las filas de la [cdc.&#91; capture_instance&#93;_CT](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) cambiar la tabla con un valor en __ $ start_lsn sea menor o igual que *from_lsn* o igual que *to_lsn* se incluyen en el conjunto de resultados.  
   

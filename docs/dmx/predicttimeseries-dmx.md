@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5d8562661e313aea59dfb233dbc5b2194b582c2d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60c55373a1647f6a2f12526e308d6ca45aeebb7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041704"
 ---
 # <a name="predicttimeseries-dmx"></a>PredictTimeSeries (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +45,7 @@ PredictTimeSeries(<scalar column reference>, n-start, n-end, REPLACE_MODEL_CASES
   
  *n* no puede ser 0. La función devuelve un error si no realiza al menos una predicción.  
   
- *n-start, n-end*  
+ *inicio de n, n-end*  
  Especifica un intervalo de pasos de serie temporal.  
   
  *n-start* debe ser un entero y no puede ser 0.  

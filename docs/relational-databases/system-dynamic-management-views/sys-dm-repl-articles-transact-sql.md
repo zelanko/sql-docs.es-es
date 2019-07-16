@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 65bc88be1b9a6cdb9a69d41a526916ab3aa7ab2a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 07dc611371cbff373fb60036c8c16da6656a8de1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56031836"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088590"
 ---
 # <a name="sysdmreplarticles-transact-sql"></a>sys.dm_repl_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,15 +44,15 @@ ms.locfileid: "56031836"
 |**wszArtdesttable**|**nvarchar(514)**|Nombre del objeto publicado en el destino.|  
 |**wszArtdesttableowner**|**nvarchar(514)**|Propietario del objeto publicado en el destino.|  
 |**wszArtinscmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para inserciones.|  
-|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeIns**|**int**|Sintaxis de la llamada para el procedimiento almacenado para inserciones. Puede ser uno de estos valores.<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtdelcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para eliminaciones.|  
-|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeDel**|**int**|Sintaxis de la llamada para el procedimiento almacenado para eliminaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones.|  
-|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = CALL<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONOCIDO|  
+|**cmdTypeUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones. Puede ser uno de estos valores.<br /><br /> **0** = XCALL<br /><br /> **1** = LLAMADA<br /><br /> **2** = SQL<br /><br /> **3** = NINGUNO<br /><br /> **4** = MCALL<br /><br /> **5** = VCALL<br /><br /> **6** = SCALL<br /><br /> **7** = DESCONOCIDO|  
 |**wszArtpartialupdcmd**|**nvarchar(510)**|Comando o procedimiento almacenado usado para actualizaciones parciales.|  
 |**cmdTypePartialUpd**|**int**|Sintaxis de la llamada para el procedimiento almacenado para actualizaciones parciales. Puede ser uno de estos valores.<br /><br /> **2** = SQL|  
 |**numcol**|**int**|Número de columnas en la partición para un artículo filtrado verticalmente.|  
-|**artcmdtype**|**tinyint**|Tipo de comando que se está replicando actualmente. Puede ser uno de los siguientes valores.<br /><br /> **1** = INSERCIÓN<br /><br /> **2** = DELETE<br /><br /> **3** = UPDATE<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = ninguno<br /><br /> **6** = solo para uso interno<br /><br /> **7** = solo para uso interno<br /><br /> **8** = UPDATE parcial|  
+|**artcmdtype**|**tinyint**|Tipo de comando que se está replicando actualmente. Puede ser uno de los siguientes valores.<br /><br /> **1** = INSERCIÓN<br /><br /> **2** = DELETE<br /><br /> **3** = ACTUALIZAR<br /><br /> **4** = UPDATETEXT<br /><br /> **5** = ninguno<br /><br /> **6** = solo para uso interno<br /><br /> **7** = solo para uso interno<br /><br /> **8** = UPDATE parcial|  
 |**artgeninscmd**|**nvarchar(510)**|Plantilla del comando INSERT basada en las columnas incluidas en el artículo.|  
 |**artgendelcmd**|**nvarchar(510)**|Plantilla del comando DELETE, que puede incluir la clave principal o las columnas incluidas en el artículo, dependiendo de la sintaxis de llamada usada.|  
 |**artgenupdcmd**|**nvarchar(510)**|Plantilla del comando UPDATE, que puede incluir la clave principal, las columnas actualizadas o una lista completa de columnas, dependiendo de la sintaxis de llamada usada.|  

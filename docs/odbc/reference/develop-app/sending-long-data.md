@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea989084-a8e6-4737-892e-9ec99dd49caf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cc7a140d7de8548f02fde6ab309823bbe1c9c656
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acb4ff1637c1530527af88affaf437334596016b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465931"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094342"
 ---
 # <a name="sending-long-data"></a>Enviar datos de tipo Long
 Definen DBMS *datos long* como cualquier carácter o datos binarios a través de un determinado tamaño, por ejemplo, 254 caracteres. No sería posible almacenar un elemento de datos largos en memoria, como cuando el elemento representa un mapa de bits o un documento de texto largo. Porque no se puede almacenar estos datos en un único búfer, el origen de datos lo envía al controlador en partes con **SQLPutData** cuando se ejecuta la instrucción. Los parámetros para el que se envían los datos en tiempo de ejecución se conocen como *parámetros de datos en ejecución*.  

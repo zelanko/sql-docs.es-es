@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 1b0b1d0c-5f7b-470b-bd52-8bfa922d7889
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4acf3466615548e9c88b7743c48e39d3915f9c8d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5533e521ba28c0190a5be57ed7637632213d7447
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47602694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018081"
 ---
 # <a name="syssystypes-transact-sql"></a>sys.systypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,25 +38,25 @@ ms.locfileid: "47602694"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre del tipo de datos.|  
+|**name**|**sysname**|Nombre del tipo de datos.|  
 |**alguno**|**tinyint**|Tipo de almacenamiento físico.|  
 |**status**|**tinyint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**xusertype**|**smallint**|Tipo extendido de usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
-|**Longitud**|**smallint**|Longitud física del tipo de datos.|  
+|**length**|**smallint**|Longitud física del tipo de datos.|  
 |**xprec**|**tinyint**|Precisión interna que usa el servidor. No debe utilizarse en consultas.|  
 |**XScale**|**tinyint**|Escala interna que usa el servidor. No debe utilizarse en consultas.|  
 |**predeterminados**|**int**|Id. del procedimiento almacenado que contiene comprobaciones de integridad para este tipo de datos.|  
-|**Dominio**|**int**|Id. del procedimiento almacenado que contiene comprobaciones de integridad para este tipo de datos.|  
+|**domain**|**int**|Id. del procedimiento almacenado que contiene comprobaciones de integridad para este tipo de datos.|  
 |**UID**|**smallint**|Id. de esquema del propietario del tipo.<br /><br /> Para bases de datos actualizadas a partir de una versión anterior de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], el identificador de esquema es igual que el identificador de usuario del propietario.<br /><br /> **\*\* Importante \* \***  si utiliza alguna de las siguientes acciones [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instrucciones DDL, debe usar el [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) en lugar de la vista de catálogo **sys.systypes**.<br /><br /> ALTER AUTHORIZATION ON TYPE<br /><br /> CREATE TYPE<br /><br /> Produce un desbordamiento o devuelve NULL si el número de usuarios y roles es superior a 32.767.|  
-|**Reservado**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**reserved**|**smallint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**collationid**|**int**|Si se basa en caracteres, **collationid** es el identificador de la intercalación de la base de datos actual; en caso contrario, es NULL.|  
 |**usertype**|**smallint**|Identificador de tipo de usuario. Produce un desbordamiento o devuelve NULL si el número de tipos de datos es superior a 32.767.|  
 |**variable**|**bit**|Tipo de datos de longitud variable.<br /><br /> 1 = True<br /><br /> 0 = False|  
 |**AllowNulls**|**bit**|Indica la nulabilidad predeterminada para este tipo de datos. Este valor predeterminado se reemplaza si la nulabilidad se especifica mediante el uso de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) o [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).|  
-|**Tipo**|**tinyint**|Tipo de datos de almacenamiento físico.|  
-|**printfmt**|**varchar (255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**type**|**tinyint**|Tipo de datos de almacenamiento físico.|  
+|**printfmt**|**varchar(255)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**Prec**|**smallint**|Nivel de precisión de este tipo de datos.<br /><br /> -1 = **xml** o tipos de valor grande.|  
-|**Escala**|**tinyint**|Escala del tipo de datos, basada en la precisión.<br /><br /> NULL = El tipo de datos no es numérico.|  
+|**scale**|**tinyint**|Escala del tipo de datos, basada en la precisión.<br /><br /> NULL = El tipo de datos no es numérico.|  
 |**intercalación**|**sysname**|Si se basa en caracteres, **intercalación** es la intercalación de la base de datos actual; en caso contrario, es NULL.|  
   
 ## <a name="see-also"></a>Vea también  

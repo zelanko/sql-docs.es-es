@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: a5029bcb-7d5d-44a0-ae28-0efd10d2a714
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a03a18bb5231ebf40c91a6cc94b0bb78aa536c16
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45c4f7b9d3c997db98e3a570136b5bf24b4d8e58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298781"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989612"
 ---
 # <a name="global-settings-editor-db2tosql"></a>Configuración global (Editor) (DB2ToSQL)
 Utilice la página del Editor de la **configuración Global** cuadro de diálogo para especificar la configuración de ventanas del editor de código.  

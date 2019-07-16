@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943493"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ sp_helpfile [ [ @filename= ] 'name' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de archivo lógico.|  
+|**name**|**sysname**|Nombre de archivo lógico.|  
 |**fileid**|**smallint**|Identificador numérico del archivo. No se devuelve si *nombre* se especifica *.*|  
 |**filename**|**nchar(260)**|Nombre de archivo físico.|  
 |**filegroup**|**sysname**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es un archivo de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(15)**|Tamaño del archivo en kilobytes.|  
 |**maxsize**|**nvarchar(15)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**growth**|**nvarchar(15)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo cada vez que se necesita más ese espacio.<br /><br /> 0 = El archivo tiene un tamaño fijo y no aumenta.|  
-|**usage**|**varchar(9)**|Para el archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'**.|  
+|**usage**|**varchar(9)**|Para el archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'** .|  
   
 ## <a name="permissions"></a>Permisos  
  Debe pertenecer al rol **public** .  

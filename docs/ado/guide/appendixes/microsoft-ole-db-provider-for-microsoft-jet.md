@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 71df952769ae509ba25b256ecdc9ddef3a54ebe5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69d88aebe25f6cfa5490cce736c05780b87eee6e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702850"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926649"
 ---
 # <a name="microsoft-ole-db-provider-for-microsoft-jet-overview"></a>Proveedor Microsoft OLE DB para Microsoft Jet Introducción
 El proveedor OLE DB para Microsoft Jet permite ADO tener acceso a bases de datos Microsoft Jet.
@@ -64,7 +63,7 @@ Microsoft.Jet.OLEDB.4.0
 |Control de Jet OLEDB: Connection (DBPROP_JETOLEDB_CONNECTIONCONTROL)|Indica si los usuarios pueden conectarse a la base de datos.|
 |Jet OLEDB: crear base de datos del sistema (DBPROP_JETOLEDB_CREATESYSTEMDATABASE)|Indica si se debe crear una base de datos del sistema al crear un nuevo origen de datos.|
 |Modo de bloqueo de Jet OLEDB: Database (DBPROP_JETOLEDB_DATABASELOCKMODE)|Indica el modo de bloqueo para esta base de datos. El primer usuario para abrir la base de datos determina el modo utilizado mientras la base de datos está abierto.|
-|Jet OLEDB:Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica la contraseña de la base de datos.|
+|Jet OLEDB: Database Password (DBPROP_JETOLEDB_DATABASEPASSWORD)|Indica la contraseña de la base de datos.|
 |Jet OLEDB: no copiar la configuración regional en Compact (DBPROP_JETOLEDB_COMPACT_DONTCOPYLOCALE)|Indica si Jet debe copiar información de configuración regional cuando se compacta una base de datos.|
 |Jet OLEDB: cifrar la base de datos (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indica si se debe cifrar una base de datos compactado. Si no se establece esta propiedad, se cifrará la base de datos compactado si también se cifró la base de datos original.|
 |Tipo de Jet OLEDB:Engine (DBPROP_JETOLEDB_ENGINE)|Indica que el motor de almacenamiento usado para tener acceso al almacén de datos actual.|
@@ -74,7 +73,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB: Ops Global masiva parcial (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indica la contraseña utilizada para abrir la base de datos.|
 |Jet OLEDB: sincronización Commit implícito (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indica si los cambios realizados en las transacciones implícitas internas se escriben en modo sincrónico o asincrónico.|
 |Retraso de Jet OLEDB:Lock (DBPROP_JETOLEDB_LOCKDELAY)|Indica el número de milisegundos que transcurrirán antes de intentar adquirir un bloqueo después de un error anterior.|
-|Jet OLEDB:Lock Retry (DBPROP_JETOLEDB_LOCKRETRY)|Indica cuántas veces se repite un intento de acceder a una página bloqueada.|
+|Reintento de Jet OLEDB:Lock (DBPROP_JETOLEDB_LOCKRETRY)|Indica cuántas veces se repite un intento de acceder a una página bloqueada.|
 |Tamaño del búfer Jet OLEDB:Max (DBPROP_JETOLEDB_MAXBUFFERSIZE)|Indica la cantidad máxima de memoria, en kilobytes, Jet puede usar antes de empezar a vaciar los cambios en el disco.|
 |Jet OLEDB:Max bloqueos por archivo (DBPROP_JETOLEDB_MAXLOCKSPERFILE)|Indica el número máximo de bloqueos de que Jet puede colocar en una base de datos. El valor predeterminado es 9.500.|
 |Jet OLEDB: nueva contraseña de base de datos (DBPROP_JETOLEDB_NEWDATABASEPASSWORD)|Indica la nueva contraseña que se establezca para esta base de datos. La contraseña antigua se almacena en **Jet OLEDB: Database Password**.|

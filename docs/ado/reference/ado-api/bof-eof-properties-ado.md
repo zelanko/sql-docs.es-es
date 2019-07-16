@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920385"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF, EOF (propiedades) (ADO)
 -   **BOF** indica que la posición actual del registro es antes del primer registro en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto.  
@@ -64,7 +63,7 @@ ms.locfileid: "66696287"
 |**MoveFirst**, **MoveLast**|Establecido en **True**|Establecido en **True**|  
 |**Mover** 0|Sin cambios|Sin cambios|  
 |**MovePrevious**, **mover** < 0|Establecido en **True**|Sin cambios|  
-|**MoveNext**, **Move** > 0|Sin cambios|Establecido en **True**|  
+|**MoveNext**, **mover** > 0|Sin cambios|Establecido en **True**|  
   
 ## <a name="applies-to"></a>Se aplica a  
  [Objeto de conjunto de registros (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  

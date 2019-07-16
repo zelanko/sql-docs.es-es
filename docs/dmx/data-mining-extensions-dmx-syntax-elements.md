@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: a745449428a0a348dc60a5b47304612bb889556c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 17d24c6924b03e4ed0415e73bfefc0d372ca45bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37989927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070852"
 ---
 # <a name="data-mining-extensions-dmx-syntax-elements"></a>Elementos de sintaxis de Extensiones de minería de datos (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "37989927"
  [Las expresiones &#40;DMX&#41;](../dmx/expressions-dmx.md)  
  Unidades de sintaxis que [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] puede resolver como valores de tabla, objetos o valores únicos o escalares.  
   
- [Operadores &#40;DMX&#41;](../dmx/operators-dmx.md)  
+ [Operators &#40;DMX&#41;](../dmx/operators-dmx.md)  
  Se usan con una o varias expresiones DMX para formar expresiones DMX más complejas.  
   
  [Funciones &#40;DMX&#41;](../dmx/functions-dmx.md)  
@@ -52,17 +51,17 @@ ms.locfileid: "37989927"
  [Uso &#40;DMX&#41;](../dmx/usage-dmx.md)  
  Define cómo usa un modelo de minería de datos las columnas que contiene.  
   
- [Las marcas de modelado &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
+ [Marcas de modelado &#40;DMX&#41;](../dmx/modeling-flags-dmx.md)  
  Define sugerencias adicionales que puede usar el algoritmo para procesar un modelo de minería de datos.  
   
 ## <a name="see-also"></a>Vea también  
- [Extensiones de minería de datos &#40;DMX&#41; referencia](../dmx/data-mining-extensions-dmx-reference.md)   
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../dmx/data-mining-extensions-dmx-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de funciones](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de operadores](../dmx/data-mining-extensions-dmx-operator-reference.md)   
  [Extensiones de minería de datos &#40;DMX&#41; referencia de instrucciones](../dmx/data-mining-extensions-dmx-statements.md)   
  [Extensiones de minería de datos &#40;DMX&#41; convenciones de sintaxis](../dmx/data-mining-extensions-dmx-syntax-conventions.md)   
  [Funciones de predicción generales &#40;DMX&#41;](../dmx/general-prediction-functions-dmx.md)   
- [Estructura y el uso de consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
+ [Estructura y uso de las consultas de predicción DMX](../dmx/structure-and-usage-of-dmx-prediction-queries.md)   
  [Descripción de la instrucción Select de DMX](../dmx/understanding-the-dmx-select-statement.md)  
   
   

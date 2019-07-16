@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 93384c8152109b01720ae7e861731638316d4966
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6210cfe67b4c360f14fc3e68929a5ac4f5f5d570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67141434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962824"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>Actualizar componentes de machine learning (R y Python) en instancias de SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,8 +56,8 @@ Microsoft R Open (MRO) a través de R | R 3.2.2     | R 3.3.2   |R 3.3.3   | R 3
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) | 8.0.3  | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
 [modelos previamente entrenados](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)| n.a. | 9.0.1 |  9.1 |  9.2.1 |  9.3 |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1,0 |  1,0 |  1,0 |  1,0 |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1,0 |  1,0 |  1,0 |  1,0 |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a. | 1.0 |  1.0 |  1.0 |  1.0 |
 
 
 [**SQL Server 2017 Machine Learning Services**](../install/sql-machine-learning-services-windows-install.md)
@@ -68,8 +67,8 @@ Componente |Versión inicial | MLS 9.3 | | | |
 Microsoft R Open (MRO) a través de R | R 3.3.3 | R 3.4.3 | | | |
 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) |   9.2 |  9.3 | | | |
 [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
-[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1,0 |  1,0 | | | |
-[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1,0 |  1,0 | | | |
+[sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils)| 1.0 |  1.0 | | | |
+[olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | 1.0 |  1.0 | | | |
 Anaconda 4.2 sobre Python 3.5  | 4.2/3.5.2 | 4.2/3.5.2 | | | |
 [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2  | 9.3| | | |
  [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2  | 9.3| | | |
@@ -243,7 +242,7 @@ Tiene dos opciones para deshacer el enlace: vuelva a ejecutar el programa de ins
 2. El programa de instalación identifica las instancias locales que son candidatos para deshacer el enlace.
 3. Desactive la casilla de verificación situada junto a la instancia que desea volver a la configuración original.
 4. Acepte el contrato de licencia. Debe indicar su aceptación de términos de licencia incluso cuando se instala.
-5. Haga clic en **Finalizar**. El proceso tarda unos minutos.
+5. Haga clic en **Finalizar** El proceso tarda unos minutos.
 
 #### <a name="bkmk_cmdunbind"></a> Desenlazar mediante la línea de comandos
 
@@ -277,7 +276,7 @@ Podría haber agregado otros paquetes de código abierto o de terceros a la bibl
 
 ### <a name="parameters"></a>Parámetros
 
-|Name|Descripción|
+|NOMBRE|Descripción|
 |------|------|
 |*list*| Muestra una lista de todos los identificadores de instancia de SQL Database en el equipo actual.|
 |*bind*| Actualiza la instancia de SQL Database especificada a la versión más reciente de R Server y garantiza que la instancia obtenga automáticamente las actualizaciones futuras de R Server.|
@@ -289,7 +288,7 @@ Podría haber agregado otros paquetes de código abierto o de terceros a la bibl
 
 Instalador de SAM y SqlBindR devuelven los siguientes códigos de error y mensajes.
 
-|Código de error  | de mensaje           | Detalles               |
+|Código de error  | Message           | Detalles               |
 |------------|-------------------|-----------------------|
 |Enlazar el error 0 | OK (correcto) | Enlace que se pasa sin errores. |
 |Enlazar error 1 | Argumentos no válidos | Error de sintaxis. |

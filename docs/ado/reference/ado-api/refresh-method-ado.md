@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0fee14a397104f8320fc01ce29f8364384151922
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a676bf5eb3d8d98f1b2eb9367aa8ad56f0da209d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931250"
 ---
 # <a name="refresh-method-ado"></a>Actualizar (método, ADO)
 Actualiza los objetos de una colección para reflejar los objetos disponibles y específicos del proveedor.  
@@ -48,7 +47,7 @@ collection.Refresh
 > [!NOTE]
 >  Si usas el **actualizar** método para obtener información de parámetros desde el proveedor y devuelve uno o varios tipos de datos de longitud variable [parámetro](../../../ado/reference/ado-api/parameter-object.md) objetos, ADO puede asignar memoria para los parámetros de acuerdo en su tamaño máximo potencial, lo que provocará un error durante la ejecución. Debe establecer explícitamente el [tamaño](../../../ado/reference/ado-api/size-property-ado-parameter.md) propiedad de estos parámetros antes de llamar a la [Execute](../../../ado/reference/ado-api/execute-method-ado-command.md) método para evitar errores.  
   
-### <a name="fields"></a>Campos  
+### <a name="fields"></a>Fields  
  Mediante el **actualizar** método en el [campos](../../../ado/reference/ado-api/fields-collection-ado.md) colección no tiene ningún efecto visible. Para recuperar los cambios de la estructura subyacente de la base de datos, debe usar el [Requery](../../../ado/reference/ado-api/requery-method.md) método o, si la [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objeto no admite marcadores, el [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)método.  
   
 ### <a name="properties"></a>Propiedades  

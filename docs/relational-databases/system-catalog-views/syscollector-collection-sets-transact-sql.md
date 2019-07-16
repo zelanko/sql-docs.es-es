@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: db0def92-f25b-45da-9709-eab972b33800
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc027ad80d4bbe1142a9e17add52f8a42d7d404
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a001a6a2da2532ac6d0e2a00079c8bd7c7036b66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760198"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68060383"
 ---
 # <a name="syscollectorcollectionsets-transact-sql"></a>syscollector_collection_sets (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62760198"
 |-----------------|---------------|-----------------|  
 |collection_set_id|**int**|Identificador local del conjunto de recopilación. No admite valores NULL.|  
 |collection_set_uid|**uniqueidentifier**|Identificador único global del conjunto de recopilación. No admite valores NULL.|  
-|NAME|**nvarchar(4000)**|Nombre del conjunto de recopilación. Acepta valores NULL.|  
+|name|**nvarchar(4000)**|Nombre del conjunto de recopilación. Acepta valores NULL.|  
 |target|**nvarchar(max)**|Identifica el destino del conjunto de recopilación. Acepta valores NULL.|  
 |is_system|**bit**|Se activa (1) o desactiva (0) para indicar si el conjunto de recopilación se incluyó con el recopilador de datos o si se agregó más tarde por medio de dc_admin. Este podría ser un conjunto de recopilación desarrollado internamente o por terceros. No admite valores NULL.|  
 |is_running|**bit**|Indica si el conjunto de recopilación se está ejecutando o no. No admite valores NULL.|  

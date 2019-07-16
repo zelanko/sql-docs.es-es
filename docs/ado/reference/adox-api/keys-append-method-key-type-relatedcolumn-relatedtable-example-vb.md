@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bb7a08ab3159fa63024c7bc761c8ccec2563a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965861"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Ejemplo de propiedades Type, RelatedColumn, RelatedTable y UpdateRule de clave, método Append de claves (VB)
 El código siguiente muestra cómo crear una nueva relación de clave externa entre dos tablas existentes denominado **clientes** y **pedidos**.  

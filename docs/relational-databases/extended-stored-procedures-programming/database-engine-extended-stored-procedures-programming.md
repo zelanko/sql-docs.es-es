@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 561305cd-c803-48af-9eec-2c19f4d311ce
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a2f25356cfc035fa2185fabe4dae4d9a6d3443f7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 541f24693598d20925dd37d4970c6d9916945793
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47688573"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032016"
 ---
 # <a name="database-engine-extended-stored-procedures---programming"></a>Programación de procedimientos almacenados extendidos de motor de base de datos +
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47688573"
 > [!NOTE]  
 >  Si tiene aplicaciones de puerta de enlace existentes, no puede utilizar opends60.dll que se distribuye con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para ejecutar las aplicaciones. Ya no se admiten las aplicaciones de puerta de enlace.  
   
-## <a name="extended-stored-procedures-vs-clr-integration"></a>Procedimientos almacenados extendidos frente a Integración CLR  
+## <a name="extended-stored-procedures-vs-clr-integration"></a>Frente a procedimientos almacenados extendidos Integración CLR  
  En versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], los procedimientos almacenados extendidos (XP) proporcionaban el único mecanismo disponible para que los programadores de aplicaciones de base de datos escribieran la lógica del servidor, que era difícil de expresar o imposible de escribir en [!INCLUDE[tsql](../../includes/tsql-md.md)]. La integración CLR es una alternativa más consolidada para escribir tales procedimientos almacenados. Además, con la integración CLR, la lógica que se solía escribir en forma de procedimientos almacenados generalmente se expresa mejor como funciones con valores de tabla, que permiten que los resultados generados por la función se consulten en las instrucciones SELECT incrustándolos en la cláusula FROM.  
   
 ## <a name="see-also"></a>Vea también  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 538c93cf-c5bb-43d5-b758-186d9fb00c19
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: a446fd4ce116ee19aa8b38d1ae6d8213e35c16e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6918dac33ce0e69116f713cb8906b2774d00575
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084549"
 ---
 # <a name="project-settings-conversion-db2tosql"></a>Configuración del proyecto (conversión) (DB2ToSQL)
 La página de conversión de la **configuración del proyecto** cuadro de diálogo contiene la configuración que permiten personalizar cómo SSMA convierte la sintaxis de DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sintaxis.  
@@ -35,7 +34,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
   
 **Modo predeterminado/optimista:** Sin  
   
-**Modo completo:** No  
+**Modo completo:** Sin  
   
 ## <a name="miscellaneous-options"></a>Otras opciones  
   
@@ -112,7 +111,7 @@ Al seleccionar un modo de conversión en el **modo** cuadro, SSMA aplica la sigu
   
 **Modo completo o de forma predeterminada:** Sí  
   
-**Modo optimista:** Sin  
+**Modo optimista:** No  
   
 ### <a name="convert-forall-statement-to-while-statement"></a>Convertir instrucción FORALL en WHILE instrucción  
 Define cómo tratará SSMA FORALL bucles en elementos de la colección de PL/SQL.  

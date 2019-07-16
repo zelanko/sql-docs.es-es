@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794502"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059002"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>Capture un seguimiento en el Asistente de experimentación de base de datos
 
@@ -39,8 +38,8 @@ Almacenamiento en caché de consulta en SQL Server puede afectar a los resultado
     - **Nombre de instancia de SQL Server**: Escriba un nombre para el equipo que ejecuta SQL Server en el que desea capturar un seguimiento del servidor.
     - **Nombre de la base de datos**: Escriba un nombre para una base de datos que se va a iniciar un seguimiento de la base de datos. Si no se especifica una base de datos, se captura la traza en todas las bases de datos en el servidor.
     - **Nombre de archivo de seguimiento**: Escriba un nombre para el archivo de seguimiento para la captura.
-    - **Tamaño máximo de archivo (MB)**: Seleccione el tamaño de sustitución incremental de archivos. Se crea un nuevo archivo según sea necesario en el tamaño de archivo que seleccione. El tamaño recomendado de sustitución incremental es de 200 MB.
-    - **Duración (en minutos)**: Seleccione el período de tiempo (en minutos) que desee que se ejecute la captura de seguimiento.
+    - **Tamaño máximo de archivo (MB)** : Seleccione el tamaño de sustitución incremental de archivos. Se crea un nuevo archivo según sea necesario en el tamaño de archivo que seleccione. El tamaño recomendado de sustitución incremental es de 200 MB.
+    - **Duración (en minutos)** : Seleccione el período de tiempo (en minutos) que desee que se ejecute la captura de seguimiento.
     - **Ruta de acceso para almacenar el archivo de salida de seguimiento**: Seleccione la ruta de acceso de destino para el archivo de seguimiento. 
 
     > [!NOTE]
@@ -75,9 +74,9 @@ En la tabla siguiente se proporciona la lista de los datos de columna correspond
 |Nombre del evento|Datos de texto (1)|Datos binarios (2)|Id. de base de datos (3)|Nombre de host (8)|Nombre de la aplicación (10)|Nombre de inicio de sesión (11)|SPID (12)|Hora de inicio (14)|Hora de finalización (15)|Nombre de base de datos (35)|Secuencia de eventos (51)|IsSystem (60)|  
 |---|---|---|---|---|---|---|---|---|---|---|---|---|  
 |**RPC: completado (10)**||*|*|*|*|*|*|*|*|*|*|*|  
-|**RPC:Starting (11)**||*|*|*|*|*|*|*||*|*|*|  
+|**RPC: iniciar (11)**||*|*|*|*|*|*|*||*|*|*|  
 |**RPC Output Parameter (100)**|*||*|*|*|*|*|*||*|*|*|  
-|**SQL:BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
+|**SQL: BatchCompleted (12)**|*||*|*|*|*|*|*|*|*|*|*|  
 |**SQL:BatchStarting (13)**|*||*|*|*|*|*|*||*|*|*|  
 |**Audit Login (14)**|*|*|*|*|*|*|*|*||*|*|*|  
 |**Audit Logout (15)**|*||*|*|*|*|*|*|*|*|*|*|  

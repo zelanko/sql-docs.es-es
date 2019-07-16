@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 77b5d1d6-7eb7-428d-bf75-a5c5a325d25c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7a8eefe5bc6678462099afda8381d6b16bd076dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 823ea02a2acb6a28f56c58bb40fe684a2589bd24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077183"
 ---
 # <a name="allocating-the-environment-handle"></a>Asignar el identificador de entorno
 La primera tarea para cualquier aplicación ODBC es cargar el Administrador de controladores cómo hacerlo depende del sistema operativo. Por ejemplo, en un equipo que ejecuta Microsoft® Windows NT® Server o Windows 2000 Server, Windows NT Workstation o Windows 2000 Professional o Microsoft Windows® 95/98, la aplicación o se vincula a la biblioteca del Administrador de controladores o llamadas  **LoadLibrary** para cargar la DLL del Administrador de controladores.  

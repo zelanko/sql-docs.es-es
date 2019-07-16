@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f1dc43ee81f1be386d0518625d36464f029dc0f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076842"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>Declarar la aplicación&#39;s versión de ODBC
 Antes de que una aplicación asigna una conexión, se debe establecer el atributo de entorno SQL_ATTR_ODBC_VERSION. Este atributo indica que la aplicación sigue ODBC *2.x* u ODBC *3.x* especificación al usar los siguientes elementos:  

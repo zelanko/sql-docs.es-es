@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 7db0e6a83997a3be7b204f780f3c0a7ad856b0d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53534d9d269803a4bce0902c1f22349dfe6c57e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058893"
 ---
 # <a name="replay-a-trace-in-database-experimentation-assistant"></a>Reproducir un seguimiento en el Asistente de experimentación de base de datos
 
@@ -52,7 +51,7 @@ En DEA, seleccione el icono de menú. En el menú expandido, seleccione **reprod
 1.  **Ruta de instalación de SQL Server**: Escriba la ruta de acceso donde está instalado SQL Server. Por ejemplo, C:\\archivos de programa (x86)\\Microsoft SQL Server\\120.
 1.  **Nombre del equipo controlador**: Escriba un nombre para la máquina que se ha establecido como el controlador. Esta máquina se está ejecutando el servicio de Windows denominado controlador de SQL Server Distributed Replay. El controlador de Distributed Replay orquestra las acciones de los clientes de Distributed Replay. Solo puede haber una instancia de controlador en cada entorno de Distributed Replay.
 1.  **Los nombres de equipo cliente**: Escriba un nombre para cada equipo cliente, separado por comas. Ejemplo: client1, client2. Puede tener hasta cinco de los controladores de cliente. Los clientes son uno o varios equipos, ya sea físicos o virtuales, que ejecutan el servicio de Windows denominado a cliente de SQL Server Distributed Replay. Los clientes de Distributed Replay colaboran para simular cargas de trabajo en una instancia de SQL Server. Puede haber uno o más clientes en cada entorno de Distributed Replay.
-1.  Seleccione **Siguiente**.
+1.  Seleccione **Next** (Siguiente).
 
 ### <a name="select-a-trace"></a>Seleccione un seguimiento
 
@@ -60,7 +59,7 @@ En DEA, seleccione el icono de menú. En el menú expandido, seleccione **reprod
 1.  **Ruta de acceso para almacenar la reproducción de preprocesamiento salida**:  
     \- Si aún no tiene el archivo IRF, escriba la ruta de acceso a la ubicación donde desea almacenar el archivo IRF y genera otro preprocesamiento.  
     \- Si ya tiene el archivo IRF, escriba la ruta de acceso a los archivos IRF.
-1. Seleccione **Siguiente**.
+1. Seleccione **Next** (Siguiente).
 
 ### <a name="replay-a-trace"></a>Reproducir un seguimiento
 
@@ -68,7 +67,7 @@ En DEA, seleccione el icono de menú. En el menú expandido, seleccione **reprod
 1.  **Tamaño máximo de archivo (MB)** : Escriba un valor de tamaño de sustitución incremental de archivo de seguimiento. El valor predeterminado es 200 MB. Puede especificar un valor personalizado.
 1.  **Ruta de acceso para almacenar el resultado del seguimiento de reproducción**: Escriba la ruta de acceso del archivo de salida. trc.
 1.  **Nombre de instancia de SQL Server**:  Escriba el nombre de la instancia de SQL Server en el que se va a reproducir seguimientos.
-1.  Seleccione **Inicio**.
+1.  Seleccione **Iniciar**.
 
 Si la información que escribió es válida, se inicia el proceso de Distributed Replay. En caso contrario, se resaltan el boses de texto que tiene información incorrecta con color rojo. Asegúrese de que los valores especificados son correctos y, a continuación, seleccione **iniciar**.
 

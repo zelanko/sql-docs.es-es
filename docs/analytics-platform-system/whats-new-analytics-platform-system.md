@@ -2,19 +2,18 @@
 title: Novedades de Analytics Platform System - un almacén de datos de escalabilidad horizontal
 description: Vea cuáles son las novedades de Microsoft Analytics Platform System, una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b56791e9fd59aef57c2d107e21eb76896ebb4910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78b2b0e7fd05bbfa430c7a8939378091850537ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959802"
 ---
 # <a name="whats-new-in-analytics-platform-system-a-scale-out-mpp-data-warehouse"></a>Novedades de Analytics Platform System, un almacén de datos MPP de escalabilidad horizontal
 Vea cuáles son las novedades en las últimas actualizaciones de dispositivo de Microsoft Analytics Platform System (APS). APS es una aplicación de escalabilidad horizontal en el entorno local que hospeda el almacenamiento de datos paralelos de MPP de SQL Server. 
@@ -112,7 +111,7 @@ APS admite un subconjunto de T-SQL [comandos DBCC](https://docs.microsoft.com/sq
 ### <a name="replaces-some-metadata-calls-with-catalog-objects"></a>Reemplaza algunas llamadas de metadatos con los objetos de catálogo
 Uso de los objetos de catálogo para las llamadas de metadatos en lugar de usar SMO ha mostrado mejora del rendimiento en puntos de acceso. A partir de CU7.1, ahora algunas de estas llamadas metadatos utilizan los objetos de catálogo predeterminada. Este comportamiento puede desactivarse por [modificador de característica](appliance-feature-switch.md) si los clientes que usan las consultas de metadatos surgen algún problema.
 
-### <a name="bug-fixes"></a>Correcciones de errores
+### <a name="bug-fixes"></a>Corrección de errores
 Hemos actualizado a SQL Server 2016 SP2 CU2 con CU7.1 APS. La actualización corrige algunos problemas que se describen a continuación.
 
 | Título | Descripción |
@@ -161,13 +160,13 @@ APS AU6 es compatible con estas mejoras de compatibilidad de Transact-SQL.  Esto
 
 - [Intercalaciones de SQL de nivel de columna][] ahora son compatibles, además de las intercalaciones de Windows.
 - [Índices no clúster en índices de almacén de columnas agrupado][] mejorar el rendimiento de las consultas que buscan valores específicos en el índice de almacén de columnas agrupado. 
-- [SELECT...INTO][] 
+- [SELECCIONE... EN][] 
 - [sp_spaceused()][] muestra el espacio en disco utilizado o reservadas en una tabla o una base de datos.
 - [Tablas anchas][] compatibilidad es igual que SQL Server 2016. El límite anterior de 32 KB para el tamaño de fila ya no existe. 
 
 **Tipos de datos**
 
-- [Varchar (max)][], [NVARCHAR(MAX)][] y [VARBINARY(MAX)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos utilizan [bcp (utilidad)][]. PolyBase y dwloader no admite actualmente estos tipos de datos. 
+- [Varchar (max)][], [nvarchar (max)][] y [varbinary (max)][]. Estos tipos de datos LOB tienen un tamaño máximo de 2 GB. Para cargar estos objetos utilizan [bcp (utilidad)][]. PolyBase y dwloader no admite actualmente estos tipos de datos. 
 - [SYSNAME][]
 - [UNIQUEIDENTIFIER][]
 - [NUMERIC][] y tipos de datos DECIMAL.
@@ -230,10 +229,10 @@ The proper formats have at least two big advantages.  One big advantage is that 
 
 [Índices no clúster en índices de almacén de columnas agrupado]:/sql/t-sql/statements/create-index-transact-sql
 [VARCHAR (MAX)]:/sql/t-sql/data-types/char-and-varchar-transact-sql
-[NVARCHAR(MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
-[VARBINARY(MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
+[NVARCHAR (MAX)]:/sql/t-sql/data-types/nchar-and-nvarchar-transact-sql
+[VARBINARY (MAX)]:/sql/t-sql/data-types/binary-and-varbinary-transact-sql
 [SYSNAME]:/sql/relational-databases/system-catalog-views/sys-types-transact-sql
-[SELECT...INTO]:/sql/t-sql/queries/select-into-clause-transact-sql
+[SELECCIONE... EN]:/sql/t-sql/queries/select-into-clause-transact-sql
 [sp_spaceused()]:/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql
 [Tablas anchas]:/sql/sql-server/maximum-capacity-specifications-for-sql-server
 [BULK INSERT]:/sql/t-sql/statements/bulk-insert-transact-sql

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 86d37637-3a25-455d-9c82-a0d7bff8d70d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f5a8237e32479bed033b8b9a8003726556a3b25
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f91dca1ac20173f9c10b4a52adf292e7abc45d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126338"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083382"
 ---
 # <a name="column-wise-binding"></a>El enlace
 Cuando se usa el enlace, una aplicación enlaza las matrices de tres, uno o dos o en algunos casos para cada columna para el que se va a devolver datos. La primera matriz contiene los valores de datos, y la segunda matriz contiene los búferes de longitud/indicador. Valores de longitud y los indicadores pueden almacenarse en búferes independientes estableciendo los campos de descriptor SQL_DESC_INDICATOR_PTR y SQL_DESC_OCTET_LENGTH_PTR en valores diferentes; Si esto sucede, se enlaza una tercera matriz. Cada matriz contiene tantos elementos como filas en el conjunto de filas.  

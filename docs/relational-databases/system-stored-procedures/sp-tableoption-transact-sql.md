@@ -17,22 +17,21 @@ helpviewer_keywords:
 ms.assetid: 0a57462c-1057-4c7d-bce3-852cc898341d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4d2b4b47e6aa0426d09397844b291ee3636226fc
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15c3c9716adefbb95d24c9528dce8607678998c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47616003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096060"
 ---
 # <a name="sptableoption-transact-sql"></a>sp_tableoption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Establece los valores de las opciones de las tablas definidas por el usuario. sp_tableoption se puede usar para controlar el comportamiento consecutivo de las tablas con **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml**, **texto**, **ntext**, **imagen**, o las columnas de tipo definido por el usuario grandes.  
+  Establece los valores de las opciones de las tablas definidas por el usuario. sp_tableoption se puede usar para controlar el comportamiento consecutivo de las tablas con **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml**, **texto**, **ntext**, **imagen**, o las columnas de tipo definido por el usuario grandes.  
   
 > [!IMPORTANT]  
->  La característica text in row se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para almacenar datos de valores grandes, se recomienda que utilice el **varchar (max)**, **nvarchar (max)** y **varbinary (max)** tipos de datos.  
+>  La característica text in row se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para almacenar datos de valores grandes, se recomienda que utilice el **varchar (max)** , **nvarchar (max)** y **varbinary (max)** tipos de datos.  
   
 
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -48,21 +47,21 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
 ## <a name="arguments"></a>Argumentos  
  [ @TableNamePattern =] '*tabla*'  
- Es el nombre completo o no completo de una tabla de base de datos definida por un usuario. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. No se pueden establecer opciones para varias tablas al mismo tiempo. *tabla* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+ Es el nombre completo o no completo de una tabla de base de datos definida por un usuario. Si se proporciona un nombre de tabla completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el nombre de la base de datos actual. No se pueden establecer opciones para varias tablas al mismo tiempo. *tabla* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
   
  [ @OptionName =] '*option_name*'  
- Es un nombre de opción de tabla. *option_name* es **varchar (35)**, no tiene ningún valor predeterminado es null. *option_name* puede ser uno de los siguientes valores.  
+ Es un nombre de opción de tabla. *option_name* es **varchar (35)** , no tiene ningún valor predeterminado es null. *option_name* puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
 |table lock on bulk load|Cuando está deshabilitado (valor predeterminado), hace que los procesos de carga masiva en tablas definidas por el usuario obtengan bloqueos de fila. Cuando está habilitado, hace que los procesos de carga masiva en tablas definidas por el usuario obtengan un bloqueo de actualización masiva.|  
 |insert row lock|Ya no se admite.<br /><br /> Esta opción no afecta al comportamiento de bloqueo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y solo está incluida para mantener la compatibilidad con los scripts y procedimientos existentes.|  
 |text in row|Cuando es OFF o 0 (deshabilitado, valor predeterminado), no cambia el comportamiento actual, y no existe ningún BLOB almacenado en fila de manera consecutiva.<br /><br /> Cuando se especifica y @OptionValue es ON (habilitado) o un valor entero comprendido entre 24 y 7000, las nuevas **texto**, **ntext**, o **imagen** las cadenas se almacenan directamente en la fila de datos. Todos los BLOB existentes (objetos binarios grandes: **texto**, **ntext**, o **imagen** datos) se cambiarán a formato text in row cuando se actualiza el valor del BLOB. Para obtener más información, vea la sección Comentarios.|  
-|large value types out of row|1 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** y se almacenan las columnas de tipo grande definido por el usuario (UDT) en la tabla out of row, con un puntero de 16 bytes en la raíz.<br /><br /> 0 = **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, **xml** y valores UDT grandes se almacenan directamente en la fila de datos, hasta un límite de 8.000 bytes y siempre y cuando el valor pueda caber en el registro. Si el valor no cabe en el registro, se almacena un puntero en la fila de manera consecutiva y el resto se almacena de forma no consecutiva en el espacio de almacenamiento de LOB. El valor predeterminado es 0.<br /><br /> El tipo grande (UDT) definido por el usuario se aplica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Utilice la opción TEXTIMAGE_ON de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar una ubicación para el almacenamiento de tipos de datos de gran tamaño. |  
+|large value types out of row|1 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml** y se almacenan las columnas de tipo grande definido por el usuario (UDT) en la tabla out of row, con un puntero de 16 bytes en la raíz.<br /><br /> 0 = **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , **xml** y valores UDT grandes se almacenan directamente en la fila de datos, hasta un límite de 8.000 bytes y siempre y cuando el valor pueda caber en el registro. Si el valor no cabe en el registro, se almacena un puntero en la fila de manera consecutiva y el resto se almacena de forma no consecutiva en el espacio de almacenamiento de LOB. El valor predeterminado es 0.<br /><br /> El tipo grande (UDT) definido por el usuario se aplica a: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] con [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. <br /><br /> Utilice la opción TEXTIMAGE_ON de [CREATE TABLE](../../t-sql/statements/create-table-transact-sql.md) para especificar una ubicación para el almacenamiento de tipos de datos de gran tamaño. |  
 |Formato de almacenamiento vardecimal|**Se aplica a**: desde [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Cuando es TRUE, ON o 1, la tabla designada se habilita para el formato de almacenamiento vardecimal. Cuando es FALSE, OFF o 0, la tabla no se habilita para el formato de almacenamiento vardecimal. Formato de almacenamiento vardecimal puede habilitarse únicamente cuando la base de datos se ha habilitado para el formato de almacenamiento vardecimal mediante el uso de [sp_db_vardecimal_storage_format](../../relational-databases/system-stored-procedures/sp-db-vardecimal-storage-format-transact-sql.md). En [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] y versiones posteriores, **vardecimal** el formato de almacenamiento está en desuso. En su lugar, use la compresión de fila. Para obtener más información, consulte [Data Compression](../../relational-databases/data-compression/data-compression.md). El valor predeterminado es 0.|  
   
  [ @OptionValue =] '*valor*'  
- Es si el *option_name* está habilitado (TRUE, ON o 1) o deshabilitado (FALSE, OFF o 0). *valor* es **varchar (12)**, no tiene ningún valor predeterminado. *valor* distingue mayúsculas de minúsculas.  
+ Es si el *option_name* está habilitado (TRUE, ON o 1) o deshabilitado (FALSE, OFF o 0). *valor* es **varchar (12)** , no tiene ningún valor predeterminado. *valor* distingue mayúsculas de minúsculas.  
   
  Para la opción text in row, los valores válidos son 0, ON, OFF o un entero comprendido entre 24 y 7000. Cuando *valor* es ON, el límite predeterminado es 256 bytes.  
   
@@ -86,7 +85,7 @@ sp_tableoption [ @TableNamePattern = ] 'table'
   
  Cuando se almacenan cadenas BLOB en la fila de datos, leer y escribir el **texto**, **ntext**, o **imagen** las cadenas pueden ser tan rápidas como la lectura o escritura de cadenas de caracteres y binarias. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no necesita obtener acceso a páginas independientes para leer o escribir la cadena BLOB.  
   
- Si un **texto**, **ntext**, o **imagen** cadena es mayor que el límite especificado o el espacio disponible en la fila, los punteros se almacenan en la fila en su lugar. Las condiciones para almacenar las cadenas BLOB en la fila siguen siendo válidas aunque debe haber espacio suficiente para almacenar los punteros en la fila de datos.  
+ Si un **texto**, **ntext**, o **imagen** cadena es mayor que el límite especificado o el espacio disponible en la fila, los punteros se almacenan en la fila en su lugar. Las condiciones para almacenar las cadenas BLOB en la fila siendo válidas: Debe haber suficiente espacio en la fila de datos para almacenar los punteros.  
   
  Los punteros y cadenas BLOB almacenados en la fila de una tabla se tratan de forma parecida a las cadenas de longitud variable. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solo utiliza el número de bytes necesario para almacenar la cadena o el puntero.  
   
@@ -118,7 +117,7 @@ GO
 EXEC sp_tableoption 'HumanResources.JobCandidate', 'large value types out of row', 1;  
 ```  
   
-### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>B. Habilitar el formato de almacenamiento vardecimal en una tabla  
+### <a name="b-enabling-vardecimal-storage-format-on-a-table"></a>b. Habilitar el formato de almacenamiento vardecimal en una tabla  
  En el ejemplo siguiente se modifica el `Production.WorkOrderRouting` tabla para almacenar el `decimal` tipo de datos en el `vardecimal` el formato de almacenamiento.  
 
 ```sql  

@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d13737f4-f641-45bf-b56c-523e2ffc080f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e7cd89d826177074bca18a047545a32acee115a9
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 7b1441f06a5825467431a7c11ee9a8e3e46df6fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128370"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910263"
 ---
 # <a name="calling-a-stored-procedure"></a>Llamar a un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54128370"
   
  La secuencia de escape ODBC CALL para llamar a un procedimiento es:  
   
- {[**? =**]**llamar**_procedure_name_[([*parámetro*] [**,**[*parámetro*]] ...)]}  
+ {[ **? =** ]**llamar**_procedure_name_[([*parámetro*] [ **,** [*parámetro*]] ...)]}  
   
  donde *nombre_procedimiento* especifica el nombre de un procedimiento y *parámetro* especifica un parámetro de procedimiento. Los parámetros con nombre solo se admiten en instrucciones que utilizan la secuencia de escape ODBC CALL.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "54128370"
   
  Los parámetros de entrada y de entrada/salida pueden omitirse de las llamadas a procedimiento. Si se llama a un procedimiento con paréntesis pero sin ningún parámetro, el controlador indica al origen de datos que use el valor predeterminado para el primer parámetro. Por ejemplo:  
   
- {**llamar** _nombre_procedimiento_**()**}  
+ {**llamar** _nombre_procedimiento_ **()** }  
   
  Si el procedimiento no tiene ningún parámetro, puede producirse un error en el procedimiento. Si se llama a un procedimiento sin paréntesis, el controlador no envía ningún valor de parámetro. Por ejemplo:  
   

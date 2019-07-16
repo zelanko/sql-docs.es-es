@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 0e08bfff-68f9-4648-9558-09b57fea08ad
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a738712a8fb1b032ef8244f579b10fdcc22becee
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa75299f4d8e8f15293064d0bf3fb3979fe382d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037704"
 ---
 # <a name="c-to-sql-timestamp"></a>C a SQL: Timestamp
 El identificador para el tipo de datos ODBC C de la marca de tiempo es:  
@@ -31,11 +30,11 @@ El identificador para el tipo de datos ODBC C de la marca de tiempo es:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = longitud de bytes de caracteres<br /><br /> 19 < = longitud de bytes de la columna < longitud de bytes de caracteres<br /><br /> Columna de bytes de longitud < 19<br /><br /> Valor de datos no es una marca de tiempo válido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = longitud de caracteres de datos<br /><br /> 19 < = longitud de caracteres de la columna < longitud de datos de caracteres<br /><br /> Columna de caracteres de longitud < 19<br /><br /> Valor de datos no es una marca de tiempo válido|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_DATE|Los campos de hora son cero<br /><br /> Los campos de hora son distintas de cero<br /><br /> Valor de datos no contiene una fecha válida|n/d<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIME|Campos de fracciones de segundo son cero [a]<br /><br /> Los campos de fracciones de segundo son [a] distinto de cero<br /><br /> Valor de datos no contiene una hora válida|n/d<br /><br /> 22008<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|No se truncan los campos de fracciones de segundo<br /><br /> Campos de fracciones de segundo se truncan<br /><br /> Valor de datos no es una marca de tiempo válido|n/d<br /><br /> 22008<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = longitud de bytes de caracteres<br /><br /> 19 < = longitud de bytes de la columna < longitud de bytes de caracteres<br /><br /> Columna de bytes de longitud < 19<br /><br /> Valor de datos no es una marca de tiempo válido|N/D<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = longitud de caracteres de datos<br /><br /> 19 < = longitud de caracteres de la columna < longitud de datos de caracteres<br /><br /> Columna de caracteres de longitud < 19<br /><br /> Valor de datos no es una marca de tiempo válido|N/D<br /><br /> 22001<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_DATE|Los campos de hora son cero<br /><br /> Los campos de hora son distintas de cero<br /><br /> Valor de datos no contiene una fecha válida|N/D<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIME|Campos de fracciones de segundo son cero [a]<br /><br /> Los campos de fracciones de segundo son [a] distinto de cero<br /><br /> Valor de datos no contiene una hora válida|N/D<br /><br /> 22008<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|No se truncan los campos de fracciones de segundo<br /><br /> Campos de fracciones de segundo se truncan<br /><br /> Valor de datos no es una marca de tiempo válido|N/D<br /><br /> 22008<br /><br /> 22007|  
   
  [La fecha se omiten los campos de la estructura de marca de tiempo a].  
   

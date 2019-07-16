@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962292"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>Escenarios de ciencia de datos y plantillas de solución
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ Cada solución incluye datos de ejemplo, código de R o código de Python y proc
 
 [La plantilla con SQL Server R Services de previsión de demanda de energía](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**Qué:**: Previsión de demanda es un problema importante en diversos dominios incluidos energía, venta directa y servicios. Previsión de demanda precisa ayuda a las empresas realizar producción mejor planeación, asignación de recursos y tomar otras decisiones empresariales importantes. En el sector energético, la previsión de demanda es fundamental para reducir el costo de almacenamiento de energía y equilibrio de suministro y demanda.
+**Qué:** : Previsión de demanda es un problema importante en diversos dominios incluidos energía, venta directa y servicios. Previsión de demanda precisa ayuda a las empresas realizar producción mejor planeación, asignación de recursos y tomar otras decisiones empresariales importantes. En el sector energético, la previsión de demanda es fundamental para reducir el costo de almacenamiento de energía y equilibrio de suministro y demanda.
 
 **Cómo:** Esta plantilla usa SQL Server R Services para predecir la demanda de electricidad. El modelo utilizado para la predicción es un modelo de regresión de bosque aleatorio basado en **rxDForest**, un algoritmo que se incluyen en Microsoft R Server de aprendizaje de automático de alto rendimiento. La solución incluye un simulador de demanda, todo el código de R y T-SQL necesario para entrenar un modelo y los procedimientos almacenados que puede usar para generar y presentar las predicciones. 
 

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 48d5305854d214e61036e00ca23a94b85313138a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3aa7ccc8d559f7017fd2a9bf0bc20bc7ae191c46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020991"
 ---
 # <a name="selecting-and-configuring-affected-objects-sybasetosql"></a>Selección y configuración de objetos afectados (SybaseToSQL)
 En esta página puede seleccionar tablas y claves externas, los cambios en el que se deben comparar cuando SSMA comprueba los resultados de ejecución para los objetos que haya elegido en el paso anterior. Además, puede personalizar los parámetros de comprobación.  
@@ -27,7 +26,7 @@ En el árbol de objetos de Sybase ubicado en el lado izquierdo de la ventana, co
   
 Si no se puede comprobar el evaluador de SSMA cualquiera de estos objetos, verá el vínculo con la etiqueta **algunos objetos seleccionados contienen errores** bajo el árbol de objetos. Haga clic en este vínculo para ver los motivos por qué no se puede comparar estos objetos y anule la selección de objetos incorrectos.  
   
-## <a name="table"></a>Table  
+## <a name="table"></a>Tabla  
 La pestaña de la tabla contiene la vista de cuadrícula de la tabla seleccionada. La cuadrícula contiene la siguiente información acerca de la tabla seleccionada:  
   
 -   Nombre de la columna  

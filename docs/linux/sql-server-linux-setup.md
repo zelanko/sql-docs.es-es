@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: Instalar, actualizar y desinstalar SQL Server en Linux. Este artículo tratan los escenarios en línea, sin conexión y desatendidos.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 565156c3-7256-4e63-aaf0-884522ef2a52
-ms.openlocfilehash: c4e58111fd6a584344b4f73e6986774040aa6211
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 7f4b2aa37b20cceaa3269527c95bfa97a2daa311
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032436"
 ---
 # <a name="installation-guidance-for-sql-server-on-linux"></a>Guía de instalación para SQL Server en Linux
 
@@ -40,8 +39,8 @@ SQL Server 2017 es compatible con Ubuntu, SUSE Linux Enterprise Server (SLES) y 
 | Plataforma | Versiones admitidas | Obtener
 |-----|-----|-----
 | **Red Hat Enterprise Linux** | 7.3, 7.4, 7.5, 7.6 | [Obtener RHEL 7.6](https://access.redhat.com/products/red-hat-enterprise-linux/evaluation)
-| **SUSE Linux Enterprise Server** | v12 SP2 | [Get SLES v12 SP2](https://www.suse.com/products/server)
-| **Ubuntu** | 16.04 | [Get Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
+| **SUSE Linux Enterprise Server** | v12 SP2 | [Obtener el Service Pack 2 SLES v12](https://www.suse.com/products/server)
+| **Ubuntu** | 16.04 | [Obtener Ubuntu 16.04](http://releases.ubuntu.com/xenial/)
 | **Motor de docker** | 1.8+ | [Obtener Docker](https://www.docker.com/get-started)
 
 Microsoft también admite la implementación y administración de contenedores de SQL Server mediante el uso de OpenShift y Kubernetes.

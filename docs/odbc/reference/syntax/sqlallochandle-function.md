@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6e7fe420-8cf4-4e72-8dad-212affaff317
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db8bcf70823401f60efc316caabe283f5be59f48
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f4f82a24e594a25b0b1ec9bbeab2256624ae6e9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036251"
 ---
 # <a name="sqlallochandle-function"></a>Función SQLAllocHandle
 **Conformidad**  
@@ -83,7 +82,7 @@ SQLRETURN SQLAllocHandle(
   
  Para obtener más información sobre el flujo de llamadas de función entre el Administrador de controladores y un controlador, consulte [función SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md).  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLAllocHandle** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con los valores adecuados *HandleType* y *controlar* establecido en el valor de *InputHandle*. SQL_SUCCESS_WITH_INFO (pero no SQL_ERROR) se pueden devolver para el *OutputHandle* argumento. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLAllocHandle** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  

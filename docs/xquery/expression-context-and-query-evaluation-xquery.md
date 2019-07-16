@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256880"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038920"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>Contexto de expresiones y evaluación de consultas (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +79,7 @@ ms.locfileid: "54256880"
   
 -   Si la consulta con tipo **xml** columna o variable, los componentes de la colección de esquemas XML asociada con la columna o variable se importan en el contexto estático. Para obtener más información, vea [Comparar XML con tipo y XML sin tipo](../relational-databases/xml/compare-typed-xml-to-untyped-xml.md).  
   
--   Se pone a disposición de cada uno de los tipos atómicos de los esquemas importados una función de conversión en el contexto estático. Esto se muestra en el ejemplo siguiente. En este ejemplo, se especifica una consulta contra un tipo **xml** variable. La colección de esquemas XML asociada a esta variable define un tipo atómico, myType. Correspondiente a este tipo, una función de conversión, **myType()**, está disponible durante el análisis estático. La expresión de consulta (`ns:myType(0)`) devuelve un valor de tipo myType.  
+-   Se pone a disposición de cada uno de los tipos atómicos de los esquemas importados una función de conversión en el contexto estático. Esto se muestra en el ejemplo siguiente. En este ejemplo, se especifica una consulta contra un tipo **xml** variable. La colección de esquemas XML asociada a esta variable define un tipo atómico, myType. Correspondiente a este tipo, una función de conversión, **myType()** , está disponible durante el análisis estático. La expresión de consulta (`ns:myType(0)`) devuelve un valor de tipo myType.  
   
     ```  
     -- DROP XML SCHEMA COLLECTION SC  
@@ -176,7 +175,7 @@ ms.locfileid: "54256880"
   
     -   El **xml** tipo de datos establece el elemento de contexto, el nodo que se va a procesar, en el nodo de documento.  
   
-    -   La posición de contexto, la posición del elemento de contexto con respecto a los nodos que se van a procesar, se establece primero en 1.   
+    -   La posición de contexto, la posición del elemento de contexto con respecto a los nodos que se van a procesar, se establece primero en 1.  
   
     -   El tamaño de contexto, el número de elementos de la secuencia que se va a procesar, se establece primero en 1, porque siempre hay un nodo de documento.  
   

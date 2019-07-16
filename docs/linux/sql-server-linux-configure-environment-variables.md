@@ -3,18 +3,17 @@ title: Configurar la configuración de SQL Server con las variables de entorno
 description: En este artículo se describe cómo usar variables de entorno para configurar valores específicos de SQL Server 2017 en Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/20/2018
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 71f537d0f9da626fbd7624727b3aee22d2a47676
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 2e28c995e5c2c0bb08938bf7ca73bda718c44ff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967490"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Configurar la configuración de SQL Server con las variables de entorno en Linux
 

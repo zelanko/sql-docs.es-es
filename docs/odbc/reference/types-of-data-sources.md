@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a5e3f966-3357-4827-afbc-6153682d26bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7c0e4ccc55ce8fe35dc129c6dded889e2923b4f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6424d7b6a6a48c36adb00ca877eadc6c69e064f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62851396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951833"
 ---
 # <a name="types-of-data-sources"></a>Tipos de orígenes de datos
 Hay dos tipos de orígenes de datos: orígenes de datos y orígenes de datos de archivo de la máquina. Aunque ambos contienen información similar sobre el origen de datos, se diferencian en la forma de que almacena esta información. Debido a estas diferencias, se utilizan en modos algo diferentes.  

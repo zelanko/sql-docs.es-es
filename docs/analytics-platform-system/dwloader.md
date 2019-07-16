@@ -2,19 +2,18 @@
 title: dwloader del cargador de la línea de comandos - almacenamiento de datos paralelos | Microsoft Docs
 description: dwloader es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga filas de la tabla de forma masiva en una tabla existente.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: df30a9b849b987b5514a1824f25736a82587da09
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd3f005346c5faae9e02513a144d04d80857b770
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66175038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961025"
 ---
 # <a name="dwloader-command-line-loader-for-parallel-data-warehouse"></a>Cargador de línea de comandos para el almacenamiento de datos paralelo de dwloader
 **dwloader** es una herramienta de línea de comandos de almacenamiento de datos paralelos (PDW) que carga filas de la tabla de forma masiva en una tabla existente. Cuando se cargan filas, puede agregar todas las filas al final de la tabla (*modo append* o *modo fastappend*), anexará filas nuevas y actualizar las filas existentes (*modo upsert*), o eliminar todos existentes filas antes de la carga y, a continuación, insertar todas las filas en una tabla vacía (*recargar modo*).  
@@ -225,11 +224,11 @@ El delimitador para cada campo (columna) en la fila. El delimitador de campo es 
 |NOMBRE|Carácter de escape|Carácter hexadecimal|  
 |--------|--------------------|-----------------|  
 |Pestaña|\t|0x09|  
-|Retorno de carro (CR)|\r|0x0d|  
+|Retorno de carro (CR)|\r|0x0D|  
 |Avance de línea (LF)|\n|0x0a|  
 |CRLF|\r\n|0x0d0x0a|  
 |Coma|','|0x2c|  
-|comilla doble|\\"|0x22|  
+|comilla doble|\\|0x22|  
 |comilla simple|\\'|0x27|  
   
 Para especificar el carácter de canalización en la línea de comandos, escríbalo entre comillas dobles, "|". Esto evita la interpretación incorrecta por el analizador de línea de comandos. Otros caracteres se incluyen entre comillas simples.  
@@ -259,13 +258,13 @@ Ejemplos de CR / LF:
   
 Ejemplos de CR:  
   
--r \r  
+\r - r  
   
 -r 0x0d  
   
 Ejemplos de LF:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
@@ -278,7 +277,7 @@ Ejemplos:
   
 -s *  
   
--s 0x22  
+-s 0 x 22  
   
 < fixed_width_column_options>  
 Las opciones de un archivo de datos de origen que tiene columnas de longitud fija. De forma predeterminada, *source_data_file_name* contiene caracteres ASCII en columnas de longitud variable.  
@@ -328,13 +327,13 @@ Ejemplos de CR / LF:
   
 Ejemplos de CR:  
   
--r \r  
+\r - r  
   
 -r 0x0d  
   
 Ejemplos de LF:  
   
--r \n  
+\n - r  
   
 -r 0x0a  
   
@@ -363,10 +362,10 @@ Ejemplos de datos de entrada de MDA para el 1 de enero de 1975:
 -   01011975  
   
 mad  
-Ejemplos de archivos de entrada para marzo 04,2010: 03-2010-04, 3/2010/4  
+Ejemplos de archivos de entrada para marzo 04,2010: 2010-03-04, 3/4/2010  
   
 dam  
-Ejemplos de archivo de entrada para 04 de marzo de 2010: 04-2010-03, 4/2010/3  
+Ejemplos de archivo de entrada para 04 de marzo de 2010: 2010-04-03, 4/3/2010  
   
 *custom_date_format*  
 *custom_date_format* es un formato de fecha personalizado (p. ej., MM/dd/aaaa) y se incluye por razones de compatibilidad. dwloader no aplica el formato de fecha personalizada. En su lugar, cuando se especifica un formato de fecha personalizada **dwloader** se convertirá en el valor correspondiente de AMD, ADM, mdy, myd, DAM o DMA.  
@@ -554,13 +553,13 @@ El modo append carga datos en dos fases. La primera fase carga los datos del arc
   
 |Tipo de tabla|Transacción múltiple<br />Modo (-m)|Tabla está vacía|Simultaneidad compatibles|Registro|  
 |--------------|-----------------------------------|------------------|-------------------------|-----------|  
-|Montón|Sí|Sí|Sí|mínimo|  
-|Montón|Sí|Sin|Sí|mínimo|  
-|Montón|Sin|Sí|Sin|mínimo|  
-|Montón|Sin|Sin|No|mínimo|  
-|Cl|Sí|Sí|Sin|mínimo|  
+|Montón|Sí|Sí|Sí|Mínimo|  
+|Montón|Sí|Sin|Sí|Mínimo|  
+|Montón|Sin|Sí|Sin|Mínimo|  
+|Montón|No|Sin|Sin|Mínimo|  
+|Cl|Sí|Sí|Sin|Mínimo|  
 |Cl|Sí|Sin|Sí|Completo|  
-|Cl|No|Sí|Sin|mínimo|  
+|Cl|Sin|Sí|No|Mínimo|  
 |Cl|Sin|Sin|Sí|Completo|  
   
 Se muestra en la tabla anterior **dwloader** utilizando el modo append cargar en un montón o una tabla de índice agrupado (CI), con o sin la marca transaccional múltiple y cargar en una tabla vacía o una tabla no vacía. El bloqueo y el comportamiento de cada combinación de este tipo de carga de registro se muestra en la tabla. Por ejemplo, cargar fase (2) con el modo append en un índice clúster sin modo multi-transaccional y en un valor vacío tabla tendrá PDW crear un bloqueo exclusivo en la tabla y el registro es mínimo. Esto significa que un cliente no podrá cargar (2) fase y consultas simultáneamente en una tabla vacía. Sin embargo, cuando se cargan con la misma configuración en una tabla no vacía, PDW no emitirá un bloqueo exclusivo en la tabla y es posible la simultaneidad. Lamentablemente, se produce un registro completo, ralentizan el proceso.  

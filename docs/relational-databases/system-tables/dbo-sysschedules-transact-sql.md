@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4cac9237-7a69-4035-bb3e-928b76aad698
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5a1922fd8b9cdfb327186afe453fc1904d698579
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a87e7819d96151ea918b8b5f33fb5f4c9e1fbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470717"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096991"
 ---
 # <a name="dbosysschedules-transact-sql"></a>dbo.sysschedules (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62470717"
 |**schedule_id**|**int**|Id. de la programación de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**schedule_uid**|**uniqueidentifier**|Identificador único de la programación de trabajo. Este valor se utiliza para identificar una programación de trabajos distribuidos.|  
 |**originating_server_id**|**int**|Id. del servidor maestro del que procede la programación de trabajo.|  
-|**Nombre**|**sysname (nvarchar(128))**|Nombre de la programación de trabajo definido por el usuario. Este nombre debe ser único en un trabajo.|  
+|**name**|**sysname (nvarchar(128))**|Nombre de la programación de trabajo definido por el usuario. Este nombre debe ser único en un trabajo.|  
 |**owner_sid**|**varbinary(85)**|Microsoft Windows *security_identifier* del usuario o grupo que posee la programación de trabajo.|  
 |**enabled**|**int**|Estado de la programación de trabajo:<br /><br /> **0** = no habilitado.<br /><br /> **1** = habilitado.<br /><br /> Si la programación no está habilitada, no se ejecutarán trabajos en la programación.|  
 |**freq_type**|**int**|Frecuencia con la que un trabajo se ejecuta para esta programación.<br /><br /> **1** = una sola vez<br /><br /> **4** = diariamente<br /><br /> **8** = semanalmente<br /><br /> **16** = mensualmente<br /><br /> **32** = mensualmente, relativo a **freq_interval**<br /><br /> **64** = se ejecuta cuando se inicia el servicio Agente SQL Server<br /><br /> **128** = se ejecuta cuando el equipo está inactivo|  

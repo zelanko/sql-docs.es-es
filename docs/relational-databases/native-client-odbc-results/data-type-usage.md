@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 4f19b0d6-94ac-4a98-a121-57d38787864c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7f52e461a6f7f0cb318a58cb439d7b15b9d780a2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f1faec789d9b0da874415fb06fa69b972e5b46fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47686613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937117"
 ---
 # <a name="data-type-usage"></a>Uso de tipos de datos
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "47686613"
 |**tinyint**|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **tinyint** tipo de datos es sin signo. Un **tinyint** columna se enlaza a una variable de tipo de datos SQL_C_UTINYINT de forma predeterminada.|  
 |Tipos de datos de alias|Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, el controlador ODBC agrega NULL a una definición de columna que no declara explícitamente la nulabilidad de una columna. Por tanto, la nulabilidad almacenada en la definición de un tipo de datos de alias se pasa por alto.<br /><br /> Cuando se conecta a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 4.2*x*, tipo de columnas con un tipo de datos de alias que tenga una base de datos de **char** o **binario** y para el que no aceptan valores null declara se crean como tipo de datos **varchar** o **varbinary**. [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md), [SQLColumns](../../relational-databases/native-client-odbc-api/sqlcolumns.md), y [SQLDescribeCol](../../relational-databases/native-client-odbc-api/sqldescribecol.md) devuelven SQL_VARCHAR o SQL_VARBINARY como datos de tipo para estas columnas. Los datos que se recuperan de estas columnas no se rellenan.<br /><br /> Nota: El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client admite la conexión a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 6.5 y versiones anteriores.|  
 |Tipos de datos LONG|*datos en ejecución* los parámetros están restringidos para SQL_LONGVARBINARY y los tipos de datos SQL_LONGVARCHAR.|  
-|Tipos de valores grandes|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client expondrá **varchar (max)**, **varbinary (max)**, y **nvarchar (max)** tipos como SQL_VARCHAR, SQL_VARBINARY y SQL_ WVARCHAR (respectivamente) en las API que aceptan o devuelven tipos de datos de SQL de ODBC.|  
+|Tipos de valores grandes|El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client expondrá **varchar (max)** , **varbinary (max)** , y **nvarchar (max)** tipos como SQL_VARCHAR, SQL_VARBINARY y SQL_ WVARCHAR (respectivamente) en las API que aceptan o devuelven tipos de datos de SQL de ODBC.|  
 |Tipo definido por el usuario (UDT)|Las columnas UDT se asignan como SQL_SS_UDT. Si una columna UDT se asigna explícitamente a otro tipo en la instrucción SQL utilizando los métodos ToXMLString () o ToString () del UDT o a través de funciones CAST/CONVERT, el tipo de la columna en el conjunto de resultados reflejará el tipo real en el que se convirtió la columna.<br /><br /> El [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] controlador ODBC de Native Client solamente puede enlazar a una columna UDT como binario. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] solamente admite la conversión entre los tipos de datos SQL_C_BINARY y SQL_SS_UDT.|  
 |XML|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convertirán automáticamente XML a texto Unicode. El tipo XML se asigna como SQL_SS_XML.|  
   

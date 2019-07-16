@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a53c6e6e0164b404fdd5b106bae83137d56f319e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b50ab4a6fa31ec74371b86129f30abf11a1ba6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932255"
 ---
 # <a name="locktype-property-ado"></a>Propiedad LockType (ADO)
 Indica el tipo de los bloqueos colocados en registros durante la edición.  

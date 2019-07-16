@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f8c58f38f100258ed9c6b0b1a95cbd37273aaa1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c4c34ae8fbfc88bde59b44bc079b1df0dbcdf26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507812"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985078"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>Conjuntos de filas y cursores de servidor de SQL Server
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "52507812"
   
  Para usar un tipo de modelo de cursor determinado, busque la columna correspondiente al modelo de cursor y busque todas las propiedades de conjunto de filas que tengan el valor 'T' en la columna. Establezca estas propiedades de conjunto de filas en VARIANT_TRUE para usar ese modelo de cursor específico. Las propiedades del conjunto de filas que contienen '-' como valor pueden establecerse en VARIANT_TRUE o VARIANT_FALSE.  
   
-|Propiedades de conjunto de filas o modelos de cursores|Default<br /><br /> result<br /><br /> conjunto<br /><br /> (SL)|Rápido<br /><br /> solo <br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
+|Propiedades de conjunto de filas o modelos de cursores|Default<br /><br /> resultado<br /><br /> set<br /><br /> (SL)|Rápido<br /><br /> solo<br /><br /> avance<br /><br /> (SL)|Estático<br /><br /> (SL)|Keyset<br /><br /> conjuntos de claves<br /><br /> (SL)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -146,7 +145,7 @@ ms.locfileid: "52507812"
   
  Para un conjunto determinado de propiedades de conjunto de filas, el modelo de cursor seleccionado se determina tal y como se indica a continuación.  
   
- De la colección especificada de propiedades de conjunto de filas, obtenga un subconjunto de propiedades de los que se indicaban en las tablas anteriores. Divida estas propiedades en dos subgrupos en función de la marca de valor requerido (T, F) u opcional (-)-de cada propiedad de conjunto de filas. Para cada modelo de cursor, comience por la primera tabla y desplácese de izquierda a derecha. Compare los valores de las propiedades de los dos subgrupos con los valores de las propiedades correspondientes de esa columna. Se seleccionará el modelo de cursor que no presente ninguna discrepancia con las propiedades necesarias y que tenga el menor número de discrepancias con las propiedades opcionales. Si hay más de un modelo de cursor, se elegirá el que esté situado más a la izquierda.  
+ De la colección especificada de propiedades de conjunto de filas, obtenga un subconjunto de propiedades de los que se indicaban en las tablas anteriores. Divida estas propiedades en dos subgrupos en función del valor de marca de cada propiedad del conjunto de filas: requerido (T, F) u opcional (-). Para cada modelo de cursor, comience por la primera tabla y desplácese de izquierda a derecha. Compare los valores de las propiedades de los dos subgrupos con los valores de las propiedades correspondientes de esa columna. Se seleccionará el modelo de cursor que no presente ninguna discrepancia con las propiedades necesarias y que tenga el menor número de discrepancias con las propiedades opcionales. Si hay más de un modelo de cursor, se elegirá el que esté situado más a la izquierda.  
   
 ## <a name="sql-server-cursor-block-size"></a>Tamaño del bloque de cursor de SQL Server  
  Cuando un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor admite un [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] filas del proveedor OLE DB de Native Client, el número de elementos de la fila controlar el parámetro de matriz de la **IRowset:: GetNextRows** o **IRowsetLocate:: GetRowsAt**  métodos define el tamaño de bloque de cursor. Las filas indicadas por los identificadores de la matriz son los miembros del bloque de cursor.  

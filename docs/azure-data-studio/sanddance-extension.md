@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 466b2b60548d1dcef104979d1e291d44bf53b3de
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: a96bde6a66642bf02cc076c3d4d4f3ac44e02a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67563990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959330"
 ---
 # <a name="sanddance-for-azure-data-studio-preview"></a>SandDance para datos de Azure Studio (versión preliminar)
 Azure Data Studio ahora ofrece una manera para crear visualizaciones rápidas para los archivos CSV y TSV que está trabajando. Esto incluye archivos locales o archivos en HDFS en el clúster grande de datos de SQL Server 2019. Esta extensión es útil al tratar de tener una rápida mirar los datos y comprender lo que está ocurriendo. Se usa una tecnología denominada SandDance desde Microsoft Research, que puede generar visualizaciones en lugar de los datos.

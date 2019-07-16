@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 08e5c5bf-f7de-4bf9-97a9-f214c128ad8c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 728edb30336d3687e92638b348d605fef5842d34
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f49de41c0735f53323c1f9ba75c6f2257439b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932494"
 ---
 # <a name="getrows-method-example-vc"></a>Ejemplo del método GetRows (VC ++)
 Este ejemplo se usa el [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) método para recuperar un número especificado de filas de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) y rellenar una matriz con los datos resultantes. El **GetRows** método devolverá menor que el número deseado de filas en dos casos: cualquier if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) alcanzado, o si **GetRows** intentó recuperar un registro que estaba otro usuario eliminado. La función devuelve **False** únicamente si se produce el segundo caso. La función GetRowsOK es necesaria ejecutar este procedimiento.  

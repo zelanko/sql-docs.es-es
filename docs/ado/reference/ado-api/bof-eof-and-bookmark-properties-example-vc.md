@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd2b9d85-e75e-4fc8-a392-076582019caa
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 445374eabceb3534f2b5791c1fb67ba6a22d4c33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b0cc864aa298055796985dd58ec6595961a17841
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920363"
 ---
 # <a name="bof-eof-and-bookmark-properties-example-vc"></a>BOF, EOF y Bookmark ejemplo de propiedades (VC ++)
 La primera función en este ejemplo utiliza la [BOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) y [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) propiedades para mostrar un mensaje si un usuario intenta pasar el primer o último registro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). Usa el [marcador](../../../ado/reference/ado-api/bookmark-property-ado.md) propiedad para permitir que el usuario marca un registro en un **Recordset** y volver a él más adelante.  

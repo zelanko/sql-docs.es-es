@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: a5dbc842-71a0-4f62-b5e0-f560a99b7f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a07c599c484f2efb85905be07e29a0ac89175fac
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: ff4cd58fcd7d11679cf410c9f379b101d42ce4bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47733123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095571"
 ---
 # <a name="systypes-transact-sql"></a>sys.types (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,14 +35,14 @@ ms.locfileid: "47733123"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre del tipo. Es exclusivo en el esquema.|  
+|**name**|**sysname**|Nombre del tipo. Es exclusivo en el esquema.|  
 |**system_type_id**|**tinyint**|Id. del tipo del sistema interno del tipo.|  
 |**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. Tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
 |**schema_id**|**int**|Id. del esquema al que pertenece el tipo.|  
 |**principal_id**|**int**|Id. del propietario individual si es distinto al propietario del esquema. De forma predeterminada, los objetos contenidos en el esquema pertenecen al propietario del esquema. No obstante, es posible especificar un propietario alternativo mediante la instrucción ALTER AUTHORIZATION para cambiar la propiedad.<br /><br /> Si no hay un propietario alternativo individual, el valor es NULL.|  
-|**max_length**|**smallint**|Longitud máxima del tipo, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)**, **nvarchar (max)**, **varbinary (max)**, o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16.|  
-|**Precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
-|**Escala**|**tinyint**|Escala máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
+|**max_length**|**smallint**|Longitud máxima del tipo, en bytes.<br /><br /> -1 = la columna es de tipo de datos **varchar (max)** , **nvarchar (max)** , **varbinary (max)** , o **xml**.<br /><br /> Para **texto** columnas, el **max_length** valor será 16.|  
+|**precisión**|**tinyint**|Precisión máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
+|**scale**|**tinyint**|Escala máxima del tipo si está basado en numerales; de lo contrario, es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del tipo si está basado en caracteres; de lo contrario, es NULL.|  
 |**is_nullable**|**bit**|El tipo admite valores NULL.|  
 |**is_user_defined**|**bit**|1 = Tipo definido por el usuario.<br /><br /> 0 = tipo de datos del sistema de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  

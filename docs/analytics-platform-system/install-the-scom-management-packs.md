@@ -2,19 +2,18 @@
 title: 'Instalar módulos de administración de SCOM: Analytics Platform System | Microsoft Docs'
 description: Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para PDW de SQL Server. Los módulos de administración necesarias para supervisar SQL Server PDW desde SCOM.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f0acfa636a3432dcffb18cfec57ee7625c1eb01b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac213e71d3754ccf610ba5c0874cea32c3737760
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63215507"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960817"
 ---
 # <a name="install-sql-server-operations-manager-scom-management-packs-for-analytics-platform-system"></a>Instalar los módulos de administración de SQL Server Operations Manager (SCOM) para Analytics Platform System
 Siga estos pasos para descargar e instalar los módulos de administración de System Center Operations Manager (SCOM) para PDW de SQL Server. Los módulos de administración necesarias para supervisar SQL Server PDW desde SCOM.  

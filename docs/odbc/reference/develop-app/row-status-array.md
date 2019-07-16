@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4b69f189-2722-4314-8a02-f4ffecd6dabd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1d2a04f5052a0b686d3669c976ec7c4bee09e52b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b187bf4f14bd5c05f91a433fa331e954fa0fb9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020371"
 ---
 # <a name="row-status-array"></a>Matriz de Estados de fila
 Además de los datos, **SQLFetch** y **SQLFetchScroll** puede devolver una matriz que muestra el estado de cada fila del conjunto de filas. Esta matriz se especifica mediante el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR. Esta matriz se asigna por la aplicación y debe tener tantos elementos como se especifican mediante el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE. Los valores de la matriz se establecen **SQLBulkOperations**, **SQLFetch**, **SQLFetchScroll**, y **SQLSetPos.** Los valores describen el estado de la fila y si ese estado ha cambiado desde que se capturó por última vez.  

@@ -1,5 +1,5 @@
 ---
-title: sys.routes (Transact-SQL) | Microsoft Docs
+title: Sys.Routes (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 09/07/2018
 ms.prod: sql
@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 098ff2a0a3e4827a9d80c3955cc6f2689c3fa53e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bfdd322107da1a08edb3933aee9d5b79b6c2b47a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904435"
 ---
 # <a name="sysroutes-transact-sql"></a>sys.routes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62446469"
 
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de la ruta, único en la base de datos. No acepta valores NULL.|  
+|**name**|**sysname**|Nombre de la ruta, único en la base de datos. No acepta valores NULL.|  
 |**route_id**|**int**|Identificador de la ruta. No acepta valores NULL.|  
 |**principal_id**|**int**|Identificador de la base de datos de la entidad de seguridad propietaria de la ruta. QUE ACEPTA VALORES NULL.|  
 |**remote_service_name**|**nvarchar(256)**|Nombre del servicio remoto. QUE ACEPTA VALORES NULL.|  

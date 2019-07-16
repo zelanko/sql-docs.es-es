@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538172"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911317"
 ---
 # <a name="sqlgetdiagrec-function"></a>Función SQLGetDiagRec
 **Conformidad**  
@@ -91,7 +90,7 @@ SQLRETURN SQLGetDiagRec(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  **SQLGetDiagRec** no registra los registros de diagnóstico para sí mismo. Los siguientes valores devueltos usa para informar del resultado de su propia ejecución:  
   
 -   SQL_SUCCESS: La función devolvió información de diagnóstico.  

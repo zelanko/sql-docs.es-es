@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912894"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` Especifica que no se quitará el archivo de índice de texto completo asociado a la base de datos que se va a separar la base de datos durante la operación de desasociación. *KeepFulltextIndexFile* es un **nvarchar (10)** valor predeterminado es de **true**. Si *KeepFulltextIndexFile* es **false**, todos los archivos de índice de texto completo asociado a la base de datos y se quitan los metadatos del índice de texto completo, a menos que la base de datos es de solo lectura. Si es NULL o **true**, relacionada con el texto completo se conservan los metadatos.  
   
 > [!IMPORTANT]
->  El**@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
+>  El **@keepfulltextindexfile** parámetro se quitará en una versión futura de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. No use este parámetro en nuevos trabajos de desarrollo, y modifique lo antes posible las aplicaciones que lo usen actualmente.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  
@@ -69,7 +68,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 > [!NOTE]  
 >  Para obtener información sobre cómo ver la base de datos predeterminada de todas las cuentas de inicio de sesión, vea [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md). Si tiene los permisos necesarios, puede usar [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md) para asignar una nueva base de datos predeterminada para un inicio de sesión.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
  No se puede separar una base de datos si se da alguna de estas circunstancias:  
   
 -   Se está utilizando la base de datos actualmente. Para obtener más información, vea "Obtener acceso exclusivo" más adelante en este tema.  

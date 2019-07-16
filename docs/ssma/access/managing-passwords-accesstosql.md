@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: b099d0f9-dd37-4c87-8b6f-ed0177881ea4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: bfa7b7481589ccb636147b3842a15b92f1a59d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d8886f28a30f264e0357af82724567e42e3bd5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453687"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907182"
 ---
 # <a name="managing-passwords-accesstosql"></a>Administración de contraseñas (AccessToSQL)
 En esta sección es acerca de cómo proteger las contraseñas de la base de datos y el procedimiento para importar o exportar a ellos a través de servidores:  

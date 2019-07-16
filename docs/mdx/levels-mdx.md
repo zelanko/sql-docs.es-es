@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6e8edfdc3c6888c34dd789c521bc42c6b919e1a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 24e15602593f9116d499345ffca093f86ecfa135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905643"
 ---
 # <a name="levels-mdx"></a>Levels (MDX)
 
@@ -53,7 +52,7 @@ Hierarchy_Expression.Levels( Level_Name )
 ## <a name="examples"></a>Ejemplos  
  Los ejemplos siguientes muestran cada uno de los **niveles** sintaxis de función.  
   
-### <a name="numeric"></a>Numérico  
+### <a name="numeric"></a>Numeric  
  El ejemplo siguiente devuelve el nivel Country:  
   
 ```  
@@ -61,7 +60,7 @@ SELECT [Geography].[Geography].Levels(1) ON 0
 FROM [Adventure Works]  
 ```  
   
-### <a name="string"></a>String  
+### <a name="string"></a>Cadena  
  El ejemplo siguiente devuelve el nivel Country:  
   
 ```  

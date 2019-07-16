@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 299c37bd-19ff-4261-8571-b9665687e075
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97a55923043d26c0eb672d7a698d5bf9224f1187
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d442a9c397ad184658f9101343e139697c9b3756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718738"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925635"
 ---
 # <a name="dealing-with-failed-updates"></a>Tratar actualizaciones con errores
 Cuando finaliza una actualización con errores, cómo se resuelven los errores depende de la naturaleza y la gravedad de los errores y la lógica de la aplicación. Sin embargo, si la base de datos se comparte con otros usuarios, un error habitual es que otra persona modifica el campo antes de realizar. Este tipo de error se denomina un conflicto. ADO detecta esta situación y notifica un error.  

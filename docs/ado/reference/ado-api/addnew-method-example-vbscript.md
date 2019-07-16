@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1409dda550c13c296d0b11e7fa5dd1d63d6f09d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e8329b1edd2e240e00221096bd501d3edf204e71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698861"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921282"
 ---
 # <a name="addnew-method-example-vbscript"></a>Ejemplo del método AddNew (VBScript)
 Este ejemplo se usa el [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) método para crear un nuevo registro con el nombre especificado.  

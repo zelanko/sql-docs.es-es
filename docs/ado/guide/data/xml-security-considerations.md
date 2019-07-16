@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fadbd38e-6e7b-4b81-96ea-85169c664374
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8e5ef2215725382650540d24f90e7cbd61102a71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa0e9e2df1e8ba3f44b10e662d25e536ac7962f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704427"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923354"
 ---
 # <a name="xml-security-considerations"></a>Consideraciones de seguridad XML
 Los métodos abiertos en el objeto de conjunto de registros y guardar ADO no se consideran operaciones seguras para ejecutarse en Internet Explorer. Por lo tanto, si estos métodos se usan en un código de script que se ejecuta en una aplicación o control que se hospeda en un explorador, la configuración de seguridad del explorador tendrá un efecto en su comportamiento.  

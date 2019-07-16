@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d4a5496-ec2d-4936-b36a-7049a82be4b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ba7675f5fe0abe02130de3c6bfc905070b24ec10
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c37a7385cc3aabb725f86261203d22b5b10c3be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697935"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918873"
 ---
 # <a name="eventreasonenum"></a>EventReasonEnum
 Especifica el motivo por el que se produjo un evento que se produzca.  
@@ -45,7 +44,7 @@ Especifica el motivo por el que se produjo un evento que se produzca.
 |**adRsnUpdate**|3|Una operación actualiza un registro existente.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

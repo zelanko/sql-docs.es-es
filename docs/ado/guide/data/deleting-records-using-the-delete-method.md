@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bfed5cfa-7f57-463b-9da2-0c612a079d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b4798e2658bf23edaf7cd04fb819e26de2a55cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a862a244f06c64767f41529b4fff36881895a0b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925558"
 ---
 # <a name="deleting-records-using-the-delete-method"></a>Eliminar registros mediante el método Delete
 Mediante el **eliminar** método marca el registro actual o un grupo de registros en un **Recordset** objeto para su eliminación. Si el **Recordset** objeto no permitir eliminación de registros, se produce un error. Si está en modo de actualización inmediata, las eliminaciones se producen en la base de datos inmediatamente. Si un registro no puede eliminarse correctamente (debido a infracciones de la integridad de la base de datos, por ejemplo), el registro permanecerá en modo de edición después de llamar a **Update.** Esto significa que se debe cancelar la actualización mediante [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) antes de abandonar el registro actual (por ejemplo, mediante [cerrar](../../../ado/reference/ado-api/close-method-ado.md), [mover](../../../ado/reference/ado-api/move-method-ado.md), o [ NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  

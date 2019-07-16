@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: f5f30232a4f6d382af6e3a21f022b86cdf1a4fd4
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100750"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196611"
 ---
 # <a name="view-the-dependencies-of-a-table"></a>Ver las dependencias de una tabla
   Puede ver las dependencias de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -41,7 +41,7 @@ ms.locfileid: "54100750"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Necesita el permiso VIEW DEFINITION en la base de datos y el permiso SELECT en sys.sql_expression_dependencies para la base de datos. De forma predeterminada, solo se permite el permiso SELECT a los miembros del rol fijo de base de datos db_owner. Si se conceden los permisos SELECT y VIEW DEFINITION a otro usuario, el receptor puede ver todas las dependencias de la base de datos.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -52,7 +52,7 @@ ms.locfileid: "54100750"
   
 2.  Haga clic con el botón derecho en una tabla y, después, haga clic en **Ver dependencias**.  
   
-3.  En el cuadro de diálogo **Dependencias del objeto**_\<nombre del objeto>_, seleccione **Objetos que dependen de** _\<nombre del objeto>_ u **Objetos de los que depende**_\<nombre del objeto>_**depende**.  
+3.  En el cuadro de diálogo **Dependencias del objeto** _\<nombre del objeto>_ , seleccione **Objetos que dependen de** _\<nombre del objeto>_ u **Objetos de los que depende** _\<nombre del objeto>_ **depende**.  
   
 4.  Seleccione un objeto en la cuadrícula **Dependencias** . El tipo de objeto (por ejemplo, "Desencadenador" o "Procedimiento almacenado"), aparece en el cuadro **Tipo** .  
   

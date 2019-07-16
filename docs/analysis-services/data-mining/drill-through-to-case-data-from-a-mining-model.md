@@ -1,5 +1,5 @@
 ---
-title: Profundizar en los datos de los casos de un modelo de minería de datos | Documentos de Microsoft
+title: Obtener detalles de los datos de casos de un modelo de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210058"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>Obtener detalles de datos de caso a partir de un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,16 +29,16 @@ ms.locfileid: "34015132"
   
 |Nombre del visor|Nombre de la pestaña o del panel|Seleccionar nodo|  
 |-----------------|----------------------|-----------------|  
-|**Visor de árboles de Microsoft**|Pestaña**Árbol de decisión** |Haga clic en un nodo de árbol.<br /><br /> **Nota** Evite usar la obtención de detalles en el nodo **All** porque puede llevar mucho tiempo devolver resultados.|  
+|**Visor de árboles de Microsoft**|Pestaña**Árbol de decisión**|Haga clic en un nodo de árbol.<br /><br /> **Nota** Evite usar la obtención de detalles en el nodo **All** porque puede llevar mucho tiempo devolver resultados.|  
 |**Visor de clústeres de Microsoft**|**Diagrama del clúster**|Haga clic en un nodo de clúster.|  
 |**Visor de clústeres de Microsoft**|**Perfiles del clúster**|Haga clic en cualquier lugar de la columna de clúster.|  
-|**Visor de asociación de Microsoft**|Pestaña**Reglas** |Haga clic en una fila que contenga un conjunto de reglas.|  
-|**Visor de asociación de Microsoft**|Pestaña**Conjuntos de elementos** |Haga clic en una fila que contenga un conjunto de elementos.|  
-|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Reglas** |Haga clic en una fila que contenga un conjunto de reglas.|  
-|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Conjuntos de elementos** |Haga clic en una fila que contenga un conjunto de elementos.|  
+|**Visor de asociación de Microsoft**|Pestaña**Reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
+|**Visor de asociación de Microsoft**|Pestaña**Conjuntos de elementos**|Haga clic en una fila que contenga un conjunto de elementos.|  
+|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Reglas**|Haga clic en una fila que contenga un conjunto de reglas.|  
+|**Visor de agrupación en clústeres de secuencia de Microsoft**|Pestaña**Conjuntos de elementos**|Haga clic en una fila que contenga un conjunto de elementos.|  
   
 > [!NOTE]  
->  Algunos modelos no pueden usar la obtención de detalles. La capacidad de usar la obtención de detalles depende del algoritmo usado para crear el modelo. Para obtener una lista de los tipos de modelo de minería de datos que admiten la obtención de detalles, vea [Drillthrough Queries &#40;Data Mining&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
+>  Algunos modelos no pueden usar la obtención de detalles. La capacidad de usar la obtención de detalles depende del algoritmo usado para crear el modelo. Para obtener una lista de los tipos de modelo de minería de datos que admiten la obtención de detalles, vea [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md).  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>Para ver los datos de obtención de detalles de un modelo de minería de datos  
   
@@ -55,6 +55,6 @@ ms.locfileid: "34015132"
 6.  Para copiar los datos en el Portapapeles, haga clic con el botón derecho en cualquier fila de la tabla y seleccione **Copiar todo**.  
   
 ## <a name="see-also"></a>Vea también  
- [Las consultas de obtención de detalles & #40; minería de datos & #41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+ [Consultas de obtención de detalles &#40;minería de datos&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

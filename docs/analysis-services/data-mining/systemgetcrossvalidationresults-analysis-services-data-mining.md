@@ -1,5 +1,5 @@
 ---
-title: 'SystemGetCrossValidationResults (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: SystemGetCrossValidationResults (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2febed19e2bd481a8e442f115f9691e5abb6be4b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018622"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209775"
 ---
 # <a name="systemgetcrossvalidationresults-analysis-services---data-mining"></a>SystemGetCrossValidationResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -108,7 +108,7 @@ SystemGetCrossValidationResults(
  El valor predeterminado es **null**.  
   
 > [!NOTE]  
->  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no se producirá un error si se establece *umbral de estado* en 0,0, pero nunca se debe utilizar este valor. De hecho, un umbral de 0,0 significa que las predicciones con una probabilidad del cero por ciento se consideran correctas.  
+>  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] no producirá ningún error si el *umbral de estado* se establece en 0,0; aunque no le recomendamos que use este valor. De hecho, un umbral de 0,0 significa que las predicciones con una probabilidad del cero por ciento se consideran correctas.  
   
  (opcional)  
   
@@ -124,7 +124,7 @@ SystemGetCrossValidationResults(
   
  En la tabla siguiente se describen las columnas del conjunto de filas.  
   
-|Nombre de la columna|Description|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |ModelName|Nombre del modelo probado.|  
 |AttributeName|Nombre de la columna de predicción.|  
@@ -133,7 +133,7 @@ SystemGetCrossValidationResults(
 |PartitionSize|Entero que indica el número de casos incluido en cada partición.|  
 |Prueba|Categoría de la prueba realizada. Para obtener una descripción de las categorías y las pruebas incluidas en cada categoría, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas de cada modelo dependen del tipo del valor de predicción. Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Value|Valor de la medida de prueba especificada.|  
+|Valor|Valor de la medida de prueba especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para devolver métricas de precisión del conjunto de datos completo, use [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md).  
@@ -162,7 +162,7 @@ NULL
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Target Mail DT|Bike Buyer|1|1|500|Clasificación|Verdadero positivo|144|  
 |Target Mail DT|Bike Buyer|1|1|500|Clasificación|Falso positivo|105|  
@@ -184,8 +184,8 @@ NULL
   
 ## <a name="see-also"></a>Vea también  
  [SystemGetCrossValidationResults](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

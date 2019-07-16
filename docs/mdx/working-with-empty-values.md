@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4551e452a7e2cbdf636e1c12441ff254ccbba2e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae8d6262f6502add09376b76a767a3076c830cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251446"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125847"
 ---
 # <a name="working-with-empty-values"></a>Trabajar con valores vacíos
 
@@ -121,7 +120,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  En la siguiente tabla se muestra el resultado de aplicar un operador AND a dos operandos booleanos.  
   
-|y|TRUE|EMPTY|FALSE|  
+|Y|TRUE|EMPTY|FALSE|  
 |---------|----------|-----------|-----------|  
 |**TRUE**|TRUE|FALSE|FALSE|  
 |**VACÍO**|FALSE|EMPTY|FALSE|  
@@ -129,7 +128,7 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
   
  En la siguiente tabla se muestra el resultado de aplicar un operador OR a dos operandos booleanos.  
   
-|O BIEN|TRUE|FALSE|  
+|OR|TRUE|FALSE|  
 |--------|----------|-----------|  
 |**TRUE**|TRUE|TRUE|  
 |**VACÍO**|TRUE|TRUE|  
@@ -146,6 +145,6 @@ WHERE([Date].[Calendar].[Calendar Year].&[2001])
 ## <a name="see-also"></a>Vea también  
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [Referencia de operadores de MDX &#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)  
+ [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

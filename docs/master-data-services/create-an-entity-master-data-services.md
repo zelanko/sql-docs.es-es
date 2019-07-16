@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d9a6a51e-7b53-4785-a118-3baeb7ca2d48
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 686c3f487207a430136feac2588e4b4b2dda9b1f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c47104459cfe9e764c857162be0baa7c84d74a24
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133652"
 ---
 # <a name="create-an-entity-master-data-services"></a>Crear una entidad (Master Data Services)
 
@@ -70,10 +69,10 @@ ms.locfileid: "65477001"
 ## <a name="grid-columns"></a>Columnas de la cuadrícula  
  Por cada entidad creada, se agrega una fila con trece columnas a la cuadrícula. Las columnas son las siguientes.  
   
-|Name|Descripción|  
+|NOMBRE|Descripción|  
 |----------|-----------------|  
-|Estado|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
-|NOMBRE|El nombre de la entidad.|  
+|Status|El estado de la entidad. Al hacer clic en **Guardar** , aparece la imagen siguiente, que indica que la entidad se está actualizando.<br /><br /> ![Icono de estado de actualización](../master-data-services/media/mds-statusicon-updating.png "Icono de estado de actualización")<br /><br /> Si se producen errores al crear o editar una entidad, se muestra la imagen siguiente.<br /><br /> ![Icono de estado de error](../master-data-services/media/mds-statusicon-error.png "Icono de estado de error")<br /><br /> Si el estado es correcto, se muestra la siguiente imagen.<br /><br /> ![Icono de estado correcto](../master-data-services/media/mds-statusicon-ok.png "Icono de estado correcto")|  
+|Name|El nombre de la entidad.|  
 |Descripción|La descripción de la entidad.|  
 |Tabla de ensayo|El nombre de prefijo de la tabla que se usa para almacenar datos.|  
 |Tipo de registro de transacciones|El tipo de registro de transacciones de la entidad.|  

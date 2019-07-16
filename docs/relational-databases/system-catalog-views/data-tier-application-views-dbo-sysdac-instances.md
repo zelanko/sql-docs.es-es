@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 28285f3d-3889-439f-8b24-3bdef08e46b4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 049f3d0201957cfee5d7bc88301c6af97c0b6dcb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: b1530e58597947a7e19f4ca264808fbfefd164ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51660685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033108"
 ---
 # <a name="data-tier-application-views---dbosysdacinstances"></a>Vistas de aplicación de capa de datos - dbo.sysdac_instances
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "51660685"
 |instance_id|**uniqueidentifier**|Identificador de la instancia de DAC.|  
 |nombre_instancia|**sysname**|Nombre de la instancia de DAC especificada cuando se implementó la DAC.|  
 |type_name|**sysname**|Nombre de la DAC especificada cuando se creó el paquete DAC.|  
-|type_version|**Nvarchar (64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
+|type_version|**nvarchar(64)**|Versión de la DAC especificada cuando se creó el paquete DAC.|  
 |description|**nvarchar(4000)**|Descripción de la DAC escrita cuando se creó el paquete DAC.|  
 |type_stream|**varbinary(max)**|Flujo de bits que contiene una representación codificada de los objetos lógicos, como tablas y vistas, que contiene la DAC.|  
 |date_created|**datetime**|Fecha y hora en que se creó la instancia de DAC.|  

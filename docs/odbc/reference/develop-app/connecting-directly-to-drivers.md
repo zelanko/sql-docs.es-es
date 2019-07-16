@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f86e198f-a088-4401-9106-aa62a0eb8f6e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3f5818d67659769ae104b3e98248c26f5b9fe8a7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 44b9de304069849e965fc335e130ae57d9ec8bad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151242"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083164"
 ---
 # <a name="connecting-directly-to-drivers"></a>Conectar directamente a los controladores
 Como se explicó en [elegir un origen de datos o controlador](../../../odbc/reference/develop-app/choosing-a-data-source-or-driver.md), anteriormente en esta sección, algunas aplicaciones no desean usar un origen de datos en absoluto. En su lugar, desean conectarse directamente a un controlador. **SQLDriverConnect** proporciona una forma de la aplicación para conectarse directamente a un controlador sin especificar un origen de datos. Conceptualmente, un origen de datos temporal se crea en tiempo de ejecución.  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 199e869b-2cd2-44ee-b2ee-69edb06a1bc4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3018d23247a8f4d127d09878cb20c5f48f76c4ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: de92a64bb090a053d4cecb03cd9b812744f72fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126401"
 ---
 # <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,19 +39,19 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [**@publisher** =] **'***publisher***'**  
+ [ **@publisher** =] **'***publisher***'**  
  Es el nombre de la que no sean de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publicador* es **sysname**, no tiene ningún valor predeterminado.  
   
- [**@schema** =] **'***esquema***'**  
+ [ **@schema** =] **'***esquema***'**  
  Es el nombre del esquema. *esquema* es **sysname**, su valor predeterminado es null.  
   
- [**@operation** =] **'***operación***'**  
- Es la acción que se realiza en este esquema. *operación* es **nvarchar (4)**, y puede tener uno de los siguientes valores.  
+ [ **@operation** =] **'***operación***'**  
+ Es la acción que se realiza en este esquema. *operación* es **nvarchar (4)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
-|**Agregar**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
-|**DROP**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
+|**add**|Agrega el esquema especificado a la lista de esquemas no aptos para su publicación.|  
+|**drop**|Quita el esquema especificado de la lista de esquemas no aptos para su publicación.|  
 |**Ayuda**|Devuelve la lista de esquemas no aptos para su publicación.|  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  

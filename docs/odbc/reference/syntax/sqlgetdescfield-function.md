@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a590e66bbbe205a7aa218ce03b0d88ed9f940318
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cdf2990056c297d217248543812e347b61d3486d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103814"
 ---
 # <a name="sqlgetdescfield-function"></a>Función SQLGetDescField
 **Conformidad**  
@@ -87,7 +86,7 @@ SQLRETURN SQLGetDescField(
   
  Si se devuelve SQL_NO_DATA *DescriptorHandle* es un identificador IRD y la instrucción está en estado preparado o ejecutado pero se ha producido ningún cursor abierto asociado con él.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLGetDescField** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLGetDescField** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  

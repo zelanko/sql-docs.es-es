@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bdee149e-7556-4fc3-8242-925dd4b7b6ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac66d9cd1e7585304aeab182ddf6ccabc8560bc0
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: d5b7eea64a807af96094767ef5aca00167d5946c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067960"
 ---
 # <a name="sysquerystorequery-transact-sql"></a>sys.query_store_query (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "59542105"
 |**context_settings_id**|**bigint**|Clave externa. Se une a [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md).<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**object_id**|**bigint**|Identificador del objeto de base de datos que forma parte de la consulta (procedimiento almacenado, desencadenador, UDF de CLR/UDAgg, etcetera.). 0 si no se ejecuta la consulta como parte de un objeto de base de datos (consulta ad hoc).<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**batch_sql_handle**|**varbinary(64)**|Id. del lote de instrucciones de la consulta forma parte de. Rellena solo si la consulta hace referencia a tablas temporales o variables de tabla.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *NULL*.|  
-|**query_hash**|**binary(8)**|Hash MD5 de la consulta individual, basándose en el árbol de consulta lógica. Incluye las sugerencias del optimizador.|  
+|**query_hash**|**binary (8)**|Hash MD5 de la consulta individual, basándose en el árbol de consulta lógica. Incluye las sugerencias del optimizador.|  
 |**is_internal_query**|**bit**|La consulta se ha generado internamente.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**query_parameterization_type**|**tinyint**|Tipo de parametrización:<br /><br /> 0: ninguno<br /><br /> 1 - usuario<br /><br /> 2 - simple<br /><br /> 3 - forzada<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá cero (0).|  
 |**query_parameterization_type_desc**|**nvarchar(60)**|Descripción textual del tipo de parametrización.<br/>**Nota:** Azure SQL Data Warehouse siempre devolverá *ninguno*.|  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a84cc45d-1b50-44af-85df-2ea033b8a6a9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4b972abd2674d88274545d1ce4394be88f43c65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e17a87a04c8c4286a66c6e7a0746f2d7de48d72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983063"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124337"
 ---
 # <a name="spfulltextcolumn-transact-sql"></a>sp_fulltext_column (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -48,14 +47,14 @@ sp_fulltext_column [ @tabname= ] 'qualified_table_name' ,
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @tabname = ] 'qualified_table_name'` Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. La tabla debe tener un índice de texto completo. *qualified_table_name* es **nvarchar (517)**, sin valor predeterminado.  
+`[ @tabname = ] 'qualified_table_name'` Es un nombre de tabla de una o dos partes. La tabla debe existir en la base de datos actual. La tabla debe tener un índice de texto completo. *qualified_table_name* es **nvarchar (517)** , sin valor predeterminado.  
   
 `[ @colname = ] 'column_name'` Es el nombre de una columna de *qualified_table_name*. La columna debe ser un carácter, **varbinary (max)** o **imagen** columna y no puede ser una columna calculada. *column_name* es **sysname**, no tiene ningún valor predeterminado.  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede crear índices de texto completo de datos de texto almacenados en las columnas de **varbinary (max)** o **imagen** tipo de datos. Las imágenes no se indizan.  
   
-`[ @action = ] 'action'` Es la acción que se realizará. *acción* es **varchar (20)**, no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
+`[ @action = ] 'action'` Es la acción que se realizará. *acción* es **varchar (20)** , no tiene ningún valor predeterminado y puede ser uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -93,7 +92,7 @@ EXEC sp_fulltext_column 'Production.Document', DocumentSummary, 'add';
 GO  
 ```  
   
- El ejemplo presupone que ha creado un índice de texto completo en una tabla denominada `spanishTbl`. Para agregar la columna `spanishCol` al índice de texto completo, ejecute el siguiente procedimiento almacenado:   
+ El ejemplo presupone que ha creado un índice de texto completo en una tabla denominada `spanishTbl`. Para agregar la columna `spanishCol` al índice de texto completo, ejecute el siguiente procedimiento almacenado:  
   
 ```  
 EXEC sp_fulltext_column 'spanishTbl', 'spanishCol', 'add', 0xC0A;  

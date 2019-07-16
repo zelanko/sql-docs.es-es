@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088502"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -148,7 +147,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
   
 ## <a name="examples"></a>Ejemplos  
   
-### <a name="a-creating-a-schedule"></a>A. Crear una programación  
+### <a name="a-creating-a-schedule"></a>A. Creación de una programación  
  En el siguiente ejemplo se crea una programación llamada `RunOnce`. La programación se ejecuta una vez a las `23:30` el día en que se ha creado la programación.  
   
 ```  

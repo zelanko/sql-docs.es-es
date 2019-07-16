@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4ae44fa2-0b9b-4e19-ab45-c1dc93b68406
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eb02dd54ea57af668e56fe910ca92830fb09c418
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92b8ca2b8c780e48cd9f3bf815ca86e3bd27081e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186282"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135630"
 ---
 # <a name="data-sources"></a>Orígenes de datos
 Un *origen de datos* es simplemente el origen de los datos. Puede ser un archivo, una base de datos determinada en un DBMS, o incluso una fuente de datos en directo. Los datos es posible que se encuentra en el mismo equipo que el programa, o en otro equipo en alguna parte de una red. Por ejemplo, un origen de datos podría ser un DBMS de Oracle que se ejecutan en un sistema de operativo OS/2®, accediendo a® de Novell Netware; un DBMS de DB2 de IBM que tiene acceso a través de una puerta de enlace; una colección de archivos de Xbase en un directorio de servidor. o un archivo de base de datos local de Microsoft® Access.  

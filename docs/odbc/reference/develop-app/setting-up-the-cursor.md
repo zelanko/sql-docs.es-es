@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b80afb0e-ef2f-408f-86f5-a392edd99a56
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59ade343f282933e05619996b119bc08e2dfb2ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c47e534f069f810948189f2668d4ecdfbfa4ad79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62445917"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107542"
 ---
 # <a name="setting-up-the-cursor"></a>Cómo configurar el Cursor
 La aplicación puede especificar el tipo de cursor antes de ejecutar una instrucción que crea un resultado de establece. Para hacerlo con el atributo de instrucción SQL_ATTR_CURSOR_TYPE. Si la aplicación no especifica explícitamente un tipo, se utilizará un cursor de solo avance. Para obtener un cursor mixto, una aplicación especifica un cursor dinámico, pero declara un conjunto de claves tamaño menor que el tamaño del conjunto de los resultados.  

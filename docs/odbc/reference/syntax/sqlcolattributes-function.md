@@ -19,17 +19,16 @@ helpviewer_keywords:
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff7d1349666d236e640d8de3524a7d069662ec86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64df7ac6e212d103fab244dfa14ce4f8e932bcb4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039772"
 ---
 # <a name="sqlcolattributes-function"></a>Función SQLColAttributes
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: Obsoleto  
+ Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: En desuso  
   
  **Resumen**  
  En ODBC 3. *x*, la función ODBC 2.0 **SQLColAttributes** ha sido reemplazado por **SQLColAttribute**. Para obtener más información, consulte [función SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md).  

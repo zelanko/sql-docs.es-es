@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106319"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63026557"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**eventtime**|**datetime**|Fecha y hora del evento.|  
+|**EventTime**|**datetime**|Fecha y hora del evento.|  
 |**pubid**|**uniqueidentifier**|Número de identificación único de una determinada publicación.|  
 |**artid**|**uniqueidentifier**|El número de identificación único del artículo indicado.|  
 |**eventtype**|**tinyint**|Especifica el tipo de evento que se va a registrar, que puede ser uno de los siguientes:<br /><br /> **1** -inicial del valor de propiedad de nivel de publicación.<br /><br /> **2** -cambiar en una propiedad de publicación.<br /><br /> **101** -inicial de la configuración de la propiedad de artículo.<br /><br /> **102** -cambiar en una propiedad del artículo.|  

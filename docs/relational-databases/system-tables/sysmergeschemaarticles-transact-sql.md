@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b5085979-2f76-48e1-bf3b-765a84003dd9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 581a6be7472818f983bc82ef3a717be0c0edaa48
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 9446d03db98d7fa5181fb0217814cdd86c55de1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029815"
 ---
 # <a name="sysmergeschemaarticles-transact-sql"></a>sysmergeschemaarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,9 +31,9 @@ ms.locfileid: "52802817"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre del artículo solo de esquema de la publicación de combinación.|  
-|**Tipo**|**tinyint**|Indica el tipo de artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **0 x 20** = el artículo de sólo esquema de procedimiento almacenado.<br /><br /> **0 x 40** = artículo solo de esquema de vista o un artículo de vista indizada solo de esquema.|  
-|**ObjID**|**int**|Identificador de objeto del objeto base del artículo. Puede ser el identificador de objeto de un procedimiento, una vista, una vista indizada o una función de usuario.|  
+|**name**|**sysname**|Nombre del artículo solo de esquema de la publicación de combinación.|  
+|**type**|**tinyint**|Indica el tipo de artículo solo de esquema, que puede ser uno de los siguientes:<br /><br /> **0 x 20** = el artículo de sólo esquema de procedimiento almacenado.<br /><br /> **0 x 40** = artículo solo de esquema de vista o un artículo de vista indizada solo de esquema.|  
+|**objid**|**int**|Identificador de objeto del objeto base del artículo. Puede ser el identificador de objeto de un procedimiento, una vista, una vista indizada o una función de usuario.|  
 |**artid**|**uniqueidentifier**|El identificador de artículo.|  
 |**description**|**nvarchar(255)**|Descripción del artículo.|  
 |**pre_creation_command**|**tinyint**|Acción predeterminada que se debe realizar cuando se crea el artículo en la base de datos de suscripciones.<br /><br /> **0 =** none: si la tabla ya existe en el suscriptor, se realiza ninguna acción.<br /><br /> **1** = drop: quita la tabla antes de volver a crearla.<br /><br /> **2** = delete: emite una eliminación basada en la cláusula WHERE del filtro de subconjunto.<br /><br /> **3** = Truncate-igual que **2**, pero elimina páginas en lugar de filas. Sin embargo, no precisa la cláusula WHERE.|  

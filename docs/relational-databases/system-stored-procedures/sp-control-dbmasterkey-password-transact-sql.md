@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 63979a87-42a2-446e-8e43-30481faaf3ca
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: af6e23ba3cce2ef4dfaa6901f51a9d6c0b034e60
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0af97dacdf5927428042d8e67593a0c6ee78542d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108775"
 ---
 # <a name="spcontroldbmasterkeypassword-transact-sql"></a>sp_control_dbmasterkey_password (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
 > [!NOTE]  
 >  Cuando utiliza la credencial que se agregó mediante sp_control_dbmasterkey_password para abrir la clave maestra de la base de datos, la clave maestra de servicio vuelve a cifrar la clave maestra de la base de datos. Si la base de datos está en modo de solo lectura, se producirá un error en la operación de recifrado y la clave maestra de la base de datos permanecerá sin cifrar. Para el acceso subsiguiente a la clave maestra de la base de datos debe utilizar la instrucción OPEN MASTER KEY y una contraseña. Para evitar el uso de una contraseña, cree la credencial antes de pasar la base de datos al modo de solo lectura.  
   
- **Posible problema de compatibilidad con versiones anteriores:** actualmente, el procedimiento almacenado no comprueba si existe una clave maestra. Esto se admite por cuestiones de compatibilidad con versiones anteriores, pero muestra una advertencia. Este comportamiento se ha desaprobado. En una versión futura de la clave maestra debe existir y la contraseña utilizada en el procedimiento almacenado **sp_control_dbmasterkey_password** debe ser la misma contraseña que una de las contraseñas utilizadas para cifrar la clave maestra de base de datos.  
+ **Posible problema de compatibilidad con versiones anteriores:** Actualmente, el procedimiento almacenado no comprueba si existe una clave maestra. Esto se admite por cuestiones de compatibilidad con versiones anteriores, pero muestra una advertencia. Este comportamiento se ha desaprobado. En una versión futura de la clave maestra debe existir y la contraseña utilizada en el procedimiento almacenado **sp_control_dbmasterkey_password** debe ser la misma contraseña que una de las contraseñas utilizadas para cifrar la clave maestra de base de datos.  
   
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso CONTROL en la base de datos.  
@@ -91,7 +90,7 @@ EXEC sp_control_dbmasterkey_password @db_name = N'AdventureWorks2012',
 GO  
 ```  
   
-### <a name="b-dropping-a-credential-for-a-database-master-key"></a>B. Quitar una credencial para la clave maestra de una base de datos  
+### <a name="b-dropping-a-credential-for-a-database-master-key"></a>b. Quitar una credencial para la clave maestra de una base de datos  
  En el siguiente ejemplo se quita la credencial creada en el ejemplo A. Tenga en cuenta que son necesarios todos los parámetros, incluida la contraseña.  
   
 ```  

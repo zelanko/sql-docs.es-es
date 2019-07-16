@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff853976cf0d900cb24391ff6bf13838782ea876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039380"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>Función SQLWritePrivateProfileString
 **Conformidad**  
@@ -61,7 +60,7 @@ BOOL SQLWritePrivateProfileString(
 ## <a name="returns"></a>Devuelve  
  La función devuelve TRUE si es correcto, FALSE si se produce un error.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLWritePrivateProfileString** devuelve FALSE, un asociado  *\*pfErrorCode* valor puede obtenerse mediante una llamada a **SQLInstallerError**. La siguiente tabla se enumeran los  *\*pfErrorCode* valores que pueden devolver **SQLInstallerError** y se explica cada uno de ellos en el contexto de esta función.  
   
 |*\*pfErrorCode*|Error|Descripción|  

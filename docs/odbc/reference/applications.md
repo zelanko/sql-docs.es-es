@@ -18,15 +18,14 @@ helpviewer_keywords:
 ms.assetid: 39d6461f-0d24-4b7d-a723-843ade15ad73
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dc655740701822d8c6ff9595327b906ee9a67026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f15b5e8eb6eb7c63ab771030f0c31e8c9ff92724
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135682"
 ---
-# <a name="applications"></a>Aplicaciones
+# <a name="applications"></a>APLICACIONES
 Un *aplicación* es un programa que llama a la API de ODBC para acceder a los datos. Aunque son posibles muchos tipos de aplicaciones, la mayoría se dividen en tres categorías, que se utilizan como ejemplos en esta guía.  
   
 -   **Aplicaciones genéricas** también se conocen como aplicaciones empaquetadas o las aplicaciones estandarizadas. Aplicaciones genéricas están diseñadas para funcionar con una variedad de diferentes DBMS. Por ejemplo, una hoja de cálculo o paquete de estadísticas que utiliza ODBC para importar datos para su posterior análisis y un procesador de textos que usa ODBC para obtener una lista de distribución de correo electrónico desde una base de datos.  

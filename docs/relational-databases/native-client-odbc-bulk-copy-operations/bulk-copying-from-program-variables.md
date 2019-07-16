@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: e4284a1b-7534-4b34-8488-b8d05ed67b8c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7c3a0eee5477b249bcde144aa6933851b2f61d5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 540a6a27a38ad7e7f749428c93773856bcc2cb89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130902"
 ---
 # <a name="bulk-copying-from-program-variables"></a>Copia masiva de variables de programa
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -57,7 +56,7 @@ ms.locfileid: "63014047"
   
  En la tabla siguiente se muestran los tipos de datos que es recomendable usar en la asignación de un tipo de datos SQL de ODBC a un tipo de datos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  
   
-|Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind *tipo* parámetro|Tipo de datos de SQL Server|  
+|Tipo de datos SQL de ODBC|Tipo de datos C de ODBC|bcp_bind *tipo* parámetro|Tipos de datos de SQL Server|  
 |-----------------------|----------------------|--------------------------------|--------------------------|  
 |SQL_CHAR|SQL_C_CHAR|SQLCHARACTER|**character**<br /><br /> **char**|  
 |SQL_VARCHAR|SQL_C_CHAR|SQLCHARACTER|**varchar**<br /><br /> **variable de carácter**<br /><br /> **char varying**<br /><br /> **sysname**|  

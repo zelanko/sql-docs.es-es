@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144860"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180263"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Adjuntar y separar bases de datos de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144860"
   
 |Separar una base de datos de lectura/escritura|Separar una base de datos de solo lectura|  
 |--------------------------------------|-------------------------------------|  
-|1) El servidor emite una solicitud de bloqueo CommitExclusive para la base de datos<br /><br /> 2) El servidor espera hasta que todas las transacciones en curso se confirmen o se reviertan<br /><br /> 3) El servidor genera todos los metadatos que necesita para separar la base de datos<br /><br /> 4) La base de datos se marca como eliminada<br /><br /> 5) El servidor confirma la transacción|1) La base de datos se marca como eliminada<br /><br /> 2) El servidor confirma la transacción<br /><br /> Nota: No es posible cambiar la contraseña de separación para una base de datos de solo lectura. Se produce un error si se proporciona el parámetro de contraseña para una base de datos adjuntada que ya contiene una contraseña.|  
+|1) El servidor emite una solicitud de bloqueo CommitExclusive para la base de datos<br /><br /> 2) El servidor espera hasta que todas las transacciones en curso se confirmen o se reviertan<br /><br /> 3) El servidor genera todos los metadatos que necesita para separar la base de datos<br /><br /> 4) La base de datos se marca como eliminada<br /><br /> 5) El servidor confirma la transacción|1) La base de datos se marca como eliminada<br /><br /> 2) El servidor confirma la transacción<br /><br /> Nota: No se puede cambiar la contraseña de separación para una base de datos de solo lectura. Se produce un error si se proporciona el parámetro de contraseña para una base de datos adjuntada que ya contiene una contraseña.|  
   
  Los comandos **Attach** y **Detach** se deben ejecutar como operaciones únicas. No se pueden combinar con otras operaciones en la misma transacción. Por otra parte, los comandos **Attach** y **Detach** son comandos transaccionales atómicos. Esto significa que la operación se realizará correctamente o producirá un error. No se dejará ninguna base de datos en un estado incompleto.  
   

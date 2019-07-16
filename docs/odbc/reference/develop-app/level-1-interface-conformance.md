@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee3f5c08-0583-4f3b-8354-ef71b6086a7e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8d75c374a7d9d57483dd56e34b51fcb6d89e1b52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05cf381ccbb8c0747db88259acfb4ba218d3e0ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135012"
 ---
 # <a name="level-1-interface-conformance"></a>Cumplimiento de la interfaz de nivel 1
 El nivel de conformidad de interfaz de nivel 1 incluye la funcionalidad de nivel de conformidad de interfaz de Core además de características adicionales, como las transacciones, que suelen estar disponibles en un DBMS relacional OLTP. Un controlador de función de la interfaz de nivel 1 permite que la aplicación haga lo siguiente, además de las características en el nivel de conformidad de interfaz de núcleo:  

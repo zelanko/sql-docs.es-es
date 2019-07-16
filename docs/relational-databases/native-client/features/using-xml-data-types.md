@@ -29,14 +29,13 @@ helpviewer_keywords:
 ms.assetid: a7af5b72-c5c2-418d-a636-ae4ac6270ee5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: dfbe6f41150e7d437a6ee1df20e62e41b799c8c0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e202e2b8a7766d4dde711a7f89d27177d176b3a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668841"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073649"
 ---
 # <a name="using-xml-data-types"></a>Usar tipos de datos XML
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -85,16 +84,16 @@ ms.locfileid: "62668841"
   
 |Tipo de datos|A datos XML<br /><br /> **XML**|A datos XML<br /><br /> **Distinto de XML**|Desde datos XML<br /><br /> **XML**|Desde datos XML<br /><br /> **Distinto de XML**|  
 |---------------|---------------------------|--------------------------------|-----------------------------|----------------------------------|  
-|DBTYPE_XML|Paso a través<sup>6,7</sup>|Error<sup>1</sup>|OK<sup>11, 6</sup>|Error<sup>8</sup>|  
-|DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/A<sup>2</sup>|Correcto<sup>11, 6</sup>|N/D <sup>2</sup>|  
-|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|OK<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
+|DBTYPE_XML|Paso a través<sup>6,7</sup>|Error<sup>1</sup>|Correcto<sup>11, 6</sup>|Error<sup>8</sup>|  
+|DBTYPE_BYTES|Paso a través<sup>6,7</sup>|N/D<sup>2</sup>|Correcto<sup>11, 6</sup>|N/D <sup>2</sup>|  
+|DBTYPE_WSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>4, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_BSTR|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
 |DBTYPE_STR|ACEPTAR<sup>6, 9, 10</sup>|N/D <sup>2</sup>|Correcto<sup>5, 6, 12</sup>|N/D <sup>2</sup>|  
 |DBTYPE_IUNKNOWN|Flujo de bytes mediante **ISequentialStream**<sup>7</sup>|N/D <sup>2</sup>|Flujo de bytes mediante **ISequentialStream**<sup>11</sup>|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_UI1 &#124; VT_ARRAY)|Paso a través<sup>6,7</sup>|N/D <sup>2</sup>|N/D|N/D <sup>2</sup>|  
 |DBTYPE_VARIANT (VT_BSTR)|Paso a través<sup>6,10</sup>|N/D <sup>2</sup>|Correcto<sup>3</sup>|N/D <sup>2</sup>|  
   
- <sup>1</sup>si el tipo de un servidor distinto de DBTYPE_XML se especifica con **ICommandWithParameters:: SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); en caso contrario, los datos se envían al servidor, pero el servidor devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
+ <sup>1</sup>Si se especifica un tipo de servidor distinto de DBTYPE_XML con **ICommandWithParameters::SetParameterInfo** y el tipo de descriptor de acceso es DBTYPE_XML, se produce un error cuando se ejecuta la instrucción (DB_E_ERRORSOCCURRED, el estado del parámetro es DBSTATUS_E_BADACCESSOR); de lo contrario, los datos se envían al servidor, pero este devuelve un error que indica que no hay ninguna conversión implícita de XML al tipo de datos del parámetro.  
   
  <sup>2</sup>fuera del ámbito de este tema.  
   
@@ -139,7 +138,7 @@ ms.locfileid: "62668841"
 #### <a name="the-columns-and-procedureparameters-schema-rowsets"></a>Los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS  
  Las adiciones a los conjuntos de filas de esquema COLUMNS y PROCEDURE_PARAMETERS incluyen las columnas siguientes.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
 |SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema donde se define una colección de esquemas XML. Es NULL para una columna no XML o una columna XML sin tipo.|  
@@ -151,7 +150,7 @@ ms.locfileid: "62668841"
 #### <a name="the-ssxmlschema-schema-rowset"></a>El conjunto de filas de esquema SS_XMLSCHEMA  
  Se ha introducido un nuevo conjunto de filas de esquema SS_XMLSCHEMA para que los clientes recuperen información del esquema XML. El conjunto de filas SS_XMLSCHEMA contiene las columnas siguientes.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección XML.|  
 |SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección XML.|  
@@ -171,7 +170,7 @@ ms.locfileid: "62668841"
 #### <a name="the-dbpropsetsqlserverparameter-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER  
  Para admitir la **xml** tipo de datos a través de OLE DB, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client implementa el nuevo conjunto de propiedades DBPROPSET_SQLSERVERPARAMETER, que contiene los valores siguientes.  
   
-|Name|Tipo|Descripción|  
+|NOMBRE|Type|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Nombre del catálogo (base de datos) donde se define una colección de esquemas XML. Una de las partes del identificador de nombre de tres partes de SQL.|  
 |SSPROP_PARAM_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Nombre de un esquema XML de la colección de esquemas. Una de las partes del identificador de nombre de tres partes de SQL.|  
@@ -180,7 +179,7 @@ ms.locfileid: "62668841"
 #### <a name="the-dbpropsetsqlservercolumn-property-set"></a>El conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN  
  Para admitir la creación de tablas en el **ITableDefinition** interfaz, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega tres nuevas columnas al conjunto de propiedades DBPROPSET_SQLSERVERCOLUMN.  
   
-|NOMBRE|Tipo|Descripción|  
+|NOMBRE|Type|Descripción|  
 |----------|----------|-----------------|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_CATALOGNAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del catálogo donde se almacena el esquema XML. Para otros tipos de columna, esta propiedad devuelve una cadena vacía.|  
 |SSPROP_COL_XML_SCHEMACOLLECTION_SCHEMANAME|VT_BSTR|Para las columnas XML con tipo, esta propiedad es una cadena que especifica el nombre del esquema XML que define esta columna.|  
@@ -200,7 +199,7 @@ ms.locfileid: "62668841"
 #### <a name="the-icolumnsrowset-interface"></a>La interfaz IColumnsRowset  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client agrega la siguiente [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]-las columnas específicas para el conjunto de filas devuelto por la **IColumnRowset:: GetColumnsRowset** método. Estas columnas contienen el nombre de tres partes de una colección de esquemas XML. Para las columnas que no son XML o las columnas XML sin tipo, las tres columnas toman el valor predeterminado NULL.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_CATALOGNAME|DBTYPE_WSTR|Catálogo al que pertenece una colección de esquemas XML.<br /><br /> De lo contrario, NULL.|  
 |DBCOLUMN_SS_XML_SCHEMACOLLECTION_SCHEMANAME|DBTYPE_WSTR|Esquema al que pertenece una colección de esquemas XML. De lo contrario, NULL.|  
@@ -216,7 +215,7 @@ ms.locfileid: "62668841"
 #### <a name="the-irowsetchange-interface"></a>La interfaz IRowsetChange  
  Un consumidor puede actualizar una instancia XML de una columna de dos formas. La primera, a través del objeto de almacenamiento **ISequentialStream** creado por el proveedor. El consumidor puede llamar al método **ISequentialStream::Write** para actualizar directamente la instancia XML devuelta por el proveedor.  
   
- La segunda, mediante los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. En este enfoque, se puede especificar una instancia XML en el búfer del consumidor en un enlace de tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
+ La segunda, mediante los métodos **IRowsetChange::SetData** o **IRowsetChange::InsertRow**. En este enfoque, puede especificarse una instancia XML del búfer del consumidor en un enlace de tipo DBTYPE_BSTR, DBTYPE_WSTR, DBTYPE_VARIANT, DBTYPE_XML o DBTYPE_IUNKNOWN.  
   
  En caso de DBTYPE_BSTR, DBTYPE_WSTR o DBTYPE_VARIANT, el proveedor almacena la instancia XML que reside en el búfer del consumidor en la columna apropiada.  
   

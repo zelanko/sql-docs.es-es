@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b695f847ec7f99366e71e76aefe5aecb99cf5933
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072662"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162642"
 ---
 # <a name="project-properties"></a>Propiedades del proyecto 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072662"
   
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Opción de procesamiento**|**Default**|De manera predeterminada, Analysis Services determinará el tipo de procesamiento necesario cuando se implementen los cambios en los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
+|**Opción de procesamiento**|**Valor predeterminado**|De manera predeterminada, Analysis Services determinará el tipo de procesamiento necesario cuando se implementen los cambios en los objetos. Eso se suele traducir en el tiempo de implementación más breve. Sin embargo, también puede elegir un procesamiento completo o ningún procesamiento durante cada implementación.|  
 |**Implementación transaccional**|**False**|Especifica si la implementación del modelo es o no transaccional. De manera predeterminada, la implementación de todos los objetos modificados no es transaccional con el procesamiento de dichos objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este comportamiento para incluir la implementación y el procesamiento en una sola transacción.|  
 |**Modo de consulta**|**In-Memory**|Especifica el origen desde el que se devuelven los resultados de la consulta. Para obtener más información, consulte [el modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   
@@ -49,7 +49,7 @@ ms.locfileid: "53072662"
   
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Configuración de suplantación**|**Default**|Especifica las credenciales utilizadas para conectar a los orígenes de datos de un modelo que se ejecuta en el modo DirectQuery. Estas credenciales son diferentes de las credenciales de suplantación que se usan en el modo In-Memory predeterminado. Para obtener más información, consulte [suplantación](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).|  
+|**Configuración de suplantación**|**Valor predeterminado**|Especifica las credenciales utilizadas para conectar a los orígenes de datos de un modelo que se ejecuta en el modo DirectQuery. Estas credenciales son diferentes de las credenciales de suplantación que se usan en el modo In-Memory predeterminado. Para obtener más información, consulte [suplantación](../../analysis-services/tabular-models/impersonation-ssas-tabular.md).|  
   
 ##  <a name="bkmk_conf_proj_settings"></a> Configurar las propiedades predeterminadas de modelado de datos y de implementación (SSAS tabular)  
   

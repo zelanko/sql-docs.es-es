@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113811"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,11 +64,11 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si *publicación* no se especifica, se ven afectadas todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%** . Si *publicación* no se especifica, se ven afectadas todas las publicaciones.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. Debe ser único para la publicación. *artículo* es **sysname**, su valor predeterminado es **%**. Si *artículo* no se especifica, se ven afectados todos los artículos.  
+`[ @article = ] 'article'` Es el nombre del artículo. Debe ser único para la publicación. *artículo* es **sysname**, su valor predeterminado es **%** . Si *artículo* no se especifica, se ven afectados todos los artículos.  
   
-`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor para cambiar el estado de. *suscriptor* es **sysname**, su valor predeterminado es **%**. Si *suscriptor* no se especifica, se cambia el estado para todos los suscriptores al artículo especificado.  
+`[ @subscriber = ] 'subscriber'` Es el nombre del suscriptor para cambiar el estado de. *suscriptor* es **sysname**, su valor predeterminado es **%** . Si *suscriptor* no se especifica, se cambia el estado para todos los suscriptores al artículo especificado.  
   
 `[ @status = ] 'status'` Es el estado de la suscripción en el **syssubscriptions** tabla. *estado* es **sysname**, no tiene ningún valor predeterminado y puede ser uno de estos valores.  
   
@@ -81,7 +80,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @previous_status = ] 'previous_status'` Es el estado anterior de la suscripción. *previous_status* es **sysname**, su valor predeterminado es null. Este parámetro le permite cambiar las suscripciones que tienen actualmente ese estado, lo que permite agrupar funciones en un conjunto específico de suscripciones (por ejemplo, establecer todos los activos hacer una copia de las suscripciones a **suscrito**).  
   
-`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%**.  
+`[ @destination_db = ] 'destination_db'` Es el nombre de la base de datos de destino. *destination_db* es **sysname**, su valor predeterminado es **%** .  
   
 `[ @frequency_type = ] frequency_type` Es la frecuencia con que se programa la tarea de distribución. *frequency_type* es **int**, su valor predeterminado es null.  
   
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` Es la fecha en la tarea de distribución deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo del sistema opcional. *optional_command_line* es **nvarchar (4000)**, su valor predeterminado es null.  
+`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo del sistema opcional. *optional_command_line* es **nvarchar (4000)** , su valor predeterminado es null.  
   
-`[ @distribution_jobid = ] distribution_jobid` Es el Id. de trabajo del agente de distribución en el distribuidor para la suscripción al cambiar el estado de la suscripción de inactiva a activa. En otros casos, no se define. Si interviene más de un agente de distribución en una sola llamada a este procedimiento almacenado, el resultado no se define. *distribution_jobid* es **binary (16)**, su valor predeterminado es null.  
+`[ @distribution_jobid = ] distribution_jobid` Es el Id. de trabajo del agente de distribución en el distribuidor para la suscripción al cambiar el estado de la suscripción de inactiva a activa. En otros casos, no se define. Si interviene más de un agente de distribución en una sola llamada a este procedimiento almacenado, el resultado no se define. *distribution_jobid* es **binary (16)** , su valor predeterminado es null.  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

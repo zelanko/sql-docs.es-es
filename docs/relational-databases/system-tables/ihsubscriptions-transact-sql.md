@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1c8ac59b6a9798f04efaf756c83b6862e9fa9871
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b677e0f6c9be058650a46aee3465811b8f3eecc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990146"
 ---
 # <a name="ihsubscriptions-transact-sql"></a>IHsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "62719612"
 |**srvid**|**smallint**|Id. de servidor del suscriptor.|  
 |**dest_db**|**sysname**|El nombre de la base de datos de destino|  
 |**login_name**|**sysname**|El nombre de inicio de sesión utilizado al agregar la suscripción.|  
-|**distribution_jobid**|**binary(16)**|El Id. de trabajo del Agente de distribución.|  
+|**distribution_jobid**|**binary (16)**|El Id. de trabajo del Agente de distribución.|  
 |**timestamp**|**timestamp**|Fecha y la hora de creación de la suscripción.|  
 |**queued_reinit**|**bit**|Especifica si el artículo está marcado para inicialización o reinicialización. Un valor de **1** especifica que el artículo suscrito está marcado para inicialización o reinicialización.|  
 |**status**|**tinyint**|El estado de la suscripción:<br /><br /> **0** = inactivo.<br /><br /> **1** = suscrito.<br /><br /> **2** = activo.|  

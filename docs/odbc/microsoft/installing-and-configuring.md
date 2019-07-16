@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d190dec4220a7ddb4bde5cc4a730396a14a8add9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 753489fe50b6d36f2ac6a6ef1167ecf8f1a6d976
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471243"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019435"
 ---
 # <a name="installing-and-configuring"></a>Instalación y configuración
 Para descargar el controlador ODBC de Visual FoxPro, consulte [el sitio de descarga de Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318).  

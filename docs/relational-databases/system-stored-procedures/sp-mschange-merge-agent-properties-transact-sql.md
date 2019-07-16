@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f775fa0f-28c7-4863-89ce-7bcfa1ab8b5e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f682400bc827d66878499b6e625671d5b9061da
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 84c517fe891052ff6e12ee6e92a2d16d912a140b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905191"
 ---
 # <a name="spmschangemergeagentproperties-transact-sql"></a>sp_MSchange_merge_agent_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_MSchange_merge_agent_properties [ @publisher = ] 'publisher'
   
 `[ @property = ] 'property'` Es la propiedad de publicación para cambiar. *propiedad* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @value = ] 'value'` Es el nuevo valor de propiedad. *valor* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @value = ] 'value'` Es el nuevo valor de propiedad. *valor* es **nvarchar (524)** , su valor predeterminado es null.  
   
  Esta tabla describe las propiedades del trabajo del Agente de mezcla que se pueden cambiar y las restricciones de los valores de esas propiedades.  
   

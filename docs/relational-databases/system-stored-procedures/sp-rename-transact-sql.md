@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bc3548f0-143f-404e-a2e9-0a15960fc8ed
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 330b330375ee49d13242dd400ed76fae2bfc6e71
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 070c2a362a69fb6863cc263da3975efc66c7c9f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47661213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006934"
 ---
 # <a name="sprename-transact-sql"></a>sp_rename (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  [ @objname =] '*object_name*'  
  Es el nombre actual completo o incompleto del objeto de usuario o tipo de datos. Si el objeto se va a cambiar es una columna de una tabla, *object_name* debe tener el formato *table.column* o *esquema.tabla.columna*. Si el objeto se va a cambiar es un índice, *object_name* debe tener el formato *table.index* o *schema.table.index*. Si el objeto se va a cambiar es una restricción, *object_name* debe tener el formato *schema.constraint*.  
   
- Las comillas solo se necesitan si se especifica un objeto completo. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *object_name* es **nvarchar(776)**, no tiene ningún valor predeterminado.  
+ Las comillas solo se necesitan si se especifica un objeto completo. Si se proporciona un nombre completo, incluido el nombre de la base de datos, el nombre de la base de datos debe ser el de la base de datos actual. *object_name* es **nvarchar(776)** , no tiene ningún valor predeterminado.  
   
  [ @newname =] '*new_name*'  
  Es el nuevo nombre del objeto especificado. *new_name* debe ser un nombre de una sola parte y debe seguir las reglas para identificadores. *NewName* es **sysname**, no tiene ningún valor predeterminado.  
@@ -60,7 +59,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
 >  Los nombres de los desencadenadores no pueden comenzar por # o ##.  
   
  [ @objtype =] '*object_type*'  
- Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es **varchar (13)**, su valor predeterminado es null, y puede tener uno de estos valores.  
+ Es el tipo de objeto cuyo nombre se va a cambiar. *object_type* es **varchar (13)** , su valor predeterminado es null, y puede tener uno de estos valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -86,7 +85,7 @@ sp_rename [ @objname = ] 'object_name' , [ @newname = ] 'new_name'
  Al cambiar el nombre de un objeto como una tabla o columna, no se cambia automáticamente el nombre de las referencias a ese objeto. Es necesario modificar de forma manual los objetos que hacen referencia al objeto cuyo nombre se ha cambiado. Por ejemplo, si se cambia el nombre de una columna de una tabla y en un desencadenador existe una referencia a esa columna, es necesario modificar el desencadenador para reflejar el nuevo nombre de la columna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de cambiarle el nombre.  
   
 ## <a name="permissions"></a>Permisos  
- Para cambiar el nombre de objetos, columnas e índices, se necesita permiso ALTER en el objeto. Para cambiar el nombre de tipos de usuario, se necesita el permiso CONTROL en el tipo. Para cambiar el nombre de una base de datos, debe pertenecer a los roles fijos de servidor sysadmin o dbcreator.   
+ Para cambiar el nombre de objetos, columnas e índices, se necesita permiso ALTER en el objeto. Para cambiar el nombre de tipos de usuario, se necesita el permiso CONTROL en el tipo. Para cambiar el nombre de una base de datos, debe pertenecer a los roles fijos de servidor sysadmin o dbcreator.  
   
 ## <a name="examples"></a>Ejemplos  
   
@@ -100,7 +99,7 @@ EXEC sp_rename 'Sales.SalesTerritory', 'SalesTerr';
 GO  
 ```  
   
-### <a name="b-renaming-a-column"></a>B. Cambiar el nombre de una columna  
+### <a name="b-renaming-a-column"></a>b. Cambiar el nombre de una columna  
  El ejemplo siguiente se cambia el nombre el `TerritoryID` columna en el `SalesTerritory` tabla `TerrID`.  
   
 ```  

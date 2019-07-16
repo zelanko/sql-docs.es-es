@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096210"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` Es el nombre de la **timestamp** columna en el publicador. *timestamp_col* es **sysname**, su valor predeterminado es null.  
   
-`[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause*es **nvarchar (4000)**, su valor predeterminado es null.  
+`[ @filter_clause = ] 'filter_clause'` Es una restricción cláusula (WHERE) que define un filtro horizontal. Al especificar la cláusula de restricción, omita la palabra clave WHERE. *filter_clause*es **nvarchar (4000)** , su valor predeterminado es null.  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Es un mapa de bits de las columnas de clave principal en la tabla. *primary_key_bitmap* es **varbinary (4000)**, no tiene ningún valor predeterminado.  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` Es un mapa de bits de las columnas de clave principal en la tabla. *primary_key_bitmap* es **varbinary (4000)** , no tiene ningún valor predeterminado.  
   
 `[ @identity_support = ] identity_support` Habilita y deshabilita la administración del intervalo automático de identidad cuando se utiliza la actualización en cola. *identity_support* es un **bit**, su valor predeterminado es **0**. **0** significa que no hay ninguna identidad de intervalo de soporte técnico, **1** permite la administración de intervalos de identidad automáticos.  
   

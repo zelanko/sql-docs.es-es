@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: b122c8dbd5e087ab8b871eb7a29e3bb2b330acaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794411"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061786"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Procedimientos recomendados para ejecutar Data Migration Assistant
 Este artículo proporciona algunos procedimientos recomendados para la instalación, evaluación y migración.
@@ -28,7 +27,7 @@ Este artículo proporciona algunos procedimientos recomendados para la instalaci
 ## <a name="installation"></a>Instalación
 No instale y ejecute el Asistente para migración de datos directamente en el equipo de host de SQL Server.
 
-## <a name="assessment"></a>Evaluación de
+## <a name="assessment"></a>Evaluación
 - Ejecute las evaluaciones en bases de datos de producción durante las horas de poca actividad.
 - Realizar el **problemas de compatibilidad** y **recomendación de característica nueva** evaluaciones por separado para reducir la duración de la evaluación.
 

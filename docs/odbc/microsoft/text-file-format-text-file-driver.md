@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912443"
 ---
 # <a name="text-file-format-text-file-driver"></a>Formato de archivo de texto (controlador de archivo de texto)
 El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y delimitado. Un archivo de texto consta de una línea de encabezado opcional y cero o más líneas de texto.  
@@ -42,7 +41,7 @@ El controlador de texto de ODBC admite tanto archivos de texto de ancho fijo y d
 |------------|--------------------|  
 |No cursiva|Caracteres que deben escribirse tal como se muestra|  
 |*italics*|Argumentos que se definen en otro lugar en la gramática|  
-|brackets ([])|Elementos opcionales|  
+|corchetes ([])|Elementos opcionales|  
 |las llaves ({})|Una lista de opciones mutuamente exclusivas|  
 |barras verticales (&#124;)|Opciones mutuamente excluyentes independientes|  
 |botón de puntos suspensivos (...)|Elementos que se pueden repetir una o más veces|  

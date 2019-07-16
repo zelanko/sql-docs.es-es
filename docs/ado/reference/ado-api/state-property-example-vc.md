@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1c38cd3b-e4f5-4754-b115-ef5e46d24ab9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2da3fc845b5144cb7b2a0ae6a2cbfc718e4f3c4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dad78c3754fb55aa83c50d467920a611db277f13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930847"
 ---
 # <a name="state-property-example-vc"></a>Ejemplo de la propiedad State (VC ++)
 Este ejemplo se usa el [estado](../../../ado/reference/ado-api/state-property-ado.md) propiedad para mostrar un mensaje mientras se están abriendo conexiones asincrónicas y se están ejecutando los comandos asincrónicos.  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b22f985-f5e4-4779-87eb-e43329a442b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 56caa8131cea834b88eeb338bb05d20c25349ea9
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 4be0e017988670d740067011f775f8477037aa18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057029"
 ---
 # <a name="sql-data-types"></a>Tipos de datos SQL
 Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos tipos de datos SQL que define el DBMS asociado. Información acerca de cómo se asigna un controlador de DBMS SQL tipos a los identificadores de tipo definido por el ODBC SQL y cómo asigna un controlador de tipos de DBMS SQL a su propio identificadores específicos del controlador de tipo SQL se devuelve a través de una llamada a **SQLGetTypeInfo**. Un controlador también devuelve los tipos de datos SQL al describir los tipos de datos de columnas y parámetros a través de las llamadas a **SQLColAttribute**, **SQLColumns**, **SQLDescribeCol**, **SQLDescribeParam**, **SQLProcedureColumns**, y **SQLSpecialColumns**.  
@@ -35,7 +34,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
   
  En la tabla siguiente se enumera los identificadores de tipo SQL válidos para todos los tipos de datos SQL. La tabla también enumera el nombre y la descripción del tipo de datos correspondiente de SQL-92 (si existe).  
   
-|Identificador de tipo SQL [1]|Datos SQL típica<br /><br /> type[2]|Descripción del tipo típico|  
+|Identificador de tipo SQL [1]|Datos SQL típica<br /><br /> tipo [2]|Descripción del tipo típico|  
 |------------------------------|------------------------------------|------------------------------|  
 |SQL_CHAR|CHAR(*n*)|Cadena de longitud fija de caracteres *n*.|  
 |SQL_VARCHAR|VARCHAR(*n*)|Cadena de caracteres de longitud variable con una longitud máxima de cadena *n*.|  
@@ -58,7 +57,7 @@ Cada DBMS define sus propios tipos SQL. Cada controlador ODBC expone solo esos t
 |SQL_LONGVARBINARY|VARBINARY LARGO|Datos binarios de longitud variable. Longitud máxima es depende del origen de datos. [9]|  
 |SQL_TYPE_DATE[6]|DATE|Año, mes y día campos, conforme a las reglas del calendario gregoriano. (Consulte [restricciones del calendario gregoriano](../../../odbc/reference/appendixes/constraints-of-the-gregorian-calendar.md), más adelante en este apéndice.)|  
 |SQL_TYPE_TIME[6]|TIEMPO (*p*)|Hora, minuto y segundo campos, con los valores válidos para las horas de 00 a 23, los valores válidos de 00 a 59 minutos y los valores válidos para los segundos de 00 a 61. Precisión *p* indica la precisión de segundos.|  
-|SQL_TYPE_TIMESTAMP[6]|TIMESTAMP(*p*)|Año, mes, día, hora, minuto y segundo campos, con los valores válidos según se define para los tipos de datos de fecha y hora.|  
+|SQL_TYPE_TIMESTAMP[6]|Marca de tiempo (*p*)|Año, mes, día, hora, minuto y segundo campos, con los valores válidos según se define para los tipos de datos de fecha y hora.|  
 |SQL_TYPE_UTCDATETIME|UTCDATETIME|Campos de año, mes, día, hora, minuto, segundo, utchour y utcminute. Los campos utchour y utcminute tienen precisión de 1/10 microsegundo.|  
 |SQL_TYPE_UTCTIME|UTCTIME|Campos de hora, minuto, segundo, utchour y utcminute. Los campos utchour y utcminute tienen precisión de 1/10 microsegundo...|  
 |SQL_INTERVAL_MONTH[7]|MES de intervalo (*p*)|Número de meses entre dos fechas; *p* es el intervalo de precisión del principio.|  

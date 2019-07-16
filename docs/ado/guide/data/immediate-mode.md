@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 31fc53d0-97de-4315-a87b-3bf5cdd1f432
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37ad4cbc60ad4c08b65ff7f0db9b5c70245a96e3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3952ef502bf79d6704cbaea80b9a825a3c70981b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925013"
 ---
 # <a name="immediate-mode"></a>Modo inmediato
 Modo inmediato está en vigor cuando el **LockType** propiedad está establecida en **adLockOptimistic** o **adLockPessimistic**. En el modo inmediato, los cambios realizados en un registro se propagan al origen de datos tan pronto como se declara completo el trabajo en una fila mediante una llamada a la **actualización** método.  

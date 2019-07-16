@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b631a20c-2f60-4102-a61d-93b8780a4620
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ed5c3230a12e79c79624d69b4714a828a865f1dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32c4a0219b049ee66a38d6c7c10295245dd48ebc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905482"
 ---
 # <a name="sqlsetconnectoption-text-file-driver"></a>SQLSetConnectOption (controlador de archivo de texto)
 > [!NOTE]  
@@ -29,10 +28,10 @@ ms.locfileid: "63305657"
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Puede establecerse la fOption SQL_ACCESS_MODE SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no impide que las actualizaciones si SQL_ACCESS_MODE está establecido en SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|El controlador de texto sólo admite SQL_AUTOCOMMIT está activado (el estado predeterminado), porque no admiten transacciones.|  
-|SQL_CURRENT_QUALIFIER|Compatible.|  
+|SQL_CURRENT_QUALIFIER|Se admite.|  
 |SQL_LOGIN_TIMEOUT|No compatible.|  
-|SQL_OPT_TRACE|Compatible.|  
-|SQL_OPT_TRACEFILE|Compatible.|  
+|SQL_OPT_TRACE|Se admite.|  
+|SQL_OPT_TRACEFILE|Se admite.|  
 |SQL_PACKET_SIZE|No compatible.|  
 |SQL_QUIET_MODE|No compatible.|  
 |SQL_TRANSLATE_DLL|No compatible.|  

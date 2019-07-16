@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69723419-4544-49c6-a517-adb30ffa5741
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c65e57f65311a01a337594b702cc4dc19d35f321
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 687f9f7441b7d77ea191047ef22491728ba81047
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47815179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095821"
 ---
 # <a name="logshippingsecondary-transact-sql"></a>log_shipping_secondary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

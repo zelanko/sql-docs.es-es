@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6adc78da-991d-4c08-98c3-ecb4762e0e99
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: baea56d983ac1c2fff9016d1a385c8b4d918fb7a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 1cd32e7224b66c012d3422a3754cb0b4e0ca325b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802802"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029774"
 ---
 # <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52802802"
 |subscription_type|**int**|El tipo de suscripción:<br /><br /> **0** = inserción.<br /><br /> **1** = extracción.<br /><br /> **2** = anónima.|  
 |sync_type|**tinyint**|Tipo de sincronización:<br /><br /> **1** = automatic.<br /><br /> **2** no = sincronización.|  
 |description|**nvarchar(255)**|Descripción breve de la suscripción.|  
-|priority|**real**|Especifica la prioridad de la suscripción y permite la implementación de una resolución de conflictos basada en prioridades. Es igual a **0,00** para todas las suscripciones locales o anónimas.|  
+|prioridad|**real**|Especifica la prioridad de la suscripción y permite la implementación de una resolución de conflictos basada en prioridades. Es igual a **0,00** para todas las suscripciones locales o anónimas.|  
 |recgen|**bigint**|Número de la última generación recibida.|  
 |recguid|**uniqueidentifier**|Identificador único de la última generación recibida.|  
 |sentgen|**bigint**|Número de la última generación enviada.|  

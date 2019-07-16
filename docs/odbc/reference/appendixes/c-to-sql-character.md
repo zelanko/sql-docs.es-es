@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0158da62ed360e926cdb5382b89b1491c0723550
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f30e0cf7622de5124cb151288417bb508354ce0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037717"
 ---
 # <a name="c-to-sql-character"></a>C a SQL: Carácter
 Los identificadores para el carácter de tipo de datos ODBC C son:  
@@ -36,16 +35,16 @@ Los identificadores para el carácter de tipo de datos ODBC C son:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de datos < = longitud de la columna.<br /><br /> Longitud de bytes de datos > longitud de la columna.|n/d<br /><br /> 22001|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de los datos de carácter < = longitud de la columna.<br /><br /> Longitud de datos de caracteres > longitud de la columna.|n/d<br /><br /> 22001|  
-|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Puede convertidas sin truncamiento de datos<br /><br /> Convierten datos con el truncamiento de dígitos fraccionarios [e]<br /><br /> Conversión de datos daría lugar a pérdida de dígitos de entero (en contraposición a fraccionarios) [e]<br /><br /> Valor de datos no es un *literales numéricos*|n/d<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
-|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Datos están dentro del intervalo del tipo de datos a la que se va a convertir el número<br /><br /> Datos están fuera del intervalo del tipo de datos a la que se va a convertir el número<br /><br /> Valor de datos no es un *literales numéricos*|n/d<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BIT|Datos están 0 o 1<br /><br /> Datos están mayores que 0, inferior a 2 y no es igual a 1<br /><br /> Datos están menor que 0 o mayor que o igual a 2<br /><br /> Datos no están un *literales numéricos*|n/d<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
-|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Longitud de bytes de datos) / 2 < = longitud de bytes de la columna<br /><br /> (Longitud de bytes de datos) / 2 > longitud de bytes de la columna<br /><br /> Valor de datos no es un valor hexadecimal|n/d<br /><br /> 22001<br /><br /> 22018|  
-|SQL_TYPE_DATE|Valor de datos es válido *literal de fecha ODBC*<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; parte de hora es cero<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; parte de hora es distinto de cero [a]<br /><br /> Valor de datos no es válido *literal de fecha ODBC* o *literal de marca de tiempo de ODBC*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIME|Valor de datos es válido *literal de hora ODBC*<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de segundos es cero [b]<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de segundos es distinto de cero [b]<br /><br /> Valor de datos no es válido *literal de hora ODBC* o *literal de marca de tiempo de ODBC*|n/d<br /><br /> n/d<br /><br /> 22008<br /><br /> 22018|  
-|SQL_TYPE_TIMESTAMP|Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de los segundos no se ha truncado<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios truncado parte de los segundos<br /><br /> Valor de datos es válido *literal de fecha ODBC*[c]<br /><br /> Valor de datos es válido *literal de hora ODBC*[d]<br /><br /> Valor de datos no es válido *literal de fecha ODBC*, *literal de hora ODBC*, o *literal de marca de tiempo de ODBC*|n/d<br /><br /> 22008<br /><br /> n/d<br /><br /> n/d<br /><br /> 22018|  
-|Todos los tipos de intervalo SQL|Valor de datos es válido *el valor de intervalo*; se produce ningún truncamiento<br /><br /> Valor de datos es válido *el valor de intervalo*; se trunca el valor en uno de los campos<br /><br /> El valor de datos no es un literal de intervalo válido|n/d<br /><br /> 22015<br /><br /> 22018|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de datos < = longitud de la columna.<br /><br /> Longitud de bytes de datos > longitud de la columna.|N/D<br /><br /> 22001|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de los datos de carácter < = longitud de la columna.<br /><br /> Longitud de datos de caracteres > longitud de la columna.|N/D<br /><br /> 22001|  
+|SQL_DECIMAL<br /><br /> SQL_NUMERIC<br /><br /> SQL_TINYINT<br /><br /> SQL_SMALLINT<br /><br /> SQL_INTEGER SQL_BIGINT|Puede convertidas sin truncamiento de datos<br /><br /> Convierten datos con el truncamiento de dígitos fraccionarios [e]<br /><br /> Conversión de datos daría lugar a pérdida de dígitos de entero (en contraposición a fraccionarios) [e]<br /><br /> Valor de datos no es un *literales numéricos*|N/D<br /><br /> 22001<br /><br /> 22001<br /><br /> 22018|  
+|SQL_REAL<br /><br /> SQL_FLOAT<br /><br /> SQL_DOUBLE|Datos están dentro del intervalo del tipo de datos a la que se va a convertir el número<br /><br /> Datos están fuera del intervalo del tipo de datos a la que se va a convertir el número<br /><br /> Valor de datos no es un *literales numéricos*|N/D<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BIT|Datos están 0 o 1<br /><br /> Datos están mayores que 0, inferior a 2 y no es igual a 1<br /><br /> Datos están menor que 0 o mayor que o igual a 2<br /><br /> Datos no están un *literales numéricos*|N/D<br /><br /> 22001<br /><br /> 22003<br /><br /> 22018|  
+|SQL_BINARY<br /><br /> SQL_VARBINARY<br /><br /> SQL_LONGVARBINARY|(Longitud de bytes de datos) / 2 < = longitud de bytes de la columna<br /><br /> (Longitud de bytes de datos) / 2 > longitud de bytes de la columna<br /><br /> Valor de datos no es un valor hexadecimal|N/D<br /><br /> 22001<br /><br /> 22018|  
+|SQL_TYPE_DATE|Valor de datos es válido *literal de fecha ODBC*<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; parte de hora es cero<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; parte de hora es distinto de cero [a]<br /><br /> Valor de datos no es válido *literal de fecha ODBC* o *literal de marca de tiempo de ODBC*|N/D<br /><br /> N/D<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIME|Valor de datos es válido *literal de hora ODBC*<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de segundos es cero [b]<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de segundos es distinto de cero [b]<br /><br /> Valor de datos no es válido *literal de hora ODBC* o *literal de marca de tiempo de ODBC*|N/D<br /><br /> N/D<br /><br /> 22008<br /><br /> 22018|  
+|SQL_TYPE_TIMESTAMP|Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios parte de los segundos no se ha truncado<br /><br /> Valor de datos es válido *literal de marca de tiempo de ODBC*; fraccionarios truncado parte de los segundos<br /><br /> Valor de datos es válido *literal de fecha ODBC*[c]<br /><br /> Valor de datos es válido *literal de hora ODBC*[d]<br /><br /> Valor de datos no es válido *literal de fecha ODBC*, *literal de hora ODBC*, o *literal de marca de tiempo de ODBC*|N/D<br /><br /> 22008<br /><br /> N/D<br /><br /> N/D<br /><br /> 22018|  
+|Todos los tipos de intervalo SQL|Valor de datos es válido *el valor de intervalo*; se produce ningún truncamiento<br /><br /> Valor de datos es válido *el valor de intervalo*; se trunca el valor en uno de los campos<br /><br /> El valor de datos no es un literal de intervalo válido|N/D<br /><br /> 22015<br /><br /> 22018|  
   
  [a] se trunca la parte de hora de la marca de tiempo.  
   

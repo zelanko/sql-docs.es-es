@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: aaf5d516-e090-445f-8839-9e39581c69c7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0913458d683d7641145b262552e147033dbfc054
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36e108fcc61b2390d5fd72ac4ad322778ccfb4b2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057068"
 ---
 # <a name="scalar-function-escape-sequence"></a>Secuencia de Escape de la función escalar
 ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta secuencia de escape es como sigue:  
@@ -36,11 +35,11 @@ ODBC utiliza secuencias de escape para funciones escalares. La sintaxis de esta 
   
  *Iniciador de esc de ODBC* fn *función escalar del terminador de esc de ODBC*  
   
- *scalar-function* ::= *function-name* (*argument-list*)  
+ *función escalar* :: = *nombre de la función* (*lista de argumentos*)  
   
  (Las definiciones de los elementos no terminales *nombre de la función* y *nombre de la función* (*lista de argumentos*) se derivan de la lista de funciones escalares en [ Apéndice E: Funciones escalares](../../../odbc/reference/appendixes/appendix-e-scalar-functions.md).)  
   
- *ODBC-esc-initiator* ::= {  
+ *Iniciador de esc de ODBC* :: = {  
   
  *ODBC-esc-terminator* ::= }  
   

@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 3af8b47a-936d-4411-91d1-d2d16dda5623
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 844a6de4bd0ee770cd8406d3024a6a7f3bec3e4b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a76835272ed86faeab807f97f6e8801985062733
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47798313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059193"
 ---
 # <a name="sysfnvalidateplanguide-transact-sql"></a>sys.fn_validate_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ CROSS APPLY fn_validate_plan_guide(plan_guide_id);
 GO  
 ```  
   
-### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>B. Validar la guía de plan de prueba antes de implementar un cambio en la base de datos  
+### <a name="b-testing-plan-guide-validation-before-implementing-a-change-to-the-database"></a>b. Validar la guía de plan de prueba antes de implementar un cambio en la base de datos  
  El ejemplo siguiente utiliza una transacción explícita para quitar un índice. El `sys.fn_validate_plan_guide` se ejecuta la función para determinar si esta acción invalidará cualquier guía de plan en la base de datos. En función de los resultados de la función, se confirma la instrucción `DROP INDEX` o se revierte la transacción y no se quita el índice.  
   
 ```sql  

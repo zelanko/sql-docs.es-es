@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536136"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056371"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @operation = ] 'operation'` El tipo de operación para la operación expuesta. *operación*es **varchar(64)**, no tiene ningún valor predeterminado. Las operaciones válidas dependen *object_type*.  
+`[ @operation = ] 'operation'` El tipo de operación para la operación expuesta. *operación*es **varchar(64)** , no tiene ningún valor predeterminado. Las operaciones válidas dependen *object_type*.  
   
 |Tipo de objeto|Operación|  
 |-----------------|---------------|  
@@ -54,11 +53,11 @@ sp_post_msx_operation
 |**SERVER**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**PROGRAMACIÓN**|INSERT<br /><br /> UPDATE<br /><br /> SUPRIMIR|  
   
-`[ @object_type = ] 'object'` El tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)**, su valor predeterminado es **trabajo**.  
+`[ @object_type = ] 'object'` El tipo de objeto para el que se expone una operación. Los tipos válidos son **trabajo**, **SERVER**, y **programación**. *objeto* es **varchar(64)** , su valor predeterminado es **trabajo**.  
   
 `[ @job_id = ] job_id` El número de identificación del trabajo del trabajo al que se aplica la operación. *job_id* es **uniqueidentifier**, no tiene ningún valor predeterminado. **0 x 00** indica todos los trabajos. Si *objeto* es **SERVER**, a continuación, *job_id*no es necesario.  
   
-`[ @specific_target_server = ] 'target_server'` El nombre del servidor de destino que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)**, su valor predeterminado es null.  
+`[ @specific_target_server = ] 'target_server'` El nombre del servidor de destino que se aplica la operación especificada. Si *job_id* se especifica, pero *target_server* no se especifica, las operaciones se exponen para todos los trabajos del trabajo de los servidores. *target_server* es **nvarchar (30)** , su valor predeterminado es null.  
   
 `[ @value = ] value` El intervalo de sondeo, en segundos. *value* es de tipo **int**y su valor predeterminado es NULL. Especifique este parámetro solo si *operación* es **SET-POLL**.  
   

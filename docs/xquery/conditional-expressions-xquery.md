@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b280dd96-c80f-4c51-bc06-a88d42174acb
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 62a061632b5f598932fe29499519d7eb897c78a6
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: f593455269b8c005a3b4d3725f4360db77ea48f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56041746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039009"
 ---
 # <a name="conditional-expressions-xquery"></a>Expresiones condicionales (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ else
   
 -   El **else** expresión es necesaria. Si no la necesita, puede devolver " ( ) ", tal como se ilustra en los ejemplos de este tema.  
   
- Por ejemplo, se especifica la consulta siguiente contra la **xml** variable de tipo. El **si** condición prueba el valor de la variable SQL (@v) dentro de la expresión XQuery mediante el uso de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) función de extensión. Si el valor de la variable es "FirstName", devolverá el elemento <`FirstName`>. De lo contrario, devolverá el elemento <`LastName`>.  
+ Por ejemplo, se especifica la consulta siguiente contra la **xml** variable de tipo. El **si** condición prueba el valor de la variable SQL (@v) dentro de la expresión XQuery mediante el uso de la [:variable()](../xquery/xquery-extension-functions-sql-variable.md) función de extensión. Si el valor de la variable es "FirstName", devuelve el <`FirstName`> elemento. De lo contrario, devuelve el <`LastName`> elemento.  
   
 ```  
 declare @x xml  
@@ -81,7 +80,7 @@ if ( sql:variable("@v")="FirstName" ) then
 <FirstName>fname</FirstName>  
 ```  
   
- La consulta siguiente recupera las dos primeras descripciones de características de la descripción del catálogo de productos de un modelo de producto determinado. Si hay más características en el documento, agrega un elemento <`there-is-more`> sin contenido.  
+ La consulta siguiente recupera las dos primeras descripciones de características de la descripción del catálogo de productos de un modelo de producto determinado. Si hay más características en el documento, agrega un <`there-is-more`> elemento con contenido vacío.  
   
 ```  
 SELECT CatalogDescription.query('  
@@ -123,7 +122,7 @@ WHERE ProductModelID = 19
 </Product>  
 ```  
   
- En la consulta siguiente, se devuelve un elemento <`Location`> con un atributo LocationID si la ubicación de centro de trabajo no especifica las horas de instalación.  
+ En la consulta siguiente, un <`Location`> se devuelve el elemento con un atributo LocationID si la ubicación del centro de trabajo no especifica las horas de instalación.  
   
 ```  
 SELECT Instructions.query('  

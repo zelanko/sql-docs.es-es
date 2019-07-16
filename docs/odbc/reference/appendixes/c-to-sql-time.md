@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a8da43c9-d9a5-45e5-bd9a-1dd633db2ee0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7ea11803847505698ea42d13727b6177f3a24bda
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c4a3734ff8d9f0cb120e1d33433ee3a301bb59ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63316530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019300"
 ---
 # <a name="c-to-sql-time"></a>C a SQL: Time
 El identificador para el tipo de datos ODBC C de tiempo es:  
@@ -31,10 +30,10 @@ El identificador para el tipo de datos ODBC C de tiempo es:
   
 |Identificador de tipo SQL|Prueba|SQLSTATE|  
 |-------------------------|----------|--------------|  
-|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = 8<br /><br /> Columna de bytes de longitud < 8<br /><br /> Valor de datos no es una hora válida|n/d<br /><br /> 22001<br /><br /> 22008|  
-|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = 8<br /><br /> Columna de caracteres de longitud < 8<br /><br /> Valor de datos no es una hora válida|n/d<br /><br /> 22001<br /><br /> 22008|  
-|SQL_TYPE_TIME|Valor de datos es una hora válida<br /><br /> Valor de datos no es una hora válida|n/d<br /><br /> 22007|  
-|SQL_TYPE_TIMESTAMP|Valor de datos es una hora válida [a]<br /><br /> Valor de datos no es una hora válida|n/d<br /><br /> 22007|  
+|SQL_CHAR<br /><br /> SQL_VARCHAR<br /><br /> SQL_LONGVARCHAR|Longitud de bytes de la columna > = 8<br /><br /> Columna de bytes de longitud < 8<br /><br /> Valor de datos no es una hora válida|N/D<br /><br /> 22001<br /><br /> 22008|  
+|SQL_WCHAR<br /><br /> SQL_WVARCHAR<br /><br /> SQL_WLONGVARCHAR|Longitud de caracteres de la columna > = 8<br /><br /> Columna de caracteres de longitud < 8<br /><br /> Valor de datos no es una hora válida|N/D<br /><br /> 22001<br /><br /> 22008|  
+|SQL_TYPE_TIME|Valor de datos es una hora válida<br /><br /> Valor de datos no es una hora válida|N/D<br /><br /> 22007|  
+|SQL_TYPE_TIMESTAMP|Valor de datos es una hora válida [a]<br /><br /> Valor de datos no es una hora válida|N/D<br /><br /> 22007|  
   
  [a] de la fecha en la parte de la marca de tiempo se establece en la fecha actual y los segundos fraccionarios parte de la marca de tiempo se establece en cero.  
   

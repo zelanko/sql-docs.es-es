@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a0e31e6b-d02b-4ee2-9b37-5baf6a11c0a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fc4b4c7a5c1074a62bf0e84d265840109f65ea55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1753e0d50655205bc6f459548f2ef2b77d5cc885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096449"
 ---
 # <a name="dbase-data-types"></a>Tipos de datos de dBASE
 En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a tipos de datos SQL de ODBC. Tenga en cuenta que no todos los tipos de datos SQL de ODBC son compatibles.  
@@ -36,7 +35,7 @@ En la tabla siguiente se muestra cómo se asignan los tipos de datos de dBASE a 
 |LÓGICO|SQL_BIT|  
 |MEMORANDO|SQL_LONGVARCHAR|  
 |NUMÉRICO (BCD)|SQL_DOUBLE|  
-|OLEOBJECT[1]|SQL_LONGBINARY|  
+|CLASES OLEOBJECT [1]|SQL_LONGBINARY|  
   
  [1] válido sólo para dBASE versión 5. *x*  
   

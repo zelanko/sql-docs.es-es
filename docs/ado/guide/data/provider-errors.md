@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: cc7d6ff9-2034-45c6-9d61-90b177010054
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56fff67f882eceec3c07553e5c465da65a69ce65
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 85d4a7607fae1df7dfb6ec62b8a3bfae8f58001b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718680"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924547"
 ---
 # <a name="provider-errors"></a>Errores del proveedor
 Cuando se produce un error de proveedor, se devuelve un error de tiempo de ejecución de -2147467259. Cuando reciba este error, compruebe el **errores** colección de activo **conexión** objeto, que contiene uno o varios errores que describe lo que ha sucedido.  
@@ -71,7 +70,7 @@ End Function
 |**HelpContext, HelpFile**|Hace referencia al archivo de ayuda y el tema de ayuda que contiene una descripción del error que se ha producido.|  
 |**NativeError**|El número de error específico del proveedor.|  
 |**Número**|Un entero largo que representa el número (enumerados en el **ErrorValueEnum**) del error que se ha producido.|  
-|**Source**|Indica el nombre del objeto o aplicación que generó un error.|  
+|**Origen**|Indica el nombre del objeto o aplicación que generó un error.|  
 |**SQLState**|Un código de error de cinco caracteres que devuelve el proveedor durante el proceso de una instrucción SQL.|  
   
  ADO **Error** objeto es muy similar a la versión estándar de Visual Basic **Err** objeto. Sus propiedades describen el error producido. Además del número del error, también recibirá dos fragmentos de información relacionados. El **NativeError** propiedad contiene un número de error específico del proveedor que está usando. En el ejemplo anterior, el proveedor es el proveedor Microsoft OLE DB para SQL Server, por lo que **NativeError** contendrá errores específicos de SQL Server. El **SQLState** propiedad tiene un código de cinco letras que describe un error en una instrucción SQL.  

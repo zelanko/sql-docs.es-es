@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046286"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ fn_get_audit_file ( file_pattern,
   
 ## <a name="arguments"></a>Argumentos  
  *file_pattern*  
- Especifica el directorio o la ruta de acceso y el nombre de archivo del conjunto de archivos de auditoría que se van a leer. El tipo es **nvarchar (260)**. 
+ Especifica el directorio o la ruta de acceso y el nombre de archivo del conjunto de archivos de auditoría que se van a leer. El tipo es **nvarchar (260)** . 
  
  - **SQL Server**:
     
@@ -58,7 +57,7 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<ruta de acceso > \LoginsAudit_{GUID}_00_29384.sqlaudit** -recopilar un archivo de auditoría concreta.  
   
- - **Base de datos SQL Azure**:
+ - **Azure SQL Database**:
  
     Este argumento se utiliza para especificar una dirección URL del blob (incluido el punto de conexión de almacenamiento y el contenedor). Aunque no se admite un carácter comodín asterisco, puede usar un prefijo de nombre de archivo parcial (blob) (en lugar del nombre del blob completo) para recopilar varios archivos (BLOB) que comienzan por este prefijo. Por ejemplo:
  
@@ -70,7 +69,7 @@ fn_get_audit_file ( file_pattern,
 >  Si se pasa una ruta de acceso sin un patrón de nombre de archivo, se producirá un error.  
   
  *initial_file_name*  
- Especifica la ruta y el nombre de un archivo específico del conjunto de archivos de auditoría desde el que hay que empezar a leer registros de auditoría. El tipo es **nvarchar (260)**.  
+ Especifica la ruta y el nombre de un archivo específico del conjunto de archivos de auditoría desde el que hay que empezar a leer registros de auditoría. El tipo es **nvarchar (260)** .  
   
 > [!NOTE]  
 >  El *initial_file_name* argumento debe contener entradas válidas o debe contener el predeterminado | Valor NULL.  
@@ -84,7 +83,7 @@ fn_get_audit_file ( file_pattern,
 ## <a name="tables-returned"></a>Tablas devueltas  
  En la tabla siguiente se describe el contenido del archivo de auditoría que puede devolver esta función.  
   
-| Nombre de columna | Tipo | Descripción |  
+| Nombre de columna | Type | Descripción |  
 |-------------|------|-------------|  
 | action_id | **varchar(4)** | Id. de la acción. No acepta valores NULL. |  
 | additional_information | **nvarchar(4000)** | La información única que se aplica exclusivamente a un evento se devuelve como XML. Este tipo de información está incluida en un pequeño número de acciones de auditoría.<br /><br /> Un nivel de pila de TSQL se mostrará en formato XML para las acciones que tienen asociada la pila de TSQL. El formato XML será:<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> Frame nest_level indica el nivel de anidamiento actual del marco. El nombre del módulo se representa en formato de tres partes (nombreDeBaseDeDatos, nombreDeEsquema y nombreDeObjeto).  El nombre del módulo se analizará para escapar caracteres xml no válidos, como `'\<'`, `'>'`, `'/'`, `'_x'`. Se produce el escape como `_xHHHH\_`. HHHH representa el código UCS-2 hexadecimal de cuatro dígitos para el carácter.<br /><br /> Acepta valores NULL. Devuelve NULL si el evento no proporciona información adicional. |
@@ -105,7 +104,7 @@ fn_get_audit_file ( file_pattern,
 | is_column_permission | **bit** | Marca que indica si éste es un permiso de nivel de columna. No admite valores NULL. Devuelve 0 si permission_bitmask = 0.<br /> 1 = verdadero<br /> 0 = falso |
 | object_id | **int** | Identificador de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> No admite valores NULL. Devuelve 0 si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |  
 | object_name | **sysname** | El nombre de la entidad en la que se produjo la auditoría. Incluye lo siguiente:<br /> Objetos de servidor<br /> Bases de datos<br /> Objetos de base de datos<br /> Objetos de esquema<br /> Acepta valores NULL. Devuelve NULL si la entidad es el propio servidor o si la auditoría no se realiza en un nivel de objeto. Por ejemplo, la autenticación. |
-| permission_bitmask | **varbinary(16)** | En algunas acciones, este es el permiso que se concedió, denegó o revocó. |
+| permission_bitmask | **varbinary (16)** | En algunas acciones, este es el permiso que se concedió, denegó o revocó. |
 | response_rows | **bigint** | **Se aplica a**: Instancia administrada y de base de datos SQL Azure<br /><br /> Número de filas devueltas en el conjunto de resultados. |  
 | schema_name | **sysname** | El contexto del esquema en el que se produjo la acción. Acepta valores NULL. Devuelve NULL para las auditorías que se producen fuera de un esquema. |  
 | sequence_group_id | **varbinary** | **Se aplica a**: Sólo servidor SQL Server (a partir de 2016)<br /><br />  Identificador único |  

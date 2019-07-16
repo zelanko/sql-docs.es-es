@@ -2,7 +2,6 @@
 title: Estadísticas automáticas (Analytics Platform System)
 description: Describe la característica de estadísticas automática introducida en Analytics Platform System AU7.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
@@ -10,12 +9,12 @@ ms.date: 06/27/2018
 ms.author: murshedz
 ms.reviewer: martinle
 monikerRange: '>= aps-pdw-2016-au7 || = sqlallproducts-allversions'
-ms.openlocfilehash: e48d40d78c25431fd6e5592dacfa410723b31f82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caed6b9d126e09bc70a61c73b5100d689f81b011
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961279"
 ---
 # <a name="configure-auto-statistics"></a>Configuración automática de estadísticas
 
@@ -55,7 +54,7 @@ ALTER DATABASE myPDW SET AUTO_UPDATE_STATISTICS_ASYNC ON
  
 Opción AUTO_UPDATE STATISTICS_ASYNC sólo funciona si AUTO_UPDATE_STATISTICS es ON.  Por lo tanto, no se actualizan las estadísticas cuando AUTO_UPDATE_STATISTICS es OFF y AUTO_UPDATE_STATISTICS_ASYNC es ON. 
 
-### <a name="error-messages"></a>Mensajes de error
+### <a name="error-messages"></a>mensajes de error
 Podría recibir el mensaje de error "no se admite esta opción en PDW".  Este error se produce cuando el administrador del sistema no ha habilitado estadísticas automáticamente y se intenta establecer cualquiera del automáticamente las opciones de estadísticas en ALTER DATABASE. 
 
 ### <a name="limitations-and-restrictions"></a>Limitaciones y restricciones

@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: ced484ae-7c17-4613-a3f9-6d8aba65a110
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 21756cadbfb924e95edd261942f018fb6aef6a4c
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: dbee7422bdf58d753c31c7aa57a81bc4b29d2568
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226522"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096234"
 ---
 # <a name="sysdmdbtuningrecommendations-transact-sql"></a>Sys.DM\_db\_optimización\_recomendaciones (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "54226522"
   
  En [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], las vistas de administración dinámica no pueden exponer información que impactaría a la contención de la base de datos ni acerca de otras bases de datos a las que el usuario tenga acceso. Para evitar exponer esta información, cada fila que contiene datos que no pertenecen al inquilino conectado se filtra.
 
-| **Nombre de columna** | **Data type** | **Descripción** |
+| **Nombre de columna** | **Tipo de datos** | **Descripción** |
 | --- | --- | --- |
-| **Nombre** | **nvarchar(4000)** | Nombre único de la recomendación. |
-| **Tipo** | **nvarchar(4000)** | El nombre de la opción de ajuste automático que generó la recomendación, por ejemplo, `FORCE_LAST_GOOD_PLAN` |
-| **motivo** | **nvarchar(4000)** | Motivo de por qué se ha proporcionado esta recomendación. |
+| **name** | **nvarchar(4000)** | Nombre único de la recomendación. |
+| **type** | **nvarchar(4000)** | El nombre de la opción de ajuste automático que generó la recomendación, por ejemplo, `FORCE_LAST_GOOD_PLAN` |
+| **reason** | **nvarchar(4000)** | Motivo de por qué se ha proporcionado esta recomendación. |
 | **válido\_puesto que** | **datetime2** | La primera vez que se generó esta recomendación. |
 | **última\_actualizar** | **datetime2** | La última vez que se generó esta recomendación. |
 | **state** | **nvarchar(4000)** | Documento JSON que describe el estado de la recomendación. Están disponibles los campos siguientes:<br />-   `currentValue` -estado actual de la recomendación.<br />-   `reason` -constante que describe por qué es la recomendación en el estado actual.|
@@ -55,7 +54,7 @@ ms.locfileid: "54226522"
 | **revertir\_acción\_duración** | **time** | Duración de la acción de reversión. |
 | **revertir\_acción\_inició\_por** | **nvarchar(4000)** | `User` = Plan recomendado de usuario forzado manualmente. <br /> `System` = Sistema revierte automáticamente la recomendación. |
 | **revertir\_acción\_inició\_tiempo** | **datetime2** | Fecha de que la recomendación se revirtió. |
-| **puntuación** | **int** | Calcula el impacto o valor de esta recomendación en el valor de 0 a 100 escala (cuanto mayor sea la mejor) |
+| **score** | **int** | Calcula el impacto o valor de esta recomendación en el valor de 0 a 100 escala (cuanto mayor sea la mejor) |
 | **Detalles** | **nvarchar(max)** | Documento JSON que contiene información más detallada acerca de la recomendación. Están disponibles los campos siguientes:<br /><br />`planForceDetails`<br />-    `queryId` -consulta\_Id. de la consulta devuelta.<br />-    `regressedPlanId` -plan_id del plan con regresión.<br />-   `regressedPlanExecutionCount` -El número de ejecuciones de la consulta con un plan con regresión antes de la regresión se detecta.<br />-    `regressedPlanAbortedCount` -El número de errores detectados durante la ejecución del plan con regresión.<br />-    `regressedPlanCpuTimeAverage` -Promedio de tiempo de CPU utilizado por la consulta con regresión antes de que se detecta la regresión.<br />-    `regressedPlanCpuTimeStddev` : Se ha detectado desviación estándar de tiempo de CPU utilizado por las consultas con regresión antes de la regresión.<br />-    `recommendedPlanId` -plan_id del plan que se debería forzar.<br />-   `recommendedPlanExecutionCount`-El número de ejecuciones de la consulta con el plan que se debería forzar antes de que se detecta la regresión.<br />-    `recommendedPlanAbortedCount` -El número de errores detectados durante la ejecución del plan que se debería forzar.<br />-    `recommendedPlanCpuTimeAverage` -Promedio de tiempo de CPU consumido por la consulta ejecutada con el plan que se debería forzar (calculado antes de que se detecta la regresión).<br />-    `recommendedPlanCpuTimeStddev` Se ha detectado la desviación estándar de tiempo de CPU utilizado por las consultas con regresión antes de la regresión.<br /><br />`implementationDetails`<br />-  `method` -El método que se debe usar para corregir la regresión. Valor siempre es `TSql`.<br />-    `script` - [!INCLUDE[tsql_md](../../includes/tsql-md.md)] secuencia de comandos que se debe ejecutar para forzar el plan recomendado. |
   
 ## <a name="remarks"></a>Comentarios  
@@ -63,7 +62,7 @@ ms.locfileid: "54226522"
 
  `currentValue` campo en el `state` columna puede tener los siguientes valores:
  
- | Estado | Descripción |
+ | Status | Descripción |
  |--------|-------------|
  | `Active` | Recomendación está activa y no ha aplicado. Usuario puede tomar el script de recomendación y ejecutarlo manualmente. |
  | `Verifying` | La recomendación se aplicó por [!INCLUDE[ssde_md](../../includes/ssde_md.md)] y proceso de comprobación internos compara el rendimiento del plan forzado con el plan con regresión. |

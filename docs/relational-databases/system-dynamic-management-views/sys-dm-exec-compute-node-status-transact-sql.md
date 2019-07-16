@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: b606f91f-3a08-4a4f-bb57-32ae155b3738
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 55023b301b1c6bae53f890e273f5a415fde42355
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1a219ab9606327bd67e26d237a9f8b7b5c2cb8fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097873"
 ---
 # <a name="sysdmexeccomputenodestatus-transact-sql"></a>sys.dm_exec_compute_node_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
@@ -38,12 +37,12 @@ ms.locfileid: "51671064"
 |-----------------|---------------|-----------------|-----------|  
 |compute_node_id|**int**|Identificador numérico único asociado al nodo.|Único en clúster de escalabilidad horizontal, independientemente del tipo.|  
 |process_id|**int**|||  
-|nombreDeProceso|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
+|process_name|**nvarchar(255)**|Nombre lógico del nodo.|Cualquier cadena de longitud adecuada.|  
 |allocated_memory|**bigint**|Memoria total asignada en este nodo.||  
 |available_memory|**bigint**|Memoria total disponible en este nodo.||  
 |process_cpu_usage|**bigint**|Uso de CPU de proceso total, en tics.||  
 |total_cpu_usage|**bigint**|Uso total de CPU, en tics.||  
-|Thread_Count|**bigint**|Número total de subprocesos en uso en este nodo.||  
+|thread_count|**bigint**|Número total de subprocesos en uso en este nodo.||  
 |handle_count|**bigint**|Número total de identificadores en uso en este nodo.||  
 |total_elapsed_time|**bigint**|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar.|Tiempo total transcurrido desde que el sistema, iniciar o reiniciar. Si total_elapsed_time supera el valor máximo de un entero (24,8 días en milisegundos), provocará el error de materialización debido al desbordamiento. El valor máximo en milisegundos equivale a 24,8 días.|  
 |is_available|**bit**|Marca que indica si este nodo está disponible.||  

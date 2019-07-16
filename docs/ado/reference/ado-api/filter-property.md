@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918636"
 ---
 # <a name="filter-property"></a>Propiedad Filter
 Indica un filtro para los datos en un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -57,7 +56,7 @@ La cadena de criterios se compone de las cláusulas en el formulario *NombreCamp
 -   En su lugar, se crea este filtro como  
  `(LastName = 'Smith' AND FirstName = 'John') OR (LastName = 'Jones' AND FirstName = 'John')`  
   
--   En un **como** cláusula, puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **como** puede usar un carácter comodín solo al final del patrón. Por ejemplo, `LastName Like 'Smit*'`.  
+-   En un **como** cláusula, puede usar un carácter comodín al principio y al final del patrón. Por ejemplo, puede usar `LastName Like '*mit*'`. O con **como** puede usar un carácter comodín solo al final del patrón. Por ejemplo: `LastName Like 'Smit*'`.  
   
  Las constantes de filtro que sea más fácil resolver conflictos de registros individuales durante el modo de actualización por lotes, ya que permite ver, por ejemplo, los registros que se vieron afectados durante la última [método UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) llamada al método.  
   

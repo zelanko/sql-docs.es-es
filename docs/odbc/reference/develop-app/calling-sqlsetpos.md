@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 846354b8-966c-4c2c-b32f-b0c8e649cedd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f94b1191815f37728a2d8de8fc1175113644bc5a
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: c64575777fc9210c36be5d417cd3def0c2c7102a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068685"
 ---
 # <a name="calling-sqlsetpos"></a>Llamar a SQLSetPos
 En ODBC *2.x*, el puntero a la matriz de Estados de fila era un argumento a **SQLExtendedFetch**. La matriz de Estados de fila se actualizó más adelante mediante una llamada a **SQLSetPos**. Algunos controladores se basaban en el hecho de que esta matriz no cambia entre **SQLExtendedFetch** y **SQLSetPos**. En ODBC *3.x*, el puntero a la matriz de Estados es un campo de descriptor y, por tanto, la aplicación puede cambiarla fácilmente para que apunte a una matriz distinta. Esto puede ser un problema cuando un ODBC *3.x* aplicación funciona con un ODBC *2.x* controlador, pero llama a **SQLSetStmtAttr** para establecer el puntero de estado de la matriz y llama a  **SQLFetchScroll** para capturar los datos. El Administrador de controladores se asigna como una secuencia de llamadas a **SQLExtendedFetch**. En el código siguiente, generará un error haría normalmente cuando el Administrador de controladores se asigna el segundo **SQLSetStmtAttr** llamar cuando se trabaja con un ODBC *2.x* controlador:  

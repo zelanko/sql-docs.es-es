@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 727ede7a057491eea2ea230d7057aa3228b5fc82
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af728d438f01203308258d8f074f145494780a3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66841105"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944576"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>Novedades de SSMA para SAP ASE (SybaseToSQL)
 Este artículo se enumeran los cambios de SAP ASE (anteriormente SSMA para Sybase) en cada versión de SQL Server Migration Assistant (SSMA).
@@ -34,7 +33,7 @@ Se ha mejorado la versión v8.2 de SSMA para SAP ASE con un conjunto de correcci
 > [!IMPORTANT]
 > Con SSMA v7.4 y versiones posteriores, .net 4.5.2 es un requisito previo de instalación.
 
-## <a name="ssma-v81"></a>SSMA v8.1
+## <a name="ssma-v81"></a>V8.1 SSMA
 
 La versión de v8.1 de SSMA para SAP ASE se ha mejorado con correcciones de destino que están diseñadas para mejorar las métricas de calidad y la conversión.
 

@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6c302f7cc9830b15ed058c160618ea0e40705444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962734"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>Configurar un cliente de ciencia de datos para el desarrollo de Python en SQL Server Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -282,7 +281,7 @@ Si utiliza otro IDE, deberá vincular las bibliotecas de Python de los archivos 
 
 Si tiene [Python en Visual Studio](https://code.visualstudio.com/docs/languages/python), utilice las siguientes opciones de configuración para crear un entorno de Python que incluya los paquetes de Python de Microsoft.
 
-| Opción de configuración | value |
+| Opción de configuración | valor |
 |-----------------------|-------|
 | **Ruta de acceso de prefijo** | C:\Program Files\Microsoft\PyForMLS |
 | **Ruta de acceso del intérprete** | C:\Program Files\Microsoft\PyForMLS\python.exe |

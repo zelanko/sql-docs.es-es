@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: ce63f633-067d-4f04-b8e9-e1abd7ec740b
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6750e17b694086cf716e32629fcf3b3f3b48f486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64348e33502e8407e567b8901890246344765f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989680"
 ---
 # <a name="executing-the-ssma-console-db2tosql"></a>Ejecución de la consola SSMA (DB2ToSQL)
 Microsoft proporciona un sólido conjunto de script de comandos del archivo para ejecutar y controlar las actividades SSMA. Las secciones que detallan la misma. La aplicación de consola utiliza ciertos comandos del archivo de script estándar como enumerados en esta sección.  
@@ -85,7 +84,7 @@ SSMA para la aplicación de consola de DB2 admite la compatibilidad con versione
   
 **Command**  
   
-save-project  
+Guardar proyecto  
   
 Guarda el proyecto de migración.  
   
@@ -98,7 +97,7 @@ Guarda el proyecto de migración.
 ```  
 **Command**  
   
-close-project  
+Cerrar proyecto  
   
 Cierra el proyecto de migración.  
   
@@ -123,7 +122,7 @@ Los comandos de conexión de base de datos ayudan a conectar a la base de datos.
   
 **Command**  
   
-connect-source-database  
+datos de origen conectarse  
   
 -   Realiza la conexión a la base de datos de origen y carga los metadatos de nivel alto de la base de datos de origen, pero no todos los metadatos.  
   
@@ -140,7 +139,7 @@ Definición de servidor se recupera el atributo de nombre definido para cada con
 ```  
 **Command**  
   
-force-load-source/target-database  
+Force-load-origen/destino-database  
   
 -   Carga los metadatos de origen.  
   
@@ -170,7 +169,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-reconnect-source-database  
+datos de origen volver a conectar  
   
 -   Vuelve a conectarse a la base de datos de origen pero no carga los metadatos a diferencia del comando de base de datos connect-origen.  
   
@@ -185,7 +184,7 @@ reconnect-source-database
 ```  
 **Command**  
   
-connect-target-database  
+base de destino conectarse  
   
 -   Se conecta a la base de datos de SQL Server de destino y carga los metadatos de nivel alto de la base de datos de destino pero no los metadatos por completo.  
   
@@ -202,7 +201,7 @@ Definición de servidor se recupera desde el atributo de nombre definido para ca
 ```  
 **Command**  
   
-reconnect-target-database  
+base de destino vuelva a conectar  
   
 -   Vuelve a conectarse a la base de datos de destino pero no carga los metadatos, a diferencia del comando de base de destino de connect.  
   
@@ -221,7 +220,7 @@ Los comandos de informe generan informes sobre el rendimiento de diversas activi
   
 **Command**  
   
-generate-assessment-report  
+informe de evaluación generar  
   
 -   Genera informes de evaluación de la base de datos de origen.  
   
@@ -295,7 +294,7 @@ Los comandos de migración conversión el esquema de base de datos de destino en
   
 **Command**  
   
-convert-schema  
+convertir esquema  
   
 -   Realiza la conversión de esquema de origen al esquema de destino.  
   
@@ -431,7 +430,7 @@ El comando de preparación de la migración inicia la asignación de esquema ent
   
 **Command**  
   
-map-schema  
+esquema de asignación  
   
 Asignación de esquema de base de datos de origen al esquema de destino.  
   
@@ -452,7 +451,7 @@ Asignación de esquema de base de datos de origen al esquema de destino.
 ```  
 **Command**  
   
-map-schema  
+esquema de asignación  
   
 Asignación de esquema de base de datos de origen al esquema de destino.  
   
@@ -497,9 +496,9 @@ sincronizar de destino
   
     -   report-total-as-warning  
   
-    -   report-each-as-warning  
+    -   informes-each-como-warning  
   
-    -   fail-script  
+    -   Error de script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de sincronización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **TargetSynchronizationReport.XML** se crea.  
   
@@ -544,7 +543,7 @@ o Administrador de configuración de
 ```  
 **Command**  
   
-refresh-from-database  
+actualización de base de datos  
   
 -   Actualiza los objetos de base de datos de origen.  
   
@@ -562,9 +561,9 @@ Requiere uno o varios nodos de la metabase como parámetro de línea de comandos
   
     -   report-total-as-warning  
   
-    -   report-each-as-warning  
+    -   informes-each-como-warning  
   
-    -   fail-script  
+    -   Error de script  
   
 -   `report-errors-to:` Especifica la ubicación del informe de errores para la operación de actualización (atributo opcional) si solo se proporciona la ruta de acceso de carpeta, a continuación, archivos por nombre **SourceDBRefreshReport.XML** se crea.  
   

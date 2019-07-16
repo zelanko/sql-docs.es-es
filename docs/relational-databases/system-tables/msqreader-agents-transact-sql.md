@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dfa1f45e-c531-4385-a097-0a9edd1d7eab
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 68bca208f7e199ad65ff93a70f4d6c4a3b97fd8b
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: d032552769c32d691a526456cba68aec9ac397e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032574"
 ---
 # <a name="msqreaderagents-transact-sql"></a>MSqreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "52818827"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|El identificador del Agente de lectura de cola.|  
-|**Nombre**|**Nvarchar (100)**|El nombre del Agente de lectura de cola.|  
+|**name**|**nvarchar(100)**|El nombre del Agente de lectura de cola.|  
 |**job_id**|**binary (16)**|El número de Id. de trabajo único de **sysjobs** tabla.|  
 |**profile_id**|**int**|El identificador del perfil desde el **MSagent_profiles** tabla.|  
 |**job_step_uid**|**uniqueidentifier**|El Id. único del paso de trabajo del Agente [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el que se inicia el agente.|  

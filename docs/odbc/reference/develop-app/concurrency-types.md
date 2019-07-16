@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 46762ae5-17dd-4777-968e-58156f470fe1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 12891d7ee674167157bcb02300d2e4181ef51734
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63d7c7dce51fe4f514232cfd0d5ae2e5abeb5b70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63012114"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083180"
 ---
 # <a name="concurrency-types"></a>Tipos de simultaneidad
 Para solucionar el problema de simultaneidad reducida en los cursores, ODBC expone cuatro tipos diferentes de simultaneidad de cursor:  

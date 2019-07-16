@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926596"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Introducción al proveedor de comunicación remota de Microsoft OLE DB
 El proveedor de servicios remotos de Microsoft OLE DB permite que un usuario local en un equipo cliente invocar los proveedores de datos en un equipo remoto. Especifique los parámetros del proveedor de datos para la máquina remota como lo haría si fuera un usuario local en el equipo remoto. A continuación, especifique los parámetros utilizados por el proveedor de servicios remotos para tener acceso a la máquina remota. A continuación, puede tener acceso a la máquina remota como si fuera un usuario local.
@@ -53,7 +52,7 @@ El proveedor de servicios remotos de Microsoft OLE DB permite que un usuario loc
 |**controlador**|Indica el nombre de un programa de personalización de servidor (o controlador) que amplía la funcionalidad de la [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md), y todos los parámetros utilizados por el controlador, todas separadas por comas (","). Un valor **String**.|
 |**Tiempo de espera de Internet**|Indica el número máximo de milisegundos de espera para que una solicitud de viaje hacia y desde el servidor. (El valor predeterminado es 5 minutos).|
 |**Proveedor remoto**|Indica el nombre del proveedor de datos que se usará en el servidor remoto.|
-|**Remote Server**|Indica el protocolo de nombre y la comunicación del servidor que va a usar esta conexión. Esta propiedad es equivalente a la [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [Server](../../../ado/reference/rds-api/server-property-rds.md) propiedad.|
+|**Servidor remoto**|Indica el protocolo de nombre y la comunicación del servidor que va a usar esta conexión. Esta propiedad es equivalente a la [RDS. DataContro](../../../ado/reference/rds-api/datacontrol-object-rds.md) objeto [Server](../../../ado/reference/rds-api/server-property-rds.md) propiedad.|
 |**Transact actualizaciones**|Cuando se establece en **True**, este valor indica que cuando [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) se lleva a cabo en el servidor, se llevará a cabo dentro de una transacción. El valor predeterminado de esta propiedad booleana dinámico es **False**.|
 
  También puede establecer propiedades dinámicas grabables especificando sus nombres como palabras clave en la cadena de conexión. Por ejemplo, establecer el **Internet Timeout** propiedad dinámica a cinco segundos especificando:

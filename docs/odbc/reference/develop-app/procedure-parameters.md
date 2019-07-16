@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 54fd857e-d2cb-467d-bb72-121e67a8e88d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1cab0fea9c39e4946122698f2476668464e556c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f85512a1686df26cad739dc906e49cc5499f62e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912302"
 ---
 # <a name="procedure-parameters"></a>Parámetros de procedimiento
 Parámetros en las llamadas a procedimiento pueden ser de entrada, entrada/salida o los parámetros de salida. Esto es diferente de parámetros en las demás instrucciones SQL, que siempre son parámetros de entrada.  

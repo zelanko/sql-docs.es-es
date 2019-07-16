@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d47f8d8ebd0e37f106e7610937af8f6585820cce
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7acc14d3950e0e2d1004727b2efbffd2e4963a2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903019"
 ---
 # <a name="sphelpdb-transact-sql"></a>sp_helpdb (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre de base de datos.|  
+|**name**|**sysname**|Nombre de base de datos.|  
 |**db_size**|**nvarchar(13)**|Tamaño total de la base de datos.|  
 |**owner**|**sysname**|Bases de datos como propietario, **sa**.|  
 |**dbid**|**smallint**|Id. de la base de datos.|  
@@ -61,14 +60,14 @@ sp_helpdb [ [ @dbname= ] 'name' ]
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**nchar(128)**|Nombre de archivo lógico.|  
+|**name**|**nchar(128)**|Nombre de archivo lógico.|  
 |**fileid**|**smallint**|Identificador de archivo.|  
 |**filename**|**nchar(260)**|Nombre del archivo en el sistema operativo (nombre de archivo físico).|  
 |**filegroup**|**nvarchar(128)**|Grupo al que pertenece el archivo.<br /><br /> NULL = El archivo es de registro. Nunca forma parte de un grupo de archivos.|  
 |**size**|**nvarchar(18)**|Tamaño del archivo, en megabytes.|  
 |**maxsize**|**nvarchar(18)**|Tamaño máximo que puede alcanzar el archivo. El valor UNLIMITED en este campo indica que el archivo puede aumentar hasta que el disco esté lleno.|  
 |**growth**|**nvarchar(18)**|Incremento de crecimiento del archivo. Esto indica la cantidad de espacio que se agrega al archivo que se necesita espacio cada vez.|  
-|**usage**|**varchar(9)**|Uso del archivo. Para un archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'**.|  
+|**usage**|**varchar(9)**|Uso del archivo. Para un archivo de datos, el valor es **"solo datos"** y para el archivo de registro es el valor **'iniciar solo'** .|  
   
 ## <a name="remarks"></a>Comentarios  
  El **estado** conjunto de columnas en el resultado de las opciones que se han establecido en ON en la base de datos de informes. No todas las opciones de base de datos notificadas por el **estado** columna. Para ver una lista completa de la configuración de opción de base de datos actual, use el **sys.databases** vista de catálogo.  

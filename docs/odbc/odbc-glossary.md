@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e8227000-1944-42e5-a881-1f549e1ff9d1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a6741b5f07f2427ef502f5177bbf01acd56c4d5b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: a91f051badfabe19373825edd156e6b2c21ca2c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911370"
 ---
 # <a name="odbc-glossary"></a>Glosario de ODBC
 ## <a name="a"></a>A  
@@ -161,10 +160,10 @@ ms.locfileid: "67794165"
  **descriptor**  
  Una estructura de datos que contiene información sobre los datos de las columnas o parámetros dinámicos. La representación física del descriptor no está definida; las aplicaciones obtienen acceso directo a un descriptor de solo manipulando sus campos mediante una llamada a funciones ODBC con el identificador de descriptor.  
   
- **desktop database**  
+ **base de datos de escritorio**  
  Un DBMS diseñado para ejecutarse en un equipo personal. Por lo general, estos DBMS no proporcionan un motor de base de datos independiente y deben tener acceso a través de un controlador basado en archivos. Generalmente, los motores de estos controladores han reducido compatibilidad con SQL y las transacciones. Por ejemplo, dBASE, Paradox, Btrieve o Microsoft® FoxPro.  
   
- **diagnostic**  
+ **Diagnóstico**  
  Un registro que contiene información de diagnóstico sobre la última función llama usa un identificador determinado. Los registros de diagnóstico se asocian con el entorno, conexión, instrucción y los identificadores de descriptor.  
   
  **DML**  
@@ -186,7 +185,7 @@ ms.locfileid: "67794165"
  Un tipo de SQL incrustado en qué SQL instrucciones se crean y se compilan en tiempo de ejecución. *Vea también* SQL estático.  
   
 ## <a name="e"></a>E  
- **embedded SQL**  
+ **SQL incrustado**  
  Las instrucciones SQL que se incluyen directamente en un programa escrito en otro lenguaje, como COBOL o C. ODBC no utiliza SQL incrustado. *Vea también* SQL estático *y* SQL dinámico.  
   
  **environment**  
@@ -415,7 +414,7 @@ ms.locfileid: "67794165"
  **cursor desplazable**  
  Un cursor que puede desplazarse hacia delante o hacia atrás por el conjunto de resultados.  
   
- **serializability**  
+ **seriabilidad**  
  Si dos transacciones que se ejecutan simultáneamente producen un resultado que es el mismo que la ejecución de la serie (o secuencial) de esas transacciones. Las transacciones serializables están obligadas a mantener la integridad de la base de datos.  
   
  **base de datos del servidor**  
@@ -473,7 +472,7 @@ ms.locfileid: "67794165"
  **table**  
  Una colección de filas.  
   
- **thunking**  
+ **código thunk**  
  La conversión de 16 bits direcciones a las direcciones de 32 bits, o viceversa, cuando se usan las aplicaciones de 16 bits con controladores ODBC de 32 bits.  
   
  **transaction**  
@@ -485,7 +484,7 @@ ms.locfileid: "67794165"
  **nivel de aislamiento de transacción**  
  Una medida de lo bien una transacción está aislada. Hay cinco niveles de aislamiento de transacción: Read Uncommitted, leer Committed, Repeatable Read, Serializable y control de versiones.  
   
- **translator DLL**  
+ **archivo DLL de traducción**  
  Un archivo DLL que se usa para traducir datos de un juego de caracteres a otro.  
   
  **DLL de instalación de traductor**  
@@ -498,5 +497,5 @@ ms.locfileid: "67794165"
  Un valor entero pasa o devolver desde una función ODBC para indicar el tipo de datos de una variable de aplicación, un parámetro o una columna. ODBC define los indicadores de tipo para tipos de datos C y SQL.  
   
 ## <a name="v"></a>V  
- **view**  
+ **Vista**  
  Una manera alternativa de mirar los datos en una o varias tablas. Normalmente, se crea una vista como un subconjunto de las columnas de una o varias tablas. En ODBC, las vistas son generalmente son equivalentes a las tablas.

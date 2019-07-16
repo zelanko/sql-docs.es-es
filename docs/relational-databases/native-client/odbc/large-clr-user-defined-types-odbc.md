@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ddce337e-bb6e-4a30-b7cc-4969bb1520a9
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5dd11fcb72496465685ce763f48518f7bcd0c2c6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6af744a468c4853bf6fb3111b83c6480e175e321
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62634580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913224"
 ---
 # <a name="large-clr-user-defined-types-odbc"></a>Tipos CLR grandes definidos por el usuario (ODBC)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -39,13 +38,13 @@ ms.locfileid: "62634580"
   
  En la tabla siguiente se muestra la asignación de tipos de datos en parámetros y conjuntos de resultados:  
   
-|Tipo de datos de SQL Server|Tipo de datos SQL|Valor|  
+|Tipos de datos de SQL Server|Tipo de datos de SQL|Valor|  
 |--------------------------|-------------------|-----------|  
 |UDT CLR|SQL_SS_UDT|-151 (sqlncli.h)|  
   
  En la tabla siguiente se describe la estructura y el tipo C de ODBC correspondiente. Básicamente, UDT de CLR es una **varbinary** tipo con metadatos adicionales.  
   
-|Tipo de datos SQL|Diseño de memoria|Tipo de datos C|Valor (sqlext.h)|  
+|Tipo de datos de SQL|Diseño de memoria|Tipo de datos C|Valor (sqlext.h)|  
 |-------------------|-------------------|-----------------|------------------------|  
 |SQL_SS_UDT|SQLCHAR * (unsigned char \*)|SQL_C_BINARY|SQL_BINARY (-2)|  
   
@@ -135,7 +134,7 @@ ms.locfileid: "62634580"
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Admite *|  
-|SQL_C_BINARY|Admitida|  
+|SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Admite *|  
   
  \* Datos binarios se convierten en una cadena hexadecimal.  
@@ -145,7 +144,7 @@ ms.locfileid: "62634580"
 |Conversión a y desde:|SQL_SS_UDT|  
 |-----------------------------|------------------|  
 |SQL_C_WCHAR|Admite *|  
-|SQL_C_BINARY|Admitida|  
+|SQL_C_BINARY|Compatible|  
 |SQL_C_CHAR|Admite *|  
   
  \* Se produce una cadena hexadecimal a la conversión de datos binarios.  
@@ -173,7 +172,7 @@ ms.locfileid: "62634580"
 ### <a name="sqlbindparameter"></a>SQLBindParameter  
  Los valores requeridos para los UDT son los siguientes:  
   
-|Tipo de datos SQL|*Parametertype*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Tipo de datos de SQL|*ParameterType*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|---------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -187,7 +186,7 @@ ms.locfileid: "62634580"
 ### <a name="sqldescribecol"></a>SQLDescribeCol  
  Los valores devueltos para los UDT son los siguientes:  
   
-|Tipo de datos SQL|*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Tipo de datos de SQL|*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|-------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -195,7 +194,7 @@ ms.locfileid: "62634580"
 ### <a name="sqldescribeparam"></a>SQLDescribeParam  
  Los valores devueltos para los UDT son los siguientes:  
   
-|Tipo de datos SQL|*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
+|Tipo de datos de SQL|*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
 |-------------------|-------------------|---------------------|------------------------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -215,7 +214,7 @@ ms.locfileid: "62634580"
 ### <a name="sqlgetdescrec"></a>SQLGetDescRec  
  Los valores devueltos para los UDT son los siguientes:  
   
-|Tipo de datos SQL|Tipo|SubType|Longitud|Precisión|Escala|  
+|Tipo de datos de SQL|Type|SubType|Longitud|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|n|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  
@@ -235,7 +234,7 @@ ms.locfileid: "62634580"
 ### <a name="sqlsetdescrec"></a>SQLSetDescRec  
  Los valores que se permiten para los UDT son los siguientes:  
   
-|Tipo de datos SQL|Tipo|SubType|Longitud|Precisión|Escala|  
+|Tipo de datos de SQL|Type|SubType|Longitud|Precisión|Escala|  
 |-------------------|----------|-------------|------------|---------------|-----------|  
 |SQL_SS_UDT<br /><br /> (longitud menor o igual a 8.000 bytes)|SQL_SS_UDT|0|*n*|*n*|0|  
 |SQL_SS_UDT<br /><br /> (longitud mayor que 8.000 bytes)|SQL_SS_UDT|0|SQL_SS_LENGTH_UNLIMITED (0)|SQL_SS_LENGTH_UNLIMITED (0)|0|  

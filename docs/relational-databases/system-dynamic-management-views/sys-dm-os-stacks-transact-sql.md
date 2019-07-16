@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: a69b06c4-28f0-4535-8fa1-9f132db4d916
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a46af6af140ab755479aac2f35eaf96ecff3424b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c31bf39c4f133aa6f693614845cb54a5cf2bfc6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899757"
 ---
 # <a name="sysdmosstacks-transact-sql"></a>sys.dm_os_stacks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ ms.locfileid: "47787253"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**stack_address**|**varbinary (8)**|Dirección única para esta asignación de pilas. No admite valores NULL.|  
+|**stack_address**|**varbinary(8)**|Dirección única para esta asignación de pilas. No admite valores NULL.|  
 |**frame_index**|**int**|Cada línea representa una función llama a eso, cuando se ordenan en orden ascendente por índice del marco para un determinado **stack_address**, devuelve la pila de llamadas completa. No admite valores NULL.|  
-|**frame_address**|**varbinary (8)**|Dirección de la llamada a función. No admite valores NULL.|  
+|**frame_address**|**varbinary(8)**|Dirección de la llamada a función. No admite valores NULL.|  
   
 ## <a name="remarks"></a>Comentarios  
  **Sys.dm_os_stacks** requiere que los símbolos del servidor y otros componentes estén presentes en el servidor para mostrar la información correctamente.  
@@ -49,7 +48,7 @@ ms.locfileid: "47787253"
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 
 ## <a name="see-also"></a>Vea también  

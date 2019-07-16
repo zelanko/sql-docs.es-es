@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d18019dd-f8dc-4492-b035-b1a639369b65
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: b06ffc7a8400d3b02698009b2452282658cf959e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 91efefbdc28480cf2a3b3fb579dba0946dba8a2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745363"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900776"
 ---
 # <a name="sysdmhadravailabilitygroupstates-transact-sql"></a>sys.dm_hadr_availability_group_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "47745363"
 |**primary_recovery_health_desc**|**nvarchar(60)**|Descripción de **primary_replica_health**, uno de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
 |**secondary_recovery_health**|**tinyint**|Indica el estado de recuperación de una réplica secundaria, uno de:<br /><br /> 0 = en curso<br /><br /> 1 = En línea<br /><br /> NULL<br /><br /> En la réplica principal, el **secondary_recovery_health** columna es NULL.|  
 |**secondary_recovery_health_desc**|**nvarchar(60)**|Descripción de **secondary_recovery_health**, uno de:<br /><br /> ONLINE_IN_PROGRESS<br /><br /> ONLINE<br /><br /> NULL|  
-|**synchronization_health**|**tinyint**|Refleja un resumen de la **synchronization_health** de todas las réplicas de disponibilidad del grupo de disponibilidad. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: no es correcto. Ninguna de las réplicas de disponibilidad tiene un **synchronization_health** (2 = correcto).<br /><br /> 1: parcialmente correcta. El estado de sincronización de algunas réplicas de disponibilidad, pero no de todas, es correcto.<br /><br /> 2: en buen estado. El estado de sincronización de todas las réplicas de disponibilidad es correcto.<br /><br /> Para obtener información sobre el estado de sincronización de réplica, vea el **synchronization_health** columna [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
+|**synchronization_health**|**tinyint**|Refleja un resumen de la **synchronization_health** de todas las réplicas de disponibilidad del grupo de disponibilidad. A continuación se muestran los valores posibles y sus descripciones.<br /><br /> 0: No es correcto. Ninguna de las réplicas de disponibilidad tiene un **synchronization_health** (2 = correcto).<br /><br /> 1: Parcialmente correcto. El estado de sincronización de algunas réplicas de disponibilidad, pero no de todas, es correcto.<br /><br /> 2: En buen estado. El estado de sincronización de todas las réplicas de disponibilidad es correcto.<br /><br /> Para obtener información sobre el estado de sincronización de réplica, vea el **synchronization_health** columna [sys.dm_hadr_availability_replica_states &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-availability-replica-states-transact-sql.md).|  
 |**synchronization_health_desc**|**nvarchar(60)**|Descripción de **synchronization_health**, uno de:<br /><br /> NOT_HEALTHY<br /><br /> PARTIALLY_HEALTHY<br /><br /> HEALTHY|  
   
 ## <a name="security"></a>Seguridad  

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1af86e92d689f262833e1bc00d8caf0fb0c78b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96307c0106a99ae1b95d58d9ec08cf2732863eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911690"
 ---
 # <a name="ado-glossary"></a>Glosario de términos de ADO
 En este tema se define términos relacionados con ADO.  
@@ -45,7 +44,7 @@ En este tema se define términos relacionados con ADO.
  operación asincrónica  
  Una operación que devuelva el control al programa que realiza la llamada sin esperar a que se complete la operación. Antes de la operación se complete, continúa la ejecución de código. Vea también *operación sincrónica*.  
   
-## <a name="b"></a>B  
+## <a name="b"></a>b  
  entrada de enlace  
  Una asignación entre un campo en una tabla y una variable. En las extensiones ADO de Visual C++, **Recordset** campos se asignan a variables de C o C++.  
   
@@ -74,7 +73,7 @@ En este tema se define términos relacionados con ADO.
   
  Columnas de capítulo permiten definir una *elementos primarios y secundarios* relación donde la *primario* es el **Recordset** que contiene la columna de capítulo y el  *secundarios* es el **Recordset** representado por el capítulo.  
   
- chapter-alias  
+ alias de capítulo  
  Un alias que hace referencia a la columna anexada al elemento primario.  
   
  juego de caracteres  
@@ -230,7 +229,7 @@ En este tema se define términos relacionados con ADO.
  primario  
  La parte que controla una relación jerárquica. En una estructura jerárquica, un elemento primario tiene uno o más nodos secundarios debajo de ella en la jerarquía. Vea también alias del primario, relación de elementos primarios y secundarios y secundarios.  
   
- parent-alias  
+ alias del primario  
  Un alias que hace referencia al elemento primario. Vea también alias, elemento primario.  
   
  relación de elementos primarios y secundarios  
@@ -247,7 +246,7 @@ En este tema se define términos relacionados con ADO.
  ProgID (identificador de programación)  
  Un nombre único asignado al registro de Windows por una aplicación COM. El ProgID para una conexión ADO es "ADODB. Conexión". Vea también CLSID y COM.  
   
- Proxy  
+ proxy  
  Un objeto de específica de la interfaz que proporciona el cálculo de referencias de parámetro y la comunicación necesaria para que un cliente llamar a un objeto de aplicación que se ejecuta en un entorno de ejecución diferente, como en un subproceso diferente o en otro proceso. El proxy se encuentra con el cliente y se comunica con un código auxiliar correspondiente que se encuentra con el objeto de aplicación que se llama. Vea también: código auxiliar.  
   
 ## <a name="r"></a>R  

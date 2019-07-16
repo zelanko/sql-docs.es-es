@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909024"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>Asignación de juegos de caracteres de MySQL y de SQL Server (MySQLToSQL)
 Juego de caracteres (juego de caracteres) puede especificarse para los tipos de datos de caracteres, expresiones y literales de MySQL.  
@@ -80,25 +79,25 @@ Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:
     ||||  
     |-|-|-|  
     |**Nombre del juego de caracteres**|**Descripción de juego de caracteres**|**Tipo de juego de caracteres de destino (valor predeterminado)**|  
-    |big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
+    |Big5|Chino tradicional Big5|NCHAR/NVARCHAR (valor predeterminado)|  
     |dec8|Europeo occidental Dic|CHAR o VARCHAR (valor predeterminado)|  
-    |cp850|Europeo occidental de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
-    |hp8|HP West European|CHAR o VARCHAR (valor predeterminado)|  
+    |CP850|Europeo occidental de denegación de servicio|CHAR o VARCHAR (valor predeterminado)|  
+    |hp8|Europeo occidental de HP|CHAR o VARCHAR (valor predeterminado)|  
     |koi8r|KOI8-R Relcom ruso|CHAR o VARCHAR (valor predeterminado)|  
     |Latín 1|Europeo occidental de CP1252|CHAR o VARCHAR (valor predeterminado)|  
-    |Latin2|ISO 8859-2 Central European|CHAR o VARCHAR (valor predeterminado)|  
+    |Latin2|ISO 8859-2 Centroeuropeo|CHAR o VARCHAR (valor predeterminado)|  
     |swe7|Sueco de 7 bits.|CHAR o VARCHAR (valor predeterminado)|  
-    |ascii|ASCII DE EE. UU.|CHAR o VARCHAR (valor predeterminado)|  
+    |ASCII|ASCII DE EE. UU.|CHAR o VARCHAR (valor predeterminado)|  
     |ujis|EUC-JP japonés|NCHAR/NVARCHAR (valor predeterminado)|  
     |SJIS|Japonés Shift-JIS|NCHAR/NVARCHAR (valor predeterminado)|  
     |Hebreo|ISO 8859-8 Hebreo|CHAR o VARCHAR (valor predeterminado)|  
     |tis620|TIS620 tailandés|CHAR o VARCHAR (valor predeterminado)|  
-    |euckr|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
+    |eucKR|Coreano EUC-KR|NCHAR/NVARCHAR (valor predeterminado)|  
     |koi8u|Ukrainian KOI8-U|CHAR o VARCHAR (valor predeterminado)|  
     |gb2312|GB2312 Chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Griego|ISO 8859-7 Griego|CHAR o VARCHAR (valor predeterminado)|  
-    |cp 1250|Centroeuropeo de Windows|CHAR o VARCHAR (valor predeterminado)|  
-    |gbk|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
+    |CP 1250|Centroeuropeo de Windows|CHAR o VARCHAR (valor predeterminado)|  
+    |GBK|GBK chino simplificado|NCHAR/NVARCHAR (valor predeterminado)|  
     |Latin5|ISO 8859-9 Turco|CHAR o VARCHAR (valor predeterminado)|  
     |armscii8|Armenio ARMSCII-8|CHAR o VARCHAR (valor predeterminado)|  
     |utf8|Unicode UTF-8|NCHAR/NVARCHAR (valor predeterminado)|  
@@ -109,9 +108,9 @@ Asignación del juego de caracteres varía en los niveles de otro nodo, a saber:
     |MacRoman|Europeo occidental de Mac|CHAR o VARCHAR (valor predeterminado)|  
     |cp852|Denegación de servicio Central europea|CHAR o VARCHAR (valor predeterminado)|  
     |Latin7|ISO 8859-13 Báltico|CHAR o VARCHAR (valor predeterminado)|  
-    |cp 1251|Windows Cyrillic|CHAR o VARCHAR (valor predeterminado)|  
-    |cp 1256|Árabe de Windows|CHAR o VARCHAR (valor predeterminado)|  
-    |cp 1257|Windows Báltico|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1251|Windows cirílico|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1256|Árabe de Windows|CHAR o VARCHAR (valor predeterminado)|  
+    |CP 1257|Windows Báltico|CHAR o VARCHAR (valor predeterminado)|  
     |binary|Juego de caracteres binarios pseudo|CHAR o VARCHAR (valor predeterminado)|  
     |geostd8|Georgiano GEOSTD8|CHAR o VARCHAR (valor predeterminado)|  
     |cp932|SJIS en japonés de Windows|NCHAR/NVARCHAR (valor predeterminado)|  

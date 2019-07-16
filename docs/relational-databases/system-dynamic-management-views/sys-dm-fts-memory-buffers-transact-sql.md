@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 56895fe5-e8df-4d75-9adc-c1f7757cdef8
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 254ba42c828bbe719d5ddce0502d0a9063755fe3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfca7379336d07b9e5a7099c6c8075c0f959b7ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65947270"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900921"
 ---
 # <a name="sysdmftsmemorybuffers-transact-sql"></a>sys.dm_fts_memory_buffers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "65947270"
 |------------|---------------|-----------------|  
 |**pool_id**|**int**|Id. del grupo de memoria asignado.<br /><br /> 0 = Búferes pequeños<br /><br /> 1 = Búferes grandes|  
 |**memory_address**|**varbinary(8)**|Dirección del búfer de memoria asignado.|  
-|**Nombre**|**nvarchar(4000)**|Nombre del búfer de memoria compartida para el que se ha realizado esta asignación.|  
+|**name**|**nvarchar(4000)**|Nombre del búfer de memoria compartida para el que se ha realizado esta asignación.|  
 |**is_free**|**bit**|Estado actual del búfer de memoria.<br /><br /> 0 = Disponible<br /><br /> 1 = Ocupado|  
 |**row_count**|**int**|Número de filas que controla actualmente este búfer.|  
 |**bytes_used**|**int**|Cantidad, en bytes, de memoria en uso en este búfer.|  
@@ -50,7 +49,7 @@ ms.locfileid: "65947270"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
   
 ## <a name="physical-joins"></a>Combinaciones físicas  
  ![Combinaciones significativas de esta vista de administración dinámica](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-memory-buffers-1.gif "combinaciones significativas de esta vista de administración dinámica")  

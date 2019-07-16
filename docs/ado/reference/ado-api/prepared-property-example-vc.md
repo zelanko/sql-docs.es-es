@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f697ac1a-f125-42b5-bbf6-762a7fa30ae3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9ba223de6cbfa7227ce35130629744fb17475f70
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 58da870e9c65be459e6bd4a8c35bb84aef325c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917583"
 ---
 # <a name="prepared-property-example-vc"></a>Ejemplo de la propiedad Prepared (VC ++)
 Este ejemplo se muestra el [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) propiedad abriendo dos [comando](../../../ado/reference/ado-api/command-object-ado.md) objetos - uno preparado y otro no preparado.  

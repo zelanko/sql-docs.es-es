@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 309339e9-9ccd-4a58-8aa4-b6dc88f4eb7c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f1fd069336a52b0a27ae927880f749c02d2c1d43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0dbddc71b0d647246d10dad16ad72d533df16de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023342"
 ---
 # <a name="parameter-binding-offsets"></a>Desplazamientos de enlace de parámetros
 Una aplicación puede especificar que se agrega un desplazamiento que va a enlazar las direcciones de búfer de parámetro y el indicador de longitud correspondiente direcciones de búfer cuando **SQLExecDirect** o **SQLExecute** se llama. El resultado de estas adiciones determina las direcciones usadas en estas operaciones.  

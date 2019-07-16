@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919444"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 Especifica si se debe mostrar un cuadro de diálogo para solicitar parámetros que faltan al abrir una conexión a un origen de datos.  
@@ -34,7 +33,7 @@ Especifica si se debe mostrar un cuadro de diálogo para solicitar parámetros q
 |**adPromptNever**|4|Nunca solicita.|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

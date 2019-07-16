@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0909a94ea49f2a4deee20cd29b26b0e1e2aaf6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895683"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -43,7 +42,7 @@ RETCODE bcp_control (
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- *HDBC*  
+ *hdbc*  
  Es el identificador de la conexión ODBC habilitada para la copia masiva.  
   
  *eOption*  
@@ -117,7 +116,7 @@ RETCODE bcp_control (
  BCPODBC  
  Cuando es TRUE, especifica que **datetime** y **smalldatetime** valores guardados en formato de caracteres usará el prefijo de secuencia de escape de marca de tiempo ODBC y el sufijo. La opción BCPODBC solo se aplica a DB_OUT.  
   
- Cuando sea FALSE, un **datetime** valor que representa el 1 de enero de 1997 se convierte en la cadena de caracteres: 00:00:00.000 1997-01-01. Cuando es TRUE, el mismo **datetime** valor se representa como: {ts ' 1997-01-01 00:00:00.000'}.  
+ Cuando sea FALSE, un **datetime** valor que representa el 1 de enero de 1997 se convierte en la cadena de caracteres: 1997-01-01 00:00:00.000. Cuando es TRUE, el mismo **datetime** valor se representa como: {ts ' 1997-01-01 00:00:00.000'}.  
   
  BCPROWCOUNT  
  Devuelve el número de filas afectado por la operación actual (o última) de BCP.  

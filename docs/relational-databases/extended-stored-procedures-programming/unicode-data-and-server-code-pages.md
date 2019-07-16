@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 52310260-a892-4b27-ad2e-bf164b98ee80
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: cbf78cf6c3ed1b04dd0a282c016db83837bf0a0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f32929b9cd5d2f69ae4ffbb8d13f7ec09d9972ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62742131"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064272"
 ---
 # <a name="unicode-data-and-server-code-pages"></a>Datos Unicode y páginas de códigos de servidor
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "62742131"
  Si la aplicación de API Procedimiento almacenado extendido está habilitada para Unicode, debe convertir los nombres de columna de metadatos de Unicode, mensajes de error, etc., a datos multibyte antes de pasar estos datos a la API Procedimiento almacenado extendido.  
   
 ## <a name="example"></a>Ejemplo  
- El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Tenga en cuenta lo siguiente:  
+ El siguiente procedimiento almacenado extendido proporciona un ejemplo de las conversiones de Unicode tratadas. Observe lo siguiente:  
   
 -   Datos de columna se pasan como datos Unicode a **srv_describe** porque la columna se describe como srvnvarchar.  
   

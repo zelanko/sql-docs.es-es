@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 21d5f8d9-a3aa-4aa4-bc37-ff8bc90c0870
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 219a6d2e837280ca3220382bea56d2ab610ce87a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 145170afee5ab791602695c662ce1e80e86cae7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915669"
 ---
 # <a name="supported-data-types-odbc-driver-for-oracle"></a>Tipos de datos admitidos (controlador ODBC para Oracle)
 > [!IMPORTANT]  
@@ -29,21 +28,21 @@ ms.locfileid: "63270886"
   
 |Tipo de datos|Oracle 7.3|Oracle8|  
 |---------------|----------------|-------------|  
-|BFILE|n/d|No compatible|  
-|BLOB|n/d|No compatible|  
-|CHAR|Admitida|Admitida|  
-|CLOB|n/d|No compatible|  
-|DATE|Admitida|Admitida|  
-|FLOAT|Admitida|Admitida|  
-|INTEGER|Admitida|Admitida|  
-|LONG|Admitida|Admitida|  
-|LONG RAW|Admitida|Admitida|  
-|NCHAR|n/d|No compatible|  
-|NCLOB|n/d|No compatible|  
-|NUMBER|Admitida|Admitida|  
-|NVARCHAR2|n/d|No compatible|  
-|RAW|Admitida|Admitida|  
-|VARCHAR2|Admitida|Admitida|  
+|BFILE|N/D|No compatible|  
+|BLOB|N/D|No compatible|  
+|CHAR|Compatible|Compatible|  
+|CLOB|N/D|No compatible|  
+|DATE|Compatible|Compatible|  
+|FLOAT|Compatible|Compatible|  
+|INTEGER|Compatible|Compatible|  
+|LONG|Compatible|Compatible|  
+|LONG RAW|Compatible|Compatible|  
+|NCHAR|N/D|No compatible|  
+|NCLOB|N/D|No compatible|  
+|NUMBER|Compatible|Compatible|  
+|NVARCHAR2|N/D|No compatible|  
+|RAW|Compatible|Compatible|  
+|VARCHAR2|Compatible|Compatible|  
 |MLSLABEL|No compatible.|No compatible.|  
   
 > [!NOTE]  

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2590159-6ec5-4510-81ab-e935cc4216cd
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: a52a8482f56bb81f6d4436d8196a39e9e277ea7e
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a6225bca9539f10c4dfea61e99d147cb188d4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47689163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059223"
 ---
 # <a name="sysfntracegettable-transact-sql"></a>sys.fn_trace_gettable (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ fn_trace_gettable ( 'filename' , number_files )
   
 ## <a name="arguments"></a>Argumentos  
  '*filename*'  
- Especifica el archivo de seguimiento inicial que se va a leer. *nombre de archivo* es **nvarchar (256)**, no tiene ningún valor predeterminado.  
+ Especifica el archivo de seguimiento inicial que se va a leer. *nombre de archivo* es **nvarchar (256)** , no tiene ningún valor predeterminado.  
   
  *number_files*  
  Especifica el número de archivos de sustitución que se van a leer. Este número incluye el archivo inicial especificado en *filename*. *number_files* es un **int**.  
@@ -53,7 +52,7 @@ fn_trace_gettable ( 'filename' , number_files )
 ## <a name="remarks"></a>Comentarios  
  Si *number_files* se especifica como **predeterminada**, **fn_trace_gettable** lee todos los archivos de sustitución incremental hasta que llega al final del seguimiento. **fn_trace_gettable** devuelve una tabla con todas las columnas válidas para el seguimiento especificado. Para obtener más información, consulte [sp_trace_setevent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando se especifica esta opción mediante el uso de la *number_files* argumento) donde el nombre de archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando un archivo realiza la sustitución incremental). Para solucionar este problema, puede cambiar el nombre de los archivos de seguimiento y quitar los caracteres de subrayado del nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5.trc** y el archivo de sustitución se denomina **Trace_Oct_5_1.trc**, puede cambiar el nombre de los archivos a **TraceOct5.trc** y  **TraceOct5_1.trc**.  
+ Tenga en cuenta que la función fn_trace_gettable no cargará los archivos de sustitución incremental (cuando se especifica esta opción mediante el uso de la *number_files* argumento) donde el nombre de archivo de seguimiento original termina con un carácter de subrayado y un valor numérico. (Esto no se aplica al carácter de subrayado y al número que se anexan automáticamente cuando un archivo realiza la sustitución incremental). Como alternativa, puede cambiar el nombre de los archivos de seguimiento para quitar los caracteres de subrayado del nombre de archivo original. Por ejemplo, si el archivo original se denomina **Trace_Oct_5.trc** y el archivo de sustitución se denomina **Trace_Oct_5_1.trc**, puede cambiar el nombre de los archivos a **TraceOct5.trc** y  **TraceOct5_1.trc**.  
   
  Esta función puede leer un seguimiento que todavía esté activo en la instancia en la que se ejecuta.  
   
@@ -73,7 +72,7 @@ FROM fn_trace_gettable('c:\temp\mytrace.trc', default);
 GO  
 ```  
   
-### <a name="b-using-fntracegettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>B. Usar fn_trace_gettable para devolver una tabla con una columna IDENTITY que se pueda cargar en una tabla de SQL Server  
+### <a name="b-using-fntracegettable-to-return-a-table-with-an-identity-column-that-can-be-loaded-into-a-sql-server-table"></a>b. Usar fn_trace_gettable para devolver una tabla con una columna IDENTITY que se pueda cargar en una tabla de SQL Server  
  Este ejemplo llama a la función como parte de una instrucción `SELECT...INTO` y devuelve una tabla con una columna `IDENTITY` que se puede cargar en la tabla `temp_trc`.  
   
 ```  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d807b4b62eed46e99fdeaf0225fadb59b26042a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a2c2802f0bd077c64800225590b2346205fb30a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817046"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029779"
 ---
 # <a name="sysmergepublications-transact-sql"></a>sysmergepublications (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62817046"
 |-----------------|---------------|-----------------|  
 |**publicador**|**sysname**|Nombre del servidor predeterminado.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador predeterminado.|  
-|**Nombre**|**sysname**|Nombre de la publicación.|  
+|**name**|**sysname**|Nombre de la publicación.|  
 |**description**|**nvarchar(255)**|Descripción breve de la publicación.|  
 |**retention**|**int**|El período de retención para el conjunto de toda la publicación, donde la unidad se indica por el valor de la **retention_period_unit** columna.|  
 |**publication_type**|**tinyint**|Indica si la publicación se filtra:<br /><br /> **0** = no filtrada.<br /><br /> **1** = filtrados.|  
@@ -78,7 +77,7 @@ ms.locfileid: "62817046"
 |**dynamic_snapshot_queue_timeout**|**int**|Especifica cuántos minutos debe esperar en la cola un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
 |**dynamic_snapshot_ready_timeout**|**int**|Especifica cuántos minutos debe esperar un suscriptor para que empiece el proceso de generación de instantáneas al utilizar filtros con parámetros.|  
 |**distributor**|**sysname**|Nombre del distribuidor de la publicación.|  
-|**snapshot_jobid**|**binary(16)**|Identifica el trabajo de agente que genera la instantánea cuando el suscriptor puede iniciar el proceso de generación correspondiente.|  
+|**snapshot_jobid**|**binary (16)**|Identifica el trabajo de agente que genera la instantánea cuando el suscriptor puede iniciar el proceso de generación correspondiente.|  
 |**allow_web_synchronization**|**bit**|Especifica si la publicación está habilitada para la sincronización Web, donde **1** significa que la sincronización Web está habilitada para la publicación.|  
 |**web_synchronization_url**|**nvarchar(500)**|Especifica el valor predeterminado de la dirección URL de Internet utilizada para la sincronización web.|  
 |**allow_partition_realignment**|**bit**|Indica si se envían eliminaciones al suscriptor cuando una modificación de la fila del publicador provoca que se modifique su partición.<br /><br /> **0** = datos de una antigua partición se dejarán en el suscriptor, donde no se replicarán los cambios realizados en estos datos en el publicador al suscriptor, pero los cambios realizados en el suscriptor se replicarán al publicador.<br /><br /> **1** = eliminaciones al suscriptor para reflejar los resultados de un cambio en la partición mediante la eliminación de datos que no forma parte de más de la partición del suscriptor.<br /><br /> Para obtener más información, consulte [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md).<br /><br /> Nota: Los datos que permanecen en el suscriptor cuando este valor es **0** deben tratarse como si fueran de solo lectura; sin embargo, no aplica esta directriz estrictamente por el sistema de replicación.|  

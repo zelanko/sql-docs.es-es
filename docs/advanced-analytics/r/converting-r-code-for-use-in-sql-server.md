@@ -7,13 +7,12 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a3348058b03ff1441256cc8298ddc1b5b2216b0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac4c00830c9f678c467a75c1531b97fd3723c0b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62642789"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962711"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>Convertir código de R para su ejecución en instancias de SQL Server (In-Database)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -159,7 +158,7 @@ Sin embargo, el código puede requerir cambios sustanciales si cualquiera de las
 
 + Ajustar la predicción y funciones de puntuación en los procedimientos almacenados para el acceso directo por las aplicaciones.
 
-### <a name="other-resources"></a>Otros recursos
+### <a name="other-resources"></a>Otros recursos:
 
 Para ver ejemplos de cómo se puede implementar una solución de R en SQL Server, vea estos ejemplos:
 

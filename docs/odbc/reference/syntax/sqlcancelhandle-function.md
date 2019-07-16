@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f572e9e76f77b0c535cd57ff4ed6cd091aec0f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 629ff63f6fd06aaccc1f60209231f5c937f4a67d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537570"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036134"
 ---
 # <a name="sqlcancelhandle-function"></a>Función SQLCancelHandle
 **Conformidad**  
@@ -54,7 +53,7 @@ SQLRETURN SQLCancelHandle(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLCancelHandle** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de Controlan SQL_HANDLE_STMT y una instrucción *controlar* o un *HandleType* de SQL_HANDLE_DBC y un identificador de conexión *controlar*.  
   
  En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLCancelHandle** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652846"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035882"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,7 +48,7 @@ PARA la ruta de acceso debe usarse con cualquier nombre de tabla de nodo o perim
 ## <a name="arbitrary-length-pattern"></a>Patrón de longitud arbitraria
 Este patrón incluye los nodos y bordes que se deben recorrer repetidamente hasta que se alcance el nodo deseado o hasta que el número máximo de iteraciones que se especifica en el patrón se cumple. Cada vez que se ejecuta la consulta, el resultado de ejecutar este patrón será una colección ordenada de los nodos y bordes recorridos a lo largo de la ruta de acceso desde el nodo inicial al nodo final. Se trata de un modelo de sintaxis de estilo de expresión regular y se admiten los cuantificadores dos patrón siguiente:
 
-* **‘+’** : repite el patrón una o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
+* **'+'** : repite el patrón una o más veces. Finaliza en cuanto encuentra una ruta de acceso más corta.
 * **{1,n}** : repite el patrón de 1 a "n" veces. Finalizar tan pronto como se encuentra una más corta.
 
 ## <a name="lastnode"></a>LAST_NODE

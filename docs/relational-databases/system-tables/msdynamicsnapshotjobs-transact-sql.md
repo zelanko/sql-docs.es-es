@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4f36a325-0e3c-46c4-aeeb-416346cce0bc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b7934d914af50d61df554c2a82ae221a1d5490f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: f8822b0e7c56fe109a251365050f5aed9cdef178
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52817287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907367"
 ---
 # <a name="msdynamicsnapshotjobs-transact-sql"></a>MSdynamicsnapshotjobs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,10 +32,10 @@ ms.locfileid: "52817287"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del trabajo de instantáneas de datos filtrados.|  
-|**Nombre**|**sysname**|El nombre del trabajo de instantánea de datos filtrados.|  
+|**name**|**sysname**|El nombre del trabajo de instantánea de datos filtrados.|  
 |**pubid**|**uniqueidentifier**|Número de identificación único para esta publicación.|  
 |**job_id**|**uniqueidentifier**|El identificador del trabajo del Agente SQL Server en el distribuidor.|  
-|**valor de agent_id**|**int**|El identificador del Agente SQL Server.|  
+|**agent_id**|**int**|El identificador del Agente SQL Server.|  
 |**dynamic_filter_login**|**sysname**|El valor utilizado para evaluar la [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md) función en filtros de fila con parámetros definidos para la publicación.|  
 |**dynamic_filter_hostname**|**sysname**|El valor utilizado para evaluar la [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) función en filtros de fila con parámetros definidos para la publicación.|  
 |**dynamic_snapshot_location**|**nvarchar(255)**|Ruta de acceso a la carpeta desde donde se leen los archivos de instantáneas si se utiliza una instantánea de datos filtrados.|  

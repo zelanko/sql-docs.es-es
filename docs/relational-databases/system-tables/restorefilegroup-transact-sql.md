@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 3aa15c55-6b72-4f76-97d7-bd88391d105c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8b0fdece346bf77efb9ae78092717bfba9098089
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 77d47f620fe7b426f8193138fb3abdf1c403ec87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47676923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910162"
 ---
 # <a name="restorefilegroup-transact-sql"></a>restorefilegroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47676923"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**restore_history_id**|**int**|Número de identificación único que identifica la operación de restauración correspondiente. Referencias **RestoreHistory (restore_history_id)**.|  
+|**restore_history_id**|**int**|Número de identificación único que identifica la operación de restauración correspondiente. Referencias **RestoreHistory (restore_history_id)** .|  
 |**filegroup_name**|**nvarchar(128)**|Nombre del grupo de archivos que se va a restaurar. Puede ser NULL.<br /><br /> Si una base de datos se revierte a una instantánea de base de datos, este valor se llena del mismo modo que en una restauración completa.|  
   
 ## <a name="remarks"></a>Comentarios  

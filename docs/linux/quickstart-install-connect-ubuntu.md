@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: Este inicio rápido muestra cómo instalar SQL Server 2017 ni SQL Server 2019 en Ubuntu y, a continuación, crear y consultar una base de datos con sqlcmd.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 05/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
-ms.openlocfilehash: 9454affd6d6c60efc31e46c575cc575227cf05f3
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 23597e4937f279694d7e4286e5aec3d714b54afa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910467"
 ---
 # <a name="quickstart-install-sql-server-and-create-a-database-on-ubuntu"></a>Inicio rápido: Instalar a SQL Server y crear una base de datos en Ubuntu
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]

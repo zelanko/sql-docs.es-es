@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901376"
 ---
 # <a name="alter-table---sql-command"></a>Modificar tabla - comando SQL
 Modifica mediante programación la estructura de una tabla.  
@@ -82,7 +81,7 @@ ALTER TABLE TableName1
   
  Si omite NULL y NOT NULL, el valor actual de SET NULL determina si se permiten valores null en el campo. Sin embargo, si omite NULL y NOT NULL e incluye la clave principal o única cláusula, se omite el valor actual de SET NULL y el campo no es NULL de manera predeterminada.  
   
- CHECK *lExpression1*  
+ COMPROBAR *lExpression1*  
  Especifica una regla de validación para el campo. *lExpression1* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado. Siempre que se anexa un registro en blanco, se comprueba la regla de validación. Se genera un error si la regla de validación no se permite un valor de campo en blanco en un registro anexado.  
   
  ERROR *cMessageText1*  
@@ -122,10 +121,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [columna] *Nombredecampo2*  
  Especifica el nombre de un campo existente para modificar.  
   
- SET DEFAULT *eExpression2*  
+ ESTABLECER un valor predeterminado *eExpression2*  
  Especifica un nuevo valor predeterminado para un campo existente. Tipo de datos de *eExpression2* debe ser el mismo que el tipo de datos para el campo.  
   
- SET CHECK *lExpression2*  
+ COMPROBACIÓN del conjunto *lExpression2*  
  Especifica una nueva regla de validación para un campo existente. *lExpression2* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado.  
   
  ERROR *cMessageText2*  
@@ -137,12 +136,12 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  COMPROBACIÓN DE COLOCACIÓN  
  Quita la regla de validación para un campo existente.  
   
- DROP [COLUMN] *FieldName3*  
+ COLOCAR [columna] *FieldName3*  
  Especifica un campo para quitar de la tabla. Quitar un campo de la tabla también quita la regla de validación de campo y de configuración del valor predeterminado del campo.  
   
  Si las expresiones de índice de clave o un desencadenador, haga referencia al campo, las expresiones dejan de ser válidas cuando se quita el campo. En este caso, no se genera un error cuando se quita el campo, pero las expresiones de índice no válido de clave o el desencadenador generará errores en tiempo de ejecución.  
   
- SET CHECK *lExpression3*  
+ COMPROBACIÓN del conjunto *lExpression3*  
  Especifica la regla de validación de la tabla. *lExpression3* debe evaluarse como una expresión lógica y puede ser una función definida por el usuario o un procedimiento almacenado.  
   
  ERROR *cMessageText3*  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9140ecc1-d912-4d76-ae70-e2a857da6d44
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 158635a13a60d652da3b78408db6cbb9d74ffd86
-ms.sourcegitcommit: c19696d3d67161ce78aaa5340964da3256bf602d
+ms.openlocfilehash: 1565adfedca53dfe6e9ddf66af559adff23337d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/29/2018
-ms.locfileid: "52617565"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910153"
 ---
 # <a name="restorehistory-transact-sql"></a>restorehistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +35,10 @@ ms.locfileid: "52617565"
 |**restore_date**|**datetime**|Fecha y hora de inicio de la operación de restauración. Puede ser NULL.|  
 |**destination_database_name**|**nvarchar(128)**|Nombre de la base de datos de destino de la operación de restauración. Puede ser NULL.|  
 |**user_name**|**nvarchar(128)**|Nombre del usuario que realizó la operación de restauración. Puede ser NULL.|  
-|**backup_set_id**|**int**|Número de identificación único que identifica el conjunto de copia de seguridad que se restaura. Referencias **backupset (backup_set_id)**.|  
-|**restore_type**|**char(1)**|Tipo de operación de restauración:<br /><br /> D = Base de datos<br /><br /> F = Archivo <br /><br /> G = Grupo de archivos <br /><br /> I = Diferencial <br /><br /> L = Registro<br /><br /> V = Solo comprobar <br /><br /> Puede ser NULL.|  
+|**backup_set_id**|**int**|Número de identificación único que identifica el conjunto de copia de seguridad que se restaura. Referencias **backupset (backup_set_id)** .|  
+|**restore_type**|**char(1)**|Tipo de operación de restauración:<br /><br /> D = Base de datos<br /><br /> F = Archivo<br /><br /> G = Grupo de archivos<br /><br /> I = Diferencial<br /><br /> L = Registro<br /><br /> V = Solo comprobar<br /><br /> Puede ser NULL.|  
 |**Reemplazar**|**bit**|Indica si la operación de restauración especificó la opción REPLACE:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
-|**recovery**|**bit**|Indica si la operación de restauración especificó la opción RECOVERY o NORECOVERY:<br /><br /> 1 = RECOVERY <br /><br /> Puede ser NULL.<br /><br /> Cuando se revierte una base de datos a una instantánea de base de datos, 1 es la única opción.<br /><br /> 0 = NORECOVERY|  
+|**recovery**|**bit**|Indica si la operación de restauración especificó la opción RECOVERY o NORECOVERY:<br /><br /> 1 = RECOVERY<br /><br /> Puede ser NULL.<br /><br /> Cuando se revierte una base de datos a una instantánea de base de datos, 1 es la única opción.<br /><br /> 0 = NORECOVERY|  
 |**Reiniciar**|**bit**|Indica si la operación de restauración especificó la opción RESTART:<br /><br /> 1 = Especificada<br /><br /> 0 = No especificada<br /><br /> Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, 0 es la única opción.|  
 |**stop_at**|**datetime**|Indica el momento hasta el cual se recuperó la base de datos. Puede ser NULL.|  
 |**device_count**|**tinyint**|Número de dispositivos implicados en la operación de restauración. Este número puede ser inferior al número de tipos de medios utilizados para la copia de seguridad. Puede ser NULL.<br /><br /> Si se revierte una base de datos a una instantánea de base de datos, el número es siempre 1.|  

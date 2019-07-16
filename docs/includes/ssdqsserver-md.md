@@ -1,9 +1,9 @@
 ---
 ms.openlocfilehash: 307ab84b6e68aee462cfffb600944a44a71118eb
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62862382"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212395"
 ---
-Servidor de calidad de datos
+ Servidor de calidad de datos 

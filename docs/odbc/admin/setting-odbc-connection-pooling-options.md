@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 037e2f78-f204-40f4-b4ab-d9cdf562012b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15a3efd678d7b1f055daebc31d71d4044ad19eef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43d4fe1ab363326269daf40375e126b930d2548b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198537"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901642"
 ---
 # <a name="setting-odbc-connection-pooling-options"></a>Establecer opciones de agrupación de conexiones ODBC
 Agrupación de conexiones permite a una aplicación usar una conexión de un grupo de conexiones que no deben establecerse para cada usuario. Puede usar el **agrupación de conexiones** pestaña de la **Administrador de orígenes de datos ODBC** cuadro de diálogo para habilitar y deshabilitar la supervisión de rendimiento. Haga doble clic en un nombre de controlador para establecer el período de tiempo de espera de conexión.  

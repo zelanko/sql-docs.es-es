@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 05cc6dc2647b5297b8d7176cd4bc70261b78cb71
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f29be5e03a6cc9c1c91809db2b8ec7c686e90f11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181415"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898626"
 ---
 # <a name="sqlgettypeinfo-visual-foxpro-odbc-driver"></a>SQLGetTypeInfo (controlador ODBC de Visual FoxPro)
 > [!NOTE]  
@@ -35,22 +34,22 @@ ms.locfileid: "63181415"
 |SQL_BIGINT|No compatible. No hay ningún tipo de Visual FoxPro de 64 bits.|  
 |SQL_BIT|Lógico|  
 |SQL_CHAR|Carácter|  
-|SQL_DATE|date|  
-|SQL_DECIMAL|Numérico|  
+|SQL_DATE|Date|  
+|SQL_DECIMAL|Numeric|  
 |SQL_DOUBLE|Double|  
 |SQL_FLOAT|Double|  
-|SQL_INTEGER|Integer|  
+|SQL_INTEGER|Entero|  
 |SQL_LONGVARBINARY|Memorando (binario)|  
 |SQL_LONGVARCHAR|Memorándum|  
 |SQL_NUMERIC|*, Moneda, numéricos Float|  
 |SQL_REAL|Double|  
-|SQL_SMALLINT|Integer|  
+|SQL_SMALLINT|Entero|  
 |SQL_TIME|No compatible. No hay ningún Visual FoxPro *tiempo* tipo.|  
 |SQL_TIMESTAMP|DateTime|  
-|SQL_TINYINT|Integer|  
+|SQL_TINYINT|Entero|  
 |SQL_VARBINARY|Memorando (binario) *, General|  
 |SQL_VARCHAR|Carácter|  
   
- * Tipo predeterminado  
+ \* Tipo predeterminado  
   
  Para obtener más información acerca de los tipos de datos de Visual FoxPro, consulte [CREATE TABLE](../../odbc/microsoft/create-table-sql-command.md). Para obtener más información acerca de esta función, vea [SQLGetTypeInfo](../../odbc/reference/syntax/sqlgettypeinfo-function.md) en el *referencia del programador de ODBC*.

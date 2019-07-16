@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 52a5429e-5829-455e-be3b-31f05cbecf2d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 925eefdbe8f5ff9196689026edb685c8f76d7d0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c56ba0b9d7ebebbf4a9e4baf669bbdc6eb84355e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718169"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920808"
 ---
 # <a name="adorecordconstruction-interface"></a>Interfaz ADORecordConstruction
 El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** objeto de OLE DB **fila** objeto en una aplicación de C o C++.  
@@ -74,6 +73,6 @@ El **ADORecordConstruction**interfaz se usa para construir un ADO **registro** o
 ## <a name="requirements"></a>Requisitos  
  **Versión:** ADO 2.0 y versiones posterior  
   
- **Library:** msado15.dll  
+ **Biblioteca:** msado15.dll  
   
  **UUID:** 00000567-0000-0010-8000-00AA006D2EA4

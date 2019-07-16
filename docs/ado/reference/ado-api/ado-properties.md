@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac0d1a7-6c7a-4f4c-b115-428935e0f98b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3b6155de4c1bbc04e921b3b019eb0128694f6412
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ddf4e26d015067c0b5bf06f6e2adeecd39f041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920893"
 ---
 # <a name="ado-properties"></a>Propiedades de ADO
 
@@ -32,7 +31,7 @@ ms.locfileid: "66696626"
 |[ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)|Indica la longitud real de un valor del campo.|  
 |[Atributos](../../../ado/reference/ado-api/attributes-property-ado.md)|Indica una o varias características de un objeto.|  
 |[BOF y EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)|**BOF** indica que la posición actual del registro es antes del primer registro en un objeto de conjunto de registros.<br /><br /> **EOF** indica que es la posición actual del registro después del último registro en un objeto de conjunto de registros.|  
-|[Bookmark](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un marcador que identifica de forma única el registro actual en un **Recordset** de objeto o establece el registro actual un **Recordset** objeto en el registro identificado por un marcador válido.|  
+|[Marcador](../../../ado/reference/ado-api/bookmark-property-ado.md)|Indica un marcador que identifica de forma única el registro actual en un **Recordset** de objeto o establece el registro actual un **Recordset** objeto en el registro identificado por un marcador válido.|  
 |[CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md)|Indica el número de registros desde un **Recordset** objeto que se almacenan en caché localmente en memoria.|  
 |[Capítulo](../../../ado/reference/ado-api/chapter-property-ado.md)|Obtiene o establece OLE DB **capítulo** objeto desde/en un **ADORecordsetConstruction** objeto.|  
 |[CharSet](../../../ado/reference/ado-api/charset-property-ado.md)|Indica el juego de caracteres al que el contenido de un texto **Stream** se deben traducir.|  

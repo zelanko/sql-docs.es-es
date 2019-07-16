@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915456"
 ---
 # <a name="dynamic-sql"></a>SQL dinámico
 Aunque SQL estático funciona bien en muchas situaciones, hay una clase de aplicaciones en la que el acceso a datos no se puede determinar de antemano. Por ejemplo, suponga que una hoja de cálculo permite que un usuario que escriba una consulta, que la hoja de cálculo, a continuación, envía a la instancia de DBMS para recuperar los datos. El contenido de esta consulta obviamente no puede conocerse al programador cuando se escribe el programa de hoja de cálculo.  

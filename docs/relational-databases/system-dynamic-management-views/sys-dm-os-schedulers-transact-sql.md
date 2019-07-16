@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899840"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -62,16 +61,16 @@ ms.locfileid: "65626769"
 |memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria del programador. No acepta valores NULL.|  
 |task_memory_object_address|**varbinary(8)**|Dirección de memoria del objeto de memoria de la tarea. No admite valores NULL. Para obtener más información, consulte [sys.dm_os_memory_objects &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-objects-transact-sql.md).|  
 |quantum_length_us|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Expone el cuanto del programador que utiliza SQLOS.|  
-| total_cpu_usage_ms |**bigint**|**Válido para ** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> Total de CPU consumido por este programador notificados por los trabajadores no preferente. No admite valores NULL.|
+| total_cpu_usage_ms |**bigint**|**Válido para**  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> Total de CPU consumido por este programador notificados por los trabajadores no preferente. No admite valores NULL.|
 |total_cpu_idle_capped_ms|**bigint**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)] Indica la limitación basada en [Service Level Objective](/azure/sql-data-warehouse/what-is-a-data-warehouse-unit-dwu-cdwu#service-level-objective), será siempre 0 para las versiones que no son de Azure de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Acepta valores NULL.|
-|total_scheduler_delay_ms|**bigint**|**Válido para ** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> El tiempo entre conmutación en un trabajo de intercambiar y la otra. Puede deberse a los trabajadores de preemptive retrasar la programación del siguiente trabajador no preferente, o porque el sistema operativo programación de subprocesos de otros procesos. No admite valores NULL.|
-|ideal_workers_limit|**int**|**Válido para ** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br> Lo ideal es que deben ser cuántos trabajos del programador. Si los trabajadores actuales superan el límite debido a la carga de la tarea desequilibrado, una vez que se vuelven inactivas se recortarán. No admite valores NULL.|
+|total_scheduler_delay_ms|**bigint**|**Válido para**  [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y versiones posteriores. <br><br> El tiempo entre conmutación en un trabajo de intercambiar y la otra. Puede deberse a los trabajadores de preemptive retrasar la programación del siguiente trabajador no preferente, o porque el sistema operativo programación de subprocesos de otros procesos. No admite valores NULL.|
+|ideal_workers_limit|**int**|**Válido para**  [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] y versiones posteriores. <br><br> Lo ideal es que deben ser cuántos trabajos del programador. Si los trabajadores actuales superan el límite debido a la carga de la tarea desequilibrado, una vez que se vuelven inactivas se recortarán. No admite valores NULL.|
 |pdw_node_id|**int**|**Se aplica a**: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> El identificador para el nodo en esta distribución.|  
   
 ## <a name="permissions"></a>Permisos
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
 
 ## <a name="examples"></a>Ejemplos  
   

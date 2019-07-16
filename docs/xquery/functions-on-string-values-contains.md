@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c88c015-04fc-429b-84b2-835596a28b65
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: c108689f2b06fca884978de68c106c2c8f28f741
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 54b3603c18d814276d700a220fbee5e16ed77502
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899025"
 ---
 # <a name="functions-on-string-values---contains"></a>Funciones usadas en valores de cadena: contains
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -60,7 +59,7 @@ fn:contains ($arg1 as xs:string?, $arg2 as xs:string?) as xs:boolean?
  Este tema proporciona ejemplos de XQuery con instancias XML almacenadas en varias columnas de tipo xml en la base de datos AdventureWorks.  
   
 ### <a name="a-using-the-contains-xquery-function-to-search-for-a-specific-character-string"></a>A. Utilizar la función contains() de XQuery para buscar una cadena de caracteres específica  
- La consulta siguiente busca los productos que contengan la palabra Aerodynamic en las descripciones resumidas. La consulta devuelve el Id. de producto (ProductID) y el elemento <`Summary`> de esos productos.  
+ La consulta siguiente busca los productos que contengan la palabra Aerodynamic en las descripciones resumidas. La consulta devuelve el identificador de producto y la <`Summary`> (elemento) para dichos productos.  
   
 ```  
 --The product model description document uses  
@@ -85,7 +84,7 @@ where CatalogDescription.exist('
     [contains(., "Aerodynamic")]') = 1  
 ```  
   
- Resultado  
+ Resultados  
   
  `ProductModelID Result`  
   

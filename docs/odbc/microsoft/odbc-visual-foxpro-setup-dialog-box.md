@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: de020197-7f53-4643-9cbf-b7887ba88de9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 35e9da17a9c3980470cfd3dcbb22b4069afec640
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9aa8954cd42ac715b3e6e67e0b0add69d07a570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233585"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915662"
 ---
 # <a name="odbc-visual-foxpro-setup-dialog-box"></a>Cuadro de diálogo de configuración de Visual FoxPro ODBC
 El **programa de instalación de Visual FoxPro ODBC** cuadro de diálogo permite agregar o cambiar un origen de datos de Visual FoxPro.  

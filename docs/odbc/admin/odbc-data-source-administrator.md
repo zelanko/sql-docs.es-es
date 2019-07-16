@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a2f66b4c-a4ac-401b-8e95-d8f96332e0b5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: adbc90288789838199a0eee866eb36896a360009
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da8dd850e62f46042287569f1e4bb8520b18151f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901655"
 ---
 # <a name="odbc-data-source-administrator"></a>Administrador de orígenes de datos ODBC
 Administrador de orígenes de datos ODBC de Microsoft® administra los orígenes de datos y los controladores de base de datos. Esta aplicación se encuentra en el Panel de Control de Windows en **herramientas administrativas**. A partir de Windows 8, el icono se denomina **orígenes de datos ODBC**, y en los sistemas operativos de 64 bits, hay una versión de 32 bits y 64 bits.  

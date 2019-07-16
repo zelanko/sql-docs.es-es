@@ -3,18 +3,17 @@ title: Introducción a las características de rendimiento de SQL Server en Linu
 description: En este artículo se proporciona una introducción de las características de rendimiento de SQL Server para los usuarios de Linux que están familiarizados con SQL Server. Muchos de estos ejemplos funcionan en todas las plataformas, pero el contexto de este artículo es Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 60036d26-4797-4872-9a9e-3552841c61be
-ms.openlocfilehash: c5cf07107702579af1ae111c9c55843c16c01bd0
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: fe60b00654d93c6362a8671318a4b7b88ae90a5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834832"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896162"
 ---
 # <a name="walkthrough-for-the-performance-features-of-sql-server-on-linux"></a>Tutorial para conocer las características de rendimiento de SQL Server en Linux
 

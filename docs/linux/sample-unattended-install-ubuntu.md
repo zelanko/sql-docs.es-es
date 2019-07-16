@@ -4,17 +4,16 @@ titleSuffix: SQL Server
 description: 'Ejemplo de Script SQL Server: instalación desatendida en Ubuntu'
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3bd5728e8046d7e48945fe815b64735362873ac1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: b71bad98aa6e9172b69efa67ce8708f1479fa691
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910483"
 ---
 # <a name="sample-unattended-sql-server-installation-script-for-ubuntu"></a>Ejemplo: Script de instalación desatendida de SQL Server para Ubuntu
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 732f624f-8900-4608-9815-194302d22e8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b33feb8075babd50f67b6c01da5afadcd1c33e0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb6bc2b9f7e53caf28f44daf39815850940b9d3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924722"
 ---
 # <a name="parameterized-commands-with-intervening-compute-commands"></a>Comandos de proceso de comandos con parámetros con intermedias
 Una forma con parámetros típica comandos APPEND tiene una cláusula que crea un elemento primario **Recordset** con un comando de consulta y otra cláusula que crea un elemento secundario **Recordset** con un comando de consulta con parámetros: es decir, un comando que contiene un marcador de posición de parámetro (un signo de interrogación "?"). El resultado en forma de **Recordset** tiene dos niveles, en el que el elemento primario ocupa el nivel superior y el elemento secundario ocupa el nivel inferior.  

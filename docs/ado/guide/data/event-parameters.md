@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925366"
 ---
 # <a name="event-parameters"></a>Parámetros de eventos
 Cada controlador de eventos tiene un parámetro de estado que controla el controlador de eventos. Para los eventos de finalización, este parámetro también se utiliza para indicar el éxito o fracaso de la operación que generó el evento. Eventos más completos también tienen un parámetro de error para proporcionar información sobre los errores que pudieran haberse producido y uno o más parámetros de objeto que hacen referencia a los objetos ADO que se usa para realizar la operación. Por ejemplo, el [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) evento incluye parámetros de objeto para el **comando**, **Recordset**, y **conexión** objetos asociado al evento. En el siguiente ejemplo de Microsoft® Visual Basic®, puede ver los objetos pCommand, Connection y pConnection los objetos que representan el **comando**, **Recordset**, y **conexión** objetos utilizados por el **Execute** método.  

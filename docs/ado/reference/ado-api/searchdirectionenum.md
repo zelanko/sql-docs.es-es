@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81272ae3-2165-4f4e-adfe-9ede0368cb17
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a5c1c3869b144bb770ca893595986288b07aa596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f8926e932317096cb3891cc8c480164268751cea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917002"
 ---
 # <a name="searchdirectionenum"></a>SearchDirectionEnum
 Especifica la dirección de una búsqueda de registros dentro de un [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -32,7 +31,7 @@ Especifica la dirección de una búsqueda de registros dentro de un [Recordset](
 |**adSearchForward**|1|Busca hacia delante, se detiene al final de la **Recordset**. Si no se encuentra una coincidencia, se coloca el puntero de registro en [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md).|  
   
 ## <a name="adowfc-equivalent"></a>Equivalente de ADO y WFC  
- Package: **com.ms.wfc.data**  
+ Paquete: **com.ms.wfc.data**  
   
 |Constante|  
 |--------------|  

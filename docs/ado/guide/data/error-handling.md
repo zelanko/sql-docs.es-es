@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4909e413-f3b0-4183-8ad3-67b1434df742
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 56d41b8c8fddff4d49cdb213834f45eac7fd5462
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb3213b6a4c5711ccb8d6f9243047d8361a6e37
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925426"
 ---
 # <a name="error-handling"></a>Tratamiento de errores
 ADO utiliza varios métodos diferentes para notificar a una aplicación de errores que se producen. Esta sección describen los tipos de errores que pueden producirse cuando se utiliza ADO y cómo se notifica a la aplicación. Concluye con sugerencias sobre cómo controlar esos errores.  

@@ -3,18 +3,17 @@ title: Notas de la versión de vista previa de 2019 de SQL Server en Linux
 description: En este artículo contiene las notas de la versión y las características admitidas para la versión preliminar de 2019 de SQL Server que se ejecutan en Linux. Notas de la versión se incluyen para la versión más reciente y varias versiones anteriores.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 07/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 88c4ebbd5d2e106dbab2dcb057ef024fe0c7f26c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 490b47c43e5a930f42163edc75280b2642e2dabc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896138"
 ---
 # <a name="release-notes-for-sql-server-2019-preview-on-linux"></a>Notas de la versión de vista previa de 2019 de SQL Server en Linux
 
@@ -48,13 +47,13 @@ La tabla siguiente muestra el historial de versión de vista previa de SQL Serve
 | Release               | `Version`       | Fecha de la versión |
 |-----------------------|---------------|--------------|
 | [CTP 3.1](#CTP31)     | 15.0.1700.37  | 2019-6-26    |
-| [CTP 3.0](#CTP30)     | 15.0.1600.8   | 2019-5-22    |
-| [CTP 2.5](#CTP25)     | 15.0.1500.28  | 2019-4-24    |
-| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 2019-3-27    |
+| [CTP 3.0](#CTP30)     | 15.0.1600.8   | 22-5-2019    |
+| [CTP 2.5](#CTP25)     | 15.0.1500.28  | 24-4-2019    |
+| [CTP 2.4](#CTP24)     | 15.0.1400.75  | 27-3-2019    |
 | [CTP 2.3](#CTP23)     | 15.0.1300.359 | 2019-3-01    |
 | [CTP 2.2](#CTP22)     | 15.0.1200.24  | 2018-12-11   |
 | [CTP 2.1](#CTP21)     | 15.0.1100.94  | 2018-11-06   |
-| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 2018-09-24   |
+| [CTP 2.0](#CTP20)     | 15.0.1000.34  | 24-09-2018   |
 
 ## <a id="cuinstall"></a> Cómo instalar actualizaciones
 

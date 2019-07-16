@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: 43dc42a8-7057-48e6-93d6-880d5c5c51a4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 76cd14b8ee1c5a55e0312993090bfaf098c7e219
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6aebf318652e604c5f5ad4c30ef389fdfd9e78c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925641"
 ---
 # <a name="data-section"></a>Sección de datos
 La sección de datos define los datos del conjunto de filas junto con el pendiente actualizaciones, inserciones o eliminaciones. La sección de datos puede contener cero o más filas. Solo puede contener datos de un conjunto de filas donde la fila se define el esquema. Además, como se indicó antes, se pueden omitir columnas sin datos. Si se utiliza un atributo o un subelemento en la sección de datos y esa construcción no se ha definido en la sección de esquema, se omite en modo silencioso.  
   
-## <a name="string"></a>String  
+## <a name="string"></a>Cadena  
  Los caracteres XML reservados en datos de texto deben reemplazarse por las entidades de caracteres apropiado. Por ejemplo, en el nombre de la empresa "De Joe garaje", una comilla simple debe sustituirse por una entidad. La fila real sería similar al siguiente:  
   
 ```  
@@ -32,7 +31,7 @@ La sección de datos define los datos del conjunto de filas junto con el pendien
   
  Los caracteres siguientes están reservados en XML y debe reemplazarse por las entidades de caracteres: {"," &,\<, >}.  
   
-## <a name="binary"></a>Binario  
+## <a name="binary"></a>Binary  
  Datos binarios están bin.hex codificado (es decir, un byte se asigna a dos caracteres, un carácter por nibble).  
   
 ## <a name="datetime"></a>DateTime  

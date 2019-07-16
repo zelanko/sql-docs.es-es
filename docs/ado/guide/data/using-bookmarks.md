@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cca244e6-84f8-4394-bca9-f7a819b8f4df
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c7e14e063d1aabcfce6391a85c0fcddbf0ff4e9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9fa2a738a3e94cd306619a318b75a2fd506972c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923608"
 ---
 # <a name="using-bookmarks"></a>Utilizar marcadores
 A menudo resulta útil volver directamente a un registro específico después de haberse movido por el **Recordset** sin tener que desplazarse por todos los registros y comparar valores. Por ejemplo, si se intenta buscar un registro mediante el **buscar** método, pero la búsqueda no devuelve ningún registro, se colocan automáticamente en los extremos de la **Recordset**. Si el proveedor es compatible con ellos, pueden utilizar marcadores para marcar la ubicación antes de usar el **buscar** método para que pueda volver a su ubicación. Un marcador es un **Variant** escriba el valor que identifica un registro en un **Recordset** objeto.  

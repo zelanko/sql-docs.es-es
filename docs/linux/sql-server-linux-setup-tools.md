@@ -4,19 +4,18 @@ titleSuffix: SQL Server
 description: En este artículo se describe cómo instalar las herramientas de SQL Server en Linux.
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/07/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 9b93530b54f2f51f2c00b9d651fcae970507a4cf
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834660"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085723"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Instalar sqlcmd y bcp las herramientas de línea de comandos de SQL Server en Linux
 
@@ -25,7 +24,7 @@ ms.locfileid: "67834660"
 Los pasos siguientes instalan las herramientas de línea de comandos, controladores ODBC de Microsoft y sus dependencias. El **mssql-tools** paquete contiene:
 
 - **sqlcmd**: Utilidad de línea de comandos de consulta.
-- **bcp**: Utilidad de importación y exportación de forma masiva.
+- **BCP**: Utilidad de importación y exportación de forma masiva.
 
 Instalar las herramientas para su plataforma:
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae2d9b5-365f-4f0a-9116-defe9498b401
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17058af1d7f0ab1e35c2d6b31c0337daed4c9e01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c0096dad8fbb4cf9847385759702e39ac074c4c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68112047"
 ---
 # <a name="descriptors-and-desktop-database-drivers"></a>Descriptores de y controladores de escritorio de la base de datos
 Un descriptor es una estructura de datos que contiene información sobre los datos de las columnas o parámetros dinámicos. **SQLGetDescField** puede usarse para recuperar los descriptores compatibles enumerados a continuación. Los descriptores de parámetros de implementación (IPD) no se rellenan automáticamente porque **SQLDescribeParam** no se admite. Tampoco se admiten campos de descriptor que no están disponibles a través de Jet (por ejemplo, SQL_DESC_BASE_TABLE_NAME).  
@@ -32,43 +31,43 @@ Un descriptor es una estructura de datos que contiene información sobre los dat
   
 |Campos de descriptor|Nivel de compatibilidad|  
 |-----------------------|-------------------|  
-|SQL_DESC_ALLOC_TYPE|Admitida|  
+|SQL_DESC_ALLOC_TYPE|Compatible|  
 |SQL_DESC_ARRAY_SIZE|Solo se admite para descartar|  
-|SQL_DESC_ARRAY_STATUS_PTR|Admitida|  
-|SQL_DESC_BIND_OFFSET_PTR|Admitida|  
-|SQL_DESC_BIND_TYPE|Admitida|  
-|SQL_DESC_COUNT|Admitida|  
+|SQL_DESC_ARRAY_STATUS_PTR|Compatible|  
+|SQL_DESC_BIND_OFFSET_PTR|Compatible|  
+|SQL_DESC_BIND_TYPE|Compatible|  
+|SQL_DESC_COUNT|Compatible|  
 |SQL_DESC_ROWS_PROCESSED_PTR|Solo se admite para descartar|  
-|SQL_DESC_AUTO_UNIQUE_VALUE|Admitida|  
+|SQL_DESC_AUTO_UNIQUE_VALUE|Compatible|  
 |SQL_DESC_BASE_COLUMN_NAME|Compatible (nuevo)|  
 |SQL_DESC_BASE_TABLE_NAME|Compatible (nuevo)|  
 |SQL_DESC_CASE_SENSITIVE|Siempre es FALSE|  
 |SQL_DESC_CATALOG_NAME|No compatible|  
-|SQL_DESC_CONCISE_TYPE|Admitida|  
-|SQL_DESC_DATA_PTR|Admitida|  
-|SQL_DESC_DATETIME_INTERVAL_CODE|Admitida|  
+|SQL_DESC_CONCISE_TYPE|Compatible|  
+|SQL_DESC_DATA_PTR|Compatible|  
+|SQL_DESC_DATETIME_INTERVAL_CODE|Compatible|  
 |SQL_DESC_DATETIME_INTERVAL_PRECISION|Admite para los tipos de C de intervalo|  
-|SQL_DESC_DISPLAY_SIZE|Admitida|  
+|SQL_DESC_DISPLAY_SIZE|Compatible|  
 |SQL_DESC_FIXED_PREC_SCALE|Compatible (TRUE por dinero)|  
-|SQL_DESC_INDICATOR_PTR|Admitida|  
-|SQL_DESC_LABEL|Admitida|  
-|SQL_DESC_LENGTH|Admitida|  
-|SQL_DESC_LITERAL_PREFIX|Admitida|  
-|SQL_DESC_LITERAL_SUFFIX|Admitida|  
+|SQL_DESC_INDICATOR_PTR|Compatible|  
+|SQL_DESC_LABEL|Compatible|  
+|SQL_DESC_LENGTH|Compatible|  
+|SQL_DESC_LITERAL_PREFIX|Compatible|  
+|SQL_DESC_LITERAL_SUFFIX|Compatible|  
 |SQL_DESC_LOCAL_TYPE_NAME|No se admite (devuelve una cadena vacía)|  
-|SQL_DESC_NAME|Admitida|  
-|SQL_DESC_NULLABLE|Admitida<br /><br /> **Tenga en cuenta** no admitidas en versiones anteriores de Jet 4.0|  
-|SQL_DESC_NUM_PREC_RADIX|Admitida|  
-|SQL_DESC_OCTET_LENGTH|Admitida|  
-|SQL_DESC_OCTET_LENGTH_PTR|Admitida|  
+|SQL_DESC_NAME|Compatible|  
+|SQL_DESC_NULLABLE|Compatible<br /><br /> **Tenga en cuenta** no admitidas en versiones anteriores de Jet 4.0|  
+|SQL_DESC_NUM_PREC_RADIX|Compatible|  
+|SQL_DESC_OCTET_LENGTH|Compatible|  
+|SQL_DESC_OCTET_LENGTH_PTR|Compatible|  
 |SQL_DESC_PARAMETER_TYPE|Solo los parámetros de entrada|  
-|SQL_DESC_PRECISION|Admitida|  
-|SQL_DESC_SCALE|Admitida|  
+|SQL_DESC_PRECISION|Compatible|  
+|SQL_DESC_SCALE|Compatible|  
 |SQL_DESC_SCHEMA_NAME|No compatible|  
-|SQL_DESC_SEARCHABLE|Admitida|  
+|SQL_DESC_SEARCHABLE|Compatible|  
 |SQL_DESC_TABLE_NAME|No compatible|  
-|SQL_DESC_TYPE|Admitida|  
-|SQL_DESC_TYPE_NAME|Admitida|  
-|SQL_DESC_UNNAMED|Admitida|  
-|SQL_DESC_UNSIGNED|Admitida|  
-|SQL_DESC_UPDATABLE|Admitida|
+|SQL_DESC_TYPE|Compatible|  
+|SQL_DESC_TYPE_NAME|Compatible|  
+|SQL_DESC_UNNAMED|Compatible|  
+|SQL_DESC_UNSIGNED|Compatible|  
+|SQL_DESC_UPDATABLE|Compatible|

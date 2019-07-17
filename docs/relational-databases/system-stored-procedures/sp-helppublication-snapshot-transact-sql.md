@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 97b4a7ae-40a5-4328-88f1-ff5d105bbb34
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0154f155c82554ba30ce71c9e7091fdc7565f587
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa2697548212e3d5c27604533e69bbc07f480864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137600"
 ---
 # <a name="sphelppublicationsnapshot-transact-sql"></a>sp_helppublication_snapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_helppublication_snapshot [ @publication = ] 'publication'
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Id. del agente de instantáneas.|  
-|**Nombre**|**nvarchar(100)**|Nombre del agente de instantáneas.|  
+|**name**|**nvarchar(100)**|Nombre del agente de instantáneas.|  
 |**publisher_security_mode**|**smallint**|Modo de seguridad utilizado por el agente al conectarse al publicador, que puede ser uno de los siguientes:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación<br /><br /> **1** = autenticación de Windows.|  
 |**publisher_login**|**sysname**|Inicio de sesión utilizado para conectarse al publicador.|  
 |**publisher_password**|**nvarchar(524)**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117960"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` Es la fecha en el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo opcional proporcionado al agente de mezcla. *optional_command_line* es **nvarchar (255)**, su valor predeterminado es ' '. Se puede utilizar para proporcionar parámetros adicionales al Agente de mezcla, como en el siguiente ejemplo, en el que se aumenta el tiempo de espera predeterminado de las consultas a `600` segundos.  
+`[ @optional_command_line = ] 'optional_command_line'` Es un símbolo opcional proporcionado al agente de mezcla. *optional_command_line* es **nvarchar (255)** , su valor predeterminado es ' '. Se puede utilizar para proporcionar parámetros adicionales al Agente de mezcla, como en el siguiente ejemplo, en el que se aumenta el tiempo de espera predeterminado de las consultas a `600` segundos.  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` Es el parámetro de salida para el identificador del trabajo. *merge_jobid* es **binary (16)**, su valor predeterminado es null.  
+`[ @merge_jobid = ] merge_jobid` Es el parámetro de salida para el identificador del trabajo. *merge_jobid* es **binary (16)** , su valor predeterminado es null.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica si la suscripción se puede sincronizar mediante el Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)** , su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @ftp_address = ] 'ftp_address'` Por compatibilidad con versiones anteriores.  
   
@@ -232,15 +231,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` Por compatibilidad con versiones anteriores.  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica la ubicación desde la que se va a recoger los archivos de instantáneas. *alternate_snapshot_folder* es **nvarchar (255)**, su valor predeterminado es null. Si es NULL, los archivos de instantáneas se recopilarán desde la ubicación predeterminada especificada por el publicador.  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` Especifica la ubicación desde la que se va a recoger los archivos de instantáneas. *alternate_snapshot_folder* es **nvarchar (255)** , su valor predeterminado es null. Si es NULL, los archivos de instantáneas se recopilarán desde la ubicación predeterminada especificada por el publicador.  
   
-`[ @working_directory = ] 'working_directory'` Es el nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y el esquema de la publicación cuando se utiliza FTP para transferir archivos de instantáneas. *working_directory* es **nvarchar (255)**, su valor predeterminado es null.  
+`[ @working_directory = ] 'working_directory'` Es el nombre del directorio de trabajo utilizado para almacenar temporalmente archivos de datos y el esquema de la publicación cuando se utiliza FTP para transferir archivos de instantáneas. *working_directory* es **nvarchar (255)** , su valor predeterminado es null.  
   
-`[ @use_ftp = ] 'use_ftp'` Especifica el uso de FTP en lugar del protocolo habitual para recuperar instantáneas. *use_ftp* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_ftp = ] 'use_ftp'` Especifica el uso de FTP en lugar del protocolo habitual para recuperar instantáneas. *use_ftp* es **nvarchar (5)** , su valor predeterminado es False.  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliza el solucionador interactivo para solucionar conflictos de todos los artículos que permitan resolución interactiva. *use_interactive_resolver* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver' ]` Utiliza el solucionador interactivo para solucionar conflictos de todos los artículos que permitan resolución interactiva. *use_interactive_resolver* es **nvarchar (5)** , su valor predeterminado es False.  
   
 `[ @offloadagent = ] 'remote_agent_activation'`
  > [!NOTE]  
@@ -252,15 +251,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` Es el nombre de un trabajo de agente existente. *job_name* es **sysname**, su valor predeterminado es null. Este parámetro solamente se especifica cuando la suscripción se va a sincronizar mediante un trabajo existente en lugar de uno recién creado (el valor predeterminado). Si no es un miembro de la **sysadmin** rol fijo de servidor, debe especificar *job_login* y *job_password* al especificar *job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)**, su valor predeterminado es null. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` Es la ruta de acceso a la carpeta que los archivos de instantáneas se leerán desde si una instantánea de datos filtrados que se usará. *dynamic_snapshot_location* es **nvarchar (260)** , su valor predeterminado es null. Para obtener más información, consulte [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md).  
   
 `[ @use_web_sync = ] use_web_sync` Indica que está habilitada la sincronización Web. *use_web_sync* es **bit**, su valor predeterminado es 0. **1** especifica que se puede sincronizar la suscripción de extracción a través de internet mediante HTTP.  
   
-`[ @internet_url = ] 'internet_url'` Es la ubicación del agente de escucha de replicación (REPLISAPI. DLL) para la sincronización Web. *internet_url* es **nvarchar (260)**, su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
+`[ @internet_url = ] 'internet_url'` Es la ubicación del agente de escucha de replicación (REPLISAPI. DLL) para la sincronización Web. *internet_url* es **nvarchar (260)** , su valor predeterminado es null. *internet_url* es una dirección URL completa, en el formato `http://server.domain.com/directory/replisapi.dll`. Si el servidor está configurado para escuchar en un puerto que no sea el 80, también se debe proporcionar el número de puerto con el formato `http://server.domain.com:portnumber/directory/replisapi.dll`, donde `portnumber` representa al puerto.  
   
 `[ @internet_login = ] 'internet_login'` Es el inicio de sesión que utiliza el agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web utilizando autenticación básica HTTP. *internet_login* es **sysname**, su valor predeterminado es null.  
   
-`[ @internet_password = ] 'internet_password'` Es la contraseña que utiliza el agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web utilizando autenticación básica HTTP. *internet_password* es **nvarchar (524)**, su valor predeterminado es null.  
+`[ @internet_password = ] 'internet_password'` Es la contraseña que utiliza el agente de mezcla al conectarse al servidor Web que hospeda la sincronización Web utilizando autenticación básica HTTP. *internet_password* es **nvarchar (524)** , su valor predeterminado es null.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteStrongPass](../../includes/ssnotestrongpass-md.md)]  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` Invalida el valor de HOST_NAME () cuando esta función se utiliza en la cláusula WHERE de un filtro con parámetros. *nombre de host* es **sysname**, su valor predeterminado es null.  
   
-`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)**, no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente al suscriptor y para las conexiones al distribuidor y al publicador cuando se utiliza Autenticación integrada de Windows.  
+`[ @job_login = ] 'job_login'` Es el inicio de sesión para la cuenta de Windows que se ejecuta el agente. *job_login* es **nvarchar (257)** , no tiene ningún valor predeterminado. Esta cuenta de Windows siempre se utiliza para las conexiones del agente al suscriptor y para las conexiones al distribuidor y al publicador cuando se utiliza Autenticación integrada de Windows.  
   
 `[ @job_password = ] 'job_password'` Es la contraseña de la cuenta de Windows que se ejecuta el agente. *job_password* es **sysname**, no tiene ningún valor predeterminado.  
   

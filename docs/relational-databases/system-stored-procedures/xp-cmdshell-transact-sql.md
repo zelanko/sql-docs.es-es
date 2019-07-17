@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123769"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>Argumentos  
  **'** *command_string* **'**  
- Es la cadena que contiene un comando que se pasa al sistema operativo. *command_string* es **varchar (8000)** o **nvarchar (4000)**, no tiene ningún valor predeterminado. *command_string* no puede contener más de un conjunto de comillas dobles. Es necesario un único par de comillas si están presentes en las rutas de acceso del archivo de espacios en blanco o hace referenciados en los nombres de programa *command_string*. Si tiene problemas con espacios incrustados, considere el uso de nombres de archivo de tipo FAT 8.3 como solución.  
+ Es la cadena que contiene un comando que se pasa al sistema operativo. *command_string* es **varchar (8000)** o **nvarchar (4000)** , no tiene ningún valor predeterminado. *command_string* no puede contener más de un conjunto de comillas dobles. Es necesario un único par de comillas si están presentes en las rutas de acceso del archivo de espacios en blanco o hace referenciados en los nombres de programa *command_string*. Si tiene problemas con espacios incrustados, considere el uso de nombres de archivo de tipo FAT 8.3 como solución.  
   
  **no_output**  
  Es un parámetro opcional que especifica que no se devuelven resultados al cliente.  
@@ -74,7 +73,7 @@ The command(s) completed successfully.
 >  Si **xp_cmdshell** se ejecuta dentro de un lote y devuelve un error, se producirá un error en el lote. Es un cambio de comportamiento. En versiones anteriores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] el lote continuaría su ejecución.  
   
 ## <a name="xpcmdshell-proxy-account"></a>Cuenta de proxy xp_cmdshell  
- Cuando se llama a un usuario que no es un miembro de la **sysadmin** rol fijo de servidor **xp_cmdshell** se conecta a Windows mediante el nombre de cuenta y la contraseña almacenada en la credencial denominada **## #xp_cmdshell_proxy_account ##**. Si no existe esta credencial de proxy, **xp_cmdshell** se producirá un error.  
+ Cuando se llama a un usuario que no es un miembro de la **sysadmin** rol fijo de servidor **xp_cmdshell** se conecta a Windows mediante el nombre de cuenta y la contraseña almacenada en la credencial denominada **## #xp_cmdshell_proxy_account ##** . Si no existe esta credencial de proxy, **xp_cmdshell** se producirá un error.  
   
  Puede crear la credencial de cuenta de proxy ejecutando **sp_xp_cmdshell_proxy_account**. Como argumentos, este procedimiento almacenado utiliza un nombre de usuario y una contraseña de Windows. Por ejemplo, el siguiente comando crea una credencial de proxy para el usuario de dominio de Windows `SHIPPING\KobeR` que tiene la contraseña de Windows `sdfh%dkc93vcMt0`.  
   

@@ -1,5 +1,5 @@
 ---
-title: Llamar a procedimientos almacenados | Documentos de Microsoft
+title: Llamar a procedimientos almacenados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a0bdf517f2845e28a9d3520034d9de16ff65a25e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020992"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181162"
 ---
 # <a name="calling-stored-procedures"></a>Llamar a procedimientos almacenados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -66,9 +66,9 @@ SELECT Country.Members on 0, MySproc(Measures.Sales) ON 1 FROM Sales
 Call MyStoredProcedure(a,b,c)  
 ```  
   
- El único tipo admitido que devuelve desde un procedimiento almacenado en una **llamar** instrucción es un conjunto de filas. La serialización para un conjunto de filas se define mediante XML for Analysis. Si un procedimiento almacenado en una **llamar** instrucción devuelve cualquier otro tipo, se omite y no se devuelve en XML a la aplicación que realiza la llamada. Para obtener más información acerca de los conjuntos de filas de XML for Analysis, vea el tema sobre conjuntos de filas del esquema de XML for Analysis.  
+ El único tipo admitido que devuelve desde un procedimiento almacenado en un **llamar** instrucción es un conjunto de filas. La serialización para un conjunto de filas se define mediante XML for Analysis. Si un procedimiento almacenado en un **llamar** instrucción devuelve cualquier otro tipo, se omite y no se devuelve en XML a la aplicación que realiza la llamada. Para obtener más información acerca de los conjuntos de filas de XML for Analysis, vea el tema sobre conjuntos de filas del esquema de XML for Analysis.  
   
- Si un procedimiento almacenado devuelve un conjunto de filas de .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] convierte el resultado en el servidor en un conjunto de filas de XML for Analysis. Siempre se devuelve el código XML para el conjunto de filas de análisis por un procedimiento almacenado en el **llamar a** (función). Si un conjunto de datos contiene características que no se pueden expresar en el conjunto de filas de XML for Analysis, se genera un error.  
+ Si un procedimiento almacenado devuelve un conjunto de filas de .NET, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] convierte el resultado en el servidor en un conjunto de filas de XML for Analysis. Siempre se devuelve el XML para el conjunto de filas de análisis por un procedimiento almacenado en el **llamar** función. Si un conjunto de datos contiene características que no se pueden expresar en el conjunto de filas de XML for Analysis, se genera un error.  
   
  También se pueden utilizar procedimientos que devuelven valores nulos (por ejemplo, subrutinas de Visual Basic) con la palabra clave CALL. Por ejemplo, si desea utilizar la función MyVoidFunction() en una instrucción MDX, se utilizaría la siguiente sintaxis:  
   
@@ -77,7 +77,7 @@ CALL(MyVoidFunction)
 ```  
   
 ## <a name="see-also"></a>Vea también  
- [Administración de ensamblados de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
- [Definir procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
+ [Administración de los ensamblados de modelos multidimensionales](../../analysis-services/multidimensional-models/multidimensional-model-assemblies-management.md)   
+ [Definición de procedimientos almacenados](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   
   

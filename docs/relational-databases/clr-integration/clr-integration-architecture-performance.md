@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671994"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134950"
 ---
 # <a name="clr-integration-architecture----performance"></a>Arquitectura de integración CLR: rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ ms.locfileid: "51671994"
  Cuando los cursores de [!INCLUDE[tsql](../../includes/tsql-md.md)] deben recorrer datos que se expresan más fácilmente como una matriz, se puede utilizar el código administrado con significativas mejoras del rendimiento.  
   
 ### <a name="string-data"></a>Datos de cadena  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres de datos, como **varchar**, puede ser del tipo SqlString o SqlChars en funciones administradas. Las variables SqlString crean una instancia del valor completo en la memoria. Las variables SqlChars proporcionan una interfaz de transmisión por secuencias que se puede utilizar para lograr mejores rendimiento y escalabilidad sin crear una instancia del valor completo en la memoria. Esto se vuelve especialmente importante para los datos de objetos grandes (LOB). Además, se puede obtener acceso al servidor los datos XML a través de una interfaz de transmisión por secuencias devuelta por **SqlXml.CreateReader()**.  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] caracteres de datos, como **varchar**, puede ser del tipo SqlString o SqlChars en funciones administradas. Las variables SqlString crean una instancia del valor completo en la memoria. Las variables SqlChars proporcionan una interfaz de transmisión por secuencias que se puede utilizar para lograr mejores rendimiento y escalabilidad sin crear una instancia del valor completo en la memoria. Esto se vuelve especialmente importante para los datos de objetos grandes (LOB). Además, se puede obtener acceso al servidor los datos XML a través de una interfaz de transmisión por secuencias devuelta por **SqlXml.CreateReader()** .  
   
 ### <a name="clr-vs-extended-stored-procedures"></a>CLR frente a Procedimientos almacenados extendidos  
- Las interfaces de programación de aplicaciones (API) de Microsoft.SqlServer.Server que permiten a los procedimientos administrados devolver conjuntos de resultados al cliente funcionan mejor que las API de Servicios abiertos de datos (ODS) utilizadas por los procedimientos almacenados extendidos. Además, los APIs System.Data.SqlServer admiten tipos de datos, como **xml**, **varchar (max)**, **nvarchar (max)**, y **varbinary (max)**, introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mientras que las API de ODS no se han ampliado para admitir los nuevos tipos de datos.  
+ Las interfaces de programación de aplicaciones (API) de Microsoft.SqlServer.Server que permiten a los procedimientos administrados devolver conjuntos de resultados al cliente funcionan mejor que las API de Servicios abiertos de datos (ODS) utilizadas por los procedimientos almacenados extendidos. Además, los APIs System.Data.SqlServer admiten tipos de datos, como **xml**, **varchar (max)** , **nvarchar (max)** , y **varbinary (max)** , introducidos en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], mientras que las API de ODS no se han ampliado para admitir los nuevos tipos de datos.  
   
  Con código administrado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] administra el uso de los recursos como la memoria, los subprocesos y la sincronización. Esto se debe a que las API administradas que exponen estos recursos se implementan sobre el administrador de recursos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. En cambio, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no tiene ninguna vista o control sobre el uso de recursos del procedimiento almacenado extendido. Por ejemplo, si un procedimiento almacenado extendido usa demasiados recursos de la CPU o de la memoria, con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no hay ninguna manera de detectarlo o controlarlo. Sin embargo, con el código administrado, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] puede detectar que un subproceso determinado no ha producido resultados durante un largo período de tiempo y, a continuación, puede obligar a la tarea a producir resultados para que se pueda programar otro trabajo. Por consiguiente, el uso de código administrado aporta una mayor escalabilidad y una mejor utilización de los recursos del sistema.  
   

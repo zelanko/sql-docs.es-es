@@ -1,5 +1,5 @@
 ---
-title: Definir relaciones referenciadas y propiedades de las relaciones referenciadas | Documentos de Microsoft
+title: Definir relaciones referenciadas y propiedades de las relaciones referenciadas | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e3fe03648977cd15bb59a7e24290cf441967b702
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027555"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178795"
 ---
 # <a name="define-a-referenced-relationship-and-referenced-relationship-properties"></a>Definir relaciones referenciadas y propiedades de las relaciones referenciadas
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

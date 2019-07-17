@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210991"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lección 1: Crear objetos de Azure Storage
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>Lección 1: Creación de objetos de Windows Azure Storage
   Para poder crear copias de seguridad de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el almacenamiento en la nube, debe crear primero una cuenta de almacenamiento y después un contenedor de blobs. La lección 1 le guía por los pasos necesarios para iniciar sesión en el portal de administración de Windows Azure, y para crear una cuenta de almacenamiento y un contenedor de blobs.  
   
 ## <a name="create-a-storage-account"></a>Crear una cuenta de almacenamiento  
@@ -57,6 +57,6 @@ ms.locfileid: "56038346"
     >  También puede crear un contenedor mediante programación con las API de REST. Para obtener más información, consulte [crear contenedor](https://go.microsoft.com/fwlink/?LinkId=271946).  
   
 ### <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Crear una credencial SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
+ [Lección 2: Crear una credencial SQL Server](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md).  
   
   

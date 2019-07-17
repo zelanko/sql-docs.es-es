@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 6eea28d6bccfa8d0f785f3b27e98141e94dd313c
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48207818"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206620"
 ---
 # <a name="table-valued-parameters-sql-server-native-client"></a>Parámetros con valores de tabla (SQL Server Native Client)
   Los parámetros con valores de tabla se introdujeron en [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] y proporcionan una manera eficaz de pasar varias filas de datos al servidor. Los parámetros con valores de tabla proporcionan una funcionalidad similar a las matrices de parámetros, pero ofrecen más flexibilidad y una integración más estrecha con [!INCLUDE[tsql](../../../includes/tsql-md.md)], y pueden mejorar con frecuencia el rendimiento. Los parámetros con valores de tabla pueden participar también en operaciones basadas en conjuntos, mientras que las matrices de parámetros no.  

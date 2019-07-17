@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceecea08-456f-4819-85d9-ecc9647d7187
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 2f4ab09693234d72890524628f4def5afcf447ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e263308713a80ffaad4bfd9c484d061f5c19b94e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65450068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107913"
 ---
 # <a name="spoageterrorinfo-transact-sql"></a>sp_OAGetErrorInfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ sp_OAGetErrorInfo [ objecttoken ]
  _descripción_ **salida**  
  Es la descripción del error. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _helpfile_ **OUTPUT**  
+ _HelpFile_ **salida**  
  Es el archivo de ayuda del objeto OLE. Si se especifica, debe ser una variable local **char**, **nchar**, **varchar**, o **nvarchar** variable. El valor devuelto se trunca, si es necesario, para que se ajuste a la variable local.  
   
- _helpid_ **OUTPUT**  
+ _HelpID_ **salida**  
  Es el identificador de contexto del archivo de ayuda. Si se especifica, debe ser una variable local **int** variable.  
   
 > [!NOTE]  
@@ -72,8 +71,8 @@ sp_OAGetErrorInfo [ objecttoken ]
   
 |Nombres de columna|Tipo de datos|Descripción|  
 |------------------|---------------|-----------------|  
-|**Error**|**binary(4)**|Representación binaria del número de error.|  
-|**Source**|**nvarchar(nn)**|Origen del error.|  
+|**Error**|**binary (4)**|Representación binaria del número de error.|  
+|**Origen**|**nvarchar(nn)**|Origen del error.|  
 |**Descripción**|**nvarchar(nn)**|Descripción del error.|  
 |**Helpfile**|**nvarchar(nn)**|Archivo de ayuda del origen.|  
 |**HelpID**|**int**|Id. del contexto de Ayuda del archivo de origen correspondiente.|  

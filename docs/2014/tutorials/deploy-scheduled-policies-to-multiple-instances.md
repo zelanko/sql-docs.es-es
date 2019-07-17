@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d37dafd5501a289e45a119323eed61242707184
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56016726"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185811"
 ---
 # <a name="deploy-scheduled-policies-to-multiple-instances"></a>Implementar directivas programadas en varias instancias
   Mediante el uso de servidores registrados puede implementar directivas programadas en servidores administrados desde una ubicación central. Puede implementar directivas programadas desde un grupo de servidores locales o desde un Servidor de administración central.  
@@ -71,7 +71,7 @@ ms.locfileid: "56016726"
     > [!NOTE]  
     >  Si hace doble clic en **grupos de servidores locales** o el servidor de Administración Central, las directivas se implementarán en todos los servidores administrados. Si hace clic con el botón secundario en un grupo de servidores concreto, las directivas solo se implementarán en servidores de ese grupo. Si hace clic con el botón secundario en un servidor registrado, las directivas solo se implementarán en ese servidor.  
   
-3.  Junto a **archivos para importar**, haga clic en el botón de puntos suspensivos (**...** ).  
+3.  Junto a **archivos para importar**, haga clic en el botón de puntos suspensivos ( **...** ).  
   
 4.  En el **Seleccionar directiva** cuadro de diálogo, vaya a la ubicación de la carpeta donde guardó las directivas programadas. En este ejemplo, vaya a la ubicación **C:\Scheduled_BP_Policies**.  
   

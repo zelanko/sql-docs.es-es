@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8e74e1aa-e95b-4183-8017-bf123439b08d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f40856b20a76abdb7a3788f2564c02fe2e090619
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 229442fed0defba9ebe39822a6184ba3b5d35644
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137556"
 ---
 # <a name="sphelpqreaderagent-transact-sql"></a>sp_helpqreader_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_helpqreader_agent [ [ @frompublisher = ] frompublisher ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|ID. del agente.|  
-|**Nombre**|**nvarchar(100)**|Nombre del agente.|  
+|**name**|**nvarchar(100)**|Nombre del agente.|  
 |**job_id**|**uniqueidentifier**|Id. único del trabajo del agente.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de distribución, que se devuelve en el formato *dominio*\\*username*.|  
 |**job_password**|**sysname**|Por motivos de seguridad, un valor de **\* \* \* \* \* \* \* \* \* \*** siempre es Devuelve.|  

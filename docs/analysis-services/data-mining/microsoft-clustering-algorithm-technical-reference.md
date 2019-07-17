@@ -1,5 +1,5 @@
 ---
-title: Referencia técnica del algoritmo de clústeres de Microsoft | Documentos de Microsoft
+title: Referencia técnica del algoritmo de clústeres de Microsoft | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018362"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183125"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Referencia técnica del algoritmo de clústeres de Microsoft
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,9 +22,9 @@ ms.locfileid: "34018362"
   
  Para obtener información adicional sobre cómo usar los modelos de agrupación en clústeres, vea los temas siguientes:  
   
--   [Contenido del modelo de minería de datos de agrupación en clústeres modelos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [Ejemplos de consultas de modelos de clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Implementar el algoritmo de clústeres de Microsoft  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] proporciona dos métodos para crear clústeres y asignar puntos de datos a dichos clústeres. El primer método, el algoritmo *mediana-K* , es un método de agrupación en clústeres duro. Esto significa que un punto de datos puede pertenecer a un solo clúster, y que únicamente se calcula una probabilidad de pertenencia de cada punto de datos de ese clúster. El segundo método, *Expectation Maximization* (EM), es un método de *agrupación en clústeres blando* . Esto significa que un punto de datos siempre pertenece a varios clústeres, y que se calcula una probabilidad para cada combinación de punto de datos y clúster.  
@@ -146,9 +146,9 @@ ms.locfileid: "34018362"
 ### <a name="modeling-flags"></a>Marcas de modelado  
  El algoritmo admite las marcas de modelado que se indican a continuación. Los marcadores de modelado se definen al crear la estructura de minería de datos o el modelo de minería de datos. Las marcas de modelado especifican cómo se procesan los valores de cada columna durante el análisis.  
   
-|Marca de modelado|Description|  
+|Marca de modelado|Descripción|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|La columna se tratará como si tuviera dos estados posibles: ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a la columna del modelo de minería de datos.|  
+|MODEL_EXISTENCE_ONLY|La columna se tratará como si tuviera dos estados posibles: Ausente y existente. Un valor NULL es un valor ausente.<br /><br /> Se aplica a la columna del modelo de minería de datos.|  
 |NOT NULL|La columna no puede contener valores NULL. Se producirá un error si Analysis Services encuentra un valor NULL durante el entrenamiento del modelo.<br /><br /> Se aplica a la columna de la estructura de minería de datos.|  
   
 ## <a name="requirements"></a>Requisitos  
@@ -157,7 +157,7 @@ ms.locfileid: "34018362"
 ### <a name="input-and-predictable-columns"></a>Columnas de entrada y de predicción  
  El algoritmo de clústeres de [!INCLUDE[msCoName](../../includes/msconame-md.md)] admite las columnas de entrada y de predicción específicas que se enumeran en la tabla siguiente. Para más información sobre el significado de los tipos de contenido usados en un modelo de minería de datos, vea [Tipos de contenido &#40;minería de datos&#41;](../../analysis-services/data-mining/content-types-data-mining.md).  
   
-|Columna|Tipos de contenido|  
+|columna|Tipos de contenido|  
 |------------|-------------------|  
 |Atributo de entrada|Continuous, Cyclical, Discrete, Discretized, Key, Table, Ordered|  
 |Atributo de predicción|Continuous, Cyclical, Discrete, Discretized, Table, Ordered|  
@@ -167,7 +167,7 @@ ms.locfileid: "34018362"
   
 ## <a name="see-also"></a>Vea también  
  [Algoritmo de clústeres de Microsoft](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [Ejemplos de consultas de modelos de clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [Contenido del modelo de minería de datos de agrupación en clústeres modelos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+ [Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [Contenido del modelo de minería de datos para los modelos de agrupación en clústeres &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: ca89aa4c-c4c1-4c46-8515-a6754667b3e5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 100da3bfaeee1c4b1e4dae00c96bcc08a763f3b3
-ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
+ms.openlocfilehash: 021a6e689dfc109f8a58ca080956aec7efc49291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67716609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124471"
 ---
 # <a name="spexecuteremote-azure-sql-database"></a>sp_execute_remote (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ \@data_source_name = ] *datasourcename*  
+ [ \@data_source_name =] *datasourcename*  
  Identifica el origen de datos externo que se ejecuta la instrucción. Consulte [crear origen de datos externo &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md). El origen de datos externo puede ser de tipo "RDBMS" o "SHARD_MAP_MANAGER".  
   
  [ \@stmt= ] *statement*  
@@ -55,10 +54,10 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
  Cada parámetro incluido en \@stmt debe tener una entrada correspondiente tanto en el \@params lista de definiciones de parámetro y el parámetro de la lista de valores.  
   
- [ \@params= ] N'\@*parameter_name**data_type* [ ,... *n* ] '  
+ [ \@params =] N'\@*parameter_name ** data_type* [,... *n* ] '  
  Es una cadena que contiene las definiciones de todos los parámetros que se han incrustado en \@stmt. La cadena debe ser una constante Unicode o una variable Unicode. Cada definición de parámetro se compone de un nombre de parámetro y un tipo de datos. *n* es un marcador de posición que indica definiciones de parámetros adicionales. Todos los parámetros especificados en \@stmtmust definirse en \@params. Si el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en \@stmt no contiene parámetros, \@params no es necesario. El valor predeterminado de este parámetro es NULL.  
   
- [ \@param1= ] '*value1*'  
+ [ \@param1 =] '*value1*'  
  Es un valor para el primer parámetro definido en la cadena de parámetros. El valor puede ser una constante Unicode o una variable Unicode. Debe haber un valor de parámetro proporcionado para cada parámetro incluido en \@stmt. Los valores no son necesarios cuando el [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucción o lote en \@stmt no tiene ningún parámetro.  
   
  *n*  

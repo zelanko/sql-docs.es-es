@@ -1,5 +1,5 @@
 ---
-title: SQLBrowseConnect | Microsoft Docs
+title: SQLBrowseConnect | Documentos de Microsoft
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 32741a2efaa3d7903c45d978c72f1ccc6867b1ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b3980ee8eb0f5f2085f47a1e2ef7f7967e998549
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68115260"
 ---
 # <a name="sqlbrowseconnect"></a>SQLBrowseConnect
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -40,10 +39,10 @@ ms.locfileid: "63014737"
 |Palabra clave|¿Se devuelve una lista?|¿Es opcional?|Descripción|  
 |-------------|--------------------|---------------|-----------------|  
 |SERVER|Sí|Sin|Nombre del servidor en la red en la que reside el origen de datos. El término"(local)" se puede escribir como el servidor, en cuyo caso se puede utilizar una copia local de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], incluso cuando se trata de una versión que no está en red.|  
-|UID|Sin|Sí|Id. de inicio de sesión de usuario.|  
+|UID|No|Sí|Id. de inicio de sesión de usuario.|  
 |PWD|No|Sí (depende del usuario)|Contraseña especificada por el usuario.|  
-|APP|Sin|Sí|Nombre de la aplicación que llama **SQLBrowseConnect**.|  
-|WSID|No|Sí|Id. de estación de trabajo. Normalmente, éste es el nombre de red del equipo en el que se ejecuta la aplicación.|  
+|APP|No|Sí|Nombre de la aplicación que llama **SQLBrowseConnect**.|  
+|WSID|Sin|Sí|Id. de estación de trabajo. Normalmente, éste es el nombre de red del equipo en el que se ejecuta la aplicación.|  
   
 ## <a name="level-3"></a>Nivel 3  
   
@@ -56,7 +55,7 @@ ms.locfileid: "63014737"
   
  Los atributos siguientes, que se establecen mediante una llamada a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md), determinar el conjunto de resultados devuelto por **SQLBrowseConnect**.  
   
-|Attribute|Descripción|  
+|Atributo|Descripción|  
 |---------------|-----------------|  
 |SQL_COPT_SS_BROWSE_CONNECT|Si está establecido en sql_more_info_yes en **SQLBrowseConnect** devuelve una cadena extendida de propiedades del servidor.<br /><br /> El siguiente es un ejemplo de una cadena extendida devuelta por **SQLBrowseConnect**:<br /><br /> <br /><br /> `ServerName\InstanceName;Clustered:No;Version:8.00.131`<br /><br /> <br /><br /> En esta cadena, se utilizan signos de punto y coma para separar distintas partes de información acerca del servidor. Use comas para separar distintas instancias del servidor.|  
 |SQL_COPT_SS_BROWSE_SERVER|Si se especifica un nombre de servidor, **SQLBrowseConnect** devolverá información para el servidor especificado. Si SQL_COPT_SS_BROWSE_SERVER está establecido en NULL, **SQLBrowseConnect** devuelve información para todos los servidores del dominio.<br /><br /> <br /><br /> Tenga en cuenta que debido a problemas de red, **SQLBrowseConnect** podría no recibir una respuesta oportuna de todos los servidores. Por lo tanto, la lista de servidores devuelta puede variar para cada solicitud.|  

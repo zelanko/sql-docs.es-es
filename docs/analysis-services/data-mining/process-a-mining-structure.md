@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182509"
 ---
 # <a name="process-a-mining-structure"></a>Procesar una estructura de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "37999737"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: comando Process  
+-   XMLA: Process, comando  
   
  Para obtener información sobre cómo procesar modelos individuales, vea [Procesar un modelo de minería de datos](../../analysis-services/data-mining/process-a-mining-model.md).  
   

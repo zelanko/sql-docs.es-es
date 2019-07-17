@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3bf71447581375fca06d8190cf6a5a863c136dc
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209201"
 ---
 # <a name="actions-in-multidimensional-models"></a>Acciones en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "50145710"
   
  Use la pestaña **Acciones** del Diseñador de cubos para generar acciones para un cubo. Especifique lo siguiente:  
   
- **Nombre**  
+ **Name**  
  Seleccione un nombre que identifique la acción.  
   
  **Destino de la acción**  
@@ -52,13 +52,13 @@ ms.locfileid: "50145710"
  **Contenido de la acción**  
  Seleccione el tipo de acción. La siguiente tabla contiene los tipos disponibles.  
   
-|Tipo|Descripción|  
+|Type|Descripción|  
 |----------|-----------------|  
 |Conjunto de datos|Recupera un conjunto de datos.|  
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
 |Conjunto de filas|Recupera un conjunto de filas.|  
 |.|Ejecuta un comando OLE DB.|  
-|Dirección URL|Muestra una página variable en un explorador de Internet.|  
+|URL|Muestra una página variable en un explorador de Internet.|  
   
  En **Expresión de acción**, especifique los parámetros que se pasan cuando se ejecuta la acción. La sintaxis se debe evaluar como una cadena, y debe incluirse una expresión escrita en MDX. Por ejemplo, la expresión MDX puede indicar una parte del cubo incluida en la sintaxis. Las expresiones MDX se evalúan antes de pasar los parámetros. Además, el Generador MDX ayuda a generar expresiones MDX.  
   

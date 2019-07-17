@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f6a86766-e2a9-4d9f-a073-1b59e888ba7d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8702c1d58e6c891505b0d7d9a85a4d5764fda67d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c9685b9733c1d13b79ef2a19ee2f19bbe3130426
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47685007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106676"
 ---
 # <a name="systracecategories-transact-sql"></a>sys.trace_categories (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "47685007"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**category_id**|**smallint**|Id. único de esta categoría. Esta columna también está disponible en el **sys.trace_events** vista de catálogo.|  
-|**Nombre**|**nvarchar(128)**|Nombre único de esta categoría. Este parámetro no se traduce.|  
-|**Tipo**|**tinyint**|Tipo de categoría:<br /><br /> 0 = Normal<br /><br /> 1 = Conexión<br /><br /> 2 = Error|  
+|**name**|**nvarchar(128)**|Nombre único de esta categoría. Este parámetro no se traduce.|  
+|**type**|**tinyint**|Tipo de categoría:<br /><br /> 0 = Normal<br /><br /> 1 = Conexión<br /><br /> 2 = Error|  
   
 ## <a name="permissions"></a>Permisos  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] Para obtener más información, consulte [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md).  

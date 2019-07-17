@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b7afeb1685951e0947af02e5309a25dd0a395a61
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52771807"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211146"
 ---
 # <a name="sql-server-browser-sql-server-configuration-manager"></a>SQL Server Browser (Administrador de configuración de SQL Server)
   Éste es el servicio que admite el Explorador de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para ver las propiedades del servicio, en el panel de detalles, haga clic con el botón derecho en el servicio y, después, haga clic en **Propiedades**.  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a8c043ec-b504-4929-ac0e-8babaa99d989
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 73f3eca2a2e7943d8911144a3657e4f826d9739c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83a40c9070db1c997f30db71a6cff226cd0430d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108265"
 ---
 # <a name="spdbincreasedpartitions"></a>sp_db_increased_partitions
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_dp_increased_partitions
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ @dbname= ] '*database_name*'  
+ [ @dbname=] '*database_name*'  
  Es el nombre de la base de datos. *dbname* es **sysname** con un valor predeterminado es null. Si *dbname* no se especifica, se usa la base de datos actual.  
   
  [ @increased_partitions=] '*increased_partitions*'  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4c118cb1-2008-44e2-a797-34b7dc34d6b1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f2843456f4f95d1019b51f82082d59977ce14d5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ce5d59e050aafa69a0b2584c66328c568f5ddee1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493700"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118056"
 ---
 # <a name="spaddmergefilter-transact-sql"></a>sp_addmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_addmergefilter [ @publication = ] 'publication'
   
 `[ @join_articlename = ] 'join_articlename'` Es el artículo primario al que el artículo secundario, especificado por *artículo*, debe combinarse con la cláusula de combinación especificada por *join_filterclause*, con el fin de determinar las filas del artículo secundario que cumplen el criterio de filtro del filtro de combinación. *join_articlename* es **sysname**, no tiene ningún valor predeterminado. El artículo debe estar en la publicación dada por *publicación*.  
   
-`[ @join_filterclause = ] join_filterclause` Es la cláusula de combinación que debe usarse para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)**.  
+`[ @join_filterclause = ] join_filterclause` Es la cláusula de combinación que debe usarse para combinar el artículo secundario especificado por *artículo*y el artículo primario especificado por *join_article*, con el fin de determinar las filas que cumplen criterios del filtro de mezcla. *join_filterclause* es **nvarchar (1000)** .  
   
 `[ @join_unique_key = ] join_unique_key` Especifica si la combinación entre el artículo secundario *artículo*y el artículo primario *join_article*es uno a varios, uno a uno, varios a uno o varios a varios. *join_unique_key* es **int**, su valor predeterminado es 0. **0** indica una combinación de varios a uno o varios a varios. **1** indica una combinación uno a uno o uno a varios. Este valor es **1** cuando las columnas de combinación forman una clave única en *join_article*, o si *join_filterclause* entre una clave externa en *artículo* y una clave principal en *join_article*.  
   

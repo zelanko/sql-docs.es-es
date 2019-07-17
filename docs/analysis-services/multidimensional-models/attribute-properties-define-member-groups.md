@@ -1,5 +1,5 @@
 ---
-title: Definir grupos de miembros | Documentos de Microsoft
+title: Definir grupos de miembros | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1da226353847409f1d808472dc155cb2055395cd
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179599"
 ---
-# <a name="attribute-properties---define-member-groups"></a>Propiedades de atributo: definir los grupos de miembros
+# <a name="attribute-properties---define-member-groups"></a>Propiedades de atributos: Definir grupos de miembros
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Si un atributo contiene muchos miembros, puede elegir agruparlos en cubos, reduciendo así el número de miembros que los usuarios ven cuando exploran los datos en una jerarquía. También puede determinar el número de cubos en los que se agrupan los miembros y establecer un esquema de nomenclatura para los cubos. Para más información, vea [Agrupar miembros de atributos &#40;Discretización&#41;](../../analysis-services/multidimensional-models/attribute-properties-group-attribute-members.md).  
   

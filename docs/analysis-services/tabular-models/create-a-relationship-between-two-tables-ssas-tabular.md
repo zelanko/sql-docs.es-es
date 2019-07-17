@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072102"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207737"
 ---
 # <a name="create-a-relationship"></a>Crear una relación 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "53072102"
   
 6.  En **Columna de búsqueda relacionada**, seleccione una columna que tenga valores únicos que coincidan con los valores seleccionados para **Columna**.  
   
-7.  Haga clic en **Crear**.  
+7.  Haga clic en **Create**(Crear).  
   
 #### <a name="to-create-a-relationship-between-two-tables-in-data-view"></a>Para crear una relación entre dos tablas en la vista de datos  
   
@@ -64,7 +64,7 @@ ms.locfileid: "53072102"
   
 5.  En **Columna de búsqueda relacionada**, seleccione una columna que tenga valores únicos que coincidan con los valores seleccionados para **Columna**.  
   
-6.  Haga clic en **Crear**.  
+6.  Haga clic en **Create**(Crear).  
   
 ## <a name="see-also"></a>Vea también  
  [Eliminar relaciones](../../analysis-services/tabular-models/delete-relationships-ssas-tabular.md)   

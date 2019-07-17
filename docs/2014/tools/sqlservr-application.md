@@ -23,11 +23,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 23f45c0a2e47381b60fe8f6852f24fd8f5f200fc
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53591869"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211019"
 ---
 # <a name="sqlservr-application"></a>sqlservr (aplicación)
   La aplicación **sqlservr** se inicia, se detiene, se pone en pausa y continúa una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] desde un símbolo del sistema.  
@@ -61,7 +61,7 @@ ms.locfileid: "53591869"
  Inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la configuración mínima. Esta opción resulta útil si el valor de una opción de configuración (por ejemplo, la confirmación excesiva de memoria) ha impedido el inicio del servidor.  
   
  **-e** _error_log_path_  
- Indica la ruta de acceso con autorización completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada es *\<Unidad>*:\Archivos de programa\Microsoft SQL Server\MSSQL\Log\Errorlog para la instancia predeterminada y *\<Unidad>*:\Archivos de programa\Microsoft SQL Server\MSSQL$*nombre_instancia*\Log\Errorlog para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.  
+ Indica la ruta de acceso con autorización completa para el archivo de registro de errores. Si no se especifica, la ubicación predeterminada es *\<Unidad>* :\Archivos de programa\Microsoft SQL Server\MSSQL\Log\Errorlog para la instancia predeterminada y *\<Unidad>* :\Archivos de programa\Microsoft SQL Server\MSSQL$*nombre_instancia*\Log\Errorlog para una instancia con nombre. No hay espacios entre **-e** y *error_log_path*.  
   
  **-l** _master_log_path_  
  Indica la ruta de acceso con autorización completa para el archivo de registro de transacciones de la base de datos **maestra** . No hay espacios entre **-l** y *master_log_path*.  
@@ -73,10 +73,10 @@ ms.locfileid: "53591869"
  Permite iniciar una instancia con nombre de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Sin el parámetro **-s** establecido, la instancia predeterminada intenta iniciarse. Debe cambiar al directorio BINN apropiado para la instancia en una ventana del símbolo del sistema antes de iniciar **sqlservr.exe**. Por ejemplo, si Instance1 usara \mssql$Instance1 para sus archivos binarios, el usuario debería estar en el directorio \mssql$Instance1\binn para poder iniciar **sqlservr.exe -s instance1**. Si inicia una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con la opción **-n** , es recomendable que use también la opción **-e** ; de lo contrario los eventos de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] no se registrarán.  
   
  **-T** _trace#_  
- Indica que se debe iniciar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una marca de seguimiento específica (*trace#*) vigente. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
+ Indica que se debe iniciar una instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con una marca de seguimiento específica (*trace#* ) vigente. Las marcas de seguimiento se utilizan para iniciar el servidor con un comportamiento distinto del habitual. Para obtener más información, vea [Marcas de seguimiento &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql).  
   
 > [!IMPORTANT]  
->  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. **acepta una t minúscula (**-t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
+>  Cuando especifique una marca de seguimiento, use **-T** para pasar el número de la marca de seguimiento. **acepta una t minúscula (** -t [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]), pero **-t** establece otras marcas de seguimiento internas que necesitan los ingenieros de soporte técnico de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] .  
   
  **-v**  
  Muestra el número de versión del servidor.  
@@ -91,9 +91,9 @@ ms.locfileid: "53591869"
   
  Use el valor predeterminado del parámetro **-g** , a menos que vea alguna de las siguientes advertencias en el registro de errores de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] :  
   
--   "No se pudo Virtual asignar Bytes: FAIL_VIRTUAL_RESERVE \<tamaño > "  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_RESERVE \<tamaño>"  
   
--   "No se pudo Virtual asignar Bytes: FAIL_VIRTUAL_COMMIT \<tamaño > "  
+-   "Failed Virtual Allocate Bytes: FAIL_VIRTUAL_COMMIT \<tamaño>"  
   
  Estos mensajes podrían indicar que [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] está intentando liberar partes del bloque de memoria de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a fin de buscar espacio para elementos como los archivos .DLL de procedimientos almacenados extendidos u objetos de automatización. En este caso, considere la posibilidad de aumentar la cantidad de memoria reservada mediante el modificador **-g**.  
   

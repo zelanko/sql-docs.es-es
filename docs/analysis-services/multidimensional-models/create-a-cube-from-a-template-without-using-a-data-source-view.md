@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28f87d9cbe6dfa0bf41a0d0547e8da7bec5659bf
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521349"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209099"
 ---
 # <a name="create-a-cube-from-a-template-without-using-a-data-source-view"></a>Crear un cubo a partir de una plantilla sin usar una vista del origen de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52521349"
 ## <a name="selecting-dimensions"></a>Seleccionar dimensiones  
  Use la página **Seleccionar dimensiones** del asistente para agregar dimensiones existentes al cubo. Esta página solo aparece si ya existen dimensiones compartidas sin un origen de datos en el proyecto o en la base de datos. No muestra las dimensiones que tienen un origen de datos.  
   
- Para agregar dimensiones existentes, seleccione una o varias dimensiones en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha (**>**) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de flecha doble (**>>**) si quiere mover todas las dimensiones de la lista.  
+ Para agregar dimensiones existentes, seleccione una o varias dimensiones en la lista **Dimensiones compartidas** y haga clic en el botón de flecha derecha ( **>** ) para moverlas a la lista **Dimensiones del cubo** . Haga clic en el botón de flecha doble ( **>>** ) si quiere mover todas las dimensiones de la lista.  
   
 ## <a name="defining-new-measures"></a>Definir nuevas medidas  
  Use la página **Definir nuevas medidas** del asistente para especificar las medidas y grupos de medida del nuevo cubo. Los grupos de medida que especifique aquí se corresponderán con las tablas de hechos del esquema generado. Las medidas que especifique aquí se corresponderán con las columnas numéricas sin clave de las tablas.  

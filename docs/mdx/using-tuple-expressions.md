@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251503"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135129"
 ---
 # <a name="using-tuple-expressions"></a>Usar expresiones de tupla
 
@@ -45,7 +44,7 @@ ms.locfileid: "63251503"
  Si la expresión de tupla tiene un solo miembro, MDX convierte el miembro en una tupla de un solo miembro a fin de evaluar la expresión. Es decir, funcionalmente es lo mismo utilizar la expresión de miembro `[Measures].[TestMeasure]` en lugar de la expresión de tupla que utilizar la expresión de tupla `( [Measures].[TestMeasure] ).`.  
   
 ## <a name="see-also"></a>Vea también  
- [Expressions &#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [Las expresiones &#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [Referencia de funciones MDX &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

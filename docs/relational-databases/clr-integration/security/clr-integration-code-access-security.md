@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 2111cfe0-d5e0-43b1-93c3-e994ac0e9729
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 25f802f5c9cb67646903179c9100c7014fe466df
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f49968392dd813b48f43e5e63586fd0c6bec71d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47802283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118515"
 ---
 # <a name="clr-integration-code-access-security"></a>Seguridad de acceso del código de integración CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,18 +29,18 @@ ms.locfileid: "47802283"
   
  La directiva de seguridad que determina los permisos que se conceden a los ensamblados se define en tres sitios distintos:  
   
--   Directiva de equipo: es la directiva activa para todo el código administrado que se ejecuta en el equipo donde está instalado [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Directiva de equipo: Esta es la directiva en vigor para todo el código administrado que se ejecuta en el equipo en el que [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] está instalado.  
   
--   Directiva de usuario: es la directiva activa para el código administrado que se hospeda en un proceso. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la directiva de usuario es específica de la cuenta de Windows en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
+-   Directiva de usuario: Esta es la directiva en vigor para código administrado hospedado por un proceso. Para [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], la directiva de usuario es específica de la cuenta de Windows en la que se ejecuta el servicio [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
--   Directiva de host: es la directiva configurada por el host de CLR (en este caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está activa para el código administrado que se ejecuta en ese host.  
+-   Directiva de host: Esta es la directiva configurada por el host de CLR (en este caso, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]) que está en vigor para código administrado que se ejecuta en ese host.  
   
  El mecanismo de seguridad de acceso del código admitido por CLR se basa en el supuesto de que el tiempo de ejecución puede hospedar código de plena confianza y código de confianza parcial. Los recursos que están protegidos por la seguridad de acceso del código CLR se incluyen normalmente en interfaces de programación de aplicación administrada que requieren el permiso correspondiente antes de permitir el acceso al recurso. La solicitud de permiso solo se satisface si todos los que llaman (en el nivel de ensamblado) de la pila de llamadas tienen el permiso correspondiente para el recurso.  
   
  El conjunto de permisos de seguridad de acceso del código que se conceden al código administrado cuando se ejecuta en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] es la combinación del conjunto de permisos que conceden los tres niveles de directiva mencionados anteriormente. Aunque [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] conceda un conjunto de permisos a un ensamblado cargado en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], las directivas de nivel de usuario y de equipo pueden restringir aún más el posible conjunto de permisos que se concede al código de usuario.  
   
 ## <a name="sql-server-host-policy-level-permission-sets"></a>Conjuntos de permisos de nivel de directiva de host de SQL Server  
- El conjunto de permisos de seguridad de acceso del código que se concede a los ensamblados mediante el nivel de directiva de host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene determinado por el conjunto de permisos especificado al crear el ensamblado. Hay tres conjuntos de permisos: **seguro**, **EXTERNAL_ACCESS** y **UNSAFE** (especificado mediante el **PERMISSION_SET** opción de [ CREAR ENSAMBLADO &#40;Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
+ El conjunto de permisos de seguridad de acceso del código que se concede a los ensamblados mediante el nivel de directiva de host de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] viene determinado por el conjunto de permisos especificado al crear el ensamblado. Hay tres conjuntos de permisos: **SEGURO**, **EXTERNAL_ACCESS** y **UNSAFE** (especificado mediante el **PERMISSION_SET** opción de [CREATE ASSEMBLY &#40; Transact-SQL&#41;](../../../t-sql/statements/create-assembly-transact-sql.md)).  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proporciona un nivel de directiva de seguridad de nivel de host a CLR mientras lo hospeda; esta directiva es un nivel de directiva adicional por debajo de los dos niveles de directiva que siempre están activos. Esta directiva se establece para cada dominio de aplicación creado por [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Esta directiva no está pensada para el dominio de aplicación predeterminado que estaría activo cuando [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] crea una instancia de CLR.  
   
@@ -58,8 +57,8 @@ ms.locfileid: "47802283"
   
 |Permiso|Valor(es)/descripción|  
 |----------------|-----------------------------|  
-|**SecurityPermission**|**Ejecución:** permiso para ejecutar código administrado.|  
-|**SqlClientPermission**|**Conexión de contexto = true**, **conexión de contexto = yes**: solo se puede usar la conexión de contexto y la cadena de conexión solo puede especificar un valor de "conexión de contexto = true" o "conexión de contexto = yes".<br /><br /> **AllowBlankPassword = false:** no se permiten contraseñas en blanco.|  
+|**SecurityPermission**|**Ejecución:** Permiso para ejecutar código administrado.|  
+|**SqlClientPermission**|**Conexión de contexto = true**, **conexión de contexto = yes**: Solo se puede usar la conexión de contexto y la cadena de conexión solo puede especificar un valor de "conexión de contexto = true" o "conexión de contexto = yes".<br /><br /> **AllowBlankPassword = false:**  No se permiten contraseñas en blanco.|  
   
 ### <a name="externalaccess"></a>EXTERNAL_ACCESS  
  Los ensamblados EXTERNAL_ACCESS tienen los mismos permisos que **seguro** ensamblados, con la capacidad adicional para tener acceso a recursos externos del sistema como archivos, redes, variables de entorno y el registro.  
@@ -68,20 +67,20 @@ ms.locfileid: "47802283"
   
 |Permiso|Valor(es)/descripción|  
 |----------------|-----------------------------|  
-|**DistributedTransactionPermission**|**Unrestricted:** se permiten las transacciones distribuidas.|  
-|**DNSPermission**|**Unrestricted:** permiso para solicitar información de servidores de nombres de dominio.|  
-|**EnvironmentPermission**|**Unrestricted:** completa se permite el acceso a variables de entorno de usuario y del sistema.|  
-|**EventLogPermission**|**Administrar:** se permiten las siguientes acciones: crear un origen de eventos, leer los registros existentes, eliminar orígenes de eventos o registros, responder a entradas, borrar un registro de eventos, escuchar eventos y obtener acceso a una colección de todos los registros de eventos.|  
-|**FileIOPermission**|**Unrestricted:** acceso completo a los archivos y carpetas se permite.|  
-|**KeyContainerPermission**|**Unrestricted:** completa se permite el acceso a contenedores de claves.|  
-|**NetworkInformationPermission**|**Acceso:** haciendo ping está permitido.|  
+|**DistributedTransactionPermission**|**Sin restricciones:** Se admiten transacciones distribuidas.|  
+|**DNSPermission**|**Sin restricciones:** Permiso para solicitar información de servidores de nombres de dominio.|  
+|**EnvironmentPermission**|**Sin restricciones:** Se permite el acceso completo a las variables de entorno de usuario y del sistema.|  
+|**EventLogPermission**|**Administrar:** Se permiten las siguientes acciones: crear un origen de eventos, leer los registros existentes, eliminar orígenes de eventos o registros, responder a entradas, borrar un registro de eventos, escuchar eventos y obtener acceso a una colección de todos los registros de eventos.|  
+|**FileIOPermission**|**Sin restricciones:** Se permite un acceso total a archivos y carpetas.|  
+|**KeyContainerPermission**|**Sin restricciones:** Se permite el acceso completo a los contenedores de claves.|  
+|**NetworkInformationPermission**|**Acceso:** Se permite hacer ping.|  
 |**RegistryPermission**|Permite derechos de lectura **HKEY_CLASSES_ROOT**, **HKEY_LOCAL_MACHINE**, **HKEY_CURRENT_USER**, **HKEY_CURRENT_CONFIG**y  **HKEY_USERS.**|  
-|**SecurityPermission**|**Aserción:** posibilidad de afirmar que todos los llamadores de este código tienen el permiso necesario para la operación.<br /><br /> **ControlPrincipal:** capacidad de manipular el objeto principal.<br /><br /> **Ejecución:** permiso para ejecutar código administrado.<br /><br /> **SerializationFormatter:** capacidad para proporcionar servicios de serialización.|  
-|**SmtpPermission**|**Acceso:** se permiten conexiones salientes al puerto 25 del host SMTP.|  
-|**SocketPermission**|**Conectar:** se permiten conexiones salientes (todos los puertos, todos los protocolos) en una dirección de transporte.|  
-|**SqlClientPermission**|**Unrestricted:** completa se permite el acceso al origen de datos.|  
-|**StorePermission**|**Unrestricted:** acceso completo al certificado X.509 se permite almacenes.|  
-|**WebPermission**|**Conectar:** se permiten conexiones salientes a recursos web.|  
+|**SecurityPermission**|**Aserción:** Posibilidad de afirmar que todos los llamadores de este código tienen el permiso necesario para la operación.<br /><br /> **ControlPrincipal:** Capacidad de manipular el objeto principal.<br /><br /> **Ejecución:** Permiso para ejecutar código administrado.<br /><br /> **SerializationFormatter:** Capacidad para proporcionar servicios de serialización.|  
+|**SmtpPermission**|**Acceso:** Se permiten conexiones salientes al puerto 25 del host SMTP.|  
+|**SocketPermission**|**Conectar:** Se permiten conexiones salientes (todos los puertos, todos los protocolos) en una dirección de transporte.|  
+|**SqlClientPermission**|**Sin restricciones:** Se permite un acceso total al origen de datos.|  
+|**StorePermission**|**Sin restricciones:** Se permite un acceso total a los almacenes de certificados X.509.|  
+|**WebPermission**|**Conectar:** Se permiten conexiones salientes a recursos web.|  
   
 ### <a name="unsafe"></a>UNSAFE  
  UNSAFE permite a los ensamblados un acceso sin límites a los recursos situados tanto dentro como fuera de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Código que se ejecuta desde un **UNSAFE** ensamblado también puede llamar a código no administrado.  
@@ -109,9 +108,9 @@ ms.locfileid: "47802283"
 ||**SAFE**|**EXTERNAL_ACCESS**|**NO SEGURO**|  
 |**Permisos de seguridad de acceso de código**|Solo ejecución|Ejecución + acceso a recursos externos|Sin restringir (se incluye P/Invoke)|  
 |**Restricciones del modelo de programación**|Sí|Sí|Sin restricciones|  
-|**Requisito de verificabilidad**|Sí|Sí|no|  
+|**Requisito de verificabilidad**|Sí|Sí|Sin|  
 |**Acceso a datos locales**|Sí|Sí|Sí|  
-|**Posibilidad de llamar a código nativo**|no|no|Sí|  
+|**Posibilidad de llamar a código nativo**|No|Sin|Sí|  
   
 ## <a name="see-also"></a>Vea también  
  [Seguridad de la integración CLR](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

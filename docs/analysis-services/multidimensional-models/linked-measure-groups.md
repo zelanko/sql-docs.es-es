@@ -1,5 +1,5 @@
 ---
-title: Vincular grupos de medida | Documentos de Microsoft
+title: Grupos de medida vinculados | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a18e61e3c59a36fbeea576234e90ce2f54123a9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023772"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176947"
 ---
 # <a name="linked-measure-groups"></a>Grupos de medida vinculados
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

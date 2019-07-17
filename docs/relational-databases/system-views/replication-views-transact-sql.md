@@ -22,18 +22,17 @@ helpviewer_keywords:
 ms.assetid: 93e5056d-0d93-4a48-ba33-72762eb995d8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5f90b60b13d9641771ce549bfccdba3f6fc5308a
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51cc9434805fbd14204d74edae1594ae01c06bb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52816077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129566"
 ---
 # <a name="replication-views-transact-sql"></a>Vistas de replicación (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  Estas vistas contienen información que se usa para la replicación en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las vistas permiten facilitar el acceso a los datos de [las tablas del sistema de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md). Las vistas se crean en una base de datos de usuario cuando ésta está habilitada como una base de datos de publicaciones o suscripciones.  Todos los objetos de replicación se quitan de las bases de datos de usuario cuando se quita la base de datos de una topología de replicación. Es el método preferido para tener acceso a los metadatos de replicación mediante [procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
+  Estas vistas contienen información que se usa para la replicación en [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las vistas permiten facilitar el acceso a los datos de [las tablas del sistema de replicación](../../relational-databases/system-tables/replication-tables-transact-sql.md). Las vistas se crean en una base de datos de usuario cuando ésta está habilitada como una base de datos de publicaciones o suscripciones. Todos los objetos de replicación se quitan de las bases de datos de usuario cuando se quita la base de datos de una topología de replicación. Es el método preferido para tener acceso a los metadatos de replicación mediante [procedimientos almacenados de replicación](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md).  
   
 > [!IMPORTANT]  
 >  Ningún usuario debe modificar directamente las vistas del sistema.  

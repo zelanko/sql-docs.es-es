@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: df06fb9ccbf4f3683877605e321207f0ca6d997e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52797747"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196506"
 ---
 # <a name="dml-triggers"></a>Desencadenadores DML
   Los desencadenadores DML constituyen un tipo especial de procedimiento almacenado que se inicia automáticamente cuando tiene lugar un evento de lenguaje de manipulación de datos (DML) que afecta a la tabla o la vista definida en el desencadenador. Los eventos DML incluyen las instrucciones INSERT, UPDATE o DELETE. Los desencadenadores DML pueden usarse para aplicar reglas de negocios y la integridad de datos, consultar otras tablas e incluir instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] complejas. El desencadenador y la instrucción que lo activa se tratan como una sola transacción, que puede revertirse desde el desencadenador. Si se detecta un error grave (por ejemplo, no hay suficiente espacio en disco), se revierte automáticamente toda la transacción.  
@@ -59,7 +59,7 @@ ms.locfileid: "52797747"
 |Aplicabilidad|Tablas|Tablas y vistas|  
 |Cantidad por tabla o vista|Varios por cada acción de desencadenamiento (UPDATE, DELETE y INSERT)|Uno por cada acción de desencadenamiento (UPDATE, DELETE y INSERT)|  
 |Referencias en cascada|No se aplica ninguna restricción|No se permiten los desencadenadores INSTEAD OF UPDATE y DELETE en tablas que son destino de las restricciones de integridad referencial en cascada|  
-|Ejecución|Después:<br /><br /> Procesamiento de restricciones<br />Acciones de integridad referencial declarativa<br />Creación de tablas**inserted** y **deleted** <br />La acción de desencadenamiento|Antes: Procesamiento de restricciones<br /><br /> En lugar de:  La acción de desencadenamiento<br /><br /> Después: Creación de tablas  **inserted** y **deleted**|  
+|Ejecución|Después:<br /><br /> Procesamiento de restricciones<br />Acciones de integridad referencial declarativa<br />Creación de tablas**inserted** y **deleted**<br />La acción de desencadenamiento|Antes: Procesamiento de restricciones<br /><br /> En lugar de:  La acción de desencadenamiento<br /><br /> Después: Creación de tablas  **inserted** y **deleted**|  
 |Orden de la ejecución|Se puede especificar la primera y la última ejecución|No aplicable|  
 |`varchar(max)`, `nvarchar(max)`, y `varbinary(max)` referencias columnas en **insertado** y **eliminado** tablas|Permitido|Permitido|  
 |`text`, `ntext`, y `image` referencias columnas en **insertado** y **eliminado** tablas|No permitido|Permitido|  

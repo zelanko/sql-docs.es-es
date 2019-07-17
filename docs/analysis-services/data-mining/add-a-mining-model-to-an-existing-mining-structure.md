@@ -1,5 +1,5 @@
 ---
-title: Agregar un modelo de minería de datos a una estructura de minería de datos existente | Documentos de Microsoft
+title: Agregar un modelo de minería de datos a una estructura de minería de datos existente | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8b995a5b3fb89956e690598c786dc0a09474021
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019782"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210228"
 ---
 # <a name="add-a-mining-model-to-an-existing-mining-structure"></a>Agregar un modelo de minería de datos a una estructura de minería de datos existente
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,6 +35,6 @@ ms.locfileid: "34019782"
  Aparece un modelo de minería de datos nuevo en la pestaña **Modelos de minería de datos** . El modelo utiliza las columnas predeterminadas que están presentes en la estructura. Para obtener información sobre cómo modificar las columnas, vea [Cambiar las propiedades de un modelo de minería de datos](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

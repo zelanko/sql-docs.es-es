@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 03752c2f1d7259f29f634473efdfe570c55b89ee
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52405400"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163576"
 ---
 # <a name="use-power-pivot-gallery"></a>Uso de la Galería de Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "52405400"
 ##  <a name="bkmk_known_issues"></a> Problemas conocidos  
   
 ### <a name="document-type-is-not-supported"></a>El tipo de documento no se admite  
- No se admite el tipo de contenido **Documento de Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**. Si habilita el tipo de contenido **Documento de Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** para una biblioteca de documentos e intenta crear un documento de ese tipo, verá un mensaje de error similar al siguiente:  
+ No se admite el tipo de contenido **Documento de Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** . Si habilita el tipo de contenido **Documento de Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** para una biblioteca de documentos e intenta crear un documento de ese tipo, verá un mensaje de error similar al siguiente:  
   
 -   'Nuevo documento' requiere un explorador compatible con Microsoft Sharepoint Foundation, web y la aplicación. Para agregar un documento a esta biblioteca de documentos, haga clic en el botón 'Cargar documento'.  
   

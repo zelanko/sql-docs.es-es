@@ -18,19 +18,18 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 1f3d69d8fdfffaa6573f4813392509d0ca71c684
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72e363b05e8f14dda535abd70e4218c949c42c91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133069"
 ---
 # <a name="sysserverresourcestats-azure-sql-database"></a>Sys.server_resource_stats (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-Devuelve los datos de almacenamiento, la E/S y el uso de CPU para una instancia administrada de SQL de Azure. Los datos se recopilan y se agregan en intervalos de cinco minutos. Hay una fila para cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, tamaño de almacenamiento, uso de E/S y SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
+Devuelve los datos de almacenamiento, la E/S y el uso de CPU para una instancia administrada de SQL de Azure. Los datos se recopilan y agregan en intervalos de cinco minutos. Hay una fila para cada 15 segundos de informes. Los datos devueltos incluyen el uso de CPU, tamaño de almacenamiento, uso de E/S y SKU de instancia administrada. Los datos históricos se conservan durante 14 días aproximadamente.
 
 El **sys.server_resource_stats** vista tiene definiciones diferentes dependiendo de la versión de la instancia administrada de SQL de Azure que está asociada la base de datos. Tenga en cuenta estas diferencias y cualquier modificación que requiera la aplicación al actualizar a una nueva versión de servidor.
  
@@ -41,17 +40,17 @@ El **sys.server_resource_stats** vista tiene definiciones diferentes dependiendo
 |----------------------------|---------------|-----------------|  
 |start_time|**datetime2**|Hora UTC que indica el inicio del intervalo de informes de quince segundos|  
 |end_time|**datetime**|Hora UTC que indica el final del intervalo de informes de quince segundos|
-|resource_type|Nvarchar(128)|Tipo de recurso para el que se proporcionan métricas|
-|resource_name|nvarchar(128)|Nombre del recurso.|
-|sku|nvarchar(128)|Administrar el nivel de servicio de instancia de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crucial para la empresa</li></ul>|
-|hardware_generation|nvarchar(128)|Identificador de generación de hardware: por ejemplo, Gen 4 o Gen 5|
-|virtual_core_count|INT|Representa el número de núcleos virtuales por instancia (8, 16 o 24 en versión preliminar pública)|
-|avg_cpu_percent|decimal(5,2)|Promedio de uso en porcentaje del límite del nivel de servicio de instancia administrada usado por la instancia de proceso. Se calcula como la suma del tiempo de CPU de todos los grupos de recursos para todas las bases de datos en la instancia y dividido por el tiempo de CPU disponible para ese nivel en el intervalo especificado.|
-|reserved_storage_mb|BIGINT|Reservado el almacenamiento por instancia (cantidad de almacenamiento de espacio que el cliente comprado para la instancia administrada)|
+|resource_type|nvarchar (128)|Tipo de recurso para el que se proporcionan métricas|
+|resource_name|nvarchar (128)|Nombre del recurso.|
+|sku|nvarchar (128)|Administrar el nivel de servicio de instancia de la instancia. Los posibles valores son los siguientes: <br><ul><li>Uso general</li></ul><ul><li>Crítico para la empresa</li></ul>|
+|hardware_generation|nvarchar (128)|Identificador de generación de hardware: por ejemplo, Gen 4 o Gen 5|
+|virtual_core_count|int|Representa el número de núcleos virtuales por instancia (8, 16 o 24 en versión preliminar pública)|
+|avg_cpu_percent|decimal (5,2)|Promedio de uso en porcentaje del límite del nivel de servicio de instancia administrada usado por la instancia de proceso. Se calcula como la suma del tiempo de CPU de todos los grupos de recursos para todas las bases de datos en la instancia y dividido por el tiempo de CPU disponible para ese nivel en el intervalo especificado.|
+|reserved_storage_mb|bigint|Reservado el almacenamiento por instancia (cantidad de almacenamiento de espacio que el cliente comprado para la instancia administrada)|
 |storage_space_used_mb|decimal(18,2)|Almacenamiento utilizado por los archivos de todas las instancia administrada las bases de datos (incluidas las bases de datos de usuario y del sistema)|
-|io_request|BIGINT|Número total de operaciones de e/s física dentro del intervalo|
-|io_bytes_read|BIGINT|Número de bytes físicos dentro del intervalo de lectura|
-|io_bytes_written|BIGINT|Número de bytes físicos escritos dentro del intervalo|
+|io_request|bigint|Número total de operaciones de e/s física dentro del intervalo|
+|io_bytes_read|bigint|Número de bytes físicos dentro del intervalo de lectura|
+|io_bytes_written|bigint|Número de bytes físicos escritos dentro del intervalo|
 
  
 > [!TIP]  

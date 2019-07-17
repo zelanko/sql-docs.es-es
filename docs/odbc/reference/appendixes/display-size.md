@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7f766f-2492-463c-aab7-f2476e222042
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c7d4a14a6afc2d716e85e687cbae1a202a596d7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61afd5c9932f58c49e54b4aff8b053d0a25a6e3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63241250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130018"
 ---
 # <a name="display-size"></a>Tamaño de presentación
 El tamaño de presentación de una columna es el número máximo de caracteres necesario para mostrar datos en formato de caracteres. En la tabla siguiente se define el tamaño de presentación para cada tipo de datos SQL de ODBC.  
@@ -39,7 +38,7 @@ El tamaño de presentación de una columna es el número máximo de caracteres n
 |SQL_FLOAT SQL_DOUBLE|24 (un signo, 15 dígitos, un separador decimal, la letra *E*, un inicio de sesión y 3 dígitos).|  
 |Todos los tipos binarios [a]|Define o máximo (tipos de variable) el tiempo de longitud de la columna 2. (Cada byte binario está representado por un número hexadecimal de 2 dígitos).|  
 |SQL_TYPE_DATE|10 (una fecha en el formato *aaaa-mm-dd*).|  
-|SQL_TYPE_TIME|8 (una hora en el formato *hh: mm:*)<br /><br /> O bien<br /><br /> 9 + *s* (una hora en el formato *hh: mm:*[.fff...], donde *s* es la precisión de fracciones de segundo).|  
+|SQL_TYPE_TIME|8 (una hora en el formato *hh: mm:* )<br /><br /> O bien<br /><br /> 9 + *s* (una hora en el formato *hh: mm:* [.fff...], donde *s* es la precisión de fracciones de segundo).|  
 |SQL_TYPE_TIMESTAMP|19 (para una marca de tiempo en el *aaaa-mm-dd hh: mm:* formato)<br /><br /> O bien<br /><br /> 20 + *s* (para una marca de tiempo en el *aaaa-mm-dd hh: mm:* formato [.fff...], donde *s* es la precisión de fracciones de segundo).|  
 |Todos los tipos de datos interval|Consulte [longitud de tipo de datos de intervalo](../../../odbc/reference/appendixes/interval-data-type-length.md).|  
 |SQL_GUID|36 (el número de caracteres en el *aaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee* formato|  

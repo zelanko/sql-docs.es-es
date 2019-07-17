@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685404"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207142"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>Lección complementaria: Jerarquías desiguales
 
@@ -23,7 +23,7 @@ ms.locfileid: "57685404"
 
 En esta lección complementaria, resolverá un problema común al dinamizar en jerarquías que contienen valores en blanco (miembros) en distintos niveles. Por ejemplo, una organización donde un director de alto nivel tiene tanto directores de departamento como no directores como subordinados directos. O bien, las jerarquías geográficas formadas país-región-ciudad, donde algunas ciudades no tienen un elemento primario estado o provincia, como Washington D.C., ciudad del Vaticano. Cuando una jerarquía tiene miembros en blanco, a menudo desciende en niveles diferentes o desiguales.
 
-![as-lesson-detail-ragged-hierarchies-table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
+![As-Lesson-Detail-ragged-Hierarchies-Table](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-table.png)
 
 Los modelos tabulares en el nivel de compatibilidad 1400 tienen más **ocultar miembros** propiedad para las jerarquías. El **predeterminado** configuración asume que no hay ningún miembro en blanco en cualquier nivel. El **ocultar miembros en blanco** configuración excluye los miembros en blanco de la jerarquía cuando se agrega a una tabla dinámica o informe.  
   
@@ -48,9 +48,9 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
     | tabla 1           | columna       | Dirección del filtro   | tabla 2     | columna      | Activo |
     |-------------------|--------------|--------------------|-------------|-------------|--------|
-    | FactResellerSales | OrderDateKey | Default            | DimDate     | date        | Sí    |
-    | FactResellerSales | DueDate      | Default            | DimDate     | date        | No     |
-    | FactResellerSales | ShipDateKey  | Default            | DimDate     | date        | No     |
+    | FactResellerSales | OrderDateKey | Default            | DimDate     | Date        | Sí    |
+    | FactResellerSales | DueDate      | Default            | DimDate     | Date        | Sin     |
+    | FactResellerSales | ShipDateKey  | Default            | DimDate     | Date        | Sin     |
     | FactResellerSales | ProductKey   | Default            | DimProduct  | ProductKey  | Sí    |
     | FactResellerSales | EmployeeKey  | Ambas tablas | DimEmployee | EmployeeKey | Sí    |
 
@@ -103,7 +103,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 9.  En **PivotTable Fields**, agregar el **organización** jerarquía desde el **DimEmployee** tabla **filas**y el  **ResellerTotalSales** medida desde la **FactResellerSales** tabla **valores**.
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
+    ![As-Lesson-Detail-ragged-Hierarchies-PivotTable](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable.png)
 
     Como puede ver en la tabla dinámica, la jerarquía muestra filas desiguales. Hay muchas filas donde se muestran los miembros en blanco.
 
@@ -117,7 +117,7 @@ Si ha creado el proyecto AW Internet Sales como parte del tutorial, el modelo no
 
 3.  En Excel, actualice la tabla dinámica. 
 
-    ![as-lesson-detail-ragged-hierarchies-pivottable-refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
+    ![As-Lesson-Detail-ragged-Hierarchies-PivotTable-Refresh](../tutorial-tabular-1400/media/as-lesson-detail-ragged-hierarchies-pivottable-refresh.png)
 
     ¡Ahora se ve mucho mejor!
 

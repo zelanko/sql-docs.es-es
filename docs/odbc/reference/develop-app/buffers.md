@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 42c5226c-cb40-4d1e-809f-2ea50ce6bd55
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 306632f544f144aa4b21e150543c2d4ca5a37d0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ad13379552e3a5a576b0aa5cc8720ca6ca1688a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63008027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118743"
 ---
 # <a name="buffers"></a>Búferes
 Un búfer es cualquier parte de la memoria de la aplicación usa para pasar datos entre la aplicación y el controlador. Por ejemplo, búferes de la aplicación se pueden asociar, o *enlazado,* columnas con el conjunto de resultados **SQLBindCol**. Cada fila se capturan, los datos se devuelven para cada columna en estos búferes. *Los búferes de entrada* se utilizan para pasar datos de la aplicación para el controlador; *los búferes de salida* se utilizan para devolver datos desde el controlador a la aplicación.  

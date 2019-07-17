@@ -1,5 +1,5 @@
 ---
-title: Comprobar un PowerPivot para SharePoint | Documentos de Microsoft
+title: Comprobar un PowerPivot para SharePoint | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017512"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209468"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Comprobar una instalación de PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -62,13 +62,13 @@ ms.locfileid: "34017512"
 ## <a name="verify-integration-at-the-site-level"></a>Comprobar la integración en el nivel de sitio  
  Para comprobar la integración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] con un sitio de SharePoint, haga lo siguiente:  
   
-1.  En un explorador, abra la aplicación web que ha creado. Si usa valores predeterminados, puede especificar http://\<el nombre del equipo > en la dirección URL.  
+1.  En un explorador, abra la aplicación web que ha creado. Si usa los valores predeterminados, puede especificar http://\<el nombre del equipo > en la dirección URL.  
   
 2.  Compruebe que el acceso a datos y las características de procesamiento de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] están disponibles en la aplicación. Para ello, compruebe la presencia de plantillas de biblioteca proporcionadas por [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]:  
   
     1.  Seleccione **Contenidos del sitio**.  
   
-    2.  En la lista de aplicaciones, debería ver **Biblioteca de fuentes de distribución de datos** y **Galería de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. La característica [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
+    2.  En la lista de aplicaciones, debería ver **Biblioteca de fuentes de distribución de datos** y **Galería de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . La característica [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] proporciona estas plantillas de biblioteca, que estarán visibles en la lista Bibliotecas si la característica está integrada correctamente.  
   
 ## <a name="verify-data-access-on-the-server"></a>Comprobar el acceso a datos en el servidor  
  Para comprobar el acceso a datos [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] en el servidor, haga lo siguiente:  
@@ -89,7 +89,7 @@ ms.locfileid: "34017512"
   
 7.  En Tipo de servidor, seleccione **Analysis Services**.  
   
-8.  En nombre del servidor, escriba  **\<nombre del servidor > \powerpivot**, donde  **\<nombre del servidor >** es el nombre del equipo que tiene el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalación.  
+8.  En el nombre del servidor, escriba  **\<nombre del servidor > \powerpivot**, donde  **\<server-name >** es el nombre del equipo que tiene el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] para SharePoint instalación.  
   
 9. Haga clic en **Conectar**. De este modo se comprueba que el servidor de Analysis Services está disponible.  
   

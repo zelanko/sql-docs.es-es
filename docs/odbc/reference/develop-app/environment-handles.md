@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 917f1b0c-272b-4e37-a1f5-87cd24b9fa21
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a73ec4a842e220a16189f1390df167fe12bbab8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 409b2c14282238766457d349287f65d90fe463b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114320"
 ---
 # <a name="environment-handles"></a>Identificadores de entorno
 Un *entorno* es un contexto global en el que se va a obtener acceso a datos; asociado a un entorno es toda la información que es global por naturaleza, como:  

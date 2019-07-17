@@ -1,5 +1,5 @@
 ---
-title: Usar una conexión de modelo semántico de BI en Excel o Reporting Services | Documentos de Microsoft
+title: Usar una conexión de modelo semántico de BI en Excel o Reporting Services | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bfd1bde3a39af9954437c6f777d82db1f1ffe187
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34035466"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163610"
 ---
 # <a name="use-a-bi-semantic-model-connection-in-excel-or-reporting-services"></a>Usar una conexión de modelo semántico de BI en Excel o Reporting Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34035466"
   
 -   Haga clic con el botón derecho en una conexión de modelo semántico de BI de una biblioteca y seleccione **Iniciar Excel**.  
   
- ![Comando de inicio rápido de captura de pantalla de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "comando de inicio rápido de captura de pantalla de BISM")  
+ ![Comando de inicio rápido de la captura de pantalla de BISM](../../analysis-services/power-pivot-sharepoint/media/ssas-bism-quicklaunch.gif "comando de inicio rápido de la captura de pantalla de BISM")  
   
  Haga clic en **Habilitar** cuando se le solicite para habilitar las conexiones de datos. Excel abre un libro que contiene una lista de campos de tabla dinámica rellena con los campos del origen de datos subyacente.  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34035466"
   
 2.  Haga clic en **Desde Analysis Services** y utilice el Asistente para la conexión de datos para importar los datos.  
   
-3.  Escriba la dirección URL de SharePoint del archivo de conexión de modelo semántico de BI (por ejemplo, `http://mysharepoint/shared documents/myData.bism`). Acepte la opción predeterminada de las credenciales de inicio de sesión, **Utilizar autenticación de Windows**. Haga clic en **Siguiente**.  
+3.  Escriba la dirección URL de SharePoint del archivo de conexión de modelo semántico de BI (por ejemplo, `http://mysharepoint/shared documents/myData.bism`). Acepte la opción predeterminada de las credenciales de inicio de sesión, **Utilizar autenticación de Windows**. Haga clic en **Next**.  
   
 4.  En la siguiente página, haga clic en **Siguiente** de nuevo. Aunque se le pida que seleccione una base de datos, puede utilizar solo una base de datos especificada en la conexión de modelo semántico de BI.  
   

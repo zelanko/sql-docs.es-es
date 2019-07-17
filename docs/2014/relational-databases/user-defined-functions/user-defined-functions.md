@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 1ce64f821edd68dceaa1809a62a6b894ded6a868
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48084695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211698"
 ---
 # <a name="user-defined-functions"></a>Funciones definidas por el usuario
   Al igual que las funciones de los lenguajes de programación, las funciones definidas por el usuario de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] son rutinas que aceptan parámetros, realizan una acción, como un cálculo complejo, y devuelven el resultado de esa acción como un valor. El valor devuelto puede ser un valor escalar único o un conjunto de resultados.  
@@ -61,10 +61,10 @@ ms.locfileid: "48084695"
   
 ##  <a name="FunctionTypes"></a> Tipos de funciones  
  Función escalar  
- Las funciones escalares definidas por el usuario devuelven un único valor de datos del tipo definido en la cláusula RETURNS. En una función escalar insertada no hay cuerpo de la función; el valor escalar es el resultado de una sola instrucción. Para una función escalar de varias instrucciones, el cuerpo de la función, definido en un bloque BEGIN...END, contiene una serie de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelven el único valor. El tipo de valor devuelto puede ser cualquier tipo de datos, excepto `text`, `ntext`, `image`, `cursor`, y `timestamp`.  
+ Las funciones escalares definidas por el usuario devuelven un único valor de datos del tipo definido en la cláusula RETURNS. En una función escalar insertada no hay cuerpo de la función; el valor escalar es el resultado de una sola instrucción. Para una función escalar de varias instrucciones, el cuerpo de la función, definido en un bloque BEGIN...END, contiene una serie de instrucciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] que devuelven el único valor. El tipo devuelto puede ser de cualquier tipo de datos excepto `text`, `ntext`, `image`, `cursor` y `timestamp`.  
   
  Funciones con valores de tabla  
- Las funciones con valores de tabla definido por el usuario devuelven un `table` tipo de datos. Las funciones insertada con valores de tabla no tienen cuerpo; la tabla es el conjunto de resultados de una sola instrucción SELECT.  
+ Las funciones con valores de tabla definidas por el usuario devuelven un tipo de datos `table`. Las funciones insertada con valores de tabla no tienen cuerpo; la tabla es el conjunto de resultados de una sola instrucción SELECT.  
   
  Funciones del sistema  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona numerosas funciones del sistema que se pueden usar para realizar diversas operaciones. No se pueden modificar. Para obtener más información, vea [Funciones integradas &#40;Transact-SQL&#41;](/sql/t-sql/functions/functions), [Funciones almacenadas del sistema &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/system-functions-for-transact-sql) y [Funciones y vistas de administración dinámica &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views).  

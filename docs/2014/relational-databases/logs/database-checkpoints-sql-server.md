@@ -27,11 +27,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 33f85b2f1cd8b259e46851aab818b258a6d78291
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54128575"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206104"
 ---
 # <a name="database-checkpoints-sql-server"></a>Puntos de comprobación de base de datos (SQL Server)
   En este tema se proporciona información general de los puntos de comprobación de base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Un *punto de comprobación* crea un buen punto conocido desde donde [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] puede empezar a aplicar cambios incluidos en el registro durante la recuperación después de un cierre inesperado o un bloqueo del sistema.  
@@ -42,10 +42,10 @@ ms.locfileid: "54128575"
   
  [!INCLUDE[ssDE](../../includes/ssde-md.md)] admite varios tipos de puntos de comprobación: automáticos, indirectos, manuales e internos. En la tabla siguiente se resumen los tipos de puntos de control.  
   
-|Nombre|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Descripción|  
+|NOMBRE|[!INCLUDE[tsql](../../includes/tsql-md.md)] Interfaz|Descripción|  
 |----------|----------------------------------|-----------------|  
-|Automático|EXEC sp_configure **'`recovery interval`','*`seconds`*'**|Emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la `recovery interval` opción de configuración del servidor. Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 20 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
-|Indirecto|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=**_target_recovery_time_ { SECONDS &#124; MINUTES }|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
+|Automático|EXEC sp_configure **'`recovery interval`',' *`seconds`* '**|Emite automáticamente en segundo plano para cumplir el límite de tiempo superior que sugiere la `recovery interval` opción de configuración del servidor. Los puntos de comprobación automáticos se ejecutan hasta completarse.  Los puntos de comprobación automáticos están limitados según el número de operaciones de escritura pendientes y en función de si [!INCLUDE[ssDE](../../includes/ssde-md.md)] detecta un aumento de la latencia de escritura superior a 20 milisegundos.<br /><br /> Para más información, consulte [Configure the recovery interval Server Configuration Option](../../database-engine/configure-windows/configure-the-recovery-interval-server-configuration-option.md).|  
+|Indirecto|ALTER DATABASE ... SET TARGET_RECOVERY_TIME **=** _target_recovery_time_ { SECONDS &#124; MINUTES }|Se emiten en segundo plano para cumplir un tiempo de recuperación de destino especificado por el usuario para una determinada base de datos. El tiempo de recuperación de destino predeterminado es 0, lo que provoca que se use la heurística de puntos de comprobación automáticos en la base de datos. Si ha usado ALTER DATABASE para establecer TARGET_RECOVERY_TIME en >0, se usa este valor en vez del intervalo de recuperación especificado para la instancia de servidor.<br /><br /> Para obtener más información, vea [Cambiar el tiempo de recuperación de destino de una base de datos &#40;SQL Server&#41;](change-the-target-recovery-time-of-a-database-sql-server.md).|  
 |Manual|CHECKPOINT [ *checkpoint_duration* ]|Se emite cuando se ejecuta un comando CHECKPOINT de [!INCLUDE[tsql](../../includes/tsql-md.md)] . El punto de comprobación manual se produce en la base de datos actual para la conexión. De forma predeterminada, los puntos de comprobación manuales se ejecutan hasta completarse. La limitación funciona de la misma forma que para los puntos de comprobación automáticos.  Opcionalmente, el parámetro *checkpoint_duration* especifica un periodo de tiempo solicitado, en segundos, para que se complete el punto de comprobación.<br /><br /> Para más información, consulte [CHECKPOINT &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/checkpoint-transact-sql).|  
 |Interno|Ninguno.|Se emite por varias operaciones de servidor, como la copia de seguridad y la creación de instantánea de base de datos, para garantizar que las imágenes de disco coinciden con el estado actual del registro.|  
   

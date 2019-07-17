@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 564ff616ec13b5f7f669db4cf6402114175f5670
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50100066"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164467"
 ---
 # <a name="activate-power-pivot-integration-for-site-collections-in-ca"></a>Activar la integración de PowerPivot para colecciones de sitios en la entidad de certificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "50100066"
   
 3.  En Administración de la colección de sitios, haga clic en **Características de la colección de sitios**.  
   
-4.  Desplácese hacia abajo en la página hasta que encuentre **Característica de colección de sitios de integración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+4.  Desplácese hacia abajo en la página hasta que encuentre **Característica de colección de sitios de integración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 5.  Haga clic en **Activar**.  
   

@@ -1,5 +1,5 @@
 ---
-title: Crear, modificar o eliminar una relación de atributo | Documentos de Microsoft
+title: Crear, modificar o eliminar una relación de atributo | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3f209670d9d51e62e457d86507f1c2d11cc10fa2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027475"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209149"
 ---
-# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Atributo relaciones - crear, modificar o Eliminar relación
+# <a name="attribute-relationships---create-modify-or-delete-relationship"></a>Relaciones de los atributos: Crear, modificar o eliminar una relación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede crear, modificar o eliminar una relación de atributo entre los atributos de una dimensión utilizando la pestaña **Relación de los atributos** en el Diseñador de dimensiones de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -57,6 +57,6 @@ ms.locfileid: "34027475"
 3.  En el cuadro de diálogo **Eliminar objetos** , haga clic en **Aceptar**.  
   
 ## <a name="see-also"></a>Vea también  
- [Relaciones de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
+ [Relación de los atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)  
   
   

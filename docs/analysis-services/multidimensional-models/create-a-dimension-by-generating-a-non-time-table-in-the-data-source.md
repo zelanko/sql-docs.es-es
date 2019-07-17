@@ -1,5 +1,5 @@
 ---
-title: Crear una dimensión generando una tabla no sea de tiempos en el origen de datos | Documentos de Microsoft
+title: Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f9f84131307282b00fd99c1d5770ac352e31713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024082"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209071"
 ---
 # <a name="create-a-dimension-by-generating-a-non-time-table-in-the-data-source"></a>Crear una dimensión generando una tabla que no sea de tiempos en el origen de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "34024082"
   
 -   Organización  
   
--   Product  
+-   Producto  
   
 -   Promoción  
   
@@ -84,7 +84,7 @@ ms.locfileid: "34024082"
   
  Al activar la casilla **Es una dimensión variable** , el Asistente para dimensiones define los atributos indicados en la siguiente tabla:  
   
-|Atributo|Tipo|  
+|Atributo|Type|  
 |---------------|----------|  
 |Id. original de DVL|SCDOriginalID|  
 |Fecha finalización de DVL|SCDEndDate|  

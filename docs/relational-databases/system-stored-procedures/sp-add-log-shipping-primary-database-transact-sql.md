@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69531611-113f-46b5-81a6-7bf496d0353c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 854edf82c32058c45df4ab4f71803933f59f2582
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5af11c14c7b0bf3b8e32d503c4b77e59623ce9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140448"
 ---
 # <a name="spaddlogshippingprimarydatabase-transact-sql"></a>sp_add_log_shipping_primary_database (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ sp_add_log_shipping_primary_database [ @database = ] 'database',
 ## <a name="arguments"></a>Argumentos  
 `[ @database = ] 'database'` Es el nombre de la base de datos principal de trasvase de registros. *base de datos* es **sysname**, no tiene ningún valor predeterminado, y no puede ser NULL.  
   
-`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad en el servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_directory = ] 'backup_directory'` Es la ruta de acceso a la carpeta de copia de seguridad en el servidor principal. *directorio_de_copia_de_seguridad* es **nvarchar (500)** , no tiene ningún valor predeterminado, y no puede ser NULL.  
   
-`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red en el directorio de copia de seguridad en el servidor principal. *backup_share* es **nvarchar (500)**, no tiene ningún valor predeterminado, y no puede ser NULL.  
+`[ @backup_share = ] 'backup_share'` Es la ruta de acceso de red en el directorio de copia de seguridad en el servidor principal. *backup_share* es **nvarchar (500)** , no tiene ningún valor predeterminado, y no puede ser NULL.  
   
 `[ @backup_job_name = ] 'backup_job_name'` Es el nombre del trabajo del Agente SQL Server en el servidor principal que guarda la copia de seguridad en la carpeta de copia de seguridad. *backup_job_name* es **sysname** y no puede ser NULL.  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535337"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137709"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,31 +40,31 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>Argumento  
-`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%**. Si *publicación* es **%**, se devuelve información sobre todas las publicaciones de combinación y suscripciones en la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, su valor predeterminado es **%** . Si *publicación* es **%** , se devuelve información sobre todas las publicaciones de combinación y suscripciones en la base de datos actual.  
   
-`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es **%**.  
+`[ @publisher = ] 'publisher'` Es el nombre del publicador. *publicador*es **sysname**, su valor predeterminado es **%** .  
   
-`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%**.  
+`[ @publisher_db = ] 'publisher_db'` Es el nombre de la base de datos del publicador. *publisher_db*es **sysname**, su valor predeterminado es **%** .  
   
-`[ @subscription_type = ] 'subscription_type'` Indica si se muestran las suscripciones de extracción. *subscription_type*es **nvarchar (10)**, su valor predeterminado es **'pull'**. Los valores válidos son **'push'**, **'pull'**, o **'both'**.  
+`[ @subscription_type = ] 'subscription_type'` Indica si se muestran las suscripciones de extracción. *subscription_type*es **nvarchar (10)** , su valor predeterminado es **'pull'** . Los valores válidos son **'push'** , **'pull'** , o **'both'** .  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|Nombre de la suscripción.|  
-|**publication**|**sysname**|Nombre de la publicación.|  
+|**publicación**|**sysname**|Nombre de la publicación.|  
 |**publicador**|**sysname**|Nombre del publicador.|  
 |**publisher_db**|**sysname**|Nombre de la base de datos del publicador.|  
 |**suscriptor**|**sysname**|Nombre del suscriptor.|  
 |**subscription_db**|**sysname**|Nombre de la base de datos de suscripciones.|  
 |**status**|**int**|Estado de la suscripción:<br /><br /> **0** = suscripción inactiva<br /><br /> **1** = suscripción activa<br /><br /> **2** = suscripción eliminada<br /><br /> **3** = suscripción separada<br /><br /> **4** = suscripción adjunta<br /><br /> **5** = suscripción se ha marcado para reiniciarla con carga<br /><br /> **6** = la suscripción no se pudo asociar el depurador<br /><br /> **7** = restaurado desde copia de seguridad de suscripción|  
-|**subscriber_type**|**int**|Tipo de suscriptor:<br /><br /> **1** = Global<br /><br /> **2** = Local<br /><br /> **3** = anónima|  
+|**subscriber_type**|**int**|Tipo de suscriptor:<br /><br /> **1** = global<br /><br /> **2** = local<br /><br /> **3** = anónima|  
 |**subscription_type**|**int**|Tipo de suscripción:<br /><br /> **0** = inserción<br /><br /> **1** = extracción<br /><br /> **2** = anónima|  
 |**priority**|**float(8)**|Prioridad de la suscripción. El valor debe ser menor que **100,00**.|  
 |**sync_type**|**tinyint**|Tipo de sincronización de suscripción:<br /><br /> **1** = automática<br /><br /> **2** = no se utiliza la instantánea.|  
 |**description**|**nvarchar(255)**|Breve descripción de la suscripción de extracción.|  
-|**merge_jobid**|**binary(16)**|Id. de trabajo del Agente de mezcla.|  
+|**merge_jobid**|**binary (16)**|Id. de trabajo del Agente de mezcla.|  
 |**enabled_for_syncmgr**|**int**|Indica si la suscripción se puede sincronizar mediante el Administrador de sincronización de [!INCLUDE[msCoName](../../includes/msconame-md.md)].|  
 |**last_updated**|**nvarchar(26)**|Hora a la que el Agente de mezcla sincronizó correctamente la suscripción por última vez.|  
 |**publisher_login**|**sysname**|Nombre de inicio de sesión del publicador.|  
@@ -95,9 +94,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar(524)**|Contraseña para el Inicio de sesión que utiliza el Agente de mezcla al conectarse al servidor web que hospeda la sincronización web utilizando autenticación básica.|  
 |**internet_security_mode**|**int**|Modo de autenticación utilizado al conectarse al servidor web que hospeda la sincronización web. Un valor de **1** significa autenticación de Windows y un valor de **0** significa [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación.|  
 |**internet_timeout**|**int**|Período de tiempo, en segundos, antes de que expire una solicitud de sincronización Web.|  
-|**hostname**|**nvarchar(128)**|Especifica un valor sobrecargado para [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro de fila con parámetros.|  
+|**Nombre de host**|**nvarchar(128)**|Especifica un valor sobrecargado para [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md) cuando esta función se utiliza en la cláusula WHERE de un filtro de fila con parámetros.|  
 |**job_login**|**nvarchar(512)**|Es la cuenta de Windows bajo la que se ejecuta el agente de mezcla, que se devuelve en el formato *dominio*\\*username*.|  
-|**job_password**|**sysname**|Por motivos de seguridad, un valor de "**\*\*\*\*\*\*\*\*\*\***" es siempre se devuelven.|  
+|**job_password**|**sysname**|Por motivos de seguridad, un valor de " **\*\*\*\*\*\*\*\*\*\*** " es siempre se devuelven.|  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

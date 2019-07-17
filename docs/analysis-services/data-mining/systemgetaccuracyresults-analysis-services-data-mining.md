@@ -1,5 +1,5 @@
 ---
-title: 'SystemGetAccuracyResults (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: SystemGetAccuracyResults (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017802"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209660"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -97,21 +97,21 @@ SystemGetAccuracyResults(<mining structure>,
   
  En la tabla siguiente se muestran las columnas que devuelve **GetValidationResults**.  
   
-|Nombre de la columna|Description|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |Modelo|Nombre del modelo probado. **Todos** indica que el resultado es un agregado para todos los modelos.|  
 |AttributeName|Nombre de la columna de predicción.|  
 |AttributeState|Valor de destino de la columna de predicción.<br /><br /> Si esta columna contiene un valor, solo se recopilan las métricas para el estado especificado.<br /><br /> Si no se especifica este valor, o es null, se calculan las métricas del estado más probable para cada predicción.|  
 |PartitionIndex|Indica la partición a la que se aplica el resultado.<br /><br /> Para este procedimiento, siempre es 0.|  
-|PartitionCases|Un entero que indica el número de filas del conjunto de casos, tomando como base la  *\<conjunto de datos >* parámetro.|  
+|PartitionCases|Un entero que indica el número de filas del conjunto de casos, según el  *\<conjunto de datos >* parámetro.|  
 |Prueba|Tipo de prueba que se realizó.|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas para cada modelo dependen del tipo de modelo, y el tipo del valor de predicción.<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).<br /><br /> Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).|  
-|Value|Valor de la medida especificada.|  
+|Valor|Valor de la medida especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
  En la tabla siguiente se proporcionan ejemplos de los valores que puede utilizar para especificar los datos de la estructura de minería de datos que se usan para la validación cruzada. Si desea utilizar casos de prueba para la validación cruzada, la estructura de minería de datos ya debe contener un conjunto de datos de prueba. Para obtener información sobre cómo definir un conjunto de datos de prueba al crear una estructura de minería de datos, vea [Conjuntos de datos de entrenamiento y de prueba](../../analysis-services/data-mining/training-and-testing-data-sets.md).  
   
-|Valor entero|Description|  
+|Valor entero|Descripción|  
 |-------------------|-----------------|  
 |1|Solo se utilizan casos de entrenamiento.|  
 |2|Solo se utilizan casos de prueba.|  
@@ -141,7 +141,7 @@ CALL SystemGetAccuracyResults (
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Clasificación|Verdadero positivo|605|  
 |v Target Mail DT|Bike Buyer|1|0|1638|Clasificación|Falso positivo|177|  
@@ -157,7 +157,7 @@ CALL SystemGetAccuracyResults (
 ## <a name="see-also"></a>Vea también  
  [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

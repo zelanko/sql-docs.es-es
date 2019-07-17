@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: dfe1e1e1-9a65-406a-aced-6385a078e135
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 580ac26d2478de1f42800d6f8d6704f26bc6fff4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d291288c44341c3a707696b0b3baecdcd15779ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137649"
 ---
 # <a name="sphelpmergepublication-transact-sql"></a>sp_helpmergepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |id|**int**|Orden secuencial de la publicación en la lista del conjunto de resultados.|  
-|NAME|**sysname**|Nombre de la publicación.|  
+|name|**sysname**|Nombre de la publicación.|  
 |description|**nvarchar(255)**|Descripción de la publicación.|  
 |status|**tinyint**|Indica cuándo están disponibles los datos de la publicación.|  
 |retention|**int**|Tiempo durante el que guardar los metadatos sobre los cambios de los artículos de la publicación. Las unidades de este período pueden ser días, semanas, meses o años. Para obtener información sobre las unidades, vea la columna retention_period_unit.|  
@@ -75,11 +74,11 @@ sp_helpmergepublication [ [ @publication = ] 'publication' ]
 |allow_pull|**int**|Determina si es posible crear suscripciones de extracción para la publicación indicada. **0** significa que no se permite una suscripción de extracción.|  
 |allow_anonymous|**int**|Determina si es posible crear suscripciones anónimas para la publicación indicada. **0** significa que no se permite una suscripción anónima.|  
 |centralized_conflicts|**int**|Determina si los registros de los conflictos se almacenan en el publicador dado:<br /><br /> **0** = conflicto entre los registros se almacenan tanto en el publicador y en el suscriptor que provocó el conflicto.<br /><br /> **1** = conflicto entre todos los registros se almacenan en el publicador.|  
-|priority|**float(8)**|Prioridad de la suscripción en bucle invertido.|  
+|prioridad|**float(8)**|Prioridad de la suscripción en bucle invertido.|  
 |snapshot_ready|**tinyint**|Indica si la instantánea de esta publicación está lista:<br /><br /> **0** = instantánea está lista para su uso.<br /><br /> **1** = instantánea no está lista para su uso.|  
 |publication_type|**int**|Tipo de publicación:<br /><br /> **0** = la instantánea.<br /><br /> **1** = transaccional.<br /><br /> **2** = la mezcla.|  
 |pubid|**uniqueidentifier**|Identificador único de esta publicación.|  
-|snapshot_jobid|**binary(16)**|Identificador de trabajo del Agente de instantáneas. Para obtener la entrada del trabajo de instantánea en la [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabla del sistema, debe convertir este valor hexadecimal a **uniqueidentifier**.|  
+|snapshot_jobid|**binary (16)**|Identificador de trabajo del Agente de instantáneas. Para obtener la entrada del trabajo de instantánea en la [sysjobs](../../relational-databases/system-tables/dbo-sysjobs-transact-sql.md) tabla del sistema, debe convertir este valor hexadecimal a **uniqueidentifier**.|  
 |enabled_for_internet|**int**|Determina si la publicación está habilitada para Internet. Si **1**, los archivos de sincronización para la publicación se colocan en el `C:\Program Files\Microsoft SQL Server\MSSQL\Repldata\Ftp` directory. El usuario debe crear el directorio FTP (Protocolo de transferencia de archivos). Si **0**, la publicación no está habilitada para el acceso a Internet.|  
 |dynamic_filter|**int**|Indica si se debe usar el filtro de filas con parámetros. **0** significa que no se utiliza un filtro de fila con parámetros.|  
 |has_subscription|**bit**|Indica si la publicación tiene alguna suscripción. **0** significa que actualmente no hay ninguna suscripción a esta publicación.|  

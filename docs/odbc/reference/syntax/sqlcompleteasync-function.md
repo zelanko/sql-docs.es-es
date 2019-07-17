@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537595"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118628"
 ---
 # <a name="sqlcompleteasync-function"></a>Función SQLCompleteAsync
 **Conformidad**  
@@ -62,7 +61,7 @@ SQLRETURN SQLCompleteAsync(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_ERROR, SQL_NO_DATA o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Si **SQLCompleteAsync** devuelve SQL_SUCCESS, una aplicación debe obtener el código de retorno de la función asincrónica desde el búfer señalado por *AsyncRetCodePtr*. El valor de SQLSTATE asociado, si existe, se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un identificador de instrucción o un *HandleType* de SQL_ HANDLE_DBC y un identificador de conexión. Los registros de diagnóstico están asociados con la función asincrónica, no esto **SQLCompleteAsync** función.  
   
  **SQLCompleteAsync** devuelve un código distinto de SQL_SUCCESS para indicar que **SQLCompleteAsync** no se llama correctamente. **SQLCompleteAsync** no registrará ningún registro de diagnóstico en este caso. Códigos de retorno posibles son:  

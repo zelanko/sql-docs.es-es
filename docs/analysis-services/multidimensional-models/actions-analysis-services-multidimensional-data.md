@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd1ae2b3dbf8ac93497bd4cfb2c875d9fe21b824
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50146370"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180376"
 ---
 # <a name="actions-analysis-services---multidimensional-data"></a>Acciones (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,8 +59,8 @@ ms.locfileid: "50146370"
 |Propietario|Ejecuta una operación con una interfaz que no aparece en esta tabla.|  
 |Informe|Envía una solicitud parametrizada basada en una dirección URL a un servidor de informes y devuelve un informe a una aplicación cliente.|  
 |Conjunto de filas|Devuelve un conjunto de filas a una aplicación cliente.|  
-|.|Ejecuta un comando OLE DB.|  
-|Dirección URL|Muestra una página web dinámica en un explorador de Internet.|  
+|Instrucción|Ejecuta un comando OLE DB.|  
+|URL|Muestra una página web dinámica en un explorador de Internet.|  
   
 ## <a name="resolving-and-executing-actions"></a>Resolver y ejecutar acciones  
  Cuando un usuario corporativo obtiene acceso al objeto para el que se define el objeto de comando, la instrucción asociada a la acción se resuelve automáticamente, lo que la pone a disposición de la aplicación cliente, pero la acción no se ejecuta automáticamente. La acción se ejecuta solo cuando el usuario corporativo realiza la operación específica del cliente que inicia la acción. Por ejemplo, las aplicaciones cliente pueden presentar una lista de acciones como menú emergente cuando el usuario corporativo hace clic con el botón secundario en un miembro o una celda concretos.  

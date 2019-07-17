@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 553288a0-be57-4d79-ae53-b7cbd065e127
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85ba57ba9e3559a790ae983025356510987c1eae
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7b3ed8e08d333c4aed2576154c645a0050ebf4df
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845133"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133129"
 ---
 # <a name="sysserverfileaudits-transact-sql"></a>sys.server_file_audits (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,12 +34,12 @@ ms.locfileid: "47845133"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |audit_id|**int**|Identificador de la auditoría.|  
-|NAME|**sysname**|Nombre de la auditoría.|  
+|name|**sysname**|Nombre de la auditoría.|  
 |audit_guid|**uniqueidentifier**|GUID de la auditoría.|  
 |create_date|**datetime**|Fecha UTC en la que se creó la auditoría de archivos.|  
 |modify_date|**valor DataTime**|Fecha UTC en la que se modificó por última vez la auditoría de archivos.|  
 |principal_id|**int**|Identificador del propietario de la auditoría tal y como se registró en el servidor.|  
-|Tipo|**char(2)**|Tipo de auditoría:<br /><br /> 0 = Registro de eventos de seguridad de NT<br /><br /> 1 = Registro de eventos de aplicación de NT<br /><br /> 2 = Archivo del sistema de archivos|  
+|type|**char(2)**|Tipo de auditoría:<br /><br /> 0 = Registro de eventos de seguridad de NT<br /><br /> 1 = Registro de eventos de aplicación de NT<br /><br /> 2 = Archivo del sistema de archivos|  
 |type_desc|**nvarchar(60)**|Descripción del tipo de auditoría.|  
 |on_failure|**tinyint**|Condición en caso de error:<br /><br /> 0 = Continuar<br /><br /> 1 = Cerrar la instancia del servidor<br /><br /> 2 = Error en la operación|  
 |on_failure_desc|**nvarchar(60)**|En caso de error escribir una entrada de acción:<br /><br /> CONTINUE<br /><br /> SHUTDOWN SERVER INSTANCE<br /><br /> FAIL OPERATION|  

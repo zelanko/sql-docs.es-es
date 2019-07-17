@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240960"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129955"
 ---
 # <a name="elements-used-in-sql-statements"></a>Elementos que se usan en instrucciones SQL
 Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriormente.  
@@ -32,13 +31,13 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  *factor de booleano* :: = [NOT] *principal de un valor booleano*  
   
- *boolean-primary* ::= comparison *-predicate* &#124; ( *search-condition* )  
+ *un valor booleano principal* :: = comparación *-predicado* &#124; ( *condición de búsqueda* )  
   
  *valor booleano término* :: = *factor de booleano* [AND *término de valor booleano*]  
   
  *character-string-literal* ::= ''{*character*}...'' (*carácter* es cualquier carácter del juego de caracteres del origen de datos del controlador. Para incluir un carácter de comilla literal (") en un literal de cadena de caracteres, use dos caracteres de comilla literal ['' '].)  
   
- *column-identifier* ::= *user-defined-name*  
+ *identificador de la columna* :: = *nombre definido por el usuario*  
   
  *nombre de columna* :: = [*nombre-tabla*.] *identificador de columna*  
   
@@ -50,11 +49,11 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  *digit* ::= 0 &#124; 1 &#124; 2 &#124; 3 &#124; 4 &#124; 5 &#124; 6 &#124; 7 &#124; 8 &#124; 9  
   
- *dynamic-parameter* ::= ?  
+ *¿parámetros dinámicos* :: =?  
   
  *expresión* :: = término &#124; expresión {+&#124;-} término  
   
- *factor* :: = [*+*&#124;*-*]*principal*  
+ *factor* :: = [ *+* &#124; *-* ]*principal*  
   
  *valor de inserción* :: =  
   
@@ -62,9 +61,9 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  &#124; *literal*  
   
- &#124; NULL  
+ &#124;ES NULL  
   
- &AMP;#124;USUARIO  
+ &#124;USUARIO  
   
  *letter* ::= *lower-case-letter &#124; upper-case-letter*  
   
@@ -74,34 +73,34 @@ Los elementos siguientes se usan en las instrucciones SQL mencionadas anteriorme
   
  *cláusula ORDER by* :: = ORDER BY *especificación de ordenación* [, *especificación de ordenación*]...  
   
- *primary* ::= *column-name*  
+ *principal* :: = *nombre de columna*  
   
  &#124; *dynamic-parameter*  
   
  &#124; *literal*  
   
- &#124; ( *expression* )  
+ &#124;( *expresión* )  
   
  *condición de búsqueda* :: = *booleano término* [o *condición de búsqueda*]  
   
  *lista de selección* :: = \* &#124; *seleccione sublista* [, *seleccione sublista*]...  (*lista de selección* no puede contener parámetros.)  
   
- *select-sublist* ::= *expression*  
+ *Seleccione sublista* :: = *expresión*  
   
- *sort-specification* ::= {*unsigned-integer &#124; column-name*} [*ASC &#124; DESC*]  
+ *especificación de ordenación* :: = {*entero sin signo &#124; nombre-columna*} [*ASC &#124; DESC*]  
   
- *table-identifier* ::= *user-defined-name*  
+ *identificador de tabla* :: = *nombre definido por el usuario*  
   
- *table-name* ::= *table-identifier*  
+ *nombre de la tabla* :: = *identificador de tabla*  
   
- *table-reference* ::= *table-name*  
+ *referencia de tabla* :: = *nombre de tabla*  
   
  *lista de referencias de tabla* :: = *referencia de tabla* [,*referencia de tabla*]...  
   
- *term* ::= *factor* &#124; *term* {\*&#124;*/*} *factor*  
+ *term* ::= *factor* &#124; *term* {\*&#124; */* } *factor*  
   
- *unsigned-integer* ::= {*digit*}  
+ *entero unsigned* :: = {*dígitos*}  
   
  *superior minúscula* :: = *A &#124; B &#124; C &#124; d. &#124; E &#124; F &#124; G &#124; H &#124; me &#124; J &#124; K &#124; L &#124; M &#124; N &#124; O &#124; P &#124;Q &#124; R &#124; S &#124; T &#124; U &#124; V &#124; W &#124; X &#124; Y &#124; Z*  
   
- *user-defined-name* ::= *letter*[*digit* &#124; *letter* &#124; *_*]...
+ *nombre definido por el usuario* :: = *letra*[*dígitos* &#124; *letra* &#124; *_* ]...

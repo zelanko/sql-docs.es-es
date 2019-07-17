@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: d740148052712a69a39e0de314496733b3b26a8b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a70bceed4cdccf6a22f0cfea4e5093634f88f1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132692"
 ---
 # <a name="filter-mdx"></a>Filter (MDX)
 
@@ -32,7 +31,7 @@ Filter(Set_Expression, Logical_Expression )
  *Set_Expression*  
  Expresión MDX (Expresiones multidimensionales) válida que devuelve un conjunto.  
   
- *Logical_Expression*  
+ *Filter*  
  Expresión lógica MDX (Expresiones multidimensionales) válida que se evalúa en true o false.  
   
 ## <a name="remarks"></a>Comentarios  

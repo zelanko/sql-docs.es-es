@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64cf1186-28b8-4cd9-88f1-a7808a9c8d60
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5bef3e4902562edde0adb2a4f495c51e6a82b091
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a315bc147cf86df40cf6fa216b8c45eeb1fcccca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535287"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111964"
 ---
 # <a name="spdeletemergeconflictrow-transact-sql"></a>sp_deletemergeconflictrow (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_deletemergeconflictrow [ [ @conflict_table = ] 'conflict_table' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @conflict_table = ] 'conflict_table'` Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, su valor predeterminado es **%**. Si el *conflict_table* se especifica como NULL o **%**, el conflicto se supone que es un conflicto de eliminación y la fila que coincide con *rowguid* y *origin_datasource* y *source_object* se elimina de la [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) tabla.  
+`[ @conflict_table = ] 'conflict_table'` Es el nombre de la tabla de conflictos. *conflict_table* es **sysname**, su valor predeterminado es **%** . Si el *conflict_table* se especifica como NULL o **%** , el conflicto se supone que es un conflicto de eliminación y la fila que coincide con *rowguid* y *origin_datasource* y *source_object* se elimina de la [MSmerge_conflicts_info &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/msmerge-conflicts-info-transact-sql.md) tabla.  
   
-`[ @source_object = ] 'source_object'` Es el nombre de la tabla de origen. *source_object* es **nvarchar (386)**, su valor predeterminado es null.  
+`[ @source_object = ] 'source_object'` Es el nombre de la tabla de origen. *source_object* es **nvarchar (386)** , su valor predeterminado es null.  
   
 `[ @rowguid = ] 'rowguid'` Es el identificador de fila del conflicto de eliminación. *ROWGUID* es **uniqueidentifier**, no tiene ningún valor predeterminado.  
   
-`[ @origin_datasource = ] 'origin_datasource'` Es el origen del conflicto. *origin_datasource* es **varchar (255)**, no tiene ningún valor predeterminado.  
+`[ @origin_datasource = ] 'origin_datasource'` Es el origen del conflicto. *origin_datasource* es **varchar (255)** , no tiene ningún valor predeterminado.  
   
-`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Es una marca que indica que el *conflict_table* es se descarte si está vacía. *drop_table_if_empty* es **varchar (10)**, su valor predeterminado es False.  
+`[ @drop_table_if_empty = ] 'drop_table_if_empty'` Es una marca que indica que el *conflict_table* es se descarte si está vacía. *drop_table_if_empty* es **varchar (10)** , su valor predeterminado es False.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

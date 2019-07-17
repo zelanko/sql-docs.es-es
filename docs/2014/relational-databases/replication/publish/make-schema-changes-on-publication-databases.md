@@ -18,11 +18,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 65436da64ca7c718de053dab520edad71dac6228
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52815437"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199449"
 ---
 # <a name="make-schema-changes-on-publication-databases"></a>Realizar cambios de esquema en bases de datos de publicaciones
   La replicación admite una gran variedad de cambios en el esquema de objetos publicados. Cuando se realiza cualquiera de los siguientes cambios de esquema en el objeto publicado apropiado en un publicador de [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] , dicho cambio se propaga de manera predeterminada a todos los suscriptores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] :  
@@ -89,7 +89,7 @@ ms.locfileid: "52815437"
   
 -   Para agregar una columna nueva a una tabla sin incluirla en una publicación existente, deshabilite la replicación de los cambios de esquema y después, ejecute ALTER TABLE \<tabla> ADD \<columna>.  
   
--   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+-   Para incluir una columna existente en una publicación existente, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario reinicializar las suscripciones.  
   
@@ -99,7 +99,7 @@ ms.locfileid: "52815437"
   
 -   Para quitar una columna de una publicación existente y de la tabla del publicador, ejecute ALTER TABLE \<tabla> DROP \<columna>. De forma predeterminada, la columna se quitará de la tabla en todos los suscriptores.  
   
--   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>**.  
+-   Para quitar una columna de una publicación existente, pero conservarla en la tabla del publicador, use [sp_articlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql), [sp_mergearticlecolumn &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) o el cuadro de diálogo **Propiedades de la publicación: \<publicación>** .  
   
      Para más información, consulte [definir y modificar un filtro de columna](define-and-modify-a-column-filter.md). Será necesario generar una instantánea nueva.  
   
@@ -115,7 +115,7 @@ ms.locfileid: "52815437"
   
     -   Las restricciones deben tener un nombre explícito para permitir la eliminación. Para obtener más información, vea la sección "Consideraciones generales" de este tema.  
   
-### <a name="transactional-replication"></a>replicación transaccional  
+### <a name="transactional-replication"></a>Replicación transaccional  
   
 -   Los cambios de esquema se propagan a los suscriptores que ejecutan versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], pero la instrucción DDL solo debe incluir sintaxis compatible con la versión instalada en el suscriptor.  
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62a75019-248a-44c8-a5cc-c79f55ea3acf
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: fd5b172b7029376d6f9641552315fc64e734cc8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee6b6a701d4ff81863973c4c8e098bd9ed49c967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124681"
 ---
 # <a name="spenumloginforproxy-transact-sql"></a>sp_enum_login_for_proxy (Transact-SQL)
 
@@ -58,7 +57,7 @@ sp_enum_login_for_proxy
 |-----------------|---------------|-----------------|  
 |**proxy_id**|**int**|Número de identificación del proxy.|  
 |**proxy_name**|**sysname**|Nombre del proxy.|  
-|**Nombre**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
+|**name**|**sysname**|Nombre de la entidad de seguridad para la asociación.|  
 |**flags**|**int**|Tipo de la entidad de seguridad.<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] inicio de sesión<br /><br /> **1** = rol fijo del sistema<br /><br /> **2** = rol de base de datos en **msdb**|  
 | &nbsp; | &nbsp; | &nbsp; |
   

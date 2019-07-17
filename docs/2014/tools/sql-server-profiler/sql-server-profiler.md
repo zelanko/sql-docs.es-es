@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: c9b0bb789dc7571a988c434f526070546d8db454
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52780727"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211046"
 ---
 # <a name="sql-server-profiler"></a>SQL Server Profiler
   El [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] es una interfaz enriquecida para crear y administrar seguimientos y analizar y reproducir resultados de seguimiento. Los eventos se guardan en un archivo de seguimiento que posteriormente se puede analizar o utilizar para reproducir una serie de pasos específicos cuando se intenta diagnosticar un problema.  
@@ -188,6 +188,6 @@ ms.locfileid: "52780727"
  [Sesiones (categoría de eventos)](../../relational-databases/event-classes/sessions-event-category.md)   
  [Procedimientos almacenados (categoría de eventos)](../../relational-databases/event-classes/stored-procedures-event-category.md)   
  [TSQL (categoría de eventos)](../../relational-databases/event-classes/tsql-event-category.md)   
- [Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
+ [Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)  
   
   

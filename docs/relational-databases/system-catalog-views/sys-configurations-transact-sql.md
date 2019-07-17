@@ -1,5 +1,5 @@
 ---
-title: sys.configurations (Transact-SQL) | Microsoft Docs
+title: Sys.Configurations (Transact-SQL) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55045001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109560"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "55045001"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**configuration_id**|**int**|Id. exclusivo del valor de configuración.|  
-|**Nombre**|**nvarchar(35)**|Nombre de la opción de configuración.|  
+|**name**|**nvarchar(35)**|Nombre de la opción de configuración.|  
 |**value**|**sql_variant**|Valor configurado para esta opción.|  
 |**Mínimo**|**sql_variant**|Valor mínimo para la opción de configuración.|  
 |**Máximo**|**sql_variant**|Valor máximo para la opción de configuración.|  

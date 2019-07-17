@@ -1,5 +1,5 @@
 ---
-title: Iniciar o detener un PowerPivot para SharePoint Server | Documentos de Microsoft
+title: Iniciar o detener un Power Pivot para SharePoint Server | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208096"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>Iniciar o detener un servidor de Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34037409"
 ##  <a name="effects"></a> Efectos de la detención de un servidor de Power Pivot  
  La tabla siguiente describe los efectos que tiene detener el servicio de Analysis Services y el Servicio de sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en un servidor de SharePoint.  
   
-|Efecto en|Description|  
+|Efecto en|Descripción|  
 |---------------|-----------------|  
 |Consultas existentes|Las consultas que están en curso en un servidor de Analysis Services se detendrán inmediatamente. El usuario obtendrá un error que indica que los datos o que la conexión a un origen de datos no se han encontrado.|  
 |Trabajos de actualización de datos que se están procesando actualmente|Los trabajos que están en curso en el servidor de Analysis Services actual se detendrán inmediatamente. Se producirá un error en la actualización de datos que se registrará en el historial de la actualización de datos.<br /><br /> Puede ver el estado de los trabajos actuales antes de detener el servicio mediante la página de comprobación del estado de los trabajos de Administración central de SharePoint.<br /><br /> Aunque es posible saber qué trabajos se están procesando actualmente, no hay ninguna manera de ver la propia cola para comprobar si otros trabajos están a punto de iniciarse.|  

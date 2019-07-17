@@ -1,5 +1,5 @@
 ---
-title: 'Cómo: insertar filas en la columna Geography (ODBC) | Documentos de Microsoft'
+title: 'Procedimientos: Insertar filas en la columna Geography (ODBC) | Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -11,14 +11,14 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 9067a1ceeff9422ed55f9a96fd3b52e2f99fe999
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753502"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206812"
 ---
-# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Insertar filas en la columna Geography (ODBC)
-  En este ejemplo se insertan dos filas en una tabla con una columna Geography a partir del lenguaje WellKnownBinary (WKB) con 2 enlaces distintos (SQLCCHAR y SQLCBINARY). Después, se selecciona una fila de esa tabla y se usa ::STAsText() para mostrarla. WKB es 0x01010000000700ECFAD03A4C4001008000B5DF07C0 y la aplicación imprime en la consola: POINT(56.4595 -2.9842).  
+# <a name="how-to-insert-rows-into-geography-column-odbc"></a>Procedimientos: Inserción de filas en la columna Geography (ODBC)
+  En este ejemplo se insertan dos filas en una tabla con una columna Geography a partir del lenguaje WellKnownBinary (WKB) con 2 enlaces distintos (SQLCCHAR y SQLCBINARY). A continuación, selecciona una fila de dicha tabla y utiliza::::stastext() para mostrarla. WKB es 0x01010000000700ECFAD03A4C4001008000B5DF07C0 y la aplicación imprime en la consola: PUNTO (56.4595-2.9842).  
   
  Este ejemplo no requiere ningún origen de datos ODBC, pero el ejemplo se ejecuta de forma predeterminada en la instancia local de SQL Server.  
   

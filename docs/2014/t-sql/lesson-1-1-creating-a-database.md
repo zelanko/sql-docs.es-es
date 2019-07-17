@@ -13,11 +13,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: c0353c89dbfc14032d33dfa49fa0c08e698cb5c0
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48098640"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211217"
 ---
 # <a name="creating-a-database-tutorial"></a>Crear una base de datos (Tutorial)
   Como muchas instrucciones de [!INCLUDE[tsql](../includes/tsql-md.md)] , la instrucción CREATE DATABASE tiene un parámetro requerido: el nombre de la base de datos. CREATE DATABASE también tiene muchos parámetros opcionales, como la ubicación de disco donde se desean colocar los archivos de la base de datos. Si se ejecuta CREATE DATABASE sin los parámetros opcionales, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] usa los valores predeterminados para muchos de estos parámetros. Este tutorial usa algunos de los parámetros de sintaxis opcionales.  
@@ -41,7 +41,7 @@ ms.locfileid: "48098640"
 >  La palabra clave GO separa las instrucciones cuando se envían varias instrucciones en un solo lote. GO es opcional cuando el lote solo contiene una instrucción.  
   
 ## <a name="next-task-in-lesson"></a>Siguiente tarea de la lección  
- [Creación de una tabla &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
+ [Crear una tabla &#40;Tutorial&#41;](lesson-1-2-creating-a-table.md)  
   
 ## <a name="see-also"></a>Vea también  
  [CREATE DATABASE &#40;Transact-SQL de SQL Server&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql)  

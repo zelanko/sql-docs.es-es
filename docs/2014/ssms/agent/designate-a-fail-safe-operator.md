@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 54ec71df8efab1f60bfb7a5b9af448705e349d28
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211424"
 ---
 # <a name="designate-a-fail-safe-operator"></a>Designar un operador para notificaciones de error
   Un operador para notificaciones de error es un usuario que recibe la alerta si ésta no llega al operador designado. En este tema se describe cómo establecer un operador para notificaciones de error para recibir notificaciones de alerta del Agente [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante el uso de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "52760757"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Solo los miembros del rol fijo de servidor **sysadmin** pueden designar operadores para notificaciones de error.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -60,13 +60,13 @@ ms.locfileid: "52760757"
   
 2.  Haga clic con el botón derecho en **Agente SQL Server** y seleccione **Propiedades**.  
 
-3.  En el **propiedades de agente SQL Server -**_nombre_servidor_ cuadro de diálogo **seleccionar una página**, seleccione **sistema de alerta**.  
+3.  En el **propiedades de agente SQL Server -** _nombre_servidor_ cuadro de diálogo **seleccionar una página**, seleccione **sistema de alerta**.  
  
 4.  En **Operador para notificaciones de error**, seleccione **Habilitar operador para notificaciones de error**.  
   
 5.  En la lista **Operador** , seleccione el operador que desee que sea el operador para notificaciones de error.  
   
-6.  Seleccione alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **buscapersonas**, o **Net send**.  
+6.  Seleccione alguna o la totalidad de las siguientes casillas para especificar cómo se notificará al operador: **Correo electrónico**, **Buscapersonas** o **Net Send**.  
   
 7.  Cuando termine, haga clic en **Aceptar**.  
   

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 9920b2f7-b802-4003-913c-978c17ae4542
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0ddc008286dfffbf8ee15da0d8a111de69d6a1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28628ee5dc8ff1bde7906dfea7fca60470720e11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47840943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108222"
 ---
 # <a name="spdbvardecimalstorageformat-transact-sql"></a>sp_db_vardecimal_storage_format (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_db_vardecimal_storage_format [ [ @dbname = ] 'database_name']
  Es el nombre de la base de datos para la que se cambia el formato de almacenamiento. *database_name* es **sysname**, no tiene ningún valor predeterminado. Si el nombre de la base de datos se omite, se devuelven los estados del formato de almacenamiento vardecimal de todas las base de datos de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  [ @vardecimal_storage_format=] {'ON' |' DESACTIVAR '}  
- Especifica si el formato de almacenamiento vardecimal está habilitado. @vardecimal_storage_format puede ser ON u OFF. El parámetro es **varchar(3)**, no tiene ningún valor predeterminado. Si se proporciona un nombre de base de datos pero se omite @vardecimal_storage_format, se devuelve la configuración actual de la base de datos especificada. Este argumento no tiene ningún efecto en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores.  
+ Especifica si el formato de almacenamiento vardecimal está habilitado. @vardecimal_storage_format puede ser ON u OFF. El parámetro es **varchar(3)** , no tiene ningún valor predeterminado. Si se proporciona un nombre de base de datos pero se omite @vardecimal_storage_format, se devuelve la configuración actual de la base de datos especificada. Este argumento no tiene ningún efecto en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] o versiones posteriores.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

@@ -15,11 +15,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: d23a16fab200c3c6ef55a1cac8f1838a2f51468d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52812757"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211725"
 ---
 # <a name="ddl-event-groups"></a>grupos de eventos DDL
   En las tablas siguientes se muestran los grupos de eventos DDL que se pueden usar para ejecutar un desencadenador DDL o una notificación de eventos, así como las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que comprenden. Observe la naturaleza inclusiva de los grupos de eventos. Por ejemplo, un desencadenador DDL o una notificación de eventos que especifica FOR DDL_TABLE_EVENTS (10018) cubre las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE TABLE, ALTER TABLE y DROP TABLE. Un desencadenador DLL o una notificación de eventos que especifica FOR DDL_TABLE_VIEW_EVENTS (10017) cubre todas las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] bajo los tipos DDL_TABLE_EVENTS, DDL_VIEW_EVENTS, DDL_INDEX_EVENTS y DDL_STATISTICS_EVENTS.  
@@ -27,12 +27,12 @@ ms.locfileid: "52812757"
 > [!NOTE]  
 >  Determinados procedimientos almacenados del sistema que realizan operaciones similares a DDL también pueden activar desencadenadores DDL o notificaciones de eventos. Pruebe los desencadenadores DDL y las notificaciones de eventos para determinar sus respuestas a los procedimientos almacenados del sistema que se ejecutan. Por ejemplo, tanto la instrucción CREATE TYPE como el procedimiento almacenado **sp_addtype** activarán un desencadenador DDL o una notificación de eventos creada en un evento CREATE_TYPE.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Los eventos que figuran bajo DDL_DATABASE_LEVEL_EVENTS se ejecutan en el nivel de servidor (instancia) o de base de datos. Los eventos que figuran bajo DDL_SERVER_LEVEL_EVENTS se ejecutan en el nivel de servidor.  
   
 ||||  
 |-|-|-|  
-|parent_type|Tipo|NAME|  
+|parent_type|type|name|  
 |NULL|296|ALTER_SERVER_CONFIGURATION|  
 |NULL|10001|DDL_EVENTS|  
 |10001|10016|&#124;    DDL_DATABASE_LEVEL_EVENTS|  

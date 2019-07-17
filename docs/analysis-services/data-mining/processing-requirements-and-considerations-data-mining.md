@@ -1,5 +1,5 @@
 ---
-title: Requisitos y consideraciones (minería de datos) de procesamiento | Documentos de Microsoft
+title: Procesamiento de los requisitos y consideraciones (minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182469"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>Requisitos y consideraciones de procesamiento (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34016152"
   
  Al procesar el modelo, éste no vuelve a leer directamente los datos del origen de datos, sino que recibe el resumen de los datos de la estructura de minería de datos. Utilizando el cubo que se creó, junto con el índice y los datos del caso almacenados en memoria caché, el servidor crea subprocesos independientes para entrenar los modelos.  
   
- Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el modelo de procesamiento en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
+ Para obtener más información sobre las ediciones de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] que admiten el procesamiento de modelos en paralelo, vea [características compatibles con las ediciones de SQL Server 2012](http://go.microsoft.com/fwlink/?linkid=232473) (http://go.microsoft.com/fwlink/?linkid=232473).  
   
 ##  <a name="bkmk_ProcessStructures"></a> Procesar estructuras de minería de datos  
  Una estructura de minería de datos se puede procesar con todos los modelos dependientes, o por separado. Procesar una estructura de minería de datos independientemente de los modelos puede ser útil cuando se prevé que el procesamiento de algunos modelos llevará mucho tiempo y se desee diferir esa operación.  
@@ -58,13 +58,13 @@ ms.locfileid: "34016152"
   
  Los modelos de minería de datos también se procesan en estos casos:  
   
- **Implementación de un proyecto**: dependiendo de la configuración del proyecto y de su estado actual, los modelos de minería de datos del proyecto normalmente se procesan por completo cuando se implementa el proyecto.  
+ **Implementación de un proyecto**: Según la configuración del proyecto y el estado actual del proyecto, normalmente se procesan los modelos de minería de datos en el proyecto en su totalidad cuando se implementa el proyecto.  
   
  Cuando se inicia la implementación, el procesamiento se inicia automáticamente, a menos que haya una versión procesada anteriormente en el servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y que no se hayan producido cambios estructurales. Puede implementar un proyecto seleccionando **Implementar solución** en la lista desplegable o presionando la tecla F5. Puede  
   
  Para más información sobre cómo establecer las propiedades de implementación de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] que controlan cómo se implementan los modelos de minería de datos, vea [Implementación de soluciones de minería de datos](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md).  
   
- **Mover un modelo de minería de datos**: al mover un modelo de minería de datos usando el comando EXPORT, solo se exportará la definición del modelo, lo que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
+ **Mover un modelo de minería de datos**: Al mover un modelo de minería de datos mediante el comando de exportación, se exporta solo la definición del modelo, que incluye el nombre de la estructura de minería de datos que se espera que proporcione datos al modelo.  
   
  Requisitos de nuevo procesamiento en los siguientes escenarios con los comandos EXPORT e IMPORT:  
   
@@ -83,8 +83,8 @@ ms.locfileid: "34016152"
  Para más información, vea [Exportar e importar objetos de minería de datos](../../analysis-services/data-mining/export-and-import-data-mining-objects.md).  
   
 ## <a name="see-also"></a>Vea también  
- [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [Estructuras de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [Estructuras de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [Procesar un modelo multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

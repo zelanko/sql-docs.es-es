@@ -1,5 +1,5 @@
 ---
-title: 'SystemGetClusterCrossValidationResults (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: SystemGetClusterCrossValidationResults (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce11f7cb54d40336633d09a5d6601f0366c6bf55
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018882"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209633"
 ---
 # <a name="systemgetclustercrossvalidationresults-analysis-services---data-mining"></a>SystemGetClusterCrossValidationResults (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +83,7 @@ SystemGetClusterCrossValidationResults(
   
  En la tabla siguiente se describen las columnas que devuelve.  
   
-|Nombre de la columna|Description|  
+|Nombre de la columna|Descripción|  
 |-----------------|-----------------|  
 |ModelName|Nombre del modelo probado.|  
 |AttributeName|Nombre de la columna de predicción. Para los modelos de clústeres, siempre es **null**.|  
@@ -92,7 +92,7 @@ SystemGetClusterCrossValidationResults(
 |PartitionSize|Entero que indica el número de casos incluido en cada partición.|  
 |Prueba|Tipo de prueba que se realizó.|  
 |Measure|Nombre de la medida que devuelve la prueba. Las medidas de cada modelo dependen del tipo del valor de predicción. Para obtener una definición de cada medida, vea [Validación cruzada &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md).<br /><br /> Para obtener una lista de las medidas que se devuelven para cada tipo de predicción, vea [Medidas en el informe de validación cruzada](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md).|  
-|Value|Valor de la medida de prueba especificada.|  
+|Valor|Valor de la medida de prueba especificada.|  
   
 ## <a name="remarks"></a>Comentarios  
  Para devolver métricas de precisión de todo el conjunto de datos, use [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md).  
@@ -119,7 +119,7 @@ CALL SystemGetClusterCrossValidationResults(
   
  Resultados del ejemplo:  
   
-|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Medida|Value|  
+|ModelName|AttributeName|AttributeState|PartitionIndex|PartitionSize|Prueba|Measure|Valor|  
 |---------------|-------------------|--------------------|--------------------|-------------------|----------|-------------|-----------|  
 |Clúster 1|||1|3025|Agrupación en clústeres|Probabilidad de casos|0.930524511864121|  
 |Clúster 1|||2|3025|Agrupación en clústeres|Probabilidad de casos|0.919184178430778|  
@@ -133,8 +133,8 @@ CALL SystemGetClusterCrossValidationResults(
   
 ## <a name="see-also"></a>Vea también  
  [SystemGetCrossValidationResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetAccuracyResults &#40;Analysis Services: minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
+ [SystemGetAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

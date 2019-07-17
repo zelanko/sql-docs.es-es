@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f29fff2e-3d09-4a8c-a2f9-2059062cbebf
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ad31d9fd07e0b9f7bdf633f8ed546331880787c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8213c08e6844003d880129dda4b441a5592bbc86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149041"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107345"
 ---
 # <a name="sqlstates"></a>SQLSTATE
 SQLSTATE proporciona información detallada sobre la causa de una advertencia o error. El SQLSTATE en este manual se basa en los que se encuentran en la especificación ISO/IEF CLI, aunque esos SQLSTATE que comienzan con la mensajería instantánea es específica de ODBC.  

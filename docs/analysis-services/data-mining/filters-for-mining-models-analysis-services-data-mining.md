@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 81592abc0224b2898b64d834857d23484750b326
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410672"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210003"
 ---
 # <a name="filters-for-mining-models-analysis-services---data-mining"></a>Filtros para modelos de minería (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "52410672"
 ### <a name="creating-model-filters-using-data-mining-designer"></a>Crear filtros de modelo mediante el Diseñador de minería de datos  
  Primero filtra un modelo en el Diseñador de minería de datos cambiando la propiedad **Filter** del modelo de minería de datos. Puede escribir una expresión de filtro directamente en el panel **Propiedades** o bien, puede abrir un cuadro de diálogo de filtro para generar condiciones.  
   
- Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones con los operadores **AND**/**OR** . Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores **greater than** y **less than** . Pero, para valores discretos, puede usar los operadores **= (igual a)**, **!= (distinto de)** y **es NULL** .  
+ Hay dos cuadros de diálogo de filtro. El primero le permite crear condiciones que se aplican a la tabla de casos. Si el origen de datos contiene varias tablas, primero seleccione una tabla y, a continuación, seleccione una columna y especifique los operadores y condiciones que desee que se apliquen a dicha columna. Puede vincular varias condiciones con los operadores **AND**/**OR** . Los operadores disponibles para definir valores dependen de si la columna contiene valores discretos o continuos. Por ejemplo, con valores continuos, puede usar operadores **greater than** y **less than** . Pero, para valores discretos, puede usar los operadores **= (igual a)** , **!= (distinto de)** y **es NULL** .  
   
 > [!NOTE]  
 >  No se admite la palabra clave **LIKE** . Si desea incluir varios atributos discretos, debe crear condiciones individuales y vincularlas mediante el operador **OR** .  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206824"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231872"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>Migrar Power Pivot a SharePoint 2013
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53206824"
 |1|2|3|4|  
 |-------|-------|-------|-------|  
 |Preparar la granja de SharePoint 2013|Hacer copia de seguridad, copiar y restaurar bases de datos.|Montar bases de datos de contenido|Migrar programaciones de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]|  
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- Administración central de SharePoint<br /><br /> - Windows PowerShell|- Páginas de aplicación de SharePoint<br /><br /> - Windows PowerShell|  
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|\- Administración central de SharePoint<br /><br /> \- Windows PowerShell|\- Páginas de aplicación de SharePoint<br /><br /> \- Windows PowerShell|  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>Preparar la granja de SharePoint 2013  
   
@@ -92,7 +92,7 @@ ms.locfileid: "53206824"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>Solucionar problemas al intentar montar bases de datos  
  En esta sección se resumen los posibles problemas que pueden producirse al montar la base de datos.  
   
-1.  **Errores de autenticación:** si ve errores relacionados con la autenticación, revise el modo de autenticación que están usando las aplicaciones web de origen. El error puede deberse a una incoherencia en la autenticación entre la aplicación web de SharePoint 2013 y la aplicación web de SharePoint 2010. Vea [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013) para obtener más información.  
+1.  **Errores de autenticación:** Si ve errores relacionados con la autenticación, revise el modo de autenticación que se están usando las aplicaciones web de origen. El error puede deberse a una incoherencia en la autenticación entre la aplicación web de SharePoint 2013 y la aplicación web de SharePoint 2010. Vea [1) Preparar la granja de SharePoint 2013](#bkmk_prepare_sharepoint2013) para obtener más información.  
   
 2.  **Que faltan:** Si ve errores relacionados con faltan [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] archivos .dll, el **spPowerPivot.msi** no ha instalado o el [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] herramienta de configuración no se ha utilizado para configurar [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)].  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53206824"
   
     1.  Otra opción para migrar programaciones consiste en habilitar la programación de actualización para cada libro. Navegue a la biblioteca de documentos que contenga los libros.  
   
-    2.  Abra el menú contextual y haga clic en **Administrar actualización de datos de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**.  
+    2.  Abra el menú contextual y haga clic en **Administrar actualización de datos de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** .  
   
     3.  En la sección **Programar actualización** , haga clic en **Habilitada**.  
   

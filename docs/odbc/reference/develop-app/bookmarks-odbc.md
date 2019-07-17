@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 1d7cccc5-f847-4321-b240-28570854ee5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9eecd202a17a0a08e8607ebec0caaa31b7b3ca9c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bab3571ba880658d9f1a2629b899484008428083
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118785"
 ---
 # <a name="bookmarks-odbc"></a>Marcadores (ODBC)
 Un marcador es un valor utilizado para identificar una fila de datos. El significado del valor de marcador solamente lo conocen el controlador u origen de datos. Por ejemplo, podría ser tan simple como un número de fila o tan complejo como una dirección de disco. Los marcadores en ODBC son un poco diferentes de marcadores en los libros en pantalla real. En un libro real, el lector coloca un marcador en una página específica y, a continuación, busca ese marcador regresar a la página. En ODBC, la aplicación solicita un marcador para una fila determinada, lo almacena y lo pasa de vuelta al cursor para volver a la fila. Por lo tanto, los marcadores en ODBC son similares a anotar un número de página, un lector recordarla y, a continuación, busque la página.  

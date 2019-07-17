@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 25926ff4-9271-45bf-bc32-d5d3344bd47a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9b13aeed62a84258fcfbf5820c17dca59f4b5852
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 995a9b5fe4786e1e188a8bbdc612cce743e77a18
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62660756"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133014"
 ---
 # <a name="sysservertriggers-transact-sql"></a>sys.server_triggers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,12 +33,12 @@ ms.locfileid: "62660756"
   
 |Nombre de la columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**Nombre**|**sysname**|Nombre del desencadenador.|  
+|**name**|**sysname**|Nombre del desencadenador.|  
 |**object_id**|**int**|Id. del objeto.|  
 |**parent_class**|**tinyint**|Clase del elemento primario. Siempre es:<br /><br /> 100 = Servidor|  
-|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVER.|  
+|**parent_class_desc**|**nvarchar(60)**|Descripción de la clase de elemento primario. Siempre es:<br /><br /> SERVIDOR.|  
 |**parent_id**|**int**|Siempre es 0 para los desencadenadores de SERVER.|  
-|**Tipo**|**char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
+|**type**|**char(2)**|Tipo de objeto:<br /><br /> TA = Desencadenador de ensamblado (CLR)<br /><br /> TR = Desencadenador SQL|  
 |**type_desc**|**nvarchar(60)**|Descripción de la clase del tipo de objeto.<br /><br /> CLR_TRIGGER<br /><br /> SQL_TRIGGER|  
 |**create_date**|**datetime**|Fecha de creación del desencadenador.|  
 |**modify_date**|**datetime**|Fecha en que se modificó el desencadenador por última vez mediante una instrucción ALTER.|  

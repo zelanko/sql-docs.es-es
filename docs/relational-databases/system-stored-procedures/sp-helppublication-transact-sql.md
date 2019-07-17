@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e801c3f0-dcbd-4b4a-b254-949a05f63518
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d6f2760d225848503d93ea361a54a0069ce16c14
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 18fc2e1dfadff4e276cd40ff6d64a0aa2fc9a06e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137568"
 ---
 # <a name="sphelppublication-transact-sql"></a>sp_helppublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a verse. *publicación* es de tipo sysname y su valor predeterminado es **%**, que devuelve información sobre todas las publicaciones.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a verse. *publicación* es de tipo sysname y su valor predeterminado es **%** , que devuelve información sobre todas las publicaciones.  
   
 `[ @found = ] 'found' OUTPUT` Es una marca para indicar que devuelven filas. *se encontró*es **int** y un parámetro OUTPUT y su valor predeterminado es **23456**. **1** indica que se encuentra la publicación. **0** indica que no se encuentra la publicación.  
   
@@ -54,7 +53,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |pubid|**int**|Id. de la publicación.|  
-|NAME|**sysname**|Nombre de la publicación.|  
+|name|**sysname**|Nombre de la publicación.|  
 |restricted|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |status|**tinyint**|Estado actual de la publicación.<br /><br /> **0** = inactivo.<br /><br /> **1** = activo.|  
 |tarea||Se utiliza para mantener la compatibilidad con versiones anteriores.|  
@@ -70,7 +69,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |immediate_sync_ready|**bit**|Indica si el Agente de instantáneas generó o no una instantánea que está lista para que la utilicen las nuevas suscripciones. Este parámetro se define únicamente si la publicación se define para tener siempre una instantánea disponible para las suscripciones nuevas o reinicializadas.|  
 |allow_sync_tran|**bit**|Indica si se permiten suscripciones de actualización inmediata a la publicación.|  
 |autogen_sync_procs|**bit**|Indica si se generan automáticamente procedimientos almacenados para admitir las suscripciones de actualización inmediata.|  
-|snapshot_jobid|**binary(16)**|Id. de tarea programada.|  
+|snapshot_jobid|**binary (16)**|Id. de tarea programada.|  
 |retention|**int**|Volumen de cambio, en horas, que se debe guardar para la publicación indicada.|  
 |has subscription|**bit**|Indica si la publicación tiene suscripciones activas. **1** significa que la publicación tiene suscripciones activas, y **0** significa que la publicación no tiene ninguna suscripción.|  
 |allow_queued_tran|**bit**|Especifica si se han habilitado las deshabilitaciones de colocación en cola de los cambios del suscriptor hasta que se puedan aplicar en el publicador. Si **0**, los cambios del suscriptor no se ponen en cola.|  
@@ -88,7 +87,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
 |centralized_conflicts|**bit**|Especifica si los registros de conflicto se almacenan en el publicador.<br /><br /> **0** = conflicto entre los registros se almacenan tanto en el publicador y en el suscriptor que provocó el conflicto.<br /><br /> **1** = conflicto entre los registros se almacenan en el publicador.|  
 |conflict_retention|**int**|Especifica el período de retención de conflictos, en días.|  
 |conflict_policy|**int**|Especifica la directiva de resolución de conflictos seguida cuando se utiliza la opción de suscriptor de actualización en cola. Puede ser uno de estos valores:<br /><br /> **1** = el publicador gana el conflicto.<br /><br /> **2** = el suscriptor gana el conflicto.<br /><br /> **3** = se reinicializa la suscripción.|  
-|queue_type||Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **MSMQ** = Use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **SQL** = Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.<br /><br /> Nota: Ya no se incluye la compatibilidad con Message Queue Server.|  
+|queue_type||Especifica el tipo de cola utilizado. Puede ser uno de estos valores:<br /><br /> **MSMQ** = Use [!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queue Server para almacenar las transacciones.<br /><br /> **SQL** = Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para almacenar las transacciones.<br /><br /> Nota: Se ha interrumpido la compatibilidad con Message Queue Server.|  
 |backward_comp_level||Nivel de compatibilidad de la base de datos, que puede ser uno de los que se especifican a continuación:<br /><br /> **90** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> **100** = [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
 |publish_to_AD|**bit**|Especifica si la publicación se publica en el [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory???. Un valor de **1** indica que se publica y un valor de **0** indica que no se publica.|  
 |allow_initialize_from_backup|**bit**|Indica si los suscriptores pueden inicializar una suscripción a esta publicación a partir de una copia de seguridad en lugar de una instantánea inicial. **1** significa que se pueden inicializar suscripciones desde una copia de seguridad y **0** significa que no. Para obtener más información, consulte [inicializar una suscripción transaccional sin una instantánea](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md) una suscripción transaccional sin una instantánea.|  

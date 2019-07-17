@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: d5450895-3824-44c4-8aa4-d4f9752a9602
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 601c0cdab47c338b903514f2e2e47547551ef678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bacf438180dd6fe2823660e8275e48a2316e9efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121441"
 ---
 # <a name="sqlcopydesc-function"></a>Función SQLCopyDesc
 **Conformidad**  
@@ -53,7 +52,7 @@ SQLRETURN SQLCopyDesc(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLCopyDesc** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_ HANDLE_DESC y un *controlar* de *TargetDescHandle*. Si no es válido *SourceDescHandle* se pasó en la llamada, se devolverá SQL_INVALID_HANDLE, pero no se devolverá ningún SQLSTATE. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLCopyDesc** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
  Cuando se devuelve un error, la llamada a **SQLCopyDesc** se anula inmediatamente y el contenido de los campos de la *TargetDescHandle* descriptor son indefinidos.  

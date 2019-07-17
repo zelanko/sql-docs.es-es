@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d354aa64e8b6a1e98941011c30550a056f4c01c9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162790"
 ---
 # <a name="object-level-security"></a>Seguridad de nivel de objeto
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -72,7 +72,7 @@ En este ejemplo, la propiedad metadataPermission de la clase de permisos de colu
   }
 ```
 
-## <a name="restrictions"></a>Restrictions
+## <a name="restrictions"></a>Restricciones
 
 *  Seguridad de nivel de tabla no se puede establecer para un modelo si divide una cadena de relación. Se genera un error en tiempo de diseño.
  Por ejemplo, si hay relaciones entre las tablas A y B y B y C, no puede proteger la tabla B. Si la tabla B está protegida, una consulta en una tabla no se permite el tránsito las relaciones entre la tabla A y B y B y C. En este caso, se podría configurar una relación independiente entre las tablas A y B.

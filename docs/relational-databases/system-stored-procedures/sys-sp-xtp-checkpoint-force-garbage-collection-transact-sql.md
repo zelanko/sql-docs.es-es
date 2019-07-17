@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 82b35b2b-edbd-44ac-9fc8-80695f2fd1df
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9142800590230126da882031b70e9c59f4670c3b
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b230fb659b41f16541fd841f1ff8b6f03d19cee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47636583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120035"
 ---
 # <a name="sysspxtpcheckpointforcegarbagecollection-transact-sql"></a>sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 para correcto. Distinto de cero para error.  
   
-## <a name="result-set"></a>Conjunto de resultados  
+## <a name="result-set"></a>Tipo de cursor  
  Una fila devuelta contiene la siguiente información:  
   
 |columna|Descripción|  
@@ -58,7 +57,7 @@ sys.sp_xtp_checkpoint_force_garbage_collection [[ @dbname=database_name]
 ## <a name="permissions"></a>Permisos  
  Necesita el permiso de propietario de la base de datos.  
   
-## <a name="sample"></a>Ejemplo  
+## <a name="sample"></a>Muestra  
   
 ```  
 exec [sys].[sp_xtp_checkpoint_force_garbage_collection] hkdb1  

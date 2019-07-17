@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0fc83e35-0caa-49a3-a4b6-a1890d4f46ef
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b486237208e5a374d5cae6da6fd82a22ee0ebe18
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0155b154a1d63343c157bc2eca6e5cbd7c1b8968
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47658873"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124832"
 ---
 # <a name="spdropserver-transact-sql"></a>sp_dropserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_dropserver [ @server = ] 'server'
  Es el servidor que se va a quitar. *server* es de tipo **sysname**y no tiene ningún valor predeterminado. *servidor* debe existir.  
   
  *droplogins*  
- Indica que los inicios de sesión de servidor remoto o vinculado para *server* también deben quitarse si **droplogins** se especifica. **`@droplogins`** es **char (10)**, su valor predeterminado es null.  
+ Indica que los inicios de sesión de servidor remoto o vinculado para *server* también deben quitarse si **droplogins** se especifica. **`@droplogins`** es **char (10)** , su valor predeterminado es null.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

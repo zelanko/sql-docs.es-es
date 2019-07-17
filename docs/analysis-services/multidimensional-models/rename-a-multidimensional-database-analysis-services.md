@@ -1,5 +1,5 @@
 ---
-title: Cambiar el nombre de una base de datos Multidimensional (Analysis Services) | Documentos de Microsoft
+title: Cambiar el nombre de una base de datos Multidimensional (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0e894db8be928f3d4bb5c53b93ead85feae94128
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027112"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208552"
 ---
 # <a name="rename-a-multidimensional-database-analysis-services"></a>Cambie el nombre de una base de datos multidimensional (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,8 +50,8 @@ ms.locfileid: "34027112"
   
 ## <a name="see-also"></a>Vea también  
  [Configurar las propiedades de servidor en Analysis Services](../../analysis-services/server-properties/server-properties-in-analysis-services.md)   
- [Establecer propiedades de la base de datos Multidimensional & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
- [Configurar propiedades de proyecto de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
- [Implementar proyectos de Analysis Services & #40; SSDT & #41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
+ [Establecer propiedades de bases de datos multidimensionales &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/set-multidimensional-database-properties-analysis-services.md)   
+ [Configurar las propiedades de un proyecto de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/configure-analysis-services-project-properties-ssdt.md)   
+ [Implementar proyectos de Analysis Services &#40;SSDT&#41;](../../analysis-services/multidimensional-models/deploy-analysis-services-projects-ssdt.md)  
   
   

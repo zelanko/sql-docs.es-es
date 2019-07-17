@@ -1,5 +1,5 @@
 ---
-title: Filtro de modelo de reglas de una regla en una asociación | Documentos de Microsoft
+title: Filtro de modelo de reglas de una regla en una asociación | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 28d3601b18f792b957627e63630806453d971110
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209995"
 ---
 # <a name="filter-a-rule-in-an-association-rules-model"></a>Filtrar una regla en un modelo de reglas de asociación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34014492"
   
 5.  En **Importancia mínima**, aumente el valor de importancia para ver menos reglas o disminuya el valor para ver más reglas.  
   
-6.  En **Mostrar**, seleccione una de las opciones siguientes: **Mostrar el valor y el nombre del atributo**, **Mostrar solo el nombre del atributo**o **Mostrar solo el valor del atributo**.  
+6.  Para **mostrar**, seleccione una de las siguientes opciones: **Mostrar el valor y nombre del atributo**, **mostrar solo el nombre del atributo**, o **mostrar solo el valor del atributo**.  
   
 7.  En **Número máximo de filas**, aumente el valor para aumentar el número total de reglas que cumplen las condiciones especificadas o disminuya el valor para limitar el número de reglas devueltas. Las reglas se ordenan por probabilidad, de modo que podría eliminar reglas adicionales que cumplan las condiciones especificadas para la probabilidad o la importancia.  
   
@@ -52,11 +52,11 @@ ms.locfileid: "34014492"
   
 ### <a name="create-a-query-on-the-itemsets-in-an-association-model"></a>Crear una consulta en los conjuntos de elementos en un modelo de asociación  
   
--   [Ejemplos de consultas de modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
+-   [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas del Visor de modelo de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
+ [Tareas y procedimientos del Visor de modelos de minería de datos](../../analysis-services/data-mining/mining-model-viewer-tasks-and-how-tos.md)   
  [Examinar un modelo usando el Visor de reglas de asociación de Microsoft](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-association-rules-viewer.md)   
- [Lección 3: Generar un escenario de cesta & #40; Tutorial de minería de datos intermedios & #41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
+ [Lección 3: Generar un escenario de cesta &#40;intermedio de Tutorial de minería de datos&#41;](http://msdn.microsoft.com/library/651eef38-772e-4d97-af51-075b1b27fc5a)  
   
   

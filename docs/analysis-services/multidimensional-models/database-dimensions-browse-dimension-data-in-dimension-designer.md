@@ -1,5 +1,5 @@
 ---
-title: Examinar los datos de dimensión en el Diseñador de dimensiones | Documentos de Microsoft
+title: Examinar los datos de dimensión en el Diseñador de dimensiones | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3692d8f7267531e00f0393149823198cc59bab7d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022872"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178913"
 ---
-# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensiones de base de datos - examinar datos de dimensión en el Diseñador de dimensiones
+# <a name="database-dimensions---browse-dimension-data-in-dimension-designer"></a>Dimensiones de base de datos: examinar los datos de dimensión en el Diseñador de dimensiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Puede examinar los datos de una dimensión mediante la vista **Explorador** del Diseñador de dimensiones, al que se obtiene acceso desde [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  
   
@@ -34,7 +34,7 @@ ms.locfileid: "34022872"
     >  Debe tener definida una traducción de la dimensión en el idioma seleccionado.  
   
 ## <a name="see-also"></a>Vea también  
- [Introducción a dimensiones & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
+ [Introducción a las dimensiones &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)   
  [Dimensiones en modelos multidimensionales](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)  
   
   

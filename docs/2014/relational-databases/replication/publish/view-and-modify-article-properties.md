@@ -22,11 +22,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22355696fda59f984e21b72e1070aaa69cba9b97
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52792357"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199251"
 ---
 # <a name="view-and-modify-article-properties"></a>Ver y modificar las propiedades de un artículo
   En este tema se describe cómo ver y modificar las propiedades del artículo en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -58,7 +58,7 @@ ms.locfileid: "52792357"
 -   Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para más información, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Agregar y quitar artículos de publicaciones existentes).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Vea y modifique propiedades de artículos en el cuadro de diálogo **Propiedades de publicación: \<Publicación>**, que está disponible en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
+ Vea y modifique propiedades de artículos en el cuadro de diálogo **Propiedades de publicación: \<Publicación>** , que está disponible en [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
   
 -   La página **General** incluye el nombre y la descripción de la publicación, el nombre de la base de datos, el tipo de publicación y los valores de expiración de la suscripción.  
   
@@ -82,27 +82,27 @@ ms.locfileid: "52792357"
   
 #### <a name="to-view-and-modify-article-properties"></a>Para ver y modificar propiedades de un artículo  
   
-1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, seleccione un artículo y luego haga clic en **Propiedades del artículo**.  
+1.  En la página **Artículos** del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , seleccione un artículo y luego haga clic en **Propiedades del artículo**.  
   
 2.  Seleccione a qué propiedades de artículos se deben aplicar los cambios:  
   
-    -   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto>** resaltado para iniciar el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>**; los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
+    -   Haga clic en **Establecer propiedades del artículo de \<tipoDeObjeto>** resaltado para iniciar el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>** ; los cambios de propiedad realizados en este cuadro de diálogo solo se aplican al objeto que está resaltado en el panel de objetos de la página **Artículos**.  
   
-    -   Haga clic en **Establecer propiedades de todos los artículos de \<tipoDeObjeto>**, para iniciar el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>**. Los cambios de propiedad realizados en este cuadro de diálogo se aplican a todos los objetos de ese tipo en el panel de objetos de la página **Artículos**, incluidos los que todavía no se hayan seleccionado para la publicación.  
+    -   Haga clic en **Establecer propiedades de todos los artículos de \<tipoDeObjeto>** , para iniciar el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** . Los cambios de propiedad realizados en este cuadro de diálogo se aplican a todos los objetos de ese tipo en el panel de objetos de la página **Artículos**, incluidos los que todavía no se hayan seleccionado para la publicación.  
   
         > [!NOTE]  
-        >  Los cambios de propiedades realizados en el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** reemplazan los que se hicieran anteriormente en el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>**. Por ejemplo, si desea establecer varios valores predeterminados para todos los artículos de un tipo de objeto, pero solamente desea establecer algunas propiedades para objetos individuales, establezca primero los valores predeterminados para todos los artículos. A continuación, establezca las propiedades de los objetos individuales.  
+        >  Los cambios de propiedades realizados en el cuadro de diálogo **Propiedades de todos los artículos de \<tipoDeObjeto>** reemplazan los que se hicieran anteriormente en el cuadro de diálogo **Propiedades del artículo: \<tipoDeObjeto>** . Por ejemplo, si desea establecer varios valores predeterminados para todos los artículos de un tipo de objeto, pero solamente desea establecer algunas propiedades para objetos individuales, establezca primero los valores predeterminados para todos los artículos. A continuación, establezca las propiedades de los objetos individuales.  
   
 3.  Modifique las propiedades si es necesario y, a continuación, haga clic en **Aceptar**.  
   
-4.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**.  
+4.  Haga clic en **Aceptar** en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** .  
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
  Se pueden modificar los artículos y devolver sus propiedades mediante programación con los procedimientos almacenados de replicación. Los procedimientos almacenados que se usen dependerán del tipo de publicación a la que pertenece el artículo.  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>Para ver las propiedades de un artículo que pertenece a una publicación transaccional o de instantáneas  
   
-1.  Ejecute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando el nombre de la publicación para el parámetro **@publication** y el nombre de artículo para el parámetro **@article** . Si no especifica **@article**, se devolverá información para todos los artículos de la publicación.  
+1.  Ejecute [sp_helparticle](/sql/relational-databases/system-stored-procedures/sp-helparticle-transact-sql), especificando el nombre de la publicación para el parámetro **@publication** y el nombre de artículo para el parámetro **@article** . Si no especifica **@article** , se devolverá información para todos los artículos de la publicación.  
   
 2.  Ejecute [sp_helparticlecolumns](/sql/relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql) para que los artículos de tabla muestren todas las columnas disponibles en la tabla base.  
   
@@ -111,7 +111,7 @@ ms.locfileid: "52792357"
 1.  Ejecute [sp_changearticle](/sql/relational-databases/system-stored-procedures/sp-changearticle-transact-sql), especificando la propiedad de artículo que se está cambiando en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio requiere la generación de una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot**, y si el cambio requiere que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio requiere la generación de una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot** , y si el cambio requiere que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>Para ver las propiedades de un artículo que pertenece a una publicación de combinación  
   
@@ -124,7 +124,7 @@ ms.locfileid: "52792357"
 1.  Ejecute [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql), especificando la propiedad de artículo que se está cambiando en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio requiere la generación de una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot**, y si el cambio requiere que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio requiere la generación de una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot** , y si el cambio requiere que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 ###  <a name="TsqlExample"></a> Ejemplo (Transact-SQL)  
  Este ejemplo de replicación transaccional devuelve las propiedades del artículo publicado.  

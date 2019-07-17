@@ -1,5 +1,5 @@
 ---
-title: (Minería de datos) de la selección de características | Documentos de Microsoft
+title: (Minería de datos) de la selección de características | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183265"
 ---
 # <a name="feature-selection-data-mining"></a>Selección de características (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019192"
   
  Durante el proceso de selección de características, el analista, la herramienta de modelado o el algoritmo seleccionan o descartan de forma activa atributos según su utilidad para el análisis.  El analista puede usar la ingeniería de características para agregar características y quitar o modificar datos existentes, mientras que el algoritmo de aprendizaje automático suele asignar puntuaciones a las columnas y valida su utilidad en el modelo.  
   
- ![Característica de selección y el proceso de ingeniería](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "selección y el proceso de ingeniería de características")  
+ ![Selección de características e ingeniería proceso](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "selección y el proceso de ingeniería de características")  
   
  En resumen, la selección de características ayuda a solucionar dos problemas: tener demasiados datos de escaso valor, o bien tener muy pocos datos de mucho valor. Su objetivo en la selección de características sería identificar el número mínimo de columnas del origen de datos que son significativas para crear un modelo.  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34019192"
   
 |Algoritmo|Método de análisis|Comentarios|  
 |---------------|------------------------|--------------|  
-|Bayes naive|entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo Bayes naive de Microsoft solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
+|Bayes naive|Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo Bayes naive de Microsoft solo acepta atributos discretos o de datos discretos, por lo que no puede utilizar la puntuación interestingness.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Naive Bayes Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md).|  
 |Árboles de decisión|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Si alguna columna contiene valores continuos no binarios, se utiliza la puntuación interestingness (grado de interés) en todas las columnas para asegurar la coherencia. De lo contrario, se usa el método de selección de características predeterminado o el método que se haya especificado al crear el modelo.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Decision Trees Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md).|  
 |Red neuronal|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|El algoritmo de redes neuronales de Microsoft puede usar el método bayesiano y el método basado en la entropía, siempre y cuando los datos contengan columnas continuas.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md).|  
 |Regresión logística|Puntuación interestingness<br /><br /> Entropía de Shannon<br /><br /> Bayesiano con prioridad K2<br /><br /> Dirichlet bayesiano con prioridad uniforme (predeterminado)|Aunque el algoritmo de regresión logística de Microsoft se basa en el algoritmo de red neuronal de Microsoft, no se pueden personalizar los modelos de regresión logística para controlar el comportamiento de la selección de características; por lo tanto, la selección de características siempre usa de manera predeterminada el método más apropiado para el atributo.<br /><br /> Si todos los atributos son discretos o de datos discretos, el valor predeterminado es BDEU.<br /><br /> Para obtener más información acerca de este algoritmo, vea [Microsoft Logistic Regression Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md).|  

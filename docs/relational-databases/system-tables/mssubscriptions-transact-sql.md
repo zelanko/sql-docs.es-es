@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4b0c5d53519b09c9f30ccdf7e973e25e5a06a6a3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 51ab87c830d27a2749fdb332c5a13a5b5dd85542
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139711"
 ---
 # <a name="mssubscriptions-transact-sql"></a>MSsubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ ms.locfileid: "52823603"
 |**snapshot_seqno_flag**|**bit**|Indica el origen del número de secuencia de transacción de instantánea, el valor **1** significa que **subscription_seqno** es el número de secuencia de instantánea.|  
 |**independent_agent**|**bit**|Indica si hay un agente de distribución independiente para esta publicación.|  
 |**subscription_time**|**datetime**|Exclusivamente para uso interno.|  
-|**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **1** = no no volver a enviar.<br /><br /> **0** = las envía.<br /><br /> Nota: Esta columna solo se admite por compatibilidad con versiones anteriores con la funcionalidad de replicación bidireccional de [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para las versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe utilizar la replicación punto a punto en su lugar. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
-|**valor de agent_id**|**int**|Id. del agente.|  
+|**loopback_detection**|**bit**|Se aplica a las suscripciones que forman parte de una topología de replicación transaccional bidireccional. La detección de bucles de retorno determina si el Agente de distribución envía las transacciones originadas en el suscriptor al mismo suscriptor:<br /><br /> **1** = no no volver a enviar.<br /><br /> **0** = las envía.<br /><br /> Nota: Esta columna solo se admite para mantener la compatibilidad con la funcionalidad de replicación bidireccional en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. Para las versiones posteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se debe utilizar la replicación punto a punto en su lugar. Para obtener más información, consulte [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).|  
+|**agent_id**|**int**|Id. del agente.|  
 |**update_mode**|**tinyint**|Tipo de actualización.|  
 |**publisher_seqno**|**varbinary (16)**|Número de secuencia de la transacción en el publicador de esta suscripción.|  
 |**ss_cplt_seqno**|**varbinary (16)**|El número de secuencia utilizado para indicar el término del procesamiento de instantáneas simultáneas.|  

@@ -1,5 +1,5 @@
 ---
-title: Diseñar agregaciones (Analysis Services - Multidimensional) | Documentos de Microsoft
+title: Diseñar agregaciones (Analysis Services - Multidimensional) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c720b45a0ac674282ad78bafd5dcd67bba8b60cc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021071"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178284"
 ---
 # <a name="designing-aggregations-analysis-services---multidimensional"></a>Diseñar agregaciones (Analysis Services - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -39,6 +39,6 @@ ms.locfileid: "34021071"
  El paso final del asistente le permitirá realizar el procesamiento o aplazarlo. El procesamiento crea las agregaciones que se han diseñado con el asistente, mientras que el aplazamiento guarda las agregaciones diseñadas para procesarlas en el futuro, permitiendo de esta manera que continúen las actividades de diseño sin tener que realizar el procesamiento. En función del tamaño de la partición, el procesamiento podría prolongarse considerablemente. Si lo elige, puede interrumpir el procesamiento de una partición.  
   
 ## <a name="see-also"></a>Vea también  
- [Las agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
+ [Agregaciones y diseños de agregaciones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md)  
   
   

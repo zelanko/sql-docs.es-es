@@ -1,5 +1,5 @@
 ---
-title: Traducciones en modelos tabulares (Analysis Services) | Documentos de Microsoft
+title: Traducciones en modelos tabulares (Analysis Services) | Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044179"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162399"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>Traducciones en modelos tabulares (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agrega compatibilidad con la cadena de traducción para los modelos tabulares. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
+  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Agrega compatibilidad con cadenas de traducción para los modelos tabulares. Un único objeto del modelo puede tener varias traducciones de un nombre o una descripción, lo que hace posible admitir varios idiomas dentro de la definición del modelo.  
   
  Las cadenas traducidas solo son para los metadatos de objeto (nombres y descripciones de tablas y columnas) que aparecen en una herramienta de cliente, como una lista de tabla dinámica de Excel.  Para utilizar cadenas traducidas, la conexión de cliente especifica la referencia cultural. En la característica **Análisis en Excel** , puede seleccionar el idioma de una lista desplegable. En otras herramientas, es posible que tenga que especificar la referencia cultural en la cadena de conexión.  
   

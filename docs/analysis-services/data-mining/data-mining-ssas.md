@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 163314576f609d6fc34ba55b05eff841d1361182
-ms.sourcegitcommit: 1c01af5b02fe185fd60718cc289829426dc86eaa
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54185101"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210115"
 ---
 # <a name="data-mining-ssas"></a>Minería de datos (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,15 +38,15 @@ ms.locfileid: "54185101"
   
 -   Varios algoritmos personalizables: Además de proporcionar algoritmos como la agrupación en clústeres, redes neurales y árboles de decisión, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] minería de datos admite el desarrollo de sus propios algoritmos complementarios personalizados.  
   
--   Infraestructura de pruebas de modelos: pruebe los modelos y los conjuntos de datos usando herramientas estadísticas tan importantes como la validación cruzada, las matrices de clasificación, los gráficos de mejora respecto al modelo predictivo y los gráficos de dispersión. Cree y administre fácilmente conjuntos de prueba y entrenamiento.  
+-   Infraestructura de prueba de modelo: Probar sus modelos y conjuntos de datos usando herramientas estadísticas importantes como la validación cruzada, las matrices de clasificación, gráficos de elevación, y los gráficos de dispersión. Cree y administre fácilmente conjuntos de prueba y entrenamiento.  
   
 -   Consultas y obtención de detalles: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Minería de datos proporciona el lenguaje DMX para integrar consultas de predicción en las aplicaciones. También puede recuperar estadísticas detalladas y patrones de los modelos, y obtener detalles de datos de casos.  
   
--   Herramientas de cliente: además de los estudios de desarrollo y diseño proporcionados por SQL Server, puede usar los Complementos de minería de datos para Excel para crear, consultar y examinar modelos. O bien crear clientes personalizados, incluidos servicios web.  
+-   Herramientas de cliente: Además de los estudios de desarrollo y diseño proporcionados por SQL Server, puede usar los complementos minería de datos para Excel para crear, consultar y examinar los modelos. O bien crear clientes personalizados, incluidos servicios web.  
   
--   Compatibilidad con lenguaje de scripting y API administradas: Todos los objetos de minería de datos son totalmente programables. El scripting es posible mediante MDX, XMLA o las extensiones de PowerShell para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use el lenguaje DMX (Extensiones de minería de datos) para crear rápidamente consultas y scripts.  
+-   Compatibilidad de idioma de scripting y API administrada: Todos los objetos de minería de datos son totalmente programables. El scripting es posible mediante MDX, XMLA o las extensiones de PowerShell para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. Use el lenguaje DMX (Extensiones de minería de datos) para crear rápidamente consultas y scripts.  
   
--   Seguridad e implementación: proporciona seguridad basada en roles a través de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] e incluye permisos independientes para obtener detalles de modelos y datos de estructura. Fácil implementación de modelos en otros servidores, de forma que los usuarios puedan tener acceso a los patrones o realizar predicciones.  
+-   Seguridad e implementación: Proporciona seguridad basada en roles mediante [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluidos permisos distintos para la obtención de detalles en el modelo y estructura de datos. Fácil implementación de modelos en otros servidores, de forma que los usuarios puedan tener acceso a los patrones o realizar predicciones.  
   
 ## <a name="in-this-section"></a>En esta sección  
  Los temas de esta sección presentan las características principales de la minería de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las tareas relacionadas.  

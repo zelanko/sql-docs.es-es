@@ -1,5 +1,5 @@
 ---
-title: ssbdiagnose (Service Broker) de la utilidad | Microsoft Docs
+title: Utilidad ssbdiagnose (Service Broker) | Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -26,11 +26,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 323ccf41b5285f4bc395223025ea164a330c28a8
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823689"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211006"
 ---
 # <a name="ssbdiagnose-utility-service-broker"></a>utilidad ssbdiagnose (Service Broker)
   La utilidad **ssbdiagnose** informa de la existencia de problemas en las conversaciones de [!INCLUDE[ssSB](../../includes/sssb-md.md)] o en la configuración de los servicios de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Las comprobaciones de la configuración se pueden realizar en dos servicios o en un único servicio. La existencia de problemas se indica en la ventana del símbolo del sistema en forma de texto legible, o como XML con formato que se puede redirigir a un archivo o a otro programa.  
@@ -116,7 +116,7 @@ ms.locfileid: "52823689"
  **-IGNORE** *error_id*  
  Especifica que los errores o los mensajes con el *error_id* especificado no se deben incluir en los informes. Puede especificar **-IGNORE** varias veces para suprimir varios identificadores de mensaje.  
   
- **\<baseconnectionoptions >**  
+ **\<baseconnectionoptions>**  
  Especifica la información de conexión base que se usa en **ssbdiagnose** cuando no se incluyen opciones de conexión en una cláusula determinada. La información de conexión proporcionada en una cláusula específica invalida la información de **baseconnectionoption** . Este proceso se realiza para cada parámetro de forma individual. Por ejemplo, si tanto **-S** como **-d** se especifican en **baseconnetionoptions**y solo se especifica **-d** en **toconnetionoptions**, **ssbdiagnose** usará -S de **baseconnetionoptions** y -d de **toconnetionoptions**.  
   
  **CONFIGURATION**  
@@ -125,7 +125,7 @@ ms.locfileid: "52823689"
  **FROM SERVICE** *service_name*  
  Especifica el servicio que inicia las conversaciones.  
   
- **\<fromconnectionoptions >**  
+ **\<fromconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos que contiene el servicio del iniciador. Si no se especifica **fromconnectionoptions** , **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos del iniciador. Si se especifica **fromconnectionoptions** , se debe incluir la base de datos que contiene el servicio del iniciador. Si **fromconnectionoptions** no se especifica, **baseconnectionoptions** debe especificar la base de datos del iniciador.  
   
  **TO SERVICE** *service_name*[, *broker_id* ]  
@@ -141,13 +141,13 @@ FROM sys.databases
 WHERE database_id = DB_ID();  
 ```  
   
- **\<toconnectionoptions >**  
+ **\<toconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos que contiene el servicio de destino. Si **toconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos de destino.  
   
  **MIRROR**  
  Especifica que el servicio de [!INCLUDE[ssSB](../../includes/sssb-md.md)] asociado se hospeda en una base de datos reflejada. **ssbdiagnose** comprueba que la ruta al servicio es una ruta reflejada, donde se ha especificado MIRROR_ADDRESS en CREATE ROUTE.  
   
- **\<mirrorconnectionoptions >**  
+ **\<mirrorconnectionoptions>**  
  Especifica la información requerida para conectar con la base de datos reflejada. Si no se especifica **mirrorconnectionoptions** , **ssbdiagnose** usa la información de conexión de **baseconnectionoptions** para conectarse a la base de datos reflejada.  
   
  **ON CONTRACT** *contract_name*  
@@ -156,11 +156,11 @@ WHERE database_id = DB_ID();
  **ENCRYPTION** { **ON** | **OFF** | **ANONYMOUS** }  
  Solicita que se compruebe si el diálogo está configurado correctamente para el nivel de cifrado especificado:  
   
- **ON**: Configuración predeterminada. Se ha configurado la seguridad de diálogo completa. Se han implementado los certificados en ambos extremos del diálogo, está presente un enlace de servicio remoto y la instrucción GRANT SEND para el servicio de destino especificó el usuario del iniciador.  
+ **ON**: valor predeterminado. Se ha configurado la seguridad de diálogo completa. Se han implementado los certificados en ambos extremos del diálogo, está presente un enlace de servicio remoto y la instrucción GRANT SEND para el servicio de destino especificó el usuario del iniciador.  
   
- **DESACTIVAR**: La seguridad de diálogo no está configurada. No se ha implementado ningún certificado, no se ha creado ningún enlace de servicio remoto y la instrucción GRANT SEND para el servicio del iniciador ha especificado el rol **public** .  
+ **OFF**: no se ha configurado la seguridad de diálogo. No se ha implementado ningún certificado, no se ha creado ningún enlace de servicio remoto y la instrucción GRANT SEND para el servicio del iniciador ha especificado el rol **public** .  
   
- **ANÓNIMO**: Se configura la seguridad de diálogo anónima. Se ha implementado un certificado, el enlace de servicio remoto ha especificado la cláusula anónima y la instrucción GRANT SEND del servicio de destino ha especificado el rol **public** .  
+ **ANONYMOUS**: se ha configurado la seguridad de diálogo anónima. Se ha implementado un certificado, el enlace de servicio remoto ha especificado la cláusula anónima y la instrucción GRANT SEND del servicio de destino ha especificado el rol **public** .  
   
  **RUNTIME**  
  Solicita un informe de los problemas que provocan errores en tiempo de ejecución en una conversación de [!INCLUDE[ssSB](../../includes/sssb-md.md)] . Si no se especifican **-NEW** ni **-ID** , **ssbdiagnose** supervisa todas las conversaciones en todas las bases de datos especificadas en las opciones de conexión. Si se especifican **-NEW** o **-ID** , **ssbdiagnose** genera una lista de los identificadores especificados en los parámetros.  
@@ -200,9 +200,9 @@ WHERE database_id = DB_ID();
  Los identificadores de conversación se presentan en el `conversation_id` columna de la **sys.conversation_endpoints** vista de catálogo.  
   
  **-TIMEOUT** *timeout_interval*  
- Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera.**-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
+ Especifica el número de segundos durante los que se debe ejecutar un informe **RUNTIME** . Si no se especifica **-TIMEOUT** , el informe RUNTIME se ejecuta de forma indefinida. **-TIMEOUT** solo se usa en informes **RUNTIME** , no en informes **CONFIGURATION** . Use CTRL+C para salir de **ssbdiagnose** si no se ha especificado **-TIMEOUT** o si quiere finalizar un informe RUNTIME antes de que expire el intervalo de tiempo de espera. **-** *timeout_interval* debe ser un número comprendido entre 1 y 2 147 483 647.  
   
- **\<runtimeconnectionoptions >**  
+ **\<runtimeconnectionoptions>**  
  Especifica la información de conexión para las bases de datos que contienen los servicios asociados a los elementos de conversación que se están supervisando. Si todos los servicios se encuentran en la misma base de datos, solo es necesario especificar una cláusula **CONNECT TO** . Por el contrario, si los servicios se encuentran en bases de datos independientes, será necesario especificar una cláusula **CONNECT TO** para cada base de datos. Si **runtimeconnectionoptions** no se especifica, **ssbdiagnose** usa la información de conexión de **baseconnectionoptions**.  
   
  **-E**  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 00752573-3367-41a7-af98-7b7a29e8e2f2
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 3a7446027be3ec8df4d3ff35a2b806ffdda6f8f8
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3bad8ec68ddeccd9ad8082b4f7b98422780581b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67585684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118550"
 ---
 # <a name="deploying-clr-database-objects"></a>Implementar objetos de base de datos de CLR
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,11 +94,11 @@ ms.locfileid: "67585684"
   
 4.  En el **elegir opciones de Script** panel, haga clic en **siguiente**, o cambiar las opciones y, a continuación, haga clic en **siguiente**.  
   
-5.  En el **elegir tipos de objeto** panel, elija el tipo de objeto de base de datos para su implementación. Haga clic en **Siguiente**.  
+5.  En el **elegir tipos de objeto** panel, elija el tipo de objeto de base de datos para su implementación. Haga clic en **Next**.  
   
 6.  Para cada tipo de objeto seleccionado en el **elegir tipos de objeto** panel, un **elegir \<tipo >** se presenta el panel. En este panel, puede elegir entre todas las instancias de ese tipo de objeto de base de datos registradas en la base de datos especificada. Seleccione uno o más objetos y haga clic en **siguiente**.  
   
-7.  El **opciones de salida** panel aparece cuando todos los de la base de datos deseada se han seleccionado los tipos de objeto. Seleccione **generar Script en archivo** y especifique una ruta de acceso de la secuencia de comandos. Seleccione **Siguiente**. Revise las selecciones y haga clic en **finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
+7.  El **opciones de salida** panel aparece cuando todos los de la base de datos deseada se han seleccionado los tipos de objeto. Seleccione **generar Script en archivo** y especifique una ruta de acceso de la secuencia de comandos. Seleccione **Next** (Siguiente). Revise las selecciones y haga clic en **finalizar**. El script de implementación se guardará en la ruta de acceso de archivo especificada.  
   
 ## <a name="post-deployment-scripts"></a>Scripts posteriores a la implementación  
  Puede ejecutar un script posterior a la implementación.  

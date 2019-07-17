@@ -1,5 +1,5 @@
 ---
-title: Explorar datos en una vista del origen de datos (Analysis Services) | Documentos de Microsoft
+title: Explorar datos en una vista del origen de datos (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4a7cb3d9895c7524bf0517270b50ac7830774dd9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026842"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177804"
 ---
 # <a name="explore-data-in-a-data-source-view-analysis-services"></a>Explorar datos en una vista del origen de datos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

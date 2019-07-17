@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135835"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212053"
 ---
 # <a name="view-and-modify-publication-properties"></a>Ver y modificar propiedades de publicación
   En este tema se describe cómo ver y modificar las propiedades de publicación en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO).  
@@ -55,7 +55,7 @@ ms.locfileid: "54135835"
 -   Una vez creada una publicación, algunos cambios de las propiedades requieren una nueva instantánea. Si una publicación tiene suscripciones, algunos cambios también requieren reinicializar todas las suscripciones. Para más información, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos) y [Add Articles to and Drop Articles from Existing Publications](add-articles-to-and-drop-articles-from-existing-publications.md) (Agregar y quitar artículos de publicaciones existentes).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Vea y modifique propiedades de publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, que está disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
+ Vea y modifique propiedades de publicación en el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , que está disponible en [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] y en el Monitor de replicación. Para información sobre cómo iniciar el Monitor de replicación, vea [Iniciar el Monitor de replicación](../monitor/start-the-replication-monitor.md).  
   
  En el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** se incluyen las páginas siguientes:  
   
@@ -109,7 +109,7 @@ ms.locfileid: "54135835"
 1.  Ejecute [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql), especificando la propiedad de publicación que quiere cambiar en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio va a requerir que se genere una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot**y si el cambio va a requerir que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio va a requerir que se genere una nueva instantánea, también debe especificar el valor **1** para **@force_invalidate_snapshot** y si el cambio va a requerir que se reinicialicen los suscriptores, debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, necesitan una nueva instantánea o una reinicialización, [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>Para ver las propiedades de una publicación de combinación  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135835"
 1.  Ejecute [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql), especificando la propiedad de publicación que se está cambiando en el parámetro **@property** y el nuevo valor de esta propiedad en el parámetro **@value** .  
   
     > [!NOTE]  
-    >  Si el cambio va a requerir que se genere una nueva instantánea, también se debe especificar el valor **1** para **@force_invalidate_snapshot**, y si el cambio va a requerir que se reinicialicen suscriptores, se debe especificar el valor **1** para **@force_reinit_subscription**. Para más información sobre las propiedades que, cuando se cambian, requieren una nueva instantánea o reinicialización, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
+    >  Si el cambio va a requerir que se genere una nueva instantánea, también se debe especificar el valor **1** para **@force_invalidate_snapshot** , y si el cambio va a requerir que se reinicialicen suscriptores, se debe especificar el valor **1** para **@force_reinit_subscription** . Para más información sobre las propiedades que, cuando se cambian, requieren una nueva instantánea o reinicialización, vea [Change Publication and Article Properties](change-publication-and-article-properties.md) (Cambiar las propiedades de la publicación y de los artículos).  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>Para ver las propiedades de una instantánea  
   
@@ -193,7 +193,7 @@ ms.locfileid: "54135835"
  [Make Schema Changes on Publication Databases](make-schema-changes-on-publication-databases.md)  (Realizar cambios de esquema en bases de datos de publicaciones)  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Agregar y quitar artículos de una publicación](add-articles-to-and-drop-articles-from-a-publication.md)   
- [Ver información y realizar tareas con el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [Visualización de información y realización de tareas mediante el Monitor de replicación](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
  [er y modificar las propiedades de un artículo](view-and-modify-article-properties.md)  
   
   

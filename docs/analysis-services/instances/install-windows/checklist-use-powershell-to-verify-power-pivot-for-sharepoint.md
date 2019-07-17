@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 46cfdd9075bd950b287bef399ca3a505a1261f5d
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087834"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181599"
 ---
-# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de comprobación: Usar PowerShell para comprobar PowerPivot para SharePoint
+# <a name="checklist-use-powershell-to-verify-power-pivot-for-sharepoint"></a>Lista de comprobación: Uso de PowerShell para comprobar PowerPivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   Ninguna operación de instalación o recuperación de [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] está completa sin un paso sólido de comprobación que confirme que los servicios y los datos son operativos. En este artículo, le mostramos cómo realizar estos pasos con Windows PowerShell. Cada paso tiene su propia sección para que pueda ir directamente a determinadas tareas. Por ejemplo, ejecute el script de la sección [Bases de datos](#bkmk_databases) de este tema para comprobar el nombre de la aplicación de servicio y las bases de datos de contenido si desea programar su mantenimiento o copia de seguridad.  
   
@@ -30,7 +30,7 @@ ms.locfileid: "55087834"
   
  Abra una ventana de Powershell o ISE (Entorno de scripting integrado) de PowerShell con **privilegios administrativos**. Si no tiene privilegios administrativos al ejecutar comandos, verá un mensaje de error similar al siguiente:  
   
- Get-SPLogEvent : Debe tener el equipo **privilegios de administrador** para ejecutar este cmdlet.  
+ Get-SPLogEvent: Debe tener el equipo **privilegios de administrador** para ejecutar este cmdlet.  
   
  **SharePoint y módulo [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)]**  
   
@@ -48,7 +48,7 @@ Add-PSSnapin Microsoft.Sharepoint.Powershell -EA 0
   
 |||  
 |-|-|  
-|![PowerPivot en el conjunto de aplicaciones generales de sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot en el conjunto de aplicaciones generales de sharepoint")|Si lo desea, puede comprobar la mayoría de los componentes en Administración central, con el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir el panel en Administración central, haga clic en **Configuración de aplicación general**y luego haga clic en **Panel de administración** en **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]**. Para obtener más información sobre el panel, vea [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
+|![PowerPivot en el conjunto de aplicaciones generales de sharepoint](../../../analysis-services/instances/install-windows/media/ssas-powerpivot-logo.png "powerpivot en el conjunto de aplicaciones generales de sharepoint")|Si lo desea, puede comprobar la mayoría de los componentes en Administración central, con el panel de administración de [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] . Para abrir el panel en Administración central, haga clic en **Configuración de aplicación general**y luego haga clic en **Panel de administración** en **[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]** . Para obtener más información sobre el panel, vea [Power Pivot Management Dashboard and Usage Data](../../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md).|  
   
 ##  <a name="bkmk_symptoms"></a> Síntomas y acciones recomendadas  
  En la tabla siguiente se muestra una lista de síntomas o problemas y la sección sugerida de este tema que puede consultar para resolver el problema.  
@@ -273,7 +273,7 @@ MidTierAcctReadPermissionRule    True PowerPivot: MidTier process account should
   
  El comando siguiente buscará en el registro de eventos de Windows los eventos relacionados con la instancia de [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] en modo de SharePoint. Para obtener información sobre cómo deshabilitar eventos o cambiar el nivel de eventos, vea [configurar y ver archivos de registro de SharePoint y el registro de diagnóstico &#40;Power Pivot para SharePoint&#41;](../../../analysis-services/power-pivot-sharepoint/configure-and-view-sharepoint-and-diagnostic-logging.md)
  
- **Nombre de servicio:** MSOLAP$POWERPIVOT  
+ **Nombre de servicio:** MSOLAP$ POWERPIVOT  
   
  **Nombre para mostrar los servicios de Windows:** SQL Server Analysis Services (POWERPIVOT)  
   

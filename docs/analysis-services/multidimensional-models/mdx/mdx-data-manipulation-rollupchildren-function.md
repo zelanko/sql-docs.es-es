@@ -1,5 +1,5 @@
 ---
-title: Trabajar con la función RollupChildren (MDX) | Documentos de Microsoft
+title: Trabajar con la función RollupChildren (MDX) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 135ab6e43a0b751639bd1ce1d93bf2183039f713
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024107"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208774"
 ---
-# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulación de datos MDX - RollupChildren, función
+# <a name="mdx-data-manipulation---rollupchildren-function"></a>Manipulación de datos MDX: función RollupChildren
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   La función MDX (expresiones multidimensionales) [RollupChildren](../../../mdx/rollupchildren-mdx.md) acumula los elementos secundarios de un miembro con la aplicación de un operador unario diferente a cada elemento secundario y devuelve el valor de este resumen como un número. El operador unario utilizado puede ser proporcionado mediante una propiedad de miembro asociada al miembro secundario, o bien puede ser una expresión de cadena proporcionada directamente a la función.  
   
@@ -68,6 +68,6 @@ RollupChildren([Net Sales], IIf([Net Sales].CurrentMember.Properties("UNARY_OPER
  La instrucción MDX examina el operador unario del miembro secundario. Si el operador unario se usa para una resta (como sucede con los miembros de los valores nacionales y extranjeros devueltos), la función **IIf** sustituye al operador unario tilde (~). De lo contrario, la función **IIf** utiliza el operador unario del miembro secundario. Finalmente, el total de resumen devuelto se multiplica por 1.1 para proporcionar el valor de predicción de las ventas brutas domésticas y extranjeras.  
   
 ## <a name="see-also"></a>Vea también  
- [Manipulación de datos & #40; MDX & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
+ [Manipular datos &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-data-manipulation-manipulating-data.md)  
   
   

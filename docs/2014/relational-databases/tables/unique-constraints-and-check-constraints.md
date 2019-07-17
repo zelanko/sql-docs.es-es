@@ -14,11 +14,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2a8dfd7da9bb1ccc60d18e68ccbe4930a6edb00d
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52772287"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196673"
 ---
 # <a name="unique-constraints-and-check-constraints"></a>Restricciones UNIQUE y restricciones CHECK
   Las restricciones UNIQUE y las restricciones CHECK son dos tipos de restricciones que se pueden usar para exigir la integridad de los datos en las tablas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Se trata de objetos de base de datos importantes.  

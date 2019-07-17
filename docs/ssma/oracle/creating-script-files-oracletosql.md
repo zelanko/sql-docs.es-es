@@ -13,22 +13,22 @@ helpviewer_keywords:
 ms.assetid: 55e5bc68-3040-4f07-bb00-0408a17c9821
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: fe8dd1ebcc6604b8cff514cff3628abc23275517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a4ee7047e2c517f05f311bf4e842f8f4c64ca8fe
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287246"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264243"
 ---
 # <a name="creating-script-files-oracletosql"></a>Creación de archivos de script (OracleToSQL)
 El primer paso antes de iniciar la aplicación de consola SSMA crear el archivo de script y si es necesario crear el archivo de valor de la variable y el archivo de conexión de servidor.  
   
 El archivo de script puede dividirse en tres secciones viz..,:  
   
-1.  **config:** Permite al usuario establecer los parámetros de configuración para la aplicación de consola.  
+1.  **configuración:** Permite al usuario establecer los parámetros de configuración para la aplicación de consola.  
   
-2.  **servers:** Permite al usuario establecer el origen o destino de las definiciones de servidor. Esto también puede estar en un archivo de conexión de servidor independiente.  
+2.  **servidores:** Permite al usuario establecer el origen o destino de las definiciones de servidor. Esto también puede estar en un archivo de conexión de servidor independiente.  
   
 3.  **script-commands:** Permite al usuario ejecutar comandos de flujo de trabajo SSMA.  
   
@@ -45,7 +45,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   destino: Especifica si la salida se debe imprimir a un archivo o stdout. Se trata de un valor predeterminado es false.  
   
-    -   file-name: La ruta de acceso del archivo (opcional).  
+    -   nombre de archivo: La ruta de acceso del archivo (opcional).  
   
     -   Suprimir-messages: Suprime los mensajes en la consola. Esto es 'false', de forma predeterminada.  
   
@@ -152,7 +152,7 @@ Las opciones configurables por el usuario incluyen:
   
     Los modos de reconexión son:  
   
-    -   reconnect-to-last-used-server: Si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa como máximo 5 veces.  
+    -   volver a conectarse a último-usar-servidor: Si la conexión no está activa, intenta volver a conectarse hasta el último servidor que se usa como máximo 5 veces.  
   
     -   generar una-error: Si la conexión no está activa, se genera un error.  
   
@@ -200,11 +200,11 @@ Las opciones configurables por el usuario incluyen:
   
     -   error: La consola muestra un error y detiene la ejecución.  
   
-    -   overwrite: Sobrescribe los valores de objeto existentes. Esta acción se realiza de forma predeterminada.  
+    -   sobrescribir: Sobrescribe los valores de objeto existentes. Esta acción se realiza de forma predeterminada.  
   
     -   Omitir: La consola omite los objetos que ya existen en la base de datos  
   
-    -   ask-user: Pide al usuario para la entrada ("Sí" o "no")  
+    -   usuario preguntar: Pide al usuario para la entrada ("Sí" o "no")  
   
     **Ejemplo:**  
   
@@ -294,7 +294,7 @@ Las opciones configurables por el usuario incluyen:
   
     -   Advertencia: Todos los niveles, salvo que se registran los mensajes de depuración e información.  
   
-    -   info: Se registran todos los niveles, excepto los mensajes de depuración.  
+    -   información: Se registran todos los niveles, excepto los mensajes de depuración.  
   
     -   Depurar: Todos los niveles de los mensajes registrados.  
   

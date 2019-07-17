@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 116a41ac2eca1f69a98391c9018b8623a10f6047
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129625"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196845"
 ---
 # <a name="modify-foreign-key-relationships"></a>Modificar relaciones de claves externas.
   Puede modificar el lado de clave externa de una relación en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. Modificar los cambios de clave externa de una tabla cuyas columnas están relacionadas con las columnas de la tabla de clave principal.  
@@ -53,7 +53,7 @@ ms.locfileid: "54129625"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -82,7 +82,7 @@ ms.locfileid: "54129625"
      Comprueba con la restricción todos los datos que había en la tabla antes de crear o habilitar de nuevo la restricción.  
   
      **Especificación de tablas y columnas (Categoría)**  
-     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos (**...**) situado a la derecha del campo de propiedad.  
+     Se expande para mostrar qué columnas actúan como clave externa y principal (o única) en la relación y a qué tablas pertenecen. Para editar o definir estos valores, haga clic en el botón de puntos suspensivos ( **...** ) situado a la derecha del campo de propiedad.  
   
      **Tabla base de clave externa**  
      Muestra la tabla que contiene la columna que actúa como clave externa en la relación seleccionada.  

@@ -15,11 +15,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: aac0c6b837fcd25b0e1f06344a2745c68b05dea3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206036"
 ---
 # <a name="execute-t-sql-statement-task-maintenance-plan"></a>Tarea Ejecutar instrucción T-SQL (Plan de mantenimiento)
   Use el cuadro de diálogo **Tarea Ejecutar instrucción T-SQL** para personalizar el plan de mantenimiento agregando las instrucciones [!INCLUDE[tsql](../../includes/tsql-md.md)] que quiera a este plan de mantenimiento.  
@@ -28,7 +28,7 @@ ms.locfileid: "52763637"
  **Conexión**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
  **Tiempo de espera de ejecución**  

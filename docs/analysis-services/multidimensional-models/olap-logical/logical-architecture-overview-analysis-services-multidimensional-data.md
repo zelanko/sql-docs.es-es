@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aca12552338eb05549199b22af3a63e9f4b4a101
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579445"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208634"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>Información general de arquitectura lógica (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -86,7 +86,7 @@ ms.locfileid: "57579445"
 |||3rd quarter|6119|1444|4675|Sep-30-99|Sep-18-99|Sep-30-99|  
 |||4th quarter|7818|2126|5692|DEC-29-99|DEC-22-99|DEC-29-99|  
   
- Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:**[agregaciones y diseños de agregaciones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
+ Una vez definido un cubo, se pueden crear agregaciones o cambiar agregaciones existentes para establecer opciones, como que las agregaciones se precalculen durante el procesamiento o se calculen en el momento de la consulta. **Tema relacionado:** [agregaciones y diseños de agregaciones](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  
   
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>Asignar medidas, atributos y jerarquías  
  Las medidas, los atributos y las jerarquías del cubo del ejemplo se derivan de las siguientes columnas de las tablas de dimensiones y de hechos del cubo.  
@@ -98,7 +98,7 @@ ms.locfileid: "57579445"
 |Nivel Route Category en la dimensión Route|nonground,ground|RouteDimensionTable|Route_Category|Nonground|  
 |Atributo Route en la dimensión Route|air,sea,road,rail|RouteDimensionTable|Ruta|Sea|  
 |Atributo Hemisphere en la dimensión Source|Eastern Hemisphere,Western Hemisphere|SourceDimensionTable|Hemisphere|Eastern Hemisphere|  
-|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEurope,N. America,S. America|SourceDimensionTable|Continente|Europe|  
+|Atributo Continent en la dimensión Source|Africa,Asia,AustraliaEurope,N. America,S. América|SourceDimensionTable|Continente|Europa|  
 |Atributo Half en la dimensión Time|1st half,2nd half|TimeDimensionTable|Half|2nd half|  
 |Atributo Quarter en la dimensión Time|1st quarter,2nd quarter,3rd quarter,4th quarter|TimeDimensionTable|Trimestre|3rd quarter|  
   
@@ -116,9 +116,9 @@ ms.locfileid: "57579445"
   
  En la tabla anterior, cada fila tiene los mismos valores para el **RouteKey**, **SourceKey**, y **TimeKey** columnas, que indica que dichas filas contribuyen a la misma celda del cubo.  
   
- En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:**[dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
+ En este ejemplo se representa un cubo muy sencillo, en donde el cubo tiene un solo grupo de medida y todas las tablas de dimensiones se combinan en la tabla de hechos en un esquema en estrella. Otro esquema común es el esquema de copo de nieve, en el que una o más tablas de dimensiones se combinan con otra tabla de dimensiones, en lugar de combinarse directamente con la tabla de hechos. **Tema relacionado:** [dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md).  
   
- Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:**[relaciones de dimensión](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
+ Este ejemplo contiene una sola tabla de hechos. Cuando un cubo tiene varias tablas de hechos, las medidas de cada tabla de hechos se organizan en grupos de medida y un grupo de medida se relaciona con un determinado conjunto de dimensiones mediante relaciones de dimensiones definidas. Estas relaciones se definen mediante la especificación de las tablas participantes en la vista del origen de datos y la granularidad de la relación. **Tema relacionado:** [relaciones de dimensión](../../../analysis-services/multidimensional-models-olap-logical-cube-objects/dimension-relationships.md).  
   
 ## <a name="see-also"></a>Vea también  
  [Bases de datos de modelo multidimensional](../../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)  

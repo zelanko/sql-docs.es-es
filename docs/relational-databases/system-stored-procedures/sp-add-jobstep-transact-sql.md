@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 112afe8f7a8eaea87c860264c820c874788cbc7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6a3551716ad6841a7ed14c92afd4ae96d3cc297b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500358"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140489"
 ---
 # <a name="spaddjobstep-transact-sql"></a>sp_add_jobstep (Transact-SQL)
 

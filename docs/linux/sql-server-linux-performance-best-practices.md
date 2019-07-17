@@ -4,17 +4,16 @@ description: En este artículo se proporcionan instrucciones y procedimientos re
 author: rgward
 ms.author: bobward
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/14/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d82ee87f0911ab6e47a9537e035e522b062a699c
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 543488eada46a088f3c634ce2326c7e2db2a97a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105440"
 ---
 # <a name="performance-best-practices-and-configuration-guidelines-for-sql-server-on-linux"></a>Procedimientos recomendados e instrucciones de configuración de SQL Server en Linux
 
@@ -74,7 +73,7 @@ En la tabla siguiente proporciona recomendaciones para la configuración de disc
 | Parámetro | Valor | Más información |
 |---|---|---|
 | lectura anticipada del disco | 4096 | Consulte la **blockdev** comando |
-| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>vm.swappiness=10 | Consulte la **sysctl** comando |
+| configuración de sysctl | kernel.sched_min_granularity_ns = 10000000<br/>kernel.sched_wakeup_granularity_ns = 15000000<br/>vm.dirty_ratio = 40<br/>vm.dirty_background_ratio = 10<br/>VM.swappiness = 10 | Consulte la **sysctl** comando |
 
 ### <a name="kernel-setting-auto-numa-balancing-for-multi-node-numa-systems"></a>Kernel configuración automática numa equilibrio para sistemas de varios nodos NUMA
 
@@ -100,7 +99,7 @@ Use la **opción noatime tal** atributo con cualquier sistema de archivos que se
 
 La mayoría de las instalaciones de Linux deben tener esta opción en forma predeterminada. Se recomienda para que la experiencia de rendimiento más coherente dejar esta opción de configuración habilitada.
 
-### <a name="swapfile"></a>swapfile
+### <a name="swapfile"></a>archivo de intercambio
 
 Asegúrese de que tener un archivo de intercambio configurado correctamente para evitar cualquier problemas de memoria insuficiente. Consulte la documentación de Linux para crear y ajustar correctamente el tamaño de un archivo de intercambio.
 

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c962c619-e18f-4315-9251-8d9862462299
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 85e5f78e6096c2a860e376c72947f149b1cf8ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e55274d1e6dfa34a3cfb92317bb4f205cfdd964
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668414"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109571"
 ---
 # <a name="syscomputedcolumns-transact-sql"></a>sys.computed_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62668414"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**\<hereda columnas >**||El **sys.computed_columns** vista devuelve todas las columnas de la **sys.columns** vista. También devuelve las columnas adicionales descritas a continuación. Para obtener una descripción de las columnas que el **sys.computed_columns** vista se hereda de **sys.columns**, consulte [sys.columns &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md). El valor de la **is_computed** columna siempre se establece en 1 en el **sys.computed_columns** vista.|  
-|**definition**|**nvarchar(max)**|Texto SQL que define esta columna calculada.|  
+|**Definición**|**nvarchar(max)**|Texto SQL que define esta columna calculada.|  
 |**uses_database_collation**|**bit**|1 = La definición de columna depende de la intercalación predeterminada de la base de datos para su correcta evaluación; de lo contrario, 0. Esta dependencia evita el cambio de la intercalación predeterminada de la base de datos.|  
 |**is_persisted**|**bit**|Se almacena la columna calculada.|  
   

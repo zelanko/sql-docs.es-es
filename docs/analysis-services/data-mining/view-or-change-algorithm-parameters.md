@@ -1,5 +1,5 @@
 ---
-title: Ver o cambiar parámetros del algoritmo | Documentos de Microsoft
+title: Ver o cambiar parámetros del algoritmo | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 58b512d726d45a8ceabb76a4ce2b1e6c8c62815b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018222"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209560"
 ---
 # <a name="view-or-change-algorithm-parameters"></a>Ver o cambiar parámetros del algoritmo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34018222"
   
 -   Especificar un valor de inicialización o el tamaño del conjunto interno de exclusión que se utiliza para la creación del modelo.  
   
- Los parámetros proporcionados para cada algoritmo varían en gran medida. Para obtener una lista de los parámetros que se pueden establecer para cada algoritmo, vea los temas de referencia técnica de esta sección: [Algoritmos de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
+ Los parámetros proporcionados para cada algoritmo varían en gran medida; Para obtener una lista de los parámetros que se pueden establecer para cada algoritmo, vea los temas de referencia técnica de esta sección: [Algoritmos de minería de datos &#40;Analysis Services - minería de datos&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md).  
   
 ### <a name="change-an-algorithm-parameter"></a>Cambiar un parámetro de algoritmo  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34018222"
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)  
   
   

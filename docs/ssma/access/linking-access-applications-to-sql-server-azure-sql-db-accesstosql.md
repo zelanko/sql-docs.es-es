@@ -23,12 +23,12 @@ ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 20efdf681baa8305b3b2be08b2e9f3efe999d3fa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 115aa0db8e8d6f2fdc35718ccb60f1d0ed06b5c1
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760132"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259899"
 ---
 # <a name="linking-access-applications-to-sql-server---azure-sql-db-accesstosql"></a>Vinculación de aplicaciones de acceso a SQL Server: Azure SQL DB (AccessToSQL)
 Si desea usar las aplicaciones de Access existentes con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], puede vincular las tablas de Access originales a la que se migrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure. Vinculación modifica la base de datos de acceso para que las páginas de acceso a las consultas, formularios, informes y datos usan los datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o base de datos de SQL Azure en lugar de los datos de la base de datos de Access.  
@@ -107,7 +107,7 @@ Las siguientes secciones de problemas de la lista que se produzcan en aplicacion
   
 -   Las consultas que actualizan o eliminan el número de filas se envían por Jet como una consulta parametrizada para cada fila.  
   
-**Solución:** Convertir las consultas de ejecución lenta en vistas, procedimientos almacenados o consultas de paso a través. Convertir en consultas de paso tiene los siguientes problemas:  
+**Resolución:** Convertir las consultas de ejecución lenta en vistas, procedimientos almacenados o consultas de paso a través. Convertir en consultas de paso tiene los siguientes problemas:  
   
 -   No se puede modificar las consultas de paso a través. Modificar el resultado de la consulta o agregar nuevos registros debe realizarse en un procedimiento alternativo, como al tener explícita **modificar** o **agregar** botones en el formulario que está enlazado a la consulta.  
   
@@ -116,7 +116,7 @@ Las siguientes secciones de problemas de la lista que se produzcan en aplicacion
 ### <a name="auto-increment-columns-are-not-updated-until-the-record-is-updated"></a>Columnas de incremento automático no se actualizan hasta que se actualiza el registro  
 **Causa:** Después de llamar a RecordSet.AddNew de Jet, la columna de incremento automático está disponible antes de actualiza el registro. Esto no es cierto en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure. El nuevo valor del valor de columna de identidad nueva está disponible solo después de guardar el nuevo registro.  
   
-**Solución:** Ejecute el siguiente código Visual Basic para aplicaciones (VBA) antes de obtener acceso al campo de identidad:  
+**Resolución:** Ejecute el siguiente código Visual Basic para aplicaciones (VBA) antes de obtener acceso al campo de identidad:  
   
 ```  
 Recordset.Update  
@@ -129,29 +129,29 @@ Recordset.LastModified
   
 `Run-time error '3167' Record is deleted.`  
   
-**Solución:** Al abrir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure de la tabla mediante el uso de código de VBA, incluya el `dbSeeChanges` opción, como en el ejemplo siguiente:  
+**Resolución:** Al abrir el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o SQL Azure de la tabla mediante el uso de código de VBA, incluya el `dbSeeChanges` opción, como en el ejemplo siguiente:  
   
 `Set rs = db.OpenRecordset("TestTable", dbOpenDynaset, dbSeeChanges)`  
   
 ### <a name="after-migration-some-queries-will-not-allow-the-user-to-add-a-new-record"></a>Tras la migración, algunas consultas no permitirá al usuario agregar un nuevo registro  
 **Causa:** Si una consulta no incluye todas las columnas que se incluyen en un índice único, no se puede agregar nuevos valores mediante el uso de la consulta.  
   
-**Solución:** Asegúrese de que todas las columnas incluidas en al menos un índice único forman parte de la consulta.  
+**Resolución:** Asegúrese de que todas las columnas incluidas en al menos un índice único forman parte de la consulta.  
   
 ### <a name="you-cannot-modify-a-linked-table-schema-with-access"></a>No se puede modificar un esquema de tabla vinculada con acceso  
 **Causa:** Después de migrar los datos y tablas de vinculación, el usuario no puede modificar el esquema de una tabla de Access.  
   
-**Solución:** Modificar el esquema de tabla mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, actualice el vínculo de acceso.  
+**Resolución:** Modificar el esquema de tabla mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]y, a continuación, actualice el vínculo de acceso.  
   
 ### <a name="hyperlink-functionality-is-lost-after-migrating-data"></a>Se pierde la funcionalidad de hipervínculo después de migrar datos  
 **Causa:** Después de migrar datos, los hipervínculos en columnas pierden su funcionalidad y se convierten en simple **nvarchar (max)** columnas.  
   
-**Solución:** Ninguno.  
+**Resolución:** Ninguno.  
   
 ### <a name="some-sql-server-data-types-are-not-supported-by-access"></a>No se admiten algunos tipos de datos de SQL Server por acceso  
 **Causa:** Si más tarde actualiza su [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o tablas de SQL Azure para que contenga los tipos de datos que no son compatibles con el acceso, no se puede abrir la tabla en Access.  
   
-**Solución:** Puede definir una consulta de acceso que devuelve solo aquellas filas que contienen tipos de datos admitidos.  
+**Resolución:** Puede definir una consulta de acceso que devuelve solo aquellas filas que contienen tipos de datos admitidos.  
   
 ## <a name="see-also"></a>Vea también  
 [Migrar bases de datos de Access a SQL Server](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  

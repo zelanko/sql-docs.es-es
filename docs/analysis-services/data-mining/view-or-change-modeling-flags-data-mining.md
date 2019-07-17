@@ -1,5 +1,5 @@
 ---
-title: Ver o cambiar marcas de modelado (minería de datos) | Documentos de Microsoft
+title: Ver o cambiar marcas de modelado (minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e587be4fe975ee35752e668f9a5d49e0afdf4488
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015474"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182276"
 ---
 # <a name="view-or-change-modeling-flags-data-mining"></a>Ver o cambiar marcas de modelado (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "34015474"
     ```  
   
 ## <a name="see-also"></a>Vea también  
- [Tareas y tareas de modelo de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
- [Modelado marcas & #40; minería de datos & #41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
+ [Tareas y procedimientos de los modelos de minería de datos](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
+ [Marcas de modelado &#40;Minería de datos&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)  
   
   

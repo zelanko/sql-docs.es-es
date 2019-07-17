@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: a8ae33b2-1883-4785-922b-ea0e31c0b37a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 57d66d48591304d5481cb86c7418ed0ac27051db
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 97c34beb0cbe27e8d3c88b922690dc369fb7103b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62818930"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262988"
 ---
 # <a name="loading-converted-database-objects-into-sql-server-oracletosql"></a>Carga de objetos de base de datos convertidos en SQL Server (OracleToSQL)
 Después de convertir los esquemas de Oracle a SQL Server, puede cargar los objetos resultantes de la base de datos en SQL Server. Se puede tener SSMA crear los objetos, o puede incluir los objetos y ejecutar las secuencias de comandos usted mismo. Además, SSMA permite actualizar los metadatos de destino con el contenido real de la base de datos de SQL Server.  

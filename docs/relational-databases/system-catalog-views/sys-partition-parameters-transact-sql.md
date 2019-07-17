@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2012ed9d-3ea3-4c29-9b78-dfa54a392dce
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 464fc14c2dbb192fb5c06aee7c718cfec5806d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 32fe257f14c1e085a43b4150ee933888a83d5d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47791163"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125341"
 ---
 # <a name="syspartitionparameters-transact-sql"></a>sys.partition_parameters (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -39,8 +38,8 @@ ms.locfileid: "47791163"
 |**parameter_id**|**int**|Id. del parámetro. Es único en la función de partición y empieza por 1.|  
 |**system_type_id**|**tinyint**|Id. del tipo de sistema del parámetro. Corresponde a la **system_type_id** columna de la **sys.types** vista de catálogo.|  
 |**max_length**|**smallint**|Longitud máxima del parámetro en bytes.|  
-|**Precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
-|**Escala**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**precisión**|**tinyint**|Precisión del parámetro si está basado en numerales; de lo contrario es 0.|  
+|**scale**|**tinyint**|Escala del parámetro si está basado en numerales; de lo contrario es 0.|  
 |**collation_name**|**sysname**|Nombre de la intercalación del parámetro, si está basado en caracteres; en caso contrario, es NULL.|  
 |**user_type_id**|**int**|Id. del tipo. Es único en la base de datos. Tipos de datos del sistema, **user_type_id** = **system_type_id**.|  
   

@@ -1,5 +1,5 @@
 ---
-title: Agregar tipo de contenido de conexión de modelo semántico de BI a biblioteca | Documentos de Microsoft
+title: Agregar tipo de contenido de conexión de modelo semántico de BI a la biblioteca | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ce6afcf0a00473760a35a062f51ef3b87c5a75d4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208361"
 ---
-# <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Agregar tipo de contenido de conexión de modelo semántico de BI a biblioteca
+# <a name="add-bi-semantic-model-connection-content-type-to-library"></a>Agregar tipo de contenido de conexión de modelo semántico de BI a la biblioteca
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Se crea una conexión de modelo semántico de BI en SharePoint y proporciona redirección a los datos de modelo semántico de Business Intelligence en un libro de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] o una base de datos de modelo tabular de Analysis Services en un servidor de red. Para poder crear una conexión de modelo semántico de BI en SharePoint, debe ampliar una biblioteca de documentos para permitir la creación de un archivo .bism. Solo es necesario realizar este paso una vez para cada biblioteca, pero tendrá que repetirla con cualquier biblioteca a partir de la que desee crear archivos .bism. Es recomendable crear una biblioteca centralizada para almacenar los archivos .bism para poder administrar los permisos en un solo lugar.  
   
@@ -62,6 +62,6 @@ ms.locfileid: "34021372"
   
 ## <a name="see-also"></a>Vea también  
  [Conexión del modelo semántico de BI de PowerPivot &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Utilizar una conexión de modelo semántico de BI en Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
+ [Usar una conexión de modelo semántico de BI en Excel o Reporting Services](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: Información general sobre seguridad (minería de datos) | Documentos de Microsoft
+title: Información general sobre seguridad (minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8cf7958cdde480bf48c26dfed7e3056385439a4d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016892"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209692"
 ---
 # <a name="security-overview-data-mining"></a>Información general de Seguridad (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,13 +23,13 @@ ms.locfileid: "34016892"
 ##  <a name="bkmk_Architecture"></a> Arquitectura de seguridad  
  Consulte los siguientes recursos para obtener información acerca de la arquitectura de seguridad básica de una instancia de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], incluida la forma en que [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] utiliza la autenticación de Windows [!INCLUDE[msCoName](../../includes/msconame-md.md)] para autenticar el acceso de los usuarios.  
   
--   [Roles de seguridad & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
+-   [Roles de seguridad &#40;Analysis Services - Datos multidimensionales&#41;](../../analysis-services/multidimensional-models/olap-logical/security-roles-analysis-services-multidimensional-data.md)  
   
 -   [Propiedades de seguridad](../../analysis-services/server-properties/security-properties.md)  
   
--   [Configurar cuentas de servicio & #40; Analysis Services & #41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
+-   [Configurar las cuentas de servicio &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)  
   
--   [Autorización de acceso a objetos y operaciones & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
+-   [Cómo autorizar el acceso a objetos y operaciones &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/authorizing-access-to-objects-and-operations-analysis-services.md)  
   
 ##  <a name="bkmk_Logon"></a> Configurar la cuenta de inicio de sesión para Analysis Services  
  Debe seleccionar una cuenta de inicio de sesión adecuada para [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] y especificar los permisos para la cuenta. Debe asegurarse de que la cuenta de inicio de sesión de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solo tenga los permisos necesarios para realizar determinadas tareas, así como los permisos adecuados para los orígenes de datos subyacentes.  
@@ -54,6 +54,6 @@ ms.locfileid: "34016892"
  Si usa los paquetes de Integration Services para limpiar los datos, actualizar los modelos de minería de datos o realizar predicciones, debe asegurarse de que el servicio Integration Services tiene los permisos adecuados en la base de datos donde se almacena el modelo y en los datos de origen.  
   
 ## <a name="see-also"></a>Vea también  
- [Roles y permisos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
+ [Roles y permisos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/roles-and-permissions-analysis-services.md)  
   
   

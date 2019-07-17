@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0c6fe4cb-d846-40b5-8884-35a9c770f5e8
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 800ec59fb837b167b1bcbffc61ddf7e8ce695849
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d8cbdd195f698090602b98cdb6e5bab0a86556ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47641795"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216411"
 ---
 # <a name="context-connections-and-regular-connections---restrictions"></a>Conexiones de contexto y conexiones normales: restricciones
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "47641795"
 ## <a name="restrictions-on-regular-connections"></a>Restricciones en conexiones normales  
  Al desarrollar su aplicación, tenga en cuenta las siguientes restricciones que se aplican a las conexiones normales:  
   
--   No se admite la ejecución de comandos asincrónica en servidores internos. Incluido "async = true" en la cadena de conexión de un comando y, a continuación, ejecutar el comando, da como resultado **System.NotSupportedException** producida. Aparece este mensaje: "No se admite el procesamiento asincrónico  al ejecutar el proceso de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]".  
+-   No se admite la ejecución de comandos asincrónica en servidores internos. Incluido "async = true" en la cadena de conexión de un comando y, a continuación, ejecutar el comando, da como resultado **System.NotSupportedException** producida. Aparece este mensaje: "No se admite el procesamiento asincrónico cuando se ejecuta en el [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] proceso."  
   
 -   **SqlDependency** objeto no es compatible.  
   

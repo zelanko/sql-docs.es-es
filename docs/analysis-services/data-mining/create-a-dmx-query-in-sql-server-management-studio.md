@@ -1,5 +1,5 @@
 ---
-title: Crear una consulta DMX en SQL Server Management Studio | Documentos de Microsoft
+title: Crear una consulta DMX en SQL Server Management Studio | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9842dd19b9f613c7b10c86e3596ddda96a99f59b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014572"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183989"
 ---
 # <a name="create-a-dmx-query-in-sql-server-management-studio"></a>Crear una consulta DMX en SQL Server Management Studio
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en modelos de minería de datos y estructuras de minería de datos de.  
+  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de características para ayudarle a crear consultas de predicción, consultas de contenido y consultas de definición de datos en los modelos y estructuras de minería de datos.  
   
 -   El Generador de consultas de predicción gráfico está disponible tanto en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] como en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], para simplificar el proceso de escritura de consultas de predicción y la asignación de conjuntos de datos a un modelo.  
   
@@ -42,7 +42,7 @@ ms.locfileid: "34014572"
  También puede crear plantillas personalizadas, para las consultas o los comandos que se ejecutan con frecuencia.  
   
 ## <a name="xmla-query-templates"></a>Plantillas de consulta XMLA  
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]También proporciona plantillas para las consultas XMLA.  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] también proporciona plantillas para las consultas XMLA.  
   
  Hay cierta superposición entre los tipos de consultas que se pueden realizar mediante XMLA y DMX. Por ejemplo, puede crear algunas consultas de contenido de modelo con conjuntos de filas de esquema de minería de datos o DMX, pero los conjuntos de filas de esquema a veces contienen información que no se expone en las consultas de contenido DMX.  
   
@@ -72,12 +72,12 @@ ms.locfileid: "34014572"
   
  Para obtener ejemplos sobre cómo utilizar tipos específicos de consultas a partir de plantillas, consulte los temas siguientes:  
   
- [Crear una consulta de predicción Singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Crear una consulta de predicción singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
   
  [Crear una consulta de contenido en un modelo de minería de datos](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas de consulta de minería de datos](../../analysis-services/data-mining/data-mining-query-tools.md)   
- [Extensiones de minería de datos & #40; DMX & #41; Referencia](../../dmx/data-mining-extensions-dmx-reference.md)  
+ [Referencia de Extensiones de minería de datos &#40;DMX&#41;](../../dmx/data-mining-extensions-dmx-reference.md)  
   
   

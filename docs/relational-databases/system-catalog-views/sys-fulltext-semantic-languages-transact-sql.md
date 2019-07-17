@@ -19,13 +19,12 @@ ms.assetid: b42a85e6-1db9-4a22-8a70-014574c95198
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: f1acc995223ba9785055839beb5e12b11ea7494f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c060f08ff70e04a22af1eb9de09aeb1e3bf4ff71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133775"
 ---
 # <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,8 +36,8 @@ ms.locfileid: "64945662"
 ||||  
 |-|-|-|  
 |**Nombre de columna**|**Tipo**|**Descripción**|  
-|lcid|INT|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
-|NAME|sysname|Es el valor del alias en [sys.syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid**, o la representación de cadena del LCID numérico.|  
+|lcid|int|Identificador de configuración regional (LCID) de Microsoft Windows para el idioma.|  
+|name|sysname|Es el valor del alias en [sys.syslanguages &#40;Transact-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid**, o la representación de cadena del LCID numérico.|  
   
 ## <a name="general-remarks"></a>Notas generales  
  Para obtener más información, vea [Instalar y configurar la búsqueda semántica](../../relational-databases/search/install-and-configure-semantic-search.md).  

@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 3fc62dc5f0e716273df257aba7fdc137391d3055
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54124595"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196732"
 ---
 # <a name="rename-tables-database-engine"></a>Cambiar el nombre a las tablas (motor de base de datos)
   Puede cambiar el nombre de una tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -49,7 +49,7 @@ ms.locfileid: "54124595"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

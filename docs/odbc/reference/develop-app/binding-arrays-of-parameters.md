@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76f756b96a62a174e329614f9ab1baf634937522
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 597142d41ed8d3cff26891dfdcc89398543dab43
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103823"
 ---
 # <a name="binding-arrays-of-parameters"></a>Las matrices de parámetros de enlace
 Las aplicaciones que utilizan las matrices de parámetros de enlazar las matrices a los parámetros en la instrucción SQL. Hay dos estilos de enlace:  

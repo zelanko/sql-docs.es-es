@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164146"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>Configurar la recolección de datos de uso para Power Pivot para SharePoint
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "52420286"
   
 4.  Haga clic en **Ejecutar ahora**. Si el botón **Ejecutar ahora** está deshabilitado, haga clic en **Habilitar** y, a continuación, haga clic en **Ejecutar ahora**.  
   
-5.  En la lista Definiciones de trabajo, haga clic en **Trabajo de temporizador de procesamiento del panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+5.  En la lista Definiciones de trabajo, haga clic en **Trabajo de temporizador de procesamiento del panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 6.  Haga clic en **Ejecutar ahora**.  
   
@@ -128,7 +128,7 @@ ms.locfileid: "52420286"
  Para obtener más información sobre cómo se recopilan y almacenan los datos de uso, vea [Recopilación de datos de uso de Power Pivot](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md).  
   
 ##  <a name="qrh"></a> Definir las categorías de respuesta a las consultas rápida, media y lenta a efectos de los informes  
- El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, Rápida, Esperada, Larga ejecución y Superado. Cada solicitud para un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
+ El rendimiento del procesamiento de las consultas se mide con las categorías predefinidas que definen un ciclo de solicitud-respuesta con el tiempo que se tarda en completarse. Las categorías predefinidas son: Trivial, rápida, esperada, larga ejecución y ha superado. Cada solicitud para un servidor de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] pertenecerá a una de las categorías en función del tiempo que tarde en completarse.  
   
  La información de las respuestas a las consultas se utiliza en los informes de actividad. Dentro de los informes, cada categoría se usa de manera diferente para revelar mejor las tendencias de rendimiento del sistema de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Las solicitudes triviales se excluyen completamente, por ejemplo, porque de ese modo se quita el ruido en los datos y se muestran las tendencias más significativas mediante las categorías restantes. Por el contrario, las estadísticas de solicitudes de ejecución prolongada o superadas se destacan en el informe para que los administradores o los propietarios de los libros puedan emprender la acción correctora inmediatamente.  
   
@@ -168,7 +168,7 @@ ms.locfileid: "52420286"
   
 1.  En Administración central de SharePoint, en **Administración de aplicaciones**, haga clic en **Administrar aplicaciones de servicio**.  
   
-2.  Busque la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Puede identificar una aplicación de servicio por su tipo. El tipo de una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es **Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Busque la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Puede identificar una aplicación de servicio por su tipo. El tipo de una aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] es **Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Haga clic en el nombre de aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Se abre el panel de administración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .  
   
@@ -179,15 +179,15 @@ ms.locfileid: "52420286"
   
  En la siguiente tabla se muestran los valores predeterminados para la configuración de la recopilación de datos de uso.  
   
-|Parámetro|Valor predeterminado|Tipo|Intervalo válido|  
+|Parámetro|Valor predeterminado|Type|Intervalo válido|  
 |-------------|-------------------|----------|-----------------|  
-|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<habilitado >|Boolean|Estos valores están habilitados o deshabilitados.|  
-|**Query Reporting interval**|300 (en segundos)|Integer|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
-|**Usage data history**|365 (en días)|Integer|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
-|Límite superior de respuesta trivial|500 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  
-|Límite superior de respuesta rápida|1000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas rápido.|  
-|Límite superior de respuesta esperada|3000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas esperado.|  
-|Límite superior de respuesta larga|10000 (en milisegundos)|Integer|Establece un límite superior que define un intercambio de solicitudes y respuestas de ejecución prolongada. Cualquier solicitud que supere este límite entra dentro de la categoría Superada, que no tiene ningún umbral superior.|  
+|**Eventos de uso de Analysis Services** (Conexión, Carga, Descarga, Solicitudes)|\<enabled>|Boolean|Estos valores están habilitados o deshabilitados.|  
+|**Query Reporting interval**|300 (en segundos)|Entero|De 1 a cualquier entero positivo. El valor predeterminado es 5 minutos.|  
+|**Usage data history**|365 (en días)|Entero|0 especifica ilimitado, pero también puede establecer un límite superior para que los datos históricos expiren y que se eliminen automáticamente. Los valores válidos para un período de retención limitado abarcan de 1 a 5000 (en días).|  
+|Límite superior de respuesta trivial|500 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas trivial. Cualquier solicitud que se complete entre 0 y 500 milisegundos es una solicitud trivial y se omite a los efectos del informe de errores.|  
+|Límite superior de respuesta rápida|1000 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas rápido.|  
+|Límite superior de respuesta esperada|3000 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas esperado.|  
+|Límite superior de respuesta larga|10000 (en milisegundos)|Entero|Establece un límite superior que define un intercambio de solicitudes y respuestas de ejecución prolongada. Cualquier solicitud que supere este límite entra dentro de la categoría Superada, que no tiene ningún umbral superior.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de las opciones de configuración &#40;Power Pivot para SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   

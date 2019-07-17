@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 769b2b9caba541af3a1ea38e1969d8a6422950be
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773637"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68188765"
 ---
 # <a name="synchronize-target-server-clocks-sql-server-management-studio"></a>Sincronizar los relojes de los servidores de destino (SQL Server Management Studio)
   En este tema se describe cómo sincronizar los relojes de los servidores de destino en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] con el reloj del servidor maestro mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)]. La sincronización de los relojes del sistema admite la programación de trabajos.  
@@ -42,7 +42,7 @@ ms.locfileid: "52773637"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere la pertenencia al rol fijo de servidor **sysadmin** .  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  

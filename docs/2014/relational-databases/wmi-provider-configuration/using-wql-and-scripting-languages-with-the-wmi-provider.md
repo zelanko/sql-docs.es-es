@@ -19,11 +19,11 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 ms.openlocfilehash: cc9994d4429e82f2bdd4f40797df1c5f628c6500
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52784127"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68195822"
 ---
 # <a name="using-wql-and-scripting-languages-with-the-wmi-provider-for-configuration-management"></a>Utilizar WQL y languages de scripting con el proveedor WMI para la administración de configuración
   Las aplicaciones de administración obtienen acceso a los servicios y la configuración de red de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante el proveedor de Instrumental de administración de Windows (WMI) para los objetos de administración de configuración de dos maneras:  

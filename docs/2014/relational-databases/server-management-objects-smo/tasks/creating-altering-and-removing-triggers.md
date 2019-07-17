@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b4f6cf3b1e988d12a39096d46275058d080a23c4
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52762337"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211899"
 ---
 # <a name="creating-altering-and-removing-triggers"></a>Crear, modificar y eliminar desencadenadores
   En SMO, los desencadenadores se representan utilizando el objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>. El [!INCLUDE[tsql](../../../includes/tsql-md.md)] código que se ejecuta cuando se establece el desencadenador que se desencadena la <xref:Microsoft.SqlServer.Management.Smo.Trigger.TextBody%2A> propiedad del objeto desencadenador. El tipo de desencadenador se establece utilizando otras propiedades del objeto <xref:Microsoft.SqlServer.Management.Smo.Trigger>, como la propiedad <xref:Microsoft.SqlServer.Management.Smo.Trigger.Update%2A>. Se trata de una propiedad booleana que especifica si el desencadenador se activa por una `UPDATE` de los registros en la tabla primaria.  

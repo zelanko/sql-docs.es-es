@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63055675"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259730"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>Instalación de componentes de SSMA en SQL Server (OracleToSQL)
 Además de instalar SSMA, también debe instalar los componentes en el equipo que ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Estos componentes incluyen el módulo de extensión SSMA, que admite la migración de datos y proveedores de Oracle para habilitar la conectividad de servidor a servidor.  

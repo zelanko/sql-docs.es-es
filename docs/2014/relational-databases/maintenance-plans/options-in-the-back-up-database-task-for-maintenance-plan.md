@@ -16,11 +16,11 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 4a31052bb0633d370098e328741432f6b854d65e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52774657"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205947"
 ---
 # <a name="back-up-database-task-maintenance-plan"></a>Tarea Copia de seguridad de base de datos (Plan de mantenimiento)
   Utilice el cuadro de diálogo **Tarea Copia de seguridad de la base de datos** para agregar una tarea de copia de seguridad al plan de mantenimiento. Es importante realizar una copia de seguridad de la base de datos por si se produce un error de sistema o del hardware (o un error del usuario) que cause algún tipo de daño en la base de datos y que requiera una copia de seguridad para la restauración. Esta tarea le permite realizar copias de seguridad completas, diferenciales, de archivos y grupos de archivos, así como de registros de transacciones.  
@@ -33,7 +33,7 @@ ms.locfileid: "52774657"
  **Conexión**  
  Seleccione la conexión al servidor que va a utilizar para la realización de esta tarea.  
   
- **Nueva**  
+ **Nuevo**  
  Cree una nueva conexión de servidor que utilizará al realizar esta tarea. El cuadro de diálogo **Nueva conexión** se describe a continuación.  
   
  **Bases de datos**  

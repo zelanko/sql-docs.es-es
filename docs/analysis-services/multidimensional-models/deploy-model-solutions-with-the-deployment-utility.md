@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 76d1a3e3cfff777f610bb00f52644af3903ac615
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37975166"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178512"
 ---
 # <a name="deploy-model-solutions-with-the-deployment-utility"></a>Implementar soluciones de modelos con la utilidad de implementación
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -59,7 +59,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 > [!NOTE]  
 >  El argumento **/d** se usa solamente en modo de salida. Este argumento se omite si se especifica en modo silencioso o de respuesta. Para obtener más información sobre los modos, vea la sección [Modos](#Modes), más adelante en este tema.  
   
-## <a name="remarks"></a>Notas  
+## <a name="remarks"></a>Comentarios  
  La utilidad **Microsoft.AnalysisServices.Deployment** toma un conjunto de archivos que proporcionan definiciones de objetos, destinos de implementación y parámetros de configuración, e intenta implementar las definiciones de objetos en los destinos de implementación especificados mediante les opciones de implementación y los parámetros de configuración que se han indicado. Esta utilidad puede proporcionar una interfaz de usuario cuando se invoca en el modo de salida o en el archivo de salida. Para obtener más información sobre cómo usar la interfaz de usuario proporcionada por esta utilidad para crear archivos de respuesta, vea [Implementar soluciones de modelos con la utilidad de implementación](../../analysis-services/multidimensional-models/deploy-model-solutions-using-the-deployment-wizard.md).  
   
  La utilidad se encuentra en la carpeta de \Microsoft SQL Server\140\Binn\ManagementStudio archivos (x86) \Program.  
@@ -67,7 +67,7 @@ Microsoft.AnalysisServices.Deployment [ASdatabasefile]
 ##  <a name="Modes"></a> Modos  
  La utilidad se puede ejecutar en los modos que se enumeran en la siguiente tabla.  
   
-|Mode|Descripción|  
+|Modo|Descripción|  
 |----------|-----------------|  
 |Modo silencioso|No se muestra ninguna interfaz de usuario y toda la información necesaria para la implementación la proporcionan los archivos de entrada. La utilidad no muestra el progreso en el modo silencioso. En su lugar, se puede usar un archivo de registro opcional para capturar el progreso y la información de errores para su posterior revisión.|  
 |Modo de respuesta|Se muestra la interfaz de usuario del Asistente para la implementación y las respuestas del usuario se guardan en los archivos de entrada especificados para la posterior implementación. La implementación no se produce en el modo de respuesta. El único propósito del modo de respuesta es capturar las respuestas del usuario|  

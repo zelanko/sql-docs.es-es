@@ -10,12 +10,12 @@ ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: fc8065bcfda3066fae31be982e25f054c07bca3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f6a2bb7e10e487d65c0fa8dfd406a30f9acd557a
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650769"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265533"
 ---
 # <a name="command-line-options-in-the-ssma-console-accesstosql"></a>Opciones de línea de comandos en la consola de SSMA (AccessToSQL)
 Microsoft le proporciona un sólido conjunto de opciones de línea de comandos para ejecutar y controlar las actividades SSMA. Las secciones subsiguientes proporcionan detalles adicionales.  
@@ -25,7 +25,7 @@ Descritos en este documento, la consola es opciones de comando.
   
 En esta sección, el término 'opción' también se conoce como 'switch'.  
   
-Las opciones no distinguen mayúsculas de minúsculas y puede comenzar por la '**-**'o'**/**' caracteres.  
+Las opciones no distinguen mayúsculas de minúsculas y puede comenzar por la ' **-** 'o' **/** ' caracteres.  
   
 Si se especifican opciones, es obligatorio que especifique los parámetros de opción correspondientes.  
   
@@ -80,7 +80,7 @@ Definición de servidor puede ser una parte del archivo de conexión de servidor
   
     `C:\>SSMAforAccessConsole.EXE -s "C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"`  
   
-### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>XML output option: -x/xmloutput [xmloutputfile]  
+### <a name="xml-output-option--xxmloutput-xmloutputfile"></a>Opción de salida de XML: - x / xmloutput [xmloutputfile]  
 Este comando se usa para generar los mensajes de salida del comando en un formato xml a la consola o en un archivo xml.  
   
 Hay dos opciones disponibles para xmloutput, a saber:  

@@ -20,12 +20,12 @@ ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a35e2f44825546d651917c4fbe4030d2a2a05e5a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097695"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255352"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "68097695"
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el permiso `VIEW DATABASE STATE` en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere el **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
     
 ## <a name="remarks"></a>Comentarios  
  **Sys.dm_exec_query_optimizer_info** contiene las siguientes propiedades (contadores). Todos los valores de repetición son acumulativos y se establecen en 0 cuando se reinicia el sistema. Todos los valores de los campos de valor se establecen en NULL cuando se reinicia el sistema. Todos los valores de columnas de valor que especifican un promedio utilizan el valor de repetición de la misma fila que el denominador en el cálculo del promedio. Todas las optimizaciones de consultas se miden cuando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] determina los cambios **dm_exec_query_optimizer_info**, incluyendo ambas consultas generados por usuario y del sistema. Ejecución de un plan de almacenamiento en caché ya no cambia valores en **dm_exec_query_optimizer_info**, solo las optimizaciones son relevantes.  

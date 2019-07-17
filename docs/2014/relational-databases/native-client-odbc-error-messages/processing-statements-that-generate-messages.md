@@ -25,11 +25,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 11235979a886e82fa09ca1d1a79fa21550965d0f
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48119145"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205698"
 ---
 # <a name="processing-statements-that-generate-messages"></a>Procesar instrucciones que generan mensajes
   Las opciones STATISTICS TIME y STATISTICS IO de la instrucción SET de [!INCLUDE[tsql](../../includes/tsql-md.md)] se utilizan para obtener información que ayuda a diagnosticar las consultas de ejecución prolongada. Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] también admiten la opción SHOWPLAN para analizar los planes de consulta. Una aplicación ODBC puede establecer estas opciones ejecutando las instrucciones siguientes:  

@@ -10,12 +10,12 @@ ms.assetid: 7633f631-ffad-469a-8441-8831a6a9f932
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 89c8ab8693ae814e9b471fe8212f8a1961d09873
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 986b151c12abcc12036bc653b7e41c6833e04f26
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63267902"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259882"
 ---
 # <a name="sql-server-migration-assistant-for-db2-db2tosql"></a>SQL Server Migration Assistant para DB2 (DB2ToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) para DB2 es una herramienta para migrar bases de datos de DB2 a [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016, [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2017 en Windows y Linux () Versión preliminar), o la base de datos SQL Azure. SSMA para DB2 convierte los objetos de base de datos DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos de base de datos, crea los objetos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], y, a continuación, migra los datos desde DB2 a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] o Azure SQL DB.  

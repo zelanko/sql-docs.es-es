@@ -3,18 +3,18 @@ title: Migrar el esquema HR de Oracle a SQL Server en Linux | Microsoft Docs
 description: Convertir el ejemplo de esquema de Oracle a SQL Server en Linux
 author: shamikg
 ms.author: shamikg
-manager: v-thobro
+manager: shamikg
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: ssma
-ms.openlocfilehash: 312797b2b883f764fc65588e72cd67d7227e327a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1926c13b739de8294966fd6ce84df3d1e02a676e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62629813"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266517"
 ---
 # <a name="migrate-an-oracle-schema-to-sql-server-2017-on-linux-with-the-sql-server-migration-assistant"></a>Migración de un esquema de Oracle a SQL Server 2017 en Linux con SQL Server Migration Assistant
 
@@ -90,11 +90,11 @@ Siga estos pasos para generar un informe de migración.
 
    ![Informe de migración de ejemplo](./media/sql-server-linux-convert-from-oracle/SSMAReport.png)
 
-## <a name="connect-to-sql-server"></a>Conectar a SQL Server
+## <a name="connect-to-sql-server"></a>Conexión con SQL Server
 
 A continuación, elija **conectar con SQL Server** y escriba la información de conexión adecuada.  Si usa un nombre de base de datos que aún no existe, SSMA para Oracle crea para usted.
 
-![Conectar a SQL Server](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
+![Conexión con SQL Server](./media/sql-server-linux-convert-from-oracle/ConnectToSQLServer.png)
 
 ## <a name="convert-schema"></a>Convertir esquema
 

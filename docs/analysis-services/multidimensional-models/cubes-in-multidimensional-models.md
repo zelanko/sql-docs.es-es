@@ -1,5 +1,5 @@
 ---
-title: Cubos en modelos multidimensionales | Documentos de Microsoft
+title: Cubos en modelos multidimensionales | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5962889f38043e675b70558e7561bfc3f63b39ce
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020152"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209055"
 ---
 # <a name="cubes-in-multidimensional-models"></a>Cubos en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "34020152"
 ## <a name="components-of-cubes"></a>Componentes de los cubos  
  Un cubo consta de:  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |-------------|-----------------|  
 |Dimensions|[Dimensiones en modelos multidimensionales](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)|  
 |Medidas y grupos de medida|[Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|  
@@ -34,13 +34,13 @@ ms.locfileid: "34020152"
 |Perspectivas|[Perspectivas de modelos multidimensionales](../../analysis-services/multidimensional-models/perspectives-in-multidimensional-models.md)|  
 |Jerarquías|[Crear jerarquías definidas por el usuario](../../analysis-services/multidimensional-models/user-defined-hierarchies-create.md)|  
 |Acciones|[Acciones en modelos multidimensionales](../../analysis-services/multidimensional-models/actions-in-multidimensional-models.md)|  
-|Indicadores clave de rendimiento (KPI)|[Indicadores clave de rendimiento & #40; KPI & #41; en modelos multidimensionales](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
+|Indicadores clave de rendimiento (KPI)|[Indicadores clave de rendimiento &#40;KPI&#41; en modelos multidimensionales](../../analysis-services/multidimensional-models/key-performance-indicators-kpis-in-multidimensional-models.md)|  
 |Cálculos|[Cálculos en modelos multidimensionales](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)|  
-|Traducciones|[Traducciones en modelos multidimensionales &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
+|Translations|[Traducciones en modelos multidimensionales &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Crear un cubo con el Asistente para cubos](../../analysis-services/multidimensional-models/create-a-cube-using-the-cube-wizard.md)|Describe la utilización del Asistente para cubos para definir un cubo, dimensiones, atributos de dimensión y jerarquías definidas por el usuario.|  
 |[Crear medidas y grupos de medida en modelos multidimensionales](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|Describe cómo definir los grupos de medida.|  

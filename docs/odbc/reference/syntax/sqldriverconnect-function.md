@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104705"
 ---
 # <a name="sqldriverconnect-function"></a>Función SQLDriverConnect
 **Conformidad**  
@@ -95,7 +94,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NO_DATA, SQL_ERROR, SQL_INVALID_HANDLE o SQL_STILL_EXECUTING.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLDriverConnect** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *fHandleType*de SQL_HANDLE_DBC y un *hHandle* de *ConnectionHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLDriverConnect** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  
@@ -147,7 +146,7 @@ SQLRETURN SQLDriverConnect(
   
  *cadena de conexión* :: = *cadena vacía*[;] &#124; *atributo*[;] &#124; *atributo*; *cadena de conexión*  
   
- *empty-string* ::=*attribute* ::= *attribute-keyword*=*attribute-value* &#124; DRIVER=[{]*attribute-value*[}]  
+ *cadena vacía* :: =*atributo* :: = *palabra clave de atributo*=*atributo-valor* &#124; DRIVER = [{}] *valor del atributo*[}]  
   
  *attribute-keyword* ::= DSN &#124; UID &#124; PWD &#124; *driver-defined-attribute-keyword*  
   
@@ -171,7 +170,7 @@ SQLRETURN SQLDriverConnect(
 |-------------|---------------------------------|  
 |**DSN**|Nombre de un origen de datos devuelto por **SQLDataSources** o el cuadro de diálogo orígenes de datos de **SQLDriverConnect**.|  
 |**FILEDSN**|Nombre de un archivo de DSN desde el que se generará una cadena de conexión del origen de datos. Estos orígenes de datos se denominan orígenes de datos de archivo.|  
-|**DRIVER**|Descripción del controlador tal como lo devuelve el **SQLDrivers** función. Por ejemplo, Rdb o SQL Server.|  
+|**CONTROLADOR**|Descripción del controlador tal como lo devuelve el **SQLDrivers** función. Por ejemplo, Rdb o SQL Server.|  
 |**UID**|Identificador de usuario.|  
 |**PWD**|La contraseña correspondiente para el identificador de usuario o una cadena vacía si no hay ninguna contraseña para el identificador de usuario (PWD =;).|  
 |**SAVEFILE**|El nombre de archivo de un archivo de DSN en el que se deben guardar los valores de atributo de palabras clave utilizadas en realizar la conexión correcta, está presente.|  

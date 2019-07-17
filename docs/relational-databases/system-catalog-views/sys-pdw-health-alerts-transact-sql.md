@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 41ae6d70399dea79a92cbc4fd77ba6e08f660d7c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: c47bcc342bf8a052aed93649ca0ad8475d937608
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56025456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127539"
 ---
 # <a name="syspdwhealthalerts-transact-sql"></a>sys.pdw_health_alerts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "56025456"
 |alert_name|**nvarchar(255)**|Nombre de la alerta.|NOT NULL|  
 |state|**nvarchar(32)**|Estado de la alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> 'Operational'<br /><br /> 'No operativa'<br /><br /> Está "Degradado"<br /><br /> 'Error'|  
 |severity|**nvarchar(32)**|Gravedad de la alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> "Informativo"<br /><br /> "Advertencia"<br /><br /> 'Error'|  
-|Tipo|**nvarchar(32)**|Tipo de alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> StatusChange - ha cambiado el estado del dispositivo.<br /><br /> Umbral - un valor ha superado el valor de umbral.|  
+|type|**nvarchar(32)**|Tipo de alerta.|NOT NULL<br /><br /> Valores posibles:<br /><br /> StatusChange - ha cambiado el estado del dispositivo.<br /><br /> Umbral - un valor ha superado el valor de umbral.|  
 |description|**nvarchar(4000)**|Descripción de la alerta.|NOT NULL|  
 |condición|**nvarchar(255)**|Se utiliza cuando escriba = umbral. Define cómo se calcula el umbral de alerta.|NULL|  
 |status|**nvarchar(32)**|Estado de alerta|NULL|  

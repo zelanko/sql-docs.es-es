@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 323ac9ea-fc52-4b8c-8a7e-e0e44f8ed86c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c028fe9a09ad1f0f0da06a75f8ac7e0cc02b8095
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6006daa91355803fa9ac937c660d503bd7e97579
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62668971"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109584"
 ---
 # <a name="syscolumns-transact-sql"></a>sys.columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "62668971"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |object_id|**int**|Identificador del objeto al que pertenece esta columna.|  
-|NAME|**sysname**|Nombre de la columna. Es único en el objeto.|  
+|name|**sysname**|Nombre de la columna. Es único en el objeto.|  
 |column_id|**int**|Identificador de la columna. Es único en el objeto.<br /><br /> Los Id. de columna no tienen que ser secuenciales.|  
 |system_type_id|**tinyint**|Id. del tipo de sistema de la columna.|  
 |user_type_id|**int**|Id. del tipo de la columna, tal como lo ha definido el usuario.<br /><br /> Para devolver el nombre del tipo, unir a la [sys.types](../../relational-databases/system-catalog-views/sys-types-transact-sql.md) en esta columna de la vista de catálogo.|  

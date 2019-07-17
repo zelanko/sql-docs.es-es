@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e9d2baf65dedf1116a85f7271b1929e0ead4ca23
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 35d1ef721df6f67e4cd5c0f993458238394ac0e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493719"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104509"
 ---
 # <a name="spchangemergearticle-transact-sql"></a>sp_changemergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,37 +46,37 @@ sp_changemergearticle [ @publication = ] 'publication'
   
 `[ @article = ] 'article'` Es el nombre del artículo que se va a cambiar. *artículo* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @property = ] 'property'` Es la propiedad para cambiar para el artículo dado y la publicación. *propiedad* es **nvarchar (30)**, y puede ser uno de los valores que aparecen en la tabla.  
+`[ @property = ] 'property'` Es la propiedad para cambiar para el artículo dado y la publicación. *propiedad* es **nvarchar (30)** , y puede ser uno de los valores que aparecen en la tabla.  
   
-`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor* es **nvarchar (1000)**, y puede ser uno de los valores que aparecen en la tabla.  
+`[ @value = ] 'value'` Es el nuevo valor para la propiedad especificada. *valor* es **nvarchar (1000)** , y puede ser uno de los valores que aparecen en la tabla.  
   
  En esta tabla se describen las propiedades de los artículos y los valores de esas propiedades.  
   
 |Property|Valores|Descripción|  
 |--------------|------------|-----------------|  
 |**allow_interactive_resolver**|**true**|Habilita el uso de un solucionador interactivo para el artículo.|  
-||**False**|Deshabilita el uso de un solucionador interactivo para el artículo.|  
+||**false**|Deshabilita el uso de un solucionador interactivo para el artículo.|  
 |**article_resolver**||Solucionador personalizado para el artículo. Solo se aplica a un artículo de tabla.|  
 |**check_permissions** (mapa de bits)|**0x00**|Los permisos de tabla no se comprueban.|  
 ||**0x10**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones INSERT realizadas en el suscriptor se apliquen en el publicador.|  
 ||**0x20**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones UPDATE realizadas en el suscriptor se apliquen en el publicador.|  
 ||**0x40**|Los permisos de tabla se comprueban en el publicador antes de que las instrucciones DELETE realizadas en el suscriptor se apliquen en el publicador.|  
-|**column_tracking**|**true**|Activa el seguimiento por columna. Solo se aplica a un artículo de tabla.<br /><br /> Nota: El seguimiento por columna no se puede utilizar cuando se publican tablas con más de 246 columnas.|  
-||**False**|Desactiva el seguimiento por columna y deja la detección de conflictos a nivel de fila. Solo se aplica a un artículo de tabla.|  
+|**column_tracking**|**true**|Activa el seguimiento por columna. Solo se aplica a un artículo de tabla.<br /><br /> Nota: No se puede utilizar el seguimiento de nivel de columna cuando se publican tablas con más de 246 columnas.|  
+||**false**|Desactiva el seguimiento por columna y deja la detección de conflictos a nivel de fila. Solo se aplica a un artículo de tabla.|  
 |**compensate_for_errors**|**true**|Las acciones de compensación se ejecutan cuando se producen errores durante la sincronización. Para obtener más información, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).|  
-||**False**|Las acciones de compensación no se ejecutan; éste es el comportamiento predeterminado. Para obtener más información, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importante \* \***  aunque estén fuera de convergencia, tan pronto como los corrija los errores, puede que aparezcan datos en las filas afectadas, se pueden aplicar los cambios y datos convergerán. Si la tabla de origen para un artículo ya está publicada en otra publicación y, a continuación, el valor de *compensate_for_errors* debe ser el mismo para ambos artículos.|  
+||**false**|Las acciones de compensación no se ejecutan; éste es el comportamiento predeterminado. Para obtener más información, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md).<br /><br /> **\*\* Importante \* \***  aunque estén fuera de convergencia, tan pronto como los corrija los errores, puede que aparezcan datos en las filas afectadas, se pueden aplicar los cambios y datos convergerán. Si la tabla de origen para un artículo ya está publicada en otra publicación y, a continuación, el valor de *compensate_for_errors* debe ser el mismo para ambos artículos.|  
 |**creation_script**||Ruta de acceso y nombre de un script opcional del esquema del artículo que se utiliza para crear el artículo en la base de datos de suscripciones.|  
 |**delete_tracking**|**true**|Las instrucciones DELETE se replican; éste es el comportamiento predeterminado.|  
-||**False**|Las instrucciones DELETE no se replican.<br /><br /> **\*\* Importante \* \***  configuración **delete_tracking** a **false** resultados de no convergencia y eliminadas las filas deben quitarse manualmente.|  
+||**false**|Las instrucciones DELETE no se replican.<br /><br /> **\*\* Importante \* \***  configuración **delete_tracking** a **false** resultados de no convergencia y eliminadas las filas deben quitarse manualmente.|  
 |**description**||Entrada descriptiva del artículo.|  
 |**destination_owner**||Nombre del propietario del objeto en la base de datos de suscripción, si no **dbo**.|  
 |**identity_range**||**bigint** que especifica el tamaño del intervalo que se usará al asignar nuevos valores de identidad si el artículo tiene **identityrangemanagementoption** establecido en **automática** o **auto_identity_ intervalo** establecido en **true**. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "Replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**identityrangemanagementoption**|**manual**|Deshabilita la administración automática de intervalos de identidad. Marca las columnas de identidad utilizando NOT FOR REPLICATION para habilitar la administración manual de intervalos de identidad. Para más información, vea [Replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 ||**Ninguno**|Deshabilita toda la administración de intervalos de identidad.|  
 |**logical_record_level_conflict_detection**|**true**|Se detecta un conflicto si se realizan cambios en cualquier parte del registro lógico. Requiere que **logical_record_level_conflict_resolution** establecerse **true**.|  
-||**False**|Se utiliza la detección de conflictos predeterminada tal y como especifica **column_tracking**.|  
+||**false**|Se utiliza la detección de conflictos predeterminada tal y como especifica **column_tracking**.|  
 |**logical_record_level_conflict_resolution**|**true**|Todo el registro lógico ganador reemplaza el registro lógico perdedor.|  
-||**False**|Las filas ganadoras no se restringen al registro lógico.|  
+||**false**|Las filas ganadoras no se restringen al registro lógico.|  
 |**partition_options**|**0**|El filtro para el artículo es estático o no produce un subconjunto de datos único para cada partición, es decir, es una partición "superpuesta".|  
 ||**1**|Las particiones se superponen y las actualizaciones del lenguaje DML realizadas en el suscriptor no pueden cambiar la partición a la que pertenece una fila.|  
 ||**2**|El filtro para el artículo produce particiones no superpuestas, pero varios suscriptores pueden recibir la misma partición.|  
@@ -89,9 +88,9 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**processing_order**||**int** que indica el orden de procesamiento de artículos en una publicación de combinación.|  
 |**pub_identity_range**||**bigint** que especifica el tamaño del intervalo asignado a un suscriptor con una suscripción de servidor si el artículo tiene **identityrangemanagementoption** establecido en **automática** o **auto_ identity_range** establecido en **true**. Este rango de identidad se reserva para que un suscriptor de republicación pueda realizar asignaciones a sus propios suscriptores. Solamente se aplica en un artículo de la tabla. Para obtener más información, vea la sección "Replicación de mezcla" de [replicar columnas de identidad](../../relational-databases/replication/publish/replicate-identity-columns.md).|  
 |**published_in_tran_pub**|**true**|El artículo también está publicado en una publicación transaccional.|  
-||**False**|El artículo no está publicado en una publicación transaccional.|  
-|**resolver_info**||Se utiliza para especificar información adicional necesaria para un solucionador personalizado. Algunos de los solucionadores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] requieren que se proporcione una columna como entrada para el solucionador. **resolver_info** es **nvarchar (255)**, su valor predeterminado es null. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
-|**schema_option** (bitmap)||Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
+||**false**|El artículo no está publicado en una publicación transaccional.|  
+|**resolver_info**||Se utiliza para especificar información adicional necesaria para un solucionador personalizado. Algunos de los solucionadores de [!INCLUDE[msCoName](../../includes/msconame-md.md)] requieren que se proporcione una columna como entrada para el solucionador. **resolver_info** es **nvarchar (255)** , su valor predeterminado es null. Para obtener más información, consulte [Solucionadores basados en Microsoft COM](../../relational-databases/replication/merge/advanced-merge-replication-conflict-com-based-resolvers.md).|  
+|**schema_option** (mapa de bits)||Para obtener más información, vea la sección Comentarios más adelante en este tema.|  
 ||**0x00**|Deshabilita el scripting del agente de instantáneas y utiliza el script proporcionado en **creation_script**.|  
 ||**0x01**|Genera el script de creación del objeto (CREATE TABLE, CREATE PROCEDURE, etc.).|  
 ||**0x10**|Genera el índice clúster correspondiente.|  
@@ -119,7 +118,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 ||**0x4000000**|Replica índices en **xml** columnas.|  
 ||**0x8000000**|Crea esquemas que aún no existen en el suscriptor.|  
 ||**0x10000000**|Convierte **xml** columnas a **ntext** en el suscriptor.|  
-||**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)**, **varchar (max)**, y **varbinary (max)**) que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que son compatibles en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
+||**0x20000000**|Convierte objetos grandes tipos de datos (**nvarchar (max)** , **varchar (max)** , y **varbinary (max)** ) que se introdujeron en [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] a tipos de datos que son compatibles en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].|  
 ||**0x40000000**|Replica permisos.|  
 ||**0x80000000**|Intenta quitar dependencias a objetos que no forman parte de la publicación.|  
 ||**0x100000000**|Use esta opción para replicar el atributo FILESTREAM si se especifica en **varbinary (max)** columnas. No especifique esta opción si replica tablas en suscriptores de [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. Replicación de tablas que incluyen columnas FILESTREAM en [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] no es compatible con suscriptores, independientemente de cómo se establece esta opción de esquema. Vea la opción relacionada **0 x 800000000**.|  
@@ -135,7 +134,7 @@ sp_changemergearticle [ @publication = ] 'publication'
 |**status**|**active**|Se ejecuta el script inicial de proceso para publicar la tabla.|  
 ||**unsynced**|El script de procesos inicial para publicar la tabla se ejecuta la próxima vez que se ejecute el Agente de instantáneas.|  
 |**stream_blob_columns**|**true**|Se utiliza una optimización del flujo de datos al replicar columnas de objetos binarios grandes. No obstante, ciertas funciones de la replicación de mezcla, como los registros lógicos, pueden impedir que se utilice la optimización de flujos. *stream_blob_columns* se establece en true cuando FILESTREAM está habilitado. Esto permite que la replicación de datos FILESTREAM se realice de forma óptima y que se reduzca el uso de memoria. Para forzar los artículos de tabla FILESTREAM no usen transmisión de datos blob, establezca *stream_blob_columns* en false.<br /><br /> **\*\* Importante \* \***  habilitar esta optimización de memoria puede perjudicar el rendimiento del agente de mezcla durante la sincronización. Esta opción solo se debe utilizar al replicar columnas que contienen megabytes de datos.|  
-||**False**|La optimización no se utiliza al replicar columnas de objetos binarios grandes.|  
+||**false**|La optimización no se utiliza al replicar columnas de objetos binarios grandes.|  
 |**subscriber_upload_options**|**0**|No existen restricciones en actualizaciones realizadas en el suscriptor con una suscripción de cliente; los cambios se cargan en el publicador. Si cambia esta propiedad puede que sea necesaria la reinicialización de suscriptores existentes.|  
 ||**1**|Se permiten cambios en un suscriptor con una suscripción de cliente, pero no se cargan en el publicador.|  
 ||**2**|No se permiten cambios en un suscriptor con una suscripción de cliente.|  

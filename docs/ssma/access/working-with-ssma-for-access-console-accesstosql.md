@@ -10,12 +10,12 @@ ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 021458a2c47f9c57f641da575b346ab09c66fee9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6366ed7d6346fb6240a5d56ae6cc4d91575f2ed0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299029"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259781"
 ---
 # <a name="working-with-ssma-for-access-console-accesstosql"></a>Trabajar con SSMA para la consola de acceso (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) para el acceso ahora es accesible a través de una aplicación de consola en línea de comandos. La entrada a la aplicación para ejecutar los comandos de formulario de los archivos de script. Como una aplicación de consola, SSMA permite la comunicación de nivel de script, reduce el ciclo de migración y escala el esfuerzo de migración.  

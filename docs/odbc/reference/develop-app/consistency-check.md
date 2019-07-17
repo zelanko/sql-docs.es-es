@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: deb80efa-ad1f-4ea5-b334-9817cd279e5c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cb73d8a4de482f24eae5794232019af9890e3624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 419e338a5e96821606dc26a53a4fccecbc72ae3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63043740"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125539"
 ---
 # <a name="consistency-check"></a>Comprobación de coherencia
 Se realiza una comprobación de coherencia por el controlador automáticamente cada vez que una aplicación establece el campo SQL_DESC_DATA_PTR del APD, descartar o IPD. Cada vez que este campo se establece, el controlador comprueba que el valor del campo SQL_DESC_TYPE y los valores aplicables para el campo SQL_DESC_TYPE en el mismo registro son válidos y coherentes.  

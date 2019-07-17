@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 manager: craigg
 ms.openlocfilehash: 37a6846d8c185549bd6c54f32cb5ab02eb564d1d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52531580"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211714"
 ---
 # <a name="create-user-defined-functions-database-engine"></a>Crear funciones definidas por el usuario (motor de base de datos)
   En este tema se describe cómo crear una función definida por el usuario en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -78,7 +78,7 @@ ms.locfileid: "52531580"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Se requiere el permiso CREATE FUNCTION en la base de datos y el permiso ALTER en el esquema en el que se va a crear la función. Si la función especifica un tipo definido por el usuario, requiere el permiso EXECUTE para ese tipo.  
   
 ##  <a name="Scalar"></a> Funciones escalares  

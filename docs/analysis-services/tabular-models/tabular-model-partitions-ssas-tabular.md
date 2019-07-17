@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e8fbbfe1aaf7c97a5739768413cdc04644be6a6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162504"
 ---
 # <a name="tabular-model-partitions"></a>Particiones de modelos tabulares 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "53072652"
   
  Por ejemplo, un modelo tabular puede tener una tabla de ventas que incluya los datos de ventas del año fiscal 2011 actual y de cada uno de los años fiscales anteriores. Tabla de ventas del modelo tiene las tres particiones siguientes:  
   
-|Partición|Datos de|  
+|Partition|Datos de|  
 |---------------|---------------|  
 |Sales2011|Año fiscal actual|  
 |Sales2010-2001|Años fiscales 2001, 2002, 2003, 2004, 2005, 2006. 2007, 2008, 2009, 2010|  
@@ -51,13 +51,13 @@ ms.locfileid: "53072652"
   
  Cómo implementar una estrategia de partición para los modelos tabulares de su organización en gran medida será depende de sus necesidades de procesamiento de datos de modelo determinado y los recursos disponibles.  
   
-##  <a name="bkmk_permissions"></a> Permissions  
+##  <a name="bkmk_permissions"></a> Permisos  
  Para crear, administrar y procesar particiones en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], es necesario disponer de los permisos adecuados de Analysis Services definidos en un rol de seguridad. Cada rol de seguridad tiene uno de los siguientes permisos:  
   
 |Permiso|Acciones|  
 |----------------|-------------|  
 |Administrador|Leer, procesar, crear, copiar, mezclar, eliminar|  
-|Procesar|Leer, procesar|  
+|Process|Leer, procesar|  
 |Solo lectura|Lectura|  
   
  Para más información sobre cómo crear roles durante la creación del modelo mediante el uso de [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], consulte [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md). Para más información sobre cómo administrar los miembros del rol para implementar roles de modelos tabulares mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], consulte [Roles de modelos tabulares](../../analysis-services/tabular-models/tabular-model-roles-ssas-tabular.md).  

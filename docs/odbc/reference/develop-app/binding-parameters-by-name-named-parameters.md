@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e2c3da5a-6c10-4dd5-acf9-e951eea71a6b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 68dfb8976312016ee7f2e42fc4fcdecb93fd28cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fdd8d00bd6af5479079e66c1ca42f249e033d29
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107641"
 ---
 # <a name="binding-parameters-by-name-named-parameters"></a>Enlazar parámetros por nombre (parámetros con nombre)
 Algunos de los DBMS permiten que una aplicación especificar los parámetros a un procedimiento almacenado por su nombre en lugar de por posición en la llamada a procedimiento. Estos parámetros se denominan *parámetros con nombre*. ODBC admite el uso de parámetros con nombre. En ODBC, los parámetros con nombre solo se usan en llamadas a procedimientos almacenados y no se puede usar en otras instrucciones SQL.  

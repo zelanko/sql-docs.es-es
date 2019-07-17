@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 996f6c9b-6426-4847-95d9-6b77541422be
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ce3ad077a62d79518d45c53596fb4334a4498434
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3613c3da1138a6ec17394a5b6615d78d0a941e56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133150"
 ---
 # <a name="sysserverevents-transact-sql"></a>sys.server_events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013335"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|Identificador de la notificación de eventos o del desencadenador DDL que se activan en el servidor.|  
-|**Tipo**|**int**|Tipo del evento que provoca la activación de la notificación de eventos o el desencadenador DDL.|  
+|**type**|**int**|Tipo del evento que provoca la activación de la notificación de eventos o el desencadenador DDL.|  
 |**type_desc**|**nvarchar(60)**|Descripción del evento que provoca la activación del desencadenador DDL o de la notificación de eventos.|  
 |**event_group_type**|**int**|Grupo de eventos donde se crea el desencadenador o la notificación de eventos o NULL si no se crea en un grupo de eventos.|  
 |**event_group_type_desc**|**nvarchar(60)**|Descripción del grupo de eventos en el que se creó la notificación de eventos o desencadenador, o null si no se crea en un grupo de eventos|  

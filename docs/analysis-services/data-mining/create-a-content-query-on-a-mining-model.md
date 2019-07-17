@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 98fff978408aa53e030efeceb67af6cc0977597a
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145080"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210158"
 ---
 # <a name="create-a-content-query-on-a-mining-model"></a>Crear una consulta de contenido en un modelo de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,11 +38,11 @@ ms.locfileid: "50145080"
   
      La plantilla **Consulta de contenido** se abre en el editor de código adecuado. El panel de metadatos muestra los modelos que están disponibles en la base de datos actual. Para cambiar la base de datos, seleccione una diferente en la lista **Bases de datos disponibles** .  
   
-5.  Escriba el nombre de un modelo de minería de datos en la línea, `FROM` [*\<modelo de minería de datos, nombre, MiModelo >*]`.CONTENT`. Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
+5.  Escriba el nombre de un modelo de minería de datos en la línea, `FROM` [ *\<modelo de minería de datos, nombre, MiModelo >* ]`.CONTENT`. Si el nombre del modelo de minería de datos contiene espacios, debe escribirse entre corchetes.  
   
      Si no desea escribir el nombre, puede seleccionar un modelo de minería de datos en el **Explorador de objetos** y arrastrarlo a la plantilla.  
   
-6.  En la línea, `SELECT` *\<lista de selección, lista de expresión, \* >*, escriba los nombres de columnas en el conjunto de filas de esquema de contenido de modelo de minería de datos.  
+6.  En la línea, `SELECT` *\<lista de selección, lista de expresión, \* >* , escriba los nombres de columnas en el conjunto de filas de esquema de contenido de modelo de minería de datos.  
   
      Para obtener una lista de las columnas que puede devolver en las consultas de contenido del modelo de minería de datos, vea [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md).  
   
@@ -73,7 +73,7 @@ ms.locfileid: "50145080"
      El panel Resultados muestra el contenido del modelo.  
   
     > [!NOTE]  
-    >  Para ver una lista de todos los conjuntos de filas de esquema que puede consultar en la instancia actual, use esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. O bien, para obtener una lista de conjuntos de filas de esquema concretos de la minería de datos, vea [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
+    >  Para ver una lista de todos los conjuntos de filas de esquema que se pueden consultar en la instancia actual, utilice esta consulta: `SELECT * FROM $system.`DISCOVER_SCHEMA_ROWSETS. O bien, para obtener una lista de conjuntos de filas de esquema concretos de la minería de datos, vea [Data Mining Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/data-mining-schema-rowsets).  
   
 ## <a name="see-also"></a>Vea también  
  [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   

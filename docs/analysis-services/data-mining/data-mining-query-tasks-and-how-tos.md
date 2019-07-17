@@ -1,5 +1,5 @@
 ---
-title: Tareas y procedimientos de consulta de minería de datos | Documentos de Microsoft
+title: Tareas y procedimientos de consulta de minería de datos | Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c3c06f78302aa46fdebe05b95d394905116b973f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014392"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210097"
 ---
 # <a name="data-mining-query-tasks-and-how-tos"></a>Tareas y procedimientos de Consulta de minería de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,11 +23,11 @@ ms.locfileid: "34014392"
 ## <a name="creating-queries-with-prediction-query-builder"></a>Crear consultas mediante el Generador de consultas de predicción  
  El Generador de consultas de predicción se proporciona en [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] y [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] como una manera de generar consultas gráficamente sobre modelos de minería de datos. Los siguientes temas explican cómo puede seleccionar un modelo, especificar un origen de datos, personalizar las predicciones y guardar la salida.  
   
--   [Crear una consulta de predicción mediante el generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
--   [Crear una consulta Singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)  
+-   [Crear una consulta singleton en el Diseñador de minería de datos](../../analysis-services/data-mining/create-a-singleton-query-in-the-data-mining-designer.md)  
   
--   [Crear una consulta de predicción mediante el generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
+-   [Crear una consulta de predicción con el Generador de consultas de predicción](../../analysis-services/data-mining/create-a-prediction-query-using-the-prediction-query-builder.md)  
   
 -   [Ver y guardar los resultados de una consulta de predicción](../../analysis-services/data-mining/view-and-save-the-results-of-a-prediction-query.md)  
   
@@ -40,13 +40,13 @@ ms.locfileid: "34014392"
 ## <a name="using-other-data-mining-query-tools"></a>Usar otras herramientas de consulta de minería de datos  
  Además de usar el Generador de consultas de predicción, puede escribir directamente una consulta en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] usando DMX o XMLA. También puede generar consultas de predicción mediante programación y enviarlas a un servidor [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] . En los siguientes temas se proporciona más información sobre cómo crear y trabajar con consultas de predicción fuera del Generador de consultas de predicción.  
   
- [Crear una consulta de predicción Singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Crear una consulta de predicción singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
  Describe cómo usar las herramientas de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para generar y ejecutar una consulta de predicción.  
   
- [Crear una consulta de predicción Singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
+ [Crear una consulta de predicción singleton desde una plantilla](../../analysis-services/data-mining/create-a-singleton-prediction-query-from-a-template.md)  
  Describe cómo usar las plantillas que se proporcionan en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para agregar parámetros a una consulta de predicción.  
   
- [Cambie el valor de tiempo de espera para las consultas de minería de datos](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)  
+ [Cambiar el valor del tiempo de espera para las consultas de minería de datos](../../analysis-services/data-mining/change-the-time-out-value-for-data-mining-queries.md)  
  Describe cómo establecer en el servidor las propiedades que controlan el comportamiento relacionado con las consultas de minería de datos.  
   
  [Crear una consulta de contenido en un modelo de minería de datos](../../analysis-services/data-mining/create-a-content-query-on-a-mining-model.md)  
@@ -56,7 +56,7 @@ ms.locfileid: "34014392"
  Describe cómo crear una consulta en el contenido del modelo de minería de datos usando las plantillas XMLA incluidas en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 ## <a name="see-also"></a>Vea también  
- [Referencia del lenguaje de expresión y de consultas & #40; Analysis Services & #41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
- [Minería de datos almacenados procedimientos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
+ [Referencia del lenguaje de expresiones y consultas &#40;Analysis Services&#41;](http://msdn.microsoft.com/library/9597533d-35f4-4742-9d8c-7af392163527)   
+ [Procedimientos almacenados de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/data-mining-stored-procedures-analysis-services-data-mining.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e51c42237b57830cbe894114019657ab5b3742c3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71027fb060a5085289aed4c8a637bc76a71bbd2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108680"
 ---
 # <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @filename = ] 'file_name'` Es la cadena que especifica la ruta de acceso completa, nombre de archivo incluido, donde se guardará una copia del archivo de datos (.mdf). *nombre de archivo* es **nvarchar (260)**, no tiene ningún valor predeterminado.  
+`[ @filename = ] 'file_name'` Es la cadena que especifica la ruta de acceso completa, nombre de archivo incluido, donde se guardará una copia del archivo de datos (.mdf). *nombre de archivo* es **nvarchar (260)** , no tiene ningún valor predeterminado.  
   
-`[ @temp_dir = ] 'temp_dir'` Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es **nvarchar (260)**, su valor predeterminado es null. Si es NULL, el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará el directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
+`[ @temp_dir = ] 'temp_dir'` Es el nombre del directorio que contiene los archivos temporales. *temp_dir* es **nvarchar (260)** , su valor predeterminado es null. Si es NULL, el [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] se usará el directorio de datos predeterminado. El directorio debe tener espacio suficiente para contener un archivo que tenga el tamaño de todos los archivos de la base de datos del suscriptor combinados.  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Es una marca booleana opcional que especifica si se debe o no sobrescribir archivos existentes del mismo nombre especificado en **@filename**. *overwrite_existing_file*es **bit**, su valor predeterminado es **0**. Si **1**, sobrescribe el archivo especificado por **@filename**, si existe. Si **0**, el procedimiento almacenado produce un error si el archivo existe y no se sobrescribe el archivo.  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` Es una marca booleana opcional que especifica si se debe o no sobrescribir archivos existentes del mismo nombre especificado en **@filename** . *overwrite_existing_file*es **bit**, su valor predeterminado es **0**. Si **1**, sobrescribe el archivo especificado por **@filename** , si existe. Si **0**, el procedimiento almacenado produce un error si el archivo existe y no se sobrescribe el archivo.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  **0** (correcto) o **1** (error)  

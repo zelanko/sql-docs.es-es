@@ -1,5 +1,5 @@
 ---
-title: Contenido del modelo para los modelos de red neuronal de minería de datos | Documentos de Microsoft
+title: Los modelos de red neuronal contenido del modelo de minería de datos | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182667"
 ---
 # <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de red neuronal (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34018532"
   
 -   Cada nodo sucesivo contiene una *subred* diferente (NODE_TYPE = 17). Cada subred siempre contiene un nivel oculto (NODE_TYPE = 19) y un nivel de salida (NODE_TYPE = 20) para esa subred.  
   
- ![estructura del contenido del modelo para redes neurales](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estructura del contenido del modelo para las redes neuronales")  
+ ![estructura del contenido del modelo para las redes neuronales](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "estructura del contenido del modelo para las redes neuronales")  
   
  La información del nivel de entrada es simple: el nodo superior de cada nivel de entrada (NODE_TYPE = 18) actúa como un organizador para una colección de nodos de entrada (NODE_TYPE = 21). El contenido de los nodos de entrada se describe en la tabla siguiente.  
   
@@ -68,7 +68,7 @@ ms.locfileid: "34018532"
 |Nodo de salida|Nombre del atributo de salida|  
   
  NODE_NAME  
- Nombre del nodo. Esta columna contiene el mismo valor que NODE_UNIQUE_NAME.  
+ El nombre del nodo. Esta columna contiene el mismo valor que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -78,7 +78,7 @@ ms.locfileid: "34018532"
  NODE_TYPE  
  Un modelo de red neuronal genera únicamente los tipos de nodos siguientes:  
   
-|Identificador del tipo de nodo|Description|  
+|Identificador del tipo de nodo|Descripción|  
 |------------------|-----------------|  
 |1|Modelo.|  
 |17|Nodo de organizador para la subred.|  
@@ -206,11 +206,11 @@ ms.locfileid: "34018532"
 ### <a name="input-nodes"></a>Nodos de entrada  
  El nivel de entrada contiene un nodo para cada valor del atributo que se utilizó en el modelo.  
   
- **Atributo discreto:** el nodo de entrada solo almacena el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo discreto:** El nodo de entrada almacena únicamente el nombre del atributo y su valor en las columnas ATTRIBUTE_NAME y ATTRIBUTE_VALUE. Por ejemplo, si [Work Shift] es la columna, se crea un nodo independiente para cada valor de esa columna que se utilizó en el modelo, como AM y PM. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo numérico de datos discretos:** el nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor concreto. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo numérico discretizado:** El nodo de entrada almacena el nombre del atributo y el valor, que puede ser un intervalo o un valor específico. Las expresiones, como '77.4 - 87.4' o ' < 64.0', representan todos los valores para el valor de [Time Per Issue]. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
- **Atributo continuo:** el nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
+ **Atributo continuo:** El nodo de entrada almacena el valor medio del atributo. La tabla NODE_DISTRIBUTION para cada nodo muestra solo el valor actual del atributo.  
   
 ### <a name="hidden-layer-nodes"></a>Nodos del nivel oculto  
  El nivel oculto contiene un número variable de nodos. En cada uno, la tabla NODE_DISTRIBUTION contiene las asignaciones del nivel oculto a los nodos del nivel de entrada. La columna ATTRIBUTE_NAME contiene un identificador de nodo que corresponde a un nodo del nivel de entrada. La columna ATTRIBUTE_VALUE contiene el peso asociado a esa combinación de nodo de entrada y nodo de nivel oculto. La última fila de la tabla contiene un coeficiente que representa el peso de ese nodo oculto en el nivel oculto.  
@@ -220,15 +220,15 @@ ms.locfileid: "34018532"
   
  La tabla NODE_DISTRIBUTION tiene la información adicional siguiente, en función de si el tipo del atributo es:  
   
- **Atributo discreto:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo en conjunto y el valor actual del atributo.  
+ **Atributo discreto:** Las dos últimas filas de la tabla NODE_DISTRIBUTION contienen un coeficiente para el nodo como un todo y el valor actual del atributo.  
   
- **Un atributo numérico de datos discretos:** idéntico a los atributos discretos, solo que el valor del atributo es un intervalo de valores.  
+ **Atributo numérico discretizado:** Es idéntico a los atributos discretos, excepto en que el valor del atributo es un intervalo de valores.  
   
- **Atributo continuo:** las dos filas finales de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo en conjunto y la varianza del coeficiente.  
+ **Atributo continuo:** Las dos últimas filas de la tabla NODE_DISTRIBUTION contienen la media del atributo, el coeficiente para el nodo como un todo y la varianza del coeficiente.  
   
 ## <a name="see-also"></a>Vea también  
- [Algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
  [Referencia técnica del algoritmo de red neuronal de Microsoft](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [Ejemplos de consultas de modelo de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+ [Ejemplos de consultas de modelos de red neuronal](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

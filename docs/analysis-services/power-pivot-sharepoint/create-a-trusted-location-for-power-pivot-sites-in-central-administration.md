@@ -1,5 +1,5 @@
 ---
-title: Crear una ubicación de confianza para sitios de Power Pivot en Administración Central | Documentos de Microsoft
+title: Crear una ubicación de confianza para sitios PowerPivot en Administración Central | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24a779a751ac93c4c132c2dbf8ae63987de2666a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027352"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208235"
 ---
 # <a name="create-a-trusted-location-for-power-pivot-sites-in-central-administration"></a>Crear una ubicación de confianza para los sitios PowerPivot en Administración central
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34027352"
 ## <a name="prerequisites"></a>Requisitos previos  
  Debe ser administrador de servicios o de una granja para designar una dirección URL como una ubicación de confianza.  
   
- Debe conocer la dirección URL del sitio de SharePoint que contiene la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca que almacene los libros. Para obtener la dirección, abra el sitio que contenga la biblioteca, haga clic con el botón derecho en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**, seleccione **Propiedades** y, después, copie la primera parte de la dirección (URL) que contiene el nombre del servidor y la ruta de acceso al sitio.  
+ Debe conocer la dirección URL del sitio de SharePoint que contiene la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] u otra biblioteca que almacene los libros. Para obtener la dirección, abra el sitio que contenga la biblioteca, haga clic con el botón derecho en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** , seleccione **Propiedades** y, después, copie la primera parte de la dirección (URL) que contiene el nombre del servidor y la ruta de acceso al sitio.  
   
 ##  <a name="overview"></a> Información general  
  Una instalación inicial de Servicios de Excel especifica 'http://' como su ubicación de confianza, lo que significa que los libros de cualquier sitio de la granja se pueden abrir en el servidor. Si requiere un control más estrecho sobre las ubicaciones que se consideren de confianza, puede crear nuevas ubicaciones de confianza que se asignen a sitios concretos de una granja y, a continuación, variar la configuración y los permisos de cada una.  
@@ -62,7 +62,7 @@ ms.locfileid: "34027352"
   
 ## <a name="see-also"></a>Vea también  
  [Galería de PowerPivot](http://msdn.microsoft.com/library/2a0db616-e08e-4062-aac8-979f8cad7794)   
- [Crear y personalizar la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
+ [Creación y personalización de la Galería de PowerPivot](../../analysis-services/power-pivot-sharepoint/create-and-customize-power-pivot-gallery.md)   
  [Uso de la Galería de Power Pivot](../../analysis-services/power-pivot-sharepoint/use-power-pivot-gallery.md)  
   
   

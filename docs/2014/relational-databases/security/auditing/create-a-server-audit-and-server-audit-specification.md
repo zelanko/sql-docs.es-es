@@ -18,11 +18,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: ec1c7205597224e5fca27942ca25ad4e197ec0d0
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68198413"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>Crear una auditoría de servidor y una especificación de auditoría de servidor
   En este tema se describe cómo crear una auditoría de servidor y una especificación de auditoría de servidor en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../../includes/tsql-md.md)]. La*auditoría* de una instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] o de una base de datos de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] implica el seguimiento y registro de los eventos que se producen en el sistema. El objeto *SQL Server Audit* recopila una única instancia de acciones y grupos de acciones de nivel de servidor o de base de datos para su supervisión. La auditoría se realiza en el nivel de instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . Es posible tener varias auditorías por cada instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] . El objeto *Especificación de auditoría de servidor* pertenece a una auditoría. Puede crear una especificación de auditoría de servidor por cada auditoría, ya que ambos se crean en el ámbito de la instancia de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. Para obtener más información, vea [SQL Server Audit &#40;motor de base de datos&#41;](sql-server-audit-database-engine.md).  
@@ -51,7 +51,7 @@ ms.locfileid: "54135765"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
   
 -   Para crear, modificar o quitar una auditoría de servidor, las entidades de seguridad deben tener el permiso ALTER ANY SERVER AUDIT o CONTROL SERVER.  
   
@@ -65,7 +65,7 @@ ms.locfileid: "54135765"
   
 1.  En el Explorador de objetos, expanda la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...**.  
+2.  Haga clic con el botón derecho en la carpeta **Auditorías** y, después, seleccione **Nueva auditoría...** .  
   
      Las siguientes opciones están disponibles en la página **General** del cuadro de diálogo **Crear auditoría** .  
   
@@ -88,14 +88,14 @@ ms.locfileid: "54135765"
     > [!IMPORTANT]  
     >  Cuando la auditoría está en un estado de error, la conexión de administrador dedicada puede seguir realizando eventos auditados.  
   
-     Lista**Destino de auditoría**   
+     Lista**Destino de auditoría**  
      Especifica el destino de los datos de la auditoría. Las opciones disponibles son un archivo binario, el registro de aplicación Windows o el registro de seguridad de Windows. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] no puede escribir en el registro de seguridad de Windows sin configurar valores adicionales en Windows. Para obtener más información, vea [Escribir eventos de auditoría de SQL Server en el registro de seguridad](write-sql-server-audit-events-to-the-security-log.md).  
   
      **Ruta del archivo**  
      Especifica la ubicación de la carpeta donde se escriben los datos de la auditoría si se ha especificado un archivo **Destino de auditoría** .  
   
      **Puntos suspensivos (...)**  
-     Se abre el **Buscar carpeta -**_nombre_servidor_ cuadro de diálogo para especificar una ruta de acceso de archivo o crear una carpeta donde se escribirá el archivo de auditoría.  
+     Se abre el **Buscar carpeta -** _nombre_servidor_ cuadro de diálogo para especificar una ruta de acceso de archivo o crear una carpeta donde se escribirá el archivo de auditoría.  
   
      **Límite máximo del archivo de auditoría:**  
      **Máximo de archivos de sustitución incremental**  
@@ -104,16 +104,16 @@ ms.locfileid: "54135765"
      **Número máximo de archivos**  
      Especifica que, si se alcanza el número máximo de archivos de auditoría, cualquier acción que ocasione la generación de eventos de auditoría adicionales producirá un error y se mostrará un mensaje.  
   
-     Casilla**Ilimitado**   
+     Casilla**Ilimitado**  
      Cuando se activa la casilla **Ilimitado** en **Máximo de archivos de sustitución incremental** , no se impone ningún límite en cuanto al número de archivos de auditoría que se crearán. La casilla **Ilimitado** está activada de forma predeterminada y se aplica a las selecciones de **Máximo de archivos de sustitución incremental** y **Máximo de archivos** .  
   
-     Casilla**Número de archivos**   
+     Casilla**Número de archivos**  
      Especifica el número de archivos de auditoría que se crearán, hasta 2.147.483.647. Esta opción solo está disponible si se desactiva la casilla **Ilimitado** .  
   
      **Tamaño máximo del archivo**  
      Especifica el tamaño máximo de un archivo de auditoría en megabytes (MB), gigabytes (GB) o terabytes (TB). Puede especificar entre 1024 MB y 2.147.483.647 TB. La activación de la casilla **Ilimitado** no pone un límite en el tamaño del archivo. La especificación de un valor inferior a 1024 MB producirá y devolverá un error. La casilla **Ilimitado** está activada de forma predeterminada.  
   
-     Casilla**Reservar espacio en disco**   
+     Casilla**Reservar espacio en disco**  
      Especifica que se debe preasignar una cantidad de espacio en disco igual al tamaño máximo de archivo especificado. Este valor solo se puede utilizar si la casilla **Ilimitado** en **Tamaño máximo del archivo** no está activada. Esta casilla no está activada de forma predeterminada.  
   
 3.  Opcionalmente, en la página **Filtrar** , escriba un predicado, o la cláusula `WHERE` , para la auditoría de servidor de modo que se especifiquen opciones adicionales no disponibles en la página **General** . Encierre el predicado entre paréntesis; por ejemplo: `(object_name = 'EmployeesTable')`.  
@@ -124,7 +124,7 @@ ms.locfileid: "54135765"
   
 1.  En el Explorador de objetos, haga clic en el signo más para expandir la carpeta **Seguridad** .  
   
-2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor...**.  
+2.  Haga clic con el botón derecho en la carpeta **Especificaciones de auditoría de servidor** y seleccione **Nueva especificación de auditoría de base de servidor...** .  
   
      Las siguientes opciones están disponibles en el cuadro de diálogo **Crear especificación de auditoría de servidor** .  
   

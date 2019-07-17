@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: c187df58-a8c8-4c74-a76f-663abbc5f0c1
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d138d5ef09c4de32b0fb279287898a4933eb4e84
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: bfefde49bb86833025fc14c2ea84782e8caa84a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47612568"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107089"
 ---
 # <a name="conversions-ole-db"></a>Conversiones (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47612568"
   
 -   El formato de **datetime** y **datetimeoffset** cadenas es:  
   
-     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[. *9999999*] [+ *hh*:*mm*]]  
+     *aaaa*-*mm*-*dd*[ *hh*:*mm*:*ss*[.*9999999*][ ± *hh*:*mm*]]  
   
 -   El formato de las cadenas **time** es:  
   
@@ -46,7 +45,7 @@ ms.locfileid: "47612568"
 > [!NOTE]  
 >  Las versiones anteriores de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client y de las conversiones OLE implementadas SQLOLEDB, en caso de un error en las conversiones estándar. Como resultado, algunas conversiones realizadas por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client 10.0 y posteriores difieren de la especificación OLE DB.  
   
- Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, vea la sección "Formatos de datos: cadenas y literales" en [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
+ Las conversiones de las cadenas permiten flexibilidad en los espacios en blanco y el ancho de campo. Para obtener más información, consulte la "formatos de datos: Sección de cadenas y literales"en [compatibilidad con tipos de datos para OLE DB mejoras de fecha y hora](../../relational-databases/native-client-ole-db-date-time/data-type-support-for-ole-db-date-and-time-improvements.md).  
   
  A continuación figuran las reglas de conversión generales:  
   

@@ -20,14 +20,13 @@ ms.assetid: 2ed6b53d-1cf2-4763-9d58-36ea24a610ef
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef59338f86601316a71ae4f97004dc9beceb015f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0aa04b9a4b90b470ca3cc6df4a8f5cf62134027c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220506"
 ---
 # <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "64945634"
 |columna|Data type|Descripción|  
 |------------|---------------|-----------------|  
 |**lcid**|**int**|Identificador de configuración regional (LCID) de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows para el idioma.|  
-|**Nombre**|**sysname**|Es el valor del alias en [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid** o la representación de cadena del LCID numérico.|  
+|**name**|**sysname**|Es el valor del alias en [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponde al valor de **lcid** o la representación de cadena del LCID numérico.|  
   
 ## <a name="values-returned-for-default-languages"></a>Valores devueltos para los idiomas predeterminados  
  En la tabla siguiente se muestran los valores para los idiomas cuyos separadores de palabras están registrados de forma predeterminada.  
@@ -58,7 +57,7 @@ ms.locfileid: "64945634"
 |Neerlandés|1043|  
 |Inglés|3082|  
 |Francés|1036|  
-|German|1031|  
+|Alemán|1031|  
 |**Se aplica a**: desde [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] hasta [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].<br /><br /> Greek|1032|  
 |Gujarati|1095|  
 |Hebreo|1037|  

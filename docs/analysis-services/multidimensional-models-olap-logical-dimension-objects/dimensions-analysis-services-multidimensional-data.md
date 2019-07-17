@@ -1,5 +1,5 @@
 ---
-title: Dimensiones (Analysis Services - datos multidimensionales) | Documentos de Microsoft
+title: Dimensiones (Analysis Services - datos multidimensionales) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 23d2cc4e916de5ada7200d7b69f727eab3500af1
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209261"
 ---
 # <a name="dimensions-analysis-services---multidimensional-data"></a>Dimensiones (Analysis Services - Datos multidimensionales)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,16 +22,16 @@ ms.locfileid: "34024142"
   
 ## <a name="in-this-section"></a>En esta sección  
   
-|Tema|Description|  
+|Tema|Descripción|  
 |-----------|-----------------|  
 |[Introducción a las dimensiones &#40;Analysis Services - datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-introduction.md)|Proporciona información general acerca de los conceptos de las dimensiones.|  
-|[Atributos y jerarquías de atributo](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)|Describe los atributos y sus jerarquías.|  
+|[Atributos y jerarquías de atributos](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)|Describe los atributos y sus jerarquías.|  
 |[Jerarquías de usuario](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)|Describe las jerarquías definidas por el usuario de los atributos.|  
 |[Dimensiones habilitadas para escritura](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/write-enabled-dimensions.md)|Describe las dimensiones habilitadas para escritura.|  
 |[Traducciones de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)|Describe las traducciones de los metadatos de las dimensiones.|  
   
 ## <a name="see-also"></a>Vea también  
  [Dimensiones en modelos multidimensionales](../../analysis-services/multidimensional-models/dimensions-in-multidimensional-models.md)   
- [Objetos de cubo & #40; Analysis Services - datos multidimensionales & #41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [Objetos de cubo &#40;Analysis Services - datos multidimensionales&#41;](../../analysis-services/multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
   

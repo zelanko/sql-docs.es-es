@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 9418cb34-d869-4d24-95b3-6cb9db949bb0
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: f1497b40fbf3462228af6b0ef9ce964c7212df64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: a5e8feb6c083c787d877cbc5491c533b8a35d740
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62630887"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68266612"
 ---
 # <a name="project-settingsloading-system-objects-oracletosql"></a>Configuración del proyecto (cargar objetos del sistema) (OracleToSQL)
 La página cargar objetos del sistema de la **configuración del proyecto** cuadro de diálogo le permite especificar qué objetos del sistema Oracle SSMA convierte y se carga en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
@@ -29,11 +29,11 @@ Está disponible en el panel de objetos del sistema al cargar el **configuració
 ## <a name="default-settings"></a>Configuración predeterminada  
 Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. Para mejorar el rendimiento, SSMA selecciona sólo los objetos del sistema utilizadas con frecuencia, como se muestra en la lista siguiente:  
   
--   SYS.DBMS_OUTPUT  
+-   SYS. DBMS_OUTPUT  
   
 -   SYS.DBMS_PIPE  
   
--   SYS.DBMS_UTILITY  
+-   SYS. DBMS_UTILITY  
   
 -   SYS. ESTÁNDAR  
   
@@ -43,7 +43,7 @@ Convertir los objetos del sistema consume recursos del sistema y lleva tiempo. P
   
 -   SYS.DBMS_SQL  
   
--   SYS.DBMS_SESSION  
+-   SYS. DBMS_SESSION  
   
 Si los objetos de Oracle hace referencia a objetos del sistema adicionales, debe seleccionar esos objetos. Si no selecciona los objetos del sistema que hacen referencia los objetos de base de datos de Oracle, SSMA va a notificar errores de conversión. Si recibe errores de conversión que se debe a que faltan los objetos del sistema, seleccione los objetos que faltan en este cuadro de diálogo. A continuación, puede repetir la conversión según sea necesario.  
   

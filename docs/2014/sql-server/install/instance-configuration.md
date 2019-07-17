@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 66329d4c25a23a6b3dbc3570723bab8aecfa3d4a
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56039886"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68190964"
 ---
 # <a name="instance-configuration"></a>Configuración de instancia
   Use la página **Configuración de instancia** del Asistente para instalación de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con el fin de especificar si quiere crear una instancia predeterminada o una instancia con nombre de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Si aún no hay instalada ninguna instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se creará una predeterminada, a menos que especifique una instancia con nombre.  

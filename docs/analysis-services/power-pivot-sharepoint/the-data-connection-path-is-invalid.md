@@ -1,5 +1,5 @@
 ---
-title: La ruta de acceso de conexión de datos no es válido | Documentos de Microsoft
+title: La ruta de acceso de conexión de datos no es válido | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d3ecd392bbcbbf310d5960ec42d7799a36c2ebac
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028446"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208078"
 ---
 # <a name="the-data-connection-path-is-invalid"></a>La ruta de acceso de conexión de datos no es válido
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34028446"
 |Se aplica a|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Excel Services se configura para permitir únicamente las conexiones de datos de archivos .odc que estén en una biblioteca de conexiones de datos de confianza.|  
-|Texto del mensaje|La ruta de acceso de la conexión de datos en el libro señala a un archivo en la unidad local o es un URI no válido. No se pudieron actualizar las siguientes conexiones: datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Texto del mensaje|La ruta de acceso de la conexión de datos en el libro señala a un archivo en la unidad local o es un URI no válido. No se pudieron actualizar las siguientes conexiones: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datos|  
   
 ## <a name="explanation"></a>Explicación  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] contienen conexiones de datos insertados. Para admitir la interacción de los libros a través de segmentaciones y filtros, Servicios de Excel se debe configurar para permitir el acceso de datos externos a través de la información de las conexiones incrustadas. Se requiere acceso a los datos externos para recuperar los datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] que se cargan en los servidores [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] de la granja.  

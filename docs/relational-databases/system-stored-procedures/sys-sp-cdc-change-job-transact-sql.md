@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536107"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106532"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>b. Cambiar un trabajo de limpieza  
- En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Todos los parámetros válidos para este tipo de trabajo, excepto **@threshold**, se especifican. El valor de **@threshold** no se modifica.  
+ En el siguiente ejemplo se actualiza un trabajo de limpieza en la base de datos `AdventureWorks2012`. Todos los parámetros válidos para este tipo de trabajo, excepto **@threshold** , se especifican. El valor de **@threshold** no se modifica.  
   
 ```  
 USE AdventureWorks2012;  

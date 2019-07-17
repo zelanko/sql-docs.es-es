@@ -11,11 +11,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: fc57a2c286c9870421a223ce6a14ef201bef0c3d
-ms.sourcegitcommit: fafb9b5512695b8e3fc2891f9c5e3abd7571d550
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50753452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205501"
 ---
 # <a name="use-date-and-time-types"></a>Usar tipos de fecha y hora
   En este ejemplo, se muestra cómo inicializar las estructuras de datos de fecha y hora que se agregaron en [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. A continuación, se preparan los valores de entrada, se enlazan los parámetros y se ejecuta la consulta. Para obtener más información sobre el uso de estos tipos, vea [mejoras de fecha y hora &#40;ODBC&#41;](../native-client-odbc-date-time/date-and-time-improvements-odbc.md).  

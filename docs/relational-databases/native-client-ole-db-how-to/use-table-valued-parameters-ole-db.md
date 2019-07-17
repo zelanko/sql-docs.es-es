@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 18cb684f-c307-4fda-a2ab-8b638416c3f0
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0d17f7b1f4d2f0d7674e59eb53948475ccde31ab
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f326704a949e4e0703f6dcb732471edd8187729b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109961"
 ---
 # <a name="use-table-valued-parameters-ole-db"></a>Usar parámetros con valores de tabla (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53204864"
  Para obtener más información acerca de los parámetros con valores de tabla, vea [parámetros con valores de tabla &#40;SQL Server Native Client&#41;](../../relational-databases/native-client/features/table-valued-parameters-sql-server-native-client.md).  
   
 ## <a name="example"></a>Ejemplo  
- La primera ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código crea la base de datos utilizada por el ejemplo.  
+ La primera lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea la base de datos que se usa en el ejemplo.  
   
  Coloque la segunda lista de código en un archivo denominado stdafx.h.  
   
@@ -46,7 +45,7 @@ ms.locfileid: "53204864"
   
  Compile con ole32.lib oleaut32.lib y ejecute la cuarta lista de código (C++). Esta aplicación se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] del equipo. En algunos sistemas operativos Windows, deberá cambiar (localhost) o (local) al nombre de la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . Para conectarse a una instancia con nombre, cambie la cadena de conexión de L"(local)" a L"(local)\\nombre", donde "nombre" es la instancia con nombre. De forma predeterminada, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express se instala en una instancia con nombre. Asegúrese de que la variable de entorno INCLUDE incluye el directorio que contiene sqlncli.h.  
   
- El quinto ( [!INCLUDE[tsql](../../includes/tsql-md.md)]) lista de código crea la base de datos utilizada por el ejemplo.  
+ La quinta lista de código ([!INCLUDE[tsql](../../includes/tsql-md.md)]) crea la base de datos que se usa en el ejemplo.  
   
 ```  
 create database testdb  

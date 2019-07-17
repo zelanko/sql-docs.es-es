@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: b8efc247-27ab-4a00-92b6-1400785783fe
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f58d262f133fc242592e62e0bb5a4152877adf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 719b34eef3eb51af1e5eeabce3a88d453f005eff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138821"
 ---
 # <a name="sqlnativesql-function"></a>Función SQLNativeSql
 **Conformidad**  
@@ -71,7 +70,7 @@ SQLRETURN SQLNativeSql(
 ## <a name="returns"></a>Devuelve  
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_ERROR o SQL_INVALID_HANDLE.  
   
-## <a name="diagnostics"></a>Diagnósticos  
+## <a name="diagnostics"></a>Diagnóstico  
  Cuando **SQLNativeSql** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_DBC y un *controlar* de *ConnectionHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLNativeSql** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
 |SQLSTATE|Error|Descripción|  

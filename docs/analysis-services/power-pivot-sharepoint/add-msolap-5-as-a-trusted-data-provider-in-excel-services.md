@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979457"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164456"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Agregar MSOLAP.5 como proveedor de datos de confianza en Excel Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "38979457"
   
  Solo necesita realizar este paso una vez para cada aplicación de servicios de Excel Services.  
   
- Cada servidor físico que controla una solicitud de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , como un servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint o un servidor de Excel Services, debe tener instalado el proveedor OLE DB en el equipo. Una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint incluye siempre el proveedor OLE DB, pero si Excel Services se ejecuta en un equipo que no dispone de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, debe instalar el proveedor manualmente. Para obtener más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
+ Cada servidor físico que controla una solicitud de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , como un servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint o un servidor de Excel Services, debe tener instalado el proveedor OLE DB en el equipo. Una instalación de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint incluye siempre el proveedor OLE DB, pero si Excel Services se ejecuta en un equipo que no dispone de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint, debe instalar el proveedor manualmente. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Agregue un proveedor de confianza en Excel Services  
   

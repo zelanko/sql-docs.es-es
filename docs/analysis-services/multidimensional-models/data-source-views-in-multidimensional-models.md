@@ -1,5 +1,5 @@
 ---
-title: Vistas en modelos multidimensionales del origen de datos | Documentos de Microsoft
+title: Vistas en modelos multidimensionales de origen de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c5947bb9de4088a97d68df7b919e3de947bd1d02
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209043"
 ---
 # <a name="data-source-views-in-multidimensional-models"></a>Vistas del origen de datos en modelos multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "34021542"
   
  Puede crear varias vistas del origen de datos en un proyecto o una base de datos de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] en uno o varios orígenes de datos y crear cada una de ellas de forma que cumpla los requisitos de una solución distinta.  
   
-## <a name="related-tasks"></a>Tareas relacionadas  
+## <a name="related-tasks"></a>Related Tasks  
  [Definir una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/defining-a-data-source-view-analysis-services.md)  
   
  [Agregar o quitar tablas o vistas en una vista del origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/adding-or-removing-tables-or-views-in-a-data-source-view-analysis-services.md)  

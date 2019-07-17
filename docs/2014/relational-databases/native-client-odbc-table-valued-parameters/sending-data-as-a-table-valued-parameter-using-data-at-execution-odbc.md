@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b2956dba6bb5c5107c5421f32bfa354e603a5b18
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48118365"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205462"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-using-data-at-execution-odbc"></a>Enviar datos como un parámetro con valores de tabla usando datos en ejecución (ODBC)
   Esto es similar a la [todo en memoria](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedimiento, pero usa los datos en ejecución para el parámetro con valores de tabla.  
@@ -211,7 +211,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 #define UNICODE  
@@ -399,7 +399,7 @@ create procedure MCLOGInsert (@TableVariable MCLOGType READONLY)
 go  
 ```  
   
-### <a name="code"></a>código  
+### <a name="code"></a>Código  
   
 ```  
 #define UNICODE  

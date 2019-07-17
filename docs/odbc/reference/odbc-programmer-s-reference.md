@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111192"
 ---
 # <a name="odbc-programmer39s-reference"></a>Programador de ODBC&#39;s referencia
 El *referencia del programador de ODBC* contiene las siguientes secciones.  
@@ -55,7 +54,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
 |*argument*|Las palabras en cursiva indican argumentos mediante programación, la información que el usuario o la aplicación debe proporcionar o énfasis en word.|  
 |**SQLEndTran**|Los tipos en negrita indican la sintaxis debe escribirse exactamente como se muestra, incluidos los nombres de función.|  
 |&#124;|Una barra vertical separa dos opciones mutuamente excluyentes en una línea de sintaxis.|  
-|…|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
+|...|Los puntos suspensivos indican que los argumentos se pueden repetir varias veces.|  
 |. . .|Una columna de tres puntos indica a continuación de líneas de código anteriores.|  
   
 ## <a name="about-the-code-examples"></a>Acerca de los ejemplos de código  
@@ -78,13 +77,13 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Emerson, L. Sandra, Darnovsky, María y Bowman, Judith S.: *El manual de SQL práctico* (Addison-Wesley, 1989).  
   
--   Groff, James R. and Weinberg, Paul N.: *Mediante SQL* (Osborne McGraw-Hill, 1990).  
+-   Groff, R. James y Weinberg, Paul N.: *Mediante SQL* (Osborne McGraw-Hill, 1990).  
   
 -   Gruber, Martin: *Descripción de SQL* (Sybex, 1990).  
   
 -   Hursch, Jack l y J. Carolina: *SQL, el lenguaje de consulta estructurado* (PESTAÑA libros, 1988).  
   
--   Melton, Jim y Simon, R. Alan: *Cómo entender el nuevo SQL: A Complete Guide* (Morgan Kaufmann Publishers, 1993).  
+-   Melton, Jim y Simon, R. Alan: *Cómo entender el nuevo SQL: Una guía completa* (Morgan Kaufmann Publishers, 1993).  
   
 -   Fabian de Pascal: *SQL y los conceptos básicos de relacionales* (M & T libros, 1990).  
   
@@ -100,7 +99,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Gris, N. J. y Reuter, Andreas: *Procesamiento de transacciones: Conceptos y técnicas* (Morgan Kaufmann Publishers, 1993).  
   
--   Hackathorn, Richard D.: *Enterprise Database Connectivity* (Wiley & Sons, 1993).  
+-   Hackathorn, Richard D.: *Conectividad de base de datos empresarial* (Wiley & Sons, 1993).  
   
  Para obtener más información sobre las Interfaces de nivel de llamada, están disponibles los siguientes estándares:  
   
@@ -112,7 +111,7 @@ El *referencia del programador de ODBC* contiene las siguientes secciones.
   
 -   Geiger, Kyle: *Dentro de ODBC* (Microsoft Press®, 1995).  
   
--   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, Cross, Jim, and Lilley, Albert W.: *Uso de ODBC 2* (Que, 1994).  
+-   Gryphon, Robert, Charpentier, Luc, Oelschlager, Jon, Shoemaker, Andrew, cruz, Jim y Lilley, W. Albert: *Uso de ODBC 2* (Que, 1994).  
   
 -   Johnston, Tom y Osborne, marca: *Guía para desarrolladores de ODBC* (Howard W. Sams & compañía, 1994).  
   

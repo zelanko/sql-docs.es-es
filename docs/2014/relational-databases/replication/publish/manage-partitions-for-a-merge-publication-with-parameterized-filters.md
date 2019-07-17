@@ -15,11 +15,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 01d2ee847c87fdab013b19edde3c20c9a03c8499
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52763187"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199411"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>Administrar particiones para una publicación de mezcla mediante filtros con parámetros
   En este tema se describe cómo administrar particiones para una publicación de mezcla con filtros con parámetros en [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)]o Replication Management Objects (RMO). Los filtros de fila con parámetros se puede utilizar para generar particiones no superpuestas. Estas particiones pueden estar restringidas para que solo una suscripción reciba una partición determinada. En estos casos, un número grande de suscriptores producirá un número de particiones grande, las cuales a su vez requieren un número igual de instantánea con particiones. Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md).  
@@ -47,11 +47,11 @@ ms.locfileid: "52763187"
 -   Cuando una publicación ha parametrizado filtros que producen suscripciones con particiones no superpuestas, y si una suscripción determinada se pierde y necesita volverse a crear, debe realizar las siguientes acciones: quitar la partición a la que se suscribió, volver a crear la suscripción y, a continuación, volver a crear la partición. Para obtener más información, consulte [Filtros de fila con parámetros](../merge/parameterized-filters-parameterized-row-filters.md). La replicación genera scripts de creación para particiones del suscriptor existentes cuando se genera un script de creación de publicación. Para más información, consulte [Scripting Replication](../scripting-replication.md).  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
- Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**. Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
+ Administre las particiones en la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** . Para obtener más información sobre el acceso a este cuadro de diálogo, vea [View and Modify Publication Properties](view-and-modify-publication-properties.md). En esta página puede crear y eliminar particiones, permitir a los suscriptores iniciar la generación y distribución de instantáneas, generar instantáneas para una o más particiones, y limpiar instantáneas.  
   
 #### <a name="to-create-a-partition"></a>Para crear una partición  
   
-1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>**, haga clic en **Agregar**.  
+1.  En la página **Particiones de datos** del cuadro de diálogo **Propiedades de la publicación: \<publicación>** , haga clic en **Agregar**.  
   
 2.  En el cuadro de diálogo **Agregar partición de datos** , escriba valores para **HOST_NAME()** y/o **SUSER_SNAME()** asociados con la partición que desea crear.  
   
@@ -100,15 +100,15 @@ ms.locfileid: "52763187"
   
 #### <a name="to-view-information-on-existing-partitions"></a>Para ver información sobre particiones existentes  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Especifique el nombre de la publicación para **@publication**. (Opcional) Especifique **@suser_sname** o **@host_name** para devolver únicamente información basada en un criterio del filtrado único.  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_helpmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql). Especifique el nombre de la publicación para **@publication** . (Opcional) Especifique **@suser_sname** o **@host_name** para devolver únicamente información basada en un criterio del filtrado único.  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>Para definir una nueva partición y generar una nueva instantánea con particiones  
   
-1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Especifique el nombre de la publicación para **@publication**y el valor con parámetros que define la partición para uno de los siguientes:  
+1.  En el publicador de la base de datos de publicación, ejecute [sp_addmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql). Especifique el nombre de la publicación para **@publication** y el valor con parámetros que define la partición para uno de los siguientes:  
   
-    -   **@suser_sname**: cuando el filtro con parámetros se define con el valor devuelto por [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** : cuando el filtro con parámetros se define con el valor devuelto por [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   **@host_name**: cuando el filtro con parámetros se define con el valor devuelto por [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   **@host_name** : cuando el filtro con parámetros se define con el valor devuelto por [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
 2.  Cree e inicialice la instantánea parametrizada para esta nueva partición. Para más información, consulte [Crear una instantánea para una publicación de mezcla con filtros con parámetros](../create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  
   
@@ -116,9 +116,9 @@ ms.locfileid: "52763187"
   
 1.  En el publicador de la base de datos de publicación, ejecute [sp_dropmergepartition &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql). Especifique el nombre de la publicación para **@publication** y el valor con parámetros que define la partición para uno de los siguientes:  
   
-    -   **@suser_sname**: cuando el filtro con parámetros se define con el valor devuelto por [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
+    -   **@suser_sname** : cuando el filtro con parámetros se define con el valor devuelto por [SUSER_SNAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/suser-sname-transact-sql).  
   
-    -   **@host_name**: cuando el filtro con parámetros se define con el valor devuelto por [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
+    -   **@host_name** : cuando el filtro con parámetros se define con el valor devuelto por [HOST_NAME &#40;Transact-SQL&#41;](/sql/t-sql/functions/host-name-transact-sql).  
   
      Este procedimiento quita también el trabajo de instantáneas y los archivos de instantáneas de la partición.  
   

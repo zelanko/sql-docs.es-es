@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: de4e1fcd-0e1a-4af3-97ee-d1becc7f04df
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 77d5386f05e371a2e653f4f6097257e99457e910
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ce26cd3d4e42d6d94e32a3454318a0ee841c486
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67046716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124488"
 ---
 # <a name="spexecuteexternalscript-transact-sql"></a>sp_execute_external_script (Transact-SQL)
 
@@ -141,7 +140,7 @@ Tanto el `@r_rowsPerRead` parámetro para el streaming y el `@parallel` argument
 > [!NOTE]  
 >  Procesamiento paralelo y Streaming solo se admiten en Enterprise Edition. Puede incluir los parámetros en las consultas en Standard Edition sin provocar un error, pero los parámetros no tienen ningún efecto y scripts de R que se ejecutan en un único proceso.  
   
-## <a name="restrictions"></a>Restrictions  
+## <a name="restrictions"></a>Restricciones  
 
 
 ### <a name="data-types"></a>Tipos de datos
@@ -280,7 +279,7 @@ Para puntuar, también puede usar la función nativa [PREDICT](../../t-sql/queri
  [Bibliotecas de R y tipos de datos de R](../../advanced-analytics/r/r-libraries-and-data-types.md)  
  [SQL Server R Services](../../advanced-analytics/r/sql-server-r-services.md)   
  [Problemas conocidos de SQL Server Machine Learning Services](../../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)   
- [CREATE EXTERNAL LIBRARY &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
+ [CREAR una biblioteca externa &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-library-transact-sql.md)  
  [sp_prepare &#40;Transact SQL&#41;](../../relational-databases/system-stored-procedures/sp-prepare-transact-sql.md)   
  [sp_configure &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)   
  [Opción de configuración del servidor external scripts enabled](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 54efc6cb-eea8-4f6d-a4d0-aa05eeb54081
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 87488f36a4b4b01181cd973a75d6e5c7f2e233d7
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 2d13e7b3e2cac16bed40752f4452ba558c982c41
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860726"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255440"
 ---
 # <a name="sysdmexecqueryprofiles-transact-sql"></a>sys.dm_exec_query_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -92,7 +91,7 @@ A partir de [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1, el *generaci�
 ## <a name="permissions"></a>Permisos  
 
 En [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requiere `VIEW SERVER STATE` permiso.   
-En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)], requiere el `VIEW DATABASE STATE` permiso en la base de datos.   
+En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] los niveles Premium, requieren el `VIEW DATABASE STATE` permiso en la base de datos. En [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] niveles estándar y básico, requiere el **administrador del servidor** o un **Administrador de Azure Active Directory** cuenta.   
    
 ## <a name="examples"></a>Ejemplos  
  Paso 1: Inicie sesión en una sesión en el que va a ejecutar la consulta analiza con `sys.dm_exec_query_profiles`. Para configurar la consulta para que use generación `SET STATISTICS PROFILE ON`. Ejecute la consulta en esta misma sesión.  

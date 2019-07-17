@@ -14,11 +14,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 0e48619daa350fd5b7a7dc47a9762459fbddc7d7
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48111144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206587"
 ---
 # <a name="filestream-support-odbc"></a>Compatibilidad con FILESTREAM (ODBC)
   ODBC en [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client admite la característica mejorada FILESTREAM. Para obtener más información sobre esta característica, consulte [compatibilidad con FILESTREAM](../features/filestream-support.md). Para obtener un ejemplo que muestra la compatibilidad de ODBC con FILESTREAM, vea [enviar y recibir datos incrementalmente con FILESTREAM &#40;ODBC&#41;](../../native-client-odbc-how-to/send-and-receive-data-incrementally-with-filestream-odbc.md).  
@@ -34,7 +34,7 @@ ms.locfileid: "48111144"
  Si se llama a SQLFetch en una columna enlazada, recibirá una advertencia "datos truncados" si el búfer no es suficientemente grande como para contener el valor completo. Omita esta advertencia y actualizar los datos en esta columna enlazada con llamadas SQLParamData y SQLPutData. Puede actualizar los datos FILESTREAM mediante el uso de SQLSetPos si está enlazada con SQLBindCol.  
   
 ## <a name="example"></a>Ejemplo  
- Las columnas FILESTREAM se comportan exactamente igual que las columnas `varbinary(max)`, pero sin límite de tamaño. Se enlazan como SQL_VARBINARY. (SQL_LONGVARBINARY se utiliza con columnas de imagen y hay restricciones en este tipo. Por ejemplo, SQL_LONGVARBINARY no se puede utilizar como un parámetro de salida.) En los ejemplos siguientes se muestra el acceso NTFS directo para las columnas FILESTREAM. En estos ejemplos se entiende que se ha ejecutado el siguiente código [!INCLUDE[tsql](../../../includes/tsql-md.md)] en la base de datos:  
+ Las columnas FILESTREAM se comportan exactamente igual que las columnas `varbinary(max)`, pero sin límite de tamaño. Se enlazan como SQL_VARBINARY. (SQL_LONGVARBINARY se utiliza con columnas de imagen y hay restricciones en este tipo. Por ejemplo, SQL_LONGVARBINARY no se puede utilizar como un parámetro de salida.) Los ejemplos siguientes muestran el acceso NTFS directo para las columnas FILESTREAM. En estos ejemplos se entiende que se ha ejecutado el siguiente código [!INCLUDE[tsql](../../../includes/tsql-md.md)] en la base de datos:  
   
 ```  
 CREATE TABLE fileStreamDocs(  

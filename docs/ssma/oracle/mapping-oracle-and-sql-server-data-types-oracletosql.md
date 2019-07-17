@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 06e538ebbdab9d6438182eaa0b61d44818286547
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: e5f14f79c355317f5e5d7a047b2d2c1ca71a4acb
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796031"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262958"
 ---
 # <a name="mapping-oracle-and-sql-server-data-types-oracletosql"></a>Asignación de tipos de datos de Oracle y de SQL Server (OracleToSQL)
 Tipos de base de datos de Oracle se diferencian [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tipos base de datos. Al convertir los objetos de base de datos de Oracle a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objetos, debe especificar cómo asignar tipos de datos de Oracle para [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Puede aceptar las asignaciones de tipos de datos de forma predeterminada, o puede personalizar las asignaciones como se muestra en las secciones siguientes.  

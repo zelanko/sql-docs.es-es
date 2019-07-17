@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: b5011daf52b7eb5a14fb97ff3d39691caf4a563c
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125235"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210773"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>Estrategias para hacer copias de seguridad y restaurar replicación de instantáneas o replicación transaccional
   Hay tres áreas que hay que considerar al diseñar una estrategia de copias de seguridad y restauración para la replicación de instantáneas o transaccional:  
@@ -148,7 +148,7 @@ ms.locfileid: "54125235"
   
          Para obtener más información acerca de cómo especificar que el suscriptor ya tiene los datos, vea [Initialize a Subscription Manually](../initialize-a-subscription-manually.md).  
   
-#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicación: Replicación transaccional con suscripciones actualizables  
+#### <a name="publication-database-transactional-replication-with-updating-subscriptions"></a>Base de datos de publicación: Replicación transaccional con suscripciones de actualización  
   
 1.  Restaure la última copia de seguridad de la base de datos de publicaciones. Vaya al paso 2.  
   
@@ -213,7 +213,7 @@ ms.locfileid: "54125235"
   
 9. Después de la restauración, el intervalo de identidad asignado a cada tabla en la base de datos **A** también se utilizará en la base de datos **B**. Asegúrese de que la base de datos restaurada **B** haya recibido todos los cambios de la base de datos **B** que se propagaron a las bases de datos **A** y **C** y luego reinicie el intervalo de identidad para cada tabla.  
   
-    1.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id**. Continúe en el paso b.  
+    1.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso b.  
   
     2.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Para más información, vea [Conceptos de los ejecutables del Agente de replicación](../concepts/replication-agent-executables-concepts.md) o [Iniciar y detener un Agente de replicación &#40;SQL Server Management Studio&#41;](../agents/start-and-stop-a-replication-agent-sql-server-management-studio.md). Continúe en el paso c.  
   
@@ -229,7 +229,7 @@ ms.locfileid: "54125235"
   
     1.  Detenga toda la actividad en las tablas publicadas de la topología punto a punto. Continúe en el paso b.  
   
-    2.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id**. Continúe en el paso c.  
+    2.  Ejecute [sp_requestpeerresponse](/sql/relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql) en la base de datos **B** y recupere el parámetro de salida **@request_id** . Continúe en el paso c.  
   
     3.  De forma predeterminada, el Agente de distribución está configurado para ejecutarse de forma continua, por lo que los tokens deben enviarse automáticamente a todos los nodos. Si el Agente de distribución no se está ejecutando de forma continua, ejecútelo. Continúe en el paso d.  
   
@@ -321,7 +321,7 @@ ms.locfileid: "54125235"
   
 2.  Restaure la última copia de seguridad de la base de datos de suscripciones. Vaya al paso 3.  
   
-3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, pregúntese lo siguiente: ¿Es la información de suscripción actual? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
+3.  Si la base de datos de suscripciones solo contiene las suscripciones de inserción, vaya al paso 4. Si la base de datos de suscripciones contiene cualquier suscripción de extracción, hágase las preguntas siguientes: ¿Está actualizada la información de suscripción? ¿La base de datos incluye todas las tablas y opciones que se establecieron en el momento del error? En caso afirmativo, continúe en el paso 4. En caso contrario, reinicialice la suscripción. La recuperación se ha completado.  
   
 4.  Para sincronizar el suscriptor, ejecute el Agente de distribución. La recuperación se ha completado.  
   
@@ -350,7 +350,7 @@ ms.locfileid: "54125235"
  [Hacer copias de seguridad y restaurar bases de datos replicadas](back-up-and-restore-replicated-databases.md)   
  [Configurar distribución](../configure-distribution.md)   
  [Publicar datos y objetos de base de datos](../publish/publish-data-and-database-objects.md)   
- [Subscribe to Publications](../subscribe-to-publications.md)   
+ [Suscribirse a publicaciones](../subscribe-to-publications.md)   
  [Initialize a Subscription](../initialize-a-subscription.md)  (Inicializar una suscripción)  
  [Sincronizar datos](../synchronize-data.md)  
   

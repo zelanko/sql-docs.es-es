@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ace6085b-355b-435b-8734-503fc3c12ec2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5f3c133b105c905b79589d86952658b6d39f0f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a97bed3bb921b9c881a98d8d9a9031ef7630f26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653392"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111905"
 ---
 # <a name="odbc-service-provider-interface-summary"></a>Resumen de la interfaz del proveedor de servicios de ODBC
 En la tabla siguiente se describe las funciones de interfaz de proveedor de servicios de ODBC. Para obtener más información sobre la sintaxis y semántica para cada función, vea [referencia de la interfaz de proveedor de servicios (SPI) de ODBC](../../../odbc/reference/syntax/odbc-service-provider-interface-spi-reference.md).  

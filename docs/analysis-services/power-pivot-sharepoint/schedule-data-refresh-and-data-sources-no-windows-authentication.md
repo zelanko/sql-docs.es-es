@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 316fe295473d106d0bea8150deed6a19c07bc3bc
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52408578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208022"
 ---
 # <a name="schedule-data-refresh-and-data-sources---no-windows-authentication"></a>Actualización de datos programada y orígenes de datos - sin autenticación de Windows
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,13 +24,13 @@ ms.locfileid: "52408578"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2010 &#124; SharePoint 2013.|  
   
- **Información general:** cree dos aplicaciones de destino de almacenamiento seguro Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
+ **Información general:** Cree dos aplicaciones de destino Store seguro. Configure la primera aplicación de destino (PowerPivotDataRefresh) para usar las credenciales de Windows. Configure la segunda aplicación de destino con las credenciales para un origen de datos que no admita la autenticación de Windows, por ejemplo, una base de datos Oracle. La segunda aplicación de destino también usa la primera aplicación de destino para la cuenta de actualización de datos desatendida.  
   
  ![as_powerpivot_refresh_no_windows_auth](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-no-windows-auth.gif "as_powerpivot_refresh_no_windows_auth")  
   
--   **(1) PowerPivotDatarefresh:** un identificador de aplicación de destino de almacén seguro que se establece con la autenticación de Windows.  
+-   **(1) PowerPivotDatarefresh:** Un identificador aplicación seguro Store destino que se establece con autenticación de windows.  
   
--   **(2) OracleAuthentication:** un identificador de aplicación de destino de almacén seguro que se establece con las credenciales de Oracle.  
+-   **(2) OracleAuthentication:** Un identificador aplicación seguro Store destino que se establece con las credenciales de Oracle.  
   
 -   **(3)**  El [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] aplicación de servicio está configurada para usar la aplicación de destino "PowerPivotDataRefresh" para el **cuenta de actualización de datos desatendida**.  
   
@@ -60,15 +60,15 @@ ms.locfileid: "52408578"
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Grupo.  
+    -   **Tipo de aplicación de destino:** grupo.  
   
     -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página Credenciales, deje los dos valores predeterminados de nombre de campo y tipos de campo para **Nombre de usuario Windows** y **Contraseña de Windows**.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   
@@ -94,17 +94,17 @@ ms.locfileid: "52408578"
   
     -   **Correo electrónico de contacto:** ?  
   
-    -   **Tipo de aplicación de destino:** Grupo.  
+    -   **Tipo de aplicación de destino:** grupo.  
   
     -   **Dirección URL de la página de aplicación de destino:** Ninguno.  
   
-5.  Haga clic en **Siguiente**.  
+5.  Haga clic en **Next**.  
   
 6.  En la página **Credenciales** , cambie el primer nombre de campo a **Oracle User ID** y cambie el **Tipo de campo** a **User Name**.  
   
      Cambie el segundo nombre de campo a **Oracle Password** y el **Tipo de campo** a **Password**.  
   
-7.  Haga clic en **Siguiente**.  
+7.  Haga clic en **Next**.  
   
 8.  En la página **Configuración de pertenencia** , agregue al menos un **Administrador de aplicación de destino** y, a continuación, agregue los miembros que necesiten acceso a la aplicación de destino.  
   

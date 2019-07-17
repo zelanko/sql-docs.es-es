@@ -22,11 +22,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: ca0e79c617db6cc2906ac9225efd92e156699951
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52752608"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189130"
 ---
 # <a name="make-a-master-server"></a>Establecer un servidor maestro
   En este tema se describe cómo establecer un servidor maestro de [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -62,7 +62,7 @@ ms.locfileid: "52752608"
   
      Para resolver este error, asegúrese de que existe una cuenta de proxy en el servidor de destino con el mismo nombre que la cuenta de proxy del servidor maestro en la que se ejecuta el paso de trabajo.  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Los permisos de ejecución de este procedimiento corresponden de forma predeterminada a los miembros del rol fijo de servidor `sysadmin`.  
   
 ##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
@@ -119,7 +119,7 @@ ms.locfileid: "52752608"
   
 #### <a name="to-make-a-master-server"></a>Para establecer un servidor principal  
   
-1.  Conéctese al [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
 2.  En la barra Estándar, haga clic en **Nueva consulta**.  
   

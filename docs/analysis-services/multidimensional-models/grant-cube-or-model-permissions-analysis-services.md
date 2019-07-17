@@ -1,5 +1,5 @@
 ---
-title: Conceder permisos para cubos o modelos (Analysis Services) | Documentos de Microsoft
+title: Conceder permisos para cubos o modelos (Analysis Services) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f028885e91dd67869e15bab4d7b64cc97b64f9bb
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024372"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208882"
 ---
 # <a name="grant-cube-or-model-permissions-analysis-services"></a>Otorgar permisos para cubos o modelos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34024372"
 > [!NOTE]  
 >  Solamente los administradores de servidor o de base de datos con permisos de Control total pueden implementar cubos a partir de archivos de origen en un servidor o crear roles y asignar miembros. Para más información sobre estos niveles de permisos, vea [Conceder permisos de administrador de servidor (Analysis Services)](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md) y [Otorgar permisos de base de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-database-permissions-analysis-services.md).  
   
-#### <a name="step-1-create-the-role"></a>Paso 1: Creación del role  
+#### <a name="step-1-create-the-role"></a>Paso 1: Crear el rol  
   
 1.  En SSMS, conéctese a Analysis Services. Vea [Conectarse desde aplicaciones cliente &#40;Analysis Services&#41;](../../analysis-services/instances/connect-from-client-applications-analysis-services.md) si necesita ayuda con este paso.  
   
@@ -41,7 +41,7 @@ ms.locfileid: "34024372"
   
 5.  Proceda con el siguiente paso después de especificar un nombre y una descripción opcional.  
   
-#### <a name="step-2-assign-membership"></a>Paso 2: Asignación de la pertenencia  
+#### <a name="step-2-assign-membership"></a>Paso 2: Asignar la pertenencia  
   
 1.  En el panel **Pertenencia** , haga clic en **Agregar** para especificar las cuentas de usuario o grupo de Windows que van a tener acceso al cubo con este rol. Analysis Services solo es compatible con identidades de seguridad de Windows. Tenga en cuenta que en este paso no va a crear inicios de sesión de base de datos. En Analysis Services, los usuarios se conectan a través de cuentas Windows.  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34024372"
   
      Tenga en cuenta que va a omitir el panel Origen de datos. La mayoría de los consumidores habituales de datos de Analysis Services no necesitan permisos para el objeto de origen de datos. Para más información sobre estos niveles de permisos, vea [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md) .  
   
-#### <a name="step-3-set-cube-permissions"></a>Paso 3: Establecimiento de los permisos de los cubos  
+#### <a name="step-3-set-cube-permissions"></a>Paso 3: Establecer permisos de cubo  
   
 1.  En el panel **Cubos** , seleccione un cubo y, después, haga clic en acceso de **Lectura** o **Lectura y escritura** .  
   
@@ -78,7 +78,7 @@ ms.locfileid: "34024372"
   
      Si se producen errores en la conexión, compruebe la configuración del puerto para Analysis Services y compruebe que el servidor acepta las conexiones remotas. Para obtener información acerca de la configuración del puerto, vea [Configurar Firewall de Windows para permitir el acceso a Analysis Services](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md) .  
   
-#### <a name="step-5-script-role-definition-and-assignments"></a>Paso 5: Definición y asignaciones del rol con el script  
+#### <a name="step-5-script-role-definition-and-assignments"></a>Paso 5: Las asignaciones y la definición de función de script  
   
 1.  El último paso es generar un script que contenga la definición del rol que acaba de crear.  
   
@@ -95,7 +95,7 @@ ms.locfileid: "34024372"
   
 ## <a name="see-also"></a>Vea también  
  [Metodologías de autenticación admitidas por Analysis Services](../../analysis-services/instances/authentication-methodologies-supported-by-analysis-services.md)   
- [Conceder permisos en las estructuras de minería de datos y modelos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [Conceder permisos en un objeto de origen de datos & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [Otorgar permisos para estructuras y modelos de minería de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [Otorgar permisos para un objeto de origen de datos &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

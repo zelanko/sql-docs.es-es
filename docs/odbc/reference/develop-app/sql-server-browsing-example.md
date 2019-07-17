@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6e0d5fd1-ec93-4348-a77a-08f5ba738bc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f8dc57d738c1d5726d2208b930c5d4fadcd93b39
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f3a7568c0849844526ef5f172bcecc0a5857268
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114329"
 ---
 # <a name="sql-server-browsing-example"></a>Ejemplo de exploración de SQL Server
 El ejemplo siguiente se muestra cómo **SQLBrowseConnect** podría utilizarse para examinar las conexiones disponibles con un controlador para SQL Server. En primer lugar, la aplicación solicita un identificador de conexión:  

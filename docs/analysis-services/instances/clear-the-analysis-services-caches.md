@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700333"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181986"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Borrar las memorias caché de Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700333"
   
  La acción de borrar la memoria caché requiere proporcionar un identificador de objeto a la instrucción **ClearCache** en una consulta XMLA. En el primer paso de este tema se explica cómo obtener un identificador de objeto.  
   
-#### <a name="step-1-get-the-object-identifier"></a>Paso 1: obtener el identificador de objeto  
+#### <a name="step-1-get-the-object-identifier"></a>Paso 1: Obtener el identificador de objeto  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en un objeto, seleccione **Propiedades**y copie el valor de la propiedad ID en el panel **Propiedades** . Este enfoque funciona para una base de datos, cubo, dimensión o tabla.  
   
 2.  Para obtener el identificador de grupo de medida, haga clic con el botón derecho en el grupo de medida y seleccione **Incluir grupo de medidas como**. Elija **Crear** o **Modificar**y envíe la consulta a una ventana. El identificador del grupo de medida estará visible en la definición del objeto. Copie el identificador de la definición del objeto.  
   
-#### <a name="step-2-run-the-query"></a>Paso 2: ejecutar la consulta  
+#### <a name="step-2-run-the-query"></a>Paso 2: Ejecute la consulta  
   
 1.  En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], haga clic con el botón derecho en una base de datos, señale **Nueva consulta**y seleccione **XMLA**.  
   

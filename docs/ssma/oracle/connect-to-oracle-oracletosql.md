@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 23a48cb6-ff30-49bb-b4a7-603ebcab336f
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: da846d4afb4ce8fe745b98c8503901fe804520e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 42ab1e77dbdb7cee237a9ec22c49a725a64390c0
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287727"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264481"
 ---
 # <a name="connect-to-oracle-oracletosql"></a>Conectarse a Oracle (OracleToSQL)
 Use la **conectar con Oracle** cuadro de diálogo para conectarse a la base de datos de Oracle que se va a migrar.  
@@ -51,7 +51,7 @@ Escriba el oráculo de identificador de conexión. Éste es el alias de la base 
   
 Esta es una opción de modo TNSNAME.  
   
-**Oracle SID**  
+**SID de Oracle**  
 Escriba al SID de la base de datos. El SID es un identificador que distingue de la base de datos de Oracle en un equipo. El valor predeterminado de SID para una base de datos es que los ocho primeros caracteres del nombre de base de datos.  
   
 Esta es una opción de modo estándar.  

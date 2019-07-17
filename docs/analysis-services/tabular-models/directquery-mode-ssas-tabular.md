@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a51b38dacf5a1ebaf67a19bf8b3761800425a347
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072472"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207687"
 ---
 # <a name="directquery-mode"></a>Modo DirectQuery
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -59,9 +59,9 @@ Los modelos tabulares de DirectQuery en el nivel de compatibilidad 1200 y versio
 Origen de datos   |Versiones  |Proveedores
 ---------|---------|---------
 Microsoft SQL Server    |  2008 y versiones posteriores      |       Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL  
-Base de datos SQL de Microsoft Azure    |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
-Almacenamiento de datos de Microsoft Azure SQL     |   All     |  Proveedor de datos de .NET Framework para SQL Client       
-Microsoft SQL Analytics Platform System (APS)     |   All      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
+Base de datos SQL de Microsoft Azure    |   Todo      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL            
+Almacenamiento de datos de Microsoft Azure SQL     |   Todo     |  Proveedor de datos de .NET Framework para SQL Client       
+Microsoft SQL Analytics Platform System (APS)     |   Todo      |  Proveedor OLE DB para SQL Server, Proveedor OLE DB de SQL Server Native Client, Proveedor de datos .NET Framework para el cliente SQL       
 Bases de datos relacionales de Oracle     |  Oracle 9i y versiones posteriores       |  Proveedor OLE DB de Oracle       
 Bases de datos relacionales de Teradata    |  Teradata V2R6 y versiones posteriores     | Proveedor de datos .NET para Teradata        
 

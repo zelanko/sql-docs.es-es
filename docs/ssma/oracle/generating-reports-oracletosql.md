@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192384"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264458"
 ---
 # <a name="generating-reports-oracletosql"></a>Generación de informes (OracleToSQL)
 Se generan los informes de ciertas actividades realizadas mediante comandos en la consola de SSMA en nivel de árbol de objetos.  
@@ -33,12 +33,12 @@ Use el procedimiento siguiente para generar informes:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Command**|**Título de informe**|  
-    |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
-    |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
+    |1|informe de evaluación generar|AssessmentReport&lt;n&gt;.XML|  
+    |2|convertir esquema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrar datos|DataMigrationReport&lt;n&gt;.XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;.XML|  
     |5|sincronizar de destino|TargetSynchronizationReport&lt;n&gt;.XML|  
-    |6|refresh-from-database|SourceDBRefreshReport&lt;n&gt;.XML|  
+    |6|actualización de base de datos|SourceDBRefreshReport&lt;n&gt;.XML|  
   
     > [!IMPORTANT]  
     > Un informe de salida es distinto de informe de evaluación. El primero es un informe sobre el rendimiento de un comando ejecutado al, el segundo es un informe XML para su consumo mediante programación.  
@@ -61,8 +61,8 @@ Use el procedimiento siguiente para generar informes:
     ||||  
     |-|-|-|  
     |**SL. No.**|**Parámetros y comandos**|**Descripción de salida**|  
-    |1|report-errors="false"|No hay detalles de un error / advertencia / mensajes de información.|  
-    |2|report-errors="true"|Error detallado / advertencia / mensajes de información.|  
+    |1|informe de errores = "false"|No hay detalles de un error / advertencia / mensajes de información.|  
+    |2|informe de errores = "true"|Error detallado / advertencia / mensajes de información.|  
   
     > [!NOTE]  
     > La configuración de informe de errores especificados anteriormente son aplicable para el informe de evaluación generar, esquema de convert, migrar datos, los comandos de la instrucción convert-sql.  
@@ -105,13 +105,13 @@ El comando **destino sincronizar** tiene **informe de errores a** parámetro, qu
 ```  
 **object-name:** Especifica los objetos que se consideran para la sincronización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**on-error:** Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
+**en caso de error:** Especifica si se debe especificar los errores de sincronización como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   report-total-as-warning  
   
--   report-each-as-warning  
+-   informes-each-como-warning  
   
--   fail-script  
+-   Error de script  
   
 ### <a name="refresh-from-database"></a>actualización-de-database:  
 El comando **actualización de base de datos** tiene **informe de errores a** parámetro, que especifica la ubicación del informe de errores para la operación de actualización. A continuación, un archivo con nombre **SourceDBRefreshReport&lt;n&gt;. XML** se crea en la ubicación especificada, donde **&lt;n&gt;** es el número de archivo único que se incrementa con un dígito con cada ejecución del mismo comando.  
@@ -133,13 +133,13 @@ El comando **actualización de base de datos** tiene **informe de errores a** pa
 ```  
 **object-name:** Especifica los objetos que se consideran para la actualización (también puede tener nombres de objeto de la emisora o un nombre de objeto de grupo).  
   
-**on-error:** Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
+**en caso de error:** Especifica si se debe especificar la actualización de errores como advertencias o errores. Opciones disponibles para en caso de error:  
   
 -   report-total-as-warning  
   
--   report-each-as-warning  
+-   informes-each-como-warning  
   
--   fail-script  
+-   Error de script  
   
 ## <a name="see-also"></a>Vea también  
 [Ejecución de la consola SSMA (Oracle)](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  

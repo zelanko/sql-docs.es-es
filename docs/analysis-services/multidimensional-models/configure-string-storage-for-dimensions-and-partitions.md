@@ -1,5 +1,5 @@
 ---
-title: Configurar el almacenamiento de cadenas para dimensiones y particiones | Documentos de Microsoft
+title: Configurar el almacenamiento de cadenas para dimensiones y particiones | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f6a5aff8822d3fceb05d22433094dc952c6cb872
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023862"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209111"
 ---
 # <a name="configure-string-storage-for-dimensions-and-partitions"></a>Configurar el almacenamiento de cadenas para dimensiones y particiones
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34023862"
   
  Los valores válidos de esta propiedad incluyen los siguientes:  
   
-|Value|Description|  
+|Valor|Descripción|  
 |-----------|-----------------|  
 |**1050**|Especifica la arquitectura predeterminada de almacenamiento de cadenas, que está sujeta a un tamaño de archivo máximo de 4 GB por almacén.|  
 |**1100**|Especifica el almacenamiento mayor de cadenas, que admite hasta 4 mil millones de cadenas únicas por almacén.|  
@@ -38,9 +38,9 @@ ms.locfileid: "34023862"
   
 -   [Requisitos previos](#bkmk_prereq)  
   
--   [Paso 1: establezca la propiedad StringStoreCompatiblityLevel en las Herramientas de datos de SQL Server](#bkmk_step1)  
+-   [Paso 1: Establezca la propiedad StringStoreCompatiblityLevel en SQL Server Data Tools](#bkmk_step1)  
   
--   [Paso 2: procesar los objetos.](#bkmk_step2)  
+-   [Paso 2: Procesar los objetos.](#bkmk_step2)  
   
 ##  <a name="bkmk_background"></a> Acerca de los almacenes de cadenas  
  La configuración del almacenamiento de cadenas es opcional, lo que significa que incluso las bases de datos creadas usan la arquitectura de almacenamiento de cadenas predefinida, que está sujeta al tamaño máximo de archivo de 4 GB. El uso de la arquitectura de almacenamiento mayor de cadenas tiene un impacto pequeño pero perceptible en el rendimiento. Debe utilizarla solo si los archivos de almacenamiento de cadenas están cercanos o en el límite máximo de 4 GB.  
@@ -61,7 +61,7 @@ ms.locfileid: "34023862"
   
  El nivel de compatibilidad de la base de datos debe estar establecido en 1100. Si creó o implementó una base de datos mediante [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] y la versión [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] o una versión superior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], el nivel de compatibilidad de la base de datos ya está establecido en 1100. Si ha movido una base de datos creada en una versión anterior de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] a ssSQL11, debe actualizar el nivel de compatibilidad. Para las bases de datos que desee mover, pero no implementar de nuevo, puede usar [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] para establecer el nivel de compatibilidad. Para obtener más información, vea [Nivel de compatibilidad de una base de datos multidimensional &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/compatibility-level-of-a-multidimensional-database-analysis-services.md).  
   
-##  <a name="bkmk_step1"></a> Paso 1: establezca la propiedad StringStoreCompatiblityLevel en las Herramientas de datos de SQL Server  
+##  <a name="bkmk_step1"></a> Paso 1: Establezca la propiedad StringStoreCompatiblityLevel en SQL Server Data Tools  
   
 1.  Con [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], abra el proyecto que contiene las dimensiones o particiones que desea modificar.  
   
@@ -79,7 +79,7 @@ ms.locfileid: "34023862"
   
 8.  Guarde el archivo.  
   
-##  <a name="bkmk_step2"></a> Paso 2: procesar los objetos.  
+##  <a name="bkmk_step2"></a> Paso 2: Procesar los objetos.  
  La nueva arquitectura de almacenamiento se utilizará después de procesar los objetos. El hecho de procesar los objetos también sirve para demostrar que ha resuelto correctamente el problema de la restricción de almacenamiento, porque el error que notificaba previamente una condición de desbordamiento del almacén de cadenas ya no debe volver a aparecer.  
   
 -   En el Explorador de soluciones, haga clic con el botón derecho en la dimensión que acaba de modificar y seleccione **Procesar**.  
@@ -88,7 +88,7 @@ ms.locfileid: "34023862"
   
 ## <a name="see-also"></a>Vea también  
  [Herramientas y enfoques de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/tools-and-approaches-for-processing-analysis-services.md)   
- [Opciones de procesamiento y configuración de & #40; Analysis Services & #41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
+ [Opciones y valores de procesamiento &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)   
  [Procesamiento y modos de almacenamiento de particiones](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-partition-storage-modes-and-processing.md)   
  [Almacenamiento de dimensiones](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-storage.md)  
   

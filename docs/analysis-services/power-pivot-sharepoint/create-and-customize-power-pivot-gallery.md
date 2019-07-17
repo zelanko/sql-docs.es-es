@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cc45718f864f14ade20348b5dae76286ea14f3a
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417126"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208266"
 ---
 # <a name="create-and-customize-power-pivot-gallery"></a>Create and Customize Power Pivot Gallery
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -68,17 +68,17 @@ ms.locfileid: "52417126"
   
     2.  Haga clic en **Más opciones**.  
   
-    3.  En Bibliotecas, haga clic en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  En Bibliotecas, haga clic en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
     1.  **SharePoint 2013**: Haga clic en el icono de configuración ![configuración de SharePoint](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "configuración de SharePoint"). Haga clic en **Contenido del sitio**  
   
     2.  Haga clic en **Agregar una aplicación**.  
   
-    3.  Haga clic en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+    3.  Haga clic en **Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 2.  Escriba el nombre de la biblioteca. Asegúrese de incluir información descriptiva que sirva de ayuda a los usuarios para identificar esta biblioteca como una eficaz vista previa para los libros [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y los informes de Reporting Services.  
   
-3.  Haga clic en **Crear**.  
+3.  Haga clic en **Create**(Crear).  
   
 4.  Pida al administrador del servicio o la granja que agregue la Galería de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] como una ubicación de confianza para Excel Services. Este paso es necesario para evitar errores si un usuario configura un libro para la actualización de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Para obtener más información, vea [Crear una ubicación de confianza para los sitios PowerPivot en Administración central](../../analysis-services/power-pivot-sharepoint/create-a-trusted-location-for-power-pivot-sites-in-central-administration.md).  
   

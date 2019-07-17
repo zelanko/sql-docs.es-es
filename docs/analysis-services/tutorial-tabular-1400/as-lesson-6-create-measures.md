@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685652"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207344"
 ---
 # <a name="create-measures"></a>Crear medidas
 
@@ -51,7 +51,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Observe que la celda superior izquierda ahora contiene un nombre de medida, **DaysCurrentQuarterToDate**, seguido del resultado, **92**. El resultado no es relevante en este momento porque no se ha aplicado ningún filtro de usuario.
     
-      ![as-lesson6-newmeasure](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
+      ![newmeasure como lesson6](../tutorial-tabular-1400/media/as-lesson6-newmeasure.png) 
     
     A diferencia de las columnas calculadas, con las fórmulas de medidas puede escribir el nombre de medida, seguido de dos puntos, seguido por la expresión de la fórmula.
 

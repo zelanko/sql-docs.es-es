@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162214"
 ---
 # <a name="deploy"></a>Implementar
 
@@ -62,7 +62,7 @@ En este artículo forma parte de un tutorial de modelado tabular, que se debe co
   
     Cuadro de diálogo implementar aparece y muestra el estado de implementación de los metadatos y cada tabla incluida en el modelo.  
     
-    ![as-lesson13-deploy-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
+    ![como-lesson13-implementar-status](../tutorial-tabular-1400/media/as-lesson13-deploy-status.png)
   
 3. Cuando se complete correctamente la implementación, continúe y haga clic en **Cerrar**.  
   

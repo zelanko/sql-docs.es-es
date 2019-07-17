@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f133a094-0009-4771-b93b-e86a5c01e40b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 668233ad7ee79617caa60933a9eef33c5a810164
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a743b03d379276e6842b72e44d346cc1356cf7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62502806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137685"
 ---
 # <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,9 +41,9 @@ sp_helpmergefilter [ @publication= ] 'publication'
 ## <a name="arguments"></a>Argumentos  
 `[ @publication = ] 'publication'` Es el nombre de la publicación. *publicación* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es ** % **, que devuelve los nombres de todos los artículos.  
+`[ @article = ] 'article'` Es el nombre del artículo. *artículo* es **sysname**, su valor predeterminado es **%** , que devuelve los nombres de todos los artículos.  
   
-`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a devolver información. *filtername* es **sysname**, su valor predeterminado es ** % **, que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
+`[ @filtername = ] 'filtername'` Es el nombre del filtro que se va a devolver información. *filtername* es **sysname**, su valor predeterminado es **%** , que devuelve información acerca de todos los filtros definidos en el artículo o la publicación.  
   
 ## <a name="result-sets"></a>Conjuntos de resultados  
   

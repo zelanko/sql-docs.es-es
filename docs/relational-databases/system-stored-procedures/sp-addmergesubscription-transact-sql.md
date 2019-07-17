@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117921"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` Es el nombre de la base de datos de suscripción. *subscriber_db*es **sysname**, su valor predeterminado es null.  
   
-`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)**, con el valor predeterminado es PUSH. Si **inserción**, se agrega una suscripción de inserción y el agente de mezcla se agrega en el distribuidor. Si **extracción**, se agrega una suscripción de extracción sin agregar un agente de mezcla en el distribuidor.  
+`[ @subscription_type = ] 'subscription_type'` Es el tipo de suscripción. *subscription_type*es **nvarchar (15)** , con el valor predeterminado es PUSH. Si **inserción**, se agrega una suscripción de inserción y el agente de mezcla se agrega en el distribuidor. Si **extracción**, se agrega una suscripción de extracción sin agregar un agente de mezcla en el distribuidor.  
   
 > [!NOTE]  
 >  Las suscripciones anónimas no necesitan utilizar este procedimiento almacenado.  
   
-`[ @subscriber_type = ] 'subscriber_type'` Es el tipo de suscriptor. *propiedad subscriber_type*es **nvarchar (15)**, y puede tener uno de los siguientes valores.  
+`[ @subscriber_type = ] 'subscriber_type'` Es el tipo de suscriptor. *propiedad subscriber_type*es **nvarchar (15)** , y puede tener uno de los siguientes valores.  
   
 |Valor|Descripción|  
 |-----------|-----------------|  
@@ -84,7 +83,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscription_priority = ] subscription_priority` Es un número que indica la prioridad de la suscripción. *subscription_priority*es **real**, su valor predeterminado es null. En las suscripciones locales y anónimas, la prioridad es 0.0. En el caso de las suscripciones globales, la prioridad debe ser inferior a 100.0.  
   
-`[ @sync_type = ] 'sync_type'` Es el tipo de sincronización de suscripción. *sync_type*es **nvarchar (15)**, su valor predeterminado es **automática**. Puede ser **automática** o **ninguno**. Si **automática**, el esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor. Si **ninguno**, se supone que el suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas. Las tablas y los datos del sistema se transfieren siempre.  
+`[ @sync_type = ] 'sync_type'` Es el tipo de sincronización de suscripción. *sync_type*es **nvarchar (15)** , su valor predeterminado es **automática**. Puede ser **automática** o **ninguno**. Si **automática**, el esquema y los datos iniciales de las tablas publicadas se transfieren primero al suscriptor. Si **ninguno**, se supone que el suscriptor ya tiene el esquema y los datos iniciales de las tablas publicadas. Las tablas y los datos del sistema se transfieren siempre.  
   
 > [!NOTE]  
 >  Se recomienda no especificar un valor de **ninguno**.  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` Es la fecha en el agente de mezcla deja de estar programado, con el formato AAAAMMDD. *active_end_date* es **int**, su valor predeterminado es null.  
   
-`[ @optional_command_line = ] 'optional_command_line'` Es la línea de comandos opcional para ejecutar. *optional_command_line*es **nvarchar (4000)**, su valor predeterminado es null. Este parámetro se utiliza para agregar un comando que captura el resultado y lo guarda en un archivo o para especificar un atributo o archivo de configuración.  
+`[ @optional_command_line = ] 'optional_command_line'` Es la línea de comandos opcional para ejecutar. *optional_command_line*es **nvarchar (4000)** , su valor predeterminado es null. Este parámetro se utiliza para agregar un comando que captura el resultado y lo guarda en un archivo o para especificar un atributo o archivo de configuración.  
   
-`[ @description = ] 'description'` Es una breve descripción de esta suscripción de mezcla. *descripción*es **nvarchar (255)**, su valor predeterminado es null. Este valor se muestra el Monitor de replicación en el **Nombre_descriptivo** columna, que puede usarse para ordenar las suscripciones en una publicación supervisada.  
+`[ @description = ] 'description'` Es una breve descripción de esta suscripción de mezcla. *descripción*es **nvarchar (255)** , su valor predeterminado es null. Este valor se muestra el Monitor de replicación en el **Nombre_descriptivo** columna, que puede usarse para ordenar las suscripciones en una publicación supervisada.  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica si la suscripción se puede sincronizar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)**, su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Especifica si la suscripción se puede sincronizar mediante [!INCLUDE[msCoName](../../includes/msconame-md.md)] Administrador de sincronización de Windows. *enabled_for_syncmgr* es **nvarchar (5)** , su valor predeterminado es False. Si **false**, la suscripción no está registrada con el Administrador de sincronización. Si **true**, la suscripción se registra con el Administrador de sincronización y se puede sincronizar sin iniciar [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 `[ @offloadagent = ] remote_agent_activation` Especifica que el agente puede activarse de forma remota. *remote_agent_activation* es **bit** con un valor predeterminado de **0**.  
   
@@ -163,7 +162,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @offloadserver = ] 'remote_agent_server_name'` Especifica el nombre de red del servidor que se usará para la activación remota del agente. *remote_agent_server_name*es **sysname**, su valor predeterminado es null.  
   
-`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que permitan resolución interactiva. *use_interactive_resolver* es **nvarchar (5)**, su valor predeterminado es False.  
+`[ @use_interactive_resolver = ] 'use_interactive_resolver'` Permite que los conflictos se resuelvan de forma interactiva para todos los artículos que permitan resolución interactiva. *use_interactive_resolver* es **nvarchar (5)** , su valor predeterminado es False.  
   
 `[ @merge_job_name = ] 'merge_job_name'` El *@merge_job_name* parámetro está en desuso y no se puede establecer. *merge_job_name* es **sysname**, su valor predeterminado es null.  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>Comentarios  
  **sp_addmergesubscription** se utiliza en la replicación de mezcla.  
   
- Cuando **sp_addmergesubscription** se ejecuta un miembro de la **sysadmin** rol fijo de servidor para crear una suscripción de inserción, el trabajo del agente de mezcla se crea implícitamente y se ejecuta bajo la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente cuenta de servicio. Se recomienda que ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente y específica del agente para **@job_login** y **@job_password**. Para más información, consulte [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
+ Cuando **sp_addmergesubscription** se ejecuta un miembro de la **sysadmin** rol fijo de servidor para crear una suscripción de inserción, el trabajo del agente de mezcla se crea implícitamente y se ejecuta bajo la [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] agente cuenta de servicio. Se recomienda que ejecute [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) y especifique las credenciales de una cuenta de Windows diferente y específica del agente para **@job_login** y **@job_password** . Para más información, consulte [Modelo de seguridad del agente de replicación](../../relational-databases/replication/security/replication-agent-security-model.md).  
   
 ## <a name="example"></a>Ejemplo  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  

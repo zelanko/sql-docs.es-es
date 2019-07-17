@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 55eb472ef14e980f77a47a2c6989031cebec91e9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208305"
 ---
 # <a name="configure-power-pivot-service-accounts"></a>Configurar las cuentas de servicio Power Pivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,13 +38,13 @@ ms.locfileid: "52509549"
   
  [Requisitos de cuentas y permisos](#requirements)  
   
- [Solución de problemas: Conceder permisos administrativos manualmente](#updatemanually)  
+ [Solucionar problemas: Conceder permisos administrativos manualmente](#updatemanually)  
   
- [Solución de problemas: Resolver HTTP 503 errores debido a las contraseñas han expirado para Administración Central o SharePoint Foundation de servicio de aplicación Web](#expired)  
+ [Solucionar problemas: Resolver HTTP 503 errores debido a las contraseñas han expirado para Administración Central o SharePoint Foundation de servicio de aplicación Web](#expired)  
   
 ##  <a name="bkmk_passwordssas"></a> Actualización de una contraseña expirada para la instancia de SQL Server Analysis Services (Power Pivot)  
   
-1.  Haga clic en Inicio, seleccione **Herramientas administrativas**y, a continuación, **Servicios**. Haga doble clic en **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**. Haga clic en **Iniciar sesión**y escriba la nueva contraseña de la cuenta.  
+1.  Haga clic en Inicio, seleccione **Herramientas administrativas**y, a continuación, **Servicios**. Haga doble clic en **SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** . Haga clic en **Iniciar sesión**y escriba la nueva contraseña de la cuenta.  
   
 2.  En Administración central, en la sección Seguridad, haga clic en **Configurar cuentas administradas**.  
   
@@ -72,7 +72,7 @@ ms.locfileid: "52509549"
   
 3.  En **Seleccionar una cuenta para este servicio**, elija una cuenta administrada o cree una nueva. La cuenta debe ser una cuenta de usuario de dominio.  
   
-4.  Seleccione **Grupo de aplicaciones de servicio - Sistema de SharePoint Web Services** para cambiar la identidad del grupo de aplicaciones de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada. Según la forma en que esté configurada la instalación, el servicio puede ejecutarse con un grupo de aplicaciones de servicio existente, creado para los servicios de SharePoint. De forma predeterminada, la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registra el servicio como **Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada (Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])**.  
+4.  Seleccione **Grupo de aplicaciones de servicio - Sistema de SharePoint Web Services** para cambiar la identidad del grupo de aplicaciones de la aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada. Según la forma en que esté configurada la instalación, el servicio puede ejecutarse con un grupo de aplicaciones de servicio existente, creado para los servicios de SharePoint. De forma predeterminada, la herramienta de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] registra el servicio como **Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] predeterminada (Aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)])** .  
   
      Si un administrador de SharePoint configuró manualmente el servicio, probablemente tendrá su propio grupo de aplicaciones de servicios.  
   
@@ -115,12 +115,12 @@ ms.locfileid: "52509549"
 |Requisitos de permisos|Esta cuenta no necesita permisos de administrador del sistema local en el equipo. Sin embargo, debe tener los permisos de administrador del sistema de Analysis Services en el [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)] local que está instalado en el mismo equipo. El programa de instalación de SQL Server concede estos permisos automáticamente, o bien se conceden al establecer o cambiar la identidad del grupo de aplicaciones de servicio PowerPivot en Administración central.<br /><br /> Los permisos administrativos son necesarios para reenviar consultas a [!INCLUDE[ssGeminiSrv](../../includes/ssgeminisrv-md.md)]. También se requieren para supervisar el estado, cerrar las sesiones inactivas y escuchar los eventos de seguimiento.<br /><br /> La cuenta debe tener permisos de conexión, lectura y escritura para la base de datos de aplicaciones del servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] . Estos permisos se conceden automáticamente cuando se crea la aplicación y se actualizan automáticamente al cambiar cuentas o contraseñas en Administración central.<br /><br /> La aplicación de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] comprobará que un usuario de SharePoint esté autorizado a ver los datos antes de recuperar el archivo, pero no suplantará al usuario. No hay ningún requisito de permiso para la suplantación.|  
 |Requisitos de escalamiento|Ninguno.|  
   
-##  <a name="updatemanually"></a> Solución de problemas: Conceder manualmente permisos administrativos  
+##  <a name="updatemanually"></a> Solución de problemas: Conceder permisos administrativos manualmente  
  Los permisos administrativos no podrán actualizarse si ella persona que actualiza las credenciales no es administrador local en el equipo. Si ocurre esto, puede conceder los permisos administrativos manualmente. La manera más fácil para ello es ejecutar el trabajo de temporizador de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en Administración central. Con esta solución, puede restablecer los permisos para todos los servidores de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en la granja. Observe que este enfoque solo funcionará si el trabajo de temporizador de SharePoint se ejecuta como administrador de la granja y como administrador local en el equipo.  
   
 1.  Para Supervisión, haga clic en **Revisar definiciones de trabajo**.  
   
-2.  Seleccione **Trabajo de temporizador de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]**.  
+2.  Seleccione **Trabajo de temporizador de configuración de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]** .  
   
 3.  Haga clic en **Ejecutar ahora**.  
   
@@ -150,7 +150,7 @@ ms.locfileid: "52509549"
   
 11. Escriba el nombre de la cuenta que se usa para el grupo de aplicaciones de servicio [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] y haga clic en **Aceptar**.  
   
-##  <a name="expired"></a> Solución de problemas: Resolver los errores HTTP 503 debidos a que las contraseñas han expirado para Administración central o el servicio de la aplicación web de SharePoint Foundation  
+##  <a name="expired"></a> Solución de problemas: Resolver HTTP 503 errores debido a las contraseñas han expirado para Administración Central o SharePoint Foundation de servicio de aplicación Web  
  Si el servicio Administración central o el servicio de aplicación web de SharePoint Foundation dejan de funcionar debido a que la cuenta se restablece o expira la contraseña, encontrará mensajes de error HTTP 503 "Servicio no disponible" al intentar abrir Administración central de SharePoint o un sitio de SharePoint. Siga estos pasos para volver a poner el servidor en línea. Cuando Administración central está disponible, puede continuar actualizando la información de la cuenta que ha expirado.  
   
 1.  En Herramientas administrativas, haga clic en **Administrador de Internet Information Services**.  

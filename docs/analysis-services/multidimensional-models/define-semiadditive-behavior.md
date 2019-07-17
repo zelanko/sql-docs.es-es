@@ -1,5 +1,5 @@
 ---
-title: Definir el comportamiento de suma parcial | Documentos de Microsoft
+title: Definir el comportamiento de suma parcial | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023442"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178641"
 ---
-# <a name="define-semiadditive-behavior"></a>Definir el comportamiento de suma parcial
+# <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   Las medidas semiaditivas, que no agregan uniformemente en todas las dimensiones, son muy comunes en muchas situaciones empresariales. Todos los cubos que se basan en instantáneas de saldos a lo largo del tiempo presentan este problema. Se pueden encontrar estas instantáneas en las aplicaciones que manejan títulos y valores, saldos de cuentas bancarias, presupuestos, recursos humanos, pólizas y siniestros de seguros y muchos otros ámbitos comerciales.  
   
@@ -26,7 +26,7 @@ ms.locfileid: "34023442"
   
  Excepto LastChild, que está disponible en la edición Standard, los comportamientos de suma parcial solo están disponibles en las ediciones Business Intelligence o Enterprise.  
   
-## <a name="define-semiadditive-behavior"></a>Definir el comportamiento de suma parcial  
+## <a name="define-semiadditive-behavior"></a>Define Semiadditive Behavior  
  En la página **Definir el comportamiento de suma parcial** del asistente, seleccione cómo definir la suma parcial eligiendo una de las siguientes opciones:  
   
  **Desactivar el comportamiento de suma parcial**  
@@ -46,9 +46,9 @@ ms.locfileid: "34023442"
   
 -   None  
   
- Esta opción no cambia las medidas con una función de agregación normal: **Sum**, **Min**, **Max**, **Count**o **Distinct****Count**.  
+ Esta opción no cambia las medidas con una función de agregación normal: **Suma**, **Min**, **Max**, **recuento**, o **distintos *** recuento**.  
   
- **El asistente ha detectado una dimensión de cuentas "Cuenta", que contiene miembros de suma parcial. El servidor agregará a los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
+ **El asistente ha detectado la "cuenta" dimensión de cuenta, que contiene miembros semiaditivos. El servidor realizará la agregación de los miembros de esta dimensión de acuerdo con el comportamiento de suma parcial especificado para cada tipo de cuenta.**  
  Hace que el sistema establezca todas las medidas de un grupo de medida con una dimensión de tipo Cuenta en la función de agregación By Account; el servidor agregará los miembros de dimensión según el comportamiento de suma parcial especificado para cada tipo de cuenta.  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023442"
   
  Para cada medida, puede seleccionar entre los tipos de funcionalidad de suma parcial que se describen en la siguiente tabla.  
   
-|Función de suma parcial|Description|  
+|Función de suma parcial|Descripción|  
 |---------------------------|-----------------|  
 |Average of Children|La agregación de un miembro es el promedio de sus elementos secundarios.|  
 |ByAccount|El sistema lee el comportamiento de suma parcial especificado para cada tipo de cuenta.|  

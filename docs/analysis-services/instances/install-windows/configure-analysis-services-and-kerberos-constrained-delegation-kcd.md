@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811157"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181705"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Configurar Analysis Services y Delegación limitada de Kerberos (KCD)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -55,7 +55,7 @@ ms.locfileid: "52811157"
   
 -   **Rol:** Servicios de dominio de Active Directory. Para obtener información general, vea [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)(Configuración de Active Directory (AD DS) en Windows Server 2012).  
   
--   **Rol:** DNS Server  
+-   **Rol:** Servidor DNS  
   
 -   **Característica:** características de .NET Framework 3.5/.NET Framework 3.5.  
   
@@ -71,7 +71,7 @@ ms.locfileid: "52811157"
   
     3.  Haga clic en **Propiedades**.  
   
-    4.  Haga clic en **Protocolo de Internet versión 6 (TCP/IPv6)**.  
+    4.  Haga clic en **Protocolo de Internet versión 6 (TCP/IPv6)** .  
   
     5.  Haga clic en **Propiedades**.  
   

@@ -11,11 +11,11 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 8d2aadd055334c7ee64871c2fdfe5239c9849e90
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56028286"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210944"
 ---
 # <a name="perform-an-on-demand-evaluation-by-using-object-explorer"></a>Realizar una evaluación a petición usando Explorador de objetos
   En esta tarea, utilizará el Explorador de objetos para realizar una evaluación a petición de las directivas de prácticas recomendadas para [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] en una instancia única de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
@@ -38,13 +38,13 @@ ms.locfileid: "56028286"
     > [!NOTE]  
     >  De forma predeterminada, la instancia local se utiliza como el origen de las directivas. Si ha importado las directivas de prácticas recomendadas previamente, se enumerarán junto con cualquier otra directiva que haya creado. Puede seleccionar cualquiera de las directivas de prácticas recomendadas importadas y, a continuación, haga clic en **Evaluate**. Si no ha importado las directivas de prácticas recomendadas, continúe con este procedimiento.  
   
-3.  En el **evaluar directivas** cuadro de diálogo, junto a la **origen** cuadro, haga clic en el botón de puntos suspensivos (**...** ) botón.  
+3.  En el **evaluar directivas** cuadro de diálogo, junto a la **origen** cuadro, haga clic en el botón de puntos suspensivos ( **...** ) botón.  
   
 4.  En el **Seleccionar origen** cuadro de diálogo, puede seleccionar cualquiera **archivos** o **Server** como origen de los archivos de directivas para evaluar. Si hace clic en **Server**, puede realizar una evaluación a petición de las directivas de prácticas recomendadas que se importaron previamente en la administración basada en directivas en un servidor local o remoto. En este tutorial, hará clic en **archivos**y, a continuación, seleccione los archivos de directiva individuales que se va a evaluar. Para ello, siga estos pasos:  
   
     1.  Haga clic en **archivos**.  
   
-    2.  Junto a **archivos**, haga clic en el botón de puntos suspensivos (**...** ) botón.  
+    2.  Junto a **archivos**, haga clic en el botón de puntos suspensivos ( **...** ) botón.  
   
     3.  En el **Seleccionar directiva** cuadro de diálogo, vaya a la carpeta siguiente, que contiene las directivas de prácticas recomendadas:  
   

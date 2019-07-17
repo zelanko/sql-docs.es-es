@@ -11,11 +11,11 @@ author: minewiskan
 ms.author: owend
 manager: kfile
 ms.openlocfilehash: 5cfb2590ea31003446bcb7027049e70924fd3f16
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56036856"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68185756"
 ---
 # <a name="lesson-1-preparing-the-analysis-services-database-basic-data-mining-tutorial"></a>Lección 1: Preparación de la base de datos de Analysis Services (Tutorial de minería de datos básicos)
   Son un nuevo empleado de [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] que se ha asignado la tarea con el diseño de una aplicación de business intelligence en [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] espera aprovechar su [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] experiencia en minería de datos para detectar información interesante y procesable sobre las personas que han comprado bicicletas. Quieren que prevea qué clientes tienen más probabilidad de comprar una bicicleta en el futuro.  
@@ -34,7 +34,7 @@ ms.locfileid: "56036856"
  [Creación de un análisis Services proyecto &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/creating-an-analysis-services-project-basic-data-mining-tutorial.md)  
   
 ## <a name="next-lesson"></a>Lección siguiente  
- [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
+ [Lección 2: Creación de una estructura de distribución de correo directo &#40;Tutorial de minería de datos básicos&#41;](../../2014/tutorials/lesson-2-building-a-targeted-mailing-structure-basic-data-mining-tutorial.md)  
   
 ## <a name="see-also"></a>Vea también  
  [Vistas del origen de datos en modelos multidimensionales](../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   

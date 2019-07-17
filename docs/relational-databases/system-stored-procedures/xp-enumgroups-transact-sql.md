@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bd3ed36-e260-469c-a5ff-b033fb9ea59d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 43366fd6463c885a41ad0304d45c2df1375015f8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 885e29f8abbeb185017bc2472566e41596a56900
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47792053"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116770"
 ---
 # <a name="xpenumgroups-transact-sql"></a>xp_enumgroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ xp_enumgroups [ 'domain_name' ]
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**Grupo**|**sysname**|Nombre del grupo de Windows|  
-|**Comentario**|**sysname**|Descripción del grupo de Windows proporcionado por Windows|  
+|**comment**|**sysname**|Descripción del grupo de Windows proporcionado por Windows|  
   
 ## <a name="remarks"></a>Comentarios  
  Si *nombre_dominio* es el nombre del equipo basado en Windows que una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] es no se especifica ningún nombre de dominio o que se ejecutan en, **xp_enumgroups** enumera los grupos locales del equipo que se está ejecutando [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

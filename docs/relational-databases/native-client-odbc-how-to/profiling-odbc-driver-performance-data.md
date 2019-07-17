@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b997790a-8cc6-4800-8867-74c1bef07be3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fcdee513f4c636552a643009d24345cfd10dec81
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 1136efd8102268623de9caa6be6e4ed77930dcec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51676434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133420"
 ---
 # <a name="profiling-odbc-driver-performance-data"></a>Generar perfiles de datos de rendimiento del controlador ODBC
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51676434"
   
 ### <a name="to-log-driver-performance-data-using-odbc-administrator"></a>Para registrar los datos de rendimiento del controlador mediante el Administrador ODBC  
   
-1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)**. De modo alternativo, puede invocar odbcad32.exe.  
+1.  En **Panel de Control**, haga doble clic en **herramientas administrativas** y, a continuación, haga doble clic en **orígenes de datos (ODBC)** . De modo alternativo, puede invocar odbcad32.exe.  
   
 2.  Haga clic en el **DSN de usuario**, **DSN de sistema**, o **DSN de archivo** ficha.  
   
@@ -46,25 +45,25 @@ ms.locfileid: "51676434"
   
 ### <a name="to-log-driver-performance-data-programmatically"></a>Para registrar mediante programación los datos de rendimiento del controlador  
   
-1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) como SQL_COPT_SS_PERF_DATA_LOG y la ruta de acceso y el nombre completo del archivo de registro de datos de rendimiento. Por ejemplo:  
+1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA_LOG y la ruta de acceso y el nombre completo del archivo de registro de datos de rendimiento. Por ejemplo:  
   
     ```  
     "C:\\Odbcperf.log"  
     ```  
   
-2.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con como SQL_COPT_SS_PERF_DATA y SQL_PERF_START para comenzar a registrar datos de rendimiento.  
+2.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA y SQL_PERF_START para iniciar el registro de datos de rendimiento.  
   
-3.  Opcionalmente, llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) como SQL_COPT_SS_LOG_NOW y NULL para escribir un registro delimitado por tabulaciones de los datos de rendimiento en el archivo de registro de datos de rendimiento. Esto se puede hacer varias veces cuando se ejecuta la aplicación.  
+3.  Opcionalmente, llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_LOG_NOW y NULL para escribir un registro delimitado por tabulaciones de los datos de rendimiento en el archivo de registro de datos de rendimiento. Esto se puede hacer varias veces cuando se ejecuta la aplicación.  
   
-4.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con como SQL_COPT_SS_PERF_DATA y como SQL_PERF_STOP para detener el registro de datos de rendimiento.  
+4.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA y SQL_PERF_STOP para detener el registro de datos de rendimiento.  
   
 ### <a name="to-pull-driver-performance-data-into-an-application"></a>Para extraer los datos de rendimiento del controlador en una aplicación  
   
-1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con como SQL_COPT_SS_PERF_DATA y SQL_PERF_START para comenzar a analizar los datos de rendimiento.  
+1.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA y SQL_PERF_START para iniciar la generación de perfiles de datos de rendimiento.  
   
-2.  Llame a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) con como SQL_COPT_SS_PERF_DATA y la dirección de un puntero a una estructura SQLPERF. La primera vez dicha llamada establece el puntero en la dirección de una estructura SQLPERF válida que contiene los datos de rendimiento actuales. El controlador no actualiza continuamente los datos de la estructura de rendimiento. La aplicación debe repetir la llamada a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) siempre que necesita para actualizar la estructura con datos de rendimiento más actuales.  
+2.  Llame a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) con SQL_COPT_SS_PERF_DATA y la dirección de un puntero a una estructura SQLPERF. La primera vez dicha llamada establece el puntero en la dirección de una estructura SQLPERF válida que contiene los datos de rendimiento actuales. El controlador no actualiza continuamente los datos de la estructura de rendimiento. La aplicación debe repetir la llamada a [SQLGetConnectAttr](../../relational-databases/native-client-odbc-api/sqlgetconnectattr.md) siempre que necesita para actualizar la estructura con datos de rendimiento más actuales.  
   
-3.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con como SQL_COPT_SS_PERF_DATA y como SQL_PERF_STOP para detener el registro de datos de rendimiento.  
+3.  Llame a [SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md) con SQL_COPT_SS_PERF_DATA y SQL_PERF_STOP para detener el registro de datos de rendimiento.  
   
 ## <a name="example"></a>Ejemplo  
  Necesitará un origen de datos ODBC denominado AdventureWorks, cuya base de datos predeterminada sea la base de datos de ejemplo AdventureWorks. (Puede descargar la base de datos de ejemplo AdventureWorks de la página principal que muestra [ejemplos y proyectos de la comunidad de Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=85384)). Este origen de datos debe estar basado en el controlador ODBC proporcionado por el sistema operativo (el nombre del controlador es "SQL Server"). Si genera y ejecuta este ejemplo como una aplicación de 32 bits en un sistema operativo de 64 bits, debe crear el origen de datos ODBC con el Administrador ODBC en %windir%\SysWOW64\odbcad32.exe.  

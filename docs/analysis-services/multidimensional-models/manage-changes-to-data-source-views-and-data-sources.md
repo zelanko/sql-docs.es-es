@@ -1,5 +1,5 @@
 ---
-title: Administrar los cambios en las vistas del origen de datos y orígenes de datos | Documentos de Microsoft
+title: Administrar los cambios en las vistas del origen de datos y orígenes de datos | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f8cb72fe4650cd76465207f3e7cd529e2a7b032
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026012"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208815"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>Administrar los cambios de las vistas del origen de datos y los orígenes de datos
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -25,6 +25,6 @@ ms.locfileid: "34026012"
  Por otra parte, no se generarán errores si se cambia la cadena de conexión de origen de datos a una base de datos distinta de la generación anterior. Se utilizará la nueva base de datos y no se realizarán cambios en la base de datos anterior.  
   
 ## <a name="see-also"></a>Vea también  
- [Descripción de la generación Incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
+ [Descripción de la generación incremental](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   

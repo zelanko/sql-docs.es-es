@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4ba9720f87cd41849cc118482ffbf4731049e8c9
-ms.sourcegitcommit: 4182a1e8be69373dde2fe778f19cab9cd78e447c
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/16/2018
-ms.locfileid: "51818501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209552"
 ---
 # <a name="using-sql-server-profiler-to-monitor-data-mining-analysis-services---data-mining"></a>Usar SQL Server Profiler para supervisar la minería de datos (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "51818501"
 |**Progress Report Begin**<br /><br /> **Progress Report End**|**34 - DataMiningProgress**|Proporciona información sobre el progreso del algoritmo de minería de datos: por ejemplo, si está generando un modelo de agrupación en clústeres, el mensaje de progreso le indica qué clúster candidato se está generando.|  
 |**Query Begin**<br /><br /> **Query End**|EXECUTESQL|Contiene el texto de la consulta de Transact-SQL que se ejecuta|  
 |**Query Begin**<br /><br /> **Query End**|**2- SQLQuery**|Contiene el texto de cualquier consulta con los conjuntos de filas de esquema en formato de tablas del sistema.|  
-|**Inicio de DISCOVER**<br /><br /> **Fin de DISCOVER**|Varios|Contiene el texto de las llamadas a la función DMX o las instrucciones DISCOVER, encapsuladas en XMLA.|  
+|**Inicio de DISCOVER**<br /><br /> **Fin de DISCOVER**|Múltiple|Contiene el texto de las llamadas a la función DMX o las instrucciones DISCOVER, encapsuladas en XMLA.|  
 |**Error**|(ninguno)|Contiene el texto de los errores que el servidor envía al cliente.<br /><br /> Los mensajes de error precedidos de **Error (Minería de datos):** o **Informativo (Minería de datos):** se generan específicamente en respuesta a las solicitudes DMX. Sin embargo, no es suficiente ver solo estos mensajes de error. Otros errores, como los que genera el analizador, pueden estar relacionados con la minería de datos y no tener este prefijo.|  
   
  Al ver las instrucciones de comandos en el registro de seguimiento, también puede ver la sintaxis de las instrucciones complejas que el cliente envía al servidor de [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] , incluidas las llamadas a los procedimientos almacenados del sistema. Esta información puede ser útil para depurar o puede utilizar las instrucciones válidas como plantilla para crear consultas de predicción o modelos nuevos. Para consultar algunos ejemplos sobre las llamadas a procedimientos almacenados que se pueden capturar con un seguimiento, vea [Ejemplos de consultas de modelos de agrupación en clústeres](../../analysis-services/data-mining/clustering-model-query-examples.md).  

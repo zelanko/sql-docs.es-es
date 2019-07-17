@@ -13,11 +13,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 03eeb209dfef3c2bfa9c2ffaea70cb24286c23f4
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48214455"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68205452"
 ---
 # <a name="sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc"></a>Enviar datos como un parámetro con valores de tabla con todos los valores en memoria (ODBC)
   En este tema se describe cómo enviar datos a un procedimiento almacenado como un parámetro con valores de tabla cuando todos los valores están en memoria. Para obtener otro ejemplo que muestra los parámetros con valores de tabla, vea [usar parámetros &#40;ODBC&#41;](table-valued-parameters-odbc.md).  

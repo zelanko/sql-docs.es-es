@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 342fa030-9fd9-4b74-ae4d-49f6038a5073
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 081eaa3995507edf20be0b83f3e0ce766135139c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 556518a5fc2950ff69e6a872df5387b4c8367c6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52416326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122570"
 ---
 # <a name="sysfnnetchangesltcaptureinstancegt-transact-sql"></a>Sys.fn_net_changes_&lt;capture_instance&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -97,11 +96,11 @@ fn_net_changes_<capture_instance> ('start_time', 'end_time', '<row_filter_option
 |Nombre de columna|Tipo de columna|Descripción|  
 |-----------------|-----------------|-----------------|  
 |\<columnas de @column_list>|**Varía**|Las columnas que se identifican en el **column_list** argumento a la función sp_cdc_generate_wrapper_function cuando se llama para generar el script que crea el contenedor. Si *column_list* es NULL, todas las columnas de origen sometidas a seguimiento aparecerán en el conjunto de resultados.|  
-|__CDC_OPERATION|**nvarchar (2)**|Un código de operación que indica qué operación se debe aplicar la fila en el entorno de destino. La operación variará en función del valor del argumento *row_filter_option* que se proporciona en la siguiente llamada:<br /><br /> *row_filter_option* = 'all', 'all with mask'<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - operación de actualización<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - operación de eliminación<br /><br /> 'M' - operación de inserción o de actualización|  
-|\<columnas de @update_flag_list>|**bit**|Marca de bits que se denomina anexando _uflag al nombre de columna. La marca acepta un valor distinto de null solo cuando *row_filter_option* **= 'all with mask'** y \__CDC_OPERATION **'UN ='**. Se establece en 1 si la columna correspondiente se modificó dentro de la ventana de consulta. En caso contrario, es 0.|  
+|__CDC_OPERATION|**nvarchar(2)**|Un código de operación que indica qué operación se debe aplicar la fila en el entorno de destino. La operación variará en función del valor del argumento *row_filter_option* que se proporciona en la siguiente llamada:<br /><br /> *row_filter_option* = 'all', 'all with mask'<br /><br /> 'D' - operación de eliminación<br /><br /> 'I' - operación de inserción<br /><br /> 'UN' - operación de actualización<br /><br /> *row_filter_option* = 'all with merge'<br /><br /> 'D' - operación de eliminación<br /><br /> 'M' - operación de inserción o de actualización|  
+|\<columnas de @update_flag_list>|**bit**|Marca de bits que se denomina anexando _uflag al nombre de columna. La marca acepta un valor distinto de null solo cuando *row_filter_option* **= 'all with mask'** y \__CDC_OPERATION **'UN ='** . Se establece en 1 si la columna correspondiente se modificó dentro de la ventana de consulta. En caso contrario, es 0.|  
   
 ## <a name="remarks"></a>Comentarios  
- La función fn_net_changes_<instancia_de_captura> actúa de contenedor para la función de consulta cdc.fn_cdc_get_net_changes_<instancia_de_captura>. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para crear el script del contenedor.  
+ La función fn_net_changes_ < instancia_de_captura > actúa como contenedor para la función de consulta cdc.fn_cdc_get_net_changes_ < capture_instance >. El procedimiento almacenado sys.sp_cdc_generate_wrapper se utiliza para crear el script del contenedor.  
   
  Las funciones contenedoras no se crean automáticamente. Para crear funciones contenedoras hay que seguir dos pasos:  
   

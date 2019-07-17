@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138410"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51657464"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**appdomain_address**|**varbinary (8)**|Dirección de la **AppDomain**. Base de datos administrado todos los objetos que pertenecen a un usuario siempre se cargan en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados actualmente cargados en este **AppDomain** en **sys.dm_clr_loaded_assemblies**.|  
+|**appdomain_address**|**varbinary(8)**|Dirección de la **AppDomain**. Base de datos administrado todos los objetos que pertenecen a un usuario siempre se cargan en el mismo **AppDomain**. Puede utilizar esta columna para buscar todos los ensamblados actualmente cargados en este **AppDomain** en **sys.dm_clr_loaded_assemblies**.|  
 |**appdomain_id**|**int**|Id. de la **AppDomain**. Cada **AppDomain** tiene un identificador único.|  
 |**appdomain_name**|**varchar(386)**|Nombre de la **AppDomain** tal como lo asignó [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 |**creation_time**|**datetime**|Hora en que expirarán el **AppDomain** se creó. Dado que **AppDomains** se almacena en caché y volver a usar para mejorar el rendimiento, **creation_time** no es necesariamente el tiempo de cuándo se ejecutó el código.|  
@@ -59,13 +58,13 @@ ms.locfileid: "51657464"
   
 ## <a name="appdomain-initialization"></a>Inicialización de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_CREATING|El **AppDomain** se está creando.|  
   
 ## <a name="appdomain-usage"></a>Uso de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_SHARED|El tiempo de ejecución **AppDomain** está listo para su uso por varios usuarios.|  
 |E_APPDOMAIN_SINGLEUSER|El **AppDomain** está listo para su uso en operaciones de DDL. Se diferencian de E_APPDOMAIN_SHARED en que AppDomains compartidos se usan para ejecuciones de integración CLR en contraposición con operaciones de DDL. Dichos AppDomains están aislados de las operaciones simultáneas.|  
@@ -73,7 +72,7 @@ ms.locfileid: "51657464"
   
 ## <a name="appdomain-cleanup"></a>Limpieza de AppDomain  
   
-|State|Descripción|  
+|Estado|Descripción|  
 |-----------|-----------------|  
 |E_APPDOMAIN_UNLOADING|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ha solicitado que CLR descargue el **AppDomain**, normalmente porque se ha modificado o quitado el ensamblado que contiene los objetos de base de datos administrados.|  
 |E_APPDOMAIN_UNLOADED|CLR ha descargado la **AppDomain**. Esto suele ser el resultado de un procedimiento de concentración debido a **ThreadAbort**, **OutOfMemory**, o una excepción no controlada en código de usuario.|  

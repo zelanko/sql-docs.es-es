@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b0eed101b1b336997b7f90c17b3f1471d4ea526b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 52a89c0220bddde6944e759936dc22ad1f3e0ff2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528311"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126301"
 ---
 # <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,21 +65,21 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
 ## <a name="arguments"></a>Argumentos  
 `[ @profile_name = ] 'profile_name'` Es el nombre del perfil para enviar el mensaje desde. El *profile_name* es de tipo **sysname**, su valor predeterminado es null. El *profile_name* debe ser el nombre de un perfil de correo electrónico de base de datos existente. Cuando no hay ninguna *profile_name* se especifica, **sp_send_dbmail** usa el perfil privado predeterminado para el usuario actual. Si el usuario no tiene un perfil privado predeterminado, **sp_send_dbmail** utiliza el perfil público predeterminado para el **msdb** base de datos. Si el usuario no tiene un perfil privado predeterminado y no hay ningún perfil público predeterminado para la base de datos, **@profile_name** debe especificarse.  
   
-`[ @recipients = ] 'recipients'` Es una lista delimitada por punto y coma de direcciones de correo electrónico para enviar el mensaje. La lista de destinatarios es de tipo **varchar (max)**. Aunque este parámetro es opcional, al menos uno de **@recipients**, **@copy_recipients**, o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
+`[ @recipients = ] 'recipients'` Es una lista delimitada por punto y coma de direcciones de correo electrónico para enviar el mensaje. La lista de destinatarios es de tipo **varchar (max)** . Aunque este parámetro es opcional, al menos uno de **@recipients** , **@copy_recipients** , o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
   
-`[ @copy_recipients = ] 'copy_recipients'` Es que una lista delimitada por punto y coma de correo electrónico direcciones para la copia del mensaje. La lista de destinatarios de copia es de tipo **varchar (max)**. Aunque este parámetro es opcional, al menos uno de **@recipients**, **@copy_recipients**, o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
+`[ @copy_recipients = ] 'copy_recipients'` Es que una lista delimitada por punto y coma de correo electrónico direcciones para la copia del mensaje. La lista de destinatarios de copia es de tipo **varchar (max)** . Aunque este parámetro es opcional, al menos uno de **@recipients** , **@copy_recipients** , o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
   
-`[ @blind_copy_recipients = ] 'blind_copy_recipients'` Es que una lista delimitada por punto y coma de correo electrónico direcciones a recibir copia oculta del mensaje. La lista de destinatarios de copia oculta es de tipo **varchar (max)**. Aunque este parámetro es opcional, al menos uno de **@recipients**, **@copy_recipients**, o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
+`[ @blind_copy_recipients = ] 'blind_copy_recipients'` Es que una lista delimitada por punto y coma de correo electrónico direcciones a recibir copia oculta del mensaje. La lista de destinatarios de copia oculta es de tipo **varchar (max)** . Aunque este parámetro es opcional, al menos uno de **@recipients** , **@copy_recipients** , o **@blind_copy_recipients** debe especificarse o **sp_ send_dbmail** devuelve un error.  
   
-`[ @from_address = ] 'from_address'` Es el valor de la 'from address' del mensaje de correo electrónico. Se trata de un parámetro opcional que se usa para invalidar la configuración del perfil de correo. Este parámetro es de tipo **varchar (max)**. La configuración de seguridad de SMTP determina si se aceptan estas invalidaciones. Si no se especifica ningún parámetro, el valor predeterminado es NULL.  
+`[ @from_address = ] 'from_address'` Es el valor de la 'from address' del mensaje de correo electrónico. Se trata de un parámetro opcional que se usa para invalidar la configuración del perfil de correo. Este parámetro es de tipo **varchar (max)** . La configuración de seguridad de SMTP determina si se aceptan estas invalidaciones. Si no se especifica ningún parámetro, el valor predeterminado es NULL.  
   
-`[ @reply_to = ] 'reply_to'` Es el valor de la 'reply to address' del mensaje de correo electrónico. Solo acepta una dirección de correo electrónico como valor válido. Se trata de un parámetro opcional que se usa para invalidar la configuración del perfil de correo. Este parámetro es de tipo **varchar (max)**. La configuración de seguridad de SMTP determina si se aceptan estas invalidaciones. Si no se especifica ningún parámetro, el valor predeterminado es NULL.  
+`[ @reply_to = ] 'reply_to'` Es el valor de la 'reply to address' del mensaje de correo electrónico. Solo acepta una dirección de correo electrónico como valor válido. Se trata de un parámetro opcional que se usa para invalidar la configuración del perfil de correo. Este parámetro es de tipo **varchar (max)** . La configuración de seguridad de SMTP determina si se aceptan estas invalidaciones. Si no se especifica ningún parámetro, el valor predeterminado es NULL.  
   
-`[ @subject = ] 'subject'` Es el asunto del mensaje de correo electrónico. El asunto es de tipo **nvarchar (255)**. Si no se especifica ningún asunto, el valor predeterminado es 'Mensaje de SQL Server'.  
+`[ @subject = ] 'subject'` Es el asunto del mensaje de correo electrónico. El asunto es de tipo **nvarchar (255)** . Si no se especifica ningún asunto, el valor predeterminado es 'Mensaje de SQL Server'.  
   
-`[ @body = ] 'body'` Es el cuerpo del mensaje de correo electrónico. El cuerpo del mensaje es de tipo **nvarchar (max)**, su valor predeterminado es null.  
+`[ @body = ] 'body'` Es el cuerpo del mensaje de correo electrónico. El cuerpo del mensaje es de tipo **nvarchar (max)** , su valor predeterminado es null.  
   
-`[ @body_format = ] 'body_format'` Es el formato del cuerpo del mensaje. El parámetro es de tipo **varchar (20)**, su valor predeterminado es null. Si se especifica, los encabezados del mensaje saliente indican que el cuerpo del mensaje tiene el formato especificado. El parámetro puede contener uno de los siguientes valores:  
+`[ @body_format = ] 'body_format'` Es el formato del cuerpo del mensaje. El parámetro es de tipo **varchar (20)** , su valor predeterminado es null. Si se especifica, los encabezados del mensaje saliente indican que el cuerpo del mensaje tiene el formato especificado. El parámetro puede contener uno de los siguientes valores:  
   
 -   TEXT  
   
@@ -88,17 +87,17 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  El valor predeterminado es TEXT.  
   
-`[ @importance = ] 'importance'` Es la importancia del mensaje. El parámetro es de tipo **varchar(6)**. El parámetro puede contener uno de los siguientes valores:  
+`[ @importance = ] 'importance'` Es la importancia del mensaje. El parámetro es de tipo **varchar(6)** . El parámetro puede contener uno de los siguientes valores:  
   
--   Baja  
+-   Bajo  
   
 -   Normal  
   
--   Alta  
+-   Alto  
   
  El valor predeterminado es Normal.  
   
-`[ @sensitivity = ] 'sensitivity'` Es la confidencialidad del mensaje. El parámetro es de tipo **varchar (12)**. El parámetro puede contener uno de los siguientes valores:  
+`[ @sensitivity = ] 'sensitivity'` Es la confidencialidad del mensaje. El parámetro es de tipo **varchar (12)** . El parámetro puede contener uno de los siguientes valores:  
   
 -   Normal  
   
@@ -110,7 +109,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  El valor predeterminado es Normal.  
   
-`[ @file_attachments = ] 'file_attachments'` Es una lista delimitada por punto y coma de nombres de archivo para adjuntar al mensaje de correo electrónico. Especifique los archivos de la lista como rutas de acceso absolutas. La lista de los datos adjuntos es de tipo **nvarchar (max)**. De forma predeterminada, Correo electrónico de base de datos limita los datos adjuntos a 1 MB por archivo.  
+`[ @file_attachments = ] 'file_attachments'` Es una lista delimitada por punto y coma de nombres de archivo para adjuntar al mensaje de correo electrónico. Especifique los archivos de la lista como rutas de acceso absolutas. La lista de los datos adjuntos es de tipo **nvarchar (max)** . De forma predeterminada, Correo electrónico de base de datos limita los datos adjuntos a 1 MB por archivo.  
   
 `[ @query = ] 'query'` Es una consulta para ejecutarla. Los resultados de la consulta pueden adjuntarse como archivo o incluirse en el cuerpo del mensaje de correo electrónico. La consulta es de tipo **nvarchar (max)** y puede contener cualquier [!INCLUDE[tsql](../../includes/tsql-md.md)] instrucciones. Tenga en cuenta que la consulta se ejecuta en una sesión independiente, las variables locales por lo que en el script que llama a **sp_send_dbmail** no están disponibles para la consulta.  
   
@@ -120,7 +119,7 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Cuando el valor es 0, los resultados de consulta se incluyen en el cuerpo del mensaje de correo electrónico, después del contenido de la **@body** parámetro. Si el valor es 1, los resultados se devuelven como dato adjunto. Este parámetro solo es aplicable si **@query** se especifica.  
   
-`[ @query_attachment_filename = ] query_attachment_filename` Especifica el nombre de archivo que se usará para el conjunto de resultados de los datos adjuntos de la consulta. *query_attachment_filename* es de tipo **nvarchar (255)**, su valor predeterminado es null. Este parámetro se omite cuando *attach_query_result* es 0. Cuando *attach_query_result* es 1 y este parámetro es NULL, correo electrónico de base de datos crea un nombre de archivo arbitrario.  
+`[ @query_attachment_filename = ] query_attachment_filename` Especifica el nombre de archivo que se usará para el conjunto de resultados de los datos adjuntos de la consulta. *query_attachment_filename* es de tipo **nvarchar (255)** , su valor predeterminado es null. Este parámetro se omite cuando *attach_query_result* es 0. Cuando *attach_query_result* es 1 y este parámetro es NULL, correo electrónico de base de datos crea un nombre de archivo arbitrario.  
   
 `[ @query_result_header = ] query_result_header` Especifica si los resultados de consulta incluyen encabezados de columna. El valor de query_result_header es de tipo **bits**. Si el valor es 1, los resultados de la consulta contienen encabezados de columna. Si el valor es 0, los resultados de la consulta no contienen encabezados de columna. Este parámetro tiene como valor predeterminado **1**. Este parámetro solo es aplicable si **@query** se especifica.  
  
@@ -130,16 +129,16 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
 `[ @query_result_width = ] query_result_width` Es el ancho de línea, en caracteres, que se usan para dar formato a los resultados de la consulta. El *query_result_width* es de tipo **int**, su valor predeterminado es 256. El valor proporcionado debe estar entre 10 y 32767. Este parámetro solo es aplicable si **@query** se especifica.  
   
-`[ @query_result_separator = ] 'query_result_separator'` Es el carácter utilizado para separar las columnas en la salida de la consulta. El separador es de tipo **char (1)**. El valor predeterminado es ' ' (espacio).  
+`[ @query_result_separator = ] 'query_result_separator'` Es el carácter utilizado para separar las columnas en la salida de la consulta. El separador es de tipo **char (1)** . El valor predeterminado es ' ' (espacio).  
   
 `[ @exclude_query_output = ] exclude_query_output` Especifica si se devuelve el resultado de la ejecución de consultas en el mensaje de correo electrónico. **exclude_query_output** es bit y su valor predeterminado es 0. Si este parámetro es 0, la ejecución de la **sp_send_dbmail** procedimiento almacenado imprime el mensaje devuelto como resultado de la ejecución de consultas en la consola. Si este parámetro es 1, la ejecución de la **sp_send_dbmail** procedimiento almacenado imprimir cualquiera de los mensajes de ejecución de consulta en la consola.  
   
 `[ @append_query_error = ] append_query_error` Especifica si se debe enviar el correo electrónico cuando se devuelve un error de la consulta especificada en el **@query** argumento. **append_query_error** es **bit**, su valor predeterminado es 0. Cuando este parámetro es 1, el Correo electrónico de base de datos envía el mensaje de correo electrónico e incluye en el cuerpo del mismo el mensaje de error de la consulta. Cuando este parámetro es 0, correo electrónico de base de datos no envía el mensaje de correo electrónico, y **sp_send_dbmail** termina con el código de retorno 1, que indica un error.  
   
-`[ @query_no_truncate = ] query_no_truncate` Especifica si se debe ejecutar la consulta con la opción que evita el truncamiento de tipos de datos de longitud variable grande (**varchar (max)**, **nvarchar (max)**, **varbinary (max)** **xml**, **texto**, **ntext**, **imagen**y los tipos de datos definido por el usuario). Si el establece, los resultados de la consulta no contienen encabezados de columna. El *@query_no_truncate* es el valor de tipo **bits**. Si el valor es 0 o no se especifica, las columnas de la consulta se truncan a 256 caracteres. Si el valor es 1, las columnas de la consulta no se truncan. El valor predeterminado de este parámetro es 0.  
+`[ @query_no_truncate = ] query_no_truncate` Especifica si se debe ejecutar la consulta con la opción que evita el truncamiento de tipos de datos de longitud variable grande (**varchar (max)** , **nvarchar (max)** , **varbinary (max)** **xml**, **texto**, **ntext**, **imagen**y los tipos de datos definido por el usuario). Si el establece, los resultados de la consulta no contienen encabezados de columna. El *@query_no_truncate* es el valor de tipo **bits**. Si el valor es 0 o no se especifica, las columnas de la consulta se truncan a 256 caracteres. Si el valor es 1, las columnas de la consulta no se truncan. El valor predeterminado de este parámetro es 0.  
   
 > [!NOTE]  
->  Cuando se usa con grandes cantidades de datos, el @**@query_no_truncate** opción consume recursos adicionales y puede ralentizar el rendimiento del servidor.  
+>  Cuando se usa con grandes cantidades de datos, el @ **@query_no_truncate** opción consume recursos adicionales y puede ralentizar el rendimiento del servidor.  
   
 `[ @query_result_no_padding ] @query_result_no_padding` El tipo es bit. El valor predeterminado es 0. Cuando se establece en 1, no se rellenan los resultados de consulta, posiblemente, reducirá el tamaño del archivo. Si establece @query_result_no_padding en 1 y establezca el @query_result_width parámetro, el @query_result_no_padding parámetro sobrescribe el @query_result_width parámetro.  
   
@@ -166,15 +165,15 @@ sp_send_dbmail [ [ @profile_name = ] 'profile_name' ]
   
  Cuando **@profile** no se especifica, **sp_send_dbmail** utiliza un perfil predeterminado. Si el usuario que envía el mensaje de correo electrónico tiene un perfil privado predeterminado, el Correo electrónico de base de datos utilizará dicho perfil. Si el usuario no tiene ningún perfil privado predeterminado, **sp_send_dbmail** usa el perfil público predeterminado. Si no hay ningún perfil privado predeterminado para el usuario y ningún perfil público predeterminado, **sp_send_dbmail** devuelve un error.  
   
- **sp_send_dbmail** no admite mensajes de correo electrónico sin contenido. Para enviar un mensaje de correo electrónico, debe especificar al menos uno de **@body**, **@query**, **@file_attachments**, o **@subject**. En caso contrario, **sp_send_dbmail** devuelve un error.  
+ **sp_send_dbmail** no admite mensajes de correo electrónico sin contenido. Para enviar un mensaje de correo electrónico, debe especificar al menos uno de **@body** , **@query** , **@file_attachments** , o **@subject** . En caso contrario, **sp_send_dbmail** devuelve un error.  
   
- El Correo electrónico de base de datos utiliza el contexto de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows del usuario actual para controlar el acceso a los archivos. Por lo tanto, los usuarios se autentican con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación no puede adjuntar archivos utilizando **@file_attachments**. Tenga en cuenta que Windows no permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcione credenciales desde un equipo remoto a otro. Por lo tanto, es posible que el Correo electrónico de base de datos no pueda adjuntar archivos desde un recurso compartido de red en aquellos casos en los que el comando se ejecuta desde un equipo que no sea el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ El Correo electrónico de base de datos utiliza el contexto de seguridad de [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows del usuario actual para controlar el acceso a los archivos. Por lo tanto, los usuarios se autentican con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] autenticación no puede adjuntar archivos utilizando **@file_attachments** . Tenga en cuenta que Windows no permite que [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporcione credenciales desde un equipo remoto a otro. Por lo tanto, es posible que el Correo electrónico de base de datos no pueda adjuntar archivos desde un recurso compartido de red en aquellos casos en los que el comando se ejecuta desde un equipo que no sea el equipo donde se ejecuta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  Si ambos **@query** y **@file_attachments** se especifican y no se encuentra el archivo, la consulta se ejecuta pero no se envía el correo electrónico.  
   
  Cuando se especifica una consulta, el conjunto de resultados se formatea como texto insertado. Los datos binarios del conjunto de resultados se envían en formato hexadecimal.  
   
- Los parámetros **@recipients**, **@copy_recipients**, y **@blind_copy_recipients** son listas delimitada por punto y coma de direcciones de correo electrónico. Debe proporcionarse al menos uno de estos parámetros, o **sp_send_dbmail** devuelve un error.  
+ Los parámetros **@recipients** , **@copy_recipients** , y **@blind_copy_recipients** son listas delimitada por punto y coma de direcciones de correo electrónico. Debe proporcionarse al menos uno de estos parámetros, o **sp_send_dbmail** devuelve un error.  
   
  Al ejecutar **sp_send_dbmail** sin un contexto de transacción, el correo electrónico de base de datos se inicia y confirma una transacción implícita. Al ejecutar **sp_send_dbmail** desde dentro de una transacción existente, correo electrónico de base de datos se basa en el usuario para confirmar o revertir los cambios. No inicia ninguna transacción interna.  
   

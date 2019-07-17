@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a4a55e595f925c8b542f14e34c8c88110472df89
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: c02a0201483617966d7d1c8aadfbad4ab39971e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52822099"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127431"
 ---
 # <a name="msreplcommands-transact-sql"></a>MSrepl_commands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "52822099"
 |-----------------|---------------|-----------------|  
 |**publisher_database_id**|**int**|El Id. de la base de datos del publicador.|  
 |**xact_seqno**|**varbinary (16)**|El número de secuencia.|  
-|**Tipo**|**int**|Tipo de comando.|  
+|**type**|**int**|Tipo de comando.|  
 |**article_id**|**int**|Id. del artículo.|  
 |**originator_id**|**int**|Id. del originador.|  
-|**$command_id**|**int**|Id. del comando.|  
+|**command_id**|**int**|Id. del comando.|  
 |**partial_command**|**bit**|Indica si se trata de un comando parcial o no.|  
 |**command**|**varbinary(1024)**|El valor del comando.|  
 |**hashkey**|**int**|Solo para uso interno.|  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533447"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122341"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,16 +38,16 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a recuperar la información. *publicación*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los artículos de mezcla contenidos en todas las publicaciones de la base de datos actual.  
+`[ @publication = ] 'publication'` Es el nombre de la publicación que se va a recuperar la información. *publicación*es **sysname**, su valor predeterminado es **%** , que devuelve información acerca de todos los artículos de mezcla contenidos en todas las publicaciones de la base de datos actual.  
   
-`[ @article = ] 'article'` Es el nombre del artículo para el que se va a devolver información. *artículo*es **sysname**, su valor predeterminado es **%**, que devuelve información acerca de todos los artículos de mezcla de la publicación indicada.  
+`[ @article = ] 'article'` Es el nombre del artículo para el que se va a devolver información. *artículo*es **sysname**, su valor predeterminado es **%** , que devuelve información acerca de todos los artículos de mezcla de la publicación indicada.  
   
 ## <a name="result-set"></a>Tipo de cursor  
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**id**|**int**|Identificador del artículo.|  
-|**Nombre**|**sysname**|Nombre del artículo.|  
+|**name**|**sysname**|Nombre del artículo.|  
 |**source_owner**|**sysname**|Nombre del propietario del objeto de origen.|  
 |**source_object**|**sysname**|Nombre del objeto de origen desde el que se agrega el artículo.|  
 |**sync_object_owner**|**sysname**|Nombre del propietario de la vista que define el artículo publicado.|  
@@ -60,8 +59,8 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**article_resolver**|**nvarchar(255)**|Solucionador personalizado para el artículo.|  
 |**subset_filterclause**|**nvarchar(1000)**|Cláusula WHERE que especifica el filtrado horizontal.|  
 |**pre_creation_command**|**tinyint**|Método anterior a la creación, que puede ser uno de los siguientes:<br /><br /> **0** = ninguno<br /><br /> **1** = quitar<br /><br /> **2** = delete<br /><br /> **3** = truncar|  
-|**schema_option**|**binary(8)**|Mapa de bits de la opción de generación de esquema para el artículo. Para obtener información acerca de esta opción de mapa de bits, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) o [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
-|**Tipo**|**smallint**|Tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla<br /><br /> **32** = procedimiento almacenado<br /><br /> **64** = vista o vista indizada<br /><br /> **128** = función definida por el usuario<br /><br /> **160** = solamente esquema de sinónimo|  
+|**schema_option**|**binary (8)**|Mapa de bits de la opción de generación de esquema para el artículo. Para obtener información acerca de esta opción de mapa de bits, consulte [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) o [sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md).|  
+|**type**|**smallint**|Tipo de artículo, que puede ser uno de los siguientes:<br /><br /> **10** = tabla<br /><br /> **32** = procedimiento almacenado<br /><br /> **64** = vista o vista indizada<br /><br /> **128** = función definida por el usuario<br /><br /> **160** = solamente esquema de sinónimo|  
 |**column_tracking**|**int**|Configuración para el seguimiento de nivel de columna; donde **1** significa que el seguimiento de la columna es on, y **0** significa que el seguimiento de la columna está desactivado.|  
 |**resolver_info**|**nvarchar(255)**|Nombre del solucionador del artículo.|  
 |**vertical_partition**|**bit**|Si el artículo está dividido verticalmente; donde **1** significa que el artículo está dividido verticalmente y **0** significa que no es así.|  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 497fdfb11ec186ffba56470f2b0ede2ed2f4221a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f355842999b505a97c3387ab9e51d3b651c3b7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187528"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138279"
 ---
 # <a name="mdx-scripting---scope"></a>Scripting de MDX: SCOPE
 
@@ -84,7 +83,7 @@ Limited_Set ::=
  Los miembros calculados y los conjuntos con nombre creados en una instrucción SCOPE no se ven afectados por la instrucción SCOPE.  
   
 ## <a name="example"></a>Ejemplo  
- Solución de ejemplo el siguiente ejemplo, desde el script de cálculo MDX en el de Adventure Works, define el ámbito actual como fiscal quarter del año fiscal 2005 y la medida sales amount quota y, a continuación, asigna un valor a las celdas en el ámbito actual mediante el uso de la  **ParallelPeriod** función. En el ejemplo, a continuación, modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante el [This (MDX)](../mdx/this-mdx.md) función.  
+ Solución de ejemplo el siguiente ejemplo, desde el script de cálculo MDX en el de Adventure Works, define el ámbito actual como fiscal quarter del año fiscal 2005 y la medida sales amount quota y, a continuación, asigna un valor a las celdas en el ámbito actual mediante el uso de la ** ParallelPeriod** función. En el ejemplo, a continuación, modifica el ámbito mediante otra instrucción SCOPE y, a continuación, realiza otra asignación mediante el [This (MDX)](../mdx/this-mdx.md) función.  
   
 ```  
 Scope   

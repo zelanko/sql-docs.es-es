@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: 4acc0f2a-85ba-4c99-856a-89030f5c418e
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 0cbe66e8298053ef1682e25e97024fa0a96e9abb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: f7e421774d3a09622835b181d5c053c994e905ee
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62864906"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264414"
 ---
 # <a name="global-settings-tester-oracletosql"></a>Configuración global (evaluador) (OracleToSQL)
 Use la página de la herramienta de comprobación de la **configuración Global** cuadro de diálogo para especificar la configuración de pruebas de SSMA.  
@@ -30,7 +30,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 **Modo de ahorro de tablas auxiliares**  
 Esta configuración especifica cómo se guardan las tablas auxiliares internas creadas durante la ejecución del caso de prueba. Siguientes opciones se pueden establecer para esta configuración concreta:  
@@ -52,7 +52,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  Sin  
+2.  No  
   
 **Detener la ejecución de pruebas tras el primer error**  
 Esta configuración especifica si se debe detener la ejecución de caso de prueba actual, si se ha producido un error durante la ejecución. Conjunto de opciones de forma predeterminada es **Sí**.  
@@ -61,7 +61,7 @@ Las siguientes opciones están disponibles para esta configuración:
   
 1.  Sí  
   
-2.  No  
+2.  Sin  
   
 ## <a name="see-also"></a>Vea también  
 [Finalización de la preparación del caso de prueba &#40;OracleToSQL&#41;](../../ssma/oracle/finishing-test-case-preparation-oracletosql.md)  

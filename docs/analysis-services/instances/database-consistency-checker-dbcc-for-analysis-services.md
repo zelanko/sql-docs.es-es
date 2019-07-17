@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181794"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Comprobador de coherencia de base de datos (DBCC) para Analysis Services
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -220,11 +220,11 @@ Execution complete
 |**Objeto**|**Descripción de la comprobación de DBCC**|**Motivo del error**|  
 |Base de datos|Comprueba la cantidad de tablas de la base de datos.  Un valor inferior a cero indica daños.|Hay daños en la capa de almacenamiento. La colección de tablas de la base de datos '%{parent/}' está dañada.|  
 |Base de datos|Comprueba la estructura interna que se utiliza para realizar un seguimiento de la integridad referencial y genera un error si el tamaño es incorrecto.|Los archivos de base de datos no superaron las comprobaciones de coherencia.|  
-|Table|Comprueba el valor interno que se usa para determinar si la tabla es una tabla de dimensiones o hechos.  Un valor que quede fuera del intervalo conocido indica daños.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la tabla.|  
-|Table|Comprueba si el número de particiones en la asignación de segmentos de la tabla coincide con el número de particiones definidas para la tabla.|Hay daños en la capa de almacenamiento. La colección de particiones de la tabla '%{parent/}' está dañada.|  
-|Table|Si se creó o se importó una base de datos tabular se creó o importados desde PowerPivot para Excel 2010 y tiene un número de particiones superior a uno, se generará un error, ya que la compatibilidad con las particiones se agregó en una etapa posterior y esto indicaría daños.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
+|Tabla|Comprueba el valor interno que se usa para determinar si la tabla es una tabla de dimensiones o hechos.  Un valor que quede fuera del intervalo conocido indica daños.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las estadísticas de la tabla.|  
+|Tabla|Comprueba si el número de particiones en la asignación de segmentos de la tabla coincide con el número de particiones definidas para la tabla.|Hay daños en la capa de almacenamiento. La colección de particiones de la tabla '%{parent/}' está dañada.|  
+|Tabla|Si se creó o se importó una base de datos tabular se creó o importados desde PowerPivot para Excel 2010 y tiene un número de particiones superior a uno, se generará un error, ya que la compatibilidad con las particiones se agregó en una etapa posterior y esto indicaría daños.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
 |Partición|Comprueba en cada partición que el número de segmentos de datos y la cantidad de registros de cada segmento de datos en el segmento coincide con los valores almacenados en el índice para el segmento.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
-|Partición|Genera un error si el número total de registros, segmentos o registros por segmento no es válido (inferior a cero), o si el número de segmentos no coincide con el número calculado de segmentos requeridos en función del número total de registros.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
+|Partition|Genera un error si el número total de registros, segmentos o registros por segmento no es válido (inferior a cero), o si el número de segmentos no coincide con el número calculado de segmentos requeridos en función del número total de registros.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la asignación de segmentos.|  
 |Relación|Genera un error si la estructura que se utiliza para almacenar datos acerca de la relación no contiene registros o si el nombre de la tabla utilizada en la relación está vacío.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
 |Relación|Comprueba que el nombre de la tabla principal, la columna principal, la tabla externa y la columna externa están configurados y que es posible acceder a las columnas y las tablas que participan en la relación.<br /><br /> Comprueba que los tipos de columna implicados son válidos y que el índice de valores de Clave principal-Clave externa resulta en una estructura de consulta válida.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar las relaciones.|  
 |Hierarchy|Genera un error si el criterio de ordenación para la jerarquía no es un valor reconocido.|Error en las comprobaciones de coherencia de la base de datos (DBCC) al comprobar la jerarquía '%{hier/}'.|  
@@ -259,7 +259,7 @@ Execution complete
 ## <a name="common-resolutions-for-error-conditions"></a>Soluciones habituales de las condiciones de error  
  Los errores siguientes aparecerán en SQL Server Management Studio o en archivos de msmdsrv.log. Estos errores aparecen cuando una o varias comprobaciones no se completan correctamente. Dependiendo del error, la solución recomendada es volver a procesar un objeto, eliminar y volver a implementar una solución o restaurar la base de datos.  
   
-|Error|Problema|Solución|  
+|Error|Problema|Resolución|  
 |-----------|-----------|----------------|  
 |**Errores del administrador de metadatos.**<br /><br /> La referencia de objeto '\<objectID >' no es válido. No coincide con la estructura de la jerarquía de clases de metadatos.|comando incorrecto|Compruebe la sintaxis del comando. Lo más probable es que haya incluido un objeto de nivel inferior sin especificar uno o varios de sus objetos primarios.|  
 |**Errores del administrador de metadatos.**<br /><br /> Ya sea el \<objeto > con el Id. de '\<objectID >' no existe en el \<parentobject > con el Id. de '\<parentobjectID >', o el usuario no tiene permisos para tener acceso al objeto.|Daños en el índice (multidimensional)|Vuelva a procesar el objeto y los objetos dependientes.|  

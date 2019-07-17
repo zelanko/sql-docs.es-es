@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b74d52f21b056caa14b2ade7fca85426f877128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120206"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -130,15 +129,15 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**sync_object**||Nombre de la tabla o vista utilizada para generar un archivo de salida de sincronización. El valor predeterminado es NULL. No es compatible con publicadores de Oracle.|  
 |**tablespace**||Identifica el espacio de tablas utilizado por la tabla de registro de un artículo publicado desde una base de datos Oracle. Para más información, vea [Manage Oracle Databases](../../relational-databases/replication/non-sql/manage-oracle-tablespaces.md) (Administrar bases de datos de Oracle).|  
 |**threshold**||Valor de porcentaje que controla cuándo el Agente de distribución asigna un nuevo intervalo de identidad. No se admite para la replicación punto a punto.|  
-|**Tipo**||No es compatible con publicadores de Oracle.|  
+|**type**||No es compatible con publicadores de Oracle.|  
 ||**logbased**|Artículo basado en registro.|  
 ||**logbased manualboth**|Artículo basado en registro con filtro manual y vista manual. Esta opción requiere que el *sync_object* y *filtro* también se pueden establecer las propiedades. No es compatible con publicadores de Oracle.|  
 ||**logbased manualfilter**|Artículo basado en registro con filtro manual. Esta opción requiere que el *sync_object* y *filtro* también se pueden establecer las propiedades. No es compatible con publicadores de Oracle.|  
 ||**logbased manualview**|Artículo basado en registro con vista manual. Esta opción requiere que el *sync_object* propiedad también se pueden establecer. No es compatible con publicadores de Oracle.|  
 ||**indexed viewlogbased**|Artículo de vista indizada basado en registro. No es compatible con publicadores de Oracle. En este tipo de artículo, no es necesario que la tabla base se publique por separado.|  
 ||**manualboth viewlogbased indizada**|Artículo de vista indizada basado en registro con filtro manual y vista manual. Esta opción requiere que el *sync_object* y *filtro* también se pueden establecer las propiedades. En este tipo de artículo, no es necesario que la tabla base se publique por separado. No es compatible con publicadores de Oracle.|  
-||**indexed viewlogbased manualfilter**|Artículo de vista indizada basado en registro con filtro manual. Esta opción requiere el *sync_object* y *filtro* también se pueden establecer las propiedades. En este tipo de artículo, no es necesario que la tabla base se publique por separado. No es compatible con publicadores de Oracle.|  
-||**indexed viewlogbased manualview**|Artículo de vista indizada basado en registro con vista manual. Esta opción requiere que el *sync_object* propiedad también se pueden establecer. En este tipo de artículo, no es necesario que la tabla base se publique por separado. No es compatible con publicadores de Oracle.|  
+||**manualfilter viewlogbased indizada**|Artículo de vista indizada basado en registro con filtro manual. Esta opción requiere el *sync_object* y *filtro* también se pueden establecer las propiedades. En este tipo de artículo, no es necesario que la tabla base se publique por separado. No es compatible con publicadores de Oracle.|  
+||**manualview viewlogbased indizada**|Artículo de vista indizada basado en registro con vista manual. Esta opción requiere que el *sync_object* propiedad también se pueden establecer. En este tipo de artículo, no es necesario que la tabla base se publique por separado. No es compatible con publicadores de Oracle.|  
 |**upd_cmd**||Instrucción UPDATE que se va a ejecutar; de lo contrario, se genera a partir del registro.|  
 |NULL|NULL|Devuelve una lista con las propiedades del artículo que se pueden cambiar.|  
   

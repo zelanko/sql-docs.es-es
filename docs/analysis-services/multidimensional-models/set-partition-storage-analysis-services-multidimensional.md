@@ -1,5 +1,5 @@
 ---
-title: Establecer el almacenamiento de partición (Analysis Services - Multidimensional) | Documentos de Microsoft
+title: Establecer el almacenamiento de particiones (Analysis Services - Multidimensional) | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3410a8b26b9b9e26046a39f8ed5250ae9b82e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022902"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165160"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>Establecer el almacenamiento de particiones (Analysis Services - Multidimensional)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y opciones de caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] proporciona varias configuraciones de almacenamiento estándar para los modos de almacenamiento y las opciones de almacenamiento en caché. Estas configuraciones proporcionan parámetros de uso común para la notificación de actualizaciones, la latencia y la regeneración de datos.  
   
  Puede especificar el almacenamiento de las particiones en la pestaña Particiones del cubo en [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]o en la página de propiedades de la partición de [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34022902"
   
 ## <a name="storage-settings-descriptions"></a>Descripción de las configuraciones de almacenamiento  
   
-|Configuración de almacenamiento estándar|Description|  
+|Configuración de almacenamiento estándar|Descripción|  
 |------------------------------|-----------------|  
 |ROLAP en tiempo real|OLAP se lleva a cabo en tiempo real. Los datos de detalle y las agregaciones se almacenan en formato relacional. El servidor escucha notificaciones cuando los datos cambian y todas las consultas reflejan el estado actual de los datos (latencia cero).<br /><br /> Por lo general, esta configuración se utiliza para un origen de datos con actualizaciones muy frecuentes y continuas, cuando los usuarios necesitan siempre los datos más recientes. Dependiendo de los tipos de consultas que generan las aplicaciones cliente, este método puede ofrecer los tiempos de respuesta más lentos.|  
 |HOLAP en tiempo real|OLAP se lleva a cabo en tiempo real. Los datos de detalle se almacenan en formato relacional, en tanto que las agregaciones se almacenan en un formato multidimensional. El servidor escucha notificaciones cuando los datos cambian y actualiza las agregaciones OLAP multidimensionales (MOLAP) siempre que sea necesario. No se crea una caché MOLAP. Siempre que el origen de datos se actualiza, el servidor cambia a OLAP relacional (ROLAP) en tiempo real hasta que se actualizan las agregaciones. Todas las consultas reflejan el estado actual de los datos (latencia cero).<br /><br /> Por lo general, esta configuración se utiliza para un origen de datos con actualizaciones frecuentes y continuas (pero no tan frecuentes como para que sea necesario ROLAP en tiempo real) donde los usuarios requieren siempre los datos más recientes. Este método proporciona, en general, un mejor rendimiento global que el almacenamiento ROLAP. Los usuarios pueden obtener el rendimiento MOLAP de esta configuración si el origen de datos permanece en silencio un período suficientemente largo.|  

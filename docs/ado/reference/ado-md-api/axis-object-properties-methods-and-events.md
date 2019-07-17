@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 89ec13b9-6324-4a95-92a7-3230d46bd02f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2e0dac54b808bac4b9928d2ab2a4e8fcd50f970d
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: e4fcd8137344f3902df25e27b011c36872f26790
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62743101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930508"
 ---
 # <a name="axis-object-properties-methods-and-events"></a>Eventos, métodos y propiedades del objeto de eje
 ## <a name="propertiescollections"></a>Propiedades y colecciones  
@@ -34,7 +33,7 @@ ms.locfileid: "62743101"
 ## <a name="methods"></a>Métodos  
  Ninguno.  
   
-## <a name="events"></a>Eventos  
+## <a name="events"></a>Events  
  Ninguno.  
   
 ## <a name="see-also"></a>Vea también  

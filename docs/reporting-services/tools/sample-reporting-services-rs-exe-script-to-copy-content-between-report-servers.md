@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: d81bb03a-a89e-4fc1-a62b-886fb5338150
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: b9fe3c95d268291ea06bb7471c8dad627aa89028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 716768027c855b86a0cffdee4bf64c5d1c66badd
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403009"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67686703"
 ---
 # <a name="sample-reporting-services-rsexe-script-to-copy-content-between-report-servers"></a>Script rs.exe de ejemplo de Reporting Services para copiar contenido entre servidores de informes
 
@@ -49,7 +49,7 @@ El script se puede usar para copiar contenido entre servidores de informes del m
 |Elemento|Migrado|SharePoint|Descripción|  
 |----------|--------------|----------------|-----------------|  
 |Contraseñas|**No**|**No**|Las contraseñas **NO** se migran. Después de migrar elementos de contenido, actualice la información de credenciales en el servidor de destino. Por ejemplo, orígenes de datos con credenciales almacenadas.|  
-|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **-u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes" de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, siga estos pasos:<br /><br /> 1.  Cree nuevas carpetas en el portal web. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios que tenga contenido de "Mis informes".<br />3.  En el portal web, seleccione la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Seleccione **Mover** en la barra de herramientas de portal web.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos del 2 al 7 para cada usuario.<br />9. Ejecute el script.|  
+|Mis informes|**No**|**No**|La característica "Mis informes" del modo nativo se basa en inicios de sesión de usuarios individuales, por lo que el servicio de scripting no tiene acceso al contenido de las carpetas "Mis informes" para los usuarios que no hayan usado el parámetro **-u** para ejecutar el script RSS. Además, "Mis informes" no es una característica del modo de SharePoint de [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] y los elementos de las carpetas no se pueden copiar a un entorno de SharePoint. Por tanto, el script no copia elementos de informe que se encuentran en las carpetas "Mis informes" de un servidor de informes en modo nativo de origen.<br /><br /> Para migrar el contenido de las carpetas "Mis informes" con este script, siga estos pasos:<br /><br /> 1.  Cree nuevas carpetas en el portal web. Opcionalmente, puede crear carpetas o subcarpetas para cada usuario.<br />2.  Inicie sesión como uno de los usuarios que tenga contenido de "Mis informes".<br />3.  En el portal web, seleccione la carpeta **Mis informes**.<br />4.  Haga clic en la vista **Detalles** de la carpeta.<br />5.  Seleccione cada informe que desea copiar.<br />6.  Seleccione **Mover** en la barra de herramientas del portal web.<br />7.  Seleccione la carpeta de destino deseada.<br />8.  Repita los pasos del 2 al 7 para cada usuario.<br />9. Ejecute el script.|  
 |Historial|**No**|**No**||  
 |Configuración del historial|Sí|Sí|La configuración del historial se migra, pero los detalles del historial NO se migran.|  
 |Programaciones|Sí|Sí|Para migrar programaciones, es necesario que el Agente SQL Server se esté ejecutando en el servidor de destino. Si el Agente SQL Server no se está ejecutando en el servidor de destino, verá un mensaje de error parecido al siguiente:<br /><br /> `Migrating schedules: 1 items found. Migrating schedule: theMondaySchedule ... FAILURE:  The SQL Agent service isn't running. This operation requires the SQL Agent service. ---> Microsoft.ReportingServices.Diagnostics.Utilities.SchedulerNotResponding Exception: The SQL Agent service isn't running. This operation requires the SQL Agent service.`|  

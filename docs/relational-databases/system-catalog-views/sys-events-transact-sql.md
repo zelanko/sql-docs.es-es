@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: f245a97a-80fc-43fb-a6e4-139420c9a47a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 122ef1eb4461b1ac3305da2c7ce9aac285616594
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 15fac5b2449e90fe7d6500bca383a71bc73954f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47601073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68025792"
 ---
 # <a name="sysevents-transact-sql"></a>sys.events (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "47601073"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |**object_id**|**int**|ID del desencadenador o de la notificación de eventos. Este valor, junto con **tipo**, de forma única identifica la fila.|  
-|**Tipo**|**int**|Evento que provoca la activación del desencadenador.|  
+|**type**|**int**|Evento que provoca la activación del desencadenador.|  
 |**type_desc**|**nvarchar(60)**|Descripción del evento que provoca la activación del desencadenador.|  
 |**is_trigger_event**|**bit**|1 = Evento de desencadenador.<br /><br /> 0 = Evento de notificación.|  
 |**event_group_type**|**int**|Grupo de eventos donde se crea el desencadenador o la notificación de eventos o NULL si no se crea en un grupo de eventos.|  

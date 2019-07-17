@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542195"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072667"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  Es el nombre de un servidor vinculado al que se aplica la asignación de inicio de sesión. *rmtsrvname* es **sysname**, no tiene ningún valor predeterminado.  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- Determina si se debe conectar a *rmtsrvname* por suplantación de inicios de sesión locales o enviando explícitamente un inicio de sesión y una contraseña. El tipo de datos es **varchar (** 8 **)**, su valor predeterminado es true.  
+ Determina si se debe conectar a *rmtsrvname* por suplantación de inicios de sesión locales o enviando explícitamente un inicio de sesión y una contraseña. El tipo de datos es **varchar (** 8 **)** , su valor predeterminado es true.  
   
  Un valor TRUE especifica que los inicios de sesión utilizan sus propias credenciales para conectarse a *rmtsrvname*, con el *rmtuser* y *rmtpassword* argumentos que se pasan por alto. FALSE especifica que el *rmtuser* y *rmtpassword* argumentos que se usan para conectarse a *rmtsrvname* especificado *locallogin* . Si *rmtuser* y *rmtpassword* también está establecido en NULL, ningún inicio de sesión o la contraseña se utiliza para conectarse al servidor vinculado.  
   

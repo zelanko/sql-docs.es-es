@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938167"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,7 +33,7 @@ FROM <existing model>
  *nuevo modelo*  
  Nombre único para el nuevo modelo que se está creando.  
   
- *algoritmo*  
+ *algorithm*  
  Nombre definido por el proveedor de un algoritmo de minería de datos.  
   
  *lista de parámetros*  
@@ -53,7 +52,7 @@ FROM <existing model>
   
  El **WITH DRILLTHROUGH** cláusula permite la obtención de detalles en el nuevo modelo de minería de datos. La obtención de detalles solo se puede habilitar al crear el modelo.  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>Ejemplo 1: modificar los parámetros del modelo  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>Ejemplo 1: Modificar los parámetros del modelo  
  En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo de minería de datos existente, `TM_Clustering`, que se crean en el [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c). En el nuevo modelo, el parámetro CLUSTER_COUNT se modifica de modo que exista un máximo de cinco clústeres en dicho modelo. En cambio, el modelo existente usa el valor predeterminado, que es 10.  
   
 ```  
@@ -62,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>Ejemplo 2: agregar un filtro al modelo  
+## <a name="example-2-adding-a-filter-to-the-model"></a>Ejemplo 2: Agregar un filtro al modelo  
  En el ejemplo siguiente se crea un nuevo modelo de minería de datos basado en un modelo existente, y se agrega un filtro al modelo. El filtro restringe los datos de entrenamiento únicamente a aquellos clientes que viven en una región determinada.  
   
 ```  

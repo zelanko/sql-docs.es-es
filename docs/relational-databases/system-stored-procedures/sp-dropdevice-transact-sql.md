@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c8b07189-7c35-414b-acc1-45bd6e7e17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 633dff3e79a32f73c9ec7c4c376a60969db45aef
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 998794fd2e5fe5521587ebbb2a88c61c80cff39e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927829"
 ---
 # <a name="spdropdevice-transact-sql"></a>sp_dropdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_dropdevice [ @logicalname = ] 'device'
 ## <a name="arguments"></a>Argumentos  
 `[ @logicalname = ] 'device'` Es el nombre lógico del dispositivo de la base de datos o el dispositivo de copia de seguridad, como se muestra en **master.dbo.sysdevices.name**. *dispositivo* es **sysname**, no tiene ningún valor predeterminado.  
   
-`[ @delfile = ] 'delfile'` Especifica si se debe eliminar el archivo de dispositivo de copia de seguridad físico. *delfile* es **varchar(7)**. Si se especifica como **DELFILE**, se elimina el archivo de disco del dispositivo físico de copia de seguridad.  
+`[ @delfile = ] 'delfile'` Especifica si se debe eliminar el archivo de dispositivo de copia de seguridad físico. *delfile* es **varchar(7)** . Si se especifica como **DELFILE**, se elimina el archivo de disco del dispositivo físico de copia de seguridad.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

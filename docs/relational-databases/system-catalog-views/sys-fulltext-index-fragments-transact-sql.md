@@ -22,14 +22,13 @@ ms.assetid: a82e5018-5d88-45c0-9a47-c251e17a6cdb
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 818457ae809b6dec653d6d546fc36b75a27fbf6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 295d924422410bbf247d9b96d27b705fdfe3b5d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133819"
 ---
 # <a name="sysfulltextindexfragments-transact-sql"></a>sys.fulltext_index_fragments (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "64945551"
 |table_id|**int**|Identificador de objeto de la tabla que contiene el fragmento de índice de texto completo.|  
 |fragment_object_id|**int**|Identificador de objeto de la tabla interna asociada al fragmento.|  
 |fragment_id|**int**|Identificador lógico del fragmento de índice de texto completo. Es único en todos los fragmentos de esta tabla.|  
-|TIMESTAMP|**timestamp**|Marca de tiempo asociada a la creación del fragmento. Las marcas de tiempo de los fragmentos más recientes son mayores que las de los fragmentos anteriores.|  
+|timestamp|**timestamp**|Marca de tiempo asociada a la creación del fragmento. Las marcas de tiempo de los fragmentos más recientes son mayores que las de los fragmentos anteriores.|  
 |data_size|**int**|Tamaño lógico del fragmento en bytes.|  
 |row_count|**int**|Número de filas individuales en el fragmento.|  
 |status|**int**|Estado del fragmento, uno de los siguientes:<br /><br /> 0 = Creado recientemente y no utilizado todavía.<br /><br /> 1 = Se usa para la inserción durante la mezcla o el rellenado del índice de texto completo.<br /><br /> 4 = Cerrado. Preparado para la consulta.<br /><br /> 6 = Se usa para la entrada de la mezcla y preparado para la consulta.<br /><br /> 8 = Marcado para su eliminación. No se utilizará para el origen de la consulta y la mezcla.<br /><br /> Estado 4 ó 6 significa que el fragmento forma parte del índice de texto completo lógico y se puede consultar; es decir, es un *consultable* fragmento.|  

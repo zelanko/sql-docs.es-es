@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990717"
 ---
 # <a name="mapping-deprecated-functions"></a>Asignación de funciones en desuso
 Esta sección describen las funciones en desuso de cómo se asignan por ODBC *3.x* Administrador de controladores para garantizar la compatibilidad con versiones anteriores de ODBC *3.x* controladores que se usan con ODBC *2.x* aplicaciones. El Administrador de controladores se realiza esta asignación independientemente de la versión de la aplicación. Dado que cada uno de ODBC *2.x* funciones en la lista siguiente se asigna a ODBC correspondiente *3.x* funcionar cuando se llama en un ODBC *3.x* controlador ODBC *3.x* controlador no tiene que implementar ODBC *2.x* funciones.  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b28a8ed6-09b1-4acf-bf3e-f90bb32422de
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 460b1cb00f68e9b1940a1680625a173bc92e6f84
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dafa6325901e289b54915bde19189b5bac69aeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080700"
 ---
 # <a name="supported-odbc-api-functions"></a>Funciones de la API de ODBC compatibles
 El propósito de la redistribución es informar a la aplicación qué características están disponibles a él desde el controlador. Los controladores de base de datos de escritorio de Microsoft ODBC admiten todas las funciones principales y de nivel 1.  

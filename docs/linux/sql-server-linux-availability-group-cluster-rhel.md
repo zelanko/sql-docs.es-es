@@ -5,18 +5,17 @@ description: Obtenga información acerca de los clústeres de grupo de disponibi
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 03/12/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 2ceefd4ce2fa643a66a289e3c3ab3e0d169b5ff8
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027325"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>Configuración de clúster RHEL para el grupo de disponibilidad de SQL Server
 
@@ -34,7 +33,7 @@ Para obtener más información sobre la configuración del clúster, las opcione
 
 Las siguientes secciones se recorra los pasos para configurar un clúster de Pacemaker y agregar un grupo de disponibilidad como recurso en el clúster de alta disponibilidad.
 
-## <a name="roadmap"></a>Roadmap
+## <a name="roadmap"></a>Mapa de ruta
 
 Los pasos para crear un grupo de disponibilidad en los servidores de Linux para lograr alta disponibilidad son diferentes de los pasos en un clúster de conmutación por error de Windows Server. En la lista siguiente se describe los pasos de alto nivel: 
 

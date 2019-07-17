@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 4de9bcf6-1346-4740-87f9-7f24a8226357
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: acf31c29b498562708c7cb049e89a0a7425fd31f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0ff56be1b7da0376250c7ed021ae78d7144a7645
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63288462"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264551"
 ---
 # <a name="assessing-oracle-schemas-for-conversion-oracletosql"></a>Evaluación de esquemas de Oracle para la conversión (OracleToSQL)
 Antes de cargar los objetos y migrar datos a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], debería determinar lo complejo que será la migración y cuánto tiempo tardará la migración. SSMA puede crear un informe de evaluación que muestra el porcentaje de objetos que se convertirán correctamente. SSMA también le permite ver los problemas específicos que provocan errores de conversión.  

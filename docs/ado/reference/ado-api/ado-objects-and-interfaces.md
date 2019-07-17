@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: d0b7e254-c89f-4406-b846-a060ef038c30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 48b1f3794828af7f60c1d00313506fa9f9c522c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e5ecc6de67defb2366bf208c38bd2de5bff643e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920907"
 ---
 # <a name="ado-objects-and-interfaces"></a>Interfaces y objetos ADO
 Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](../../../ado/reference/ado-api/ado-object-model.md).  
@@ -41,7 +40,7 @@ Las relaciones entre estos objetos se representan en el [modelo de objetos ADO](
 |[Propiedad](../../../ado/reference/ado-api/property-object-ado.md)|Representa una característica dinámica de un objeto ADO que está definida por el proveedor.|  
 |[Record](../../../ado/reference/ado-api/record-object-ado.md)|Representa una fila de un **Recordset**, o un directorio o archivo en un sistema de archivos. El **registro** objeto es seguro para scripting.|  
 |[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)|Representa el conjunto de registros de una tabla base o los resultados de un comando ejecutado. En cualquier momento, el **Recordset** objeto hace referencia a solo un único registro dentro del conjunto como el registro actual.<br /><br /> El **Recordset** objeto es seguro para scripting.|  
-|[Stream](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El **Stream** objeto es seguro para scripting.|  
+|[secuencia](../../../ado/reference/ado-api/stream-object-ado.md)|Representa un flujo binario de datos.<br /><br /> El **Stream** objeto es seguro para scripting.|  
   
 ## <a name="see-also"></a>Vea también  
  [Referencia de API de ADO](../../../ado/reference/ado-api/ado-api-reference.md)   

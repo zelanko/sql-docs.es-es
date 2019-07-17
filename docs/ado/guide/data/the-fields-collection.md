@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 574cf36e-e5f5-403b-983c-749ef93c108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1969ef21c3c30c46a891fa84acfcd58d460b07c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 197a57b8a9b9ea2927a057733992a02c731a335a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700356"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923932"
 ---
 # <a name="the-fields-collection"></a>Fields (colección)
 El **campos** colección es una de las colecciones de ADO intrínsecas. Una colección es un conjunto ordenado de elementos que se puede hacer referencia como una unidad. Para obtener más información acerca de las colecciones de ADO, vea [el modelo de objetos ADO](../../../ado/guide/data/ado-objects-and-collections.md).  

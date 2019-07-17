@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6af8fcd665fdfe503eab5aec591419982d0d3958
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 60510302525562d9c3007a6ef57213fc261b4c60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926624"
 ---
 # <a name="microsoft-ole-db-provider-for-oracle-overview"></a>Proveedor Microsoft OLE DB para Oracle Introducción
 > [!IMPORTANT]
@@ -68,7 +67,7 @@ MSDAORA
 |**Identificador de ventana**|Indica el identificador de ventana se utiliza para solicitar información adicional.|
 |**Identificador de configuración regional**|Indica un número único de 32 bits (por ejemplo, 1033) que especifica las preferencias relacionadas con el idioma del usuario. Estas preferencias indican cómo se da formato a fechas y horas, los elementos se ordenan alfabéticamente, se comparan cadenas y así sucesivamente.|
 |**Servicios OLE DB**|Indica una máscara de bits que especifica los servicios de OLE DB para habilitar o deshabilitar.|
-|**Prompt**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
+|**Símbolo del sistema**|Indica si se debe preguntar al usuario mientras se está estableciendo una conexión.|
 |**Propiedades extendidas**|Una cadena que contiene información de conexión ampliada específica del proveedor. Utilice esta propiedad solo para obtener información de conexión específica del proveedor que no se puede describir mediante un mecanismo de propiedad.|
 
 ## <a name="see-also"></a>Vea también

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dd9920e1-7064-4c05-93d8-9303103fa1d6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4409b44a04411357d0109fb643fd13fcff6451b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81df88f6e451d71dc5778e49162db97def7ed27d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113193"
 ---
 # <a name="spinvalidatetextptr-transact-sql"></a>sp_invalidate_textptr (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_invalidate_textptr [ [ @TextPtrValue = ] textptr_value ]
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @TextPtrValue = ] textptr_value` Es el puntero de texto consecutivo que va a invalidarse. *textptr_value* es **varbinary (** 16 **)**, su valor predeterminado es null. Si es NULL, **sp_invalidate_textptr** invalida todos los punteros de texto consecutivos en la transacción.  
+`[ @TextPtrValue = ] textptr_value` Es el puntero de texto consecutivo que va a invalidarse. *textptr_value* es **varbinary (** 16 **)** , su valor predeterminado es null. Si es NULL, **sp_invalidate_textptr** invalida todos los punteros de texto consecutivos en la transacción.  
   
 ## <a name="return-code-values"></a>Valores de código de retorno  
  0 (correcto) o 1 (error)  

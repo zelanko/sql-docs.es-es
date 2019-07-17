@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 9b648198-349f-46f6-b869-13d129945971
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 44e773248cd2d61e211f6de98d5a0f81acc78bd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 884a33339db10ee8e07d8b432d1765720d45734a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62471180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019451"
 ---
 # <a name="insert---sql-command"></a>Insertar: comando SQL
 Anexa un registro al final de una tabla que contiene los valores del campo especificado.  
@@ -41,10 +40,10 @@ INSERT INTO dbf_name [(fname1 [, fname2, ...])]
   
  Si la tabla que se especifique está abierta, INSERT anexa el nuevo registro a la tabla. Si la tabla está abierta en un área de trabajo distintos de área de trabajo actual, no está seleccionada una vez que se anexa el registro; el área de trabajo actual permanece seleccionado.  
   
- [( *fname1*[, *fname2*[, ...]])]  
+ [( *fname1*[, *fname2*[,...]])]  
  Especifica en el nuevo registro de los nombres de los campos en que se insertan los valores.  
   
- VALUES ( *eExpression1*[, *eExpression2*[, ...]])  
+ VALORES ( *eExpression1*[, *eExpression2*[,...]])  
  Especifica los valores de campo que se inserta en el nuevo registro. Si omite los nombres de campo, debe especificar los valores de campo en el orden definido por la estructura de tabla.  
   
 ## <a name="remarks"></a>Comentarios  

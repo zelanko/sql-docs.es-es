@@ -1,5 +1,5 @@
 ---
-title: Propiedades de SQL Server (pestaña parámetros de inicio) | Microsoft Docs
+title: Propiedades de SQL Server (pestaña Parámetros de inicio)
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: configuration
 ms.topic: conceptual
 ms.assetid: 16942624-5374-446c-8de4-ee6ed34d6e94
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
 manager: craigg
-ms.openlocfilehash: ea089a65065aedac59eb7cac7308acdab097ff47
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: MTE75
+ms.openlocfilehash: f1a48d9b2892033ee0e6203800a5b30cbd45b7c3
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213074"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731928"
 ---
 # <a name="sql-server-properties-startup-parameters-tab"></a>Propiedades de SQL Server (pestaña Parámetros de inicio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,6 +80,6 @@ ms.locfileid: "53213074"
 -   La cuenta de dominio utilizada por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], si el [!INCLUDE[ssDE](../../includes/ssde-md.md)] está configurado para ejecutarse bajo una cuenta de dominio.  
   
 ## <a name="books-online-references"></a>Referencias de los Libros en pantalla  
- Para información adicional sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte "Cómo: Configurar las opciones de inicio del servidor ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager)" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+ Para obtener más información sobre los parámetros de inicio de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], vea "Cómo configurar opciones de inicio del servidor (Administrador de configuración de[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] )" en los Libros en pantalla de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
   

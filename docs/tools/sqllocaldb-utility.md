@@ -12,15 +12,15 @@ helpviewer_keywords:
 - local database runtime utility
 - LocalDB, SqlLocalDB Utility
 ms.assetid: d785cdb7-1ea0-4871-bde9-1ae7881190f5
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 19902c030538d0384c89dd632aaf1d6f8c728048
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: MTE75
+ms.openlocfilehash: bf71626fcec01b1140f85a67a03a69dc1a9736e8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52538771"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728145"
 ---
 # <a name="sqllocaldb-utility"></a>SqlLocalDB (utilidad)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,8 +45,8 @@ SqlLocalDB.exe
 ```  
   
 ## <a name="arguments"></a>Argumentos  
- [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [**-s** ]  
- Crea una instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** usa la versión de los archivos binarios de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificados por el argumento *\<instance-version>*. El número de versión se especifica en formato numérico con al menos un decimal. Los números de versión secundaria (Service Pack) son opcionales. Como los siguientes dos números de versión son aceptables: 11.0 u 11.0.1186. La versión especificada se debe instalar en el equipo. Si no se especifica, el número de versión tiene como valor predeterminado el de la versión de la utilidad **SqlLocalDB** . Al agregar **–s** se inicia la nueva instancia de **LocalDB**.  
+ [ **create** | **c** ] *\<instance-name>* *\<instance-version>* [ **-s** ]  
+ Crea una instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. **SqlLocalDB** usa la versión de los archivos binarios de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] especificados por el argumento *\<instance-version>* . El número de versión se especifica en formato numérico con al menos un decimal. Los números de versión secundaria (Service Pack) son opcionales. Como los siguientes dos números de versión son aceptables: 11.0 u 11.0.1186. La versión especificada se debe instalar en el equipo. Si no se especifica, el número de versión tiene como valor predeterminado el de la versión de la utilidad **SqlLocalDB** . Al agregar **-s**, se inicia la nueva instancia de **LocalDB**.  
   
  [ **share** | **h** ]  
  Comparte la instancia privada especificada de **LocalDB** por medio del nombre compartido especificado. Si se omite el SID del usuario o el nombre de la cuenta, usa de forma predeterminada el usuario actual.  
@@ -57,11 +57,11 @@ SqlLocalDB.exe
  [ **delete** | **d** ] *\<instance-name>*  
  Elimina la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**.  
   
- [ **start** | **s** ] "*\<instance-name>*"  
+ [ **start** | **s** ] " *\<instance-name>* "  
  Inicia la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Cuando se realiza correctamente, la instrucción devuelve la dirección de la canalización con nombre de **LocalDB**.  
   
- [ **stop** | **p** ] *\<instance-name>* [**-i** ] [**-k** ]  
- Detiene la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Al agregar **–i** se solicita el cierre de la instancia con la opción **NOWAIT** . Al agregar **–k** se elimina el proceso de la instancia sin ponerse en contacto con ella.  
+ [ **stop** | **p** ] *\<instance-name>* [ **-i** ] [ **-k** ]  
+ Detiene la instancia especificada de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)]**LocalDB**. Al agregar **-i**, se solicita el cierre de la instancia con la opción **NOWAIT**. Al agregar **-k**, se elimina el proceso de la instancia sin ponerse en contacto con ella.  
   
  [ **info** | **i** ] [ *\<instance-name>* ]  
  Muestra toda la instancia de [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB** que pertenece al usuario actual.  
@@ -113,7 +113,7 @@ EXIT
 sqlcmd -S (localdb)\.\DeptSharedLocalDB -U NewLogin -P Passw0rd!!@52  
 ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md)  
 [Herramienta de administración de la línea de comandos: SqlLocalDB.exe](../relational-databases/express-localdb-instance-apis/command-line-management-tool-sqllocaldb-exe.md)  
   

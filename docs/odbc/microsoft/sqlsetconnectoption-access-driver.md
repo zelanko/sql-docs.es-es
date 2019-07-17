@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 58399bc4-d0b1-4eaa-a474-c92b2d5855ea
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 18950d49afdab8517b95c59df8841c33b5d3d086
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bea124a78e2a180180c59de3577fe1db7637e110
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305639"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897785"
 ---
 # <a name="sqlsetconnectoption-access-driver"></a>SQLSetConnectOption (controlador de Access)
 > [!NOTE]  
@@ -29,10 +28,10 @@ ms.locfileid: "63305639"
 |-------------|-------------|  
 |SQL_ACCESS_MODE|Puede establecerse la fOption SQL_ACCESS_MODE SQL_MODE_READ_ONLY o SQL_MODE_READ_WRITE. Sin embargo, el controlador no impide que las actualizaciones si SQL_ACCESS_MODE está establecido en SQL_MODE_READ_ONLY.|  
 |SQL_AUTOCOMMIT|Cuando se usa el controlador de Microsoft Access, la opción SQL_AUTOCOMMIT puede establecerse en SQL_AUTOCOMMIT_OFF o SQL_AUTOCOMMIT_OFF, porque el controlador de Microsoft Access admite transacciones [1].|  
-|SQL_CURRENT_QUALIFIER|Compatible.|  
+|SQL_CURRENT_QUALIFIER|Se admite.|  
 |SQL_LOGIN_TIMEOUT|No compatible.|  
-|SQL_OPT_TRACE|Compatible.|  
-|SQL_OPT_TRACEFILE|Compatible.|  
+|SQL_OPT_TRACE|Se admite.|  
+|SQL_OPT_TRACEFILE|Se admite.|  
 |SQL_PACKET_SIZE|No compatible.|  
 |SQL_QUIET_MODE|No compatible.|  
 |SQL_TRANSLATE_DLL|No compatible.|  

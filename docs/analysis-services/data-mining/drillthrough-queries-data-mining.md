@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516674"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210034"
 ---
 # <a name="drillthrough-queries-data-mining"></a>Consultas de obtención de detalles (minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,8 +81,8 @@ ms.locfileid: "52516674"
 |Algoritmo Bayes Naïve de Microsoft|No compatible. Estos algoritmos no asignan casos a nodos específicos del contenido.|  
 |Algoritmo de red neuronal de Microsoft|No compatible. Estos algoritmos no asignan casos a nodos específicos del contenido.|  
 |Algoritmo de regresión logística de Microsoft|No compatible. Estos algoritmos no asignan casos a nodos específicos del contenido.|  
-|Algoritmo de regresión lineal de Microsoft|Compatible. Sin embargo, dado que el modelo crea un nodo único, **All**, la obtención de detalles devuelve todos los casos de entrenamiento para el modelo. Si el conjunto de entrenamiento es grande, la carga de resultados puede tardar mucho tiempo.|  
-|Algoritmo de serie temporal de Microsoft|Compatible. Sin embargo, no puede obtener información de estructuras o casos mediante el **Visor de modelos de minería de datos** en el Diseñador de minería de datos. En su lugar, debe crear una consulta de DMX.<br /><br /> Tampoco puede obtener detalles de nodos específicos, ni escribir una consulta DMX para recuperar casos en nodos específicos de un modelo de serie temporal. Puede recuperar datos de casos del modelo o la estructura usando otros criterios, como valores de fecha o de atributo.<br /><br /> También puede devolver las fechas de los casos del modelo mediante la función [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Si quiere ver detalles de los nodos ARTXP y ARIMA creados por el algoritmo de serie temporal de Microsoft, puede usar el [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
+|Algoritmo de regresión lineal de Microsoft|Se admite. Sin embargo, dado que el modelo crea un nodo único, **All**, la obtención de detalles devuelve todos los casos de entrenamiento para el modelo. Si el conjunto de entrenamiento es grande, la carga de resultados puede tardar mucho tiempo.|  
+|Algoritmo de serie temporal de Microsoft|Se admite. Sin embargo, no puede obtener información de estructuras o casos mediante el **Visor de modelos de minería de datos** en el Diseñador de minería de datos. En su lugar, debe crear una consulta de DMX.<br /><br /> Tampoco puede obtener detalles de nodos específicos, ni escribir una consulta DMX para recuperar casos en nodos específicos de un modelo de serie temporal. Puede recuperar datos de casos del modelo o la estructura usando otros criterios, como valores de fecha o de atributo.<br /><br /> También puede devolver las fechas de los casos del modelo mediante la función [Lag &#40;DMX&#41;](../../dmx/lag-dmx.md).<br /><br /> Si quiere ver detalles de los nodos ARTXP y ARIMA creados por el algoritmo de serie temporal de Microsoft, puede usar el [Visor de árbol de contenido genérico de Microsoft &#40;Minería de datos&#41;](http://msdn.microsoft.com/library/751b4393-f6fd-48c1-bcef-bdca589ce34c).|  
   
 ##  <a name="bkmk_Tasks"></a> Tareas relacionadas  
  Use los vínculos siguientes para trabajar con la obtención de detalles en escenarios concretos.  

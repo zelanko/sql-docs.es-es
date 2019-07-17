@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fd72f62cc513064e01c04e5a501b18a070f4c7a8
-ms.sourcegitcommit: 9f2edcdf958e6afce9a09fb2e572ae36dfe9edb0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/25/2018
-ms.locfileid: "50098978"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208280"
 ---
 # <a name="connect-power-pivot-service-app-to-sharepoint-web-app-in-ca"></a>Conectar aplicación de servicio de Power Pivot para la aplicación Web de SharePoint en la entidad de certificación
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "50098978"
   
 3.  En Aplicaciones web, en Administrar, haga clic en **Conexiones de servicio**.  
   
-4.  En **Editar el siguiente grupo de conexiones**, seleccione **[personalizado]**.  
+4.  En **Editar el siguiente grupo de conexiones**, seleccione **[personalizado]** .  
   
 5.  Active la casilla situada al lado de cada conexión de aplicación de servicio que desee utilizar. Si tiene varias aplicaciones de servicio de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] (indicadas por el tipo establecido en **Proxy de la aplicación de servicio PowerPivot**), elija solo una.  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 09d859cf8b5c372b9588266b9210837012396ea6
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072142"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162868"
 ---
 # <a name="deploy-from-sql-server-data-tools"></a>Implementar con SQL Server Data Tools
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "53072142"
   
 #### <a name="to-deploy-a-tabular-model"></a>Para implementar un modelo tabular
   
--   En SSDT, en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >**.  
+-   En SSDT, en el **compilar** menú, haga clic en **implementar \<nombre del proyecto >** .  
   
      Aparecerá el cuadro de diálogo **Implementar** e indicará el estado de la implementación de los metadatos y del procesamiento (a menos que se haya establecido la propiedad Opción de procesamiento en No procesar) de cada tabla incluida en el modelo. Una vez completado el proceso de implementación, utilice SSMS para conectarse a la instancia de Analysis Services y comprobar que se ha creado el nuevo objeto de base de datos de modelo o un aplicación cliente de informes para conectarse al modelo implementado.  
   

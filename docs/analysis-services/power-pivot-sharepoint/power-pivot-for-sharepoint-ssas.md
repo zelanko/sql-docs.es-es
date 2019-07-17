@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40392132"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164306"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot para SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,6 +84,6 @@ ms.locfileid: "40392132"
   
 ## <a name="see-also"></a>Vea también  
  [Planeación e implementación de Power Pivot](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Recuperación ante desastres de PowerPivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Recuperación ante desastres en Power Pivot para SharePoint](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

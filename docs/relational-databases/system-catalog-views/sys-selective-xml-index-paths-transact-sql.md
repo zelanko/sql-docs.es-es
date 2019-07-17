@@ -19,13 +19,12 @@ ms.assetid: 07a73d71-ec3e-4894-947a-5859ca62c606
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: bb20f646179ec147e4bbca43689812cc39c5bf97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ff85273a1e970b3bb891d1816a96019dd4f3ae5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135189"
 ---
 # <a name="sysselectivexmlindexpaths-transact-sql"></a>sys.selective_xml_index_paths (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ FOR ( path1 = '/a/b/c' AS XQUERY 'xs:string',
 |**index_id**|**int**|Identificador único del índice xml selectivo.|  
 |**path_id**|**int**|Identificador de la ruta de acceso XML promocionado.|  
 |**path**|**nvarchar(4000)**|Ruta de acceso promocionada. Por ejemplo, '/a/b/c/d/e'.|  
-|**Nombre**|**sysname**|Nombre de ruta de acceso.|  
+|**name**|**sysname**|Nombre de ruta de acceso.|  
 |**path_type**|**tinyint**|0 = XQUERY<br /><br /> 1 = SQL|  
 |**path_type_desc**|**sysname**|En función de **path_type** valor 'XQUERY' o 'SQL'.|  
 |**xml_component_id**|**int**|Id. único del componente del esquema XML en la base de datos.|  

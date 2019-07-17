@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: dbc1737f-261e-4017-b9cd-703b9fc4ac78
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 36d6c5db3f675c570237a436557bbe6827af09e2
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8518c787f876152787ee30a20b9f25f936b9fa86
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52758557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139778"
 ---
 # <a name="mssubscriptionarticles-transact-sql"></a>MSsubscription_articles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,11 +31,11 @@ ms.locfileid: "52758557"
   
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
-|**valor de agent_id**|**int**|El Id. del agente que sirve a este artículo.|  
+|**agent_id**|**int**|El Id. del agente que sirve a este artículo.|  
 |**artid**|**int**|El identificador de artículo de la **sysarticles** tabla.|  
 |**article**|**sysname**|El nombre del artículo de la **sysarticles** tabla.|  
 |**dest_table**|**sysname**|El nombre de la tabla de destino desde el **sysarticles** tabla.|  
-|**Propietario**|**sysname**|El propietario de la suscripción.|  
+|**owner**|**sysname**|El propietario de la suscripción.|  
 |**cft_table**|**sysname**|El nombre de la tabla de conflictos de este artículo, para el tipo de replicación de actualización en cola.|  
   
 ## <a name="see-also"></a>Vea también  

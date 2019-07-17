@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 330cdf7a48b17bab5cb912d3a520b8d98635d652
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b7d5967108d605d6b7426dcd662507a49037108
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132661"
 ---
 # <a name="sqlcolattributes-paradox-driver"></a>SQLColAttributes (controlador de Paradox)
 > [!NOTE]  
 >  En este tema se proporciona información específica del controlador de Paradox. Para obtener información general acerca de esta función, vea el tema correspondiente en [referencia de la API de ODBC](../../odbc/reference/syntax/odbc-api-reference.md).  
   
-|Attribute|Comentarios|  
+|Atributo|Comentarios|  
 |---------------|--------------|  
 |SQL_COLUMN_DISPLAY_SIZE|Datos LONGVARBINARY, SQL_COLUMN_DISPLAY_SIZE es la longitud máxima de la columna, no la longitud máxima de la columna veces 2.|  
 |SQL_OWNER_NAME|Una cadena vacía ("") se devuelve en esta columna porque no se admite el nombre del propietario.|  

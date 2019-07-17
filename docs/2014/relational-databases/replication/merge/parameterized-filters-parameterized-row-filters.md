@@ -21,11 +21,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 905a0a4189a97b6cd8ef3cc461f805adf0afd727
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131505"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210707"
 ---
 # <a name="parameterized-row-filters"></a>Parameterized Row Filters
   Los filtros de filas con parámetros permiten enviar diferentes particiones de datos a diferentes suscriptores sin necesidad de crear varias publicaciones (los filtros con parámetros se denominaban filtros dinámicos en versiones anteriores de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]). Una partición es un subconjunto de filas de una tabla; dependiendo de la configuración elegida al crear un filtro de filas con parámetros, cada fila de una tabla publicada puede pertenecer a una sola partición (lo que produce particiones no superpuestas) o a dos o más particiones (lo que produce particiones superpuestas).  
@@ -37,7 +37,7 @@ ms.locfileid: "54131505"
  Para definir o modificar un filtro de fila con parámetros, vea [Definir y modificar un filtro de fila con parámetros para un artículo de mezcla](../publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md).  
   
 ## <a name="how-parameterized-filters-work"></a>Cómo funcionan los filtros con parámetros  
- Un filtro de fila con parámetros utiliza una cláusula WHERE para seleccionar los datos apropiados para publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: SUSER_SNAME () y HOST_NAME (). También se pueden utilizar funciones definidas por el usuario, pero deben incluir SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, o evaluar una de estas funciones del sistema (como `MyUDF(SUSER_SNAME()`). Si una función definida por el usuario incluye SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, no se pueden pasar parámetros a la función.  
+ Un filtro de fila con parámetros utiliza una cláusula WHERE para seleccionar los datos apropiados para publicar. En vez de especificar un valor literal en la cláusula (como ocurre con un filtro de fila estático), se especifica una o las dos funciones del sistema siguientes: SUSER_SNAME() y HOST_NAME(). También se pueden utilizar funciones definidas por el usuario, pero deben incluir SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, o evaluar una de estas funciones del sistema (como `MyUDF(SUSER_SNAME()`). Si una función definida por el usuario incluye SUSER_SNAME() o HOST_NAME() en el cuerpo de la función, no se pueden pasar parámetros a la función.  
   
  Las funciones del sistema SUSER_SNAME() y HOST_NAME() no son específicas para la replicación de mezcla, pero la replicación de mezcla las utiliza para el filtrado con parámetros:  
   
@@ -107,7 +107,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
 -   Agente de mezcla: especifique un valor para el parámetro **-Hostname** en la línea de comandos o a través de un perfil de agente. Para obtener más información acerca del Agente de mezcla, vea [Replication Merge Agent](../agents/replication-merge-agent.md). Para obtener más información acerca de los perfiles de agente, vea [Replication Agent Profiles](../agents/replication-agent-profiles.md).  
   
 ## <a name="initializing-a-subscription-to-a-publication-with-parameterized-filters"></a>Inicializar una suscripción a una publicación con filtros con parámetros  
- Cuando se utilizan filtros de fila con parámetros en las publicaciones de combinación, la replicación inicializa cada suscripción con una instantánea en dos partes. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+ Cuando se utilizan filtros de fila con parámetros en las publicaciones de combinación, la replicación inicializa cada suscripción con una instantánea en dos partes. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ## <a name="using-the-appropriate-filtering-options"></a>Usar las opciones de filtrado apropiadas  
  Hay dos áreas clave que puede controlar cuando se utilizan filtros con parámetros:  
@@ -172,7 +172,7 @@ LoginID = SUSER_SNAME() AND ComputerName = HOST_NAME()
   
 -   Los artículos solo pueden existir en una publicación y no se pueden volver a publicar.  
   
--   La publicación debe permitir que los suscriptores inicien el proceso de instantánea. Para más información, consulte [Snapshots for Merge Publications with Parameterized Filters](../snapshots-for-merge-publications-with-parameterized-filters.md).  
+-   La publicación debe permitir que los suscriptores inicien el proceso de instantánea. Para más información, consulte [Instantáneas para publicaciones de combinación con filtros con parámetros](../snapshots-for-merge-publications-with-parameterized-filters.md).  
   
 ##### <a name="additional-considerations-for-join-filters"></a>Otras consideraciones para los filtros de combinación  
   

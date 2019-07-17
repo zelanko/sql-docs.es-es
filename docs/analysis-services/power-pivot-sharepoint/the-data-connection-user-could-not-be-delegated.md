@@ -1,5 +1,5 @@
 ---
-title: El usuario de la conexión de datos no se pudieron delegar | Documentos de Microsoft
+title: El usuario de conexión de datos no se pudieron delegar | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028346"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208012"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>No se pudieron delegar el usuario de la conexión de datos
+# <a name="the-data-connection-user-could-not-be-delegated"></a>El usuario de conexión de datos no se pudieron delegar
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   En los libros de Excel que contienen datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , Excel Services devuelve este error si no puede conectarse a una instancia del servidor [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] en SharePoint.  
   
@@ -27,7 +27,7 @@ ms.locfileid: "34028346"
 |Se aplica a|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint|  
 |Versión del producto|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |Causa|Error en la conexión al intentar utilizar un proveedor de datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] .|  
-|Texto del mensaje|La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: datos de [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]|  
+|Texto del mensaje|La conexión de datos utiliza la autenticación de Windows y las credenciales del usuario no se pudieron delegar. No se pudieron actualizar las siguientes conexiones: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Datos|  
   
 ## <a name="explanation"></a>Explicación  
  Este mensaje de error tiene varias causas posibles. El factor común de todas ellas es que Servicios de Excel no puede recibir una identidad de usuario de Windows válida de un token de notificaciones en SharePoint. En el caso de los libros de Excel que contienen datos [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] , este error se produce cuando se da alguna de las condiciones siguientes:  

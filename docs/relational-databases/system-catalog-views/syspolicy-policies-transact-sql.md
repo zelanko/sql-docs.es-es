@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: aecf35bb-187e-4f80-870f-48081b88974e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: aec3b91a52667e0ef0801bd2532689e39ebf9ccb
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 9619f06273b60076f41ad217465d3aa134855135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47845153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121158"
 ---
 # <a name="syspolicypolicies-transact-sql"></a>syspolicy_policies (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "47845153"
 |Nombre de columna|Tipo de datos|Descripción|  
 |-----------------|---------------|-----------------|  
 |policy_id|**int**|Identificador de la directiva.|  
-|NAME|**sysname**|Nombre de la directiva.|  
+|name|**sysname**|Nombre de la directiva.|  
 |condition_id|**int**|Identificador de la condición exigida o probada por esta directiva.|  
 |root_condition_id|**int**|Exclusivamente para uso interno.|  
 |date_created|**datetime**|Fecha y hora cuando se creó la directiva.|  

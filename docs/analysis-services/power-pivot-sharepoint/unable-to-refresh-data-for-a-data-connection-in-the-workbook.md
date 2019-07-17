@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5db5706af88a657b213e85d97777abe3ef4f744
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53203144"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207993"
 ---
 # <a name="unable-to-refresh-data-for-a-data-connection-in-the-workbook"></a>No se pueden actualizar los datos para la conexión de datos del libro
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "53203144"
   
  Los servidores que ejecutan [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint obtienen el proveedor de datos OLE DB actualizado automáticamente. Otros servidores, como los que ejecutan una instancia independiente de Excel Services sin [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en el mismo equipo, deben aplicar una revisión para usar las bibliotecas de cliente más recientes. Para más información, consulte [Instalar el proveedor OLE DB de Analysis Services en servidores de SharePoint](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859).  
   
- **Escenario 3: Controlador de dominio no está disponible**  
+ **Escenario 3: Controlador de dominio no está disponible**  
   
  La causa podría ser que un controlador de dominio no está disponible para validar la identidad del usuario. Notificaciones del servicio de token de Windows requiere un controlador de dominio para autenticar al usuario de SharePoint en cada conexión. Notificaciones del servicio de token de Windows no utiliza las credenciales almacenadas en memoria caché. Valida la identidad del usuario para cada conexión.  
   
@@ -62,7 +62,7 @@ ms.locfileid: "53203144"
   
  La instalación de un controlador de dominio en el equipo resulta útil si desea utilizar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] para SharePoint en un estado sin conexión. Para obtener instrucciones detalladas sobre cómo usar [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] sin conexión, vea la entrada de blog "teniendo su [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] server fuera de la red" en [ http://www.powerpivotgeek.com ](http://go.microsoft.com/fwlink/?LinkId=184241).  
   
- **Escenario 4: Servidor inestable**  
+ **Escenario 4: Servidor inestable**  
   
  Uno o más servicios pueden estar en un estado incoherente. En algunos casos, al ejecutar IISRESET, se resolverá el problema.  
   

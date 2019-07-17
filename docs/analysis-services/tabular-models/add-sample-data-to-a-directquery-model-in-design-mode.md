@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: db5ef518a715553b1eecbeeaf5a5ba248b365bf5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071542"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207854"
 ---
 # <a name="add-sample-data-to-a-directquery-model-in-design-mode"></a>Agregar datos de ejemplo a un modelo DirectQuery en el modo de diseño
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ Pero se puede agregar una cantidad más pequeña de datos de ejemplo a la base d
   
 2.  Haga clic en **Tabla** > **Propiedades** para abrir el cuadro de diálogo Administración de particiones.  
   
-    Tenga en cuenta la partición predeterminada es **(Direct Query) \<nombre de tabla >**. Esta es la vista de datos completa. No elimine esta partición. Esta partición se usará cuando se implemente el modelo.  
+    Tenga en cuenta la partición predeterminada es **(Direct Query) \<nombre de tabla >** . Esta es la vista de datos completa. No elimine esta partición. Esta partición se usará cuando se implemente el modelo.  
   
 4.  Seleccione la partición y haga clic en **Copiar**.  
 

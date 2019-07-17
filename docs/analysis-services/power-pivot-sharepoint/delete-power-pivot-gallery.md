@@ -1,5 +1,5 @@
 ---
-title: Eliminar galería de PowerPivot | Documentos de Microsoft
+title: Eliminar galería de PowerPivot | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e288a1823ca2dca44b4c032b1618710212c2a65
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023492"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164037"
 ---
 # <a name="delete-power-pivot-gallery"></a>Eliminar Galería de PowerPivot
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34023492"
   
 3.  En Administración del sitio, haga clic en **Bibliotecas y listas del sitio**.  
   
-4.  Haga clic en **personalizar "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galería"**.  
+4.  Haga clic en **personalizar "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galería"** .  
   
 5.  En Permisos y administración, haga clic en **Eliminar la biblioteca de documentos**.  
   
@@ -45,7 +45,7 @@ ms.locfileid: "34023492"
   
 3.  En Administración del sitio, haga clic en **Bibliotecas y listas del sitio**.  
   
-4.  Haga clic en **personalizar "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galería"**.  
+4.  Haga clic en **personalizar "[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Galería"** .  
   
 5.  En Permisos y Administración, haga clic en **Eliminar esta biblioteca**.  
   

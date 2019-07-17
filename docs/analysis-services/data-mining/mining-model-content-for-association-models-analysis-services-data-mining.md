@@ -1,5 +1,5 @@
 ---
-title: 'Contenido del modelo para los modelos de asociación de minería de datos (Analysis Services: minería de datos) | Documentos de Microsoft'
+title: Contenido para los modelos de asociación del modelo de minería de datos (Analysis Services - minería de datos) | Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e5b9c977cbe5a31672d6738e2aaa7f3f911975e8
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017582"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182787"
 ---
 # <a name="mining-model-content-for-association-models-analysis-services---data-mining"></a>Contenido del modelo de minería de datos para los modelos de asociación (Analysis Services - Minería de datos)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,7 +46,7 @@ ms.locfileid: "34017582"
  Nombres de los atributos que corresponden a este nodo.  
   
  NODE_NAME  
- Nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
+ El nombre del nodo. Para un modelo de asociación, esta columna contendrá el mismo valor que NODE_UNIQUE_NAME.  
   
  NODE_UNIQUE_NAME  
  Nombre único del nodo.  
@@ -54,10 +54,10 @@ ms.locfileid: "34017582"
  NODE_TYPE  
  Un modelo de asociación genera únicamente los tipos de nodos siguientes:  
   
-|Identificador del tipo de nodo|Tipo|  
+|Identificador del tipo de nodo|Type|  
 |------------------|----------|  
 |1 (Modelo)|Raíz o nodo primario.|  
-|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o bien<br /><br /> `Gender = Male`.|  
+|7 (Conjunto de elementos)|Conjunto de elementos o colección de pares de atributo-valor. Ejemplos:<br /><br /> `Product 1 = Existing, Product 2 = Existing`<br /><br /> o Administrador de configuración de<br /><br /> `Gender = Male`.|  
 |8 (Regla)|Regla que define cómo se relacionan entre sí los elementos.<br /><br /> Ejemplo:<br /><br /> `Product 1 = Existing, Product 2 = Existing -> Product 3 = Existing`.|  
   
  NODE_CAPTION  
@@ -89,7 +89,7 @@ ms.locfileid: "34017582"
   
  **Nodo primario** Incluye una lista separada por comas con la siguiente información sobre el modelo:  
   
-|Elemento|Description|  
+|Elemento|Descripción|  
 |----------|-----------------|  
 |ITEMSET_COUNT|Recuento de todos los conjuntos de elementos del modelo.|  
 |RULE_COUNT|Recuento de todas las reglas del modelo.|  
@@ -97,10 +97,10 @@ ms.locfileid: "34017582"
 |MAX_SUPPORT|Soporte máximo para cualquier conjunto de elementos único.<br /><br /> **Nota** Este valor puede ser diferente del valor establecido para el parámetro *MAXIMUM_SUPPORT* .|  
 |MIN_ITEMSET_SIZE|Tamaño del conjunto de elementos más pequeño, representado como recuento de elementos.<br /><br /> Un valor de 0 indica que el estado **Missing** se trató como un elemento independiente.<br /><br /> **Nota** El valor predeterminado del parámetro *MINIMUM_ITEMSET_SIZE* es 1.|  
 |MAX_ITEMSET_SIZE|Indica el tamaño del conjunto de elementos más grande que se encontró.<br /><br /> **Nota** Este valor está restringido por el valor establecido para el parámetro *MAX_ITEMSET_SIZE* al crear el modelo. Este tamaño nunca puede superar dicho valor; sin embargo, puede ser menor. El valor predeterminado es 3.|  
-|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0,400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
+|MIN_PROBABILITY|Probabilidad mínima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 0.400390625<br /><br /> **Nota** En los conjuntos de elementos, este valor es siempre mayor que el establecido para el parámetro *MINIMUM_PROBABILITY* al crear el modelo.|  
 |MAX_PROBABILITY|Probabilidad máxima detectada para cualquier conjunto de elementos o regla únicos del modelo.<br /><br /> Ejemplo: 1<br /><br /> **Nota** : no hay ningún parámetro para restringir la probabilidad máxima de los conjuntos de elementos. Si quiere eliminar los elementos que son demasiado frecuentes, use el parámetro *MAXIMUM_SUPPORT* en su lugar.|  
-|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0,14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
-|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** : conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MIN_LIFT|Cantidad mínima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 0.14309369632511<br /><br /> Nota: Conocer la elevación mínima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
+|MAX_LIFT|Cantidad máxima de elevación proporcionada por el modelo para cualquier conjunto de elementos.<br /><br /> Ejemplo: 1,95758227647523 **Nota** conocer la elevación máxima puede ayudar a determinar si la elevación para cualquier conjunto de elementos es importante.|  
   
  **Nodo de conjunto de elementos** Los nodos de conjunto de elementos contienen una lista de los elementos, mostrados como una cadena de texto separada por comas.  
   
@@ -126,7 +126,7 @@ ms.locfileid: "34017582"
  **Nodo de regla** El fragmento XML incluye información útil adicional sobre la regla, como el soporte, la confianza y el número de elementos, así como el identificador del nodo que representa el lado izquierdo de la regla.  
   
  MARGINAL_RULE  
- En blanco.  
+ : en blanco.  
   
  NODE_PROBABILITY  
  Puntuación de confianza o probabilidad asociada al conjunto de elementos o a la regla.  
@@ -187,8 +187,8 @@ ms.locfileid: "34017582"
  : en blanco.  
   
 ## <a name="see-also"></a>Vea también  
- [Contenido del modelo de minería de datos & #40; Analysis Services: minería de datos & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+ [Contenido del modelo de minería de datos &#40;Analysis Services - Minería de datos&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Algoritmo de asociación de Microsoft](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
- [Ejemplos de consultas de modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
+ [Ejemplos de consultas del modelo de asociación](../../analysis-services/data-mining/association-model-query-examples.md)  
   
   

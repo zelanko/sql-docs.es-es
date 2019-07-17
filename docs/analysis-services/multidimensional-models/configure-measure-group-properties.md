@@ -1,5 +1,5 @@
 ---
-title: Configurar las propiedades de grupo de medida | Documentos de Microsoft
+title: Configurar las propiedades del grupo de medida | Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023904"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209122"
 ---
 # <a name="configure-measure-group-properties"></a>Configurar las propiedades de los grupos de medida
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,17 +23,17 @@ ms.locfileid: "34023904"
 ## <a name="measure-group-properties"></a>Propiedades de los grupos de medida  
  Las propiedades de los grupos de medida determinan el comportamiento de todo el grupo de medida y establecen los comportamientos predeterminados de ciertas propiedades de medidas dentro de un grupo de medida.  
   
-|Propiedad|Definición|  
+|Property|Definición|  
 |--------------|----------------|  
 |**AggregationPrefix**|Se aplica al almacenamiento ROLAP. Asigna un prefijo común a las vistas indizadas en SQL Server, que se usa para almacenar agregaciones para las particiones asociadas con este grupo de medida.|  
 |**DataAggregation**|Esta propiedad se reserva para uso futuro y actualmente no tiene ningún efecto. Por lo tanto, se recomienda que no modifique esta configuración.|  
-|**Description**|Puede usar esta propiedad para documentar el grupo de medida.|  
+|**Descripción**|Puede usar esta propiedad para documentar el grupo de medida.|  
 |**ErrorConfiguration**|Valores de control de errores configurables para controlar las claves duplicadas, las claves desconocidas, las claves NULL, los límites de error, las acciones tras la detección de errores y el archivo de registro de errores. Vea [Configuración de errores para el procesamiento de cubos, particiones y dimensiones &#40;SSAS - multidimensional&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md).|  
 |**EstimatedRows**|Especifica el número estimado de filas de la tabla de hechos.|  
 |**EstimatedSize**|Especifica el tamaño estimado (en bytes) del grupo de medida.|  
 |**ID**|Especifica el identificador del objeto.|  
 |**IgnoreUnrelatedDimensions**|Determina si las dimensiones no relacionadas están forzadas a su nivel superior cuando los miembros de las dimensiones que no están relacionadas con el grupo de medida se incluyen en una consulta. El valor predeterminado es **True**.|  
-|**Nombre**|Nombre de la medida. Esta propiedad es de solo lectura.|  
+|**Name**|Nombre de la medida. Esta propiedad es de solo lectura.|  
 |**ProactiveCaching**|Valores de control de errores configurables para controlar las claves duplicadas, las claves desconocidas, las claves NULL, los límites de error, las acciones tras la detección de errores y el archivo de registro de errores.|  
 |**ProcessingMode**|Indica si la indización y la agregación se deben producir durante o después del procesamiento. Las opciones son Regular y LazyAggregations. LazyAggregations puede usarse para ejecutar la agregación como una tarea en segundo plano.|  
 |**ProcessingPriority**|Determina la prioridad de procesamiento del cubo durante las operaciones de fondo, como indizaciones y agregaciones diferidas. El valor predeterminado es **0**.|  

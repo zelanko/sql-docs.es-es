@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fda788cecbad21a73186b96a6c360ceeae3948e3
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52537278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68179054"
 ---
 # <a name="browse-data-and-metadata-in-cube"></a>Examinar los datos y metadatos de un cubo
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "52537278"
 |--------------|-----------------------|-----------------|  
 |Igual|Uno o varios miembros|Los valores deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
 |No igual|Uno o varios miembros|Los valores no deben ser iguales que un miembro especificado.<br /><br /> (Proporciona una selección de varios miembros para jerarquías de atributo que no sean jerarquías de elementos primarios y secundarios ni una selección de un único miembro de otras jerarquías).|  
-|Entrada|Uno o varios conjuntos con nombre|Los valores deben estar en un conjunto con nombre especificado.<br /><br /> (Se admite solo para las jerarquías de atributo).|  
+|En|Uno o varios conjuntos con nombre|Los valores deben estar en un conjunto con nombre especificado.<br /><br /> (Se admite solo para las jerarquías de atributo).|  
 |No en|Uno o varios conjuntos con nombre|Los valores no deben estar en un conjunto con nombre especificado.<br /><br /> (Se admite solo para las jerarquías de atributo).|  
 |Intervalo (Inclusivo)|Uno o dos miembros delimitadores de un intervalo|Los valores deben estar entre los miembros delimitadores o ser iguales que ellos. Si los miembros delimitadores son iguales o solo se ha especificado un miembro, no se impone ningún intervalo y se permiten todos los valores.<br /><br /> (Se admite solo para las jerarquías de atributo. El intervalo debe estar en un nivel de una jerarquía. Actualmente, no se admiten los intervalos sin límites).|  
 |Intervalo (Exclusivo)|Uno o dos miembros delimitadores de un intervalo|Los valores deben estar entre los miembros delimitadores. Si los miembros delimitadores son iguales o solo se ha especificado uno, los valores deben ser mayores o menores que el miembro delimitador.<br /><br /> (Se admite solo para las jerarquías de atributo. El intervalo debe estar en un nivel de una jerarquía. Actualmente, no se admiten los intervalos sin límites).|  
@@ -91,7 +91,7 @@ ms.locfileid: "52537278"
   
  Por razones de seguridad, la pestaña **Explorador** solo admite las siguientes acciones:  
   
--   Dirección URL  
+-   URL  
   
 -   Conjunto de filas  
   

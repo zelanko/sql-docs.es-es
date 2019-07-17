@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 58b67426-1e66-4445-8e2c-03182e94c4be
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 433e23cdd4805da701d4eaf1104d4f534cdb3a6d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 17d28b2d8d2da467fa07bd2c2ddc2de8db207cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51673394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139380"
 ---
 # <a name="using-wql-with-the-wmi-provider-for-server-events"></a>Usar WQL con el proveedor WMI para eventos de servidor
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ WHERE where_condition
   
  El proveedor WMI de eventos de servidor usa un algoritmo ascendente de tipo "el primero que sea válido" para generar un ámbito lo más restringido posible para la EVENT NOTIFICATION subyacente. El algoritmo intenta minimizar la actividad interna en el tráfico del servidor y de la red entre la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y el proceso de host de WMI. El proveedor examina el *event_type* especificado en la cláusula FROM y las condiciones en la cláusula WHERE e intente volver a registrar la EVENT NOTIFICATION subyacente con el ámbito más restringido posible. Si el proveedor no se puede registrar en el ámbito más restringido, intenta registrarse en ámbitos superiores consecutivamente hasta que el registro resulta satisfactorio finalmente. Si llega al ámbito superior en el nivel de servidor y se produce un error, devuelve un error al consumidor.  
   
- Por ejemplo, si DatabaseName =**'** AdventureWorks **'** se especifica en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
+ Por ejemplo, si DatabaseName = **'** AdventureWorks **'** se especifica en la cláusula WHERE, el proveedor intenta registrar una notificación de eventos en el [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] base de datos. Si la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] existe y el cliente que realiza la llamada tiene los permisos necesarios para crear una notificación de eventos en [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)], el registro es satisfactorio. De lo contrario, se intenta registrar la notificación de eventos en el nivel de servidor. El registro es satisfactorio si el cliente de WMI tiene los permisos necesarios. Sin embargo, en esta situación, los eventos no se devuelven al cliente hasta que no se haya creado la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
  El *where_condition* también puede actuar como un filtro para limitar más la consulta a una base de datos específica, schema u object. Por ejemplo, considere la siguiente consulta WQL:  
   
@@ -124,7 +123,7 @@ WHERE DatabaseName = 'AdventureWorks' AND SchemaName = 'Sales'
 SELECT * FROM SERVER_MEMORY_CHANGE  
 ```  
   
-### <a name="b-querying-for-events-at-the-database-scope"></a>B. Consultar eventos en el ámbito de base de datos  
+### <a name="b-querying-for-events-at-the-database-scope"></a>b. Consultar eventos en el ámbito de base de datos  
  La consulta WQL siguiente recupera propiedades de evento concretas de los eventos que se produzcan en la base de datos `AdventureWorks` y existan bajo el grupo de eventos `DDL_DATABASE_LEVEL_EVENTS`.  
   
 ```  

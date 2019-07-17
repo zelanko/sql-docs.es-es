@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0fc639564c1ac37af1cf29cc119cbf48cbf3baee
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579547"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207463"
 ---
 # <a name="tabular-model-solution-deployment"></a>Implementación de la solución de modelo tabular 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "57579547"
   
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  
-|**Opción de procesamiento**|**Default**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Default** -esta configuración especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No procesar** -esta configuración especifica que solo los metadatos que se va a implementar. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completa** -esta configuración especifica que los metadatos se implementarán y se realiza una operación proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
+|**Opción de procesamiento**|**Valor predeterminado**|Esta propiedad especifica el tipo de procesamiento necesario cuando se implementan cambios en los objetos. Esta propiedad tiene las opciones siguientes:<br /><br /> **Default** -esta configuración especifica que Analysis Services determinará el tipo de procesamiento necesario. Los objetos sin procesar se procesarán y, si fuera necesario, se volverán a calcular las relaciones de atributo, las jerarquías de atributo, las jerarquías de usuario y las columnas calculadas. Esta configuración produce como resultado un menor tiempo de implementación que la opción de procesamiento completo.<br /><br /> **No procesar** -esta configuración especifica que solo los metadatos que se va a implementar. Después de la implementación, puede que sea necesario ejecutar una operación de procesamiento en el modelo implementado para actualizar y recalcular los datos.<br /><br /> **Completa** -esta configuración especifica que los metadatos se implementarán y se realiza una operación proceso completo. Esto garantiza que el modelo implementado tiene las actualizaciones más recientes de los metadatos y los datos.|  
 |**Implementación transaccional**|**False**|Esta propiedad especifica si la implementación es o no transaccional. De manera predeterminada, la implementación de todos los objetos modificados no es transaccional con el procesamiento de dichos objetos implementados. La implementación puede ser correcta y persistir aunque se produzca un error de procesamiento. Puede cambiar este comportamiento para incluir la implementación y el procesamiento en una sola transacción.|  
 |**Modo de consulta**|**In-Memory**|Esta propiedad especifica el modo en que se ejecuta el origen cuyos resultados de la consulta se devuelven: modo In-Memory (almacenamiento en caché) o modo de DirectQuery. Esta propiedad tiene las opciones siguientes:<br /><br /> **DirectQuery** : este valor especifica todas las consultas del modelo deben utilizar solo el origen de datos relacionales.<br /><br /> **DirectQuery con In-Memory** : este valor especifica que, de forma predeterminada, las consultas se deben responder con el origen relacional, a menos que se especifique lo contrario en la cadena de conexión desde el cliente.<br /><br /> **In-Memory** : este valor especifica que las consultas tienen que responderse únicamente con la caché.<br /><br /> **In-Memory con DirectQuery** : este valor especifica, de forma predeterminada, que las consultas se deben responder mediante caché, a menos que se especifique lo contrario en la cadena de conexión de cliente.<br /><br /> <br /><br /> Para obtener más información, consulte [el modo DirectQuery](../../analysis-services/tabular-models/directquery-mode-ssas-tabular.md).|  
   

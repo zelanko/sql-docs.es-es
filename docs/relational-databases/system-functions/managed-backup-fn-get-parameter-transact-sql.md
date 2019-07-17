@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: ed94e54d-4516-4806-a8ce-f013d3a04122
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: a3fca21870bda4a5a47ba4a8d898939a5f09f6a7
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 18a42273218bb73de55694b9b54877a4f2e0f669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47596345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140650"
 ---
 # <a name="managedbackupfngetparameter-transact-sql"></a>managed_backup.fn_get_parameter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ managed_backup.fn_get_parameter ('parameter_name' | '' | NULL )
   
 ##  <a name="Arguments"></a> Argumentos  
  parameter_name  
- Nombre del parámetro. parameter_name es **nvarchar (128)**. Si se proporciona NULL o una cadena vacía como argumento de la función, se devuelven pares nombre-valor para todos los parámetros de Administración inteligente configurados.  
+ Nombre del parámetro. parameter_name es **nvarchar (128)** . Si se proporciona NULL o una cadena vacía como argumento de la función, se devuelven pares nombre-valor para todos los parámetros de Administración inteligente configurados.  
   
 ## <a name="table-returned"></a>Tabla devuelta  
   

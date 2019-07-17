@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: c1ca9d710ca0e87e69bcc237848c02b758c724cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072550"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210255"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>Comparar soluciones tabulares y multidimensionales
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,13 +52,13 @@ ms.locfileid: "53072550"
 |||| 
 |-|-|-|
 ||Multidimensional|Tabular|
-|Acciones|Sí|No|
-|Agregaciones|Sí|No|
+|Acciones|Sí|Sin|
+|Agregaciones|Sí|Sin|
 |Columna calculada|No|Sí|  
 |Medidas calculadas|Sí|Sí| 
 |Tablas calculadas|No|Sí<sup>1</sup>|  
-|Ensamblados personalizados|Sí|No|
-|Resúmenes personalizados|Sí|No| 
+|Ensamblados personalizados|Sí|Sin|
+|Resúmenes personalizados|Sí|Sin| 
 |Miembro predeterminado|Sí|No|  
 |Carpetas para mostrar|Sí|Sí<sup>1</sup>|  
 |Distinct Count|Sí|Sí (mediante DAX)|
@@ -68,17 +68,17 @@ ms.locfileid: "53072550"
 |Objetos vinculados|Sí|Sí (tablas vinculadas)|
 |Expresiones de M|No|Sí<sup>1</sup>|
 |Relaciones varios a varios|Sí|No (pero no hay [bidireccionales filtros cruzados](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) en niveles de compatibilidad 1200 y versiones posteriores)| 
-|Conjuntos con nombre|Sí|No| 
+|Conjuntos con nombre|Sí|Sin| 
 |Jerarquías desiguales|Sí|Sí<sup>1</sup>|  
 |Jerarquías de elementos primarios y secundarios|Sí|Sí (mediante DAX)|
 |Particiones|Sí|Sí| 
-|perspectivas|Sí|Sí|
+|Perspectivas|Sí|Sí|
 |Seguridad de filas|Sí|Sí| 
 |Seguridad de nivel de objeto|Sí|Sí<sup>1</sup>|
 |Medidas de suma parcial|Sí|Sí| 
 |Translations|[Sí](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|Sí| 
 |Jerarquías definidas por el usuario|Sí|Sí|
-|Reescritura|Sí|No| 
+|Reescritura|Sí|Sin| 
   
  <sup>1</sup> vea [modelos Compatibility Level for Tabular de Analysis Services](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md) para obtener información sobre las diferencias funcionales entre los niveles de compatibilidad.  
   

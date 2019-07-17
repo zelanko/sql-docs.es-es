@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bfa5e6ee-5979-42a9-be6f-a84d1ee7a54c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f90f2395eac5dce76848d7bc309f1a3d5ce289f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e325793a7b703c445be836f6f427645acda3370
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63179893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138847"
 ---
 # <a name="is-odbc-the-answer"></a>¿Es la respuesta ODBC?
 Antes de profundizar en la pregunta de interoperabilidad, tenga en cuenta la siguiente pregunta: ¿Debe la aplicación usa ODBC en absoluto? Esto puede parecer una pregunta extraña en una guía para ODBC, pero es, de hecho, una legítima. ODBC no se diseñó para reemplazar completamente la API de base de datos nativa, ni se diseñó para proporcionar acceso a la base de datos en todas las circunstancias. Se diseñó para proporcionar una interfaz común para las bases de datos y se ha diseñado para liberar a los programadores de aplicaciones de tener que conocer y conservar los vínculos a varias bases de datos.  

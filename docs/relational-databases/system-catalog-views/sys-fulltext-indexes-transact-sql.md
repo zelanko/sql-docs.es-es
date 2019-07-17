@@ -20,14 +20,13 @@ ms.assetid: 7fc10fdc-370f-4927-bba0-b76108a7508e
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9d6f7aafe405b29db5457f470a99efac2e23e92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b240c74abde034f5008416994ca9cb497e6e64f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64945684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133801"
 ---
 # <a name="sysfulltextindexes-transact-sql"></a>sys.fulltext_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "64945684"
 |**crawl_type_desc**|**nvarchar(60)**|Descripción del tipo de rastreo último o actual.<br /><br /> FULL_CRAWL<br /><br /> INCREMENTAL_CRAWL<br /><br /> UPDATE_CRAWL<br /><br /> PAUSED_FULL_CRAWL|  
 |**crawl_start_date**|**datetime**|Inicio del rastreo último o actual.<br /><br /> NULL = Ninguno|  
 |**crawl_end_date**|**datetime**|Fin del rastreo último o actual.<br /><br /> NULL = Ninguno|  
-|**incremental_timestamp**|**binary(8)**|Valor de marca de tiempo que deberá utilizarse para el siguiente rastreo incremental.<br /><br /> NULL = Ninguno|  
+|**incremental_timestamp**|**binary (8)**|Valor de marca de tiempo que deberá utilizarse para el siguiente rastreo incremental.<br /><br /> NULL = Ninguno|  
 |**stoplist_id**|**int**|Id. de la [stoplist](../../relational-databases/search/configure-and-manage-stopwords-and-stoplists-for-full-text-search.md) que está asociado a este índice de texto completo.|  
 |**data_space_id**|**int**|Grupo de archivos donde reside este índice de texto completo.|  
 |**property_list_id**|**int**|Identificador de la lista de propiedades de búsqueda asociada a este índice de texto completo. NULL indica que no hay ninguna lista de propiedades de búsqueda asociada al índice de texto completo. Para obtener más información acerca de esta lista de propiedades de búsqueda, use el [sys.registered_search_property_lists &#40;Transact-SQL&#41; ](../../relational-databases/system-catalog-views/sys-registered-search-property-lists-transact-sql.md) vista de catálogo.|  

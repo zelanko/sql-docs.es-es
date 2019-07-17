@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072312"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163176"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>Filtros cruzados bidireccionales en los modelos tabulares
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -115,7 +115,7 @@ ms.locfileid: "53072312"
   
 3.  Elija la base de datos ContosoRetailDW.  
   
-4.  Haga clic en **Siguiente**.  
+4.  Haga clic en **Next**.  
   
 5.  En selección de tabla, presione Ctrl y seleccione las tablas siguientes:  
   
@@ -185,7 +185,7 @@ ms.locfileid: "53072312"
   
      Cambie la dirección del filtro en ambas tablas.  
   
-3.  Guarde la configuración.  
+3.  Guarde la configuración  
   
 4.  En el libro, haga clic en **Actualizar** para volver a leer el modelo.  
   

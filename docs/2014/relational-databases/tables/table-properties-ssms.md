@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b07f157294700b3b3b7958ce4cdc6f1589bff864
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53356278"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68196714"
 ---
 # <a name="table-properties"></a>Propiedades de tabla
   En este tema se describen las propiedades de la tabla que se muestran en el cuadro de diálogo Propiedades de tabla en [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Para obtener más información sobre cómo mostrar estas propiedades, vea [Ver la definición de tabla](view-the-table-definition.md).  
@@ -50,7 +50,7 @@ ms.locfileid: "53356278"
  Fecha y hora de creación de la tabla.  
   
  **Name**  
- Nombre de la tabla.  
+ El nombre de la tabla.  
   
  **Esquema**  
  Esquema al que pertenece la tabla.  
@@ -152,7 +152,7 @@ ms.locfileid: "53356278"
  **Espacio de datos**  
  La cantidad de espacio en megabytes que ocupan los datos en la tabla.  
   
-### <a name="partitioning"></a>Particiones  
+### <a name="partitioning"></a>Creación de particiones  
  Esta sección solo está disponible si la tabla tiene particiones. Para obtener más información, vea [Partitioned Tables and Indexes](../partitions/partitioned-tables-and-indexes.md).  
   
  **Columna de partición**  

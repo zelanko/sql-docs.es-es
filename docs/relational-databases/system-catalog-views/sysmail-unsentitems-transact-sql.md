@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9de1f394184c6dab26f691251af85bfe631ae6c2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2302b64253c824ea21ef23f96bd2fae2952972d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47724933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121213"
 ---
 # <a name="sysmailunsentitems-transact-sql"></a>sysmail_unsentitems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "47724933"
 |**destinatarios**|**ntext**|Direcciones de correo electrónico de los destinatarios de mensajes.|  
 |**copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje.|  
 |**blind_copy_recipients**|**ntext**|Direcciones de correo electrónico de los destinatarios que reciben copias del mensaje pero cuyos nombres no aparecen en el encabezado del mensaje.|  
-|**Asunto**|**nvarchar(510)**|Línea de asunto del mensaje.|  
-|**Cuerpo**|**ntext**|El cuerpo del mensaje.|  
-|**body_format**|**varchar (20)**|El formato del cuerpo del mensaje. Los valores posibles son **texto** y **HTML**.|  
+|**subject**|**nvarchar(510)**|Línea de asunto del mensaje.|  
+|**body**|**ntext**|El cuerpo del mensaje.|  
+|**body_format**|**varchar(20)**|El formato del cuerpo del mensaje. Los valores posibles son **texto** y **HTML**.|  
 |**Importancia**|**varchar(6)**|El **importancia** parámetro del mensaje.|  
-|**Sensibilidad**|**varchar (12)**|El **sensibilidad** parámetro del mensaje.|  
+|**Sensibilidad**|**varchar(12)**|El **sensibilidad** parámetro del mensaje.|  
 |**file_attachments**|**ntext**|Una lista delimitada por punto y coma de nombres de archivo adjuntado al mensaje de correo electrónico.|  
-|**attachment_encoding**|**varchar (20)**|Tipo de datos adjuntos.|  
-|**Consulta**|**ntext**|Consulta ejecutada por el programa de correo.|  
+|**attachment_encoding**|**varchar(20)**|Tipo de datos adjuntos.|  
+|**query**|**ntext**|Consulta ejecutada por el programa de correo.|  
 |**execute_query_database**|**sysname**|Contexto de base de datos en el cual el programa de correo ejecutó la consulta.|  
 |**attach_query_result_as_file**|**bit**|Si el valor es 0, los resultados de la consulta se incluyeron en el cuerpo del mensaje de correo electrónico, después del contenido del cuerpo. Si el valor es 1, los resultados se devolvieron como datos adjuntos.|  
 |**query_result_header**|**bit**|Si el valor es 1, los resultados de la consulta contenían encabezados de columna. Si el valor es 0, los resultados de la consulta no contenían encabezados de columna.|  
@@ -67,7 +66,7 @@ ms.locfileid: "47724933"
 |**send_request_date**|**datetime**|Fecha y hora en que se colocó el mensaje en la cola de correo electrónico.|  
 |**send_request_user**|**sysname**|Usuario que envió el mensaje. Esto no es el contexto de usuario del procedimiento del correo electrónico de base de datos, el **desde** campo del mensaje.|  
 |**sent_account_id**|**int**|Identificador de la cuenta del Correo electrónico de base de datos utilizada para enviar el mensaje. Siempre es NULL para esta vista.|  
-|**sent_status**|**varchar (8)**|Será **sin enviar** si no ha intentado enviar el correo de correo electrónico de base de datos. Será **reintentando** si el correo electrónico de base de datos no pudo enviar el mensaje pero está intentando de nuevo.|  
+|**sent_status**|**varchar(8)**|Será **sin enviar** si no ha intentado enviar el correo de correo electrónico de base de datos. Será **reintentando** si el correo electrónico de base de datos no pudo enviar el mensaje pero está intentando de nuevo.|  
 |**sent_date**|**datetime**|Fecha y hora en las que el Correo electrónico de base de datos intentó por última vez enviar el mensaje. Será NULL si el Correo electrónico de base de datos no ha intentado enviar el mensaje.|  
 |**last_mod_date**|**datetime**|Fecha y hora de la modificación más reciente de la fila.|  
 |**last_mod_user**|**sysname**|Usuario que realizó la modificación más reciente de la fila.|  

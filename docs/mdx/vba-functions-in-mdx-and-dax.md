@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4f6b6d89ced88a570ce242ae9490d4c6d8bd6ac8
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 39a0db181f3b1d1a40af1a5fa27ba78366a9d2b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135018"
 ---
 # <a name="vba-functions-in-mdx-and-dax"></a>Funciones de VBA en MDX y DAX
 
@@ -23,10 +22,10 @@ ms.locfileid: "67500048"
   
 ## <a name="visual-basic-for-applications-functions-reference"></a>Referencia de funciones de Visual Basic para Aplicaciones  
   
-|Nombre de la función|Admitida|Notas|  
+|Nombre de la función|Compatible|Notas|  
 |-------------------|---------------|-----------|  
 |Abs|DAX, MDX||  
-|Array|No compatible||  
+|Matriz|No compatible||  
 |Asc|Solo MDX||  
 |AscW|Solo MDX||  
 |Atn|Solo MDX||  
@@ -51,7 +50,7 @@ ms.locfileid: "67500048"
 |CurDir|No compatible||  
 |CVar|Solo MDX||  
 |CVErr|No compatible||  
-|date|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; la función DATE (Year, Month, Day), utilizada para generar un valor de tipo de fecha de los argumentos proporcionados|  
+|Date|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; la función DATE (Year, Month, Day), utilizada para generar un valor de tipo de fecha de los argumentos proporcionados|  
 |DateAdd|Solo MDX|**Advertencia** DAX implementa otra función con el mismo nombre; el DATEADD (\<fechas >, < number_of_intervals >,\<intervalo >) función, utilizada para desplazar las fechas proporcionadas por un número de intervalos especificado|  
 |DateDiff|Solo MDX||  
 |DatePart|Solo MDX||  
@@ -89,7 +88,7 @@ ms.locfileid: "67500048"
 |InputBox|No compatible||  
 |InStr|Solo MDX||  
 |InStrRev|No compatible||  
-|int|DAX, MDX||  
+|Int|DAX, MDX||  
 |IPmt|Solo MDX||  
 |IRR|Solo MDX||  
 |IsArray|Solo MDX||  
@@ -100,28 +99,28 @@ ms.locfileid: "67500048"
 |IsNull|Solo MDX||  
 |IsNumeric|Solo MDX||  
 |IsObject|No compatible||  
-|Join|No compatible||  
+|Unir|No compatible||  
 |LBound|No compatible||  
 |LCase|Solo MDX||  
 |Izquierda|DAX, MDX||  
 |Len|DAX, MDX||  
 |Loc|No compatible||  
 |LOF|No compatible||  
-|Log|Solo MDX|**Importante** DAX implementa otra función con el mismo nombre; la función LOG (number, base). Devuelve el logaritmo de un número en la base de los argumentos proporcionados.|  
+|Registro|Solo MDX|**Importante** DAX implementa otra función con el mismo nombre; la función LOG (number, base). Devuelve el logaritmo de un número en la base de los argumentos proporcionados.|  
 |LTrim|Solo MDX||  
 |MacID|No compatible||  
 |MacScript|No compatible||  
 |Mid|DAX, MDX||  
 |Minute|DAX, MDX||  
 |MIRR|Solo MDX||  
-|Month|DAX, MDX||  
+|Mes|DAX, MDX||  
 |MonthName|No compatible||  
 |MsgBox|No compatible||  
 |Ahora|DAX, MDX||  
 |NPer|Solo MDX||  
 |NPV|Solo MDX||  
 |Oct|Solo MDX||  
-|Partición|Solo MDX||  
+|Partition|Solo MDX||  
 |Pmt|Solo MDX||  
 |PPmt|Solo MDX||  
 |PV|Solo MDX||  
@@ -146,7 +145,7 @@ ms.locfileid: "67500048"
 |Str|Solo MDX||  
 |StrComp|Solo MDX||  
 |StrConv|Solo MDX||  
-|String|Solo MDX||  
+|Cadena|Solo MDX||  
 |StrReverse|No compatible||  
 |Modificador|Solo MDX||  
 |SYD|Solo MDX||  

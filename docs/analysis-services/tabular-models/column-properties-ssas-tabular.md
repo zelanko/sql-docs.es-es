@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 95a8f86b2cf2bc3cf28a128349540183c88d7fd0
-ms.sourcegitcommit: c51f7f2f5d622a1e7c6a8e2270bd25faba0165e7
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/19/2018
-ms.locfileid: "53626295"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163108"
 ---
 # <a name="column-properties"></a>Propiedades de columna 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "53626295"
 |--------------|---------------------|-----------------|  
 |**Carpeta para mostrar**||Una carpeta única o anidada para organizar las columnas de una lista de campos de la aplicación de cliente.|  
 
-**Basic**  
+**Básico**  
   
 |Property|Valor predeterminado|Descripción|  
 |--------------|---------------------|-----------------|  

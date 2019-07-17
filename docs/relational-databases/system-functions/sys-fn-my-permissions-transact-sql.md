@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 30f97f00-03d8-443a-9de9-9ec420b7699b
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 244e8935a580a8febc483673d6d747b6cc4b7b1c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 0a64db42ba04e864752559bb2d2b895625f2c9f5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47659253"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122633"
 ---
 # <a name="sysfnmypermissions-transact-sql"></a>sys.fn_my_permissions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,12 +46,12 @@ fn_my_permissions ( securable , 'securable_class' )
  Es el nombre del elemento protegible. Si el elemento protegible es el servidor o una base de datos, este valor debe establecerse en NULL. *securable* es una expresión escalar de tipo **sysname**. *elemento protegible* puede ser un nombre de varias partes.  
   
  '*securable_class*'  
- Es el nombre de la clase de protegible cuyos permisos se muestran. *securable_class* es un **sysname**. *securable_class* debe ser uno de los siguientes: rol de aplicación, ENSAMBLADO, clave ASIMÉTRICA, certificado, contrato, base de datos, ENDPOINT, FULLTEXT CATALOG, inicio de sesión, tipo de mensaje, objeto, REMOTE SERVICE BINDING, rol, ruta, esquema, servidor, servicio , CLAVE SIMÉTRICA, TIPO, USUARIO, COLECCIÓN DE ESQUEMAS XML.  
+ Es el nombre de la clase de protegible cuyos permisos se muestran. *securable_class* es un **sysname**. *securable_class* debe ser uno de los siguientes: ROL DE APLICACIÓN, ENSAMBLADO, CLAVE ASIMÉTRICA, CERTIFICADO, CONTRATO, BASE DE DATOS, ENDPOINT, FULLTEXT CATALOG, INICIO DE SESIÓN, TIPO DE MENSAJE, OBJETO, ENLACE DE SERVICIO REMOTO, ROL, RUTA, ESQUEMA, SERVIDOR, SERVICIO, CLAVE SIMÉTRICA, TIPO, USUARIO, COLECCIÓN DE ESQUEMAS XML.  
   
 ## <a name="columns-returned"></a>Columnas devueltas  
  La tabla siguiente enumeran las columnas que **fn_my_permissions** devuelve. En cada fila devuelta se describe un permiso correspondiente al contexto de seguridad actual del elemento protegible. Devuelve NULL si la consulta da error.  
   
-|Nombre de columna|Tipo|Descripción|  
+|Nombre de columna|Type|Descripción|  
 |-----------------|----------|-----------------|  
 |entity_name|**sysname**|Nombre del elemento protegible en el que se conceden los permisos indicados.|  
 |subentity_name|**sysname**|Nombre de columna si el elemento protegible tiene columnas; de lo contrario, es NULL.|  
@@ -93,7 +92,7 @@ SELECT * FROM fn_my_permissions(NULL, 'SERVER');
 GO  
 ```  
   
-### <a name="b-listing-effective-permissions-on-the-database"></a>B. Enumerar los permisos efectivos de la base de datos  
+### <a name="b-listing-effective-permissions-on-the-database"></a>b. Enumerar los permisos efectivos de la base de datos  
  El ejemplo siguiente devuelve una lista de los permisos efectivos del autor de la llamada en la base de datos [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)].  
   
 ```  

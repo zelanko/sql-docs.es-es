@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a17ae701-6ab6-4eaf-9e46-d3b9cd0a3a67
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: abe670570dd2219247da0c70b2b62e1de4e60341
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fc9f8dcc3782204c8bf1c9add1200e451edcf127
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181760"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103873"
 ---
 # <a name="behavioral-changes"></a>Cambios de comportamiento
 Cambios de comportamiento son esos cambios para que la *sintaxis* de la interfaz sigue siendo el mismo, pero la *semántica* han cambiado. Para que estos cambios, la funcionalidad que se usa en ODBC 2. *x* se comporta de forma diferente a la misma funcionalidad en ODBC 3. *x*.  

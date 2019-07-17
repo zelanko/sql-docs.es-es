@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6314331be3a844b86ff8790c8c38abb4c0d3758e
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072532"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207510"
 ---
 # <a name="relationships"></a>Relaciones 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072532"
 ##  <a name="what"></a> Ventajas  
  Una relación es una conexión entre dos tablas de datos, basada en una o más columnas de cada tabla. Para ver por qué son útiles las relaciones, imagine que realiza el seguimiento de los datos de los pedidos de los clientes de su negocio. Podría realizar el seguimiento de todos los datos en una sola tabla que tiene una estructura como la siguiente:  
   
-|CustomerID|Nombre|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
+|CustomerID|NOMBRE|EMail|DiscountRate|OrderID|OrderDate|Producto|Cantidad|  
 |----------------|----------|-----------|------------------|-------------|---------------|-------------|--------------|  
 |1|Ashton|chris.ashton@contoso.com|.05|256|2010-01-07|Compact Digital|11|  
 |1|Ashton|chris.ashton@contoso.com|.05|255|2010-01-03|SLR Camera|15|  
@@ -41,7 +41,7 @@ ms.locfileid: "53072532"
   
 ### <a name="customers"></a>Clientes  
   
-|[CustomerID]|Nombre|EMail|  
+|[CustomerID]|NOMBRE|EMail|  
 |--------------------|----------|-----------|  
 |1|Ashton|chris.ashton@contoso.com|  
 |2|Jaworski|michal.jaworski@contoso.com|  
@@ -83,7 +83,7 @@ ms.locfileid: "53072532"
   
  En la siguiente tabla se muestran las relaciones entre las tres tablas:  
   
-|Relación|Tipo|columna de búsqueda|columna|  
+|Relación|Type|columna de búsqueda|columna|  
 |------------------|----------|-------------------|------------|  
 |Customers-CustomerDiscounts|uno a uno|Customers.CustomerID|CustomerDiscounts.CustomerID|  
 |Customers-Orders|uno a varios|Customers.CustomerID|Orders.CustomerID|  
@@ -164,7 +164,7 @@ ms.locfileid: "53072532"
 ##  <a name="bkmk_dupl_errors"></a> Duplicate values and other errors  
  Si elige una columna que no se puede usar en la relación, aparece una X roja al lado de la columna. Puede pausar el cursor sobre el icono de error para ver un mensaje con más información sobre el problema. Entre los problemas que pueden impedir crear una relación entre las columnas seleccionadas están:  
   
-|Problema o mensaje|Solución|  
+|Problema o mensaje|Resolución|  
 |------------------------|----------------|  
 |No se puede crear la relación porque las dos columnas seleccionadas contienen valores duplicados.|Para crear una relación válida, al menos una de las columnas del par seleccionado debe contener solo valores únicos.<br /><br /> Puede modificar las columnas para quitar los valores duplicados o revertir el orden de las columnas de manera que la columna que contiene valores únicos se use como **columna de búsqueda relacionada**.|  
 |La columna contiene un valor nulo o vacío.|Las columnas de datos no se pueden unir entre sí por un valor nulo. Para cada fila, debe haber un valor en las dos columnas que se usan en una relación.|  

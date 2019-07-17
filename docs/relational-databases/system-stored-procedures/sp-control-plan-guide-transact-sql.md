@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96d43d5-6507-4d66-b3f5-f44c0617cb5c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5801a38e22a0c638e9daee1e448158941499b19f
-ms.sourcegitcommit: 78e32562f9c1fbf2e50d3be645941d4aa457e31f
+ms.openlocfilehash: 808d6e9482d293e957a0dc483df128d08b74133c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/08/2019
-ms.locfileid: "54100790"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108761"
 ---
 # <a name="spcontrolplanguide-transact-sql"></a>sp_control_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,19 +57,19 @@ sp_control_plan_guide [ @operation = ] N'<control_option>'
  Quita la Guía de plan especificada por *plan_guide_name*. Una vez quitada una guía de plan, las ejecuciones futuras de una consulta que coincidía anteriormente con la guía de plan no se ven afectadas por dicha guía de plan.  
   
  DROP ALL  
- Quita todas las guías de plan de la base de datos actual. **N'**_plan_guide_name_ no se puede especificar cuando se especifica DROP ALL.  
+ Quita todas las guías de plan de la base de datos actual. **N'** _plan_guide_name_ no se puede especificar cuando se especifica DROP ALL.  
   
  DISABLE  
  Deshabilita la Guía de plan especificada por *plan_guide_name*. Una vez deshabilitada una guía de plan, las ejecuciones futuras de una consulta que coincidía anteriormente con la guía de plan no se ven afectadas por dicha guía de plan.  
   
  DISABLE ALL  
- Deshabilita todas las guías de plan de la base de datos actual. **N'**_plan_guide_name_ no se puede especificar cuando se especifica DISABLE ALL.  
+ Deshabilita todas las guías de plan de la base de datos actual. **N'** _plan_guide_name_ no se puede especificar cuando se especifica DISABLE ALL.  
   
  ENABLE  
  Habilita la Guía de plan especificada por *plan_guide_name*. Una guía de plan puede coincidir con una consulta apta después de ser habilitada. De manera predeterminada, las guías de plan se habilitan en el momento en que se crean.  
   
  ENABLE ALL  
- Habilita todas las guías de plan de la base de datos actual. **N'**_plan_guide_name_**'** no se puede especificar cuando se especifica ENABLE ALL.  
+ Habilita todas las guías de plan de la base de datos actual. **N'** _plan_guide_name_ **'** no se puede especificar cuando se especifica ENABLE ALL.  
   
 ## <a name="remarks"></a>Comentarios  
  Se producirá un error si se intenta quitar o modificar una función, procedimiento almacenado o desencadenador DML al que una guía de plan, habilitada o deshabilitada, haga referencia.  

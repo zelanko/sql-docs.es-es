@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: add88e48-ada3-4c0c-a5ac-e78903d3ff41
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 76846a5027ff5229997151b36a93b1ea553ddbc8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 86488da93470a61a54638e9c60e6e1795a9da4dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68125753"
 ---
 # <a name="bookmark-c-data-type"></a>Tipo de datos C de marcador
 El tipo de datos C de marcador permite que una aplicación recuperar un marcador. Los tipos de marcador C sirven únicamente para recuperar los valores de marcador pueden ser variable de longitud; no se debe convertir en otros tipos de datos. Una aplicación recupera un marcador desde la columna 0 del resultado se establece con **SQLBulkOperations** (con una operación de SQL_ADD), **SQLFetch**, **SQLFetchScroll**, o **SQLGetData**. Para obtener más información, consulte [marcadores](../../../odbc/reference/develop-app/bookmarks-odbc.md).  

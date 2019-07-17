@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532153"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106543"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 ```  
   
 ## <a name="arguments"></a>Argumentos  
-`[ @job_type = ] 'job\_type'` Tipo de trabajo que desea agregar. *job_type* es **nvarchar (20)** y no puede ser NULL. Las entradas válidas son **'capture'** y **'cleanup'**.  
+`[ @job_type = ] 'job\_type'` Tipo de trabajo que desea agregar. *job_type* es **nvarchar (20)** y no puede ser NULL. Las entradas válidas son **'capture'** y **'cleanup'** .  
   
 `[ @start_job = ] start_job` Marca que indica si se debe iniciar el trabajo inmediatamente después de agregarse. *start_job* es **bit** con el valor predeterminado es 1.  
   
@@ -90,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  Dado que los trabajos de captura y limpieza se crean de forma predeterminada, este procedimiento almacenado solo es necesario cuando un trabajo se ha eliminado y se ha vuelto a crear explícitamente.  
   
- El nombre del trabajo es **cdc.**  _\<base de datos\_nombre\>_**\_limpieza** o **cdc.**  _\<base de datos\_nombre\>_**\_capturar**, donde *< database_name >* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, se anexa el nombre con un punto (**.**) seguido por un identificador único, por ejemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
+ El nombre del trabajo es **cdc.**  _\<base de datos\_nombre\>_ **\_limpieza** o **cdc.**  _\<base de datos\_nombre\>_ **\_capturar**, donde *< database_name >* es el nombre de la base de datos actual. Si ya existe un trabajo con el mismo nombre, se anexa el nombre con un punto ( **.** ) seguido por un identificador único, por ejemplo: **cdc. AdventureWorks_capture. A1ACBDED-13FC-428C-8302-10100EF74F52**.  
   
  Para ver la configuración actual de un trabajo de captura o limpieza, use [sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md). Para cambiar la configuración de un trabajo, use [sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md).  
   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab1ed7614ff315986f38d497f00687784785790b
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4e15f0755cac41f0f262582417e0e22ead39f9be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124564"
 ---
 # <a name="spestimatedatacompressionsavings-transact-sql"></a>sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ sp_estimate_data_compression_savings
 |-----------------|---------------|-----------------|  
 |object_name|**sysname**|Nombre de la tabla o vista indizada.|  
 |schema_name|**sysname**|Esquema de la tabla o vista indizada.|  
-|index_id|**int**|Identificador de índice de un índice:<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = Índice no clúster|  
+|index_id|**int**|Identificador de índice de un índice:<br /><br /> 0 = Montón<br /><br /> 1 = Índice clúster<br /><br /> > 1 = índice no clúster|  
 |partition_number|**int**|Número de partición. Devuelve 1 para una tabla o índice sin particiones.|  
 |size_with_current_compression_setting (KB)|**bigint**|Tamaño actual de la tabla, índice o partición solicitados.|  
 |size_with_requested_compression_setting (KB)|**bigint**|Tamaño estimado de la tabla, índice o partición que utiliza el valor de compresión solicitado y, si es aplicable, factor de relleno existente, suponiendo que no hay fragmentación.|  

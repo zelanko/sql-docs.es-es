@@ -13,11 +13,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 1dad0f71b2978c25245a42cc33d4adec05dbeaf3
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757717"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211086"
 ---
 # <a name="create-a-trace-sql-server-profiler"></a>Crear un seguimiento (SQL Server Profiler)
   En este tema se describe cómo utilizar [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] para crear un seguimiento.  
@@ -37,7 +37,7 @@ ms.locfileid: "52757717"
   
 4.  Para guardar los resultados del seguimiento, realice una de las siguientes operaciones:  
   
-    -   Haga clic en **Guardar en el archivo**para capturar el seguimiento a un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)**. El valor predeterminado es 5 megabytes (MB).  
+    -   Haga clic en **Guardar en el archivo**para capturar el seguimiento a un archivo. Especifique un valor en **Establecer el tamaño máximo de archivo (MB)** . El valor predeterminado es 5 megabytes (MB).  
   
          También puede seleccionar **Habilitar sustitución incremental de archivos** para crear automáticamente nuevos archivos cuando se alcance el tamaño máximo del archivo También puede seleccionar **El servidor procesa los datos de seguimiento**, que hace que el servicio que ejecuta el seguimiento procese los datos del seguimiento en lugar de la aplicación cliente. Cuando el servidor procese los datos del seguimiento, no se omitirá ningún evento en condiciones de gran demanda; sin embargo, puede que el rendimiento del servidor se vea afectado.  
   

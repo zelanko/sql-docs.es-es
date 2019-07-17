@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9e94146a-5b80-4a01-b586-1e03ff05b9ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bc8133241ad0b76579e87164350a5c6fe2a39f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ef460a7d004227e34e0043223abdf3769c92520
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63186329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135660"
 ---
 # <a name="compiling-an-embedded-sql-program"></a>Compilar un programa SQL incrustado
 Dado que un programa SQL incrustado contiene una combinación de las instrucciones de lenguaje SQL y el host, no se pueden enviar directamente a un compilador para el lenguaje del host. En su lugar, se compila mediante un proceso de varios pasos. Aunque este proceso es diferente del producto, los pasos son aproximadamente el mismo para todos los productos.  

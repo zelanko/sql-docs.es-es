@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 50a5ed42-2d5b-4a11-a0d2-9a02241b078d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c14010d0472d8ed72418c30d7b6c34af1fc9dc65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1568e1ff8bd37f36fe22e4d25b4e76b5837f71d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47626005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127578"
 ---
 # <a name="sysassemblyreferences-transact-sql"></a>sys.assembly_references (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]

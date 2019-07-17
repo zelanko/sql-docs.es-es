@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23bee0f6-e12a-4598-b34e-df11a8086829
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 92da788205213394edc75257d8266752a2a9d8df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7065aa88d60a508df9946d38d0dded220c4bb7a1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106137"
 ---
 # <a name="determining-the-target-dbmss-and-drivers"></a>Determinar el DBMS de destino y los controladores
 Es la siguiente pregunta que tenga en cuenta, ¿cuáles son el DBMS de destino para la aplicación, y están disponibles los controladores que admiten esos DBMS? Dado que las aplicaciones genéricas tienden a ser muy interoperable, la pregunta de DBMS de destino es más aplicable a las aplicaciones personalizadas y verticales. Sin embargo, la pregunta de controladores de destino se aplica a todas las aplicaciones, porque los controladores varían ampliamente en velocidad, calidad, disponibilidad y compatibilidad con las características. Además, si controladores se pueden redistribuir con la aplicación, el costo y la disponibilidad de los planes de licencia deben considerarse.  

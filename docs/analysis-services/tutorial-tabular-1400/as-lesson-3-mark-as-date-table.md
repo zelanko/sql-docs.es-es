@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 2008f066d537b1f88b9bf674c4a864217eae9890
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 41ff4c51d3dc357f253a42689565849f07235ff6
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685576"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162137"
 ---
 # <a name="mark-as-date-table"></a>Marcar como tabla de fechas
 
@@ -33,7 +33,7 @@ Tiempo estimado para completar esta lección: **Tres minutos**
   
 ## <a name="prerequisites"></a>Requisitos previos  
 
-En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
+En este artículo forma parte de un tutorial de modelado tabular, que se debe completar en orden. Antes de realizar las tareas en esta lección, debe haber completado la lección anterior: [Lección 2: Obtener datos](../tutorial-tabular-1400/as-lesson-2-get-data.md). 
 
 ### <a name="to-rename-the-fulldatealternatekey-column"></a>Para cambiar el nombre de la columna FullDateAlternateKey
 

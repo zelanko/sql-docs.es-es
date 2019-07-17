@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7267097b1a06cb44c801ed20cbfd206c330328ff
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52509471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165466"
 ---
 # <a name="object-naming-rules-analysis-services"></a>Normas de nomenclatura de objetos (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -64,13 +64,13 @@ ms.locfileid: "52509471"
   
  La tabla siguiente muestra caracteres no válidos para objetos especificados.  
   
-|Objeto|Caracteres no válidos|  
+|Object|Caracteres no válidos|  
 |------------|------------------------|  
 |**Server**|Siga las convenciones de nomenclatura de servidores de Windows al asignar nombre a un objeto de servidor. Vea [Convenciones de nomenclatura (Windows)](/windows/desktop/DNS/naming-conventions) para obtener más detalles.|  
 |**DataSource**|: / \ * &#124; ? "[] () {} <>|  
-|**Level** o **Attribute**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} < >|  
-|**Dimension** o **Hierarchy**|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} \<, >|  
-|Todos los demás objetos|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] () {} < >|  
+|**Level** o **Attribute**|. , ; ' ` : / \ * &#124; ? "& % $i! + = [] {} < >|  
+|**Dimension** o **Hierarchy**|. , ; ' ` : / \ * &#124; ? "& % $i! + = [] () {} \<, >|  
+|Todos los demás objetos|. , ; ' ` : / \ * &#124; ? "& % $i! + = [] () {} < >|  
   
  **Excepciones: Cuando se permiten caracteres reservados**  
   
@@ -78,9 +78,9 @@ ms.locfileid: "52509471"
   
 |Modo de servidor y nivel de compatibilidad de base de datos|¿Se permiten caracteres reservados?|  
 |--------------------------------------------------|----------------------------------|  
-|MOLAP (todas las versiones)|No|  
-|Tabular - 1050|No|  
-|Tabular - 1100|No|  
+|MOLAP (todas las versiones)|Sin|  
+|Tabular - 1050|Sin|  
+|Tabular - 1100|Sin|  
 |Tabular - 1130 y superior|Sí|  
   
  Las bases de datos pueden tener un ModelType predeterminado (default). Default es equivalente a multidimensional y por tanto no admite el uso de caracteres reservados en los nombres de columna.  

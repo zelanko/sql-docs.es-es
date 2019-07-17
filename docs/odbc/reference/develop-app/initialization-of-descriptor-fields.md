@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1da157cb-8ea9-4a56-983b-1c45650217c5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d988099cad357254f04a79a8a6cccbbe4eb2768c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c78162bcf0421fee609abe5fcacf9613e0f8020b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62446816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138940"
 ---
 # <a name="initialization-of-descriptor-fields"></a>Inicialización de campos de Descriptor
 Cuando se asigna un descriptor de fila de la aplicación, sus campos reciben valores iniciales como se indica en [SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md). El valor inicial del campo SQL_DESC_TYPE es SQL_DEFAULT. Esto proporciona un tratamiento estándar de base de datos para su presentación a la aplicación. La aplicación puede especificar un tratamiento distinto de los datos estableciendo los campos del registro de descriptor.  

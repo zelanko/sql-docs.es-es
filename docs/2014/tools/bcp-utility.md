@@ -28,11 +28,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 24367bfec4b0e25fec60eb49c77a74e1ccd54f46
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579765"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68187138"
 ---
 # <a name="bcp-utility"></a>bcp (utilidad)
   El **bcp** copia de forma masiva datos entre una instancia de [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] y un archivo de datos en un formato especificado por el usuario. La utilidad **bcp** se puede usar para importar un número elevado de filas nuevas en tablas de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] o para exportar datos de tablas a archivos de datos. Excepto cuando se usa con la opción **queryout** , la utilidad no requiere ningún conocimiento de [!INCLUDE[tsql](../includes/tsql-md.md)]. Para importar datos en una tabla, debe usar un archivo de formato creado para esa tabla o comprender la estructura de la tabla y los tipos de datos que son válidos para sus columnas.  
@@ -99,7 +99,7 @@ ms.locfileid: "57579765"
   
 -   **queryout** copia desde una consulta y debe especificarse solo cuando se copian datos de forma masiva desde una consulta.  
   
--   **formato** crea un archivo de formato basado en la opción especificada (**- n**, `-c`, `-w`, o **-N**) y los delimitadores de tabla o vista. Cuando se copian datos en bloque, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f**; la creación de un archivo de formato XML también requiere la opción **-x**. Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul** como el valor (**format nul**).  
+-   **formato** crea un archivo de formato basado en la opción especificada ( **- n**, `-c`, `-w`, o **-N**) y los delimitadores de tabla o vista. Cuando se copian datos en bloque, el comando **bcp** puede hacer referencia a un archivo de formato, lo que evita tener que especificar de nuevo la información de formato interactivamente. La opción **format** necesita la opción **-f**; la creación de un archivo de formato XML también requiere la opción **-x**. Para obtener más información, vea [Crear un archivo de formato &#40;SQL Server&#41;](../relational-databases/import-export/create-a-format-file-sql-server.md). Hay que especificar **nul** como el valor (**format nul**).  
   
  *owner*  
  Es el nombre del propietario de la tabla o vista. *owner* es opcional si el usuario que realiza la operación es propietario de la tabla o vista especificada. Si *owner* no se especifica y el usuario que realiza la acción no es el propietario de la tabla o la vista especificada, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] devuelve un mensaje de error y se cancela la operación.  
@@ -123,7 +123,7 @@ ms.locfileid: "57579765"
  **-b** _batch_size_  
  Especifica el número de filas por lote de datos importados. Cada lote se importa y registra como una transacción aparte que importa el lote entero antes de confirmarse. De forma predeterminada, todas las filas del archivo de datos se importan en un solo lote. Para distribuir las filas en varios lotes, especifique un valor de *batch_size* inferior al número de filas del archivo de datos. Si se produce un error en la transacción de un lote, solamente se revierten las inserciones del lote actual. Los lotes importados por transacciones confirmadas no se ven afectados por los errores posteriores.  
   
- No use esta opción junto con la **-h "** ROWS_PER_BATCH  **= *`bb`*"** opción.  
+ No use esta opción junto con la **-h "** ROWS_PER_BATCH  **= *`bb`* "** opción.  
   
  `-c`  
  Realiza la operación con un tipo de datos de caracteres. Esta opción no realiza una petición para cada campo; lo usa `char` como tipo de almacenamiento, sin prefijos y con **\t** (carácter de tabulación) como separador de campos y **\r\n** (carácter de nueva línea) como terminador de fila. `-c` no es compatible con `-w`.  
@@ -175,13 +175,13 @@ ms.locfileid: "57579765"
   
  *first_row* puede ser un valor entero positivo hasta 2^63-1. **-F**_first_row_ está basado en 1.  
   
- **-h"** _hint_[ **,**... *n*] **"**  
+ **-h"** _hint_[ **,** ... *n*] **"**  
  Especifica las sugerencias que deben usarse durante una importación de datos masiva en una tabla o en una vista.  
   
- ORDER **(**_column_[ASC | DESC] [**,**...*n*]**)**  
+ ORDER **(** _column_[ASC | DESC] [ **,** ...*n*] **)**  
  Indica el criterio de ordenación de los datos en el archivo de datos. El rendimiento de la importación masiva mejora si los datos importados se ordenan según el índice clúster de la tabla, si lo hay. Si el archivo de datos se ordena siguiendo otro criterio que no sea el orden de una clave de índice clúster, o si no hay ningún índice clúster en la tabla, la cláusula ORDER se pasa por alto. Los nombres de columna facilitados deben ser nombres válidos en la tabla de destino. De forma predeterminada, **bcp** supone que el archivo de datos no está ordenado. En las importaciones masivas optimizadas, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] también valida que los datos importados estén ordenados.  
   
- ROWS_PER_BATCH **=**_bb_  
+ ROWS_PER_BATCH **=** _bb_  
  Número de filas de datos por lote (como *bb*). Se usa cuando no se especifica **-b** , por lo que el archivo de datos completo se envía al servidor en una sola transacción. El servidor optimiza la carga masiva según el valor *bb*. De forma predeterminada, el valor de ROWS_PER_BATCH es desconocido.  
   
  KILOBYTES_PER_BATCH **=** _cc_  
@@ -210,7 +210,7 @@ ms.locfileid: "57579765"
  Cuando se especifica con el argumento **in**, se ejecutarán todos los desencadenadores de inserción definidos en la tabla de destino durante la operación de copia masiva. Si no se especifica FIRE_TRIGGERS, no se ejecutará ningún desencadenador. FIRE_TRIGGERS se ignora para los argumentos **out**, **queryout** y **format**.  
   
  **-i** _input_file_  
- Especifica el nombre de un archivo de respuesta, que contiene las respuestas a las preguntas del símbolo del sistema para cada campo de datos cuando se realiza una copia masiva con el modo interactivo (**- n**, `-c`, `-w`, o **- N** no especificado).  
+ Especifica el nombre de un archivo de respuesta, que contiene las respuestas a las preguntas del símbolo del sistema para cada campo de datos cuando se realiza una copia masiva con el modo interactivo ( **- n**, `-c`, `-w`, o **- N** no especificado).  
   
  Si *input_file* comienza por un guión (-) o una barra diagonal (/), no incluya un espacio entre **-i** y el valor de *input_file* .  
   
@@ -281,8 +281,8 @@ ms.locfileid: "57579765"
  **-R**  
  Especifica que se realice la copia masiva de datos de moneda, fecha y hora en [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] con el formato regional definido para la configuración regional del equipo cliente. De forma predeterminada, la configuración regional se omite.  
   
- **-S** _server_name_[ **\\**_instance_name_]  
- Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Si no se especifica ningún servidor, la utilidad **bcp** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta un comando **bcp** desde un equipo remoto de la red o desde una instancia local con nombre. Para establecer una conexión con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor, especifique únicamente *server_name*. Especifique [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]server_name *instance_name**_\\_** para conectar con una instancia con nombre de*en ese servidor.  
+ **-S** _server_name_[ **\\** _instance_name_]  
+ Especifica la instancia de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] a la que hay que conectarse. Si no se especifica ningún servidor, la utilidad **bcp** se conecta a la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en el equipo local. Esta opción es necesaria cuando se ejecuta un comando **bcp** desde un equipo remoto de la red o desde una instancia local con nombre. Para establecer una conexión con la instancia predeterminada de [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] en un servidor, especifique únicamente *server_name*. Especifique [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]server_name *instance_name  ** _\\_** para conectar con una instancia con nombre de*en ese servidor.  
   
  `-t` *field_term*  
  Especifica el terminador del campo. El valor predeterminado es **\t** (carácter de tabulación). Use este parámetro para invalidar el terminador de campo predeterminado. Para obtener más información, vea [Especificar terminadores de campo y de fila &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md).  
@@ -412,7 +412,7 @@ ms.locfileid: "57579765"
 -   (Usuario) Utilice un terminador largo y único (cualquier secuencia de bytes o caracteres) para minimizar la posibilidad de conflicto con el valor de cadena real. Esto se puede realizar utilizando las opciones -t y -r.  
   
 ## <a name="examples"></a>Ejemplos  
- Esta sección contiene los siguientes ejemplos:  
+ En esta sección se incluyen los ejemplos siguientes:  
   
 -   A. Copiar filas de tablas en un archivo de datos (con una conexión de confianza)  
   

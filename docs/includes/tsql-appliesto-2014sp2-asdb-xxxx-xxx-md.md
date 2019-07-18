@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: a2b49dcb94210e7abb3d73d6d1d827cb9c8f8497
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
-ms.translationtype: MT
+ms.openlocfilehash: 76136d5f896e72cef7600562c83d104883713637
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63013125"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68220440"
 ---
-**Se aplica a:** ![Sí](media/yes.png)(a partir de 2014 SP2) de SQL Server ![Sí](media/yes.png)Azure SQL Database ![ningún](media/no.png)Azure SQL Data Warehouse ![ningún](media/no.png) Almacenamiento de datos paralelos 
+**SE APLICA A:** ![sí](media/yes.png)SQL Server ![sí](media/yes.png)Azure SQL Database ![no](media/no.png)Azure SQL Data Warehouse ![no](media/no.png)Almacenamiento de datos paralelos 
 

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 111b3dbf-92f8-4670-b156-1468c63e4fc1
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 482658872c069ff530484b6f5eaafd73cb0b3d74
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fc15ed0b36738968a2b455157213a10dbceb2965
+ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113162"
+ms.lasthandoff: 07/17/2019
+ms.locfileid: "68300447"
 ---
 # <a name="spreplrestart-transact-sql"></a>sp_replrestart (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68113162"
   Se utiliza en la replicación transaccional durante las copias de seguridad y restauración para sincronizar los datos replicados del distribuidor con los datos del publicador. Este procedimiento almacenado se ejecuta en el publicador de la base de datos de publicación.  
   
 > [!IMPORTANT]  
->  **sp_replrestart** es el procedimiento almacenado de una replicación interna y solo debe usarse al restaurar una base de datos publicada en una topología de replicación transaccional, tal como se indica en el tema [estrategias para realizar copias de seguridad y restauración Replicación de instantáneas y transaccional](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
+>  **sp_replrestart** es un procedimiento almacenado de replicación interno y solo se debe usar al restaurar una base de datos Publicada en una topología de replicación transaccional como se indica en el tema [estrategias para realizar copias de seguridad y restaurar instantáneas y Replicación transaccional](../../relational-databases/replication/administration/strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication.md).  
   
  ![Icono de vínculo de tema](../../database-engine/configure-windows/media/topic-link.gif "Icono de vínculo de tema") [Convenciones de sintaxis de Transact-SQL](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,10 +43,10 @@ sp_replrestart
  **0** (correcto) o **1** (error)  
   
 ## <a name="remarks"></a>Comentarios  
- **sp_replrestart** se usa cuando el valor más alto de (LSN) del número de secuencia de registro en el distribuidor coincide con el valor LSN más alto en el publicador.  
+ **sp_replrestart** se utiliza cuando el valor de número de secuencia de registro (LSN) más alto del distribuidor no coincide con el valor de LSN más alto del publicador.  
   
 ## <a name="permissions"></a>Permisos  
- Solo los miembros de la **sysadmin** rol fijo de servidor o **db_owner** rol fijo de base de datos se puede ejecutar **sp_replrestart**.  
+ Solo los miembros del rol fijo de servidor **sysadmin** o del rol fijo de base de datos **db_owner** pueden ejecutar **sp_replrestart**.  
   
 ## <a name="see-also"></a>Vea también  
  [Procedimientos almacenados de replicación &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  

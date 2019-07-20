@@ -1,27 +1,27 @@
 ---
-title: Inicio rápido para crear un modelo predictivo con R - SQL Server Machine Learning
-description: En este tutorial, obtenga información sobre cómo crear un modelo en R con datos de SQL Server para trazar las predicciones.
+title: Inicio rápido para crear un modelo predictivo mediante R
+description: En esta guía de inicio rápido, aprenderá a crear un modelo en R con datos de SQL Server para trazar las predicciones.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962039"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345473"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Inicio rápido: Crear un modelo predictivo con R en SQL Server
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>Inicio rápido: Creación de un modelo predictivo mediante R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tutorial, podrá obtener información sobre cómo entrenar un modelo mediante R y, a continuación, guardar el modelo en una tabla en SQL Server. El modelo es un sencillo modelo lineal generalizado (GLM) que predice la probabilidad de que un vehículo está equipado con una caja manual. Deberá usar el `mtcars` conjunto de datos que se incluye con R.
+En esta guía de inicio rápido, aprenderá a entrenar un modelo mediante R y, a continuación, guardará el modelo en una tabla en SQL Server. El modelo es un modelo lineal generalizado simple (GLM) que predice la probabilidad de que un vehículo se haya equipado con una transmisión manual. Usará el `mtcars` conjunto de DataSet incluido con R.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Un tutorial anterior, [R Compruebe que existe en SQL Server](quickstart-r-verify.md), proporciona información y vínculos para configurar el entorno de R necesario para este inicio rápido.
+En una guía de inicio rápido anterior, [Verify r existe en SQL Server](quickstart-r-verify.md), se proporciona información y vínculos para configurar el entorno de r necesario para esta guía de inicio rápido.
 
 ## <a name="create-the-source-data"></a>Crear el origen de datos
 
@@ -43,7 +43,7 @@ CREATE TABLE dbo.MTCars(
 );
 ```
 
-A continuación, inserte los datos de la compilación en el conjunto de datos `mtcars`.
+A continuación, inserte los datos de la compilación en `mtcars`el conjunto de datos.
 
 ```SQL
 INSERT INTO dbo.MTCars
@@ -54,15 +54,15 @@ EXEC sp_execute_external_script
         , @output_data_1_name = N'MTCars';
 ```
 
-+ Algunas personas les gusta usar tablas temporales, pero tenga en cuenta que algunos clientes R desconectarán las sesiones entre los lotes.
++ A algunas personas les gusta usar tablas temporales, pero tenga en cuenta que algunos clientes de R desconectan las sesiones entre los lotes.
 
 + El runtime de R incluye muchos conjuntos de datos, pequeños y grandes. Para obtener una lista de los conjuntos de datos instalados en R, escriba `library(help="datasets")` desde un símbolo del sistema de R.
 
 ## <a name="create-a-model"></a>Crear un modelo
 
-Los datos de velocidad de automóvil contienen dos columnas, ambas numéricas, caballos de fuerza (`hp`) y el peso (`wt`). Desde estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo está equipado con una caja manual.
+Los datos de velocidad del automóvil contienen dos columnas, numéricas,`hp`de potencia ()`wt`y ponderación (). A partir de estos datos, creará un modelo lineal generalizado (GLM) que calcula la probabilidad de que un vehículo se haya equipado con una transmisión manual.
 
-Para crear el modelo, defina la fórmula dentro de su código de R y pase los datos como un parámetro de entrada.
+Para compilar el modelo, debe definir la fórmula dentro del código de R y pasar los datos como un parámetro de entrada.
 
 ```sql
 DROP PROCEDURE IF EXISTS generate_GLM;
@@ -82,12 +82,12 @@ END;
 GO
 ```
 
-+ El primer argumento `glm` es el *fórmula* parámetro, que define `am` como dependientes de `hp + wt`.
++ El primer argumento de `glm` es el parámetro de *fórmula* , que `am` define como dependiente `hp + wt`de.
 + Los datos de entrada se almacenan en la variable `MTCarsData`, que se rellena con la consulta SQL. Si no asigna un nombre específico a los datos de entrada, el nombre predeterminado de la variable sería _InputDataSet_.
 
 ## <a name="create-a-table-for-the-model"></a>Crear una tabla para el modelo
 
-A continuación, almacenar el modelo para que pueda volver a entrenar o usarlo para la predicción. El resultado de un paquete de R que crea un modelo suele ser un **objeto binario**. Por lo tanto, la tabla donde se almacena el modelo debe incluir una columna de **varbinary (max)** tipo.
+A continuación, almacene el modelo para que pueda volver a entrenarlo o usarlo para la predicción. El resultado de un paquete de R que crea un modelo suele ser un **objeto binario**. Por lo tanto, la tabla en la que se almacena el modelo debe proporcionar una columna de tipo **varbinary (Max)** .
 
 ```sql
 CREATE TABLE GLM_models (
@@ -105,7 +105,7 @@ INSERT INTO GLM_models(model)
 EXEC generate_GLM;
 ```
 
-Tenga en cuenta que si ejecuta este código una segunda vez, aparece este error:
+Tenga en cuenta que si ejecuta este código por segunda vez, obtendrá este error:
 
 ```sql
 Violation of PRIMARY KEY constraint...Cannot insert duplicate key in object dbo.stopping_distance_models
@@ -121,7 +121,7 @@ WHERE model_name = 'default model'
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-Ahora que tiene un modelo, en el último inicio rápido, obtendrá información sobre cómo generar las predicciones a partir de él y trazar los resultados.
+Ahora que tiene un modelo, en la guía de inicio rápido final, aprenderá a generar predicciones a partir de él y a trazar los resultados.
 
 > [!div class="nextstepaction"]
 > [Inicio rápido: Predecir y trazar desde el modelo](quickstart-r-predict-from-model.md)

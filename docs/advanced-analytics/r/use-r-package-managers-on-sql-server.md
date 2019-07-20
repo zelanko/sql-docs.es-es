@@ -1,74 +1,74 @@
 ---
-title: Usar los administradores de paquetes de R - SQL Server Machine Learning Services
-description: Use los comandos de R estándar como install.packages para agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (In-Database).
+title: Uso de administradores de paquetes de R
+description: Use comandos de R estándar como install. Packages para agregar nuevos paquetes de R a SQL Server 2016 R Services o SQL Server 2017 Machine Learning Services (in-Database).
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: d53725e708a5aaf6fb8476ce2d7408ffcfa7f102
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da14d2f00a6eb0c0ed52a50d27b6f1d06b062cf5
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962405"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344873"
 ---
-# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Uso de R administradores de paquetes para instalar paquetes de R en SQL Server
+# <a name="use-r-package-managers-to-install-r-packages-on-sql-server"></a>Usar administradores de paquetes de R para instalar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Puede usar las herramientas de R estándar para instalar nuevos paquetes en una instancia de SQL Server 2016 o SQL Server 2017, que proporciona el equipo tiene un puerto abierto 80 y tener derechos de administrador.
+Puede usar las herramientas de R estándar para instalar nuevos paquetes en una instancia de SQL Server 2016 o SQL Server 2017, lo que le proporcionará un puerto abierto 80 y tendrá derechos de administrador.
 
 > [!IMPORTANT] 
-> Asegúrese de instalar paquetes en la biblioteca predeterminada que está asociada con la instancia actual. Nunca instale paquetes en un directorio de usuario.
+> Asegúrese de instalar paquetes en la biblioteca predeterminada que está asociada a la instancia actual. No instale nunca paquetes en un directorio de usuario.
 
-Este procedimiento utiliza RGui pero puede usar RTerm o cualquier otro R línea de comandos que admite el acceso con privilegios elevados.
+Este procedimiento usa RGui, pero puede usar RTerm o cualquier otra herramienta de línea de comandos de R que admita el acceso con privilegios elevados.
 
-## <a name="install-a-package-using-rgui"></a>Instalar un paquete mediante RGui
+## <a name="install-a-package-using-rgui"></a>Instalación de un paquete con RGui
 
-1. [Determinar la ubicación de la biblioteca de instancia](../package-management/default-packages.md). Navegue hasta la carpeta donde se instalan las herramientas de R. Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server 2017 es como sigue: `C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
+1. [Determinar la ubicación de la biblioteca de instancias](../package-management/default-packages.md). Navegue hasta la carpeta donde están instaladas las herramientas de R. Por ejemplo, la ruta de acceso predeterminada para una instancia predeterminada de SQL Server 2017 es la siguiente:`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64`
 
-1. Haga clic en RGui.exe y seleccione **ejecutar como administrador**. Si no tiene los permisos necesarios, póngase en contacto con el Administrador de base de datos y proporcionar una lista de los paquetes que necesita.
+1. Haga clic con el botón secundario en RGui. exe y seleccione **Ejecutar como administrador**. Si no dispone de los permisos necesarios, póngase en contacto con el administrador de la base de datos y proporcione una lista de los paquetes que necesita.
 
-1. Desde la línea de comandos, si conoce el nombre del paquete, puede escribir: `install.packages("the_package-name")` Las comillas dobles son necesarias para el nombre del paquete.
+1. Desde la línea de comandos, si conoce el nombre del paquete, puede escribir: `install.packages("the_package-name")`Se requieren comillas dobles para el nombre del paquete.
 
-1. Cuando se le pida un sitio de réplica, seleccione cualquier sitio que es conveniente para su ubicación.
+1. Cuando se le pida un sitio reflejado, seleccione cualquier sitio que sea adecuado para su ubicación.
 
-Si el paquete de destino depende de los paquetes adicionales, descarga las dependencias automáticamente el instalador de R y los instala automáticamente.
+Si el paquete de destino depende de paquetes adicionales, el instalador de R descarga automáticamente las dependencias y las instala.
 
-Si tiene varias instancias de SQL Server, como las instancias en paralelo de SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services, ejecutar la instalación por separado para cada instancia si desea usar el paquete en ambos contextos. Los paquetes no se puede compartir entre instancias.
+Si tiene varias instancias de SQL Server, como instancias en paralelo de SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services, ejecute la instalación por separado para cada instancia si desea utilizar el paquete en ambos contextos. Los paquetes no se pueden compartir entre instancias.
 
-## <a name = "bkmk_offlineInstall"></a> Instalación sin conexión mediante herramientas de R
+## <a name = "bkmk_offlineInstall"></a>Instalación sin conexión mediante herramientas de R
 
-Si el servidor no tiene acceso a internet, se requieren pasos adicionales para preparar los paquetes. Para instalar paquetes de R en un servidor que no tiene acceso a internet, debe:
+Si el servidor no tiene acceso a Internet, se requieren pasos adicionales para preparar los paquetes. Para instalar paquetes de R en un servidor que no tiene acceso a Internet, debe:
 
-+ Analizar las dependencias de antemano.
++ Analice las dependencias de antemano.
 + Descargue el paquete de destino en un equipo con acceso a Internet.
-+ Descargar los paquetes necesarios en el mismo equipo y colocar todos los paquetes en un archivo de paquete único.
-+ El archivo zip si aún no está en formato comprimido.
++ Descargue los paquetes necesarios en el mismo equipo y coloque todos los paquetes en un solo archivo de paquete.
++ Comprimir el archivo si aún no está en formato comprimido.
 + Copie el archivo de paquete en una ubicación en el servidor.
-+ Instale el paquete de destino, especificando el archivo de almacenamiento como origen.
++ Instale el paquete de destino especificando el archivo de almacenamiento como origen.
 
 > [!IMPORTANT] 
->  Asegúrese de que analizar todas las dependencias y descargar **todas** los paquetes necesarios **antes** a partir de la instalación. Se recomienda [miniCRAN](https://mran.microsoft.com/package/miniCRAN) para este proceso. Este paquete de R toma una lista de los paquetes que desea instalar, analiza las dependencias y obtiene todos los archivos comprimidos para usted. miniCRAN, a continuación, crea un único repositorio que puede copiar en el equipo del servidor. Para obtener más información, consulte [crear un repositorio de paquete local mediante miniCRAN](create-a-local-package-repository-using-minicran.md)
+>  Asegúrese de analizar todas las dependencias y descargar **todos los** paquetes necesarios **antes** de comenzar la instalación. Se recomienda [miniCRAN](https://mran.microsoft.com/package/miniCRAN) para este proceso. Este paquete de R toma una lista de los paquetes que desea instalar, analiza las dependencias y obtiene todos los archivos comprimidos. a continuación, miniCRAN crea un repositorio único que se puede copiar en el equipo servidor. Para obtener más información, consulte [crear un repositorio de paquetes local mediante miniCRAN](create-a-local-package-repository-using-minicran.md)
 
-Este procedimiento se supone que ha preparado todos los paquetes que necesita, en formato comprimido y está listo para copiarlos en el servidor.
+En este procedimiento se supone que ha preparado todos los paquetes que necesita, en formato comprimido, y están listos para copiarlos en el servidor.
 
-1. Copia el paquete en archivos ZIP, o para varios paquetes, todo el repositorio que contiene todos los paquetes de comprimidos formato en una ubicación que el servidor pueda acceder.
+1. Copie el archivo comprimido del paquete, o para varios paquetes, el repositorio completo que contiene todos los paquetes en formato comprimido en una ubicación a la que el servidor pueda tener acceso.
 
-2. Abra la carpeta en el servidor donde se instalan las herramientas de R para la instancia. Por ejemplo, si usa el símbolo del sistema de Windows en un sistema con SQL Server 2016 R Services, cambie a `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`.
+2. Abra la carpeta en el servidor donde están instaladas las herramientas de R para la instancia de. Por ejemplo, si está usando el símbolo del sistema de Windows en un sistema con SQL Server R Services de 2016, `C:\Program Files\MSSQL13.MSSQLSERVER\R_SERVICES\bin\x64`cambie a.
 
-3. Haga doble clic en RGui o RTerm y seleccione **ejecutar como administrador**.
+3. Haga clic con el botón derecho en RGui o RTerm y seleccione **Ejecutar como administrador**.
 
-4. Ejecute el comando de R `install.packages` y especifique el paquete o el nombre de repositorio y la ubicación de los archivos comprimidos.
+4. Ejecute el comando `install.packages` de R y especifique el nombre del paquete o del repositorio y la ubicación de los archivos comprimidos.
 
     ```R
     install.packages("C:\\Temp\\Downloaded packages\\mynewpackage.zip", repos=NULL)
     ```
 
-    Este comando extrae el paquete de R `mynewpackage` de su archivo comprimido local, siempre que haya guardado la copia en el directorio `C:\Temp\Downloaded packages`e instala el paquete en el equipo local. Si el paquete tiene dependencias, el instalador comprueba los paquetes existentes en la biblioteca. Si ha creado un repositorio que incluye las dependencias, el programa de instalación instala los paquetes necesarios también.
+    Este comando extrae el paquete `mynewpackage` de R de su archivo comprimido local, siempre que haya guardado la copia en `C:\Temp\Downloaded packages`el directorio e instale el paquete en el equipo local. Si el paquete tiene dependencias, el instalador comprueba si hay paquetes existentes en la biblioteca. Si ha creado un repositorio que incluye las dependencias, el instalador instala también los paquetes necesarios.
 
-    Si los paquetes necesarios no están presentes en la biblioteca de la instancia y no se encuentra en los archivos comprimidos, se produce un error en la instalación del paquete de destino.
+    Si los paquetes necesarios no están presentes en la biblioteca de instancias y no se encuentran en los archivos comprimidos, se produce un error en la instalación del paquete de destino.
 
 ## <a name="see-also"></a>Vea también
 

@@ -1,37 +1,37 @@
 ---
-title: 'Conversiones: SQL Server Machine Learning tipos de datos de Python para SQL'
-description: Revise el tipo de datos implícitas y explícitas converstions entre Python y SQL Server en soluciones de aprendizaje automático y ciencia de datos.
+title: Conversiones de tipos de datos de Python a SQL
+description: Revise el tipo de datos implícito y explícito converstions entre Python y SQL Server en soluciones de ciencia de datos y aprendizaje automático.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 652824e4b038e629cf9b998dd6fae64465426d0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962768"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345508"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Asignaciones de tipos de datos entre Python y SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Para las soluciones de Python que se ejecutan en la característica de integración de Python en SQL Server Machine Learning Services, revise la lista de tipos de datos no admitidos y conversiones de tipos de datos que pueden realizarse de forma implícita cuando se pasan datos entre Python y SQL Server.
+En el caso de las soluciones de Python que se ejecutan en la característica de integración de Python en SQL Server Machine Learning Services, revise la lista de tipos de datos no admitidos y conversiones de tipos de datos que se pueden realizar de forma implícita cuando se pasan datos entre Python y SQL Server.
 
 ## <a name="python-version"></a>Versión de Python
 
-Distribución de SQL Server 2017 Anaconda 4.2 y Python 3.6.
+SQL Server 2017 Anaconda 4,2 y Python 3,6.
 
-Un subconjunto de las funciones de RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, quizás algunas otras) se proporciona mediante las API de Python, con un nuevo paquete de Python **revoscalepy**. Puede usar este paquete para trabajar con datos mediante consultas de datos SQL, archivos XDF o tramas de datos de Pandas.
+Un subconjunto de la funcionalidad de RevoScaleR (rxLinMod, rxLogit, rxPredict, rxDTrees, rxBTrees, quizás algunas otras) se proporciona mediante las API de Python, mediante un nuevo paquete de Python **revoscalepy**. Puede usar este paquete para trabajar con datos mediante tramas de datos de pandas, archivos XDF o consultas de datos SQL.
 
-Para obtener más información, consulte [módulo revoscalepy en SQL Server](ref-py-revoscalepy.md) y [referencia de funciones de revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package).
+Para obtener más información, vea [módulo revoscalepy en](ref-py-revoscalepy.md) la [referencia de funciones](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)de SQL Server y revoscalepy.
 
-Python es compatible con un número limitado de tipos de datos en comparación con SQL Server. Como resultado, siempre que use datos de SQL Server en scripts de Python, datos pueden convertirse implícitamente a un tipo de datos compatible. Sin embargo, a menudo una conversión exacta no puede realizarse automáticamente y se devuelve un error.
+Python admite un número limitado de tipos de datos en comparación con SQL Server. Como resultado, cada vez que se usan datos de SQL Server en scripts de Python, los datos se pueden convertir implícitamente a un tipo de datos compatible. Sin embargo, a menudo no se puede realizar una conversión exacta automáticamente y se devuelve un error.
 
-## <a name="python-and-sql-data-types"></a>Tipos de datos SQL y Python
+## <a name="python-and-sql-data-types"></a>Tipos de datos de Python y SQL
 
-Esta tabla enumeran las conversiones implícitas que se proporcionan. No se admiten otros tipos de datos.
+En esta tabla se enumeran las conversiones implícitas que se proporcionan. No se admiten otros tipos de datos.
 
 |SQLtype|Tipo de Python|
 |-------|-----------|

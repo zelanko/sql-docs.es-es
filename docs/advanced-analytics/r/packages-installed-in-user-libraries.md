@@ -1,78 +1,78 @@
 ---
-title: 'Sugerencias para usar paquetes de R instalados en bibliotecas de usuario: SQL Server Machine Learning Services'
+title: Sugerencias para el uso de paquetes de R instalados en bibliotecas de usuario
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e1aea5bd9166386662fc090a7a6d41737a9eecb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a03d78e5d3100105f74e2efe361391a6bcfaf7ac
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962565"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345281"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>Sugerencias para usar paquetes de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo tiene secciones independientes para los DBA que no estén familiarizados con R y los desarrolladores experimentados de R que son de acceso de paquete desconocido en una instancia de SQL Server.
+Este artículo tiene secciones independientes para los DBA que no están familiarizados con R y los desarrolladores de R experimentados que no conocen el acceso a los paquetes en una instancia de SQL Server.
 
-## <a name="new-to-r"></a>Está familiarizado con R
+## <a name="new-to-r"></a>Novedad de R
 
-Como un administrador de instalación de R por primera vez, los paquetes conocer algunos conceptos básicos sobre la administración de paquetes de R pueden ayudar a empezar a trabajar.
+Como administrador que instala paquetes de R por primera vez, conocer algunos aspectos básicos sobre la administración de paquetes de R puede ayudarle a empezar.
 
 ### <a name="package-dependencies"></a>Dependencias de paquetes
 
-Paquetes de R con frecuencia dependen de varios otros paquetes, algunos de los cuales es posible que no estén disponibles en la biblioteca de R predeterminada usada por la instancia. A veces un paquete requiere una versión diferente de un paquete dependiente que ya está instalada. Las dependencias del paquete se indican en un archivo de descripción incrustado en el paquete, pero a veces están incompletas. Puede usar un paquete denominado [iGraph](https://igraph.org/r/) totalmente articular el gráfico de dependencias.
+Los paquetes de r suelen depender de varios otros paquetes, algunos de los cuales podrían no estar disponibles en la biblioteca de R predeterminada usada por la instancia de. A veces, un paquete requiere una versión diferente de un paquete dependiente que ya está instalado. Las dependencias de paquete se indican en un archivo de Descripción insertado en el paquete, pero a veces están incompletos. Puede usar un paquete denominado [iGraph](https://igraph.org/r/) para articular completamente el gráfico de dependencias.
 
-Si necesita instalar varios paquetes o quiere asegurarse de que todas las personas de su organización obtienen el tipo de paquete correcto y la versión, recomendamos que use el [miniCRAN](https://mran.microsoft.com/package/miniCRAN) paquetes para analizar la cadena de dependencias completo. minicRAN crea un repositorio local que se puede compartir entre varios usuarios o equipos. Para obtener más información, consulte [crear un repositorio de paquete local mediante miniCRAN](create-a-local-package-repository-using-minicran.md).
+Si necesita instalar varios paquetes o desea asegurarse de que todos los usuarios de su organización obtienen el tipo de paquete y la versión correctos, se recomienda usar el paquete [miniCRAN](https://mran.microsoft.com/package/miniCRAN) para analizar la cadena de dependencia completa. minicRAN crea un repositorio local que se puede compartir entre varios usuarios o equipos. Para obtener más información, vea [crear un repositorio de paquetes local mediante miniCRAN](create-a-local-package-repository-using-minicran.md).
 
 ### <a name="package-sources-versions-and-formats"></a>Orígenes de paquetes, versiones y formatos
 
-Hay varios orígenes de paquetes de R, como [CRAN](https://cran.r-project.org/) y [Bioconductor](https://www.bioconductor.org/). El sitio oficial para el lenguaje R (<https://www.r-project.org/>) recoge muchos de estos recursos. Microsoft ofrece [MRAN](https://mran.microsoft.com/) para su distribución de R de código abierto ([MRO](https://mran.microsoft.com/open)) y otros paquetes. Muchos paquetes se publican en GitHub, donde los desarrolladores pueden obtener el código fuente.
+Hay varios orígenes para los paquetes de R, como [Cran](https://cran.r-project.org/) y [Bioconductor](https://www.bioconductor.org/). El sitio oficial del lenguaje R (<https://www.r-project.org/>) enumera muchos de estos recursos. Microsoft ofrece [MRAN](https://mran.microsoft.com/) para su distribución de R ([MRO](https://mran.microsoft.com/open)) de código abierto y otros paquetes. Muchos paquetes se publican en GitHub, donde los desarrolladores pueden obtener el código fuente.
 
-Paquetes de R se ejecutan en varias plataformas informáticas. Asegúrese de que las versiones que instalar los archivos binarios de Windows.
+Los paquetes de R se ejecutan en varias plataformas de computación. Asegúrese de que las versiones que instala son archivos binarios de Windows.
 
-### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>Saber qué biblioteca que está instalando y los paquetes ya instalados.
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>Conozca la biblioteca en la que va a instalar y los paquetes que ya están instalados.
 
-Si previamente ha modificado el entorno de R en el equipo, antes de instalar nada, asegúrese de que la variable de entorno de R `.libPath` usa una sola ruta de acceso.
+Si ha modificado previamente el entorno de r en el equipo, antes de instalar nada, asegúrese de que la variable `.libPath` de entorno de r usa una sola ruta de acceso.
 
-Esta ruta de acceso debe apuntar a la carpeta R_SERVICES para la instancia. Para obtener más información, incluida la forma de determinar qué paquetes ya están instalados, consulte [paquetes predeterminada de R y Python en SQL Server](../package-management/default-packages.md).
+Esta ruta de acceso debe apuntar a la carpeta R_SERVICES de la instancia. Para obtener más información, incluida la forma de determinar qué paquetes ya están instalados, vea [paquetes de R y Python predeterminados en SQL Server](../package-management/default-packages.md).
 
-## <a name="new-to-sql-server"></a>Novedad en SQL Server
+## <a name="new-to-sql-server"></a>Nuevo en SQL Server
 
-Como desarrollador de R trabajando en el código se ejecuta en SQL Server, las directivas de seguridad que protege el servidor restringen la capacidad de controlar el entorno de R.
+Como desarrollador de R que trabaja en código que se ejecuta en SQL Server, las directivas de seguridad que protegen el servidor restringen su capacidad para controlar el entorno de R.
 
-### <a name="r-user-libraries-not-supported-on-sql-server"></a>Bibliotecas de R de usuario: no se admite en SQL Server
+### <a name="r-user-libraries-not-supported-on-sql-server"></a>Bibliotecas de usuario de R: no se admiten en SQL Server
 
-Los desarrolladores de R que necesitan para instalar nuevos paquetes de R están acostumbrados a la instalación de paquetes a voluntad, mediante una privada, la biblioteca de usuario cada vez que la biblioteca predeterminada no está disponible o cuando el desarrollador no es un administrador en el equipo. Por ejemplo, en un entorno de desarrollo de R típico, el usuario agregaría la ubicación del paquete a la variable de entorno de R `libPath`, o hacer referencia a la ruta de acceso completa del paquete, similar al siguiente:
+Los desarrolladores de r que necesiten instalar nuevos paquetes de R están acostumbrados a instalar paquetes en, mediante una biblioteca de usuario privada siempre que la biblioteca predeterminada no esté disponible o cuando el desarrollador no sea un administrador del equipo. Por ejemplo, en un entorno de desarrollo de r típico, el usuario agregaría la ubicación del paquete a la variable `libPath`de entorno de r o hacer referencia a la ruta de acceso completa del paquete, similar a la siguiente:
 
 ```R
 library("c:/Users/<username>/R/win-library/packagename")
 ```
 
-Esto no funciona cuando se ejecuta soluciones de R en SQL Server, porque los paquetes de R deben instalarse en una biblioteca predeterminada específica que está asociada a la instancia. Cuando un paquete no está disponible en la biblioteca predeterminada, obtendrá este error al intentar llamar al paquete:
+Esto no funciona cuando se ejecutan soluciones de R en SQL Server, ya que los paquetes de R deben instalarse en una biblioteca específica predeterminada que esté asociada a la instancia. Cuando un paquete no está disponible en la biblioteca predeterminada, se obtiene este error al intentar llamar al paquete:
 
-*Error en There: no hay ningún paquete llamado 'package-name'*
+*Error en la biblioteca (XXX): no hay ningún paquete denominado ' package-name '*
 
-### <a name="avoid-package-not-found-errors"></a>Evitar errores de "no se encontró el paquete"
+### <a name="avoid-package-not-found-errors"></a>Evitar errores de "paquete no encontrado"
 
-+ Eliminar las dependencias en las bibliotecas de usuario. 
++ Elimine las dependencias de las bibliotecas de usuario. 
 
-    Es una práctica incorrecta de desarrollo para instalar paquetes de R necesarios en una biblioteca de usuario personalizada, ya que puede provocar errores si se ejecuta una solución a otro usuario que no tiene acceso a la ubicación de la biblioteca.
+    Es una práctica de desarrollo incorrecta instalar los paquetes de R necesarios en una biblioteca de usuario personalizada, ya que puede provocar errores si otro usuario que no tiene acceso a la ubicación de la biblioteca ejecuta una solución.
 
-    Además, si se instala un paquete en la biblioteca predeterminada, el runtime de R carga el paquete desde la biblioteca predeterminada, incluso si se especifica una versión diferente en el código de R.
+    Además, si un paquete está instalado en la biblioteca predeterminada, el tiempo de ejecución de R carga el paquete desde la biblioteca predeterminada, aunque especifique una versión diferente en el código de R.
 
-+ Modifique el código para ejecutarlo en un entorno compartido.
++ Modifique el código para que se ejecute en un entorno compartido.
 
-+ Evite la instalación de paquetes como parte de una solución. Si no tiene permisos para instalar paquetes, se producirá un error en el código. Incluso si tiene permisos para instalar paquetes, debe hacer por separado del resto del código que desea ejecutar.
++ Evite instalar paquetes como parte de una solución. Si no tiene permisos para instalar paquetes, se producirá un error en el código. Incluso si tiene permisos para instalar paquetes, debe hacerlo por separado de otro código que desee ejecutar.
 
 + Comprobar el código para asegurarse de que no hay ninguna llamada a paquetes no instalados.
 
-+ Actualice el código para quitar las referencias directas a las rutas de acceso de paquetes de R o bibliotecas de R. 
++ Actualice el código para quitar las referencias directas a las rutas de acceso de los paquetes de R o de las bibliotecas de R. 
 
-+ Saber qué biblioteca de paquetes está asociada a la instancia. Para obtener más información, consulte [paquetes predeterminada de R y Python en SQL Server](../package-management/default-packages.md).
++ Saber qué biblioteca de paquetes está asociada a la instancia. Para obtener más información, vea [paquetes de R y Python predeterminados en SQL Server](../package-management/default-packages.md).
 
 ## <a name="see-also"></a>Vea también
 

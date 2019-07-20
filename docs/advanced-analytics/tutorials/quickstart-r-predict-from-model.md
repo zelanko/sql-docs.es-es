@@ -1,31 +1,31 @@
 ---
-title: Inicio rápido para la predicción de modelo mediante R - SQL Server Machine Learning
-description: En este tutorial, obtenga información sobre la puntuación mediante un modelo creado previamente en los datos de R y SQL Server.
+title: Inicio rápido para predecir el modelo mediante R
+description: En esta guía de inicio rápido, obtendrá información sobre la puntuación mediante un modelo creado previamente en R y SQL Server datos.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961995"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345408"
 ---
-# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Inicio rápido: Predicción de modelo mediante R en SQL Server
+# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>Inicio rápido: Predicción del modelo mediante R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tutorial, use el modelo que creó en el tutorial anterior para puntuar predicciones basadas en datos actualizados. Para realizar _puntuación_ con nuevos datos, obtener uno de los modelos entrenados de la tabla y, a continuación, llamar a un nuevo conjunto de datos en el que se va a basar las predicciones. La puntuación es un término usado en ocasiones, ciencia de datos significa generar predicciones, las probabilidades u otros valores según los nuevos datos que se introducen en un modelo entrenado.
+En esta guía de inicio rápido, use el modelo que ha creado en la guía de inicio rápido anterior para puntuar las predicciones con datos nuevos. Para realizar la _puntuación_ con datos nuevos, obtenga uno de los modelos entrenados de la tabla y, a continuación, llame a un nuevo conjunto de datos en el que basar las predicciones. La puntuación es un término que a veces se usa en la ciencia de datos para hacer referencia a la generación de predicciones, probabilidades u otros valores basados en nuevos datos que se introducen en un modelo entrenado.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Este inicio rápido es una extensión de [crear un modelo predictivo](quickstart-r-create-predictive-model.md).
+Esta guía de inicio rápido es una extensión de [creación de un modelo predictivo](quickstart-r-create-predictive-model.md).
 
-## <a name="create-the-table-of-new-data"></a>Crear la tabla de datos nueva
+## <a name="create-the-table-of-new-data"></a>Crear la tabla de datos nuevos
 
-En primer lugar, cree una tabla con datos nuevos. 
+En primer lugar, cree una tabla con nuevos datos. 
 
 ```sql
 CREATE TABLE dbo.NewMTCars(
@@ -49,11 +49,11 @@ VALUES (120, 2.800)
 GO
 ```
 
-## <a name="predict-manual-transmission"></a>Predecir una transmisión manual
+## <a name="predict-manual-transmission"></a>Predicción de la transmisión manual
 
-En este momento, su `dbo.GLM_models` tabla puede contener varios modelos de R, todos creados con distintos parámetros o algoritmos o entrenado en distintos subconjuntos de datos.
+En este momento, `dbo.GLM_models` es posible que la tabla contenga varios modelos de R, todos ellos compilados con diferentes parámetros o algoritmos, o entrenado en distintos subconjuntos de datos.
 
-Para obtener predicciones basadas en un modelo específico, debe escribir un script SQL que hace lo siguiente:
+Para obtener las predicciones basadas en un modelo específico, debe escribir un script SQL que hace lo siguiente:
 
 1. Obtener el modelo que quiere
 2. Obtener los nuevos datos de entrada
@@ -81,7 +81,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
 ```
 
-El script anterior lleva a cabo los pasos siguientes:
+En el script anterior se realizan los pasos siguientes:
 
 + Use una instrucción SELECT para obtener un único modelo de la tabla y páselo como un parámetro de entrada.
 
@@ -89,21 +89,21 @@ El script anterior lleva a cabo los pasos siguientes:
 
 + Use la función `predict` con los argumentos adecuados para el modelo y proporcione los nuevos datos de entrada.
 
-+ En el ejemplo, el `str` se agrega la función durante la fase de pruebas para comprobar el esquema de datos que se devuelve desde R. Puede quitar la instrucción más tarde.
++ En el ejemplo, la `str` función se agrega durante la fase de prueba para comprobar el esquema de datos devuelto desde R. Puede quitar la instrucción más adelante.
 
-+ Los nombres de columna utilizados en el script de R no son necesariamente pasa a la salida del procedimiento almacenado. Aquí hemos usado la cláusula WITH RESULTS para definir algunos nuevos nombres de columna.
++ Los nombres de columna utilizados en el script de R no se pasan necesariamente a la salida del procedimiento almacenado. Aquí hemos usado la cláusula WITH RESULTs para definir algunos nombres de columna nuevos.
 
 **Resultado**
 
-![Conjunto de resultados para predecir properbility de transmisión manual](./media/r-predict-am-resultset.png)
+![Conjunto de resultados para predecir properbility de la transmisión manual](./media/r-predict-am-resultset.png)
 
-También es posible usar el [PREDICT de Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para generar un valor de predicción o la puntuación basada en un modelo almacenado.
+También es posible usar la predicción [en Transact-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) para generar un valor o una puntuación predichos basados en un modelo almacenado.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 La integración de R con SQL Server hace que sea más fácil implementar soluciones de R a escala (gracias a las mejores características de R y de las bases de datos relacionales) para controlar los datos de alto rendimiento y los análisis rápidos de R. 
 
-Continuar aprendiendo sobre las soluciones de uso de R con SQL Server a través de escenarios de extremo a otro creados por los equipos de desarrollo de ciencia de datos de Microsoft y R Services.
+Siga aprendiendo sobre soluciones que usan R con SQL Server a través de escenarios de un extremo a otro creados por los equipos de desarrollo de ciencia de datos de Microsoft y de R Services.
 
 > [!div class="nextstepaction"]
 > [Tutoriales de SQL Server R](sql-server-r-tutorials.md)

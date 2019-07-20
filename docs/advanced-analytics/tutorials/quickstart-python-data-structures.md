@@ -1,41 +1,41 @@
 ---
-title: 'Guía de inicio rápido para trabajar con estructuras de datos en Python: SQL Server Machine Learning'
-description: En este inicio rápido para script de Python en SQL Server, obtenga información sobre cómo usar las estructuras de datos con el procedimiento almacenado del sistema de sp_execute_external_script.
+title: Guía de inicio rápido para trabajar con estructuras de datos en Python
+description: En esta guía de inicio rápido para el script de Python en SQL Server, obtenga información sobre cómo usar estructuras de datos con el procedimiento almacenado del sistema sp_execute_external_script.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962088"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344563"
 ---
 # <a name="quickstart-python-data-structures-in-sql-server"></a>Inicio rápido: Estructuras de datos de Python en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este inicio rápido muestra cómo usar las estructuras de datos cuando se usa Python en SQL Server Machine Learning Services.
+En esta guía de inicio rápido se muestra cómo usar las estructuras de datos al usar Python en SQL Server Machine Learning Services.
 
-SQL Server se basa en la versión de Python **pandas** paquete, que resulta ideal para trabajar con datos tabulares. Sin embargo, no se puede pasar un valor escalar de Python para SQL Server y espera que "simplemente funcione". En este tutorial, revisaremos algunas definiciones de tipo de datos básicos para prepararse para problemas adicionales que podrían surgir cuando se pasan datos tabulares entre Python y SQL Server.
+SQL Server se basa en el paquete **pandas** de Python, que es ideal para trabajar con datos tabulares. Sin embargo, no puede pasar un valor escalar desde Python a SQL Server y esperar que funcione. En esta guía de inicio rápido, revisaremos algunas definiciones de tipos de datos básicas para prepararle problemas adicionales que podrían ocurrir al pasar datos tabulares entre Python y SQL Server.
 
-+ Una trama de datos es una tabla con _varios_ columnas.
-+ Una sola columna de una trama de datos es un objeto de lista como llama a una serie.
-+ Un valor único es una celda de una trama de datos y tiene que llamarse por índice.
++ Una trama de datos es una tabla con _varias_ columnas.
++ Una sola columna de una trama de bits es un objeto de tipo lista denominado serie.
++ Un valor único es una celda de una trama de datos y debe llamarse por índice.
 
-¿Cómo podría exponer el resultado de un cálculo como una trama de datos único si data.frame requiere una estructura tabular? Una respuesta que se va a representar el único valor escalar como una serie, que fácilmente se convierte en una trama de datos. 
+¿Cómo se expondría el resultado único de un cálculo como una trama de datos, si un Data. Frame requiere una estructura tabular? Una respuesta es representar el valor escalar único como una serie, que se convierte fácilmente en una trama de datos. 
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-Un tutorial anterior, [Python Compruebe que existe en SQL Server](quickstart-python-verify.md), proporciona información y vínculos para configurar el entorno de Python necesario para este inicio rápido.
+En una guía de inicio rápido anterior, [Compruebe que Python existe en SQL Server](quickstart-python-verify.md), proporciona información y vínculos para configurar el entorno de Python necesario para esta guía de inicio rápido.
 
 ## <a name="scalar-value-as-a-series"></a>Valor escalar como una serie
 
-En este ejemplo se hace un simple cálculo matemático y se convierte un valor escalar en una serie.
+Este ejemplo realiza algunas operaciones matemáticas simples y convierte un valor escalar en una serie.
 
-1. Una serie requiere un índice, que puede asignar manualmente, tal como se muestra a continuación, o mediante programación.
+1. Una serie requiere un índice, que puede asignar manualmente, como se muestra aquí, o mediante programación.
 
     ```sql
     execute sp_execute_external_script 
@@ -50,7 +50,7 @@ En este ejemplo se hace un simple cálculo matemático y se convierte un valor e
     '
     ```
 
-2. Dado que la serie no se ha convertido en un data.frame, se devuelven los valores en la ventana de mensajes, pero puede ver que los resultados están en formato tabular más.
+2. Dado que la serie no se ha convertido a Data. Frame, los valores se devuelven en la ventana mensajes, pero puede ver que los resultados se encuentran en un formato más tabular.
 
     **Resultado**
 
@@ -61,7 +61,7 @@ En este ejemplo se hace un simple cálculo matemático y se convierte un valor e
     dtype: float64
     ```
 
-3. Para aumentar la longitud de la serie, puede agregar nuevos valores utilizando una matriz. 
+3. Para aumentar la longitud de la serie, puede agregar nuevos valores mediante una matriz. 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +76,7 @@ En este ejemplo se hace un simple cálculo matemático y se convierte un valor e
     '
     ```
 
-    Si no especifica un índice, se genera un índice que tiene valores empezando por 0 y finalizando con la longitud de la matriz.
+    Si no especifica un índice, se genera un índice con valores que empiezan por 0 y terminan con la longitud de la matriz.
 
     **Resultado**
 
@@ -87,7 +87,7 @@ En este ejemplo se hace un simple cálculo matemático y se convierte un valor e
     dtype: float64
     ```
 
-4. Si aumenta el número de **índice** valores, pero no agregue nuevos **datos** valores, los valores de datos se repiten para rellenar la serie.
+4. Si aumenta el número de valores de **Índice** , pero no agrega nuevos valores de **datos** , los valores de datos se repiten para rellenar la serie.
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +111,11 @@ En este ejemplo se hace un simple cálculo matemático y se convierte un valor e
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>Convertir serie en la trama de datos
+## <a name="convert-series-to-data-frame"></a>Convertir series en tramas de datos
 
-Tener convertido nuestros resultados escalares matemáticas a una estructura tabular, necesitamos convertirlos a un formato que puede administrar SQL Server. 
+Después de convertir nuestros resultados matemáticos escalares en una estructura tabular, todavía necesitamos convertirlos a un formato que SQL Server pueda controlar. 
 
-1. Para convertir una serie en un data.frame, llame a la pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) método.
+1. Para convertir una serie en Data. Frame, llame al método pandas de [trama](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) de datos.
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +134,7 @@ Tener convertido nuestros resultados escalares matemáticas a una estructura tab
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. El resultado se muestra a continuación. Incluso si utiliza el índice para obtener los valores específicos de la trama de datos, los valores de índice no forman parte de la salida.
+2. El resultado se muestra a continuación. Incluso si usa el índice para obtener valores específicos de Data. Frame, los valores de índice no forman parte de la salida.
 
     **Resultado**
 
@@ -143,11 +143,11 @@ Tener convertido nuestros resultados escalares matemáticas a una estructura tab
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>Valores de salida en data.frame
+## <a name="output-values-into-dataframe"></a>Los valores de salida en Data. Frame
 
-Veamos cómo funciona la conversión a un data.frame con nuestros dos series que contiene los resultados de operaciones matemáticas sencillas. La primera tiene un índice de valores secuenciales generados por Python. El segundo usa un índice de valores de cadena arbitrario.
+Veamos cómo la conversión a Data. Frame funciona con nuestras dos series que contienen los resultados de operaciones matemáticas simples. El primero tiene un índice de valores secuenciales generados por Python. El segundo usa un índice arbitrario de valores de cadena.
 
-1. En este ejemplo se obtiene un valor de la serie que utiliza un índice entero.
+1. En este ejemplo se obtiene un valor de la serie que utiliza un índice de entero.
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +166,9 @@ Veamos cómo funciona la conversión a un data.frame con nuestros dos series que
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    Recuerde que el índice generado automáticamente comienza en 0. Pruebe a usar un valor fuera del intervalo índice y vea Qué sucede.
+    Recuerde que el índice generado automáticamente comienza en 0. Pruebe a usar un valor de índice fuera de intervalo y vea lo que sucede.
 
-2. Ahora vamos a obtener un único valor desde el marco de datos que tiene un índice de cadena. 
+2. Ahora, vamos a obtener un valor único de la otra trama de datos que tiene un índice de cadena. 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -196,7 +196,7 @@ Veamos cómo funciona la conversión a un data.frame con nuestros dos series que
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-A continuación, compilará un modelo predictivo con Python en SQL Server.
+A continuación, creará un modelo predictivo con Python en SQL Server.
 
 > [!div class="nextstepaction"]
 > [Crear, entrenar y usar un modelo de Python con procedimientos almacenados en SQL Server](quickstart-python-train-score-in-tsql.md)

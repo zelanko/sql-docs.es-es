@@ -1,41 +1,41 @@
 ---
-title: Exploración de datos y modelado de predicción con R - SQL Server Machine Learning Services
+title: Exploración de datos y modelado de predicción con R
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f83dc9fb698a57280f71e345f05e90ef3916bd95
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecf9015fcb8f28a37343267d32f8e63aeb667e38
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962672"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345648"
 ---
 # <a name="data-exploration-and-predictive-modeling-with-r-in-sql-server"></a>Exploración de datos y modelado de predicción con R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Este artículo describe las mejoras en el proceso de ciencia de datos que son posibles mediante la integración con SQL Server.
+En este artículo se describen las mejoras en el proceso de ciencia de datos que se pueden realizar a través de la integración con SQL Server.
 
-Se aplica a: SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
+Se aplica a: SQL Server 2016 R Services, SQL Server 2017 Machine aprendizaje Services
 
-## <a name="the-data-science-process"></a>El proceso de ciencia de datos
+## <a name="the-data-science-process"></a>Proceso de ciencia de datos
 
 Los científicos de datos suelen utilizar R para explorar datos y crear modelos de predicción. Habitualmente, esto consiste en un proceso iterativo de ensayo y error hasta que se logra un buen modelo de predicción. Como científico de datos experimentado, se podría conectar a la base de datos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y capturar los datos para su estación de trabajo local mediante el paquete RODBC, explorar los datos y crear un modelo de predicción mediante paquetes R estándares.
 
-Sin embargo, este enfoque tiene muchas desventajas, que tengan impedirse la adopción más amplia de R en la empresa. 
+Sin embargo, este enfoque tiene muchas desventajas, por lo que Hae impedimento la adopción más amplia de R en la empresa. 
 
-+ Movimiento de datos puede ser lento, ineficaz o no segura
-+ Propio R tiene limitaciones de rendimiento y escalabilidad
++ El movimiento de datos puede ser lento, ineficaz o inseguro
++ El propio R tiene limitaciones de rendimiento y escalado
 
-Estos inconvenientes resultan más evidentes cuando necesite mover y analizar grandes cantidades de datos o usar conjuntos de datos que no se ajustan a la memoria disponible en el equipo.
+Estas desventajas se hacen más evidentes cuando es necesario trasladar y analizar grandes cantidades de datos, o bien usar conjuntos de datos que no caben en la memoria disponible en el equipo.
 
-Los nuevos paquetes escalables y funciones de R incluidas con [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] le ayudarán a superar muchas de estas dificultades. 
+Los nuevos paquetes escalables y las funciones de R [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] que se incluyen con le ayudan a superar muchos de estos desafíos. 
 
-## <a name="whats-different-about-revoscaler"></a>¿Qué es diferente en RevoScaleR?
+## <a name="whats-different-about-revoscaler"></a>¿Qué diferencias hay entre RevoScaleR?
 
-El paquete **RevoScaleR** contiene implementaciones de algunas de las funciones de R más populares, que se han rediseñado para ofrecer paralelismo y escalabilidad. Para obtener más información, consulte [Distributed Computing con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
+El paquete **RevoScaleR** contiene implementaciones de algunas de las funciones de R más populares, que se han rediseñado para ofrecer paralelismo y escalabilidad. Para obtener más información, vea computación [distribuida mediante RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing).
 
 El paquete RevoScaleR también permite cambiar el *contexto de ejecución*. Esto significa que, para una solución completa o tan solo una función, puede indicar que los cálculos se deben llevar a cabo con los recursos del equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] , en lugar de su estación de trabajo local. Esto conlleva varias ventajas: evita los movimientos de datos innecesarios y puede aprovechar la mayor cantidad de recursos de cálculo del equipo del servidor.
 
@@ -45,7 +45,7 @@ El entorno de R admitido en [!INCLUDE[rsql_productname](../../includes/rsql-prod
 
 ### <a name="using-other-r-packages"></a>Uso de otros paquetes de R
 
-Además de las bibliotecas de R patentadas incluidas con Microsoft Machine Learning, puede usar casi todos los paquetes de R en la solución, incluidos:
+Además de las bibliotecas de R de propiedad incluidas con Microsoft Machine Learning, puede usar casi todos los paquetes de R de la solución, entre los que se incluyen:
 
 + Paquetes de R de propósito general de repositorios públicos. Puede conseguir los paquetes de R de código abierto más populares en repositorios públicos, como CRAN, que hospeda más de 6000 paquetes que pueden usar los científicos de datos.
   
@@ -59,33 +59,33 @@ Además de las bibliotecas de R patentadas incluidas con Microsoft Machine Learn
   
      El paquete **RevoPemaR** permite desarrollar en R sus propios algoritmos de ejecución en paralelo de memoria externa.  
   
-     Para obtener más información sobre estos paquetes y cómo usarlas, vea [What ' s RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) y [Introducción a RevoPemaR](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar). 
+     Para obtener más información sobre estos paquetes y cómo usarlos, vea [¿Qué es RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-revoscaler) e [Introducción a RevoPemaR](https://docs.microsoft.com/machine-learning-server/r/how-to-developer-pemar). 
 
-+ **MicrosoftML** contiene una colección de transformaciones de datos desde el equipo de ciencia de datos de Microsoft y algoritmos de aprendizaje automático altamente optimizada. Muchos de los algoritmos también se usan en Azure Machine Learning. Para obtener más información, consulte [MicrosoftML en SQL Server](ref-r-microsoftml.md).
++ **MicrosoftML** contiene una colección de algoritmos de aprendizaje automático y transformaciones de datos muy optimizados del equipo de ciencia de datos de Microsoft. Muchos de los algoritmos también se usan en Azure Machine Learning. Para obtener más información, consulte [MicrosoftML en SQL Server](ref-r-microsoftml.md).
 
 ### <a name="r-development-tools"></a>Herramientas de desarrollo en R
 
-Al desarrollar la solución de R, asegúrese de descargar a Microsoft R Client. Esta descarga gratuita incluye las bibliotecas necesarias para admitir contextos de cálculo remotos y alorithms escalable:
+Al desarrollar la solución de R, asegúrese de descargar Microsoft R Client. Esta descarga gratuita incluye las bibliotecas necesarias para admitir contextos de cálculo remotos y alorithms escalables:
 
-+ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Una distribución de tiempo de ejecución de R y un conjunto de paquetes, como la biblioteca central de matemáticas de Intel, que potencian el rendimiento de las operaciones de R estándar.  
++ **[!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)]:** Una distribución del tiempo de ejecución de R y un conjunto de paquetes, como la biblioteca de kernel Math de Intel, que aumentan el rendimiento de las operaciones de R estándar.  
   
-+ **RevoScaleR:** Un paquete de R que le permite insertar cálculos en una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] También incluye un conjunto de funciones de R habituales que se han rediseñado para ofrecer mejor rendimiento y escalabilidad. Puede identificar estas funciones mejoradas gracias al prefijo **rx** . También incluye proveedores de datos mejorados para una variedad de orígenes. Estas funciones tienen el prefijo **Rx**.
++ **RevoScaleR:** Un paquete de R que le permite enviar cálculos a una instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[rsql_rre-noversion](../../includes/rsql-rre-noversion-md.md)] También incluye un conjunto de funciones de R habituales que se han rediseñado para ofrecer mejor rendimiento y escalabilidad. Puede identificar estas funciones mejoradas gracias al prefijo **rx** . También incluye proveedores de datos mejorados para una variedad de orígenes. Estas funciones tienen el prefijo **Rx**.
 
-Se puede usar cualquier editor de código basado en Windows que admita R, como [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] o RStudio. La descarga de [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] también incluye herramientas de línea de comandos para R habituales, como RGui.exe.
+Puede usar cualquier editor de código basado en Windows que admita R, [!INCLUDE[rsql_rtvs](../../includes/rsql-rtvs-md.md)] como o RStudio. La descarga de [!INCLUDE[rsql_rro-noversion](../../includes/rsql-rro-noversion-md.md)] también incluye herramientas de línea de comandos para R habituales, como RGui.exe.
 
-## <a name="use-new-data-sources-and-compute-contexts"></a>Use nuevos orígenes de datos y contextos de cálculo
+## <a name="use-new-data-sources-and-compute-contexts"></a>Usar nuevos orígenes de datos y contextos de cálculo
 
-Cuando se usa el paquete RevoScaleR para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], busque estas funciones para usar en el código de R:
+Al usar el paquete RevoScaleR para conectarse a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], busque estas funciones que se van a usar en el código de R:
 
 + **RxSqlServerData** es una función incluida en el paquete RevoScaleR para facilitar una conectividad de datos con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
      Esta función se utiliza en el código en R para definir el *origen de datos*. El objeto de origen de datos especifica el servidor y las tablas donde se encuentran los datos y se ocupa de la tarea de leer y escribir datos en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   
--   El paquete **RxInSqlServer** se puede usar para especificar el *cálculo*.  Dicho de otro modo, puede indicar en qué lugar se debe ejecutar el código en R: en su estación de trabajo local o en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Para obtener más información, consulte [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler).
+-   El paquete **RxInSqlServer** se puede usar para especificar el *cálculo*.  Dicho de otro modo, puede indicar en qué lugar se debe ejecutar el código en R: en su estación de trabajo local o en el equipo que hospeda la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .  Para obtener más información, vea [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler).
   
      Al establecer el contexto de cálculo, este solo afecta a los cálculos compatibles con el contexto de ejecución remoto (es decir, las operaciones de R proporcionadas por el paquete RevoScaleR y funciones relacionadas). Normalmente, no se pueden ejecutar soluciones de R basadas en paquetes CRAN estándar en un contexto de cálculo remoto, aunque se pueden ejecutar en el equipo de [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] si las inicia T-SQL. Pero se puede usar la función `rxExec` para llamar a funciones individuales de R y ejecutarlas de forma remota en [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].
 
-Para obtener ejemplos de cómo crear y trabajar con orígenes de datos y contextos de ejecución, consulte estos tutoriales:
+Para ver ejemplos de cómo crear y trabajar con orígenes de datos y contextos de ejecución, consulte estos tutoriales:
 
 + [Análisis detallado de ciencia de datos](../../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)  
 +  [Análisis de datos con Microsoft R](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
@@ -96,10 +96,10 @@ Una parte importante de ciencia de datos consiste en proporcionar sus análisis 
 
 Para obtener más información sobre cómo puede trasladar el código para que se ejecute en [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], consulte [Operationalizing Your R Code](../../advanced-analytics/r/operationalizing-your-r-code.md).
 
-Por lo general, el proceso de implementación empieza por limpiar el script para eliminar los fragmentos de código que no se precisen en el entorno de producción. Conforme se desplaza al acercar los cálculos a los datos, podría encontrar maneras de forma más eficaz mover, resumir o presentar los datos que al hacerlo todo en R.  Se recomienda que consulte a los científicos de datos con un desarrollador de la base de datos sobre las formas de mejorar el rendimiento, especialmente si la solución realiza limpieza de datos o ingeniería de características que podrían ser más eficaces en SQL. Es posible que se necesiten cambios en los procesos ETL para garantizar que los flujos de trabajo destinados a generar o puntuar un modelo no produzcan errores, y que los datos de entrada estén disponibles en el formato correcto.
+Por lo general, el proceso de implementación empieza por limpiar el script para eliminar los fragmentos de código que no se precisen en el entorno de producción. A medida que mueve los cálculos más cerca de los datos, puede encontrar maneras de trasladar, resumir o presentar datos de forma más eficaz que hacer todo en R.  Se recomienda que el científico de datos Consulte con un desarrollador de bases de datos las formas de mejorar el rendimiento, especialmente si la solución realiza la limpieza de datos o la ingeniería de características que pueden ser más eficaces en SQL. Es posible que se necesiten cambios en los procesos ETL para garantizar que los flujos de trabajo destinados a generar o puntuar un modelo no produzcan errores, y que los datos de entrada estén disponibles en el formato correcto.
 
 ## <a name="see-also"></a>Vea también
 
-[Comparación de la Base de R y funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
+[Comparación de las funciones base R y RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler-compared-to-base-r)
 
 [Biblioteca de RevoScaleR en SQL Server](ref-r-revoscaler.md)

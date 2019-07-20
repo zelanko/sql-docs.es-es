@@ -1,32 +1,32 @@
 ---
-title: 'Usar R código de generación de perfiles de funciones: SQL Server Machine Learning Services'
-description: Mejorar el rendimiento y obtener resultados más rápidos en los cálculos de R en SQL Server mediante las funciones de generación de perfiles de R para devolver información sobre las llamadas de función interna.
+title: Usar las funciones de generación de perfiles de código de R
+description: Mejorar el rendimiento y obtener resultados más rápidos en los cálculos de R en SQL Server mediante el uso de funciones de generación de perfiles de R para devolver información acerca de las llamadas de función internas.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a68c19813b31164947f6d04a8c54c2a54eec34
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962367"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345692"
 ---
-# <a name="use-r-code-profiling-functions-to-improve-performance"></a>Usar funciones de generación de perfiles de código de R para mejorar el rendimiento
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>Uso de funciones de generación de perfiles de código de R para mejorar el rendimiento
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Además de usar herramientas y recursos de SQL Server para supervisar la ejecución de scripts de R, puede usar herramientas de rendimiento de otros paquetes de R para obtener más información sobre las llamadas de función interna. 
 
 > [!TIP]
-> Este artículo proporciona recursos básicos para ayudarle a comenzar. Para obtener orientación experta, se recomienda la *rendimiento* sección ["Advanced R" de Hadley Wickham](http://adv-r.had.co.nz).
+> En este artículo se proporcionan recursos básicos para comenzar. Para obtener instrucciones de expertos, se recomienda la sección de *rendimiento* en ["Advanced R" de Hadley Wickham](http://adv-r.had.co.nz).
 
 ## <a name="using-rprof"></a>Uso de RPROF
 
-[*rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) es una función incluida en el paquete base [ **utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), que se cargan de forma predeterminada. 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof) es una función incluida en el paquete base [**utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1), que se carga de forma predeterminada. 
 
-Por lo general, la función *rprof* escribe la pila de llamadas en un archivo, a intervalos especificados. A continuación, puede usar el [ *summaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) función para procesar el archivo de salida. Una ventaja de *rprof* es que realiza el muestreo, lo que, por tanto, disminuye la carga de rendimiento de la supervisión.
+Por lo general, la función *rprof* escribe la pila de llamadas en un archivo, a intervalos especificados. Después, puede usar la función [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof) para procesar el archivo de salida. Una ventaja de *rprof* es que realiza el muestreo, lo que, por tanto, disminuye la carga de rendimiento de la supervisión.
 
 Para usar la generación de perfiles de R en el código, llame a esta función y especifique sus parámetros, incluido el nombre de la ubicación del archivo de registro que se va a escribir. La generación de perfiles se puede activar y desactivar en el código. La sintaxis siguiente muestra el uso básico: 
 
@@ -58,9 +58,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>Depuración y generación de perfiles de R
 
-La documentación de Microsoft R Open, que se instala de forma predeterminada, incluye un manual sobre el desarrollo de extensiones para el lenguaje R que analiza [de generación de perfiles y depuración](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) en detalle. Puede encontrar la documentación del misma en el equipo en C:\Program Files\Microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\doc\manual.
+La documentación de Microsoft R Open, que se instala de forma predeterminada, incluye un manual sobre el desarrollo de extensiones para el lenguaje R que describe detalladamente la [generación de perfiles y](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging) la depuración. Puede encontrar la misma documentación en el equipo en C:\Archivos de Programa\microsoft SQL Server\MSSQL13. MSSQLSERVER\R_SERVICES\doc\manual.
 
 ## <a name="see-also"></a>Vea también
 
-+ [paquete de R utils](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ ["Advanced R" de Hadley Wickham](http://adv-r.had.co.nz)
++ [paquete de utils R](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
++ ["Advanced R" por Hadley Wickham](http://adv-r.had.co.nz)

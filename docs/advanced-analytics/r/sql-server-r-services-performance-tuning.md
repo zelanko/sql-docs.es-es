@@ -1,99 +1,99 @@
 ---
-title: SQL Server R Services Performance Tuning - SQL Server Machine Learning Services
+title: Optimización del rendimiento de SQL Server R Services
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: bb3f48a9a25b12568497c3583536d8c650a6f702
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 49b96bf2c3381f3b0d44ba0b0192fbe0c0df4a2f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962432"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344855"
 ---
 # <a name="performance-tuning-for-r-in-sql-server"></a>Optimización del rendimiento de R en SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo es el primero de una serie de cuatro artículos que describen la optimización de rendimiento para servicios de R, basado en dos casos prácticos:
+Este artículo es el primero de una serie de cuatro artículos que describen la optimización del rendimiento de R Services, en función de dos casos prácticos:
 
-- Pruebas de rendimiento realizadas por el equipo de desarrollo de productos para validar el perfil de rendimiento de las soluciones de R
+- Pruebas de rendimiento realizadas por el equipo de desarrollo del producto para validar el perfil de rendimiento de las soluciones de R
 
-- Optimización del rendimiento por el equipo de ciencia de datos de Microsoft para un escenario de aprendizaje automático específico frecuentemente solicitado por los clientes.
+- Optimización del rendimiento por parte del equipo de ciencia de datos de Microsoft para un escenario específico de aprendizaje automático solicitado por los clientes.
 
-El objetivo de esta serie es ofrecer orientación sobre los tipos de técnicas que son muy útiles para ejecutar trabajos de R en SQL Server de optimización del rendimiento.
+El objetivo de esta serie es proporcionar instrucciones sobre los tipos de técnicas de optimización del rendimiento que son más útiles para ejecutar trabajos de R en SQL Server.
 
-+ En este tema (primera) proporciona información general de la arquitectura y algunos problemas comunes para optimizar las tareas de ciencia de datos.
-+ El segundo artículo cubre el hardware específico y las optimizaciones de SQL Server.
-+ El tercer artículo abarca las optimizaciones de código de R y recursos de operacionalización.
-+ El cuarto artículo describe los métodos de prueba en detalle y resultados de informes y conclusiones.
++ En este tema (primero) se proporciona información general sobre la arquitectura y algunos problemas comunes al optimizar las tareas de ciencia de datos.
++ En el segundo artículo se tratan las optimizaciones de hardware y SQL Server específicas.
++ En el tercer artículo se tratan las optimizaciones del código R y los recursos para la operacionalización.
++ En el cuarto artículo se describen los métodos de prueba en detalle y se notifican los hallazgos y las conclusiones.
 
 **Se aplica a:** SQL Server 2016 R Services, SQL Server 2017 Machine Learning Services
 
-## <a name="performance-goals-and-targeted-scenarios"></a>Objetivos de rendimiento y los escenarios de destino
+## <a name="performance-goals-and-targeted-scenarios"></a>Objetivos de rendimiento y escenarios de destino
 
-La característica R Services se introdujo en SQL Server 2016 para admitir la ejecución de scripts de R con SQL Server. Al usar esta característica, el runtime de R funciona en un proceso independiente desde el motor de base de datos, pero intercambia datos de forma segura con el motor de base de datos, utilizando los recursos del servidor y los servicios que interactúan con SQL Server, como Trusted Launchpad.
+La característica R Services se presentó en SQL Server 2016 para admitir la ejecución de scripts de R mediante SQL Server. Cuando se usa esta característica, el tiempo de ejecución de R funciona en un proceso independiente del motor de base de datos, pero intercambia los datos de forma segura con el motor de base de datos, usando los recursos del servidor y los servicios que interactúan con SQL Server, como el Launchpad de confianza.
 
-En SQL Server 2017, se anunció la compatibilidad para ejecutar scripts de Python con la misma arquitectura, lenguaje adicional para seguir en el futuro.
+En SQL Server 2017, se anunció la compatibilidad para ejecutar scripts de Python con la misma arquitectura, con un lenguaje adicional que seguir en el futuro.
 
-A medida que crece el número de versiones y de idioma, es importante que el Administrador de base de datos y el arquitecto de base de datos sean conscientes de las posibilidades de contención de recursos debido a trabajos de machine learning, y que se les permite configurar el servidor para admitir las cargas de trabajo nueva. Aunque mantener análisis cerca de los datos elimina los movimientos de datos no seguro, también se mueve las cargas de trabajo analíticos desactivar el equipo portátil de los científicos de datos y vuelva a iniciarla en el servidor que hospeda los datos.
+A medida que crece el número de versiones admitidas y el idioma, es importante que el administrador de la base de datos y el arquitecto de la base de datos conozcan el potencial de contención de recursos debido a trabajos de aprendizaje automático, y que puedan configurar el servidor para que admita las nuevas cargas de trabajo. Aunque mantener el análisis cerca de los datos elimina los movimientos de datos inseguros, también mueve las cargas de trabajo analíticas fuera del equipo portátil del científico de datos y vuelve al servidor que hospeda los datos.
 
-Optimización del rendimiento para el aprendizaje automático no es claramente una propuesta única. Las siguientes tareas comunes que tenga los perfiles de rendimiento muy diferentes:
+La optimización del rendimiento del aprendizaje automático no es claramente una propuesta de un solo tamaño. Las siguientes tareas comunes pueden tener perfiles de rendimiento muy diferentes:
 
-- Tareas de aprendizaje: crear y entrenar un modelo de regresión frente a entrenar una red neuronal
-- Diseño de características con R frente a la extracción de características con Transact-SQL
-- Puntuación en filas individuales o en lotes pequeños, frente a masiva con entradas de tabla de puntuación
-- Ejecución de R de puntuación frente a implementación de modelos en producción en SQL Server en los procedimientos almacenados
-- Modificar el código de R para minimizar la transferencia de datos o quitar las transformaciones de datos costosos
-- Habilitar pruebas automatizadas y reciclaje de modelos
+- Tareas de entrenamiento: crear y entrenar un modelo de regresión frente a entrenar una red neuronal
+- Ingeniería de características con R frente a la extracción de características mediante T-SQL
+- Puntuación en filas individuales o lotes pequeños, frente a puntuación masiva mediante entradas tabulares
+- Ejecutar la puntuación en R frente a la implementación de modelos en producción en SQL Server en procedimientos almacenados
+- Modificación del código de R para minimizar la transferencia de datos o quitar las transformaciones de datos costosas
+- Habilitar las pruebas automatizadas y el reciclaje de los modelos
 
-Dado que la elección de técnicas de optimización depende de la tarea que es crítica para la aplicación o el caso de uso, los casos prácticos cubrir tanto sugerencias generales de rendimiento e instrucciones sobre cómo optimizar un escenario concreto, la optimización de puntuación por lotes.
+Dado que la elección de las técnicas de optimización depende de qué tarea es crítica para su aplicación o caso de uso, los casos prácticos cubren sugerencias de rendimiento generales e instrucciones sobre cómo optimizar para un escenario concreto, la optimización de la puntuación por lotes.
 
-+ **Opciones de optimización individual en SQL Server**
++ **Opciones de optimización individuales en SQL Server**
 
-    En el primer caso práctico de rendimiento, varias pruebas se ejecutaron en un único conjunto de datos mediante un único tipo de modelo. El algoritmo rxLinMod en RevoscaleR se usó para crear un modelo y crear puntuaciones a partir de él, pero el código, así como las tablas de datos subyacentes se modificaron sistemáticamente para probar el impacto de cada cambio.
+    En el primer caso práctico de rendimiento, se ejecutaron varias pruebas en un único conjunto de resultados con un solo tipo de modelo. El algoritmo rxLinMod de RevoscaleR se usó para generar un modelo y crear puntuaciones a partir de él, pero el código, así como las tablas de datos subyacentes, se modificaron sistemáticamente para probar el impacto de cada cambio.
 
-    Por ejemplo, en una serie de pruebas, el código de R se modificó para que se pudo establecer una comparación entre el diseño de características con una función de transformación frente a calcular previamente las características y, a continuación, cargar las características de una tabla. En otra serie de pruebas, se comparó el rendimiento de entrenamiento del modelo entre el uso de una tabla con índice estándar frente a datos en una tabla con distintos tipos de compresión o nuevos tipos de índice.
+    Por ejemplo, en una ejecución de pruebas, se modificó el código de R para que se pueda realizar una comparación entre la ingeniería de características mediante una función de transformación en lugar de realizar un cálculo previo de las características y, a continuación, cargar características desde una tabla. En otra serie de pruebas, el rendimiento del entrenamiento del modelo se comparaba entre el uso de una tabla indizada estándar frente a los datos de una tabla con varios tipos de compresión o nuevos tipos de índices.
 
-+ **Optimización para un escenario concreto de puntuación de gran volumen**
++ **Optimización para un escenario específico de puntuación de gran volumen**
 
-    La tarea de aprendizaje automático en el segundo caso práctico implica el procesamiento de currículos muchos enviado para varios puestos y encontrar a los mejores candidatos para cada puesto de trabajo. El propio modelo de aprendizaje automático se formula como un problema de clasificación binaria: toma una descripción resume y trabajo como entrada y genera la probabilidad de cada par resume-job. Dado que el objetivo es encontrar la mejor coincidencia, se usa un umbral de probabilidad definidas por el usuario para filtrar aún más y obtener a las concordancias de buena.
+    La tarea de aprendizaje automático en el segundo caso práctico implica el procesamiento de muchos currículos enviados para varias posiciones y la búsqueda del mejor candidato para cada puesto de trabajo. El propio modelo de aprendizaje automático se formula como un problema de clasificación binaria: toma una descripción de resume y Job como entrada y genera la probabilidad de cada par de resume-Job. Dado que el objetivo es encontrar la mejor coincidencia, se usa un umbral de probabilidad definido por el usuario para filtrar y obtener solo las buenas coincidencias.
 
-    Para esta solución, el principal objetivo era obtener una baja latencia durante la puntuación. Sin embargo, esta tarea es costosa, incluso durante el proceso de puntuación, porque cada nuevo trabajo debe coincidir con millones de currículos dentro de un período de tiempo razonable. Además, el paso de ingeniería de características produce más de 2000 funciones por trabajo o reanudar y es un cuello de botella de rendimiento significativas.
+    Para esta solución, el objetivo principal era lograr una baja latencia durante la puntuación. Sin embargo, esta tarea es costosa incluso durante el proceso de puntuación, ya que cada nuevo trabajo debe coincidir con millones de currículos dentro de un período de tiempo razonable. Además, el paso de ingeniería de características produce más de 2000 características por reanudación o trabajo, y tiene un cuello de botella significativo en el rendimiento.
 
-Se recomienda que revise todos los resultados desde el primer caso práctico para determinar qué técnicas son aplicables a la solución y sopesar su impacto potencial.
+Le recomendamos que revise todos los resultados del primer caso práctico para determinar las técnicas que se aplican a la solución y sopese su impacto potencial.
 
-A continuación, revise los resultados de la puntuación de optimización caso práctico para ver cómo el autor aplica técnicas diferentes y optimizado para el servidor para admitir una carga de trabajo determinado.
+A continuación, revise los resultados del caso práctico de optimización de puntuación para ver cómo el autor aplicó distintas técnicas y optimizó el servidor para admitir una carga de trabajo determinada.
 
 ## <a name="performance-optimization-process"></a>Proceso de optimización del rendimiento
 
-Configuración y ajuste del rendimiento requiere la creación de una base sólida, en el que las optimizaciones de capa diseñadas para cargas de trabajo específicas:
+La configuración y la optimización del rendimiento requieren la creación de una base sólida, en la que las optimizaciones de capas están diseñadas para cargas de trabajo específicas:
 
-- Elija un servidor apropiado para el análisis de host. Normalmente, un informe secundario, almacenamiento de datos u otro servidor que ya se usa en otros informes o análisis es preferido. Sin embargo, en una solución de procesamiento transaccional analítico (HTAP) híbrida, los datos operativos pueden utilizarse como entrada de R para puntuar rápida.
+- Elija un servidor adecuado para hospedar análisis. Normalmente, se prefiere un almacén de datos secundario de informes, un almacenamiento de datos u otro servidor que ya se usa para otros informes o análisis. Sin embargo, en una solución híbrida de procesamiento analítico de transacciones (HTAP), los datos operativos se pueden usar como entrada de R para una puntuación rápida.
 
-- Configurar la instancia de SQL Server para las operaciones del motor de base de datos de saldo y R o en los niveles adecuados de la ejecución del script de Python. Esto puede incluir el cambio de los valores predeterminados de SQL Server de memoria y uso de CPU, NUMA y configuración de afinidad de procesador y la creación de grupos de recursos.
+- Configure la instancia de SQL Server para equilibrar las operaciones del motor de base de datos y la ejecución del script de R o Python en los niveles adecuados. Esto puede incluir cambiar SQL Server valores predeterminados para la memoria y el uso de CPU, la configuración de la afinidad de NUMA y del procesador, y la creación de grupos de recursos.
 
-- Optimizar el equipo del servidor para admitir un uso eficaz de scripts externos. Esto puede incluir el aumento del número de cuentas que se usan para la ejecución de scripts externos, habilitar la administración de paquetes, y relacionados con la asignación de usuarios a roles de seguridad.
+- Optimice el equipo servidor para admitir el uso eficaz de los scripts externos. Esto puede incluir el aumento del número de cuentas usadas para la ejecución de scripts externos, la habilitación de la administración de paquetes y la asignación de usuarios a roles de seguridad relacionados.
 
-- Aplicar optimizaciones específicas para el almacenamiento de datos y la transferencia en SQL Server, incluida la indexación y las estrategias de estadísticas, diseño de la consulta y la optimización de consultas y el diseño de tablas que se usan para el aprendizaje automático. También puede analizar orígenes de datos y datos de los métodos de transporte o modificar los procesos ETL para optimizar la extracción de características.
+- Aplicar optimizaciones específicas para el almacenamiento de datos y la transferencia en SQL Server, incluidas las estrategias de indexación y estadísticas, el diseño de consultas y la optimización de consultas, y el diseño de las tablas que se usan para el aprendizaje automático. También puede analizar los orígenes de datos y los métodos de transporte de datos, o modificar los procesos ETL para optimizar la extracción de características.
 
-- Optimizar el modelo analítico para evitar deficiencias. El ámbito de las optimizaciones que son posibles dependen de la complejidad de su código de R y los paquetes y los datos que se utiliza. Tareas clave incluyen la eliminación de transformaciones de datos costosos o descargar datos preparación o característica ingeniería las tareas de R o Python para procesos ETL o SQL. También podría refactorizar las secuencias de comandos, eliminar instalaciones de paquetes en línea, divida el código de R en procedimientos independientes para el entrenamiento, puntuación y evaluación o simplificar el código para que funcione de forma más eficaz como un procedimiento almacenado.
+- Ajuste el modelo analítico para evitar ineficiencias. El ámbito de las optimizaciones que son posibles depende de la complejidad del código de R y de los paquetes y datos que se usan. Las tareas clave incluyen la eliminación de las transformaciones de datos costosas o la descarga de la preparación de datos o las tareas de ingeniería de características de R o Python a procesos ETL o SQL. También puede refactorizar scripts, eliminar instalaciones de paquetes en línea, dividir código R en procedimientos independientes de entrenamiento, puntuación y evaluación, o simplificar el código para que funcione de forma más eficaz como un procedimiento almacenado.
 
 ## <a name="articles-in-this-series"></a>Artículos de esta serie
 
-+ [Optimización del rendimiento de R en SQL Server: hardware](../r/sql-server-configuration-r-services.md)
++ [Optimización del rendimiento de R en SQL Server-hardware](../r/sql-server-configuration-r-services.md)
 
-    Proporciona instrucciones para configurar el hardware que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está instalado en y para configurar la instancia de SQL Server para admitir mejor los scripts externos. Resulta especialmente útil para **los administradores de base de datos**.
+    Proporciona instrucciones para configurar el hardware que [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] está instalado en y para configurar la instancia de SQL Server con el fin de mejorar la compatibilidad con scripts externos. Es especialmente útil para **los administradores de bases de datos**.
 
-+ [Optimización del rendimiento de R en SQL Server - código y datos de optimización](../r/r-and-data-optimization-r-services.md)
++ [Optimización del rendimiento de R en SQL Server: código y optimización de datos](../r/r-and-data-optimization-r-services.md)
 
-    Proporciona sugerencias específicas sobre cómo optimizar la secuencia de comandos externo para evitar problemas conocidos. Es muy útil para **científicos de datos**.
+    Proporciona sugerencias específicas sobre cómo optimizar el script externo para evitar problemas conocidos. Es más útil para los **científicos de datos**.
 
     > [!NOTE]
-    > Aunque gran parte de la información de esta sección se aplica a R en general, algunos información es específica para las funciones analíticas de RevoScaleR. Guía de rendimiento detallado no está disponible para **revoscalepy** y otros admitidos de bibliotecas de Python.
+    > Aunque gran parte de la información de esta sección se aplica a R en general, parte de la información es específica de las funciones analíticas de RevoScaleR. Las instrucciones detalladas de rendimiento no están disponibles para **revoscalepy** y otras bibliotecas de Python compatibles.
     >
 
-+ [Optimización del rendimiento de R en SQL Server: métodos y los resultados](../r/performance-case-study-r-services.md)
++ [Optimización del rendimiento de R en SQL Server-métodos y resultados](../r/performance-case-study-r-services.md)
 
-    Resume los datos que se usó los dos casos prácticos, cómo se ha probado el rendimiento y cómo las optimizaciones afectan los resultados.
+    Resume los datos que se usaron en los dos casos prácticos, cómo se probó el rendimiento y cómo afectan a las optimizaciones.

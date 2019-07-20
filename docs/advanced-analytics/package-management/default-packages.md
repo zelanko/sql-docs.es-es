@@ -1,6 +1,6 @@
 ---
-title: Obtener información de paquete de R y Python - SQL Server Machine Learning Services
-description: Determinar la versión del paquete de R y Python, comprobar la instalación y obtener una lista de paquetes instalados en SQL Server R Services o Machine Learning Services.
+title: Obtener información de paquetes de R y Python
+description: Determinar la versión del paquete de R y Python, comprobar la instalación y obtener una lista de los paquetes instalados en SQL Server R Services o Machine Learning Services.
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 961d55237af75c0ef169332068c91e7d2341a542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962788"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343419"
 ---
-#  <a name="get-r-and-python-package-information"></a>Obtener información de paquete de R y Python
+#  <a name="get-r-and-python-package-information"></a>Obtener información de paquetes de R y Python
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-A veces, cuando se trabaja con varios entornos o las instalaciones de R o Python, debe comprobar que el código que se está ejecutando es usar el entorno esperado de Python o el área de trabajo correcta para R. Por ejemplo, si tiene [actualizado R o Python](../install/upgrade-r-and-python.md), podría ser la ruta de acceso a la biblioteca de R en una carpeta diferente que el valor predeterminado. Además, si instala R Client o una instancia de servidor independiente, podría tener varias bibliotecas de R en el equipo.
+A veces, al trabajar con varios entornos o instalaciones de R o Python, debe comprobar que el código que está ejecutando usa el entorno esperado para Python o el área de trabajo correcta para R. Por ejemplo, si ha [actualizado R o Python](../install/upgrade-r-and-python.md), la ruta de acceso a la biblioteca de r podría estar en una carpeta distinta a la predeterminada. Además, si instala R Client o una instancia del servidor independiente, es posible que tenga varias bibliotecas de R en el equipo.
 
-Ejemplos de script de R y Python en este artículo muestran cómo obtener la ruta de acceso y la versión de los paquetes utilizados por SQL Server.
+Los ejemplos de scripts de R y Python de este artículo muestran cómo obtener la ruta de acceso y la versión de los paquetes usados por SQL Server.
 
 ## <a name="get-the-r-library-location"></a>Obtener la ubicación de la biblioteca de R
 
-Para cualquier versión de SQL Server, ejecute la siguiente instrucción para comprobar que la biblioteca de paquetes de R predeterminada para la instancia actual:
+Para cualquier versión de SQL Server, ejecute la siguiente instrucción para comprobar la biblioteca de paquetes de R predeterminada para la instancia actual:
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +34,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-Si lo desea, puede usar [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) en las versiones más recientes de RevoScaleR en Machine Learning Services de SQL Server 2017 o [R Services actualizado R para al menos RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de la instancia y la versión de RevoScaleR utilizado por SQL Server:
+Opcionalmente, puede usar [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) en las versiones más recientes de RevoScaleR en SQL Server 2017 Machine Learning Services o [r Services actualizó r al menos RevoScaleR 9.0.1](../install/upgrade-r-and-python.md). Este procedimiento almacenado devuelve la ruta de acceso de la biblioteca de instancias y la versión de RevoScaleR que usa SQL Server:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -47,7 +47,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> El [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) función se puede ejecutar solo en el equipo local. La función no puede devolver las rutas de acceso de biblioteca para las conexiones remotas.
+> La función [rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) solo se puede ejecutar en el equipo local. La función no puede devolver las rutas de acceso de la biblioteca para las conexiones remotas.
 
 **Resultado**
 
@@ -59,7 +59,7 @@ STDOUT message(s) from external script:
 
 ## <a name="get-the-python-library-location"></a>Obtener la ubicación de la biblioteca de Python
 
-Para **Python** en SQL Server 2017, ejecute la siguiente instrucción para comprobar que la biblioteca predeterminada para la instancia actual. En este ejemplo devuelve la lista de carpetas incluidas en la versión de Python `sys.path` variable. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
+Para **Python** en SQL Server 2017, ejecute la siguiente instrucción para comprobar la biblioteca predeterminada de la instancia actual. En este ejemplo se devuelve la lista de carpetas incluida en `sys.path` la variable de Python. La lista incluye el directorio actual y la ruta de acceso de la biblioteca estándar.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -82,15 +82,15 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-Para obtener más información acerca de la variable `sys.path` y cómo se usa para establecer la ruta de búsqueda del intérprete de módulos, vea el [documentación de Python](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+Para obtener más información sobre la `sys.path` variable y cómo se usa para establecer la ruta de acceso de búsqueda del intérprete para los módulos, consulte la [documentación de Python](https://docs.python.org/2/tutorial/modules.html#the-module-search-path) .
 
 ## <a name="list-all-packages"></a>Enumerar todos los paquetes
 
-Hay varias formas que puede obtener una lista completa de los paquetes instalados actualmente. Una ventaja de ejecutar comandos de la lista de paquetes desde sp_execute_external_script es que se garantiza que para obtener los paquetes instalados en la biblioteca de la instancia.
+Hay varias maneras de obtener una lista completa de los paquetes instalados actualmente. Una ventaja de ejecutar comandos de lista de paquetes desde sp_execute_external_script es que se garantiza que los paquetes se instalan en la biblioteca de instancias.
 
 ### <a name="r"></a>R
 
-En el ejemplo siguiente se usa la función de R `installed.packages()` en un [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimiento almacenado para obtener una matriz de los paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Este script devuelve los campos de nombre y la versión del paquete en el archivo de descripción, se devuelve solo el nombre.
+En el ejemplo siguiente se usa la `installed.packages()` función de [!INCLUDE[tsql](../../includes/tsql-md.md)] R en un procedimiento almacenado para obtener una matriz de paquetes que se han instalado en la biblioteca R_SERVICES para la instancia actual. Este script devuelve los campos de nombre y versión del paquete en el archivo de descripción, solo se devuelve el nombre.
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-Para obtener más información sobre el elemento opcional y los campos predeterminados para el campo de descripción del paquete de R, consulte [ https://cran.r-project.org ](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file).
+Para obtener más información acerca de los campos opcionales y predeterminados para el campo de [https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)Descripción del paquete de R, vea.
 
 ### <a name="python"></a>Python
 
-El `pip` módulo se instala de forma predeterminada y es compatible con muchas operaciones para los paquetes de anuncio instalado, además de los admitidos por el estándar de Python. Puede ejecutar `pip` desde un Python símbolo del sistema, por supuesto, pero también puede llamar a algunas funciones de pip de `sp_execute_external_script`.
+El `pip` módulo se instala de manera predeterminada y admite muchas operaciones para enumerar los paquetes instalados, además de los admitidos por Python estándar. Puede ejecutar `pip` desde un símbolo del sistema de Python, por supuesto, pero también puede llamar a algunas funciones de `sp_execute_external_script`PIP desde.
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -124,15 +124,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
-Cuando se ejecuta `pip` desde la línea de comandos, existen otras muchas funciones útiles: `pip list` Obtiene todos los paquetes que están instalados, mientras que `pip freeze` enumera los paquetes instalados por `pip`y no se muestran los paquetes de pip de sí mismo depende. También puede usar `pip freeze` para generar un archivo de dependencia.
+Cuando se `pip` ejecuta desde la línea de comandos, hay muchas otras funciones útiles `pip list` : obtiene todos los paquetes que se instalan, mientras que `pip freeze` enumera `pip`los paquetes instalados por y no muestra los paquetes que se encuentran en el propio PIP. depende de. También puede usar `pip freeze` para generar un archivo de dependencia.
 
 ## <a name="find-a-single-package"></a>Buscar un único paquete
 
-Si ha instalado un paquete y desea asegurarse de que está disponible para una determinada instancia de SQL Server, puede ejecutar la siguiente llamada de procedimiento almacenado para cargar el paquete y devolver solo los mensajes.
+Si ha instalado un paquete y desea asegurarse de que está disponible para una instancia de SQL Server determinada, puede ejecutar la siguiente llamada al procedimiento almacenado para cargar el paquete y devolver solo los mensajes.
 
 ### <a name="r"></a>R
 
-En este ejemplo se busca y carga la biblioteca de RevoScaleR, si está disponible.
+En este ejemplo se busca y se carga la biblioteca RevoScaleR, si está disponible.
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -141,13 +141,13 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ Si se encuentra el paquete, se devuelve un mensaje: "Comandos completados correctamente."
++ Si se encuentra el paquete, se devuelve un mensaje: "Comandos completados correctamente".
 
-+ Si el paquete no se encuentra o se ha cargado, se produce un error que contiene el texto: "no hay ningún paquete llamado 'MissingPackageName'"
++ Si no se puede encontrar o cargar el paquete, obtendrá un error que contiene el texto: "no hay ningún paquete llamado ' MissingPackageName '"
 
 ### <a name="python"></a>Python
 
-La comprobación equivalente para Python se puede realizar desde la versión de Python de shell, mediante `conda` o `pip` comandos. Como alternativa, puede ejecutar esta instrucción en un procedimiento almacenado:
+La comprobación equivalente de Python se puede realizar desde el shell de Python, `conda` mediante `pip` los comandos o. Como alternativa, ejecute esta instrucción en un procedimiento almacenado:
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,9 +163,9 @@ EXECUTE sp_execute_external_script
 
 <a name="get-package-vers"></a>
 
-## <a name="get-package-version"></a>Obtener la versión del paquete
+## <a name="get-package-version"></a>Obtener versión del paquete
 
-Puede obtener R y Python empaquetar información de versión con Management Studio.
+Puede obtener información de versión del paquete de R y Python mediante Management Studio.
 
 ### <a name="r-package-version"></a>Versión del paquete de R
 

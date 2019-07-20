@@ -1,29 +1,29 @@
 ---
-title: 'Transformar datos mediante rxDataStep RevoScaleR: SQL Server Machine Learning'
-description: Tutorial del tutorial sobre cómo transformar datos mediante el lenguaje R en SQL Server.
+title: Transformar datos con RevoScaleR rxDataStep
+description: Tutorial tutorial sobre cómo transformar datos con el lenguaje R en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0da478798e87497da7828126b2168bbae5d980f7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c7d88137994cf5d920462cc4942eb5b632ae3d6e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962177"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344680"
 ---
-# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformar datos mediante R (tutorial de SQL Server y RevoScaleR)
+# <a name="transform-data-using-r-sql-server-and-revoscaler-tutorial"></a>Transformación de datos mediante R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En esta lección forma parte de la [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [las funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-En esta lección, conocerá el **RevoScaleR** funciones para transformar los datos en distintas fases del análisis.
+En esta lección, obtendrá información sobre las funciones de **RevoScaleR** para transformar datos en varias fases del análisis.
 
 > [!div class="checklist"]
-> * Use **rxDataStep** para crear y transformar un subconjunto de datos
-> * Use **rxImport** para transformar los datos en tránsito hacia o desde un archivo XDF o una trama de datos en memoria durante la importación
+> * Usar **rxDataStep** para crear y transformar un subconjunto de datos
+> * Usar **rxImport** para transformar datos en tránsito hacia o desde un archivo XDF o una trama de datos en memoria durante la importación
 
 Aunque no son específicas para el movimiento de datos, las funciones **rxSummary**, **rxCube**, **rxLinMod**y **rxLogit** admiten transformaciones de datos.
 
@@ -31,26 +31,26 @@ Aunque no son específicas para el movimiento de datos, las funciones **rxSummar
 
 La función [rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep) procesa un fragmento de datos cada vez. Para ello, lo lee en un origen de datos y lo escribe en otro. Puede especificar las columnas que se van a transformar, las transformaciones que se van a cargar, etc.
 
-Para que este ejemplo sea interesante, vamos a usar una función de otro paquete de R para transformar los datos. El paquete **boot** es uno de los paquetes "recomendados", lo que significa que **boot** se incluye con todas las distribuciones de R, pero no se carga automáticamente en el inicio. Por lo tanto, el paquete ya debe estar disponible en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instancia configurada para la integración de R.
+Para que este ejemplo sea interesante, vamos a usar una función de otro paquete de R para transformar los datos. El paquete **boot** es uno de los paquetes "recomendados", lo que significa que **boot** se incluye con todas las distribuciones de R, pero no se carga automáticamente en el inicio. Por lo tanto, el paquete ya debe estar disponible [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en la instancia configurada para la integración de R.
 
-Desde el **arranque** del paquete, utilice la función **inv.logit**, que calcula el inverso de una función logit. Es decir, la función **inv.logit** convierte una función logit a una probabilidad en la escala [0,1].
+En el paquete de **arranque** , use la función **inv. función logit**, que calcula el inverso de un función logit. Es decir, la función **inv.logit** convierte una función logit a una probabilidad en la escala [0,1].
 
 > [!TIP] 
 > Otra manera de obtener predicciones en esta escala sería establecer el parámetro *type* en **response** en la llamada original a **rxPredict**.
 
-1. Empiece por crear un origen de datos para almacenar los datos destinados a la tabla `ccScoreOutput`.
+1. Empiece creando un origen de datos que contenga los datos destinados a la `ccScoreOutput`tabla,.
   
     ```R
     sqlOutScoreDS <- RxSqlServerData( table =  "ccScoreOutput",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-2. Agregar otro origen de datos para almacenar los datos de la tabla `ccScoreOutput2`.
+2. Agregue otro origen de datos que contenga los datos de `ccScoreOutput2`la tabla.
   
     ```R
     sqlOutScoreDS2 <- RxSqlServerData( table =  "ccScoreOutput2",  connectionString = sqlConnString, rowsPerRead = sqlRowsPerRead )
     ```
   
-    En la nueva tabla, almacenamiento de todas las variables del anterior `ccScoreOutput` tabla, además de la variable recién creada.
+    En la nueva tabla, almacene todas las variables de la `ccScoreOutput` tabla anterior, además de la variable recién creada.
   
 3. Establezca el contexto de proceso en la instancia de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] .
   
@@ -58,7 +58,7 @@ Desde el **arranque** del paquete, utilice la función **inv.logit**, que calcul
     rxSetComputeContext(sqlCompute)
     ```
   
-4. Use la función **rxSqlServerTableExists** para comprobar si la tabla de salida `ccScoreOutput2` ya existe; y si es así, use la función **rxSqlServerDropTable** para eliminar la tabla.
+4. Use la función **rxSqlServerTableExists** para comprobar si la tabla `ccScoreOutput2` de salida ya existe; y si es así, use la función **rxSqlServerDropTable** para eliminar la tabla.
   
     ```R
     if (rxSqlServerTableExists("ccScoreOutput2"))     rxSqlServerDropTable("ccScoreOutput2")
@@ -74,7 +74,7 @@ Desde el **arranque** del paquete, utilice la función **inv.logit**, que calcul
         overwrite = TRUE)
     ```
 
-    Al definir las transformaciones que se aplican a cada columna, también puede especificar los paquetes de R adicionales que se necesitan para realizar las transformaciones.  Para obtener más información sobre los tipos de transformaciones que se pueden realizar, consulte [transformación y el subconjunto de los datos mediante RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
+    Al definir las transformaciones que se aplican a cada columna, también puede especificar los paquetes de R adicionales que se necesitan para realizar las transformaciones.  Para obtener más información sobre los tipos de transformaciones que puede realizar, vea [Cómo transformar y subconjuntos de datos mediante RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-transform).
   
 6. Llame a **rxGetVarInfo** para ver un resumen de las variables del nuevo conjunto de datos.
   
@@ -98,7 +98,7 @@ Var 9: ccFraudProb, Type: numeric
 
 Las puntuaciones originales de la función logit se conservan, pero se ha agregado una nueva columna, *ccFraudProb*, en la que las puntuaciones de la función logit se representan como valores comprendidos entre 0 y 1.
 
-Tenga en cuenta que las variables de factor se han escrito en la tabla `ccScoreOutput2` como datos de caracteres. Para usarlos como factores en análisis posteriores, use el parámetro *colInfo* para especificar los niveles.
+Observe que las variables de factor se han escrito en la `ccScoreOutput2` tabla como datos de caracteres. Para usarlos como factores en análisis posteriores, use el parámetro *colInfo* para especificar los niveles.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

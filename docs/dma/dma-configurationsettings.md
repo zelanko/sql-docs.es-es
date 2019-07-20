@@ -1,6 +1,6 @@
 ---
-title: Configurar opciones para Data Migration Assistant (SQL Server) | Microsoft Docs
-description: Aprenda a configurar la configuración de Data Migration Assistant actualizando los valores del archivo de configuración
+title: Configurar las opciones de Data Migration Assistant (SQL Server) | Microsoft Docs
+description: Obtenga información sobre cómo configurar las opciones de la Data Migration Assistant actualizando los valores del archivo de configuración.
 ms.custom: ''
 ms.date: 03/12/2019
 ms.prod: sql
@@ -14,34 +14,34 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-ms.openlocfilehash: cb50b5380a305382bfb5494273cd335c8b60f51e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e94760c23a0c8621ba1c50f34162466f21f833c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68058871"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345239"
 ---
-# <a name="configure-settings-for-data-migration-assistant"></a>Configurar opciones para Data Migration Assistant
+# <a name="configure-settings-for-data-migration-assistant"></a>Configurar las opciones de Data Migration Assistant
 
-Puede ajustar estableciendo los valores de configuración en el archivo dma.exe.config ciertos comportamientos de Data Migration Assistant. En este artículo se describe los valores de configuración de la clave.
+Puede ajustar el comportamiento de Data Migration Assistant estableciendo los valores de configuración en el archivo DMA. exe. config. En este artículo se describen los valores de configuración clave.
 
-Puede encontrar el archivo dma.exe.config para la aplicación de escritorio Data Migration Assistant y la utilidad de línea de comandos, en las siguientes carpetas en el equipo.
+Puede encontrar el archivo DMA. exe. config para la aplicación de escritorio Data Migration Assistant y la utilidad de línea de comandos, en las siguientes carpetas de la máquina.
 
 - Aplicación de escritorio
 
-  % ProgramFiles %\\Microsoft Data Migration Assistant\\dma.exe.config
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\DMA. exe. config
 
 - Utilidad de línea de comandos
 
-  % ProgramFiles %\\Microsoft Data Migration Assistant\\dmacmd.exe.config 
+  % ProgramFiles%\\Microsoft Data Migration Assistant\\dmacmd. exe. config 
 
-No olvide guardar una copia del archivo de configuración original antes de realizar modificaciones. Después de realizar cambios, reinicie Data Migration Assistant para los nuevos valores de configuración para que surta efecto.
+Asegúrese de guardar una copia del archivo de configuración original antes de realizar cualquier modificación. Después de realizar los cambios, reinicie Data Migration Assistant para que los nuevos valores de configuración surtan efecto.
 
-## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bases de datos para evaluar en paralelo
+## <a name="number-of-databases-to-assess-in-parallel"></a>Número de bases de datos que se van a evaluar en paralelo
 
-Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación de Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de base de datos. Esta operación puede tiempo de espera si varias bases de datos en el mismo servidor que se evalúan en paralelo. 
+Data Migration Assistant evalúa varias bases de datos en paralelo. Durante la evaluación Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos. Esta operación puede agotar el tiempo de espera si varias bases de datos en el mismo servidor se evalúan en paralelo. 
 
-A partir de la versión 2.0 de Data Migration Assistant, puede controlar esto estableciendo el parallelDatabases del valor de configuración. Valor predeterminado es 8.
+A partir de Data Migration Assistant v 2.0, puede controlar esto estableciendo el valor de configuración parallelDatabases. El valor predeterminado es 8.
 
 ```
 <advisorGroup>
@@ -58,11 +58,11 @@ A partir de la versión 2.0 de Data Migration Assistant, puede controlar esto es
 
 
 
-## <a name="number-of-databases-to-migrate-in-parallel"></a>Número de bases de datos para la migración en paralelo
+## <a name="number-of-databases-to-migrate-in-parallel"></a>Número de bases de datos que se van a migrar en paralelo
 
-Data Migration Assistant migra varias bases de datos en paralelo, antes de migrar los inicios de sesión. Durante la migración, Data Migration Assistant se realice una copia de seguridad de la base de datos de origen, si lo desea copiar la copia de seguridad y, a continuación, restaurarla en el servidor de destino. Cuando se seleccionan varias bases de datos para la migración, podrían producirse errores de tiempo de espera. 
+Data Migration Assistant migra varias bases de datos en paralelo antes de migrar los inicios de sesión. Durante la migración, Data Migration Assistant realizará una copia de seguridad de la base de datos de origen y, opcionalmente, copiará la copia de seguridad y, a continuación, la restaurará en el servidor de destino. Es posible que se produzcan errores de tiempo de espera cuando se seleccionan varias bases de datos para la migración. 
 
-Comenzando con la versión 2.0 de Data Migration Assistant, si experimenta este problema puede reducir el valor de configuración parallelDatabases. Puede aumentar el valor para reducir el tiempo de migración general.
+A partir de Data Migration Assistant v 2.0, si experimenta este problema, puede reducir el valor de configuración parallelDatabases. Puede aumentar el valor para reducir el tiempo total de migración.
 
 ```
 <advisorGroup>
@@ -79,22 +79,22 @@ Comenzando con la versión 2.0 de Data Migration Assistant, si experimenta este 
 
 ## <a name="dacfx-settings"></a>Configuración de DacFX
 
-Durante la valoración, Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de base de datos. Esta operación puede producir un error con tiempos de espera para las bases de datos extremadamente grandes, o si el servidor está bajo carga. Comenzando con la versión 1.0 de la migración de datos, puede modificar los valores de configuración siguiente para evitar errores. 
+Durante la evaluación, Data Migration Assistant extrae la aplicación de capa de datos (dacpac) para comprender el esquema de la base de datos. Esta operación puede producir un error en los tiempos de espera de las bases de datos extremadamente grandes o si el servidor está bajo carga. A partir de Data Migration v 1.0, puede modificar los siguientes valores de configuración para evitar errores. 
 
 > [!NOTE]
-> Toda la &lt;dacfx&gt; entrada está marcada como predeterminada. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
+> La entrada &lt;dacfx&gt; completa está comentada de forma predeterminada. Quite los comentarios y, a continuación, modifique el valor según sea necesario.
 
 - commandTimeout
 
-   Este parámetro establece la propiedad IDbCommand.CommandTimeout *segundos*. (Predeterminado = 60)
+   Este parámetro establece la propiedad IDbCommand. CommandTimeout en *segundos*. (Valor predeterminado = 60)
 
 - databaseLockTimeout
 
-   Este parámetro es equivalente a [establecer bloqueo\_tiempo de espera de tiempo de espera\_período](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Predeterminado = 5000)
+   Este parámetro equivale a establecer el tiempo de [\_espera\_de bloqueo](../t-sql/statements/set-lock-timeout-transact-sql.md) en *milisegundos*. (Valor predeterminado = 5000)
 
 - maxDataReaderDegreeOfParallelism
 
-  Este parámetro establece el número de conexiones de grupo de conexión SQL a usar. (Predeterminado = 8)
+  Este parámetro establece el número de conexiones de grupo de conexiones SQL que se van a utilizar. (Valor predeterminado = 8)
 
 ```
 <advisorGroup>
@@ -111,9 +111,9 @@ maxDataReaderDegreeOfParallelism="8"/>
 
 ## <a name="stretch-database-recommendation-threshold"></a>Stretch Database: Umbral de recomendación
 
-Con [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), puede ampliar dinámicamente los datos activos e inactivos transaccionales de Microsoft SQL Server 2016 en Azure. Stretch Database destinos bases de datos transaccionales con grandes cantidades de datos inactivos. La recomendación de Stretch Database, en la recomendación de característica de almacenamiento, primero identifica las tablas que piensa que se beneficiará de esta característica y, a continuación, identifica los cambios que deben realizarse para permitir que la tabla para esta característica.
+Con [SQL Server Stretch Database](https://docs.microsoft.com/sql/sql-server/stretch-database/stretch-database), puede ampliar dinámicamente los datos transaccionales activos e inactivos de Microsoft SQL Server 2016 a Azure. Stretch Database se dirige a las bases de datos transaccionales con grandes cantidades de datos inactivos. En la recomendación de Stretch Database, en la recomendación de características de almacenamiento, primero se identifican las tablas que considera que se beneficiarán de esta característica y, a continuación, se identifican los cambios que se deben realizar para habilitar la tabla para esta característica.
 
-A partir de la versión 2.0 de Data Migration Assistant, puede controlar este umbral para una tabla calificar para la característica Stretch Database con el valor de configuración recommendedNumberOfRows. Valor predeterminado es 100.000 filas. Si desea analizar las capacidades de stretch para tablas incluso más pequeñas, disminuya el valor en consecuencia.
+A partir de Data Migration Assistant v 2.0, puede controlar este umbral para que una tabla pueda optar a la característica de Stretch Database mediante el valor de configuración recommendedNumberOfRows. El valor predeterminado es 100.000 filas. Si desea analizar las capacidades de stretch para tablas incluso más pequeñas, disminuya el valor en consecuencia.
 
 ```
 <advisorGroup>
@@ -128,9 +128,9 @@ A partir de la versión 2.0 de Data Migration Assistant, puede controlar este um
 ```
 
 
-## <a name="sql-connection-timeout"></a>Tiempo de espera de conexión de SQL
+## <a name="sql-connection-timeout"></a>Tiempo de espera de conexión SQL
 
-Puede controlar la [tiempo de espera de conexión SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) para las instancias de origen y de destino mientras se ejecuta una evaluación o la migración, estableciendo el valor de tiempo de espera de conexión a un número especificado de segundos. El valor predeterminado es 15 segundos.
+Puede controlar el [tiempo de espera de conexión de SQL](https://msdn.microsoft.com/library/system.data.sqlclient.sqlconnection.connectiontimeout(v=vs.110).aspx) para las instancias de origen y de destino durante la ejecución de una evaluación o migración, estableciendo el valor de tiempo de espera de la conexión en un número de segundos especificado. El valor predeterminado es 15 segundos.
 
 ```
 <appSettings>
@@ -140,7 +140,18 @@ Puede controlar la [tiempo de espera de conexión SQL](https://msdn.microsoft.co
 </appSettings>
 ```
 
+## <a name="ignore-error-codes"></a>Omitir códigos de error
+
+Cada regla tiene un código de error en su título. Si no necesita reglas y desea omitirlas, use la propiedad ignoreErrorCodes. Puede especificar para omitir un solo error o varios errores. Para omitir varios errores, use un punto y coma, por ejemplo, ignoreErrorCodes = "46010; 71501". El valor predeterminado es 71501, que está asociado a las referencias no resueltas identificadas cuando un objeto hace referencia a objetos del sistema como procedimientos, vistas, etc.
+
+```
+<workflowSettings>
+
+<assessment parallelDatabases="8" ignoreErrorCodes="71501" />
+
+</workflowSettings>
+```
 
 ## <a name="see-also"></a>Vea también
 
-[Descarga de Ayudante de migración de datos](https://www.microsoft.com/download/details.aspx?id=53595)
+[Descargar Data Migration Assistant](https://www.microsoft.com/download/details.aspx?id=53595)

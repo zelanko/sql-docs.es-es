@@ -1,18 +1,18 @@
 ---
-title: funciones auxiliares sqlrutils - SQL Server Machine Learning Services
-description: Use la biblioteca de funciones sqlrutils en SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services con R para generar los procedimientos almacenados que contiene el script de R.
+title: funciones auxiliares de sqlrutils
+description: Use la biblioteca de funciones sqlrutils en SQL Server 2016 R Services y SQL Server 2017 Machine Learning Services con R para generar procedimientos almacenados que contengan scripts de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6a66d79d376806383f1376510bb6de79493cb7ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 361093be372e77a869996e6ffb67a6bd6e701c44
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962471"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345086"
 ---
 # <a name="sqlrutils-r-library-in-sql-server"></a>sqlrutils (biblioteca de R en SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,41 +34,41 @@ También puede ejecutar el procedimiento almacenado desde un entorno de R pasand
   
 ## <a name="full-reference-documentation"></a>Documentación de referencia completa
 
-El **sqlrutils** library se distribuye en varios productos de Microsoft, pero el uso es el mismo si obtener la biblioteca de SQL Server u otro producto. Dado que las funciones son los mismos, [documentación para las funciones individuales sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft Machine Learning Server. Debe cualquier producto específico comportamientos existen, se anotará discrepancias en la página de Ayuda de la función.
+La biblioteca **sqlrutils** se distribuye en varios productos de Microsoft, pero el uso es el mismo si se obtiene la biblioteca en SQL Server u otro producto. Dado que las funciones son iguales, la [documentación de las funciones individuales de sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) se publica en una sola ubicación en la [referencia de R](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) para Microsoft machine learning Server. Si hay algún comportamiento específico del producto, las discrepancias se anotarán en la página de ayuda de la función.
 
 ## <a name="functions-list"></a>Lista de funciones
 
-La siguiente sección proporciona información general sobre las funciones que se pueden llamar desde el **sqlrutils** incrustados de paquete para desarrollar un procedimiento almacenado que contiene código de R. Para obtener información detallada de los parámetros de cada método o función, consulte la Ayuda de R para el paquete: `help(package="sqlrutils")`
+En la sección siguiente se proporciona información general de las funciones a las que se puede llamar desde el paquete **sqlrutils** para desarrollar un procedimiento almacenado que contenga código R incrustado. Para obtener detalles de los parámetros de cada método o función, vea la ayuda de R del paquete:`help(package="sqlrutils")`
 
 |Función | Descripción |
 |------|-------------|
 |[executeStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/executestoredprocedure)| Ejecutar un procedimiento almacenado de SQL.|
-|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obtener una lista de parámetros de entrada al procedimiento almacenado.| 
+|[getInputParameters](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/getinputparameters)| Obtiene una lista de parámetros de entrada para el procedimiento almacenado.| 
 |[InputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputdata)| Define el origen de los datos de SQL Server que se usarán en la trama de datos de R. Debe especificar el nombre de la trama de datos en la que almacenará los datos de entrada y una consulta para obtener los datos o un valor predeterminado. Solo se admiten las consultas SELECT simples. | 
 |[InputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/inputparameter)| Define un parámetro de entrada que se incrustará en el script de T-SQL. Debe proporcionar el nombre del parámetro y el tipo de datos de R.| 
 |[OutputData](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputdata)| Genera un objeto de datos intermedio que es necesario si la función de R devuelve una lista que contiene data.frame. El objeto *OutputData* se usa para almacenar el nombre de una data.frame obtenida de la lista.| 
 |[OutputParameter](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/outputparameter) | Genera un objeto de datos intermedio que es necesario si la función de R devuelve una lista. El objeto *OutputParameter* almacena el nombre y el tipo de datos de un único miembro de la lista, suponiendo que dicho miembro **no** sea una trama de datos. |
-|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrar el procedimiento almacenado con una base de datos.|
+|[registerStoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/registerstoredprocedure) | Registrar el procedimiento almacenado en una base de datos de.|
 |[setInputDataQuery](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputdataquery)| Asignar una consulta a un parámetro de datos de entrada del procedimiento almacenado.| 
-|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Asignar un valor a un parámetro de entrada del procedimiento almacenado.| 
-|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Un objeto de procedimiento almacenado.|
+|[setInputParameterValue](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/setinputparametervalue)| Asigne un valor a un parámetro de entrada del procedimiento almacenado.| 
+|[StoredProcedure](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/storedprocedure)| Objeto de procedimiento almacenado.|
 
 
 ## <a name="how-to-use-sqlrutils"></a>Cómo usar sqlrutils
 
-El **sqlrutils** funciones de biblioteca deben ejecutar en un equipo que tiene SQL Server Machine Learning con R. Si está trabajando en una estación de trabajo cliente, establecer un contexto de cálculo remoto para la ejecución de cambio a SQL Server. El flujo de trabajo para el uso de este paquete incluye los siguientes pasos:
+Las funciones de la biblioteca **sqlrutils** se deben ejecutar en un equipo que tenga SQL Server machine learning con R. Si está trabajando en una estación de trabajo cliente, establezca un contexto de cálculo remoto para que la ejecución cambie a SQL Server. El flujo de trabajo para usar este paquete incluye los pasos siguientes:
 
-+ Definir parámetros de procedimiento almacenado (entradas, salidas o ambos) 
++ Definir los parámetros de los procedimientos almacenados (entradas, salidas o ambos) 
 + Generar y registrar el procedimiento almacenado    
 + Ejecutar el procedimiento almacenado  
 
-En una sesión de R, cargue **sqlrutils** desde la línea de comandos escribiendo `library(sqlrutils)`.
+En una sesión de R, cargue **sqlrutils** desde la línea de comandos `library(sqlrutils)`escribiendo.
 
 > [!Note]
-> Puede cargar esta biblioteca en el equipo que no tiene SQL Server (por ejemplo, en una instancia de R Client) si cambia el contexto de cálculo a SQL Server y ejecute el código en ese contexto de proceso.
+> Puede cargar esta biblioteca en un equipo que no tiene SQL Server (por ejemplo, en una instancia de cliente de R) si cambia el contexto de cálculo a SQL Server y ejecuta el código en ese contexto de proceso.
 
 
-### <a name="define-stored-procedure-parameters-and-inputs"></a>Definir las entradas y los parámetros de procedimiento almacenado
+### <a name="define-stored-procedure-parameters-and-inputs"></a>Definir parámetros y entradas de procedimientos almacenados
 
 `StoredProcedure` es el constructor principal empleado para crear el procedimiento almacenado. Este constructor genera un objeto de *procedimiento almacenado de SQL Server* y, opcionalmente, crea un archivo de texto que contiene una consulta que puede usarse para generar el procedimiento almacenado mediante un comando de T-SQL. 
 

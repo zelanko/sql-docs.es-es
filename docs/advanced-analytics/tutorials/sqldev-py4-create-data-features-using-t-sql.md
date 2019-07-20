@@ -1,5 +1,5 @@
 ---
-title: Crear características de datos mediante las funciones de T-SQL y Python - SQL Server Machine Learning
+title: Crear características de datos mediante las funciones de T-SQL y Python
 description: Tutorial que muestra cómo agregar cálculos a los procedimientos almacenados para su uso en los modelos de aprendizaje automático de Python.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,19 +7,19 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961885"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345919"
 ---
 # <a name="create-data-features-using-t-sql"></a>Crear características de datos mediante T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Después de la exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a *ingeniería de características*. Este proceso de creación de características de los datos sin formato puede ser un paso crítico en el modelado de análisis avanzado.
+Después de la exploración de datos, ha recopilado información de los datos y está listo para pasar a la *ingeniería de características*. Este proceso de creación de características a partir de los datos sin procesar puede ser un paso crítico en el modelado de análisis avanzado.
 
-Este artículo forma parte de un tutorial, [análisis de Python en bases de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
+Este artículo forma parte de un tutorial, [análisis de Python en base de datos para desarrolladores de SQL](sqldev-in-database-python-for-sql-developers.md). 
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
@@ -29,7 +29,7 @@ Los valores de distancia notificados en los datos originales se basan en la dist
 
 Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
-### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje mediante fnCalculateDistance
+### <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de la carrera mediante fnCalculateDistance
 
 1.  La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Tómese un minuto para revisar el código.
   
@@ -106,9 +106,9 @@ Para agregar el valor calculado a una tabla y poder usarlo para entrenar el mode
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Esto es por eso es importante la ingeniería de características.
+    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Este es el motivo por el que es importante el diseño de características.
 
-En el paso siguiente, obtendrá información sobre cómo usar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
+En el paso siguiente, aprenderá a usar estas características de datos para crear y entrenar un modelo de aprendizaje automático con Python.
 
 ## <a name="next-step"></a>Paso siguiente
 
@@ -116,6 +116,6 @@ En el paso siguiente, obtendrá información sobre cómo usar estas característ
 
 ## <a name="previous-step"></a>Paso anterior
 
-[Explorar y visualizar los datos](sqldev-py3-explore-and-visualize-the-data.md)
+[Explore y visualice los datos](sqldev-py3-explore-and-visualize-the-data.md)
 
 

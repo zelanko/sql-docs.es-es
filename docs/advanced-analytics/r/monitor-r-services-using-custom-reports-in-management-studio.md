@@ -1,32 +1,32 @@
 ---
-title: 'Supervisar R Services con informes personalizados en Management Studio: SQL Server Machine Learning Services'
+title: Supervisar R Services mediante informes personalizados en Management Studio
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 71a8e0adf814128e78651b43ad14a43fc231f87c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8768532e3891183d82cbb2273ded8dcc378b1fc
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962587"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345298"
 ---
 # <a name="monitor-machine-learning-services-using-custom-reports-in-management-studio"></a>Supervisar Machine Learning Services con informes personalizados en Management Studio
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Para que sea más fácil de administrar la instancia utilizada para el aprendizaje automático, el equipo del producto ha ofrecido una serie de informes personalizado de ejemplo que se pueden agregar a SQL Server Management Studio. En estos informes, puede ver detalles tales como:
+Para facilitar la administración de la instancia que se usa para el aprendizaje automático, el equipo del producto ha proporcionado una serie de informes personalizados de ejemplo que puede Agregar a SQL Server Management Studio. En estos informes, puede ver detalles como:
 
-- Sesiones activa R o Python
-- Configuración de la instancia
-- Estadísticas de ejecución de trabajos de machine learning
+- Sesiones activas de R o Python
+- Opciones de configuración de la instancia
+- Estadísticas de ejecución para trabajos de machine learning
 - Eventos extendidos para R Services
 - Paquetes de R o Python instalados en la instancia actual
 
-En este artículo se explica cómo instalar y usar los informes personalizados proporcionados específicamente para la máquina leaerning. 
+En este artículo se explica cómo instalar y usar los informes personalizados proporcionados específicamente para el equipo leaerning. 
 
-Para obtener una introducción general a los informes en Management Studio, consulte [informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
+Para obtener una introducción general a los informes de Management Studio, vea [informes personalizados en Management Studio](../../ssms/object/custom-reports-in-management-studio.md).
 
 ## <a name="how-to-install-the-reports"></a>Cómo instalar los informes
 
@@ -41,12 +41,12 @@ Para utilizar estos informes:
 
 ### <a name="step-1-download-the-reports"></a>Paso 1. Descargar los informes
 
-1. Abra el repositorio de GitHub que contiene [muestras de productos de SQL Server](https://github.com/Microsoft/sql-server-samples)y descargar los informes de ejemplo. 
+1. Abra el repositorio de GitHub que contiene [SQL Server ejemplos de productos](https://github.com/Microsoft/sql-server-samples)y descargue los informes de ejemplo. 
 
     + [Informes personalizados de SSMS](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/machine-learning-services/ssms-custom-reports)
 
     > [!NOTE]
-    > Los informes se pueden usar con servicios de aprendizaje de máquina de SQL Server 2017 o SQL Server 2016 R Services.
+    > Los informes se pueden usar con SQL Server 2017 machiine Learning Services o SQL Server 2016 R Services.
 
 2. Para descargar los ejemplos, también puede iniciar sesión en GitHub y realizar una bifurcación local de los ejemplos. 
 
@@ -73,31 +73,31 @@ Para utilizar estos informes:
 
 ## <a name="report-list"></a>Lista de informes
 
-Actualmente, el repositorio de ejemplos del producto en GitHub incluye los siguientes informes:
+El repositorio de ejemplos del producto en GitHub incluye actualmente los siguientes informes:
 
 + **R Services: sesiones activas**
 
-  Use este informe para ver los usuarios que están conectados actualmente a la instancia de SQL Server y la máquina en ejecución trabajos de aprendizaje. 
+  Use este informe para ver los usuarios que están conectados actualmente a la instancia de SQL Server y ejecutar trabajos de aprendizaje automático. 
   
 + **R Services: configuración**
 
-  Use este informe para ver la configuración del tiempo de ejecución de scripts externos y servicios relacionados. El informe indicará si es necesario un reinicio y buscará los protocolos de red necesarios. 
+  Use este informe para ver la configuración del tiempo de ejecución del script externo y los servicios relacionados. El informe indicará si es necesario un reinicio y buscará los protocolos de red necesarios. 
   
-  Autenticación implícita es necesaria para tareas de aprendizaje automático que se ejecutan en SQL Server como un contexto de proceso. Para comprobar que la autenticación implícita está configurada, el informe comprueba si existe un inicio de sesión de base de datos para el grupo SQLRUserGroup.
+  La autenticación implícita es necesaria para las tareas de aprendizaje automático que se ejecutan en SQL Server como un contexto de cálculo. Para comprobar que se ha configurado la autenticación implícita, el informe comprueba si existe un inicio de sesión de base de datos para el grupo SQLRUserGroup.
 
  + **R Services : configuración de una instancia** 
 
-   Este informe está pensado para ayudarle a configurar el aprendizaje automático. También puede ejecutar este informe para corregir errores de configuración que se encuentra en el informe anterior.
+   Este informe está diseñado para ayudarle a configurar el aprendizaje automático. También puede ejecutar este informe para corregir los errores de configuración que se encuentran en el informe anterior.
  
 + **R Services: estadísticas de ejecución**
 
-  Use este informe para ver estadísticas de ejecución de trabajos de machine learning. Por ejemplo, puede obtener el número total de secuencias de comandos de R que se han ejecutado, el número de ejecuciones en paralelo y las funciones RevoScaleR utilizadas con más frecuencia. Haga clic en **ver Script de SQL** para obtener el código de T-SQL completo detrás de este informe.
+  Use este informe para ver las estadísticas de ejecución de los trabajos de machine learning. Por ejemplo, puede obtener el número total de secuencias de comandos de R que se han ejecutado, el número de ejecuciones en paralelo y las funciones RevoScaleR utilizadas con más frecuencia. Haga clic en **Ver script SQL** para obtener el código T-SQL completo detrás de este informe.
 
   Actualmente el informe solo supervisa estadísticas para las funciones del paquete de RevoScaleR.
 
 + **R Services: eventos extendidos**
 
-  Utilice este informe para ver una lista de los eventos extendidos que están disponibles para supervisar las tareas relacionadas con los tiempos de ejecución del script externo. Haga clic en **ver Script de SQL** para obtener el código de T-SQL completo detrás de este informe.
+  Use este informe para ver una lista de los eventos extendidos que están disponibles para supervisar tareas relacionadas con los tiempos de ejecución de scripts externos. Haga clic en **Ver script SQL** para obtener el código T-SQL completo detrás de este informe.
 
 + **R Services: paquetes**
 
@@ -105,7 +105,7 @@ Actualmente, el repositorio de ejemplos del producto en GitHub incluye los sigui
 
 + **R Services: uso de recursos**
 
-  Use este informe para ver el consumo de recursos de CPU, memoria y E/S por ejecución de scripts externos. También puede ver la configuración de la memoria de grupos de recursos externos.
+  Use este informe para ver el consumo de CPU, memoria y recursos de e/s mediante la ejecución de scripts externos. También puede ver la configuración de la memoria de grupos de recursos externos.
 
 ## <a name="see-also"></a>Vea también
 

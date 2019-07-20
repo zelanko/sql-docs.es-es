@@ -1,64 +1,64 @@
 ---
-title: 'Calcular las estadísticas de resumen RevoScaleR tutorial: SQL Server Machine Learning'
-description: Tutorial del tutorial sobre cómo calcular las estadísticas de resumen Estadísticas usando el lenguaje R en SQL Server.
+title: Tutorial de Compute Summary Statistics RevoScaleR
+description: Tutorial tutorial sobre cómo calcular estadísticas de resumen estadístico con el lenguaje R en SQL Server.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 945b7cb32c64c343ca7bb5ab2aab4169fd7bea24
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5f90cc0e6101e168e15ed7c1145d286f799375ac
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962289"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344709"
 ---
-# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Calcular las estadísticas de resumen en R (tutorial de SQL Server y RevoScaleR)
+# <a name="compute-summary-statistics-in-r-sql-server-and-revoscaler-tutorial"></a>Estadísticas de Resumen de proceso en R (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En esta lección forma parte de la [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [las funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Los orígenes de datos establecidas y contextos de proceso que creó en lecciones anteriores usa para ejecutar scripts de R de alta potencia en este caso. En esta lección, usará los contextos de proceso de servidor local y remoto para las siguientes tareas:
+Usa los orígenes de datos y contextos de cálculo establecidos creados en lecciones anteriores para ejecutar scripts de R de alta potencia en este. En esta lección, usará contextos de cálculo de servidores locales y remotos para las siguientes tareas:
 
 > [!div class="checklist"]
 > * Cambiar el contexto de cálculo a SQL Server
-> * Obtener estadísticas de resumen sobre los objetos de datos remotos
+> * Obtener estadísticas de resumen sobre objetos de datos remotos
 > * Calcular un resumen local
 
-Si ha completado las lecciones anteriores, debe tener los siguientes contextos de cálculo remoto: sqlCompute y sqlComputeTrace. Más adelante, que usa sqlCompute y local calculará contexto en lecciones posteriores.
+Si ha completado las lecciones anteriores, debería tener estos contextos de cálculo remotos: sqlCompute y sqlComputeTrace. En el futuro, usará sqlCompute y el contexto de proceso local en lecciones posteriores.
 
-Usar un IDE de R o **Rgui** para ejecutar el script de R en esta lección.
+Use un IDE de R o **Rgui** para ejecutar el script de r en esta lección.
 
-## <a name="compute-summary-statistics-on-remote-data"></a>Calcular las estadísticas de resumen de datos remotos
+## <a name="compute-summary-statistics-on-remote-data"></a>Calcular estadísticas de resumen en datos remotos
 
-Antes de que puede ejecutar cualquier código R de forma remota, deberá especificar el contexto de proceso remoto. Todos los cálculos posteriores tienen lugar el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] equipo especificado en el *sqlCompute* parámetro.
+Antes de poder ejecutar cualquier código R de forma remota, debe especificar el contexto de cálculo remoto. Todos los cálculos subsiguientes tienen lugar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] en el equipo especificado en el parámetro *sqlCompute* .
 
-Un contexto de proceso permanece activo hasta que la cambie. Sin embargo, los scripts de R que *no* ejecución en un contexto de servidor remoto se ejecutará automáticamente localmente.
+Un contexto de cálculo permanece activo hasta que se cambia. Sin embargo, los scripts de R que *no se pueden* ejecutar en un contexto de servidor remoto se ejecutarán automáticamente de forma local.
 
-Para ver cómo funciona un contexto de cálculo, generar estadísticas de resumen sobre el origen de datos sqlFraudDS en el servidor SQL remoto. Se creó este objeto de origen de datos en [lección dos](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) y representa la tabla ccFraudSmall en la base de datos RevoDeepDive. 
+Para ver cómo funciona un contexto de cálculo, genere estadísticas de resumen en el origen de datos sqlFraudDS en el SQL Server remoto. Este objeto de origen de datos se creó en la [lección dos](deepdive-create-sql-server-data-objects-using-rxsqlserverdata.md) y representa la tabla ccFraudSmall en la base de datos RevoDeepDive. 
 
-1. Cambiar el contexto de cálculo a sqlCompute que creó en la lección anterior:
+1. Cambie el contexto de cálculo a sqlCompute creado en la lección anterior:
   
     ```R
     rxSetComputeContext(sqlCompute)
     ```
 
-2. Llame a la [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) funcionando y pase los argumentos necesarios, como la fórmula y el origen de datos y asigne los resultados a la variable `sumOut`.
+2. Llame a la función [rxSummary](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsummary) y pase los argumentos necesarios, como la fórmula y el origen de datos, y asigne los resultados a `sumOut`la variable.
   
     ```R
     sumOut <- rxSummary(formula = ~gender + balance + numTrans + numIntlTrans + creditLine, data = sqlFraudDS)
     ```
   
-    El lenguaje R proporciona muchas funciones de resumen, pero **rxSummary** en **RevoScaleR** admite la ejecución en varios contextos de cálculo remoto, incluidos [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información sobre funciones similares, vea [resúmenes de los datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
+    El lenguaje R proporciona muchas funciones de Resumen, pero **rxSummary** en **RevoScaleR** admite la ejecución en varios contextos de cálculo remotos, incluido [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener información sobre funciones similares, vea [resúmenes de datos con RevoScaleR](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-data-summaries).
   
-3. Imprimir el contenido de sumOut en la consola.
+3. Imprime el contenido de sumOut en la consola.
   
     ```R
     sumOut
     ```
     > [!NOTE]
-    > Si se produce un error, espere unos minutos para que finalice antes de reintentar el comando de la ejecución.
+    > Si recibe un error, espere unos minutos a que finalice la ejecución antes de volver a intentar el comando.
 
 **Resultado**
 
@@ -91,7 +91,7 @@ Number of valid observations: 10000
     rxSetComputeContext ("local")
     ```
   
-2. Al extraer datos de SQL Server, a menudo encontrará un mejor rendimiento si aumenta el número de filas que se extraen para cada lectura, suponiendo que se puede incluir el tamaño del mayor bloque de memoria. Ejecute el siguiente comando para aumentar el valor para el *rowsPerRead* parámetro en el origen de datos. Antes, el valor de *rowsPerRead* estaba establecido en 5000.
+2. Al extraer datos de SQL Server, a menudo puede obtener un mejor rendimiento si aumenta el número de filas extraídas para cada lectura, suponiendo que se pueda acomodar el mayor tamaño de bloque en la memoria. Ejecute el siguiente comando para aumentar el valor del parámetro *rowsPerRead* en el origen de datos. Antes, el valor de *rowsPerRead* estaba establecido en 5000.
   
     ```R
     sqlServerDS1 <- RxSqlServerData(
@@ -109,7 +109,7 @@ Number of valid observations: 10000
   
    Los resultados actuales deben ser los mismos que cuando ejecuta **rxSummary** en el contexto del equipo de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] . En cambio, la operación puede ser más rápida o más lenta. Depende en gran medida de la conexión a la base de datos, ya que los datos se transfieren al equipo local para el análisis.
 
-4. Vuelva a remoto el contexto de proceso para el siguientes varias lecciones.
+4. Vuelva al contexto de cálculo remoto para las siguientes lecciones.
 
     ```R
     rxSetComputeContext(sqlCompute)

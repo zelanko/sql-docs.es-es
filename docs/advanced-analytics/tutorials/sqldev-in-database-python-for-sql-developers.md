@@ -1,67 +1,67 @@
 ---
-title: 'Tutorial de análisis de Python en bases de datos para desarrolladores de SQL: SQL Server Machine Learning'
-description: Obtenga información sobre cómo insertar código de Python en las funciones de Transact-SQL y procedimientos almacenados de SQL Server.
+title: Tutorial de análisis de Python en base de datos para desarrolladores de SQL
+description: Obtenga información sobre cómo insertar código de Python en SQL Server procedimientos almacenados y funciones de T-SQL.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed8008bbda76bfc8a194897e9389c9d5dc6bb031
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961905"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345936"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>Tutorial: Análisis de datos de Python para desarrolladores de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este tutorial para programadores de SQL, obtenga información sobre la integración de Python mediante la creación e implementación de una máquina basada en Python y aprendizaje de la solución mediante un [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) base de datos en SQL Server. Deberá usar Transact-SQL, SQL Server Management Studio y una instancia del motor de base de datos con [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) y compatibilidad con el lenguaje Python.
+En este tutorial para programadores de SQL, obtenga información sobre la integración de Python mediante la creación e implementación de una solución de aprendizaje automático basada en Python mediante una base de datos de [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) en SQL Server. Usará T-SQL, SQL Server Management Studio y una instancia del motor de base de datos con compatibilidad con el lenguaje [Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) y Python.
 
-Este tutorial presenta funciones de Python que se usan en un flujo de trabajo de modelado de datos. Los pasos incluyen la exploración de datos, crear y entrenar un modelo de clasificación binaria y la implementación de modelos. Va a usar datos de ejemplo de los taxis de Nueva York y Limosine Comisión y el modelo que se compilará predice si un viaje es probable que produzca una propina en función de la hora del día, la distancia recorrida y la ubicación de recogida. 
+En este tutorial se presentan las funciones de Python usadas en un flujo de trabajo de modelado de datos. Los pasos incluyen la exploración de datos, la compilación y el entrenamiento de un modelo de clasificación binaria y la implementación de modelos. Usará datos de ejemplo de la Comisión de taxis de Nueva York y LIMOSINE, y el modelo que se va a crear predice si es probable que un viaje dé como resultado una propina basada en la hora del día, la distancia recorrida y la ubicación de la recogida. 
 
-Todo el código de Python que se usa en este tutorial se incluye en los procedimientos almacenados que crean y ejecutan en Management Studio.
+Todo el código de Python que se usa en este tutorial está incluido en procedimientos almacenados que se crean y ejecutan en Management Studio.
 
 > [!NOTE]
-> Este tutorial está disponible en R y Python. Para la versión de R, consulte [en análisis base de datos para los desarrolladores de R](sqldev-in-database-r-for-sql-developers.md).
+> Este tutorial está disponible en R y Python. Para la versión de R, consulte [análisis de base de datos para desarrolladores de r](sqldev-in-database-r-for-sql-developers.md).
 
 ## <a name="overview"></a>Información general
 
-El proceso de creación de una solución de aprendizaje automático es una compleja que puede implicar varias herramientas y la coordinación de expertos a través de varias fases:
+El proceso de creación de una solución de aprendizaje automático es una compleja que puede implicar varias herramientas y la coordinación de expertos en la materia en varias fases:
 
 + obtención y limpieza de datos
-+ explorar los datos y generar características útiles para el modelado
-+ entrenamiento y el modelo de optimización
++ exploración de los datos y creación de características útiles para el modelado
++ entrenamiento y ajuste del modelo
 + implementación en producción
 
-Desarrollo y pruebas del código real se realiza mejor mediante un entorno de desarrollo dedicado. Sin embargo, después de la secuencia de comandos está probado completamente, puede implementar fácilmente a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] procedimientos almacenados en el entorno familiar de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Ajuste el código externo en los procedimientos almacenados es el mecanismo principal para el código de puesta en marcha en SQL Server.
+El desarrollo y las pruebas del código real se realizan mejor con un entorno de desarrollo dedicado. Sin embargo, una vez que el script se ha probado por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)] completo, puede implementarlo fácilmente con procedimientos almacenados en el [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]entorno conocido de. El encapsulado de código externo en procedimientos almacenados es el mecanismo principal para la puesta en operación del código en SQL Server.
 
-Tanto si es un programador SQL nuevo para Python, o un desarrollador de Python es nuevo en SQL, este tutorial de varias partes presenta un flujo de trabajo típico para llevar a cabo análisis en bases de datos con Python y SQL Server. 
+Si es un programador de SQL nuevo en Python o un desarrollador de Python nuevo en SQL, este tutorial de varias partes presenta un flujo de trabajo típico para realizar análisis en base de datos con Python y SQL Server. 
 
-+ [Lección 1: Explorar y visualizar datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
++ [Lección 1: Explore y visualice los datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
 
 + [Lección 2: Crear características de datos mediante funciones SQL personalizadas](sqldev-py4-create-data-features-using-t-sql.md)
 
 + [Lección 3: Entrenar y guardar un modelo de Python mediante T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-+ [Lección 4: Predecir los resultados posibles con un modelo de Python en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
++ [Lección 4: Predecir posibles resultados mediante un modelo de Python en un procedimiento almacenado](sqldev-py6-operationalize-the-model.md)
 
-Después de que el modelo se ha guardado en la base de datos, puede llamar el modelo para las predicciones de [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante procedimientos almacenados.
+Una vez guardado el modelo en la base de datos, puede llamar al modelo para las predicciones [!INCLUDE[tsql](../../includes/tsql-md.md)] desde mediante procedimientos almacenados.
 
 ## <a name="prerequisites"></a>Requisitos previos
 
-+ [Servicios SQL Server 2017 Machine Learning con Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
++ [SQL Server 2017 Machine Learning Services con Python](../install/sql-machine-learning-services-windows-install.md#verify-installation)
 
 + [Permisos](../security/user-permission.md)
 
-+ [Base de datos de demostración de taxis de Nueva York](demo-data-nyctaxi-in-sql.md)
++ [Base de datos de demostración de taxi de Nueva York](demo-data-nyctaxi-in-sql.md)
 
-Todas las tareas que pueden hacerse mediante [!INCLUDE[tsql](../../includes/tsql-md.md)] los procedimientos almacenados de [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Todas las tareas se pueden realizar [!INCLUDE[tsql](../../includes/tsql-md.md)] mediante procedimientos almacenados [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]en.
 
-Este tutorial supone que está familiarizado con operaciones de base de datos básica, como la creación de tablas y bases de datos, importación de datos y escribir consultas SQL. Supone que sabe Python. Por lo tanto, se proporciona todo el código Python. 
+En este tutorial se supone que está familiarizado con las operaciones básicas de base de datos, como la creación de bases de datos y tablas, la importación de datos y la escritura de consultas SQL. No supone que conoce Python. Como tal, se proporciona todo el código de Python. 
 
 ## <a name="next-steps"></a>Pasos siguientes
 
 > [!div class="nextstepaction"]
-> [Explorar y visualizar datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)
+> [Explore y visualice los datos mediante Python](sqldev-py3-explore-and-visualize-the-data.md)

@@ -1,5 +1,5 @@
 ---
-title: 'Características de datos de la lección 2 crear con funciones de R y T-SQL: SQL Server Machine Learning'
+title: Lección 2 creación de características de datos mediante funciones de R y T-SQL
 description: Tutorial que muestra cómo agregar cálculos a los procedimientos almacenados para su uso en los modelos de aprendizaje automático de R.
 ms.prod: sql
 ms.technology: machine-learning
@@ -7,39 +7,39 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7570c6769a780c5a6d98bdfc762092524bf5000c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961920"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345923"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>Lección 2: Crear características de datos mediante R y T-SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
+Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
 En este paso, aprenderá a crear características desde datos sin procesar mediante una función de [!INCLUDE[tsql](../../includes/tsql-md.md)] . Después, llamaremos a esa función desde un procedimiento almacenado para crear una tabla que contiene los valores de las características.
 
-## <a name="about-feature-engineering"></a>Acerca de ingeniería de características
+## <a name="about-feature-engineering"></a>Acerca de la ingeniería de características
 
-Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones*. Este proceso de creación de características significativas de los datos sin procesar es un paso crítico en la creación de modelos analíticos.
+Después de varias series de exploración de datos, ha recopilado conocimientos de los datos y está listo para pasar a la *ingeniería de funciones*. Este proceso de creación de características significativas a partir de los datos sin procesar es un paso crítico en la creación de modelos analíticos.
 
-En este conjunto de datos, los valores de distancia se basan en la distancia notificada del taxímetro y no representan necesariamente la distancia geográfica o la distancia real recorrida. Por tanto, debe calcular la distancia directa entre los puntos de origen y destino, usando las coordenadas disponibles en el conjunto de datos de origen NYC Taxi. Puede hacerlo mediante la [fórmula Haversine](https://en.wikipedia.org/wiki/Haversine_formula) en un función personalizada de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
+En este conjunto de datos, los valores de distancia se basan en la distancia de medidor indicada y no representan necesariamente la distancia geográfica ni la distancia real recorrida. Por tanto, debe calcular la distancia directa entre los puntos de origen y destino, usando las coordenadas disponibles en el conjunto de datos de origen NYC Taxi. Puede hacerlo mediante la [fórmula Haversine](https://en.wikipedia.org/wiki/Haversine_formula) en un función personalizada de [!INCLUDE[tsql](../../includes/tsql-md.md)] .
 
 Usará una función personalizada de T-SQL, _fnCalculateDistance_, para calcular la distancia usando la fórmula Haversine, y una segunda función personalizada de T-SQL, _fnEngineerFeatures_, para crear una tabla que contiene todas las características.
 
-El proceso general es como sigue:
+El proceso general es el siguiente:
 
-- Cree la función de T-SQL que realiza los cálculos
+- Crear la función de T-SQL que realiza los cálculos
 
-- Llame a la función para generar los datos de características
+- Llamar a la función para generar los datos de la característica
 
-- Guardar los datos de características a una tabla
+- Guardar los datos de la característica en una tabla
 
-## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de viaje mediante fnCalculateDistance
+## <a name="calculate-trip-distance-using-fncalculatedistance"></a>Calcular la distancia de la carrera mediante fnCalculateDistance
 
-La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] como parte de la preparación para este tutorial. Tómese un minuto para revisar el código.
+La función _fnCalculateDistance_ debe haberse descargado y registrado [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] con como parte de la preparación de este tutorial. Tómese un minuto para revisar el código.
   
 1. En [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], expanda **Programación**, expanda **Funciones** y, después, **Funciones escalares**.   
 
@@ -75,7 +75,7 @@ La función _fnCalculateDistance_ debe haberse descargado y registrado con [!INC
 
 ## <a name="generate-the-features-using-fnengineerfeatures"></a>Generar las características mediante _fnEngineerFeatures_
 
-Para agregar los valores calculados en una tabla que se puede usar para entrenar el modelo, deberá usar otra función _fnEngineerFeatures_. La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_, para obtener la distancia directa entre las ubicaciones de origen y destino. 
+Para agregar los valores calculados a una tabla que se puede usar para entrenar el modelo, use otra función, _fnEngineerFeatures_. La nueva función llama a la función de T-SQL creada anteriormente, _fnCalculateDistance_, para obtener la distancia directa entre las ubicaciones de recogida y desactivación. 
 
 1. Tómese un minuto para revisar el código de la función personalizada de T-SQL, _fnEngineerFeatures_, que debe haberse creado como parte de la preparación para este tutorial.
   
@@ -103,11 +103,11 @@ Para agregar los valores calculados en una tabla que se puede usar para entrenar
     GO
     ```
 
-    + Esta función con valores de tabla que toma varias columnas como entradas y genera una tabla con varias columnas de característica.
+    + Esta función con valores de tabla toma varias columnas como entradas y genera una tabla con varias columnas de características.
 
     + El propósito de esta función es crear nuevas características para su uso en la creación de un modelo.
 
-2.  Para comprobar que esta función funciona, usarla para calcular la distancia geográfica de los viajes donde la distancia medida era 0 pero las ubicaciones de origen y destino eran diferentes.
+2.  Para comprobar que esta función funciona, Úsela para calcular la distancia geográfica de los viajes en los que la distancia de uso medido era 0, pero las ubicaciones de recogida y desactivación eran diferentes.
   
     ```sql
         SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
@@ -118,12 +118,12 @@ Para agregar los valores calculados en una tabla que se puede usar para entrenar
         ORDER BY trip_time_in_secs DESC
     ```
   
-    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Por eso es tan importante la ingeniería de características. Puede usar estas características mejoradas de los datos para entrenar un modelo de aprendizaje automático con R.
+    Como puede ver, la distancia notificada por el taxímetro no siempre se corresponde con la distancia geográfica. Por eso es tan importante la ingeniería de características. Puede usar estas características de datos mejoradas para entrenar un modelo de aprendizaje automático mediante R.
 
 ## <a name="next-lesson"></a>Lección siguiente
 
-[Lección 3: Entrenar y guardar un modelo con T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+[Lección 3: Entrenar y guardar un modelo mediante T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>Lección anterior
 
-[Lección 1: Explorar y visualizar los datos mediante R y los procedimientos almacenados](sqldev-explore-and-visualize-the-data.md)
+[Lección 1: Explorar y visualizar los datos mediante R y procedimientos almacenados](sqldev-explore-and-visualize-the-data.md)

@@ -1,35 +1,35 @@
 ---
-title: Resultados posibles para la lección 4 predicción mediante modelos de R, SQL Server Machine Learning
-description: Tutorial que muestra cómo poner los scripts de R incrustados en SQL Server en procedimientos almacenados con funciones de Transact-SQL
+title: Lección 4 predecir los posibles resultados con los modelos de R
+description: Tutorial que muestra cómo poner en funcionamiento scripts de R incrustados en SQL Server procedimientos almacenados con funciones de T-SQL
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 159fb29bf560e755fdc605330d7d20369f55ba08
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961861"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345898"
 ---
-# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lección 4: Ejecutar predicciones con R incrustado en un procedimiento almacenado
+# <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>Lección 4: Ejecutar predicciones mediante R Embedded en un procedimiento almacenado
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
+Este artículo forma parte de un tutorial para desarrolladores de SQL sobre cómo usar R en SQL Server.
 
-En este paso, aprenderá a usar el modelo con las nuevas observaciones para predecir resultados posibles. El modelo se ajusta en un procedimiento almacenado que se puede llamar directamente por otras aplicaciones. El tutorial muestran varias maneras de realizar la puntuación:
+En este paso, aprenderá a usar el modelo con nuevas observaciones para predecir posibles resultados. El modelo se ajusta en un procedimiento almacenado que puede ser llamado directamente por otras aplicaciones. En el tutorial se muestran varias maneras de realizar la puntuación:
 
-- **Modo de puntuación por lotes**: Utilice una consulta de selección como entrada al procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
+- **Modo de puntuación por lotes**: Use una consulta SELECT como entrada para el procedimiento almacenado. El procedimiento almacenado devuelve una tabla de observaciones correspondientes a los casos de entrada.
 
-- **Modo de puntuación individual**: Pasar un conjunto de valores de parámetro individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
+- **Modo de puntuación individual**: Pase un conjunto de valores de parámetro individuales como entrada.  El procedimiento almacenado devuelve una sola fila o valor.
 
 En primer lugar, veremos cómo funcionan las puntuaciones en general.
 
-## <a name="basic-scoring"></a>Puntuaciones básicas
+## <a name="basic-scoring"></a>Puntuación básica
 
-El procedimiento almacenado **RxPredict** muestra la sintaxis básica para el ajuste de una llamada de RevoScaleR rxPredict en un procedimiento almacenado.
+El procedimiento almacenado **RxPredict** ilustra la sintaxis básica para encapsular una llamada RxPredict de RevoScaleR en un procedimiento almacenado.
 
 ```sql
 CREATE PROCEDURE [dbo].[RxPredict] (@model varchar(250), @inquery nvarchar(max))
@@ -53,21 +53,21 @@ END
 GO
 ```
 
-+ La instrucción SELECT Obtiene el modelo serializado de la base de datos y almacena el modelo en la variable de R `mod` para su posterior procesamiento con R.
++ La instrucción SELECT obtiene el modelo serializado de la base de datos y lo almacena en la variable `mod` de R para su posterior procesamiento mediante R.
 
-+ Los nuevos casos para puntuar se obtienen de la [!INCLUDE[tsql](../../includes/tsql-md.md)] consulta especificada en `@inquery`, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Esta trama de datos se pasa a la [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) funcionando en [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), lo que genera las puntuaciones.
++ Los nuevos casos de puntuación se obtienen a partir [!INCLUDE[tsql](../../includes/tsql-md.md)] de la consulta `@inquery`especificada en, el primer parámetro del procedimiento almacenado. Cuando se leen los datos de la consulta, las filas se guardan en la trama de datos predeterminada, `InputDataSet`. Esta trama de datos se pasa a la función [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) en [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler), que genera las puntuaciones.
   
     `OutputDataSet<-rxPredict(modelObject = mod, data = InputDataSet, outData = NULL, predVarNames = "Score", type = "response", writeModelVars = FALSE, overwrite = TRUE);`
   
     Como data.frame puede contener una sola fila, puede usar el mismo código para la puntuación individual o por lotes.
   
-+ El valor devuelto por la `rxPredict` función es un **float** que representa la probabilidad de que el controlador obtiene una sugerencia de cualquier cantidad.
++ El valor devuelto por `rxPredict` la función es un valor de **tipo float** que representa la probabilidad de que el controlador obtenga una propina de cualquier cantidad.
 
-## <a name="batch-scoring-a-list-of-predictions"></a>(Una lista de predicciones) de puntuación por lotes
+## <a name="batch-scoring-a-list-of-predictions"></a>Puntuación por lotes (una lista de predicciones)
 
-Un escenario más común es generar predicciones para diversas observaciones en modo por lotes. En este paso, vamos a ver cómo funciona la puntuación por lotes.
+Un escenario más común es generar predicciones para varias observaciones en el modo por lotes. En este paso, vamos a ver cómo funciona la puntuación por lotes.
 
-1.  Comience por obtener un conjunto de datos de entrada para que funcione con menor. Esta consulta crea una lista de los "Diez mejores" viajes con número de pasajeros y otras características necesarias para realizar una predicción.
+1.  Empiece por obtener un conjunto más pequeño de datos de entrada con los que trabajar. Esta consulta crea una lista de los "Diez mejores" viajes con número de pasajeros y otras características necesarias para realizar una predicción.
   
     ```sql
     SELECT TOP 10 a.passenger_count AS passenger_count, a.trip_time_in_secs AS trip_time_in_secs, a.trip_distance AS trip_distance, a.dropoff_datetime AS dropoff_datetime, dbo.fnCalculateDistance(pickup_latitude, pickup_longitude, dropoff_latitude,dropoff_longitude) AS direct_distance
@@ -92,7 +92,7 @@ Un escenario más común es generar predicciones para diversas observaciones en 
     1  214 0.7 2013-06-26 13:28:10.000   0.6970098661
     ```
 
-2. Crear un procedimiento almacenado llamado **RxPredictBatchOutput** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+2. Cree un procedimiento almacenado llamado **RxPredictBatchOutput** en [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictBatchOutput] (@model varchar(250), @inquery nvarchar(max))
@@ -115,7 +115,7 @@ Un escenario más común es generar predicciones para diversas observaciones en 
     END
     ```
 
-3.  Proporcione el texto de consulta en una variable y pasarla como parámetro al procedimiento almacenado:
+3.  Proporcione el texto de la consulta en una variable y páselo como parámetro al procedimiento almacenado:
 
     ```sql
     -- Define the input data
@@ -126,22 +126,22 @@ Un escenario más común es generar predicciones para diversas observaciones en 
     EXEC [dbo].[RxPredictBatchOutput] @model = 'RxTrainLogit_model', @inquery = @query_string;
     ```
   
-El procedimiento almacenado devuelve una serie de valores que representan la predicción para cada uno de los viajes en los 10 principales. Sin embargo, los viajes superiores también son único pasajero viajes con una distancia de viaje relativamente corta, para que el controlador no es probable que reciba una propina.
+El procedimiento almacenado devuelve una serie de valores que representan la predicción para cada uno de los 10 viajes principales. Sin embargo, los primeros viajes son también viajes de un solo pasajero con una distancia de viaje relativamente breve, para los que es improbable que el controlador obtenga una propina.
   
 
 > [!TIP]
 > 
-> En lugar de devolver únicamente el "Sí: propina" y "no-sugerencia" resultados, podría también devolver la puntuación de probabilidad de predicción y, a continuación, aplicar una cláusula WHERE a la _puntuación_ valores de columna para clasificar el resultado como "propina probable" o " propina improbable", con un valor de umbral como 0,5 o 0,7. Este paso no se incluye en el procedimiento almacenado, pero es fácil de implementar.
+> En lugar de devolver solo los resultados "sí-propina" y "no-propina", también puede devolver la puntuación de probabilidad para la predicción y, a continuación, aplicar una cláusula WHERE a los valores de columna de _puntuación_ para clasificar la puntuación como "probable que sea posible" o "improbable que se presione" con un valor de umbral como 0,5 o 0,7. Este paso no se incluye en el procedimiento almacenado, pero es fácil de implementar.
 
-## <a name="single-row-scoring-of-multiple-inputs"></a>Fila única de puntuación de varias entradas
+## <a name="single-row-scoring-of-multiple-inputs"></a>Puntuación de una sola fila de varias entradas
 
-A veces desea pasar varios valores de entrada y obtener una sola predicción según esos valores. Por ejemplo, podría configurar una hoja de cálculo de Excel, una aplicación web o un informe de Reporting Services para llamar al procedimiento almacenado y proporcionar entradas escritas o seleccionadas por los usuarios de esas aplicaciones.
+A veces, desea pasar varios valores de entrada y obtener una sola predicción basada en esos valores. Por ejemplo, podría configurar una hoja de cálculo de Excel, una aplicación web o un informe de Reporting Services para llamar al procedimiento almacenado y proporcionar entradas escritas o seleccionadas por los usuarios de esas aplicaciones.
 
-En esta sección, aprenderá a crear predicciones únicas mediante un procedimiento almacenado que toma varias entradas, como número de pasajeros, distancia de viaje y así sucesivamente. El procedimiento almacenado crea una puntuación basada en el modelo de R almacenado previamente.
+En esta sección, aprenderá a crear predicciones únicas mediante un procedimiento almacenado que toma varias entradas, como el número de pasajeros, la distancia del viaje, etc. El procedimiento almacenado crea una puntuación basada en el modelo R previamente almacenado.
   
-Si se llama al procedimiento almacenado desde una aplicación externa, debe asegurarse de que los datos coinciden con los requisitos del modelo de R. Esto puede incluir asegurarse de que los datos de entrada se pueden convertir a un tipo de datos R o validar el tipo y la longitud de los datos. 
+Si llama al procedimiento almacenado desde una aplicación externa, asegúrese de que los datos coinciden con los requisitos del modelo de R. Esto puede incluir asegurarse de que los datos de entrada se pueden convertir a un tipo de datos R o validar el tipo y la longitud de los datos. 
 
-1. Crear un procedimiento almacenado **RxPredictSingleRow**.
+1. Cree un procedimiento almacenado **RxPredictSingleRow**.
   
     ```sql
     CREATE PROCEDURE [dbo].[RxPredictSingleRow] @model varchar(50), @passenger_count int = 0, @trip_distance float = 0, @trip_time_in_secs int = 0, @pickup_latitude float = 0, @pickup_longitude float = 0, @dropoff_latitude float = 0, @dropoff_longitude float = 0
@@ -166,7 +166,7 @@ Si se llama al procedimiento almacenado desde una aplicación externa, debe aseg
 
 2. Pruébelo, proporcionando los valores manualmente.
   
-    Abra una nueva **consulta** ventana y llame al procedimiento almacenado, que proporciona valores para cada uno de los parámetros. Los parámetros representan las columnas de característica que se usa el modelo y son necesarios.
+    Abra una nueva ventana de **consulta** y llame al procedimiento almacenado y proporcione valores para cada uno de los parámetros. Los parámetros representan las columnas de características utilizadas por el modelo y son necesarias.
 
     ```sql
     EXEC [dbo].[RxPredictSingleRow] @model = 'RxTrainLogit_model',
@@ -179,17 +179,17 @@ Si se llama al procedimiento almacenado desde una aplicación externa, debe aseg
     @dropoff_longitude = -73.977303
     ```
 
-    O bien, use este formulario más corto compatibles con [parámetros a un procedimiento almacenado](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
+    O bien, use esta forma más corta compatible con [los parámetros de un procedimiento almacenado](https://docs.microsoft.com/sql/relational-databases/stored-procedures/specify-parameters):
   
     ```sql
     EXEC [dbo].[RxPredictSingleRow] 'RxTrainLogit_model', 1, 2.5, 631, 40.763958,-73.973373, 40.782139,-73.977303
     ```
 
-3. Los resultados indican que la probabilidad de obtener una sugerencia es baja (cero) en los viajes 10 principales, ya que todos son viajes único pasajero en una distancia relativamente corta.
+3. Los resultados indican que la probabilidad de obtener una propina es baja (cero) en estos 10 viajes principales, ya que todos son viajes de un solo pasajero a través de una distancia relativamente corta.
 
 ## <a name="conclusions"></a>Conclusiones
 
-Esto concluye el tutorial. Ahora que ha aprendido a incrustar código R en procedimientos almacenados, puede ampliar estas prácticas para crear modelos de su elección. La integración con [!INCLUDE[tsql](../../includes/tsql-md.md)] hace mucho más fácil la implementación de modelos de R para la predicción y la incorporación del reciclaje de modelos como parte de un flujo de trabajo de datos empresarial.
+Esto concluye el tutorial. Ahora que ha aprendido a incrustar código de R en procedimientos almacenados, puede ampliar estas prácticas para crear modelos propios. La integración con [!INCLUDE[tsql](../../includes/tsql-md.md)] hace mucho más fácil la implementación de modelos de R para la predicción y la incorporación del reciclaje de modelos como parte de un flujo de trabajo de datos empresarial.
 
 ## <a name="previous-lesson"></a>Lección anterior
 

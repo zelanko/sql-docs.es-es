@@ -1,37 +1,37 @@
 ---
-title: 'Crear una base de datos y permisos para ver tutoriales RevoScaleR: SQL Server Machine Learning'
-description: Tutorial de tutorial sobre cómo crear una base de datos de SQL Server para los tutoriales de R...
+title: Crear una base de datos y permisos para los tutoriales de RevoScaleR
+description: Tutorial tutorial sobre cómo crear una base de datos de SQL Server para tutoriales de R.
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84f78219bf4bb188f7a29e79718e107d7fa43347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88a8bb4ab81f3e7c18bcafce70488583fa0421fa
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962168"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344642"
 ---
 # <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>Crear una base de datos y permisos (tutorial de SQL Server y RevoScaleR)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-En esta lección forma parte de la [RevoScaleR tutorial](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
+Esta lección forma parte del [tutorial de RevoScaleR](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md) sobre cómo usar [las funciones de RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) con SQL Server.
 
-Lección uno es sobre cómo configurar una base de datos de SQL Server y los permisos necesarios para completar este tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) u otro editor de consultas para completar las tareas siguientes:
+La lección uno consiste en configurar una base de datos SQL Server y los permisos necesarios para completar este tutorial. Use [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) u otro editor de consultas para completar las siguientes tareas:
 
 > [!div class="checklist"]
-> * Crear una nueva base de datos para almacenar los datos de entrenamiento y puntuación dos modelos de R
-> * Crear un inicio de sesión de usuario de base de datos con permisos para crear y utilizar objetos de base de datos
+> * Crear una nueva base de datos para almacenar los datos para el entrenamiento y la puntuación de dos modelos de R
+> * Crear un inicio de sesión de usuario de base de datos con permisos para crear y usar objetos de base de datos
   
 ## <a name="create-the-database"></a>Crear la base de datos
 
-Este tutorial requiere una base de datos para almacenar datos y el código. Si no es un administrador, solicitar el DBA para crear la base de datos y el inicio de sesión para usted. Necesitará permisos para leer y escribir datos y para ejecutar scripts de R.
+En este tutorial se necesita una base de datos para almacenar datos y código. Si no es administrador, pida a su DBA que cree la base de datos e inicie sesión automáticamente. Necesitará permisos para escribir y leer datos, y para ejecutar scripts de R.
 
 1. En SQL Server Management Studio, conéctese a una instancia de base de datos habilitada para R.
 
-2. Haga clic en **bases de datos**y seleccione **nueva base de datos**.
+2. Haga clic con el botón derecho en **bases**de **datos y seleccione nueva base de datos**.
   
 2. Escriba un nombre para la nueva base de datos: RevoDeepDive.
   
@@ -74,9 +74,9 @@ CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 
 ## <a name="assign-permissions"></a>Asignar permisos
 
-Este tutorial muestra el script de R y las operaciones de DDL, incluida la creación y eliminación de tablas y procedimientos almacenados y ejecutar el script de R en un proceso externo en SQL Server. En este paso, asigne permisos para permitir que estas tareas.
+En este tutorial se muestran las operaciones de scripts y DDL de R, incluida la creación y eliminación de tablas y procedimientos almacenados, y la ejecución de scripts de R en un proceso externo en SQL Server. En este paso, asigne permisos para permitir estas tareas.
 
-En este ejemplo se da por supuesto un inicio de sesión SQL (DDUser01), pero si ha creado un inicio de sesión de Windows, use en su lugar.
+En este ejemplo se da por supuesto un inicio de sesión de SQL (DDUser01), pero si creó un inicio de sesión de Windows, úselo en su lugar.
 
 ```sql
 USE RevoDeepDive
@@ -97,25 +97,25 @@ En esta sección se enumeran algunos problemas comunes que podrían surgir duran
   
     Si no quiere instalar herramientas adicionales de administración de bases de datos, puede crear una conexión de prueba a la instancia de SQL Server mediante el [Administrador de orígenes de datos ODBC](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) en el Panel de control. Si la base de datos está configurada correctamente y escribe el nombre de usuario y la contraseña correctos, verá la base de datos que acaba de crear y podrá seleccionarla como la base de datos predeterminada.
   
-    Causas comunes de errores de conexión incluyen remota no están habilitadas las conexiones para el servidor y no está habilitado el protocolo Canalizaciones con nombre. Puede encontrar más sugerencias para solucionar problemas en este artículo: [Solucionar problemas de conexión para el motor de base de datos SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
+    Entre los motivos comunes de los errores de conexión se incluyen las conexiones remotas no están habilitadas para el servidor y el protocolo de canalizaciones con nombre no está habilitado. Puede encontrar más sugerencias para la solución de problemas en este artículo: [Solucionar problemas de conexión al Motor de base de datos SQL Server](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine).
   
 - **¿Por qué el nombre de la tabla tiene como prefijo "datareader"?**
   
-    Cuando se especifica el esquema predeterminado para este usuario como **db_datareader**, todas las tablas y los objetos creados por este usuario tienen el prefijo con el *esquema* nombre. Un esquema es como una carpeta que puede agregar a una base de datos para organizar objetos. El esquema también define los privilegios de un usuario en la base de datos.
+    Cuando se especifica el esquema predeterminado para este usuario como **db_datareader**, todas las tablas y otros objetos nuevos creados por este usuario tienen como prefijo el nombre del *esquema* . Un esquema es como una carpeta que puede agregar a una base de datos para organizar objetos. El esquema también define los privilegios de un usuario en la base de datos.
   
-    Cuando el esquema se asocia con un nombre de usuario en particular, el usuario es el _propietario del esquema_. Cuando crea un objeto, siempre lo crea en su propio esquema, a menos que solicite específicamente que se cree en otro esquema.
+    Cuando el esquema está asociado a un nombre de usuario determinado, el usuario es el _propietario del esquema_. Cuando crea un objeto, siempre lo crea en su propio esquema, a menos que solicite específicamente que se cree en otro esquema.
   
-    Por ejemplo, si crea una tabla con el nombre **TestData**, y su esquema predeterminado es **db_datareader**, se crea la tabla con el nombre `<database_name>.db_datareader.TestData`.
+    Por ejemplo, si crea una tabla con el nombre **TestData**y el esquema predeterminado es **db_datareader**, la tabla se crea con el nombre `<database_name>.db_datareader.TestData`.
   
     Por esta razón, una base de datos puede contener varias tablas con el mismo nombre, siempre y cuando las tablas pertenezcan a esquemas diferentes.
    
-    Si está buscando una tabla y no se especifica un esquema, el servidor de base de datos buscará un esquema que posee. Por lo tanto, no hace falta que especifique el nombre de esquema al tener acceso a tablas en un esquema asociado a su inicio de sesión.
+    Si busca una tabla y no especifica un esquema, el servidor de base de datos buscará un esquema de su propiedad. Por lo tanto, no hace falta que especifique el nombre de esquema al tener acceso a tablas en un esquema asociado a su inicio de sesión.
   
 - **No tengo privilegios DDL. ¿Puedo ejecutar el tutorial igualmente?**
   
-    Sí, pero se debe pedirle a alguien que cargue previamente los datos en el [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas e ir directamente a la lección siguiente. Las funciones que requieren privilegios DDL se mencionan en el tutorial siempre que sea posible.
+    Sí, pero debe pedirle a alguien que cargue previamente los datos en las [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tablas y vaya directamente a la lección siguiente. Siempre que sea posible, se llama a las funciones que requieren privilegios DDL en el tutorial.
 
-    Además, pida al administrador que conceda el permiso EXECUTE ANY EXTERNAL SCRIPT. Es necesario para la ejecución del script de R, si es remoto o mediante `sp_execute_external_script`.
+    Además, pida a su administrador que le conceda el permiso, ejecute cualquier SCRIPT externo. Es necesario para la ejecución del script de R, ya sea remota `sp_execute_external_script`o mediante.
 
 ## <a name="next-steps"></a>Pasos siguientes
 

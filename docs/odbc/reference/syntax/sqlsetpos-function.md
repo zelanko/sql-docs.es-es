@@ -1,7 +1,7 @@
 ---
 title: Función SQLSetPos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetPos
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetPos
@@ -19,19 +20,19 @@ helpviewer_keywords:
 ms.assetid: 80190ee7-ae3b-45e5-92a9-693eb558f322
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: eb60350be75a6b4fae5e0c5c7c237d125ee3d3a4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f14b99d2c7dac91116186fdcf53ff77ee6c2c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039694"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343067"
 ---
 # <a name="sqlsetpos-function"></a>Función SQLSetPos
 **Conformidad**  
- Versión de introducción: Cumplimiento de estándares 1.0 de ODBC: ODBC  
+ Versión introducida: Compatibilidad con los estándares de ODBC 1,0: ODBC  
   
  **Resumen**  
- **SQLSetPos** establece la posición del cursor en un conjunto de filas y permite que una aplicación para actualizar los datos del conjunto de filas o actualizar o eliminar datos en el conjunto de resultados.  
+ **SQLSetPos** establece la posición del cursor en un conjunto de filas y permite que una aplicación actualice los datos del conjunto de filas o actualice o elimine los datos del conjunto de resultados.  
   
 ## <a name="syntax"></a>Sintaxis  
   
@@ -46,25 +47,25 @@ SQLRETURN SQLSetPos(
   
 ## <a name="arguments"></a>Argumentos  
  *StatementHandle*  
- [Entrada] Identificador de instrucción.  
+ Entradas Identificador de instrucción.  
   
  *RowNumber*  
- [Entrada] Posición de la fila del conjunto de filas en el que se va a realizar la operación especificada con el *operación* argumento. Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas.  
+ Entradas Posición de la fila del conjunto de filas en la que se va a realizar la operación especificada con el argumento *Operation* . Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas.  
   
  Para obtener más información, vea "Comentarios".  
   
  *Operación*  
- [Entrada] Para realizar la operación:  
+ Entradas Operación que se va a realizar:  
   
  SQL_POSITION SQL_REFRESH SQL_UPDATE SQL_DELETE  
   
 > [!NOTE]
->  El valor SQL_ADD para el *operación* argumento ha quedado desusado para ODBC *3.x*. ODBC *3.x* controladores deberá ser compatible con SQL_ADD para compatibilidad con versiones anteriores. Esta funcionalidad se ha reemplazado por una llamada a **SQLBulkOperations** con un *operación* de SQL_ADD. Cuando un ODBC *3.x* aplicación trabaja con un ODBC *2.x* controlador, el Administrador de controladores asigna una llamada a **SQLBulkOperations** con un *operación*de SQL_ADD a **SQLSetPos** con un *operación* de SQL_ADD.  
+>  El valor SQL_ADD para el argumento *Operation* está en desuso para ODBC *3. x*. Los controladores ODBC *3. x* deberán admitir SQL_ADD para mantener la compatibilidad con versiones anteriores. Esta funcionalidad se ha reemplazado por una llamada a **SQLBulkOperations** con una *operación* de SQL_ADD. Cuando una aplicación ODBC *3. x* funciona con un controlador *ODBC 2. x* , el administrador de controladores asigna una llamada a **SQLBULKOPERATIONS** con una *operación* de SQL_ADD a **SQLSetPos** con una *operación* de SQL_ADD.  
   
  Para obtener más información, vea "Comentarios".  
   
  *LockType*  
- [Entrada] Especifica la forma de bloquear la fila después de realizar la operación especificada en el *operación* argumento.  
+ Entradas Especifica cómo bloquear la fila después de realizar la operación especificada en el argumento de *operación* .  
   
  SQL_LOCK_NO_CHANGE SQL_LOCK_EXCLUSIVE SQL_LOCK_UNLOCK  
   
@@ -75,244 +76,244 @@ SQLRETURN SQLSetPos(
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR o SQL_INVALID_HANDLE.  
   
 ## <a name="diagnostics"></a>Diagnóstico  
- Cuando **SQLSetPos** devuelve SQL_ERROR o SQL_SUCCESS_WITH_INFO, un valor SQLSTATE asociado se puede obtener mediante una llamada a **SQLGetDiagRec** con un *HandleType* de SQL_ HANDLE_STMT y un *controlar* de *StatementHandle*. En la tabla siguiente se enumera los valores SQLSTATE devueltos normalmente por **SQLSetPos** y se explica cada uno de ellos en el contexto de esta función; la notación "(DM)" precede a las descripciones de SQLSTATE devuelto por el Administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
+ Cuando **SQLSetPos** devuelve SQL_ERROR u SQL_SUCCESS_WITH_INFO, se puede obtener un valor SQLSTATE asociado llamando a **SQLGetDiagRec** con un *HandleType* de SQL_HANDLE_STMT y un *identificador* de *StatementHandle*. En la tabla siguiente se enumeran los valores de SQLSTATE que suele devolver **SQLSetPos** y se explica cada uno de ellos en el contexto de esta función. la notación "(DM)" precede a las descripciones de SQLSTATEs devueltas por el administrador de controladores. El código de retorno asociado a cada valor SQLSTATE es SQL_ERROR, a menos que se indique lo contrario.  
   
- Para todas esas SQLSTATE que puede devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO, si se produce un error en uno o más, pero no todas las filas de una operación de varias filas, y se devuelve SQL_ERROR si se produce un error en un fila única operación.  
+ En el caso de todos los SQLSTATEs que pueden devolver SQL_SUCCESS_WITH_INFO o SQL_ERROR (excepto 01xxx SQLSTATEs), se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en una o varias filas, pero no en todas, filas de una operación MultiRow, y se devuelve SQL_ERROR si se produce un error en un operación de una sola fila.  
   
 |SQLSTATE|Error|Descripción|  
 |--------------|-----------|-----------------|  
-|01000|Advertencia general|Específico del controlador de mensaje informativo. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01001|Conflicto de operación de cursor|El *operación* argumento era SQL_DELETE o SQL_UPDATE, y no hay filas o más de una fila se eliminó o actualizó. (Para obtener más información acerca de las actualizaciones a más de una fila, vea la descripción de la SQL_ATTR_SIMULATE_CURSOR *atributo* en **SQLSetStmtAttr**.) (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> El *operación* argumento era SQL_DELETE o SQL_UPDATE y error en la operación debido a la simultaneidad optimista. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|01004|Truncamiento de datos derecho de cadena|El *operación* argumento era SQL_REFRESH y cadena o datos binarios devueltos para una o varias columnas con un tipo de datos SQL_C_CHAR o SQL_C_BINARY dieron como resultado el truncamiento de carácter no en blanco o datos binarios que no son NULL.|  
-|01S01|Error en la fila|El *RowNumber* argumento era 0 y se produjo un error en una o varias filas al realizar la operación especificada con el *operación* argumento.<br /><br /> (Se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en uno o más, pero no todas las filas de una operación de varias filas, y se devuelve SQL_ERROR si se produce un error en una operación única fila).<br /><br /> (Este SQLSTATE se devuelve solo cuando **SQLSetPos** se llama después de **SQLExtendedFetch**, si el controlador es un ODBC *2.x* no se utiliza el controlador y la biblioteca de cursores.)|  
-|01S07|Truncamiento fraccionario|El *operación* argumento era SQL_REFRESH, el tipo de datos del búfer de aplicación no era SQL_C_CHAR o SQL_C_BINARY y se truncaron los datos devueltos a los búferes de la aplicación para una o varias columnas. Para los tipos de datos numéricos, se ha truncado la parte fraccionaria del número. De hora, marca de tiempo y los tipos de datos de intervalo que contiene un componente de tiempo, se trunca la parte fraccionaria del tiempo.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
-|07006|Infracción del atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados para el tipo de datos especificado por *TargetType* en la llamada a **SQLBindCol**.|  
-|07009|Índice de descriptor no válido|El argumento *operación* fue SQL_REFRESH o SQL_UPDATE, y se enlaza una columna con un número de columna mayor que el número de columnas del conjunto de resultados.|  
-|21S02|Grado de la tabla derivada no coincide con la lista de columnas|El argumento *operación* era SQL_UPDATE y no hay columnas eran actualizables porque todas las columnas se puede ser independiente, de solo lectura o el valor en el búfer de longitud/indicador enlazado era SQL_COLUMN_IGNORE.|  
-|22001|Cadena de datos, truncamiento por la derecha|El *operación* argumento era SQL_UPDATE, y tuvo como resultado de la asignación de un carácter o un valor binario a una columna en el truncamiento de no están en blanco (para los caracteres) o distinto de null (para el binario) caracteres o bytes.|  
-|22003|Valor numérico fuera del intervalo|El argumento *operación* estaba SQL_UPDATE y la asignación de un valor numérico a una columna del conjunto de resultados provocó la parte entera (en contraposición a fraccionarios) del número que se va a truncar.<br /><br /> El argumento *operación* era SQL_REFRESH y devolver el valor numérico para una o varias columnas enlazadas, habría provocado una pérdida de dígitos significativos.|  
-|22007|Formato de datetime no válido|El argumento *operación* estaba SQL_UPDATE y la asignación de un valor date o timestamp a una columna del conjunto de resultados que provocó el año, mes o campo día para estar fuera del intervalo.<br /><br /> El argumento *operación* era SQL_REFRESH y devolver el valor de fecha o la marca de tiempo para uno o más columnas enlazadas habría provocado el año, mes o campo día para estar fuera del intervalo.|  
-|22008|Desbordamiento del campo de fecha y hora|El *operación* argumento era SQL_UPDATE y el rendimiento de fecha y hora aritmética en datos que se envían a una columna del conjunto de resultados dieron lugar a un campo de fecha y hora (año, mes, día, hora, minuto o segundo campo) de los resultados fuera del intervalo válido de valores para el campo o no sea válido según las reglas en natural para fechas y horas del calendario gregoriano.<br /><br /> El *operación* argumento era SQL_REFRESH y el rendimiento de fecha y hora aritmética en los datos recuperados del conjunto de resultados dieron lugar a un campo de fecha y hora (año, mes, día, hora, minuto o segundo campo) de los resultados fuera del intervalo válido de valores para el campo o no sea válido según las reglas en natural para fechas y horas del calendario gregoriano.|  
-|22015|Desbordamiento de campo de intervalo|El *operación* argumento era SQL_UPDATE y la asignación de un valor numérico exacto o el tipo de intervalo C a un tipo de datos SQL de intervalo causó una pérdida de dígitos significativos.<br /><br /> El *operación* argumento era SQL_UPDATE; cuando se asigna a un intervalo de tipo SQL, no había ninguna representación del valor del tipo C en el intervalo de tipo SQL.<br /><br /> El *operación* argumento era SQL_REFRESH y asignación de un valor numérico exacto o el intervalo de tipo SQL a un tipo de intervalo C causó una pérdida de dígitos significativos en el campo inicial.<br /><br /> El *operación* argumento era SQL_ actualizar; cuando se asigna a un tipo de intervalo de C, no había ninguna representación del valor del tipo SQL en el tipo de intervalo C.|  
-|22018|Valor de carácter no válido para especificación cast|El *operación* argumento era SQL_REFRESH; el tipo C era un numérico exacto o aproximado, una fecha y hora o un tipo de datos de intervalo; el tipo SQL de la columna era un tipo de datos de caracteres; y el valor de la columna no es un literal válido de la tipo de C enlazado.<br /><br /> El argumento *operación* era SQL_UPDATE; el tipo SQL era un numérico exacto o aproximado, una fecha y hora o un tipo de datos de intervalo; el tipo de C era SQL_C_CHAR; y el valor de la columna no es un literal válido del tipo SQL enlazado.|  
-|23000|Infracción de restricción de integridad|El argumento *operación* fue SQL_DELETE o SQL_UPDATE, y se ha infringido una restricción de integridad.|  
-|24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado, pero se ha asociado ningún conjunto de resultados la *StatementHandle*.<br /><br /> (DM) un cursor estaba abierto en el *StatementHandle*, pero **SQLFetch** o **SQLFetchScroll** no se había llamado.<br /><br /> Un cursor estaba abierto en el *StatementHandle*, y **SQLFetch** o **SQLFetchScroll** hubiera llamado, pero el cursor se coloca antes del inicio del conjunto de resultados o después de final del conjunto de resultados.<br /><br /> El argumento *operación* fue SQL_DELETE, SQL_REFRESH o SQL_UPDATE, y el cursor se coloca antes del inicio del conjunto de resultados o después del final del conjunto de resultados.|  
-|40001|Error de serialización.|Debido a un interbloqueo de recurso con otra transacción se revirtió la transacción.|  
-|40003|Finalización de instrucción desconocida|Error en la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
-|42000|Error de sintaxis, infracción de acceso|El controlador no pudo bloquear la fila según sea necesario para realizar la operación solicitada en el argumento *operación*.<br /><br /> El controlador no pudo bloquear la fila cuando se le solicite en el argumento *LockType*.|  
-|44000|Infracción de WITH CHECK OPTION|El *operación* argumento era SQL_UPDATE y la actualización se realizó en una tabla vista o una tabla derivada de la tabla mostrada en la que se creó mediante la especificación de **WITH CHECK OPTION**, de modo que una o varias filas afectado por la actualización ya no estará presente en la tabla mostrada.|  
-|HY000|Error general|Se produjo un error para que se ha producido ningún SQLSTATE específico y para los que se ha definido ningún SQLSTATE específicos de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*MessageText* búfer describe el error y su causa.|  
+|01000|ADVERTENCIA general|Mensaje informativo específico del controlador. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01001|Conflicto de operación de cursor|El argumento de *operación* era SQL_DELETE o SQL_UPDATE y no se eliminó o actualizó ninguna fila o más de una fila. (Para obtener más información acerca de las actualizaciones de más de una fila, vea la descripción del *atributo* SQL_ATTR_SIMULATE_CURSOR en **SQLSetStmtAttr**). (La función devuelve SQL_SUCCESS_WITH_INFO).<br /><br /> El argumento de *operación* era SQL_DELETE o SQL_UPDATE y se produjo un error en la operación debido a la simultaneidad optimista. (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|01004|Truncamiento de derecha de datos de cadena|El argumento *Operation* era SQL_REFRESH y los datos binarios o de cadena devueltos para una columna o columnas con un tipo de datos SQL_C_CHAR o SQL_C_BINARY dieron como resultado el truncamiento de datos binarios de caracteres que no están en blanco o no NULL.|  
+|01S01|Error en la fila|El argumento *RowNumber* era 0 y se produjo un error en una o varias filas mientras se realizaba la operación especificada con el argumento *Operation* .<br /><br /> (Se devuelve SQL_SUCCESS_WITH_INFO si se produce un error en una o varias filas, pero no en todas, filas de una operación MultiRow, y se devuelve SQL_ERROR si se produce un error en una operación de una sola fila.)<br /><br /> (Este SQLSTATE solo se devuelve cuando se llama a **SQLSetPos** después de **SQLExtendedFetch**, si el controlador es ODBC *2. x* y no se utiliza la biblioteca de cursores).|  
+|01S07|Truncamiento fraccionario|El argumento de *operación* era SQL_REFRESH, el tipo de datos del búfer de aplicación no era SQL_C_CHAR o SQL_C_BINARY y los datos devueltos a los búferes de la aplicación para una o más columnas se truncaron. En el caso de los tipos de datos numéricos, se truncó la parte fraccionaria del número. En el caso de los tipos de datos Time, TIMESTAMP y Interval que contienen un componente de hora, se truncó la parte fraccionaria de la hora.<br /><br /> (La función devuelve SQL_SUCCESS_WITH_INFO).|  
+|07006|Infracción de atributo de tipo de datos restringido|No se pudo convertir el valor de datos de una columna del conjunto de resultados al tipo de datos especificado por *TargetType* en la llamada a **SQLBindCol**.|  
+|07009|Índice de descriptor no válido|La *operación* del argumento era SQL_REFRESH o SQL_UPDATE y una columna estaba enlazada con un número de columna mayor que el número de columnas del conjunto de resultados.|  
+|21S02|El grado de la tabla derivada no coincide con la lista de columnas|La *operación* del argumento era SQL_UPDATE y no se podía actualizar ninguna columna porque todas las columnas eran independientes, de solo lectura o el valor del búfer de indicador/longitud enlazado era SQL_COLUMN_IGNORE.|  
+|22001|Datos de cadena, truncamiento derecho|El argumento de *operación* era SQL_UPDATE y la asignación de un valor de carácter o binario a una columna dio como resultado el truncamiento de caracteres que no están en blanco (para caracteres) o que no son NULL (para binario) o bytes.|  
+|22003|Valor numérico fuera del intervalo|La *operación* ARGUMENT era SQL_UPDATE y la asignación de un valor numérico a una columna del conjunto de resultados provocó la parte entera (en oposición a fraccionario) del número que se va a truncar.<br /><br /> La *operación* del argumento era SQL_REFRESH y la devolución del valor numérico de una o varias columnas enlazadas habría causado una pérdida de dígitos significativos.|  
+|22007|Formato de fecha y hora no válido|La *operación* de argumento era SQL_UPDATE y la asignación de un valor de fecha o marca de tiempo a una columna del conjunto de resultados hizo que el campo Year, month o Day esté fuera del intervalo.<br /><br /> La *operación* del argumento era SQL_REFRESH y la devolución del valor de fecha o marca de tiempo para una o varias columnas enlazadas habría causado que el campo Year, month o Day esté fuera del intervalo.|  
+|22008|Desbordamiento del campo de fecha y hora|El argumento de *operación* era SQL_UPDATE y el rendimiento de la aritmética de DateTime en los datos que se envían a una columna en el conjunto de resultados provocó que un campo DateTime (el año, mes, día, hora, minuto o segundo campo) del resultado fuera del valor permitido rango de valores para el campo o no válido en función de las reglas naturales del calendario gregoriano para los valores DateTime.<br /><br /> El argumento de *operación* era SQL_REFRESH y el rendimiento de la aritmética de DateTime en los datos que se recuperan del conjunto de resultados provocó un campo de fecha y hora (año, mes, día, hora, minuto o segundo) del resultado fuera del permitido rango de valores para el campo o no válido en función de las reglas naturales del calendario gregoriano para los valores DateTime.|  
+|22015|Desbordamiento de campo de intervalo|El argumento de *operación* era SQL_UPDATE y la asignación de un tipo numérico exacto o de intervalo C a un tipo de datos SQL de intervalo provoca una pérdida de dígitos significativos.<br /><br /> El argumento de *operación* era SQL_UPDATE; al asignar a un tipo SQL de intervalo, no había ninguna representación del valor del tipo C en el tipo SQL de intervalo.<br /><br /> El argumento de *operación* era SQL_REFRESH y la asignación de un tipo de SQL numérico exacto o de intervalo a un tipo de intervalo C provocó una pérdida de dígitos significativos en el campo inicial.<br /><br /> El argumento de *operación* se SQL_ actualizar; al asignar a un tipo de intervalo C, no había ninguna representación del valor del tipo SQL en el tipo de intervalo C.|  
+|22018|Valor de carácter no válido para la especificación de conversión|El argumento de *operación* era SQL_REFRESH; el tipo C era un tipo de datos numérico exacto o aproximado, un valor de fecha y hora o un intervalo. el tipo SQL de la columna era un tipo de datos de caracteres. y el valor de la columna no era un literal válido del tipo C enlazado.<br /><br /> La *operación* del argumento era SQL_UPDATE; el tipo SQL era un tipo numérico exacto o aproximado, un valor de fecha y hora o un tipo de datos de intervalo; el tipo C era SQL_C_CHAR; y el valor de la columna no era un literal válido del tipo SQL enlazado.|  
+|23000|Infracción de la restricción de integridad|La *operación* del argumento era SQL_DELETE o SQL_UPDATE y se infringió una restricción de integridad.|  
+|24000|Estado de cursor no válido|El *StatementHandle* estaba en un estado ejecutado, pero no hay ningún conjunto de resultados asociado a *StatementHandle*.<br /><br /> (DM) un cursor estaba abierto en el *StatementHandle*, pero no se ha llamado a **SQLFetch** o **SQLFetchScroll** .<br /><br /> Un cursor estaba abierto en el *StatementHandle*y se ha llamado a **SQLFetch** o **SQLFetchScroll** , pero el cursor se colocó antes del inicio del conjunto de resultados o después del final del conjunto de resultados.<br /><br /> La *operación* ARGUMENT era SQL_DELETE, SQL_REFRESH o SQL_UPDATE y el cursor se colocó antes del inicio del conjunto de resultados o después del final del conjunto de resultados.|  
+|40001|Error de serialización|La transacción se revirtió debido a un interbloqueo de recursos con otra transacción.|  
+|40003|Finalización de instrucciones desconocida|No se pudo establecer la conexión asociada durante la ejecución de esta función y no se puede determinar el estado de la transacción.|  
+|42000|Error de sintaxis o infracción de acceso|El controlador no pudo bloquear la fila según sea necesario para realizar la operación solicitada en la *operación*de argumento.<br /><br /> El controlador no pudo bloquear la fila tal como se solicitó en el argumento *LockType*.|  
+|44000|Infracción de WITH CHECK OPTION|El argumento *Operation* era SQL_UPDATE y la actualización se realizó en una tabla vista o en una tabla derivada de la tabla vista que se creó especificando **with check Option**, de modo que una o varias filas afectadas por la actualización dejarán de ser presente en la tabla vista.|  
+|HY000|Error general|Se produjo un error para el que no había ningún SQLSTATE específico y para el que no se definió ningún SQLSTATE específico de la implementación. El mensaje de error devuelto por **SQLGetDiagRec** en el  *\*búfer MessageText* describe el error y su causa.|  
 |HY001|Error de asignación de memoria|El controlador no pudo asignar la memoria necesaria para admitir la ejecución o la finalización de la función.|  
-|HY008|Operación cancelada|Procesamiento asincrónico se habilitó para la *StatementHandle*. Se llamó a la función, y antes que completó la ejecución, **SQLCancel** o **SQLCancelHandle** se ha llamado en el *StatementHandle*, y, a continuación, se llamó a la función nuevo en el *StatementHandle*.<br /><br /> Se llamó a la función, y antes que completó la ejecución, **SQLCancel** o **SQLCancelHandle** se ha llamado en el *StatementHandle* desde un subproceso diferente en un aplicaciones multiproceso.|  
-|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado el *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función SQLSetPos.<br /><br /> (DM) especificado *StatementHandle* no estaba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute**, o una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta asincrónicamente (no ésta) para el *StatementHandle* y aún se estaba ejecutando cuando se llamó a esta función.<br /><br /> (DM) **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**, o **SQLSetPos** se llamó para el  *StatementHandle* y devuelve SQL_NEED_DATA. Esta función se invoca antes de que se enviaron datos para todas las columnas o parámetros de datos en ejecución.<br /><br /> (DM) el controlador fue un ODBC *2.x* controlador, y **SQLSetPos** se llamó para un *StatementHandle* después **SQLFetch** llamó.|  
-|HY011|Atributo no se puede establecer ahora|(DM) el controlador fue un ODBC *2.x* controlador; el SQL_ATTR_ROW_STATUS_PTR se ha establecido el atributo de instrucción; a continuación, **SQLSetPos** se llamó antes **SQLFetch**,  **SQLFetchScroll**, o **SQLExtendedFetch** llamó.|  
-|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque los objetos de memoria subyacente no se podrían tener acceso, posiblemente debido a memoria insuficiente.|  
-|HY090|Longitud de búfer o cadena no válida|El *operación* argumento era SQL_UPDATE, un valor de datos era un puntero nulo y el valor de longitud de columna no era 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA, o menor o igual que SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> El *operación* argumento era SQL_UPDATE; un valor de datos no era un puntero nulo; el tipo de datos C era SQL_C_BINARY o SQL_C_CHAR; y el valor de longitud de columna era menor que 0 pero no es igual a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE , SQL_NTS o SQL_NULL_DATA, o menor o igual que SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> El valor en un búfer de longitud/indicador era SQL_DATA_AT_EXEC; el tipo SQL era SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo de datos específicos del origen de datos long; y el tipo de información SQL_NEED_LONG_DATA_LEN **SQLGetInfo** era "S".|  
-|HY092|Identificador de atributo no válido|(DM) el valor especificado para el *operación* argumento no era válido.<br /><br /> (DM) el valor especificado para el *LockType* argumento no era válido.<br /><br /> El *operación* argumento era SQL_UPDATE o SQL_DELETE y el atributo de instrucción SQL_ATTR_CONCURRENCY era SQL_ATTR_CONCUR_READ_ONLY.|  
+|HY008|Operación cancelada|El procesamiento asincrónico se ha habilitado para *StatementHandle*. Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en *StatementHandle*y, a continuación, se llamó de nuevo a la función en *StatementHandle*.<br /><br /> Se llamó a la función y antes de completar la ejecución, se llamó a **SQLCancel** o **SQLCancelHandle** en el *StatementHandle* desde un subproceso diferente en una aplicación multiproceso.|  
+|HY010|Error de secuencia de función|(DM) se llamó a una función que se ejecuta de forma asincrónica para el identificador de conexión que está asociado a *StatementHandle*. Esta función asincrónica todavía se estaba ejecutando cuando se llamó a la función SQLSetPos.<br /><br /> (DM) el *StatementHandle* especificado no se encontraba en un estado ejecutado. Se llamó a la función sin llamar primero a **SQLExecDirect**, **SQLExecute**o a una función de catálogo.<br /><br /> (DM) se llamó a una función que se ejecuta de forma asincrónica (no a esta) para *StatementHandle* y que todavía se estaba ejecutando cuando se llamó a esta función.<br /><br /> Se llamó a **SQLExecute**, **SQLExecDirect**, **SQLBulkOperations**o **SQLSETPOS** para *StatementHandle* y se devolvió SQL_NEED_DATA. Se llamó a esta función antes de enviar los datos para todos los parámetros o columnas de datos en ejecución.<br /><br /> (DM) el controlador era un controlador ODBC *2. x* y se llamó a **SQLSetPos** para un *StatementHandle* después de llamar a **SQLFetch** .|  
+|HY011|El atributo no se puede establecer ahora|(DM) el controlador era un controlador ODBC *2. x.* se estableció el atributo de la instrucción SQL_ATTR_ROW_STATUS_PTR. después se llamó a **SQLSetPos** antes de llamar a **SQLFetch**, **SQLFetchScroll**o **SQLExtendedFetch** .|  
+|HY013|Error de administración de memoria|No se pudo procesar la llamada de función porque no se pudo tener acceso a los objetos de memoria subyacentes, posiblemente debido a condiciones de memoria insuficientes.|  
+|HY090|Longitud de búfer o cadena no válida|El argumento de *operación* era SQL_UPDATE, un valor de datos era un puntero nulo y el valor de la longitud de columna no era 0, SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NULL_DATA o menor o igual que SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> El argumento de *operación* era SQL_UPDATE; un valor de datos no era un puntero nulo; el tipo de datos C era SQL_C_BINARY o SQL_C_CHAR; y el valor de la longitud de la columna era menor que 0 pero no es igual a SQL_DATA_AT_EXEC, SQL_COLUMN_IGNORE, SQL_NTS o SQL_NULL_DATA, o menor o igual que SQL_LEN_DATA_AT_EXEC_OFFSET.<br /><br /> El valor de un búfer de longitud/indicador era SQL_DATA_AT_EXEC; el tipo SQL era SQL_LONGVARCHAR, SQL_LONGVARBINARY o un tipo de datos específico del origen de datos largo; y el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo** era "Y".|  
+|HY092|Identificador de atributo no válido|(DM) el valor especificado para el argumento de la *operación* no era válido.<br /><br /> (DM) el valor especificado para el argumento *LockType* no era válido.<br /><br /> El argumento de *operación* era SQL_UPDATE o SQL_DELETE y el atributo de instrucción SQL_ATTR_CONCURRENCY era SQL_ATTR_CONCUR_READ_ONLY.|  
 |HY107|Valor de fila fuera del intervalo|El valor especificado para el argumento *RowNumber* era mayor que el número de filas del conjunto de filas.|  
-|HY109|Posición del cursor no válido|El cursor asociado con el *StatementHandle* se definió como de solo avance, por lo que no se podría colocar el cursor dentro del conjunto de filas. Vea la descripción para el atributo SQL_ATTR_CURSOR_TYPE en **SQLSetStmtAttr**.<br /><br /> El *operación* argumento era SQL_UPDATE, SQL_DELETE o SQL_REFRESH y la fila identificada por el *RowNumber* argumento se había eliminado o no se ha tenido capturado.<br /><br /> (DM) el *RowNumber* argumento era 0 y el *operación* argumento era SQL_POSITION.<br /><br /> **SQLSetPos** llamó después **SQLBulkOperations** llamó y antes de **SQLFetchScroll** o **SQLFetch** llamó.|  
-|HY117|Conexión está suspendida debido al estado de transacción desconocido. Solo se desconecte y se permiten funciones de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
-|HYC00|Característica opcional no implementada|El controlador u origen de datos no admite la operación solicitada en el *operación* argumento o la *LockType* argumento.|  
-|HYT00|Se agotó el tiempo de espera|Ha expirado el período de tiempo de espera de consulta antes de que el origen de datos devuelva el conjunto de resultados. El período de tiempo de espera se establece a través de **SQLSetStmtAttr** con un *atributo* de SQL_ATTR_QUERY_TIMEOUT.|  
-|HYT01|Tiempo de espera de conexión agotado|Ha expirado el período de tiempo de espera de conexión antes de que el origen de datos que respondió a la solicitud. El período de tiempo de espera de conexión se establece a través de **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
-|IM001|Controlador no admite esta función|(DM) el controlador asociado con el *StatementHandle* no admite la función.|  
-|IM017|Sondeo se deshabilita en modo de notificación asincrónica|Cada vez que se usa el modelo de notificación, se deshabilita el sondeo.|  
-|IM018|**SQLCompleteAsync** no se ha llamado para completar la operación asincrónica anterior en este identificador.|Si la llamada de función anterior en el controlador devuelve SQL_STILL_EXECUTING y si está habilitado el modo de notificación, **SQLCompleteAsync** debe llamarse en el identificador para realizar el procesamiento posterior y completar la operación.|  
+|HY109|Posición del cursor no válida|El cursor asociado con *StatementHandle* se definió como de solo avance, por lo que el cursor no se pudo colocar en el conjunto de filas. Vea la descripción del atributo SQL_ATTR_CURSOR_TYPE en **SQLSetStmtAttr**.<br /><br /> El argumento de *operación* era SQL_UPDATE, SQL_DELETE o SQL_REFRESH y la fila identificada por el argumento *RowNumber* se ha eliminado o no se ha capturado.<br /><br /> (DM) el argumento *RowNumber* era 0 y el argumento *Operation* era SQL_POSITION.<br /><br /> Se llamó a **SQLSetPos** después de llamar a **SQLBulkOperations** y antes de llamar a **SQLFetchScroll** o **SQLFetch** .|  
+|HY117|La conexión se suspendió debido a un estado de transacción desconocido. Solo se permiten las funciones de desconexión y de solo lectura.|(DM) para obtener más información sobre el estado suspendido, consulte [función SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md).|  
+|HYC00|Característica opcional no implementada|El controlador o el origen de datos no admite la operación solicitada en el argumento *Operation* o el argumento *LockType* .|  
+|HYT00|Se agotó el tiempo de espera|El período de tiempo de espera de consulta expiró antes de que el origen de datos devolviera el conjunto de resultados. El período de tiempo de espera se establece a través de **SQLSetStmtAttr** con un *atributo* de SQL_ATTR_QUERY_TIMEOUT.|  
+|HYT01|Tiempo de espera de conexión agotado|Expiró el tiempo de espera de conexión antes de que el origen de datos respondiera a la solicitud. El tiempo de espera de la conexión se establece mediante **SQLSetConnectAttr**, SQL_ATTR_CONNECTION_TIMEOUT.|  
+|IM001|El controlador no admite esta función|(DM) el controlador asociado a *StatementHandle* no admite la función.|  
+|IM017|El sondeo está deshabilitado en el modo de notificación asincrónico|Cada vez que se usa el modelo de notificación, el sondeo se deshabilita.|  
+|IM018|No se ha llamado a **SQLCompleteAsync** para completar la operación asincrónica anterior en este controlador.|Si la llamada de función anterior en el identificador devuelve SQL_STILL_EXECUTING y si el modo de notificación está habilitado, se debe llamar a **SQLCompleteAsync** en el identificador para realizar el procesamiento posterior y completar la operación.|  
   
 ## <a name="comments"></a>Comentarios  
   
 > [!CAUTION]
->  Para obtener información acerca de la instrucción indica que **SQLSetPos** puede llamarse y lo que necesita hacer para ofrecer compatibilidad con ODBC *2.x* las aplicaciones, vea [cursores de bloque, cursores desplazables, y Compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
+>  Para obtener información sobre la instrucción que indica que se puede llamar a **SQLSetPos** en y lo que necesita para la compatibilidad con aplicaciones ODBC *2. x* , consulte cursores de [bloque, cursores desplazables y compatibilidad con versiones anteriores](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md).  
   
-## <a name="rownumber-argument"></a>Argumento RowNumber  
- El *RowNumber* argumento especifica el número de la fila del conjunto de filas en el que se va a realizar la operación especificada por el *operación* argumento. Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas. *RowNumber* debe ser un valor entre 0 y el número de filas del conjunto de filas.  
+## <a name="rownumber-argument"></a>RowNumber (argumento)  
+ El argumento *RowNumber* especifica el número de la fila del conjunto de filas en la que se va a realizar la operación especificada por el argumento de la *operación* . Si *RowNumber* es 0, la operación se aplica a todas las filas del conjunto de filas. *RowNumber* debe ser un valor comprendido entre 0 y el número de filas del conjunto de filas.  
   
 > [!NOTE]  
->  En el lenguaje C, las matrices son basado en 0 y el *RowNumber* argumento está basado en 1. Por ejemplo, para actualizar la quinta fila del conjunto de filas, una aplicación modifica los búferes de conjunto de filas en el índice de matriz 4 pero especifica un *RowNumber* de 5.  
+>  En el lenguaje C, las matrices se basan en 0 y el argumento *RowNumber* se basa en 1. Por ejemplo, para actualizar la quinta fila del conjunto de filas, una aplicación modifica los búferes del conjunto de filas en el índice de matriz 4, pero especifica un *RowNumber* de 5.  
   
- Todas las operaciones de colocar el cursor en la fila especificada por *RowNumber*. Las siguientes operaciones requieren una posición del cursor:  
+ Todas las operaciones sitúan el cursor en la fila especificada por *RowNumber*. Las siguientes operaciones requieren una posición del cursor:  
   
--   Coloca la actualización y eliminación de instrucciones.  
+-   Instrucciones Update y DELETE posicionadas.  
   
--   Las llamadas a **SQLGetData**.  
+-   Llamadas a **SQLGetData**.  
   
--   Las llamadas a **SQLSetPos** con las opciones SQL_DELETE, SQL_REFRESH y SQL_UPDATE.  
+-   Llama a **SQLSetPos** con las opciones SQL_DELETE, SQL_REFRESH y SQL_UPDATE.  
   
- Por ejemplo, si *RowNumber* es 2 para llamar a **SQLSetPos** con un *operación* de SQL_DELETE, el cursor se coloca en la segunda fila del conjunto de filas y se elimina esa fila. La entrada en la implementación fila matriz de Estados (indicada por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR) para la segunda fila se cambia a SQL_ROW_DELETED.  
+ Por ejemplo, si *RowNumber* es 2 para una llamada a **SQLSetPos** con una *operación* de SQL_DELETE, el cursor se coloca en la segunda fila del conjunto de filas y se elimina esa fila. La entrada de la matriz de estado de la fila de implementación (indicada por el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR) de la segunda fila se cambia a SQL_ROW_DELETED.  
   
- Una aplicación puede especificar una posición del cursor cuando llama a **SQLSetPos**. Por lo general, llama a **SQLSetPos** con la operación SQL_POSITION o SQL_REFRESH para colocar el cursor antes de ejecutar un posicionadas update o delete, instrucción o una llamada a **SQLGetData**.  
+ Una aplicación puede especificar una posición del cursor cuando llama a **SQLSetPos**. Generalmente, llama a **SQLSetPos** con la operación SQL_POSITION o SQL_REFRESH para colocar el cursor antes de ejecutar una instrucción UPDATE o DELETE posicionada o llamando a **SQLGetData**.  
   
 ## <a name="operation-argument"></a>Argumento de operación  
- El *operación* argumento admite las siguientes operaciones. Para determinar qué opciones son compatibles con un origen de datos, una aplicación llama a **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_ Tipo de información CURSOR_ATTRIBUTES1 (según el tipo del cursor).  
+ El argumento *Operation* admite las siguientes operaciones. Para determinar qué opciones admite un origen de datos, una aplicación llama a **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 tipo de información (dependiendo del tipo de cursor).  
   
 |*Operación*<br /><br /> argument|Operación|  
 |------------------------------|---------------|  
-|SQL_POSITION|El controlador coloca el cursor en la fila especificada por *RowNumber*.<br /><br /> El contenido de la matriz de Estados de fila que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se omite para las SQL_POSITION *operación*.|  
-|SQL_REFRESH|El controlador coloca el cursor en la fila especificada por *RowNumber* y actualiza los datos en los búferes del conjunto de filas de esa fila. Para obtener más información acerca de cómo el controlador devuelve datos en los búferes de conjunto de filas, vea las descripciones de modo de fila y el enlace en **SQLBindCol**.<br /><br /> **SQLSetPos** con un *operación* de SQL_REFRESH actualiza el estado y el contenido de las filas dentro del conjunto de filas capturada actual. Esto incluye la actualización de los marcadores. Dado que los datos en los búferes se actualiza pero no volver a capturar, la pertenencia en el conjunto de filas se ha corregido. Esto es diferente de la actualización se realiza mediante una llamada a **SQLFetchScroll** con un *FetchOrientation* de SQL_FETCH_RELATIVE y un *RowNumber* igual a 0, que vuelve a obtener el conjunto de filas del conjunto de resultados para que pueda mostrar datos agregados y quitar los datos eliminados si esas operaciones son compatibles con el controlador y el cursor.<br /><br /> Una actualización correcta con **SQLSetPos** no cambiará el estado de una fila de SQL_ROW_DELETED. Las filas eliminadas del conjunto de filas se seguirán se marca como eliminada hasta la próxima recopilación. Las filas desaparecerá en la siguiente captura si el cursor admite el empaquetado (en el que un posteriores **SQLFetch** o **SQLFetchScroll** no devuelve las filas eliminadas).<br /><br /> Agrega filas no aparecen cuando una actualización con **SQLSetPos** se lleva a cabo. Este comportamiento es diferente de **SQLFetchScroll** con un *FetchType* de SQL_FETCH_RELATIVE y un *RowNumber* igual a 0, lo que también actualiza el conjunto de filas actual, pero que se Mostrar los registros agregados o módulo de registros eliminados si estas operaciones son compatibles con el cursor.<br /><br /> Una actualización correcta con **SQLSetPos** cambiará el estado de una fila de SQL_ROW_ADDED a SQL_ROW_SUCCESS (si existe la matriz de Estados de fila).<br /><br /> Una actualización correcta con **SQLSetPos** cambiará el estado de una fila de SQL_ROW_UPDATED al código de estado de la fila nueva (si existe la matriz de Estados de fila).<br /><br /> Si se produce un error en un **SQLSetPos** operación en una fila, el estado de fila se establece en SQL_ROW_ERROR (si existe la matriz de Estados de fila).<br /><br /> Para un cursor abierto con un atributo de instrucción SQL_ATTR_CONCURRENCY de SQL_CONCUR_ROWVER o SQL_CONCUR_VALUES, una actualización con **SQLSetPos** podría actualizar los valores de la simultaneidad optimista utilizados por el origen de datos para detectar que el fila ha cambiado. Si esto ocurre, las versiones de fila o los valores que se utiliza para garantizar la simultaneidad de cursor se actualizan cada vez que se actualizan los búferes de conjunto de filas desde el servidor. Esto se produce para cada fila que se actualiza.<br /><br /> El contenido de la matriz de Estados de fila que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se omite para las SQL_REFRESH *operación*.|  
-|SQL_UPDATE|El controlador coloca el cursor en la fila especificada por *RowNumber* y actualiza la fila de datos subyacente con los valores de los búferes de conjunto de filas (el *TargetValuePtr* argumento en  **SQLBindCol**). Recupera las longitudes de los datos de los búferes de longitud/indicador (el *StrLen_or_IndPtr* argumento en **SQLBindCol**). Si la longitud de cualquier columna es SQL_COLUMN_IGNORE, no se actualiza la columna. Después de actualizar la fila, el controlador cambia el elemento correspondiente de la matriz de Estados de fila a SQL_ROW_UPDATED o SQL_ROW_SUCCESS_WITH_INFO (si existe la matriz de Estados de fila).<br /><br /> Es definido por el controlador lo que es el comportamiento si **SQLSetPos** con un *operación* argumento de SQL_UPDATE se llama en un cursor que contiene las columnas duplicadas. El controlador puede devolver un valor de SQLSTATE definidos por el controlador, puede actualizar la primera columna que aparece en el conjunto de resultados o realizar otros comportamientos definidos por el controlador.<br /><br /> La matriz de operación de fila que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR puede utilizarse para indicar que una fila en el conjunto de filas actual se debe omitir durante una actualización masiva. Para obtener más información, vea "Matrices de estado y de operación" más adelante en esta referencia de función.|  
-|SQL_DELETE|El controlador coloca el cursor en la fila especificada por *RowNumber* y elimina la fila de datos subyacente. Cambia el elemento correspondiente de la matriz de Estados de fila a SQL_ROW_DELETED. Después de que se ha eliminado la fila, los siguientes no son válidos para la fila: coloca la actualización y eliminación de instrucciones, las llamadas a **SQLGetData**y las llamadas a **SQLSetPos** con *operación* establece en cualquier valor excepto SQL_POSITION. Para los controladores compatibles con el empaquetado, se elimina la fila del cursor cuando se recuperan datos nuevos del origen de datos.<br /><br /> Si la fila permanece visible depende del tipo de cursor. Por ejemplo, las filas eliminadas son visibles para los cursores estáticos y controlados por pero invisibles para los cursores dinámicos.<br /><br /> La matriz de operación de fila que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR puede utilizarse para indicar que una fila en el conjunto de filas actual se debe omitir durante una eliminación masiva. Para obtener más información, vea "Matrices de estado y de operación" más adelante en esta referencia de función.|  
+|SQL_POSITION|El controlador coloca el cursor en la fila especificada por *RowNumber*.<br /><br /> El contenido de la matriz de estado de fila a la que señala el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se omite para la *operación*SQL_POSITION.|  
+|SQL_REFRESH|El controlador coloca el cursor en la fila especificada por *RowNumber* y actualiza los datos en los búferes del conjunto de filas de esa fila. Para obtener más información sobre cómo el controlador devuelve datos en los búferes del conjunto de filas, vea las descripciones de los enlaces de modo de fila y de modo de columna en **SQLBindCol**.<br /><br /> **SQLSetPos** con una *operación* de SQL_REFRESH actualiza el estado y el contenido de las filas del conjunto de filas capturado actual. Esto incluye actualizar los marcadores. Dado que los datos de los búferes se actualizan pero no se recuperan, la pertenencia al conjunto de filas es fija. Esto es diferente de la actualización realizada por una llamada a **SQLFetchScroll** con un *FetchOrientation* de SQL_FETCH_RELATIVE y un *RowNumber* igual a 0, que recupera el conjunto de filas del conjunto de resultados para que pueda mostrar los datos agregados y quitar se han eliminado datos si las operaciones son compatibles con el controlador y el cursor.<br /><br /> Una actualización correcta con **SQLSetPos** no cambiará el estado de la fila SQL_ROW_DELETED. Las filas eliminadas del conjunto de filas seguirán marcadas como eliminadas hasta la siguiente captura. Las filas desaparecerán en la siguiente captura si el cursor admite el empaquetado (en el que un siguiente **SQLFetch** o **SQLFetchScroll** no devuelve filas eliminadas).<br /><br /> Las filas agregadas no aparecen cuando se realiza una actualización con **SQLSetPos** . Este comportamiento es diferente de **SQLFetchScroll** con un *FetchType* de SQL_FETCH_RELATIVE y un *RowNumber* igual a 0, que también actualiza el conjunto de filas actual, pero muestra registros agregados o empaquetar registros eliminados si estas operaciones son compatible con el cursor.<br /><br /> Una actualización correcta con **SQLSetPos** cambiará el estado de una fila de SQL_ROW_ADDED a SQL_ROW_SUCCESS (si la matriz de estado de fila existe).<br /><br /> Una actualización correcta con **SQLSetPos** cambiará el estado de una fila de SQL_ROW_UPDATED al nuevo estado de la fila (si la matriz de estado de fila existe).<br /><br /> Si se produce un error en una operación **SQLSetPos** en una fila, el estado de la fila se establece en SQL_ROW_ERROR (si la matriz de estado de fila existe).<br /><br /> Para un cursor abierto con un atributo de instrucción SQL_ATTR_CONCURRENCY de SQL_CONCUR_ROWVER o SQL_CONCUR_VALUES, una actualización con **SQLSetPos** podría actualizar los valores de simultaneidad optimista utilizados por el origen de datos para detectar que la fila ha cambiado. Si esto ocurre, se actualizan las versiones de fila o los valores utilizados para garantizar la simultaneidad del cursor siempre que los búferes del conjunto de filas se actualizan desde el servidor. Esto sucede en cada fila que se actualiza.<br /><br /> El contenido de la matriz de estado de fila a la que señala el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se omite para la *operación*SQL_REFRESH.|  
+|SQL_UPDATE|El controlador coloca el cursor en la fila especificada por *RowNumber* y actualiza la fila subyacente de datos con los valores de los búferes del conjunto de filas (el argumento *TargetValuePtr* en **SQLBindCol**). Recupera las longitudes de los datos de los búferes de longitud/indicador (el argumento *StrLen_or_IndPtr* en **SQLBindCol**). Si la longitud de una columna es SQL_COLUMN_IGNORE, no se actualiza la columna. Después de actualizar la fila, el controlador cambia el elemento correspondiente de la matriz de estado de fila a SQL_ROW_UPDATED o SQL_ROW_SUCCESS_WITH_INFO (si la matriz de estado de fila existe).<br /><br /> Está definido por el controlador cuál es el comportamiento si se llama a **SQLSetPos** con un argumento de *operación* de SQL_UPDATE en un cursor que contiene columnas duplicadas. El controlador puede devolver un SQLSTATE definido por el controlador, puede actualizar la primera columna que aparece en el conjunto de resultados o realizar otro comportamiento definido por el controlador.<br /><br /> La matriz de operación de fila a la que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se puede utilizar para indicar que una fila del conjunto de filas actual debe omitirse durante una actualización masiva. Para obtener más información, vea "matrices de estado y de operaciones" más adelante en esta referencia de función.|  
+|SQL_DELETE|El controlador coloca el cursor en la fila especificada por *RowNumber* y elimina la fila de datos subyacente. Cambia el elemento correspondiente de la matriz de estado de fila a SQL_ROW_DELETED. Una vez eliminada la fila, las siguientes no son válidas para la fila: las instrucciones Update y DELETE posicionadas, las llamadas a **SQLGetData**y las llamadas a **SQLSetPos** con la *operación* establecida en cualquier cosa excepto SQL_POSITION. En el caso de los controladores que admiten el empaquetado, la fila se elimina del cursor cuando se recuperan nuevos datos desde el origen de datos.<br /><br /> El hecho de que la fila permanezca visible depende del tipo de cursor. Por ejemplo, las filas eliminadas son visibles para los cursores estáticos y los controlados por conjunto de claves, pero no son visibles para los cursores dinámicos.<br /><br /> La matriz de operación de fila a la que apunta el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR se puede utilizar para indicar que una fila del conjunto de filas actual debe omitirse durante una eliminación masiva. Para obtener más información, vea "matrices de estado y de operaciones" más adelante en esta referencia de función.|  
   
-## <a name="locktype-argument"></a>Argumento LockType  
- El *LockType* argumento proporciona una manera para las aplicaciones controlar la simultaneidad. En la mayoría de los casos, los orígenes de datos que admiten los niveles de simultaneidad y las transacciones admitirá solo el valor SQL_LOCK_NO_CHANGE de la *LockType* argumento. El *LockType* argumento generalmente se usa solo para soporte técnico basado en archivos.  
+## <a name="locktype-argument"></a>LockType (argumento)  
+ El argumento *LockType* proporciona una manera para que las aplicaciones controlen la simultaneidad. En la mayoría de los casos, los orígenes de datos que admiten niveles de simultaneidad y transacciones solo admitirán el valor SQL_LOCK_NO_CHANGE del argumento *LockType* . Normalmente, el argumento *LockType* solo se usa para la compatibilidad basada en archivos.  
   
- El *LockType* argumento especifica el estado de bloqueo de la fila después de **SQLSetPos** se ha ejecutado. Si el controlador no se puede bloquear la fila para realizar la operación solicitada o para satisfacer la *LockType* argumento, devuelve SQL_ERROR y SQLSTATE 42000 (sintaxis o infracción de acceso).  
+ El argumento *LockType* especifica el estado de bloqueo de la fila después de que se haya ejecutado **SQLSetPos** . Si el controlador no puede bloquear la fila para realizar la operación solicitada o para cumplir el argumento *LockType* , devuelve SQL_ERROR y SQLSTATE 42000 (error de sintaxis o infracción de acceso).  
   
- Aunque el *LockType* se especifica el argumento para una única instrucción, el bloqueo dará los mismos privilegios a todas las instrucciones de la conexión. En concreto, puede desbloquear un bloqueo que se adquiere una instrucción en una conexión con una instrucción diferente en la misma conexión.  
+ Aunque el argumento *LockType* se especifica para una única instrucción, el bloqueo concede los mismos privilegios a todas las instrucciones de la conexión. En concreto, un bloqueo adquirido por una instrucción en una conexión se puede desbloquear mediante una instrucción diferente en la misma conexión.  
   
- Bloquea una fila a través de **SQLSetPos** permanece bloqueado hasta que la aplicación llama a **SQLSetPos** para la fila con *LockType* establecido en SQL_LOCK_UNLOCK, o hasta que la aplicación las llamadas **SQLFreeHandle** para la instrucción o **SQLFreeStmt** con la opción de SQL_CLOSE. Para un controlador que admite transacciones, se bloquea una fila a través de **SQLSetPos** se desbloquea cuando la aplicación llama **SQLEndTran** para confirmar o revertir una transacción en la conexión (si se cierra un cursor Cuando una transacción se confirma o revierte, tal y como indica los tipos de información SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR devueltos por **SQLGetInfo**).  
+ Una fila bloqueada a **SQLSetPos** permanece bloqueada hasta que la aplicación llama a **SQLSetPos** para la fila con *LockType* establecida en SQL_LOCK_UNLOCK, o hasta que la aplicación llama a **SQLFreeHandle** para la instrucción o **SQLFreeStmt** con la opción SQL_CLOSE. Para un controlador que admite transacciones, una fila bloqueada a **SQLSetPos** se desbloquea cuando la aplicación llama a **SQLEndTran** para confirmar o revertir una transacción en la conexión (si se cierra un cursor cuando se confirma o se revierte una transacción). tal y como se indica en los tipos de información SQL_CURSOR_COMMIT_BEHAVIOR y SQL_CURSOR_ROLLBACK_BEHAVIOR devueltos por **SQLGetInfo**).  
   
- El *LockType* argumento admite los siguientes tipos de bloqueos. Para determinar los bloqueos que son compatibles con un origen de datos, una aplicación llama a **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_ Tipo de información CURSOR_ATTRIBUTES1 (según el tipo del cursor).  
+ El argumento *LockType* admite los siguientes tipos de bloqueos. Para determinar qué bloqueos se admiten en un origen de datos, una aplicación llama a **SQLGetInfo** con SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1 o SQL_STATIC_CURSOR_ATTRIBUTES1 tipo de información (dependiendo del tipo de cursor).  
   
-|*LockType* argumento|Tipo de bloqueo|  
+|*LockType* (argumento)|Tipo de bloqueo|  
 |-------------------------|---------------|  
-|SQL_LOCK_NO_CHANGE|El controlador u origen de datos garantiza que la fila en el mismo estado bloqueado o desbloqueado que estaba antes **SQLSetPos** llamó. Este valor de *LockType* permite a los orígenes de datos que no admiten bloqueos de nivel de fila explícitos para usar cualquier bloqueo es necesaria por los niveles de aislamiento de transacciones y simultaneidad actuales.|  
-|SQL_LOCK_EXCLUSIVE|El controlador u origen de datos bloquea exclusivamente la fila. No se puede usar una instrucción en una conexión diferente o en una aplicación diferente para adquirir los bloqueos de la fila.|  
-|SQL_LOCK_UNLOCK|El controlador u origen de datos desbloquea la fila.|  
+|SQL_LOCK_NO_CHANGE|El controlador o el origen de datos garantiza que la fila se encuentra en el mismo estado bloqueado o desbloqueado que tenía antes de que se llamase a **SQLSetPos** . Este valor de *LockType* permite que los orígenes de datos que no admiten el bloqueo explícito de nivel de fila utilicen el bloqueo que requieran los niveles de aislamiento de transacción y simultaneidad actuales.|  
+|SQL_LOCK_EXCLUSIVE|El controlador o el origen de datos bloquea la fila exclusivamente. No se puede usar una instrucción en una conexión diferente o en una aplicación diferente para adquirir bloqueos en la fila.|  
+|SQL_LOCK_UNLOCK|El controlador o el origen de datos desbloquea la fila.|  
   
- Si un controlador es compatible con SQL_LOCK_EXCLUSIVE pero no admite SQL_LOCK_UNLOCK, una fila que está bloqueada permanecerá bloqueada hasta que se produzca una de las llamadas de función que se describe en el párrafo anterior.  
+ Si un controlador admite SQL_LOCK_EXCLUSIVE pero no admite SQL_LOCK_UNLOCK, una fila bloqueada permanecerá bloqueada hasta que se produzca una de las llamadas de función descritas en el párrafo anterior.  
   
- Si un controlador es compatible con SQL_LOCK_EXCLUSIVE pero no admite SQL_LOCK_UNLOCK, una fila que está bloqueada permanecerá bloqueada hasta que la aplicación llama a **SQLFreeHandle** para la instrucción o **SQLFreeStmt** con la opción SQL_CLOSE. Si el controlador admite las transacciones y se cierra el cursor al confirmar o revertir la transacción, la aplicación llama a **SQLEndTran**.  
+ Si un controlador admite SQL_LOCK_EXCLUSIVE pero no admite SQL_LOCK_UNLOCK, una fila bloqueada permanecerá bloqueada hasta que la aplicación llame a **SQLFreeHandle** para la instrucción o **SQLFreeStmt** con la opción SQL_CLOSE. Si el controlador admite transacciones y cierra el cursor al confirmar o revertir la transacción, la aplicación llama a **SQLEndTran**.  
   
- Para las operaciones update y delete en **SQLSetPos**, la aplicación usa el *LockType* argumento tal como sigue:  
+ En el caso de las operaciones de actualización y eliminación en **SQLSetPos**, la aplicación usa el argumento *LockType* como se indica a continuación:  
   
--   Para garantizar que una fila no cambia después de haberlos recuperado, una aplicación llama a **SQLSetPos** con *operación* establecido en SQL_REFRESH y *LockType* establecido en SQL_LOCK_ EXCLUSIVO.  
+-   Para garantizar que una fila no cambie una vez recuperada, una aplicación llama a **SQLSetPos** con la *operación* establecida en SQL_REFRESH y *LockType* establecida en SQL_LOCK_EXCLUSIVE.  
   
--   Si la aplicación establece *LockType* a SQL_LOCK_NO_CHANGE, el controlador garantiza que una operación update o delete se realizará correctamente solo si la aplicación especifica SQL_CONCUR_LOCK para el atributo de instrucción SQL_ATTR_CONCURRENCY.  
+-   Si la aplicación establece *LockType* en SQL_LOCK_NO_CHANGE, el controlador garantiza que una operación de actualización o eliminación se realizará correctamente solo si la aplicación especificó SQL_CONCUR_LOCK para el atributo de instrucción SQL_ATTR_CONCURRENCY.  
   
--   Si la aplicación especifica SQL_CONCUR_ROWVER o SQL_CONCUR_VALUES para el atributo de instrucción SQL_ATTR_CONCURRENCY, el controlador compara las versiones de fila o los valores y rechaza la operación si la fila ha cambiado desde la aplicación había capturado la fila.  
+-   Si la aplicación especifica SQL_CONCUR_ROWVER o SQL_CONCUR_VALUES para el atributo de instrucción SQL_ATTR_CONCURRENCY, el controlador compara las versiones de fila o los valores y rechaza la operación si la fila ha cambiado desde que la aplicación ha capturado la fila.  
   
--   Si la aplicación especifica SQL_CONCUR_READ_ONLY para el atributo de instrucción SQL_ATTR_CONCURRENCY, el controlador rechaza cualquier actualización o la operación de eliminación.  
+-   Si la aplicación especifica SQL_CONCUR_READ_ONLY para el atributo de instrucción SQL_ATTR_CONCURRENCY, el controlador rechaza cualquier operación de actualización o eliminación.  
   
- Para obtener más información sobre el atributo de instrucción SQL_ATTR_CONCURRENCY, consulte [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
+ Para obtener más información sobre el atributo de la instrucción SQL_ATTR_CONCURRENCY, vea [SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
-## <a name="status-and-operation-arrays"></a>Estado y las matrices de operación  
- Las siguientes matrices de estado y la operación se usan al llamar a **SQLSetPos**:  
+## <a name="status-and-operation-arrays"></a>Matrices de estado y de operación  
+ Cuando se llama a **SQLSetPos**, se usan las matrices de estado y de operación siguientes:  
   
--   La matriz de Estados de fila (como la que apunta el campo SQL_DESC_ARRAY_STATUS_PTR IRD y el atributo de instrucción SQL_ATTR_ROW_STATUS_ARRAY) contiene los valores de estado para cada fila de datos en el conjunto de filas. El controlador establece los valores de estado de esta matriz después de llamar a **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**, o **SQLSetPos** . El atributo de instrucción SQL_ATTR_ROW_STATUS_PTR apunta a esta matriz.  
+-   La matriz de estado de fila (indicada por el campo SQL_DESC_ARRAY_STATUS_PTR de IRD y el atributo de instrucción SQL_ATTR_ROW_STATUS_ARRAY) contiene los valores de estado de cada fila de datos del conjunto de filas. El controlador establece los valores de estado de esta matriz después de una llamada a **SQLFetch**, **SQLFetchScroll**, **SQLBulkOperations**o **SQLSetPos**. El atributo de la instrucción SQL_ATTR_ROW_STATUS_PTR apunta a esta matriz.  
   
--   La matriz de operación de fila (como la que apunta el campo SQL_DESC_ARRAY_STATUS_PTR el descartar y el atributo de instrucción SQL_ATTR_ROW_OPERATION_ARRAY) contiene un valor para cada fila del conjunto de filas que indica si una llamada a **SQLSetPos**para se omite o se realiza una operación masiva. Cada elemento de la matriz se establece en SQL_ROW_PROCEED (valor predeterminado) o SQL_ROW_IGNORE. El atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR apunta a esta matriz.  
+-   La matriz de operación de fila (indicada por el campo SQL_DESC_ARRAY_STATUS_PTR de ARD y el atributo de instrucción SQL_ATTR_ROW_OPERATION_ARRAY) contiene un valor para cada fila del conjunto de filas que indica si una llamada a **SQLSetPos** para una operación masiva se omite o se realiza. Cada elemento de la matriz se establece en SQL_ROW_PROCEED (valor predeterminado) o SQL_ROW_IGNORE. El atributo de la instrucción SQL_ATTR_ROW_OPERATION_PTR apunta a esta matriz.  
   
- El número de elementos de las matrices de estado y la operación debe ser igual el número de filas del conjunto de filas (tal y como se define por el atributo de instrucción SQL_ATTR_ROW_ARRAY_SIZE).  
+ El número de elementos de las matrices de estado y de operación debe ser igual al número de filas del conjunto de filas (tal y como se define en el atributo de la instrucción SQL_ATTR_ROW_ARRAY_SIZE).  
   
- Para obtener información acerca de la matriz de Estados de fila, vea [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Para obtener información acerca de la matriz de operación de fila, vea "Omitiendo una fila en una operación masiva," más adelante en esta sección.  
+ Para obtener información sobre la matriz de estado de fila, vea [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md). Para obtener información sobre la matriz de operación de fila, vea "omitir una fila en una operación masiva", más adelante en esta sección.  
   
-## <a name="using-sqlsetpos"></a>Uso de SQLSetPos  
- Antes de que una aplicación llama a **SQLSetPos**, debe realizar la siguiente secuencia de pasos:  
+## <a name="using-sqlsetpos"></a>Usar SQLSetPos  
+ Antes de que una aplicación llame a **SQLSetPos**, debe realizar la siguiente secuencia de pasos:  
   
-1.  Si la aplicación llamará **SQLSetPos** con *operación* establecido en SQL_UPDATE, llamada **SQLBindCol** (o **SQLSetDescRec**) para cada uno columna para especificar su tipo de datos y enlazar los búferes de datos y la longitud de la columna.  
+1.  Si la aplicación va a llamar a **SQLSetPos** con la *operación* establecida en SQL_UPDATE, llame a **SQLBindCol** (o **SQLSetDescRec**) para cada columna para especificar su tipo de datos y búferes de enlace para los datos y la longitud de la columna.  
   
-2.  Si la aplicación llamará **SQLSetPos** con *operación* establecido en SQL_DELETE o SQL_UPDATE, llamada **SQLColAttribute** para asegurarse de que las columnas que se eliminó o actualizó son actualizables.  
+2.  Si la aplicación va a llamar a **SQLSetPos** con la *operación* establecida en SQL_DELETE o SQL_UPDATE, llame a **SQLColAttribute** para asegurarse de que las columnas que se van a eliminar o actualizar son actualizables.  
   
-3.  Llame a **SQLExecDirect**, **SQLExecute**, o una función de catálogo para crear un conjunto de resultados.  
+3.  Llame a **SQLExecDirect**, **SQLExecute**o una función de catálogo para crear un conjunto de resultados.  
   
 4.  Llame a **SQLFetch** o **SQLFetchScroll** para recuperar los datos.  
   
- Para obtener más información sobre el uso de **SQLSetPos**, consulte [actualizar los datos con SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
+ Para obtener más información sobre el uso de **SQLSetPos**, vea [actualizar datos con SQLSetPos](../../../odbc/reference/develop-app/updating-data-with-sqlsetpos.md).  
   
-## <a name="deleting-data-using-sqlsetpos"></a>Eliminar datos con SQLSetPos  
- Para eliminar datos con **SQLSetPos**, una aplicación llama a **SQLSetPos** con *RowNumber* establecido en el número de la fila para eliminar y *operación*establecido en SQL_DELETE.  
+## <a name="deleting-data-using-sqlsetpos"></a>Eliminar datos mediante SQLSetPos  
+ Para eliminar datos con **SQLSetPos**, una aplicación llama a **SQLSetPos** con *RowNumber* establecido en el número de la fila que se va a eliminar y en la *operación* establecida en SQL_DELETE.  
   
- Después de que se han eliminado los datos, el controlador cambia el valor de la matriz de estado de fila de implementación para la fila correspondiente a SQL_ROW_DELETED (o SQL_ROW_ERROR).  
+ Una vez eliminados los datos, el controlador cambia el valor de la matriz de estado de la fila de implementación de la fila correspondiente a SQL_ROW_DELETED (o SQL_ROW_ERROR).  
   
-## <a name="updating-data-using-sqlsetpos"></a>Actualizar datos con SQLSetPos  
- Una aplicación puede pasar el valor de una columna en el búfer de datos enlazados o con uno o más llamadas a **SQLPutData**. Las columnas cuyos datos se pasan con **SQLPutData** se conocen como *datos en ejecución* *columnas*. Estos se usan normalmente para enviar datos de las columnas SQL_LONGVARBINARY y SQL_LONGVARCHAR y se pueden mezclar con otras columnas.  
+## <a name="updating-data-using-sqlsetpos"></a>Actualizar datos mediante SQLSetPos  
+ Una aplicación puede pasar el valor de una columna en el búfer de datos enlazados o con una o más llamadas a **SQLPutData**. Las columnas cuyos datos se pasan con **SQLPutData** se conocen como *columnas*de *datos en ejecución* . Normalmente se usan para enviar datos para las columnas SQL_LONGVARBINARY y SQL_LONGVARCHAR y se pueden mezclar con otras columnas.  
   
 #### <a name="to-update-data-with-sqlsetpos-an-application"></a>Para actualizar datos con SQLSetPos, una aplicación:  
   
-1.  Los valores de los lugares en los búferes de datos y de longitud/indicador enlazan con **SQLBindCol**:  
+1.  Coloca los valores en los datos y en los búferes de indicador y longitud enlazados con **SQLBindCol**:  
   
-    -   Para las columnas normales, la aplicación coloca el nuevo valor de columna en la  *\*TargetValuePtr* búfer y la longitud de ese valor en el  *\*StrLen_or_IndPtr* búfer. Si no se debe actualizar la fila, la aplicación coloca SQL_ROW_IGNORE en elemento de la fila de la matriz de operación de la fila.  
+    -   En el caso de las columnas normales, la aplicación coloca el nuevo  *\** valor de columna en el búfer de TargetValuePtr y la  *\** longitud de ese valor en el búfer de StrLen_or_IndPtr. Si no se debe actualizar la fila, la aplicación coloca SQL_ROW_IGNORE en el elemento de esa fila de la matriz de operación de fila.  
   
-    -   Para las columnas de datos en ejecución, la aplicación coloca un valor definido por la aplicación, como el número de columna, en el  *\*TargetValuePtr* búfer. El valor se puede usar posteriormente para identificar la columna.  
+    -   En el caso de las columnas de datos en ejecución, la aplicación coloca un valor definido por la aplicación, como el número de  *\** columna, en el búfer de TargetValuePtr. El valor se puede usar más adelante para identificar la columna.  
   
-         La aplicación coloca el resultado de la SQL_LEN_DATA_AT_EXEC (*longitud*) macro en el **StrLen_or_IndPtr* búfer. Si el tipo de datos SQL de la columna es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos específicos del origen de datos de tipo long y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *longitud*  es el número de bytes de datos que se enviarán para el parámetro; en caso contrario, debe ser un valor no negativo y se omite.  
+         La aplicación coloca el resultado de la macro SQL_LEN_DATA_AT_EXEC (*length*) en el búfer **StrLen_or_IndPtr* . Si el tipo de datos SQL de la columna es SQL_LONGVARBINARY, SQL_LONGVARCHAR o un tipo de datos específico del origen de datos largo y el controlador devuelve "Y" para el tipo de información SQL_NEED_LONG_DATA_LEN en **SQLGetInfo**, *length* es el número de bytes de datos que se van a se va a enviar para el parámetro; de lo contrario, debe ser un valor no negativo y se omite.  
   
-2.  Las llamadas **SQLSetPos** con el *operación* establecido en SQL_UPDATE para actualizar la fila de datos.  
+2.  Llama a **SQLSetPos** con el argumento *Operation* establecido en SQL_UPDATE para actualizar la fila de datos.  
   
-    -   Si no hay ninguna columna de datos en ejecución, el proceso está completado.  
+    -   Si no hay columnas de datos en ejecución, el proceso se completa.  
   
-    -   Si hay columnas de datos en ejecución, la función devuelve SQL_NEED_DATA y continúa con el paso 3.  
+    -   Si hay columnas de datos en ejecución, la función devuelve SQL_NEED_DATA y continúa en el paso 3.  
   
-3.  Las llamadas **SQLParamData** para recuperar la dirección de la  *\*TargetValuePtr* búfer para la primera columna de datos en ejecución para procesarse. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación desde el  *\*TargetValuePtr* búfer.  
+3.  Llama a **SQLParamData** para recuperar la dirección del  *\*búfer TargetValuePtr* de la primera columna de datos en ejecución que se va a procesar. **SQLParamData** devuelve SQL_NEED_DATA. La aplicación recupera el valor definido por la aplicación del  *\*búfer TargetValuePtr* .  
   
     > [!NOTE]  
     >  Aunque los parámetros de datos en ejecución son similares a las columnas de datos en ejecución, el valor devuelto por **SQLParamData** es diferente para cada uno.  
   
     > [!NOTE]  
-    >  Parámetros de datos en ejecución son parámetros en una instrucción SQL para el que se enviarán los datos con **SQLPutData** cuando se ejecuta la instrucción con **SQLExecDirect** o **SQLExecute**. Se enlazan con **SQLBindParameter** o estableciendo descriptores con **SQLSetDescRec**. El valor devuelto por **SQLParamData** es un valor de 32 bits que se pasa a **SQLBindParameter** en el *ParameterValuePtr* argumento.  
+    >  Los parámetros de datos en ejecución son parámetros de una instrucción SQL para los que se enviarán datos con **SQLPutData** cuando se ejecute la instrucción con **SQLExecDirect** o **SQLExecute**. Se enlazan con **SQLBindParameter** o estableciendo descriptores con **SQLSetDescRec**. El valor devuelto por **SQLParamData** es un valor de 32 bits que se pasa a **SQLBindParameter** en el argumento *ParameterValuePtr* .  
   
     > [!NOTE]  
-    >  Columnas de datos en ejecución son columnas de un conjunto de filas para el que se enviarán los datos con **SQLPutData** cuando se actualiza una fila con **SQLSetPos**. Se enlazan con **SQLBindCol**. El valor devuelto por **SQLParamData** es la dirección de la fila en el **TargetValuePtr* búfer que se está procesando.  
+    >  Las columnas de datos en ejecución son columnas de un conjunto de filas para el que se enviarán datos con **SQLPutData** cuando una fila se actualice con **SQLSetPos**. Están enlazadas con **SQLBindCol**. El valor devuelto por **SQLParamData** es la dirección de la fila del búfer **TargetValuePtr* que se está procesando.  
   
-4.  Las llamadas **SQLPutData** uno o más veces para enviar datos de la columna. Se necesita más de una llamada si no se puede devolver todos los valores de datos en el  *\*TargetValuePtr* especificado en el búfer **SQLPutData**; varias llamadas a **SQLPutData** para la misma columna se permiten solo al enviar datos de carácter C a una columna con un tipo de carácter, binario o datos específicos del origen de datos o al enviar datos binarios de C a una columna con un carácter, binario, o el tipo de datos específico del origen de datos.  
+4.  Llama a **SQLPutData** una o más veces para enviar datos para la columna. Se necesita más de una llamada si no se pueden devolver todos los valores de datos  *\** en el búfer de TargetValuePtr especificado en **SQLPutData**; se permiten varias llamadas a **SQLPutData** para la misma columna solo cuando se envían datos de caracteres C a una columna con un tipo de datos de carácter, binario o específico del origen de datos o cuando se envían datos binarios de C a una columna con un tipo de datos de carácter, binario o de origen de datos específico.  
   
-5.  Las llamadas **SQLParamData** nuevo para indicar que se han enviado todos los datos de la columna.  
+5.  Llama de nuevo a **SQLParamData** para indicar que se han enviado todos los datos para la columna.  
   
-    -   Si hay más columnas de datos en ejecución, **SQLParamData** devuelve SQL_NEED_DATA y la dirección de la *TargetValuePtr* búfer para la siguiente columna de datos en ejecución para procesarse. La aplicación repite los pasos 4 y 5.  
+    -   Si hay más columnas de datos en ejecución, **SQLParamData** devuelve SQL_NEED_DATA y la dirección del búfer *TargetValuePtr* para la siguiente columna de datos en ejecución que se va a procesar. La aplicación repite los pasos 4 y 5.  
   
-    -   Si no hay nada más columnas de datos en ejecución, el proceso está completado. Si se ha ejecutado correctamente, la instrucción **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO; si se produjo un error en la ejecución, devuelve SQL_ERROR. En este momento, **SQLParamData** puede devolver cualquier SQLSTATE, que puede devolver **SQLSetPos**.  
+    -   Si no hay más columnas de datos en ejecución, el proceso se completa. Si la instrucción se ha ejecutado correctamente, **SQLParamData** devuelve SQL_SUCCESS o SQL_SUCCESS_WITH_INFO; Si se produce un error en la ejecución, devuelve SQL_ERROR. En este punto, **SQLParamData** puede devolver cualquier SQLSTATE que pueda ser devuelto por **SQLSetPos**.  
   
- Si se han actualizado los datos, el controlador cambia el valor de la matriz de estado de fila de implementación para la fila correspondiente a SQL_ROW_UPDATED.  
+ Si se han actualizado los datos, el controlador cambia el valor de la matriz de estado de la fila de implementación de la fila correspondiente a SQL_ROW_UPDATED.  
   
- Si se cancela la operación o se produce un error en **SQLParamData** o **SQLPutData**, después **SQLSetPos** devuelve SQL_NEED_DATA y antes de enviar los datos para todos columnas de datos en ejecución, la aplicación puede llamar solo **SQLCancel**, **SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions** , **SQLParamData**, o **SQLPutData** para la instrucción o la conexión asociada con la instrucción. Si llama a cualquier otra función para la instrucción o la conexión asociada con la instrucción, la función devuelve SQL_ERROR y SQLSTATE HY010 (función de error de secuencia).  
+ Si se cancela la operación o se produce un error en **SQLParamData** o **SQLPutData**, después que **SQLSetPos** devuelve SQL_NEED_DATA y antes de que se envíen datos para todas las columnas de datos en ejecución, la aplicación solo puede llamar a **SQLCancel** **. SQLGetDiagField**, **SQLGetDiagRec**, **SQLGetFunctions**, **SQLParamData**o **SQLPutData** para la instrucción o la conexión asociada con la instrucción. Si llama a cualquier otra función para la instrucción o la conexión asociada a la instrucción, la función devuelve SQL_ERROR y SQLSTATE HY010 (error de secuencia de función).  
   
- Si la aplicación llama a **SQLCancel** mientras el controlador sigue necesitando los datos para las columnas de datos en ejecución, el controlador cancela la operación. A continuación, puede llamar la aplicación **SQLSetPos** nuevo; Cancelar no afecta el estado del cursor o la posición actual del cursor.  
+ Si la aplicación llama a **SQLCancel** mientras el controlador todavía necesita datos para las columnas de datos en ejecución, el controlador cancela la operación. A continuación, la aplicación puede llamar a **SQLSetPos** de nuevo; la cancelación no afecta al estado del cursor ni a la posición actual del cursor.  
   
- Cuando la lista de selección de la especificación de consulta asociada con el cursor contiene más de una referencia a la misma columna, si se genera un error o el controlador omite las referencias duplicadas y realiza las operaciones solicitadas es definido por el controlador.  
+ Cuando la lista de selección de la especificación de consulta asociada al cursor contiene más de una referencia a la misma columna, si se genera un error o si el controlador omite las referencias duplicadas y realiza las operaciones solicitadas definidas por el controlador.  
   
 ## <a name="performing-bulk-operations"></a>Realización de operaciones masivas  
- Si el *RowNumber* argumento es 0, el controlador realiza la operación especificada en el *operación* argumento para cada fila del conjunto de filas que tiene un valor de SQL_ROW_PROCEED en su campo en la operación de fila matriz señalada por el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR. Este es un valor válido de la *RowNumber* argumento para un *operación* argumento de SQL_DELETE, SQL_REFRESH, o SQL_UPDATE, pero no SQL_POSITION. **SQLSetPos** con un *operación* de SQL_POSITION y un *RowNumber* es igual a 0 devolverá SQLSTATE HY109 (posición del cursor no válido).  
+ Si el argumento *RowNumber* es 0, el controlador realiza la operación especificada en el argumento *Operation* para cada fila del conjunto de filas que tenga un valor de SQL_ROW_PROCEED en su campo de la matriz de operación Row a la que apunta SQL_ATTR_ROW_OPERATION_PTR atributo de instrucción. Es un valor válido del argumento *RowNumber* para un argumento de *operación* de SQL_DELETE, SQL_REFRESH o SQL_UPDATE, pero no SQL_POSITION. **SQLSetPos** con una *operación* de SQL_POSITION y un *RowNumber* igual a 0 devolverá SQLSTATE HY109 (posición del cursor no válida).  
   
- Si produce un error que se aplica a todo el conjunto de filas, como SQLSTATE HYT00 (tiempo de espera expirado), el controlador devuelve SQL_ERROR y el SQLSTATE correspondiente. El contenido de los búferes del conjunto de filas no está definido, y la posición del cursor se ha modificado.  
+ Si se produce un error que pertenece al conjunto de filas completo, como SQLSTATE HYT00 (tiempo de espera agotado), el controlador devuelve SQL_ERROR y el SQLSTATE adecuado. El contenido de los búferes del conjunto de filas no está definido y la posición del cursor no se modifica.  
   
- Si produce un error pertenece a una sola fila, el controlador:  
+ Si se produce un error que pertenece a una única fila, el controlador:  
   
--   Establece el elemento de la fila de la matriz de Estados de fila que apunta el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR para SQL_ROW_ERROR.  
+-   Establece el elemento de la fila de la matriz de estado de fila a la que señala el atributo de instrucción SQL_ATTR_ROW_STATUS_PTR en SQL_ROW_ERROR.  
   
--   Envía una o varias SQLSTATEs adicionales para el error en la cola de errores y establece el campo SQL_DIAG_ROW_NUMBER en la estructura de datos de diagnóstico.  
+-   Envía una o más SQLSTATEs adicionales para el error en la cola de errores y establece el campo SQL_DIAG_ROW_NUMBER en la estructura de datos de diagnóstico.  
   
- Una vez procesado el error o advertencia, si el controlador completa la operación de las filas restantes del conjunto de filas, devuelve SQL_SUCCESS_WITH_INFO. Por lo tanto, para cada fila que devolvió un error, la cola de errores contiene cero o más SQLSTATEs adicionales. Si el controlador detiene la operación una vez procesado el error o advertencia, devuelve SQL_ERROR.  
+ Después de haber procesado el error o la advertencia, si el controlador completa la operación para las filas restantes del conjunto de filas, devuelve SQL_SUCCESS_WITH_INFO. Por lo tanto, para cada fila que devolvió un error, la cola de errores contiene cero o más SQLSTATEs adicionales. Si el controlador detiene la operación después de haber procesado el error o la advertencia, devuelve SQL_ERROR.  
   
- Si el controlador devuelve las advertencias, como SQLSTATE 01004 (datos truncados), devuelve las advertencias que se aplican a todo el conjunto de filas o filas desconocidas en el conjunto de filas antes de devolver la información de error que se aplica a filas específicas. Devuelve las advertencias para las filas específicas junto con cualquier otra información de error acerca de las filas.  
+ Si el controlador devuelve advertencias, como SQLSTATE 01004 (datos truncados), devuelve las advertencias que se aplican a todo el conjunto de filas o a las filas desconocidas del conjunto de filas antes de devolver la información de error que se aplica a filas específicas. Devuelve advertencias para filas específicas junto con cualquier otra información de error sobre esas filas.  
   
- Si *RowNumber* es igual a 0 y *operación* es SQL_UPDATE, SQL_REFRESH o SQL_DELETE, el número de filas que **SQLSetPos** opera en apunta a la y Atributo de instrucción _FETCHED_PTR.  
+ Si *RowNumber* es igual a 0 y la *operación* es SQL_UPDATE, SQL_REFRESH o SQL_DELETE, el atributo de instrucción SQL_ATTR_ROWS_FETCHED_PTR señala el número de filas en las que funciona **SQLSetPos** .  
   
- Si *RowNumber* es igual a 0 y *operación* es SQL_DELETE, SQL_REFRESH o SQL_UPDATE, la fila actual después de la operación es igual que la fila actual antes de la operación.  
+ Si *RowNumber* es igual a 0 y la *operación* es SQL_DELETE, SQL_REFRESH o SQL_UPDATE, la fila actual después de la operación es la misma que la fila actual antes de la operación.  
   
-## <a name="ignoring-a-row-in-a-bulk-operation"></a>Se omitirá una fila en una operación masiva  
- La matriz de operación de la fila se puede usar para indicar que una fila en el conjunto de filas actual se debe omitir durante una operación masiva mediante **SQLSetPos**. Para indicar que el controlador para pasar por alto una o varias filas durante una operación masiva, una aplicación debe realizar los pasos siguientes:  
+## <a name="ignoring-a-row-in-a-bulk-operation"></a>Omitir una fila en una operación masiva  
+ La matriz de operaciones de fila se puede usar para indicar que una fila del conjunto de filas actual debe omitirse durante una operación masiva mediante **SQLSetPos**. Para indicar al controlador que omita una o más filas durante una operación masiva, una aplicación debe realizar los siguientes pasos:  
   
-1.  Llame a **SQLSetStmtAttr** para establecer el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR para que apunte a una matriz de SQLUSMALLINTs. Este campo también se puede establecer mediante una llamada a **SQLSetDescField** para establecer el campo de encabezado SQL_DESC_ARRAY_STATUS_PTR del descartar, lo que requiere que una aplicación obtiene el identificador de descriptor.  
+1.  Llame a **SQLSetStmtAttr** para establecer el atributo de instrucción SQL_ATTR_ROW_OPERATION_PTR para que apunte a una matriz de SQLUSMALLINTs. Este campo también se puede establecer mediante una llamada a **SQLSetDescField** para establecer el campo de encabezado SQL_DESC_ARRAY_STATUS_PTR de ARD, que requiere que una aplicación obtenga el identificador del descriptor.  
   
-2.  Cada elemento de la matriz de operación de la fila se establece en uno de dos valores:  
+2.  Establezca cada elemento de la matriz de operación de fila en uno de dos valores:  
   
-    -   SQL_ROW_IGNORE, para indicar que la fila se ha excluido de la operación masiva.  
+    -   SQL_ROW_IGNORE, para indicar que la fila se excluye para la operación masiva.  
   
-    -   SQL_ROW_PROCEED, para indicar que la fila se incluye en la operación masiva. (Esto es el valor predeterminado).  
+    -   SQL_ROW_PROCEED, para indicar que la fila se incluye en la operación masiva. (Este es el valor predeterminado).  
   
 3.  Llame a **SQLSetPos** para realizar la operación masiva.  
   
- Las siguientes reglas se aplican a la matriz de operación de fila:  
+ Las siguientes reglas se aplican a la matriz de operaciones de fila:  
   
--   SQL_ROW_IGNORE y SQL_ROW_PROCEED afectan a solo las operaciones masivas utilizando **SQLSetPos** con un *operación* de SQL_DELETE o SQL_UPDATE. No afectan a las llamadas a **SQLSetPos** con un *operación* de SQL_REFRESH o SQL_POSITION.  
+-   SQL_ROW_IGNORE y SQL_ROW_PROCEED solo afectan a las operaciones masivas que usan **SQLSetPos** con una *operación* de SQL_DELETE o SQL_UPDATE. No afectan a las llamadas a **SQLSetPos** con una *operación* de SQL_REFRESH o SQL_POSITION.  
   
--   El puntero se establece en null de forma predeterminada.  
+-   De forma predeterminada, el puntero se establece en NULL.  
   
--   Si el puntero es null, se actualizan todas las filas como si todos los elementos se han establecido en SQL_ROW_PROCEED.  
+-   Si el puntero es null, todas las filas se actualizan como si todos los elementos se hubieran establecido en SQL_ROW_PROCEED.  
   
--   Establecimiento de un elemento a SQL_ROW_PROCEED no garantiza que la operación se producirá en esa fila determinada. Por ejemplo, si una determinada fila del conjunto de filas tiene el estado SQL_ROW_ERROR, el controlador puede no ser capaz de actualizar esa fila, independientemente de si la aplicación especificó SQL_ROW_PROCEED. Una aplicación debe comprobar siempre la matriz de Estados de fila para ver si la operación fue correcta.  
+-   Si se establece un elemento en SQL_ROW_PROCEED, no se garantiza que la operación se produzca en esa fila concreta. Por ejemplo, si una determinada fila del conjunto de filas tiene el estado SQL_ROW_ERROR, es posible que el controlador no pueda actualizar esa fila independientemente de si la aplicación especificó SQL_ROW_PROCEED. Una aplicación siempre debe comprobar la matriz de estado de fila para ver si la operación se realizó correctamente.  
   
--   SQL_ROW_PROCEED se define como 0 en el archivo de encabezado. Una aplicación puede inicializar la matriz de operación de la fila en 0 con el fin de procesar todas las filas.  
+-   SQL_ROW_PROCEED se define como 0 en el archivo de encabezado. Una aplicación puede inicializar la matriz de operación de fila en 0 para procesar todas las filas.  
   
--   Si el número de elemento "n" en la matriz de operación de la fila se establece en SQL_ROW_IGNORE y **SQLSetPos** se llama para realizar una actualización masiva o la enésima fila en el conjunto de filas que se modifica después de llamar a la operación de eliminación **SQLSetPos**.  
+-   Si el número de elemento "n" en la matriz de operaciones de fila se establece en SQL_ROW_IGNORE y se llama a **SQLSetPos** para realizar una operación de actualización o eliminación masiva, la fila nth del conjunto de filas permanece sin cambios después de la llamada a **SQLSetPos**.  
   
--   Una aplicación debe establecer automáticamente una columna de sólo lectura a SQL_ROW_IGNORE.  
+-   Una aplicación debe establecer automáticamente una columna de solo lectura en SQL_ROW_IGNORE.  
   
 ## <a name="ignoring-a-column-in-a-bulk-operation"></a>Omitir una columna en una operación masiva  
- Para evitar los diagnósticos de procesamiento innecesario generados por intentadas actualizaciones a una o varias columnas de solo lectura, una aplicación puede establecer el valor en el búfer de longitud/indicador enlazado a SQL_COLUMN_IGNORE. Para obtener más información, consulte [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
+ Para evitar los diagnósticos innecesarios de procesamiento generados por intentos de actualización en una o varias columnas de solo lectura, una aplicación puede establecer el valor del búfer de indicador/longitud enlazado en SQL_COLUMN_IGNORE. Para obtener más información, vea [SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md).  
   
 ## <a name="code-example"></a>Ejemplo de código  
- En el ejemplo siguiente, una aplicación permite al usuario examinar la tabla ORDERS y actualizar el estado del pedido. El cursor es dinámico con un tamaño de conjunto de filas de 20 y usa el control de simultaneidad optimista comparar versiones de fila. Después de que se captura cada conjunto de filas, la aplicación lo imprime y permite al usuario seleccionar y actualizar el estado de un pedido. La aplicación usa **SQLSetPos** para colocar el cursor en la fila seleccionada y realiza una actualización por posición de la fila. (Control de errores se omite para mayor claridad).  
+ En el ejemplo siguiente, una aplicación permite al usuario examinar la tabla ORDERs y actualizar el estado de los pedidos. El cursor está controlado por conjunto de claves con un tamaño de conjunto de filas de 20 y utiliza el control de simultaneidad optimista para comparar las versiones de fila. Una vez que se captura cada conjunto de filas, la aplicación lo imprime y permite al usuario seleccionar y actualizar el estado de un pedido. La aplicación usa **SQLSetPos** para colocar el cursor en la fila seleccionada y realiza una actualización posicionada de la fila. (El control de errores se omite para mayor claridad).  
   
 ```cpp  
 #define ROWS 20  
@@ -362,20 +363,20 @@ while ((retcode == SQLFetchScroll(hstmtS, SQL_FETCH_NEXT, 0)) != SQL_ERROR) {
 }  
 ```  
   
- Para obtener más ejemplos, vea [coloca actualizar y eliminar instrucciones](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) y [actualizar filas en el conjunto de filas con SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
+ Para obtener más ejemplos, vea [instrucciones Update y DELETE posicionadas](../../../odbc/reference/develop-app/positioned-update-and-delete-statements.md) y [Actualizar filas en el conjunto de filas con SQLSetPos](../../../odbc/reference/develop-app/updating-rows-in-the-rowset-with-sqlsetpos.md).  
   
 ## <a name="related-functions"></a>Funciones relacionadas  
   
 |Para obtener información acerca de|Vea|  
 |---------------------------|---------|  
-|Enlazar un búfer con una columna en un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
-|Realizar operaciones masivas que no hacen referencia a la posición del cursor de bloque|[Función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
-|Procesamiento de una instrucción de cancelación|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
-|Obtención de un bloque de datos o desplazarse a través de un resultado de conjunto|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
-|Obtención de un único campo de un descriptor|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
-|Introducción a varios campos de descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
-|Configuración de un único campo de un descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
-|Configuración de varios campos de descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
+|Enlazar un búfer a una columna de un conjunto de resultados|[Función SQLBindCol](../../../odbc/reference/syntax/sqlbindcol-function.md)|  
+|Realizar operaciones masivas que no están relacionadas con la posición del cursor de bloque|[Función SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|  
+|Cancelar el procesamiento de instrucciones|[Función SQLCancel](../../../odbc/reference/syntax/sqlcancel-function.md)|  
+|Obtener un bloque de datos o desplazarse por un conjunto de resultados|[Función SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|  
+|Obtener un solo campo de un descriptor|[Función SQLGetDescField](../../../odbc/reference/syntax/sqlgetdescfield-function.md)|  
+|Obtener varios campos de un descriptor|[Función SQLGetDescRec](../../../odbc/reference/syntax/sqlgetdescrec-function.md)|  
+|Establecer un solo campo de un descriptor|[Función SQLSetDescField](../../../odbc/reference/syntax/sqlsetdescfield-function.md)|  
+|Establecer varios campos de un descriptor|[Función SQLSetDescRec](../../../odbc/reference/syntax/sqlsetdescrec-function.md)|  
 |Establecer un atributo de instrucción|[Función SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)|  
   
 ## <a name="see-also"></a>Vea también  

@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: f3431445-8dd2-443b-813e-b99db893977e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 096e0b12aea8376ee27b7d22cceaae94a0746f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: daa98eea8582d65ae0653d9de407d9908cc11ac9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007933"
 ---
 # <a name="catalogdeleteproject-ssisdb-database"></a>catalog.delete_project (base de datos de SSISDB)
 
@@ -35,10 +34,10 @@ catalog.delete_project [ @folder_name = ] folder_name , [ @project_name = ] proj
   
 ## <a name="arguments"></a>Argumentos  
  [ @folder_name = ] *folder_name*  
- Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)**.  
+ Nombre de la carpeta que contiene el proyecto. *folder_name* es **nvarchar(128)** .  
   
  [ @project_name = ] *project_name*  
- Nombre del proyecto que se va a eliminar. *project_name* es **nvarchar(128)**.  
+ Nombre del proyecto que se va a eliminar. *project_name* es **nvarchar(128)** .  
   
 ## <a name="return-code-value"></a>Valor de código de retorno  
  0 (correcto)  

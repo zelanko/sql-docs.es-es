@@ -24,13 +24,12 @@ helpviewer_keywords:
 ms.assetid: 5a3a27aa-03e8-4c98-a27e-809282379b21
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 46623d2a2a92c719b783241f8bbafdbdff8b4bba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0c5a07b7ff618b3857d9e67b11d50a5a29e8248
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894788"
 ---
 # <a name="declare-cursor-transact-sql"></a>DECLARE CURSOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,7 +75,7 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
  READ ONLY  
  Evita que se efectúen actualizaciones a través de este cursor. No se puede hacer referencia al cursor en una cláusula `WHERE CURRENT OF` de una instrucción `UPDATE` o `DELETE`. Esta opción reemplaza la capacidad predeterminada de actualizar el cursor.  
   
- UPDATE [OF *column_name* [**,**...*n*]]  
+ UPDATE [OF *column_name* [ **,** ...*n*]]  
  Define las columnas actualizables en el cursor. Si se especifica OF <column_name> [, <… n>], solo las columnas enumeradas admiten modificaciones. Si se especifica `UPDATE` sin indicar una lista de columnas, se pueden actualizar todas las columnas.  
   
 *cursor_name*  
@@ -135,7 +134,7 @@ Especifica que las actualizaciones o las cancelaciones posicionadas realizadas a
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] convierte implícitamente el cursor a otro tipo si las cláusulas de la instrucción *select_statement* entran en conflicto con la funcionalidad del tipo de cursor solicitado. Para obtener más información, vea el tema relativo a las conversiones de cursor implícitas.  
   
-FOR UPDATE [OF *column_name* [**,**...*n*]]  
+FOR UPDATE [OF *column_name* [ **,** ...*n*]]  
 Define las columnas actualizables en el cursor. Si se especifica `OF <column_name> [, <... n>]`, solo las columnas enumeradas admiten modificaciones. Si se especifica `UPDATE` sin una lista de columnas, se pueden actualizar todas las columnas, a menos que se haya especificado la opción de simultaneidad `READ_ONLY`.  
   
 ## <a name="remarks"></a>Notas  

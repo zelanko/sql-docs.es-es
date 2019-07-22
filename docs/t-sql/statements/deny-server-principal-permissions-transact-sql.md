@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: bb2b43324d9147dfdd55f3109842dceb2ffcb975
-ms.sourcegitcommit: 9c99f992abd5f1c174b3d1e978774dffb99ff218
+ms.openlocfilehash: 2fc90354abf3c18a5eba7a92b7a5ffa54a84ce3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/17/2019
-ms.locfileid: "54361622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984501"
 ---
 # <a name="deny-server-principal-permissions-transact-sql"></a>DENY (permisos de entidad de seguridad de servidor de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,10 +60,10 @@ DENY permission [ ,...n ] }
  Especifica un permiso que se puede denegar en un inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Para obtener una lista de permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
  LOGIN **::** *SQL_Server_login*  
- Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se deniega el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  SERVER ROLE **::** *server_role*  
- Especifica el rol de servidor para el que se deniega el permiso. El calificador de ámbito (**::**) es obligatorio.  
+ Especifica el rol de servidor para el que se deniega el permiso. El calificador de ámbito ( **::** ) es obligatorio.  
   
  TO \<server_principal>  
  Especifica el rol de servidor o el inicio de sesión de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] para el que se va a conceder el permiso.  
@@ -125,7 +124,7 @@ DENY IMPERSONATE ON LOGIN::WanidaBenshoof TO [AdvWorks\YoonM];
 GO  
 ```  
   
-### <a name="b-denying-view-definition-permission-with-cascade"></a>b. Denegar el permiso VIEW DEFINITION con CASCADE  
+### <a name="b-denying-view-definition-permission-with-cascade"></a>B. Denegar el permiso VIEW DEFINITION con CASCADE  
  En el siguiente ejemplo se deniega el permiso `VIEW DEFINITION` para el inicio de sesión `EricKurjan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] al inicio de sesión `RMeyyappan` de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. La opción `CASCADE` indica que el permiso `VIEW DEFINITION` para `EricKurjan` también se denegará a las entidades de seguridad a las que `RMeyyappan` concedió este permiso.  
   
 ```  

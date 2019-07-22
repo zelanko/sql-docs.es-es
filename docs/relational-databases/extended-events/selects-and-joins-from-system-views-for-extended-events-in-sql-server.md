@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788032"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903456"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>Instrucciones SELECT y JOIN en vistas del sistema para eventos extendidos en SQL Server
 
@@ -574,8 +573,8 @@ type           package0       xml                           Well formed XML frag
 
 La siguiente instrucción SELECT devuelve todos los campos de datos específicos del tipo de evento.
 
-- Observe el elemento de la cláusula WHERE: *column_type = 'data'*.
-- Además, tendrá que modificar el valor de la cláusula WHERE para *o.name =*.
+- Observe el elemento de la cláusula WHERE: *column_type = 'data'* .
+- Además, tendrá que modificar el valor de la cláusula WHERE para *o.name =* .
 
 
 ```sql
@@ -727,8 +726,8 @@ you could put:
 
 La siguiente instrucción SELECT devuelve todos los parámetros para el destino. Cada parámetro tiene una etiqueta para indicar si es obligatorio. Los valores que asigne a los parámetros afectarán al comportamiento del destino.
 
-- Observe el elemento de la cláusula WHERE: *object_type = 'customizable'*.
-- Además, tendrá que modificar el valor de la cláusula WHERE para *o.name =*.
+- Observe el elemento de la cláusula WHERE: *object_type = 'customizable'* .
+- Además, tendrá que modificar el valor de la cláusula WHERE para *o.name =* .
 
 
 ```sql
@@ -793,7 +792,7 @@ package0   event_file   metadatafile         unicode_string_ptr   Not_mandatory 
 Esta instrucción SELECT de DMV devuelve filas de datos del destino de la sesión de eventos activa. Los datos se convierten a XML, lo que permite hacer clic en las celdas devueltas para mostrarlas fácilmente en SSMS.
 
 - Si se detiene la sesión de eventos, esta instrucción SELECT no devolverá ninguna fila.
-- Tendrá que modificar el valor de la cláusula WHERE para *s.name =*.
+- Tendrá que modificar el valor de la cláusula WHERE para *s.name =* .
 
 
 ```sql

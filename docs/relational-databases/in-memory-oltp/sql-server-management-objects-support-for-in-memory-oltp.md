@@ -11,14 +11,13 @@ ms.topic: conceptual
 ms.assetid: 2b67292d-6d8e-4016-9063-a97461ffe57a
 author: CarlRabeler
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 957e5a385f40f25bc608088b981853e23daf1dec
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 6bbf25218547548bf48c6eaf7c57c0a000e84c85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47741603"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022481"
 ---
 # <a name="sql-server-management-objects-support-for-in-memory-oltp"></a>Compatibilidad de Objetos de administración de SQL Server con OLTP en memoria
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -29,18 +28,18 @@ En este tema se describen los elementos de Objetos de administración de SQL Ser
 Los tipos y miembros siguientes forman parte del espacio de nombres **Microsoft.SqlServer.Management.Smo** y admiten el OLTP en memoria:
 
 - **<xref:Microsoft.SqlServer.Management.Smo.DurabilityType>** (enumeración)
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (propiedad)
-- FileGroup.**<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructor)
+- FileGroup. **<xref:Microsoft.SqlServer.Management.Smo.FileGroup.FileGroupType%2A>** (propiedad)
+- FileGroup. **<xref:Microsoft.SqlServer.Management.Smo.FileGroup.%23ctor%2A>** (constructor)
 - **<xref:Microsoft.SqlServer.Management.Smo.FileGroupType>** (enumeración)
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propiedad)
-- IndexType.**<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (miembro de la enumeración)
-- Index.**<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propiedad)
-- Server.**<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propiedad)
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propiedad)
-- StoredProcedure.**<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (propiedad)
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (propiedad)
-- Table.**<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propiedad)
-- UserDefinedTableType.**<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propiedad)
+- Index. **<xref:Microsoft.SqlServer.Management.Smo.Index.BucketCount%2A>** (propiedad)
+- IndexType. **<xref:Microsoft.SqlServer.Management.Smo.IndexType.NonClusteredHashIndex>** (miembro de la enumeración)
+- Index. **<xref:Microsoft.SqlServer.Management.Smo.Index.IsMemoryOptimized%2A>** (propiedad)
+- Server. **<xref:Microsoft.SqlServer.Management.Smo.Server.IsXTPSupported%2A>** (propiedad)
+- StoredProcedure. **<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsNativelyCompiled%2A>** (propiedad)
+- StoredProcedure. **<xref:Microsoft.SqlServer.Management.Smo.StoredProcedure.IsSchemaBound%2A>** (propiedad)
+- Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.Durability%2A>** (propiedad)
+- Table. **<xref:Microsoft.SqlServer.Management.Smo.Table.IsMemoryOptimized%2A>** (propiedad)
+- UserDefinedTableType. **<xref:Microsoft.SqlServer.Management.Smo.UserDefinedTableType.IsMemoryOptimized%2A>** (propiedad)
 
 ## <a name="c-code-example"></a>Ejemplo de código C#
 

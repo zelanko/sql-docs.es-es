@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 01d4117f-01a0-4bc3-8762-7382a1cdbd6c
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: a5446bbd0857fb60ca0523a873c2d7abc03914a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 86f995fc650460bdbda6004917c974377cd1b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894870"
 ---
 # <a name="stmpointfromwkb-geometry-data-type"></a>STMPointFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STMPointFromWKB ( 'WKB_multipoint' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_multipoint*  
- Es la representación WKB de la instancia de **geometryMultiPoint** que se quiere devolver. *WKB_multipoint* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometryMultiPoint** que se quiere devolver. *WKB_multipoint* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometryMultiPoint** que se quiere devolver.  

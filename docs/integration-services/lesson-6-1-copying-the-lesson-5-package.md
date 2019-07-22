@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: a25fcc13-987e-4f3d-8f0c-76f7e6e59920
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: ca91b9a6e432346e4ecb6e43e333a80e7cded22f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8b47f2da5e16e83abf6846d33ac7ce9e38aa6af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721248"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911456"
 ---
 # <a name="lesson-6-1-copy-the-lesson-5-package"></a>Lección 6-1: Copiar el paquete de la lección 5
 
@@ -49,7 +48,7 @@ Use este procedimiento si va a copiar la lección 5 completada.  Para copiar la 
 
 7.  En la ventana **Propiedades**, cambie la propiedad **Nombre** por **Lesson 6**.
 
-8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>**.
+8.  Haga clic en el cuadro de la propiedad **ID**, haga clic en la flecha desplegable y después seleccione **\<Generar nuevo Id>** .
 
 ## <a name="add-the-completed-lesson-5-package"></a>Agregar el paquete de la lección 5 completado
 
@@ -59,7 +58,7 @@ Use este procedimiento si va a copiar la lección 5 completada.  Para copiar la 
 
 3.  En el cuadro de diálogo **Agregar copia de paquete existente** , en **Ubicación del paquete**, seleccione **Sistema de archivos**.
 
-4.  Seleccione el botón Examinar **(…)**, vaya a **Lesson 5.dtsx** en el equipo y luego seleccione **Abrir**.
+4.  Seleccione el botón Examinar **(…)** , vaya a **Lesson 5.dtsx** en el equipo y luego seleccione **Abrir**.
 
 5.  Copie y pegue el paquete de la lección 5 como se ha explicado en los pasos 3 a 8 de la sección anterior.
 

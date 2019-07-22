@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 70f1d938-97e2-48a4-9bc0-8be9f2f2c36d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3b67961b62e3d6629aaa23b485a96d855fe72a9c
-ms.sourcegitcommit: c6e71ed14198da67afd7ba722823b1af9b4f4e6f
+ms.openlocfilehash: 4ed6e67bbf6f3fcda872650c2d3394d6311802b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/16/2019
-ms.locfileid: "54326636"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914224"
 ---
 # <a name="revoke-service-broker-permissions-transact-sql"></a>REVOKE (permisos de Service Broker de Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -63,19 +62,19 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
  *permission*  
  Especifica un permiso que se puede revocar para un elemento protegible de [!INCLUDE[ssSB](../../includes/sssb-md.md)]. Para obtener una lista de estos permisos, vea la sección Comentarios que se muestra posteriormente en este tema.  
   
- CONTRACT **::**_contract_name_  
+ CONTRACT **::** _contract_name_  
  Especifica el contrato en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- MESSAGE TYPE **::**_message_type_name_  
+ MESSAGE TYPE **::** _message_type_name_  
  Especifica el tipo de mensaje en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- REMOTE SERVICE BINDING **::**_remote_binding_name_  
+ REMOTE SERVICE BINDING **::** _remote_binding_name_  
  Especifica el enlace de servicio remoto en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- ROUTE **::**_route_name_  
+ ROUTE **::** _route_name_  
  Especifica la ruta en la que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
- SERVICE **::**_message_type_name_  
+ SERVICE **::** _message_type_name_  
  Especifica el servicio en el que se va a revocar el permiso. El calificador de ámbito **::** es obligatorio.  
   
  *database_principal*  

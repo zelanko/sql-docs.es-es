@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 3c082177-a2b1-4fde-8833-b49b2a351815
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ba48569633363dc7a1714bb036f40abcc0249160
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b920803c317920c6336dbdde0990b4ad511cccb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984591"
 ---
 # <a name="creating-and-defining-sql-server-unit-tests"></a>Crear y definir pruebas unitarias de SQL Server
 Puede ejecutar pruebas unitarias de SQL Server para comprobar si los cambios en uno o varios objetos de base de datos en un esquema han interrumpido la funcionalidad existente en una aplicación de base de datos. Estas pruebas complementan las pruebas unitarias creadas por los desarrolladores de software. Debe ejecutar ambos tipos de pruebas para comprobar el comportamiento de la aplicación.  

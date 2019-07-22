@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e72cfd52-de66-45e9-98b9-b8580ac7b956
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 865a3c4eab996e41c08477b275b44250d43eb993
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: acf530363e942b35b69b9b53c0c2b23ed7bb874a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716035"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007749"
 ---
 # <a name="cataloggrantpermission-ssisdb-database"></a>catalog.grant_permission (base de datos de SSISDB)
 
@@ -41,7 +40,7 @@ catalog.grant_permission [ @object_type = ] object_type
   
 ## <a name="arguments"></a>Argumentos  
  [ @object_type = ] *object_type*  
- Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint**_._  
+ Tipo del objeto protegible. Entre los tipos de objetos protegibles se incluyen la carpeta (`1`), el proyecto (`2`), el entorno (`3`) y la operación (`4`). El parámetro *object_type* es **smallint** _._  
   
  [ @object_id = ] *object_id*  
  Identificador único (id.) del objeto protegible. El parámetro *object_id* es **bigint**.  

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: b6f3cd5a-3389-42d6-a93f-97b3ddf31b95
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 8921129e8e5b7afcf3f141749bc31ec857a166e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cd7a605fbe9d3075d4d67e1ce824664ef2747c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098037"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897134"
 ---
 # <a name="how-to-create-an-empty-sql-server-unit-test"></a>Procedimientos: Creación de una prueba unitaria de SQL Server vacía
 Incluya pruebas unitarias en el proyecto de base de datos para comprobar que los cambios realizados en los objetos de base de datos no interrumpen la funcionalidad existente. En los procedimientos siguientes se explica cómo crear pruebas unitarias de SQL Server para cualquier objeto de base de datos. SQL Server Data Tools incluye compatibilidad adicional para funciones, procedimientos y desencadenadores de base de datos almacenados. Para más información, vea: [Cómo: Creación de pruebas unitarias de SQL Server para funciones, desencadenadores y procedimientos almacenados](../ssdt/how-to-create-unit-tests-for-functions-triggers-stored-procedures.md).  
@@ -45,13 +44,13 @@ Tiene dos opciones para crear una prueba unitaria de SQL Server:
   
 3.  En **Nombre de la prueba**, escriba un nombre para la prueba.  
   
-4.  En **Agregar a proyecto de prueba**, seleccione un proyecto de prueba existente al que desee agregar esta prueba. Si no existe ningún proyecto de prueba o si desea crear un nuevo proyecto de prueba, seleccione **Crear un nuevo proyecto de prueba <language>**.  
+4.  En **Agregar a proyecto de prueba**, seleccione un proyecto de prueba existente al que desee agregar esta prueba. Si no existe ningún proyecto de prueba o si desea crear un nuevo proyecto de prueba, seleccione **Crear un nuevo proyecto de prueba <language>** .  
   
 5.  Haga clic en **Aceptar**.  
   
     Si el proyecto de prueba es nuevo, aparecerá el cuadro de diálogo **Nuevo proyecto de prueba**. Proporcione un nombre al proyecto y haga clic en **Aceptar**.  
   
-    Si el proyecto de prueba es nuevo o no se ha configurado, aparecerá el cuadro de diálogo **Configuración de prueba de <ProjectName>**. Este cuadro de diálogo permite configurar la siguiente información del proyecto de prueba:  
+    Si el proyecto de prueba es nuevo o no se ha configurado, aparecerá el cuadro de diálogo **Configuración de prueba de <ProjectName>** . Este cuadro de diálogo permite configurar la siguiente información del proyecto de prueba:  
   
     -   La conexión de base de datos utilizada para ejecutar pruebas.  
   
@@ -81,7 +80,7 @@ Tiene dos opciones para crear una prueba unitaria de SQL Server:
   
 1.  Abra una clase de prueba unitaria de SQL Server existente en el **Diseñador de pruebas unitarias de SQL Server**. Puede obtener acceso al **Diseñador de pruebas unitarias de SQL Server** si hace doble clic en el archivo de código fuente de la prueba unitaria en el **Explorador de soluciones**.  
   
-2.  Haga clic en el signo más (**+**) de la barra de navegación para mostrar el cuadro de diálogo **Especificar un nombre de prueba unitaria**.  
+2.  Haga clic en el signo más ( **+** ) de la barra de navegación para mostrar el cuadro de diálogo **Especificar un nombre de prueba unitaria**.  
   
 3.  Escriba un nombre y haga clic en **Aceptar**.  
   

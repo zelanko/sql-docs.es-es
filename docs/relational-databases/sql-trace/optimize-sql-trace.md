@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 50944218-925f-4576-aec8-4379846d7681
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: c6145a0bba1418846bdc45a1354138ac5592ffcd
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 59b1a599a38e31abeee677059d5a99842e76d807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51571285"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033218"
 ---
 # <a name="optimize-sql-trace"></a>Optimizar el seguimiento de SQL
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "51571285"
   
 -   Limite el número de eventos que se devuelven. Con [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] , puede limitar el número de eventos devueltos guardando el seguimiento en una tabla y configurando el número máximo de filas. Los resultados del seguimiento siguen mostrándose en la pantalla de [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] tras alcanzar el número máximo de filas, pero se elimina el costo de registrar los resultados en una tabla.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Filtrar un seguimiento](../../relational-databases/sql-trace/filter-a-trace.md)  
   
   

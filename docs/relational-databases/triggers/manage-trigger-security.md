@@ -13,12 +13,12 @@ author: rothja
 ms.author: jroth
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1e400ada65efa69dd1b3e5ccc7dbdc21f67e3674
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: edc81e7f148a2d0c2572da4902a90499baf9db7e
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47690793"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866280"
 ---
 # <a name="manage-trigger-security"></a>Administrar la seguridad de los desencadenadores
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,14 +41,31 @@ ms.locfileid: "47690793"
 ## <a name="trigger-security-best-practices"></a>Prácticas recomendadas de seguridad de los desencadenadores  
  Para evitar que se ejecute código de desencadenador con privilegios aumentados, puede adoptar las siguientes medidas:  
   
+::: moniker range=">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+
 -   Tenga en cuenta los desencadenadores DML y DDL que se encuentran en la base de datos y en la instancia del servidor al consultar la vistas de catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md) y [sys.server_triggers](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md) . La consulta siguiente devuelve todos los desencadenadores DML y DLL de base de datos para la base de datos actual, además de todos los desencadenadores DDL de servidor para la instancia de servidor:  
   
-    ```  
+    ```sql
     SELECT type, name, parent_class_desc FROM sys.triggers  
     UNION  
     SELECT type, name, parent_class_desc FROM sys.server_triggers ;  
     ```  
+
+   > [!NOTE]
+   > Solo **sys.triggers** está disponible para Azure SQL Database, a menos que se use Instancia administrada.
+
+::: moniker-end
+
+::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
+
+-   Sepa cuáles son los desencadenadores DML y DDL que existen en la base de datos mediante una consulta a la vista del catálogo [sys.triggers](../../relational-databases/system-catalog-views/sys-triggers-transact-sql.md). La consulta siguiente devuelve todos los desencadenadores DDL de nivel de base de datos y DML de la base de datos actual:  
   
+    ```sql
+    SELECT type, name, parent_class_desc FROM sys.triggers ; 
+    ```  
+  
+::: moniker-end
+
 -   Utilice [DISABLE TRIGGER](../../t-sql/statements/disable-trigger-transact-sql.md) para deshabilitar desencadenadores que podrían dañar la integridad de la base de datos o el servidor si se ejecutan con privilegios aumentados. La siguiente instrucción deshabilita todos los desencadenadores DDL de base de datos para la base de datos actual:  
   
     ```  
@@ -94,7 +111,7 @@ ms.locfileid: "47690793"
     DEALLOCATE trig_cur;  
     ```  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   
  [Desencadenadores DML](../../relational-databases/triggers/dml-triggers.md)   
  [Desencadenadores DDL](../../relational-databases/triggers/ddl-triggers.md)  

@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 47148383-c2c7-4f08-a9e4-7016bf2d1d13
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 514ec88554282cf6e2cf0cc74eb1f35e77091fa9
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 79ce697e86adcd7a2b11d4ec1d5f4564d51692e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539021"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024991"
 ---
 # <a name="create-clustered-indexes"></a>Crear índices clúster
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,20 +74,20 @@ ms.locfileid: "52539021"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  Requiere el permiso ALTER en la tabla o la vista. El usuario debe ser miembro del rol fijo de servidor **sysadmin** o de los roles fijos de base de datos **db_ddladmin** y **db_owner** .  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-create-a-clustered-index-by-using-object-explorer"></a>Para crear un índice clúster mediante el Explorador de objetos  
   
 1.  En el Explorador de objetos, expanda la tabla en la que desea crear un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...**.  
+2.  Haga clic con el botón derecho en la carpeta **Índices**, seleccione **Nuevo índice** y, luego, **Índice no agrupado...** .  
   
 3.  En el cuadro de diálogo **Nuevo índice** , en la página **General** , escriba el nombre del nuevo índice en el cuadro **Nombre de índice** .  
   
-4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...**.  
+4.  Debajo de **Columnas de clave de índice**, haga clic en **Agregar...** .  
   
 5.  En el cuadro de diálogo **Seleccionar columnas de**_nombre\_tabla_, active la casilla de la columna de tabla que se va a agregar al índice agrupado.  
   
@@ -100,7 +99,7 @@ ms.locfileid: "52539021"
   
 1.  En el Explorador de objetos, expanda la base de datos en la que desea crear una tabla con un índice clúster.  
   
-2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...**.  
+2.  Haga clic con el botón derecho en la carpeta **Tablas** y, luego, haga clic en **Nueva tabla...** .  
   
 3.  Cree una tabla nueva como lo haría normalmente. Para obtener más información, vea [Crear tablas &#40;motor de base de datos&#41;](../../relational-databases/tables/create-tables-database-engine.md).  
   
@@ -146,7 +145,7 @@ ms.locfileid: "52539021"
   
  Para obtener más información, vea [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md).  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Crear claves principales](../../relational-databases/tables/create-primary-keys.md)   
  [Crear restricciones UNIQUE](../../relational-databases/tables/create-unique-constraints.md)  
   

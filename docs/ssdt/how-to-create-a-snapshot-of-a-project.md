@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: bed670a3-13bd-4d88-91a1-58d5b9524a97
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4093d18cfce9e7a5632039cf819955762c84adc1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3fad9b94c83a314ab252ed52377d6fb332e7029e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897203"
 ---
 # <a name="how-to-create-a-snapshot-of-a-project"></a>Procedimientos: Creación de una instantánea de un proyecto
 Un archivo de **Aplicación de capa de datos** ofrece una representación de solo lectura del esquema de la base de datos en el momento de su creación. Básicamente se considera un esquema de la base de datos desde el que puede volver a importar los objetos de esquema en un proyecto. También puede compararla con el esquema de una base de datos o de un proyecto y actualizar la base de datos o el proyecto para reflejar el esquema definido en la instantánea.  

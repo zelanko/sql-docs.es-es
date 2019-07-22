@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 92a44d4d-0e53-4fb0-b890-de264c65c95a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a28d59165f7c1a7e733807cb4b86d334604da289
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: dd722c59384b1a7878ac2b940da9534ba5d1f7a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51672774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951328"
 ---
 # <a name="accessing-memory-optimized-tables-using-interpreted-transact-sql"></a>Acceso a tablas con optimización para memoria mediante Transact-SQL interpretado
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -69,7 +68,7 @@ Al tener acceso a una tabla optimizada para memoria desde una transacción expl�
   
 No es necesaria una sugerencia de tabla de nivel de aislamiento para las tablas optimizadas para memoria a las que acceden las consultas que se ejecutan en [modo de confirmación automática](https://msdn.microsoft.com/c8de5b60-d147-492d-b601-2eeae8511d00).  
   
-## <a name="see-also"></a>Ver también
+## <a name="see-also"></a>Consulte también
 
 [Compatibilidad de Transact-SQL con OLTP en memoria](../../relational-databases/in-memory-oltp/transact-sql-support-for-in-memory-oltp.md)   
 

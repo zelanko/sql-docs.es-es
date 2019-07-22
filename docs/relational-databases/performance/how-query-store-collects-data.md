@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8d5eec36-0013-480a-9c11-183e162e4c8e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b74ad99ac0ade660e524241a0368cacc92e6852
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
+ms.openlocfilehash: 83fbc6c183216cedcbb664a0c3a2e3a9337e1513
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946779"
 ---
 # <a name="how-query-store-collects-data"></a>Introducción a la recopilación de datos del almacén de consultas
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "59542205"
   
  ![query-store-process-2processor](../../relational-databases/performance/media/query-store-process-2processor.png "query-store-process-2processor")  
   
- Para minimizar la sobrecarga de E/S, los nuevos datos se capturan en memoria. Las operaciones de escritura se ponen en cola y se vacían posteriormente en el disco. La información de consulta y plan (planear el almacén en el diagrama siguiente) se vacían con una latencia mínima. Las estadísticas en tiempo de ejecución (Estadísticas en tiempo de ejecución) se mantienen en memoria durante un período de tiempo definido con la opción `DATA_FLUSH_INTERVAL_SECONDS` de la instrucción `SET QUERY_STORE` . El cuadro de diálogo Almacén de consultas de SSMS permite especificar la opción **Intervalo de vaciado de datos (minutos)**, que se convierte a segundos.  
+ Para minimizar la sobrecarga de E/S, los nuevos datos se capturan en memoria. Las operaciones de escritura se ponen en cola y se vacían posteriormente en el disco. La información de consulta y plan (planear el almacén en el diagrama siguiente) se vacían con una latencia mínima. Las estadísticas en tiempo de ejecución (Estadísticas en tiempo de ejecución) se mantienen en memoria durante un período de tiempo definido con la opción `DATA_FLUSH_INTERVAL_SECONDS` de la instrucción `SET QUERY_STORE` . El cuadro de diálogo Almacén de consultas de SSMS permite especificar la opción **Intervalo de vaciado de datos (minutos)** , que se convierte a segundos.  
   
  ![query-store-process-3plan](../../relational-databases/performance/media/query-store-process-3.png "query-store-process-3plan")  
   

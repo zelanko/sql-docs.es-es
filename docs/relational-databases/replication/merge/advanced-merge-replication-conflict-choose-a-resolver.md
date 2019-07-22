@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b7dec3fa-d9d9-409d-b946-f9b9a3202829
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 66dc8bd94030b499b93e2f05c1c56fb7d7ef0a62
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3b93c9b438a22cba125bb7487b393371b4ffd8c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47699283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033439"
 ---
 # <a name="advanced-merge-replication-conflict---choose-a-resolver"></a>Conflictos de replicación de mezcla avanzada: elegir un solucionador
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,9 +42,9 @@ ms.locfileid: "47699283"
 |Marcar como conflicto cualquier cambio múltiple en los valores de un registro lógico.|Utilice el solucionador predeterminado con seguimiento por registro lógico (la característica de registros lógicos no admite el uso de solucionadores personalizados ni controladores de lógica de negocios).|  
 |Los datos resultantes del conflicto deben ser diferentes de los datos originales en conflicto.|Utilice un solucionador de artículos que calcule nuevos valores.|  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Detectar y solucionar conflictos en registros lógicos](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)   
- [Advanced Merge Replication Conflict Detection and Resolution](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
+ [Detección y resolución de conflictos de replicación de mezcla avanzada](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [Volver a publicar datos](../../../relational-databases/replication/republish-data.md)  
   
   

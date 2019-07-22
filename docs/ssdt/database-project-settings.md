@@ -40,13 +40,12 @@ f1_keywords:
 ms.assetid: 34418730-1aaa-4948-aee2-8f1e62cda85c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 1c3899fc603da55d03ae7acd1e11c7f485637f30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4921df6e1602d4cfc98aa6da3733452d6b5d33d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099383"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912854"
 ---
 # <a name="database-project-settings"></a>Configuración del proyecto de base de datos
 Utilice la configuración del proyecto de base de datos para controlar aspectos de las configuraciones de base de datos, depuración y compilación. Existen varias categorías de configuraciones.  

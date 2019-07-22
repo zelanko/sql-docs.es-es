@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f77ef5e91015bd53f22bfbfb4b747d67bfa58157
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 73aee045b57ca7fde08c24adca4a3d4267d06c61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934075"
 ---
 # <a name="create-a-stored-procedure"></a>Crear un procedimiento almacenado
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,7 +32,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
   
 -   **Para crear un procedimiento con:**  [SQL Server Management Studio](#SSMSProcedure), [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permisos  
  Requiere el permiso CREATE PROCEDURE en la base de datos y el permiso ALTER en el esquema en el que se va a crear el procedimiento.  
   
 ##  <a name="Procedures"></a> Crear un procedimiento almacenado  
@@ -43,7 +42,7 @@ En este tema se describe cómo se crea un procedimiento almacenado de [!INCLUDE[
   
 -   [Transact-SQL](#TsqlProcedure)  
   
-###  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+###  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  **Para crear un procedimiento en el Explorador de objetos**  
   
 1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)] y expándala.  

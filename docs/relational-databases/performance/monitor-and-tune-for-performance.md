@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 87f23f03-0f19-4b2e-bfae-efa378f7a0d4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 828e0c79d3d68cded07e3dc1204f92f409033e9c
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: fd6fdf81a74e015995f5bf9bd5500f196ccf5cc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360727"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020249"
 ---
 # <a name="monitor-and-tune-for-performance"></a>Supervisión y optimización del rendimiento
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ A medida que aumenta el número de usuarios, aumenta la competencia para obtener
 |[Aislar problemas de rendimiento](../../relational-databases/performance/isolate-performance-problems.md)|Describe cómo aislar problemas de rendimiento de base de datos.|  
 |[Identificar los cuellos de botella](../../relational-databases/performance/identify-bottlenecks.md)|Describe cómo supervisar y seguir el rendimiento del servidor para identificar cuellos de botella.|  
 |[Uso de DMV para determinar las estadísticas de uso y el rendimiento de las vistas](../../relational-databases/performance/use-dmvs-determine-usage-performance-views.md)|Se trata la metodología y los scripts usados para obtener información sobre el rendimiento de las consultas.|  
-|[Supervisión de la actividad y el rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
+|[Supervisión de la actividad y rendimiento del servidor](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|Describe cómo usar [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y las herramientas de supervisión de rendimiento y actividad de Windows.|  
 |[Supervisión del grupo de recursos](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)|Uso del Monitor de sistema (también conocido como perfmon) para medir el rendimiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mediante contadores de rendimiento.|  
 
   

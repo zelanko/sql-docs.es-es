@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3198188a-2b59-4865-9560-10f760934b8e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f6a30012675c45688e49e8d32524b060de869908
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: c63c98eda9ef0827919bfe36f3a2b14ef717f648
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021501"
 ---
 # <a name="trustworthy-bit"></a>Bit de confianza
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51512600"
 ## <a name="for-more-information"></a>Para obtener más información  
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Supervisar y aplicar las prácticas recomendadas usando la administración basada en directivas](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)  
   
   

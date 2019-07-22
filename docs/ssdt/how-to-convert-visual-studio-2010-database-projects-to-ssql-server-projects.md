@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84815176ca9b32614e851800a59ea2951010ce4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098237"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897322"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>Procedimientos: Conversión de proyectos de base de datos de Visual Studio 2010 en proyectos de base de datos de SQL Server y cambio del destino a otra plataforma
 En SQL Server Data Tools (SSDT), puede convertir proyectos de bases de datos de SQL Database, CLR y aplicación de capa de datos creados en Visual Studio 2010 en el nuevo proyecto de base de datos de SQL Server. Al hacerlo, puede aprovechar la nueva experiencia de desarrollo de bases de datos que ofrece SSDT, como edición de Transact\-SQL actualizada, y la posibilidad de cambiar el destino del proyecto a Microsoft SQL Server 2012 y SQL Azure con validación del código. El proceso de conversión convierte los objetos (tablas, vistas, procedimientos almacenados, archivos de propiedades o scripts) que tengan un tipo equivalente en SSDT, incluidos sus permisos y archivos de directivas de DAC. Los artefactos que no se puedan convertir aparecen resaltados en un informe de registro de conversión.  

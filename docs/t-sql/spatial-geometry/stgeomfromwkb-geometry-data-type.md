@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
-ms.openlocfilehash: dfd85de28fd8f757c7c8b389fe5e5e5934162751
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 769b48c99e59c8bfcf38fa96cd60d6ef11cd3237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65938872"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950146"
 ---
 # <a name="stgeomfromwkb-geometry-data-type"></a>STGeomFromWKB (tipo de datos geometry)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ STGeomFromWKB ( 'WKB_geometry' , SRID )
   
 ## <a name="arguments"></a>Argumentos  
  *WKB_geometry*  
- Es la representación WKB de la instancia de **geometry** que se quiere devolver. *WKB_geometry* es una expresión **varbinary(max)**.  
+ Es la representación WKB de la instancia de **geometry** que se quiere devolver. *WKB_geometry* es una expresión **varbinary(max)** .  
   
  *SRID*  
  Es una expresión **int** que representa el identificador de referencia espacial (SRID) de la instancia de **geometry** que se quiere devolver.  

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ead8470-93ba-44e3-8848-b59322e37621
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 13e2b010a193e8c610c54a5b619d8a67c9b4d2d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 167667590df0b2172e05674c462cfa9833d45acd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65097458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912781"
 ---
 # <a name="walkthrough-extend-database-project-deployment-to-analyze-the-deployment-plan"></a>Tutorial: Ampliación de la implementación del proyecto de base de datos para analizar el plan de implementación
 Puede crear colaboradores de implementación para realizar acciones personalizadas al implementar un proyecto de SQL. Puede crear un DeploymentPlanModifier o un DeploymentPlanExecutor. Utilice un DeploymentPlanModifier para cambiar el plan antes de ejecutarlo y un DeploymentPlanExecutor para realizar operaciones mientras se ejecuta el plan. En este tutorial, se crea un DeploymentPlanExecutor denominado DeploymentUpdateReportContributor que crea un informe sobre las acciones que se realizan al implementar un proyecto de base de datos. Dado que este colaborador de compilación acepta un parámetro para controlar si el informe se genera, debe efectuar un paso necesario adicional.  

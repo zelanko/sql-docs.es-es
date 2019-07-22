@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aad3594a-11cf-4e68-a622-071a93d43875
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: c4e95970acd0228c44e493c7fffd98c0d5abc908
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d32b782c8508952a85f0a9a22b55d32dab096d6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017619"
 ---
 # <a name="how-to-clone-an-existing-database"></a>Procedimientos: Clon de una base de datos existente
 Esta tarea usa algunos de los pasos que ha aprendido en procedimientos anteriores para crear una nueva base de datos y transportar datos existentes. Además, utiliza los pasos que se describen en [Cómo: Usar Comparación de esquemas para comparar distintas definiciones de base de datos](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md) para sincronizar el esquema de una base de datos de origen y de un proyecto.  

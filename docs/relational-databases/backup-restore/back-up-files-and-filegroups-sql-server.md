@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a0d3a567-7d8b-4cfe-a505-d197b9a51f70
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 1b6127bbc02c85276292da1ada5748fbb2d7923f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ca2092dead08ea135a2c3d35acb93a43476a086
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64478897"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940907"
 ---
 # <a name="back-up-files-and-filegroups-sql-server"></a>Realizar copias de seguridad de archivos y grupos de archivos (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -132,20 +131,20 @@ ms.locfileid: "64478897"
   
      BACKUP DATABASE *database*  
   
-     { FILE _=_*logical_file_name* | FILEGROUP _=_*logical_filegroup_name* } [ **,**...*f* ]  
+     { FILE _=_ *logical_file_name* | FILEGROUP _=_ *logical_filegroup_name* } [ **,** ...*f* ]  
   
-     TO *backup_device* [ **,**...*n* ]  
+     TO *backup_device* [ **,** ...*n* ]  
   
-     [ WITH *with_options* [ **,**...*o* ] ] ;  
+     [ WITH *with_options* [ **,** ...*o* ] ] ;  
   
     |Opción|Descripción|  
     |------------|-----------------|  
     |*database*|Es la base de datos para la que se realiza la copia de seguridad del registro de transacciones, de una parte de la base de datos o de la base de datos completa.|  
-    |FILE _=_*logical_file_name*|Especifica el nombre lógico de un archivo que se debe incluir en la copia de seguridad de archivos.|  
-    |FILEGROUP _=_*logical_filegroup_name*|Especifica el nombre lógico de un grupo de archivos que se debe incluir en la copia de seguridad de archivos. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.|  
-    |[ **,**...*f* ]|Se trata de un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos. El número de archivos o grupos de archivos es ilimitado.|  
-    |*backup_device* [ **,**...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } _=_*physical_backup_device_name*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
-    |WITH *with_options* [ **,**...*o* ]|Opcionalmente, especifica una o más opciones, como DIFFERENTIAL.<br /><br /> Nota: Una copia de seguridad diferencial de archivos necesita una copia de seguridad completa de archivos como base. Para obtener más información, vea [Crear una copia de seguridad diferencial de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
+    |FILE _=_ *logical_file_name*|Especifica el nombre lógico de un archivo que se debe incluir en la copia de seguridad de archivos.|  
+    |FILEGROUP _=_ *logical_filegroup_name*|Especifica el nombre lógico de un grupo de archivos que se debe incluir en la copia de seguridad de archivos. En el modelo de recuperación simple, se permite la copia de seguridad de un grupo de archivos solo si se trata de un grupo de archivos de solo lectura.|  
+    |[ **,** ...*f* ]|Se trata de un marcador de posición que indica que se pueden especificar varios archivos y grupos de archivos. El número de archivos o grupos de archivos es ilimitado.|  
+    |*backup_device* [ **,** ...*n* ]|Especifica una lista de 1 a 64 dispositivos de copia de seguridad que se pueden utilizar en la operación de copia de seguridad. Puede especificar un dispositivo físico de copia de seguridad o puede especificar un dispositivo de copia de seguridad lógico correspondiente, si ya se definió. Para especificar un dispositivo de copia de seguridad físico, use la opción DISK o TAPE:<br /><br /> { DISK &#124; TAPE } _=_ *physical_backup_device_name*<br /><br /> Para obtener más información, vea [Dispositivos de copia de seguridad &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md).|  
+    |WITH *with_options* [ **,** ...*o* ]|Opcionalmente, especifica una o más opciones, como DIFFERENTIAL.<br /><br /> Nota: Una copia de seguridad diferencial de archivos necesita una copia de seguridad completa de archivos como base. Para obtener más información, vea [Crear una copia de seguridad diferencial de base de datos &#40;SQL Server&#41;](../../relational-databases/backup-restore/create-a-differential-database-backup-sql-server.md).|  
   
 2.  Con el modelo de recuperación completa, también debe realizar copias de seguridad del registro de transacciones. Para utilizar un conjunto completo de copias de seguridad de completas archivos para restaurar una base de datos, también debe tener suficientes copias de seguridad de registros que abarquen todas las copias de seguridad de archivos, desde el principio de la primera copia de seguridad de archivos. Para más información, consulte [Realizar copia de seguridad de un registro de transacciones &#40;SQL Server&#41;](../../relational-databases/backup-restore/back-up-a-transaction-log-sql-server.md).  
   

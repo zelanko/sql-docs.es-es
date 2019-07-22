@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 8a7aaaf2-62e3-46c0-8e44-fa22290dd86b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fad23cc2ecd044b300ee80366f06d2f5c54b80ae
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59cbaf203b8e877f9476e807008345b9af05b0fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948782"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944534"
 ---
 # <a name="replace-transact-sql"></a>REPLACE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -63,7 +62,7 @@ REPLACE ( string_expression , string_pattern , string_replacement )
 ## <a name="remarks"></a>Notas  
  REPLACE realiza comparaciones basándose en la intercalación de la entrada. Para realizar una comparación de una intercalación especificada, puede usar [COLLATE](~/t-sql/statements/collations.md) para aplicar una intercalación explícita a la entrada.  
   
- 0x0000 (**char(0)**) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  
+ 0x0000 (**char(0)** ) es un carácter no definido en las intercalaciones de Windows y no se puede incluir en REPLACE.  
   
 ## <a name="examples"></a>Ejemplos  
  El siguiente ejemplo reemplaza la cadena `cde` de `abcdefghi` por `xxx`.  

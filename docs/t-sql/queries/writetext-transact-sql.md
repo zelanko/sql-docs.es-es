@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 5dd029115c99ae4826bf1070a7556c7fbdcb8c55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: c10e7259062316454e4e0ecf430f6fdb87c53caf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948100"
 ---
 # <a name="writetext-transact-sql"></a>WRITETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ WRITETEXT [BULK]
  Es el nombre de la tabla y la columna **text**, **ntext** o **image** que se van a actualizar. Los nombres de tablas y columnas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *text_ptr*  
- Es un valor que almacena el puntero a los datos **text**, **ntext** o **image**. *text_ptr* debe ser de tipo **binary(16)**. Para crear un puntero de texto, ejecute una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con datos que no sean NULL para la columna **text**, **ntext** o **image**.  
+ Es un valor que almacena el puntero a los datos **text**, **ntext** o **image**. *text_ptr* debe ser de tipo **binary(16)** . Para crear un puntero de texto, ejecute una instrucción [INSERT](../../t-sql/statements/insert-transact-sql.md) o [UPDATE](../../t-sql/queries/update-transact-sql.md) con datos que no sean NULL para la columna **text**, **ntext** o **image**.  
   
  WITH LOG  
  Omitido por [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. El registro está determinado por el modelo de recuperación vigente para la base de datos.  

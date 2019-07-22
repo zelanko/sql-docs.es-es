@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 8664bde5-86ff-4e8b-b5a6-af003316f6ad
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 49c19d1109f6105f2f081b1f85c2f188d2c02539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b5ff9e02b15c70d08151384bb46332e8b4ea550a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099677"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035157"
 ---
 # <a name="how-to-navigate-between-scripts"></a>Procedimientos: Navegación entre scripts
 El Editor de Transact\-SQL para el desarrollo sin conexión proporciona dos herramientas de navegación útiles que resultan familiares a los usuarios de Visual Studio: Ir a la definición y Buscar todas las referencias. Por ejemplo, puede hacer clic con el botón secundario en el nombre de una tabla y usar “Buscar todas las referencias” para enumerar todas las referencias a la tabla en el proyecto. Puede hacer doble clic en un resultado de la búsqueda para ir a ese archivo de código determinado. En este archivo, puede volver a hacer clic con el botón secundario en el nombre de tabla y elegir “Ir a la definición” para volver a la definición de la tabla.  

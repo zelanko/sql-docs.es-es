@@ -40,13 +40,12 @@ helpviewer_keywords:
 ms.assetid: 864b393f-225f-4895-8c8d-4db59ea60032
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b2474bc1f0d0111c4dedd2fa8ce3a9f885503d52
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: bf64036b88b6f29da0404b6e611ae891db93da70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912664"
 ---
 # <a name="create-function-transact-sql"></a>CREATE FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -309,7 +308,7 @@ Si no se especifica *type_schema_name*, [!INCLUDE[ssDE](../../includes/ssde-md.m
 Es un valor predeterminado para el parámetro. Si se define un valor *default*, la función se puede ejecutar sin especificar un valor para ese parámetro.  
   
 > [!NOTE]  
-> Se pueden especificar valores predeterminados de parámetros para las funciones CLR, excepto para los tipos de datos **varchar(max)** y **varbinary(max)**.  
+> Se pueden especificar valores predeterminados de parámetros para las funciones CLR, excepto para los tipos de datos **varchar(max)** y **varbinary(max)** .  
   
  Cuando un parámetro de la función tiene un valor predeterminado, se debe especificar la palabra clave DEFAULT al llamar a la función para recuperar el valor predeterminado. Este comportamiento es distinto del uso de parámetros con valores predeterminados en los procedimientos almacenados, donde la omisión del parámetro implica especificar el valor predeterminado. Sin embargo, la palabra clave DEFAULT no se requiere cuando se invoca una función escalar mediante la instrucción EXECUTE.  
   
@@ -464,7 +463,7 @@ Especifica si esta UDF escalar se debe insertar o no. Esta cláusula solo se apl
  La propiedad ROWGUIDCOL no exige que los valores almacenados en la columna sean únicos. Del mismo modo, tampoco genera automáticamente valores para nuevas filas insertadas en la tabla. Si desea generar valores únicos para cada columna, use la función NEWID en instrucciones INSERT. Puede especificar un valor predeterminado; sin embargo, no puede especificar NEWID como valor predeterminado.  
   
  IDENTITY  
- Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)**. Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment*, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
+ Indica que la nueva columna es una columna de identidad. Cuando se agrega una nueva fila a la tabla, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un valor incremental único para la columna. Las columnas de identidad se utilizan normalmente junto con las restricciones PRIMARY KEY como identificadores de fila exclusivos de la tabla. La propiedad IDENTITY se puede asignar a columnas **tinyint**, **smallint**, **int**, **bigint**, **decimal(p,0)** o **numeric(p,0)** . Solo se puede crear una columna de identidad para cada tabla. Las restricciones DEFAULT y los valores predeterminados enlazados no se pueden utilizar en las columnas de identidad. Se debe especificar los dos argumentos, *seed* e *increment*, o ninguno. Si no se especifica ninguno, el valor predeterminado es (1,1).  
   
  No se puede especificar IDENTITY para las funciones CLR con valores de tabla.  
   
@@ -558,7 +557,7 @@ Si una función definida por el usuario no se crea con la cláusula `SCHEMABINDI
  Para más información sobre la programación de funciones CLR, vea [CLR User-Defined Functions](../../relational-databases/clr-integration-database-objects-user-defined-functions/clr-user-defined-functions.md) (Funciones CLR definidas por el usuario).  
   
 ## <a name="general-remarks"></a>Notas generales  
- Se pueden invocar funciones escalares cuando se utilizan expresiones escalares. Esto incluye las columnas calculadas y las definiciones de restricciones CHECK. Las funciones escalares también se pueden ejecutar con la instrucción [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Las funciones escalares deben invocarse como mínimo con el nombre de dos partes de la función (*<schema>.<function>*). Para más información sobre los nombres con varias partes, vea [Convenciones de sintaxis de Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Las funciones con valores de tabla se pueden invocar cuando se admiten expresiones de tabla en la cláusula `FROM` de instrucciones `SELECT`, `INSERT`, `UPDATE` o `DELETE`. Para más información, vea [Ejecutar funciones definidas por el usuario](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
+ Se pueden invocar funciones escalares cuando se utilizan expresiones escalares. Esto incluye las columnas calculadas y las definiciones de restricciones CHECK. Las funciones escalares también se pueden ejecutar con la instrucción [EXECUTE](../../t-sql/language-elements/execute-transact-sql.md). Las funciones escalares deben invocarse como mínimo con el nombre de dos partes de la función ( *<schema>.<function>* ). Para más información sobre los nombres con varias partes, vea [Convenciones de sintaxis de Transact-SQL (Transact-SQL)](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md). Las funciones con valores de tabla se pueden invocar cuando se admiten expresiones de tabla en la cláusula `FROM` de instrucciones `SELECT`, `INSERT`, `UPDATE` o `DELETE`. Para más información, vea [Ejecutar funciones definidas por el usuario](../../relational-databases/user-defined-functions/execute-user-defined-functions.md).  
   
 ## <a name="interoperability"></a>Interoperabilidad  
  Las siguientes instrucciones son válidas en una función:  

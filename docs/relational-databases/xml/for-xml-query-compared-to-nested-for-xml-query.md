@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 19225b4a-ee3f-47cf-8bcc-52699eeda32c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d5bc778a2f0b1126925003ebb13df0f5a0dd1ec0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f00e060bf477d6e43f2ddd42e0fd4bbbf6515898
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513112"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943345"
 ---
 # <a name="for-xml-query-compared-to-nested-for-xml-query"></a>Comparación de la consulta FOR XML con la consulta FOR XML anidada
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -116,7 +115,7 @@ ORDER BY ProductCategoryID
 FOR XML AUTO, TYPE  
 ```  
   
- Observe lo siguiente en la consulta anterior:    
+ Observe lo siguiente en la consulta anterior:  
   
 -   La consulta `FOR XML` interna recupera información de subcategoría de productos. La directiva `ELEMENTS` se agrega a la consulta `FOR XML` interna para generar el XML centrado en elementos que se agrega al XML generado por la consulta externa. De manera predeterminada, la consulta externa genera XML centrado en atributos.  
   

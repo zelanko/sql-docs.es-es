@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4b5ecffd-f025-4ab7-b69d-8958c6477127
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 9ed4ea2aa5c11e8e764f3ff821122b4290d110ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74bbb2b7b066d106aa82f36669de6b4704537e72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947957"
 ---
 # <a name="add-or-replace-a-database-mirroring-witness-sql-server-management-studio"></a>Agregar o reemplazar un testigo de creación de reflejo de la base de datos (SQL Server Management Studio)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "66774990"
   
 13. Si lo desea, en la pantalla de resumen **Finalización del asistente** , compruebe la configuración del testigo y haga clic en **Finalizar**.  
   
-14. Cuando finalice, el asistente volverá al cuadro de diálogo **Propiedades de la base de datos** , donde en el campo **Testigo** se mostrará la dirección de red del servidor del testigo. Además, se seleccionará automáticamente **Modo de alta seguridad con conmutación por error automática (sincrónica)**, que es necesario con un testigo.  
+14. Cuando finalice, el asistente volverá al cuadro de diálogo **Propiedades de la base de datos** , donde en el campo **Testigo** se mostrará la dirección de red del servidor del testigo. Además, se seleccionará automáticamente **Modo de alta seguridad con conmutación por error automática (sincrónica)** , que es necesario con un testigo.  
   
      Para habilitar el testigo y cambiar la sesión al modo de alta seguridad con conmutación por error automática, haga clic en **Aceptar**.  
   

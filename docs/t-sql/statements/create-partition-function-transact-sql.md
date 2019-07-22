@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 9dfe8b76-721e-42fd-81ae-14e22258c4f2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 52e2d08a629a2e7272a409f0e84ab9b79299649b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 2693b552008760025977a4c0ed0d3f3c3065713a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54132135"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912615"
 ---
 # <a name="create-partition-function-transact-sql"></a>CREATE PARTITION FUNCTION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Es el nombre de la función de partición. Los nombres de las funciones de partición deben ser únicos en la base de datos y ajustarse a las reglas para los [identificadores](../../relational-databases/databases/database-identifiers.md).  
   
  *input_parameter_type*  
- Es el tipo de datos de la columna utilizada para la partición. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
+ Es el tipo de datos de la columna utilizada para la partición. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
   
  La columna en sí, conocida como columna de partición, se especifica en la instrucción CREATE TABLE o CREATE INDEX.  
   
@@ -74,7 +73,7 @@ FOR VALUES ( [ boundary_value [ ,...n ] ] )
  Especifica el número de valores proporcionados por *boundary_value*, que no puede superar 14 999. El número de particiones creadas es igual a *n* + 1. Los valores no se tienen que enumerar en orden. Si los valores no están en orden, [!INCLUDE[ssDE](../../includes/ssde-md.md)] los ordena, crea la función y muestra una advertencia para indicar que los valores proporcionados no estaban en orden. Si *n* incluye valores duplicados, el motor de base de datos devuelve un error.  
   
  **LEFT** | RIGHT  
- Especifica el lado de cada intervalo de valores de límite, derecho o izquierdo, al que pertenece *boundary_value* [ **,**_...n_ ], cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] ordena los valores del intervalo en orden ascendente de izquierda a derecha. Si no se especifica, el valor predeterminado es LEFT.  
+ Especifica el lado de cada intervalo de valores de límite, derecho o izquierdo, al que pertenece *boundary_value* [ **,** _...n_ ], cuando [!INCLUDE[ssDE](../../includes/ssde-md.md)] ordena los valores del intervalo en orden ascendente de izquierda a derecha. Si no se especifica, el valor predeterminado es LEFT.  
   
 ## <a name="remarks"></a>Notas  
  El ámbito de una función de partición está limitado a la base de datos en la que se crea. Dentro de la base de datos, las funciones de partición residen en un espacio de nombres independiente de las demás funciones.  
@@ -106,8 +105,8 @@ AS RANGE LEFT FOR VALUES (1, 100, 1000);
 |---------------|-------|-------|-------|-------|  
 |**Valores**|**col1** <= `1`|**col1** > `1` AND **col1** <= `100`|**col1** > `100` AND **col1** <=`1000`|**col1** > `1000`|  
   
-### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>b. Crear una función de partición RANGE RIGHT en una columna int  
- La siguiente función de partición utiliza los mismos valores para *boundary_value* [ **,**_...n_ ] que el ejemplo anterior, con la excepción de que especifica RANGE RIGHT.  
+### <a name="b-creating-a-range-right-partition-function-on-an-int-column"></a>B. Crear una función de partición RANGE RIGHT en una columna int  
+ La siguiente función de partición utiliza los mismos valores para *boundary_value* [ **,** _...n_ ] que el ejemplo anterior, con la excepción de que especifica RANGE RIGHT.  
   
 ```sql  
 CREATE PARTITION FUNCTION myRangePF2 (int)  

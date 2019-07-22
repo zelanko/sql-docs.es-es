@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 8d17ac9c-f3af-4bbb-9cc1-5cf647e994c4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: da5528a606fdfc72aec7f1b0bba4348d389f3c98
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
+ms.openlocfilehash: cf54565115df53dc7d502f48aad68f9974adebd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52191024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909690"
 ---
 # <a name="indexes-on-computed-columns"></a>Índices en columnas calculadas
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +58,7 @@ Cualquier columna calculada que contenga una expresión CLR (Common Language Run
 
 Cuando haga referencia a los literales de cadena del tipo de datos de fecha en las columnas calculadas indizadas de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], se recomienda convertir explícitamente el literal al tipo de datos deseado mediante un estilo de formato de fecha determinista. Para obtener una lista de los estilos de formato de fecha deterministas, vea [CAST y CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md). 
 
-Para obtener más información, vea [Nondeterministic conversion of literal date strings into DATE values](../../t-sql/data-types/nondeterministic-convert-date-literals.md) (Conversión no determinista de las cadenas de fecha literales en valores DATE).
+Para obtener más información, vea [Conversión no determinista de las cadenas de fecha literales en valores DATE](../../t-sql/data-types/nondeterministic-convert-date-literals.md).
 
 #### <a name="compatibility-level"></a>Nivel de compatibilidad
 
@@ -96,7 +95,7 @@ La propiedad **IsPrecise** de la función COLUMNPROPERTY informa de si una expre
 ## <a name="data-type-requirements"></a>Requisitos de tipo de datos
   
 -   La expresión *computed_column_expression* definida para la columna calculada no se puede evaluar para los tipos de datos **text**, **ntext**o **image** .  
--   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
+-   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**, **text**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** y **xml** se pueden indexar, siempre que el tipo de datos de la columna calculada esté disponible como una columna de clave de índice.  
 -   Las columnas calculadas derivadas de los tipos de datos **image**, **ntext**y **text** pueden ser columnas sin clave (incluidas) en un índice no agrupado, siempre que el tipo de datos de la columna calculada esté disponible como una columna índice sin clave.  
 
 

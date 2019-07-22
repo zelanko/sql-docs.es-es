@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 383992f5e1fc9891fb570dec168d1648913f4254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 778783c61be2d3b9cfac784d271bce584ef37f68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098168"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897196"
 ---
 # <a name="how-to-create-new-database-objects-using-queries"></a>Procedimientos: Creación de nuevos objetos de base de datos mediante consultas
 Si prefiere usar scripts para crear o editar vistas, procedimientos almacenados, funciones, desencadenadores, tipos definidos por el usuario, etc., puede usar el Editor de Transact\-SQL. El Editor de Transact\-SQL proporciona IntelliSense y compatibilidad con otros lenguajes. Para más información, consulte [Uso del Editor de Transact-SQL para editar y ejecutar scripts](../ssdt/use-transact-sql-editor-to-edit-and-execute-scripts.md).  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5f6d488b46f576ed5c5d97358ec8674a64be46bd
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 0da7b4425a5ca5c27e6f4ec745880bbcdfb6d09c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135365"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939143"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>Preguntas más frecuentes para administradores de replicación
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -154,7 +153,7 @@ ms.locfileid: "54135365"
   
 -   Especificar que los objetos no se quiten al reinicializar la suscripción. Antes de la reinicialización, elija entre:  
   
-    -   Ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique un valor de 'pre_creation_cmd' (**sp_changearticle**) o 'pre_creation_command' (**sp_changemergearticle**) para el parámetro **@property** y un valor de 'none', 'delete' o 'truncate' para el parámetro **@value**.  
+    -   Ejecute [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) o [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md). Especifique un valor de 'pre_creation_cmd' (**sp_changearticle**) o 'pre_creation_command' (**sp_changemergearticle**) para el parámetro **@property** y un valor de 'none', 'delete' o 'truncate' para el parámetro **@value** .  
   
     -   En el cuadro de diálogo **Propiedades del artículo: \<Artículo>** de la sección **Objeto de destino**, seleccione un valor de **Mantener el objeto existente sin cambios**, **Eliminar datos. Si el artículo tiene un filtro de fila, elimine solo los datos que coincidan con el filtro.** o **Truncar todos los datos del objeto existente** para la opción **Acción si el nombre está en uso**. Para más información sobre el acceso a este cuadro de diálogo, vea [Ver y modificar propiedades de publicación](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
@@ -184,7 +183,7 @@ ms.locfileid: "54135365"
  En versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], mover o cambiar de nombre los archivos de base de datos exigía separar y volver a adjuntar la base de datos. Puesto que una base de datos replicada no se puede separar, la replicación tenía que quitarse de estas bases de datos primero. A partir de [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], se pueden mover o cambiar de nombre los archivos sin separar y volver a adjuntar la base de datos, sin efecto alguno en la replicación. Para más información sobre mover y cambiar el nombre de los archivos, vea [ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md).  
   
 ### <a name="how-do-i-drop-a-table-that-is-being-replicated"></a>¿Cómo se quita una tabla que se está replicando?  
- Primero, quite el artículo de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**, y después quítelo de la base de datos mediante `DROP <Object>`. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Primero, quite el artículo de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** , y después quítelo de la base de datos mediante `DROP <Object>`. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>¿Cómo se agregan o quitan columnas de una tabla publicada?  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] permite una amplia variedad de cambios de esquema en objetos publicados, lo que incluye agregar y quitar columnas. Por ejemplo, ejecute ALTER TABLE... DROP COLUMN en el publicador y la instrucción se replica en los suscriptores y, a continuación, se ejecuta para quitar la columna. Los suscriptores que ejecutan versiones de [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] anteriores a [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] admiten agregar y quitar columnas a través de los procedimientos almacenados [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) y [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md). Para más información, vea [Realizar cambios de esquema en bases de datos de publicaciones](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md).  
@@ -198,7 +197,7 @@ ms.locfileid: "54135365"
  Para agregar una tabla (u otro objeto), no es necesario detener la actividad en las bases de datos de publicaciones o suscripciones. Agregue una tabla a una publicación a través del cuadro de diálogo **Propiedades de la publicación: \<Publicación>** o los procedimientos almacenados [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) y [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="how-do-i-remove-a-table-from-a-publication"></a>¿Cómo se quita una tabla de una publicación?  
- Quite una tabla de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>**. No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
+ Quite una tabla de la publicación mediante [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md), [sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md) o el cuadro de diálogo **Propiedades de la publicación: \<Publicación>** . No se pueden quitar artículos de publicaciones transaccionales o de instantáneas después de que se hayan agregado suscripciones; es preciso quitar primero las suscripciones. Para más información, vea [Agregar y quitar artículos de publicaciones existentes](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md).  
   
 ### <a name="what-actions-require-subscriptions-to-be-reinitialized"></a>¿Qué acciones exigen que las suscripciones se reinicialicen?  
  Existen una serie de cambios de publicaciones y artículos que requieren que las suscripciones se reinicialicen. Para obtener más información, vea [Cambiar las propiedades de la publicación y de los artículos](../../../relational-databases/replication/publish/change-publication-and-article-properties.md).  

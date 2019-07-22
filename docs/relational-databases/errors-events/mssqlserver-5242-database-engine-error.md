@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 712b1a10-2f87-41df-a111-1ed9f14102d4
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: cad6c107e6ca130ef19908f71e356a929589e1cd
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 1461bf8fd10324c610e5df99c8bfe48da0d397e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47631013"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031086"
 ---
 # <a name="mssqlserver5242"></a>MSSQLSERVER_5242
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47631013"
 |||  
 |-|-|  
 |Nombre del producto|SQL Server|  
-|Id. de evento|5242|  
+|Identificador del evento|5242|  
 |Origen del evento|MSSQLSERVER|  
 |Componente|SQLEngine|  
 |Nombre simbólico||  
@@ -36,7 +35,7 @@ ms.locfileid: "47631013"
 ## <a name="explanation"></a>Explicación  
 Se ha producido una incoherencia estructural en la página de base de datos a la que se hace referencia en el mensaje de error.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Archivos y grupos de archivos de base de datos](~/relational-databases/databases/database-files-and-filegroups.md)  
   

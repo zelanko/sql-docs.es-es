@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: d73c28ee-3972-4afd-af8d-ebbbd9e50793
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dc092d095835caa5422f01c2f9a9b3a85ec94d55
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: b858cc4930cdfe9792e08c991c3ebdf8f319d0f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334632"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948220"
 ---
 # <a name="updatetext-transact-sql"></a>UPDATETEXT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ UPDATETEXT [BULK] { table_name.dest_column_name dest_text_ptr }
  Es el nombre de la tabla y la columna **text**, **ntext** o **image** que se van a actualizar. Los nombres de las tablas y de las columnas deben cumplir las reglas de los [identificadores](../../relational-databases/databases/database-identifiers.md). La especificación de los nombres de la base de datos y del propietario es opcional.  
   
  *dest_text_ptr*  
- Es el valor de un puntero de texto (devuelto por la función TEXTPTR) que señala a los datos **text**, **ntext** o **image** que se van a actualizar. *dest_text_ptr* debe ser **binary(** 16 **)**.  
+ Es el valor de un puntero de texto (devuelto por la función TEXTPTR) que señala a los datos **text**, **ntext** o **image** que se van a actualizar. *dest_text_ptr* debe ser **binary(** 16 **)** .  
   
  *insert_offset*  
  Es la posición de inicio de la actualización a partir de cero. En columnas **text** o **image**, *insert_offset* es el número de bytes que se van a omitir desde el principio de la columna existente antes de insertar nuevos datos. En columnas **ntext**, *insert_offset* es el número de caracteres (cada carácter **ntext** usa dos bytes). Los datos **text**, **ntext** o **image** existentes a partir de esta posición de inicio basada en cero se desplazan a la derecha para dejar espacio a los nuevos datos. Un valor 0 inserta los nuevos datos al principio de los datos existentes. Un valor NULL anexa los nuevos datos al valor de datos existente.  

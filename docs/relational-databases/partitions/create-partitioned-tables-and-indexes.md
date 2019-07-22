@@ -28,14 +28,13 @@ helpviewer_keywords:
 ms.assetid: 7641df10-1921-42a7-ba6e-4cb03b3ba9c8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8c9beeacd220108b2df83049716387439f0e2a90
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: 046ce79c989fdfb24c6615968e6bad951aeb7280
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414190"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024901"
 ---
 # <a name="create-partitioned-tables-and-indexes"></a>Crear tablas e índices con particiones
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ ms.locfileid: "53414190"
   
 ###  <a name="Security"></a> Seguridad  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> Permisos  
  La creación de una tabla con particiones requiere el permiso CREATE TABLE en la base de datos y el permiso ALTER en el esquema en el que se crea la tabla. Crear un índice con particiones requiere el permiso ALTER en la tabla o vista donde se crea el índice. Crear una tabla o índice con particiones requiere alguno de los permisos adicionales siguientes:  
   
 -   Permiso ALTER ANY DATASPACE. De forma predeterminada, este permiso corresponde a los miembros del rol fijo de servidor **sysadmin** y a los roles fijos de base de datos **db_owner** y **db_ddladmin** .  
@@ -84,7 +83,7 @@ ms.locfileid: "53414190"
   
 -   Permiso CONTROL SERVER o ALTER ANY DATABASE en el servidor de la base de datos en la que se está creando la función de partición y el esquema de partición.  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
  Siga los pasos de este procedimiento para crear uno o más grupos de archivos, los archivos correspondientes y una tabla. Hará referencia a estos objetos en el siguiente procedimiento al crear la tabla con particiones.  
   
 #### <a name="to-create-new-filegroups-for-a-partitioned-table"></a>Para crear nuevos grupos de archivos en una tabla con particiones  
@@ -112,13 +111,13 @@ ms.locfileid: "53414190"
   
 #### <a name="to-create-a-partitioned-table"></a>Para crear una tabla con particiones  
   
-1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...**.  
+1.  Haga clic con el botón derecho en la tabla donde quiere crear las particiones, seleccione **Almacenamiento** y, después, haga clic en **Crear partición...** .  
   
 2.  En el **Asistente para la creación de particiones**, en la página **Asistente para la creación de particiones** , haga clic en **Siguiente**.  
   
 3.  En la página **Seleccionar una columna de particionamiento** , en la cuadrícula de **Columnas de particionamiento disponibles** , seleccione la columna en la que desea crear particiones de la tabla. En la cuadrícula **Columnas de particionamiento disponibles** solo se mostrarán las columnas con tipos de datos que se pueden utilizar para crear particiones de los datos. Si selecciona una columna calculada como columna de partición, la columna se debe designar como una columna PERSISTED.  
   
-     Las opciones de que dispone para la columna de partición y el intervalo de valores vienen determinados, principalmente, por el grado en que los datos se pueden agrupar de un modo lógico. Por ejemplo, puede decidir dividir los datos en agrupaciones lógicas por meses o trimestres del año. Las consultas que planea realizar en los datos determinarán si esta agrupación lógica es adecuada para administrar las particiones de la tabla. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
+     Las opciones de que dispone para la columna de partición y el intervalo de valores vienen determinados, principalmente, por el grado en que los datos se pueden agrupar de un modo lógico. Por ejemplo, puede decidir dividir los datos en agrupaciones lógicas por meses o trimestres del año. Las consultas que planea realizar en los datos determinarán si esta agrupación lógica es adecuada para administrar las particiones de la tabla. Todos los tipos de datos son válidos para su uso como columnas de partición, excepto **text**, **ntext**, **image**, **xml**, **timestamp**, **varchar(max)** , **nvarchar(max)** , **varbinary(max)** , tipos de datos de alias o tipos de datos definidos por el usuario CLR.  
   
      En esta página están disponibles las opciones siguientes:  
   

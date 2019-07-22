@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e58d15af6605a8b50440fcff6e181a39c58098f4
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 9d7e3e718cae97ece079bbd44ad1a17068201668
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54134372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939216"
 ---
 # <a name="enhance-general-replication-performance"></a>Aumentar el rendimiento de la replicación general
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ ms.locfileid: "54134372"
   
 -   Limite el uso de tipos de datos de objetos grandes (LOB).  
   
-     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)**, **nvarchar(max)** y **varbinary(max)**, respectivamente.  
+     Los LOB requieren más espacio de almacenamiento y procesamiento que otros tipos de datos de columna. No incluya estas columnas en los artículos a menos que sea necesario para la aplicación. Los tipos de datos **text**, **ntext**y **image** han quedado desusados. Si incluye LOB, se recomienda que utilice los tipos de datos **varchar(max)** , **nvarchar(max)** y **varbinary(max)** , respectivamente.  
   
      Para la replicación transaccional, considere la posibilidad de utilizar el perfil de Agente de distribución denominado **Perfil de distribución para secuencias OLEDB**. Para más información, vea [Replication Agent Profiles](../../../relational-databases/replication/agents/replication-agent-profiles.md).  
   

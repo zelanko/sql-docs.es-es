@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8ae31c6-d76f-4dd7-8f46-17d023ca3eca
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 16f7701ab70e3edab1194732dca70e5c10f98a65
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: a965da708880fc3411dbdd33e372e197afc9dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47707913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948752"
 ---
 # <a name="strategies-for-backing-up-and-restoring-merge-replication"></a>Estrategias para hacer copias de seguridad y restaurar la replicación de mezcla
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "47707913"
 ## <a name="backing-up-and-restoring-a-republishing-database"></a>Realizar copias de seguridad y restaurar una base de datos de republicaciones  
  Cuando una base de datos se suscribe a datos de un publicador y, a su vez, publica esos mismos datos en otras bases de datos de suscripciones se denomina base de datos de republicaciones. Al restaurar una base de datos de republicaciones, siga las directrices descritas en las secciones "Realizar copias de seguridad y restaurar la base de datos de publicaciones" y "Realizar copias de seguridad y restaurar la base de datos de suscripciones" de este tema.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [Realizar copias de seguridad y restaurar bases de datos de SQL Server](../../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)   
  [Hacer copias de seguridad y restaurar bases de datos replicadas](../../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)  
   

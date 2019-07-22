@@ -24,12 +24,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2370c428d063958079e749c792a60de3b7379ee3
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 217ed3b61b3e4da943103f992340210ef8295bb0
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210534"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832930"
 ---
 # <a name="data-compression"></a>Data Compression
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -139,7 +139,7 @@ Las vistas del sistema siguientes contienen información sobre la compresión de
 -   [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md): las columnas **type** y **type_desc** incluyen CLUSTERED COLUMNSTORE y NONCLUSTERED COLUMNSTORE.  
 -   [sys.partitions &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-partitions-transact-sql.md): las columnas **data_compression** y **data_compression_desc** incluyen COLUMNSTORE y COLUMNSTORE_ARCHIVE.  
   
-El procedimiento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) no se aplica a los índices de almacén de columnas.  
+El procedimiento [sp_estimate_data_compression_savings &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md) también se puede aplicar a los índices de almacén de columnas.  
   
 ## <a name="how-compression-affects-partitioned-tables-and-indexes"></a>Cómo afecta la compresión a tablas e índices con particiones  
  Cuando use la compresión de datos con tablas e índices con particiones, tenga en cuenta las consideraciones siguientes:  

@@ -1,7 +1,7 @@
 ---
 title: Roles de nivel de base de datos | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -39,12 +39,12 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a035182b6436f723abfb2a53a034ddac30fe2165
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 65330658d47ad371d992eaf15d648e7abfd4d5b6
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59516501"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832951"
 ---
 # <a name="database-level-roles"></a>Roles de nivel de base de datos
 
@@ -89,7 +89,7 @@ No se pueden cambiar los permisos asignados a los roles fijos de base de datos. 
 
 ## <a name="special-roles-for-includesssdsmdincludessssds-mdmd-and-includesssdwmdincludessssdw-mdmd"></a>Roles especiales para [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] y [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
 
-Estos roles de base de datos solo existen en la base de datos maestra virtual. Sus permisos están restringidos a las acciones realizadas en la base de datos maestra. Solo los usuarios de base de datos en la base de datos maestra se pueden agregar a estos roles. Los inicios de sesión no se pueden agregar a estos roles, pero los usuarios se pueden crear basados en inicios de sesión y, luego, esos usuarios se pueden agregar a los roles. Los usuarios de bases de datos independientes en la base de datos maestra también se pueden agregar a estos roles.
+Estos roles de base de datos solo existen en la base de datos maestra virtual. Sus permisos están restringidos a las acciones realizadas en la base de datos maestra. Solo los usuarios de base de datos en la base de datos maestra se pueden agregar a estos roles. Los inicios de sesión no se pueden agregar a estos roles, pero los usuarios se pueden crear basados en inicios de sesión y, luego, esos usuarios se pueden agregar a los roles. Los usuarios de bases de datos independientes en la base de datos maestra también se pueden agregar a estos roles. Sin embargo, los usuarios de la base de datos independiente que se agregaron al rol **dbmanager** en la base de datos maestra no se pueden usar para crear bases de datos nuevas.
 
 |Nombre de rol|Descripción|  
 |--------------------|-----------------|

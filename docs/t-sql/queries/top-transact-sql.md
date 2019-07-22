@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334652"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948247"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -182,7 +181,7 @@ ORDER BY HireDate DESC;
 GO  
 ```  
   
-#### <a name="b-using-top-with-a-variable"></a>b. Usar TOP con una variable  
+#### <a name="b-using-top-with-a-variable"></a>B. Usar TOP con una variable  
 En el siguiente ejemplo se utiliza una variable para especificar el número de empleados que se devuelven en el conjunto de resultados de la consulta.  
   
 ```sql  
@@ -253,7 +252,7 @@ WHERE PurchaseOrderDetailID IN
 GO  
 ```  
   
-#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>b. Utilizar TOP para limitar el número de filas insertadas  
+#### <a name="b-using-top-to-limit-the-number-of-rows-inserted"></a>B. Utilizar TOP para limitar el número de filas insertadas  
 En el siguiente ejemplo se crea la tabla `EmployeeSales` y se insertan el nombre y los datos de ventas del año hasta la fecha para los primeros cinco empleados de la tabla `HumanResources.Employee`. La instrucción INSERT elige cinco filas cualesquiera devueltas por la instrucción `SELECT` que cumplen los criterios definidos en la cláusula WHERE. La cláusula OUTPUT muestra las filas que se insertan en la tabla `EmployeeSales`. Observe que la cláusula ORDER BY de la instrucción SELECT no se utiliza para determinar los primeros cinco empleados.  
   
 ```sql  

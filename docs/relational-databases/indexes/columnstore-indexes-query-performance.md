@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583219"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860718"
 ---
 # <a name="columnstore-indexes---query-performance"></a>Rendimiento de las consultas de índices de almacén de columnas
 
@@ -92,7 +92,7 @@ ms.locfileid: "67583219"
     
  No todos los operadores de ejecución de consultas se pueden ejecutar en el modo por lotes. Por ejemplo, las operaciones de DML Insert, Delete o Update ejecutan una fila cada vez. Los operadores de modo por lote destinan operadores para la aceleración del rendimiento de las consultas como Scan, Join, Aggregate, sort, etc. Dado que el índice de almacén de columnas se introdujo en [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], hay un esfuerzo sostenido para expandir los operadores que se pueden ejecutar en el modo por lotes. En la tabla siguiente se muestran los operadores que se ejecutan en el modo por lotes según la versión del producto.    
     
-|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|¿[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|Comentarios|    
+|Operadores del modo por lotes|¿Cuándo se usa?|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] y [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|Comentarios|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |Operaciones de DML (insert, delete, update y merge)||no|no|no|DML no es una operación de modo por lotes porque no es paralela. Incluso cuando se habilita el procesamiento por lotes del modo serie, no vemos importantes mejoras si se permite que DML se procese en el modo por lotes.|    
 |Exploración de índice de almacén de columnas|SCAN|N/D|sí|sí|Para los índices de almacén de columnas, podemos insertar el predicado en el nodo SCAN.|    
@@ -111,7 +111,7 @@ ms.locfileid: "67583219"
 |Top Sort||no|no|sí||    
 |Agregados de ventana||N/D|N/D|sí|Nuevo operador en [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].|    
     
- ? Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a los niveles Premium, estándar, S3 y superiores de [!INCLUDE[ssSDS](../../includes/sssds-md.md)], a todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
+<sup>1</sup>Se aplica a [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], a los niveles Premium, Estándar y -S3 y superiores de [!INCLUDE[ssSDS](../../includes/sssds-md.md)] y todos los niveles de núcleo virtual y a [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].    
     
 ### <a name="aggregate-pushdown"></a>Aplicación de agregados    
  Ruta de acceso de ejecución normal para el cálculo de agregados para capturar las filas calificadas desde el nodo SCAN y agregar los valores en el modo por lotes. Aunque esto proporciona un buen rendimiento, con [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], la operación de agregación se puede insertar en el nodo SCAN para mejorar el rendimiento del cálculo de la agregación mediante órdenes de magnitud en la parte superior de la ejecución en el modo por lotes una vez que se cumplan las condiciones siguientes: 
@@ -146,7 +146,7 @@ Cuando se diseña un esquema de almacenamiento de datos, el modelado del esquema
     
 Por ejemplo, un hecho puede ser un registro que representa una venta de un producto determinado en una región específica, mientras que la dimensión representa un conjunto de regiones, productos y así sucesivamente. Las tablas de hechos y dimensiones están conectadas a través de la relación de clave principal o externa. Las consultas de análisis de uso más frecuente unen una o varias tablas de dimensiones con la tabla de hechos.    
     
-Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos. ? ?
+Consideremos un elemento `Products` de tabla de dimensiones. Una clave principal típica será `ProductCode`, que normalmente se representa como tipo de datos de cadena. Para el rendimiento de las consultas, es aconsejable crear una clave suplente, normalmente una columna de enteros, para hacer referencia a la fila en la tabla de dimensiones de la tabla de hechos. 
     
 El índice de almacén de columnas ejecuta las consultas de análisis con combinaciones y predicados que implican claves basadas en enteros o números de forma muy eficiente. Pero en muchas cargas de trabajo de cliente, encontramos que el uso de las columnas basadas en cadenas que se vinculan con tablas de dimensiones/hechos, lo que, como resultado, genera un rendimiento de la consulta del índice del almacén de columna diferente del esperado. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] mejora el rendimiento de las consultas de análisis con las columnas basadas en cadenas notablemente mediante la aplicación de los predicados con las columnas de cadena en el nodo SCAN.    
     

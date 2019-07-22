@@ -2,22 +2,21 @@
 title: Solución de problemas de conectividad de Kerberos con PolyBase | Microsoft Docs
 author: alazad-msft
 ms.author: alazad
-ms.reviewer: jroth
+ms.reviewer: mikeray
 manager: craigg
 ms.technology: polybase
-ms.custom: ''
 ms.devlang: ''
 ms.topic: conceptual
 ms.date: 04/23/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 626d188dca3a013cba246f54523aa4fe9532815d
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 58725a5f0ebf3038bd95be410ae6b1db8de01845
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67581214"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860557"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>Solución de problemas de conectividad de Kerberos con PolyBase
 
@@ -106,7 +105,7 @@ La herramienta se ejecuta de forma independiente de SQL Server, por lo que no es
 | *Puerto del nodo de nombre* | El puerto del nodo de nombre. Hace referencia al argumento "LOCATION" de CREATE EXTERNAL DATA SOURCE T-SQL. Por ejemplo, 8020. |
 | *Entidad de servicio* | La entidad de servicio de administración del Centro de distribución de claves. Coincide con el argumento "IDENTITY" de `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Contraseña del servicio* | En lugar de escribir la contraseña en la consola, almacénela en un archivo y pase aquí la ruta de acceso al archivo. El contenido del archivo debe coincidir con el que use como argumento "SECRET" en `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |
-| *Ruta de acceso a archivo HDFS remoto (opcional) * | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
+| *Ruta de acceso al archivo HDFS remoto (opcional)* | La ruta de acceso de un archivo existente al cual acceder. Si no se especifica, se usará la raíz "/". |
 
 ## <a name="example"></a>Ejemplo
 

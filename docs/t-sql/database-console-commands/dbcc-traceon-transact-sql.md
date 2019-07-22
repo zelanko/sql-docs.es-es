@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 93085324-ebaa-4e38-aac8-5e57b4b0d36d
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 1bc364890a2bb678b8ad9ef5dad5238656443acf
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 6e3a4a360f4a317139908b57421e420e8cd68402
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685252"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040598"
 ---
 # <a name="dbcc-traceon-transact-sql"></a>DBCC TRACEON (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ Suprime todos los mensajes de información.
 ## <a name="remarks"></a>Notas  
 En un servidor de producción, para evitar un comportamiento impredecible, se recomienda habilitar únicamente marcas de seguimiento en todo el servidor mediante uno de los siguientes métodos:
 -   Use la opción de inicio de la línea de comandos **-T** de Sqlservr.exe. Es una práctica recomendada porque garantiza que todas las instrucciones se ejecutarán con la marca de seguimiento habilitada. Incluye comandos en scripts de inicio. Para más información, consulte [sqlservr Application](../../tools/sqlservr-application.md).  
--   Use DBCC TRACEON **(**_trace#_ [**,** ...*.n*]**,-1)** solo mientras los usuarios o las aplicaciones no ejecuten simultáneamente instrucciones en el sistema.  
+-   Use DBCC TRACEON **(** _trace#_ [ **,** ... *.n*] **,-1)** solo mientras los usuarios o las aplicaciones no ejecuten simultáneamente instrucciones en el sistema.  
 
 Las marcas de seguimiento se utilizan para personalizar algunas características controlando el funcionamiento de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Las marcas de seguimiento, una vez habilitadas, permanecen habilitadas en el servidor hasta que son deshabilitadas al ejecutarse una instrucción DBCC TRACEOFF. En [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], hay dos tipos de marcas de seguimiento: sesión y global. Las marcas de seguimiento de sesión se activan para una conexión y solo están visibles para esa conexión. Las marcas de seguimiento globales se establecen en el nivel del servidor y están visibles para todas las conexiones del servidor. Para determinar el estado de las marcas de seguimiento, utilice DBCC TRACESTATUS. Para deshabilitar marcas de seguimiento, utilice DBCC TRACEOFF.
   

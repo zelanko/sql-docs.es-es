@@ -1,6 +1,6 @@
 ---
-title: Recomendaciones y trucos adicionales para usar SQL Server Management Studio
-description: Tutorial que incluye algunas recomendaciones y trucos adicionales al usar SSMS.
+title: Recomendaciones y trucos para usar SQL Server Management Studio (SSMS)
+description: Aprenda a agregar o quitar marcas de comentarios en el código, aplicar sangría al texto, filtrar objetos en el explorador de objetos, acceder al registro de errores de SQL Server y buscar el nombre de la instancia de SQL Server con SQL Server Management Studio.
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499421"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860646"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>Tutorial: Otras recomendaciones y trucos al usar SSMS
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>Recomendaciones y trucos para usar SQL Server Management Studio (SSMS)
 
-En este tutorial se le ofrecen algunos trucos adicionales al usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
+En este artículo se brindan algunas recomendaciones y trucos para usar SQL Server Management Studio (SSMS). En este artículo aprenderá a: 
 
 > [!div class="checklist"]
 > * Agregar o quitar marcas de comentario del texto de Transact-SQL (T-SQL)
@@ -40,7 +40,7 @@ En este tutorial se le ofrecen algunos trucos adicionales al usar SQL Server Man
 
 ## <a name="prerequisites"></a>Prerequisites
 
-Para llevar a cabo este tutorial, necesita tener SQL Server Management Studio, acceso a un servidor SQL Server y una base de datos de AdventureWorks. 
+Para probar los pasos proporcionados en este artículo, necesita SQL Server Management Studio, acceso a una instancia de SQL Server y una base de datos de AdventureWorks. 
 
 * Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
 * Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
@@ -267,7 +267,7 @@ Si se ha conectado a SQL Server, puede buscar el nombre del servidor en tres sit
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad
 
-Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad, esa información aparecerá en Explorador de objetos y en Propiedades. En este caso, puede que el nombre de la instancia de SQL Server no sea claro y se deba consultar: 
+Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilidad, esa información aparecerá en Explorador de objetos y en Propiedades. En este caso, puede que el nombre de la instancia de SQL Server no sea claro y se deba consultar:
 
 1. Conéctese a su servidor de SQL Server.
 
@@ -282,3 +282,12 @@ Si se ha conectado a un alias o a un agente de escucha del grupo de disponibilid
 4. Vea los resultados de la consulta para identificar el nombre de la instancia de SQL Server a la que se ha conectado: 
 
     ![Consultar el nombre de SQL Server](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>Pasos siguientes
+
+La mejor forma de familiarizarse con SSMS es practicar. Estos *tutoriales* y artículos de *procedimientos* lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
+
+* [Conexión a una instancia y realización de consultas](connect-query-sql-server.md)
+* [Scripting](scripting-ssms.md)
+* [Uso de plantillas en SSMS](../template/templates-ssms.md)
+* [Configuración de SSMS](ssms-configuration.md)

@@ -13,12 +13,12 @@ author: joesackmsft
 ms.author: josack
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f548fff9a7634e0c105fc8ce09fa39d2aa4100c7
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 3ae6d0d35da353a9307832989f562f3282af19e5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67580750"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860706"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>Procesamiento de consultas inteligente en bases de datos SQL
 
@@ -130,7 +130,7 @@ Algunas condiciones convierten a una combinación lógica en apta como combinaci
 Si una combinación adaptable cambia a una operación de bucles anidados, usa las filas ya leídas por la compilación de combinación hash. El operador **no** vuelve a leer las filas de la referencia externa.
 
 ### <a name="adaptive-threshold-rows"></a>Filas de umbral adaptable
-El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados.? En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
+El gráfico siguiente muestra una intersección de ejemplo entre el costo de una combinación hash y el de una alternativa de combinación de bucles anidados. En este punto de intersección, se determina el umbral que a su vez determina el algoritmo real usado para la operación de combinación.
 
 ![Umbral de combinación](./media/6_AQPJoinThreshold.png)
 

@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586178"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860521"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>Configurar y administrar archivos de sinónimos para búsquedas de texto completo
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ Un diccionario de sinónimos de búsqueda de texto completo es un archivo de tex
 
 -   Configuración de signos diacríticos  
   
-     En un diccionario de sinónimos determinado, todos los patrones de búsqueda distinguen o no las marcas diacríticas como la tilde ( **~** ), la marca de acento agudo ( **?** ) o la diéresis ( **?** ) (es decir, *distinguen acentos* o *no distinguen acentos*). Por ejemplo, imagine que especifica el patrón "caf?" para que se reemplace por otros patrones en una consulta de texto completo. Si el archivo de sinónimos no distingue acentos, la búsqueda de texto completo reemplaza los patrones "café" y "cafe". Si el archivo de sinónimos distingue acentos, la búsqueda de texto completo solo reemplaza el patrón "café". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
+     En un diccionario de sinónimos determinado, todos los patrones de búsqueda distinguen o no las marcas diacríticas como la tilde ( **~** ), la marca de acento agudo ( **&acute;** ) o la diéresis ( **&uml;** ) (es decir, *distinguen acentos* o *no distinguen acentos*). Por ejemplo, imagine que especifica el patrón "caf&eacute;" para que sea reemplazado por otros patrones en una consulta de búsqueda de texto completo. Si el archivo de sinónimos no distingue acentos, la búsqueda de texto completo reemplaza los patrones "caf&eacute;" y "cafe". Si el archivo de sinónimos distingue acentos, la búsqueda de texto completo solo reemplaza el patrón "caf&eacute;". De forma predeterminada, un diccionario de sinónimos no distingue acentos.  
   
 ##  <a name="initial_thesaurus_files"></a> Archivos de sinónimos predeterminados
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] proporciona un conjunto de archivos de sinónimos XML, uno para cada idioma admitido. Estos archivos están esencialmente vacíos. Contienen solo la estructura XML de nivel superior que es común a todos los diccionarios de sinónimos de [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] y un diccionario de sinónimos de ejemplo como comentario.  

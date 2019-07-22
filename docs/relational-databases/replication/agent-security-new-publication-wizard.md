@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 05ae44df-8e9f-46ea-95f6-972ad109c6c0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 92c14af686e33a84ef82c9d568448e44e0242234
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 02ae52aa310f760b06c51f003bd417f26486a5f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54130425"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027843"
 ---
 # <a name="agent-security-new-publication-wizard"></a>Seguridad del agente (Asistente para nueva publicación)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "54130425"
 >  Existe un Agente de registro del LOG para cada base de datos que se publica utilizando la replicación transaccional. Si ya existe una publicación transaccional en la base de datos, la configuración de seguridad será de solo lectura. Es posible modificar la configuración del cuadro de diálogo **Propiedades de la publicación** , aunque los cambios afectarán a todas las publicaciones transaccionales de la base de datos.  
   
  **Agente de lectura de cola**  
- Se muestra para las publicaciones transaccionales que admiten suscripciones actualizables Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de lectura de cola** . Se crea un trabajo de Agente de lectura de cola cuando finaliza este asistente. Esto no depende de que se hayan creado suscripciones de actualización en cola. Si no tiene previsto crear una suscripción de actualización en cola, puede deshabilitar el trabajo. Haga clic con el botón derecho en el trabajo (que recibe un nombre con el formato: *[\<Publisher>].\<integer>*.) en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Trabajos del **Agente** y después haga clic en **Deshabilitar**.  
+ Se muestra para las publicaciones transaccionales que admiten suscripciones actualizables Haga clic en **Configuración de seguridad** para especificar la configuración de seguridad en el cuadro de diálogo **Seguridad del Agente de lectura de cola** . Se crea un trabajo de Agente de lectura de cola cuando finaliza este asistente. Esto no depende de que se hayan creado suscripciones de actualización en cola. Si no tiene previsto crear una suscripción de actualización en cola, puede deshabilitar el trabajo. Haga clic con el botón derecho en el trabajo (que recibe un nombre con el formato: *[\<Publisher>].\<integer>* .) en la carpeta [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Trabajos del **Agente** y después haga clic en **Deshabilitar**.  
   
  Haga clic en **Ayuda** en el cuadro de diálogo **Seguridad del Agente de lectura de cola** para obtener más información sobre los permisos requeridos para las cuentas utilizadas por el Agente de lectura de cola.  
   

@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343856"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624379"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -239,7 +239,10 @@ Las columnas que devuelve la función OPENJSON dependen de la opción WITH.
   
      Solo se devuelven las propiedades de primer nivel. Se produce un error en la instrucción si el texto JSON no tiene el formato correcto.  
 
-2. Cuando se llama a OPENJSON y se especifica un esquema explícito en la cláusula WITH, la función devuelve una tabla con el esquema que se haya definido en la cláusula WITH.  
+2. Cuando se llama a OPENJSON y se especifica un esquema explícito en la cláusula WITH, la función devuelve una tabla con el esquema que se haya definido en la cláusula WITH.
+
+> [!NOTE]  
+> Las columnas **Clave**, **Valor** y **Tipo** se devuelven solo cuando se usa OPENJSON con el esquema predeterminado y no están disponibles con un esquema explícito.
 
 ## <a name="remarks"></a>Notas  
 

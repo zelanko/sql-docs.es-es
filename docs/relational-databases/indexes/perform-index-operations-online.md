@@ -16,12 +16,12 @@ ms.author: mikeray
 manager: craigg
 ms.prod_service: table-view-index, sql-database
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ca3269ffefc69584aea56ad47f125e8c11fa75d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1ac49348a7cfacf441977051727c0d062f9586d8
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62686758"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732397"
 ---
 # <a name="perform-index-operations-online"></a>Realizar operaciones de índice en línea
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -94,26 +94,19 @@ ms.locfileid: "62686758"
   
 ##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
   
-#### <a name="to-create-rebuild-or-drop-an-index-online"></a>Para crear, volver a generar o quitar un índice en línea  
+### <a name="to-create-rebuild-or-drop-an-index-online"></a>Para crear, volver a generar o quitar un índice en línea  
   
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+En el ejemplo siguiente se recompila un índice en línea existente en la base de datos de AdventureWorks.
   
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
+ ```sql  
+ ALTER INDEX AK_Employee_NationalIDNumber
+   ON HumanResources.Employee  
+   REBUILD WITH (ONLINE = ON)
+;
+```  
   
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En el ejemplo se vuelve a generar un índice en línea existente.  
+En el ejemplo siguiente se elimina un índice clúster en línea y se mueve la tabla resultante (montón) al grupo de archivos `NewGroup` mediante la cláusula `MOVE TO` . Las vistas de catálogo `sys.indexes`, `sys.tables`y `sys.filegroups` se consultan para comprobar la ubicación del índice y la tabla en los grupos de archivos antes y después del desplazamiento.  
   
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    ALTER INDEX AK_Employee_NationalIDNumber ON HumanResources.Employee  
-    REBUILD WITH (ONLINE = ON);  
-    GO  
-    ```  
+[!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
   
-     En el ejemplo siguiente se elimina un índice clúster en línea y se mueve la tabla resultante (montón) al grupo de archivos `NewGroup` mediante la cláusula `MOVE TO` . Las vistas de catálogo `sys.indexes`, `sys.tables`y `sys.filegroups` se consultan para comprobar la ubicación del índice y la tabla en los grupos de archivos antes y después del desplazamiento.  
-  
-     [!code-sql[IndexDDL#DropIndex4](../../relational-databases/indexes/codesnippet/tsql/perform-index-operations_1.sql)]  
-  
- Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
-  
-  
+Para obtener más información, vea [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  

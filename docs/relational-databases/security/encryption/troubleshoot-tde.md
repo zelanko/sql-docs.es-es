@@ -1,6 +1,6 @@
 ---
-title: Errores comunes y soluciones con el cifrado de datos transparente (TDE) con claves administradas por el cliente en Azure Key Vault (AKV) | Microsoft Docs
-description: Solucione los problemas de cifrado de datos transparente (TDE) con la configuración de Azure Key Vault.
+title: Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault | Microsoft Docs
+description: Solucione los problemas en el cifrado de datos transparente (TDE) con la configuración de Azure Key Vault.
 helpviewer_keywords:
 - troublshooting, tde akv
 - tde akv configuration, troubleshooting
@@ -14,114 +14,159 @@ ms.topic: conceptual
 ms.date: 04/26/2019
 ms.author: aliceku
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 1366d0a20ed39b466d1a2f6cb3e84f0f30e17f9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f963e15d674115029fce78b98ba280fe75da2cd1
+ms.sourcegitcommit: aeb2273d779930e76b3e907ec03397eab0866494
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718089"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67716669"
 ---
-# <a name="common-errors-and-resolutions-with-transparent-data-encryption-tde-with-customer-managed-keys-in-azure-key-vault-akv"></a>Errores comunes y soluciones con el cifrado de datos transparente (TDE) con claves administradas por el cliente en Azure Key Vault (AKV)
+# <a name="common-errors-for-transparent-data-encryption-with-customer-managed-keys-in-azure-key-vault"></a>Errores comunes en el cifrado de datos transparente con claves administradas por el cliente en Azure Key Vault
 
 [!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
-Este tema proporciona información acerca de lo siguiente:  
-  
-- Requisitos  
-- Cómo identificar y resolver los errores más comunes.
+En este artículo se describen los requisitos para usar el cifrado de datos transparente (TDE) con claves administradas por el cliente en Azure Key Vault y cómo identificar y resolver los errores comunes.
 
 ## <a name="requirements"></a>Requisitos
-Para solucionar problemas de [TDE con el protector de TDE administrada por el cliente en la configuración de AKV](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault), vamos a empezar con la confirmación de los requisitos siguientes:
-- El servidor SQL lógico y el almacén de claves se deben ubicar en la misma región.
-- La identidad del servidor SQL lógico proporcionada por Azure Active Directory (APPID en Azure Key Vault) se limita a un inquilino en la suscripción original.  Si el servidor se ha movido a otra suscripción, la identidad del servidor (APPID) se tiene que volver a crear.
-- El almacén de claves debe estar instalado y en ejecución, obtenga información sobre [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview) para comprobar el estado del almacén de claves y sobre [Grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) para suscribirse a notificaciones.
-- En el escenario de recuperación ante desastres con localización geográfica, con el fin de que funcionen ambos almacenes de claves, estos deben contener el mismo material de clave para una conmutación por error.
-- El servidor lógico debe tener una identidad de Azure Active Directory (AAD) (APPID) para autenticarse en el almacén de claves.
-- La APPID debe tener acceso al almacén de claves y al encapsulado, desencapsulado y obtención de permisos para las claves seleccionadas como protectores del TDE.
 
-La mayoría de las incidencias detectadas al usar TDE con AKV se deben a uno de los errores de configuración siguientes:
+Para solucionar problemas en el cifrado de datos transparente con un protector de TDE administrado por el usuario en Key Vault, debe cumplir con estos requisitos:
 
-### <a name="key-vault-unavailable-or-doesnt-exist"></a>¿El almacén de claves está deshabilitado o no existe?
-- El almacén de claves se ha eliminado por error.
-- El firewall se ha configurado para Azure Key Vault sin permitir el acceso a los servicios de Microsoft.
+- La instancia de SQL Server lógica y el almacén de claves deben estar en la misma región.
+- La identidad de la instancia de SQL Server lógica proporcionada por Azure Active Directory (Azure AD) (AppId en Azure Key Vault) debe ser un inquilino de la suscripción original. Si el servidor se movió a una suscripción distinta de donde se creó, la identidad del servidor (AppId) se debe volver a crear.
+- El almacén de claves debe estar funcionando. Para saber cómo comprobar el estado del almacén de claves, consulte [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview). Si quiere registrarse para recibir notificaciones, lea sobre los [grupos de acciones](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups).
+- En un escenario de recuperación ante desastres geográfica, ambos almacenes de claves deben contener el mismo material clave para que una conmutación por error funcione.
+- El servidor lógico debe tener una identidad de Azure AD (AppId) para autenticarse en el almacén de claves.
+- La AppId debe tener acceso al almacén de claves y debe tener los permisos Get, Wrap y Unwrap para las claves que se seleccionaron como los protectores de TDE.
 
-### <a name="no-permissions-to-access-the-key-vault-or-key-doesnt-exist"></a>¿No existen permisos de acceso al almacén de claves o la clave no existe?
-- La clave se ha eliminado por error.
-- La APPID de SQL se ha eliminado por error.
-- SQL se ha movido a otra suscripción, lo que requiere una APPID nueva.
-- Los permisos concedidos a la APPID para las claves no son suficientes (encapsulado, desencapsulado, obtención).
-- Se han revocado los permisos para la APPID de SQL.
+Para más información, consulte [Directrices para configurar TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
 
+## <a name="common-misconfigurations"></a>Configuraciones erróneas comunes
 
-En la siguiente sección, vamos a enumerar los pasos para la solución de problemas de los errores más comunes.
+La mayoría de los problemas que se producen cuando se usa TDE con Key Vault se debe a una de las configuraciones erróneas siguientes:
 
+### <a name="the-key-vault-is-unavailable-or-doesnt-exist"></a>El almacén de claves no está disponible o no existe.
 
-## <a name="how-to-identify-and-resolve-the-most-common-errors"></a>Cómo identificar y resolver los errores más comunes.
+- El almacén se claves se eliminó por error.
+- El firewall se configuró para Azure Key Vault, pero no permite acceso a los servicios de Microsoft.
 
-## <a name="missing-server-identity"></a>Falta la auditoría de servidor.
-Mensaje de error: "401 AzureKeyVaultNoServerIdentity: la identidad del servidor no se ha configurado correctamente en el servidor. Póngase en contacto con el soporte técnico".
+### <a name="no-permissions-to-access-the-key-vault-or-the-key-doesnt-exist"></a>No existen permisos para acceder al almacén de claves o la clave no existe.
 
-Detección: use el siguiente comando para asegurarse de que se ha asignado una identidad al servidor SQL lógico:
+- La clave se eliminó por error.
+- La AppId de la instancia de SQL Server lógica se eliminó por error.
+- La instancia de SQL Server lógica se movió a otra suscripción. Se debe crear una AppId distinta si el servidor lógico se movió a otra suscripción.
+- Los permisos concedidos a la AppId para las claves no son suficientes (no incluyen los permisos Get, Wrap ni Unwrap).
+- Se revocaron los permisos para la AppId de la instancia de SQL Server lógica.
 
-- [Azure PowerShell Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
-- [CLI de Azure az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+## <a name="identify-and-resolve-common-errors"></a>Identificación y resolución de los errores comunes
 
-Mitigación: configuración de una identidad de Azure Active Directory (Azure AD) (APPID) para el servidor SQL lógico.
+En esta sección, se muestran los pasos para resolver los errores más comunes.
 
-Para PowerShell: use el comando Set-AzureRmSqlServer con la opción [- AssignIdentity](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0). 
+### <a name="missing-server-identity"></a>Falta la auditoría de servidor.
 
-Para la CLI: use el comando az sql server update con la opción [--assign_identity](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update). 
+**Mensaje de error**
 
-En Azure Portal, examine el almacén de claves y vaya a las directivas de acceso:  
- - Con el botón Agregar nuevo, agregue la APPID para el servidor que se creó en el paso anterior. 
- - Asigne los permisos de clave siguientes: obtención, encapsulado y desencapsulado. 
+_401 AzureKeyVaultNoServerIdentity: la identidad del servidor no se ha configurado correctamente en el servidor. Póngase en contacto con el soporte técnico_.
 
-[Más información](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server)
+**Detección**
+
+Use el comando o el cmdlet siguiente para asegurarse de que se asignó una identidad a la instancia de SQL Server lógica:
+
+- Azure PowerShell: [Get-AzureRMSqlServer](https://docs.microsoft.com/powershell/module/AzureRM.Sql/Get-AzureRmSqlServer?view=azurermps-6.13.0) 
+
+- CLI de Azure: [az-sql-server-show](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-show)
+
+**Mitigación**
+
+Use el comando o el cmdlet siguiente para configurar una identidad de Azure AD (una AppId) para la instancia de SQL Server lógica:
+
+- Azure PowerShell: [Set-AzureRmSqlServer](https://docs.microsoft.com/powershell/module/azurerm.sql/set-azurermsqlserver?view=azurermps-6.13.0) con la opción `-AssignIdentity`.
+
+- CLI de Azure: [az sql server update](https://docs.microsoft.com/cli/azure/sql/server?view=azure-cli-latest#az-sql-server-update) con la opción `--assign_identity`.
+
+En Azure Portal, vaya al almacén de claves y, luego, a **Directivas de acceso**. Complete estos pasos: 
+
+ 1. Use el botón **Agregar nuevo** para agregar la AppId del servidor que creó en el paso anterior. 
+ 1. Asigne los permisos de clave siguientes: obtención, encapsulado y desencapsulado. 
+
+Para más información, consulte [Asignar una entidad de Azure AD al servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).
 
 > [!IMPORTANT]
-> Si el servidor SQL lógico se ha movido a una nueva suscripción después de la configuración inicial de TDE con AKV, el paso para configurar la identidad AAD debe repetirse con el fin de crear la APPID nueva.  Esta, después, debe agregarse al almacén de claves y se tienen que reasignar los permisos correctos. 
+> Si la instancia de SQL Server lógica se movió a una suscripción nueva después de la configuración inicial de TDE con Key Vault, repita el paso para configurar la identidad de Azure AD y crear una nueva AppId. Luego, agregue la AppId al almacén de claves y asigne los permisos correctos a la clave. 
 >
 
-## <a name="missing-key-vault"></a>Falta el almacén de claves
-Mensaje de error: "503 AzureKeyVaultConnectionFailed: la operación no ha podido completarse en el servidor debido a que se ha producido un error al intentar conectarse a Azure Key Vault".
+### <a name="missing-key-vault"></a>Falta el almacén de claves
 
-Detección: cómo identificar el URI de clave y el almacén de claves. 
+**Mensaje de error**
 
-Paso 1: use el comando siguiente para obtener el URI de clave de un servidor SQL lógico determinado:
+_503 AzureKeyVaultConnectionFailed: la operación no ha podido completarse en el servidor debido a que se ha producido un error al intentar conectarse a Azure Key Vault_.
 
--[Azure PowerShell get-azurermsqlserverkeyvaultkey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
+**Detección**
 
--[CLI de Azure az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
+Para identificar un URI de clave y el almacén de claves:
 
-Paso 2: use el URI de clave para identificar el almacén de claves.
+1. Use el comando o el cmdlet siguiente para obtener el URI de clave de una instancia de SQL Server lógica específica:
 
-PowerShell: se pueden inspeccionar las propiedades de $MyServerKeyVaultKey para obtener detalles sobre el almacén de claves.
+    - Azure PowerShell: [Get-AzureRmSqlServerKeyVaultKey](https://docs.microsoft.com/powershell/module/azurerm.sql/get-azurermsqlserverkeyvaultkey?view=azurermps-6.13.0)
 
-CLI: inspeccione el protector de cifrado de servidor devuelto para obtener más información sobre el almacén de claves.
+    - CLI de Azure: [az-sql-server-tde-key-show](https://docs.microsoft.com/cli/azure/sql/server/tde-key?view=azure-cli-latest#az-sql-server-tde-key-show) 
 
-Mitigación: confirmación de que el almacén de claves está disponible.
-- Asegúrese de que el almacén de claves está disponible y el SQL Server lógico tiene acceso.
-- Si el almacén de claves está protegido por un firewall, asegúrese de que está activada la casilla para permitir que los servicios de Microsoft puedan acceder al almacén de claves.
-- Si el almacén de claves se ha eliminado por error, la configuración debe realizarse desde el principio.
+1. Use el URI de clave para identificar el almacén de claves:
+
+    - Azure PowerShell: se pueden inspeccionar las propiedades de la variable $MyServerKeyVaultKey para obtener detalles sobre el almacén de claves.
+
+    - CLI de Azure: inspeccione el protector de cifrado de servidor devuelto para obtener más información sobre el almacén de claves.
+
+**Mitigación**
+
+Confirme que el almacén de claves está disponible:
+
+- Asegúrese de que el almacén de claves está disponible y de que la instancia de SQL Server lógica tiene acceso.
+- Si el almacén de claves está protegido detrás de un firewall, asegúrese de que la casilla para permitir que los servicios de Microsoft pueden acceder al almacén de claves esté activada.
+- Si el almacén de claves se eliminó por error, debe completar la configuración desde el inicio.
 
 
-## <a name="missing-key"></a>Falta una clave 
-Mensaje de error: "404 ServerKeyNotFound: no se ha encontrado la clave de servidor solicitada en la suscripción actual".
-"409 ServerKeyDoesNotExists: la clave del servidor no existe".
+### <a name="missing-key"></a>Falta una clave
 
-Detección: cómo identificar el URI de clave y el almacén de claves.
-- Identifique el URI de clave agregado al servidor SQL lógico mediante los cmdlet de la sección anterior Falta el almacén de claves para devolver la lista de claves.
+**Mensajes de error**
 
-Mitigación: confirmación de que el protector del TDE se encuentra en AKV.
-- Identifique el almacén de claves y navegue hasta él en Azure Portal.
-- Asegúrese de que está la clave identificada por el URI de clave.
+_404 ServerKeyNotFound: no se ha encontrado la clave de servidor solicitada en la suscripción actual_. 
 
-## <a name="missing-permissions"></a>Faltan permisos 
-Mensaje de error: "401 AzureKeyVaultMissingPermissions: el servidor no encuentra los permisos necesarios en Azure Key Vault".
+_409 ServerKeyDoesNotExists: la clave del servidor no existe_.
 
-Detección: cómo identificar el URI de clave y el almacén de claves.
-- Identifique el almacén de claves que ha usado el servidor SQL lógico mediante los cmdlet de la sección anterior Falta el almacén de claves.
+**Detección**
 
-Mitigación: confirmación de que el servidor SQL lógico tiene permisos para que el almacén de claves y los permisos correctos puedan acceder a la clave.
-- En Azure Portal, examine el almacén de claves, vaya a las directivas de acceso y localice la APPID de SQL Server:  
-  - Si la APPID no está presente, agréguela con el botón Agregar nuevo. 
-  - Si la APPID está presente, asegúrese de que tiene los permisos de clave siguientes: obtención, encapsulado y desencapsulado.
+Para identificar un URI de clave y el almacén de claves:
+
+- Use el cmdlet o los comandos que aparecen en [Falta el almacén de claves](#missing-key-vault) para identificar el URI de clave que se agrega a la instancia de SQL Server lógica. La ejecución de los comandos devuelve la lista de las claves.
+
+**Mitigación**
+
+Confirme que el protector de TDE está presente en Key Vault:
+
+1. Identifique el almacén de claves y vaya a él en Azure Portal.
+1. Asegúrese de que está la clave identificada por el URI de clave.
+
+### <a name="missing-permissions"></a>Faltan permisos
+
+**Mensaje de error**
+
+_401 AzureKeyVaultMissingPermissions: el servidor no encuentra los permisos necesarios en Azure Key Vault_.
+
+**Detección**
+
+Para identificar el URI de clave y el almacén de claves: 
+
+- Use el cmdlet o los comandos que aparecen en [Falta el almacén de claves](#missing-key-vault) para identificar el almacén de claves que se usa en la instancia de SQL Server lógica.
+
+**Mitigación**
+
+Confirme que la instancia de SQL Server lógica tiene permisos para el almacén de claves y los permisos correctos para acceder a la clave:
+
+- En Azure Portal, vaya al almacén de claves > **Directivas de acceso**. Busque la AppId de la instancia de SQL Server lógica.  
+- Si está la AppId, asegúrese de que tiene los permisos de clave siguientes: obtención, encapsulado y desencapsulado.
+- Si la AppId no está, agréguela con el botón **Agregar nuevo**. 
+
+## <a name="next-steps"></a>Pasos siguientes
+
+- Revise las [directrices para configurar TDE con Azure Key Vault](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql#guidelines-for-configuring-tde-with-azure-key-vault).
+- Obtenga información sobre [Azure Resource Health](https://docs.microsoft.com/azure/service-health/resource-health-overview).
+- Obtenga una actualización de cómo [asignar una identidad de Azure AD al servidor](https://docs.microsoft.com/azure/sql-database/transparent-data-encryption-byok-azure-sql-configure?view=sql-server-2017&viewFallbackFrom=azuresqldb-current#step-1-assign-an-azure-ad-identity-to-your-server).

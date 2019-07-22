@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342898"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866231"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ Desplaza las páginas asignadas desde el final del archivo a páginas no asignad
   
 El espacio disponible al final del archivo no se devuelve al sistema operativo, y el tamaño físico del archivo no cambia. Por tanto, parece que la base de datos no se reduce cuando se especifica NOTRUNCATE.  
   
-NOTRUNCATE solo es aplicable a archivos de datos. NONTRUNCATE no afecta al archivo de registro.  
+NOTRUNCATE solo es aplicable a archivos de datos. NOTRUNCATE no afecta al archivo de registro.  
   
 TRUNCATEONLY  
 Libera todo el espacio libre al final del archivo en el sistema operativo. Dentro del archivo no se mueve ninguna página. El archivo de datos se reduce solo a la última extensión asignada. Omite _porcentaje\_destino_ si se especifica con TRUNCATEONLY. Azure SQL Data Warehouse no admite esta opción.
@@ -113,7 +113,7 @@ No es necesario que la base de datos reducida esté en modo de usuario único. O
 No se puede reducir una base de datos mientras se está realizando una copia de seguridad de la misma. Por el contrario, no se puede realizar una copia de seguridad de una base de datos mientras se está realizando una operación de reducción en ella.
   
 ## <a name="how-dbcc-shrinkdatabase-works"></a>Cómo funciona DBCC SHRINKDATABASE  
-DBCC SHRINKDATABASE reduce los archivos de datos de uno en uno, pero reduce los archivos de registro como si todos estuvieran en una agrupación de registros contiguos.  Los archivos se reducen siempre desde el final.
+DBCC SHRINKDATABASE reduce los archivos de datos de uno en uno, pero reduce los archivos de registro como si todos estuvieran en una agrupación de registros contiguos. Los archivos se reducen siempre desde el final.
   
 Suponga que tiene un par de archivos de registro, un archivo de datos y una base de datos denominada **mydb**. Los archivos de datos y de registro tienen 10 MB cada uno, y el archivo de datos contiene 6 MB de datos. El [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula un tamaño de destino para cada archivo. Este valor es el tamaño al que se va a reducir el archivo. Cuando DBCC SHRINKDATABASE se especifica con _porcentaje\_destino_, el [!INCLUDE[ssDE](../../includes/ssde-md.md)] calcula el tamaño final para que quede _porcentaje\_destino_ de espacio disponible en el archivo tras la reducción. 
 
@@ -165,7 +165,7 @@ DBCC SHRINKDATABASE (UserDB, 10);
 GO  
 ```  
   
-### <a name="b-truncating-a-database"></a>b. Truncar una base de datos  
+### <a name="b-truncating-a-database"></a>B. Truncar una base de datos  
 En el ejemplo siguiente se reducen los archivos de datos y de registro de la base de datos de ejemplo `AdventureWorks` al último tamaño asignado.  
   
 ```sql  

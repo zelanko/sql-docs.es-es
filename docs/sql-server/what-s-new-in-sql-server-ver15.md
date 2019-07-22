@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f3bd726fc0320d1dd0980f9e568190e00ea08bbb
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9c833144fb94a06d4c8941dd7b39b762fc17ba3c
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469100"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687754"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>Novedades de [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]
 
@@ -315,7 +315,7 @@ Además, se han incorporado o mejorado las características siguientes de [!INCL
 |Compatibilidad ampliada con los dispositivos de memoria persistente.|[Grupo de búferes híbrido](../database-engine/configure-windows/hybrid-buffer-pool.md) |
 |Compatibilidad con las estadísticas de almacén de columnas en `DBCC CLONEDATABASE`|[Blob de estadísticas para los índices de almacén de columnas](../t-sql/database-console-commands/dbcc-clonedatabase-transact-sql.md#ctp23)|
 |`sp_estimate_data_compression_savings` presenta `COLUMNSTORE` y `COLUMNSTORE_ARCHIVE`.|[Consideraciones para los índices de almacén de columnas](../relational-databases/system-stored-procedures/sp-estimate-data-compression-savings-transact-sql.md#considerations-for-columnstore-indexes)|
-|Machine Learning Services se admite en el clúster de conmutación de Windows Server. |[Novedades: ¿Qué es SQL Server Machine Learning Services?](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
+|Machine Learning Services se admite en el clúster de conmutación de Windows Server. |[Novedades: SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md)|
 |Machine Learning admite el modelo basado en particiones.|[Novedades: SQL Server Machine Learning Services](../advanced-analytics/what-s-new-in-sql-server-machine-learning-services.md) |
 |Infraestructura de generación de perfiles ligera de consultas habilitada de forma predeterminada |[Infraestructura de generación de perfiles de estadísticas de ejecución de consultas ligera v3](../relational-databases/performance/query-profiling-infrastructure.md#lightweight-query-execution-statistics-profiling-infrastructure-v3) |
 |Nuevos conectores de PolyBase para [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], Oracle, Teradata y MongoDB. |[¿Qué es PolyBase?](../relational-databases/polybase/polybase-guide.md) |

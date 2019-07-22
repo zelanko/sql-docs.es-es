@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef81931a39bd6e1cf9d30b465d1bd11541c9d540
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106270"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687609"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>Restauración por etapas de bases de datos con tablas con optimización para memoria
 
@@ -102,7 +102,7 @@ BACKUP database imoltp
     with init;
 ```
   
- En el ejemplo siguiente se muestra que una copia de seguridad de un grupo de archivos que no son del grupo de archivos principal, y un grupo de archivos optimizados para memoria, funciona de un modo similar a las bases de datos que no tienen tablas optimizadas para memoria. El comando siguiente hace una copia de seguridad hasta el grupo de archivos secundario  
+ En el ejemplo siguiente se muestra que una copia de seguridad de un grupo de archivos que no son del grupo de archivos principal, y un grupo de archivos optimizados para memoria, funciona de un modo similar a las bases de datos que no tienen tablas optimizadas para memoria. El comando siguiente hace una copia de seguridad hasta el grupo de archivos secundario.  
   
 ```sql
 BACKUP database imoltp

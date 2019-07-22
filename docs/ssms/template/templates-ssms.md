@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822942"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866257"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>Uso de plantillas en SQL Server Management Studio
 
@@ -35,8 +35,9 @@ En este tutorial se presentan las plantillas predefinidas de Transact-SQL (T-SQL
 
 Para llevar a cabo este tutorial, necesita tener SQL Server Management Studio, así como acceso a un servidor SQL Server.
 
-- Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
-- Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
+* Instale [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms).
+
+* Instale [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads).
 
 ## <a name="use-template-browser"></a>Usar el explorador de plantillas
 
@@ -108,15 +109,17 @@ También puede crear una plantilla en Explorador de plantillas. En los siguiente
 
 5. Haga clic con el botón derecho en la plantilla que ha creado y, después, seleccione **Editar**. Se abrirá la ventana Nueva consulta.
 
-6. Escriba el texto de T-SQL que quiere guardar. 
+6. Escriba el texto de T-SQL que quiere guardar.
 
 7. En el menú **Archivo**, seleccione **Guardar**.
 
-8. Cierre la ventana de consulta existente y abra la nueva plantilla personalizada. 
+8. Cierre la ventana de consulta existente y abra la nueva plantilla personalizada.
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En el siguiente artículo se proporcionan recomendaciones y trucos adicionales para usar SQL Server Management Studio. 
+La mejor forma de familiarizarse con SSMS es practicar. Estos *tutoriales* y artículos de *procedimientos* lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
 
-> [!div class="nextstepaction"]
-> [Otras recomendaciones y trucos al usar SSMS](../tutorials/ssms-tricks.md)
+* [Conexión a una instancia y realización de consultas](../tutorials/connect-query-sql-server.md)
+* [Scripting](../tutorials/scripting-ssms.md)
+* [Configuración de SSMS](../tutorials/ssms-configuration.md)
+* [Otras recomendaciones y trucos al usar SSMS](../tutorials/ssms-tricks.md)

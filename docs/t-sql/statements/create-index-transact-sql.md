@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500232"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652793"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,7 +734,7 @@ Se aplican las directrices siguientes para las operaciones de índice reanudable
 - ONLINE INDEX CREATE se especifica como RESUMABLE con la opción `RESUMABLE = ON`.
 - La opción RESUMABLE no se conserva en los metadatos de un índice dado y solo se aplica a la duración de una instrucción DDL actual. Por tanto, la cláusula `RESUMABLE = ON` debe especificarse explícitamente para habilitar la capacidad de reanudación.
 - La opción MAX_DURATION solo se admite para la opción `RESUMABLE = ON`.
-- MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para compilar un índice. Una vez pasado este tiempo, la operación de compilación de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una compilación de un índice en pausa. El valor de **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos y menor o igual que una semana (7 * 24 * 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error.
+- MAX_DURATION para la opción RESUMABLE especifica el intervalo de tiempo para compilar un índice. Una vez pasado este tiempo, la operación de compilación de índice se pausa o completa su ejecución. El usuario decide cuándo se puede reanudar una compilación de un índice en pausa. El valor **time** en minutos para MAX_DURATION debe ser mayor que 0 minutos o menor o igual que una semana (7 \* 24 \* 60 = 10080 minutos). Si se hace una pausa larga en una operación de índice puede afectar al rendimiento de DML en una tabla específica, así como a la capacidad de disco de base de datos, dado que ambos índices, el original y el que se acaba de crear, necesitan espacio en disco y deben actualizarse durante las operaciones de DML. Si se omite la opción MAX_DURATION, la operación de índice continuará hasta su finalización o hasta que se produzca un error.
 - Para pausar inmediatamente la operación de índice, puede detener (Ctrl+C) el comando en curso, ejecutar el comando [ALTER INDEX](alter-index-transact-sql.md) PAUSE o ejecutar el comando `KILL <session_id>`. Una vez que el comando está en pausa, se puede reanudar mediante el comando [ALTER INDEX](alter-index-transact-sql.md).
 - Al volver a ejecutar la instrucción CREATE INDEX para el índice reanudable, se reanuda automáticamente una operación de creación de índice en pausa.
 - La opción `SORT_IN_TEMPDB = ON` no es compatible con el índice reanudable.

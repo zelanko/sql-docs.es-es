@@ -16,81 +16,72 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f4ce68d33fee3fcf98b8e68b7997e7ac477890c4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 36b7c385f3722a1db86899c749ee8310e7596e1e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47745103"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67727782"
 ---
 # <a name="rename-columns-database-engine"></a>Cambiar el nombre a las columnas (motor de base de datos)
+
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  Puede cambiar una columna de la tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].  
-  
- **En este tema**  
-  
--   **Antes de empezar:**  
-  
-     [Limitaciones y restricciones](#Restrictions)  
-  
-     [Seguridad](#Security)  
-  
--   **Para cambiar el nombre de las columnas, utilizando:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Antes de empezar  
-  
-###  <a name="Restrictions"></a> Limitaciones y restricciones  
- Cambiar el nombre de una columna automáticamente no cambiará las referencias a esa columna. Es necesario modificar de forma manual los objetos que hacen referencia a la columna cuyo nombre se ha cambiado. Por ejemplo, si se cambia el nombre de una columna de una tabla y en un desencadenador existe una referencia a esa columna, es necesario modificar el desencadenador para reflejar el nuevo nombre de la columna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de cambiarle el nombre.  
-  
-###  <a name="Security"></a> Seguridad  
-  
-####  <a name="Permissions"></a> Permissions  
- Requiere el permiso ALTER en el objeto.  
-  
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
-  
-#### <a name="to-rename-a-column-using-object-explorer"></a>Para cambiar el nombre de una columna mediante el Explorador de objetos  
-  
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Cambiar nombre**.  
-  
-3.  Escriba un nuevo nombre de columna.  
-  
-#### <a name="to-rename-a-column-using-table-designer"></a>Para cambiar el nombre de una columna mediante el Diseñador de tablas  
-  
-1.  En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Diseño**.  
-  
-2.  En **Nombre de columna**, seleccione el nombre que desea cambiar y escriba uno nuevo.  
-  
-3.  En el menú **Archivo** , haga clic en **Guardar**_table name_.  
-  
-> [!NOTE]  
->  También puede cambiar el nombre de una columna en la pestaña **Propiedades de columna** . Seleccione la columna cuyo nombre desea cambiar y escriba un nuevo valor en **Nombre**.  
-  
-##  <a name="TsqlProcedure"></a> Usar Transact-SQL  
- **Para cambiar el nombre de una columna**  
-  
-#### <a name="to-rename-a-column"></a>Para cambiar el nombre de una columna  
-  
-1.  En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  En la barra de Estándar, haga clic en **Nueva consulta**.  
-  
-3.  En el siguiente ejemplo se cambia el nombre de la columna `TerritoryID` de la tabla `Sales.SalesTerritory` por `TerrID`. Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**.  
-  
-    ```  
-    USE AdventureWorks2012;  
-    GO  
-    EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';  
-    GO  
-    ```  
-  
- Para obtener más información, vea [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).  
-  
-  
+Puede cambiar una columna de la tabla en [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] mediante [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] o [!INCLUDE[tsql](../../includes/tsql-md.md)].
+
+**En este tema**
+
+- **Antes de empezar:**
+
+   [Limitaciones y restricciones](#Restrictions)
+
+   [Seguridad](#Security)
+
+- **Para cambiar el nombre de las columnas, utilizando:**
+
+   [SQL Server Management Studio](#SSMSProcedure)
+
+   [Transact-SQL](#TsqlProcedure)
+
+## <a name="BeforeYouBegin"></a> Antes de comenzar
+
+### <a name="Restrictions"></a> Limitaciones y restricciones
+
+Cambiar el nombre de una columna automáticamente no cambiará las referencias a esa columna. Es necesario modificar de forma manual los objetos que hacen referencia a la columna cuyo nombre se ha cambiado. Por ejemplo, si se cambia el nombre de una columna de una tabla y en un desencadenador existe una referencia a esa columna, es necesario modificar el desencadenador para reflejar el nuevo nombre de la columna. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) para ver las dependencias del objeto antes de cambiarle el nombre.
+
+### <a name="Security"></a> Seguridad
+
+#### <a name="Permissions"></a> Permisos
+
+Requiere el permiso ALTER en el objeto.
+
+## <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio
+
+### <a name="to-rename-a-column-using-object-explorer"></a>Para cambiar el nombre de una columna mediante el Explorador de objetos
+
+1. En el **Explorador de objetos**, conéctese a una instancia del [!INCLUDE[ssDE](../../includes/ssde-md.md)].
+2. En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Cambiar nombre**.
+3. Escriba un nuevo nombre de columna.
+
+### <a name="to-rename-a-column-using-table-designer"></a>Para cambiar el nombre de una columna mediante el Diseñador de tablas
+
+1. En el **Explorador de objetos**, haga clic con el botón derecho en la tabla en la que quiere cambiar nombres de columnas y elija **Diseño**.
+2. En **Nombre de columna**, seleccione el nombre que desea cambiar y escriba uno nuevo.
+3. En el menú **Archivo** , haga clic en **Guardar**_nombre de tabla_.
+
+> [!NOTE]
+> También puede cambiar el nombre de una columna en la pestaña **Propiedades de columna** . Seleccione la columna cuyo nombre desea cambiar y escriba un nuevo valor en **Nombre**.
+
+## <a name="TsqlProcedure"></a> Usar Transact-SQL
+
+**Para cambiar el nombre de una columna**
+
+### <a name="to-rename-a-column"></a>Para cambiar el nombre de una columna
+
+En el ejemplo siguiente se cambia el nombre de la columna `TerritoryID` de la tabla `Sales.SalesTerritory` a `TerrID` en la base de datos de AdventureWorks.
+
+```sql
+EXEC sp_rename 'Sales.SalesTerritory.TerritoryID', 'TerrID', 'COLUMN';
+```
+
+Para obtener más información, vea [sp_rename &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md).

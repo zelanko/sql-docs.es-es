@@ -1,10 +1,10 @@
 ---
 title: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
-description: Tutorial de inicio rápido para conectarse a una instancia de SQL Server mediante SQL Server Management Studio y la ejecución de consultas básicas de T-SQL.
+description: Tutorial para conectarse a una instancia de SQL Server usando SQL Server Management Studio y ejecutando consultas básicas de T-SQL.
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469232"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834963"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS) 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>Tutorial: Conexión a una instancia de SQL Server y realización de consultas con SQL Server Management Studio (SSMS)
 
-En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En el artículo se muestra cómo hacer lo siguiente:
+En este tutorial aprenderá a usar SQL Server Management Studio (SSMS) para conectarse a su instancia de SQL Server y a ejecutar algunos comandos básicos de Transact-SQL (T-SQL). En el artículo se muestra cómo seguir estos pasos:
 
 > [!div class="checklist"]
 > * Conectarse a una instancia de SQL Server
@@ -54,9 +54,9 @@ Si no tiene acceso a ninguna instancia de SQL Server, seleccione su plataforma e
     * En **Tipo de servidor**, seleccione **Motor de base de datos** (suele ser la opción predeterminada).
     * En **Nombre del servidor**, escriba el nombre de su instancia de SQL Server (en este artículo se usa el nombre de instancia SQL2016ST en el nombre de host NODE5 [NODE5\SQL2016ST]). Si no sabe cómo determinar el nombre de la instancia de SQL Server, vea [Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md#determine-sql-server-name).
 
-    ![Campo "Nombre del servidor" con la opción para usar la instancia de SQL Server](media/connect-query-sql-server/connection2.png)
+    * En **Autenticación**, seleccione **Autenticación de Windows**. En este artículo se usa la autenticación de Windows, aunque también se admite el inicio de sesión de SQL Server. Si selecciona **Inicio de sesión SQL**, se le pedirá un nombre de usuario y una contraseña. Para obtener más información sobre los tipos de autenticación, vea [Conectar al servidor (motor de base de datos)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
 
-    * En **Autenticación**, seleccione **Autenticación de Windows**. En este artículo se usa la autenticación de Windows, aunque también se admite el inicio de sesión de SQL Server. Si selecciona **Inicio de sesión SQL**, se le pide un nombre de usuario y una contraseña. Para obtener más información sobre los tipos de autenticación, vea [Conectar al servidor (motor de base de datos)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine).
+    ![Campo "Nombre del servidor" con la opción para usar la instancia de SQL Server](media/connect-query-sql-server/connection2.png)
 
     También puede modificar otras opciones de conexión seleccionando **Opciones**. Como ejemplos de las opciones de conexión tiene la base de datos a la que se está conectando, el valor de tiempo de espera de conexión y el protocolo de red. En este artículo se usan los valores predeterminados para todas las opciones.
 
@@ -188,7 +188,7 @@ Siga estos pasos para cambiar el servidor al que está conectada la ventana de c
 
 1. Haga clic con el botón derecho en la ventana de consulta y, después, seleccione **Conexión** > **Cambiar conexión**. Se volverá a abrir la ventana **Conectar al servidor**.
 
-2. Cambie el servidor que la consulta usa. 
+2. Cambie el servidor que la consulta usa.
 
    ![Comando Cambiar conexión](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ Siga estos pasos para cambiar el servidor al que está conectada la ventana de c
 
 ## <a name="next-steps"></a>Pasos siguientes
 
-En el siguiente artículo se muestra cómo programar varios objetos en SQL Server Management Studio.
+La mejor forma de familiarizarse con SSMS es practicar. Estos artículos lo ayudan con varias características disponibles dentro de SSMS.  Estos artículos le mostrarán cómo administrar los componentes de SSMS y cómo localizar las características que utiliza habitualmente.
 
-Vaya al siguiente artículo para más información:
-> [!div class="nextstepaction"]
-> [Pasos siguientes](scripting-ssms.md)
+* [Scripting](scripting-ssms.md)
+* [Uso de plantillas en SSMS](../template/templates-ssms.md)
+* [Configuración de SSMS](ssms-configuration.md)
+* [Otras recomendaciones y trucos al usar SSMS](ssms-tricks.md)

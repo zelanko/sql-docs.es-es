@@ -16,12 +16,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: ee26ba8891c2854bf772c0af021f48b8420d3356
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: d2aba0c1526473d48fe1171bbd41f4e006ca1690
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: HT
 ms.contentlocale: es-ES
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47680243"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67732416"
 ---
 # <a name="modify-an-index"></a>Modificar un índice
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx_md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "47680243"
   
      [Transact-SQL](#TsqlProcedure)  
   
-##  <a name="SSMSProcedure"></a> Usar SQL Server Management Studio  
+##  <a name="SSMSProcedure"></a> Uso de SQL Server Management Studio  
   
 #### <a name="to-modify-an-index"></a>Para modificar un índice  
   
@@ -61,15 +61,11 @@ ms.locfileid: "47680243"
   
 #### <a name="to-modify-an-index"></a>Para modificar un índice  
   
-1.  Conéctese con el [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
-  
-2.  En la barra Estándar, haga clic en **Nueva consulta**.  
-  
-3.  Copie y pegue el siguiente ejemplo en la ventana de consulta y haga clic en **Ejecutar**. En este ejemplo se quita y vuelve a crear un índice existente en la columna `ProductID` de la tabla `Production.WorkOrder` usando la opción `DROP_EXISTING` . También se establecen las opciones `FILLFACTOR` y `PAD_INDEX` .  
+En el ejemplo siguiente se quita y se vuelve a crear un índice existente en la columna `ProductID` de la tabla `Production.WorkOrder` en la base de datos de AdventureWorks mediante la opción `DROP_EXISTING`. También se establecen las opciones `FILLFACTOR` y `PAD_INDEX` .  
   
      [!code-sql[IndexDDL#CreateIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_1.sql)]  
   
-     En el ejemplo siguiente se usa ALTER INDEX para establecer varias opciones del índice `AK_SalesOrderHeader_SalesOrderNumber`.  
+     The following example uses ALTER INDEX to set several options on the index `AK_SalesOrderHeader_SalesOrderNumber`.  
   
      [!code-sql[IndexDDL#AlterIndex4](../../relational-databases/indexes/codesnippet/tsql/modify-an-index_2.sql)]  
   
@@ -77,7 +73,7 @@ ms.locfileid: "47680243"
   
 1.  Para agregar, quitar o cambiar la posición de una columna de índice, debe quitar y volver a crear el índice.  
   
-## <a name="see-also"></a>Ver también  
+## <a name="see-also"></a>Consulte también  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)   
  [INDEXPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/indexproperty-transact-sql.md)   
